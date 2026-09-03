@@ -41,6 +41,10 @@ one reference stays in that entry's prose in `design/references.md`.
   zero radius, maximum contrast, one unmistakable action — and most "sophisticated" styling is
   optional there.
 
+- **Never composite text with `opacity`.** Use `color-mix()` instead. Opacity-composited text
+  failed WCAG contrast measurement during the Revolution build — the computed value isn't what the
+  checker sees, and it isn't auditable. This one cost real rework.
+
 ## Matching the medium to the reference
 
 - **Don't approximate a render.** If a reference's quality comes from 3D rendering — soft shadows,
