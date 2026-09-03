@@ -255,6 +255,23 @@ Add to `process/checklist.md`:
   and it takes ten seconds.
 - **Everything at phone width.** Most of this list fails on mobile first.
 
+Run the harness first; it does all of the above except the human look:
+
+```bash
+node scripts/verify.mjs <url> --expect-org "<Client legal name>"
+```
+
+Exit code 1 means the gate failed. On QBS's own `/website-services` it currently returns
+**9 FAIL / 4 WARN / 14 PASS** — including two accessibility failures nobody had spotted: the Ask
+Quantum chat dialog has no accessible name, and body-copy links are distinguishable by colour alone
+(WCAG 1.4.1). CLS, though, measures **0.016** — comfortably inside budget, so the missing image
+dimensions haven't cost anything on that page yet. Fix the a11y failures before the CSS work.
+
+**A caveat on running it here:** where the sandbox blocks the browser's own egress, the harness
+routes requests through curl. Screenshots and axe-core stay fully valid; network *timing* does not,
+so LCP reports as unavailable rather than as a fabricated number. Use PageSpeed Insights for real
+timing.
+
 ---
 
 ## The theme-level fixes worth making at source

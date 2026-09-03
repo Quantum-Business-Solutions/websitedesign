@@ -81,7 +81,22 @@ fine.
 
 `reskin.py plan` now refuses to apply a re-skin that fails this gate.
 
-### 4. The header and footer leak QBS's identity — visibly, and worse than the schema does
+### 4. The harness found accessibility failures on the live site
+
+`node scripts/verify.mjs` on `/website-services`, at all three widths:
+
+- **`aria-dialog-name`** — the "Ask Quantum" chat widget is a dialog with no accessible name, so a
+  screen-reader user is dropped into an unlabelled dialog.
+- **`link-in-text-block`** — links inside body copy are distinguishable from surrounding text by
+  **colour alone**, which fails WCAG 1.4.1. Needs an underline or a non-colour cue.
+- **Heading order skips h2 → h4.**
+
+Two things worth noting about the same run. CLS measured **0.016** — well inside the 0.1 budget, so
+the missing image dimensions have not actually cost anything on this page yet. And the run produced
+a **false positive** on placeholder text: `\byour company\b` matched the legitimate line "Are AI
+engines citing your company?" The pattern list was tightened to bracketed and template forms only.
+
+### 5. The header and footer leak QBS's identity — visibly, and worse than the schema does
 
 The repo framed `Organization` JSON-LD as the identity problem. But
 `templates/partials/header.html` and `footer.html` hardcode QBS's **logo images**, LinkedIn,
@@ -93,14 +108,14 @@ seconds. And both files are `templateType: global_partial` — **portal-scoped s
 per-client overrides are not a simple clone-and-edit. `reskin.py` reports the leak and explicitly
 does **not** claim to fix it.
 
-### 5. Eight of the nine themes have never rendered a live page
+### 6. Eight of the nine themes have never rendered a live page
 
 All 41 Void site pages plus the landing page use `Quantum Void/templates/mv-shell.html`. **Zero**
 live pages use Flagship, Signal, Converter, Clean, Press, Paper, Journal or Showcase. The catalogue
 calls the nine "published and sold"; eight are sold and unproven. A client's site would be the
 first real test — which, combined with finding 3, is how a contrast failure reaches production.
 
-### 6. Void's schema leak includes a person's name and email
+### 7. Void's schema leak includes a person's name and email
 
 Eight of the nine `base.html` files are byte-identical. **Void's is different** — a richer block
 with `@id`, `logo`, a `founder` Person (**Shawn Peterson**, with LinkedIn) and a `contactPoint`
@@ -110,7 +125,7 @@ carrying **shawn@thequantumleap.business**. Void also emits `WebSite` + `SearchA
 So a client site cloned from Void publishes Shawn's name and email as its own founder and sales
 contact — and two rows of `structured-data.md`'s "missing" table were wrong for Void.
 
-### 7. The `og:image` gap is 31 pages, not one
+### 8. The `og:image` gap is 31 pages, not one
 
 `launch-standards.md` treated it as a `/website-services` finding. From the pages API, **31 of 41**
 Void pages have an empty `featuredImage` — including `/about-us`, `/contact-us`, `/pricing`,

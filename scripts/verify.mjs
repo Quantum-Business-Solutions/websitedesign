@@ -28,10 +28,15 @@ const WIDTHS = [
 ];
 
 // Lorem, unfilled tokens, and the tells that a template shipped unedited.
+// Only patterns that a real page would never contain. "your company" on its own is
+// legitimate marketing copy ("Are AI engines citing your company?") and produced a
+// false positive on the first run -- so it has to be the bracketed/template form.
 const PLACEHOLDER = [
-  /\blorem ipsum\b/i, /\bdolor sit amet\b/i, /\bTODO\b/, /\bFIXME\b/,
-  /\bexample\.com\b/i, /\byour company\b/i, /\bcompany name here\b/i,
-  /\{\{\s*\w+/, /\blogo here\b/i, /\bplaceholder\b/i, /\bComing soon\b/i,
+  /\blorem ipsum\b/i, /\bdolor sit amet\b/i, /\bTODO\b/, /\bFIXME\b/, /\bXXX\b/,
+  /\bexample\.com\b/i, /\byour company name\b/i, /\bcompany name here\b/i,
+  /\[your [a-z ]{2,20}\]/i, /<your [a-z ]{2,20}>/i,
+  /\{\{\s*\w+/, /\blogo here\b/i, /\bimage placeholder\b/i, /\btext placeholder\b/i,
+  /\bplaceholder text\b/i, /\blipsum\b/i, /\bacme (corp|inc|co)\b/i,
 ];
 
 /**
@@ -93,10 +98,25 @@ async function installTransport(ctx) {
 }
 
 const args = process.argv.slice(2);
-const urls = args.filter(a => !a.startsWith('--'));
+const VALUE_FLAGS = ['out', 'expect-org'];
 const flag = n => { const i = args.indexOf(`--${n}`); return i === -1 ? null : args[i + 1]; };
+// Skip both the flag AND its value -- otherwise a flag value like
+// --expect-org "Meridian Dental" gets audited as if it were a URL.
+const urls = [];
+for (let i = 0; i < args.length; i++) {
+  const a = args[i];
+  if (a.startsWith('--')) {
+    if (VALUE_FLAGS.includes(a.slice(2))) i++;
+    continue;
+  }
+  urls.push(a);
+}
 const OUT = flag('out') || 'verify-out';
 const EXPECT_ORG = flag('expect-org');
+if (urls.some(u => !/^https?:\/\//.test(u))) {
+  console.error(`not a URL: ${urls.find(u => !/^https?:\/\//.test(u))}`);
+  process.exit(2);
+}
 
 if (!urls.length) {
   console.error('usage: node scripts/verify.mjs <url> [...] [--out DIR] [--expect-org "Client Name"]');
