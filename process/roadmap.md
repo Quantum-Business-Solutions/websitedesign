@@ -1,5 +1,11 @@
 # Roadmap: what's worth building next
 
+> **Status — 2026-09-03.** The methodology in this repo is **agreed and adopted.** Build order
+> confirmed as **item 1** (scripted clone-and-reskin, carrying the item-5 theme fixes in the same
+> approved change) then **item 2** (`/verify`). Item 7 (the retainer) is the business-changing one
+> and follows. The nine-theme writes to portal `20682069` still need explicit approval before they
+> execute — propose-then-confirm, per the `qbs-hubspot-private-app` skill.
+
 Ordered by **money per hour of build effort**, not by interest. The system is already good at
 deciding what a site should look like. Everything below is about the three things that actually
 convert that into profit: **delivery speed**, **provable quality**, and **recurring revenue**.

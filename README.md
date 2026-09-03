@@ -7,6 +7,9 @@ time.
 **This repo is not a builder.** It's the layer that decides what good looks like. The building
 happens in BrandCommand and HubSpot.
 
+The methodology here is **agreed and in use.** What's still being built, and in what order, is
+`process/roadmap.md`.
+
 ## Start here
 
 ```
