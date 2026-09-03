@@ -92,6 +92,9 @@ not optional, and neither is acting on what you see.
 - Lazy-loading below the fold, `fetchpriority="high"` on the hero, `width`/`height` on every image
 - Analytics baseline captured **before** launch — no baseline, no way to prove the optimisation
   window worked
+- **Every changed URL has a 301, not a 302.** Check the top-traffic pages from
+  `process/seo-baseline.md` individually. On QBS's own domain, articles are 82% of organic traffic —
+  losing their URLs in a redesign would cost more than the build is worth
 
 ---
 

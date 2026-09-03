@@ -45,6 +45,7 @@ Re-skinning is six values per theme — see `process/reskin.md`.
 | `themes/catalogue.md` | **The nine themes**, what each is for, and the selection rules. |
 | `process/pitch-presentation.md` | How options get shown: one main page, then three. |
 | `process/reskin.md` | How a client's brand gets onto a theme. Six values. |
+| `process/seo-baseline.md` | **The Semrush method** — four pulls, what the numbers mean, client project IDs. |
 | `process/launch-standards.md` | **The traffic-and-leads baseline.** Measured gaps, and the launch gate. |
 | `process/structured-data.md` | Schema for SEO/AEO — what ships, what's missing, and a bug in all nine themes. |
 | `process/checklist.md` | Pre-ship checklist. Nothing reaches a client without it. |
@@ -55,6 +56,7 @@ Re-skinning is six values per theme — see `process/reskin.md`.
 | `design/prompts.md` | Generation prompts that worked, with model and settings. |
 | `design/inbox.md` | Drop URLs here, then run `/design-ingest`. |
 | `design/SCHEMA.md` | The ingest contract — slug rule, file shapes, failure handling. |
+| `process/roadmap.md` | **What to build next**, ordered by money per hour of effort. |
 | `brands/<client>.md` | Per-client brief. Client-stated constraints live here and **outrank house defaults**. |
 
 ## Gorgeous is half the job
@@ -67,6 +69,13 @@ measured against QBS's own flagship page, so the findings are real: fonts loadin
 sells websites.
 
 `process/structured-data.md` covers schema for SEO and AEO — including the worst bug in the set.
+
+And `process/seo-baseline.md` is the evidence layer. We have Semrush with 13 projects already
+configured, so a real traffic baseline is a ten-minute pull per client. Worked through on QBS's own
+domain, it found that **blog posts drive 82% of organic traffic while the page that sells websites
+earns zero**, and that one article is parked at position 11 across four keywords worth ~1,700
+monthly searches. That reframes what a website build is *for* — and it turns "we'll improve your
+SEO" into a number the client can hold us to.
 
 ## The two habits that do the work
 
@@ -119,6 +128,11 @@ Worth being explicit about, because both are places quality currently leaks:
    process is currently spending days on.
 5. **The live website-services page advertises "47 modules each." It's 57.** Verified against the
    source-code metadata API. Client-facing, undersells the product, cheap to fix.
+
+`process/roadmap.md` orders these and the rest by money per hour of build effort. The short version:
+script the clone-and-reskin, make quality a command (`/verify`) instead of a discipline, and
+productise the post-launch retainer — the first two are margin on fixed-price work, the third is the
+annuity.
 
 ## Setup
 

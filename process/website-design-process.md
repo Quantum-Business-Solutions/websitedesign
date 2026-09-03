@@ -49,12 +49,15 @@ The repo's job is to collapse phases 02–05 from weeks of hand work into a day 
 | Phase | Tooling | Output |
 |---|---|---|
 | 01 Information Gathering | `/website <company>` step 1 — `list_brands`, `firecrawl_scrape` with `formats:["branding"]` on their site and two or three competitors, then the four-question interview | Measured tokens, category read |
+| 01 Information Gathering | **`process/seo-baseline.md` — the four Semrush pulls.** Traffic baseline, which pages actually earn it, striking-distance keywords, site audit | The number we're measured against, and the evidence that sells the tier |
 | 01 → 02 | `brands/<slug>.md` from `brands/_template.md` | **The brief.** Client-stated constraints, which outrank house defaults |
 | 02 Planning | `themes/catalogue.md` selection rules — three of nine, safe / stretch / wildcard, ground filtered by the brief | Three named directions |
+| 02 Planning | **URL migration map.** Every page earning traffic today gets a 301 to its new home. A redesign that changes blog URLs without 301s destroys the only traffic the client has | Old → new URL map |
 | 03 Wireframing | The 57 shared modules *are* the wireframe vocabulary. Pick section order from the module inventory rather than drawing boxes | Section order per page |
 | 04 Content Writing | The three P's test in `process/checklist.md`. When a hero fails it, the fix is usually a missing persuasion module — `pain-bridge`, `is-this-you`, `cost-of-inaction` — not new adjectives | Copy that passes the gate |
 | 05 Design & Build | `process/reskin.md` — clone the theme, six values. Higgsfield for hero imagery per `design/prompts.md`. `/impeccable polish`, `design-taste-frontend` | Re-skinned clone in HubSpot |
-| 06 Test, Review & Launch | `process/checklist.md` end to end, `/impeccable audit`, mobile-width screenshot loop | Signed-off build |
+| 06 Test, Review & Launch | `process/checklist.md` end to end, `/impeccable audit`, mobile-width screenshot loop, `process/launch-standards.md` launch gate | Signed-off build |
+| Post-launch | `process/seo-baseline.md` monthly re-pull — trend, next striking-distance win, audit regressions. This is what makes growth-driven design falsifiable | Monthly report against the baseline |
 | Post-launch | Growth-driven design. New reference → `design/inbox.md`. Rule that generalises → `design/guardrails.md` | A faster next build |
 
 Phase 03 is the one that changed most. Wireframing used to mean drawing layouts; with a fixed
