@@ -5,9 +5,15 @@ The repeatable path from "client wants a website" to "shipped and it doesn't loo
 Follow it in order. Most slop comes from skipping step 1 (no brief, so the model defaults) or step 5
 (nobody checked before it shipped).
 
-This is the **craft** sequence. The **commercial** sequence — the six phases and 90 days QBS
-actually sells, and the three packages that scope them — is `process/website-design-process.md`.
-Read that first if you're scoping; read this if you're building.
+**This file is rationale, and it is authoritative over nothing.** Where it disagrees with another
+document, the other document wins. The authority order is:
+
+1. **`process/website-design-process.md`** — commercials, phases, dates, tiers
+2. **`.claude/commands/website.md`** — the operational steps, and what runs in what order
+3. **`process/checklist.md`** + `launch-standards.md` + `structured-data.md` — the gates
+4. **this file** — why the shape is what it is
+
+Read it once for the reasoning, then work from the three above.
 
 ---
 
@@ -35,8 +41,10 @@ No brief, no build. This is the step that prevents the model reaching for its de
 
 ## 3. Build wide — never one-shot
 
-Produce **3–5 genuinely distinct directions**, not one design plus tweaks. Distinct means different
-aesthetic families (see the style-direction categories), not the same layout in different colours.
+Produce **three** genuinely distinct directions — safe, stretch, wildcard — not one design plus
+tweaks. Three is the house number: two reads as a coin flip, four or more and nobody chooses. The
+selection rules that make three genuinely distinct are in `themes/catalogue.md`; the shape they get
+presented in is `process/pitch-presentation.md`.
 
 Put them side by side and pick with the client. This is the single highest-leverage habit: choosing
 between real options beats iterating blindly toward "make it more premium."
@@ -50,9 +58,14 @@ Generate hero imagery at this stage, not before — see `design/prompts.md`.
 
 Run **all three**, and fix what they surface:
 
+- `node scripts/verify.mjs <url> --expect-org "<Client>"` — the automated gate: a11y, Core Web
+  Vitals, schema entity, `og:image`, lazy-loading, placeholder text, conversion paths, broken links
 - `/impeccable critique` — UX and hierarchy review
 - `/impeccable audit` — accessibility, responsive, performance
 - Re-read `design/guardrails.md` and check the build against it line by line
+
+`process/checklist.md` is the full gate and supersedes this list — it has eight items to these
+three, including the structured-data and launch standards that postdate this file.
 
 If the page trips a guardrail, it doesn't ship. This gate is the difference between a house style
 and a hope.

@@ -1,17 +1,19 @@
 ---
 description: Interview, then build — company name in, three gorgeous options out
 argument-hint: "<company name or URL>"
-allowed-tools: AskUserQuestion, Read, Write, Edit, Glob, Grep, Bash, Skill, mcp__Firecrawl__firecrawl_scrape, mcp__Firecrawl__firecrawl_search, mcp__BrandCommand__list_brands, mcp__BrandCommand__query_table, mcp__BrandCommand__insert_row, mcp__BrandCommand__list_websites, mcp__BrandCommand__get_website, mcp__Higgsfield__generate_image, mcp__Higgsfield__balance, mcp__Higgsfield__job_display, mcp__Higgsfield__upscale_image
+allowed-tools: AskUserQuestion, Read, Write, Edit, Glob, Grep, Bash, Skill, mcp__Firecrawl__firecrawl_scrape, mcp__Firecrawl__firecrawl_search, mcp__BrandCommand__list_brands, mcp__BrandCommand__query_table, mcp__BrandCommand__insert_row, mcp__BrandCommand__list_websites, mcp__BrandCommand__get_website, mcp__Semrush__overview_research, mcp__Semrush__organic_research, mcp__Semrush__siteaudit_research, mcp__Semrush__projects_research, mcp__Semrush__get_report_schema, mcp__Semrush__execute_report
 ---
 
 Build website options for `$ARGUMENTS`. **Interview first, then build in one pass.** The interview
 is four questions — do not skip it and do not expand it. Guessing the answers is what produces slop;
 asking twelve questions is what makes people stop using the tool.
 
-This command is Phases 01–03 of the process QBS actually sells — six phases, 90 days, three fixed
-packages. Read `process/website-design-process.md` once so you know which phase you're in and what
-tier was bought; the tier decides re-skin depth (Launch = theme as-is, Growth = clone and re-skin,
-Transform = clone, re-skin and extend at source).
+This command spans **Phases 01 through 06** of the process QBS actually sells — six phases, 90 days,
+three fixed packages. It does not cover Phase 03 wireframing or Phase 04 content writing, which are
+the long poles and are still run by hand. Read `process/website-design-process.md` once so you know
+which phase you're in and what tier was bought; the tier decides re-skin depth (Launch = clone with
+the theme's own colours, Growth = clone and re-skin, Transform = clone, re-skin and extend at
+source). **Every tier clones** — there is no "use the theme as-is" tier.
 
 ## Step 1 — Gather evidence BEFORE asking anything
 
@@ -21,6 +23,10 @@ Ask nothing you could have found out yourself. Run these first, in parallel:
   **if directions already exist, read them before proposing new ones.**
 - `firecrawl_scrape` their current site with `formats: ["branding"]` → measured tokens.
 - `firecrawl_scrape` two or three category competitors the same way.
+- **The four Semrush pulls in `process/seo-baseline.md`** — traffic baseline, which pages actually
+  earn it, striking-distance keywords, site audit. Write the baseline into the brief; it is the
+  number the engagement gets measured against. On a client with no Semrush project, pulls 1-3 still
+  work — start the project on day one so the audit is ready for Phase 02.
 - `brands/<slug>.md` if it exists — client-stated constraints outrank everything.
 - `themes/catalogue.md` and `design/guardrails.md`.
 
@@ -56,10 +62,23 @@ that check is the whole reason the brief exists.
 
 ### Lane A: full site (three of nine, re-skinned)
 
-Follow `process/reskin.md`. Per theme: map the client's measured tokens onto the six-value surface
-(`appearance.mode` — **always set explicitly**, the defaults are wrong — plus `gold`, `gold_bright`,
-`void`, `navy`, `paper`). Record each as a `website_projects` row using the house naming
-convention:
+Use `scripts/reskin.py`, which does the clone, the six values **and the client's `Organization`
+schema** in one pass — see `process/reskin.md` for the reasoning:
+
+```bash
+python3 scripts/reskin.py audit                     # sweep the nine for known defects
+python3 scripts/reskin.py plan --theme "Quantum Press" --client "<Client>" \
+    --accent "#RRGGBB" --mode light \
+    --org-name "<Legal name>" --org-url "https://<domain>"
+# read the proposal table, then re-run with:  --apply --approved-by "<name>"
+```
+
+**Six values is not the whole re-skin.** Identity is not a field: `templates/layouts/base.html`
+emits QBS's `Organization` JSON-LD, and a perfect colour re-skin leaves it naming the wrong company.
+The script patches it in the same pass so it cannot be forgotten. Never run `--apply` against one of
+the nine.
+
+Then record each direction as a `website_projects` row using the house naming convention:
 
 ```
 <Company> — <ThemeName>
@@ -76,11 +95,18 @@ hand it the brief and let it work.
 
 This is the step that separates a re-skin from something worth showing.
 
+**Ordering.** Clone and re-skin all three (Step 4) — that's cheap now. Everything in *this* step is
+expensive, so run it on **one** direction only: your recommended one before the pitch, so the set
+isn't visibly uneven, then the client's pick after Step 7 if they chose differently. Three
+Higgsfield heroes and three polish passes when two get discarded is waste.
+
 - **Hero imagery — Higgsfield.** `design/prompts.md` has a proven render prompt and the four things
   that make it work. Check `balance` first, preflight with `get_cost: true`, and **generate with
   blank surfaces** so labels stay real HTML text — crisp, editable, translatable, and readable by
   search engines. Baked-in AI text fails all four.
-  Only render for the **chosen** direction. Three heroes when two get discarded is wasted credit.
+  Render for **one** direction only, per the ordering note above.
+  Higgsfield is exposed here as skills (`higgsfield-generate`), not as `mcp__Higgsfield__*` tools —
+  check which is present before relying on `balance` or `get_cost`.
 - **Craft pass — Impeccable.** `/impeccable polish` on the chosen build, and `/impeccable bolder`
   where a direction is landing safe.
 - **Anti-default pass — `design-taste-frontend`.** It states a design read and steers off LLM
@@ -98,9 +124,20 @@ Run `process/checklist.md` end to end. Then:
 - `/impeccable audit` — accessibility, responsive, performance
 - Re-read `design/guardrails.md` and check line by line
 
-**Verification loop:** screenshot the build and actually look at it — including at mobile width.
-Iterate on what you see, not on what you intended. A build nobody looked at is a build nobody
-checked.
+**Verification loop — run the harness, then look at what it produced:**
+
+```bash
+node scripts/verify.mjs <preview-url> --expect-org "<Client legal name>"
+```
+
+It screenshots at 390 / 768 / 1440, runs axe-core, measures LCP and CLS on mobile, parses every
+JSON-LD block and asserts the `Organization` names **the client**, and checks `og:image`,
+lazy-loading, image dimensions, placeholder text, conversion paths and internal links. Exit code 1
+means the gate failed.
+
+Then open the screenshots in `verify-out/` and actually look. The harness catches what's measurable;
+it cannot tell you the design is wrong. Iterate on what you see, not on what you intended — a build
+nobody looked at is a build nobody checked.
 
 A direction that trips a guardrail does not go to the client.
 

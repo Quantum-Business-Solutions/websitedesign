@@ -111,8 +111,9 @@ Small build. Prevents the one mistake that turns a happy client into a refund.
 
 ## 5. Fix the nine themes at source
 
-Already specified in `process/structured-data.md` and `process/launch-standards.md`, awaiting
-approval:
+Awaiting approval. Items 1-4 are specified in `process/structured-data.md` and
+`process/launch-standards.md`; item 5 is specified in `themes/catalogue.md` and `process/reskin.md`.
+`launch-standards.md` counts four because it predates item 5 being added here:
 
 1. **`seo` field group + fail-safe `Organization`** — stops nine themes asserting a false identity
 2. **Fonts via `<link>` + `preconnect`, or self-hosted woff2** — removes the CSS `@import` chain;
@@ -170,9 +171,20 @@ Two reasons it's the highest-value item on this list even though it's last:
   statement rather than hoping nobody asks.
 - **Reusable proof assets.** Logo strips, stats bands and case-study layouts get rebuilt per client.
   A proof kit per vertical would cut Phase 05.
-- **Define "conversion architecture."** It's Transform's headline differentiator and it's currently
-  undefined, which means it's unscoped — and unscoped premium features are where fixed-price margin
-  goes to die.
+- **Bound the revisions.** Phase 05 is sold as "refined with your feedback at every step" with no
+  round cap, no change-order trigger and no meeting cadence written down anywhere. On fixed price
+  that is where the margin goes. "Conversion architecture" now has a definition in
+  `process/launch-standards.md` (offers mapped to funnel stage, two paths per page, sticky CTA,
+  inline meetings, real thank-you page) — what it still lacks is a *quantity*.
+- **Define "blog setup."** It's a Growth line item and the traffic engine, and no document says what
+  it includes — instance, templates, authors, categories, how many seeded posts, written by whom.
+  A client starting from zero content has no branch in the process at all.
+- **Phase exit criteria.** Six phases with dates, an output column, and no definition of done.
+  Phase 03 is sold as "layout agreed before design" with no agreement artifact; Phase 06's output is
+  "signed-off build" with no signature.
+- **A page-counting rule.** Growth is "up to 20 pages". Nothing says whether one template plus N
+  data-driven instances counts as one page or N — which decides whether a 12-location client fits
+  the tier at all.
 
 ---
 

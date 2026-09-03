@@ -1,0 +1,13 @@
+{
+  "name": "qbs-websitedesign-tools",
+  "private": true,
+  "type": "module",
+  "description": "QA and re-skin tooling for the QBS website build process",
+  "scripts": {
+    "verify": "node scripts/verify.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.49.0",
+    "axe-core": "^4.10.2"
+  }
+}

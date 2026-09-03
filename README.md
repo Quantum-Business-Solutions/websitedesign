@@ -38,7 +38,8 @@ the tooling that does the work. Options get presented as **one main page, then t
 generated from scratch. That's what makes the output reliably good: you start from something already
 built well rather than from a model's average.
 
-Re-skinning is six values per theme — see `process/reskin.md`.
+Re-skinning rewrites twelve CSS custom properties in one block — see `process/reskin.md`. (Not
+`fields.json`: `theme.colors` is wired to nothing. `process/qa-findings.md` has the evidence.)
 
 ## Layout
 
@@ -59,7 +60,12 @@ Re-skinning is six values per theme — see `process/reskin.md`.
 | `design/prompts.md` | Generation prompts that worked, with model and settings. |
 | `design/inbox.md` | Drop URLs here, then run `/design-ingest`. |
 | `design/SCHEMA.md` | The ingest contract — slug rule, file shapes, failure handling. |
+| `process/qa-findings.md` | **What a four-agent QA pass found**, verified. Read before trusting an older claim. |
 | `process/roadmap.md` | **What to build next**, ordered by money per hour of effort. |
+| `scripts/reskin.py` | Clone + re-skin + client schema in one pass. Read-only until `--apply`. |
+| `scripts/verify.mjs` | The launch gate as a command. Exit 1 means it failed. |
+| `brands/_template.md` | The brief template. Every field here is consumed by a later phase. |
+| `.claude/commands/` | `/website` (the entry point) and `/design-ingest`. |
 | `brands/<client>.md` | Per-client brief. Client-stated constraints live here and **outrank house defaults**. |
 
 ## Gorgeous is half the job
@@ -112,7 +118,7 @@ projects.
 
 ## Known gaps
 
-Worth being explicit about, because both are places quality currently leaks:
+Worth being explicit about, because every one of these is a place quality currently leaks:
 
 1. **All nine themes ship QBS's `Organization` schema on every page.** Hardcoded in
    `templates/layouts/base.html` — client sites declare themselves to be Quantum Business Solutions
@@ -123,13 +129,17 @@ Worth being explicit about, because both are places quality currently leaks:
    including the five light ones — so Clean, Press, Paper, Journal and Showcase render dark out of
    the box, contradicting their own descriptions. Worth fixing at source; until then, always set
    `mode` explicitly.
-3. **Figma is not an input yet.** Clients hand over Figma files (Revolution did), and Figma's API
+3. **Multi-location clients cannot be served.** No location/address/hours module exists in the 57,
+   no `locations.html` template, and no `LocalBusiness` schema anywhere. For a practice group or
+   dealer network, local visibility *is* the traffic. Out of tier until a `quantum-location` module
+   exists — see `process/structured-data.md`.
+4. **No CMS migration procedure.** Clients arrive on WordPress. Nothing covers content inventory,
+   asset migration, the URL map, the DNS cutover window, or rollback — and "monitored launch" is a
+   sold promise. The URL map is named as a Phase 02 output with no method behind it.
+5. **Figma is not an input yet.** Clients hand over Figma files (Revolution did), and Figma's API
    exposes real fills, type styles and variables — more precise than scraping a rendered page.
    Adding the Figma MCP would make client-supplied designs a first-class source.
-4. **No automated clone-and-reskin.** `process/reskin.md` documents the operation but it's still run
-   by hand. Scripting it is the next real efficiency gain — and it's what Phase 05 of the sold
-   process is currently spending days on.
-5. **The live website-services page advertises "47 modules each." It's 57.** Verified against the
+6. **The live website-services page advertises "47 modules each." It's 57.** Verified against the
    source-code metadata API. Client-facing, undersells the product, cheap to fix.
 
 `process/roadmap.md` orders these and the rest by money per hour of build effort. The short version:

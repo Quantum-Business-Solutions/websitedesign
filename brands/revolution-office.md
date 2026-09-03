@@ -1,5 +1,11 @@
 # Revolution Office
 
+> **Pre-methodology.** This brief was written before `themes/catalogue.md` existed. Its three
+> directions use Sora, Archivo and Fraunces — and only Fraunces is one of the nine (it's Flagship,
+> not Press). "Signature" and "Ink" are not theme names. Read it as the argument for brief-first
+> working, which it proves well; do **not** copy its naming into a new build. New directions are
+> `<Company> — <ThemeName>` using a real theme name.
+
 - **slug:** revolution-office
 - **brand_profile_id:** `d8a54316-97b9-48ce-a7e2-482b491763a6`
 - **current site:** https://revolutionoffice.com

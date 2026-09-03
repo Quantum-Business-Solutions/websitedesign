@@ -89,8 +89,8 @@ one reference stays in that entry's prose in `design/references.md`.
 ## Structured data
 
 - **Never hand-write JSON-LD into a rich-text block.** Derive it from the module's own fields, so
-  markup and visible copy cannot drift. Drift is what gets a site discounted. Copy the
-  `quantum-faq.module` pattern.
+  markup and visible copy cannot drift. Drift means Google declines to show the rich result — and
+  the block silently stops earning anything. Copy the `quantum-faq.module` pattern.
 - **`|escapejson` on every interpolated value.** Without it, one apostrophe from a client silently
   invalidates the whole block.
 - **Omit schema rather than guess it.** Absent markup is safe — a search engine infers the entity
@@ -99,9 +99,40 @@ one reference stays in that entry's prose in `design/references.md`.
 - **Never mark up self-published testimonials with `AggregateRating` or `Review`.** Self-serving
   reviews are ineligible for review rich results and marking them risks a manual action. Leave
   `quantum-reviews` unmarked.
-- **Don't promise rich results that no longer exist.** FAQ and HowTo rich results were retired
-  (2023); the sitelinks searchbox went with them. Keep `FAQPage` for **AEO** — clean extractable
-  Q&A is what an LLM quotes — and say it that way to clients. `Event`, `Product`/`Offer`,
-  `BreadcrumbList` and `Article` still earn visible results.
-- **Schema belongs to the module that renders the content**, never to a global block. Delete the
-  section, delete its markup — correct behaviour, free.
+- **Don't promise rich results that no longer exist, and check the date before you assert one.**
+  HowTo retired 2023. **FAQ retired entirely 7 May 2026** — not restricted, gone. The sitelinks
+  searchbox went November **2024**, though `WebSite` still drives site names. Of the rest: only
+  `Event` unreservedly earns a rich result; `BreadcrumbList` is desktop-only; `Product`/`Offer`
+  needs a single-product page; `Article` is an enhancement, not a rich result; `Service` earns
+  nothing visible. Sell "machine-readable entity graph," never "rich results."
+- **Structured data is not an AEO lever.** Google: "structured data isn't required for generative AI
+  search, and there's no special schema.org markup you need to add." The one thing that does help is
+  markup **agreeing with the visible text**. Don't sell `FAQPage` as an AI-citation driver, and
+  don't build `llms.txt` — Google ignores it.
+- **Section-level schema belongs to the module that renders the content.** Delete the section,
+  delete its markup — correct behaviour, free. **Site-level entity markup is the exception**:
+  `Organization`, `BreadcrumbList` and `WebSite` describe the site, not a section, so they belong in
+  `templates/layouts/base.html`. A site's identity cannot live in a block a client can delete.
+
+## Typefaces on the watchlist
+
+Two faces are LLM defaults — the ones a model reaches for when it has nothing to design against.
+Neither is banned; both need a reason beyond "it looked right":
+
+- **Inter** — the default sans of every AI-generated interface.
+- **Space Grotesk** — the default "technical" face. This is why `Quantum Converter` carries a
+  caution in `themes/catalogue.md`: it's the right call when a genuinely technical register is
+  needed, and the theme most likely to read generic.
+
+## Reading measured tokens — two live examples in this repo
+
+The extractors mislabel, and the token files here prove it. Both of these are in
+`design/tokens/` and neither is a bug in the file — the file records what was measured:
+
+- **`stripe.json`** has `textPrimary: #533AFD` (the indigo accent) and `primary: #061B31` (the
+  near-black body colour) — swapped relative to their roles. It also reports
+  `body: 32px`, identical to its own `h2`, which is a fluid-scale artefact, not a real body size.
+- **`linear.json`** has `textPrimary: #08090A` identical to `background: #08090A` — black on black,
+  which is obviously not what the site renders.
+
+Never port a token straight into a theme field. Look at the live page first.

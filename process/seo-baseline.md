@@ -49,12 +49,14 @@ Semrush rank: 3,234,724  Paid keywords: 0
 | `/blog/msp-marketing-successful-strategies-for-2026` | 30 | 6 | 4.1% |
 | `/blog/how-to-build-a-sales-friendly-website` | 1 | 2 | 1.4% |
 
-**Blog posts drive 82% of organic traffic. Service pages drive about 10%.**
+**Blog posts drive 82% of organic traffic. No service page earns any.**
 
-And the page that *sells websites* — `/website-services`, the most designed page on the site —
-earns **zero organic traffic.** It isn't in the top fifteen. Nor are `/revops-services`,
-`/sales-blitz-as-a-service`, or most of the service pages: they appear with one keyword and zero
-visits.
+The remaining 18% is the homepage (8.2%) and `/connectandsell-the-definitive-guide` (8.9%) — and
+that second one is a guide, not a service page. Every actual service page earns zero.
+
+The page that *sells websites* — `/website-services`, the most designed page on the site — earns
+**zero organic traffic.** It isn't in the top fifteen. Nor are `/revops-services` or
+`/sales-blitz-as-a-service`: they appear with one keyword and no visits.
 
 Two consequences, and they're the reason this file exists:
 
@@ -82,8 +84,9 @@ places from page 1 where clicks actually happen. Sort by volume, filter to low d
 | `best marketing agencies for msps` | 20 | 90 | 6 | same page |
 | `hubspot chat` | 33 | 1,000 | 38 | `/resources/how-to-set-up-hubspot-chatflows…` |
 
-**One page is parked at position 11 across four keywords worth ~1,700 monthly searches, at
-difficulty 11–22.** It earns 6 visits. It has 30 ranking keywords and converts almost none of them
+**One page is parked at positions 11–14 across four keywords worth ~1,720 monthly searches, at
+difficulty 11–22** — three of them at position 11 (1,330 searches) plus one at 14. It earns 6
+visits. It has 30 ranking keywords and converts almost none of them
 into traffic, because page 2 is invisible.
 
 Moving that single page into the top five is worth more than every other SEO task on the domain
@@ -127,8 +130,8 @@ live and indexable. On a client build those 9 valid blocks would all be naming t
 alongside 17 pages with no markup at all. Don't hand a client a 100 and call schema done — read
 `groupByPages`, not the thematic score.
 
-**c) 66 temporary redirects against a 77-page crawl budget.** 73 of the 99 crawled URLs are
-redirects, only 26 return 200. Temporary (302) redirects don't pass authority the way permanent
+**c) 66 temporary redirects out of 99 crawled URLs.** 73 of the 99 are redirects; only 26 return
+200. So three-quarters of the 100-page crawl allowance is spent on URLs that aren't destinations. Temporary (302) redirects don't pass authority the way permanent
 (301) ones do, and they burn crawl budget on URLs that aren't destinations. Converting the 66 to
 301s is a settings-level fix with no design work.
 
@@ -161,7 +164,14 @@ more.
 | CCG Be Decorating | bedecorating.com | `29449459` |
 | CCG Be Boxing | beboxing.com | `29449460` |
 
-Re-run `list_projects` rather than trusting this table — projects get added.
+Re-run the `list_projects` report (inside the `projects_research` toolkit — it is a report name, not
+a tool name) rather than trusting this table; projects get added.
+
+**A new client has no project, so pull 4 is blocked on day one.** Pulls 1–3 work on any domain
+without a project — run those first. Creating the site-audit project is a manual step in the Semrush
+UI (Projects → Add new project → enter domain → enable Site Audit), and the crawl takes hours, so
+**start it on day one of Phase 01** or the audit won't be ready when Phase 02 needs it. Check plan
+headroom before promising it: 13 projects are already configured.
 
 ---
 

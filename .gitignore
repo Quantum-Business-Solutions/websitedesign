@@ -7,3 +7,6 @@ node_modules/
 # not vendored. `.claude/skills/scroll-craft` is a symlink into .agents/.
 .agents/
 .claude/skills/scroll-craft
+
+node_modules/
+verify-out/

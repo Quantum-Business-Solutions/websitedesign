@@ -12,7 +12,7 @@ the output. `$ARGUMENTS`, if present, is a URL to ingest directly; otherwise pro
 Read `design/SCHEMA.md` first. It defines the slug rule, the token-file key order, the reference
 entry shape, and the failure rule. Everything below depends on it.
 
-Then read `design/inbox.md` and collect the queue: every line below the `<!-- queue starts below -->`
+Then read `design/inbox.md` and collect the queue: every line below the `<!-- queue starts below this line -->`
 marker that isn't blank, isn't a `#` comment, and isn't inside a fenced code block. Each line is
 `<url>` or `<url> | <why>`.
 

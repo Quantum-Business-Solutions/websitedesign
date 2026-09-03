@@ -1,6 +1,6 @@
 # Pre-ship checklist
 
-Run end to end before anything reaches a client. Adapted from a 7-point process by **AIS (AI
+Run end to end before anything reaches a client. Items 1-7 are adapted from a 7-point process by **AIS (AI
 Automation Society)** — the creator of the `scroll-craft` skill — cross-checked against what's
 actually held up on QBS builds.
 
@@ -36,7 +36,7 @@ multi-page site — it fights the CMS and ages badly. Save it for the signature 
 ### 4. Inspiration from real sites, not thin air
 
 *Both lanes.* Name the reference before you build. From `design/references.md`, or ingest a new one
-via `/design-inbox` → `/design-ingest`.
+by adding it to `design/inbox.md`, then running `/design-ingest`.
 
 **Take the technique, not the frame.** Cloning a competitor's page shape wholesale is how you end up
 with their design and your logo. And per the sourcing rules in `design/guardrails.md`, gallery
