@@ -22,6 +22,12 @@ the type system.
 > Paper, Journal and Showcase all render dark out of the box, contradicting their own descriptions.
 > Never rely on the default.
 
+> **The bigger trap: six values is not the whole re-skin.** `fields.json` has only `appearance` and
+> `colors` — there is no field for identity. So `templates/layouts/base.html` keeps emitting *QBS's*
+> `Organization` JSON-LD on every page of every client site, and no amount of re-skinning changes
+> it. Until that's fixed at source, **hand-edit `base.html` on the clone** so the schema names the
+> client. See `process/structured-data.md`.
+
 ## Mapping measured tokens onto the surface
 
 Firecrawl's `branding` extractor gives roled colours — see `design/SCHEMA.md`. The mapping:
@@ -83,7 +89,11 @@ came from and `current_website_url` to the site being replaced.
 
 ## What re-skinning does not fix
 
-Colour and ground only. If a direction is wrong because the **typeface** is wrong, the answer is a
+Colour and ground only — and that's narrower than it sounds. **Identity is not colour.** The
+`Organization` schema in `base.html` and anything else naming QBS survives a perfect re-skin
+untouched, because it isn't a field. Check the clone's `<head>` by hand every time.
+
+Beyond that: If a direction is wrong because the **typeface** is wrong, the answer is a
 different theme, not a different palette — and if it's wrong because the **structure** is wrong,
 that's a theme fix at source, benefiting every future client. Resist per-client structural forks;
 that's how nine maintainable themes become forty unmaintainable ones.

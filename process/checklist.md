@@ -67,6 +67,32 @@ not optional, and neither is acting on what you see.
 
 `scroll-craft` automates this — it screenshots its own scroll and verifies at every position.
 
+**Also validate the structured data**, which no screenshot will show you:
+
+- [Google Rich Results Test](https://search.google.com/test/rich-results) on home, one blog post,
+  one case study, one interior page, pricing
+- [validator.schema.org](https://validator.schema.org) for spec correctness
+- **Read the rendered `<head>` and confirm the `Organization` block names the client.** All nine
+  themes currently hardcode QBS's identity there — see `process/structured-data.md`. Until that's
+  fixed at source, this check is the only thing standing between a client and a site that declares
+  itself to be Quantum Business Solutions.
+
+### 8. The launch gate — found and capturing, not just correct
+
+*Both lanes.* Gorgeous is half the job. Full baseline in `process/launch-standards.md`:
+
+- **PageSpeed Insights** on home, one interior, one blog post — **mobile** scores; desktop hides the
+  real problems
+- **Share one URL into Slack or LinkedIn** and look at the preview card. That's the `og:image`
+  check, and it takes ten seconds
+- **Submit a form and book a meeting yourself**, end to end — submission lands in the CRM, thank-you
+  page fires, asset arrives
+- **Two conversion paths on every page**: a hard offer for the ready buyer, a soft offer for the 95%
+  who aren't ready today
+- Lazy-loading below the fold, `fetchpriority="high"` on the hero, `width`/`height` on every image
+- Analytics baseline captured **before** launch — no baseline, no way to prove the optimisation
+  window worked
+
 ---
 
 ## Then the tooling gate

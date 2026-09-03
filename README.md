@@ -45,6 +45,8 @@ Re-skinning is six values per theme — see `process/reskin.md`.
 | `themes/catalogue.md` | **The nine themes**, what each is for, and the selection rules. |
 | `process/pitch-presentation.md` | How options get shown: one main page, then three. |
 | `process/reskin.md` | How a client's brand gets onto a theme. Six values. |
+| `process/launch-standards.md` | **The traffic-and-leads baseline.** Measured gaps, and the launch gate. |
+| `process/structured-data.md` | Schema for SEO/AEO — what ships, what's missing, and a bug in all nine themes. |
 | `process/checklist.md` | Pre-ship checklist. Nothing reaches a client without it. |
 | `process/build-sequence.md` | The methodology, in order, with the reasoning. Read once. |
 | `design/guardrails.md` | Always/never. **Read before generating any design work.** |
@@ -54,6 +56,17 @@ Re-skinning is six values per theme — see `process/reskin.md`.
 | `design/inbox.md` | Drop URLs here, then run `/design-ingest`. |
 | `design/SCHEMA.md` | The ingest contract — slug rule, file shapes, failure handling. |
 | `brands/<client>.md` | Per-client brief. Client-stated constraints live here and **outrank house defaults**. |
+
+## Gorgeous is half the job
+
+A site also has to be **found** and has to **capture**. `process/launch-standards.md` is the
+measured baseline — what HubSpot gives us free (canonical, OG, sitemap, robots: don't rebuild
+these), what the themes already get right, and the specific gaps that leak traffic and leads. It was
+measured against QBS's own flagship page, so the findings are real: fonts loading through a CSS
+`@import`, zero lazy-loaded images, no `og:image`, and no on-page conversion path on the page that
+sells websites.
+
+`process/structured-data.md` covers schema for SEO and AEO — including the worst bug in the set.
 
 ## The two habits that do the work
 
@@ -89,17 +102,22 @@ projects.
 
 Worth being explicit about, because both are places quality currently leaks:
 
-1. **The nine themes default to the wrong mode.** All of them ship `appearance.mode: dark`,
+1. **All nine themes ship QBS's `Organization` schema on every page.** Hardcoded in
+   `templates/layouts/base.html` — client sites declare themselves to be Quantum Business Solutions
+   to every search engine and AI crawler. Re-skinning can't fix it: identity isn't a field. This is
+   the most damaging gap on the list. Fix proposed in `process/structured-data.md`; needs approval
+   before it touches the portal.
+2. **The nine themes default to the wrong mode.** All of them ship `appearance.mode: dark`,
    including the five light ones — so Clean, Press, Paper, Journal and Showcase render dark out of
    the box, contradicting their own descriptions. Worth fixing at source; until then, always set
    `mode` explicitly.
-2. **Figma is not an input yet.** Clients hand over Figma files (Revolution did), and Figma's API
+3. **Figma is not an input yet.** Clients hand over Figma files (Revolution did), and Figma's API
    exposes real fills, type styles and variables — more precise than scraping a rendered page.
    Adding the Figma MCP would make client-supplied designs a first-class source.
-3. **No automated clone-and-reskin.** `process/reskin.md` documents the operation but it's still run
+4. **No automated clone-and-reskin.** `process/reskin.md` documents the operation but it's still run
    by hand. Scripting it is the next real efficiency gain — and it's what Phase 05 of the sold
    process is currently spending days on.
-4. **The live website-services page advertises "47 modules each." It's 57.** Verified against the
+5. **The live website-services page advertises "47 modules each." It's 57.** Verified against the
    source-code metadata API. Client-facing, undersells the product, cheap to fix.
 
 ## Setup

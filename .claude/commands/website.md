@@ -104,6 +104,11 @@ checked.
 
 A direction that trips a guardrail does not go to the client.
 
+**And check it's findable, not just handsome.** `process/launch-standards.md` and
+`process/structured-data.md` — schema names the *client* not QBS, `og:image` set, images lazy below
+the fold, two conversion paths per page. A beautiful site nobody finds and nobody converts on is a
+failed build.
+
 ## Step 7 — Show one main page, then three options
 
 Follow `process/pitch-presentation.md`. Four pages, not one: a **main page** carrying the design

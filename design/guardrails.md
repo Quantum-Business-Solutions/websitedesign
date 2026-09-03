@@ -85,3 +85,23 @@ one reference stays in that entry's prose in `design/references.md`.
   then ingest the real site.
 - Never hand-write a value into `design/tokens/`. That directory is the boundary between measured
   and guessed, and it holds only measured. Observations go in prose.
+
+## Structured data
+
+- **Never hand-write JSON-LD into a rich-text block.** Derive it from the module's own fields, so
+  markup and visible copy cannot drift. Drift is what gets a site discounted. Copy the
+  `quantum-faq.module` pattern.
+- **`|escapejson` on every interpolated value.** Without it, one apostrophe from a client silently
+  invalidates the whole block.
+- **Omit schema rather than guess it.** Absent markup is safe — a search engine infers the entity
+  from the page. Wrong markup is a false statement in the one format engines are built to trust.
+  This is why the nine themes hardcoding QBS's `Organization` is worse than shipping none.
+- **Never mark up self-published testimonials with `AggregateRating` or `Review`.** Self-serving
+  reviews are ineligible for review rich results and marking them risks a manual action. Leave
+  `quantum-reviews` unmarked.
+- **Don't promise rich results that no longer exist.** FAQ and HowTo rich results were retired
+  (2023); the sitelinks searchbox went with them. Keep `FAQPage` for **AEO** — clean extractable
+  Q&A is what an LLM quotes — and say it that way to clients. `Event`, `Product`/`Offer`,
+  `BreadcrumbList` and `Article` still earn visible results.
+- **Schema belongs to the module that renders the content**, never to a global block. Delete the
+  section, delete its markup — correct behaviour, free.
