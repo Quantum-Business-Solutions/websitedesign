@@ -133,6 +133,26 @@ copy alone.
 
 ---
 
+# Sourcing routes
+
+Where to go for each kind of input. **Take the technique, not the frame** — and per the sourcing
+rules in `guardrails.md`, ingest live sites rather than storing gallery images.
+
+| Source | Good for | Notes |
+|---|---|---|
+| **21st.dev** | Component prompts — buttons, borders, gradients, container-scroll animations | Copy the prompt, not the pixels. Lane B mainly; the nine themes are already Lane A's component system. |
+| **godly.design** / **godly.websites** | Niche-specific visual references | Curated, high bar. Browse to discover, then ingest the real site. |
+| **Awwwards** | Award-tier motion and interaction | The ceiling, not the default. Most of it is over-built for a B2B services site. |
+| **motion-primitives** / **motion-sites** | Animated backgrounds, motion patterns | Check performance cost before committing — see the mobile item in `process/checklist.md`. |
+| **Dribbble** / **Pinterest** | Discovery only | Do **not** store their content here — their terms prohibit it and their API can't serve it. Find the live site and ingest that. |
+| **Live competitor sites** | Measured tokens, category norms | The primary route. `/design-ingest`. |
+| **Client Figma files** | The most precise source available | Real fills, type styles, spacing, variables. Not yet wired in — see the README gaps. |
+
+Credit where due: the 21st.dev / godly / motion-primitives routes come from the AIS (AI Automation
+Society) process, alongside the `scroll-craft` skill.
+
+---
+
 ## Candidates not yet adopted
 
 Two review boards were assembled earlier and never approved into this list — 18 references by page

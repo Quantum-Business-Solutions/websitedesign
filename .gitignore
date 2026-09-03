@@ -2,3 +2,8 @@ node_modules/
 .env
 .env.local
 .DS_Store
+
+# Third-party skills installed via `npx skills add` — reproducible from skills-lock.json,
+# not vendored. `.claude/skills/scroll-craft` is a symlink into .agents/.
+.agents/
+.claude/skills/scroll-craft

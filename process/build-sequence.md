@@ -5,6 +5,10 @@ The repeatable path from "client wants a website" to "shipped and it doesn't loo
 Follow it in order. Most slop comes from skipping step 1 (no brief, so the model defaults) or step 5
 (nobody checked before it shipped).
 
+This is the **craft** sequence. The **commercial** sequence — the six phases and 90 days QBS
+actually sells, and the three packages that scope them — is `process/website-design-process.md`.
+Read that first if you're scoping; read this if you're building.
+
 ---
 
 ## 1. Write the brand brief — before any design
@@ -55,13 +59,14 @@ and a hope.
 
 ## 6. Ship to the platform
 
-QBS sites ship on **HubSpot**, atlas-theme child — see the `qbs-atlas-page-builder` skill for the
-`layoutSections` mechanics, `dnd_area` naming, and the PATCH-plus-push-live flow.
+QBS sites ship on **HubSpot**, on one of the nine Quantum themes — see `themes/catalogue.md` for the
+set and `process/reskin.md` for the clone-and-re-skin operation. For atlas-theme pages specifically,
+the `qbs-atlas-page-builder` skill has the `layoutSections` mechanics, `dnd_area` naming and the
+PATCH-plus-push-live flow.
 
-> **Known gap.** Nothing in this repo yet outputs HubSpot modules directly. A design that stops at
-> a Tailwind config hasn't closed the loop — someone still hand-translates it into atlas modules,
-> and that translation is where quality quietly leaks out. Closing this is the highest-value next
-> piece of work here.
+There is no hand-translation step. The themes are already HubSpot-native: 57 shared modules, every
+page a `dnd_area`. A design doesn't stop at a Tailwind config — it lands as six field values on a
+cloned theme.
 
 ## 7. Feed what you learned back
 
