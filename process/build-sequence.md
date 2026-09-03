@@ -1,0 +1,88 @@
+# Build sequence
+
+The repeatable path from "client wants a website" to "shipped and it doesn't look AI-generated."
+
+Follow it in order. Most slop comes from skipping step 1 (no brief, so the model defaults) or step 5
+(nobody checked before it shipped).
+
+---
+
+## 1. Write the brand brief — before any design
+
+`brands/<client>.md`, from the template. Sources, in descending order of authority:
+
+1. **What the client actually said.** Direct constraints beat inference. Revolution's *"lighter
+   background, orange/white/gray, no heavy black, straightforward not whimsical font, tiled
+   layout"* is worth more than any amount of taste library.
+2. **Their existing brand assets** — logo, palette, type, photography. If a Figma file exists, it's
+   the most precise source available: real fills, type styles, spacing, variables.
+3. **Their current site**, ingested via `/design-ingest` for measured tokens.
+4. **Their competitors**, same way, to know what the category looks like and what to avoid.
+
+No brief, no build. This is the step that prevents the model reaching for its defaults.
+
+## 2. Ground in the library
+
+- Read `design/guardrails.md`. Hard constraints, not suggestions.
+- Read `design/references.md` and pull the token files for anything matching the page type or
+  register. Measured values port straight into a theme; prose is judgement.
+- Where the brief and the library conflict, **the brief wins.** A house guardrail is a default, not
+  an override on a paying client's stated preference.
+
+## 3. Build wide — never one-shot
+
+Produce **3–5 genuinely distinct directions**, not one design plus tweaks. Distinct means different
+aesthetic families (see the style-direction categories), not the same layout in different colours.
+
+Put them side by side and pick with the client. This is the single highest-leverage habit: choosing
+between real options beats iterating blindly toward "make it more premium."
+
+## 4. Refine the chosen direction
+
+Now go deep on one. Three variants of the body/layout, pick, then tune type, colour, spacing.
+Generate hero imagery at this stage, not before — see `design/prompts.md`.
+
+## 5. The anti-slop gate — required before ship
+
+Run **all three**, and fix what they surface:
+
+- `/impeccable critique` — UX and hierarchy review
+- `/impeccable audit` — accessibility, responsive, performance
+- Re-read `design/guardrails.md` and check the build against it line by line
+
+If the page trips a guardrail, it doesn't ship. This gate is the difference between a house style
+and a hope.
+
+## 6. Ship to the platform
+
+QBS sites ship on **HubSpot**, atlas-theme child — see the `qbs-atlas-page-builder` skill for the
+`layoutSections` mechanics, `dnd_area` naming, and the PATCH-plus-push-live flow.
+
+> **Known gap.** Nothing in this repo yet outputs HubSpot modules directly. A design that stops at
+> a Tailwind config hasn't closed the loop — someone still hand-translates it into atlas modules,
+> and that translation is where quality quietly leaks out. Closing this is the highest-value next
+> piece of work here.
+
+## 7. Feed what you learned back
+
+- New reference worth keeping → `design/inbox.md`, then `/design-ingest`.
+- A rule that generalises past this client → `design/guardrails.md`.
+- A prompt that worked → `design/prompts.md`, with model and settings.
+
+A library that only gets read decays. This step is what makes the next build faster than this one.
+
+---
+
+## Where this fits alongside the other tools
+
+Keeping these straight prevents duplicated effort:
+
+| Tool | Its job |
+|---|---|
+| **This repo** | Taste, guardrails, process. The layer that decides *what good looks like*. |
+| **Claude Design** | Brand-specific design systems from descriptions, assets, Figma or GitHub. |
+| **BrandCommand** | Production builder — `website_projects`, `builder_pages`, pushes to HubSpot. |
+| **`qbs-atlas-page-builder`** | The HubSpot atlas-theme mechanics. |
+| **Impeccable / taste-skill** | Craft execution and anti-slop critique. |
+
+This repo is deliberately **not** a builder. It's the spine the builders should be reading from.
