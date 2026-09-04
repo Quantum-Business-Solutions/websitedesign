@@ -13,8 +13,16 @@ The methodology here is **agreed and in use.** What's still being built, and in 
 ## Start here
 
 ```
-/website <company name or URL>
+/mockups <company>     three directions as a shareable page. Seconds. No HubSpot writes.
+/build <company>       clone, re-skin, client schema, gate. Once, after they choose.
 ```
+
+Mockups are **not** HubSpot clones — that was the mistake. `scripts/mockup.py` renders the three
+directions from the themes' real cached tokens, so the colours and faces are what ships, and the
+clone happens once at the end. Three options used to be the expensive part of a pitch; now they're
+free.
+
+`/website` is the older combined command, kept for the full interview-to-ship path.
 
 Gathers evidence, asks **four** questions, then builds in one pass. Two lanes:
 
@@ -60,7 +68,11 @@ Re-skinning rewrites twelve CSS custom properties in one block — see `process/
 | `design/prompts.md` | Generation prompts that worked, with model and settings. |
 | `design/inbox.md` | Drop URLs here, then run `/design-ingest`. |
 | `design/SCHEMA.md` | The ingest contract — slug rule, file shapes, failure handling. |
+| `process/strategy.md` | **Is this the right process to dominate?** An honest answer. |
 | `process/qa-findings.md` | **What a four-agent QA pass found**, verified. Read before trusting an older claim. |
+| `themes/tokens.json` | The nine themes' real tokens, cached. Mockups need no portal access. |
+| `scripts/mockup.py` | Three directions as one HTML file. Enforces the selection rules. |
+| `scripts/themetokens.py` | Refresh `themes/tokens.json` from the portal. Read-only. |
 | `process/roadmap.md` | **What to build next**, ordered by money per hour of effort. |
 | `scripts/reskin.py` | Clone + re-skin + client schema in one pass. Read-only until `--apply`. |
 | `scripts/verify.mjs` | The launch gate as a command. Exit 1 means it failed. |
