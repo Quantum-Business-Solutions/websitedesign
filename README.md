@@ -82,6 +82,7 @@ Re-skinning rewrites twelve CSS custom properties in one block — see `process/
 | `design/inbox.md` | Drop URLs here, then run `/design-ingest`. |
 | `design/SCHEMA.md` | The ingest contract — slug rule, file shapes, failure handling. |
 | `process/RUNBOOK.md` | **Eight phases, 28 steps, in order.** If you read one file, read this one. |
+| `process/repos.md` | **Where client work lives.** Not a branch per client — and when a repo is warranted. |
 | `process/SCHEDULE.md` | **The calendar** — week-one contract, phase dependencies, WIP limits. |
 | `design/patterns.md` | **Patterns that shipped**, and why each one works. |
 | `themes/architecture.md` | **What the nine should become** — proven on the live Revolution build. |
