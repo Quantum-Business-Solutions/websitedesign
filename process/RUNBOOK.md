@@ -148,8 +148,13 @@ not a drawing.
 
 ### 18 🤖→🏢 Draft copy, grounded not generated
 Every `<h1>` answers a **real keyword** from step 2. Three P's above the fold. Their language from
-step 3.
-**Done:** no page could belong to another company in the category.
+step 3. **Site pages are the Copywriter agent; campaign assets are BrandCommand's
+`campaign-launcher`** — same skill, different gate.
+**Score it.** Write a critic score to `agent_runs` the way BrandCommand already does for campaign
+assets. **Nothing ships under 80.** Live scores say `blog` averages 67.4 against 85.1 for every
+other asset type — and blog posts drive 82% of organic traffic, so this is the single most valuable
+number in the system to move.
+**Done:** no page could belong to another company in the category, and every page is scored.
 
 ### 19 🏢🚦 Verify every number on the page
 **Every figure a client site claims is theirs to confirm** — years in business, technician count,
@@ -285,6 +290,10 @@ the live site.
 # Phase 8 · Optimise & calibrate — ongoing
 
 ### 37 🏢→👤 Hand over, calibrate, and convert
+**Write the actuals back.** Hours per station, critic scores per page, and — the one nobody does —
+**which module order the converting pages used.** `agent_runs` and `agent_learnings` already exist
+for this. A learning needs a **minimum sample** before it's written; BrandCommand currently holds one
+that reinforces a 0% reply rate at maximum confidence, which is worse than no learning.
 - **A recorded walkthrough**, not a live one. It scales, and it's what makes "editable by your team"
   true instead of a support queue.
 - **Record actual hours per station** and replace the estimates in `process/clientcommand.md`.

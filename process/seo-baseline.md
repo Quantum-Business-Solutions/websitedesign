@@ -51,6 +51,10 @@ Semrush rank: 3,234,724  Paid keywords: 0
 
 **Blog posts drive 82% of organic traffic. No service page earns any.**
 
+> And BrandCommand's critic scores `blog` at **67.4** — worst of eleven asset types by eighteen
+> points. The asset that produces the traffic is the one we produce worst. See
+> `process/agents.md`.
+
 The remaining 18% is the homepage (8.2%) and `/connectandsell-the-definitive-guide` (8.9%) — and
 that second one is a guide, not a service page. Every actual service page earns zero.
 

@@ -61,6 +61,20 @@ many builds concurrently rather than each one faster. And a retainer at $2,500/m
 is **$250/hour and $30,000/year per client** — 45% better than Growth, 2× Transform. That is the
 arithmetic behind the point below.
 
+## The biggest quality lever is measurable, and it is blog
+
+Two findings from opposite ends of the stack meet here:
+
+- `process/seo-baseline.md` — **blog posts drive 82% of QBS's organic traffic**, and the same holds
+  category-wide for office technology.
+- BrandCommand's live critic scores — **`blog` averages 67.4**, worst of eleven asset types by
+  eighteen points, and never once above 79 across seven runs. Everything else averages 85.1.
+
+**The one asset that produces the traffic is the one the system produces worst.** That is not an
+opinion — it is QBS's own critic scoring QBS's own output. It makes "improve the content" a
+measurable target rather than an aspiration, and it means a dedicated blog agent has a higher
+expected return than any other agent on the roster.
+
 ## The product isn't finished, and that gates everything
 
 You cannot dominate on a product line with defects in it. From `process/qa-findings.md`:

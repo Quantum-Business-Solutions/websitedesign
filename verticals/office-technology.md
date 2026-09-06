@@ -62,7 +62,11 @@ Three consequences:
    category invests almost nothing in content.
 2. **Local intent is the real volume.** "copier lease `<city>`", "managed print `<state>`". Which
    means location pages matter — and see the multi-location gap below.
-3. **A Launch-tier build in this vertical is selling a conversion surface to someone whose traffic
+3. **The blog is the whole growth story here, and it is the weakest thing we produce.** Live critic
+   scores put `blog` at 67.4 against 85.1 for every other asset type. In a category that invests
+   nothing in content, a genuinely good blog is the entire competitive opening — and right now it
+   is our lowest-scoring output. Fix that before selling content-led growth to a dealer.
+4. **A Launch-tier build in this vertical is selling a conversion surface to someone whose traffic
    is their own brand name.** Say so. The content engine is where the growth is, and it starts at
    Growth.
 
