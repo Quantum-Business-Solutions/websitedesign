@@ -270,6 +270,7 @@ Phases own the dates. Stations own the flow. Four numbers, weekly:
 |---|---|
 | **WIP per station**, all clients | Where the pile-up is. Pages sitting at *copy approved* means client latency; at *built* means us |
 | **Median hours per station-pass** | Whether the estimates above are real. Fix them with data after ten builds |
+| **Critic score per page** | The quality trendline. BrandCommand already scores campaign assets 0-100 in `agent_runs`; website pages should use the same scale, and nothing ships under 80 |
 | **Age of oldest unit per station** | A page stuck 3 weeks at one station is invisible in a phase view and obvious here |
 | **Client-owed assets overdue** | The most actionable report in the system |
 

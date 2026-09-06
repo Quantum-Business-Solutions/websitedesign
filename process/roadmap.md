@@ -1,197 +1,163 @@
-# Roadmap: what's worth building next
+# What would make this world class
 
-> **Status — 2026-09-03.** The methodology in this repo is **agreed and adopted.** Build order
-> confirmed as **item 1** (scripted clone-and-reskin, carrying the item-5 theme fixes in the same
-> approved change) then **item 2** (`scripts/verify.mjs`). Item 7 (the retainer) is the business-changing one
-> and follows. The nine-theme writes to portal `20682069` still need explicit approval before they
-> execute — propose-then-confirm, per the `qbs-hubspot-private-app` skill.
+The process now works. This is what separates *works* from *world class*, ordered by leverage.
 
-Ordered by **money per hour of build effort**, not by interest. The system is already good at
-deciding what a site should look like. Everything below is about the three things that actually
-convert that into profit: **delivery speed**, **provable quality**, and **recurring revenue**.
-
-The economics to keep in view: the packages are **fixed price** ($4,950 / $9,950 / $14,950) over
-**90 days**. At fixed price, every hour removed from delivery is margin, and every project finished
-early is capacity for the next one. Quality that's *checkable* is what lets us go fast without the
-rework that eats the margin back.
+The distinction matters: the first three items below are things whose absence will eventually cost
+real money or a client. The rest are what compounds.
 
 ---
 
-## 1. Script the clone-and-reskin — the single biggest win
+## 1 · Get the nine themes into source control
 
-**Today:** `process/reskin.md` is run by hand. Clone a theme in Design Manager, patch `fields.json`,
-create pages from 16 page templates, wire the modules. Per direction. Times three.
+**The biggest structural risk in the whole system, and nothing currently mitigates it.**
 
-**Build:** one script that takes a client slug, a theme name and an accent, and returns a preview
-URL.
+The nine themes exist **only** in HubSpot portal `20682069`. This repo holds their derived tokens
+and nothing else — no theme HTML, no `quantum.css`. Which means:
 
-```
-reskin.py plan --client "<client>" --theme "Quantum <Theme>" --accent "#..." --ground light
-  → clone Quantum <Theme> → <Client> — <Theme>
-  → rewrite the NATIVE DIRECTION block in css/quantum.css
-  → PATCH base.html with the client's Organization schema   ← fixes the bug in the same pass
-  → create pages from the 16 page templates
-  → return preview URLs
-```
+- **No diff, no review, no rollback.**
+- **No way to detect that someone edited one of the nine in Design Manager** — the repo's single
+  loudest "never", one accidental save away from changing every client's site, with no audit trail.
+- "Fix the nine at source" is a live edit rather than a reviewable change.
 
-**Why it's first:** it's the step repeated three times per project, it's pure mechanics with no
-judgement in it, and it's the reason three options currently feel expensive. Get it to ten minutes
-and the three-option pitch in `process/pitch-presentation.md` becomes free — which is the thing that
-wins the deal.
+Revolution's client theme is in git. The product line isn't.
 
-It also makes the schema fix **structural** rather than a checklist item someone remembers.
+**Build:** `reskin.py export --theme <name>` for all nine, committed. Then `reskin.py drift` to diff
+live against committed, run weekly. A day's work, and it turns the most dangerous operation in the
+system into a pull request.
 
----
+## 2 · Score every page, not just pass/fail
 
-## 2. `scripts/verify.mjs` — make quality a command, not a discipline
+`verify.mjs` answers *did it pass*. It cannot answer *is it getting better*.
 
-**Today:** `process/checklist.md` and `process/launch-standards.md` are human discipline. This
-repo's own history is the argument: two hand-coded graphics shipped with a written note admitting
-they were flat, because nobody looked. Discipline fails under deadline. Deadlines are when it
-matters.
+BrandCommand already solved this for campaign assets — `agent_runs.critic_score`, 0–100, per
+output. Adopt the same scale for website pages and you get, for free:
 
-**Build:** a Playwright harness — Chromium is already installed here — that loads every page at
-three widths and reports pass/fail on:
+- A **quality trendline** per client and per agent
+- The ability to say "our tenth build scored 91, our first scored 74" — which is the only honest
+  proof that a process is improving
+- **Attribution**: which agent, which model, which prompt produced the low scores
 
-| Check | Tool | Catches |
-|---|---|---|
-| Screenshots at 390 / 768 / 1440 | Playwright | Everything visual, at the width clients actually use |
-| Accessibility | axe-core | Contrast, labels, tap targets — **and legal exposure** |
-| Core Web Vitals | Lighthouse | The LCP and CLS problems measured in `launch-standards.md` |
-| JSON-LD validity + **whose name is in it** | parse `ld+json` | The nine-theme Organization bug |
-| `og:image` present | head parse | Blank social cards |
-| Lazy-loading, `width`/`height` | DOM scan | CLS and LCP contention |
-| Placeholder text | regex | Lorem, "TODO", `example.com`, unfilled tokens |
-| Broken links, orphan pages | crawl | The dead ends Semrush found |
-| Forms actually submit | Playwright | The untested form that silently loses every lead |
+The existing scores already earned their keep: they identified blog as eighteen points worse than
+everything else, which no amount of reading would have surfaced.
 
-Everything on that list is already documented as a manual check. Automating it costs one build and
-pays on every project forever — and it's what lets a junior ship at senior quality.
+**One caveat to fix while adopting it:** normalise the model identifier. Runs are currently split
+across `claude-sonnet-4`, `gemini-2.5-pro` and `google/gemini-2.5-pro` — two spellings of one model
+— for the same asset types, so a 56 on a blog can't be attributed to prompt or model. Fix that and
+the scores become an A/B test already paid for.
 
-**Sell it too.** This is the "Grade your Website" grader, pointed inward. Same engine, two revenue
-lines: a lead magnet and an internal QA gate.
+## 3 · Close the loop from shipped to converted
 
----
+**Everything in this repo optimises for passing a gate. Nothing measures whether the thing worked.**
 
-## 3. Kill the content bottleneck — it's the real long pole
+We know which modules exist, which order they went in, and what the page scored. We have no idea
+which ones **converted**. So taste is still opinion with good hygiene.
 
-Look at the phase durations: **Content Writing is days 30–50, and Design & Build is 45–75.** Design
-is nine themes and twelve tokens; that problem is solved. **Copy is what the 90 days is actually spent
-on**, and it's the least systematised part of the process.
+The data is already in HubSpot: form submissions, meeting bookings, and page views per URL. Joining
+it to the section order we recorded per page gives the thing nobody in this category has:
 
-**Build:** a copy pass that is *research-grounded* rather than generated from nothing —
+> *"On dealer homepages, `pain-bridge` above the fold converted at 3.1% against `is-this-you` at
+> 1.8%, n=6 sites."*
 
-- **Semrush keywords** (`process/seo-baseline.md`) decide what each page must rank for, so the `<h1>`
-  matches real search intent instead of a slogan
-- **Competitor scrapes** (Firecrawl) establish category language, and what to deliberately avoid
-- **The client's own words** from the interview and their existing site — the fastest route to a
-  voice that isn't generic
-- **The persuasion modules as the outline**: `pain-bridge` → `is-this-you` → `cost-of-inaction` →
-  `two-futures` → `why-now`. The section order *is* the argument, which is why a hero that fails the
-  three-P test usually needs a missing module, not better adjectives
+**Build:** per-page conversion pulled monthly, joined to the page record's section list, written to
+`agent_learnings` **with a minimum sample size.** That last clause is not optional — BrandCommand
+currently holds a learning asserting that the best variant is the one with a 0% reply rate, at
+maximum confidence.
 
-This is where "doesn't look like AI slop" is won or lost now. The design already doesn't. Generic
-copy is the remaining tell.
+This is the item that changes what QBS *is*: a shop with evidence rather than a shop with taste.
 
 ---
 
-## 4. The URL migration map — insurance against the expensive disaster
+## 4 · Make the judgement steps delegable
 
-**Why:** on QBS's own domain, articles are **82% of organic traffic**. A redesign that changes blog
-URLs without 301s deletes most of a client's traffic, and they will — correctly — blame us. One
-occurrence costs more than this is worth building.
+**15 of the 37 runbook steps are 🏢 QBS.** At any real volume, that is the ceiling — and most of
+those steps are judgement that lives in one head.
 
-**Build:** pull the client's ranking pages from Semrush and their sitemap, diff against the new
-sitemap, and emit a 301 map plus a hard **fail** on any page with traffic that has no destination.
-Runs in Phase 02 as a plan, and again in Phase 06 as a gate.
+Some are already written as rules and are genuinely delegable: the three-of-nine selection rules,
+the card-grid table, the contrast floors, the mobile floors. Those are the model.
 
-Small build. Prevents the one mistake that turns a happy client into a refund.
+These are not, and each is a decision someone makes by feel:
 
----
+- What makes a wildcard **good** rather than padding
+- When a theme defect is worth **fixing at source** versus living with
+- When a build needs **Phase 4** at all
+- What counts as "**could belong to any company in the category**"
+- When to **walk away** from a scope
 
-## 5. Fix the nine themes at source
+**Build:** write each as a decision rule with a worked example, the way `catalogue.md` does for
+theme selection. A rule you can hand over is worth more than a judgement you can exercise.
 
-**The single reconciled list is in `themes/architecture.md`.** Awaiting approval. Specified across `process/structured-data.md` and
-`process/launch-standards.md`; item 5 is specified in `themes/catalogue.md` and `process/reskin.md`.
-The single reconciled list lives in `themes/architecture.md`; this is the summary:
+## 5 · Price the actual cost driver
 
-1. **`seo` field group + fail-safe `Organization`** — stops nine themes asserting a false identity
-2. **Fonts via `<link>` + `preconnect`, or self-hosted woff2** — removes the CSS `@import` chain;
-   biggest Core Web Vitals win available
-3. **`loading="lazy"` default with an above-the-fold toggle**, `fetchpriority="high"` on heroes
-4. **`width`/`height` passthrough** on image modules
-5. **The light-theme contrast failure** — `accent_ink` / `accent_lift`, per `themes/architecture.md`
+The tiers price **page count**. The cost driver is **Phase 4** — custom modules, sections and
+templates — which is priced at nothing.
 
-One approved change, every past and future client benefits. This is the whole argument for never
-forking themes per client, and it's cheap.
+Revolution needed 29 modules, 7 sections and 49 templates. That is plausibly a second build's worth
+of work inside one engagement, and no tier accounts for it.
 
----
+**Build:** a Phase 4 line item with a per-module rate, and a rule for when it applies (the section
+list needs something the 57 don't have). Then two model variants — *first build in a vertical*,
+where the platform work is amortised or priced as investment, and *subsequent build*, which is the
+belt.
 
-## 6. A visual module catalogue — the wireframing phase, collapsed
+Until then every quote on a non-standard build is provisional, and the repo should keep saying so.
 
-**The unlock is already there:** every theme ships `templates/all-modules.html`. Screenshot that page
-per theme and you have a visual library of all 57 modules in nine skins, for free.
+## 6 · A module-level performance library
 
-**Why it matters:** Phase 03 Wireframing is days 20–35. With a visual catalogue, wireframing becomes
-*"pick these nine sections in this order"* in a client meeting — an hour, not two weeks. It also
-makes the three-option pitch richer at no cost, and gives sales something to show without a designer
-in the room.
+`design/references.md` records six external sites we admire. There is **no record of which of our
+own pages performed.**
 
----
+That's the compounding asset. Every build adds a data point: this vertical, this section order, this
+hero treatment, this conversion rate. After ten builds you can open a dealer pitch with *"this
+layout converts at X across six dealers"* — which is a claim no competitor can make and no amount of
+design talent substitutes for.
 
-## 7. Productise the retainer — this is where the actual money is
+Depends on item 3.
 
-Everything above sells one-time work at $4,950–$14,950. **The annuity is post-launch.** The
-website-services page already promises monthly optimisation, and only Transform includes a
-time-bounded window. There's no recurring product.
+## 7 · Monitor the category continuously
 
-The data pipeline for it already exists — `process/seo-baseline.md` re-pulled monthly gives the
-trend, the next striking-distance keyword, and audit regressions. Wrap that in a monthly report plus
-a fixed number of CRO/content hours and it's a retainer that costs little to deliver because the
-analysis is automated.
+We scrape competitors once, at brief time, and never again.
 
-Two reasons it's the highest-value item on this list even though it's last:
+For a vertical where **six of ten clients are office technology**, continuous monitoring is cheap
+and compounding: Firecrawl has `firecrawl_monitor_create`, Semrush has position tracking. Knowing a
+competitor relaunched, or that a category keyword's difficulty dropped, is worth more in outbound
+than in delivery.
 
-- **Recurring beats one-time.** Twelve months of retainer on a $9,950 build is likely worth more than
-  the build.
-- **It's how the promise gets kept.** "Continuously optimize based on real behaviour" is currently
-  unfalsifiable. With a written baseline and a monthly pull, it's provable — and provable results are
-  what generate referrals and case studies, which is what fills the pipeline.
+**Build:** monitors on the top five competitors per vertical, a monthly digest, and a trigger into
+`process/outbound-mockups.md` when a prospect's site materially changes — a relaunch is the worst
+possible moment to pitch, and a *stale* site is the best.
 
----
+## 8 · Give the process an owner and a cadence
 
-## Also worth doing, lower down
+Twenty documents, five scripts, and **no named owner and no review date.** That is how a good
+process becomes a stale one — and this repo has already demonstrated the failure mode twice: claims
+that were true when written and false three months later, caught only by an adversarial audit.
 
-- **Figma as an input.** Clients hand over Figma files (Revolution did). The API exposes real fills,
-  type styles and variables — more precise than scraping a rendered page.
-- **Structured intake → brief.** Phase 01 is days 1–10, mostly chasing assets and answers. A HubSpot
-  form that populates `brands/<slug>.md` compresses it.
-- **Accessibility as a sellable line item.** WCAG conformance is a real procurement requirement and
-  a real liability. `axe-core` is already in item 2; the differentiator is offering a conformance
-  statement rather than hoping nobody asks.
-- **Reusable proof assets.** Logo strips, stats bands and case-study layouts get rebuilt per client.
-  A proof kit per vertical would cut Phase 05.
-- **Bound the revisions.** Phase 05 is sold as "refined with your feedback at every step" with no
-  round cap, no change-order trigger and no meeting cadence written down anywhere. On fixed price
-  that is where the margin goes. "Conversion architecture" now has a definition in
-  `process/launch-standards.md` (offers mapped to funnel stage, two paths per page, sticky CTA,
-  inline meetings, real thank-you page) — what it still lacks is a *quantity*.
-- **Define "blog setup."** It's a Growth line item and the traffic engine, and no document says what
-  it includes — instance, templates, authors, categories, how many seeded posts, written by whom.
-  A client starting from zero content has no branch in the process at all.
-- **Phase exit criteria.** Six phases with dates, an output column, and no definition of done.
-  Phase 03 is sold as "layout agreed before design" with no agreement artifact; Phase 06's output is
-  "signed-off build" with no signature.
-- **Re-test the page-counting rule.** `process/clientcommand.md` decided it (one template plus N
-  instances = one page), but if `layoutSections` really cannot be populated by API then N instances
-  means N hand-written templates and the rule is a promise the platform cannot honour. Settle it.
+**Build:** one named owner. A monthly pass with a fixed agenda — run the QA agents, reconcile the
+numbers against actuals, retire anything superseded. And a version stamp on `RUNBOOK.md`, because a
+process without a version is one nobody can tell is out of date.
+
+## 9 · An onboarding track
+
+`OPERATOR.md` is a checklist, not a curriculum. A new hire cannot run this today, and several steps
+silently assume an AI agent is doing them.
+
+**Build:** a first-build path — shadow one, run one with review, run one alone — and graduated
+permissions, so `--apply` on a live portal is earned rather than granted. Plus the **visual module
+catalogue** (`all-modules.html` already exists in every theme; screenshot it), because step 13 asks
+someone to pick from 57 module *names*.
 
 ---
 
-## If only two get built
+## If you do three
 
-**Item 1** (scripted re-skin) and **item 2** (`scripts/verify.mjs`). Together they make the three-option pitch
-cheap and the quality gate automatic — speed and provable quality, which are exactly the two things
-a fixed-price business runs on. Item 5 rides along with item 1 for almost nothing.
+**1** (themes in git) because it is the risk. **2** (score every page) because it is nearly free and
+it tells you whether any of this is working. **3** (shipped→converted) because it is the only one
+that changes what the business is.
 
-Then **item 7**, because that's the one that changes the business rather than the delivery.
+Items 4–9 are what a competitor cannot copy by hiring a good designer.
+
+## And the two things that are still just waiting
+
+- **One tracked build.** Every hour figure here is an estimate. Kelly replaces them with numbers.
+- **The `layoutSections` question.** One afternoon decides whether Phase 4 costs 8 hours or 40 per
+  build, and it changes both the pricing and the page-counting rule.

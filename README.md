@@ -97,7 +97,7 @@ Re-skinning rewrites twelve CSS custom properties in one block — see `process/
 | `themes/tokens.json` | The nine themes' real tokens, cached. Mockups need no portal access. |
 | `scripts/mockup.py` | Three directions as one HTML file. Enforces the selection rules. |
 | `scripts/themetokens.py` | Refresh `themes/tokens.json` from the portal. Read-only. |
-| `process/roadmap.md` | **What to build next**, ordered by money per hour of effort. |
+| `process/roadmap.md` | **What would make this world class**, ordered by leverage. |
 | `scripts/reskin.py` | Clone + re-skin + client schema in one pass. Read-only until `--apply`. |
 | `scripts/verify.mjs` | The launch gate as a command. Exit 1 means it failed. |
 | `brands/_template.md` | The brief template. Every field here is consumed by a later phase. |
