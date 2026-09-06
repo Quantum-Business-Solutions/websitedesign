@@ -115,7 +115,7 @@ def client_tokens(theme: str, brand: dict) -> tuple[str, dict]:
 DIRECTION_CSS = {
     "clean": r'''
 /* Clean: the control. Humanist sans, bordered cards, 6px buttons, image right. */
-.q-h1{font-weight:700}
+.q-h1{font-weight:700;font-size:clamp(40px,4.5vw,66px)}
 ''',
     "showcase": r'''
 /* Showcase: display grotesque at weight 800, pill buttons, floating cards, image LEFT, bigger stats. */
