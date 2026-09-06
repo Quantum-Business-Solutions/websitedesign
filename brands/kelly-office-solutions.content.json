@@ -1,0 +1,1144 @@
+{
+  "client": "Kelly Office Solutions",
+  "slug": "kelly-office-solutions",
+  "domain_hint": "kellyofficesolutions.com",
+  "brand": {
+    "accent": "#65BC7B",
+    "ink_secondary": "#000545",
+    "chrome": "dark",
+    "chrome_bg": "#000545",
+    "logo": "assets/kelly-logo.png",
+    "logo_alt": "Kelly Office Solutions",
+    "logo_note": "300x109 raster with white subtext: built for a dark ground. Ask for a vector and a light-ground variant.",
+    "phone": "1-800-34-KELLY",
+    "phone_href": "tel:18003453559",
+    "email": "info@kellyofficesolutions.com",
+    "utility": [
+      {
+        "label": "Customer portal",
+        "href": "#"
+      },
+      {
+        "label": "Request service",
+        "href": "service-support.html#request"
+      },
+      {
+        "label": "Meter reads",
+        "href": "service-support.html#meters"
+      },
+      {
+        "label": "Order supplies",
+        "href": "service-support.html#supplies"
+      }
+    ],
+    "cta": {
+      "label": "Request an assessment",
+      "href": "contact.html"
+    },
+    "social": {
+      "linkedin": "https://www.linkedin.com/company/kelly-office-solutions/",
+      "facebook": "https://www.facebook.com/KellyOfficeSolutions",
+      "x": "https://twitter.com/kellyofficesolu"
+    },
+    "tagline": "Moving business forward since 1947. Family-owned, North Carolina-based, and still answering the phone ourselves.",
+    "footer_columns": [
+      {
+        "title": "What we do",
+        "links": [
+          [
+            "Office products & copiers",
+            "what-we-do.html#copiers"
+          ],
+          [
+            "Managed print",
+            "what-we-do.html#managed-print"
+          ],
+          [
+            "Document management",
+            "what-we-do.html#document-management"
+          ],
+          [
+            "Production print",
+            "what-we-do.html#production-print"
+          ],
+          [
+            "IT services",
+            "what-we-do.html#it"
+          ],
+          [
+            "Mailing solutions",
+            "what-we-do.html#mailing"
+          ],
+          [
+            "Pure Technology",
+            "what-we-do.html#pure"
+          ]
+        ]
+      },
+      {
+        "title": "Customers",
+        "links": [
+          [
+            "Customer portal",
+            "#"
+          ],
+          [
+            "Request service",
+            "service-support.html#request"
+          ],
+          [
+            "Meter reads",
+            "service-support.html#meters"
+          ],
+          [
+            "Copier supplies",
+            "service-support.html#supplies"
+          ],
+          [
+            "Coffee & water supplies",
+            "service-support.html#supplies"
+          ],
+          [
+            "Online training",
+            "service-support.html"
+          ]
+        ]
+      },
+      {
+        "title": "Company",
+        "links": [
+          [
+            "About Kelly",
+            "about.html"
+          ],
+          [
+            "Key markets",
+            "about.html#markets"
+          ],
+          [
+            "Locations",
+            "locations.html"
+          ],
+          [
+            "Blog",
+            "blog.html"
+          ],
+          [
+            "Contact",
+            "contact.html"
+          ]
+        ]
+      }
+    ],
+    "legal": [
+      [
+        "Privacy policy",
+        "#"
+      ]
+    ]
+  },
+  "schema": {
+    "org_name": "Kelly Office Solutions",
+    "org_url": "https://kellyofficesolutions.com",
+    "org_logo": "https://kellyofficesolutions.com/wp-content/uploads/2020/12/Kelly-Office-Solutions-Logo-copy-3.png",
+    "org_description": "Family-owned office technology company serving North Carolina since 1947: copiers and managed print, document management, production print, IT services, mailing solutions, and water, ice and coffee service.",
+    "sameAs": [
+      "https://www.linkedin.com/company/kelly-office-solutions/",
+      "https://www.facebook.com/KellyOfficeSolutions",
+      "https://twitter.com/kellyofficesolu"
+    ],
+    "telephone": "+1-800-345-3559"
+  },
+  "nav": [
+    [
+      "What we do",
+      "what-we-do.html"
+    ],
+    [
+      "Supplies & service",
+      "service-support.html"
+    ],
+    [
+      "Key markets",
+      "about.html#markets"
+    ],
+    [
+      "About",
+      "about.html"
+    ],
+    [
+      "Locations",
+      "locations.html"
+    ],
+    [
+      "Blog",
+      "blog.html"
+    ]
+  ],
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Kelly Office Solutions | Copiers, managed print, IT and office technology in North Carolina",
+      "description": "Family-owned since 1947. Copiers and managed print, document management, IT, mailing, water and coffee for North Carolina businesses, from four local offices with same-day service.",
+      "sections": [
+        {
+          "type": "hero",
+          "layout": "split",
+          "eyebrow": "Moving business forward since 1947",
+          "heading": "Fully connected office systems, serviced by people who <em>show up the same day</em>.",
+          "subhead": "Copiers and print, document management, IT, mailing, and the water and coffee that keep an office running. One North Carolina partner, four locations, one number to call.",
+          "primary": {
+            "label": "Request a print assessment",
+            "href": "contact.html"
+          },
+          "secondary": {
+            "label": "Request service",
+            "href": "service-support.html#request"
+          },
+          "note": "Ricoh, Konica Minolta, Sharp, Brother and Epson authorized",
+          "image": "assets/hero-1200.jpg",
+          "image_alt": "A Kelly technician replacing a toner unit in a customer's office",
+          "image_w": 1200,
+          "image_h": 800,
+          "badge": {
+            "value": "94.4",
+            "label": "Net Promoter Score, independently audited"
+          }
+        },
+        {
+          "type": "partners",
+          "caption": "Technology partners",
+          "items": [
+            "Ricoh",
+            "Konica Minolta",
+            "Sharp",
+            "Brother",
+            "Epson",
+            "DocuWare",
+            "Datto",
+            "WatchGuard",
+            "Microsoft 365",
+            "Zultys",
+            "FP Mailing",
+            "FloWater"
+          ]
+        },
+        {
+          "type": "stats",
+          "alt": true,
+          "items": [
+            [
+              "1947",
+              "Family-owned since"
+            ],
+            [
+              "94.4",
+              "NPS, audited by CEO Juice (industry average: 70s)"
+            ],
+            [
+              "4,000",
+              "North Carolina businesses served"
+            ],
+            [
+              "4",
+              "Locations: Winston-Salem, Greensboro, Charlotte, Raleigh"
+            ]
+          ]
+        },
+        {
+          "type": "services",
+          "id": "services",
+          "heading": "Everything an office runs on, from one partner",
+          "intro": "Most dealers sell copiers. Kelly connects the whole office and keeps it running, so you have one relationship instead of seven vendors.",
+          "items": [
+            [
+              "Office products & copiers",
+              "Ricoh, Konica Minolta, Sharp and Brother multifunction devices, leased or purchased, networked on day one.",
+              "what-we-do.html#copiers"
+            ],
+            [
+              "Managed print",
+              "Assessment, monitoring and automatic supplies. You stop counting toner and we send the report.",
+              "what-we-do.html#managed-print"
+            ],
+            [
+              "Document management",
+              "DocuWare workflows that take paper out of approvals, invoices and HR files, with the audit trail compliance asks for.",
+              "what-we-do.html#document-management"
+            ],
+            [
+              "Production print",
+              "In-house print rooms and finishing for the volumes and deadlines outsourced print can't hit.",
+              "what-we-do.html#production-print"
+            ],
+            [
+              "IT services",
+              "Managed IT, backup and security with Datto and WatchGuard, from the team that already knows your network.",
+              "what-we-do.html#it"
+            ],
+            [
+              "Mailing solutions",
+              "Postage meters, folder-inserters and parcel lockers from FP, for the mailroom nobody thinks about until it stops.",
+              "what-we-do.html#mailing"
+            ],
+            [
+              "Pure Technology: water, ice & coffee",
+              "Filtered water, commercial ice and bean-to-cup coffee, serviced on the same visit as your copier.",
+              "what-we-do.html#pure"
+            ]
+          ]
+        },
+        {
+          "type": "process",
+          "alt": true,
+          "eyebrow": "How a Kelly engagement works",
+          "heading": "Five stages, and every one of them hands you something",
+          "stages": [
+            [
+              "Assessment",
+              "Produces: a fleet and cost report you keep whether or not you buy."
+            ],
+            [
+              "Plan",
+              "Produces: a right-sized device plan with lease, rental or purchase priced side by side."
+            ],
+            [
+              "Install & connect",
+              "Produces: every device on your network, every user trained, on a date you chose."
+            ],
+            [
+              "Monitor & supply",
+              "Produces: toner that arrives before it runs out, and a monthly usage report."
+            ],
+            [
+              "Review",
+              "Produces: a quarterly look at cost per page and uptime, then back to stage one if anything moved."
+            ]
+          ]
+        },
+        {
+          "type": "casestudy",
+          "eyebrow": "Why companies stay for decades",
+          "heading": "Fourteen field offices, one printing partner",
+          "quote": "We are a company with 350 employees and fourteen field offices, all of which they serve. All needs are met on a timely and professional basis. It is nice to know there is still a local company here when you need them.",
+          "attribution": "Debbie Scott, S&N Communications",
+          "metrics": [
+            [
+              "Service",
+              "Same day",
+              "Response on service requests across all four territories"
+            ],
+            [
+              "Reputation",
+              "A+ BBB",
+              "Accredited since 1960 and rated A+"
+            ],
+            [
+              "Ricoh",
+              "Top 10",
+              "Among Ricoh dealers in the Southeast"
+            ],
+            [
+              "Team",
+              "90",
+              "People, factory-trained technicians among them"
+            ]
+          ]
+        },
+        {
+          "type": "cards",
+          "alt": true,
+          "id": "markets",
+          "eyebrow": "Key markets",
+          "heading": "Built around how your industry actually uses paper",
+          "items": [
+            [
+              "Legal",
+              "Scan-to-matter, cost recovery by client code, and print centers that outsourcing can't match on turnaround."
+            ],
+            [
+              "Healthcare",
+              "HIPAA-aware print release, secure fax and DocuWare records, across practices with more than one site."
+            ],
+            [
+              "Faith-based",
+              "Bulletins, mailings and production print on a budget that is answerable to a congregation."
+            ],
+            [
+              "Architecture & engineering",
+              "Wide-format plotting and scanning, with the color accuracy drawings need."
+            ],
+            [
+              "Manufacturing",
+              "Rugged devices on the floor, label and forms printing, and IT that keeps the line's systems up."
+            ],
+            [
+              "Professional services",
+              "Accounting and staffing firms with seasonal peaks, and a technician who calls back the same day in tax season."
+            ]
+          ]
+        },
+        {
+          "type": "band",
+          "eyebrow": "Supplies & service",
+          "heading": "Already a customer? This is the fast lane.",
+          "subhead": "Request service, send a meter read or order copier and coffee supplies in under a minute. A named technician, not a queue.",
+          "items": [
+            [
+              "Request service",
+              "Same-day dispatch in all four territories",
+              "service-support.html#request"
+            ],
+            [
+              "Meter reads",
+              "Or let us read them automatically",
+              "service-support.html#meters"
+            ],
+            [
+              "Copier supplies",
+              "Toner and parts, shipped before you run out",
+              "service-support.html#supplies"
+            ],
+            [
+              "Coffee & water supplies",
+              "Beans, filters and cups on your schedule",
+              "service-support.html#supplies"
+            ]
+          ]
+        },
+        {
+          "type": "locations",
+          "heading": "Four North Carolina locations",
+          "intro": "Every one staffed with local technicians. Call the branch, or 1-800-34-KELLY reaches all of them.",
+          "items": [
+            [
+              "Winston-Salem",
+              "163 South Stratford Road",
+              "Winston-Salem, NC 27103",
+              "(336) 725-2566",
+              "tel:3367252566"
+            ],
+            [
+              "Greensboro",
+              "1040 E. Wendover Ave.",
+              "Greensboro, NC 27405",
+              "(336) 232-0399",
+              "tel:3362320399"
+            ],
+            [
+              "Charlotte",
+              "4205-B Stuart Andrew Blvd.",
+              "Charlotte, NC 28217",
+              "(704) 588-6891",
+              "tel:7045886891"
+            ],
+            [
+              "Raleigh",
+              "6001 Chapel Hill Rd, Suite 103",
+              "Raleigh, NC 27607",
+              "(919) 378-0172",
+              "tel:9193780172"
+            ]
+          ]
+        },
+        {
+          "type": "faq",
+          "alt": true,
+          "heading": "Questions we get on the first call",
+          "items": [
+            [
+              "How fast do you actually respond to a service call?",
+              "Same day, in all four territories, for devices under a Kelly service agreement. Most calls are resolved on the first visit because technicians carry parts for the models we sell. Our NPS of 94.4 is audited by an independent third party, so that claim is checked every month."
+            ],
+            [
+              "Can you take over devices we bought from someone else?",
+              "Usually, yes. The assessment covers your whole fleet regardless of where it came from, and the plan tells you honestly which devices are worth keeping under service and which are costing more than they are worth."
+            ],
+            [
+              "Lease, rent or buy?",
+              "Depends on volume, cash preference and how fast your needs change. The plan prices all three side by side for your actual usage so you can compare, and rentals cover seasonal peaks without a long commitment."
+            ],
+            [
+              "Do you serve offices outside the Triad and Charlotte?",
+              "Our four locations cover the Triad, Charlotte and the Triangle, and customers with field offices across North Carolina are served from the nearest branch. If you are further afield, ask; we will tell you plainly whether we can meet our own response standard there."
+            ]
+          ]
+        },
+        {
+          "type": "contact",
+          "id": "contact",
+          "heading": "Start with the assessment",
+          "body": "A specialist walks your fleet and your workflows, and you get the report either way. No obligation, and it takes about an hour of your time.",
+          "options": [
+            "Copiers and print",
+            "Managed print assessment",
+            "Document management",
+            "IT services",
+            "Mailing",
+            "Water, ice and coffee"
+          ],
+          "submit": "Request my assessment",
+          "note": "A person from the nearest branch replies within one business day."
+        }
+      ]
+    },
+    {
+      "file": "what-we-do.html",
+      "title": "What we do | Kelly Office Solutions",
+      "description": "Seven service lines, one partner: copiers and office products, managed print, document management, production print, IT services, mailing solutions, and water, ice and coffee.",
+      "sections": [
+        {
+          "type": "hero",
+          "layout": "centered",
+          "eyebrow": "What we do",
+          "heading": "Seven things an office runs on. One partner who <em>answers the phone</em>.",
+          "subhead": "Every line below is installed, serviced and supplied by Kelly people from four North Carolina offices. Mix and match; most customers start with print and add from there.",
+          "primary": {
+            "label": "Request an assessment",
+            "href": "contact.html"
+          }
+        },
+        {
+          "type": "detail",
+          "id": "copiers",
+          "eyebrow": "01",
+          "heading": "Office products & copiers",
+          "body": "Ricoh, Konica Minolta, Sharp and Brother multifunction devices, matched to your volume and networked on day one. Lease, rent or buy, priced side by side in the plan.",
+          "bullets": [
+            "Color and mono MFPs from desktop to departmental",
+            "Wide-format for plans and drawings",
+            "Secure print release and scan-to-cloud on every device",
+            "Trade-in and takeover of devices you already own"
+          ]
+        },
+        {
+          "type": "detail",
+          "id": "managed-print",
+          "alt": true,
+          "eyebrow": "02",
+          "heading": "Managed print",
+          "body": "The assessment finds what your fleet really costs. Monitoring keeps it that way: toner ships before it runs out, meters read themselves, and you get one report and one invoice a month.",
+          "bullets": [
+            "Fleet assessment with a cost-per-page report you keep",
+            "Automatic supplies and meter reads",
+            "Monthly usage and uptime report",
+            "Quarterly review, then back to the assessment if anything moved"
+          ]
+        },
+        {
+          "type": "detail",
+          "id": "document-management",
+          "eyebrow": "03",
+          "heading": "Document management",
+          "body": "DocuWare workflows that take paper out of approvals, invoices and HR files, with the audit trail that compliance asks for and the search that your people actually use.",
+          "bullets": [
+            "Accounts payable and approval routing",
+            "HR and contract files with retention rules",
+            "Integration with the systems you already run",
+            "Built by a certified DocuWare team in North Carolina"
+          ]
+        },
+        {
+          "type": "detail",
+          "id": "production-print",
+          "alt": true,
+          "eyebrow": "04",
+          "heading": "Production print",
+          "body": "In-house print rooms and finishing for the volumes and deadlines outsourced print can't hit: schools, churches, legal and marketing departments that print every day.",
+          "bullets": [
+            "High-volume color and mono production systems",
+            "Booklet making, folding, stapling and trimming inline",
+            "Operator training and same-day service",
+            "Cost comparison against your current outsourced spend"
+          ]
+        },
+        {
+          "type": "detail",
+          "id": "it",
+          "eyebrow": "05",
+          "heading": "IT services",
+          "body": "Managed IT, backup and security from the team that already knows your network, because we put the printers on it. Datto backup, WatchGuard firewalls, Microsoft 365 and a help desk with a name.",
+          "bullets": [
+            "Managed IT and help desk",
+            "Backup and disaster recovery",
+            "Firewall, endpoint and email security",
+            "Microsoft 365 licensing and migration"
+          ]
+        },
+        {
+          "type": "detail",
+          "id": "mailing",
+          "alt": true,
+          "eyebrow": "06",
+          "heading": "Mailing solutions",
+          "body": "Postage meters, folder-inserters and parcel lockers from FP Mailing, for the mailroom nobody thinks about until it stops.",
+          "bullets": [
+            "Postage meters with online rate updates",
+            "Folder-inserters for statements and invoices",
+            "Parcel lockers for offices and multifamily",
+            "Supplies and service on the same Kelly visit"
+          ]
+        },
+        {
+          "type": "detail",
+          "id": "pure",
+          "eyebrow": "07",
+          "heading": "Pure Technology: water, ice & coffee",
+          "body": "Filtered water, commercial ice and bean-to-cup coffee, serviced on the same visit as your copier. One invoice, one technician, one less vendor.",
+          "bullets": [
+            "Bottleless filtered water coolers (Wellsys, FloWater)",
+            "Commercial ice machines (Manitowoc, Follett)",
+            "Bean-to-cup and single-serve coffee",
+            "Filter changes and sanitizing on schedule"
+          ]
+        },
+        {
+          "type": "cta",
+          "heading": "Not sure where to start? Start with the assessment.",
+          "subhead": "One visit, one report on what your office really spends. You keep it either way.",
+          "primary": {
+            "label": "Request an assessment",
+            "href": "contact.html"
+          }
+        }
+      ]
+    },
+    {
+      "file": "service-support.html",
+      "title": "Supplies & service | Kelly Office Solutions",
+      "description": "Request service, send meter reads and order copier, coffee and water supplies. Same-day dispatch across Winston-Salem, Greensboro, Charlotte and Raleigh.",
+      "sections": [
+        {
+          "type": "hero",
+          "layout": "centered",
+          "eyebrow": "Supplies & service",
+          "heading": "Already a customer? <em>This is the fast lane.</em>",
+          "subhead": "Everything an existing customer needs, one click deep. Same-day dispatch in all four territories, and a technician who carries parts for the models we sell.",
+          "primary": {
+            "label": "Request service",
+            "href": "#request"
+          },
+          "secondary": {
+            "label": "Call 1-800-34-KELLY",
+            "href": "tel:18003453559"
+          }
+        },
+        {
+          "type": "band",
+          "eyebrow": "Fast lane",
+          "heading": "Four things, under a minute each",
+          "subhead": "Or call. A person answers.",
+          "items": [
+            [
+              "Request service",
+              "Same-day dispatch, first-visit fix on the models we sell",
+              "#request"
+            ],
+            [
+              "Meter reads",
+              "Send a read, or let us read them automatically",
+              "#meters"
+            ],
+            [
+              "Copier supplies",
+              "Toner and parts, shipped before you run out",
+              "#supplies"
+            ],
+            [
+              "Coffee & water supplies",
+              "Beans, filters and cups on your schedule",
+              "#supplies"
+            ]
+          ]
+        },
+        {
+          "type": "detail",
+          "id": "request",
+          "eyebrow": "Service",
+          "heading": "Request service",
+          "body": "Tell us the device and what it is doing. Dispatch confirms a window the same business day for customers under a Kelly agreement, and the technician arrives with parts.",
+          "bullets": [
+            "Same-day response in all four territories",
+            "Factory-trained technicians for Ricoh, Konica Minolta, Sharp and Brother",
+            "Loaner devices when a repair needs the shop",
+            "Every call tracked in the customer portal"
+          ],
+          "form": {
+            "fields": [
+              "Company",
+              "Device serial or location",
+              "What is it doing?"
+            ],
+            "submit": "Request service"
+          }
+        },
+        {
+          "type": "detail",
+          "id": "meters",
+          "alt": true,
+          "eyebrow": "Meters",
+          "heading": "Meter reads",
+          "body": "Send a read in thirty seconds, or ask about automatic meter collection so you never do it again.",
+          "bullets": [
+            "Web form, email or automatic collection",
+            "Reads feed billing directly, so invoices match usage",
+            "Monthly usage report on managed fleets"
+          ],
+          "form": {
+            "fields": [
+              "Company",
+              "Device serial",
+              "Meter reading"
+            ],
+            "submit": "Send meter read"
+          }
+        },
+        {
+          "type": "detail",
+          "id": "supplies",
+          "eyebrow": "Supplies",
+          "heading": "Copier, coffee and water supplies",
+          "body": "Toner and parts for your devices, beans and filters for your break room, shipped from the nearest branch or delivered on your service visit.",
+          "bullets": [
+            "Genuine supplies for every device we sell",
+            "Automatic replenishment on managed fleets",
+            "Coffee, cups, filters and sanitizing kits",
+            "One invoice with your service agreement"
+          ],
+          "form": {
+            "fields": [
+              "Company",
+              "Device or item",
+              "Quantity"
+            ],
+            "submit": "Order supplies"
+          }
+        },
+        {
+          "type": "faq",
+          "alt": true,
+          "heading": "Service questions",
+          "items": [
+            [
+              "What counts as same-day?",
+              "A call logged before 2pm is scheduled the same business day in all four territories for devices under a Kelly agreement. Later calls are first thing the next morning."
+            ],
+            [
+              "Do you service devices you did not sell?",
+              "Often, yes. Ask, and we will tell you plainly which models we can support to our own standard."
+            ],
+            [
+              "How do I get access to the customer portal?",
+              "Your account manager sets it up at install. If you have lost access, call the branch and they will reset it while you are on the phone."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "file": "about.html",
+      "title": "About Kelly | Family-owned office technology since 1947",
+      "description": "Kelly Office Solutions has served North Carolina businesses since 1947: about 90 people, four offices, an audited NPS of 94.4, and the key markets we know best.",
+      "sections": [
+        {
+          "type": "hero",
+          "layout": "centered",
+          "eyebrow": "About Kelly",
+          "heading": "Family-owned since 1947. <em>Still local, on purpose.</em>",
+          "subhead": "Kelly started in Winston-Salem selling office equipment and stayed independent while most of the industry consolidated. Today about 90 people across four North Carolina offices serve some 4,000 businesses, and the phone is still answered by someone who works here.",
+          "primary": {
+            "label": "Meet the team",
+            "href": "#team"
+          }
+        },
+        {
+          "type": "stats",
+          "alt": true,
+          "items": [
+            [
+              "1947",
+              "Founded in Winston-Salem"
+            ],
+            [
+              "90",
+              "People, across four offices"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited by CEO Juice"
+            ],
+            [
+              "4,000",
+              "North Carolina businesses served"
+            ]
+          ]
+        },
+        {
+          "type": "casestudy",
+          "eyebrow": "What we believe",
+          "heading": "The best service call is the one you never have to make",
+          "quote": "Our technicians are trained to fix it right the first time, and our monitoring is built so that toner arrives before the machine asks for it. Uptime is the product. The copier is just the thing it runs on.",
+          "attribution": "Kelly service leadership",
+          "metrics": [
+            [
+              "Since",
+              "1947",
+              "Independent and family-owned"
+            ],
+            [
+              "BBB",
+              "A+",
+              "Accredited since 1960"
+            ],
+            [
+              "Ricoh",
+              "Top 10",
+              "Dealer in the Southeast"
+            ],
+            [
+              "Service",
+              "Same day",
+              "In all four territories"
+            ]
+          ]
+        },
+        {
+          "type": "cards",
+          "alt": true,
+          "id": "markets",
+          "eyebrow": "Key markets",
+          "heading": "The industries we know best",
+          "items": [
+            [
+              "Legal",
+              "Scan-to-matter, cost recovery by client code, and print centers that outsourcing can't match on turnaround."
+            ],
+            [
+              "Healthcare",
+              "HIPAA-aware print release, secure fax and DocuWare records, across practices with more than one site."
+            ],
+            [
+              "Faith-based",
+              "Bulletins, mailings and production print on a budget that is answerable to a congregation."
+            ],
+            [
+              "Architecture & engineering",
+              "Wide-format plotting and scanning, with the color accuracy drawings need."
+            ],
+            [
+              "Manufacturing",
+              "Rugged devices on the floor, label and forms printing, and IT that keeps the line's systems up."
+            ],
+            [
+              "Professional services",
+              "Accounting and staffing firms with seasonal peaks, and a technician who calls back the same day in tax season."
+            ]
+          ]
+        },
+        {
+          "type": "team",
+          "id": "team",
+          "eyebrow": "The people",
+          "heading": "Meet the people who answer",
+          "intro": "Portraits and bios come from Kelly's own photography. These are placeholders for the layout only.",
+          "items": [
+            [
+              "Leadership",
+              "Names and roles from Kelly"
+            ],
+            [
+              "Service management",
+              "The team behind same-day"
+            ],
+            [
+              "Sales specialists",
+              "By service line and territory"
+            ],
+            [
+              "Field technicians",
+              "Factory-trained, by region"
+            ]
+          ]
+        },
+        {
+          "type": "cta",
+          "heading": "Come see the showroom",
+          "subhead": "Winston-Salem, Greensboro, Charlotte or Raleigh. Bring a sample of what you print.",
+          "primary": {
+            "label": "Find your branch",
+            "href": "locations.html"
+          }
+        }
+      ]
+    },
+    {
+      "file": "locations.html",
+      "title": "Locations | Kelly Office Solutions in Winston-Salem, Greensboro, Charlotte and Raleigh",
+      "description": "Four North Carolina offices with local technicians: Winston-Salem, Greensboro, Charlotte and Raleigh. Copier, print, IT and coffee service across the Triad, Charlotte and the Triangle.",
+      "sections": [
+        {
+          "type": "hero",
+          "layout": "centered",
+          "eyebrow": "Locations",
+          "heading": "Four offices. <em>Local technicians at every one.</em>",
+          "subhead": "Call the branch nearest you, or 1-800-34-KELLY reaches all of them. Showrooms welcome walk-ins; bring a sample of what you print.",
+          "primary": {
+            "label": "Call 1-800-34-KELLY",
+            "href": "tel:18003453559"
+          }
+        },
+        {
+          "type": "locations",
+          "detailed": true,
+          "heading": "Where we are",
+          "intro": "Each location is a full branch: sales, service dispatch, supplies and a showroom.",
+          "items": [
+            [
+              "Winston-Salem",
+              "163 South Stratford Road",
+              "Winston-Salem, NC 27103",
+              "(336) 725-2566",
+              "tel:3367252566"
+            ],
+            [
+              "Greensboro",
+              "1040 E. Wendover Ave.",
+              "Greensboro, NC 27405",
+              "(336) 232-0399",
+              "tel:3362320399"
+            ],
+            [
+              "Charlotte",
+              "4205-B Stuart Andrew Blvd.",
+              "Charlotte, NC 28217",
+              "(704) 588-6891",
+              "tel:7045886891"
+            ],
+            [
+              "Raleigh",
+              "6001 Chapel Hill Rd, Suite 103",
+              "Raleigh, NC 27607",
+              "(919) 378-0172",
+              "tel:9193780172"
+            ]
+          ]
+        },
+        {
+          "type": "faq",
+          "alt": true,
+          "heading": "Coverage questions",
+          "items": [
+            [
+              "Do you cover my town?",
+              "The Triad, Charlotte and the Triangle are our home territories, and customers with field offices across North Carolina are served from the nearest branch. Ask, and we will tell you plainly whether we can meet our own response standard where you are."
+            ],
+            [
+              "Can I visit a showroom?",
+              "Yes, all four. Bring a sample of what you print and we will run it on the device you are considering."
+            ]
+          ]
+        },
+        {
+          "type": "cta",
+          "heading": "Start with the assessment",
+          "subhead": "A specialist from your nearest branch walks your fleet and your workflows. You keep the report either way.",
+          "primary": {
+            "label": "Request an assessment",
+            "href": "contact.html"
+          }
+        }
+      ]
+    },
+    {
+      "file": "blog.html",
+      "title": "Blog | Kelly Office Solutions",
+      "description": "Plain-spoken guides on managed print, document management, office IT and the break room, from the Kelly team in North Carolina.",
+      "sections": [
+        {
+          "type": "hero",
+          "layout": "centered",
+          "eyebrow": "Blog",
+          "heading": "What we tell customers <em>before they ask</em>",
+          "subhead": "Guides from the people who service the machines. No jargon, no vendor pitch."
+        },
+        {
+          "type": "listing",
+          "items": [
+            [
+              "Managed print",
+              "Document management: how it works and why it matters",
+              "What a document management system actually does inside a business, the compliance standards it supports, and how to tell whether you need one.",
+              "6 min read"
+            ],
+            [
+              "Office IT",
+              "Workstation management, an overview",
+              "Why the desk PC is where most support tickets start, and what managed workstation support changes for a 50-person office.",
+              "5 min read"
+            ],
+            [
+              "Pure Technology",
+              "How to clean a water cooler, step by step",
+              "The sanitizing routine our technicians follow on bottleless coolers, and how often an office should do it.",
+              "4 min read"
+            ],
+            [
+              "Copiers",
+              "All-in-one office printers: a compact solution for modern workspaces",
+              "When one device is enough, when it is not, and what to look for in duty cycle and security.",
+              "5 min read"
+            ],
+            [
+              "Managed print",
+              "How managed print services transform a business",
+              "The three costs nobody counts, and what changes in the first ninety days of a managed agreement.",
+              "6 min read"
+            ],
+            [
+              "Wide format",
+              "How wide-format printers help businesses",
+              "Plans, signage and drawings in house: the volume at which it pays for itself.",
+              "4 min read"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "file": "contact.html",
+      "title": "Contact | Kelly Office Solutions",
+      "description": "Request a print assessment or talk to the nearest Kelly branch. Winston-Salem, Greensboro, Charlotte and Raleigh, or 1-800-34-KELLY.",
+      "sections": [
+        {
+          "type": "hero",
+          "layout": "centered",
+          "eyebrow": "Contact",
+          "heading": "Start with the assessment, or <em>just call</em>.",
+          "subhead": "A specialist walks your fleet and your workflows, and you get the report either way. No obligation, about an hour of your time."
+        },
+        {
+          "type": "contact",
+          "id": "form",
+          "heading": "Request an assessment",
+          "body": "Tell us a little about your office and the nearest branch will call within one business day to set a time.",
+          "options": [
+            "Copiers and print",
+            "Managed print assessment",
+            "Document management",
+            "IT services",
+            "Mailing",
+            "Water, ice and coffee"
+          ],
+          "submit": "Request my assessment",
+          "note": "A person from the nearest branch replies within one business day."
+        },
+        {
+          "type": "locations",
+          "alt": true,
+          "heading": "Or call the branch",
+          "intro": "1-800-34-KELLY reaches all four.",
+          "items": [
+            [
+              "Winston-Salem",
+              "163 South Stratford Road",
+              "Winston-Salem, NC 27103",
+              "(336) 725-2566",
+              "tel:3367252566"
+            ],
+            [
+              "Greensboro",
+              "1040 E. Wendover Ave.",
+              "Greensboro, NC 27405",
+              "(336) 232-0399",
+              "tel:3362320399"
+            ],
+            [
+              "Charlotte",
+              "4205-B Stuart Andrew Blvd.",
+              "Charlotte, NC 28217",
+              "(704) 588-6891",
+              "tel:7045886891"
+            ],
+            [
+              "Raleigh",
+              "6001 Chapel Hill Rd, Suite 103",
+              "Raleigh, NC 27607",
+              "(919) 378-0172",
+              "tel:9193780172"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "pitch": {
+    "qbs_contact": {
+      "name": "Shawn Peterson",
+      "email": "shawn@thequantumleap.business",
+      "phone": "(712) 389-4639"
+    },
+    "prepared_for": "Claudia Coleman, Director of Marketing",
+    "heard": [
+      "Green and navy are the brand; the logo carries both, and it is built for a dark ground, so the header and footer are navy in every direction.",
+      "Your existing customers come to the site to request service, send meter reads and order supplies. Those stay one click from the top of every page.",
+      "Six service lines plus mailing all survive. Pure Technology (water, ice, coffee) is a revenue line, not a footnote.",
+      "The tone is approachable authority: proof points over hype, North Carolina references, urgent but not pushy.",
+      "Cross-sell is the growth plan: the site has to sell IT and document management to existing copier customers, not only copiers to strangers."
+    ],
+    "found": [
+      "About 80% of your organic visits are people searching your name. The site is a phone book for people who already know you.",
+      "The only page earning strangers today is the Charlotte location page. Location pages are not optional; they are your non-branded traffic, so every direction has a real locations page.",
+      "The blog ranks 24 to 94 on real terms and is thin. It is the growth lever, so the blog matches the theme in every direction.",
+      "There is nothing to download or try for a visitor who is not ready to call. We would productize the assessment your MPS page already describes.",
+      "There is effectively no photography of your people or your four offices. A half-day shoot per office is the single thing that makes the site un-copyable.",
+      "Your assessment process, staged, is the differentiator. We built it as a five-stage section; we would like your real stage names and what each one hands the customer."
+    ],
+    "pick_reasons": [
+      [
+        "You said approachable, not flashy",
+        "Clean is the plainest-spoken of the three: a humanist sans, generous white space, one action per section."
+      ],
+      [
+        "You have 4,000 customers using the site as a tool",
+        "Clean puts the customer fast lane and the phone number where they are found first, and stays fast to scan on a phone."
+      ],
+      [
+        "Green and navy",
+        "Clean gives the navy the chrome and the green the actions, so both brand colours do real work instead of competing."
+      ]
+    ],
+    "pick_change": "Clean's type can read a little quiet on the home page. We would borrow Showcase's larger heading scale for the hero and the section openers, and keep Clean's rhythm everywhere else.",
+    "alternatives": [
+      [
+        "Quantum Showcase",
+        "If you want the site to say modern dealer moving into IT first: same ground, a display typeface, wider measure and bigger rhythm."
+      ],
+      [
+        "Quantum Press",
+        "If heritage is the story: an editorial serif on warm paper, the narrowest measure and the most catalogue-like. Nobody in your category looks like this."
+      ]
+    ],
+    "plan": [
+      [
+        "Week 1",
+        "Choose a direction. Confirm the promise, the tagline, the location list and the BBB wording. Send the logo as a vector."
+      ],
+      [
+        "Weeks 2 to 3",
+        "Copy for every page, from your service leadership and Claudia, in your words. Photography scheduled."
+      ],
+      [
+        "Weeks 3 to 5",
+        "Build in your HubSpot: theme cloned and re-skinned, blog templates assigned, every page built, forms wired to named people."
+      ],
+      [
+        "Week 6",
+        "Quality gate on every page, on a real phone. Redirects tested. You edit a page yourself in the walkthrough."
+      ],
+      [
+        "Launch, then 90 days",
+        "Go live. Reads at 30, 60 and 90 days against the baseline, with what we would change next."
+      ]
+    ]
+  }
+}

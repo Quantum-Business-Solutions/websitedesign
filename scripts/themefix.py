@@ -386,9 +386,9 @@ FOOTER_PARTIAL = r'''<!--
 '''
 
 SKIP_CSS = ("/* skip link (themefix) */\n"
-            ".q-skip{position:absolute;left:-999px;top:8px;z-index:100;background:var(--q-gold);color:var(--cta-fg);"
+            ".q-skip{position:absolute;top:-200px;left:8px;z-index:100;background:var(--q-gold);color:var(--cta-fg);"
             "padding:10px 16px;border-radius:6px;font-weight:600;}\n"
-            ".q-skip:focus{left:8px;outline:2px solid var(--fg);outline-offset:2px;}\n"
+            ".q-skip:focus{top:8px;outline:2px solid var(--fg);outline-offset:2px;}\n"
             "#q-content:focus{outline:none;}\n")
 
 # Anchored: `color:` as a property, not the tail of border-color / border-left-color.
@@ -427,9 +427,14 @@ def patch_css(css: str, theme: str) -> tuple[str, dict]:
     css = re.sub(r"(\.q-card\{[^}]*?)border-radius:8px;", r"\1border-radius:var(--radius);", css, count=1)
     css = css.replace(".q-h1{font-family:var(--q-serif);font-size:82px;", ".q-h1{font-family:var(--q-serif);font-size:var(--hero-size);", 1)
     css = css.replace(".q-h2{font-family:var(--q-serif);font-size:50px;", ".q-h2{font-family:var(--q-serif);font-size:var(--display-2);", 1)
+    # Five stages in two columns is 2+2+1: an orphan, on every theme's own framework section.
+    # Stay five across on a tablet (the stage text is capped at 180px) and stack on a phone.
+    css = css.replace("@media(max-width:1024px){.q-h1{font-size:56px;}.q-h2{font-size:38px;}.q-grid-5{grid-template-columns:1fr 1fr;}}",
+                      "@media(max-width:1024px){.q-h1{font-size:56px;}.q-h2{font-size:38px;}.q-grid-5{grid-template-columns:repeat(5,1fr);gap:16px;}}", 1)
     css, n = COLOR_GOLD_RE.subn("color:var(--accent-ink)", css)
-    if ".q-skip{" not in css:
-        css = css.rstrip() + "\n" + SKIP_CSS
+    # Idempotent against an earlier run: replace the skip-link rules if present, else append.
+    css = re.sub(r"/\* skip link \(themefix\) \*/\n(\.q-skip\{[^}]*\}\n\.q-skip:focus\{[^}]*\}\n(#q-content:focus\{[^}]*\}\n)?)", "", css)
+    css = css.rstrip() + "\n" + SKIP_CSS
     return css, {"ink": ink, "lift": lift, "cta_fg": cta_fg, "ink_ratio": round(reskin.contrast_ratio(ink, bg), 2),
                  "cta_ratio": round(reskin.contrast_ratio(cta_fg, gold), 2), "color_rewrites": n}
 

@@ -426,7 +426,9 @@ async function auditPage(browser, url) {
       }
       scrollTo(0, 0);
     });
-    await page.waitForTimeout(400);
+    // Let entrance animations finish before measuring. The themes' .q-reveal fades in over
+    // 700ms; sampling mid-fade reports composited, lighter colours and fails contrast falsely.
+    await page.waitForTimeout(1200);
 
     mkdirSync(OUT, { recursive: true });
     await page.screenshot({
@@ -597,8 +599,16 @@ async function auditPage(browser, url) {
     rec(url, 'og:image', d.ogImage ? 'PASS' : 'FAIL',
       d.ogImage || 'absent — every social share renders a bare text link');
     rec(url, 'twitter:card', d.twitter ? 'PASS' : 'WARN', d.twitter ? 'present' : 'absent');
-    rec(url, 'noindex check', /noindex/i.test(d.robots || '') ? 'FAIL' : 'PASS',
-      d.robots || 'no robots meta (indexable)');
+    {
+      const hasNoindex = /noindex/i.test(d.robots || '');
+      if (ENV === 'staging') {
+        rec(url, 'noindex check', hasNoindex ? 'PASS' : 'FAIL',
+          hasNoindex ? 'noindex present (required on staging)' : 'staging copy is indexable: add <meta name="robots" content="noindex">');
+      } else {
+        rec(url, 'noindex check', hasNoindex ? 'FAIL' : 'PASS',
+          hasNoindex ? 'noindex on a production page: the site cannot be found' : 'indexable');
+      }
+    }
 
     // headings
     rec(url, 'exactly one h1', d.h1.length === 1 ? 'PASS' : 'FAIL',
@@ -662,9 +672,10 @@ async function auditPage(browser, url) {
     }
     if (orgName) {
       const qbs = /quantum business solutions/i.test(orgName);
-      rec(url, 'Organization entity', qbs ? 'FAIL' : 'WARN',
+      const matched = EXPECT_ORG && orgName.toLowerCase().includes(EXPECT_ORG.toLowerCase());
+      rec(url, 'Organization entity', qbs ? 'FAIL' : matched ? 'PASS' : 'WARN',
         qbs ? `names "${orgName}" — on a client site this is the wrong entity`
-            : `names "${orgName}" — pass --expect-org to assert`);
+            : matched ? `names "${orgName}"` : `names "${orgName}" — pass --expect-org to assert`);
       // sameAs is the entity-resolution signal: it is how an engine confirms this
       // Organization is that LinkedIn company page and not a namesake. The one
       // failure mode here is a client site pointing at *our* profiles.
