@@ -147,7 +147,7 @@ DIRECTION_CSS = {
 .q-h2{font-weight:500}
 .q-btn,.q-btn-ghost,.q-form input,.q-form select,.q-form textarea,.q-form .hs-button,.q-card,.pv-detail-img,.pv-hero-img,.pv-hero-wide{border-radius:2px}
 .q-header .q-booknow,.q-mnav-cta{border-radius:2px}
-.q-eyebrow{font-family:var(--q-sans);font-size:12.5px;letter-spacing:.22em;font-weight:600}
+.q-eyebrow{font-family:var(--q-sans);font-size:13px;letter-spacing:.22em;font-weight:600}
 .q-eyebrow::before{width:40px;background:var(--fg)}
 .pv-hero-img,.pv-detail-img,.pv-hero-wide{border:1px solid var(--fg);padding:10px;background:var(--card);box-sizing:border-box}
 .pv-hero-img img,.pv-detail-img img,.pv-hero-wide img{border-radius:0}

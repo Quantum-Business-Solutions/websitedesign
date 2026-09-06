@@ -376,3 +376,33 @@ and INP/jQuery is a portal setting that may beat all of it. See `process/roadmap
 
 **Still open from that pass:** the three preview panels share one layout and differ only in ground
 and heading face — honest, but a per-theme hero treatment would show what Press does editorially.
+
+
+## 2026-09-06, evening: the Kelly preview site, two agent passes before the client sees it
+
+**Copy and facts (34 findings):** an invented 2pm service cutoff stated as policy; a quotation we
+wrote attributed to "Kelly service leadership"; a founding city the brief never stated; "Top 10 Ricoh
+dealer" softened from an unverified "sixth-largest"; "factory-trained", showrooms at all four
+branches, a certified DocuWare team, "within one business day", all unsourced; "What we heard" on
+the hub when nothing had been heard; the hub footer claiming every number was sourced and marked.
+Fixes: every unsourced claim removed or qualified; the real Edwards Craver Veach testimonial replaces
+the invented quote; a ten-item **To confirm** section on the hub lists every draft claim by name; the
+hub says plainly that we have not interviewed the client yet.
+
+**Mobile and design (19 findings):** the three directions were one page with a heading font swapped
+(Showcase indistinguishable from Clean); Showcase's hero pushed the offer below a 900px fold; the
+compare block rendered three phone layouts in 319px frames with their own switchers; the hub's sticky
+bar took 22% of a phone and anchors landed under it; duplicate "Start with the assessment" blocks;
+placeholder map boxes; partner logos at 60px; footer social links running together; 17px tap targets.
+Fixes: per-direction component systems in `preview.py` (Showcase: display weight, pills, floating
+cards, image left; Press: serif past the headline, plates, folios, 2px corners); hero scale clamps
+per direction (first CTA at 786/798/812 px on 1440x900); compare as scaled desktop frames with the
+switcher hidden when embedded; thumbnails on the direction cards; static bar on phones and
+`scroll-padding-top`; closing CTA suppressed on pages with a form; footer and utility targets at 44px.
+
+**Gate after both passes:** Clean 97, Showcase 97, Press 96 (after a 12.5px eyebrow fix), Locations 96.
+axe default rules clean at 390 and 1440 on all pages.
+
+**Two lessons for the process.** A rendered preview is where unsourced specifics hide, because
+specific copy reads well; the fact checker must run on the *content file*, not the brief. And "three
+directions" is a claim the generator has to earn with components and composition, not just tokens.
