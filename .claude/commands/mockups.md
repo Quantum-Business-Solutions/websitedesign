@@ -47,8 +47,18 @@ python3 scripts/mockup.py \
     --brief brands/<slug>.md \
     --roles "The safe one|The stretch|The wildcard" \
     --rationales "<why A>|<why B>|<why C>" \
+    --eyebrow "<their line, e.g. Moving business forward since 1947>" \
+    --cards "<service 1>|<service 2>|<service 3>" \
+    --stats "<value>:<label>|<value>:<label>|<value>:<label>" \
+    --cta "<primary button>" --cta2 "<secondary>" --nav "<a>|<b>|<c>|<d>" \
+    --logo-text "<Company>" \
     --out /tmp/<slug>-directions.html
 ```
+
+**`--eyebrow`, `--cards` and `--stats` are required and have no defaults.** The first Kelly render
+shipped a dental demo's "General dentistry / Orthodontics / Implants" cards under Kelly's headline,
+and only the screenshot caught it. Every word in the preview is now yours: pull the three services
+from their nav and the three stats from the brief's *Proof points*.
 
 Pipe-separated, so rationales can contain commas. It renders from `themes/tokens.json` — the
 themes' real tokens — so the colours and faces are what ships, not an approximation.

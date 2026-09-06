@@ -63,6 +63,13 @@ def load_tokens():
         return json.load(fh)["themes"]
 
 
+def _plain(md: str) -> str:
+    """Markdown emphasis and code spans read as noise in rendered HTML."""
+    md = re.sub(r"\*\*(.+?)\*\*", r"\1", md)
+    md = re.sub(r"`([^`]*)`", r"\1", md)
+    return md.strip()
+
+
 def parse_brief(path):
     """Pull what the main page needs out of brands/<slug>.md. Best effort -- a
     missing field renders as a visible gap, which is the correct behaviour: the
@@ -89,17 +96,21 @@ def parse_brief(path):
             out["read"] = val
     sec = re.search(r"## Client-stated constraints.*?\n(.*?)(?=\n## )", txt, re.S)
     if sec:
-        out["constraints"] = [
-            re.sub(r"\*\*", "", l).strip("- ").strip()
-            for l in sec.group(1).splitlines()
-            if l.strip().startswith("- ") and "<" not in l
-        ]
+        # Bullets wrap at 100 columns in every brief; a continuation line starts with
+        # two spaces. Join them, or a constraint renders as a confident half-sentence.
+        items = []
+        for l in sec.group(1).splitlines():
+            if l.strip().startswith("- "):
+                items.append(l.strip()[2:].strip())
+            elif l.startswith("  ") and items and l.strip():
+                items[-1] += " " + l.strip()
+        out["constraints"] = [_plain(i) for i in items if "<" not in i]
     sec = re.search(r"## Competitors ingested.*?\n(.*?)(?=\n## )", txt, re.S)
     if sec:
         rows = [l for l in sec.group(1).splitlines()
                 if l.strip().startswith("|") and "---" not in l]
         out["competitors"] = [
-            [c.strip() for c in r.strip().strip("|").split("|")] for r in rows[1:]
+            [_plain(c.strip()) for c in r.strip().strip("|").split("|")] for r in rows[1:]
         ]
     m = re.search(r"\*\*Organic traffic:\*\*\s*([^\n·]+)", txt)
     if m:
@@ -148,7 +159,7 @@ def option_card(idx, name, meta, tok, role, rationale):
     <div class="mock">
       <div class="m-nav">
         <span class="m-logo">{E(NAV_LOGO)}</span>
-        <span class="m-links"><i>Services</i><i>About</i><i>Insights</i>
+        <span class="m-links">{''.join(f"<i>{E(n)}</i>" for n in NAV_LINKS)}
           <b class="m-cta">{E(CTA_LABEL)}</b></span>
       </div>
       <div class="m-hero">
@@ -159,9 +170,7 @@ def option_card(idx, name, meta, tok, role, rationale):
           <b class="m-cta2">{E(CTA2_LABEL)}</b></span>
       </div>
       <div class="m-band">
-        <div class="m-stat"><b>12</b><span>locations</span></div>
-        <div class="m-stat"><b>4.9</b><span>average rating</span></div>
-        <div class="m-stat"><b>30 yrs</b><span>in practice</span></div>
+        {''.join(f'<div class="m-stat"><b>{E(v)}</b><span>{E(l)}</span></div>' for v, l in STATS)}
       </div>
       <div class="m-cards">
         <div class="m-card"><h5>{E(CARD1)}</h5><p>{E(CARD_BODY)}</p><span class="m-link">More →</span></div>
@@ -184,15 +193,20 @@ def option_card(idx, name, meta, tok, role, rationale):
 
 
 # Mock copy. Deliberately specific: real content is the difference between a mockup
-# a prospect can judge and a template they can't. Lorem is banned -- guardrails.
+# a prospect can judge and a template they can't. Lorem is banned -- guardrails --
+# and so is another client's copy: the first Kelly render shipped "General dentistry"
+# cards from a dental demo, and only a human looking at the screenshot caught it.
+# So there are no defaults. --eyebrow, --cards and --stats are required.
 NAV_LOGO = "LOGO"
-CTA_LABEL = "Book a consult"
-CTA2_LABEL = "See our practices"
-EYEBROW = "Twelve practices, one standard"
+NAV_LINKS = ["Services", "About", "Insights"]
+CTA_LABEL = "Book a call"
+CTA2_LABEL = "See how it works"
+EYEBROW = ""
 HEADLINE = ""
 SUBHEAD = ""
-CARD1, CARD2, CARD3 = "General dentistry", "Orthodontics", "Implants"
-CARD_BODY = "What it involves, what it costs, and how soon you can be seen."
+CARD1, CARD2, CARD3 = "", "", ""
+CARD_BODY = "What it covers, what it costs, and how quickly it starts."
+STATS = []
 
 
 # Rough typeface classes, for selection rule 5. A serif and a grotesque read as
@@ -480,6 +494,14 @@ def main():
                    help="pipe-separated, so prose can contain commas")
     p.add_argument("--rationales", default="||",
                    help="pipe-separated, one per direction")
+    p.add_argument("--eyebrow", help="the small line above the headline, e.g. 'Since 1947'")
+    p.add_argument("--cards", help="three service names, pipe-separated")
+    p.add_argument("--card-body", help="one line under each card")
+    p.add_argument("--stats", help='three "value:label" pairs, pipe-separated — the stat-band')
+    p.add_argument("--cta", help="primary button label")
+    p.add_argument("--cta2", help="secondary button label")
+    p.add_argument("--nav", help="three or four nav labels, pipe-separated")
+    p.add_argument("--logo-text", help="what stands in for the logo")
     p.add_argument("--override", metavar="REASON",
                    help="proceed despite a selection-rule violation. Recorded in the output.")
     p.add_argument("--out", default="mockups.html")
@@ -504,6 +526,33 @@ def main():
         print("\nREFUSING: the set of three violates a selection rule (above).\n"
               'Fix the set, or pass --override "<reason>" if you have one.', file=sys.stderr)
         return 2
+
+    global EYEBROW, CARD1, CARD2, CARD3, CARD_BODY, STATS, CTA_LABEL, CTA2_LABEL, NAV_LINKS, NAV_LOGO
+    missing = [f for f, v in (("--eyebrow", a.eyebrow), ("--cards", a.cards), ("--stats", a.stats)) if not v]
+    if missing:
+        print(f"\nREFUSING: preview copy is required: {' '.join(missing)}.\n"
+              "There is no default copy on purpose -- a placeholder in front of a client is\n"
+              "a placeholder, whoever it was written for (design/guardrails.md).", file=sys.stderr)
+        return 2
+    cards = [c.strip() for c in a.cards.split("|")]
+    if len(cards) != 3:
+        raise SystemExit("--cards takes exactly three, pipe-separated")
+    stats = []
+    for pair in a.stats.split("|"):
+        v, _, l = pair.partition(":")
+        if not l:
+            raise SystemExit(f'--stats entries are "value:label", got {pair!r}')
+        stats.append((v.strip(), l.strip()))
+    if len(stats) != 3:
+        raise SystemExit("--stats takes exactly three (the band is three wide)")
+    EYEBROW = a.eyebrow
+    CARD1, CARD2, CARD3 = cards
+    STATS = stats
+    if a.card_body: CARD_BODY = a.card_body
+    if a.cta: CTA_LABEL = a.cta
+    if a.cta2: CTA2_LABEL = a.cta2
+    if a.nav: NAV_LINKS = [n.strip() for n in a.nav.split("|") if n.strip()]
+    if a.logo_text: NAV_LOGO = a.logo_text
 
     doc = build(a.client,
                 a.promise or brief.get("promise"),
