@@ -73,6 +73,7 @@ Re-skinning rewrites twelve CSS custom properties in one block — see `process/
 | `design/inbox.md` | Drop URLs here, then run `/design-ingest`. |
 | `design/SCHEMA.md` | The ingest contract — slug rule, file shapes, failure handling. |
 | `process/OPERATOR.md` | **Hand this to whoever is building.** Self-contained checklist + the five traps. |
+| `process/clientcommand.md` | **The delivery chain** — catalogue → proposal → plan → page → asset → ticket. |
 | `process/strategy.md` | **Is this the right process to dominate?** An honest answer. |
 | `process/qa-findings.md` | **What a four-agent QA pass found**, verified. Read before trusting an older claim. |
 | `themes/tokens.json` | The nine themes' real tokens, cached. Mockups need no portal access. |
