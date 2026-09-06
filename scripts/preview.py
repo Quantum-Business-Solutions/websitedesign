@@ -97,6 +97,10 @@ def client_tokens(theme: str, brand: dict) -> tuple[str, dict]:
         "--accent": "var(--q-gold)", "--accent-ink": ink, "--accent-lift": lift, "--cta-fg": cta_fg,
         "--border": d["--border"] if ground == "light" else native.get("--border", d["--border"]),
     }
+    for key in ("--q-serif", "--q-sans"):
+        face = (native.get(key) or "").split(",")[0].strip().strip("'\"").lower()
+        if face in FALLBACKS:
+            tok[key] = FALLBACKS[face]
     chrome_bg = brand.get("chrome_bg") if brand.get("chrome") == "dark" else native["--bg"]
     tok["--chrome-bg"] = chrome_bg
     tok["--chrome-fg"] = reskin.best_on(chrome_bg)
@@ -106,10 +110,75 @@ def client_tokens(theme: str, brand: dict) -> tuple[str, dict]:
     return css, tok
 
 
+# Each direction owns its geometry AND its components, or three directions are one page recoloured
+# (themes/architecture.md item 2; the first Kelly QA pass said exactly that about Showcase).
+DIRECTION_CSS = {
+    "clean": r'''
+/* Clean: the control. Humanist sans, bordered cards, 6px buttons, image right. */
+.q-h1{font-weight:700}
+''',
+    "showcase": r'''
+/* Showcase: display grotesque at weight 800, pill buttons, floating cards, image LEFT, bigger stats. */
+.q-h1,.q-h2,.pv-svc h3,.pv-cs .h,.pv-grid .q-card h3,.pv-loc .q-card h3,.pv-post h2,.pv-stage h3{font-weight:800;letter-spacing:-.03em}
+.q-h1{font-size:clamp(40px,4.6vw,68px);line-height:.98}
+.q-btn,.q-form .hs-button,.q-header .q-booknow,.q-mnav-cta{border-radius:999px}
+.q-card{border:0;box-shadow:0 14px 36px rgba(0,5,69,.08);border-radius:var(--radius)}
+.pv-band .q-card{border:1px solid var(--chrome-border);box-shadow:none}
+.pv-hero-grid > div:first-child{order:2}
+.pv-hero-img{border-radius:28px;border:0;box-shadow:0 30px 70px rgba(0,5,69,.14)}
+.pv-badge{border-radius:999px;padding:14px 22px;border:0;box-shadow:0 10px 30px rgba(0,0,0,.12)}
+.pv-stat b{font-size:76px;font-weight:800;letter-spacing:-.03em}
+.pv-stats{gap:12px}.pv-stat{background:var(--card);border-radius:var(--radius);padding:28px 20px;box-shadow:0 10px 30px rgba(0,5,69,.06)}.pv-stat + .pv-stat{border-left:0}
+.q-eyebrow{letter-spacing:.2em;font-weight:700}
+.q-eyebrow::before{width:10px;height:10px;border-radius:50%}
+.pv-svc a{border-top:0;background:var(--card);border-radius:var(--radius);margin-bottom:12px;padding:26px 24px;box-shadow:0 8px 24px rgba(0,5,69,.05)}
+.pv-svc a:last-child{border-bottom:0}
+.pv-svc .num{display:none}.pv-svc a{grid-template-columns:1fr 130px}
+.q-stagenum{width:56px;height:56px;border:0;background:var(--q-gold);color:var(--cta-fg);font-family:var(--q-sans);font-weight:800}
+.pv-quote{border-left:0;padding-left:0;font-size:28px;font-weight:600}
+.pv-detail-img{border:0;box-shadow:0 20px 50px rgba(0,5,69,.12);border-radius:24px}
+@media(max-width:767px){.pv-hero-grid > div:first-child{order:0}.q-h1{font-size:40px}.pv-stat b{font-size:48px}}
+''',
+    "press": r'''
+/* Press: editorial. Serif reaches past the headline; hairline rules; plates around photographs; 2px corners; folios. */
+.q-lead,.pv-quote,.pv-cs .h,.pv-stat b,.pv-badge b,.pv-metric .v,.pv-svc h3,.pv-post h2,.pv-grid .q-card h3,.pv-loc .q-card h3,.pv-stage h3,.pv-faq summary{font-family:var(--q-serif)}
+.q-lead{font-size:21px;line-height:1.55}
+.q-h1{font-weight:500;letter-spacing:-.015em}
+.q-h2{font-weight:500}
+.q-btn,.q-btn-ghost,.q-form input,.q-form select,.q-form textarea,.q-form .hs-button,.q-card,.pv-detail-img,.pv-hero-img,.pv-hero-wide{border-radius:2px}
+.q-header .q-booknow,.q-mnav-cta{border-radius:2px}
+.q-eyebrow{font-family:var(--q-sans);font-size:12.5px;letter-spacing:.22em;font-weight:600}
+.q-eyebrow::before{width:40px;background:var(--fg)}
+.pv-hero-img,.pv-detail-img,.pv-hero-wide{border:1px solid var(--fg);padding:10px;background:var(--card);box-sizing:border-box}
+.pv-hero-img img,.pv-detail-img img,.pv-hero-wide img{border-radius:0}
+.pv-badge{border-radius:0;border:1px solid var(--fg);box-shadow:none;left:auto;right:-14px;bottom:-14px}
+.q-section{border-bottom:1px solid var(--border)}
+.pv-svc a{grid-template-columns:64px 1fr 130px;padding:22px 0}
+.pv-svc .num{width:auto;height:auto;border-radius:0;background:none;margin:0;font-family:var(--q-serif);font-size:22px;color:var(--fg-muted);font-style:italic}
+.pv-svc .num::after{content:attr(data-folio)}
+.pv-svc .more{font-family:var(--q-sans);letter-spacing:.14em}
+.q-card{background:transparent;border:1px solid var(--border);border-top:2px solid var(--fg)}
+.pv-band .q-card{background:rgba(255,255,255,.06);border-top:2px solid var(--chrome-accent)}
+.q-stagenum{border-radius:0;border:1px solid var(--fg);font-style:italic}
+.pv-stat b{font-weight:500}
+.pv-quote{font-style:italic;border-left:0;padding-left:0;font-size:26px}
+.pv-quote::before{content:"\201C";display:block;font-size:64px;line-height:.6;color:var(--accent-ink);margin-bottom:10px}
+@media(max-width:767px){.pv-badge{right:10px;bottom:10px}}
+''',
+}
+
+FALLBACKS = {"open sans": "'Open Sans',Arial,'Helvetica Neue',sans-serif",
+             "bricolage grotesque": "'Bricolage Grotesque','Arial Black','Helvetica Neue',Arial,sans-serif",
+             "playfair display": "'Playfair Display',Georgia,'Times New Roman',serif",
+             "inter": "'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif"}
+
 PREVIEW_CSS = r'''
 /* ===== preview layer: page grammar the modules would supply in HubSpot ===== */
 *{box-sizing:border-box}
+html{scroll-padding-top:130px}
+@media(max-width:767px){html{scroll-padding-top:96px}}
 img{max-width:100%;height:auto}
+.embedded .pv-switch,.embedded .pv-util{display:none}
 .q-skip{position:absolute;top:-200px;left:8px;z-index:100;background:var(--q-gold);color:var(--cta-fg);padding:10px 16px;border-radius:6px;font-weight:600}
 .q-skip:focus{top:8px}
 h1,h2,h3{text-wrap:balance}
@@ -119,7 +188,7 @@ h1,h2,h3{text-wrap:balance}
 /* utility bar */
 .pv-util{background:var(--chrome-bg);border-bottom:1px solid var(--chrome-border)}
 .pv-util .q-container{display:flex;gap:6px 22px;justify-content:flex-end;flex-wrap:wrap;font-size:13px;padding-top:2px;padding-bottom:2px}
-.pv-util a{color:var(--chrome-muted);text-decoration:none;display:inline-flex;align-items:center;min-height:36px}
+.pv-util a{color:var(--chrome-muted);text-decoration:none;display:inline-flex;align-items:center;min-height:44px;padding:0 2px}
 .pv-util a:hover{color:var(--chrome-fg)}
 .pv-util a.pv-phone{color:var(--chrome-fg);font-weight:600}
 /* header on chrome */
@@ -129,7 +198,8 @@ h1,h2,h3{text-wrap:balance}
 .q-header .q-nav > a:hover{color:var(--chrome-accent)}
 .q-header .q-booknow{background:var(--q-gold);color:var(--cta-fg)!important;border-color:var(--q-gold);min-height:44px;display:inline-flex;align-items:center}
 .q-header .q-booknow:hover{background:var(--q-gold-bright)}
-.q-header-logo img{height:40px}
+.q-header-logo img{height:48px;width:auto}
+@media(max-width:767px){.q-header{position:static}.q-header-in{position:sticky;top:0;background:var(--chrome-bg);z-index:50}.pv-util a:not(.pv-phone):not(.pv-keep){display:none}.q-header-logo img{height:40px}}
 .q-logo-text{color:var(--chrome-fg)}
 .q-mnav > summary{border-color:var(--chrome-border)!important}
 .q-mnav > summary span{background:var(--chrome-fg)!important}
@@ -146,14 +216,16 @@ h1,h2,h3{text-wrap:balance}
 .q-footer-links a{min-height:36px;display:flex;align-items:center;padding:0}
 .q-footer-legal{border-top-color:var(--chrome-border)}
 .q-footer-legal a{display:inline-flex;align-items:center;min-height:44px;padding:0 6px}
-.q-footer-social a{margin:0;width:44px;height:44px}
+.q-footer-social a{margin:0;width:auto;min-width:44px;height:44px;padding:0 10px}
+.q-footer-contact a{display:inline-flex;align-items:center;min-height:44px}
 .q-footer img{height:36px}
 @media(max-width:1024px){.q-footer-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.q-footer-grid{grid-template-columns:1fr}}
 /* hero */
 .pv-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
 .pv-hero-img{width:100%;aspect-ratio:3/2;border-radius:calc(var(--radius) + 6px);overflow:hidden;border:1px solid var(--border);background:var(--bg-alt);position:relative}
-.pv-hero-img img{width:100%;height:100%;object-fit:cover;display:block}
+.pv-hero-img img{width:100%;height:100%;object-fit:cover;object-position:22% 50%;display:block}
+.q-h1{max-width:16ch}
 .pv-badge{position:absolute;left:20px;bottom:20px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:14px 18px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
 .pv-badge b{display:block;font-family:var(--q-serif);font-size:30px;line-height:1;color:var(--accent-ink)}
 .pv-badge span{font-size:13px;color:var(--fg-muted)}
@@ -166,9 +238,10 @@ h1,h2,h3{text-wrap:balance}
 .pv-partners{padding:8px 0 70px}
 .pv-partners .q-container{padding-top:36px;border-top:1px solid var(--border)}
 .pv-cap{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-muted);text-align:center;margin:0 0 22px}
-.pv-logos{display:flex;flex-wrap:wrap;gap:18px 34px;align-items:center;justify-content:center}
-.pv-logos img{height:40px;width:auto;max-width:130px;object-fit:contain;filter:grayscale(1);transition:filter .2s}
+.pv-logos{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:18px 28px;align-items:center;max-width:1000px;margin:0 auto}
+.pv-logos img{width:100%;height:44px;object-fit:contain;mix-blend-mode:multiply;filter:grayscale(1) opacity(.82);transition:filter .2s}
 .pv-logos img:hover{filter:none}
+@media(max-width:767px){.pv-logos{grid-template-columns:repeat(3,1fr);gap:14px 18px}}
 .pv-logos span{font-family:var(--q-serif);font-size:20px;color:var(--fg-muted)}
 /* stats */
 .pv-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
@@ -238,6 +311,7 @@ h1,h2,h3{text-wrap:balance}
 .pv-detail{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start}
 .pv-detail .q-h2{margin-top:14px}
 .pv-detail ul{margin:22px 0 0;padding-left:20px;color:var(--fg);line-height:1.8;font-size:16px}
+.pv-detail > div:last-child > ul:first-child{margin-top:38px}
 .pv-detail ul li::marker{color:var(--accent-ink)}
 .pv-detail .q-lead{margin-top:18px}
 .pv-detail-img{aspect-ratio:3/2;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);background:var(--bg-alt);margin-bottom:18px}
@@ -256,15 +330,27 @@ h1,h2,h3{text-wrap:balance}
 .pv-cta{text-align:center}
 .pv-cta .q-container{max-width:820px}
 /* direction switcher */
-.pv-switch{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:90;display:flex;gap:4px;align-items:center;background:rgba(20,23,28,.92);color:#fff;border-radius:999px;padding:6px 8px 6px 14px;font:13px/1 Inter,system-ui,sans-serif;box-shadow:0 10px 30px rgba(0,0,0,.25);backdrop-filter:blur(6px)}
+.pv-switch{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:90;display:flex;gap:4px;align-items:center;background:rgba(20,23,28,.94);color:#fff;border-radius:999px;padding:6px 8px 6px 14px;font:13px/1 Inter,system-ui,sans-serif;box-shadow:0 10px 30px rgba(0,0,0,.25);backdrop-filter:blur(6px);white-space:nowrap}
 .pv-switch .lbl{opacity:.7;margin-right:6px}
-.pv-switch a{color:#fff;text-decoration:none;padding:10px 12px;border-radius:999px;min-height:36px;display:inline-flex;align-items:center}
-.pv-switch a.on{background:rgba(255,255,255,.16)}
+.pv-switch a{color:#fff;text-decoration:none;padding:10px 12px;border-radius:999px;min-height:36px;display:inline-flex;align-items:center;white-space:nowrap}
+.pv-switch a[aria-current]{background:rgba(255,255,255,.18);box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)}
 .pv-switch a:hover{background:rgba(255,255,255,.1)}
+.pv-switch-m{display:none}
+@media(max-width:767px){
+  .pv-switch{display:none}
+  .pv-switch-m{display:block;position:fixed;right:10px;bottom:10px;z-index:90;font:13px/1 Inter,system-ui,sans-serif}
+  .pv-switch-m summary{list-style:none;cursor:pointer;background:rgba(20,23,28,.94);color:#fff;border-radius:999px;padding:12px 16px;min-height:44px;display:inline-flex;align-items:center;gap:8px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+  .pv-switch-m summary::-webkit-details-marker{display:none}
+  .pv-switch-m[open] summary{border-radius:14px 14px 0 0}
+  .pv-switch-m .menu{position:absolute;right:0;bottom:100%;margin-bottom:6px;background:rgba(20,23,28,.96);border-radius:14px;padding:6px;display:flex;flex-direction:column;min-width:180px;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+  .pv-switch-m .menu a{color:#fff;text-decoration:none;padding:12px 14px;border-radius:10px;min-height:44px;display:flex;align-items:center}
+  .pv-switch-m .menu a[aria-current]{background:rgba(255,255,255,.18)}
+}
 /* responsive */
 @media(max-width:1024px){.pv-hero-grid{grid-template-columns:1fr}.pv-cs,.pv-contact,.pv-detail{grid-template-columns:1fr;gap:34px}.pv-grid-4{grid-template-columns:repeat(2,1fr)}.pv-grid-5{grid-template-columns:repeat(5,1fr);gap:12px}.pv-stats{grid-template-columns:repeat(2,1fr);gap:28px 0}.pv-stat:nth-child(3){border-left:none}}
 @media(max-width:767px){
   .q-section{padding:56px 0}
+  .q-h1{max-width:none}
   .pv-util .q-container{justify-content:flex-start}
   .pv-grid-2,.pv-grid-3,.pv-grid-4,.pv-grid-5{grid-template-columns:1fr}
   .pv-svc a{grid-template-columns:1fr;gap:8px;padding:20px 0}.pv-svc .num{display:none}.pv-svc .more{justify-self:start}
@@ -323,7 +409,7 @@ def r_stats(s, ctx):
 
 def r_services(s, ctx):
     rows = "".join(
-        f'<a href="{E(href)}"><div class="num" aria-hidden="true"></div><div><h3>{E(t)}</h3><p>{E(b)}</p></div><div class="more">Learn more</div></a>'
+        f'<a href="{E(href)}"><div class="num" aria-hidden="true" data-folio="{i:02d}"></div><div><h3>{E(t)}</h3><p>{E(b)}</p></div><div class="more">Learn more</div></a>'
         for i, (t, b, href) in enumerate(s["items"], 1))
     return f'{sec_open(s)} <div class="q-container"><div class="pv-split"><h2 class="q-h2">{E(s["heading"])}</h2><p>{E(s.get("intro"))}</p></div><div class="pv-svc">{rows}</div></div></section>'
 
@@ -361,7 +447,7 @@ def r_locations(s, ctx):
     n = len(s["items"]); cols = cols_for(n)
     cards = []
     for name, a1, a2, phone, href in s["items"]:
-        mp = '<div class="pv-map">Map and hours</div>' if s.get("detailed") else ""
+        mp = ""
         cards.append(f'<div class="q-card">{mp}<h3>{E(name)}</h3><p>{E(a1)}<br>{E(a2)}<br><a href="{E(href)}">{E(phone)}</a></p></div>')
     return f'{sec_open(s)} <div class="q-container"><div class="pv-split"><h2 class="q-h2">{E(s["heading"])}</h2><p>{E(s.get("intro"))}</p></div><div class="pv-grid pv-grid-{cols} pv-loc">{"".join(cards)}</div></div></section>'
 
@@ -433,11 +519,11 @@ RENDER = {"hero": r_hero, "partners": r_partners, "stats": r_stats, "services": 
 
 def header(content, ctx):
     b = content["brand"]
-    util = "".join(f'<a href="{E(h)}">{E(l)}</a>' for l, h in ((u["label"], u["href"]) for u in b.get("utility", [])))
+    util = "".join(f'<a href="{E(h)}"{" class=pv-keep" if i == 0 else ""}>{E(l)}</a>' for i, (l, h) in enumerate((u["label"], u["href"]) for u in b.get("utility", [])))
     if b.get("phone"):
         util += f'<a class="pv-phone" href="{E(b["phone_href"])}">{E(b["phone"])}</a>'
     nav = "".join(f'<a href="{E(h)}">{E(l)}</a>' for l, h in content["nav"])
-    mnav = "".join(f'<a href="{E(h)}">{E(l)}</a>' for l, h in content["nav"])
+    mnav = "".join(f'<a href="{E(h)}">{E(l)}</a>' for l, h in content["nav"]) + "".join(f'<a href="{E(u["href"])}">{E(u["label"])}</a>' for u in b.get("utility", [])[1:])
     cta = f'<a class="q-booknow" href="{E(b["cta"]["href"])}">{E(b["cta"]["label"])}</a>' if b.get("cta") else ""
     mcta = f'<a class="q-mnav-cta" href="{E(b["cta"]["href"])}">{E(b["cta"]["label"])}</a>' if b.get("cta") else ""
     lw, lh = b.get("logo_w", 300), b.get("logo_h", 100)
@@ -475,10 +561,15 @@ def footer(content, ctx):
 
 
 def switcher(themes, this_theme, page_file, recommend):
-    links = "".join(
-        f'<a href="../{slug_of(t)}/{page_file}"{" class=on" if t == this_theme else ""}>{E(t.replace("Quantum ", ""))}{" ★" if t == recommend else ""}</a>'
-        for t in themes)
-    return f'<nav class="pv-switch" aria-label="Preview directions"><span class="lbl">Direction</span>{links}<a href="../index.html">All</a></nav>'
+    def link(t):
+        cur = ' aria-current="page"' if t == this_theme else ""
+        label = t.replace("Quantum ", "") + (" (recommended)" if t == recommend and t != this_theme else "")
+        return f'<a href="../{slug_of(t)}/{page_file}"{cur}>{E(label)}</a>'
+    links = "".join(link(t) for t in themes)
+    cur_name = this_theme.replace("Quantum ", "")
+    return (f'<nav class="pv-switch" aria-label="Preview directions"><span class="lbl">Direction</span>{links}<a href="../index.html">All three</a></nav>'
+            f'<details class="pv-switch-m"><summary aria-label="Change direction">Direction: {E(cur_name)} &#9662;</summary><nav class="menu" aria-label="Preview directions">{links}<a href="../index.html">All three</a></nav></details>'
+            '<script>if(top!==self){document.documentElement.classList.add("embedded")}</script>')
 
 
 def schema_blocks(content, page, base, dslug):
@@ -529,7 +620,10 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
         return None
 
     ctx = {"rel": rel, "partner_logo": partner_logo, "brand": b, "year": 2026, "srcset": lambda pth: srcset_for(pth, out_dir)}
-    body = "".join(RENDER[s["type"]](s, ctx) for s in page["sections"])
+    secs = list(page["sections"])
+    if any(x["type"] in ("leadform", "contact") for x in secs) and secs and secs[-1]["type"] == "cta":
+        secs = secs[:-1]   # two "start with the assessment" blocks in a row read as a template bug
+    body = "".join(RENDER[s["type"]](s, ctx) for s in secs)
     canonical = f"{base}/{dslug}/{page['file'].replace('index.html', '')}".rstrip("/") if page["file"] == "index.html" else f"{base}/{dslug}/{page['file'].replace('.html', '')}"
     og_img = f"{base}/assets/hero-og.jpg"
     tokcss = "\n  ".join(f"{k}:{v};" for k, v in tok.items())
@@ -564,6 +658,8 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
   {tokcss}
 }}
 {PREVIEW_CSS}
+/* ===== direction system: {E(dslug)} ===== */
+{DIRECTION_CSS.get(dslug, "")}
 </style>
 {schema_blocks(content, page, base, dslug)}
 </head>
@@ -602,7 +698,7 @@ def main(argv=None):
             doc = render_page(content, page, t, css, tok, themes, a.recommend, base, a.out, slug_of(t))
             open(os.path.join(d, page["file"]), "w", encoding="utf-8").write(doc); written += 1
         print(f"  {t:20} {len(content['pages'])} pages  accent {tok['--q-gold']} ink {tok['--accent-ink']} cta-fg {tok['--cta-fg']} chrome {tok['--chrome-bg']}")
-    open(os.path.join(a.out, "index.html"), "w", encoding="utf-8").write(hub(content, themes, a.recommend, base, roles, not a.no_standard, client_tokens))
+    open(os.path.join(a.out, "index.html"), "w", encoding="utf-8").write(hub(content, themes, a.recommend, base, roles, not a.no_standard, client_tokens, a.out))
     print(f"wrote {written} pages + hub to {a.out}")
     if DASH_HITS:
         print(f"\nwarning: {len(DASH_HITS)} string(s) contained an em/en dash and were rewritten with a comma. Fix the content file:")

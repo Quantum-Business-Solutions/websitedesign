@@ -195,7 +195,7 @@
           },
           "note": "Ricoh, Konica Minolta, Sharp and Brother dealer",
           "image": "assets/hero-1200.jpg",
-          "image_alt": "A technician replacing a toner unit. Placeholder image until Kelly photography exists.",
+          "image_alt": "A technician kneeling beside an open office copier, replacing a toner unit",
           "image_w": 1200,
           "image_h": 800,
           "badge": {
@@ -522,7 +522,7 @@
             "Quarterly review, then back to the assessment if anything moved"
           ],
           "image": "assets/dispatch-1200.jpg",
-          "image_alt": "A service dispatcher at work. Placeholder image until Kelly photography exists.",
+          "image_alt": "A service dispatcher at work.",
           "image_w": 1200,
           "image_h": 800,
           "flip": false
@@ -554,7 +554,7 @@
             "Cost comparison against your current outsourced spend"
           ],
           "image": "assets/production-1200.jpg",
-          "image_alt": "A production printer feeding finished booklets. Placeholder image until Kelly photography exists.",
+          "image_alt": "A production printer feeding finished booklets.",
           "image_w": 1200,
           "image_h": 800,
           "flip": false
@@ -572,7 +572,7 @@
             "Microsoft 365 licensing and migration"
           ],
           "image": "assets/it-1200.jpg",
-          "image_alt": "A technician checking a small office server rack. Placeholder image until Kelly photography exists.",
+          "image_alt": "A technician checking a small office server rack.",
           "image_w": 1200,
           "image_h": 800,
           "flip": true
@@ -604,7 +604,7 @@
             "Filter changes and sanitizing on schedule"
           ],
           "image": "assets/breakroom-1200.jpg",
-          "image_alt": "An office break room with a filtered water cooler and coffee machine. Placeholder image until Kelly photography exists.",
+          "image_alt": "An office break room with a filtered water cooler and coffee machine.",
           "image_w": 1200,
           "image_h": 800,
           "flip": true

@@ -33,7 +33,8 @@ def _ground(bg: str) -> str:
     return "White"
 
 
-def hub(content, themes, recommend, base, roles, standard, client_tokens):
+def hub(content, themes, recommend, base, roles, standard, client_tokens, out_dir=None):
+    import os
     b = content["brand"]
     pitch = content.get("pitch", {})
     ink = reskin.darken_until(b["accent"], "#f6f7f6")
@@ -46,14 +47,18 @@ def hub(content, themes, recommend, base, roles, standard, client_tokens):
         short = t.replace("Quantum ", "")
         face = (nat.get("--q-serif") or "").split(",")[0].strip("'\"")
         rec = '<span class="rec">our recommendation</span>' if t == recommend else ""
+        thumb = f"screenshots/{_slug(t)}-home-1440.jpg"
+        has_thumb = bool(out_dir) and os.path.exists(os.path.join(out_dir, thumb))
+        thumb_html = (f'<a class="thumb" href="{_slug(t)}/index.html" target="_blank" rel="noopener"><img src="{thumb}" alt="{_e(short)} home page at desktop width" width="720" height="450" loading="lazy"></a>'
+                      if has_thumb else "")
         specs.append(
-            '<article class="dir"><div class="dir-h">'
-            f'<span class="n">{i} / {n}</span><h2 class="h3">{_e(short)}{rec}</h2><p>{_e(roles.get(t, ""))}</p></div>'
-            '<dl class="spec">'
-            f'<div><dt>Measure</dt><dd>{_e(nat.get("--maxw", "1240px"))}</dd></div>'
+            '<article class="dir">' + thumb_html + '<div class="dir-h">'
+            f'<span class="n">{i} / {n}</span><h2 class="h3">{_e(short)}</h2>{rec}<p>{_e(roles.get(t, ""))}</p></div>'
+            '<details class="specd"><summary>Design specifics</summary><dl class="spec">'
             f'<div><dt>Headings</dt><dd>{_e(face)}</dd></div>'
             f'<div><dt>Ground</dt><dd>{_e(_ground(nat["--bg"]))}</dd></div>'
-            f'<div><dt>Corner</dt><dd>{_e(nat.get("--radius", "8px"))}</dd></div></dl>'
+            f'<div><dt>Page width</dt><dd>{_e(nat.get("--maxw", "1240px"))}</dd></div>'
+            f'<div><dt>Corners</dt><dd>{_e(nat.get("--radius", "8px"))}</dd></div></dl></details>'
             f'<a class="btn" href="{_slug(t)}/index.html" target="_blank" rel="noopener">Open {_e(short)}</a></article>')
 
     pick = recommend or themes[0]
@@ -71,8 +76,9 @@ def hub(content, themes, recommend, base, roles, standard, client_tokens):
     pages = content["pages"]
     page_opts = "".join(f'<option value="{_e(pg["file"])}">{_e(_pname(pg))}</option>' for pg in pages)
     frames = "".join(
-        f'<figure><figcaption>{_e(t.replace("Quantum ", ""))}</figcaption>'
-        f'<iframe title="{_e(t.replace("Quantum ", ""))} preview" loading="lazy" src="{_slug(t)}/index.html" data-dir="{_slug(t)}"></iframe></figure>'
+        f'<figure><figcaption>{_e(t.replace("Quantum ", ""))}</figcaption><div class="scale">'
+        f'<iframe title="{_e(t.replace("Quantum ", ""))} preview" loading="lazy" src="{_slug(t)}/index.html" data-dir="{_slug(t)}" width="1440" height="1000"></iframe></div>'
+        f'<a class="open" href="{_slug(t)}/index.html" target="_blank" rel="noopener" data-dir="{_slug(t)}">Open full size</a></figure>'
         for t in themes)
     every = ""
     for t in themes:
@@ -90,7 +96,9 @@ def hub(content, themes, recommend, base, roles, standard, client_tokens):
 *{{box-sizing:border-box}}body{{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 Inter,system-ui,sans-serif}}
 a{{color:var(--ink)}}
 .skip{{position:absolute;top:-200px;left:8px;background:var(--accent);color:#000;padding:10px 16px;border-radius:6px}}.skip:focus{{top:8px}}
-.top{{background:var(--chrome);position:sticky;top:0;z-index:20}}.top .wrap{{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:64px}}.top img{{height:36px}}
+html{{scroll-padding-top:80px}}
+.top{{background:var(--chrome);position:sticky;top:0;z-index:20}}
+@media(max-width:900px){{.top{{position:static}}html{{scroll-padding-top:12px}}}}.top .wrap{{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:64px}}.top img{{height:36px}}
 .top nav{{display:flex;gap:4px;flex-wrap:wrap}}.top nav a{{color:rgba(255,255,255,.82);text-decoration:none;font-size:13.5px;padding:10px 10px;border-radius:8px;min-height:44px;display:inline-flex;align-items:center}}.top nav a:hover{{color:#fff;background:rgba(255,255,255,.08)}}
 .wrap{{max-width:1040px;margin:0 auto;padding:0 24px}}
 section{{padding:64px 0;border-bottom:1px solid var(--border)}}
@@ -103,23 +111,29 @@ h3,.h3{{font-size:22px;margin:0 0 6px;letter-spacing:-.01em}}h4,.h4{{font-size:1
 .dirs{{display:grid;grid-template-columns:repeat({n},1fr);gap:18px}}
 .dir{{border:1px solid var(--border);border-radius:14px;padding:24px;background:var(--bg-alt);display:flex;flex-direction:column;gap:18px}}
 .dir .n{{font-size:13px;color:var(--muted);letter-spacing:.08em}}.dir p{{margin:6px 0 0;color:var(--muted);font-size:14.5px}}
-.rec{{display:inline-block;margin-left:8px;font-size:12.5px;font-weight:600;letter-spacing:.04em;color:var(--ink);border:1px solid var(--accent);border-radius:999px;padding:2px 10px;vertical-align:middle}}
+.rec{{display:inline-block;margin:6px 0 0;font-size:13px;font-weight:600;letter-spacing:.04em;color:var(--ink);border:1px solid var(--accent);border-radius:999px;padding:2px 10px;vertical-align:middle}}
 .spec{{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;margin:0}}.spec dt{{font-size:13px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}}.spec dd{{margin:2px 0 0;font-weight:600;font-size:14.5px}}
 .btn{{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;background:var(--accent);color:#000545;border-radius:8px;text-decoration:none;font-weight:600;margin-top:auto}}
 .btn:hover{{filter:brightness(.95)}}
 .pick{{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}}
 .why{{padding:16px 0;border-top:1px solid var(--border)}}.why:last-of-type{{border-bottom:1px solid var(--border)}}.why p{{margin:4px 0 0;color:var(--muted);font-size:15px}}
 .change{{background:var(--bg-alt);border:1px solid var(--border);border-radius:12px;padding:20px 22px;margin-top:22px;font-size:15px}}
-.alts{{display:grid;grid-template-columns:1fr 1fr;gap:16px}}.alt{{display:block;border:1px solid var(--border);border-radius:12px;padding:20px 22px;text-decoration:none;color:inherit;background:var(--bg-alt)}}.alt:hover{{border-color:var(--accent)}}.alt p{{color:var(--muted);font-size:14.5px;margin:0 0 10px}}.alt span{{font-weight:600;color:var(--ink);font-size:14px}}
+.alts{{display:grid;grid-template-columns:1fr 1fr;gap:16px}}.alts.single{{grid-template-columns:1fr;max-width:560px}}.alt{{display:block;border:1px solid var(--border);border-radius:12px;padding:20px 22px;text-decoration:none;color:inherit;background:var(--bg-alt)}}.alt:hover{{border-color:var(--accent)}}.alt p{{color:var(--muted);font-size:14.5px;margin:0 0 10px}}.alt span{{font-weight:600;color:var(--ink);font-size:14px}}
 .cmp-bar{{display:flex;gap:14px;align-items:center;margin:0 0 18px;flex-wrap:wrap}}select{{font:inherit;font-size:16px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;background:var(--bg);color:var(--fg);min-height:44px}}
 .frames{{display:grid;grid-template-columns:repeat({n},1fr);gap:14px}}.frames figure{{margin:0}}.frames figcaption{{font-size:13px;color:var(--muted);margin:0 0 8px;font-weight:600}}
-.frames iframe{{width:100%;aspect-ratio:9/16;border:1px solid var(--border);border-radius:12px;background:#fff}}
+.frames .scale{{width:100%;aspect-ratio:1440/1000;overflow:hidden;border:1px solid var(--border);border-radius:12px;background:#fff;position:relative}}
+.frames iframe{{width:1440px;height:1000px;border:0;transform-origin:0 0;position:absolute;left:0;top:0;pointer-events:none}}
+.frames .open{{display:inline-flex;align-items:center;min-height:44px;font-size:14px;font-weight:600;text-decoration:none;color:var(--ink)}}
+.cmp-note{{display:none;color:var(--muted);font-size:14.5px}}
+.thumb{{display:block;border-radius:10px;overflow:hidden;border:1px solid var(--border);aspect-ratio:16/10;background:#fff}}.thumb img{{width:100%;height:100%;object-fit:cover;object-position:top;display:block}}
+.specd summary{{cursor:pointer;font-size:13.5px;color:var(--muted);min-height:44px;display:flex;align-items:center;list-style:none}}.specd summary::-webkit-details-marker{{display:none}}.specd summary::before{{content:"+";margin-right:8px;color:var(--ink);font-weight:700}}.specd[open] summary::before{{content:"\2212"}}
+.specd .spec{{margin-top:8px}}
 .every{{display:grid;grid-template-columns:repeat({n},1fr);gap:24px}}.every .col a{{display:flex;align-items:center;min-height:44px;text-decoration:none;color:var(--fg);border-top:1px solid var(--border);font-size:15px}}.every .col a:hover{{color:var(--ink)}}
 .two{{display:grid;grid-template-columns:1fr 1fr;gap:40px}}ul{{margin:0;padding-left:18px}}li{{margin:8px 0;color:var(--fg)}}li::marker{{color:var(--accent)}}
 .plan{{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}}.step{{border-top:2px solid var(--accent);padding-top:12px}}.when{{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);font-weight:700}}.step p{{margin:8px 0 0;font-size:14.5px;color:var(--muted)}}
 .turn{{background:var(--bg-alt);border:1px solid var(--border);border-radius:14px;padding:28px}}.turn a.btn{{margin:0 12px 12px 0}}
 footer{{padding:36px 0 80px;color:var(--muted);font-size:13.5px;max-width:66ch}}
-@media(max-width:900px){{.dirs,.frames,.every,.plan{{grid-template-columns:1fr}}.pick,.alts,.two{{grid-template-columns:1fr}}.frames iframe{{aspect-ratio:3/4}}}}
+@media(max-width:900px){{.dirs,.every,.plan{{grid-template-columns:1fr}}.pick,.alts,.two{{grid-template-columns:1fr}}.frames{{display:none}}.cmp-note{{display:block}}}}
 """
     return f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
@@ -141,18 +155,23 @@ footer{{padding:36px 0 80px;color:var(--muted);font-size:13.5px;max-width:66ch}}
 <section id="three"><div class="wrap"><p class="eyebrow">The three</p><div class="dirs">{"".join(specs)}</div></div></section>
 <section id="pick"><div class="wrap"><p class="eyebrow">Our recommendation</p><div class="pick"><div><h2>We would build {_e(pick_short)}</h2><p class="lead">{_e(roles.get(pick, ""))}</p>{reasons}<div class="change"><strong>The one thing we would change:</strong> {_e(pitch.get("pick_change", ""))}</div><p style="margin-top:22px"><a class="btn" href="{pick_slug}/index.html" target="_blank" rel="noopener">Open {_e(pick_short)}</a></p></div>
 <div><h3 class="h3" style="font-size:18px;margin-bottom:14px">If you would rather not</h3><div class="alts" style="grid-template-columns:1fr">{alts}</div></div></div></div></section>
-<section id="compare"><div class="wrap"><p class="eyebrow">Side by side</p><h2>The same page, all three at once</h2><div class="cmp-bar"><label for="cmp">Pick a page</label><select id="cmp">{page_opts}</select></div><div class="frames">{frames}</div></div></section>
+<section id="compare"><div class="wrap"><p class="eyebrow">Side by side</p><h2>The same page, all three at once</h2><div class="cmp-bar"><label for="cmp">Pick a page</label><select id="cmp">{page_opts}</select></div><p class="cmp-note">Side by side needs a wider screen. On a phone, open each direction from the cards above.</p><div class="frames">{frames}</div></div></section>
 <section id="heard"><div class="wrap"><div class="two"><div><p class="eyebrow">What we are treating as fixed</p><h2>What your site and brand profile already say</h2><p class="lead" style="margin-bottom:12px">{_e(heard_intro)}</p><ul>{heard}</ul></div><div><p class="eyebrow">What we found</p><h2>And what we would do about it</h2><ul>{found}</ul></div></div></div></section>
 <section id="confirm"><div class="wrap"><p class="eyebrow">To confirm with you</p><h2>Ten things we wrote as a draft, not a fact</h2><p class="lead">Each of these appears on the pages. None is built until you confirm or correct it.</p><ul class="confirm">{confirm}</ul></div></section>
 <section id="every"><div class="wrap"><p class="eyebrow">Every page</p><h2>Built and live in all three</h2><div class="every">{every}</div></div></section>
-<section id="plan"><div class="wrap"><p class="eyebrow">The plan</p><h2>From a choice to a live site</h2><div class="plan">{plan}</div>{('<div class="alts" style="margin-top:28px;grid-template-columns:1fr 1fr">' + std + '</div>') if std else ""}</div></section>
+<section id="plan"><div class="wrap"><p class="eyebrow">The plan</p><h2>From a choice to a live site</h2><div class="plan">{plan}</div>{('<div class="alts single" style="margin-top:28px">' + std + '</div>') if std else ""}</div></section>
 <section id="turn"><div class="wrap"><div class="turn"><p class="eyebrow">Your turn</p><h2>Tell us which one, and what you would change</h2><p class="lead" style="margin-bottom:18px">Reply with the direction and anything on any page you would change. Nothing is locked until you say so.</p><a class="btn" href="mailto:{_e(qc.get("email", ""))}?subject={_e(content["client"])}%20website%20direction">Email {_e(qc.get("name", "us"))}</a><a class="btn" style="background:transparent;border:1px solid var(--accent);color:var(--ink)" href="tel:{_e(phone_href)}">Call {_e(qc.get("phone", ""))}</a></div></div></section>
 </main>
 <footer class="wrap">{_e(pitch.get("footer", "Prepared for " + pitch.get("prepared_for", content["client"]) + ". Nothing here is live or indexed."))}</footer>
 <script>
-document.getElementById('cmp').addEventListener('change', function (e) {{
-  document.querySelectorAll('.frames iframe').forEach(function (f) {{ f.src = f.dataset.dir + '/' + e.target.value; }});
-}});
+(function () {{
+  function fit() {{ document.querySelectorAll('.frames .scale').forEach(function (s) {{ var f = s.querySelector('iframe'); if (f) f.style.transform = 'scale(' + (s.clientWidth / 1440) + ')'; }}); }}
+  fit(); window.addEventListener('resize', fit);
+  document.getElementById('cmp').addEventListener('change', function (e) {{
+    document.querySelectorAll('.frames iframe').forEach(function (f) {{ f.src = f.dataset.dir + '/' + e.target.value; }});
+    document.querySelectorAll('.frames .open').forEach(function (a) {{ a.href = a.dataset.dir + '/' + e.target.value; }});
+  }});
+}})();
 </script>
 </body></html>
 """
