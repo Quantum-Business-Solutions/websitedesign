@@ -666,9 +666,18 @@ async function auditPage(browser, url) {
     }
 
     if (EXPECT_ORG) {
+      // Google: Organization on the home page or a single about page, not site-wide
+      // (process/structured-data.md). An inner page with no Organization block is correct;
+      // an inner page whose block names someone else is not.
+      const path = new URL(url).pathname;
+      const isHome = path === '/' || /^\/[^/]+\/?$/.test(path) && /\/$/.test(path) || /\/index\.html$/.test(path);
       const ok = orgName && orgName.toLowerCase().includes(EXPECT_ORG.toLowerCase());
-      rec(url, 'Organization names the client', ok ? 'PASS' : 'FAIL',
-        `schema says "${orgName || 'nothing'}", expected "${EXPECT_ORG}"`);
+      if (!orgName && !isHome) {
+        rec(url, 'Organization names the client', 'PASS', 'no Organization block on an inner page (home page only is correct)');
+      } else {
+        rec(url, 'Organization names the client', ok ? 'PASS' : 'FAIL',
+          `schema says "${orgName || 'nothing'}", expected "${EXPECT_ORG}"`);
+      }
     }
     if (orgName) {
       const qbs = /quantum business solutions/i.test(orgName);

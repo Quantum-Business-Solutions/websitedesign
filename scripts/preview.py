@@ -85,7 +85,10 @@ def client_tokens(theme: str, brand: dict) -> tuple[str, dict]:
     native = reskin.parse_native(css)
     ground = "dark" if reskin.relative_luminance(native["--bg"]) < 0.18 else "light"
     d = reskin.derive_native(brand["accent"], ground)
-    ink = reskin.darken_until(brand["accent"], native["--bg"])
+    # Accent text must clear 4.5 on the section ground AND the alternate band; derive against the darker.
+    _alt = native.get("--bg-alt", native["--bg"])
+    _darker = _alt if reskin.relative_luminance(_alt) < reskin.relative_luminance(native["--bg"]) else native["--bg"]
+    ink = reskin.darken_until(brand["accent"], _darker)
     lift = brand["accent"] if ground == "dark" else reskin.darken_until(brand["accent"], native.get("--bg-alt", native["--bg"]))
     sec = brand.get("ink_secondary")
     cta_fg = sec if sec and reskin.contrast_ratio(sec, brand["accent"]) >= 4.5 else reskin.best_on(brand["accent"])
@@ -120,7 +123,8 @@ h1,h2,h3{text-wrap:balance}
 .pv-util a:hover{color:var(--chrome-fg)}
 .pv-util a.pv-phone{color:var(--chrome-fg);font-weight:600}
 /* header on chrome */
-.q-header{background:var(--chrome-bg);border-bottom:1px solid var(--chrome-border)}
+.q-header{background:var(--chrome-bg);border-bottom:1px solid var(--chrome-border);display:block}
+.q-header .q-header-in{position:relative}
 .q-header .q-nav > a,.q-header .q-nav-item > a{color:var(--chrome-fg)}
 .q-header .q-nav > a:hover{color:var(--chrome-accent)}
 .q-header .q-booknow{background:var(--q-gold);color:var(--cta-fg)!important;border-color:var(--q-gold);min-height:44px;display:inline-flex;align-items:center}
@@ -154,6 +158,8 @@ h1,h2,h3{text-wrap:balance}
 .pv-badge b{display:block;font-family:var(--q-serif);font-size:30px;line-height:1;color:var(--accent-ink)}
 .pv-badge span{font-size:13px;color:var(--fg-muted)}
 .pv-hero-note{margin-top:28px;font-size:13.5px;color:var(--fg-muted)}
+.pv-hero-wide{margin:48px auto 0;max-width:1000px;aspect-ratio:16/9;border-radius:calc(var(--radius) + 6px);overflow:hidden;border:1px solid var(--border);background:var(--bg-alt)}
+.pv-hero-wide img{width:100%;height:100%;object-fit:cover;display:block}
 .pv-btns{display:flex;gap:16px;margin-top:36px;flex-wrap:wrap;align-items:center}
 .q-h1 em{font-style:normal;color:var(--accent-ink)}
 /* partners */
@@ -174,10 +180,10 @@ h1,h2,h3{text-wrap:balance}
 .pv-split{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;margin-bottom:40px}
 .pv-split .q-h2{max-width:560px}
 .pv-split p{font-size:16px;line-height:1.65;color:var(--fg-muted);max-width:360px;margin:0}
-.pv-svc a{display:grid;grid-template-columns:80px 1fr 130px;gap:32px;align-items:center;padding:26px 8px;border-top:1px solid var(--border);color:inherit;text-decoration:none;min-height:44px}
+.pv-svc a{display:grid;grid-template-columns:28px 1fr 130px;gap:32px;align-items:center;padding:26px 8px;border-top:1px solid var(--border);color:inherit;text-decoration:none;min-height:44px}
 .pv-svc a:last-child{border-bottom:1px solid var(--border)}
 .pv-svc a:hover h3{color:var(--accent-ink)}
-.pv-svc .num{font-family:var(--q-serif);font-size:28px;color:var(--accent-ink)}
+.pv-svc .num{width:10px;height:10px;border-radius:50%;background:var(--q-gold);margin-top:8px}
 .pv-svc h3{font-family:var(--q-serif);font-size:22px;font-weight:600;color:var(--fg);margin:0 0 6px}
 .pv-svc p{font-size:15px;color:var(--fg-muted);margin:0;line-height:1.6}
 .pv-svc .more{justify-self:end;font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-ink)}
@@ -225,7 +231,7 @@ h1,h2,h3{text-wrap:balance}
 .pv-contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}
 .q-form{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:32px}
 .q-form label{display:block;font-size:13px;color:var(--fg-muted);margin:0 0 6px}
-.q-form input,.q-form select,.q-form textarea{font-size:16px;min-height:44px}
+.q-form input[type=text],.q-form input[type=email],.q-form input[type=tel],.q-form select,.q-form textarea,.q-form input[type=submit],.q-form .hs-button{font-size:16px;min-height:44px}
 .q-form .hs-button{min-height:48px;font-size:16px;width:100%}
 .pv-form-note{font-size:13px;color:var(--fg-muted);margin:12px 0 0}
 /* detail */
@@ -234,10 +240,13 @@ h1,h2,h3{text-wrap:balance}
 .pv-detail ul{margin:22px 0 0;padding-left:20px;color:var(--fg);line-height:1.8;font-size:16px}
 .pv-detail ul li::marker{color:var(--accent-ink)}
 .pv-detail .q-lead{margin-top:18px}
+.pv-detail-img{aspect-ratio:3/2;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);background:var(--bg-alt);margin-bottom:18px}
+.pv-detail-img img{width:100%;height:100%;object-fit:cover;display:block}
+.pv-flip > div:first-child{order:2}
 /* listing */
 .pv-post{display:flex;flex-direction:column;gap:10px;text-decoration:none;color:inherit}
 .pv-post .tag{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-ink)}
-.pv-post h3{font-family:var(--q-serif);font-size:22px;margin:0;font-weight:600;color:var(--fg)}
+.pv-post h2{font-family:var(--q-serif);font-size:22px;margin:0;font-weight:600;color:var(--fg);line-height:1.25}
 .pv-post p{font-size:15px;line-height:1.65;color:var(--fg-muted);margin:0}
 .pv-post .rt{font-size:13px;color:var(--fg-muted)}
 .pv-post .ph{aspect-ratio:16/9;border-radius:var(--radius);background:linear-gradient(135deg,var(--bg-alt),var(--card));border:1px solid var(--border)}
@@ -258,7 +267,7 @@ h1,h2,h3{text-wrap:balance}
   .q-section{padding:56px 0}
   .pv-util .q-container{justify-content:flex-start}
   .pv-grid-2,.pv-grid-3,.pv-grid-4,.pv-grid-5{grid-template-columns:1fr}
-  .pv-svc a{grid-template-columns:1fr;gap:8px;padding:20px 0}.pv-svc .num{font-size:20px}.pv-svc .more{justify-self:start}
+  .pv-svc a{grid-template-columns:1fr;gap:8px;padding:20px 0}.pv-svc .num{display:none}.pv-svc .more{justify-self:start}
   .pv-stats{grid-template-columns:1fr 1fr}.pv-stat b{font-size:42px}
   .pv-cs .h{font-size:30px}.pv-quote{font-size:19px}
   .pv-switch{bottom:8px;padding:4px 6px 4px 10px;font-size:12.5px;max-width:calc(100vw - 16px)}.pv-switch .lbl{display:none}
@@ -292,7 +301,7 @@ def r_hero(s, ctx):
 <div class="pv-hero-img"><img src="{E(ctx["rel"](s["image"]))}" alt="{E(s.get("image_alt"))}" width="{s.get("image_w", 1200)}" height="{s.get("image_h", 800)}" fetchpriority="high" decoding="async">{badge}</div></div></div></section>'''
     return f'''{sec_open(s)} <div class="q-container"><div class="pv-center" style="max-width:860px;margin:0 auto">{eyebrow}
 <h1 class="q-h1" style="margin-top:22px">{RAW(s["heading"])}</h1>
-<div class="q-lead" style="max-width:640px;margin:24px 0 0">{E(s.get("subhead"))}</div>{btns.replace('class="pv-btns"', 'class="pv-btns" style="justify-content:center"')}{note}</div></div></section>'''
+<div class="q-lead" style="max-width:640px;margin:24px 0 0">{E(s.get("subhead"))}</div>{btns.replace('class="pv-btns"', 'class="pv-btns" style="justify-content:center"')}{note}</div>{f'<div class="pv-hero-wide"><img src="{E(ctx["rel"](s["image"]))}" alt="{E(s.get("image_alt", ""))}" width="{s.get("image_w", 1200)}" height="{s.get("image_h", 675)}" fetchpriority="high" decoding="async"></div>' if s.get("image") else ""}</div></section>'''
 
 
 def r_partners(s, ctx):
@@ -314,7 +323,7 @@ def r_stats(s, ctx):
 
 def r_services(s, ctx):
     rows = "".join(
-        f'<a href="{E(href)}"><div class="num">{i:02d}</div><div><h3>{E(t)}</h3><p>{E(b)}</p></div><div class="more">Learn more</div></a>'
+        f'<a href="{E(href)}"><div class="num" aria-hidden="true"></div><div><h3>{E(t)}</h3><p>{E(b)}</p></div><div class="more">Learn more</div></a>'
         for i, (t, b, href) in enumerate(s["items"], 1))
     return f'{sec_open(s)} <div class="q-container"><div class="pv-split"><h2 class="q-h2">{E(s["heading"])}</h2><p>{E(s.get("intro"))}</p></div><div class="pv-svc">{rows}</div></div></section>'
 
@@ -352,7 +361,7 @@ def r_locations(s, ctx):
     n = len(s["items"]); cols = cols_for(n)
     cards = []
     for name, a1, a2, phone, href in s["items"]:
-        mp = '<div class="pv-map">Map, hours and technician count go here</div>' if s.get("detailed") else ""
+        mp = '<div class="pv-map">Map and hours</div>' if s.get("detailed") else ""
         cards.append(f'<div class="q-card">{mp}<h3>{E(name)}</h3><p>{E(a1)}<br>{E(a2)}<br><a href="{E(href)}">{E(phone)}</a></p></div>')
     return f'{sec_open(s)} <div class="q-container"><div class="pv-split"><h2 class="q-h2">{E(s["heading"])}</h2><p>{E(s.get("intro"))}</p></div><div class="pv-grid pv-grid-{cols} pv-loc">{"".join(cards)}</div></div></section>'
 
@@ -375,18 +384,22 @@ def r_contact(s, ctx):
 def r_detail(s, ctx):
     bullets = "".join(f"<li>{E(b)}</li>" for b in s.get("bullets", []))
     right = ""
-    if s.get("form"):
+    if s.get("image"):
+        right = (f'<div class="pv-detail-img"><img src="{E(ctx["rel"](s["image"]))}" alt="{E(s.get("image_alt", ""))}" width="{s.get("image_w", 1200)}" height="{s.get("image_h", 800)}" loading="lazy" decoding="async"></div>'
+                 + (f'<ul>{bullets}</ul>' if bullets else ""))
+        bullets = ""
+    elif s.get("form"):
         fields = "".join(f'<label for="{E(s["id"])}-{i}">{E(f)}</label><input id="{E(s["id"])}-{i}" type="text">' for i, f in enumerate(s["form"]["fields"]))
         right = f'<form class="q-form" onsubmit="return false">{fields}<input type="submit" class="hs-button" value="{E(s["form"]["submit"])}"></form>'
     else:
         right = f'<ul>{bullets}</ul>'
         bullets = ""
-    return f'''{sec_open(s)} <div class="q-container pv-detail"><div><div class="q-eyebrow">{E(s.get("eyebrow"))}</div><h2 class="q-h2">{E(s["heading"])}</h2><div class="q-lead">{E(s.get("body"))}</div>{f"<ul>{bullets}</ul>" if bullets else ""}</div><div>{right}</div></div></section>'''
+    return f'''{sec_open(s)} <div class="q-container pv-detail{" pv-flip" if s.get("flip") else ""}"><div><div class="q-eyebrow">{E(s.get("eyebrow"))}</div><h2 class="q-h2">{E(s["heading"])}</h2><div class="q-lead">{E(s.get("body"))}</div>{f"<ul>{bullets}</ul>" if bullets else ""}</div><div>{right}</div></div></section>'''
 
 
 def r_listing(s, ctx):
     n = len(s["items"]); cols = cols_for(n)
-    posts = "".join(f'<a class="pv-post" href="#"><div class="ph"></div><span class="tag">{E(tag)}</span><h3>{E(t)}</h3><p>{E(d)}</p><span class="rt">{E(rt)}</span></a>' for tag, t, d, rt in s["items"])
+    posts = "".join(f'<a class="pv-post" href="{E(it[3] if len(it) > 3 else "#")}"{" target=_blank rel=noopener" if len(it) > 3 and str(it[3]).startswith("http") else ""}><div class="ph"></div><span class="tag">{E(it[0])}</span><h2>{E(it[1])}</h2><p>{E(it[2])}</p></a>' for it in s["items"])
     return f'{sec_open(s)} <div class="q-container"><div class="pv-grid pv-grid-{cols}">{posts}</div></div></section>'
 
 
@@ -396,6 +409,15 @@ def r_team(s, ctx):
     return f'{sec_open(s)} <div class="q-container"><div class="pv-center" style="margin-bottom:40px"><div class="q-eyebrow">{E(s.get("eyebrow"))}</div><h2 class="q-h2" style="margin-top:22px">{E(s["heading"])}</h2><p style="color:var(--fg-muted);max-width:60ch;margin:14px 0 0">{E(s.get("intro"))}</p></div><div class="pv-grid pv-grid-{cols} pv-team">{cards}</div></div></section>'
 
 
+def r_leadform(s, ctx):
+    """The soft conversion path on pages that have no form: one line, one field, one button,
+    plus the phone for the visitor who would rather talk. process/quality-standard.md item 6."""
+    brand = ctx["brand"]
+    fid = s.get("id", "lead")
+    return f'''{sec_open(s)} <div class="q-container pv-contact" style="align-items:center"><div><h2 class="q-h2">{E(s["heading"])}</h2><div class="q-lead" style="margin-top:16px">{E(s.get("body"))}</div><p style="margin-top:20px;font-size:15px;color:var(--fg-muted)">Or call <a href="{E(brand["phone_href"])}" style="color:var(--fg);font-weight:600;min-height:44px;display:inline-flex;align-items:center">{E(brand["phone"])}</a></p></div>
+<form class="q-form" onsubmit="return false"><label for="{E(fid)}-e">Work email</label><input id="{E(fid)}-e" type="email"><label for="{E(fid)}-c">Company</label><input id="{E(fid)}-c" type="text"><input type="submit" class="hs-button" value="{E(s.get("submit", "Send"))}"><p class="pv-form-note">{E(s.get("note", ""))}</p></form></div></section>'''
+
+
 def r_cta(s, ctx):
     btn = f'<div style="margin-top:34px"><a class="q-btn" href="{E(s["primary"]["href"])}">{E(s["primary"]["label"])}</a></div>' if s.get("primary") else ""
     return f'{sec_open(s, "pv-cta")} <div class="q-container"><h2 class="q-h2" style="font-size:clamp(30px,4vw,52px)">{E(s["heading"])}</h2><div class="q-lead" style="max-width:540px;margin:22px auto 0">{E(s.get("subhead"))}</div>{btn}</div></section>'
@@ -403,7 +425,8 @@ def r_cta(s, ctx):
 
 RENDER = {"hero": r_hero, "partners": r_partners, "stats": r_stats, "services": r_services, "process": r_process,
           "casestudy": r_casestudy, "cards": r_cards, "band": r_band, "locations": r_locations, "faq": r_faq,
-          "contact": r_contact, "detail": r_detail, "listing": r_listing, "team": r_team, "cta": r_cta}
+          "contact": r_contact, "detail": r_detail, "listing": r_listing, "team": r_team, "cta": r_cta,
+          "leadform": r_leadform}
 
 
 # ------------------------------------------------------------------------------ chrome
@@ -417,11 +440,12 @@ def header(content, ctx):
     mnav = "".join(f'<a href="{E(h)}">{E(l)}</a>' for l, h in content["nav"])
     cta = f'<a class="q-booknow" href="{E(b["cta"]["href"])}">{E(b["cta"]["label"])}</a>' if b.get("cta") else ""
     mcta = f'<a class="q-mnav-cta" href="{E(b["cta"]["href"])}">{E(b["cta"]["label"])}</a>' if b.get("cta") else ""
-    logo = (f'<img src="{E(ctx["rel"](b["logo"]))}" alt="{E(b.get("logo_alt", content["client"]))}" height="40" loading="eager">'
+    lw, lh = b.get("logo_w", 300), b.get("logo_h", 100)
+    logo = (f'<img src="{E(ctx["rel"](b["logo"]))}" alt="{E(b.get("logo_alt", content["client"]))}" width="{round(40 * lw / lh)}" height="40" loading="eager">'
             if b.get("logo") else f'<span class="q-logo-text">{E(content["client"])}</span>')
-    return f'''<a class="q-skip" href="#q-content">Skip to content</a>
+    return f'''<header class="q-header"><a class="q-skip" href="#q-content">Skip to content</a>
 <div class="pv-util"><div class="q-container">{util}</div></div>
-<header class="q-header"><div class="q-container q-header-in">
+<div class="q-container q-header-in">
   <a href="index.html" class="q-header-logo" aria-label="{E(content["client"])} home">{logo}</a>
   <nav class="q-nav" aria-label="Main navigation">{nav}{cta}</nav>
   <details class="q-mnav"><summary aria-label="Open menu"><span></span><span></span><span></span></summary><div class="q-mnav-panel">{mnav}{mcta}</div></details>
@@ -431,14 +455,16 @@ def header(content, ctx):
 
 def footer(content, ctx):
     b = content["brand"]
-    logo = (f'<img src="{E(ctx["rel"](b["logo"]))}" alt="{E(b.get("logo_alt", content["client"]))}" height="36" loading="lazy">'
+    lw, lh = b.get("logo_w", 300), b.get("logo_h", 100)
+    logo = (f'<img src="{E(ctx["rel"](b["logo"]))}" alt="{E(b.get("logo_alt", content["client"]))}" width="{round(36 * lw / lh)}" height="36" loading="lazy">'
             if b.get("logo") else f'<span class="q-logo-text">{E(content["client"])}</span>')
     cols = "".join(
         f'<div><div class="q-footer-head">{E(c["title"])}</div><nav class="q-footer-links" aria-label="{E(c["title"])}">'
         + "".join(f'<a href="{E(h)}">{E(l)}</a>' for l, h in c["links"]) + "</nav></div>"
         for c in b.get("footer_columns", []))
     soc = b.get("social", {})
-    social = "".join(f'<a href="{E(u)}" aria-label="{E(k.title())}">{E(k.title() if k != "x" else "X")}</a>' for k, u in soc.items() if u)
+    _names = {"linkedin": "LinkedIn", "facebook": "Facebook", "x": "X", "instagram": "Instagram", "youtube": "YouTube"}
+    social = "".join(f'<a href="{E(u)}" aria-label="{E(_names.get(k, k.title()))}">{E(_names.get(k, k.title()))}</a>' for k, u in soc.items() if u)
     contact = ""
     if b.get("phone") or b.get("email"):
         contact = f'<p class="q-footer-contact">{f"<a class=q-footer-phone href={E(b[chr(112)+chr(104)+chr(111)+chr(110)+chr(101)+chr(95)+chr(104)+chr(114)+chr(101)+chr(102)])}>{E(b[chr(112)+chr(104)+chr(111)+chr(110)+chr(101)])}</a>" if b.get("phone") else ""}{" &nbsp;·&nbsp; " if b.get("phone") and b.get("email") else ""}{f"<a href=mailto:{E(b[chr(101)+chr(109)+chr(97)+chr(105)+chr(108)])}>{E(b[chr(101)+chr(109)+chr(97)+chr(105)+chr(108)])}</a>" if b.get("email") else ""}</p>'

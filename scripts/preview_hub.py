@@ -36,7 +36,7 @@ def _ground(bg: str) -> str:
 def hub(content, themes, recommend, base, roles, standard, client_tokens):
     b = content["brand"]
     pitch = content.get("pitch", {})
-    ink = reskin.darken_until(b["accent"], "#ffffff")
+    ink = reskin.darken_until(b["accent"], "#f6f7f6")
     n = len(themes)
 
     specs = []
@@ -48,7 +48,7 @@ def hub(content, themes, recommend, base, roles, standard, client_tokens):
         rec = '<span class="rec">our recommendation</span>' if t == recommend else ""
         specs.append(
             '<article class="dir"><div class="dir-h">'
-            f'<span class="n">{i} / {n}</span><h3>{_e(short)}{rec}</h3><p>{_e(roles.get(t, ""))}</p></div>'
+            f'<span class="n">{i} / {n}</span><h2 class="h3">{_e(short)}{rec}</h2><p>{_e(roles.get(t, ""))}</p></div>'
             '<dl class="spec">'
             f'<div><dt>Measure</dt><dd>{_e(nat.get("--maxw", "1240px"))}</dd></div>'
             f'<div><dt>Headings</dt><dd>{_e(face)}</dd></div>'
@@ -58,12 +58,14 @@ def hub(content, themes, recommend, base, roles, standard, client_tokens):
 
     pick = recommend or themes[0]
     pick_short, pick_slug = pick.replace("Quantum ", ""), _slug(pick)
-    reasons = "".join(f'<div class="why"><h4>{_e(h)}</h4><p>{_e(t)}</p></div>' for h, t in pitch.get("pick_reasons", []))
+    reasons = "".join(f'<div class="why"><h3 class="h4">{_e(h)}</h3><p>{_e(t)}</p></div>' for h, t in pitch.get("pick_reasons", []))
     alts = "".join(
-        f'<a class="alt" href="{_slug(t)}/index.html" target="_blank" rel="noopener"><h4>{_e(t.replace("Quantum ", ""))}</h4>'
+        f'<a class="alt" href="{_slug(t)}/index.html" target="_blank" rel="noopener"><h3 class="h4">{_e(t.replace("Quantum ", ""))}</h3>'
         f'<p>{_e(why)}</p><span>Open {_e(t.replace("Quantum ", ""))}</span></a>'
         for t, why in pitch.get("alternatives", []))
     heard = "".join(f"<li>{_e(x)}</li>" for x in pitch.get("heard", []))
+    confirm = "".join(f"<li>{_e(x)}</li>" for x in pitch.get("confirm", []))
+    heard_intro = pitch.get("heard_intro", "Tell us if any of this is wrong. It outranks our house defaults.")
     found = "".join(f"<li>{_e(x)}</li>" for x in pitch.get("found", []))
     plan = "".join(f'<div class="step"><div class="when">{_e(w)}</div><p>{_e(what)}</p></div>' for w, what in pitch.get("plan", []))
     pages = content["pages"]
@@ -74,10 +76,10 @@ def hub(content, themes, recommend, base, roles, standard, client_tokens):
         for t in themes)
     every = ""
     for t in themes:
-        every += f'<div class="col"><h4>{_e(t.replace("Quantum ", ""))}</h4>' + "".join(
+        every += f'<div class="col"><h3 class="h4">{_e(t.replace("Quantum ", ""))}</h3>' + "".join(
             f'<a href="{_slug(t)}/{pg["file"]}" target="_blank" rel="noopener">{_e(_pname(pg))}</a>' for pg in pages) + "</div>"
     qc = pitch.get("qbs_contact", {})
-    std = ('<a class="alt" href="standard.html" target="_blank" rel="noopener"><h4>The Quantum Website Standard</h4>'
+    std = ('<a class="alt" href="standard.html" target="_blank" rel="noopener"><h3 class="h4">The Quantum Website Standard</h3>'
            '<p>The ten things every site we build is guaranteed to have at launch, and the evidence you receive for each.</p><span>Open</span></a>') if standard else ""
     phone_href = re.sub(r"[^0-9+]", "", qc.get("phone", ""))
 
@@ -95,7 +97,8 @@ section{{padding:64px 0;border-bottom:1px solid var(--border)}}
 .eyebrow{{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);font-weight:600;margin:0 0 14px}}
 h1{{font-size:clamp(32px,5vw,52px);line-height:1.04;letter-spacing:-.02em;margin:0 0 16px;text-wrap:balance;max-width:20ch}}
 h2{{font-size:clamp(24px,3vw,34px);line-height:1.1;letter-spacing:-.02em;margin:0 0 12px;text-wrap:balance}}
-h3{{font-size:22px;margin:0 0 6px;letter-spacing:-.01em}}h4{{font-size:16px;margin:0 0 6px}}
+h3,.h3{{font-size:22px;margin:0 0 6px;letter-spacing:-.01em}}h4,.h4{{font-size:16px;margin:0 0 6px}}.dir h2.h3{{font-size:22px;line-height:1.2}}
+.confirm li{{margin:10px 0}}
 .lead{{color:var(--muted);max-width:62ch;margin:0 0 28px;font-size:17px}}
 .dirs{{display:grid;grid-template-columns:repeat({n},1fr);gap:18px}}
 .dir{{border:1px solid var(--border);border-radius:14px;padding:24px;background:var(--bg-alt);display:flex;flex-direction:column;gap:18px}}
@@ -131,20 +134,21 @@ footer{{padding:36px 0 80px;color:var(--muted);font-size:13.5px;max-width:66ch}}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
 <style>{css}</style></head><body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="top"><div class="wrap"><img src="{_e(b["logo"])}" alt="{_e(content["client"])}" height="36" width="99"><nav aria-label="Sections"><a href="#three">The three</a><a href="#pick">Our pick</a><a href="#compare">Compare</a><a href="#heard">What we heard</a><a href="#every">Every page</a><a href="#plan">The plan</a><a href="#turn">Your turn</a></nav></div></div>
+<header class="top"><div class="wrap"><img src="{_e(b["logo"])}" alt="{_e(content["client"])}" height="36" width="99"><nav aria-label="Sections"><a href="#three">The three</a><a href="#pick">Our pick</a><a href="#compare">Compare</a><a href="#heard">Fixed</a><a href="#confirm">To confirm</a><a href="#every">Every page</a><a href="#plan">The plan</a><a href="#turn">Your turn</a></nav></div></header>
 <main id="main">
 <section><div class="wrap"><p class="eyebrow">Quantum Business Solutions for {_e(content["client"])}</p><h1>Same site. Three ways to design it.</h1>
 <p class="lead">Each one is the whole site, not a home page and two mockups: every page is built and live in all three. The words and the structure are identical across them on purpose, so the decision in front of you is about direction, not copy. Open any one, then use the switcher pinned to the bottom of the page to flip between all three without losing your place.</p></div></section>
 <section id="three"><div class="wrap"><p class="eyebrow">The three</p><div class="dirs">{"".join(specs)}</div></div></section>
 <section id="pick"><div class="wrap"><p class="eyebrow">Our recommendation</p><div class="pick"><div><h2>We would build {_e(pick_short)}</h2><p class="lead">{_e(roles.get(pick, ""))}</p>{reasons}<div class="change"><strong>The one thing we would change:</strong> {_e(pitch.get("pick_change", ""))}</div><p style="margin-top:22px"><a class="btn" href="{pick_slug}/index.html" target="_blank" rel="noopener">Open {_e(pick_short)}</a></p></div>
-<div><h3 style="font-size:18px;margin-bottom:14px">If you would rather not</h3><div class="alts" style="grid-template-columns:1fr">{alts}</div></div></div></div></section>
+<div><h3 class="h3" style="font-size:18px;margin-bottom:14px">If you would rather not</h3><div class="alts" style="grid-template-columns:1fr">{alts}</div></div></div></div></section>
 <section id="compare"><div class="wrap"><p class="eyebrow">Side by side</p><h2>The same page, all three at once</h2><div class="cmp-bar"><label for="cmp">Pick a page</label><select id="cmp">{page_opts}</select></div><div class="frames">{frames}</div></div></section>
-<section id="heard"><div class="wrap"><div class="two"><div><p class="eyebrow">What we heard</p><h2>What we are treating as fixed</h2><p class="lead" style="margin-bottom:12px">Tell us if any of this is wrong. It outranks our house defaults.</p><ul>{heard}</ul></div><div><p class="eyebrow">What we found</p><h2>And what we would do about it</h2><ul>{found}</ul></div></div></div></section>
+<section id="heard"><div class="wrap"><div class="two"><div><p class="eyebrow">What we are treating as fixed</p><h2>What your site and brand profile already say</h2><p class="lead" style="margin-bottom:12px">{_e(heard_intro)}</p><ul>{heard}</ul></div><div><p class="eyebrow">What we found</p><h2>And what we would do about it</h2><ul>{found}</ul></div></div></div></section>
+<section id="confirm"><div class="wrap"><p class="eyebrow">To confirm with you</p><h2>Ten things we wrote as a draft, not a fact</h2><p class="lead">Each of these appears on the pages. None is built until you confirm or correct it.</p><ul class="confirm">{confirm}</ul></div></section>
 <section id="every"><div class="wrap"><p class="eyebrow">Every page</p><h2>Built and live in all three</h2><div class="every">{every}</div></div></section>
 <section id="plan"><div class="wrap"><p class="eyebrow">The plan</p><h2>From a choice to a live site</h2><div class="plan">{plan}</div>{('<div class="alts" style="margin-top:28px;grid-template-columns:1fr 1fr">' + std + '</div>') if std else ""}</div></section>
 <section id="turn"><div class="wrap"><div class="turn"><p class="eyebrow">Your turn</p><h2>Tell us which one, and what you would change</h2><p class="lead" style="margin-bottom:18px">Reply with the direction and anything on any page you would change. Nothing is locked until you say so.</p><a class="btn" href="mailto:{_e(qc.get("email", ""))}?subject={_e(content["client"])}%20website%20direction">Email {_e(qc.get("name", "us"))}</a><a class="btn" style="background:transparent;border:1px solid var(--accent);color:var(--ink)" href="tel:{_e(phone_href)}">Call {_e(qc.get("phone", ""))}</a></div></div></section>
 </main>
-<footer class="wrap">Prepared for {_e(pitch.get("prepared_for", content["client"]))}. Nothing here is live or indexed. The photograph on the home page is a generated stand-in until your own photography exists; partner logos are the ones on your current site. Every number comes from your site, your HubSpot or public sources, and the ones we still need to confirm with you are marked.</footer>
+<footer class="wrap">{_e(pitch.get("footer", "Prepared for " + pitch.get("prepared_for", content["client"]) + ". Nothing here is live or indexed."))}</footer>
 <script>
 document.getElementById('cmp').addEventListener('change', function (e) {{
   document.querySelectorAll('.frames iframe').forEach(function (f) {{ f.src = f.dataset.dir + '/' + e.target.value; }});

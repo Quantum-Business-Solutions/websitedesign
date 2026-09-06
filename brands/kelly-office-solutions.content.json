@@ -16,7 +16,7 @@
     "utility": [
       {
         "label": "Customer portal",
-        "href": "#"
+        "href": "https://einfo.kellyofficesolutions.com:8890/"
       },
       {
         "label": "Request service",
@@ -80,7 +80,7 @@
         "links": [
           [
             "Customer portal",
-            "#"
+            "https://einfo.kellyofficesolutions.com:8890/"
           ],
           [
             "Request service",
@@ -97,10 +97,6 @@
           [
             "Coffee & water supplies",
             "service-support.html#supplies"
-          ],
-          [
-            "Online training",
-            "service-support.html"
           ]
         ]
       },
@@ -133,9 +129,11 @@
     "legal": [
       [
         "Privacy policy",
-        "#"
+        "https://kellyofficesolutions.com/privacy-policy/"
       ]
-    ]
+    ],
+    "logo_w": 300,
+    "logo_h": 109
   },
   "schema": {
     "org_name": "Kelly Office Solutions",
@@ -179,7 +177,7 @@
     {
       "file": "index.html",
       "title": "Kelly Office Solutions | Copiers, managed print, IT and office technology in North Carolina",
-      "description": "Family-owned since 1947. Copiers and managed print, document management, IT, mailing, water and coffee for North Carolina businesses, from four local offices with same-day service.",
+      "description": "Family-owned since 1947. Copiers and managed print, document management, IT, mailing, water and coffee for North Carolina businesses, from four local offices, with same-day response under a Kelly agreement.",
       "sections": [
         {
           "type": "hero",
@@ -188,16 +186,16 @@
           "heading": "Fully connected office systems, serviced by people who <em>show up the same day</em>.",
           "subhead": "Copiers and print, document management, IT, mailing, and the water and coffee that keep an office running. One North Carolina partner, four locations, one number to call.",
           "primary": {
-            "label": "Request a print assessment",
+            "label": "Request an assessment",
             "href": "contact.html"
           },
           "secondary": {
             "label": "Request service",
             "href": "service-support.html#request"
           },
-          "note": "Ricoh, Konica Minolta, Sharp, Brother and Epson authorized",
+          "note": "Ricoh, Konica Minolta, Sharp and Brother dealer",
           "image": "assets/hero-1200.jpg",
-          "image_alt": "A Kelly technician replacing a toner unit in a customer's office",
+          "image_alt": "A technician replacing a toner unit. Placeholder image until Kelly photography exists.",
           "image_w": 1200,
           "image_h": 800,
           "badge": {
@@ -219,7 +217,6 @@
             "WatchGuard",
             "Microsoft 365",
             "Zultys",
-            "FP Mailing",
             "FloWater"
           ]
         },
@@ -237,7 +234,7 @@
             ],
             [
               "4,000",
-              "North Carolina businesses served"
+              "Customers, most of them in North Carolina"
             ],
             [
               "4",
@@ -278,7 +275,7 @@
             ],
             [
               "Mailing solutions",
-              "Postage meters, folder-inserters and parcel lockers from FP, for the mailroom nobody thinks about until it stops.",
+              "Postage meters, folder-inserters and parcel lockers, for the mailroom nobody thinks about until it stops.",
               "what-we-do.html#mailing"
             ],
             [
@@ -291,12 +288,12 @@
         {
           "type": "process",
           "alt": true,
-          "eyebrow": "How a Kelly engagement works",
+          "eyebrow": "How we would stage an engagement",
           "heading": "Five stages, and every one of them hands you something",
           "stages": [
             [
               "Assessment",
-              "Produces: a fleet and cost report you keep whether or not you buy."
+              "Produces: a fleet and cost report, yours to keep."
             ],
             [
               "Plan",
@@ -318,15 +315,15 @@
         },
         {
           "type": "casestudy",
-          "eyebrow": "Why companies stay for decades",
+          "eyebrow": "Why customers stay",
           "heading": "Fourteen field offices, one printing partner",
           "quote": "We are a company with 350 employees and fourteen field offices, all of which they serve. All needs are met on a timely and professional basis. It is nice to know there is still a local company here when you need them.",
-          "attribution": "Debbie Scott, S&N Communications",
+          "attribution": "Debbie Scott, S & N Communications",
           "metrics": [
             [
               "Service",
               "Same day",
-              "Response on service requests across all four territories"
+              "Response under a Kelly service agreement, in all four territories"
             ],
             [
               "Reputation",
@@ -334,14 +331,14 @@
               "Accredited since 1960 and rated A+"
             ],
             [
-              "Ricoh",
-              "Top 10",
-              "Among Ricoh dealers in the Southeast"
+              "Since",
+              "1947",
+              "Family-owned and independent"
             ],
             [
               "Team",
               "90",
-              "People, factory-trained technicians among them"
+              "People, across four offices"
             ]
           ]
         },
@@ -350,7 +347,7 @@
           "alt": true,
           "id": "markets",
           "eyebrow": "Key markets",
-          "heading": "Built around how your industry actually uses paper",
+          "heading": "Built around how your industry uses paper",
           "items": [
             [
               "Legal",
@@ -386,7 +383,7 @@
           "items": [
             [
               "Request service",
-              "Same-day dispatch in all four territories",
+              "Same-day response under a Kelly agreement",
               "service-support.html#request"
             ],
             [
@@ -447,12 +444,12 @@
           "heading": "Questions we get on the first call",
           "items": [
             [
-              "How fast do you actually respond to a service call?",
-              "Same day, in all four territories, for devices under a Kelly service agreement. Most calls are resolved on the first visit because technicians carry parts for the models we sell. Our NPS of 94.4 is audited by an independent third party, so that claim is checked every month."
+              "How fast do you respond to a service call?",
+              "Same day, in all four territories, for devices under a Kelly service agreement. Technicians carry parts for the models we sell. Our NPS of 94.4 is audited by an independent third party, so that claim is checked by someone other than us."
             ],
             [
               "Can you take over devices we bought from someone else?",
-              "Usually, yes. The assessment covers your whole fleet regardless of where it came from, and the plan tells you honestly which devices are worth keeping under service and which are costing more than they are worth."
+              "Often, yes. The assessment covers your whole fleet regardless of where it came from, and the plan tells you honestly which devices are worth keeping under service and which are costing more than they are worth."
             ],
             [
               "Lease, rent or buy?",
@@ -460,7 +457,7 @@
             ],
             [
               "Do you serve offices outside the Triad and Charlotte?",
-              "Our four locations cover the Triad, Charlotte and the Triangle, and customers with field offices across North Carolina are served from the nearest branch. If you are further afield, ask; we will tell you plainly whether we can meet our own response standard there."
+              "Our four locations cover the Triad, Charlotte and the Triangle, and customers with field offices across North Carolina are served from the nearest branch. If you are further afield, ask your nearest branch."
             ]
           ]
         },
@@ -468,7 +465,7 @@
           "type": "contact",
           "id": "contact",
           "heading": "Start with the assessment",
-          "body": "A specialist walks your fleet and your workflows, and you get the report either way. No obligation, and it takes about an hour of your time.",
+          "body": "A specialist walks your fleet and your workflows. Our recommendation: you keep the report whether or not you buy. About an hour of your time.",
           "options": [
             "Copiers and print",
             "Managed print assessment",
@@ -478,7 +475,7 @@
             "Water, ice and coffee"
           ],
           "submit": "Request my assessment",
-          "note": "A person from the nearest branch replies within one business day."
+          "note": "A person from the nearest branch replies, not an autoresponder."
         }
       ]
     },
@@ -501,48 +498,53 @@
         {
           "type": "detail",
           "id": "copiers",
-          "eyebrow": "01",
+          "eyebrow": "Copiers",
           "heading": "Office products & copiers",
           "body": "Ricoh, Konica Minolta, Sharp and Brother multifunction devices, matched to your volume and networked on day one. Lease, rent or buy, priced side by side in the plan.",
           "bullets": [
             "Color and mono MFPs from desktop to departmental",
             "Wide-format for plans and drawings",
             "Secure print release and scan-to-cloud on every device",
-            "Trade-in and takeover of devices you already own"
+            "Trade-in and takeover of devices you already own, where we support the model"
           ]
         },
         {
           "type": "detail",
           "id": "managed-print",
           "alt": true,
-          "eyebrow": "02",
+          "eyebrow": "Managed print",
           "heading": "Managed print",
           "body": "The assessment finds what your fleet really costs. Monitoring keeps it that way: toner ships before it runs out, meters read themselves, and you get one report and one invoice a month.",
           "bullets": [
-            "Fleet assessment with a cost-per-page report you keep",
+            "Fleet assessment with a cost-per-page report",
             "Automatic supplies and meter reads",
             "Monthly usage and uptime report",
             "Quarterly review, then back to the assessment if anything moved"
-          ]
+          ],
+          "image": "assets/dispatch-1200.jpg",
+          "image_alt": "A service dispatcher at work. Placeholder image until Kelly photography exists.",
+          "image_w": 1200,
+          "image_h": 800,
+          "flip": false
         },
         {
           "type": "detail",
           "id": "document-management",
-          "eyebrow": "03",
+          "eyebrow": "Document management",
           "heading": "Document management",
-          "body": "DocuWare workflows that take paper out of approvals, invoices and HR files, with the audit trail that compliance asks for and the search that your people actually use.",
+          "body": "DocuWare workflows that take paper out of approvals, invoices and HR files, with the audit trail that compliance asks for and search your people will use.",
           "bullets": [
             "Accounts payable and approval routing",
             "HR and contract files with retention rules",
             "Integration with the systems you already run",
-            "Built by a certified DocuWare team in North Carolina"
+            "Configured and supported by the Kelly team in North Carolina"
           ]
         },
         {
           "type": "detail",
           "id": "production-print",
           "alt": true,
-          "eyebrow": "04",
+          "eyebrow": "Production print",
           "heading": "Production print",
           "body": "In-house print rooms and finishing for the volumes and deadlines outsourced print can't hit: schools, churches, legal and marketing departments that print every day.",
           "bullets": [
@@ -550,12 +552,17 @@
             "Booklet making, folding, stapling and trimming inline",
             "Operator training and same-day service",
             "Cost comparison against your current outsourced spend"
-          ]
+          ],
+          "image": "assets/production-1200.jpg",
+          "image_alt": "A production printer feeding finished booklets. Placeholder image until Kelly photography exists.",
+          "image_w": 1200,
+          "image_h": 800,
+          "flip": false
         },
         {
           "type": "detail",
           "id": "it",
-          "eyebrow": "05",
+          "eyebrow": "IT",
           "heading": "IT services",
           "body": "Managed IT, backup and security from the team that already knows your network, because we put the printers on it. Datto backup, WatchGuard firewalls, Microsoft 365 and a help desk with a name.",
           "bullets": [
@@ -563,15 +570,20 @@
             "Backup and disaster recovery",
             "Firewall, endpoint and email security",
             "Microsoft 365 licensing and migration"
-          ]
+          ],
+          "image": "assets/it-1200.jpg",
+          "image_alt": "A technician checking a small office server rack. Placeholder image until Kelly photography exists.",
+          "image_w": 1200,
+          "image_h": 800,
+          "flip": true
         },
         {
           "type": "detail",
           "id": "mailing",
           "alt": true,
-          "eyebrow": "06",
+          "eyebrow": "Mailing",
           "heading": "Mailing solutions",
-          "body": "Postage meters, folder-inserters and parcel lockers from FP Mailing, for the mailroom nobody thinks about until it stops.",
+          "body": "Postage meters, folder-inserters and parcel lockers, for the mailroom nobody thinks about until it stops.",
           "bullets": [
             "Postage meters with online rate updates",
             "Folder-inserters for statements and invoices",
@@ -582,7 +594,7 @@
         {
           "type": "detail",
           "id": "pure",
-          "eyebrow": "07",
+          "eyebrow": "Pure Technology",
           "heading": "Pure Technology: water, ice & coffee",
           "body": "Filtered water, commercial ice and bean-to-cup coffee, serviced on the same visit as your copier. One invoice, one technician, one less vendor.",
           "bullets": [
@@ -590,12 +602,26 @@
             "Commercial ice machines (Manitowoc, Follett)",
             "Bean-to-cup and single-serve coffee",
             "Filter changes and sanitizing on schedule"
-          ]
+          ],
+          "image": "assets/breakroom-1200.jpg",
+          "image_alt": "An office break room with a filtered water cooler and coffee machine. Placeholder image until Kelly photography exists.",
+          "image_w": 1200,
+          "image_h": 800,
+          "flip": true
+        },
+        {
+          "type": "leadform",
+          "alt": true,
+          "id": "assessment",
+          "heading": "Start with the assessment",
+          "body": "A specialist from your nearest branch walks your fleet and your workflows, and writes it up.",
+          "submit": "Request my assessment",
+          "note": "A person from the nearest branch replies, not an autoresponder."
         },
         {
           "type": "cta",
           "heading": "Not sure where to start? Start with the assessment.",
-          "subhead": "One visit, one report on what your office really spends. You keep it either way.",
+          "subhead": "One visit, one report on what your office really spends.",
           "primary": {
             "label": "Request an assessment",
             "href": "contact.html"
@@ -613,7 +639,7 @@
           "layout": "centered",
           "eyebrow": "Supplies & service",
           "heading": "Already a customer? <em>This is the fast lane.</em>",
-          "subhead": "Everything an existing customer needs, one click deep. Same-day dispatch in all four territories, and a technician who carries parts for the models we sell.",
+          "subhead": "Everything an existing customer needs, one click deep. Same-day response under a Kelly agreement, and a technician who carries parts for the models we sell.",
           "primary": {
             "label": "Request service",
             "href": "#request"
@@ -631,7 +657,7 @@
           "items": [
             [
               "Request service",
-              "Same-day dispatch, first-visit fix on the models we sell",
+              "Same-day response under a Kelly agreement; technicians carry parts for the models we sell",
               "#request"
             ],
             [
@@ -656,10 +682,10 @@
           "id": "request",
           "eyebrow": "Service",
           "heading": "Request service",
-          "body": "Tell us the device and what it is doing. Dispatch confirms a window the same business day for customers under a Kelly agreement, and the technician arrives with parts.",
+          "body": "Tell us the device and what it is doing. Dispatch confirms a window for customers under a Kelly agreement, and the technician arrives with parts for the models we sell.",
           "bullets": [
-            "Same-day response in all four territories",
-            "Factory-trained technicians for Ricoh, Konica Minolta, Sharp and Brother",
+            "Same-day response under a Kelly agreement, in all four territories",
+            "Technicians for Ricoh, Konica Minolta, Sharp and Brother",
             "Loaner devices when a repair needs the shop",
             "Every call tracked in the customer portal"
           ],
@@ -721,11 +747,11 @@
           "items": [
             [
               "What counts as same-day?",
-              "A call logged before 2pm is scheduled the same business day in all four territories for devices under a Kelly agreement. Later calls are first thing the next morning."
+              "Ask your branch for the current response commitment for your agreement. We would rather tell you the real number than print a round one."
             ],
             [
               "Do you service devices you did not sell?",
-              "Often, yes. Ask, and we will tell you plainly which models we can support to our own standard."
+              "Often, yes. Ask, and we will say plainly which models we support to our own standard."
             ],
             [
               "How do I get access to the customer portal?",
@@ -745,11 +771,15 @@
           "layout": "centered",
           "eyebrow": "About Kelly",
           "heading": "Family-owned since 1947. <em>Still local, on purpose.</em>",
-          "subhead": "Kelly started in Winston-Salem selling office equipment and stayed independent while most of the industry consolidated. Today about 90 people across four North Carolina offices serve some 4,000 businesses, and the phone is still answered by someone who works here.",
+          "subhead": "Kelly started in 1947 selling office equipment and stayed independent while most of the industry consolidated. Today about 90 people across four North Carolina offices serve some 4,000 businesses, and the phone is still answered by someone who works here.",
           "primary": {
             "label": "Meet the team",
             "href": "#team"
-          }
+          },
+          "image": "assets/kelly-team-1024.jpg",
+          "image_alt": "The Kelly team, from kellyofficesolutions.com",
+          "image_w": 1024,
+          "image_h": 576
         },
         {
           "type": "stats",
@@ -757,7 +787,7 @@
           "items": [
             [
               "1947",
-              "Founded in Winston-Salem"
+              "Founded in North Carolina"
             ],
             [
               "90",
@@ -769,16 +799,16 @@
             ],
             [
               "4,000",
-              "North Carolina businesses served"
+              "Customers, most of them in North Carolina"
             ]
           ]
         },
         {
           "type": "casestudy",
-          "eyebrow": "What we believe",
-          "heading": "The best service call is the one you never have to make",
-          "quote": "Our technicians are trained to fix it right the first time, and our monitoring is built so that toner arrives before the machine asks for it. Uptime is the product. The copier is just the thing it runs on.",
-          "attribution": "Kelly service leadership",
+          "eyebrow": "What customers say",
+          "heading": "Same-day repair, in tax season",
+          "quote": "I was thrilled to be able to call and get a repair on the same day. Tax season is our busiest time of year and the quick response was appreciated by all.",
+          "attribution": "Anita Henderson, Edwards Craver Veach, PLLC",
           "metrics": [
             [
               "Since",
@@ -791,14 +821,14 @@
               "Accredited since 1960"
             ],
             [
-              "Ricoh",
-              "Top 10",
-              "Dealer in the Southeast"
+              "Offices",
+              "4",
+              "Winston-Salem, Greensboro, Charlotte, Raleigh"
             ],
             [
               "Service",
               "Same day",
-              "In all four territories"
+              "Under a Kelly agreement, all four territories"
             ]
           ]
         },
@@ -840,15 +870,15 @@
           "id": "team",
           "eyebrow": "The people",
           "heading": "Meet the people who answer",
-          "intro": "Portraits and bios come from Kelly's own photography. These are placeholders for the layout only.",
+          "intro": "Preview: photography and bios to come from Kelly.",
           "items": [
             [
               "Leadership",
-              "Names and roles from Kelly"
+              "Owners and directors"
             ],
             [
               "Service management",
-              "The team behind same-day"
+              "Dispatch and service management"
             ],
             [
               "Sales specialists",
@@ -856,13 +886,22 @@
             ],
             [
               "Field technicians",
-              "Factory-trained, by region"
+              "By region"
             ]
           ]
         },
         {
+          "type": "leadform",
+          "alt": true,
+          "id": "assessment",
+          "heading": "Start with the assessment",
+          "body": "A specialist from your nearest branch walks your fleet and your workflows, and writes it up.",
+          "submit": "Request my assessment",
+          "note": "A person from the nearest branch replies, not an autoresponder."
+        },
+        {
           "type": "cta",
-          "heading": "Come see the showroom",
+          "heading": "Talk to your branch",
           "subhead": "Winston-Salem, Greensboro, Charlotte or Raleigh. Bring a sample of what you print.",
           "primary": {
             "label": "Find your branch",
@@ -881,7 +920,7 @@
           "layout": "centered",
           "eyebrow": "Locations",
           "heading": "Four offices. <em>Local technicians at every one.</em>",
-          "subhead": "Call the branch nearest you, or 1-800-34-KELLY reaches all of them. Showrooms welcome walk-ins; bring a sample of what you print.",
+          "subhead": "Call the branch nearest you, or 1-800-34-KELLY reaches all of them.",
           "primary": {
             "label": "Call 1-800-34-KELLY",
             "href": "tel:18003453559"
@@ -891,7 +930,7 @@
           "type": "locations",
           "detailed": true,
           "heading": "Where we are",
-          "intro": "Each location is a full branch: sales, service dispatch, supplies and a showroom.",
+          "intro": "Each location is a full branch: sales, service dispatch and supplies.",
           "items": [
             [
               "Winston-Salem",
@@ -930,18 +969,27 @@
           "items": [
             [
               "Do you cover my town?",
-              "The Triad, Charlotte and the Triangle are our home territories, and customers with field offices across North Carolina are served from the nearest branch. Ask, and we will tell you plainly whether we can meet our own response standard where you are."
+              "The Triad, Charlotte and the Triangle are our home territories, and customers with field offices across North Carolina are served from the nearest branch. Ask your branch; we will say honestly whether we can meet our own response standard where you are."
             ],
             [
-              "Can I visit a showroom?",
-              "Yes, all four. Bring a sample of what you print and we will run it on the device you are considering."
+              "Can I see a device before I decide?",
+              "Ask your branch. Bring a sample of what you print and we will run it on the device you are considering."
             ]
           ]
         },
         {
+          "type": "leadform",
+          "alt": true,
+          "id": "assessment",
+          "heading": "Start with the assessment",
+          "body": "A specialist from your nearest branch walks your fleet and your workflows, and writes it up.",
+          "submit": "Request my assessment",
+          "note": "A person from the nearest branch replies, not an autoresponder."
+        },
+        {
           "type": "cta",
           "heading": "Start with the assessment",
-          "subhead": "A specialist from your nearest branch walks your fleet and your workflows. You keep the report either way.",
+          "subhead": "A specialist from your nearest branch walks your fleet and your workflows, and writes it up.",
           "primary": {
             "label": "Request an assessment",
             "href": "contact.html"
@@ -959,68 +1007,77 @@
           "layout": "centered",
           "eyebrow": "Blog",
           "heading": "What we tell customers <em>before they ask</em>",
-          "subhead": "Guides from the people who service the machines. No jargon, no vendor pitch."
+          "subhead": "Guides from the people who service the machines. No jargon, no vendor pitch. Titles link to the posts on your current site."
         },
         {
           "type": "listing",
           "items": [
             [
-              "Managed print",
+              "Document management",
               "Document management: how it works and why it matters",
-              "What a document management system actually does inside a business, the compliance standards it supports, and how to tell whether you need one.",
-              "6 min read"
+              "What a document management system does inside a business, the compliance standards it supports, and how to tell whether you need one.",
+              "https://kellyofficesolutions.com/document-management/document-management-how-it-works-and-why-it-matters/"
             ],
             [
               "Office IT",
               "Workstation management, an overview",
               "Why the desk PC is where most support tickets start, and what managed workstation support changes for a 50-person office.",
-              "5 min read"
+              "https://kellyofficesolutions.com/greensboro-it-services/workstation-management-an-overview/"
             ],
             [
               "Pure Technology",
               "How to clean a water cooler, step by step",
               "The sanitizing routine our technicians follow on bottleless coolers, and how often an office should do it.",
-              "4 min read"
+              "https://kellyofficesolutions.com/pure-water-technology/clean-water-cooler-step-by-step-guide/"
             ],
             [
               "Copiers",
               "All-in-one office printers: a compact solution for modern workspaces",
               "When one device is enough, when it is not, and what to look for in duty cycle and security.",
-              "5 min read"
+              "https://kellyofficesolutions.com/printer/all-in-one-office-printer-a-compact-solution-for-modern-workspaces/"
             ],
             [
               "Managed print",
               "How managed print services transform a business",
               "The three costs nobody counts, and what changes in the first ninety days of a managed agreement.",
-              "6 min read"
+              "https://kellyofficesolutions.com/managed-print-services/how-managed-print-services-transforms-business/"
             ],
             [
               "Wide format",
               "How wide-format printers help businesses",
               "Plans, signage and drawings in house: the volume at which it pays for itself.",
-              "4 min read"
+              "https://kellyofficesolutions.com/office-printers/how-wide-format-printers-help-businesses/"
             ]
           ]
+        },
+        {
+          "type": "leadform",
+          "alt": true,
+          "id": "guide",
+          "heading": "Get the print cost guide",
+          "body": "What a page really costs, the three numbers to ask any dealer for, and how to read a lease. Ten pages, no pitch.",
+          "submit": "Send me the guide",
+          "note": "One email with the guide. Nothing else unless you ask."
         }
       ]
     },
     {
       "file": "contact.html",
       "title": "Contact | Kelly Office Solutions",
-      "description": "Request a print assessment or talk to the nearest Kelly branch. Winston-Salem, Greensboro, Charlotte and Raleigh, or 1-800-34-KELLY.",
+      "description": "Request an assessment or talk to the nearest Kelly branch. Winston-Salem, Greensboro, Charlotte and Raleigh, or 1-800-34-KELLY.",
       "sections": [
         {
           "type": "hero",
           "layout": "centered",
           "eyebrow": "Contact",
           "heading": "Start with the assessment, or <em>just call</em>.",
-          "subhead": "A specialist walks your fleet and your workflows, and you get the report either way. No obligation, about an hour of your time."
+          "subhead": "A specialist walks your fleet and your workflows. About an hour of your time, and the report is yours."
         },
         {
           "type": "contact",
           "id": "form",
           "heading": "Request an assessment",
-          "body": "Tell us a little about your office and the nearest branch will call within one business day to set a time.",
+          "body": "Tell us a little about your office and the nearest branch will call to set a time.",
           "options": [
             "Copiers and print",
             "Managed print assessment",
@@ -1030,7 +1087,7 @@
             "Water, ice and coffee"
           ],
           "submit": "Request my assessment",
-          "note": "A person from the nearest branch replies within one business day."
+          "note": "A person from the nearest branch replies, not an autoresponder."
         },
         {
           "type": "locations",
@@ -1095,7 +1152,7 @@
     ],
     "pick_reasons": [
       [
-        "You said approachable, not flashy",
+        "Your brand voice is approachable authority",
         "Clean is the plainest-spoken of the three: a humanist sans, generous white space, one action per section."
       ],
       [
@@ -1125,7 +1182,7 @@
       ],
       [
         "Weeks 2 to 3",
-        "Copy for every page, from your service leadership and Claudia, in your words. Photography scheduled."
+        "Copy for every page, from your service leadership and from you, in your words. Photography scheduled."
       ],
       [
         "Weeks 3 to 5",
@@ -1139,6 +1196,20 @@
         "Launch, then 90 days",
         "Go live. Reads at 30, 60 and 90 days against the baseline, with what we would change next."
       ]
-    ]
+    ],
+    "heard_intro": "We have not interviewed you yet. Everything here comes from your current site and your brand profile. Tell us if any of it is wrong; it outranks our house defaults.",
+    "confirm": [
+      "The response commitment: what you promise today, and for which agreements. The pages say same-day under a Kelly agreement; the exact terms are yours to state.",
+      "The BBB wording. We have written BBB-accredited since 1960, rated A+. Please confirm both halves.",
+      "The Ricoh standing. Your profile says sixth-largest Ricoh dealer in the Southeast; we left it off until Ricoh confirms it.",
+      "Manufacturer authorizations to show: Ricoh, Konica Minolta, Sharp, Brother, and whether Epson belongs on the list.",
+      "The location list and the headquarters. Your site lists Winston-Salem, Greensboro, Charlotte and Raleigh; an older profile lists Hickory and a Greensboro HQ.",
+      "The tagline. Moving Business Forward Since 1947 is on your site today; Office Technology Done Right Since 1947 has also been used.",
+      "The key markets. We show six; your site has five pages. Which list is current?",
+      "Your assessment process, stage by stage, and what each stage hands the customer. We drafted five stages; they are ours until you replace them.",
+      "The customer count and where they are: about 4,000, most in North Carolina, or nationwide?",
+      "Permission to use the four testimonials on your current site, and their spellings."
+    ],
+    "footer": "Prepared for Claudia Coleman, Director of Marketing. Nothing here is live or indexed. Every number we could source comes from your current site, your brand profile or public data. Several service commitments on these pages (response time, the assessment report, the staged process) are our draft of what we think you do, and they are listed under To confirm. The photograph on the home page is a generated stand-in until your own photography exists; partner logos are the ones on your current site."
   }
 }
