@@ -20,6 +20,77 @@ Step numbers refer to `process/RUNBOOK.md`.
 
 ---
 
+## What already exists in BrandCommand — don't rebuild it
+
+Three agents are live, with a **critic pattern already implemented**: `agent_runs` carries a
+`critic_score` and `critic_feedback` per output, and `agent_learnings` accumulates reinforced
+findings per brand. That is the same idea as the gates in this file, built first and running in
+production.
+
+| Agent | Produces | Model | Scored? |
+|---|---|---|---|
+| **`campaign-director`** | `campaign_plan` | Sonnet / Gemini 2.5 Pro | **never** |
+| **`campaign-launcher`** | 13 asset types — `linkedin_post`, `landing_page`, `blog`, `call_script`, `email_blast`, `direct_mail`, `ad_copy`, `video_script`, `case_study`, `one_pager`, `presentation`, `lead_magnet` | Sonnet / Gemini 2.5 Pro | mostly |
+| **`crm-ops`** | `crm_audit` | Gemini 2.5 Pro | n/a |
+
+**Reuse these, don't duplicate them.** `campaign-launcher` already writes landing-page copy, case
+studies, video scripts and blogs — which overlaps the Copywriter agent below. The right split:
+`campaign-launcher` for campaign assets, the Copywriter agent for *site* pages where the `<h1>` has
+to answer a keyword from the baseline. Same skill, different gate.
+
+### The critic scores say something worth acting on
+
+Mean score by asset type, from live runs:
+
+| Asset | Mean | Worst | n |
+|---|---|---|---|
+| `video_script` | 88.0 | 88 | 3 |
+| `email_blast` | 87.8 | 87 | 5 |
+| `linkedin_post` | 87.2 | 81 | 27 |
+| `direct_mail` | 84.7 | 81 | 7 |
+| `landing_page` | 84.0 | 69 | 9 |
+| `one_pager` | 83.3 | 81 | 3 |
+| `call_script` | 82.7 | 72 | 7 |
+| `case_study` | 82.5 | 82 | 2 |
+| `ad_copy` | 80.6 | 73 | 5 |
+| `presentation` | 71.0 | 71 | 1 |
+| **`blog`** | **67.4** | **56** | 7 |
+
+**Blog is the worst asset type by eighteen points** — 67.4 against 85.1 for everything else, and it
+has never once scored above 79.
+
+That matters more than it looks. `process/seo-baseline.md` found that **blog posts drive 82% of
+QBS's organic traffic**, and `verticals/office-technology.md` found the same category-wide. So **the
+one asset that produces the traffic is the one the system produces worst** — measured by QBS's own
+critic, not by opinion.
+
+Two consequences: blog is where a dedicated agent earns the most, and no blog should ship on a
+score under 80 until that changes.
+
+### Three defects in the existing setup
+
+1. **`campaign-director` output is never scored.** Every `campaign_plan` row has
+   `critic_score: null`. The plan that everything downstream is generated *from* is the one thing
+   nothing checks. That is the highest-leverage gate to add anywhere in the stack.
+2. **`lead_magnet` and some `ad_copy` runs have a null score too** — the critic doesn't run
+   consistently, so a null means "not checked", not "fine".
+3. **The learning loop reinforces zero-signal findings.** The one row in `agent_learnings` reads:
+
+   > *"B has the highest reply rate: 0%"* — `confidence: 1`, `times_reinforced: 4`
+
+   A learning that the best variant is the one at 0% is worse than no learning, and maximum
+   confidence means it will be trusted. **It needs a minimum-sample gate** before a finding is
+   written, and confidence should scale with sample size rather than defaulting to 1.
+
+### Model discipline
+
+Runs are split across `claude-sonnet-4`, `gemini-2.5-pro` and `google/gemini-2.5-pro` — two
+spellings of one model — for the *same* asset types. That makes the critic scores hard to attribute:
+you cannot tell whether a 56 on a blog is the prompt or the model. **Normalise the identifier and
+record it, then the scores become an A/B test you already paid for.**
+
+---
+
 ## Squad 1 · Intake — days 1–10
 
 ### Diagnostic agent
@@ -91,7 +162,9 @@ ask first whether the odd item is *different in kind* — often it is, and it sh
 (`design/patterns.md`).
 
 ### Copywriter agent
-**Role:** Page copy. **The highest-value agent to build** — 15 of the 43 page hours, and the only
+**Role:** *Site* page copy — distinct from BrandCommand's `campaign-launcher`, which owns campaign
+assets. **The highest-value agent to build**, and the live critic scores agree: `blog` averages
+**67.4** against 85.1 for every other asset type, while blog posts drive 82% of organic traffic. — 15 of the 43 page hours, and the only
 remaining "AI slop" tell now that design is systematised.
 **Expertise:** the three P's; the client's own language; the target keyword per page.
 **Deploy:** step 18 · **Gate:** placeholder text and heading structure ✅ · the three P's and
