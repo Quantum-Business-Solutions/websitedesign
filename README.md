@@ -29,9 +29,9 @@ ships: `python3 scripts/designsystem.py --out /tmp/ds.html`. It sets all nine th
 typefaces at their real colours, and carries the colour roles, the card-grid table and the
 accessibility floors.
 
-**Just tell me what to do, in order** → `process/RUNBOOK.md`. Eight production phases and 28 steps from
-"we should talk to them" to "launched and on retainer", each with who owns it, the command if there
-is one, and what done looks like.
+**Just tell me what to do, in order** → `process/RUNBOOK.md`. Eight production phases and 37 steps from
+"we should talk to them" to "launched, on retainer and calibrated" — each tagged AI, QBS, CLIENT or
+approval, with the command if there is one and what done looks like.
 
 **Building a client site right now?** `process/OPERATOR.md` is one self-contained page — the build
 order, the exact commands, and the five verified traps that have shipped or nearly shipped. Hand it
@@ -81,7 +81,7 @@ Re-skinning rewrites twelve CSS custom properties in one block — see `process/
 | `design/prompts.md` | Generation prompts that worked, with model and settings. |
 | `design/inbox.md` | Drop URLs here, then run `/design-ingest`. |
 | `design/SCHEMA.md` | The ingest contract — slug rule, file shapes, failure handling. |
-| `process/RUNBOOK.md` | **Eight phases, 28 steps, in order.** If you read one file, read this one. |
+| `process/RUNBOOK.md` | **Eight phases, 37 steps, with an owner on every step.** If you read one file, read this one. |
 | `process/repos.md` | **Where client work lives.** Not a branch per client — and when a repo is warranted. |
 | `process/SCHEDULE.md` | **The calendar** — week-one contract, phase dependencies, WIP limits. |
 | `design/patterns.md` | **Patterns that shipped**, and why each one works. |
