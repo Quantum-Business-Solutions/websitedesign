@@ -52,9 +52,16 @@ into a theme fragments it. Fix the theme at source instead, so every future clie
 
 ### 6. Mobile — actually look at it
 
-*Both lanes.* Load it at phone width and scroll the whole thing. Most slop survives desktop review
-and dies on mobile: hero type too large, tables overflowing, motion that stutters, tap targets too
-small.
+*Both lanes, and **review mobile before desktop**.* Most slop survives desktop review and dies on
+mobile, so looking at mobile last finds it last.
+
+`node scripts/verify.mjs <url>` measures the floors at 390px — tap targets ≥24px (WCAG 2.5.8) and
+≥8px apart, body text ≥13px, form inputs ≥16px (below that iOS zooms the page on focus), sticky
+chrome ≤25% of the viewport, `srcset` present, pinch-zoom not blocked, nav reachable on touch, and
+no horizontal overflow with the offending element named.
+
+Then **load it on a real phone and scroll the whole thing.** The harness measures; it can't tell you
+the thing feels wrong in the hand.
 
 ### 7. Verification loop — screenshot and iterate on what you see
 

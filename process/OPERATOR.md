@@ -161,6 +161,28 @@ python3 scripts/reskin.py plan \
       delivery, and the next offer.
 - [ ] Gate the *result* of a calculator, not the tool.
 
+## 6b · Mobile — review it before desktop
+
+Most traffic is a phone, and most of what fails on a phone survives a desktop review untouched. The
+gate measures all of this at 390px; these are floors, not aspirations.
+
+- [ ] **Tap targets ≥ 24×24 CSS px** (WCAG 2.5.8 AA). Social icons are the usual offender — on QBS's
+      own site they are 20×25 and fail. Aim for 44×44, which is Apple's guidance.
+- [ ] **≥ 8px between adjacent targets.**
+- [ ] **Body text ≥ 13px.** 12px is a desktop habit that shipped to a phone.
+- [ ] **Form inputs ≥ 16px.** Below that **iOS zooms the page on focus** and yanks the layout out
+      from under whoever is filling the form. The most common mobile form defect there is.
+- [ ] **Pinch-zoom not blocked.** No `user-scalable=no`, no `maximum-scale=1` — a WCAG 1.4.4
+      failure, and the one mobile mistake a user cannot work around.
+- [ ] **Sticky chrome ≤ 25% of the viewport.** A sticky header plus the sticky CTA this checklist
+      asks for can eat a third of a phone screen. Reconcile them per build.
+- [ ] **Nav works on touch.** A hover-only mega-menu does not exist on a phone.
+- [ ] **`srcset` or `<picture>` on every content image.** A 2400px hero on a 390px screen wastes the
+      visitor's bandwidth and our LCP.
+- [ ] **No horizontal scroll** at 390px. The gate names the element causing it.
+- [ ] **Then load it on an actual phone and scroll the whole thing.** The harness measures; it
+      cannot tell you it feels wrong in the hand.
+
 ## 7 · The gate — nothing ships without it
 
 - [ ] ```bash
@@ -168,8 +190,8 @@ python3 scripts/reskin.py plan \
       ```
       **Exit code 1 means it failed.** It checks a11y (axe-core) at 390/768/1440, CLS, canonical,
       `og:image`, headings, lazy-loading, image dimensions, JSON-LD validity *and whose name is in
-      it*, **card-grid balance at every width**, placeholder text, conversion paths and broken
-      links.
+      it*, **card-grid balance at every width**, **the mobile floors above**, placeholder text,
+      conversion paths and broken links.
 - [ ] **Open the screenshots in `verify-out/` and actually look**, including at phone width. The
       harness catches what's measurable; it cannot tell you the design is wrong. This is the
       most-skipped step in the whole process and the highest-value one.

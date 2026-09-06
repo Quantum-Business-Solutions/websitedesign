@@ -122,7 +122,43 @@ attributes while keeping the inline height reserves nothing. The fix is the attr
 Measured caveat: 14 of 14 *content* images lack both attributes. The one image that has them is a
 ZoomInfo tracking pixel, not theme output.
 
-### 5. INP is unmeasured, and it's the likely real weak spot.
+### 5. Mobile is where the traffic is, and the process reviewed desktop first.
+
+**Invert the review order: look at mobile first, then desktop.** Almost everything on this page
+fails on a phone before it fails anywhere else, and a desktop-first review finds it last.
+
+Measured on `/website-services` at 390px:
+
+| Gate | Result |
+|---|---|
+| Horizontal scroll | ✅ 0px |
+| Viewport meta | ✅ `width=device-width, initial-scale=1` |
+| Hero type on a phone | ✅ h1 at 38px on a 375px screen |
+| Sticky chrome | ✅ 0% of viewport |
+| **Tap targets ≥ 24px** (WCAG 2.5.8 AA) | ❌ **3 fail** — Facebook, Instagram, LinkedIn icons at 20×25 |
+| **Body text ≥ 13px** | ❌ **16 fail** — 15 elements at 12px, one at 11px |
+| **Responsive images** | ⚠️ **12 of 12** have no `srcset`, all served at >2.5× displayed size |
+
+The floors, all now enforced by the gate:
+
+- **Tap targets 24×24 CSS px minimum** — WCAG 2.5.8 at AA. 44×44 is Apple's guidance and what
+  thumbs actually want, so under 44 is a warning. Inline links inside a text block are exempt.
+- **8px minimum between adjacent targets.** Two targets whose boxes nearly touch are one target
+  with a 50% error rate.
+- **13px minimum body text.** 12px is a desktop habit that shipped to a phone.
+- **16px minimum on form inputs.** Below that, iOS zooms the page on focus and yanks the layout out
+  from under the person filling the form. This is the single most common mobile form defect.
+- **Never block pinch-zoom.** `user-scalable=no` or `maximum-scale=1` is a WCAG 1.4.4 failure and
+  the one mobile mistake a user cannot work around.
+- **Sticky chrome ≤ 25% of the viewport.** A sticky header plus a sticky CTA can eat a third of a
+  phone screen — and this file asks for a sticky CTA on every long page, so these two rules have to
+  be reconciled per build, not assumed.
+- **Nav reachable on touch.** A hover-only mega-menu does not exist on a phone. The theme has a
+  `.q-mnav` panel; confirm it works rather than assuming.
+- **`srcset` or `<picture>` on every content image.** Serving a 2400px hero to a 390px screen wastes
+  the visitor's bandwidth and our LCP.
+
+### 6. INP is unmeasured, and it's the likely real weak spot.
 
 Core Web Vitals are **LCP, INP and CLS** — INP replaced FID as stable in 2024, threshold 200ms. This
 file covered only LCP and CLS.
@@ -134,7 +170,7 @@ theme fork**, which makes it cheaper than all nine CSS edits and possibly worth 
 
 Measure it before assuming. Then measure again after.
 
-### 6. `og:image` is missing — social shares render blank.
+### 7. `og:image` is missing — social shares render blank.
 
 **And it's 31 pages, not one.** From the pages API, 31 of 41 site pages have an empty
 `featuredImage` — including `/about-us`, `/contact-us`, `/pricing`, `/technology` and every playbook

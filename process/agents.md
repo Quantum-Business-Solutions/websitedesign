@@ -64,6 +64,22 @@ Answers the "built in, not bolted on" promise on the website-services page.
 - **What actually moves AEO:** markup that agrees with visible text, genuinely useful non-commodity
   content, off-site brand presence, and real author attribution. In that order
 
+### Asset agent — imagery and video
+
+Runs only for the **chosen** direction. Three heroes when two get discarded is wasted credit.
+
+- **Route:** **Higgsfield MCP** first — `design/prompts.md` has a proven render prompt with the
+  model, the settings, the cost, and the four things that make it work. **`fal.ai` API** as the
+  fallback when Higgsfield is unavailable or lacks the model needed. That fallback is not
+  hypothetical: the Higgsfield MCP has disconnected mid-session in this repo's own history.
+- **Writes:** `design/assets/`, then the page's asset row
+- **Gates:** generate with **blank surfaces** so every label stays real HTML text — crisp, editable,
+  translatable and readable by search engines. Baked-in AI text fails all four. Then `verify.mjs`
+  for `srcset`, dimensions and `og:image`. Check `balance` and preflight the cost first.
+- **Two traps, both earned the hard way here:** *don't approximate a render* — if a reference's
+  quality comes from 3D rendering, flat SVG or CSS polygons produce SmartArt, not a likeness. And
+  **stop after two failed attempts and write a brief instead** of iterating a third time.
+
 ### Website developer agent
 Turns an approved section order and approved copy into pages in HubSpot.
 

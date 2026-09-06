@@ -24,6 +24,11 @@ free.
 
 `/website` is the older combined command, kept for the full interview-to-ship path.
 
+**The design system document** is generated, never hand-written, so it cannot drift from what
+ships: `python3 scripts/designsystem.py --out /tmp/ds.html`. It sets all nine themes in their real
+typefaces at their real colours, and carries the colour roles, the card-grid table and the
+accessibility floors.
+
 **Building a client site right now?** `process/OPERATOR.md` is one self-contained page — the build
 order, the exact commands, and the five verified traps that have shipped or nearly shipped. Hand it
 over instead of pointing anyone at this repo.
@@ -78,6 +83,7 @@ Re-skinning rewrites twelve CSS custom properties in one block — see `process/
 | `process/clientcommand.md` | **The delivery chain** — catalogue → proposal → plan → page → asset → ticket. |
 | `process/strategy.md` | **Is this the right process to dominate?** An honest answer. |
 | `process/qa-findings.md` | **What a four-agent QA pass found**, verified. Read before trusting an older claim. |
+| `scripts/designsystem.py` | Generates the **Website Design System** doc from the live tokens. |
 | `themes/tokens.json` | The nine themes' real tokens, cached. Mockups need no portal access. |
 | `scripts/mockup.py` | Three directions as one HTML file. Enforces the selection rules. |
 | `scripts/themetokens.py` | Refresh `themes/tokens.json` from the portal. Read-only. |

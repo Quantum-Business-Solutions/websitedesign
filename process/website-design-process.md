@@ -78,7 +78,7 @@ page count and copy depth. Rendered live by `quantum-pricing-matrix`.
 | Quantum theme | One theme, as-is | Tailored to your brand | Full design system |
 | Pages | up to 8 | up to 20 | up to 50 |
 | Copywriting | Polish pass | Conversion copywriting | Page-by-page rewrite |
-| Mobile and speed pass | ✓ | ✓ | ✓ |
+| Mobile and speed pass — tap targets, 13px text, 16px inputs, `srcset` | ✓ | ✓ | ✓ |
 | Timeline | ~90 days | ~90 days | ~90 days |
 | Schema and AEO stack | — | ✓ | ✓ |
 | Blog setup | — | ✓ | ✓ |

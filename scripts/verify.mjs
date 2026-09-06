@@ -186,6 +186,124 @@ async function auditPage(browser, url) {
     await installTransport(ctx);
     const page = await ctx.newPage();
 
+    // ---- mobile audit. Most traffic is a phone, and most of what fails here
+    // survives desktop review untouched. Measured, not eyeballed.
+    await page.addInitScript(() => {
+      window.mobileAudit = () => {
+        const vis = el => {
+          const r = el.getBoundingClientRect();
+          const cs = getComputedStyle(el);
+          return r.width > 0 && r.height > 0 && cs.visibility !== 'hidden' &&
+                 cs.display !== 'none' && +cs.opacity > 0.05;
+        };
+        const q = sel => Array.from(document.querySelectorAll(sel));
+
+        // --- tap targets. WCAG 2.5.8 (AA) is 24x24 CSS px; platform guidance is
+        // 44 (Apple) / 48 (Android). Inline links inside a text block are exempt
+        // from 2.5.8, so they're excluded rather than reported as noise.
+        const inlineLink = a => {
+          if (a.tagName !== 'A') return false;
+          const p = a.parentElement;
+          if (!p) return false;
+          const t = (p.textContent || '').trim().length;
+          return t > (a.textContent || '').trim().length + 12;
+        };
+        const targets = q('a[href],button,input:not([type=hidden]),select,textarea,' +
+                          '[role=button],[role=link],[role=tab],[onclick]')
+          .filter(vis).filter(el => !inlineLink(el));
+        const tiny = [], small = [];
+        for (const el of targets) {
+          const r = el.getBoundingClientRect();
+          const label = (el.getAttribute('aria-label') || el.textContent || el.name ||
+                         el.tagName).trim().replace(/\s+/g, ' ').slice(0, 26) || el.tagName;
+          const dim = `${Math.round(r.width)}x${Math.round(r.height)}`;
+          if (r.width < 24 || r.height < 24) tiny.push(`${label} (${dim})`);
+          else if (r.width < 44 || r.height < 44) small.push(`${label} (${dim})`);
+        }
+
+        // --- crowding: two targets whose 24px boxes overlap are hard to hit apart
+        const crowded = [];
+        for (let i = 0; i < targets.length && crowded.length < 6; i++) {
+          const a = targets[i].getBoundingClientRect();
+          for (let j = i + 1; j < targets.length; j++) {
+            const b = targets[j].getBoundingClientRect();
+            const gapX = Math.max(0, Math.max(a.left, b.left) - Math.min(a.right, b.right));
+            const gapY = Math.max(0, Math.max(a.top, b.top) - Math.min(a.bottom, b.bottom));
+            const gap = Math.hypot(gapX, gapY);
+            if (gap > 0 && gap < 8) {
+              crowded.push(`${(targets[i].textContent || targets[i].tagName).trim().slice(0, 16)} / ` +
+                           `${(targets[j].textContent || targets[j].tagName).trim().slice(0, 16)} (${Math.round(gap)}px)`);
+              break;
+            }
+          }
+        }
+
+        // --- text too small to read on a phone
+        const tooSmall = {};
+        for (const el of q('p,li,td,span,div,a,label,figcaption,small')) {
+          const direct = Array.from(el.childNodes)
+            .filter(n => n.nodeType === 3).map(n => n.textContent.trim()).join('');
+          if (direct.length < 12 || !vis(el)) continue;
+          const fs = parseFloat(getComputedStyle(el).fontSize);
+          if (fs && fs < 13) {
+            const k = `${fs}px`;
+            tooSmall[k] = (tooSmall[k] || 0) + 1;
+          }
+        }
+
+        // --- iOS auto-zooms any focused input under 16px, which yanks the layout
+        const zoomers = q('input:not([type=hidden]),select,textarea').filter(vis)
+          .filter(el => parseFloat(getComputedStyle(el).fontSize) < 16)
+          .map(el => `${el.tagName.toLowerCase()}${el.type ? '[' + el.type + ']' : ''} ` +
+                     `${parseFloat(getComputedStyle(el).fontSize)}px`);
+
+        // --- fixed/sticky chrome eating the viewport
+        let chrome = 0;
+        const chromeParts = [];
+        for (const el of q('*')) {
+          const cs = getComputedStyle(el);
+          if (cs.position !== 'fixed' && cs.position !== 'sticky') continue;
+          if (!vis(el)) continue;
+          const r = el.getBoundingClientRect();
+          if (r.height < 8 || r.height > innerHeight * 0.9) continue;
+          const atEdge = r.top <= 4 || Math.abs(r.bottom - innerHeight) <= 4;
+          if (!atEdge) continue;
+          if (el.parentElement && chromeParts.some(c => c.el.contains(el))) continue;
+          chromeParts.push({ el, h: r.height });
+          chrome += r.height;
+        }
+
+        // --- hero type set for a desktop, rendered on a phone
+        const h1 = q('h1').filter(vis)[0];
+        const h1px = h1 ? Math.round(parseFloat(getComputedStyle(h1).fontSize)) : 0;
+
+        // --- overflow, and which element causes it
+        const docW = document.documentElement.clientWidth;
+        const bleeders = q('*').filter(el => {
+          const r = el.getBoundingClientRect();
+          return r.width > 0 && (r.right > docW + 2 || r.left < -2) &&
+                 getComputedStyle(el).position !== 'fixed';
+        }).slice(0, 4).map(el => (el.className && String(el.className).split(' ')[0]) ||
+                                 el.tagName.toLowerCase());
+
+        // --- responsive images
+        const imgs = q('img').filter(vis);
+        const noSrcset = imgs.filter(i => !i.srcset && !i.closest('picture')).length;
+        const oversize = imgs.filter(i => i.naturalWidth &&
+          i.naturalWidth > i.getBoundingClientRect().width * 2.5).length;
+
+        return {
+          tiny, small: small.slice(0, 8), crowded, tooSmall, zoomers: zoomers.slice(0, 6),
+          chrome: Math.round(chrome), chromePct: Math.round(chrome / innerHeight * 100),
+          h1px, docW, bleeders,
+          imgTotal: imgs.length, noSrcset, oversize,
+          navLinks: q('nav a,header a').filter(vis).length,
+          navToggle: q('button,summary,[role=button],[aria-expanded],.hamburger,[class*=menu]')
+            .filter(vis).length,
+        };
+      };
+    });
+
     // ---- card-grid balance. Measures ACTUAL rendered rows, so it catches an
     // orphan the CSS didn't advertise -- see design/guardrails.md.
     await page.addInitScript(() => {
@@ -306,10 +424,48 @@ async function auditPage(browser, url) {
       rec(url, 'CLS (mobile)', cwv.cls <= 0.1 ? 'PASS' : 'FAIL',
         `${cwv.cls.toFixed(3)} (good <=0.1)`);
 
-      // horizontal overflow — the classic mobile failure
+      // ---------- mobile-specific gates ----------
+      const m = await page.evaluate(() => mobileAudit());
+
       const overflow = await page.evaluate(() =>
         document.documentElement.scrollWidth - document.documentElement.clientWidth);
-      rec(url, 'no horizontal scroll (mobile)', overflow <= 1 ? 'PASS' : 'FAIL', `${overflow}px overflow`);
+      rec(url, 'no horizontal scroll (mobile)', overflow <= 1 ? 'PASS' : 'FAIL',
+        overflow <= 1 ? '0px' :
+          `${overflow}px overflow${m.bleeders.length ? ' — from ' + m.bleeders.join(', ') : ''}`);
+
+      // WCAG 2.5.8 AA is 24x24; 44 is Apple's guidance and what thumbs actually want.
+      rec(url, 'tap targets >= 24px (WCAG 2.5.8)', m.tiny.length ? 'FAIL' : 'PASS',
+        m.tiny.length ? `${m.tiny.length} under 24px: ${m.tiny.slice(0, 5).join(', ')}`
+                      : 'all interactive targets 24px or larger');
+      rec(url, 'tap targets >= 44px (thumb-friendly)', m.small.length ? 'WARN' : 'PASS',
+        m.small.length ? `${m.small.length} between 24 and 44px: ${m.small.slice(0, 4).join(', ')}`
+                       : 'all targets 44px or larger');
+      rec(url, 'tap targets not crowded', m.crowded.length ? 'WARN' : 'PASS',
+        m.crowded.length ? `under 8px apart: ${m.crowded.slice(0, 3).join('; ')}`
+                         : 'adequate spacing');
+
+      const tsKeys = Object.keys(m.tooSmall);
+      rec(url, 'body text >= 13px on mobile', tsKeys.length ? 'FAIL' : 'PASS',
+        tsKeys.length ? tsKeys.map(k => `${m.tooSmall[k]} element(s) at ${k}`).join(', ')
+                      : 'no text under 13px');
+
+      rec(url, 'inputs >= 16px (no iOS zoom)', m.zoomers.length ? 'FAIL' : 'PASS',
+        m.zoomers.length ? `${m.zoomers.join(', ')} — iOS zooms the page on focus`
+                         : m.imgTotal >= 0 ? 'no undersized inputs' : '');
+
+      rec(url, 'sticky chrome <= 25% of viewport', m.chromePct <= 25 ? 'PASS' : 'FAIL',
+        `${m.chrome}px = ${m.chromePct}% of the phone viewport`);
+
+      rec(url, 'hero type sized for a phone', !m.h1px ? 'WARN' : m.h1px <= 44 ? 'PASS' : 'WARN',
+        m.h1px ? `h1 renders at ${m.h1px}px on a ${m.docW}px screen` : 'no visible h1');
+
+      rec(url, 'nav reachable on touch', m.navLinks > 0 || m.navToggle > 0 ? 'PASS' : 'FAIL',
+        `${m.navLinks} visible nav link(s), ${m.navToggle} possible toggle(s) — ` +
+        'a hover-only mega-menu is unreachable on a phone');
+
+      rec(url, 'responsive images', m.noSrcset === 0 ? 'PASS' : 'WARN',
+        `${m.noSrcset}/${m.imgTotal} without srcset or <picture>` +
+        (m.oversize ? `, ${m.oversize} served at >2.5x their displayed size` : ''));
     }
 
     // ---- accessibility, at every width (tap targets and reflow differ)
@@ -368,6 +524,7 @@ async function auditPage(browser, url) {
         metaDesc: document.querySelector('meta[name=description]')?.content || null,
         robots: document.querySelector('meta[name=robots]')?.content || null,
         preconnect: q('link[rel=preconnect]').length,
+        viewport: document.querySelector('meta[name=viewport]')?.content || null,
         cssImport: /@import/.test(head),
         jsonld: q('script[type="application/ld+json"]').map(s => s.textContent),
         imgTotal: imgs.length,
@@ -388,6 +545,20 @@ async function auditPage(browser, url) {
     });
 
     d.grids = await page.evaluate(() => measureGrids());
+
+    // Viewport meta. Blocking pinch-zoom is a WCAG 1.4.4 failure and it is the one
+    // mobile mistake that cannot be worked around by the user.
+    {
+      const v = d.viewport || '';
+      const hasWidth = /width\s*=\s*device-width/i.test(v);
+      const blocksZoom = /user-scalable\s*=\s*(no|0)/i.test(v) ||
+                         /maximum-scale\s*=\s*1(\.0)?\b/i.test(v);
+      rec(url, 'viewport meta', !d.viewport ? 'FAIL' : blocksZoom ? 'FAIL'
+            : hasWidth ? 'PASS' : 'WARN',
+        !d.viewport ? 'absent — the page renders at desktop width on a phone'
+          : blocksZoom ? `"${v}" — blocks pinch-zoom (WCAG 1.4.4 failure)`
+          : hasWidth ? v : `"${v}" — no width=device-width`);
+    }
 
     // SEO head
     rec(url, 'canonical', d.canonical ? 'PASS' : 'FAIL', d.canonical || 'absent');
