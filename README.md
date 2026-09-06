@@ -24,6 +24,10 @@ free.
 
 `/website` is the older combined command, kept for the full interview-to-ship path.
 
+**Building a client site right now?** `process/OPERATOR.md` is one self-contained page — the build
+order, the exact commands, and the five verified traps that have shipped or nearly shipped. Hand it
+over instead of pointing anyone at this repo.
+
 Gathers evidence, asks **four** questions, then builds in one pass. Two lanes:
 
 - **Lane A — full site.** Three of the nine Quantum themes, re-skinned to the client's brand,
@@ -68,6 +72,7 @@ Re-skinning rewrites twelve CSS custom properties in one block — see `process/
 | `design/prompts.md` | Generation prompts that worked, with model and settings. |
 | `design/inbox.md` | Drop URLs here, then run `/design-ingest`. |
 | `design/SCHEMA.md` | The ingest contract — slug rule, file shapes, failure handling. |
+| `process/OPERATOR.md` | **Hand this to whoever is building.** Self-contained checklist + the five traps. |
 | `process/strategy.md` | **Is this the right process to dominate?** An honest answer. |
 | `process/qa-findings.md` | **What a four-agent QA pass found**, verified. Read before trusting an older claim. |
 | `themes/tokens.json` | The nine themes' real tokens, cached. Mockups need no portal access. |
