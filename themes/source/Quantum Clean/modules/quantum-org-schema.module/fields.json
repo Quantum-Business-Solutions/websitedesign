@@ -1,0 +1,140 @@
+[
+  {
+    "id": "org_name",
+    "name": "org_name",
+    "label": "Organization legal name (empty = no schema emitted)",
+    "type": "text",
+    "default": "",
+    "required": false,
+    "locked": false
+  },
+  {
+    "id": "org_alt_name",
+    "name": "org_alt_name",
+    "label": "Short / alternate name",
+    "type": "text",
+    "default": "",
+    "required": false,
+    "locked": false
+  },
+  {
+    "id": "org_url",
+    "name": "org_url",
+    "label": "Canonical URL (https://…, no trailing slash)",
+    "type": "text",
+    "default": "",
+    "required": false,
+    "locked": false
+  },
+  {
+    "id": "org_description",
+    "name": "org_description",
+    "label": "One-line description",
+    "type": "text",
+    "default": "",
+    "required": false,
+    "locked": false
+  },
+  {
+    "id": "org_logo",
+    "name": "org_logo",
+    "label": "Logo (≥112px)",
+    "type": "image",
+    "default": {
+      "src": "",
+      "alt": "",
+      "loading": "disabled"
+    },
+    "required": false,
+    "locked": false,
+    "responsive": false,
+    "resizable": false,
+    "show_loading": false
+  },
+  {
+    "id": "org_sameas",
+    "name": "org_sameas",
+    "label": "sameAs profile URL (LinkedIn company page first)",
+    "type": "text",
+    "default": "",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 0,
+      "max": 12,
+      "default": 1
+    }
+  },
+  {
+    "id": "contact_email",
+    "name": "contact_email",
+    "label": "Sales contact email (optional)",
+    "type": "text",
+    "default": "",
+    "required": false,
+    "locked": false
+  },
+  {
+    "id": "contact_phone",
+    "name": "contact_phone",
+    "label": "Sales phone, E.164 e.g. +1-800-345-3559 (optional)",
+    "type": "text",
+    "default": "",
+    "required": false,
+    "locked": false
+  },
+  {
+    "id": "founder_name",
+    "name": "founder_name",
+    "label": "Founder name (optional)",
+    "type": "text",
+    "default": "",
+    "required": false,
+    "locked": false
+  },
+  {
+    "id": "founder_title",
+    "name": "founder_title",
+    "label": "Founder title",
+    "type": "text",
+    "default": "",
+    "required": false,
+    "locked": false
+  },
+  {
+    "id": "founder_url",
+    "name": "founder_url",
+    "label": "Founder page URL",
+    "type": "text",
+    "default": "",
+    "required": false,
+    "locked": false
+  },
+  {
+    "id": "founder_sameas",
+    "name": "founder_sameas",
+    "label": "Founder LinkedIn",
+    "type": "text",
+    "default": "",
+    "required": false,
+    "locked": false
+  },
+  {
+    "id": "knows_about",
+    "name": "knows_about",
+    "label": "knowsAbout, comma-separated",
+    "type": "text",
+    "default": "",
+    "required": false,
+    "locked": false
+  },
+  {
+    "id": "search_path",
+    "name": "search_path",
+    "label": "Site search path for a WebSite SearchAction (blank = none)",
+    "type": "text",
+    "default": "",
+    "required": false,
+    "locked": false
+  }
+]

@@ -341,3 +341,38 @@ The theme-level fixes are still writes to portal `20682069` and still need appro
 is now longer and better-argued than it was: the native-direction block is the real target, the
 light-theme contrast failure is new and shipping, the header/footer leak is worse than the schema,
 and INP/jQuery is a portal setting that may beat all of it. See `process/roadmap.md`.
+
+
+---
+
+## 2026-09-06 — two passes on the Kelly build and the theme fix
+
+**Theme fix (pre-upload review of `scripts/themefix.py` output), seven findings, all fixed before upload:**
+1. **Blocker.** Theme-level `fields.json` rejects text/image/menu fields. Brand and schema moved into
+   three modules included from the global partials.
+2. `require_js` for `quantum.js` had been dropped from the shared base — nine interactive modules
+   would have gone dead. Restored (the new base patches the original head instead of replacing it).
+3. The `color:var(--q-gold)` rewrite matched the tail of `border-color:`; anchored with a lookbehind.
+4. `|replace('/$','')` is a literal replace in HubL; now `|regex_replace`.
+5. Skip link had no target on four templates; the target is now a `#q-content` wrapper in base.html.
+6. Dark `section_bg` bands on light themes have a pre-existing `--fg` problem (1.1:1). Not fixed here.
+7. Breadcrumb names were not JSON-escaped; now `|tojson`.
+
+**Kelly pitch page, fourteen findings, the ones that changed the tool:**
+- The hero *subhead* was the brief's design read ("a regional office-technology dealer site for…")
+  rendered under the client's headline. `--subhead` is now required.
+- Accent text on light grounds used the fill color (2.3:1). The mock now uses the derived ink.
+- Confidential detail (a revenue target, an internal hostname, source-system names) leaked onto a
+  shareable page. Constraints render without their source tag; the growth target moved out of the
+  rendered section of the brief.
+- "What you told us, taken as binding" when nothing had been told. Retitled.
+- 390px: table overflow, nav labels wrapping, an orphaned stat. Fixed in the mock CSS.
+- Signal as a dark wildcard against a measured light category was a loophole, not an argument.
+  Rule 5's typeface classes were refined (humanist sans vs display grotesque) so the vertical's own
+  playbook — Clean / Showcase / Press — passes the selection check.
+- "A+ BBB since 1960" cannot be true (letter grades date from 2009). "BBB-accredited since 1960."
+- No recommendation, no findings, no hero render on the page. `--recommend` and `--findings` added;
+  the recommended direction has a high-fidelity home page render.
+
+**Still open from that pass:** the three preview panels share one layout and differ only in ground
+and heading face — honest, but a per-theme hero treatment would show what Press does editorially.

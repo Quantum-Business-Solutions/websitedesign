@@ -5,7 +5,7 @@
 -->
 {% extends "./layouts/base.html" %}
 {% block body %}
-<main>
+<main id="main">
   {% dnd_area "main" %}
     {% dnd_section %}
       {% dnd_module "s_hero" path="../modules/quantum-hero", width=12, layout="centered", eyebrow="HubSpot Admin", heading="Maximize Your HubSpot Potential with Quantum Business Solutions As a Super Admin, you have the power to manage your entire HubSpot account, but we recognize that this can be a daunting task", subhead="That’s where we come in. At Quantum, our team of experts is dedicated to ensuring you get the most out of HubSpot by managing your account and providing you with the necessary insights to make data-driven decisions.", primary_label="Book a call", secondary_label="Learn more" %}{% end_dnd_module %}

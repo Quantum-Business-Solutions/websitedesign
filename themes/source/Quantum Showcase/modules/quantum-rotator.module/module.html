@@ -1,6 +1,6 @@
 {% require_css %}<style>
 .qrot-{{ module.id }}{padding:96px 0;{% if module.section_bg=='alt' %}background:var(--bg-alt);{% endif %}}
-.qrot-{{ module.id }} .qrot-word{display:inline-block;font-family:var(--q-serif);font-style:italic;color:var(--q-gold);transition:opacity .35s ease;}
+.qrot-{{ module.id }} .qrot-word{display:inline-block;font-family:var(--q-serif);font-style:italic;color:var(--accent-ink);transition:opacity .35s ease;}
 </style>{% end_require_css %}
 <section class="qrot-{{ module.id }}"><div class="q-container" style="text-align:{{ module.align|default('center') }};">
   {% if module.eyebrow %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}

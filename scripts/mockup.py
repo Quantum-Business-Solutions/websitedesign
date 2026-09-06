@@ -54,6 +54,28 @@ GOOGLE_FONTS = (
 
 E = lambda s: html.escape(str(s or ""), quote=True)
 
+FONT_QUERY = {
+    "fraunces": "Fraunces:opsz,wght@9..144,400;9..144,600", "instrument serif": "Instrument+Serif:ital@0;1",
+    "poppins": "Poppins:wght@400;500;600", "space grotesk": "Space+Grotesk:wght@400;500;700",
+    "open sans": "Open+Sans:wght@400;600", "playfair display": "Playfair+Display:ital,wght@0,500;0,700;1,500",
+    "spectral": "Spectral:wght@400;600", "newsreader": "Newsreader:opsz,wght@6..72,400;6..72,600",
+    "bricolage grotesque": "Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700",
+    "inter": "Inter:wght@400;500;600", "dm sans": "DM+Sans:wght@400;500;600;700",
+}
+
+
+def fonts_for(themes, tokens) -> str:
+    """One Google Fonts request carrying only the faces these three themes use.
+    Eleven families for three directions was a phone-load cost during the call."""
+    fams = []
+    for t in themes:
+        tok = tokens.get(t, {}).get("tokens", {})
+        for k in ("--q-serif", "--q-sans"):
+            f = (tok.get(k) or "").split(",")[0].strip().strip("'\"").lower()
+            if f in FONT_QUERY and FONT_QUERY[f] not in fams:
+                fams.append(FONT_QUERY[f])
+    return "https://fonts.googleapis.com/css2?family=" + "&family=".join(fams) + "&display=swap"
+
 
 def load_tokens():
     if not os.path.exists(TOKENS):
@@ -138,6 +160,7 @@ def swatch_row(tok):
 def option_card(idx, name, meta, tok, role, rationale):
     bg, fg, muted = tok.get("--bg", "#fff"), tok.get("--fg", "#111"), tok.get("--fg-muted", "#666")
     gold, cta_fg = tok.get("--q-gold", "#c4a44a"), tok.get("--cta-fg", "#fff")
+    ink = tok.get("--accent-ink") or gold        # accent as TEXT: darkened on light grounds
     card, border = tok.get("--card", bg), tok.get("--border", "rgba(0,0,0,.12)")
     serif, sans = tok.get("--q-serif", "Georgia,serif"), tok.get("--q-sans", "system-ui,sans-serif")
     short = name.replace("Quantum ", "")
@@ -148,13 +171,12 @@ def option_card(idx, name, meta, tok, role, rationale):
     return f"""
 <section class="opt">
   <header class="opt-h">
-    <span class="num">Option {idx}</span>
+    <span class="num">{E(short)} · {E(meta.get('ground'))} ground{' · our recommendation' if RECOMMEND and name == RECOMMEND else ''}</span>
     <h3>{E(role)}</h3>
-    <p class="theme-name">{E(short)} · {E(meta.get('ground'))} · {E(meta.get('readsAs'))}</p>
     <p class="why">{E(rationale)}</p>
   </header>
 
-  <div class="frame" style="--bg:{E(bg)};--fg:{E(fg)};--muted:{E(muted)};--gold:{E(gold)};
+  <div class="frame{' frame-rec' if RECOMMEND and name == RECOMMEND else ''}" style="--bg:{E(bg)};--fg:{E(fg)};--muted:{E(muted)};--gold:{E(gold)};--ink:{E(ink)};
        --ctafg:{E(cta_fg)};--card:{E(card)};--bd:{E(border)};--serif:{E(serif)};--sans:{E(sans)}">
     <div class="mock">
       <div class="m-nav">
@@ -173,9 +195,9 @@ def option_card(idx, name, meta, tok, role, rationale):
         {''.join(f'<div class="m-stat"><b>{E(v)}</b><span>{E(l)}</span></div>' for v, l in STATS)}
       </div>
       <div class="m-cards">
-        <div class="m-card"><h5>{E(CARD1)}</h5><p>{E(CARD_BODY)}</p><span class="m-link">More →</span></div>
-        <div class="m-card"><h5>{E(CARD2)}</h5><p>{E(CARD_BODY)}</p><span class="m-link">More →</span></div>
-        <div class="m-card"><h5>{E(CARD3)}</h5><p>{E(CARD_BODY)}</p><span class="m-link">More →</span></div>
+        <div class="m-card"><h5>{E(CARD1)}</h5><p>{E(CARD_BODIES[0])}</p><span class="m-link">More →</span></div>
+        <div class="m-card"><h5>{E(CARD2)}</h5><p>{E(CARD_BODIES[1])}</p><span class="m-link">More →</span></div>
+        <div class="m-card"><h5>{E(CARD3)}</h5><p>{E(CARD_BODIES[2])}</p><span class="m-link">More →</span></div>
       </div>
     </div>
   </div>
@@ -206,19 +228,29 @@ HEADLINE = ""
 SUBHEAD = ""
 CARD1, CARD2, CARD3 = "", "", ""
 CARD_BODY = "What it covers, what it costs, and how quickly it starts."
+CARD_BODIES = [CARD_BODY] * 3
 STATS = []
+RECOMMEND = ""
+FINDINGS = []
+PROMISE_NOTE = "Your words, back to you. Everything below hangs off this line."
+SUBHEAD_OVERRIDE = ""
 
 
 # Rough typeface classes, for selection rule 5. A serif and a grotesque read as
 # different characters; two grotesques do not, however different their names.
 def face_class(stack: str) -> str:
+    """Four classes, because rule 5 is about how a heading READS, not the font's file
+    type: a humanist sans (Open Sans, Inter) and a display grotesque (Bricolage) are
+    different characters; two humanist sans are not, however different their names."""
     f = (stack or "").split(",")[0].strip().strip("'\"").lower()
     if any(k in f for k in ("serif", "playfair", "spectral", "newsreader",
                             "fraunces", "instrument", "georgia")):
         return "serif"
     if "grotesque" in f or "grotesk" in f:
         return "grotesque"
-    return "sans"
+    if any(k in f for k in ("poppins", "jost", "dm sans", "montserrat", "futura", "outfit")):
+        return "geometric sans"
+    return "humanist sans"
 
 
 def check_selection(themes, tokens, accent=None):
@@ -271,7 +303,7 @@ def check_selection(themes, tokens, accent=None):
 def build(client, promise, read, themes, tokens, accent, brief, roles, rationales):
     global HEADLINE, SUBHEAD
     HEADLINE = promise or f"{client}"
-    SUBHEAD = read or "The one line a visitor has to believe."
+    SUBHEAD = SUBHEAD_OVERRIDE or "The one line a visitor has to believe."
 
     opts = []
     for i, name in enumerate(themes, 1):
@@ -308,23 +340,32 @@ def build(client, promise, read, themes, tokens, accent, brief, roles, rationale
 
     cons = brief.get("constraints") or []
     comps = brief.get("competitors") or []
-    cons_html = ("<ul>" + "".join(f"<li>{E(c)}</li>" for c in cons) + "</ul>"
+    # The brief keeps the source after an em dash ("-- BrandCommand profile"); the
+    # client page does not need to know where we read it.
+    cons_html = ("<ul>" + "".join(f"<li>{E(c.rsplit(' — ', 1)[0] if ' — ' in c else c)}</li>" for c in cons) + "</ul>"
                  if cons else '<p class="gap">Not captured yet — this is the highest-trust '
                               'section on the page. Fill it from the call.</p>')
-    comp_html = ("<table><tr><th>Competitor</th><th>Ingested</th><th>What the category looks like</th></tr>"
+    comp_html = ('<div class="tablewrap"><table><tr><th>Competitor</th><th>Ingested</th><th>What the category looks like</th></tr>'
                  + "".join("<tr>" + "".join(f"<td>{E(c)}</td>" for c in r[:3]) + "</tr>"
-                           for r in comps) + "</table>"
+                           for r in comps) + "</table></div>"
                  if comps else '<p class="gap">None ingested yet — run <code>/design-ingest</code> '
                                'before the meeting. Naming a competitor we haven\'t read is worse '
                                'than naming none.</p>')
     traffic = brief.get("traffic")
-    traffic_html = (f'<p class="big">{E(traffic)} <span>organic visits / month today</span></p>'
-                    '<p class="note">This is the number the engagement gets measured against.</p>'
+    traffic_num = re.sub(r"\s*/\s*mo\b.*$", "", traffic or "")
+    traffic_html = (f'<p class="big">{E(traffic_num)} <span>organic visits a month today</span></p>'
+                    '<p class="note">The baseline. Every number we report after launch is against this one.</p>'
                     if traffic else
                     '<p class="gap">No baseline recorded. Pull it before the meeting — without it '
                     'there is no way to prove the work worked.</p>')
 
-    accent_note = (f'<p class="note">All three directions re-skinned to {E(accent)}, '
+    findings_html = ("<section class=\"blk\"><h2>What we found, and what we'd do about it</h2>"
+                     '<ul class="findings">' + "".join(f"<li>{E(f)}</li>" for f in FINDINGS) + "</ul></section>"
+                     if FINDINGS else "")
+    rec_html = (f'<p class="lead"><b>Our recommendation is {E(RECOMMEND.replace("Quantum ", ""))}.</b> '
+                'The other two are real alternatives, not padding; if one of them is the one you keep '
+                'coming back to, that is the answer.</p>' if RECOMMEND else "")
+    accent_note = (rec_html + f'<p class="note">All three directions re-skinned to {E(accent)}, '
                    'taken from your own site. Each theme keeps its own ground and '
                    'typeface — that is what makes the three genuinely different.</p>'
                    if accent else "")
@@ -332,7 +373,7 @@ def build(client, promise, read, themes, tokens, accent, brief, roles, rationale
     return f"""<title>{E(client)} — three directions</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="{GOOGLE_FONTS}">
+<link rel="stylesheet" href="{fonts_for(themes, tokens)}">
 <style>
 :root{{
   --ink:#14171c; --ink-2:#4a515c; --line:#e3e0d8; --paper:#faf8f4;
@@ -382,37 +423,39 @@ code{{font:12px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;
 .opt-h .num{{font-size:11px;letter-spacing:.16em;text-transform:uppercase;
   color:var(--accent);font-weight:700}}
 .opt-h h3{{font-size:clamp(22px,3vw,30px);margin:6px 0 4px}}
-.opt-h .theme-name{{font-size:13px;color:var(--ink-2);margin:0 0 10px;
-  letter-spacing:.02em;text-transform:lowercase}}
+.frame-rec{{box-shadow:0 0 0 3px var(--accent)}}
 .opt-h .why{{margin:0 0 20px;max-width:66ch}}
 .frame{{border:1px solid var(--rule);border-radius:12px;overflow:hidden}}
 .mock{{background:var(--bg);color:var(--fg);font-family:var(--sans);padding:0}}
 .m-nav{{display:flex;justify-content:space-between;align-items:center;
   padding:16px 22px;border-bottom:1px solid var(--bd);font-size:13px}}
-.m-logo{{font-family:var(--serif);font-size:17px;letter-spacing:.04em}}
-.m-links{{display:flex;align-items:center;gap:16px}}
-.m-links i{{font-style:normal;color:var(--muted)}}
+.m-logo{{font-family:var(--serif);font-size:17px;letter-spacing:.04em;white-space:nowrap}}
+.m-links{{display:flex;align-items:center;gap:16px;flex-shrink:0}}
+.m-links i{{font-style:normal;color:var(--muted);white-space:nowrap}}
+@media(max-width:700px){{.m-links i{{display:none}}}}
 .m-cta{{background:var(--gold);color:var(--ctafg);padding:7px 15px;border-radius:6px;
   font-weight:600;font-size:12.5px}}
-.m-cta2{{border:1px solid var(--gold);color:var(--gold);padding:6px 14px;
+.m-cta2{{border:1px solid var(--gold);color:var(--ink);padding:6px 14px;
   border-radius:6px;font-weight:600;font-size:12.5px}}
 .m-hero{{padding:52px 30px 46px;max-width:44rem}}
 .m-eyebrow{{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--gold);font-weight:600}}
+  color:var(--ink);font-weight:600}}
 .m-hero h4{{font-family:var(--serif);font-size:clamp(26px,3.6vw,40px);line-height:1.1;
   letter-spacing:-.02em;margin:14px 0 12px;font-weight:600}}
 .m-hero p{{color:var(--muted);margin:0 0 22px;font-size:15px;max-width:46ch}}
 .m-btns{{display:flex;gap:10px;flex-wrap:wrap}}
-.m-band{{display:flex;gap:34px;flex-wrap:wrap;padding:20px 30px;
+.m-band{{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:20px 30px;
   border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);background:var(--card)}}
-.m-stat b{{font-family:var(--serif);font-size:26px;display:block;color:var(--gold)}}
+.m-stat b{{font-family:var(--serif);font-size:26px;display:block;color:var(--ink)}}
 .m-stat span{{font-size:11.5px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}}
 .m-cards{{display:grid;grid-template-columns:1fr;gap:16px;padding:26px 30px 34px}}
 @media(min-width:700px){{.m-cards{{grid-template-columns:repeat(3,1fr)}}}}
 .m-card{{border:1px solid var(--bd);border-radius:9px;padding:18px;background:var(--card)}}
 .m-card h5{{font-family:var(--serif);font-size:16.5px;margin:0 0 7px;font-weight:600}}
 .m-card p{{font-size:13px;color:var(--muted);margin:0 0 12px}}
-.m-link{{font-size:12.5px;color:var(--gold);font-weight:600}}
+.m-link{{font-size:12.5px;color:var(--ink);font-weight:600}}
+.tablewrap{{overflow-x:auto;-webkit-overflow-scrolling:touch}}
+.findings li{{margin:0 0 10px}}
 
 .type{{display:grid;gap:4px;margin:22px 0 0;padding:20px 0 0;border-top:1px solid var(--line)}}
 .tspec{{font-size:11px;letter-spacing:.13em;text-transform:uppercase;
@@ -434,28 +477,29 @@ footer{{padding:40px 0 70px;color:var(--ink-2);font-size:13.5px}}
 <header class="top">
   <p class="eyebrow">Website directions</p>
   <h1>{E(client)}</h1>
-  <p class="sub">Three directions, each a complete 19-template site kit on a theme we own
-  outright — re-skinned to your brand. Not concepts: working systems, editable by your team
-  in HubSpot after launch.</p>
+  <p class="sub">Three directions, each a complete site system of sixteen page templates on a
+  theme we own outright, re-skinned to your brand. Not concepts: working systems, editable by
+  your team in HubSpot after launch.</p>
 </header>
 
 <section class="blk">
   <h2>What we read</h2>
-  <p class="lead">{E(read or 'Reading to be confirmed.')}</p>
+  <p class="lead">{E((read[:1].upper() + read[1:]) if read else 'Reading to be confirmed.')}</p>
   <div class="grid2">
     <div><h2 style="font-size:17px;margin-bottom:10px">The promise</h2>
       <p class="lead" style="font-size:19px">"{E(promise or 'To be confirmed on the call.')}"</p>
-      <p class="note">Your words, back to you. Everything below hangs off this line.</p></div>
+      <p class="note">{E(PROMISE_NOTE)}</p></div>
     <div><h2 style="font-size:17px;margin-bottom:10px">Where you are today</h2>
       {traffic_html}</div>
   </div>
 </section>
 
 <section class="blk">
-  <h2>Constraints we're honouring</h2>
-  <p class="lead">What you told us, taken as binding — these outrank our house defaults.</p>
+  <h2>What we're treating as fixed</h2>
+  <p class="lead">Tell us if any of this is wrong. It outranks our house defaults.</p>
   {cons_html}
 </section>
+{findings_html}
 
 <section class="blk">
   <h2>What the category looks like</h2>
@@ -467,13 +511,13 @@ footer{{padding:40px 0 70px;color:var(--ink-2);font-size:13.5px}}
   <p class="eyebrow">The three directions</p>
   <h2 style="font-size:clamp(22px,3vw,30px);margin-bottom:8px">One safe, one stretch, one wildcard</h2>
   <p class="lead">Deliberately different registers, so the choice is real rather than three
-  shades of one idea. {'' if not accent else 'All three carry your accent colour.'}</p>
+  shades of one idea. {'' if not accent else 'All three carry your accent color.'}</p>
   {accent_note}
   {''.join(opts)}
 </section>
 
 <footer>
-  Rendered from the live design tokens of the nine Quantum themes — the colours and typefaces
+  Rendered from the live design tokens of the nine Quantum themes. The colors and typefaces
   above are what ships, not an approximation. Nothing has been built in HubSpot yet; the
   direction you choose gets cloned and re-skinned once.
 </footer>
@@ -495,6 +539,11 @@ def main():
     p.add_argument("--rationales", default="||",
                    help="pipe-separated, one per direction")
     p.add_argument("--eyebrow", help="the small line above the headline, e.g. 'Since 1947'")
+    p.add_argument("--subhead", help="the hero paragraph, written for the client's visitor (required)")
+    p.add_argument("--card-bodies", help="three one-liners, pipe-separated, one per card")
+    p.add_argument("--findings", help="pipe-separated bullets: what we found and what we'd do")
+    p.add_argument("--recommend", help="theme name QBS recommends; marked on the page")
+    p.add_argument("--promise-note", help="provenance of the promise line, e.g. 'your current homepage line; we confirm it on the first call'")
     p.add_argument("--cards", help="three service names, pipe-separated")
     p.add_argument("--card-body", help="one line under each card")
     p.add_argument("--stats", help='three "value:label" pairs, pipe-separated — the stat-band')
@@ -527,8 +576,10 @@ def main():
               'Fix the set, or pass --override "<reason>" if you have one.', file=sys.stderr)
         return 2
 
-    global EYEBROW, CARD1, CARD2, CARD3, CARD_BODY, STATS, CTA_LABEL, CTA2_LABEL, NAV_LINKS, NAV_LOGO
-    missing = [f for f, v in (("--eyebrow", a.eyebrow), ("--cards", a.cards), ("--stats", a.stats)) if not v]
+    global EYEBROW, CARD1, CARD2, CARD3, CARD_BODY, CARD_BODIES, STATS, CTA_LABEL, CTA2_LABEL, NAV_LINKS, NAV_LOGO
+    global RECOMMEND, FINDINGS, PROMISE_NOTE, SUBHEAD_OVERRIDE
+    missing = [f for f, v in (("--eyebrow", a.eyebrow), ("--cards", a.cards), ("--stats", a.stats),
+                              ("--subhead", a.subhead)) if not v]
     if missing:
         print(f"\nREFUSING: preview copy is required: {' '.join(missing)}.\n"
               "There is no default copy on purpose -- a placeholder in front of a client is\n"
@@ -549,6 +600,16 @@ def main():
     CARD1, CARD2, CARD3 = cards
     STATS = stats
     if a.card_body: CARD_BODY = a.card_body
+    CARD_BODIES = [c.strip() for c in a.card_bodies.split("|")] if a.card_bodies else [CARD_BODY] * 3
+    if len(CARD_BODIES) != 3:
+        raise SystemExit("--card-bodies takes exactly three, pipe-separated")
+    if a.recommend:
+        if a.recommend not in themes:
+            raise SystemExit(f"--recommend must be one of the three themes: {themes}")
+        RECOMMEND = a.recommend
+    FINDINGS = [f.strip() for f in a.findings.split("|") if f.strip()] if a.findings else []
+    if a.promise_note: PROMISE_NOTE = a.promise_note
+    SUBHEAD_OVERRIDE = a.subhead
     if a.cta: CTA_LABEL = a.cta
     if a.cta2: CTA2_LABEL = a.cta2
     if a.nav: NAV_LINKS = [n.strip() for n in a.nav.split("|") if n.strip()]

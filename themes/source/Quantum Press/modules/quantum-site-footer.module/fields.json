@@ -1,0 +1,180 @@
+[
+  {
+    "id": "company_name",
+    "name": "company_name",
+    "label": "Company name",
+    "type": "text",
+    "default": "Quantum Business Solutions",
+    "required": false,
+    "locked": false
+  },
+  {
+    "id": "logo_dark",
+    "name": "logo_dark",
+    "label": "Logo for dark ground",
+    "type": "image",
+    "default": {
+      "src": "https://www.thequantumleap.business/hubfs/quantum_new.png",
+      "alt": "Quantum Business Solutions",
+      "loading": "disabled"
+    },
+    "required": false,
+    "locked": false,
+    "responsive": false,
+    "resizable": false,
+    "show_loading": false
+  },
+  {
+    "id": "logo_light",
+    "name": "logo_light",
+    "label": "Logo for light ground",
+    "type": "image",
+    "default": {
+      "src": "https://20682069.fs1.hubspotusercontent-na1.net/hubfs/20682069/quantum-theme/brand/quantum-light.png",
+      "alt": "Quantum Business Solutions",
+      "loading": "disabled"
+    },
+    "required": false,
+    "locked": false,
+    "responsive": false,
+    "resizable": false,
+    "show_loading": false
+  },
+  {
+    "id": "tagline",
+    "name": "tagline",
+    "label": "Tagline",
+    "type": "text",
+    "default": "Quickly understand your business and what technology you are using.",
+    "required": false,
+    "locked": false
+  },
+  {
+    "id": "phone",
+    "name": "phone",
+    "label": "Phone (blank hides)",
+    "type": "text",
+    "default": "",
+    "required": false,
+    "locked": false
+  },
+  {
+    "id": "email",
+    "name": "email",
+    "label": "Email (blank hides)",
+    "type": "text",
+    "default": "",
+    "required": false,
+    "locked": false
+  },
+  {
+    "id": "facebook",
+    "name": "facebook",
+    "label": "Facebook URL",
+    "type": "text",
+    "default": "https://www.facebook.com/profile.php?id=100075560065925",
+    "required": false,
+    "locked": false
+  },
+  {
+    "id": "instagram",
+    "name": "instagram",
+    "label": "Instagram URL",
+    "type": "text",
+    "default": "https://www.instagram.com/the.quantum.leap/",
+    "required": false,
+    "locked": false
+  },
+  {
+    "id": "linkedin",
+    "name": "linkedin",
+    "label": "LinkedIn company URL",
+    "type": "text",
+    "default": "https://www.linkedin.com/company/quantum-business-solutions",
+    "required": false,
+    "locked": false
+  },
+  {
+    "id": "x",
+    "name": "x",
+    "label": "X URL",
+    "type": "text",
+    "default": "",
+    "required": false,
+    "locked": false
+  },
+  {
+    "id": "show_menu_1",
+    "name": "show_menu_1",
+    "label": "Show link column 1",
+    "type": "boolean",
+    "default": false,
+    "required": false,
+    "locked": false,
+    "display": "toggle"
+  },
+  {
+    "id": "menu_1_title",
+    "name": "menu_1_title",
+    "label": "Column 1 title",
+    "type": "text",
+    "default": "Solutions",
+    "required": false,
+    "locked": false
+  },
+  {
+    "id": "menu_1",
+    "name": "menu_1",
+    "label": "Column 1 menu",
+    "type": "menu",
+    "default": null,
+    "required": false,
+    "locked": false
+  },
+  {
+    "id": "show_menu_2",
+    "name": "show_menu_2",
+    "label": "Show link column 2",
+    "type": "boolean",
+    "default": false,
+    "required": false,
+    "locked": false,
+    "display": "toggle"
+  },
+  {
+    "id": "menu_2_title",
+    "name": "menu_2_title",
+    "label": "Column 2 title",
+    "type": "text",
+    "default": "Resources",
+    "required": false,
+    "locked": false
+  },
+  {
+    "id": "menu_2",
+    "name": "menu_2",
+    "label": "Column 2 menu",
+    "type": "menu",
+    "default": null,
+    "required": false,
+    "locked": false
+  },
+  {
+    "id": "privacy_url",
+    "name": "privacy_url",
+    "label": "Privacy policy URL",
+    "type": "text",
+    "default": "/privacy-policy",
+    "required": false,
+    "locked": false
+  },
+  {
+    "id": "terms_url",
+    "name": "terms_url",
+    "label": "Terms URL (blank hides)",
+    "type": "text",
+    "default": "",
+    "required": false,
+    "locked": false
+  }
+]

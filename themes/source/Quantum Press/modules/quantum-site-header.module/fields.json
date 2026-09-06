@@ -1,0 +1,98 @@
+[
+  {
+    "id": "company_name",
+    "name": "company_name",
+    "label": "Company name",
+    "type": "text",
+    "default": "Quantum Business Solutions",
+    "required": false,
+    "locked": false
+  },
+  {
+    "id": "logo_dark",
+    "name": "logo_dark",
+    "label": "Logo for dark ground",
+    "type": "image",
+    "default": {
+      "src": "https://www.thequantumleap.business/hubfs/quantum_new.png",
+      "alt": "Quantum Business Solutions",
+      "loading": "disabled"
+    },
+    "required": false,
+    "locked": false,
+    "responsive": false,
+    "resizable": false,
+    "show_loading": false
+  },
+  {
+    "id": "logo_light",
+    "name": "logo_light",
+    "label": "Logo for light ground",
+    "type": "image",
+    "default": {
+      "src": "https://20682069.fs1.hubspotusercontent-na1.net/hubfs/20682069/quantum-theme/brand/quantum-light.png",
+      "alt": "Quantum Business Solutions",
+      "loading": "disabled"
+    },
+    "required": false,
+    "locked": false,
+    "responsive": false,
+    "resizable": false,
+    "show_loading": false
+  },
+  {
+    "id": "header_menu",
+    "name": "header_menu",
+    "label": "Navigation menu",
+    "type": "menu",
+    "default": 184144186499,
+    "required": false,
+    "locked": false
+  },
+  {
+    "id": "cta_label",
+    "name": "cta_label",
+    "label": "CTA button label",
+    "type": "text",
+    "default": "Book Now",
+    "required": false,
+    "locked": false
+  },
+  {
+    "id": "cta_url",
+    "name": "cta_url",
+    "label": "CTA button URL (blank hides the button)",
+    "type": "text",
+    "default": "https://meetings.hubspot.com/shawn-peterson",
+    "required": false,
+    "locked": false
+  },
+  {
+    "id": "show_topbar",
+    "name": "show_topbar",
+    "label": "Show announcement bar",
+    "type": "boolean",
+    "default": false,
+    "required": false,
+    "locked": false,
+    "display": "toggle"
+  },
+  {
+    "id": "topbar_text",
+    "name": "topbar_text",
+    "label": "Announcement text",
+    "type": "text",
+    "default": "Are AI engines citing your company? Get your free AEO score",
+    "required": false,
+    "locked": false
+  },
+  {
+    "id": "topbar_url",
+    "name": "topbar_url",
+    "label": "Announcement URL",
+    "type": "text",
+    "default": "/en/aeo-health-check",
+    "required": false,
+    "locked": false
+  }
+]

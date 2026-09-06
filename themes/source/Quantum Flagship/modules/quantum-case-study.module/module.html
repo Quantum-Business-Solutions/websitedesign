@@ -10,7 +10,7 @@
       {% if module.photo.src %}<div style="width:100%;height:300px;border-radius:12px;overflow:hidden;border:1px solid var(--border);margin-bottom:16px;"><img src="{{ module.photo.src }}" alt="{{ module.photo.alt }}" style="width:100%;height:100%;object-fit:cover;"></div>{% endif %}
       <div class="q-grid-2">
         {% for m in module.metrics %}
-        <div class="q-card"><div style="font-size:11px;text-transform:uppercase;letter-spacing:0.12em;color:var(--fg-muted);">{{ m.k }}</div><div style="font-family:var(--q-serif);font-size:34px;color:var(--q-gold);margin-top:8px;">{{ m.v }}</div></div>
+        <div class="q-card"><div style="font-size:11px;text-transform:uppercase;letter-spacing:0.12em;color:var(--fg-muted);">{{ m.k }}</div><div style="font-family:var(--q-serif);font-size:34px;color:var(--accent-ink);margin-top:8px;">{{ m.v }}</div></div>
         {% endfor %}
       </div>
     </div>

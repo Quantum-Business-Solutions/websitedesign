@@ -27,9 +27,10 @@
   {% endif %}
 </head>
 <body data-theme="{{ theme.appearance.mode }}" class="{{ builtin_body_classes }}">
+  <a class="q-skip" href="#q-content">Skip to content</a>
   <div class="body-wrapper">
     {% block header %}{% global_partial path='../partials/header.html' %}{% endblock %}
-    {% block body %}{% endblock %}
+    <div id="q-content" tabindex="-1">{% block body %}{% endblock %}</div>
     {% block footer %}{% global_partial path='../partials/footer.html' %}{% endblock %}
   </div>
   {{ standard_footer_includes }}

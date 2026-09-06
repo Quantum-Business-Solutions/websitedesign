@@ -1,0 +1,46 @@
+{% set b = module %}
+<footer class="q-footer">
+  <div class="q-container q-footer-grid">
+    <div>
+      {% if b.logo_dark.src or b.logo_light.src %}
+        <img class="only-dark" src="{{ b.logo_dark.src or b.logo_light.src }}" alt="{{ b.company_name }}" height="38" loading="lazy">
+        <img class="only-light" src="{{ b.logo_light.src or b.logo_dark.src }}" alt="{{ b.company_name }}" height="38" loading="lazy">
+      {% else %}
+        <span class="q-logo-text">{{ b.company_name }}</span>
+      {% endif %}
+      {% if b.tagline %}<p class="q-footer-tag">{{ b.tagline }}</p>{% endif %}
+      {% if b.phone or b.email %}
+      <p class="q-footer-contact">
+        {% if b.phone %}<a class="q-footer-phone" href="tel:{{ b.phone|regex_replace('[^0-9+]','') }}">{{ b.phone }}</a>{% endif %}
+        {% if b.phone and b.email %} &nbsp;·&nbsp; {% endif %}
+        {% if b.email %}<a href="mailto:{{ b.email }}">{{ b.email }}</a>{% endif %}
+      </p>
+      {% endif %}
+      <div class="q-footer-social">
+        {% if b.facebook %}<a href="{{ b.facebook }}" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.75-1.6 1.5V12h2.7l-.43 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg></a>{% endif %}
+        {% if b.instagram %}<a href="{{ b.instagram }}" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>{% endif %}
+        {% if b.linkedin %}<a href="{{ b.linkedin }}" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>{% endif %}
+        {% if b.x %}<a href="{{ b.x }}" aria-label="X"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 2H22l-7.4 8.5L23 22h-6.8l-5.3-6.9L4.8 22H1.7l7.9-9L1 2h7l4.8 6.3L18.9 2zm-1.2 18h1.9L7.2 3.9H5.2L17.7 20z"/></svg></a>{% endif %}
+      </div>
+    </div>
+    <div>
+      {% if b.show_menu_1 and b.menu_1 %}
+        {% set fm1 = menu(b.menu_1) %}
+        {% if b.menu_1_title %}<div class="q-footer-head">{{ b.menu_1_title }}</div>{% endif %}
+        <nav class="q-footer-links" aria-label="{{ b.menu_1_title or 'Footer' }}">{% for item in fm1.children %}<a href="{{ item.url }}">{{ item.label }}</a>{% endfor %}</nav>
+      {% endif %}
+    </div>
+    <div>
+      {% if b.show_menu_2 and b.menu_2 %}
+        {% set fm2 = menu(b.menu_2) %}
+        {% if b.menu_2_title %}<div class="q-footer-head">{{ b.menu_2_title }}</div>{% endif %}
+        <nav class="q-footer-links" aria-label="{{ b.menu_2_title or 'Footer' }}">{% for item in fm2.children %}<a href="{{ item.url }}">{{ item.label }}</a>{% endfor %}</nav>
+      {% endif %}
+    </div>
+  </div>
+  <div class="q-container q-footer-legal">
+    Copyright &copy; {{ year }} {{ b.company_name }}
+    {% if b.privacy_url %} &nbsp;|&nbsp; <a href="{{ b.privacy_url }}">Privacy Policy</a>{% endif %}
+    {% if b.terms_url %} &nbsp;|&nbsp; <a href="{{ b.terms_url }}">Terms of Service</a>{% endif %}
+  </div>
+</footer>

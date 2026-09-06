@@ -1,0 +1,43 @@
+.q-topbar{background:linear-gradient(90deg,rgba(196,164,74,.12),rgba(196,164,74,.04));border-bottom:1px solid rgba(196,164,74,.18);text-align:center;padding:9px 16px;font-size:13.5px;}
+.q-topbar a{color:var(--fg);text-decoration:none;letter-spacing:.01em;}
+.q-topbar a:hover{text-decoration:underline;}
+.q-topbar-arrow{color:var(--accent-ink);}
+.q-header{border-bottom:1px solid var(--border);background:var(--bg);position:sticky;top:0;z-index:50;}
+.q-header-in{height:80px;display:flex;align-items:center;justify-content:space-between;gap:32px;}
+.q-header-logo{display:flex;align-items:center;flex:0 0 auto;text-decoration:none;}
+.q-header-logo img{height:40px;width:auto;}
+.q-logo-text{font-family:var(--q-serif);font-size:22px;font-weight:600;color:var(--fg);letter-spacing:-0.01em;}
+.q-nav{display:flex;align-items:center;gap:28px;font-size:14.5px;font-weight:500;}
+.q-nav > a, .q-nav-item > a{color:var(--fg);text-decoration:none;display:inline-flex;align-items:center;gap:6px;padding:28px 0;}
+.q-nav > a:hover, .q-nav-item > a:hover{color:var(--accent-ink);}
+.q-nav-item{position:relative;}
+.q-nav-item .q-caret{width:8px;height:8px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-2px);}
+.q-subnav{visibility:hidden;opacity:0;transition:opacity .18s ease,transform .18s ease;transform:translate(-50%,6px);position:absolute;top:100%;left:50%;min-width:250px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:8px 0;box-shadow:0 14px 40px rgba(0,0,0,0.18);z-index:60;}
+.q-nav-item:hover .q-subnav, .q-nav-item:focus-within .q-subnav{visibility:visible;opacity:1;transform:translate(-50%,0);}
+.q-subnav a{display:block;padding:9px 22px;color:var(--fg);text-decoration:none;font-size:14px;white-space:nowrap;}
+.q-subnav a:hover{color:var(--accent-ink);background:var(--bg-alt);}
+.q-booknow{border:1px solid var(--q-gold);color:var(--accent-ink)!important;padding:11px 26px!important;border-radius:999px;font-weight:600;letter-spacing:0.01em;}
+.q-booknow:hover{background:var(--q-gold);color:var(--cta-fg)!important;}
+.q-mnav{display:none;}
+@media(max-width:1024px){
+  .q-nav{display:none;}
+  .q-mnav{display:block;}
+  .q-mnav > summary{list-style:none;cursor:pointer;width:46px;height:46px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;border:1px solid var(--border);border-radius:10px;}
+  .q-mnav > summary::-webkit-details-marker{display:none;}
+  .q-mnav > summary span{display:block;width:20px;height:2px;background:var(--accent-ink);border-radius:2px;transition:transform .2s ease,opacity .2s ease;}
+  .q-mnav[open] > summary span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .q-mnav[open] > summary span:nth-child(2){opacity:0;}
+  .q-mnav[open] > summary span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+  .q-mnav-panel{position:absolute;top:100%;left:0;right:0;max-height:calc(100vh - 80px);overflow:auto;-webkit-overflow-scrolling:touch;background:var(--bg);border-top:1px solid var(--border);box-shadow:0 30px 60px rgba(0,0,0,.25);padding:10px 22px 34px;z-index:70;}
+  .q-mnav-panel > a, .q-msub > summary{display:flex;align-items:center;justify-content:space-between;padding:15px 2px;color:var(--fg);text-decoration:none;font-size:16px;font-weight:500;border-bottom:1px solid var(--border);min-height:44px;box-sizing:border-box;}
+  .q-msub{border-bottom:1px solid var(--border);}
+  .q-msub > summary{border-bottom:none;list-style:none;cursor:pointer;}
+  .q-msub > summary::-webkit-details-marker{display:none;}
+  .q-msub .q-caret{width:8px;height:8px;border-right:1.5px solid var(--accent-ink);border-bottom:1.5px solid var(--accent-ink);transform:rotate(45deg);transition:transform .18s ease;}
+  .q-msub[open] > summary .q-caret{transform:rotate(-135deg);}
+  .q-msub-links{padding:2px 0 12px;}
+  .q-msub-links a{display:block;padding:12px 14px;color:var(--fg-muted);text-decoration:none;font-size:15px;min-height:44px;box-sizing:border-box;}
+  .q-msub-links a:active, .q-msub-links a:hover{color:var(--accent-ink);}
+  .q-mnav-cta{display:block;text-align:center;margin-top:22px;border:1px solid var(--q-gold);color:var(--accent-ink);padding:13px 26px;border-radius:999px;font-weight:600;text-decoration:none;font-size:16px;}
+  .q-mnav-panel > a.q-mnav-cta{justify-content:center;border-bottom:none;}
+}

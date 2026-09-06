@@ -5,7 +5,7 @@
 -->
 {% extends "./layouts/base.html" %}
 {% block body %}
-<main>
+<main id="main">
   {% dnd_area "main" label="Main content" %}
     {% dnd_section %}
       {% dnd_module "m_hero" path="../modules/quantum-hero", width=12, layout="orbit", eyebrow="Growth Agency", heading="Revolutionize your <em>sales</em> to maximize growth", subhead="We systemize, optimize, and automate your entire go-to-market, so sales and marketing finally run as one compounding engine.", primary_label="Book a call", secondary_label="See the Growth Model", rotate_words="sales,marketing,operations", image={"src":"https://20682069.fs1.hubspotusercontent-na1.net/hubfs/20682069/quantum-theme/graphics/hero.svg","alt":"Quantum revenue growth"} %}{% end_dnd_module %}

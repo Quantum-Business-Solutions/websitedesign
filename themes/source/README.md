@@ -16,6 +16,12 @@ live portal against this directory and exits 1 if they differ.
 - **Client themes are not mirrored here.** They live in the client's portal, and in a client repo
   only when Phase 4 produced code (`process/repos.md`).
 
+## When source is ahead of the portal
+
+A fix staged by `scripts/themefix.py` is committed here before it is uploaded, so `drift` will
+report a difference until `reskin.py upload` lands. That is the intended direction of travel;
+the failure this directory prevents is the other one, where the portal moves and nothing here does.
+
 ## Refresh
 
 ```bash

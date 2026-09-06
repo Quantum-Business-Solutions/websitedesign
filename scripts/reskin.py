@@ -175,8 +175,8 @@ def read_source(theme_path: str, token: str) -> str:
         "/cms/v3/source-code/published/content/" + urllib.parse.quote(theme_path), token)
 
 
-def put_file(path: str, token: str, content: str):
-    """Create or update a file in the DRAFT environment via multipart upload."""
+def put_file(path: str, token: str, content: str, env: str = "draft"):
+    """Create or update a file via multipart upload. env is draft (default) or published."""
     boundary = f"----qbs{uuid.uuid4().hex}"
     payload = (
         f"--{boundary}\r\n"
@@ -184,7 +184,20 @@ def put_file(path: str, token: str, content: str):
         "Content-Type: application/octet-stream\r\n\r\n"
     ).encode() + content.encode("utf-8") + f"\r\n--{boundary}--\r\n".encode()
     enc = urllib.parse.quote(path)
-    return _req("PUT", f"/cms/v3/source-code/draft/content/{enc}", token,
+    return _req("PUT", f"/cms/v3/source-code/{env}/content/{enc}", token,
+                body=payload, ctype=f"multipart/form-data; boundary={boundary}")
+
+
+def validate_file(path: str, token: str, content: str, env: str = "published"):
+    """HubL/JSON validation without writing. Raises HubSpotError on a template error."""
+    boundary = f"----qbs{uuid.uuid4().hex}"
+    payload = (
+        f"--{boundary}\r\n"
+        f'Content-Disposition: form-data; name="file"; filename="{os.path.basename(path)}"\r\n'
+        "Content-Type: application/octet-stream\r\n\r\n"
+    ).encode() + content.encode("utf-8") + f"\r\n--{boundary}--\r\n".encode()
+    enc = urllib.parse.quote(path)
+    return _req("POST", f"/cms/v3/source-code/{env}/validate/{enc}", token,
                 body=payload, ctype=f"multipart/form-data; boundary={boundary}")
 
 
@@ -905,6 +918,71 @@ def cmd_drift(a, token):
 
 # ------------------------------------------------------------------------------ cli
 
+def cmd_upload(a, token):
+    """Push files from themes/source/ to the portal. The nine are refused unless
+    --fix-at-source is passed with --approved-by and --reason: that is the
+    propose-then-confirm gate for the shared themes, in code."""
+    info = verify_portal(token, a.portal)
+    manifest = json.load(open(a.manifest))
+    themes = [t for t in manifest if not a.themes or t in a.themes]
+    touching_nine = [t for t in themes if t in NINE]
+    if touching_nine and not a.fix_at_source:
+        raise SystemExit(f"REFUSING: {', '.join(touching_nine)} are shared themes. "
+                         "Pass --fix-at-source --approved-by <name> --reason \"...\" to edit them at source.")
+    if a.fix_at_source and not (a.approved_by and a.reason):
+        raise SystemExit("--fix-at-source needs --approved-by and --reason. Both are recorded.")
+    total = sum(len(manifest[t]) for t in themes)
+    print(f"\nportal {info.get('portalId')} ({info.get('accountType')}) - {len(themes)} theme(s), {total} file(s), env={a.env}")
+    if a.fix_at_source:
+        print(f"editing shared themes at source - approved by {a.approved_by}: {a.reason}")
+    failures = []
+    for t in themes:
+        rels = manifest[t]
+        print(f"\n== {t}: {len(rels)} file(s)")
+        if a.dry_run:
+            for rel in rels:
+                print(f"  would write  {t}/{rel}")
+            continue
+
+        def _one(rel):
+            local = os.path.join(SOURCE_DIR, t, rel)
+            content = open(local, encoding="utf-8").read()
+            remote = f"{t}/{rel}"
+            try:
+                if rel.endswith((".html", ".css", ".json")):
+                    validate_file(remote, token, content, env=a.env)
+                put_file(remote, token, content, env=a.env)
+                return remote, None
+            except HubSpotError as e:
+                return remote, str(e)[:300]
+
+        # fields.json and the base layout first, alone: if they fail, nothing else moves.
+        first = [r for r in rels if r in ("fields.json", "templates/layouts/base.html")]
+        rest = [r for r in rels if r not in first]
+        for rel in first:
+            remote, err = _one(rel)
+            if err:
+                failures.append((remote, err)); print(f"  FAILED {remote}: {err[:200]}")
+            else:
+                print(f"  wrote  {remote}")
+        if any(f[0].startswith(t + "/") for f in failures) and not a.keep_going:
+            print("  stopping this theme: a foundation file failed validation")
+            continue
+        from concurrent.futures import ThreadPoolExecutor
+        with ThreadPoolExecutor(max_workers=6) as ex:
+            for remote, err in ex.map(_one, rest):
+                if err:
+                    failures.append((remote, err)); print(f"  FAILED {remote}: {err[:200]}")
+        ok = len(rels) - sum(1 for f in failures if f[0].startswith(t + "/"))
+        print(f"  {ok}/{len(rels)} written")
+    if failures:
+        print(f"\n{len(failures)} failure(s). Nothing else was changed after the first unless --keep-going.")
+        return 1
+    if not a.dry_run:
+        print("\nDone. Now: reskin.py export --all  (records what is live), then git diff / commit.")
+    return 0
+
+
 class KV(argparse.Action):
     def __call__(self, parser, ns, values, option_string=None):
         d = getattr(ns, self.dest) or {}
@@ -936,6 +1014,16 @@ def main(argv=None):
     dr = sub.add_parser("drift", help="diff the live portal against what's committed")
     dr.add_argument("--theme")
     dr.add_argument("--all", action="store_true", help="all nine")
+
+    up = sub.add_parser("upload", help="push files from themes/source/ to the portal (guarded)")
+    up.add_argument("--manifest", required=True, help="JSON {theme: [relative files]} from themefix.py")
+    up.add_argument("--themes", nargs="*", help="restrict to these theme names")
+    up.add_argument("--env", default="published", choices=["draft", "published"])
+    up.add_argument("--fix-at-source", action="store_true", help="allow writing to the nine shared themes")
+    up.add_argument("--approved-by")
+    up.add_argument("--reason")
+    up.add_argument("--dry-run", action="store_true")
+    up.add_argument("--keep-going", action="store_true")
 
     pl = sub.add_parser("plan", help="show (and optionally apply) a clone + re-skin")
     pl.add_argument("--theme", required=True, help="source theme, one of the nine")
@@ -976,7 +1064,7 @@ def main(argv=None):
         raise SystemExit("--apply requires --approved-by \"<name>\". "
                          "Writes to a live portal are never unattributed.")
     handlers = {"inspect": cmd_inspect, "plan": cmd_plan, "audit": cmd_audit,
-                "export": cmd_export, "drift": cmd_drift}
+                "export": cmd_export, "drift": cmd_drift, "upload": cmd_upload}
     return handlers[a.cmd](a, a.token) or 0
 
 

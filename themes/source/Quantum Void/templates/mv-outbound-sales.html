@@ -5,7 +5,7 @@
 -->
 {% extends "./layouts/base.html" %}
 {% block body %}
-<main>
+<main id="main">
   {% dnd_area "main" label="Main content" %}
     {% dnd_section %}
       {% dnd_module "s0" path="../modules/quantum-hero", width=12, layout="centered", eyebrow="Quantum", heading="Fill Your Pipeline Without Growing Headcount", subhead="A complete outbound sales system built on the People, Process, and Technology framework — so you can scale pipeline without scaling payroll. 8-12", primary_label="Book a Discovery Call", secondary_label="Take the Assessment" %}{% end_dnd_module %}

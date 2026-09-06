@@ -1,0 +1,17 @@
+{#- Structured data, fail-safe. No org_name, no output. Organization + WebSite on the home
+    page only (Google: "you don't need to include it on every page of your site");
+    BreadcrumbList everywhere but home. JSON-LD in <body> is valid. process/structured-data.md -#}
+{% set s = module %}
+{% if s.org_name %}
+{% set _home = (request.path == '/' or request.path == '') %}
+{% set _site = (s.org_url or ('https://' ~ request.domain))|regex_replace('/$','') %}
+{% if _home %}
+{% set _sa = [] %}{% for _u in s.org_sameas %}{% if _u %}{% set _sa = _sa + [_u] %}{% endif %}{% endfor %}
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"{{ _site }}/#organization","name":{{ s.org_name|tojson }}{% if s.org_alt_name %},"alternateName":{{ s.org_alt_name|tojson }}{% endif %},"url":"{{ _site }}"{% if s.org_logo.src %},"logo":{"@type":"ImageObject","url":{{ s.org_logo.src|tojson }}}{% endif %}{% if s.org_description %},"description":{{ s.org_description|tojson }}{% endif %}{% if _sa %},"sameAs":{{ _sa|tojson }}{% endif %}{% if s.founder_name %},"founder":{"@type":"Person"{% if s.founder_url %},"@id":{{ s.founder_url|tojson }}{% endif %},"name":{{ s.founder_name|tojson }}{% if s.founder_title %},"jobTitle":{{ s.founder_title|tojson }}{% endif %}{% if s.founder_sameas %},"sameAs":[{{ s.founder_sameas|tojson }}]{% endif %}}{% endif %}{% if s.contact_email or s.contact_phone %},"contactPoint":{"@type":"ContactPoint","contactType":"Sales"{% if s.contact_email %},"email":{{ s.contact_email|tojson }}{% endif %}{% if s.contact_phone %},"telephone":{{ s.contact_phone|tojson }}{% endif %},"areaServed":"US","availableLanguage":"English"}{% endif %}{% if s.knows_about %},"knowsAbout":{{ s.knows_about|split(',')|map('trim')|list|tojson }}{% endif %}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"{{ _site }}/#website","url":"{{ _site }}","name":{{ s.org_name|tojson }},"publisher":{"@id":"{{ _site }}/#organization"},"inLanguage":"{{ html_lang or 'en-US' }}"{% if s.search_path %},"potentialAction":{"@type":"SearchAction","target":"{{ _site }}{{ s.search_path }}?q={search_term_string}","query-input":"required name=search_term_string"}{% endif %}}</script>
+{% elif request.path %}
+{% set _bcns = namespace(url=_site, pos=1, items='{"@type":"ListItem","position":1,"name":"Home","item":' ~ ((_site ~ '/')|tojson) ~ '}') %}
+{% for _seg in request.path|split('/') %}{% if _seg %}{% set _bcns.url = _bcns.url ~ '/' ~ _seg %}{% set _bcns.pos = _bcns.pos + 1 %}{% set _bcns.items = _bcns.items ~ ',{"@type":"ListItem","position":' ~ _bcns.pos ~ ',"name":' ~ ((_seg|replace('-',' ')|title)|tojson) ~ ',"item":' ~ (_bcns.url|tojson) ~ '}' %}{% endif %}{% endfor %}
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{{ _bcns.items }}]}</script>
+{% endif %}
+{% endif %}

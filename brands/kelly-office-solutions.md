@@ -28,7 +28,8 @@ used until Claudia answers question 4 directly. Confirm or replace on the first 
 
 > "We create fully connected systems so you can focus on your business."
 
-Secondary line, also theirs: *"Moving Business Forward Since 1947."*
+Secondary line, also theirs: *"Moving Business Forward Since 1947."* The BrandCommand build used
+*"Office Technology Done Right Since 1947"* — two taglines in circulation; pick one with Claudia.
 
 ## The design read
 
@@ -46,11 +47,10 @@ None recorded yet from a design conversation. What the brand profile and the liv
   not pushy — BrandCommand `tone_and_voice`
 - Six service lines plus Mailing Solutions must all survive; Pure Technology (water, ice, coffee) is
   a real revenue line, not a footnote — current site nav
-- The **Customer Portal** (einfo.kellyofficesolutions.com:8890), **Request Service**, **Meter
-  Reads** and **Request Supplies** are the pages 4,000 existing customers actually use. They stay
-  one click from the header — current site
-- Growth strategy is headcount, cross-sell, and moving upmarket toward $30M — the site has to sell
-  IT and document management to existing copier customers, not just copiers to strangers — Hindsight
+- The **Customer Portal**, **Request Service**, **Meter Reads** and **Request Supplies** are the
+  pages 4,000 existing customers actually use. They stay one click from the header — current site
+- The site has to sell IT and document management to existing copier customers, not just copiers
+  to strangers — cross-sell is the growth plan — Hindsight
 
 ## Entity facts — for structured data
 
@@ -69,8 +69,11 @@ None recorded yet from a design conversation. What the brand profile and the liv
 - **Locations:** 4 — Winston-Salem (163 S Stratford Rd, 27103 · 336-725-2566), Greensboro (1040 E
   Wendover Ave, 27405 · 336-232-0399), Charlotte (4205-B Stuart Andrew Blvd, 28217 · 704-588-6891),
   Raleigh (6001 Chapel Hill Rd Ste 103, 27607 · 919-378-0172). Toll-free 1-800-34-KELLY.
-  - ⚠️ **Discrepancy:** BrandCommand's profile says HQ Greensboro and lists Hickory; the live site
-    lists Raleigh and puts Winston-Salem first. Resolve with Claudia before any `LocalBusiness`.
+  - ⚠️ **Discrepancy, three sources:** BrandCommand's profile says HQ Greensboro and lists Hickory;
+    the BrandCommand page build's meta descriptions also name Hickory; the live site lists Raleigh
+    and puts Winston-Salem first. Resolve with Claudia before any `LocalBusiness` or location page.
+  - Page naming: the live site says "Key Markets" and "Supplies & Service"; the BrandCommand build
+    says "Industries" and "Service & Support". The URL map below uses `/industries/`. Pick one set.
   - ⚠️ **Multi-location is the known gap** — no location module, no `LocalBusiness` schema in the
     57. And it matters here more than usual: **see SEO baseline** — the Charlotte location page is
     the only page earning non-branded traffic.
@@ -153,9 +156,9 @@ to assessment — that is the retainer argument and the `process-steps` module.
 
 All on the record already:
 
-- **Since 1947** — 78 years, family-owned
+- **Since 1947** — family-owned (say "since 1947", not a year count that goes stale)
 - **NPS 94.4** — third-party audited (CEO Juice); industry average is in the 70s
-- **A+ BBB rating since 1960** (brand profile — verify)
+- **BBB-accredited since 1960, A+ rated** (brand profile — confirming; BBB letter grades only date from 2009, so "A+ since 1960" is not a claim to make)
 - **6th-largest Ricoh dealer in the Southeast** (brand profile — verify with Ricoh)
 - **~4,000 customers · ~90 employees · 4 locations · $24M**
 - Four named testimonials on the site today (S&N Communications, Pike Electric, Edwards Craver
@@ -175,7 +178,7 @@ and any page that hides the phone number.
 |---|---|---|
 | Systel Business Equipment (systeloa.com) | 2026-09-06 | **Dark** ground, Libre Franklin / DM Sans, olive-green + slate-blue buttons. On **HubSpot**. "Largest independent dealer in the Southeast." The one dark site in the category, and the biggest competitor |
 | Titan Office Solutions (titanofficesolutions.com) | 2026-09-06 | Light, Inter, orange `#FF7209`, square buttons, phone number as the primary CTA. Elementor. Charlotte-local SEO play |
-| Copier Lease Charlotte | 2026-09-06 | Light, Roboto, blue `#2B6CB0` + orange `#F7941D`. "Instant lease quote." Pure lead-gen |
+| Copier Lease Charlotte (copierleasecharlotte.com) | 2026-09-06 | Light, Roboto, blue `#2B6CB0` + orange `#F7941D`. "Instant lease quote." Pure lead-gen |
 
 **Read:** the category is light-ground, sans, orange-or-blue, phone-number-forward. Kelly's green +
 navy is already differentiated on colour. Nobody in the set looks *established*; two of three look
@@ -185,12 +188,15 @@ like lead-gen microsites. Systel owns "dark and big."
 
 | Name | Theme | Rationale | Status |
 |---|---|---|---|
-| Kelly Office Solutions — Clean | Quantum Clean | **The safe one.** Light, sans, maximum clarity — closest to where Jost/Roboto already sits, and the right register for 4,000 customers hitting Request Service and Meter Reads. Green reads as Kelly, not as a template | draft |
-| Kelly Office Solutions — Press | Quantum Press | **The stretch.** Editorial, traditional-premium — the theme the catalogue names for heritage brands. Nobody in the category looks like an institution; 1947, A+ since 1960 and NPS 94 land harder in a serif | draft |
-| Kelly Office Solutions — Signal | Quantum Signal | **The wildcard.** Dark, tech-forward but approachable. Sells the IT / document-management / "fully connected systems" story that the $30M plan depends on. Only Systel is dark — Kelly green on near-black is a look no one else owns | draft |
+| Kelly Office Solutions — Clean | Quantum Clean | **The clear one, and our recommendation.** Light, humanist sans, maximum clarity — the right register for 4,000 customers who come for Request Service and Meter Reads, and for buyers burned by lead-gen microsites. Green does the work; navy is the button text | rendered (home page, hi-fi) |
+| Kelly Office Solutions — Showcase | Quantum Showcase | **The contemporary one.** Same light ground, a display grotesque and bigger rhythm — Kelly as the modern dealer moving into IT and document management, without going dark | draft |
+| Kelly Office Solutions — Press | Quantum Press | **The established one.** Editorial serif on warm paper — the theme the catalogue names for heritage brands. Nobody in this category looks like an institution; since 1947, BBB-accredited since 1960 and an audited NPS of 94 land harder in a serif | draft |
 
-Grounds are mixed deliberately: there is **no client-stated ground constraint** yet. If Claudia says
-"keep it light" on the first call, Signal is out (rule 1) and Showcase takes the slot.
+All three light, per `verticals/office-technology.md` (measured: the category is light-ground and
+the dark four are usually wrong for it). Signal was considered as a dark wildcard and dropped: the
+largest competitor, Systel, already owns "dark and big", Kelly has no reversed logo, and a
+near-black ground is not "warm, established, approachable." It stays in reserve if the first call
+reveals appetite for an IT-forward register.
 
 ## Chosen direction, and why — in their words
 

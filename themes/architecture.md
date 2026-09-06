@@ -121,6 +121,27 @@ Straight from the Revolution build. These are not opinions.
 4. **Client portals use `CLIENT_HUBSPOT_TOKEN`**, never the QBS token, and never the OAuth MCP —
    which is bound to portal `20682069` and would silently corrupt the analysis.
 
+## Status, 2026-09-06
+
+**Patched at source, locally, not yet uploaded.** `scripts/themefix.py --all` applies items 1, 2, 4
+and 5 to all nine and item 3 to the eight client-facing themes; the result is committed under
+`themes/source/` (so `reskin.py drift` will report the portal as *behind* until the upload lands).
+Two things the QA pass changed before anything shipped:
+
+- **HubSpot theme `fields.json` does not accept text, image or menu fields** — only boolean, choice,
+  color, font, number, spacing. So the brand and schema fields are **modules**
+  (`quantum-site-header`, `quantum-site-footer`, `quantum-org-schema`) included from the global
+  partials — which is Revolution's pattern anyway. The first draft put them in theme fields and
+  would have failed validation on all nine.
+- **Quantum Void is QBS's live theme** (41 published pages, a header full of QBS-specific menu logic).
+  It gets the safe subset only: accent-ink (identity on dark, so nothing moves), geometry tokens at
+  today's values, skip link and the content landmark. Its header, footer and schema are untouched.
+  Clients clone from the other eight.
+
+The upload itself (`reskin.py upload --fix-at-source --approved-by … --reason …`) was approved in
+chat and is blocked only by the session's write permission to the portal. It validates every file
+with the HubL validator before writing, foundation files first.
+
 ## The recommendation
 
 Do not fork the nine toward this piecemeal. **Take the Revolution theme as the reference

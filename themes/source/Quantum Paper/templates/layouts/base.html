@@ -10,15 +10,17 @@
   <meta name="description" content="{{ page_meta.meta_description }}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% if site_settings.favicon_src %}<link rel="shortcut icon" href="{{ site_settings.favicon_src }}">{% endif %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   {{ require_css(get_asset_url('../../css/quantum.css')) }}
   {{ require_js(get_asset_url('../../js/quantum.js'), 'footer') }}
   {{ standard_header_includes }}
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Quantum Business Solutions","url":"https://www.thequantumleap.business","description":"Revenue operations infrastructure for growth-minded companies. HubSpot Diamond and ZoomInfo Solutions Partner.","sameAs":[]}</script>
 </head>
 <body data-theme="{{ theme.appearance.mode }}" class="{{ builtin_body_classes }}">
+  <a class="q-skip" href="#q-content">Skip to content</a>
   <div class="body-wrapper">
     {% block header %}{% global_partial path='../partials/header.html' %}{% endblock %}
-    {% block body %}{% endblock %}
+    <div id="q-content" tabindex="-1">{% block body %}{% endblock %}</div>
     {% block footer %}{% global_partial path='../partials/footer.html' %}{% endblock %}
   </div>
   {{ standard_footer_includes }}

@@ -2,7 +2,7 @@
   <div class="q-container" style="display:grid;grid-template-columns:repeat({{ module.stats|length }},1fr);gap:0;">
     {% for s in module.stats %}
     <div style="padding:0 32px;text-align:center;{% if not loop.last %}border-right:1px solid var(--border);{% endif %}">
-      <div style="font-family:var(--q-serif);font-size:64px;line-height:1;color:var(--q-gold);">{% if s.num %}<span data-count="{{ s.num }}" data-prefix="{{ s.prefix }}" data-suffix="{{ s.suffix }}">{{ s.prefix }}{{ s.num }}{{ s.suffix }}</span>{% else %}{{ s.v }}{% endif %}</div>
+      <div style="font-family:var(--q-serif);font-size:64px;line-height:1;color:var(--accent-ink);">{% if s.num %}<span data-count="{{ s.num }}" data-prefix="{{ s.prefix }}" data-suffix="{{ s.suffix }}">{{ s.prefix }}{{ s.num }}{{ s.suffix }}</span>{% else %}{{ s.v }}{% endif %}</div>
       <div style="font-size:14px;color:var(--fg-muted);margin-top:12px;">{{ s.k }}</div>
     </div>
     {% endfor %}

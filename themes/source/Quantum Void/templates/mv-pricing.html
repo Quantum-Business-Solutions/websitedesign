@@ -5,7 +5,7 @@
 -->
 {% extends "./layouts/base.html" %}
 {% block body %}
-<main>
+<main id="main">
   {% dnd_area "main" label="Main content" %}
     {% dnd_section %}
       {% dnd_module "s0" path="../modules/quantum-hero", width=12, layout="centered", eyebrow="Quantum", heading="Transparent Pricing", subhead="No hidden fees, no surprises. Choose the services that fit your business — from one-time projects to ongoing managed services.", primary_label="Get a Custom Quote", secondary_label="Grade Your Business Free" %}{% end_dnd_module %}

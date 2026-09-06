@@ -5,7 +5,7 @@
 -->
 {% extends "./layouts/base.html" %}
 {% block body %}
-<main>
+<main id="main">
   {% dnd_area "main" label="Main content" %}
     {% dnd_section %}
       {% dnd_module "s0" path="../modules/quantum-hero", width=12, layout="centered", eyebrow="Quantum", heading="Connect Everything. Automate Anything.", subhead="Your tools should talk to each other. We build the bridges between your systems so data flows freely and work gets done automatically. From CRM configuration to cloud infrastructure, we set up and manage the technology that powers your revenue engine.", primary_label="Get Your Free Assessment", secondary_label="Book a Call" %}{% end_dnd_module %}

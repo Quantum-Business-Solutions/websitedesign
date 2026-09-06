@@ -1,0 +1,59 @@
+{#- Quantum site header. Every visible value is a module field, edited once in the
+    global content editor. reskin.py sets the defaults for a client clone. -#}
+{% set b = module %}
+{% if b.show_topbar and b.topbar_text %}
+<div class="q-topbar">
+  <a href="{{ b.topbar_url or '#' }}">{{ b.topbar_text }} <span class="q-topbar-arrow">&rarr;</span></a>
+</div>
+{% endif %}
+<header class="q-header">
+  <div class="q-container q-header-in">
+    <a href="/" class="q-header-logo" aria-label="{{ b.company_name }} home">
+      {% if b.logo_dark.src or b.logo_light.src %}
+        <img class="only-dark" src="{{ b.logo_dark.src or b.logo_light.src }}" alt="{{ b.company_name }}" height="40" loading="eager">
+        <img class="only-light" src="{{ b.logo_light.src or b.logo_dark.src }}" alt="{{ b.company_name }}" height="40" loading="eager">
+      {% else %}
+        <span class="q-logo-text">{{ b.company_name }}</span>
+      {% endif %}
+    </a>
+    <nav class="q-nav" aria-label="Main navigation">
+      {% if b.header_menu %}
+      {% set main_nav = menu(b.header_menu) %}
+      {% for item in main_nav.children %}
+        {% if item.children %}
+          <div class="q-nav-item">
+            <a href="{{ item.url or '#' }}" aria-haspopup="true">{{ item.label }}<span class="q-caret" aria-hidden="true"></span></a>
+            <div class="q-subnav">
+              {% for sub in item.children %}<a href="{{ sub.url }}">{{ sub.label }}</a>{% endfor %}
+            </div>
+          </div>
+        {% else %}
+          <a href="{{ item.url }}">{{ item.label }}</a>
+        {% endif %}
+      {% endfor %}
+      {% endif %}
+      {% if b.cta_url %}<a class="q-booknow" href="{{ b.cta_url }}">{{ b.cta_label or 'Contact' }}</a>{% endif %}
+    </nav>
+    <details class="q-mnav">
+      <summary aria-label="Open menu"><span></span><span></span><span></span></summary>
+      <div class="q-mnav-panel">
+        {% if b.header_menu %}
+        {% set m_nav = menu(b.header_menu) %}
+        {% for item in m_nav.children %}
+          {% if item.children %}
+            <details class="q-msub">
+              <summary>{{ item.label }}<span class="q-caret" aria-hidden="true"></span></summary>
+              <div class="q-msub-links">
+                {% for sub in item.children %}<a href="{{ sub.url }}">{{ sub.label }}</a>{% endfor %}
+              </div>
+            </details>
+          {% else %}
+            <a href="{{ item.url }}">{{ item.label }}</a>
+          {% endif %}
+        {% endfor %}
+        {% endif %}
+        {% if b.cta_url %}<a class="q-mnav-cta" href="{{ b.cta_url }}">{{ b.cta_label or 'Contact' }}</a>{% endif %}
+      </div>
+    </details>
+  </div>
+</header>
