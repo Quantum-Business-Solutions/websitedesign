@@ -48,6 +48,19 @@ Three consequences:
 3. **Stop competing on speed alone.** Speed is margin, not positioning — capture it internally, don't
    advertise it. "We build fast" invites "so does everyone."
 
+## The tiers are mispriced, and Transform is the problem
+
+Modelled per-page in `process/clientcommand.md`, the effective hourly rate is **$172 for Launch,
+$171 for Growth, and $101 for Transform.** The premium tier is the worst business — fifty pages of
+page-by-page rewrite earns 40% less per hour than the cheapest tier while occupying five times the
+capacity. Price it at **$22–25k** or cut the allowance to 30 pages.
+
+The same model says a **Growth build is ~58 hours across 90 sold days** — 13% work, 87% waiting on
+the client. So the constraint on volume is latency, not our throughput, and the lever is running
+many builds concurrently rather than each one faster. And a retainer at $2,500/month for 10 hours
+is **$250/hour and $30,000/year per client** — 46% better than Growth, 2.5× Transform. That is the
+arithmetic behind the point below.
+
 ## The product isn't finished, and that gates everything
 
 You cannot dominate on a product line with defects in it. From `process/qa-findings.md`:

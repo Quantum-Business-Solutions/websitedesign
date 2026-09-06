@@ -204,6 +204,103 @@ makes client-side delay self-evident without anyone having to say so.
 
 ---
 
+## The conveyor belt, and what actually limits it
+
+A conveyor belt is the right model, and it's stricter than "a repeatable process." A line means:
+**standard units, fixed stations, work moves while people stay put, and you measure throughput per
+station so the bottleneck is a fact rather than an opinion.**
+
+The page-as-unit model above *is* a line. Seven stations, one unit type, no unit moves backward.
+
+But before optimising it, here's the arithmetic — and it says something surprising.
+
+### A Growth build is about 58 hours of work
+
+At 20 pages, with the tooling that now exists:
+
+| Station | min/page | × 20 pages |
+|---|---|---|
+| Briefed | 10 | 3.3h |
+| Sectioned | 15 | 5.0h |
+| Copy drafted | 45 | 15.0h |
+| Copy approved *(our effort)* | 5 | 1.7h |
+| Built | 30 | 10.0h |
+| Assets in | 15 | 5.0h |
+| Gated | 10 | 3.3h |
+| | **130** | **43.3h** |
+
+Plus once-per-build: brief and the four Semrush pulls 6h · mockups 0.5h *(scripted)* · clone and
+re-skin 0.3h *(scripted)* · de-QBS the header and footer 3h · URL map and 301s 2h · launch and
+baseline 3h — **14.8h**.
+
+**Total ≈ 58 hours ≈ 8 working days. Sold across 90 calendar days.**
+
+### So the belt is not the constraint. Waiting is.
+
+Work is **13%** of a 60-working-day window. **87% of the 90 days is latency** — waiting on copy
+approval, waiting on photography, waiting on a logo file.
+
+Three consequences, and they change what's worth building:
+
+1. **Automating our 58 hours down to 45 changes nothing about the 90 days.** The bottleneck is
+   outside the factory. This is the single most important thing to understand before spending
+   another week on tooling.
+2. **The scale unlock is concurrency, not speed.** On work alone, one person could carry roughly
+   **16 concurrent Launch builds, 8 Growth, or 3 Transform.** Whether that actually happens is a
+   *tracking* problem — you cannot hold eight builds in your head, which is precisely why page-level
+   tracking is worth building.
+3. **Attacking wait states beats attacking work.** Front-load every client-owed ask into week one.
+   Batch copy approvals into two scheduled reviews instead of trickling pages. Give every approval a
+   **default that ships if they don't respond** — that one policy converts a wait into a decision.
+
+### Run the stations across clients, not the clients across stations
+
+The operational change that makes it a belt: **one person does "sectioned" for four clients in a
+morning**, rather than one person owning one client end to end. Same station, batched. Context
+switching within a station is nearly free; between stations it isn't.
+
+That's only possible if page state lives somewhere everyone can see. Which is the whole argument
+for section 4.
+
+### Measure stations, not phases
+
+Phases own the dates. Stations own the flow. Four numbers, weekly:
+
+| Metric | What it tells you |
+|---|---|
+| **WIP per station**, all clients | Where the pile-up is. Pages sitting at *copy approved* means client latency; at *built* means us |
+| **Median hours per station-pass** | Whether the estimates above are real. Fix them with data after ten builds |
+| **Age of oldest unit per station** | A page stuck 3 weeks at one station is invisible in a phase view and obvious here |
+| **Client-owed assets overdue** | The most actionable report in the system |
+
+A **WIP limit per station** is what stops the line becoming twelve half-finished builds. Nothing
+enters *built* until something leaves it.
+
+### The pricing finding this exposes
+
+Effective rate by tier, using the model above:
+
+| Tier | Pages | Hours | $/hr | Concurrent per person |
+|---|---|---|---|---|
+| **Launch** $4,950 | 8 | 29 | **$172** | 16 |
+| **Growth** $9,950 | 20 | 58 | **$171** | 8 |
+| **Transform** $14,950 | 50 | 148 | **$101** | 3 |
+
+**Transform is the premium tier and the worst business.** Fifty pages of page-by-page rewrite is
+enormous, and it earns 40% less per hour than Launch while occupying five times the capacity. Two
+honest options: price it around **$22–25k**, or cut the page allowance to 30. Right now it is
+selling the least profitable work hardest.
+
+And for scale — a retainer at **$2,500/month for 10 hours is $250/hour**, 46% better than Growth and
+**2.5× Transform**, at **$30,000/year per client** against a one-time $9,950. That is the number
+behind `process/strategy.md`: the belt should end at a retainer, not at a launch.
+
+> These are estimates, not measurements. **Track actuals from the first build** and replace them —
+> the model is only useful once it's calibrated, and everything above changes if copy really takes
+> 90 minutes a page rather than 45.
+
+---
+
 ## Build order
 
 Each step is useful on its own, so none of it has to wait for the rest:
