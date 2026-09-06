@@ -34,6 +34,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import reskin  # noqa: E402
 import themefix  # noqa: E402
 from preview_hub import hub  # noqa: E402
+import preview_sections  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DASH_HITS: list[str] = []
@@ -176,7 +177,7 @@ PREVIEW_CSS = r'''
 /* ===== preview layer: page grammar the modules would supply in HubSpot ===== */
 *{box-sizing:border-box}
 html{scroll-padding-top:130px}
-@media(max-width:767px){html{scroll-padding-top:96px}}
+@media(max-width:767px){html{scroll-padding-top:92px}}
 img{max-width:100%;height:auto}
 .embedded .pv-switch,.embedded .pv-util{display:none}
 .q-skip{position:absolute;top:-200px;left:8px;z-index:100;background:var(--q-gold);color:var(--cta-fg);padding:10px 16px;border-radius:6px;font-weight:600}
@@ -199,7 +200,7 @@ h1,h2,h3{text-wrap:balance}
 .q-header .q-booknow{background:var(--q-gold);color:var(--cta-fg)!important;border-color:var(--q-gold);min-height:44px;display:inline-flex;align-items:center}
 .q-header .q-booknow:hover{background:var(--q-gold-bright)}
 .q-header-logo img{height:48px;width:auto}
-@media(max-width:767px){.q-header{position:static}.q-header-in{position:sticky;top:0;background:var(--chrome-bg);z-index:50}.pv-util a:not(.pv-phone):not(.pv-keep){display:none}.q-header-logo img{height:40px}}
+@media(max-width:767px){.q-header{position:sticky;top:0;z-index:60}.pv-util{display:none}.q-header-logo img{height:40px}}
 .q-logo-text{color:var(--chrome-fg)}
 .q-mnav > summary{border-color:var(--chrome-border)!important}
 .q-mnav > summary span{background:var(--chrome-fg)!important}
@@ -213,11 +214,14 @@ h1,h2,h3{text-wrap:balance}
 .q-footer-tag,.q-footer-contact,.q-footer-contact a,.q-footer-links a,.q-footer-legal,.q-footer-legal a,.q-footer-social a{color:var(--chrome-muted)}
 .q-footer-head,.q-footer-contact .q-footer-phone{color:var(--chrome-fg)}
 .q-footer-links a:hover,.q-footer-social a:hover{color:var(--chrome-accent)}
-.q-footer-links a{min-height:36px;display:flex;align-items:center;padding:0}
+.q-footer-links a{min-height:44px;display:flex;align-items:center;padding:0}
+.q-footer-links{gap:0}
+.pv-legal-item{display:inline-flex;align-items:center;white-space:nowrap}.pv-legal-item + .pv-legal-item::before{content:"|";margin:0 10px;color:var(--chrome-muted)}
+.q-header-logo{min-height:44px;display:inline-flex;align-items:center}
 .q-footer-legal{border-top-color:var(--chrome-border)}
 .q-footer-legal a{display:inline-flex;align-items:center;min-height:44px;padding:0 6px}
 .q-footer-social a{margin:0;width:auto;min-width:44px;height:44px;padding:0 10px}
-.q-footer-contact a{display:inline-flex;align-items:center;min-height:44px}
+.q-footer-contact a{display:inline-flex;align-items:center;min-height:44px}.q-footer-contact br{display:block;content:""}
 .q-footer img{height:36px}
 @media(max-width:1024px){.q-footer-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.q-footer-grid{grid-template-columns:1fr}}
@@ -238,10 +242,13 @@ h1,h2,h3{text-wrap:balance}
 .pv-partners{padding:8px 0 70px}
 .pv-partners .q-container{padding-top:36px;border-top:1px solid var(--border)}
 .pv-cap{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-muted);text-align:center;margin:0 0 22px}
-.pv-logos{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:18px 28px;align-items:center;max-width:1000px;margin:0 auto}
-.pv-logos img{width:100%;height:44px;object-fit:contain;mix-blend-mode:multiply;filter:grayscale(1) opacity(.82);transition:filter .2s}
+.pv-logos{display:flex;overflow:hidden;gap:64px;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.pv-logos-track{display:flex;align-items:center;gap:64px;flex:none;animation:pv-marquee 46s linear infinite}.pv-logos:hover .pv-logos-track{animation-play-state:paused}
+@keyframes pv-marquee{to{transform:translateX(calc(-100% - 64px))}}
+@media(prefers-reduced-motion:reduce){.pv-logos{flex-wrap:wrap;justify-content:center;mask-image:none;-webkit-mask-image:none}.pv-logos-track{animation:none;flex-wrap:wrap;justify-content:center}.pv-logos-track[aria-hidden]{display:none}}
+.pv-logos img{width:auto;max-width:170px;height:56px;object-fit:contain;mix-blend-mode:multiply;filter:grayscale(1) opacity(.82);transition:filter .2s}
 .pv-logos img:hover{filter:none}
-@media(max-width:767px){.pv-logos{grid-template-columns:repeat(3,1fr);gap:14px 18px}}
+@media(max-width:767px){.pv-logos,.pv-logos-track{gap:40px}.pv-logos img{height:44px;max-width:130px}@keyframes pv-marquee{to{transform:translateX(calc(-100% - 40px))}}}
 .pv-logos span{font-family:var(--q-serif);font-size:20px;color:var(--fg-muted)}
 /* stats */
 .pv-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
@@ -290,7 +297,7 @@ h1,h2,h3{text-wrap:balance}
 .pv-band .q-card .d{font-size:14px;color:var(--chrome-muted);margin-top:6px}
 /* locations */
 .pv-loc .q-card h3{font-family:var(--q-serif);font-size:20px;margin:0 0 8px;font-weight:600}
-.pv-loc .q-card p{font-size:14.5px;line-height:1.7;color:var(--fg-muted);margin:0}
+.pv-loc .q-card p{font-size:14.5px;line-height:1.7;color:var(--fg-muted);margin:0}.pv-loc .q-card{display:flex;flex-direction:column}.pv-loc .q-card p{display:flex;flex-direction:column;flex:1}.pv-loc .q-card p a{margin-top:auto;padding-top:8px;font-weight:600;color:var(--fg)}.pv-loc .q-card p br{display:none}
 .pv-map{aspect-ratio:16/9;border-radius:var(--radius);background:linear-gradient(135deg,var(--bg-alt),var(--card));border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--fg-muted);font-size:13px;margin-bottom:14px}
 /* faq */
 .pv-faq details{border-top:1px solid var(--border);padding:18px 0}
@@ -338,11 +345,11 @@ h1,h2,h3{text-wrap:balance}
 .pv-switch-m{display:none}
 @media(max-width:767px){
   .pv-switch{display:none}
-  .pv-switch-m{display:block;position:fixed;right:10px;bottom:10px;z-index:90;font:13px/1 Inter,system-ui,sans-serif}
+  .pv-switch-m{display:block;position:fixed;right:10px;bottom:70px;z-index:90;font:13px/1 Inter,system-ui,sans-serif}
   .pv-switch-m summary{list-style:none;cursor:pointer;background:rgba(20,23,28,.94);color:#fff;border-radius:999px;padding:12px 16px;min-height:44px;display:inline-flex;align-items:center;gap:8px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
   .pv-switch-m summary::-webkit-details-marker{display:none}
   .pv-switch-m[open] summary{border-radius:14px 14px 0 0}
-  .pv-switch-m .menu{position:absolute;right:0;bottom:100%;margin-bottom:6px;background:rgba(20,23,28,.96);border-radius:14px;padding:6px;display:flex;flex-direction:column;min-width:180px;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+  .pv-switch-m .menu{position:absolute;right:0;bottom:100%;margin-bottom:6px;background:rgba(20,23,28,.96);border-radius:14px;padding:6px;display:flex;flex-direction:column;min-width:236px;white-space:nowrap;box-shadow:0 10px 30px rgba(0,0,0,.3)}
   .pv-switch-m .menu a{color:#fff;text-decoration:none;padding:12px 14px;border-radius:10px;min-height:44px;display:flex;align-items:center}
   .pv-switch-m .menu a[aria-current]{background:rgba(255,255,255,.18)}
 }
@@ -361,6 +368,51 @@ h1,h2,h3{text-wrap:balance}
 '''
 
 
+PREVIEW_JS = r"""
+(function(){
+var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+/* count-up on stat numbers */
+var stats=document.querySelectorAll('.pv-stat b');
+if(!rm&&'IntersectionObserver' in window&&stats.length){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;io.unobserve(e.target);var el=e.target,txt=el.textContent.trim(),m=txt.match(/^([^0-9]*)([0-9][0-9,]*)(\.[0-9]+)?(.*)$/);if(!m)return;var pre=m[1],intp=m[2].replace(/,/g,''),dec=m[3]||'',suf=m[4],target=parseFloat(intp+dec),places=dec?dec.length-1:0,comma=m[2].indexOf(',')>-1,t0=null;function fmt(v){var f=v.toFixed(places);if(comma){var parts=f.split('.');parts[0]=parts[0].replace(/\B(?=(\d{3})+(?!\d))/g,',');f=parts.join('.')}return pre+f+suf}function step(ts){if(t0===null)t0=ts;var k=Math.min(1,(ts-t0)/1400);k=1-Math.pow(1-k,3);el.textContent=fmt(target*k);if(k<1)requestAnimationFrame(step);else el.textContent=txt}el.textContent=fmt(0);requestAnimationFrame(step)})},{threshold:.4});
+  stats.forEach(function(b){io.observe(b)});
+}
+/* hero image: slow parallax against the scroll */
+var hero=document.querySelector('.pv-hero-img img');
+if(hero&&!rm&&matchMedia('(min-width:1025px)').matches){
+  var raf=0;function move(){raf=0;var r=hero.getBoundingClientRect(),c=(r.top+r.height/2-innerHeight/2)/innerHeight;hero.style.transform='translateY('+(-c*26).toFixed(1)+'px) scale(1.06)'}
+  hero.style.willChange='transform';addEventListener('scroll',function(){if(!raf)raf=requestAnimationFrame(move)},{passive:true});move();
+}
+/* cards: light 3D tilt toward the pointer */
+if(!rm&&matchMedia('(pointer:fine) and (min-width:1025px)').matches){
+  document.querySelectorAll('.pv-tilt').forEach(function(c){
+    c.style.transformStyle='preserve-3d';c.style.transition='transform .25s ease, box-shadow .25s ease';
+    c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform='perspective(900px) rotateX('+(-y*6).toFixed(2)+'deg) rotateY('+(x*6).toFixed(2)+'deg) translateY(-3px)'});
+    c.addEventListener('pointerleave',function(){c.style.transform=''});
+  });
+}
+/* video facade: poster + play, iframe only on click */
+document.querySelectorAll('.pv-video[data-embed]').forEach(function(v){
+  var b=v.querySelector('button');if(!b)return;
+  b.addEventListener('click',function(){var f=document.createElement('iframe');f.src=v.getAttribute('data-embed');f.title=b.getAttribute('aria-label')||'Video';f.allow='autoplay; fullscreen; picture-in-picture';f.allowFullscreen=true;v.innerHTML='';v.appendChild(f)});
+});
+})();
+"""
+
+MOBILE_LAST_CSS = r"""
+.q-header .q-nav a,.q-header .q-booknow{white-space:nowrap}
+[data-dir="press"] .q-header .q-nav{gap:20px}[data-dir="press"] .q-header .q-nav > a{font-size:15px}
+.pv-hero-c .q-h1{max-width:22ch;margin-left:auto;margin-right:auto}
+[data-dir="press"] .pv-loc.pv-grid-4{grid-template-columns:repeat(2,1fr)}
+@media(max-width:767px){
+  .pv-svc a{grid-template-columns:1fr!important;padding:20px 0!important}.pv-svc .num{display:none!important}
+  .pv-quote{font-size:20px!important;font-weight:500!important}
+  .q-section .pv-stats[style]{grid-template-columns:1fr 1fr!important;gap:28px 0!important}.pv-stat:nth-child(3){border-left:none}
+  .q-h1{font-size:42px;line-height:1.05}.q-h2{font-size:31px;line-height:1.12}
+  .pv-loc .q-card p a{padding-top:4px}
+}
+"""
+
 # ----------------------------------------------------------------------------- sections
 
 def sec_open(s: dict, extra_cls: str = "") -> str:
@@ -373,9 +425,9 @@ def r_hero(s, ctx):
     eyebrow = f'<div class="q-eyebrow">{E(s.get("eyebrow"))}</div>' if s.get("eyebrow") else ""
     btns = ""
     if s.get("primary"):
-        btns += f'<a class="q-btn" href="{E(s["primary"]["href"])}">{E(s["primary"]["label"])}</a>'
+        btns += f'<a class="q-btn" href="{E(ctx["L"](s["primary"]["href"]))}">{E(s["primary"]["label"])}</a>'
     if s.get("secondary"):
-        btns += f'<a class="q-btn-ghost" href="{E(s["secondary"]["href"])}">{E(s["secondary"]["label"])}<span style="width:22px;height:1px;background:currentColor;display:inline-block"></span></a>'
+        btns += f'<a class="q-btn-ghost" href="{E(ctx["L"](s["secondary"]["href"]))}">{E(s["secondary"]["label"])}<span style="width:22px;height:1px;background:currentColor;display:inline-block"></span></a>'
     btns = f'<div class="pv-btns">{btns}</div>' if btns else ""
     note = f'<div class="pv-hero-note">{E(s["note"])}</div>' if s.get("note") else ""
     if s.get("layout") == "split" and s.get("image"):
@@ -385,7 +437,7 @@ def r_hero(s, ctx):
 <h1 class="q-h1" style="margin-top:22px">{RAW(s["heading"])}</h1>
 <div class="q-lead" style="max-width:540px;margin:24px 0 0">{E(s.get("subhead"))}</div>{btns}{note}</div>
 <div class="pv-hero-img"><img src="{E(ctx["rel"](s["image"]))}"{ctx["srcset"](s["image"])} alt="{E(s.get("image_alt"))}" width="{s.get("image_w", 1200)}" height="{s.get("image_h", 800)}" fetchpriority="high" decoding="async">{badge}</div></div></div></section>'''
-    return f'''{sec_open(s)} <div class="q-container"><div class="pv-center" style="max-width:860px;margin:0 auto">{eyebrow}
+    return f'''{sec_open(s)} <div class="q-container"><div class="pv-center pv-hero-c" style="max-width:860px;margin:0 auto">{eyebrow}
 <h1 class="q-h1" style="margin-top:22px">{RAW(s["heading"])}</h1>
 <div class="q-lead" style="max-width:640px;margin:24px 0 0">{E(s.get("subhead"))}</div>{btns.replace('class="pv-btns"', 'class="pv-btns" style="justify-content:center"')}{note}</div>{f'<div class="pv-hero-wide"><img src="{E(ctx["rel"](s["image"]))}"{ctx["srcset"](s["image"])} alt="{E(s.get("image_alt", ""))}" width="{s.get("image_w", 1200)}" height="{s.get("image_h", 675)}" fetchpriority="high" decoding="async"></div>' if s.get("image") else ""}</div></section>'''
 
@@ -395,10 +447,11 @@ def r_partners(s, ctx):
     for name in s["items"]:
         img = ctx["partner_logo"](name)
         if img:
-            items.append(f'<img src="{E(img)}" alt="{E(name)}" loading="lazy" width="120" height="40">')
+            items.append(f'<img src="{E(img)}" alt="{E(name)}" loading="eager" width="144" height="48">')
         else:
             items.append(f"<span>{E(name)}</span>")
-    return f'<section class="pv-partners"><div class="q-container"><p class="pv-cap">{E(s.get("caption", "Partners"))}</p><div class="pv-logos">{"".join(items)}</div></div></section>'
+    track = "".join(items)
+    return f'<section class="pv-partners"><div class="q-container"><p class="pv-cap">{E(s.get("caption", "Partners"))}</p></div><div class="pv-logos" aria-label="Technology partners"><div class="pv-logos-track">{track}</div><div class="pv-logos-track" aria-hidden="true">{track}</div></div></section>'
 
 
 def r_stats(s, ctx):
@@ -409,7 +462,7 @@ def r_stats(s, ctx):
 
 def r_services(s, ctx):
     rows = "".join(
-        f'<a href="{E(href)}"><div class="num" aria-hidden="true" data-folio="{i:02d}"></div><div><h3>{E(t)}</h3><p>{E(b)}</p></div><div class="more">Learn more</div></a>'
+        f'<a href="{E(ctx["L"](href))}"><div class="num" aria-hidden="true" data-folio="{i:02d}"></div><div><h3>{E(t)}</h3><p>{E(b)}</p></div><div class="more">Learn more</div></a>'
         for i, (t, b, href) in enumerate(s["items"], 1))
     return f'{sec_open(s)} <div class="q-container"><div class="pv-split"><h2 class="q-h2">{E(s["heading"])}</h2><p>{E(s.get("intro"))}</p></div><div class="pv-svc">{rows}</div></div></section>'
 
@@ -425,12 +478,12 @@ def r_process(s, ctx):
 
 def r_casestudy(s, ctx):
     metrics = "".join(f'<div class="q-card pv-metric"><div class="k">{E(k)}</div><div class="v">{E(v)}</div><div class="d">{E(d)}</div></div>' for k, v, d in s["metrics"])
-    return f'''{sec_open(s)} <div class="q-container pv-cs"><div><div class="q-eyebrow">{E(s.get("eyebrow"))}</div><div class="h">{E(s["heading"])}</div><p class="pv-quote">"{E(s["quote"])}"</p><div class="pv-attr">{E(s.get("attribution"))}</div></div><div class="pv-grid pv-grid-2">{metrics}</div></div></section>'''
+    return f'''{sec_open(s)} <div class="q-container pv-cs"><div><div class="q-eyebrow">{E(s.get("eyebrow"))}</div><div class="h">{E(s["heading"])}</div><p class="pv-quote">{E(s["quote"].strip().strip('"'))}</p><div class="pv-attr">{E(s.get("attribution"))}</div></div><div class="pv-grid pv-grid-2">{metrics}</div></div></section>'''
 
 
 def r_cards(s, ctx):
     n = len(s["items"]); cols = cols_for(n)
-    cards = "".join(f'<div class="q-card"><h3>{E(t)}</h3><p>{E(b)}</p></div>' for t, b in s["items"])
+    cards = "".join(f'<div class="q-card pv-tilt pv-tilt"><h3>{E(t)}</h3><p>{E(b)}</p></div>' for t, b in s["items"])
     head = ""
     if s.get("heading"):
         head = f'<div class="pv-center" style="margin-bottom:44px">{f"<div class=q-eyebrow>{E(s.get(chr(101)+chr(121)+chr(101)+chr(98)+chr(114)+chr(111)+chr(119)))}</div>" if s.get("eyebrow") else ""}<h2 class="q-h2" style="margin-top:22px;max-width:700px">{E(s["heading"])}</h2></div>'
@@ -439,7 +492,7 @@ def r_cards(s, ctx):
 
 def r_band(s, ctx):
     n = len(s["items"]); cols = cols_for(n)
-    cards = "".join(f'<a class="q-card" href="{E(h)}"><div class="t">{E(t)}</div><div class="d">{E(d)}</div></a>' for t, d, h in s["items"])
+    cards = "".join(f'<a class="q-card" href="{E(ctx["L"](h))}"><div class="t">{E(t)}</div><div class="d">{E(d)}</div></a>' for t, d, h in s["items"])
     return f'''{sec_open(s, "pv-band")} <div class="q-container pv-cs"><div><div class="q-eyebrow">{E(s.get("eyebrow"))}</div><h2 class="q-h2" style="margin-top:22px">{E(s["heading"])}</h2><div class="q-lead" style="margin-top:20px;max-width:480px">{E(s.get("subhead"))}</div></div><div class="pv-grid pv-grid-{min(cols,2)}">{cards}</div></div></section>'''
 
 
@@ -448,7 +501,7 @@ def r_locations(s, ctx):
     cards = []
     for name, a1, a2, phone, href in s["items"]:
         mp = ""
-        cards.append(f'<div class="q-card">{mp}<h3>{E(name)}</h3><p>{E(a1)}<br>{E(a2)}<br><a href="{E(href)}">{E(phone)}</a></p></div>')
+        cards.append(f'<div class="q-card">{mp}<h3>{E(name)}</h3><p><span>{E(a1)}</span><span>{E(a2)}</span><a href="{E(ctx["L"](href))}">{E(phone)}</a></p></div>')
     return f'{sec_open(s)} <div class="q-container"><div class="pv-split"><h2 class="q-h2">{E(s["heading"])}</h2><p>{E(s.get("intro"))}</p></div><div class="pv-grid pv-grid-{cols} pv-loc">{"".join(cards)}</div></div></section>'
 
 
@@ -463,8 +516,8 @@ def r_contact(s, ctx):
     opts = "".join(f"<option>{E(o)}</option>" for o in s.get("options", []))
     brand = ctx["brand"]
     return f'''{sec_open(s)} <div class="q-container pv-contact"><div><h2 class="q-h2">{E(s["heading"])}</h2><div class="q-lead" style="margin-top:20px">{E(s.get("body"))}</div>
-<div style="margin-top:28px;display:flex;flex-direction:column;gap:14px"><a class="q-btn" style="align-self:flex-start" href="{E(brand["phone_href"])}">Call {E(brand["phone"])}</a><a href="mailto:{E(brand["email"])}" style="font-size:15px;color:var(--fg-muted);min-height:44px;display:inline-flex;align-items:center">{E(brand["email"])}</a></div></div>
-<form class="q-form" onsubmit="return false"><label for="f1">Name</label><input id="f1" type="text"><label for="f2">Work email</label><input id="f2" type="email"><label for="f3">Phone</label><input id="f3" type="tel"><label for="f4">What would you like to look at?</label><select id="f4">{opts}</select><input type="submit" class="hs-button" value="{E(s.get("submit", "Send"))}"><p class="pv-form-note">{E(s.get("note"))}</p></form></div></section>'''
+<div style="margin-top:28px;display:flex;flex-direction:column;gap:14px"><a class="q-btn" style="align-self:flex-start" href="{E(ctx["L"](brand["phone_href"]))}">Call {E(brand["phone"])}</a><a href="mailto:{E(brand["email"])}" style="font-size:15px;color:var(--fg-muted);min-height:44px;display:inline-flex;align-items:center">{E(brand["email"])}</a></div></div>
+<form class="q-form" onsubmit="return false"><label for="f1">Name</label><input id="f1" type="text" autocomplete="name"><label for="f2">Work email</label><input id="f2" type="email" autocomplete="email"><label for="f3">Phone</label><input id="f3" type="tel" autocomplete="tel"><label for="f4">What would you like to look at?</label><select id="f4">{opts}</select><input type="submit" class="hs-button" value="{E(s.get("submit", "Send"))}"><p class="pv-form-note">{E(s.get("note"))}</p></form></div></section>'''
 
 
 def r_detail(s, ctx):
@@ -485,7 +538,7 @@ def r_detail(s, ctx):
 
 def r_listing(s, ctx):
     n = len(s["items"]); cols = cols_for(n)
-    posts = "".join(f'<a class="pv-post" href="{E(it[3] if len(it) > 3 else "#")}"{" target=_blank rel=noopener" if len(it) > 3 and str(it[3]).startswith("http") else ""}><div class="ph"></div><span class="tag">{E(it[0])}</span><h2>{E(it[1])}</h2><p>{E(it[2])}</p></a>' for it in s["items"])
+    posts = "".join(f'<a class="pv-post" href="{E(ctx["L"](it[3] if len(it) > 3 else "#"))}"{" target=_blank rel=noopener" if len(it) > 3 and str(it[3]).startswith("http") else ""}><div class="ph"></div><span class="tag">{E(it[0])}</span><h2>{E(it[1])}</h2><p>{E(it[2])}</p></a>' for it in s["items"])
     return f'{sec_open(s)} <div class="q-container"><div class="pv-grid pv-grid-{cols}">{posts}</div></div></section>'
 
 
@@ -500,12 +553,12 @@ def r_leadform(s, ctx):
     plus the phone for the visitor who would rather talk. process/quality-standard.md item 6."""
     brand = ctx["brand"]
     fid = s.get("id", "lead")
-    return f'''{sec_open(s)} <div class="q-container pv-contact" style="align-items:center"><div><h2 class="q-h2">{E(s["heading"])}</h2><div class="q-lead" style="margin-top:16px">{E(s.get("body"))}</div><p style="margin-top:20px;font-size:15px;color:var(--fg-muted)">Or call <a href="{E(brand["phone_href"])}" style="color:var(--fg);font-weight:600;min-height:44px;display:inline-flex;align-items:center">{E(brand["phone"])}</a></p></div>
-<form class="q-form" onsubmit="return false"><label for="{E(fid)}-e">Work email</label><input id="{E(fid)}-e" type="email"><label for="{E(fid)}-c">Company</label><input id="{E(fid)}-c" type="text"><input type="submit" class="hs-button" value="{E(s.get("submit", "Send"))}"><p class="pv-form-note">{E(s.get("note", ""))}</p></form></div></section>'''
+    return f'''{sec_open(s)} <div class="q-container pv-contact" style="align-items:center"><div><h2 class="q-h2">{E(s["heading"])}</h2><div class="q-lead" style="margin-top:16px">{E(s.get("body"))}</div><p style="margin-top:20px;font-size:15px;color:var(--fg-muted)">Or call <a href="{E(ctx["L"](brand["phone_href"]))}" style="color:var(--fg);font-weight:600;min-height:44px;display:inline-flex;align-items:center">{E(brand["phone"])}</a></p></div>
+<form class="q-form" onsubmit="return false"><label for="{E(fid)}-e">Work email</label><input id="{E(fid)}-e" type="email" autocomplete="email"><label for="{E(fid)}-c">Company</label><input id="{E(fid)}-c" type="text" autocomplete="organization"><input type="submit" class="hs-button" value="{E(s.get("submit", "Send"))}"><p class="pv-form-note">{E(s.get("note", ""))}</p></form></div></section>'''
 
 
 def r_cta(s, ctx):
-    btn = f'<div style="margin-top:34px"><a class="q-btn" href="{E(s["primary"]["href"])}">{E(s["primary"]["label"])}</a></div>' if s.get("primary") else ""
+    btn = f'<div style="margin-top:34px"><a class="q-btn" href="{E(ctx["L"](s["primary"]["href"]))}">{E(s["primary"]["label"])}</a></div>' if s.get("primary") else ""
     return f'{sec_open(s, "pv-cta")} <div class="q-container"><h2 class="q-h2" style="font-size:clamp(30px,4vw,52px)">{E(s["heading"])}</h2><div class="q-lead" style="max-width:540px;margin:22px auto 0">{E(s.get("subhead"))}</div>{btn}</div></section>'
 
 
@@ -513,26 +566,29 @@ RENDER = {"hero": r_hero, "partners": r_partners, "stats": r_stats, "services": 
           "casestudy": r_casestudy, "cards": r_cards, "band": r_band, "locations": r_locations, "faq": r_faq,
           "contact": r_contact, "detail": r_detail, "listing": r_listing, "team": r_team, "cta": r_cta,
           "leadform": r_leadform}
+RENDER.update(preview_sections.RENDER_EXTRA)
 
 
 # ------------------------------------------------------------------------------ chrome
 
 def header(content, ctx):
     b = content["brand"]
-    util = "".join(f'<a href="{E(h)}"{" class=pv-keep" if i == 0 else ""}>{E(l)}</a>' for i, (l, h) in enumerate((u["label"], u["href"]) for u in b.get("utility", [])))
+    util = "".join(f'<a href="{E(ctx["L"](h))}"{" class=pv-keep" if i == 0 else ""}>{E(l)}</a>' for i, (l, h) in enumerate((u["label"], u["href"]) for u in b.get("utility", [])))
     if b.get("phone"):
         util += f'<a class="pv-phone" href="{E(b["phone_href"])}">{E(b["phone"])}</a>'
-    nav = "".join(f'<a href="{E(h)}">{E(l)}</a>' for l, h in content["nav"])
-    mnav = "".join(f'<a href="{E(h)}">{E(l)}</a>' for l, h in content["nav"]) + "".join(f'<a href="{E(u["href"])}">{E(u["label"])}</a>' for u in b.get("utility", [])[1:])
-    cta = f'<a class="q-booknow" href="{E(b["cta"]["href"])}">{E(b["cta"]["label"])}</a>' if b.get("cta") else ""
-    mcta = f'<a class="q-mnav-cta" href="{E(b["cta"]["href"])}">{E(b["cta"]["label"])}</a>' if b.get("cta") else ""
+    nav = "".join(f'<a href="{E(ctx["L"](h))}">{E(l)}</a>' for l, h in content["nav"])
+    mnav = "".join(f'<a href="{E(ctx["L"](h))}">{E(l)}</a>' for l, h in content["nav"]) + "".join(f'<a href="{E(ctx["L"](u["href"]))}">{E(u["label"])}</a>' for u in b.get("utility", []))
+    if b.get("phone"):
+        mnav += f'<a href="{E(b["phone_href"])}">Call {E(b["phone"])}</a>'
+    cta = f'<a class="q-booknow" href="{E(ctx["L"](b["cta"]["href"]))}">{E(b["cta"]["label"])}</a>' if b.get("cta") else ""
+    mcta = f'<a class="q-mnav-cta" href="{E(ctx["L"](b["cta"]["href"]))}">{E(b["cta"]["label"])}</a>' if b.get("cta") else ""
     lw, lh = b.get("logo_w", 300), b.get("logo_h", 100)
     logo = (f'<img src="{E(ctx["rel"](b["logo"]))}" alt="{E(b.get("logo_alt", content["client"]))}" width="{round(40 * lw / lh)}" height="40" loading="eager">'
             if b.get("logo") else f'<span class="q-logo-text">{E(content["client"])}</span>')
     return f'''<header class="q-header"><a class="q-skip" href="#q-content">Skip to content</a>
 <div class="pv-util"><div class="q-container">{util}</div></div>
 <div class="q-container q-header-in">
-  <a href="index.html" class="q-header-logo" aria-label="{E(content["client"])} home">{logo}</a>
+  <a href="{E(ctx["L"]("index.html"))}" class="q-header-logo" aria-label="{E(content["client"])} home">{logo}</a>
   <nav class="q-nav" aria-label="Main navigation">{nav}{cta}</nav>
   <details class="q-mnav"><summary aria-label="Open menu"><span></span><span></span><span></span></summary><div class="q-mnav-panel">{mnav}{mcta}</div></details>
 </div></header>
@@ -546,29 +602,30 @@ def footer(content, ctx):
             if b.get("logo") else f'<span class="q-logo-text">{E(content["client"])}</span>')
     cols = "".join(
         f'<div><div class="q-footer-head">{E(c["title"])}</div><nav class="q-footer-links" aria-label="{E(c["title"])}">'
-        + "".join(f'<a href="{E(h)}">{E(l)}</a>' for l, h in c["links"]) + "</nav></div>"
+        + "".join(f'<a href="{E(ctx["L"](h))}">{E(l)}</a>' for l, h in c["links"]) + "</nav></div>"
         for c in b.get("footer_columns", []))
     soc = b.get("social", {})
     _names = {"linkedin": "LinkedIn", "facebook": "Facebook", "x": "X", "instagram": "Instagram", "youtube": "YouTube"}
     social = "".join(f'<a href="{E(u)}" aria-label="{E(_names.get(k, k.title()))}">{E(_names.get(k, k.title()))}</a>' for k, u in soc.items() if u)
     contact = ""
     if b.get("phone") or b.get("email"):
-        contact = f'<p class="q-footer-contact">{f"<a class=q-footer-phone href={E(b[chr(112)+chr(104)+chr(111)+chr(110)+chr(101)+chr(95)+chr(104)+chr(114)+chr(101)+chr(102)])}>{E(b[chr(112)+chr(104)+chr(111)+chr(110)+chr(101)])}</a>" if b.get("phone") else ""}{" &nbsp;·&nbsp; " if b.get("phone") and b.get("email") else ""}{f"<a href=mailto:{E(b[chr(101)+chr(109)+chr(97)+chr(105)+chr(108)])}>{E(b[chr(101)+chr(109)+chr(97)+chr(105)+chr(108)])}</a>" if b.get("email") else ""}</p>'
-    legal = "".join(f' &nbsp;|&nbsp; <a href="{E(h)}">{E(l)}</a>' for l, h in b.get("legal", []))
+        contact = f'<p class="q-footer-contact">{f"<a class=q-footer-phone href={E(b[chr(112)+chr(104)+chr(111)+chr(110)+chr(101)+chr(95)+chr(104)+chr(114)+chr(101)+chr(102)])}>{E(b[chr(112)+chr(104)+chr(111)+chr(110)+chr(101)])}</a>" if b.get("phone") else ""}{"<br>" if b.get("phone") and b.get("email") else ""}{f"<a href=mailto:{E(b[chr(101)+chr(109)+chr(97)+chr(105)+chr(108)])}>{E(b[chr(101)+chr(109)+chr(97)+chr(105)+chr(108)])}</a>" if b.get("email") else ""}</p>'
+    legal = "".join(f'<span class="pv-legal-item"><a href="{E(ctx["L"](h))}">{E(l)}</a></span>' for l, h in b.get("legal", []))
     return f'''</div>
 <footer class="q-footer"><div class="q-container q-footer-grid"><div>{logo}<p class="q-footer-tag">{E(b.get("tagline"))}</p>{contact}<div class="q-footer-social" style="gap:8px;font-size:14px">{social}</div></div>{cols}</div>
-<div class="q-container q-footer-legal">Copyright &copy; {ctx["year"]} {E(content["client"])}{legal}</div></footer>'''
+<div class="q-container q-footer-legal"><span class="pv-legal-item">Copyright &copy; {ctx["year"]} {E(content["client"])}</span>{legal}</div></footer>'''
 
 
 def switcher(themes, this_theme, page_file, recommend):
+    up = "../" * (page_file.count("/") + 1)
     def link(t):
         cur = ' aria-current="page"' if t == this_theme else ""
-        label = t.replace("Quantum ", "") + (" (recommended)" if t == recommend and t != this_theme else "")
-        return f'<a href="../{slug_of(t)}/{page_file}"{cur}>{E(label)}</a>'
+        label = t.replace("Quantum ", "") + (" (recommended)" if t == recommend else "")
+        return f'<a href="{up}{slug_of(t)}/{page_file}"{cur}>{E(label)}</a>'
     links = "".join(link(t) for t in themes)
     cur_name = this_theme.replace("Quantum ", "")
-    return (f'<nav class="pv-switch" aria-label="Preview directions"><span class="lbl">Direction</span>{links}<a href="../index.html">All three</a></nav>'
-            f'<details class="pv-switch-m"><summary aria-label="Change direction">Direction: {E(cur_name)} &#9662;</summary><nav class="menu" aria-label="Preview directions">{links}<a href="../index.html">All three</a></nav></details>'
+    return (f'<nav class="pv-switch" aria-label="Preview directions"><span class="lbl">Direction</span>{links}<a href="{up}index.html">All three</a></nav>'
+            f'<details class="pv-switch-m"><summary aria-label="Change direction">Direction: {E(cur_name)} &#9662;</summary><nav class="menu" aria-label="Preview directions">{links}<a href="{up}index.html">All three</a></nav></details>'
             '<script>if(top!==self){document.documentElement.classList.add("embedded")}</script>')
 
 
@@ -588,9 +645,12 @@ def schema_blocks(content, page, base, dslug):
         return (f'<script type="application/ld+json">{json.dumps(org, ensure_ascii=False)}</script>\n'
                 f'<script type="application/ld+json">{json.dumps(web, ensure_ascii=False)}</script>')
     name = page["title"].split("|")[0].strip()
-    bc = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{site}/"},
-        {"@type": "ListItem", "position": 2, "name": name, "item": f"{site}/{page['file'].replace('.html', '')}"}]}
+    items = [{"@type": "ListItem", "position": 1, "name": "Home", "item": f"{site}/"}]
+    parts = page["file"].split("/")
+    if len(parts) > 1:
+        items.append({"@type": "ListItem", "position": 2, "name": parts[0].replace("-", " ").title(), "item": f"{site}/{parts[0]}"})
+    items.append({"@type": "ListItem", "position": len(items) + 1, "name": name, "item": f"{site}/{page['file'].replace('.html', '')}"})
+    bc = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": items}
     return f'<script type="application/ld+json">{json.dumps(bc, ensure_ascii=False)}</script>'
 
 
@@ -608,27 +668,42 @@ def srcset_for(path: str, out_dir: str) -> str:
 def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir, dslug):
     b = content["brand"]
     partners_dir = os.path.join(out_dir, "assets", "partners")
+    depth = page["file"].count("/")           # blog/post.html -> 1
+    up = "../" * (depth + 1)                   # to the repo root (assets/, other directions)
+    root = "../" * depth                       # to this direction's root (index.html, contact.html)
 
     def rel(p):
-        return "../" + p
+        return up + p
+
+    def L(href):
+        """Internal links are written root-relative in the content file (contact.html,
+        blog/x.html, what-we-do.html#it). Prefix them for the page's depth."""
+        if not href or href.startswith(("#", "http", "mailto:", "tel:", "/")):
+            return href
+        return root + href
 
     def partner_logo(name):
         s = re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
         for ext in ("png", "jpg", "svg", "webp"):
             if os.path.exists(os.path.join(partners_dir, f"{s}.{ext}")):
-                return f"../assets/partners/{s}.{ext}"
+                return f"{up}assets/partners/{s}.{ext}"
         return None
 
-    ctx = {"rel": rel, "partner_logo": partner_logo, "brand": b, "year": 2026, "srcset": lambda pth: srcset_for(pth, out_dir)}
+    def srcset(pth):
+        ss = srcset_for(pth, out_dir)
+        return ss.replace('"../', '"' + up).replace(', ../', ', ' + up)
+
+    ctx = {"rel": rel, "L": L, "partner_logo": partner_logo, "brand": b, "year": 2026, "srcset": srcset,
+           "E": E, "RAW": RAW, "sec_open": sec_open, "depth": depth}
     secs = list(page["sections"])
     if any(x["type"] in ("leadform", "contact") for x in secs) and secs and secs[-1]["type"] == "cta":
         secs = secs[:-1]   # two "start with the assessment" blocks in a row read as a template bug
     body = "".join(RENDER[s["type"]](s, ctx) for s in secs)
-    canonical = f"{base}/{dslug}/{page['file'].replace('index.html', '')}".rstrip("/") if page["file"] == "index.html" else f"{base}/{dslug}/{page['file'].replace('.html', '')}"
+    canonical = f"{base}/{dslug}/" if page["file"] == "index.html" else f"{base}/{dslug}/{page['file']}"
     og_img = f"{base}/assets/hero-og.jpg"
     tokcss = "\n  ".join(f"{k}:{v};" for k, v in tok.items())
     return f'''<!doctype html>
-<html lang="en">
+<html lang="en" data-dir="{E(dslug)}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -658,10 +733,14 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
   {tokcss}
 }}
 {PREVIEW_CSS}
+{preview_sections.EXTRA_CSS}
 /* ===== direction system: {E(dslug)} ===== */
 {DIRECTION_CSS.get(dslug, "")}
+/* ===== mobile, after the direction system so it wins ===== */
+{MOBILE_LAST_CSS}
 </style>
 {schema_blocks(content, page, base, dslug)}
+{"".join(f'<script type="application/ld+json">{json.dumps(blk, ensure_ascii=False)}</script>' for blk in page.get("schema", []))}
 </head>
 <body>
 {header(content, ctx)}
@@ -669,7 +748,9 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
 {body}
 </main>
 {footer(content, ctx)}
+{preview_sections.RENDER_EXTRA["sticky"](b.get("sticky", {}), ctx) if b.get("sticky") else ""}
 {switcher(themes, theme, page["file"], recommend)}
+<script>{PREVIEW_JS}</script>
 </body>
 </html>
 '''
@@ -696,7 +777,8 @@ def main(argv=None):
         d = os.path.join(a.out, slug_of(t)); os.makedirs(d, exist_ok=True)
         for page in content["pages"]:
             doc = render_page(content, page, t, css, tok, themes, a.recommend, base, a.out, slug_of(t))
-            open(os.path.join(d, page["file"]), "w", encoding="utf-8").write(doc); written += 1
+            dest = os.path.join(d, page["file"]); os.makedirs(os.path.dirname(dest), exist_ok=True)
+            open(dest, "w", encoding="utf-8").write(doc); written += 1
         print(f"  {t:20} {len(content['pages'])} pages  accent {tok['--q-gold']} ink {tok['--accent-ink']} cta-fg {tok['--cta-fg']} chrome {tok['--chrome-bg']}")
     open(os.path.join(a.out, "index.html"), "w", encoding="utf-8").write(hub(content, themes, a.recommend, base, roles, not a.no_standard, client_tokens, a.out))
     print(f"wrote {written} pages + hub to {a.out}")

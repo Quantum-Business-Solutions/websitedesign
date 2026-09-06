@@ -132,6 +132,11 @@ every page, the plan, reply). Pushed to the client repo, live at `https://<slug>
 `noindex`. Gate the recommended home page, the locations page and the blog listing; run the Copy
 critic, Fact checker and Mobile reviewer on the hub and the home page. **The client gets the hub
 URL only, and only after the gate and the agents pass.** Inputs: `process/INTAKE.md`.
+The content file is written by `brands/<slug>.content.py` (constants in, JSON out); edit the script,
+rerun it, rerun `preview.py`. Every rendered page must resolve its links from nested folders, so run
+the link and image check (`node scripts/preview_check.mjs <dir>/<page>.html ...`, run from this repo) before the gate. Motion (count-up, hero
+parallax, card tilt, logo marquee) is on by default and turns itself off under
+`prefers-reduced-motion`; nothing on the page depends on it.
 
 ### 13 👤🔒 They choose
 **Done:** the choice **and why, in their words**, in the brief. Attach a decision date.

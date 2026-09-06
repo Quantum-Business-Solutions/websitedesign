@@ -188,9 +188,9 @@ like lead-gen microsites. Systel owns "dark and big."
 
 | Name | Theme | Rationale | Status |
 |---|---|---|---|
-| Kelly Office Solutions — Clean | Quantum Clean | **The clear one, and our recommendation.** Light, humanist sans, maximum clarity — the right register for 4,000 customers who come for Request Service and Meter Reads, and for buyers burned by lead-gen microsites. Green does the work; navy is the button text | full preview site, 7 pages |
-| Kelly Office Solutions — Showcase | Quantum Showcase | **The contemporary one.** Same light ground, a display grotesque and bigger rhythm — Kelly as the modern dealer moving into IT and document management, without going dark | full preview site, 7 pages |
-| Kelly Office Solutions — Press | Quantum Press | **The established one.** Editorial serif on warm paper — the theme the catalogue names for heritage brands. Nobody in this category looks like an institution; since 1947, BBB-accredited since 1960 and an audited NPS of 94 land harder in a serif | full preview site, 7 pages |
+| Kelly Office Solutions — Clean | Quantum Clean | **The clear one, and our recommendation.** Light, humanist sans, maximum clarity — the right register for 4,000 customers who come for Request Service and Meter Reads, and for buyers burned by lead-gen microsites. Green does the work; navy is the button text | full preview site, 36 pages |
+| Kelly Office Solutions — Showcase | Quantum Showcase | **The contemporary one.** Same light ground, a display grotesque and bigger rhythm — Kelly as the modern dealer moving into IT and document management, without going dark | full preview site, 36 pages |
+| Kelly Office Solutions — Press | Quantum Press | **The established one.** Editorial serif on warm paper — the theme the catalogue names for heritage brands. Nobody in this category looks like an institution; since 1947, BBB-accredited since 1960 and an audited NPS of 94 land harder in a serif | full preview site, 36 pages |
 
 All three light, per `verticals/office-technology.md` (measured: the category is light-ground and
 the dark four are usually wrong for it). Signal was considered as a dark wildcard and dropped: the
@@ -199,9 +199,14 @@ near-black ground is not "warm, established, approachable." It stays in reserve 
 reveals appetite for an IT-forward register.
 
 **Preview:** https://kelly-office-solutions.vercel.app (hub; each direction opens in its own tab, every
-page built). Content source of truth: `brands/kelly-office-solutions.content.json`. Gate on 2026-09-06:
-home 97, locations 96, blog 96, what-we-do 91. Two QA passes (copy/fact, mobile/design) applied; the
-unverified claims moved to the hub's "To confirm" list.
+page built). Content source of truth: `brands/kelly-office-solutions.content.py`, which writes
+`brands/kelly-office-solutions.content.json`. Thirty-six pages per direction: home, what we do, seven
+service pages, industries plus five industry pages, supplies and service, cost calculator,
+assessment, about, careers, locations plus four city pages with LocalBusiness schema, blog plus nine
+posts with BlogPosting schema, contact. Kelly's own brand film (Vimeo 271855836) on the home page
+behind a poster, and their production print film on the production page. Three QA passes applied
+(copy and fact, mobile and design, then the expansion pass); unverified claims stay on the hub's
+"To confirm" list. Managed print copy verified against the live page on 2026-09-06.
 
 ## Chosen direction, and why — in their words
 

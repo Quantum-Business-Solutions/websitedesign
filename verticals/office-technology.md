@@ -157,6 +157,27 @@ The builder is a real demo-website tool with real content in it. **Check it befo
 dealer build** — the page set, the meta descriptions and the service-line taxonomy may already
 exist.
 
+### The dealer page set as now built for Kelly (the template for the next one)
+
+`brands/kelly-office-solutions.content.py` is the reusable shape. Swap the constants and the assets
+and the same script produces the next dealer's site:
+
+| Block | Pages | Notes |
+|---|---|---|
+| Home | 1 | hero, partner marquee, stats, "is this you" checklist, services list, brand film, process, testimonials, industry tabs, customer fast lane, locations, FAQ, assessment form |
+| Services | 7 | one per line: copiers, managed print (four assessment steps, five reports, lease/rent/buy table), document management, production print (film), IT, mailing, water/ice/coffee |
+| Industries | 1 + 5 | index plus legal, healthcare, faith-based, architecture, manufacturing |
+| Local | 1 + 4 | index plus one page per branch with LocalBusiness schema, hours, named services, branch phone |
+| Tools | 2 | cost calculator (sliders), assessment (what you get, what it costs) |
+| Company | 3 | about (timeline, owners, values, community), careers, supplies and service |
+| Blog | 1 + 9 | listing plus nine posts, each with chapters, FAQ, a form and related reads; the topics are the category's evergreen searches (cost, lease vs buy, water cooler cleaning, same-day service) |
+| Contact | 1 | form plus branches |
+
+The next dealer needs: their service-line list in their words, their branches with phones and hours,
+their partners (logos), four to six testimonials with names, their process stage names as published,
+their films if they have them, and the real photography. Everything else is already written to be
+swapped.
+
 ## The proof points every dealer has
 
 Ask for these in step 5 of the runbook; they are the `stat-band` and they are always available:

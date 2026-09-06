@@ -406,3 +406,34 @@ axe default rules clean at 390 and 1440 on all pages.
 **Two lessons for the process.** A rendered preview is where unsourced specifics hide, because
 specific copy reads well; the fact checker must run on the *content file*, not the brief. And "three
 directions" is a claim the generator has to earn with components and composition, not just tokens.
+
+## 2026-09-06, night: the Kelly expansion to 36 pages, third pass
+
+**Mobile and quality (Playwright agent, 15 findings on the 22-page version):** the direction CSS
+was declared after the shared mobile rules, so at 390 Press put the services list in a 64px column
+and Showcase kept an empty "Learn more" column; the testimonial quote outweighed the section heading
+on phones; the stats band collapsed to one column with orphaned rules; the mobile header claimed to
+be sticky but was not, while `scroll-padding-top` behaved as if it were; footer contact and legal
+lines wrapped and left dangling separators; footer links at 36px; the mobile menu omitted the phone
+and the portal; the switcher label wrapped and differed between directions; partner logos small and
+soft; the About photo upscaled; blank avatar circles on About and blank image slots on the blog.
+Fixes: a `MOBILE_LAST_CSS` block emitted after the direction system (that is where mobile overrides
+must live from now on); the whole header sticky on phones with the utility bar hidden (the phone is in
+the menu and in the bottom bar); `<html data-dir>` so a direction can be targeted from shared CSS;
+stacked footer contact, nowrap legal items with a `::before` separator; 44px footer links and logo;
+phone and portal rows in the menu; one switcher label everywhere; the partner strip as a marquee with
+real logo sizes; Press locations two across; phone pinned to the foot of every location card.
+
+**Found on the new pages:** service blurbs cut mid-sentence by a character slice (a `brief()` helper
+now cuts at sentence or clause boundaries); rooted links missing on the mobile menu and the sticky bar
+from nested folders; the Press nav wrapping inside its 1120px measure; the Vimeo block rendering as a
+black iframe (now a poster and a play button, iframe on click); the mobile sticky bar colliding with
+the direction switcher.
+
+**Facts verified against the live site:** Kelly's managed print page really has both structures we
+had been arguing about. Three programme parts (Assessment; Monitoring & Reporting; Leasing & Rental)
+and a four-step assessment (Assess, Plan, Measure, Manage), reports every six months, five named
+reports. The page now carries both, in their words.
+
+**Lesson:** when a direction gets its own CSS block, anything responsive that must survive it has to
+be emitted after it. Order is the cascade's first rule and the easiest one to break by appending.

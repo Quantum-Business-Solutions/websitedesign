@@ -61,11 +61,30 @@ footer columns, legal links.
 
 `nav`: label and file, five to seven items.
 
-`pages`: one entry per page with `file`, `title` (with the brand after a pipe), `description` (140
-to 160 characters) and `sections`. Section types available in `scripts/preview.py`: hero (split or
-centered), partners, stats, services, process, casestudy, cards, band, locations, faq, contact,
-detail, listing, team, cta. Card counts that balance: 2, 3, 4, 5 (stays five across), 6, 8. Seven
-goes in a list, not a grid.
+`pages`: one entry per page with `file` (nested paths allowed: `services/managed-print.html`,
+`blog/<slug>.html`, `locations/<city>.html`), `title` (with the brand after a pipe), `description`
+(140 to 160 characters), optional per-page `schema` (a list of JSON-LD objects, for LocalBusiness on
+location pages and BlogPosting on posts) and `sections`.
+
+Section types, all in `scripts/preview.py` and `scripts/preview_sections.py`:
+
+| Family | Types |
+|---|---|
+| Openers | `hero` (split or centered, image, badge, note), `hero-video`, `partners` (auto-scrolling logo strip) |
+| Proof | `stats` (count-up on scroll), `testimonials`, `casestudy`, `leadership`, `timeline`, `values`, `video` (Vimeo behind a poster and play button, or a self-hosted mp4) |
+| Offer | `services` (list), `cards` (3D tilt on hover), `resources`, `tabs` (industries or steps, with image), `process`, `comparison` (table), `checklist` (interactive), `calculator` (three sliders, live result), `detail`, `band` |
+| Local | `locations` (phone at the card foot), `faq` |
+| Content | `listing` (blog index), `article` (breadcrumb, table of contents, chapters, pull quote, callout, author), `related` |
+| Convert | `contact`, `leadform`, `cta` (suppressed automatically on pages with a form), `sticky` (mobile two-button bar, set once under `brand.sticky`) |
+
+Card counts that balance: 2, 3, 4, 5 (stays five across), 6, 8. Seven goes in a list, not a grid.
+
+**Author the JSON from a script, not by hand.** `brands/kelly-office-solutions.content.py` is the
+pattern: the facts live once as Python constants (services, industries, locations, partners,
+testimonials, posts), builder functions turn each service, industry, city and post into a page, and
+`build()` writes the JSON. Thirty-six pages from about 600 lines, and a new dealer is a new
+constants block, not a new file of prose. Blurbs come from `brief()`, which cuts at a sentence or
+clause boundary, never mid-sentence.
 
 `pitch`: what we heard, what we found, the reasons for our pick tied to what they said, the one
 thing we would change, the alternatives, the plan, and who at QBS answers.
