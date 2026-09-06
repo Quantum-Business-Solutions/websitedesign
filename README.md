@@ -102,6 +102,9 @@ Re-skinning rewrites twelve CSS custom properties in one block — see `process/
 | `scripts/verify.mjs` | The launch gate as a command. Scores every page 0–100; nothing ships under 80. Exit 1 means it failed. |
 | `process/quality-standard.md` | **Client-facing.** What every site is guaranteed to have, and the evidence delivered. Goes in every proposal. |
 | `process/qa-process.md` | **The four QA stations** that produce that evidence, who signs each, and the 30-day fix rule. |
+| `process/INTAKE.md` | **What to feed the machine.** Every input a build needs, who supplies it, and the default if it is late. |
+| `scripts/preview.py` | **Three complete clickable sites** from one content file, plus the hub. Deploys via the client repo. |
+| `brands/<slug>.content.json` | The site as data: brand, nav, schema, every page as sections, the pitch. Reference: Kelly. |
 | `process/decisions.md` | **Eight decision rules** — the judgement calls, written down so they can be delegated. |
 | `process/onboarding.md` | **How someone new earns the right to run a build** — three builds, graduated permissions. |
 | `themes/source/` | **The nine themes, in git.** 2,835 files. `reskin.py export` refreshes; `reskin.py drift` catches live edits. |
@@ -109,7 +112,7 @@ Re-skinning rewrites twelve CSS custom properties in one block — see `process/
 | `scripts/converted.py` | Pulls 30/60/90-day performance per page; writes a learning only when it clears the floor. |
 | `scripts/monitor.py` | Plans Firecrawl monitors for a vertical's competitors and head terms. Dry-run by default. |
 | `brands/_template.md` | The brief template. Every field here is consumed by a later phase. |
-| `.claude/commands/` | `/mockups` and `/build` (the entry points), `/design-ingest`, `/website` (legacy). |
+| `.claude/commands/` | `/mockups`, `/preview` and `/build` (the entry points), `/design-ingest`, `/website` (legacy). |
 | `brands/<client>.md` | Per-client brief. Client-stated constraints live here and **outrank house defaults**. |
 
 ## Gorgeous is half the job

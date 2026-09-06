@@ -16,6 +16,10 @@ def _e(s) -> str:
     return html.escape(s, quote=True)
 
 
+def _pname(pg: dict) -> str:
+    return "Home" if pg["file"] == "index.html" else pg["title"].split("|")[0].strip()
+
+
 def _slug(theme: str) -> str:
     return theme.replace("Quantum ", "").lower()
 
@@ -63,7 +67,7 @@ def hub(content, themes, recommend, base, roles, standard, client_tokens):
     found = "".join(f"<li>{_e(x)}</li>" for x in pitch.get("found", []))
     plan = "".join(f'<div class="step"><div class="when">{_e(w)}</div><p>{_e(what)}</p></div>' for w, what in pitch.get("plan", []))
     pages = content["pages"]
-    page_opts = "".join(f'<option value="{_e(pg["file"])}">{_e(pg["title"].split("|")[0].strip())}</option>' for pg in pages)
+    page_opts = "".join(f'<option value="{_e(pg["file"])}">{_e(_pname(pg))}</option>' for pg in pages)
     frames = "".join(
         f'<figure><figcaption>{_e(t.replace("Quantum ", ""))}</figcaption>'
         f'<iframe title="{_e(t.replace("Quantum ", ""))} preview" loading="lazy" src="{_slug(t)}/index.html" data-dir="{_slug(t)}"></iframe></figure>'
@@ -71,7 +75,7 @@ def hub(content, themes, recommend, base, roles, standard, client_tokens):
     every = ""
     for t in themes:
         every += f'<div class="col"><h4>{_e(t.replace("Quantum ", ""))}</h4>' + "".join(
-            f'<a href="{_slug(t)}/{pg["file"]}" target="_blank" rel="noopener">{_e(pg["title"].split("|")[0].strip())}</a>' for pg in pages) + "</div>"
+            f'<a href="{_slug(t)}/{pg["file"]}" target="_blank" rel="noopener">{_e(_pname(pg))}</a>' for pg in pages) + "</div>"
     qc = pitch.get("qbs_contact", {})
     std = ('<a class="alt" href="standard.html" target="_blank" rel="noopener"><h4>The Quantum Website Standard</h4>'
            '<p>The ten things every site we build is guaranteed to have at launch, and the evidence you receive for each.</p><span>Open</span></a>') if standard else ""

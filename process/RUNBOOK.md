@@ -125,6 +125,14 @@ clear the build gate.
 ### 12 🏢 Present it
 `process/pitch-presentation.md`. Main page first — the evidence — then the three.
 
+### 12b 🤖→🏢 Build the preview site
+`/preview <client>`: `scripts/preview.py` renders every page of the site in all three directions
+from `brands/<slug>.content.json`, plus the chooser hub (specs, our pick with reasons, compare,
+every page, the plan, reply). Pushed to the client repo, live at `https://<slug>.vercel.app`,
+`noindex`. Gate the recommended home page, the locations page and the blog listing; run the Copy
+critic, Fact checker and Mobile reviewer on the hub and the home page. **The client gets the hub
+URL only, and only after the gate and the agents pass.** Inputs: `process/INTAKE.md`.
+
 ### 13 👤🔒 They choose
 **Done:** the choice **and why, in their words**, in the brief. Attach a decision date.
 
