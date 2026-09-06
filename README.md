@@ -29,7 +29,7 @@ ships: `python3 scripts/designsystem.py --out /tmp/ds.html`. It sets all nine th
 typefaces at their real colours, and carries the colour roles, the card-grid table and the
 accessibility floors.
 
-**Just tell me what to do, in order** → `process/RUNBOOK.md`. Twenty-four numbered steps from
+**Just tell me what to do, in order** → `process/RUNBOOK.md`. Eight production phases and 28 steps from
 "we should talk to them" to "launched and on retainer", each with who owns it, the command if there
 is one, and what done looks like.
 
@@ -81,7 +81,9 @@ Re-skinning rewrites twelve CSS custom properties in one block — see `process/
 | `design/prompts.md` | Generation prompts that worked, with model and settings. |
 | `design/inbox.md` | Drop URLs here, then run `/design-ingest`. |
 | `design/SCHEMA.md` | The ingest contract — slug rule, file shapes, failure handling. |
-| `process/RUNBOOK.md` | **Step 1 to 24, in order.** If you read one file, read this one. |
+| `process/RUNBOOK.md` | **Eight phases, 28 steps, in order.** If you read one file, read this one. |
+| `themes/architecture.md` | **What the nine should become** — proven on the live Revolution build. |
+| `verticals/office-technology.md` | **Layer 2** — copier dealers and managed print. Six of ten clients. |
 | `process/OPERATOR.md` | **Hand this to whoever is building.** Self-contained checklist + the five traps. |
 | `process/outbound-mockups.md` | **Speculative mockups as outbound.** Free to render changes the funnel. |
 | `process/agents.md` | **The agent roster** — and the gate each one is checked against. |
