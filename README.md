@@ -66,7 +66,7 @@ Re-skinning rewrites twelve CSS custom properties in one block — see `process/
 | `process/structured-data.md` | Schema for SEO/AEO — what ships, what's missing, and a bug in all nine themes. |
 | `process/checklist.md` | Pre-ship checklist. Nothing reaches a client without it. |
 | `process/build-sequence.md` | The methodology, in order, with the reasoning. Read once. |
-| `design/guardrails.md` | Always/never. **Read before generating any design work.** |
+| `design/guardrails.md` | Always/never — including the card-grid balance rule. **Read before generating any design work.** |
 | `design/references.md` | Live-site references, why each is here. |
 | `design/tokens/*.json` | Values **measured** off live pages. Only measured, never hand-written. |
 | `design/prompts.md` | Generation prompts that worked, with model and settings. |

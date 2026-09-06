@@ -90,6 +90,8 @@ not optional, and neither is acting on what you see.
 - **Two conversion paths on every page**: a hard offer for the ready buyer, a soft offer for the 95%
   who aren't ready today
 - Lazy-loading below the fold, `fetchpriority="high"` on the hero, `width`/`height` on every image
+- **Card grids balanced at every width** — no single card orphaned on a row beneath three or more.
+  Fix the column count, not the content. `design/guardrails.md` has the safe counts
 - Analytics baseline captured **before** launch — no baseline, no way to prove the optimisation
   window worked
 - **Every changed URL has a 301, not a 302.** Check the top-traffic pages from

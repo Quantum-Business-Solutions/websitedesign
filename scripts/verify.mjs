@@ -186,6 +186,68 @@ async function auditPage(browser, url) {
     await installTransport(ctx);
     const page = await ctx.newPage();
 
+    // ---- card-grid balance. Measures ACTUAL rendered rows, so it catches an
+    // orphan the CSS didn't advertise -- see design/guardrails.md.
+    await page.addInitScript(() => {
+      window.measureGrids = () => {
+        const out = [];
+        for (const el of document.querySelectorAll('*')) {
+          const kids = Array.from(el.children).filter(c => {
+            const r = c.getBoundingClientRect();
+            return r.width > 40 && r.height > 40;
+          });
+          if (kids.length < 3) continue;
+
+          const boxes = kids.map(k => k.getBoundingClientRect());
+          // Only card-like sets: children of similar width and height. This is what
+          // keeps navs, footers and prose out of the results.
+          const w = boxes.map(b => b.width), h = boxes.map(b => b.height);
+          if (Math.max(...w) / Math.max(1, Math.min(...w)) > 1.35) continue;
+          if (Math.max(...h) / Math.max(1, Math.min(...h)) > 3) continue;
+
+          // Group by top edge into rows.
+          const rows = [];
+          for (const b of boxes.slice().sort((a, z) => a.top - z.top)) {
+            const last = rows[rows.length - 1];
+            if (last && Math.abs(last.top - b.top) < 12) last.n++;
+            else rows.push({ top: b.top, n: 1 });
+          }
+          if (rows.length < 2) continue;
+
+          const counts = rows.map(r => r.n);
+          const widest = Math.max(...counts);
+          const lastRow = counts[counts.length - 1];
+          if (widest < 2 || lastRow >= widest) continue;
+
+          out.push({
+            total: kids.length, cols: widest, rows: counts, lastRow,
+            label: (el.className && String(el.className).split(' ')[0]) || el.tagName.toLowerCase(),
+            // The nearest heading BEFORE this grid in document order. Walking up and
+            // taking an ancestor's first descendant heading finds the first h2 on the
+            // page, which mislabels every grid on a flat layout.
+            heading: (() => {
+              const heads = Array.from(document.querySelectorAll('h1,h2,h3'));
+              let best = '';
+              for (const h of heads) {
+                if (h.compareDocumentPosition(el) & Node.DOCUMENT_POSITION_FOLLOWING) {
+                  best = h.textContent.trim().slice(0, 50);
+                } else break;
+              }
+              return best;
+            })(),
+          });
+        }
+        // De-duplicate nested containers reporting the same shape.
+        const seen = new Set();
+        return out.filter(g => {
+          const k = `${g.total}:${g.cols}:${g.lastRow}`;
+          if (seen.has(k)) return false;
+          seen.add(k);
+          return true;
+        });
+      };
+    });
+
     // ---- Core Web Vitals proxies, installed before navigation
     await page.addInitScript(() => {
       window.__cwv = { lcp: 0, cls: 0, shifts: [] };
@@ -262,6 +324,34 @@ async function auditPage(browser, url) {
           ? `${axe.violations.length} minor: ` + axe.violations.map(v => v.id).join(', ')
           : 'no violations');
 
+    // Grid balance is breakpoint-dependent -- a grid balanced on desktop can orphan
+    // on tablet, so this runs at all three widths.
+    {
+      const grids = await page.evaluate(() => measureGrids());
+      const orphans = grids.filter(g => g.lastRow === 1 && g.cols >= 3);
+      const weak = grids.filter(g => g.lastRow > 1 && g.lastRow <= g.cols / 2 && g.cols >= 4);
+      const describe = g =>
+        `${g.total} cards as ${g.rows.join('+')}${g.heading ? ` under "${g.heading}"` : ''}`;
+      if (orphans.length) {
+        rec(url, `card grid balance@${vp.name}`, 'FAIL',
+          orphans.map(describe).join('; ') +
+          ' — one card alone on a row. Change the column count, span the odd card, ' +
+          'or change the count. See design/guardrails.md.');
+      }
+      // Report weak rows even when an orphan exists -- they are separate grids, and
+      // hiding one behind the other means a second pass to find it.
+      if (weak.length) {
+        rec(url, `card grid lopsided@${vp.name}`, 'WARN',
+          weak.map(describe).join('; ') +
+          ' — last row under half full. Fewer columns would balance it.');
+      }
+      if (!orphans.length && !weak.length) {
+        rec(url, `card grid balance@${vp.name}`, 'PASS',
+          grids.length ? `${grids.length} multi-row grid(s), last row full enough`
+                       : 'no multi-row grids');
+      }
+    }
+
     if (vp.name !== 'desktop') { await ctx.close(); continue; }
 
     // ---------- desktop-only structural checks ----------
@@ -296,6 +386,8 @@ async function auditPage(browser, url) {
         headings: q('h1,h2,h3,h4').map(h => +h.tagName[1]),
       };
     });
+
+    d.grids = await page.evaluate(() => measureGrids());
 
     // SEO head
     rec(url, 'canonical', d.canonical ? 'PASS' : 'FAIL', d.canonical || 'absent');

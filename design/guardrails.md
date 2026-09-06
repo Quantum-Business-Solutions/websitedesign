@@ -136,3 +136,62 @@ The extractors mislabel, and the token files here prove it. Both of these are in
   which is obviously not what the site renders.
 
 Never port a token straight into a theme field. Look at the live page first.
+
+## Card grids must balance. No orphan rows.
+
+A section with six cards on the first row and two on the second reads as a mistake, because it is
+one — nobody chose that, a `grid-template-columns` did. The last row of a card grid must be full, or
+close enough that it reads as deliberate.
+
+**The fix is almost always the column count, not the content.** Six cards is perfect at three
+columns and bad at four. Four cards is perfect at four or two and bad at three. So change the grid
+before you change the client's content.
+
+### Safe counts, by column width
+
+`+1 ORPHAN` is never acceptable. `weak` means lopsided — allowed only if the section genuinely
+can't be another count.
+
+| Cards | 4 col | 3 col | 2 col |
+|---|---|---|---|
+| **2** | — | — | 2×1 ✅ |
+| **3** | — | 3×1 ✅ | +1 weak |
+| **4** | 4×1 ✅ | **+1 ORPHAN** | 2×2 ✅ |
+| **5** | **+1 ORPHAN** | +2 ok | +1 weak |
+| **6** | +2 weak | 3×2 ✅ | 2×3 ✅ |
+| **7** | +3 ok | **+1 ORPHAN** | +1 weak |
+| **8** | 4×2 ✅ | +2 ok | 2×4 ✅ |
+| **9** | **+1 ORPHAN** | 3×3 ✅ | +1 weak |
+| **12** | 4×3 ✅ | 3×4 ✅ | 2×6 ✅ |
+
+**12 is the only count that is clean at every width.** After that, 2 · 4 · 8 are clean at 4/2/1, and
+3 · 6 · 9 are clean at 3.
+
+### It has to hold at every breakpoint
+
+This is the part that gets missed. A grid balanced on desktop can orphan on tablet, so the cascade
+is part of the decision:
+
+| Cards | Cascade |
+|---|---|
+| 3 or 9 | 3 → **1**. **Skip 2 columns entirely** — both orphan there |
+| 4 or 8 | 4 → 2 → 1. **Skip 3** — 4 orphans at 3 |
+| 6 | 3 → 2 → 1 |
+| 12 | 4 → 3 → 2 → 1 |
+
+### When the count is genuinely fixed
+
+Five services is five services. Three options, in order of preference:
+
+1. **Change the column count** so the remainder is at least half a row (5 at 3 columns is 3+2 — fine).
+2. **Make the odd one deliberate.** A first card spanning two columns, or a last card spanning the
+   remainder, reads as designed rather than as leftover. `grid-column: span 2` on one item.
+3. **Change the count.** Merge two weak cards, or find a sixth. Often the right answer — a list
+   padded to fill a grid is usually a list with a weak item in it.
+
+What is never acceptable: leaving one card alone on a row beneath three or more.
+
+### Checked automatically
+
+`scripts/verify.mjs` measures actual rendered rows at 390 / 768 / 1440 and fails on an orphan, so
+this rule does not depend on anyone remembering it.

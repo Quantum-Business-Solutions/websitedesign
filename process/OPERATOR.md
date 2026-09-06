@@ -116,6 +116,13 @@ python3 scripts/reskin.py plan \
       what's being promised? If the hero could belong to any company in the category, it isn't
       done — and the fix is usually a **missing persuasion module** (`pain-bridge`, `is-this-you`,
       `cost-of-inaction`, `two-futures`, `why-now`), not better adjectives.
+- [ ] **Card grids balance — no orphan rows.** Six cards on one row and two on the next reads as a
+      mistake, because it is one: nobody chose it, a `grid-template-columns` did. **Change the column
+      count, not the client's content.** 12 is clean at every width; 2·4·8 are clean at 4/2/1;
+      3·6·9 are clean at 3. Never 4 cards at 3 columns, or 5/9 at 4 columns.
+      **And check every breakpoint** — 3 or 9 cards must go 3 → 1 and skip 2 columns; 4 or 8 must go
+      4 → 2 → 1 and skip 3. Full table in `design/guardrails.md`; the gate measures rendered rows and
+      fails on an orphan.
 - [ ] **Real content. No Lorem, no `example.com`, no "Your Company".** The gate checks for these.
 - [ ] Exactly one `<h1>` per page, answering the search intent from the baseline.
 - [ ] **Featured image set on every page** — otherwise `og:image` is absent and every LinkedIn or
@@ -161,7 +168,8 @@ python3 scripts/reskin.py plan \
       ```
       **Exit code 1 means it failed.** It checks a11y (axe-core) at 390/768/1440, CLS, canonical,
       `og:image`, headings, lazy-loading, image dimensions, JSON-LD validity *and whose name is in
-      it*, placeholder text, conversion paths and broken links.
+      it*, **card-grid balance at every width**, placeholder text, conversion paths and broken
+      links.
 - [ ] **Open the screenshots in `verify-out/` and actually look**, including at phone width. The
       harness catches what's measurable; it cannot tell you the design is wrong. This is the
       most-skipped step in the whole process and the highest-value one.
@@ -207,6 +215,7 @@ python3 scripts/reskin.py plan \
 - Ship a clone whose `<head>`, header or footer still says Quantum Business Solutions.
 - Hand-write JSON-LD into a rich-text block.
 - Fix a contrast failure with `opacity`.
+- Leave one card alone on a row beneath three or more.
 - Change a URL that has traffic without a 301.
 - Fork a theme's *structure* for one client. If the structure is wrong, fix it at source.
 - Ship anything nobody has looked at, at phone width.
