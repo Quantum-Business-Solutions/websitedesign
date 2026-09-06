@@ -71,6 +71,8 @@ Version 1.0, 2026-09-06. Owner: Shawn Peterson. Changes go through `process/RUNB
 ### 8. Balanced and finished
 
 - Card grids never leave an orphan: no row of six over a row of two. Checked at every width.
+- The blog listing and every blog post match the rest of the site: same theme, same header and
+  footer, same type. Not a default template bolted on.
 - Every image is a real image or a deliberately blank surface. Nothing generated is passed off as
   a photograph of your people or your premises.
 - Every page scores at least 80 out of 100 on our automated gate, and you receive the score

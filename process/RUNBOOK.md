@@ -223,6 +223,9 @@ this phase costs 8 hours or 40.
 # Phase 5 · Build the website — days 50–75
 
 ### 27 🤖→🏢 Build the pages
+**Assign the blog templates first**: Settings → Website → Blog → the client's blog → Templates →
+the clone's `blog-listing.html` and `blog-post.html`. The blog is set in blog settings, not in the
+theme, so it is the page most likely to ship in a default template. Then the pages.
 Real content. One `<h1>`. **Featured image on every page** or `og:image` is absent. Lazy below the
 fold, `fetchpriority="high"` on the hero, `width`/`height` **plus `height:auto`**.
 
@@ -282,6 +285,8 @@ before it's built**, per the trigger from step 6. On fixed price this is where t
 # Phase 7 · Launch — days 85–90
 
 ### 35 🏢🔒 Pre-flight, then go
+The gate's URL list always includes `/blog` and one post. A blog listing in the wrong template is
+the most common "the site is live but looks broken" call.
 - **Drop DNS TTL 48 hours ahead**, so a rollback is minutes not days
 - **Rollback plan written**: the old site stays reachable for 30 days, and someone owns the decision
 - 301s live and spot-checked **individually** on the top-traffic pages

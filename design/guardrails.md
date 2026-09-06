@@ -13,6 +13,11 @@ one reference stays in that entry's prose in `design/references.md`.
   2026, and one is enough. Use a comma, a colon, a full stop, or two sentences. `verify.mjs` fails
   a page on it (`no em dashes in copy`); `mockup.py` rewrites them and warns. Internal docs may
   use them; nothing that leaves the building may.
+- **Never ship a blog listing or blog post page that does not match the theme.** The blog's
+  templates are assigned in HubSpot's blog settings, not in the theme, so a re-skinned site can go
+  live with a default-template blog and nobody notices until the client does. Every theme carries
+  `blog-listing.html` and `blog-post.html`; assign them, and run the gate on `/blog` and one post.
+  `verify.mjs` fails a blog page that is not loading the theme (`blog uses the theme`).
 - No purple-to-blue gradient heroes on white. The single most recognizable AI-generated tell.
 - No Inter as a default just because it's safe. If Inter is the right call, it should be a call.
 - No three-equal-feature-card row as the section after the hero.

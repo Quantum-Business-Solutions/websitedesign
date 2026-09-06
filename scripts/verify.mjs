@@ -549,6 +549,10 @@ async function auditPage(browser, url) {
         metaDesc: document.querySelector('meta[name=description]')?.content || null,
         robots: document.querySelector('meta[name=robots]')?.content || null,
         preconnect: q('link[rel=preconnect]').length,
+        bodyClass: document.body.className || '',
+        themeCss: q('link[rel=stylesheet]').some(l => /quantum[^/]*\.css|\/themes?\//i.test(l.href || ''))
+                  || q('style').some(st => /--q-gold|\.q-container/.test(st.textContent || '')),
+        themeChrome: !!document.querySelector('.q-container, .q-header, .q-footer, .q-nav'),
         viewport: document.querySelector('meta[name=viewport]')?.content || null,
         cssImport: /@import/.test(head),
         jsonld: q('script[type="application/ld+json"]').map(s => s.textContent),
@@ -713,6 +717,16 @@ async function auditPage(browser, url) {
     rec(url, 'on-page form (in main)', conv.forms > 0 ? 'PASS' : 'WARN',
       `${conv.forms} form(s) — every click between intent and capture loses people`);
 
+    // ---- blog pages in the theme. The blog's templates are assigned in HubSpot's blog
+    // settings, not in the theme, so a re-skinned site can ship a default-template blog.
+    const isBlog = /\bhs-blog-(listing|post)\b|\bblog-(listing|post)\b/.test(d.bodyClass) || /\/blog(\/|$)/.test(new URL(url).pathname);
+    if (isBlog) {
+      const ok = d.themeCss && d.themeChrome;
+      rec(url, 'blog uses the theme', ok ? 'PASS' : 'FAIL',
+        ok ? 'theme stylesheet and chrome present'
+           : `${d.themeCss ? '' : 'theme stylesheet not loaded; '}${d.themeChrome ? '' : 'no theme header/footer/container found; '}assign blog-listing.html / blog-post.html in Settings > Website > Blog`);
+    }
+
     // ---- em dashes. The most reliable "a model wrote this" tell; one is enough to
     // undo a page's credibility with the buyer we most want. design/guardrails.md.
     const emDashes = (d.text.match(/\u2014/g) || []).length;
@@ -784,7 +798,7 @@ try {
 // puts website pages on the same scale so there is one quality trendline. Weights
 // follow the runbook's own ranking: correctness failures cost most, quality next,
 // warnings least. Nothing ships under 80.
-const CORRECTNESS = /no QBS branding|Organization names the client|Organization entity|Organization sameAs|a11y@|indexable|noindex|JSON-LD parses|tap targets >= 24|inputs >= 16|viewport meta|no placeholder|no horizontal scroll|load@/;
+const CORRECTNESS = /no QBS branding|blog uses the theme|Organization names the client|Organization entity|Organization sameAs|a11y@|indexable|noindex|JSON-LD parses|tap targets >= 24|inputs >= 16|viewport meta|no placeholder|no horizontal scroll|load@/;
 const QUALITY = /og:image|lazy|width\/height|card grid balance|conversion path|exactly one h1|body text|structured data present|broken internal|CLS|canonical|meta description/;
 function scorePage(rows) {
   let score = 100;

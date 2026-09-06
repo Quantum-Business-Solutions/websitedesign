@@ -25,6 +25,10 @@ never goes back to step 1; it goes to the station that caused it.
 node scripts/verify.mjs <staging-url> --env staging --expect-org "<Client legal name>" --out verify-out
 ```
 
+The URL list always includes the home page, every template in use, **the blog listing and one
+blog post**. The blog's templates are assigned in HubSpot's blog settings, not the theme, so it is
+the page most likely to be in the wrong template; the `blog uses the theme` check fails it.
+
 Runs at 390, 768 and 1440. Produces `verify-out/report.json`, three screenshots per page, a
 `SCORE n/100` line and a row in `verify-out/scores.jsonl`. **Exit 1 or a score under 80 means the
 page is not done.**
@@ -75,6 +79,8 @@ The step that gets skipped, so it is a station with a checklist:
 
 ### Station D: the launch checks (QBS, once, at go-live)
 
+- [ ] Blog listing and blog post open in the theme's templates, on the live domain, and match the
+      rest of the site. Screenshot both for the bundle.
 - [ ] 301s in place and tested for every URL in the brief's migration map. Record the status codes.
 - [ ] Rich Results Test and schema.org validator on home, one blog post, one case study, one
       interior page, the pricing or services page. Save the results.

@@ -199,7 +199,10 @@ gate measures all of this at 390px; these are floors, not aspirations.
 - [ ] **Draft pages cannot be rendered anonymously.** Publish temporarily to the client's
       `<portal>.hs-sites.com` staging subdomain, **with `noindex`** — an indexable staging copy is a
       crawlable duplicate of their site.
-- [ ] Run the gate with `--env staging`, which requires the `noindex` rather than failing it.
+- [ ] **Blog templates assigned to the clone** (Settings → Website → Blog → Templates: `blog-listing.html`
+      and `blog-post.html`). The blog is configured outside the theme and is the page that ships wrong.
+- [ ] Run the gate with `--env staging`, which requires the `noindex` rather than failing it, and
+      **include `/blog` and one post in the URL list**, every time.
 - [ ] At launch: remove the staging publish and confirm those URLs 404.
 
 ## 7 · The gate — nothing ships without it

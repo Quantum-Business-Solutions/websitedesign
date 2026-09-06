@@ -734,7 +734,10 @@ def cmd_plan(a, token):
         if written % 40 == 0:
             print(f"  ... {written}/{len(files)}")
     print(f"\n  wrote {written} files to draft: {target}")
-    print("  Next: publish in Design Manager, then gate it:")
+    print("  Next: publish in Design Manager. Then, before anything else, assign the blog templates:")
+    print(f"        Settings > Website > Blog > Templates > '{target}/templates/blog-listing.html' and blog-post.html")
+    print("        (the blog is configured outside the theme and is the page that ships in the wrong template).")
+    print("  Then gate it, with /blog and one post in the URL list:")
     print(f'    node scripts/verify.mjs <staging-url> --env staging '
           f'--expect-org "{a.org_name or client}"')
     return 0
