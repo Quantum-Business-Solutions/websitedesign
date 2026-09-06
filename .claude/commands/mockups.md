@@ -83,7 +83,10 @@ If `themes/tokens.json` is missing: `QBS_HUBSPOT_TOKEN=... python3 scripts/theme
 Screenshot at 1440 and 390 and **actually look**. This is the step that gets skipped, and this
 script's own first run produced three near-identical options — caught only by looking.
 
-Then publish as an artifact and hand over the link.
+Then publish as an artifact for internal review, and for the client push it to their repo: wrap the
+HTML in a full document at the repo root (`directions.html`, plus `index.html` and `vercel.json`
+per `process/repos.md` → *Public preview URLs*). Vercel redeploys on push and the buyer gets
+`https://<client-slug>.vercel.app/directions` with no login.
 
 ## 6 — Only after they choose
 

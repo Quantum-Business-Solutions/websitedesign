@@ -99,6 +99,31 @@ By that rule, at least three of Revolution's five scripts should be here:
 Only `gen-chrome.mjs` (defaults from Revolution's own nav) and the Next.js resolve hook are
 genuinely client-specific.
 
+## Public preview URLs: the client repo is the front end
+
+A pitch needs a URL a buyer can open on a phone without a login. The client repo gives you one for
+free: connect it to Vercel once (Add New Project, import the repo, no framework, no build command)
+and every push to `main` redeploys to `https://<client-slug>.vercel.app`. Nothing to run, nothing to
+maintain, and the repo stays the record.
+
+What goes in the repo root so the URL is worth sharing (Kelly is the reference,
+`Quantum-Business-Solutions/kelly-office-solutions`):
+
+| File | What it is |
+|---|---|
+| `index.html` | A hub in the client's colours: the directions, the home render, the Quantum Website Standard |
+| `directions.html` | The pitch page from `mockup.py`, wrapped in a full HTML document |
+| `home-clean.html` (one per rendered direction) | The high-fidelity render, self-contained, images inlined |
+| `standard.html` | The client-facing guarantee |
+| `vercel.json` | `cleanUrls: true` and an `X-Robots-Tag: noindex, nofollow` header on every path |
+
+Rules: **noindex everywhere** (a preview that gets indexed is a duplicate of the client's future
+site); no forms that submit anywhere; no analytics; the dated files under `directions/` and
+`renders/` stay as the record and the root files are the served copies. The gate runs against the
+preview URL with `--env staging`, which requires the noindex.
+
+This replaces nothing in HubSpot. The preview is a picture of the site; the site is the clone.
+
 ## Naming
 
 | Thing | Convention |
