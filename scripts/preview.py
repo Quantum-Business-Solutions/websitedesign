@@ -298,10 +298,10 @@ def r_hero(s, ctx):
         return f'''{sec_open(s)} <div class="q-container"><div class="pv-hero-grid"><div>{eyebrow}
 <h1 class="q-h1" style="margin-top:22px">{RAW(s["heading"])}</h1>
 <div class="q-lead" style="max-width:540px;margin:24px 0 0">{E(s.get("subhead"))}</div>{btns}{note}</div>
-<div class="pv-hero-img"><img src="{E(ctx["rel"](s["image"]))}" alt="{E(s.get("image_alt"))}" width="{s.get("image_w", 1200)}" height="{s.get("image_h", 800)}" fetchpriority="high" decoding="async">{badge}</div></div></div></section>'''
+<div class="pv-hero-img"><img src="{E(ctx["rel"](s["image"]))}"{ctx["srcset"](s["image"])} alt="{E(s.get("image_alt"))}" width="{s.get("image_w", 1200)}" height="{s.get("image_h", 800)}" fetchpriority="high" decoding="async">{badge}</div></div></div></section>'''
     return f'''{sec_open(s)} <div class="q-container"><div class="pv-center" style="max-width:860px;margin:0 auto">{eyebrow}
 <h1 class="q-h1" style="margin-top:22px">{RAW(s["heading"])}</h1>
-<div class="q-lead" style="max-width:640px;margin:24px 0 0">{E(s.get("subhead"))}</div>{btns.replace('class="pv-btns"', 'class="pv-btns" style="justify-content:center"')}{note}</div>{f'<div class="pv-hero-wide"><img src="{E(ctx["rel"](s["image"]))}" alt="{E(s.get("image_alt", ""))}" width="{s.get("image_w", 1200)}" height="{s.get("image_h", 675)}" fetchpriority="high" decoding="async"></div>' if s.get("image") else ""}</div></section>'''
+<div class="q-lead" style="max-width:640px;margin:24px 0 0">{E(s.get("subhead"))}</div>{btns.replace('class="pv-btns"', 'class="pv-btns" style="justify-content:center"')}{note}</div>{f'<div class="pv-hero-wide"><img src="{E(ctx["rel"](s["image"]))}"{ctx["srcset"](s["image"])} alt="{E(s.get("image_alt", ""))}" width="{s.get("image_w", 1200)}" height="{s.get("image_h", 675)}" fetchpriority="high" decoding="async"></div>' if s.get("image") else ""}</div></section>'''
 
 
 def r_partners(s, ctx):
@@ -385,7 +385,7 @@ def r_detail(s, ctx):
     bullets = "".join(f"<li>{E(b)}</li>" for b in s.get("bullets", []))
     right = ""
     if s.get("image"):
-        right = (f'<div class="pv-detail-img"><img src="{E(ctx["rel"](s["image"]))}" alt="{E(s.get("image_alt", ""))}" width="{s.get("image_w", 1200)}" height="{s.get("image_h", 800)}" loading="lazy" decoding="async"></div>'
+        right = (f'<div class="pv-detail-img"><img src="{E(ctx["rel"](s["image"]))}"{ctx["srcset"](s["image"])} alt="{E(s.get("image_alt", ""))}" width="{s.get("image_w", 1200)}" height="{s.get("image_h", 800)}" loading="lazy" decoding="async"></div>'
                  + (f'<ul>{bullets}</ul>' if bullets else ""))
         bullets = ""
     elif s.get("form"):
@@ -503,6 +503,17 @@ def schema_blocks(content, page, base, dslug):
     return f'<script type="application/ld+json">{json.dumps(bc, ensure_ascii=False)}</script>'
 
 
+def srcset_for(path: str, out_dir: str) -> str:
+    """srcset/sizes when a 600px sibling exists (assets/x-1200.jpg -> assets/x-600.jpg)."""
+    m = re.match(r"(.*)-(1200|1024)\.(jpe?g|png)$", path)
+    if not m:
+        return ""
+    small = f"{m.group(1)}-600.{m.group(3)}"
+    if not os.path.exists(os.path.join(out_dir, small)):
+        return ""
+    return f' srcset="../{small} 600w, ../{path} {m.group(2)}w" sizes="(max-width: 1024px) 100vw, 50vw"'
+
+
 def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir, dslug):
     b = content["brand"]
     partners_dir = os.path.join(out_dir, "assets", "partners")
@@ -517,7 +528,7 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
                 return f"../assets/partners/{s}.{ext}"
         return None
 
-    ctx = {"rel": rel, "partner_logo": partner_logo, "brand": b, "year": 2026}
+    ctx = {"rel": rel, "partner_logo": partner_logo, "brand": b, "year": 2026, "srcset": lambda pth: srcset_for(pth, out_dir)}
     body = "".join(RENDER[s["type"]](s, ctx) for s in page["sections"])
     canonical = f"{base}/{dslug}/{page['file'].replace('index.html', '')}".rstrip("/") if page["file"] == "index.html" else f"{base}/{dslug}/{page['file'].replace('.html', '')}"
     og_img = f"{base}/assets/hero-og.jpg"

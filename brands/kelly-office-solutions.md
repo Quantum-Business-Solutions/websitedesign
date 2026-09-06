@@ -188,15 +188,20 @@ like lead-gen microsites. Systel owns "dark and big."
 
 | Name | Theme | Rationale | Status |
 |---|---|---|---|
-| Kelly Office Solutions — Clean | Quantum Clean | **The clear one, and our recommendation.** Light, humanist sans, maximum clarity — the right register for 4,000 customers who come for Request Service and Meter Reads, and for buyers burned by lead-gen microsites. Green does the work; navy is the button text | rendered (home page, hi-fi) |
-| Kelly Office Solutions — Showcase | Quantum Showcase | **The contemporary one.** Same light ground, a display grotesque and bigger rhythm — Kelly as the modern dealer moving into IT and document management, without going dark | draft |
-| Kelly Office Solutions — Press | Quantum Press | **The established one.** Editorial serif on warm paper — the theme the catalogue names for heritage brands. Nobody in this category looks like an institution; since 1947, BBB-accredited since 1960 and an audited NPS of 94 land harder in a serif | draft |
+| Kelly Office Solutions — Clean | Quantum Clean | **The clear one, and our recommendation.** Light, humanist sans, maximum clarity — the right register for 4,000 customers who come for Request Service and Meter Reads, and for buyers burned by lead-gen microsites. Green does the work; navy is the button text | full preview site, 7 pages |
+| Kelly Office Solutions — Showcase | Quantum Showcase | **The contemporary one.** Same light ground, a display grotesque and bigger rhythm — Kelly as the modern dealer moving into IT and document management, without going dark | full preview site, 7 pages |
+| Kelly Office Solutions — Press | Quantum Press | **The established one.** Editorial serif on warm paper — the theme the catalogue names for heritage brands. Nobody in this category looks like an institution; since 1947, BBB-accredited since 1960 and an audited NPS of 94 land harder in a serif | full preview site, 7 pages |
 
 All three light, per `verticals/office-technology.md` (measured: the category is light-ground and
 the dark four are usually wrong for it). Signal was considered as a dark wildcard and dropped: the
 largest competitor, Systel, already owns "dark and big", Kelly has no reversed logo, and a
 near-black ground is not "warm, established, approachable." It stays in reserve if the first call
 reveals appetite for an IT-forward register.
+
+**Preview:** https://kelly-office-solutions.vercel.app (hub; each direction opens in its own tab, every
+page built). Content source of truth: `brands/kelly-office-solutions.content.json`. Gate on 2026-09-06:
+home 97, locations 96, blog 96, what-we-do 91. Two QA passes (copy/fact, mobile/design) applied; the
+unverified claims moved to the hub's "To confirm" list.
 
 ## Chosen direction, and why — in their words
 
