@@ -1,0 +1,75 @@
+{% set n = module.steps|length %}
+{% set axis = module.axis_labels|split(",") if module.axis_labels else [] %}
+{% set cols = (axis|length - 1) if axis|length > 1 else n %}
+<section class="q-section q-roadmap-sec">
+  <div class="q-container">
+    <div style="max-width:640px;margin-bottom:40px;">
+      {% if module.eyebrow %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      <h2 class="q-h2" style="margin-top:14px;">{{ module.heading }}</h2>
+      {% if module.intro %}<p style="color:var(--fg-muted);font-size:17px;line-height:1.65;margin:14px 0 0;">{{ module.intro }}</p>{% endif %}
+    </div>
+    {% if axis|length > 1 %}
+    <div class="q-road-axisrow">
+      <div></div>
+      <div class="q-road-axis">
+        {% for a in axis %}<span>{{ a|trim }}</span>{% endfor %}
+      </div>
+    </div>
+    {% endif %}
+    <div class="q-road" style="--cols:{{ cols }};">
+      {% for s in module.steps %}
+      {% set i = loop.index %}
+      <details class="q-road-row"{% if i == 1 %} open{% endif %}>
+        <summary>
+          <div class="q-road-head">
+            <div class="q-road-num">{{ "%02d"|format(i) }}</div>
+            <h4>{{ s.title }}</h4>
+            <span class="q-road-caret" aria-hidden="true"></span>
+          </div>
+          <div class="q-road-track">
+            {% set ml = ((i-1) * (55 / n))|round(1) %}{% set w = (100 / n + 18)|round(1) %}{% if ml + w > 99 %}{% set w = (99 - ml)|round(1) %}{% endif %}<div class="q-road-bar" style="margin-left:{{ ml }}%;width:{{ w }}%;">
+              {% if s.chip %}<span class="q-road-chip">{{ s.chip }}</span>{% endif %}
+            </div>
+          </div>
+        </summary>
+        {% if s.desc %}<div class="q-road-desc"><p>{{ s.desc }}</p></div>{% endif %}
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<style>
+.q-road-axisrow{display:grid;grid-template-columns:0.9fr 1.1fr;gap:28px;margin-bottom:4px;}
+.q-road-axis{display:flex;justify-content:space-between;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-muted);padding:0 2px 8px;}
+.q-road{border-top:1px solid var(--border);}
+.q-road-row{border-bottom:1px solid var(--border);}
+.q-road-row summary{display:grid;grid-template-columns:0.9fr 1.1fr;gap:28px;align-items:center;padding:22px 0;cursor:pointer;list-style:none;}
+.q-road-row summary::-webkit-details-marker{display:none;}
+.q-road-head{display:flex;gap:18px;align-items:center;}
+.q-road-num{font-family:var(--q-serif);font-size:32px;line-height:1;color:var(--q-gold);flex:0 0 auto;opacity:.85;}
+.q-road-head h4{font-family:var(--q-sans);font-size:17px;font-weight:600;color:var(--fg);margin:0;flex:1;}
+.q-road-caret{width:9px;height:9px;border-right:1.5px solid var(--q-gold);border-bottom:1.5px solid var(--q-gold);transform:rotate(45deg);transition:transform .2s;flex:0 0 auto;margin-right:6px;}
+.q-road-row[open] .q-road-caret{transform:rotate(225deg);}
+.q-road-desc{padding:0 0 22px;}
+.q-road-desc p{font-size:14.5px;line-height:1.65;color:var(--fg-muted);margin:0;max-width:520px;padding-left:50px;}
+.q-road-track{position:relative;height:32px;border-radius:8px;background:
+  repeating-linear-gradient(90deg,transparent,transparent calc(100%/var(--cols,6) - 1px),var(--border) calc(100%/var(--cols,6) - 1px),var(--border) calc(100%/var(--cols,6)));}
+.q-road-bar{position:relative;height:100%;border-radius:8px;display:flex;align-items:center;justify-content:flex-end;padding:0 12px;
+  background:linear-gradient(90deg,rgba(196,164,74,.25),var(--q-gold));box-shadow:0 4px 18px rgba(196,164,74,.25);
+  transform-origin:left;animation:qbar .9s cubic-bezier(.2,.7,.2,1) both;}
+.q-road-row:nth-child(2) .q-road-bar{animation-delay:.08s}.q-road-row:nth-child(3) .q-road-bar{animation-delay:.16s}
+.q-road-row:nth-child(4) .q-road-bar{animation-delay:.24s}.q-road-row:nth-child(5) .q-road-bar{animation-delay:.32s}
+.q-road-row:nth-child(6) .q-road-bar{animation-delay:.4s}.q-road-row:nth-child(7) .q-road-bar{animation-delay:.48s}
+@keyframes qbar{from{transform:scaleX(0);opacity:0}to{transform:scaleX(1);opacity:1}}
+.q-road-chip{font-size:11px;font-weight:700;letter-spacing:.05em;color:var(--cta-fg);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;}
+.q-road-bar{min-width:0;max-width:100%;}
+.q-road-row:hover .q-road-num{opacity:1;}
+@media(prefers-reduced-motion:reduce){.q-road-bar{animation:none;}}
+@media(max-width:900px){
+  .q-road-row summary{grid-template-columns:1fr;gap:10px;}
+  .q-road-axisrow{grid-template-columns:1fr;}
+  .q-road-axisrow > div:first-child{display:none;}
+  .q-road-track{height:24px;}
+  .q-road-desc p{padding-left:0;}
+}
+</style>

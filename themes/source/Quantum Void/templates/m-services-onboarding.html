@@ -1,0 +1,24 @@
+<!--
+  templateType: page
+  label: QV services/onboarding
+  isAvailableForNewContent: true
+-->
+{% extends "./layouts/base.html" %}
+{% block body %}
+<main>
+  {% dnd_area "main" %}
+    {% dnd_section %}
+      {% dnd_module "s_hero" path="../modules/quantum-hero", width=12, layout="centered", eyebrow="HUBSPOT ONBOARDING", heading="Maximize Your Investment in HubSpot with our On-Boarding Experts Personalized HubSpot onboarding prevents frustration and costly errors while getting your team up and running on the tools as quickly as possible", subhead="", primary_label="Book a call", secondary_label="Learn more" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_0" path="../modules/quantum-rich-text", width=12, prose="<h2>4 Easy Steps to get you Onboarded Successfully</h2>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s_1" path="../modules/quantum-rich-text", width=12, prose="<h2>Partner Pricing On-Boarding Comparison Guide The same onboarding HubSpot publishes, delivered by a HubSpot Solutions Partner at 25% off published rates</h2><p>Pick your hub and tier below. Sales Hub onboarding CRM, pipelines, sequences, forecasting What you may receive guidance on Professional Enterprise How your data lives in HubSpot Importing and organizing your contacts Deal pipelines and stage setup Email templates and sequences Meeting links and calling setup Sales automation and task queues Custom reporting and forecasting — Permissions, teams and territory setup — Onboarding fee One-time · Remote · ~90–120 days $1,500 $1,125 Save $375 $3,500 $2,625 Save $875 Marketing Hub onboarding Email, automation, campaigns, analytics What you may receive guidance on Professional Enterprise How your data lives in HubSpot Lead capture and conversion paths Segmenting your data Email marketing and nurturing Traffic and website analytics Campaign setup and analysis Calculated properties and custom reporting — Permissions, teams and multiple brands — Onboarding fee One-time · Remote · ~90–120 days $3,000 $2,250 Save $750 $7,000 $5,250 Save $1,750 Service Hub onboarding Help desk, ticketing, knowledge base, SLAs What you may receive guidance on Professional Enterprise How your data lives in HubSpot Help desk and ticketing setup Ticket pipelines and routing Knowledge base and live chat Customer feedback surveys SLA and pipeline configuration Custom reporting and analytics — AI agent, advanced routing and permissions — Onboarding fee One-time · Remote · ~90–120 days $1,500 $1,125 Save $375 $3,500 $2,625 Save $875 Add-On Support HubSpot On-Boarding Support Services Need hands-on help beyond guided onboarding? Add a block of expert hours for builds, migrations, integrations, and custom configuration. Starter Block 10 Hours $2,000 $200 / hour · one-time block Hands-on builds and configuration Data import and migration help Workflow and automation setup Use anytime during onboarding Most Popular 20 Hours $3,500 Save $500 $175 / hour · one-time block Everything in the 10-hour block Custom integrations and API work Advanced reporting and dashboards Lower effective hourly rate Need more than 20 hours? Custom blocks available. Talk to our team → Onboarding Waiver Option QBS Consulting Jumpstart For clients who qualify to waive HubSpot’s required onboarding fee. Two dedicated consulting calls covering your goals, tech stack, and a personalized 30-day action plan. Qualification determined by QBS based on tier, prior CRM experience, and complexity. $295 flat · replaces onboarding fee Waiver eligible only Onboarding is advisory — HubSpot’s proven methodology, delivered by QBS, guides your team while your team executes the build. One-time fees shown; software subscription pricing quoted separately. Starter editions include free self-guided onboarding.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_cta" path="../modules/quantum-cta-band", width=12 %}{% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+</main>
+{% endblock %}

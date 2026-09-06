@@ -1,0 +1,143 @@
+[ {
+  "id" : "content_width",
+  "name" : "content_width",
+  "label" : "Content width",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "full", "Full width" ], [ "half", "Half (centered)" ], [ "left", "Left aligned" ], [ "right", "Right aligned" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "full"
+}, {
+  "id" : "padding",
+  "name" : "padding",
+  "label" : "Section padding",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "normal", "Normal" ], [ "none", "None" ], [ "large", "Large" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "normal"
+}, {
+  "id" : "section_bg",
+  "name" : "section_bg",
+  "label" : "Section background",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "default", "Theme default" ], [ "void", "Void (dark)" ], [ "navy", "Navy (dark)" ], [ "paper", "Paper (light)" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "default"
+}, {
+  "id" : "cards",
+  "name" : "cards",
+  "label" : "Cards",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 2,
+    "max" : 4,
+    "sorting_label_field" : null,
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "num",
+    "name" : "num",
+    "label" : "Animated number (blank = plain value)",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  }, {
+    "id" : "prefix",
+    "name" : "prefix",
+    "label" : "Prefix",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  }, {
+    "id" : "suffix",
+    "name" : "suffix",
+    "label" : "Suffix",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  }, {
+    "id" : "v",
+    "name" : "v",
+    "label" : "Plain value (fallback)",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  }, {
+    "id" : "k",
+    "name" : "k",
+    "label" : "Label",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  }, {
+    "id" : "d",
+    "name" : "d",
+    "label" : "Detail",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "v" : "25%",
+    "num" : "25",
+    "prefix" : "",
+    "suffix" : "%",
+    "k" : "Profit increase",
+    "d" : "Average across managed engagements."
+  }, {
+    "v" : "10x",
+    "num" : "10",
+    "prefix" : "",
+    "suffix" : "x",
+    "k" : "Sales conversations",
+    "d" : "With AI-assisted outbound."
+  }, {
+    "v" : "94%",
+    "num" : "94",
+    "prefix" : "",
+    "suffix" : "%",
+    "k" : "Client retention",
+    "d" : "Year over year."
+  } ]
+} ]

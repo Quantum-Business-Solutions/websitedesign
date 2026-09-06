@@ -1,0 +1,49 @@
+[ {
+  "id" : "columns",
+  "name" : "columns",
+  "label" : "Menu columns",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 5,
+    "sorting_label_field" : null,
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "title",
+    "name" : "title",
+    "label" : "Column title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  }, {
+    "id" : "links",
+    "name" : "links",
+    "label" : "Links (pipe-separated)",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "title" : "Services",
+    "links" : "Operations|AI Solutions|Marketing|Outbound Sales"
+  }, {
+    "title" : "Company",
+    "links" : "Framework|Case studies|About|Contact"
+  }, {
+    "title" : "Resources",
+    "links" : "Blog|Playbooks|Guides"
+  } ]
+} ]

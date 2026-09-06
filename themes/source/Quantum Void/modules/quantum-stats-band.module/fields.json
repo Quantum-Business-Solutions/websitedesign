@@ -1,0 +1,146 @@
+[ {
+  "id" : "content_width",
+  "name" : "content_width",
+  "label" : "Content width",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "full", "Full width" ], [ "half", "Half (centered)" ], [ "left", "Left aligned" ], [ "right", "Right aligned" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "full"
+}, {
+  "id" : "padding",
+  "name" : "padding",
+  "label" : "Section padding",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "normal", "Normal" ], [ "none", "None" ], [ "large", "Large" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "normal"
+}, {
+  "id" : "section_bg",
+  "name" : "section_bg",
+  "label" : "Section background",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "default", "Theme default" ], [ "void", "Void (dark)" ], [ "navy", "Navy (dark)" ], [ "paper", "Paper (light)" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "default"
+}, {
+  "id" : "note",
+  "name" : "note",
+  "label" : "Footnote",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : ""
+}, {
+  "id" : "stats",
+  "name" : "stats",
+  "label" : "Stats",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 2,
+    "max" : 4,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "num",
+    "name" : "num",
+    "label" : "Animated number (leave blank to show plain value)",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  }, {
+    "id" : "prefix",
+    "name" : "prefix",
+    "label" : "Prefix",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  }, {
+    "id" : "suffix",
+    "name" : "suffix",
+    "label" : "Suffix",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  }, {
+    "id" : "v",
+    "name" : "v",
+    "label" : "Plain value (fallback / non-numeric)",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  }, {
+    "id" : "k",
+    "name" : "k",
+    "label" : "Label",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "num" : "",
+    "prefix" : "",
+    "suffix" : "",
+    "v" : "$47M+",
+    "k" : "Revenue influenced"
+  }, {
+    "num" : "500",
+    "prefix" : "",
+    "suffix" : "+",
+    "v" : "",
+    "k" : "Businesses transformed"
+  }, {
+    "num" : "10",
+    "prefix" : "",
+    "suffix" : "x",
+    "v" : "",
+    "k" : "Avg lead velocity"
+  }, {
+    "num" : "94",
+    "prefix" : "",
+    "suffix" : "%",
+    "v" : "",
+    "k" : "Client retention"
+  } ]
+} ]

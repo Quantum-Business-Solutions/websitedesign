@@ -1,0 +1,172 @@
+[ {
+  "id" : "content_width",
+  "name" : "content_width",
+  "label" : "Content width",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "full", "Full width" ], [ "half", "Half (centered)" ], [ "left", "Left aligned" ], [ "right", "Right aligned" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "full"
+}, {
+  "id" : "padding",
+  "name" : "padding",
+  "label" : "Section padding",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "normal", "Normal" ], [ "none", "None" ], [ "large", "Large" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "normal"
+}, {
+  "id" : "section_bg",
+  "name" : "section_bg",
+  "label" : "Section background",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "default", "Theme default" ], [ "void", "Void (dark)" ], [ "navy", "Navy (dark)" ], [ "paper", "Paper (light)" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "navy"
+}, {
+  "id" : "kind",
+  "name" : "kind",
+  "label" : "Event kind",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Live webinar"
+}, {
+  "id" : "title",
+  "name" : "title",
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "Building a revenue engine that scales without headcount"
+}, {
+  "id" : "summary",
+  "name" : "summary",
+  "label" : "Summary",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "A 45-minute working session on the systems, data, and automation behind predictable pipeline. Live Q&A after."
+}, {
+  "id" : "details",
+  "name" : "details",
+  "label" : "Details",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 0,
+    "max" : 5,
+    "sorting_label_field" : null,
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "label",
+    "name" : "detail_label",
+    "label" : "Label",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  }, {
+    "id" : "value",
+    "name" : "value",
+    "label" : "Value",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "value" : "Thursday, Sept 18",
+    "detail_label" : "Date"
+  }, {
+    "value" : "11:00 AM PT",
+    "detail_label" : "Time"
+  }, {
+    "value" : "Online (Zoom)",
+    "detail_label" : "Where"
+  } ]
+}, {
+  "id" : "cta",
+  "name" : "cta",
+  "label" : "CTA text",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Save your seat"
+}, {
+  "id" : "url",
+  "name" : "url",
+  "label" : "CTA link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "display_width" : null,
+  "default" : {
+    "url" : {
+      "href" : "#register",
+      "type" : "EXTERNAL"
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "cta_note",
+  "name" : "cta_note",
+  "label" : "CTA note",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Free. Recording sent to all registrants."
+}, {
+  "id" : "image",
+  "name" : "image",
+  "label" : "Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : false,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "src" : "",
+    "alt" : ""
+  }
+} ]

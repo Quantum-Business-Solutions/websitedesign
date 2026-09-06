@@ -1,0 +1,36 @@
+<!--
+  templateType: page
+  label: QV case-studies
+  isAvailableForNewContent: true
+-->
+{% extends "./layouts/base.html" %}
+{% block body %}
+<main>
+  {% dnd_area "main" %}
+    {% dnd_section %}
+      {% dnd_module "s_hero" path="../modules/quantum-hero", width=12, layout="centered", eyebrow="CASE STUDIES", heading="Real Results for Real Businesses See how we've helped companies like yours maximize business outcomes through AI, automation, and operational excellence", subhead="", primary_label="Book a call", secondary_label="Learn more" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_0" path="../modules/quantum-rich-text", width=12, prose="<h2>Transforming B2B Companies Into Revenue Machines From healthcare to manufacturing, SaaS to financial services — our frameworks consistently deliver measurable results</h2>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s_1" path="../modules/quantum-rich-text", width=12, prose="<h2>Impact at a Glance 500+ — Businesses Transformed 90 Days — Average Time to Results 25% — Average Profit Increase</h2>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_2" path="../modules/quantum-rich-text", width=12, prose="<h2>How We've Helped Companies Like Yours Real challenges</h2><p>Real solutions. Real results across multiple industries. Healthcare: 25% Revenue Increase in 90 Days Fragmented CRM across 12 locations. Implemented HubSpot CRM with custom integrations, automated lead routing, ZoomInfo prospecting. Result: 25% revenue increase, 60% less manual work, 3x pipeline. B2B SaaS: 10x Sales Velocity Small team struggling for meetings. Deployed ConnectAndSell for 10x dial velocity, ZoomInfo for precision targeting. Result: 340% more meetings in 45 days. Financial Services: Tool Chaos to Unified Engine 8 different tools with no integration. Consolidated around HubSpot with custom dashboards. Result: $180K annual savings, 85% attribution accuracy. Manufacturing: Scaling Without Headcount Revenue plateaued at $12M. Built AI-powered lead scoring, automated nurture, maximized rep productivity. Result: $20M revenue, 0 new hires, 67% higher close rate. Multi-Location Franchise: 30+ Locations Unified No standardization across locations. Designed centralized HubSpot with location-specific pipelines and shared playbook. Result: 40% avg lead increase, 1-week onboarding. Insurance: 94% Client Retention High churn from lack of proactive communication. Built automated renewal workflows, health scoring, proactive outreach triggers. Result: 94% retention, 3x upsell revenue.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s_3" path="../modules/quantum-rich-text", width=12, prose="<h2>500+ Businesses Transformed 90 Days Average Time to Results 25% Average Profit Increase</h2>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_4" path="../modules/quantum-rich-text", width=12, prose="<h2>Common Questions What industries have you worked with?</h2><p>Technology, managed services, professional services, manufacturing, insurance, healthcare, franchises, and B2B SaaS. Our frameworks are industry-agnostic but our expertise runs deepest in B2B services. What kind of results do your clients see? Common outcomes include 3–4x pipeline growth, 25–40% revenue lift, 40% cost reduction, and 60% faster deal cycles. Results vary based on starting maturity and engagement scope. How long do typical engagements last? Initial implementations run 60–90 days. Many clients continue on optimization retainers to maintain momentum and compound results over time.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s_5" path="../modules/quantum-rich-text", width=12, prose="<h2>Ready to Become Our Next Success Story?</h2><p>Book a free strategy call and find out how we can drive measurable results for your business.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_cta" path="../modules/quantum-cta-band", width=12 %}{% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+</main>
+{% endblock %}

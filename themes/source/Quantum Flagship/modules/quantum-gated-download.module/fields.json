@@ -1,0 +1,84 @@
+[ {
+  "id" : "content_width",
+  "name" : "content_width",
+  "label" : "Content width",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "full", "Full width" ], [ "half", "Half (centered)" ], [ "left", "Left aligned" ], [ "right", "Right aligned" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "full"
+}, {
+  "id" : "padding",
+  "name" : "padding",
+  "label" : "Section padding",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "normal", "Normal" ], [ "none", "None" ], [ "large", "Large" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "normal"
+}, {
+  "id" : "eyebrow",
+  "name" : "eyebrow",
+  "label" : "Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Free download"
+}, {
+  "id" : "heading",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "The Go-To-Market Playbook"
+}, {
+  "id" : "body",
+  "name" : "body_text",
+  "label" : "Body",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "Enter your email and we'll send the full playbook."
+}, {
+  "id" : "cover",
+  "name" : "cover",
+  "label" : "Cover",
+  "required" : false,
+  "locked" : false,
+  "responsive" : false,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "src" : "",
+    "alt" : ""
+  }
+}, {
+  "id" : "form",
+  "name" : "form",
+  "label" : "Form",
+  "required" : false,
+  "locked" : false,
+  "embed_versions" : [ "v2", "v4" ],
+  "type" : "form",
+  "display_width" : null,
+  "default" : {
+    "form_type" : "HUBSPOT"
+  }
+} ]

@@ -1,0 +1,64 @@
+[ {
+  "id" : "content_width",
+  "name" : "content_width",
+  "label" : "Content width",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "full", "Full width" ], [ "half", "Half (centered)" ], [ "left", "Left aligned" ], [ "right", "Right aligned" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "full"
+}, {
+  "id" : "padding",
+  "name" : "padding",
+  "label" : "Section padding",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "normal", "Normal" ], [ "none", "None" ], [ "large", "Large" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "normal"
+}, {
+  "id" : "section_bg",
+  "name" : "section_bg",
+  "label" : "Section background",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "default", "Theme default" ], [ "void", "Void (dark)" ], [ "navy", "Navy (dark)" ], [ "paper", "Paper (light)" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "default"
+}, {
+  "id" : "heading",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "Tell us about your revenue goals"
+}, {
+  "id" : "form",
+  "name" : "form",
+  "label" : "Form",
+  "required" : false,
+  "locked" : false,
+  "embed_versions" : [ "v2", "v4" ],
+  "type" : "form",
+  "display_width" : null,
+  "default" : {
+    "form_type" : "HUBSPOT"
+  }
+} ]

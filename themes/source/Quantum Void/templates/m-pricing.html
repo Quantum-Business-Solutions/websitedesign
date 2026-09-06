@@ -1,0 +1,24 @@
+<!--
+  templateType: page
+  label: QV pricing
+  isAvailableForNewContent: true
+-->
+{% extends "./layouts/base.html" %}
+{% block body %}
+<main>
+  {% dnd_area "main" %}
+    {% dnd_section %}
+      {% dnd_module "s_hero" path="../modules/quantum-hero", width=12, layout="centered", eyebrow="PRICING", heading="Transparent Pricing No hidden fees, no surprises", subhead="Choose the services that fit your business — from one-time projects to ongoing managed services.", primary_label="Book a call", secondary_label="Learn more" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_0" path="../modules/quantum-rich-text", width=12, prose="<h2>AI Services AI strategy, automation, and custom builds — from discovery to managed service</h2><p>AI Discovery Workshop $1,500 AI SDR Setup + Configuration $4,995 AI SDR Managed Service /month $1,995 AI Customer Service Bot One-time setup $3,995 AI Customer Service Managed /month $1,495 Custom AI Build — Starter $7,500 Custom AI Build — Enterprise $14,950 AI Strategy + Implementation (FOCUS) $9,995 AI Office Hours (5 hrs) $1,495 GTM / CRO Go-to-market strategy and conversion rate optimization engagements. GTM Strategic Advisors /month $3,495 GTM Assessment $2,500 1-Hour Consultation GTM / Sales Training / Consulting $595 HubSpot Services Flexible hourly blocks, audits, cleanup, and managed admin tiers. 1 Hour Block $350 10 Hour Block Save $250 $3,250 20 Hour Block Save $1,000 $6,000 25 Hour Block Save $1,250 $7,500 50 Hour Block Save $4,000 $13,500 100 Hour Block Save $10,000 $25,000 Portal Audit $7,500 HubSpot Clean Up $10,000 HubSpot User Group /month $497 Admin as a Service — Tier 3 /month $2,000 Admin as a Service — Tier 2 /month $3,000 Admin as a Service — Tier 1 /month $5,000 Website & Landing Pages HubSpot CMS websites and landing pages — growth-driven design. Website — Basic $9,995 Website — Professional $15,995 Website — Enterprise $24,995 Website Management /month $1,495 Landing Page Template $1,495 Sales Training Sales Blitz, Quantum Academy, bootcamps, and ConnectAndSell seats. Sales Blitz as a Service $1,000 Platinum Bootcamp (up to 3 users) CAS + Training + Academy $9,995 Quantum Academy (up to 5) /month $595 ConnectAndSell — Full Seat /month $1,250</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s_1" path="../modules/quantum-rich-text", width=12, prose="<h2>Ready to Get Started?</h2><p>Start with a free assessment. We'll show you exactly where the opportunities are.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_cta" path="../modules/quantum-cta-band", width=12 %}{% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+</main>
+{% endblock %}

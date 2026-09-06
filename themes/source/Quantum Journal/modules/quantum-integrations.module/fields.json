@@ -1,0 +1,122 @@
+[ {
+  "id" : "content_width",
+  "name" : "content_width",
+  "label" : "Content width",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "full", "Full width" ], [ "half", "Half (centered)" ], [ "left", "Left aligned" ], [ "right", "Right aligned" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "full"
+}, {
+  "id" : "padding",
+  "name" : "padding",
+  "label" : "Section padding",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "normal", "Normal" ], [ "none", "None" ], [ "large", "Large" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "normal"
+}, {
+  "id" : "section_bg",
+  "name" : "section_bg",
+  "label" : "Section background",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "default", "Theme default" ], [ "void", "Void (dark)" ], [ "navy", "Navy (dark)" ], [ "paper", "Paper (light)" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "default"
+}, {
+  "id" : "eyebrow",
+  "name" : "eyebrow",
+  "label" : "Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Your stack, connected"
+}, {
+  "id" : "heading",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "We work with the tools you <em>already run</em>"
+}, {
+  "id" : "tools",
+  "name" : "tools",
+  "label" : "Tools",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 24,
+    "sorting_label_field" : null,
+    "default" : 8
+  },
+  "children" : [ {
+    "id" : "name",
+    "name" : "tool_name",
+    "label" : "Tool name",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  }, {
+    "id" : "logo",
+    "name" : "logo",
+    "label" : "Logo (optional)",
+    "required" : false,
+    "locked" : false,
+    "responsive" : false,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "display_width" : null,
+    "default" : {
+      "src" : "",
+      "alt" : ""
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "tool_name" : "HubSpot"
+  }, {
+    "tool_name" : "ZoomInfo"
+  }, {
+    "tool_name" : "ConnectAndSell"
+  }, {
+    "tool_name" : "Salesforce"
+  }, {
+    "tool_name" : "Slack"
+  }, {
+    "tool_name" : "Gong"
+  }, {
+    "tool_name" : "Outreach"
+  }, {
+    "tool_name" : "Apollo"
+  } ]
+} ]

@@ -89,7 +89,7 @@ Re-skinning rewrites twelve CSS custom properties in one block — see `process/
 | `verticals/office-technology.md` | **Layer 2** — copier dealers and managed print. Six of ten clients. |
 | `process/OPERATOR.md` | **Hand this to whoever is building.** Self-contained checklist + the five traps. |
 | `process/outbound-mockups.md` | **Speculative mockups as outbound.** Free to render changes the funnel. |
-| `process/agents.md` | **The agent roster** — 22 agents in 8 squads: role, expertise, which step, what gates it. |
+| `process/agents.md` | **The agent roster** — 30 agents in 8 squads: role, expertise, which step, what gates it. |
 | `process/clientcommand.md` | **The delivery chain** — catalogue → proposal → plan → page → asset → ticket. |
 | `process/strategy.md` | **Is this the right process to dominate?** An honest answer. |
 | `process/qa-findings.md` | **What a four-agent QA pass found**, verified. Read before trusting an older claim. |
@@ -99,7 +99,13 @@ Re-skinning rewrites twelve CSS custom properties in one block — see `process/
 | `scripts/themetokens.py` | Refresh `themes/tokens.json` from the portal. Read-only. |
 | `process/roadmap.md` | **What would make this world class**, ordered by leverage. |
 | `scripts/reskin.py` | Clone + re-skin + client schema in one pass. Read-only until `--apply`. |
-| `scripts/verify.mjs` | The launch gate as a command. Exit 1 means it failed. |
+| `scripts/verify.mjs` | The launch gate as a command. Scores every page 0–100; nothing ships under 80. Exit 1 means it failed. |
+| `process/decisions.md` | **Eight decision rules** — the judgement calls, written down so they can be delegated. |
+| `process/onboarding.md` | **How someone new earns the right to run a build** — three builds, graduated permissions. |
+| `themes/source/` | **The nine themes, in git.** 2,835 files. `reskin.py export` refreshes; `reskin.py drift` catches live edits. |
+| `data/README.md` | The shipped→converted loop — `pages.jsonl`, `performance.jsonl`, `learnings.jsonl`, and the sample floor. |
+| `scripts/converted.py` | Pulls 30/60/90-day performance per page; writes a learning only when it clears the floor. |
+| `scripts/monitor.py` | Plans Firecrawl monitors for a vertical's competitors and head terms. Dry-run by default. |
 | `brands/_template.md` | The brief template. Every field here is consumed by a later phase. |
 | `.claude/commands/` | `/mockups` and `/build` (the entry points), `/design-ingest`, `/website` (legacy). |
 | `brands/<client>.md` | Per-client brief. Client-stated constraints live here and **outrank house defaults**. |

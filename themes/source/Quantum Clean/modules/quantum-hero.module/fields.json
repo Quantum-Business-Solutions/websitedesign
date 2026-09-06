@@ -1,0 +1,153 @@
+[ {
+  "id" : "section_bg",
+  "name" : "section_bg",
+  "label" : "Section background",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "default", "Theme default" ], [ "void", "Void (dark)" ], [ "navy", "Navy (dark)" ], [ "paper", "Paper (light)" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "default"
+}, {
+  "id" : "layout",
+  "name" : "layout",
+  "label" : "Layout",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "orbit", "Orbit (partner ring)" ], [ "editorial", "Editorial (text + hairline motif)" ], [ "split", "Split (text + image)" ], [ "centered", "Centered" ], [ "fullbleed", "Full-bleed image" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "editorial"
+}, {
+  "id" : "show_eyebrow",
+  "name" : "show_eyebrow",
+  "label" : "Show eyebrow",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "display_width" : null,
+  "default" : true
+}, {
+  "id" : "eyebrow",
+  "name" : "eyebrow",
+  "label" : "Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Revenue operations, engineered"
+}, {
+  "id" : "heading",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "Most firms sell tools. We deliver <em>outcomes.</em>"
+}, {
+  "id" : "subhead",
+  "name" : "subhead",
+  "label" : "Subhead",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "We build and operate the revenue infrastructure that helps growth-minded companies scale without adding headcount."
+}, {
+  "id" : "image",
+  "name" : "image",
+  "label" : "Image (split layout)",
+  "required" : false,
+  "locked" : false,
+  "responsive" : false,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "src" : "",
+    "alt" : ""
+  }
+}, {
+  "id" : "primary_label",
+  "name" : "primary_label",
+  "label" : "Primary label",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Book your free strategy call"
+}, {
+  "id" : "primary_url",
+  "name" : "primary_url",
+  "label" : "Primary URL",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "type" : "url",
+  "display_width" : null,
+  "default" : {
+    "href" : "https://meetings.hubspot.com/shawn-peterson",
+    "type" : "EXTERNAL"
+  }
+}, {
+  "id" : "secondary_label",
+  "name" : "secondary_label",
+  "label" : "Secondary label",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "See the framework"
+}, {
+  "id" : "secondary_url",
+  "name" : "secondary_url",
+  "label" : "Secondary URL",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "type" : "url",
+  "display_width" : null,
+  "default" : {
+    "href" : "#framework",
+    "type" : "EXTERNAL"
+  }
+}, {
+  "id" : "rotate_words",
+  "name" : "rotate_words",
+  "label" : "Rotating accent words (comma-separated, cycles the <em> word)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : ""
+}, {
+  "id" : "bg_art",
+  "name" : "bg_art",
+  "label" : "Background art (sits behind text at low opacity)",
+  "required" : false,
+  "locked" : false,
+  "responsive" : false,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "src" : "",
+    "alt" : ""
+  }
+} ]

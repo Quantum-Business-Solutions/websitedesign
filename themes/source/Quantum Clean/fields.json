@@ -1,0 +1,88 @@
+[
+  {
+    "id": "appearance",
+    "name": "appearance",
+    "label": "Appearance",
+    "type": "group",
+    "expanded": true,
+    "children": [
+      {
+        "id": "mode",
+        "name": "mode",
+        "label": "Theme mode",
+        "type": "choice",
+        "display": "select",
+        "choices": [
+          [
+            "dark",
+            "Dark (gold on void)"
+          ],
+          [
+            "light",
+            "Light (warm paper)"
+          ]
+        ],
+        "default": "dark"
+      }
+    ]
+  },
+  {
+    "id": "colors",
+    "name": "colors",
+    "label": "Brand colors",
+    "type": "group",
+    "expanded": false,
+    "children": [
+      {
+        "id": "gold",
+        "name": "gold",
+        "label": "Gold accent",
+        "type": "color",
+        "default": {
+          "color": "#c4a44a",
+          "opacity": 100
+        }
+      },
+      {
+        "id": "gold_bright",
+        "name": "gold_bright",
+        "label": "Gold (hover)",
+        "type": "color",
+        "default": {
+          "color": "#d4ba6a",
+          "opacity": 100
+        }
+      },
+      {
+        "id": "void",
+        "name": "void",
+        "label": "Void (dark bg)",
+        "type": "color",
+        "default": {
+          "color": "#080b12",
+          "opacity": 100
+        }
+      },
+      {
+        "id": "navy",
+        "name": "navy",
+        "label": "Navy (alt dark bg)",
+        "type": "color",
+        "default": {
+          "color": "#101725",
+          "opacity": 100
+        }
+      },
+      {
+        "id": "paper",
+        "name": "paper",
+        "label": "Paper (light bg)",
+        "type": "color",
+        "default": {
+          "color": "#fbfaf6",
+          "opacity": 100
+        }
+      }
+    ]
+  }
+]

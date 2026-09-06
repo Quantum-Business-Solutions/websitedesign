@@ -1,0 +1,128 @@
+[ {
+  "id" : "content_width",
+  "name" : "content_width",
+  "label" : "Content width",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "full", "Full width" ], [ "half", "Half (centered)" ], [ "left", "Left aligned" ], [ "right", "Right aligned" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "full"
+}, {
+  "id" : "padding",
+  "name" : "padding",
+  "label" : "Section padding",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "normal", "Normal" ], [ "none", "None" ], [ "large", "Large" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "normal"
+}, {
+  "id" : "section_bg",
+  "name" : "section_bg",
+  "label" : "Section background",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "default", "Theme default" ], [ "void", "Void (dark)" ], [ "navy", "Navy (dark)" ], [ "paper", "Paper (light)" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "default"
+}, {
+  "id" : "per_row",
+  "name" : "per_row",
+  "label" : "Columns across",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "1", "1 (full width)" ], [ "2", "2 across" ], [ "3", "3 across" ], [ "4", "4 across" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "3"
+}, {
+  "id" : "boxed",
+  "name" : "boxed",
+  "label" : "Card style (bordered boxes)",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "display_width" : null,
+  "default" : false
+}, {
+  "id" : "cols",
+  "name" : "cols",
+  "label" : "Columns",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 8,
+    "sorting_label_field" : null,
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "image",
+    "name" : "image",
+    "label" : "Image (optional)",
+    "required" : false,
+    "locked" : false,
+    "responsive" : false,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "display_width" : null,
+    "default" : {
+      "src" : "",
+      "alt" : ""
+    }
+  }, {
+    "id" : "body",
+    "name" : "col_body",
+    "label" : "Content",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<h3>Heading</h3><p>Body text.</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "image" : {
+      "src" : "",
+      "alt" : ""
+    },
+    "col_body" : "<h3>Column one</h3><p>Editable rich text. Add headings, lists, and links.</p>"
+  }, {
+    "image" : {
+      "src" : "",
+      "alt" : ""
+    },
+    "col_body" : "<h3>Column two</h3><p>Editable rich text.</p>"
+  }, {
+    "image" : {
+      "src" : "",
+      "alt" : ""
+    },
+    "col_body" : "<h3>Column three</h3><p>Editable rich text.</p>"
+  } ]
+} ]

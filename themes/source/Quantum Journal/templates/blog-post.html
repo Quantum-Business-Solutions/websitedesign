@@ -1,0 +1,30 @@
+<!--
+  templateType: blog
+  label: Quantum Blog Post
+  isAvailableForNewContent: true
+-->
+{% extends "./layouts/base.html" %}
+{% block body %}
+<main>
+  <article class="q-section">
+    <div class="q-container" style="max-width:760px;">
+      <div class="q-eyebrow"><span class="q-eyebrow-rule"></span>{{ content.topic_list[0].name|default('Article') }}</div>
+      <h1 class="q-h1" style="margin:16px 0 20px;">{{ content.name }}</h1>
+      <div style="display:flex;align-items:center;gap:14px;font-size:14px;color:var(--fg-muted);padding-bottom:28px;border-bottom:1px solid var(--border);margin-bottom:36px;">
+        {% if content.blog_post_author.avatar %}<img src="{{ content.blog_post_author.avatar }}" alt="{{ content.blog_post_author.display_name }}" style="width:40px;height:40px;border-radius:50%;object-fit:cover;">{% endif %}
+        <span>{{ content.blog_post_author.display_name }}</span><span>&middot;</span><span>{{ content.publish_date_localized }}</span>
+      </div>
+      {% if content.featured_image %}<img src="{{ content.featured_image }}" alt="{{ content.featured_image_alt_text }}" style="width:100%;border-radius:8px;margin-bottom:36px;">{% endif %}
+      <div class="q-prose">{{ content.post_body }}</div>
+    </div>
+  </article>
+  {% dnd_area "post_footer" label="Post footer" %}
+    {% dnd_section %}
+      {% dnd_module path="../modules/quantum-related-posts", width=12 %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module path="../modules/quantum-cta-band", width=12 %}{% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+</main>
+{% endblock %}

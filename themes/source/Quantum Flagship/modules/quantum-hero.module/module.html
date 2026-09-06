@@ -1,0 +1,110 @@
+<section class="q-section q-reveal" style="position:relative;{% if module.section_bg != 'default' %}background:{{ {'void':'#080b12','navy':'#101725','paper':'#fbf8f1'}[module.section_bg] }};{% endif %}">
+  {% if module.bg_art.src %}<div class="q-hero-art" style="position:absolute;inset:0;overflow:hidden;pointer-events:none;"><img src="{{ module.bg_art.src }}" alt="" style="width:100%;height:100%;object-fit:cover;opacity:.22;"></div>{% endif %}
+  <div class="q-container" style="position:relative;">
+  {% if module.layout == 'split' %}
+    <div style="display:grid;grid-template-columns:1.05fr 0.95fr;gap:56px;align-items:center;">
+      <div>
+        {% if module.show_eyebrow != false %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+        <h1 class="q-h1" style="font-size:72px;margin-top:26px;">{{ module.heading }}</h1>
+        <div class="q-lead" style="max-width:520px;margin:26px 0 0;">{{ module.subhead }}</div>
+        <div style="display:flex;gap:16px;margin-top:36px;">{% if module.primary_label %}<a class="q-btn" href="{{ module.primary_url.href or "https://meetings.hubspot.com/shawn-peterson" }}">{{ module.primary_label }}</a>{% endif %}{% if module.secondary_label %}<a class="q-btn-ghost" href="{{ module.secondary_url.href }}">{{ module.secondary_label }}<span style="width:22px;height:1px;background:currentColor;display:inline-block;"></span></a>{% endif %}</div>
+      </div>
+      <div style="width:100%;height:440px;border-radius:16px;overflow:hidden;border:1px solid var(--border);">{% if module.image.src %}<img src="{{ module.image.src }}" alt="{{ module.image.alt }}" style="width:100%;height:100%;object-fit:cover;">{% endif %}</div>
+    </div>
+  {% elif module.layout == 'centered' %}
+    <div style="max-width:860px;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center;">
+      {% if module.show_eyebrow != false %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      <h1 class="q-h1" style="margin-top:26px;">{{ module.heading }}</h1>
+      <div class="q-lead" style="max-width:600px;margin:26px 0 0;">{{ module.subhead }}</div>
+      <div style="display:flex;gap:16px;margin-top:36px;">{% if module.primary_label %}<a class="q-btn" href="{{ module.primary_url.href or "https://meetings.hubspot.com/shawn-peterson" }}">{{ module.primary_label }}</a>{% endif %}{% if module.secondary_label %}<a class="q-btn-ghost" href="{{ module.secondary_url.href }}">{{ module.secondary_label }}<span style="width:22px;height:1px;background:currentColor;display:inline-block;"></span></a>{% endif %}</div>
+    </div>
+  {% elif module.layout == 'orbit' %}
+    <style>
+      @keyframes qspin{to{transform:rotate(360deg)}}
+      @keyframes qspinR{to{transform:rotate(-360deg)}}
+      .q-orbit-ring{animation:qspin 48s linear infinite}
+      .q-orbit-ring .q-chip-in{animation:qspinR 48s linear infinite}
+      @media(max-width:900px){
+        .q-orbit-grid{grid-template-columns:1fr!important;text-align:center;justify-items:center}
+        .q-orbit-grid .q-lead{margin-left:auto;margin-right:auto}
+        .q-orbit-wrap{height:400px!important}
+        .q-orbit-h1{font-size:52px!important}
+      }
+    </style>
+    <div style="position:absolute;left:50%;top:0;transform:translateX(-50%);width:100vw;height:100%;overflow:hidden;pointer-events:none;">
+      <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.05) 1px,transparent 1px);background-size:66px 66px;-webkit-mask-image:radial-gradient(ellipse 90% 70% at 50% 35%,#000,transparent);mask-image:radial-gradient(ellipse 90% 70% at 50% 35%,#000,transparent);"></div>
+      <div style="position:absolute;left:24%;top:42%;width:820px;height:820px;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(196,164,74,0.15),transparent 66%);filter:blur(12px);"></div>
+      <div style="position:absolute;left:82%;top:80%;width:520px;height:520px;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(196,164,74,0.08),transparent 66%);filter:blur(12px);"></div>
+    </div>
+    <div class="q-orbit-grid" style="position:relative;display:grid;grid-template-columns:1.05fr 0.95fr;gap:40px;align-items:center;min-height:520px;">
+      <div>
+        {% if module.show_eyebrow != false %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+        <h1 class="q-h1 q-orbit-h1" style="font-size:84px;line-height:1.0;margin-top:22px;">{{ module.heading }}</h1>
+        <div class="q-lead" style="max-width:520px;margin:28px 0 0;">{{ module.subhead }}</div>
+        <div style="display:flex;gap:16px;margin-top:36px;flex-wrap:wrap;">{% if module.primary_label %}<a class="q-btn" href="{{ module.primary_url.href or "https://meetings.hubspot.com/shawn-peterson" }}">{{ module.primary_label }}</a>{% endif %}{% if module.secondary_label %}<a class="q-btn-ghost" href="{{ module.secondary_url.href }}">{{ module.secondary_label }}<span style="width:22px;height:1px;background:currentColor;display:inline-block;"></span></a>{% endif %}</div>
+      </div>
+      <div class="q-orbit-wrap" style="position:relative;height:560px;">
+        <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:560px;height:560px;">
+          <svg viewBox="0 0 560 560" style="position:absolute;inset:0;width:100%;height:100%;"><circle cx="280" cy="280" r="210" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1"/><circle cx="280" cy="280" r="140" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></svg>
+          <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center;">
+            <div style="position:absolute;width:250px;height:250px;border-radius:50%;background:radial-gradient(circle,rgba(196,164,74,0.3),transparent 66%);"></div>
+            <img src="https://20682069.fs1.hubspotusercontent-na1.net/hubfs/20682069/quantum-theme/brand/quantum-q-gold.png" alt="Quantum" style="position:relative;width:150px;height:auto;filter:drop-shadow(0 0 34px rgba(196,164,74,0.55));">
+          </div>
+          <div class="q-orbit-ring" style="position:absolute;inset:0;">
+            <div style="position:absolute;left:280px;top:70px;transform:translate(-50%,-50%);width:96px;height:66px;"><div class="q-chip-in" style="width:100%;height:100%;background:rgba(11,15,22,0.95);border:1px solid rgba(196,164,74,0.22);border-radius:14px;display:flex;align-items:center;justify-content:center;padding:16px;box-shadow:0 14px 34px rgba(0,0,0,0.55);"><img src="https://20682069.fs1.hubspotusercontent-na1.net/hubfs/20682069/quantum-theme/hero/hubspot.png" alt="HubSpot" style="max-width:100%;max-height:30px;width:auto;"></div></div>
+            <div style="position:absolute;left:479.72px;top:215.11px;transform:translate(-50%,-50%);width:96px;height:66px;"><div class="q-chip-in" style="width:100%;height:100%;background:rgba(11,15,22,0.95);border:1px solid rgba(196,164,74,0.22);border-radius:14px;display:flex;align-items:center;justify-content:center;padding:16px;box-shadow:0 14px 34px rgba(0,0,0,0.55);"><img src="https://20682069.fs1.hubspotusercontent-na1.net/hubfs/20682069/quantum-theme/hero/zoominfo.png" alt="ZoomInfo" style="max-width:100%;max-height:26px;width:auto;"></div></div>
+            <div style="position:absolute;left:403.43px;top:449.89px;transform:translate(-50%,-50%);width:96px;height:66px;"><div class="q-chip-in" style="width:100%;height:100%;background:rgba(11,15,22,0.95);border:1px solid rgba(196,164,74,0.22);border-radius:14px;display:flex;align-items:center;justify-content:center;padding:16px;box-shadow:0 14px 34px rgba(0,0,0,0.55);"><img src="https://20682069.fs1.hubspotusercontent-na1.net/hubfs/20682069/quantum-theme/hero/connectandsell.png" alt="ConnectAndSell" style="max-width:100%;max-height:26px;width:auto;"></div></div>
+            <div style="position:absolute;left:156.57px;top:449.89px;transform:translate(-50%,-50%);width:96px;height:66px;"><div class="q-chip-in" style="width:100%;height:100%;background:rgba(11,15,22,0.95);border:1px solid rgba(196,164,74,0.22);border-radius:14px;display:flex;align-items:center;justify-content:center;padding:16px;box-shadow:0 14px 34px rgba(0,0,0,0.55);"><img src="https://20682069.fs1.hubspotusercontent-na1.net/hubfs/20682069/quantum-theme/hero/grant-cardone.png" alt="Grant Cardone Licensee" style="max-width:100%;max-height:30px;width:auto;"></div></div>
+            <div style="position:absolute;left:80.28px;top:215.11px;transform:translate(-50%,-50%);width:96px;height:66px;"><div class="q-chip-in" style="width:100%;height:100%;background:rgba(11,15,22,0.95);border:1px solid rgba(196,164,74,0.22);border-radius:14px;display:flex;align-items:center;justify-content:center;padding:16px;box-shadow:0 14px 34px rgba(0,0,0,0.55);"><img src="https://20682069.fs1.hubspotusercontent-na1.net/hubfs/20682069/quantum-theme/hero/q2.png" alt="Q2" style="max-width:100%;max-height:30px;width:auto;"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% elif module.layout == 'fullbleed' %}
+    <div style="position:absolute;inset:0;overflow:hidden;">{% if module.image.src %}<img src="{{ module.image.src }}" alt="{{ module.image.alt }}" style="width:100%;height:100%;object-fit:cover;">{% endif %}<div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,11,18,0.92) 0%,rgba(8,11,18,0.72) 45%,rgba(8,11,18,0.35) 100%);"></div></div>
+    <div style="position:relative;max-width:640px;color:#e2e5eb;padding:60px 0;">
+      {% if module.show_eyebrow != false %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      <h1 class="q-h1" style="margin-top:28px;color:#e2e5eb;">{{ module.heading }}</h1>
+      <div class="q-lead" style="max-width:520px;margin:30px 0 0;color:#c9cdd6;">{{ module.subhead }}</div>
+      <div style="display:flex;gap:16px;margin-top:38px;">{% if module.primary_label %}<a class="q-btn" href="{{ module.primary_url.href or "https://meetings.hubspot.com/shawn-peterson" }}">{{ module.primary_label }}</a>{% endif %}{% if module.secondary_label %}<a class="q-btn-ghost" href="{{ module.secondary_url.href }}" style="color:#e2e5eb;">{{ module.secondary_label }}<span style="width:22px;height:1px;background:currentColor;display:inline-block;"></span></a>{% endif %}</div>
+    </div>
+  {% else %}
+    <div style="max-width:760px;">
+      {% if module.show_eyebrow != false %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      <h1 class="q-h1" style="margin-top:28px;">{{ module.heading }}</h1>
+      <div class="q-lead" style="max-width:560px;margin:30px 0 0;">{{ module.subhead }}</div>
+      <div style="display:flex;gap:16px;margin-top:38px;">{% if module.primary_label %}<a class="q-btn" href="{{ module.primary_url.href or "https://meetings.hubspot.com/shawn-peterson" }}">{{ module.primary_label }}</a>{% endif %}{% if module.secondary_label %}<a class="q-btn-ghost" href="{{ module.secondary_url.href }}">{{ module.secondary_label }}<span style="width:22px;height:1px;background:currentColor;display:inline-block;"></span></a>{% endif %}</div>
+    </div>
+  {% endif %}
+  </div>
+</section>{% if module.rotate_words %}
+<style>.q-h1 em{transition:opacity .35s ease;display:inline-block;text-align:center;vertical-align:baseline;}</style>
+<script>
+(function(){
+  var words="{{ module.rotate_words }}".split(",").map(function(w){return w.trim();}).filter(Boolean);
+  var el=document.querySelector(".q-h1 em");
+  if(!el||words.length<2)return;
+  // Lock the em to the widest word so the centered headline never reflows/bounces.
+  function lockWidth(){
+    var cs=getComputedStyle(el);
+    var probe=document.createElement("span");
+    probe.style.cssText="position:absolute;left:-9999px;top:-9999px;visibility:hidden;white-space:nowrap;";
+    probe.style.fontFamily=cs.fontFamily;probe.style.fontWeight=cs.fontWeight;
+    probe.style.fontStyle=cs.fontStyle;probe.style.fontSize=cs.fontSize;
+    probe.style.letterSpacing=cs.letterSpacing;
+    document.body.appendChild(probe);
+    var max=0;
+    words.forEach(function(w){probe.textContent=w;if(probe.offsetWidth>max)max=probe.offsetWidth;});
+    document.body.removeChild(probe);
+    el.style.width=Math.ceil(max)+"px";
+  }
+  lockWidth();
+  if(document.fonts&&document.fonts.ready){document.fonts.ready.then(lockWidth);}
+  var i=0;
+  setInterval(function(){
+    el.style.opacity="0";
+    setTimeout(function(){ i=(i+1)%words.length; el.textContent=words[i]; el.style.opacity="1"; },350);
+  },2400);
+})();
+</script>
+{% endif %}

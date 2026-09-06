@@ -1,0 +1,33 @@
+<!--
+  templateType: page
+  label: QV outbound-sales
+  isAvailableForNewContent: true
+-->
+{% extends "./layouts/base.html" %}
+{% block body %}
+<main>
+  {% dnd_area "main" %}
+    {% dnd_section %}
+      {% dnd_module "s_hero" path="../modules/quantum-hero", width=12, layout="centered", eyebrow="OUTBOUND SALES", heading="Fill Your Pipeline Without Growing Headcount A complete outbound sales system built on the People, Process, and Technology framework — so you can scale pipeline without scaling payroll", subhead="", primary_label="Book a call", secondary_label="Learn more" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_0" path="../modules/quantum-rich-text", width=12, prose="<h2>8-12 Live Conversations per Hour 2x Pipeline Without New Headcount 60 Days To Meaningful Pipeline 15% Connect Rate with ZoomInfo</h2>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s_1" path="../modules/quantum-rich-text", width=12, prose="<h2>People · Process · Technology The three pillars behind every successful outbound program</h2><div class=q-cards><div class=q-card><h4>People</h4><p>We embed trained sales professionals into your workflow — or upskill your existing team — so every dial is a meaningful conversation.</p></div><div class=q-card><h4>Process</h4><p>Our proven cadences, scripts, and objection-handling frameworks turn cold outreach into warm pipeline consistently.</p></div><div class=q-card><h4>Technology</h4><p>We leverage ZoomInfo for targeting, ConnectAndSell for live conversations, and HubSpot for full-funnel visibility — all fully integrated.</p></div><div class=q-card><h4>ZoomInfo data enrichment,</h4><p>ConnectAndSell power dialing, HubSpot CRM automation, real-time dashboards.</p></div></div>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_2" path="../modules/quantum-rich-text", width=12, prose="<h2>Our outbound system isn't three separate tools — it's one integrated revenue engine</h2><p>ZoomInfo identifies and enriches your ideal prospects with verified contact data. ConnectAndSell puts your reps into 8-12 live conversations per hour instead of leaving voicemails. HubSpot orchestrates every touchpoint — calls, emails, tasks — into automated sequences so nothing falls through the cracks. The result: your existing team produces the pipeline output of a team twice its size, with full visibility from first dial to closed deal.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s_3" path="../modules/quantum-rich-text", width=12, prose="<h2>Ready to Build a Pipeline Machine?</h2><p>Book a free discovery call and let us show you how People, Process, and Technology can transform your outbound results.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_4" path="../modules/quantum-rich-text", width=12, prose="<h2>Outbound Sales FAQ What is outbound sales and how does it differ from inbound?</h2><p>Outbound sales is proactive prospecting — your team reaches out to potential customers through calls, emails, and social selling rather than waiting for leads to come to you. How many calls should sales reps make per day? With traditional dialing, a good rep makes 50–80 calls per day. With ConnectAndSell, reps can have 8–12 live conversations per hour. What's a good connect rate for outbound sales? Industry average is 3–5%. Using ConnectAndSell and ZoomInfo together, our clients achieve 8–15% connect rates. Do I need to hire more sales reps to scale outbound? Not necessarily. Our framework helps you get more from your existing team first — most clients double pipeline before needing to add headcount. How quickly can I start seeing pipeline from outbound? Most clients see new meetings within the first 2 weeks. Meaningful pipeline impact typically shows within 60–90 days.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_cta" path="../modules/quantum-cta-band", width=12 %}{% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+</main>
+{% endblock %}

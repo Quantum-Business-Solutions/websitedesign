@@ -1,0 +1,4 @@
+/* Auto-scaling bar chart — CSS only, motion-safe */
+.q-chart-bar{transform-origin:bottom center;animation:qBarRise .8s cubic-bezier(.2,.7,.2,1) both;}
+@keyframes qBarRise{from{transform:scaleY(0);}to{transform:scaleY(1);}}
+@media (prefers-reduced-motion: reduce){.q-chart-bar{animation:none;transform:none;}}

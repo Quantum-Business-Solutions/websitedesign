@@ -9,6 +9,8 @@ real money or a client. The rest are what compounds.
 
 ## 1 · Get the nine themes into source control
 
+**Status 2026-09-06: built.** `themes/source/` holds all nine (2,835 files); `reskin.py export` refreshes, `reskin.py drift` exits 1 if the portal moved.
+
 **The biggest structural risk in the whole system, and nothing currently mitigates it.**
 
 The nine themes exist **only** in HubSpot portal `20682069`. This repo holds their derived tokens
@@ -26,6 +28,8 @@ live against committed, run weekly. A day's work, and it turns the most dangerou
 system into a pull request.
 
 ## 2 · Score every page, not just pass/fail
+
+**Status 2026-09-06: built.** `verify.mjs` prints `SCORE n/100`, appends `verify-out/scores.jsonl`, exits 1 under 80.
 
 `verify.mjs` answers *did it pass*. It cannot answer *is it getting better*.
 
@@ -46,6 +50,8 @@ across `claude-sonnet-4`, `gemini-2.5-pro` and `google/gemini-2.5-pro` — two s
 the scores become an A/B test already paid for.
 
 ## 3 · Close the loop from shipped to converted
+
+**Status 2026-09-06: skeleton built, no data yet.** `scripts/converted.py pull|learn` and `data/README.md`. It writes nothing until a pattern clears the sample floor — which is the point.
 
 **Everything in this repo optimises for passing a gate. Nothing measures whether the thing worked.**
 
@@ -69,6 +75,8 @@ This is the item that changes what QBS *is*: a shop with evidence rather than a 
 
 ## 4 · Make the judgement steps delegable
 
+**Status 2026-09-06: written.** `process/decisions.md` — eight decision rules.
+
 **15 of the 37 runbook steps are 🏢 QBS.** At any real volume, that is the ceiling — and most of
 those steps are judgement that lives in one head.
 
@@ -88,6 +96,8 @@ theme selection. A rule you can hand over is worth more than a judgement you can
 
 ## 5 · Price the actual cost driver
 
+**Status 2026-09-06: estimated, not measured.** Per-unit Phase 4 estimates in `process/clientcommand.md`; the `layoutSections` afternoon still decides 8h vs 40h.
+
 The tiers price **page count**. The cost driver is **Phase 4** — custom modules, sections and
 templates — which is priced at nothing.
 
@@ -103,6 +113,8 @@ Until then every quote on a non-standard build is provisional, and the repo shou
 
 ## 6 · A module-level performance library
 
+**Status 2026-09-06: schema only.** `data/pages.jsonl` records `sections` per page; `converted.py learn` groups on the first three. Needs shipped pages.
+
 `design/references.md` records six external sites we admire. There is **no record of which of our
 own pages performed.**
 
@@ -114,6 +126,8 @@ design talent substitutes for.
 Depends on item 3.
 
 ## 7 · Monitor the category continuously
+
+**Status 2026-09-06: built, not armed.** `scripts/monitor.py plan --vertical office-technology` emits the Firecrawl monitor calls; `--apply --approved-by` records them. No live monitors yet.
 
 We scrape competitors once, at brief time, and never again.
 
@@ -128,6 +142,8 @@ possible moment to pitch, and a *stale* site is the best.
 
 ## 8 · Give the process an owner and a cadence
 
+**Status 2026-09-06: done.** Version stamp, owner and the monthly agenda are at the top and bottom of `RUNBOOK.md`.
+
 Twenty documents, five scripts, and **no named owner and no review date.** That is how a good
 process becomes a stale one — and this repo has already demonstrated the failure mode twice: claims
 that were true when written and false three months later, caught only by an adversarial audit.
@@ -137,6 +153,8 @@ numbers against actuals, retire anything superseded. And a version stamp on `RUN
 process without a version is one nobody can tell is out of date.
 
 ## 9 · An onboarding track
+
+**Status 2026-09-06: written; catalogue pending.** `process/onboarding.md` — three builds, graduated permissions. The visual module catalogue still needs `all-modules.html` published on staging so it can be screenshotted.
 
 `OPERATOR.md` is a checklist, not a curriculum. A new hire cannot run this today, and several steps
 silently assume an AI agent is doing them.

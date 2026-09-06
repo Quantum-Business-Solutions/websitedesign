@@ -96,7 +96,7 @@ A line without limits becomes many half-finished builds and every date slips tog
 
 **Nothing enters a station until something leaves it.**
 
-## The four weekly numbers
+## The five weekly numbers
 
 | Metric | Read it as |
 |---|---|
@@ -104,6 +104,7 @@ A line without limits becomes many half-finished builds and every date slips tog
 | **Age of the oldest item per station** | A page stuck three weeks is invisible in a phase view and obvious here |
 | **Client-owed assets overdue** | The most actionable report in the system |
 | **Actual hours per station** | Replaces the estimates. **The model is only useful once it's calibrated** |
+| **`reskin.py drift` — clean or not** | Whether the nine themes in the portal still match `themes/source/`. Non-zero means someone edited live; commit it or revert it, that week |
 
 ## Capacity, honestly
 
@@ -114,9 +115,10 @@ Per `process/clientcommand.md`, one person's work-only ceiling is roughly **16 c
 - Phase 6 needs a human to look, every time
 - Client latency is unevenly distributed — three clients going quiet in the same week is normal
 
-**And Phase 4 is not in the hour model yet.** The Revolution build needed 29 modules, 7 sections and
-10 templates — plausibly another 58 hours, which would roughly double a build. Until actuals are
-recorded, treat any quote on a build needing custom modules as provisional.
+**And Phase 4 is priced on estimates, not actuals.** The Revolution build needed 29 modules, 7
+sections and 10 templates; `process/clientcommand.md` now carries per-unit estimates for it, but
+until three builds have written actuals to `data/pages.jsonl`, treat any quote on a build needing
+custom modules as provisional.
 
 ## What to do when a date is going to slip
 

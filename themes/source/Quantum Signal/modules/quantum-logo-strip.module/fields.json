@@ -1,0 +1,91 @@
+[ {
+  "id" : "caption",
+  "name" : "caption",
+  "label" : "Caption",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Certified partners"
+}, {
+  "id" : "logos",
+  "name" : "logos",
+  "label" : "Logos",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 8,
+    "sorting_label_field" : null,
+    "default" : 5
+  },
+  "children" : [ {
+    "id" : "dark",
+    "name" : "dark",
+    "label" : "Logo for dark bg (light mark)",
+    "required" : false,
+    "locked" : false,
+    "responsive" : false,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "display_width" : null,
+    "default" : {
+      "src" : "",
+      "alt" : ""
+    }
+  }, {
+    "id" : "light",
+    "name" : "light",
+    "label" : "Logo for light bg (dark mark)",
+    "required" : false,
+    "locked" : false,
+    "responsive" : false,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "display_width" : null,
+    "default" : {
+      "src" : "",
+      "alt" : ""
+    }
+  }, {
+    "id" : "label",
+    "name" : "logo_label",
+    "label" : "Fallback text",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  }, {
+    "id" : "h",
+    "name" : "h",
+    "label" : "Height px",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "30"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "light" : {
+      "src" : "",
+      "alt" : ""
+    },
+    "dark" : {
+      "src" : "",
+      "alt" : ""
+    },
+    "h" : "30",
+    "logo_label" : "HubSpot Diamond"
+  } ]
+} ]

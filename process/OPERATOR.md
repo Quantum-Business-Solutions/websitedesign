@@ -207,7 +207,7 @@ gate measures all of this at 390px; these are floors, not aspirations.
 - [ ] ```bash
       node scripts/verify.mjs <staging-url> --env staging --expect-org "<Client legal name>"
       ```
-      **Exit code 1 means it failed.** It checks a11y (axe-core) at 390/768/1440, CLS, canonical,
+      **Exit code 1 means it failed — and so does any page scoring under 80/100.** It checks a11y (axe-core) at 390/768/1440, CLS, canonical,
       `og:image`, headings, lazy-loading, image dimensions, JSON-LD validity *and whose name is in
       it*, **card-grid balance at every width**, **the mobile floors above**, placeholder text,
       conversion paths and broken links.

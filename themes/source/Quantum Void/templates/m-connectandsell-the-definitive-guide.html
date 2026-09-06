@@ -1,0 +1,33 @@
+<!--
+  templateType: page
+  label: QV connectandsell-the-definitive-guide
+  isAvailableForNewContent: true
+-->
+{% extends "./layouts/base.html" %}
+{% block body %}
+<main>
+  {% dnd_area "main" %}
+    {% dnd_section %}
+      {% dnd_module "s_hero" path="../modules/quantum-hero", width=12, layout="centered", eyebrow="Quantum", heading="The Ultimate Guide to ConnectAndSell Lightning Stop chasing dials", subhead="Start having 10x more live sales conversations with your ideal buyers. Master the proven frameworks to integrate ConnectAndSell with your HubSpot and ZoomInfo stack. Your complete playbook for setup, scripting, and maximizing revenue impact", primary_label="Book a call", secondary_label="Learn more" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_0" path="../modules/quantum-rich-text", width=12, prose="<h2>'Sales reps are spending two-thirds of their time on non-selling activities .'</h2>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s_1" path="../modules/quantum-rich-text", width=12, prose="<h2>You heard that right</h2><p>According to a study published by Forbes , reps spend about 35-percent of their time selling and 65-percent on other activities. This busy-work might include updating prospecting lists, researching their accounts, managing their calendars, and entering data in the company CRM. Keep in mind the average sales rep is paid more than $100,000 per year. That means nearly $70,000 of that salary is going to activities that are not delivering revenue for the organization. This should be alarming to CEOs and Sales Managers everywhere.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_2" path="../modules/quantum-rich-text", width=12, prose="<h2>ConnectAndSell is a tool that removes time-wasting admin work from calling prospects and enables sales teams to connect with more decision-makers in a shorter amount of time</h2><p>It also allows for easy capture of important insights during conversations and syncs them with HubSpot. This guide will give you a clearer picture of the benefits and use cases of ConnectAndSell and how to get started quickly.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s_3" path="../modules/quantum-rich-text", width=12, prose="<h2>Book Your Strategic ConnectAndSell Consultation</h2>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_4" path="../modules/quantum-rich-text", width=12, prose="<h2>As a certified ConnectAndSell implementation partner, we ensure your team achieves measurable outbound acceleration—not just platform access</h2><p>In your complimentary strategy session, we will: Audit your current outbound process, tech stack, and data quality. Deliver a data-backed plan to integrate ConnectAndSell and multiply your live conversations. Model the ROI and pipeline impact you can expect within the first 90 days. Reserve your time on the calendar below.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_cta" path="../modules/quantum-cta-band", width=12 %}{% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+</main>
+{% endblock %}

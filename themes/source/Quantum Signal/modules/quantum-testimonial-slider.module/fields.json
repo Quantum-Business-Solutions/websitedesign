@@ -1,0 +1,158 @@
+[ {
+  "id" : "content_width",
+  "name" : "content_width",
+  "label" : "Content width",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "full", "Full width" ], [ "half", "Half (centered)" ], [ "left", "Left aligned" ], [ "right", "Right aligned" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "full"
+}, {
+  "id" : "padding",
+  "name" : "padding",
+  "label" : "Section padding",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "normal", "Normal" ], [ "none", "None" ], [ "large", "Large" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "normal"
+}, {
+  "id" : "section_bg",
+  "name" : "section_bg",
+  "label" : "Section background",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "default", "Theme default" ], [ "void", "Void (dark)" ], [ "navy", "Navy (dark)" ], [ "paper", "Paper (light)" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "default"
+}, {
+  "id" : "items",
+  "name" : "items",
+  "label" : "Testimonials",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 10,
+    "sorting_label_field" : null,
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "quote",
+    "name" : "quote",
+    "label" : "Quote",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  }, {
+    "id" : "who",
+    "name" : "who",
+    "label" : "Name",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  }, {
+    "id" : "role",
+    "name" : "role",
+    "label" : "Role / company",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  }, {
+    "id" : "avatar",
+    "name" : "avatar",
+    "label" : "Headshot",
+    "required" : false,
+    "locked" : false,
+    "responsive" : false,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "display_width" : null,
+    "default" : {
+      "src" : "",
+      "alt" : ""
+    }
+  }, {
+    "id" : "logo",
+    "name" : "logo",
+    "label" : "Company logo",
+    "required" : false,
+    "locked" : false,
+    "responsive" : false,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "display_width" : null,
+    "default" : {
+      "src" : "",
+      "alt" : ""
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "role" : "",
+    "avatar" : {
+      "src" : "",
+      "alt" : ""
+    },
+    "logo" : {
+      "src" : "",
+      "alt" : ""
+    },
+    "quote" : "Quantum is a well-run company from top to bottom. A pleasure to work with.",
+    "who" : "J. Blatchford · Client"
+  }, {
+    "role" : "",
+    "avatar" : {
+      "src" : "",
+      "alt" : ""
+    },
+    "logo" : {
+      "src" : "",
+      "alt" : ""
+    },
+    "quote" : "We went from scratching the surface to fully leveraging ZoomInfo, driving significant growth in lead generation.",
+    "who" : "Sarah M. · Director of Marketing"
+  }, {
+    "role" : "",
+    "avatar" : {
+      "src" : "",
+      "alt" : ""
+    },
+    "logo" : {
+      "src" : "",
+      "alt" : ""
+    },
+    "quote" : "Their strategic approach to data analysis has been instrumental in our success.",
+    "who" : "Mark T. · CEO"
+  } ]
+} ]

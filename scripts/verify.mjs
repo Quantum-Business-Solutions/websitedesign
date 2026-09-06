@@ -8,12 +8,13 @@
  * checks run themselves.
  *
  *   node scripts/verify.mjs <url> [more urls...] [--out verify-out] [--expect-org "Name"]
+ *                            [--env staging|production] [--forbid "a,b" | --forbid none]
  *
  * Exit code 0 = all gates pass, 1 = at least one FAIL. Wire it into CI or run it
  * before a client sees anything.
  */
 import { chromium } from 'playwright';
-import { readFileSync, mkdirSync, writeFileSync, readdirSync, existsSync } from 'node:fs';
+import { readFileSync, mkdirSync, writeFileSync, readdirSync, existsSync, appendFileSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
 import { createRequire } from 'node:module';
 import path from 'node:path';
@@ -129,7 +130,11 @@ const DEFAULT_FORBID = [
   'Quantum Academy', 'meetings.hubspot.com/shawn-peterson',
   '/zoominfo-as-a-service', '/outbound-sales', '/connectandsell',
 ];
-const FORBID = (flag('forbid') || '').split(',').map(x => x.trim()).filter(Boolean);
+// --forbid "a,b"  replaces the default list.  --forbid none  skips the check — for QBS's own site,
+// where the defaults are the brand, not a leak.
+const FORBID_RAW = flag('forbid') || '';
+const FORBID_NONE = FORBID_RAW.trim().toLowerCase() === 'none';
+const FORBID = FORBID_NONE ? [] : FORBID_RAW.split(',').map(x => x.trim()).filter(Boolean);
 if (urls.some(u => !/^https?:\/\//.test(u))) {
   console.error(`not a URL: ${urls.find(u => !/^https?:\/\//.test(u))}`);
   process.exit(2);
@@ -634,12 +639,13 @@ async function auditPage(browser, url) {
     // at all: the only QBS check tested the schema NAME and sat in an else-if that was
     // skipped whenever --expect-org was passed, i.e. on every real gated run.
     {
-      const needles = FORBID.length ? FORBID : DEFAULT_FORBID;
+      const needles = FORBID_NONE ? [] : (FORBID.length ? FORBID : DEFAULT_FORBID);
       const html = await page.evaluate(() => document.documentElement.outerHTML);
       const hits = needles.filter(n => html.toLowerCase().includes(n.toLowerCase()));
       rec(url, 'no QBS branding left', hits.length ? 'FAIL' : 'PASS',
-        hits.length ? `found: ${hits.join(', ')} — header/footer de-brand is incomplete`
-                    : `${needles.length} forbidden string(s) checked`);
+        FORBID_NONE ? 'skipped (--forbid none: this is our own site)'
+        : hits.length ? `found: ${hits.join(', ')} — header/footer de-brand is incomplete`
+                      : `${needles.length} forbidden string(s) checked`);
     }
 
     if (EXPECT_ORG) {
@@ -750,9 +756,29 @@ try {
   await browser.close();
 }
 
+// ------------------------------------------------------------------ scoring
+// A pass/fail gate answers "did it pass". It cannot answer "is it getting better".
+// BrandCommand already scores campaign assets 0-100 (agent_runs.critic_score); this
+// puts website pages on the same scale so there is one quality trendline. Weights
+// follow the runbook's own ranking: correctness failures cost most, quality next,
+// warnings least. Nothing ships under 80.
+const CORRECTNESS = /no QBS branding|Organization names the client|Organization entity|a11y@|indexable|noindex|JSON-LD parses|tap targets >= 24|inputs >= 16|viewport meta|no placeholder|no horizontal scroll|load@/;
+const QUALITY = /og:image|lazy|width\/height|card grid balance|conversion path|exactly one h1|body text|structured data present|broken internal|CLS|canonical|meta description/;
+function scorePage(rows) {
+  let score = 100;
+  for (const r of rows) {
+    if (r.status === 'FAIL') score -= CORRECTNESS.test(r.gate) ? 8 : QUALITY.test(r.gate) ? 5 : 3;
+    else if (r.status === 'WARN') score -= 1.5;
+  }
+  score = Math.max(0, Math.round(score));
+  const grade = score >= 90 ? 'A' : score >= 80 ? 'B' : score >= 70 ? 'C' : score >= 60 ? 'D' : 'F';
+  return { score, grade, ships: score >= 80 };
+}
+
 // ------------------------------------------------------------------ report
 const ICON = { PASS: '\x1b[32mPASS\x1b[0m', WARN: '\x1b[33mWARN\x1b[0m', FAIL: '\x1b[31mFAIL\x1b[0m' };
 let fails = 0, warns = 0;
+const scores = [];
 for (const u of urls) {
   const rows = results.filter(r => r.url === u);
   if (!rows.length) continue;
@@ -763,15 +789,36 @@ for (const u of urls) {
     if (r.status === 'WARN') warns++;
     console.log(`  ${ICON[r.status]}  ${r.gate.padEnd(w)}  ${r.detail}`);
   }
+  const sc = scorePage(rows);
+  scores.push({ url: u, ...sc,
+    fails: rows.filter(r => r.status === 'FAIL').length,
+    warns: rows.filter(r => r.status === 'WARN').length });
+  const col = sc.score >= 80 ? '\x1b[32m' : sc.score >= 60 ? '\x1b[33m' : '\x1b[31m';
+  console.log(`\n  ${col}SCORE ${sc.score}/100  grade ${sc.grade}\x1b[0m` +
+              (sc.ships ? '' : '  — under 80, does not ship'));
+}
+
+// Append to the trendline. One line per page per run; this is the file that lets you
+// say "build ten scored 91 and build one scored 74", which is the only honest proof
+// a process is improving.
+{
+  const line = scores.map(sc => JSON.stringify({
+    at: new Date().toISOString(), env: ENV, expectOrg: EXPECT_ORG || null, ...sc,
+  })).join('\n') + '\n';
+  mkdirSync(OUT, { recursive: true });
+  appendFileSync(path.join(OUT, 'scores.jsonl'), line);
 }
 mkdirSync(OUT, { recursive: true });
 writeFileSync(path.join(OUT, 'report.json'), JSON.stringify({
-  generatedAt: new Date().toISOString(), urls, results,
+  generatedAt: new Date().toISOString(), urls, results, scores,
 }, null, 2));
 
 console.log(`\n${'-'.repeat(78)}`);
 console.log(`  ${fails} FAIL   ${warns} WARN   ${results.length - fails - warns} PASS`);
-console.log(`  screenshots + report.json in ./${OUT}/`);
+console.log(`  screenshots + report.json in ${OUT.startsWith('/') ? OUT : './' + OUT}/`);
 console.log(`${'-'.repeat(78)}\n`);
-if (fails) console.log('Gate NOT passed. A build nobody looked at is a build nobody checked.\n');
-process.exit(fails ? 1 : 0);
+const underFloor = scores.filter(sc => !sc.ships).length;
+if (fails || underFloor) {
+  console.log('Gate NOT passed. A build nobody looked at is a build nobody checked.\n');
+}
+process.exit(fails || underFloor ? 1 : 0);

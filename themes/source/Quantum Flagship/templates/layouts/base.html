@@ -1,0 +1,26 @@
+<!--
+  templateType: none
+  isAvailableForNewContent: false
+-->
+<!doctype html>
+<html lang="{{ html_lang }}" {{ html_lang_dir }}>
+<head>
+  <meta charset="utf-8">
+  <title>{{ page_meta.html_title }}</title>
+  <meta name="description" content="{{ page_meta.meta_description }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if site_settings.favicon_src %}<link rel="shortcut icon" href="{{ site_settings.favicon_src }}">{% endif %}
+  {{ require_css(get_asset_url('../../css/quantum.css')) }}
+  {{ require_js(get_asset_url('../../js/quantum.js'), 'footer') }}
+  {{ standard_header_includes }}
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Quantum Business Solutions","url":"https://www.thequantumleap.business","description":"Revenue operations infrastructure for growth-minded companies. HubSpot Diamond and ZoomInfo Solutions Partner.","sameAs":[]}</script>
+</head>
+<body data-theme="{{ theme.appearance.mode }}" class="{{ builtin_body_classes }}">
+  <div class="body-wrapper">
+    {% block header %}{% global_partial path='../partials/header.html' %}{% endblock %}
+    {% block body %}{% endblock %}
+    {% block footer %}{% global_partial path='../partials/footer.html' %}{% endblock %}
+  </div>
+  {{ standard_footer_includes }}
+</body>
+</html>

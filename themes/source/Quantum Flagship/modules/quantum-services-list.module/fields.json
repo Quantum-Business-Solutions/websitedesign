@@ -1,0 +1,127 @@
+[ {
+  "id" : "section_bg",
+  "name" : "section_bg",
+  "label" : "Section background",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "default", "Theme default" ], [ "void", "Void (dark)" ], [ "navy", "Navy (dark)" ], [ "paper", "Paper (light)" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "default"
+}, {
+  "id" : "heading",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "Solutions that create real <em>value</em>"
+}, {
+  "id" : "intro",
+  "name" : "intro",
+  "label" : "Intro",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "Four practices, one operating system."
+}, {
+  "id" : "items",
+  "name" : "items",
+  "label" : "Services",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 8,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "num",
+    "name" : "num",
+    "label" : "Number",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "01"
+  }, {
+    "id" : "title",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Service"
+  }, {
+    "id" : "body",
+    "name" : "item_body",
+    "label" : "Body",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  }, {
+    "id" : "url",
+    "name" : "url",
+    "label" : "Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "type" : "url",
+    "display_width" : null,
+    "default" : {
+      "href" : "#",
+      "type" : "EXTERNAL"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "num" : "01",
+    "title" : "Operational Excellence",
+    "url" : {
+      "href" : "/operational-efficiency",
+      "type" : "EXTERNAL"
+    },
+    "item_body" : "Automation, integration, consolidation, reporting."
+  }, {
+    "num" : "02",
+    "title" : "AI Solutions",
+    "url" : {
+      "href" : "/ai-solutions",
+      "type" : "EXTERNAL"
+    },
+    "item_body" : "AI SDRs, lead scoring, predictive analytics, custom builds."
+  }, {
+    "num" : "03",
+    "title" : "Inbound Marketing",
+    "url" : {
+      "href" : "/hubspot-services-1",
+      "type" : "EXTERNAL"
+    },
+    "item_body" : "HubSpot onboarding, content, SEO, website, paid media."
+  }, {
+    "num" : "04",
+    "title" : "Outbound Sales",
+    "url" : {
+      "href" : "/services/outbound-sales",
+      "type" : "EXTERNAL"
+    },
+    "item_body" : "Sales training, CRM and pipeline, ZoomInfo, ConnectAndSell."
+  } ]
+} ]

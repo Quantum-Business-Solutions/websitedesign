@@ -1,0 +1,33 @@
+<!--
+  templateType: page
+  label: QV technology
+  isAvailableForNewContent: true
+-->
+{% extends "./layouts/base.html" %}
+{% block body %}
+<main>
+  {% dnd_area "main" %}
+    {% dnd_section %}
+      {% dnd_module "s_hero" path="../modules/quantum-hero", width=12, layout="centered", eyebrow="Technology & Integrations", heading="Connect Everything", subhead="Automate Anything. Your tools should talk to each other. We build the bridges between your systems so data flows freely and work gets done automatically.", primary_label="Book a call", secondary_label="Learn more" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_0" path="../modules/quantum-rich-text", width=12, prose="<h2>Integration & Automation Services n8n Workflows Enterprise-grade automation pipelines that connect your entire tech stack without vendor lock-in</h2><div class=q-cards><div class=q-card><h4>Zapier</h4><p>Automation Rapid-deploy automations for teams that need results fast without heavy engineering lift.</p></div><div class=q-card><h4>Custom</h4><p>API Work When off-the-shelf won't cut it — custom integrations built to your exact specifications.</p></div><div class=q-card><h4>Data</h4><p>Sync & Migration Seamless data migration and real-time sync between any platforms, zero data loss guaranteed.</p></div></div>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s_1" path="../modules/quantum-rich-text", width=12, prose="<h2>500+ Integrations Built 99.9% System Uptime 50% Faster Workflows</h2>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_2" path="../modules/quantum-rich-text", width=12, prose="<h2>The Tech Stack Behind Scalable Growth From CRM configuration to cloud infrastructure, we set up and manage the technology that powers your revenue engine</h2><div class=q-cards><div class=q-card><h4>CRM &</h4><p>Sales Tech Stack End-to-end CRM setup, customization, and optimization so your sales team works in one unified system.</p></div><div class=q-card><h4>Marketing</h4><p>Automation Platforms Configure and connect marketing automation tools that nurture leads and attribute revenue automatically.</p></div><div class=q-card><h4>Business</h4><p>Intelligence & Reporting Dashboards and reporting that give leadership real-time visibility into pipeline, revenue, and operations.</p></div><div class=q-card><h4>Cloud</h4><p>Infrastructure & DevOps Scalable cloud environments and CI/CD pipelines so your tech runs reliably without babysitting.</p></div></div>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s_3" path="../modules/quantum-rich-text", width=12, prose="<h2>FAQ What types of integrations do you build?</h2><p>We build integrations using n8n, Zapier, custom APIs, and native connectors between CRMs, ERPs, marketing platforms, and more. Do you work with our existing tech stack? Yes. We integrate with your current tools rather than replacing them. What's the difference between n8n and Zapier? Zapier is ideal for simple automations. n8n handles complex workflows with branching logic, error handling, and self-hosting. How do you handle data migration? Staged approach: audit, map fields, test migration, full migration, then validate integrity. What does ongoing support look like? Monitoring, maintenance, optimization, proactive error detection, and priority support.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_4" path="../modules/quantum-rich-text", width=12, prose="<h2>Ready to Maximize Your Business Outcomes?</h2>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_cta" path="../modules/quantum-cta-band", width=12 %}{% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+</main>
+{% endblock %}

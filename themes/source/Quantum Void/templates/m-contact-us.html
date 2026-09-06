@@ -1,0 +1,18 @@
+<!--
+  templateType: page
+  label: QV contact-us
+  isAvailableForNewContent: true
+-->
+{% extends "./layouts/base.html" %}
+{% block body %}
+<main>
+  {% dnd_area "main" %}
+    {% dnd_section %}
+      {% dnd_module "s_hero" path="../modules/quantum-hero", width=12, layout="centered", eyebrow="Quantum", heading="Let's Talk About Your Growth You're likely leaving revenue on the table due to a leaky sales funnel or a misaligned tech stack", subhead="The good news? It's fixable. Book a complimentary strategy call below. We won't pitch you. We'll listen, analyze, and give you a concrete plan to add a predictable 25% to your bottom line. This is a conversation about your growth. Nothing l", primary_label="Book a call", secondary_label="Learn more" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_cta" path="../modules/quantum-cta-band", width=12 %}{% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+</main>
+{% endblock %}

@@ -1,0 +1,45 @@
+<!--
+  templateType: page
+  label: QV quantum-ai-demo
+  isAvailableForNewContent: true
+-->
+{% extends "./layouts/base.html" %}
+{% block body %}
+<main>
+  {% dnd_area "main" %}
+    {% dnd_section %}
+      {% dnd_module "s_hero" path="../modules/quantum-hero", width=12, layout="centered", eyebrow="Quantum", heading="The Future of Revenue Your Sales Team, Supercharged by AI We deploy AI-powered revenue systems that generate pipeline, close deals, and scale your business — while your team focuses on relationships", subhead="Deploy Your AI Revenue Engine → Book Strategy Call", primary_label="Book a call", secondary_label="Learn more" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_0" path="../modules/quantum-rich-text", width=12, prose="<h2>340% Pipeline Increase 67% Cost Reduction 12x ROI Average 48hrs To Launch</h2>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s_1" path="../modules/quantum-rich-text", width=12, prose="<h2>Not generating enough leads and sales Lack of reliable CRM data to drive better outcomes Slow, inefficient sales prospecting and engagement activities Lack of data to improve sales performance</h2>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_2" path="../modules/quantum-rich-text", width=12, prose="<h2>Too many manual tasks managed by internal teams, from prospecting to lead generation to client onboarding Stalled deals, upsell opportunities, and other initiatives getting lost in the mix</h2>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s_3" path="../modules/quantum-rich-text", width=12, prose="<h2>We know how frustrating it is when you have a good team but lack the systems, processes, and data to hit your revenue goals</h2><p>Let us help.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_4" path="../modules/quantum-rich-text", width=12, prose="<h2>AI Revenue Systems That Actually Work AI-Powered Prospecting Autonomous agents that research, qualify, and prioritize your ideal buyers 24/7</h2><p>Intelligent Sales Dialers ConnectAndSell + AI coaching that turns every conversation into a revenue opportunity. Revenue Operations Engine HubSpot + ZoomInfo + AI automation that eliminates manual work and scales your team.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s_5" path="../modules/quantum-rich-text", width=12, prose="<h2>Everything You Need to Dominate AI Sales Agents Deploy autonomous SDRs that never sleep Instant Qualification Score and route leads in milliseconds Predictive Revenue Forecast with 94% accuracy using AI models Precision Targeting ZoomInfo intent + AI finds buyers before they search Real-Time Analytics Every metric, every channel, one dashboard Content Generation AI writes emails, sequences, and follow-ups Enterprise Security SOC 2 compliant with end-to-end encryption 24/7 Automation Revenue engine runs while you sleep</h2>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_6" path="../modules/quantum-rich-text", width=12, prose="<h2>Companies using AI-powered sales systems close 3x more deals in half the time</h2>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s_7" path="../modules/quantum-rich-text", width=12, prose="<h2>From Zero to Revenue Machine in 48 Hours 01 Day 1 Audit & Strategy We analyze your current sales stack, identify gaps, and design your AI-powered revenue architecture</h2><p>02 Day 2 Build & Deploy Our team configures HubSpot, ZoomInfo, ConnectAndSell, and custom AI agents tailored to your ICP. 03 Ongoing Scale & Optimize AI continuously learns from results, optimizing sequences, targeting, and messaging for maximum ROI.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_8" path="../modules/quantum-rich-text", width=12, prose="<h2>Stop Selling</h2><p>Start Scaling. Book a free strategy call and we'll show you exactly how AI can transform your revenue operation — with real numbers, not hype.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_cta" path="../modules/quantum-cta-band", width=12 %}{% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+</main>
+{% endblock %}

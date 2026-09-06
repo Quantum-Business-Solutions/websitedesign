@@ -1,5 +1,9 @@
 # The runbook
 
+> **Version 1.0 · 2026-09-06 · Owner: Shawn Peterson · Next review: 2026-10-06**
+> Reviewed monthly, on the agenda in *Owner and cadence* at the bottom. If today is past the review
+> date, this document is unverified — read `process/qa-findings.md` for what tends to rot first.
+
 **Eight production phases, 37 steps, in order** — from "we should talk to them" to "launched, on
 retainer, and calibrated."
 
@@ -249,6 +253,9 @@ node scripts/verify.mjs <staging-url> --env staging --expect-org "<Client legal 
 ```
 Exit 1 = not done. **A failure returns to the station that caused it**, not to step 1: contrast →
 22/23 · placeholder text → 18 · card orphan → 16 · QBS branding → 24.
+Every page also gets a **score out of 100** (correctness FAIL −8, quality FAIL −5, WARN −1.5).
+**Nothing ships under 80**, and the run appends to `verify-out/scores.jsonl` — the trendline that
+tells you whether builds are getting better, which pass/fail never could.
 
 ### 32 🤖→🏢 The agents that read what a script can't
 Quality · fact-check · copy · AEO · adversarial verifier — `process/agents.md`.
@@ -291,7 +298,9 @@ the live site.
 
 ### 37 🏢→👤 Hand over, calibrate, and convert
 **Write the actuals back.** Hours per station, critic scores per page, and — the one nobody does —
-**which module order the converting pages used.** `agent_runs` and `agent_learnings` already exist
+**which module order the converting pages used.** Concretely: one line per shipped page in
+`data/pages.jsonl` (schema in `data/README.md`), then `scripts/converted.py pull` at 30/60/90 days
+and `converted.py learn` — which writes nothing until a pattern clears the sample floor. `agent_runs` and `agent_learnings` already exist
 for this. A learning needs a **minimum sample** before it's written; BrandCommand currently holds one
 that reinforces a 0% reply rate at maximum confidence, which is worse than no learning.
 - **A recorded walkthrough**, not a live one. It scales, and it's what makes "editable by your team"
@@ -333,6 +342,25 @@ in this repo about tooling is optimising the 13%.
    automated gate catches it.
 7. **Treating Phase 4 as free** (22–26) — custom modules are real work and the hour model still
    doesn't price them.
+
+## Owner and cadence
+
+**Owner:** Shawn Peterson. One person, by name, or it is nobody.
+
+**Monthly, first working day, ninety minutes, fixed agenda:**
+
+1. `python3 scripts/reskin.py drift` — did the nine themes move in the portal without a commit?
+2. Run the QA agents (`process/qa-findings.md` has the last pass) against RUNBOOK, OPERATOR,
+   clientcommand. Anything they catch gets fixed or retired that day — no "known issues" list.
+3. Reconcile `process/clientcommand.md` hours against `data/pages.jsonl` actuals. Replace the
+   estimate the moment there are three real builds behind it.
+4. Read `verify-out/scores.jsonl`. If the median is falling, something upstream changed.
+5. `converted.py learn` — read what cleared the floor, and what almost did.
+6. Bump the version stamp at the top and the *next review* date. **A review that doesn't change the
+   stamp didn't happen.**
+
+Version numbers: patch for wording, minor for a step added or an owner changed, major when the phase
+list changes. `git log -- process/RUNBOOK.md` is the changelog.
 
 ## If you only have an hour
 

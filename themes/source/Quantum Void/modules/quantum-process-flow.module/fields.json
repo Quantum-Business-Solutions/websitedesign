@@ -1,0 +1,130 @@
+[ {
+  "id" : "eyebrow",
+  "name" : "eyebrow",
+  "label" : "Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "How we do it"
+}, {
+  "id" : "heading",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "The Quantum Growth Model"
+}, {
+  "id" : "intro",
+  "name" : "intro",
+  "label" : "Intro paragraph",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Five stages, one continuous engine. Every client relationship compounds from first touch to lasting loyalty."
+}, {
+  "id" : "stages",
+  "name" : "stages",
+  "label" : "Stages",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 5,
+    "sorting_label_field" : null,
+    "default" : 5
+  },
+  "children" : [ {
+    "id" : "title",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  }, {
+    "id" : "desc",
+    "name" : "desc",
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "title" : "Target",
+    "desc" : "Precise data analytics to identify and engage the right potential clients."
+  }, {
+    "title" : "Attract",
+    "desc" : "Strategic marketing techniques that capture genuine interest."
+  }, {
+    "title" : "Nurture",
+    "desc" : "Business development that builds real relationships and trust."
+  }, {
+    "title" : "Convert",
+    "desc" : "Dynamic sales strategies that turn prospects into customers."
+  }, {
+    "title" : "WOW",
+    "desc" : "Client success that ensures satisfaction and long-term loyalty."
+  } ]
+}, {
+  "id" : "cycles_label",
+  "name" : "cycles_label",
+  "label" : "Cycle band label",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Running continuously across every stage"
+}, {
+  "id" : "cycles",
+  "name" : "cycles",
+  "label" : "Cycle pills",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 0,
+    "max" : 5,
+    "sorting_label_field" : null,
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "pill",
+    "name" : "pill",
+    "label" : "Label",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "pill" : "Systemize"
+  }, {
+    "pill" : "Optimize"
+  }, {
+    "pill" : "Automate"
+  } ]
+} ]

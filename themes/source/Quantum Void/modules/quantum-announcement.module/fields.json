@@ -1,0 +1,34 @@
+[ {
+  "id" : "text",
+  "name" : "text",
+  "label" : "Text",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "New: the 2026 Go-To-Market Playbook is out."
+}, {
+  "id" : "label",
+  "name" : "link_label",
+  "label" : "Link label",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Read it"
+}, {
+  "id" : "url",
+  "name" : "url",
+  "label" : "Link URL",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "type" : "url",
+  "display_width" : null,
+  "default" : {
+    "href" : "#",
+    "type" : "EXTERNAL"
+  }
+} ]

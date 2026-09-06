@@ -1,0 +1,245 @@
+[ {
+  "id" : "content_width",
+  "name" : "content_width",
+  "label" : "Content width",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "full", "Full width" ], [ "half", "Half (centered)" ], [ "left", "Left aligned" ], [ "right", "Right aligned" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "full"
+}, {
+  "id" : "padding",
+  "name" : "padding",
+  "label" : "Section padding",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "normal", "Normal" ], [ "none", "None" ], [ "large", "Large" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "normal"
+}, {
+  "id" : "section_bg",
+  "name" : "section_bg",
+  "label" : "Section background",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "default", "Theme default" ], [ "void", "Void (dark)" ], [ "navy", "Navy (dark)" ], [ "paper", "Paper (light)" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "default"
+}, {
+  "id" : "heading",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "Three packages. One proven process."
+}, {
+  "id" : "sub",
+  "name" : "sub",
+  "label" : "Subheading",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : ""
+}, {
+  "id" : "plans",
+  "name" : "plans",
+  "label" : "Plans",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 3,
+    "sorting_label_field" : null,
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "plan_name",
+    "name" : "plan_name",
+    "label" : "Name",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  }, {
+    "id" : "price",
+    "name" : "price",
+    "label" : "Price",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  }, {
+    "id" : "unit",
+    "name" : "unit",
+    "label" : "Unit",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  }, {
+    "id" : "featured",
+    "name" : "featured",
+    "label" : "Featured",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : false
+  }, {
+    "id" : "cta",
+    "name" : "cta",
+    "label" : "CTA label",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Book a call"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "plan_name" : "Launch",
+    "price" : "$4,950",
+    "unit" : "one-time",
+    "featured" : false,
+    "cta" : "Book a call"
+  }, {
+    "plan_name" : "Growth",
+    "price" : "$9,950",
+    "unit" : "one-time",
+    "featured" : true,
+    "cta" : "Book a call"
+  }, {
+    "plan_name" : "Transform",
+    "price" : "$14,950",
+    "unit" : "one-time",
+    "featured" : false,
+    "cta" : "Book a call"
+  } ]
+}, {
+  "id" : "url",
+  "name" : "url",
+  "label" : "CTA URL",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "type" : "url",
+  "display_width" : null,
+  "default" : {
+    "href" : "https://meetings.hubspot.com/shawn-peterson",
+    "type" : "EXTERNAL"
+  }
+}, {
+  "id" : "rows",
+  "name" : "rows",
+  "label" : "Feature rows (use yes / no / or text)",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 20,
+    "sorting_label_field" : null,
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "row_label",
+    "name" : "row_label",
+    "label" : "Feature",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  }, {
+    "id" : "a",
+    "name" : "a",
+    "label" : "Column 1 (yes/no/text)",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  }, {
+    "id" : "b",
+    "name" : "b",
+    "label" : "Column 2 (yes/no/text)",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  }, {
+    "id" : "c",
+    "name" : "c",
+    "label" : "Column 3 (yes/no/text)",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "row_label" : "Pages included",
+    "a" : "Up to 8",
+    "b" : "Up to 20",
+    "c" : "Unlimited core pages"
+  }, {
+    "row_label" : "Schema and AEO stack",
+    "a" : "no",
+    "b" : "yes",
+    "c" : "yes"
+  }, {
+    "row_label" : "Conversion architecture",
+    "a" : "no",
+    "b" : "no",
+    "c" : "yes"
+  } ]
+}, {
+  "id" : "custom_note",
+  "name" : "custom_note",
+  "label" : "Custom path note (below table)",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : ""
+} ]

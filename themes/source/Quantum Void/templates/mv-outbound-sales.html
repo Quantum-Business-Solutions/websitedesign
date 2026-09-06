@@ -1,0 +1,33 @@
+<!--
+  templateType: page
+  label: QV outbound-sales
+  isAvailableForNewContent: true
+-->
+{% extends "./layouts/base.html" %}
+{% block body %}
+<main>
+  {% dnd_area "main" label="Main content" %}
+    {% dnd_section %}
+      {% dnd_module "s0" path="../modules/quantum-hero", width=12, layout="centered", eyebrow="Quantum", heading="Fill Your Pipeline Without Growing Headcount", subhead="A complete outbound sales system built on the People, Process, and Technology framework — so you can scale pipeline without scaling payroll. 8-12", primary_label="Book a Discovery Call", secondary_label="Take the Assessment" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s1" path="../modules/quantum-rich-text", width=12, maxw="full", prose="<div class=q-cards><div class=q-card><h4>2x</h4><p>Pipeline Without New Headcount</p></div><div class=q-card><h4>15%</h4><p>Connect Rate with ZoomInfo</p></div></div>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s2" path="../modules/quantum-rich-text", width=12, maxw="full", prose="<h2>People · Process · Technology</h2><p>The three pillars behind every successful outbound program.</p><p>Our outbound system isn't three separate tools — it's one integrated revenue engine. ZoomInfo identifies and enriches your ideal prospects with verified contact data. ConnectAndSell puts your reps into 8-12 live conversations per hour instead of leaving voicemails. HubSpot orchestrates every touchpoint — calls, emails, tasks — into automated sequences so nothing falls through the cracks.</p><p>The result: your existing team produces the pipeline output of a team twice its size, with full visibility from first dial to closed deal.</p><div class=q-cards><div class=q-card><h4>People</h4><p>We embed trained sales professionals into your workflow — or upskill your existing team — so every dial is a meaningful conversation. Dedicated outbound reps, weekly coaching sessions, call recording & review, performance scorecards.</p></div><div class=q-card><h4>Process</h4><p>Our proven cadences, scripts, and objection-handling frameworks turn cold outreach into warm pipeline consistently. Multi-channel cadence design, talk-track library, objection playbooks, pipeline stage definitions.</p></div><div class=q-card><h4>Technology</h4><p>We leverage ZoomInfo for targeting, ConnectAndSell for live conversations, and HubSpot for full-funnel visibility — all fully integrated. ZoomInfo data enrichment, ConnectAndSell power dialing, HubSpot CRM automation, real-time dashboards.</p></div></div><p><a class=q-btn href='https://meetings.hubspot.com/shawn-peterson'>See It In Action</a></p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s3" path="../modules/quantum-rich-text", width=12, maxw="wide", prose="<h2>Ready to Build a Pipeline Machine?</h2><p>Book a free discovery call and let us show you how People, Process, and Technology can transform your outbound results.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s4" path="../modules/quantum-rich-text", width=12, maxw="full", prose="<h2>Outbound Sales FAQ</h2><div class=q-cards><div class=q-card><h4>What is outbound sales and how does it differ from inbound?</h4><p>Outbound sales is proactive prospecting — your team reaches out to potential customers through calls, emails, and social selling rather than waiting for leads to come to you.</p></div><div class=q-card><h4>How many calls should sales reps make per day?</h4><p>With traditional dialing, a good rep makes 50–80 calls per day. With ConnectAndSell, reps can have 8–12 live conversations per hour.</p></div><div class=q-card><h4>What's a good connect rate for outbound sales?</h4><p>Industry average is 3–5%. Using ConnectAndSell and ZoomInfo together, our clients achieve 8–15% connect rates.</p></div><div class=q-card><h4>Do I need to hire more sales reps to scale outbound?</h4><p>Not necessarily. Our framework helps you get more from your existing team first — most clients double pipeline before needing to add headcount.</p></div><div class=q-card><h4>How quickly can I start seeing pipeline from outbound?</h4><p>Most clients see new meetings within the first 2 weeks. Meaningful pipeline impact typically shows within 60–90 days.</p></div></div>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% module "s5" path="@hubspot/video", hubspot_video={"player_id":20682069,"player_type":"hsvideo2","autoplay":false,"loop_video":false,"mute_by_default":false,"width":1920,"height":1080}, video_type="hubspot_video" %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s6" path="../modules/quantum-cta-band", width=12, heading="Ready to maximize your growth?", subhead="Book a call and we will map your path to a unified revenue engine.", cta_label="Book a call" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+</main>
+{% endblock %}

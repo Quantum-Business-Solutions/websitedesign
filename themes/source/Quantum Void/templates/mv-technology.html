@@ -1,0 +1,30 @@
+<!--
+  templateType: page
+  label: QV technology
+  isAvailableForNewContent: true
+-->
+{% extends "./layouts/base.html" %}
+{% block body %}
+<main>
+  {% dnd_area "main" label="Main content" %}
+    {% dnd_section %}
+      {% dnd_module "s0" path="../modules/quantum-hero", width=12, layout="centered", eyebrow="Quantum", heading="Connect Everything. Automate Anything.", subhead="Your tools should talk to each other. We build the bridges between your systems so data flows freely and work gets done automatically. From CRM configuration to cloud infrastructure, we set up and manage the technology that powers your revenue engine.", primary_label="Get Your Free Assessment", secondary_label="Book a Call" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s1" path="../modules/quantum-rich-text", width=12, maxw="full", prose="<div class=q-cards><div class=q-card><h4>500+</h4><p>Integrations Built</p></div><div class=q-card><h4>99.9%</h4><p>System Uptime</p></div><div class=q-card><h4>50%</h4><p>Faster Workflows</p></div></div>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s2" path="../modules/quantum-rich-text", width=12, maxw="full", prose="<div class=q-cards><div class=q-card><h4>n8n Workflows</h4><p>Enterprise-grade automation pipelines that connect your entire tech stack without vendor lock-in.</p></div><div class=q-card><h4>Zapier Automation</h4><p>Rapid-deploy automations for teams that need results fast without heavy engineering lift.</p></div><div class=q-card><h4>Custom API Work</h4><p>When off-the-shelf won't cut it — custom integrations built to your exact specifications.</p></div><div class=q-card><h4>Data Sync & Migration</h4><p>Seamless data migration and real-time sync between any platforms, zero data loss guaranteed.</p></div><div class=q-card><h4>CRM & Sales Tech Stack</h4><p>End-to-end CRM setup, customization, and optimization so your sales team works in one unified system.</p></div><div class=q-card><h4>Marketing Automation Platforms</h4><p>Configure and connect marketing automation tools that nurture leads and attribute revenue automatically.</p></div><div class=q-card><h4>Business Intelligence & Reporting</h4><p>Dashboards and reporting that give leadership real-time visibility into pipeline, revenue, and operations.</p></div><div class=q-card><h4>Cloud Infrastructure & DevOps</h4><p>Scalable cloud environments and CI/CD pipelines so your tech runs reliably without babysitting.</p></div></div>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s3" path="../modules/quantum-rich-text", width=12, maxw="full", prose="<h2>FAQ</h2><div class=q-cards><div class=q-card><h4>What types of integrations do you build?</h4><p>We build integrations using n8n, Zapier, custom APIs, and native connectors between CRMs, ERPs, marketing platforms, and more.</p></div><div class=q-card><h4>Do you work with our existing tech stack?</h4><p>Yes. We integrate with your current tools rather than replacing them.</p></div><div class=q-card><h4>What's the difference between n8n and Zapier?</h4><p>Zapier is ideal for simple automations. n8n handles complex workflows with branching logic, error handling, and self-hosting.</p></div><div class=q-card><h4>How do you handle data migration?</h4><p>Staged approach: audit, map fields, test migration, full migration, then validate integrity.</p></div><div class=q-card><h4>What does ongoing support look like?</h4><p>Monitoring, maintenance, optimization, proactive error detection, and priority support.</p></div></div><p><a class=q-btn href='https://www.thequantumleap.business/contact?hsLang=en'>Book Your Free Strategy Call</a></p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% module "s4" path="@hubspot/video", hubspot_video={"player_id":20682069,"player_type":"hsvideo2","autoplay":false,"loop_video":false,"mute_by_default":false,"width":1920,"height":1080}, video_type="hubspot_video" %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s5" path="../modules/quantum-cta-band", width=12, heading="Ready to maximize your growth?", subhead="Book a call and we will map your path to a unified revenue engine.", cta_label="Book a call" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+</main>
+{% endblock %}

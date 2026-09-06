@@ -1,0 +1,67 @@
+{# Quantum Growth Model — dark, glowing pipeline. Icons map by loop index (1–5). #}
+{% set gm_icons = [
+  '<svg width="34" height="34" viewBox="0 0 40 40" fill="none" stroke="#f0dca0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="20" r="15"/><circle cx="20" cy="20" r="9"/><circle cx="20" cy="20" r="3" fill="#c6a54b" stroke="none"/></svg>',
+  '<svg width="34" height="34" viewBox="0 0 40 40" fill="none" stroke="#f0dca0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 9v11a9 9 0 0 0 18 0V9"/><path d="M11 9h6v11a3 3 0 0 1-6 0z"/><path d="M23 9h6v11a3 3 0 0 1-6 0z"/></svg>',
+  '<svg width="34" height="34" viewBox="0 0 40 40" fill="none" stroke="#f0dca0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 31s-11-6.5-11-14a6 6 0 0 1 11-3 6 6 0 0 1 11 3c0 7.5-11 14-11 14z"/></svg>',
+  '<svg width="34" height="34" viewBox="0 0 40 40" fill="none" stroke="#f0dca0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 15h16l-4-4"/><path d="M31 25H15l4 4"/></svg>',
+  '<svg width="34" height="34" viewBox="0 0 40 40" fill="none" stroke="#f0dca0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6l3.8 8.2L33 15.4l-6.5 6 1.7 9-8.2-4.4L11.8 30l1.7-9-6.5-6 9.2-1.2z"/></svg>'
+] %}
+{% require_head %}
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+{% end_require_head %}
+{% require_css %}
+<style>
+.q-gm{{ module.id }}{position:relative;overflow:hidden;padding:110px 64px 120px;background:#070a10;}
+.q-gm{{ module.id }} .gm-card{transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s,border-color .35s;}
+.q-gm{{ module.id }} .gm-card:hover{transform:translateY(-8px);border-color:rgba(198,165,75,0.5);box-shadow:0 24px 60px rgba(0,0,0,0.5),0 0 0 1px rgba(198,165,75,0.2);}
+@media (max-width:900px){.q-gm{{ module.id }}{padding:72px 24px 80px;}.q-gm{{ module.id }} .gm-flow{flex-wrap:wrap;}.q-gm{{ module.id }} .gm-card{min-width:calc(50% - 8px);}}
+</style>
+{% end_require_css %}
+
+<section class="q-gm{{ module.id }}">
+  <div style="position:absolute;left:50%;top:-120px;width:1000px;height:700px;transform:translateX(-50%);background:radial-gradient(ellipse,rgba(198,165,75,0.16),transparent 65%);pointer-events:none;filter:blur(6px);"></div>
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.07) 1px,transparent 1px);background-size:70px 70px;opacity:.4;-webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 30%,#000,transparent);mask-image:radial-gradient(ellipse 80% 60% at 50% 30%,#000,transparent);"></div>
+  <div style="position:relative;max-width:1500px;margin:0 auto;">
+
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:28px;">
+      <div>
+        <div style="display:inline-flex;align-items:center;gap:9px;font:700 12px 'DM Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#c6a54b;background:rgba(198,165,75,0.1);border:1px solid rgba(198,165,75,0.18);padding:8px 15px;border-radius:30px;">
+          <span style="width:7px;height:7px;border-radius:50%;background:#c6a54b;box-shadow:0 0 12px #c6a54b;"></span>{{ module.eyebrow }}</div>
+        <h2 style="font:400 60px/1.02 'Instrument Serif',serif;color:#eef0f5;margin:22px 0 0;">{{ module.heading }}</h2>
+      </div>
+      {% if module.intro %}<p style="font:400 16px/1.65 'DM Sans',sans-serif;color:#9299a6;max-width:360px;margin:0 0 8px;">{{ module.intro }}</p>{% endif %}
+    </div>
+
+    {% set n = module.stages|length %}
+    <div style="position:relative;margin:56px 0 0;">
+      <div style="position:relative;height:2px;margin:0 8%;background:linear-gradient(90deg,transparent,rgba(198,165,75,0.18),rgba(198,165,75,0.18),transparent);"></div>
+      <div style="position:absolute;top:-6px;left:8%;right:8%;display:flex;justify-content:space-between;">
+        {% for s in module.stages %}<span style="width:14px;height:14px;border-radius:50%;background:#c6a54b;box-shadow:0 0 18px #c6a54b,0 0 0 5px rgba(198,165,75,0.12);"></span>{% endfor %}
+      </div>
+    </div>
+
+    <div class="gm-flow" style="position:relative;display:flex;align-items:stretch;gap:16px;margin-top:34px;">
+    {% for s in module.stages %}
+      {% set idx = loop.index0 % 5 %}
+      <div class="gm-card" style="position:relative;flex:1;min-width:200px;background:linear-gradient(165deg,rgba(255,255,255,0.05),rgba(255,255,255,0.015));border:1px solid rgba(198,165,75,0.18);border-radius:16px;padding:30px 24px 28px;display:flex;flex-direction:column;gap:16px;overflow:hidden;">
+        <div style="position:absolute;top:-30px;right:-6px;font:400 130px 'Instrument Serif',serif;color:rgba(198,165,75,0.07);line-height:1;pointer-events:none;">{{ '%02d'|format(loop.index) }}</div>
+        <div style="position:absolute;left:0;top:0;height:3px;width:100%;background:linear-gradient(90deg,#c6a54b,transparent);opacity:.8;"></div>
+        <div style="position:relative;width:56px;height:56px;border-radius:14px;background:radial-gradient(circle at 30% 30%,rgba(198,165,75,0.28),rgba(198,165,75,0.06));border:1px solid rgba(198,165,75,0.18);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(198,165,75,0.12);">{{ gm_icons[idx] }}</div>
+        <div style="position:relative;font:700 21px 'DM Sans',sans-serif;color:#eef0f5;letter-spacing:.01em;">{{ s.title }}</div>
+        <div style="position:relative;font:400 14px 'DM Sans',sans-serif;line-height:1.6;color:#9299a6;">{{ s.desc }}</div>
+        <div style="position:relative;margin-top:auto;font:700 12px 'DM Sans',sans-serif;letter-spacing:.14em;color:#c6a54b;opacity:.85;">STAGE {{ '%02d'|format(loop.index) }}</div>
+      </div>
+    {% endfor %}
+    </div>
+
+    {% if module.cycles %}
+    <div style="position:relative;margin-top:56px;display:flex;align-items:center;gap:24px;flex-wrap:wrap;justify-content:center;">
+      <span style="font:600 11px 'DM Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#6b7280;">{{ module.cycles_label }}</span>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        {% for c in module.cycles %}<span style="font:700 13px 'DM Sans',sans-serif;letter-spacing:.18em;color:#f0dca0;background:linear-gradient(160deg,rgba(198,165,75,0.16),rgba(198,165,75,0.03));border:1px solid rgba(198,165,75,0.18);padding:11px 22px;border-radius:40px;box-shadow:0 6px 20px rgba(198,165,75,0.1);">{{ c.pill|upper }}</span>{% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+  </div>
+</section>

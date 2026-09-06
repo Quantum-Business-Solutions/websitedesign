@@ -1,0 +1,198 @@
+{% if module.endpoint %}
+<style>
+.qa-launch{position:fixed;bottom:22px;left:22px;z-index:90;display:flex;align-items:center;gap:10px;
+  background:#101725;border:1px solid rgba(196,164,74,.45);color:var(--q-gold);border-radius:999px;
+  padding:13px 22px;font-family:'DM Sans',sans-serif;font-size:14.5px;font-weight:600;cursor:pointer;
+  box-shadow:0 10px 30px rgba(0,0,0,.5);}
+.qa-launch:hover{background:rgba(196,164,74,.12);}
+.qa-panel{position:fixed;bottom:22px;left:22px;z-index:95;width:390px;max-width:calc(100vw - 24px);
+  height:600px;max-height:calc(100vh - 44px);display:none;flex-direction:column;background:#0b111d;
+  border:1px solid rgba(196,164,74,.3);border-radius:16px;box-shadow:0 24px 70px rgba(0,0,0,.65);overflow:hidden;
+  font-family:'DM Sans',sans-serif;}
+.qa-panel.open{display:flex;}
+.qa-head{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;
+  border-bottom:1px solid rgba(196,164,74,.2);background:#101725;}
+.qa-head b{color:#e2e5eb;font-size:15px;font-weight:600;}
+.qa-head span{display:block;color:#8a8f9b;font-size:11.5px;margin-top:1px;}
+.qa-close{background:none;border:none;color:#8a8f9b;font-size:22px;cursor:pointer;line-height:1;}
+.qa-log{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:12px;}
+.qa-msg{max-width:86%;padding:10px 14px;border-radius:12px;font-size:14px;line-height:1.55;white-space:pre-wrap;word-wrap:break-word;}
+.qa-msg.user{align-self:flex-end;background:rgba(196,164,74,.14);color:#e2e5eb;border:1px solid rgba(196,164,74,.25);}
+.qa-msg.bot{align-self:flex-start;background:#131b2b;color:#cfd3db;border:1px solid rgba(226,229,235,.08);}
+.qa-msg.bot a{color:var(--q-gold);}
+.qa-book{align-self:flex-start;display:inline-block;background:var(--q-gold);color:#0b111d;font-weight:700;
+  font-size:14px;text-decoration:none;border-radius:999px;padding:11px 22px;margin-top:2px;}
+.qa-typing{align-self:flex-start;color:#8a8f9b;font-size:13px;padding:2px 6px;}
+.qa-inputrow{display:flex;gap:8px;padding:12px;border-top:1px solid rgba(196,164,74,.2);background:#101725;align-items:flex-end;}
+.qa-attach{background:#0b111d;border:1px solid rgba(226,229,235,.15);border-radius:10px;color:#8a8f9b;
+  width:44px;height:44px;flex:0 0 auto;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+.qa-attach:hover{color:var(--q-gold);border-color:rgba(196,164,74,.5);}
+.qa-chips{display:flex;flex-wrap:wrap;gap:6px;padding:0 12px;background:#101725;}
+.qa-chips:not(:empty){padding-top:10px;}
+.qa-chip{display:inline-flex;align-items:center;gap:6px;background:#0b111d;border:1px solid rgba(196,164,74,.3);
+  color:#cfd3db;border-radius:999px;padding:5px 10px;font-size:12px;max-width:220px;}
+.qa-chip span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.qa-chip button{background:none;border:none;color:#8a8f9b;cursor:pointer;font-size:15px;line-height:1;padding:0;}
+.qa-input{flex:1;background:#0b111d;border:1px solid rgba(226,229,235,.15);border-radius:10px;color:#e2e5eb;
+  padding:11px 13px;font-size:14px;font-family:inherit;resize:none;height:44px;}
+.qa-input:focus{outline:none;border-color:rgba(196,164,74,.5);}
+.qa-send{background:var(--q-gold);color:#0b111d;border:none;border-radius:10px;padding:0 18px;font-weight:700;
+  font-size:14px;cursor:pointer;}
+.qa-send:disabled{opacity:.5;cursor:default;}
+.qa-note{text-align:center;color:#5c6270;font-size:10.5px;padding:0 12px 10px;background:#101725;}
+@media(max-width:640px){.qa-panel{bottom:0;left:0;border-radius:16px 16px 0 0;height:80vh;width:100vw;max-width:100vw;}}
+</style>
+
+<button class="qa-launch" id="qaLaunch" aria-label="Open chat">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+  {{ module.launcher_label }}
+</button>
+
+<div class="qa-panel" id="qaPanel" role="dialog" aria-label="Quantum Assistant">
+  <div class="qa-head">
+    <div><b>Quantum Assistant</b><span>Answers from our site. For anything else, book a call.</span></div>
+    <button class="qa-close" id="qaClose" aria-label="Close">&times;</button>
+  </div>
+  <div class="qa-log" id="qaLog"></div>
+  <div class="qa-chips" id="qaChips"></div>
+  <div class="qa-inputrow">
+    <input type="file" id="qaFile" accept="image/png,image/jpeg,image/webp,image/gif,application/pdf" style="display:none" multiple>
+    <button class="qa-attach" id="qaAttach" type="button" aria-label="Attach a file" title="Attach an image or PDF to review">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+    </button>
+    <textarea class="qa-input" id="qaInput" placeholder="Ask, or paste/upload copy to review..." rows="1"></textarea>
+    <button class="qa-send" id="qaSend">Send</button>
+  </div>
+  <div class="qa-note">AI assistant. May make mistakes; verify important details or <a href="https://meetings.hubspot.com/shawn-peterson" style="color:#8a8f9b;">talk to a human</a>.</div>
+</div>
+
+<script>
+(function () {
+  var ENDPOINT = {{ module.endpoint|tojson }};
+  var GREETING = {{ module.greeting|tojson }};
+  // Page-aware opening line: tailor the first message to the page the visitor is on.
+  function pickGreeting(){
+    var p = (location.pathname || '').toLowerCase();
+    var map = [
+      [/q2-revenue-machine/, "Hi. Q2 Revenue Machine is our HubSpot system built for copier dealers, office technology, and MSPs, with e-automate integration. Ask me how it works, or type \"script\", \"sequence\", or \"research\" and I will help right now."],
+      [/zoominfo/, "Hi. Quantum is a ZoomInfo Solutions Partner. Ask me about our ZoomInfo services and data enrichment, or type \"script\", \"sequence\", or \"research\" for hands-on help."],
+      [/(connectandsell|\/cas)/, "Hi. Ask me anything about ConnectAndSell and how Quantum helps teams get more live conversations. I can also write you a call script or sequence, just type \"script\" or \"sequence\"."],
+      [/(hubspot|\/services\/|\/pricing)/, "Hi. Ask me about Quantum's HubSpot services, onboarding, migration, or pricing. I can also help with sales scripts, sequences, or prospect research, just type \"script\", \"sequence\", or \"research\"."],
+      [/(ai-solutions|ai-assessment|quantum-ai|ai-workforce)/, "Hi. Ask me about Quantum's AI solutions for revenue teams, or put me to work: type \"script\", \"sequence\", or \"research\"."],
+      [/(outbound-sales|sales-blitz|online-sales-training|b2bsales)/, "Hi. I can help you prospect right now. Type \"script\" for a cold-call script, \"sequence\" for a cadence, or \"research\" to build an account brief. I can also answer questions about Quantum's outbound services."],
+      [/(marketing-services|website-services)/, "Hi. Ask me about Quantum's marketing and website services, or type \"script\", \"sequence\", or \"research\" for hands-on sales help."],
+      [/aeo/, "Hi. Ask me about Answer Engine Optimization and how Quantum helps you get cited by AI search, or type \"script\", \"sequence\", or \"research\" for hands-on help."]
+    ];
+    for (var i=0;i<map.length;i++){ if (map[i][0].test(p)) return map[i][1]; }
+    return GREETING;
+  }
+  var log = document.getElementById('qaLog'), input = document.getElementById('qaInput'),
+      sendBtn = document.getElementById('qaSend'), panel = document.getElementById('qaPanel'),
+      launch = document.getElementById('qaLaunch'),
+      fileInput = document.getElementById('qaFile'), attachBtn = document.getElementById('qaAttach'),
+      chips = document.getElementById('qaChips');
+  var history = [], convId = sessionStorage.getItem('qa_conv') || null, busy = false;
+  var pending = []; // {name, media_type, kind, data(base64)}
+  var visitorId = localStorage.getItem('qa_vid') || (Date.now().toString(36) + Math.random().toString(36).slice(2, 8));
+  localStorage.setItem('qa_vid', visitorId);
+  var MAX_FILE = 4 * 1024 * 1024; // 4MB
+
+  function renderChips(){
+    chips.innerHTML = '';
+    pending.forEach(function(a, idx){
+      var c = document.createElement('div'); c.className = 'qa-chip';
+      var s = document.createElement('span'); s.textContent = a.name; c.appendChild(s);
+      var b = document.createElement('button'); b.type='button'; b.setAttribute('aria-label','Remove'); b.textContent='×';
+      b.addEventListener('click', function(){ pending.splice(idx,1); renderChips(); });
+      c.appendChild(b); chips.appendChild(c);
+    });
+  }
+  attachBtn.addEventListener('click', function(){ fileInput.click(); });
+  fileInput.addEventListener('change', function(){
+    var files = Array.prototype.slice.call(fileInput.files || []);
+    files.forEach(function(f){
+      if (pending.length >= 3) return;
+      if (f.size > MAX_FILE){ add('bot', 'That file is over 4MB. Please attach a smaller image or PDF.'); return; }
+      var reader = new FileReader();
+      reader.onload = function(){
+        var res = String(reader.result || '');
+        var data = res.indexOf(',') >= 0 ? res.slice(res.indexOf(',')+1) : res;
+        var kind = f.type === 'application/pdf' ? 'pdf' : 'image';
+        pending.push({ name: f.name, media_type: f.type, kind: kind, data: data });
+        renderChips();
+      };
+      reader.readAsDataURL(f);
+    });
+    fileInput.value = '';
+  });
+
+  function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML;}
+  function linkify(s){return esc(s)
+    .replace(/(https:\/\/[^\s<]+)/g,'<a href="$1" target="_blank" rel="noopener">$1<\/a>')
+    .replace(/(^|[\s(])(\/[a-z0-9][a-z0-9\-\/]*)/g,'$1<a href="$2">$2<\/a>');}
+  function add(role, text){var m=document.createElement('div');m.className='qa-msg '+role;
+    m.innerHTML=role==='bot'?linkify(text):esc(text);log.appendChild(m);log.scrollTop=log.scrollHeight;return m;}
+  function addBook(url){var a=document.createElement('a');a.className='qa-book';a.href=url;a.target='_blank';
+    a.rel='noopener';a.textContent='Book a call with Shawn';log.appendChild(a);log.scrollTop=log.scrollHeight;}
+
+  launch.addEventListener('click', function(){
+    panel.classList.add('open'); launch.style.display='none';
+    if (!log.children.length) add('bot', pickGreeting());
+    input.focus();
+  });
+  document.getElementById('qaClose').addEventListener('click', function(){
+    panel.classList.remove('open'); launch.style.display='flex';
+  });
+
+  function send(){
+    var q = input.value.trim();
+    var atts = pending.slice();
+    if ((!q && !atts.length) || busy) return;
+    if (!q && atts.length) q = 'Please review the attached file and give me your feedback.';
+    busy = true; sendBtn.disabled = true; input.value = '';
+    var label = atts.length ? q + '\n(' + atts.length + ' file' + (atts.length>1?'s':'') + ' attached)' : q;
+    add('user', label); history.push({ role: 'user', content: q });
+    pending = []; renderChips();
+    var typing = document.createElement('div'); typing.className='qa-typing'; typing.textContent='Thinking...';
+    log.appendChild(typing); log.scrollTop = log.scrollHeight;
+
+    fetch(ENDPOINT, {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ messages: history, conversation_id: convId, visitor_id: visitorId, page_url: location.pathname, attachments: atts })
+    }).then(function (res) {
+      if (!res.ok) throw new Error('http ' + res.status);
+      var reader = res.body.getReader(), dec = new TextDecoder(), buf = '', botMsg = null, botText = '';
+      function pump(){ return reader.read().then(function (r) {
+        if (r.done) { finish(); return; }
+        buf += dec.decode(r.value, { stream: true });
+        var frames = buf.split('\n\n'); buf = frames.pop();
+        frames.forEach(function (f) {
+          var ev = (f.match(/^event: (.+)$/m) || [])[1];
+          var dataLine = (f.match(/^data: (.+)$/m) || [])[1];
+          if (!ev || !dataLine) return;
+          var data = {}; try { data = JSON.parse(dataLine); } catch (e) {}
+          if (ev === 'text') {
+            if (typing.parentNode) typing.remove();
+            if (!botMsg) botMsg = add('bot', '');
+            botText += data.delta; botMsg.innerHTML = linkify(botText); log.scrollTop = log.scrollHeight;
+          } else if (ev === 'meeting_link') { if (typing.parentNode) typing.remove(); addBook(data.url); }
+          else if (ev === 'done') { if (data.conversation_id) { convId = data.conversation_id; sessionStorage.setItem('qa_conv', convId); } }
+          else if (ev === 'error') { if (typing.parentNode) typing.remove(); add('bot', data.message || 'Something went wrong.'); }
+        });
+        return pump();
+      });}
+      function finish(){ if (typing.parentNode) typing.remove();
+        if (botText) history.push({ role: 'assistant', content: botText });
+        busy = false; sendBtn.disabled = false; input.focus(); }
+      return pump();
+    }).catch(function () {
+      if (typing.parentNode) typing.remove();
+      add('bot', 'I could not reach the assistant just now. You can book a call instead: https://meetings.hubspot.com/shawn-peterson');
+      busy = false; sendBtn.disabled = false;
+    });
+  }
+  sendBtn.addEventListener('click', send);
+  input.addEventListener('keydown', function (e) { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); send(); } });
+})();
+</script>
+{% endif %}

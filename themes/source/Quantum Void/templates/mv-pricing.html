@@ -1,0 +1,42 @@
+<!--
+  templateType: page
+  label: QV pricing
+  isAvailableForNewContent: true
+-->
+{% extends "./layouts/base.html" %}
+{% block body %}
+<main>
+  {% dnd_area "main" label="Main content" %}
+    {% dnd_section %}
+      {% dnd_module "s0" path="../modules/quantum-hero", width=12, layout="centered", eyebrow="Quantum", heading="Transparent Pricing", subhead="No hidden fees, no surprises. Choose the services that fit your business — from one-time projects to ongoing managed services.", primary_label="Get a Custom Quote", secondary_label="Grade Your Business Free" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s1" path="../modules/quantum-rich-text", width=12, maxw="wide", prose="<h2>AI Services</h2><p>AI strategy, automation, and custom builds — from discovery to managed service.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s2" path="../modules/quantum-rich-text", width=12, maxw="wide", prose="<h2>GTM / CRO</h2><p>Go-to-market strategy and conversion rate optimization engagements.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s3" path="../modules/quantum-rich-text", width=12, maxw="wide", prose="<h2>HubSpot Services</h2><p>Flexible hourly blocks, audits, cleanup, and managed admin tiers.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s4" path="../modules/quantum-rich-text", width=12, maxw="wide", prose="<h2>Website & Landing Pages</h2><p>HubSpot CMS websites and landing pages — growth-driven design.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s5" path="../modules/quantum-rich-text", width=12, maxw="wide", prose="<h2>Sales Training</h2><p>Sales Blitz, Quantum Academy, bootcamps, and ConnectAndSell seats.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s6" path="../modules/quantum-rich-text", width=12, maxw="full", prose="<h2>Frequently Asked Questions</h2><div class=q-cards><div class=q-card><h4>Why does Quantum publish pricing transparently when most agencies don't?</h4><p>We publish pricing because we believe a prospect should know whether we are in their budget range before a sales call, not after three meetings. Hidden pricing wastes both sides' time. The published rates are real and apply to standard scopes — custom or unusually complex engagements get bespoke quotes, but those start from these baselines, not above them.</p></div><div class=q-card><h4>Are HubSpot hour blocks the same as ongoing Admin Services?</h4><p>No. Hour blocks are pre-purchased project hours that you draw down as needed and roll forward across months until used. Admin as a Service is a recurring monthly subscription with defined service levels and ticket volumes. Hour blocks are right when you have specific projects to deliver; Admin as a Service is right when you want predictable monthly support without scoping each request.</p></div><div class=q-card><h4>What's the difference between the three Admin as a Service tiers?</h4><p>Tier 3 ($2,000/month) covers basic portal maintenance, list and sequence updates, and reactive ticket handling for smaller portals. Tier 2 ($3,000/month) adds proactive optimization, faster response SLAs, and quarterly portal reviews. Tier 1 ($5,000/month) is white-glove — dedicated administrator continuity, same-day response on urgent issues, ongoing strategic advisory, and custom development hours included monthly. Tier choice depends on portal complexity and how much you need us thinking ahead versus catching up.</p></div><div class=q-card><h4>How do AI Service engagements work — what does the discovery, setup, and managed service include?</h4><p>AI Discovery Workshop ($1,500) is a focused half-day session that maps your sales motion, identifies AI opportunities, and produces a prioritized implementation roadmap. AI SDR Setup ($4,995) configures the AI prospecting agent, integrates it with HubSpot and ZoomInfo, and trains your team on the workflow. AI SDR Managed Service ($1,995/month) covers ongoing optimization, prompt refinement, performance monitoring, and reporting after launch. Each component can be purchased separately depending on where you are in the AI adoption curve.</p></div><div class=q-card><h4>Can pricing be adjusted for non-standard scope, multi-service engagements, or longer-term commitments?</h4><p>Yes. Multi-service engagements (HubSpot + ZoomInfo + ConnectAndSell, for example) typically receive bundled pricing that's 10-20% below the sum of individual line items. Annual prepayment for retainer services typically receives a discount equivalent to one month free. Custom scopes outside the published catalog get fixed quotes after a discovery call. We do not negotiate published rates downward without scope changes — discounting based on negotiation pressure produces engagements that feel transactional from day one, and we have found that's bad for both sides.</p></div></div>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s7" path="../modules/quantum-rich-text", width=12, maxw="wide", prose="<h2>Ready to Get Started?</h2><p>Start with a free assessment. We'll show you exactly where the opportunities are.</p><p><a class=q-btn href='https://meetings.hubspot.com/shawn-peterson'>Book a Call</a></p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% module "s8" path="@hubspot/video", hubspot_video={"player_id":20682069,"player_type":"hsvideo2","autoplay":false,"loop_video":false,"mute_by_default":false,"width":1920,"height":1080}, video_type="hubspot_video" %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s9" path="../modules/quantum-cta-band", width=12, heading="Ready to maximize your growth?", subhead="Book a call and we will map your path to a unified revenue engine.", cta_label="Book a call" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+</main>
+{% endblock %}

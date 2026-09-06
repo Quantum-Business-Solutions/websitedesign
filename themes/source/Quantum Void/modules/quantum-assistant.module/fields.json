@@ -1,0 +1,31 @@
+[ {
+  "id" : "endpoint",
+  "name" : "endpoint",
+  "label" : "Chat endpoint URL (qa-chat edge function)",
+  "required" : true,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : ""
+}, {
+  "id" : "greeting",
+  "name" : "greeting",
+  "label" : "Greeting message",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Hi, I am the Quantum Assistant. Ask me anything about our services, pricing, or how we work."
+}, {
+  "id" : "launcher_label",
+  "name" : "launcher_label",
+  "label" : "Launcher label",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Ask Quantum"
+} ]

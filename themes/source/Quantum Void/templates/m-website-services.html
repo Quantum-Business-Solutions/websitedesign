@@ -1,0 +1,36 @@
+<!--
+  templateType: page
+  label: QV website-services
+  isAvailableForNewContent: true
+-->
+{% extends "./layouts/base.html" %}
+{% block body %}
+<main>
+  {% dnd_area "main" %}
+    {% dnd_section %}
+      {% dnd_module "s_hero" path="../modules/quantum-hero", width=12, layout="centered", eyebrow="WEBSITE DESIGN & DEVELOPMENT", heading="Transform Your Brand With Websites That Generate Revenue Expert design and development for HubSpot or WordPress websites", subhead="", primary_label="Book a call", secondary_label="Learn more" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_0" path="../modules/quantum-rich-text", width=12, prose="<h2>Our Proven Web Design Process To ensure the success of your website, we follow a structured, research-driven process:</h2>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s_1" path="../modules/quantum-rich-text", width=12, prose="<h2>Why Choose Quantum for Your Website Design We understand that your website is more than just a digital presence; it's an extension of your brand</h2><p>Our custom HubSpot and WordPress website design services ensure that your site represents your brand’s identity and caters to your business objectives.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_2" path="../modules/quantum-rich-text", width=12, prose="<h2>Platforms We Specialize In HubSpot: Integrated CRM and marketing features for seamless inbound marketing</h2><p>WordPress: Versatile and user-friendly, perfect for businesses of all sizes. Shopify: E-commerce powerhouse designed to boost your online sales.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s_3" path="../modules/quantum-rich-text", width=12, prose="<h2>Built for Performance We follow a structured, data-driven process to deliver websites that generate measurable results</h2><div class=q-cards><div class=q-card><h4>Growth-Driven</h4><p>Design Launch fast in 60 days, then continuously optimize based on real user data with monthly sprints, A/B testing, and heatmap analysis.</p></div><div class=q-card><h4>HubSpot</h4><p>CMS Development Built natively on HubSpot CMS for seamless CRM integration, smart content personalization, blog and resource centers, and custom landing pages.</p></div><div class=q-card><h4>SEO and</h4><p>Content Strategy Every page built for search visibility with technical SEO audits, pillar page strategy, schema markup, and Core Web Vitals optimization.</p></div><div class=q-card><h4>Conversion</h4><p>Optimization Every element designed to guide visitors toward action — conversion-focused layouts, smart CTA placement, form optimization, and social proof integration.</p></div><div class=q-card><h4>Content and</h4><p>Copywriting SEO-friendly content that resonates with your audience, supports your brand voice, and drives organic traffic to your site.</p></div><div class=q-card><h4>Launch and</h4><p>Continuous Improvement Thorough cross-device testing, seamless launch, and ongoing monthly performance reviews with analytics reporting and optimization.</p></div></div>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_4" path="../modules/quantum-rich-text", width=12, prose="<h2>Frequently Asked Questions Why build on HubSpot CMS instead of WordPress?</h2><p>HubSpot CMS offers built-in CRM integration, enterprise-grade security, automatic SSL, and no plugin management. Your website, marketing automation, and sales tools all live in one platform — eliminating data silos and reducing maintenance overhead. What is growth-driven design? A data-driven approach that launches a high-impact site fast (typically 60 days), then continuously optimizes based on real user behavior, heatmaps, and conversion data — rather than rebuilding every 2–3 years. How long does a website project take? Typical projects launch in 6–10 weeks depending on scope. We start with a launch pad site, then iterate monthly with data-driven improvements. Do you handle SEO as part of the website build? Yes. Every site includes technical SEO, on-page optimization, schema markup, Core Web Vitals tuning, and pillar page strategy — built in from day one, not bolted on after. What's included in ongoing website optimization? Monthly performance reviews, A/B testing, content updates, conversion rate optimization, and detailed analytics reporting to ensure your site keeps improving after launch.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s_5" path="../modules/quantum-rich-text", width=12, prose="<h2>Ready to Maximize Your Online Presence?</h2><p>Contact us today to discover how we can build a website that truly represents your brand and achieves your business goals.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_cta" path="../modules/quantum-cta-band", width=12 %}{% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+</main>
+{% endblock %}

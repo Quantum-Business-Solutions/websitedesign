@@ -1,0 +1,30 @@
+<!--
+  templateType: page
+  label: QV operational-efficiency
+  isAvailableForNewContent: true
+-->
+{% extends "./layouts/base.html" %}
+{% block body %}
+<main>
+  {% dnd_area "main" %}
+    {% dnd_section %}
+      {% dnd_module "s_hero" path="../modules/quantum-hero", width=12, layout="centered", eyebrow="OPERATIONAL EFFICIENCY", heading="Cut Costs & Scale Smarter Eliminate busywork across every department", subhead="We automate the repetitive so your team can focus on what actually moves the needle. 30+ Hours Saved Per Week • 85% Process Automation • 40% Cost Reduction", primary_label="Book a call", secondary_label="Learn more" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_0" path="../modules/quantum-rich-text", width=12, prose="<h2>Automate Every Department We streamline operations across your entire organization: HR & People Ops — Automated onboarding flows, PTO & leave management, performance review automation, employee data sync</h2><div class=q-cards><div class=q-card><h4>Finance &</h4><p>Accounting — Invoice processing automation, expense management, financial reporting, approval workflows.</p></div><div class=q-card><h4>Operations &</h4><p>Fulfillment — Order processing automation, inventory sync, shipping & logistics, vendor management.</p></div><div class=q-card><h4>IT &</h4><p>Admin — User provisioning/deprovisioning, ticket routing & triage, asset management, security compliance.</p></div><div class=q-card><h4>Process</h4><p>Design — Process mapping & audit, bottleneck identification, SOP documentation, automation roadmap.</p></div><div class=q-card><h4>Cross-Department</h4><p>Automation — Inter-department workflows, unified dashboards, notification orchestration, compliance automation.</p></div></div>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s_1" path="../modules/quantum-rich-text", width=12, prose="<h2>Our Approach A proven methodology to identify, prioritize, and automate your biggest operational bottlenecks</h2><div class=q-cards><div class=q-card><h4>Assess &</h4><p>Map We map your existing processes, identify bottlenecks, and quantify the cost of manual work across every department.</p></div><div class=q-card><h4>Design &</h4><p>Build We design automation workflows, select the right tools, and build integrations that eliminate manual handoffs.</p></div><div class=q-card><h4>Launch &</h4><p>Optimize We deploy automations, train your team, and continuously optimize for maximum efficiency and ROI.</p></div></div>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_2" path="../modules/quantum-rich-text", width=12, prose="<h2>Ready to Maximize Your Business Outcomes?</h2><p>Start with a free assessment. We'll show you exactly where the opportunities are — and how to capture them.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s_3" path="../modules/quantum-rich-text", width=12, prose="<h2>Operational Efficiency FAQ What is operational efficiency consulting?</h2><p>We audit your internal processes across HR, finance, IT, and operations to find bottlenecks, redundant workflows, and manual tasks that can be automated — then we build and implement the solutions to eliminate them. Which departments benefit most from automation? HR, finance, IT, and operations typically see the biggest gains. These departments often rely on repetitive, rule-based processes that are ideal candidates for automation. How much can automation reduce operational costs? Clients typically see 30–40% cost reduction in automated workflows within the first 6 months, driven by reduced manual labor, fewer errors, and faster processing times. Do you replace our existing tools? No. We build automations on top of your current tech stack — connecting the tools you already use so they work together seamlessly rather than ripping and replacing. How quickly can we see results from process automation? Most clients see measurable time savings within the first 30 days of implementation. Full ROI typically materializes within 60–90 days as automations stabilize and scale.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_cta" path="../modules/quantum-cta-band", width=12 %}{% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+</main>
+{% endblock %}

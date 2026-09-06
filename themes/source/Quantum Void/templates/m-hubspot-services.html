@@ -1,0 +1,36 @@
+<!--
+  templateType: page
+  label: QV hubspot-services
+  isAvailableForNewContent: true
+-->
+{% extends "./layouts/base.html" %}
+{% block body %}
+<main>
+  {% dnd_area "main" %}
+    {% dnd_section %}
+      {% dnd_module "s_hero" path="../modules/quantum-hero", width=12, layout="centered", eyebrow="HubSpot Services", heading="Get the ROI You Were Promised HubSpot is powerful when it's set up right", subhead="As a top-tier HubSpot partner, we make sure your investment actually pays off with expert implementation, optimization, and ongoing admin services.", primary_label="Book a call", secondary_label="Learn more" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_0" path="../modules/quantum-rich-text", width=12, prose="<h2>HubSpot Services That Deliver Implementation Get HubSpot set up right the first time — configured for your sales process, not a generic template</h2><p>Optimization Already on HubSpot but not seeing results? We audit, fix, and supercharge your portal. Managed Services Ongoing HubSpot management so your team can focus on selling, not configuring software. Training & Enablement Empower your team to actually use HubSpot — custom training that sticks.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s_1" path="../modules/quantum-rich-text", width=12, prose="<h2>We're not just HubSpot users — we're a certified solutions partner with deep platform expertise across Sales Hub, Marketing Hub, Service Hub, and Operations Hub</h2><p>Our team brings hands-on implementation experience to every engagement.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_2" path="../modules/quantum-rich-text", width=12, prose="<h2>500+ Portals Configured 3x CRM Adoption Rate 100% HubSpot Certified Team</h2>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s_3" path="../modules/quantum-rich-text", width=12, prose="<h2>— Managed Admin Services Full-Service HubSpot Management CRM Administration Keep your HubSpot CRM clean, organized, and optimized</h2><div class=q-cards><div class=q-card><h4>Property management & cleanup</h4><p>Pipeline configuration User roles & permissions Data hygiene & deduplication Workflow Automation Build and maintain the automations that power your revenue engine — from lead routing to lifecycle stage management to internal notifications.</p></div><div class=q-card><h4>Lead routing & assignment</h4><p>Lifecycle stage automation Task creation & reminders Re-engagement sequences Reporting & Dashboards Custom dashboards that give your leadership team real-time visibility into the metrics that matter — pipeline, conversion rates, rep activity, and revenue.</p></div><div class=q-card><h4>Executive dashboards</h4><p>Sales activity reports Marketing attribution Custom report building Ongoing Optimization HubSpot evolves constantly.</p></div></div>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_4" path="../modules/quantum-rich-text", width=12, prose="<h2>FAQ Do I need a dedicated HubSpot admin?</h2><p>If you have more than 5 users or complex workflows, yes. A dedicated admin ensures your CRM stays clean, automations run smoothly, and your team actually adopts the platform. Our Managed Admin Services provide this without hiring a full-time employee. What's included in HubSpot consulting? Our services range from initial implementation and migration to ongoing optimization. This includes custom pipeline design, workflow automation, reporting dashboards, integration setup, data cleanup, and team training — all tailored to your sales process. How do you clean up a messy CRM? We start with a full portal audit — identifying duplicate records, incomplete data, broken workflows, and unused properties. Then we systematically clean, deduplicate, and restructure your data while setting up automation to prevent future data decay. How long does a HubSpot implementation take? A standard implementation takes 4–8 weeks depending on complexity. We follow a phased approach: discovery and audit, configuration and migration, automation setup, and team training — with measurable milestones at each stage. Can you help if we're already on HubSpot but not seeing results? Absolutely — that's one of our most common engagements. We perform a comprehensive portal audit, identify gaps and opportunities, and create an optimization roadmap that typically delivers measurable improvements within 30–60 days.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s_5" path="../modules/quantum-rich-text", width=12, prose="<h2>Ready to Get Real ROI from HubSpot?</h2>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_cta" path="../modules/quantum-cta-band", width=12 %}{% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+</main>
+{% endblock %}

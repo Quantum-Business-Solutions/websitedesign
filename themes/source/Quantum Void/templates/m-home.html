@@ -1,0 +1,69 @@
+<!--
+  templateType: page
+  label: Quantum Home (migrated)
+  isAvailableForNewContent: true
+-->
+{% extends "./layouts/base.html" %}
+{% block body %}
+<main>
+  {% dnd_area "main" label="Main content" %}
+    {% dnd_section %}
+      {% dnd_module "m_hero" path="../modules/quantum-hero", width=12, layout="orbit", eyebrow="Growth Agency", heading="Revolutionize your <em>sales</em> to maximize growth", subhead="We systemize, optimize, and automate your entire go-to-market, so sales and marketing finally run as one compounding engine.", primary_label="Book a call", secondary_label="See the Growth Model", rotate_words="sales,marketing,operations", image={"src":"https://20682069.fs1.hubspotusercontent-na1.net/hubfs/20682069/quantum-theme/graphics/hero.svg","alt":"Quantum revenue growth"} %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "m_logos" path="../modules/quantum-logo-strip", width=12 %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "m_video" path="../modules/quantum-rich-text", width=12, maxw="wide", prose="<h2>How Quantum builds your revenue engine</h2><div class=q-embed><video src='https://20682069.fs1.hubspotusercontent-na1.net/hubfs/20682069/QUANTUM/VIDEOS/Quantum%20Academy/quantum_overview%20(1080p)%20(1).mp4' controls preload='metadata' style='position:absolute;inset:0;width:100%;height:100%;background:#000'></video></div>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "m_problem" path="../modules/quantum-rich-text", width=12, maxw="full", prose="<h2>The hidden costs killing your profits</h2><div class=q-cards><div class=q-card><h4>Your team is drowning in manual work</h4><p>Hours lost to repetitive tasks that should be automated.</p></div><div class=q-card><h4>Systems don't talk</h4><p>Data silos creating blind spots and duplicate work.</p></div><div class=q-card><h4>Revenue slipping through the cracks</h4><p>Leads going cold, deals stalling, opportunities missed.</p></div><div class=q-card><h4>Can't see what's happening</h4><p>No single source of truth across your operations.</p></div><div class=q-card><h4>Expensive tools collecting dust</h4><p>Paying for software that never got properly implemented.</p></div><div class=q-card><h4>Growth harder than it should be</h4><p>Scaling means hiring more people instead of working smarter.</p></div></div>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "m_change" path="../modules/quantum-rich-text", width=12, prose="<h2>Change the game with the only growth agency HubSpot, ZoomInfo, and ConnectAndSell depend on for customer success</h2><p>We are a top-tier partner with the best sales and marketing tech providers in the world, the only growth agency that HubSpot, ZoomInfo, and ConnectAndSell hand-pick to deliver outstanding results for their clients. Using world-class tools, we revolutionize sales and marketing performance with our comprehensive approach to the Revenue Generation (RevGen) cycle that optimizes conversion rates.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "m_why" path="../modules/quantum-rich-text", width=12, maxw="full", prose="<h2>Most firms sell tools. We deliver outcomes.</h2><p>We don't implement AI, HubSpot, or automation in isolation. We design systems that increase profit, reduce friction, and scale without adding complexity.</p><div class=q-cards><div class=q-card><h4>Outcome-first approach</h4><p>Every engagement starts with your P and L, not a product pitch.</p></div><div class=q-card><h4>Unified systems</h4><p>AI, automation, and ops work together as one engine.</p></div><div class=q-card><h4>Measurable ROI</h4><p>You'll see the impact in your numbers within 90 days.</p></div></div>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "m_leap" path="../modules/quantum-rich-text", width=12, prose="<h2>Delivering inbound marketing and outbound sales success</h2><p>We empower businesses aspiring to boost their sales by 20 percent or more and amplify their sales velocity by 10 times within 180 days. We lift the burden for them by evaluating and systemizing their go-to-market strategy, building integrated, automated sales and marketing platforms, and delivering services that optimize revenue operations.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "m_faster" path="../modules/quantum-rich-text", width=12, prose="<h2>We deliver a faster time to value than any other growth agency</h2><p>Our focus on optimization, automation, and systematization is key to success. This holistic strategy not only drives top-line sales growth, it enhances overall business value by modernizing and elevating your team's capabilities, processes, and technological tools.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "m_services" path="../modules/quantum-services-list", width=12, heading="Our Solutions", intro="Comprehensive services to optimize, automate, and scale your revenue engine." %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "m_impact" path="../modules/quantum-rich-text", width=12, maxw="full", prose="<h2>Everything we do drives your bottom line</h2><div class=q-cards><div class=q-card><h4>Ramp revenue</h4><p>AI-powered outbound, automated lead nurture, pipeline acceleration, conversion optimization, revenue operations.</p></div><div class=q-card><h4>Cut costs</h4><p>Process automation, tool consolidation, headcount avoidance, error elimination, vendor optimization.</p></div><div class=q-card><h4>Scale smarter</h4><p>AI workforce augmentation, system integration, data-driven decisions, operational excellence, growth infrastructure.</p></div></div>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "m_stats" path="../modules/quantum-stats-band", width=12 %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "m_growthmodel" path="../modules/quantum-process-flow", width=12 %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "m_badges" path="../modules/quantum-image", width=12, image={"src":"https://20682069.fs1.hubspotusercontent-na1.net/hubfs/20682069/quantum-theme/graphics/pb_trim.png","alt":"HubSpot Diamond, ZoomInfo, Grant Cardone, ConnectAndSell, IBPI partner badges"}, caption="Recognized by the platforms we run on" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "m_custh" path="../modules/quantum-rich-text", width=12, prose="<h2>What our customers say</h2>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "m_testi" path="../modules/quantum-testimonial-slider", width=12 %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "m_academy" path="../modules/quantum-rich-text", width=12, prose="<h2>Teach your team sales and marketing best practices</h2><p>Quantum Academy offers dozens of training videos, playbooks, and other resources created by experts.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "m_gtm" path="../modules/quantum-feature-split", width=12, eyebrow="Go-To-Market Playbook", heading="Your essential guide for sales, marketing, and execution", body_text="<p>A clear framework for effectively launching and promoting your products or services, optimizing distribution, communication, and sales strategies to drive revenue growth and reach your target audience.</p>", image={"src":"https://20682069.fs1.hubspotusercontent-na1.net/hubfs/20682069/go%20to%20market.jpg","alt":"Go-To-Market Playbook"}, cta_label="Download the playbook" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "m_faq" path="../modules/quantum-rich-text", width=12, maxw="wide", prose="<h2>Frequently Asked Questions</h2><div class=q-faq><details class=q-faq-item><summary>What does Quantum Business Solutions do?</summary><div class=q-faq-a>Quantum Business Solutions is a HubSpot Diamond Partner and B2B Revenue Operations consultancy. We specialize in AI-augmented sales operations, ConnectAndSell implementation, ZoomInfo integration, and our proprietary Q2 Platinum Revenue Operations Framework. We serve office equipment dealers, MSPs, IT services providers, and commercial real estate firms.</div></details><details class=q-faq-item><summary>Who is Quantum Business Solutions for?</summary><div class=q-faq-a>We serve B2B revenue teams with 5-50 people, primarily in office equipment, managed services, IT services, and commercial real estate. Our typical client has HubSpot Pro+ or wants to migrate to HubSpot, and needs a partner to take their revenue operations from chaotic to systematized.</div></details><details class=q-faq-item><summary>How much does an AI Workforce Assessment cost?</summary><div class=q-faq-a>The AI Workforce Assessment & Implementation Program is $9,500 for an 8-week paired delivery engagement. The fee is due upfront on signed SOW, invoiced Net 15 via QuickBooks. Quantum also offers a free 22-question AI Readiness Assessment as a top-of-funnel diagnostic.</div></details><details class=q-faq-item><summary>Is Quantum Business Solutions a HubSpot Diamond Partner?</summary><div class=q-faq-a>Yes. Quantum is a HubSpot Diamond Partner — one of the highest tiers in HubSpot's solutions partner program. We have certified experts across Sales Hub, Marketing Hub, Service Hub, Operations Hub, and CMS Hub.</div></details><details class=q-faq-item><summary>Who runs Quantum Business Solutions?</summary><div class=q-faq-a>Shawn Peterson is the Principal and leads strategy on every Q2 Platinum and AI Workforce Assessment engagement. Shawn has 20+ years of B2B revenue operations experience across hundreds of organizations, with recent focus on AI-augmented revenue operations.</div></details><details class=q-faq-item><summary>What is the Q2 Platinum Revenue Operations Framework?</summary><div class=q-faq-a>Q2 Platinum is Quantum's proprietary methodology for systematizing B2B revenue operations. It organizes revenue data work into the 5 Cs: Capture, Cleanse, Combine, Calculate, Communicate. Q2 is delivered as a productized engagement with defined hour ranges and templated deliverables.</div></details></div>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "m_sub" path="../modules/quantum-cta-band", width=12, heading="Get updates on the latest from Quantum", subhead="Join our list for playbooks, webinars, and go-to-market insights.", cta_label="Subscribe" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+</main>
+{% endblock %}

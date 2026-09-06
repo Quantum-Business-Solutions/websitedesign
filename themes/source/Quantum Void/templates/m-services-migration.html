@@ -1,0 +1,33 @@
+<!--
+  templateType: page
+  label: QV services/migration
+  isAvailableForNewContent: true
+-->
+{% extends "./layouts/base.html" %}
+{% block body %}
+<main>
+  {% dnd_area "main" %}
+    {% dnd_section %}
+      {% dnd_module "s_hero" path="../modules/quantum-hero", width=12, layout="centered", eyebrow="HUBSPOT MIGRATIONS", heading="Seamless HubSpot Migration, Powered by Quantum Ready to maximize your CRM potential?", subhead="Quantum’s certified HubSpot experts make your transition smooth, fast, and fully aligned with your business goals. With a proven process and deep platform knowledge, we’ll move your data, systems, and teams into HubSpot—without disrupting o", primary_label="Book a call", secondary_label="Learn more" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_0" path="../modules/quantum-rich-text", width=12, prose="<h2>Why Quantum?</h2><p>Migrating to HubSpot without experienced help can drag on for weeks—or even months. At Quantum, we specialize in accelerating the process while eliminating risk. Whether you’re moving from Salesforce, Zoho, ActiveCampaign, Pipedrive, or another platform, we handle the complexity for you.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s_1" path="../modules/quantum-rich-text", width=12, prose="<h2>Without experienced help, your data migration can take weeks or months</h2><p>Our team gets it done fast. We help with the following: Data Migration Strategy Data Mapping and Cleanup Data Migration Post-Migration Training and Onboarding</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_2" path="../modules/quantum-rich-text", width=12, prose="<h2>Our 4-Step Migration Process</h2>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s_3" path="../modules/quantum-rich-text", width=12, prose="<h2>Ready for a Seamless HubSpot Migration?</h2><p>Contact us today to learn more about our HubSpot migration. Let’s create something amazing together.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_4" path="../modules/quantum-rich-text", width=12, prose="<h2>What our customers say</h2>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_cta" path="../modules/quantum-cta-band", width=12 %}{% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+</main>
+{% endblock %}

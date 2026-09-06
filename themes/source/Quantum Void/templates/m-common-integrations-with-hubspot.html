@@ -1,0 +1,24 @@
+<!--
+  templateType: page
+  label: QV common-integrations-with-hubspot
+  isAvailableForNewContent: true
+-->
+{% extends "./layouts/base.html" %}
+{% block body %}
+<main>
+  {% dnd_area "main" %}
+    {% dnd_section %}
+      {% dnd_module "s_hero" path="../modules/quantum-hero", width=12, layout="centered", eyebrow="Quantum", heading="Reference Common Integrations with HubSpot A categorized reference of the most common integrations that connect to HubSpot — from CRM and marketing automation to ERP, accounting, and e-commerce", subhead="Use this as a starting point when planning your tech stack. 12 Categories 48+ Tools Listed 1000+ In App Marketplace", primary_label="Book a call", secondary_label="Learn more" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_0" path="../modules/quantum-rich-text", width=12, prose="<h2>By Category 12 Categories of HubSpot Integrations These are the most common integrations we see in the field</h2><p>HubSpot's App Marketplace contains 1,000+ more — but if you're planning a tech stack, this list covers most of what you'll actually need. CRM Salesforce Microsoft Dynamics 365 SugarCRM Zoho CRM Marketing Automation Mailchimp Marketo Pardot ActiveCampaign Email & Communication Gmail Outlook Slack Microsoft Teams Content Management WordPress Drupal Joomla Shopify E-commerce Shopify Magento WooCommerce BigCommerce Social Media Facebook LinkedIn Twitter Instagram Customer Service & Helpdesk Intercom Help Scout Zendesk Freshdesk Analytics & Reporting Google Analytics Google Data Studio Databox Tableau Lead Generation & Forms Typeform Wufoo Gravity Forms Formstack Sales & Communication LinkedIn Sales Navigator Zoom GoToMeeting Calendly ERP NetSuite SAP Business One Microsoft Dynamics 365 BC Oracle NetSuite Accounting QuickBooks Xero Sage Intacct FreshBooks</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s_1" path="../modules/quantum-rich-text", width=12, prose="<h2>Need help wiring it up?</h2><p>Let's connect your stack to HubSpot Quantum specializes in integrating HubSpot with the rest of your tech stack — CRM migrations, marketing automation, ERP and accounting sync, custom integrations through n8n. If you're staring at this list wondering where to start, that's our job. Schedule a Consultation</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_cta" path="../modules/quantum-cta-band", width=12 %}{% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+</main>
+{% endblock %}

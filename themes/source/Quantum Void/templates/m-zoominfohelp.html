@@ -1,0 +1,33 @@
+<!--
+  templateType: page
+  label: QV zoominfohelp
+  isAvailableForNewContent: true
+-->
+{% extends "./layouts/base.html" %}
+{% block body %}
+<main>
+  {% dnd_area "main" %}
+    {% dnd_section %}
+      {% dnd_module "s_hero" path="../modules/quantum-hero", width=12, layout="centered", eyebrow="Quantum", heading="Get Help With ZoomInfo Want more from your investment in the world's greatest data enrichment tool?", subhead="You invested in ZoomInfo to grow your business. Let their top-rated partner guide your team to success by showing you how to turn data into dollars . We have helped dozens of B2B companies like yours extract trackable ROI from ZoomInfo and", primary_label="Book a call", secondary_label="Learn more" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_0" path="../modules/quantum-rich-text", width=12, prose="<h2>How can we help your business get more ROI from ZoomInfo?</h2><p>We provide step-by-step guidance, proven strategies, and best practices to help you harness the full power of ZoomInfo and HubSpot. Based on the Revenue Efficiency Model, Quantum will show you how to use ZoomInfo to drive growth in your business.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s_1" path="../modules/quantum-rich-text", width=12, prose="<h2>What Challenges Does It Solve?</h2><p>Data overload and “analysis paralysis” Lack of strategy on how to use the data effectively Ineffective marketing and sales campaigns Data is not flowing seamlessly into your CRM records Lack of support and training on using the tools Time constraints and needing results fast</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_2" path="../modules/quantum-rich-text", width=12, prose="<h2>Learn From a Top-Rated ZoomInfo and HubSpot Partner Quantum Business Solutions and our sister-company, Open Flow , help sales and marketing managers that are frustrated with tools and processes that fail to achieve 20%+ growth for their companies</h2><p>We provide go-to-market strategies, build integrated and automated sales and marketing platforms for clients, and deliver trackable ROI with customer acquisition services. We also provide training to outbound sales teams while enabling them to reach decision-makers 5-10 times an hour on the phone!</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s_3" path="../modules/quantum-rich-text", width=12, prose="<h2>What our customers say</h2>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_4" path="../modules/quantum-rich-text", width=12, prose="<h2>Put ZoomInfo to Work For Your Business Book a call with us today to discuss your business challenges, share a few tips, and see if we are a good fit to help</h2>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_cta" path="../modules/quantum-cta-band", width=12 %}{% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+</main>
+{% endblock %}

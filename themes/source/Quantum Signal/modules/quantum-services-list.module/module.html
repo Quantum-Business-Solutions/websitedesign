@@ -1,0 +1,17 @@
+<section class="q-section" id="services" style="{% if module.section_bg != 'default' %}background:{{ {'void':'#080b12','navy':'#101725','paper':'#fbfaf6'}[module.section_bg] }};{% endif %}">
+  <div class="q-container">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;margin-bottom:48px;">
+      <h2 class="q-h2" style="max-width:560px;">{{ module.heading }}</h2>
+      <div style="font-size:16px;line-height:1.65;color:var(--fg-muted);max-width:340px;margin:0;">{{ module.intro }}</div>
+    </div>
+    <div>
+      {% for it in module.items %}
+      <a href="{{ it.url.href }}" style="display:grid;grid-template-columns:80px 1fr 120px;gap:32px;align-items:center;padding:32px 8px;border-top:1px solid var(--border);{% if loop.last %}border-bottom:1px solid var(--border);{% endif %}">
+        <div style="font-family:var(--q-serif);font-size:28px;color:var(--q-gold);">{{ it.num }}</div>
+        <div><h3 style="font-size:22px;font-weight:600;color:var(--fg);margin:0 0 6px;">{{ it.title }}</h3><p style="font-size:15px;color:var(--fg-muted);margin:0;">{{ it.item_body }}</p></div>
+        <div style="justify-self:end;font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--q-gold);">Learn more</div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

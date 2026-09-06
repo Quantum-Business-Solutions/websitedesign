@@ -296,6 +296,36 @@ And for scale — a retainer at **$2,500/month for 10 hours is $250/hour**, 45% 
 **2× Transform**, at **$30,000/year per client** against a one-time $9,950. That is the number
 behind `process/strategy.md`: the belt should end at a retainer, not at a launch.
 
+### Price the actual cost driver: Phase 4
+
+The tiers price **page count**. The cost driver is **Phase 4** — custom modules, sections and
+templates — which is priced at nothing. Revolution needed 29 modules, 7 sections and 49 templates:
+plausibly a second build's worth of work inside one engagement, and no tier saw it.
+
+**The rule for when it applies:** map every section in step 16 to a module name. Any section with no
+module in the 57 (plus the vertical kit) is Phase 4 work.
+
+**The line item**, provisional until actuals exist:
+
+| Unit | Estimate | Note |
+|---|---|---|
+| Custom module | 90 min | fields.json + module.html + module.css, `quantum-faq` pattern |
+| Drag-and-drop section | 60 min | a pre-composed group of modules |
+| Custom page template | 45 min | falls to ~10 min if `layoutSections` works — **settle that** |
+| Header/footer as field-driven modules | 3 h | once per theme at source, then free |
+
+Two model variants, because they are different businesses:
+
+| | First build in a vertical | Subsequent build |
+|---|---|---|
+| Phase 4 | Full — the vertical kit doesn't exist yet | Near zero — port from the kit |
+| Price it as | A custom line, **or** a product investment QBS eats knowingly | The belt |
+| Revolution was | This | — |
+| Kelly would be | Subsequent, if Revolution's 29 are ported first | — |
+
+**The quote rule:** if the section list needs anything the kit doesn't have, the quote carries a
+Phase 4 line or it is provisional. Say which.
+
 > These are estimates, not measurements. **Track actuals from the first build** and replace them —
 > the model is only useful once it's calibrated, and everything above changes if copy really takes
 > 90 minutes a page rather than 45.

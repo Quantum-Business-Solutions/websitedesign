@@ -1,0 +1,103 @@
+[ {
+  "id" : "section_bg",
+  "name" : "section_bg",
+  "label" : "Section background",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "default", "Theme default" ], [ "void", "Void (dark)" ], [ "navy", "Navy (dark)" ], [ "paper", "Paper (light)" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "default"
+}, {
+  "id" : "eyebrow",
+  "name" : "eyebrow",
+  "label" : "Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "How we do it"
+}, {
+  "id" : "heading",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "The Quantum Growth Model"
+}, {
+  "id" : "stages",
+  "name" : "stages",
+  "label" : "Stages",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 3,
+    "max" : 6,
+    "sorting_label_field" : null,
+    "default" : 5
+  },
+  "children" : [ {
+    "id" : "num",
+    "name" : "num",
+    "label" : "Number",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "1"
+  }, {
+    "id" : "title",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Stage"
+  }, {
+    "id" : "body",
+    "name" : "stage_body",
+    "label" : "Body",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "num" : "1",
+    "title" : "Target",
+    "stage_body" : "Utilizes precise data analytics to identify and engage potential clients."
+  }, {
+    "num" : "2",
+    "title" : "Attract",
+    "stage_body" : "Employs strategic marketing techniques to capture interest."
+  }, {
+    "num" : "3",
+    "title" : "Nurture",
+    "stage_body" : "Focuses on business development to build relationships and trust."
+  }, {
+    "num" : "4",
+    "title" : "Convert",
+    "stage_body" : "Employs dynamic sales strategies to turn prospects into customers."
+  }, {
+    "num" : "5",
+    "title" : "WOW",
+    "stage_body" : "Centers on client success to ensure satisfaction and loyalty."
+  } ]
+} ]

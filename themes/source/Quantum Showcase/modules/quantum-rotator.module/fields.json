@@ -1,0 +1,69 @@
+[ {
+  "id" : "eyebrow",
+  "name" : "eyebrow",
+  "label" : "Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "What we do"
+}, {
+  "id" : "pre_text",
+  "name" : "pre_text",
+  "label" : "Text before rotating word",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Revolutionize your"
+}, {
+  "id" : "words",
+  "name" : "words",
+  "label" : "Rotating words (comma-separated)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "sales,marketing,operations"
+}, {
+  "id" : "post_text",
+  "name" : "post_text",
+  "label" : "Text after rotating word",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "in six months or less"
+}, {
+  "id" : "align",
+  "name" : "align",
+  "label" : "Alignment",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "center", "Center" ], [ "left", "Left" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "center"
+}, {
+  "id" : "section_bg",
+  "name" : "section_bg",
+  "label" : "Section background",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "default", "Theme default" ], [ "alt", "Alt" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "default"
+} ]

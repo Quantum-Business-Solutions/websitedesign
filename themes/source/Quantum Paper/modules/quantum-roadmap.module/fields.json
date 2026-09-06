@@ -1,0 +1,114 @@
+[ {
+  "id" : "eyebrow",
+  "name" : "eyebrow",
+  "label" : "Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "How we work"
+}, {
+  "id" : "heading",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Our proven process"
+}, {
+  "id" : "intro",
+  "name" : "intro",
+  "label" : "Intro",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "A structured, research-driven process from first conversation to launch."
+}, {
+  "id" : "axis_labels",
+  "name" : "axis_labels",
+  "label" : "Timeline axis labels (comma-separated, e.g. Day 1,Day 30,Day 60,Day 90)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : ""
+}, {
+  "id" : "steps",
+  "name" : "steps",
+  "label" : "Phases",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 2,
+    "max" : 8,
+    "sorting_label_field" : null,
+    "default" : 6
+  },
+  "children" : [ {
+    "id" : "title",
+    "name" : "title",
+    "label" : "Phase title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  }, {
+    "id" : "desc",
+    "name" : "desc",
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  }, {
+    "id" : "chip",
+    "name" : "chip",
+    "label" : "Timing chip (e.g. Weeks 1-2)",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "title" : "Information Gathering",
+    "desc" : "We start by understanding your business, target audience, and goals. This lays the foundation for a website that meets your specific needs.",
+    "chip" : "Phase 1"
+  }, {
+    "title" : "Planning",
+    "desc" : "Based on the gathered information, we create a strategic plan for your website: structure, technology stack, and project timelines.",
+    "chip" : "Phase 2"
+  }, {
+    "title" : "Wireframing",
+    "desc" : "We develop wireframes to outline the basic layout and functionality of your site, aligning the look and feel before design begins.",
+    "chip" : "Phase 3"
+  }, {
+    "title" : "Content Writing",
+    "desc" : "Compelling, SEO-friendly content that resonates with your audience and supports your brand voice.",
+    "chip" : "Phase 4"
+  }, {
+    "title" : "Design & Build",
+    "desc" : "Visually stunning, conversion-focused design and development, refined with your feedback at every step.",
+    "chip" : "Phase 5"
+  }, {
+    "title" : "Test, Review & Launch",
+    "desc" : "Thorough testing across devices and browsers, final review, and a smooth launch with monitoring.",
+    "chip" : "Phase 6"
+  } ]
+} ]

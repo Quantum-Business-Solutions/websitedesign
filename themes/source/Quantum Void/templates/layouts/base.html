@@ -1,0 +1,37 @@
+<!--
+  templateType: none
+  isAvailableForNewContent: false
+-->
+<!doctype html>
+<html lang="{{ html_lang }}" {{ html_lang_dir }}>
+<head>
+  <meta charset="utf-8">
+  <title>{{ page_meta.html_title }}</title>
+  <meta name="description" content="{{ page_meta.meta_description }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if site_settings.favicon_src %}<link rel="shortcut icon" href="{{ site_settings.favicon_src }}">{% endif %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta property="og:site_name" content="Quantum Business Solutions">
+  {{ require_css(get_asset_url('../../css/quantum.css')) }}
+  {{ require_js(get_asset_url('../../js/quantum.js'), 'footer') }}
+  {{ standard_header_includes }}
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://www.thequantumleap.business/#organization","name":"Quantum Business Solutions","alternateName":"Quantum","url":"https://www.thequantumleap.business","logo":{"@type":"ImageObject","url":"https://www.thequantumleap.business/hubfs/Quantum%20Business%20Solutions%20Logo.png"},"description":"HubSpot Solutions Partner and B2B revenue operations consultancy specializing in AI-augmented sales, ConnectAndSell implementation, ZoomInfo integration, and revenue systems for office equipment dealers, MSPs, and IT services providers.","founder":{"@type":"Person","@id":"https://www.thequantumleap.business/about-us#shawn-peterson","name":"Shawn Peterson","jobTitle":"Principal","sameAs":["https://www.linkedin.com/in/shawnpeterson1"]},"sameAs":["https://www.linkedin.com/company/quantum-business-solutions"],"contactPoint":{"@type":"ContactPoint","contactType":"Sales","email":"shawn@thequantumleap.business","areaServed":"US","availableLanguage":"English"},"knowsAbout":["HubSpot CRM","Revenue Operations","Sales Acceleration","AI for B2B Sales","ConnectAndSell","ZoomInfo","Sales Enablement","Pipeline Management","Lead Scoring","CRM Data Hygiene"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"https://www.thequantumleap.business/#website","url":"https://www.thequantumleap.business","name":"Quantum Business Solutions","publisher":{"@id":"https://www.thequantumleap.business/#organization"},"inLanguage":"en-US","potentialAction":{"@type":"SearchAction","target":"https://www.thequantumleap.business/search?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
+  {% set _bcpath = request.path %}
+  {% if _bcpath and _bcpath != '/' %}
+  {% set _bcsegs = _bcpath|split('/') %}
+  {% set _bcns = namespace(url='https://www.thequantumleap.business', pos=1, items='{"@type":"ListItem","position":1,"name":"Home","item":"https://www.thequantumleap.business/"}') %}
+  {% for _s in _bcsegs %}{% if _s %}{% set _bcns.url = _bcns.url ~ '/' ~ _s %}{% set _bcns.pos = _bcns.pos + 1 %}{% set _bcns.items = _bcns.items ~ ',{"@type":"ListItem","position":' ~ _bcns.pos ~ ',"name":"' ~ (_s|replace('-',' ')|title) ~ '","item":"' ~ _bcns.url ~ '"}' %}{% endif %}{% endfor %}
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{{ _bcns.items }}]}</script>
+  {% endif %}
+</head>
+<body data-theme="{{ theme.appearance.mode }}" class="{{ builtin_body_classes }}">
+  <div class="body-wrapper">
+    {% block header %}{% global_partial path='../partials/header.html' %}{% endblock %}
+    {% block body %}{% endblock %}
+    {% block footer %}{% global_partial path='../partials/footer.html' %}{% endblock %}
+  </div>
+  {{ standard_footer_includes }}
+</body>
+</html>

@@ -1,0 +1,22 @@
+[ {
+  "id" : "height",
+  "name" : "height",
+  "label" : "Height (px)",
+  "required" : false,
+  "locked" : false,
+  "display" : "text",
+  "step" : 1,
+  "type" : "number",
+  "display_width" : null,
+  "default" : 64
+}, {
+  "id" : "divider",
+  "name" : "divider",
+  "label" : "Show gold divider",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "display_width" : null,
+  "default" : false
+} ]

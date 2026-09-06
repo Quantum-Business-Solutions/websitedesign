@@ -39,6 +39,7 @@ import re
 import sys
 import subprocess
 import tempfile
+from concurrent.futures import ThreadPoolExecutor
 import urllib.parse
 import uuid
 
@@ -710,7 +711,7 @@ def patch_fields_json(raw: str, new_six: dict) -> str:
 
 def cmd_audit(a, token):
     """Sweep all nine themes for the known defects. Read-only."""
-    verify_portal(token, a.portal)
+    verify_portal(token, getattr(a, "portal", None))
     rows = []
     for t in NINE:
         try:
@@ -754,6 +755,121 @@ Reading this:
     return 0
 
 
+# ---------------------------------------------------------------------- export/drift
+
+SOURCE_DIR = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "themes", "source")
+
+
+def _fetch_one(args):
+    path, token = args
+    try:
+        return path, read_source(path, token), None
+    except HubSpotError as e:
+        return path, None, str(e)[:120]
+
+
+def export_theme(theme: str, token: str, out_root: str = SOURCE_DIR):
+    """Write every file of a theme to disk so it can be diffed and reviewed.
+
+    The nine exist only in the portal: no diff, no review, no rollback, and no way
+    to notice that someone edited one in Design Manager -- which is the repo's
+    loudest 'never', one accidental save from changing every client's site."""
+    files = sorted(walk(theme, token))
+    dest_root = os.path.join(out_root, theme)
+    written, failed = 0, []
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        for path, body, err in pool.map(_fetch_one, [(f, token) for f in files]):
+            if err:
+                failed.append((path, err))
+                continue
+            rel = path[len(theme) + 1:]
+            dest = os.path.join(dest_root, rel)
+            os.makedirs(os.path.dirname(dest), exist_ok=True)
+            with open(dest, "w", encoding="utf-8", newline="\n") as fh:
+                fh.write(body)
+            written += 1
+    return written, len(files), failed
+
+
+def cmd_export(a, token):
+    verify_portal(token, a.portal)
+    targets = NINE if a.all else [a.theme]
+    if not targets or targets == [None]:
+        raise SystemExit("Pass --theme <name> or --all.")
+    total = 0
+    for t in targets:
+        w, n, failed = export_theme(t, token)
+        total += w
+        flag = f"  ({len(failed)} failed)" if failed else ""
+        print(f"  {t:22} {w}/{n} files{flag}")
+        for path, err in failed[:3]:
+            print(f"      ! {path}: {err}")
+    print(f"\nwrote {total} files to themes/source/")
+    print("Commit it. From here on, `reskin.py drift` tells you if the portal moved.")
+    return 0
+
+
+def cmd_drift(a, token):
+    """Diff the live portal against what's committed. Read-only."""
+    verify_portal(token, a.portal)
+    targets = NINE if a.all else [a.theme]
+    if not targets or targets == [None]:
+        raise SystemExit("Pass --theme <name> or --all.")
+    if not os.path.isdir(SOURCE_DIR):
+        raise SystemExit(f"{SOURCE_DIR} does not exist. Run `reskin.py export --all` first.")
+
+    any_drift = False
+    for t in targets:
+        base = os.path.join(SOURCE_DIR, t)
+        if not os.path.isdir(base):
+            print(f"  {t:22} NOT EXPORTED - run export first")
+            any_drift = True
+            continue
+        committed = {}
+        for root, _dirs, names in os.walk(base):
+            for n in names:
+                fp = os.path.join(root, n)
+                committed[os.path.relpath(fp, base).replace(os.sep, "/")] = fp
+
+        live_paths = sorted(walk(t, token))
+        live_rel = {p[len(t) + 1:] for p in live_paths}
+        changed, added, removed = [], sorted(live_rel - set(committed)), sorted(set(committed) - live_rel)
+
+        with ThreadPoolExecutor(max_workers=8) as pool:
+            for path, body, err in pool.map(_fetch_one, [(p, token) for p in live_paths]):
+                rel = path[len(t) + 1:]
+                if err or rel not in committed:
+                    continue
+                with open(committed[rel], encoding="utf-8") as fh:
+                    if fh.read() != body:
+                        changed.append(rel)
+
+        if changed or added or removed:
+            any_drift = True
+            print(f"\n  {t}  DRIFT")
+            for rel in changed[:12]:
+                print(f"      modified  {rel}")
+            for rel in added[:6]:
+                print(f"      added     {rel}")
+            for rel in removed[:6]:
+                print(f"      removed   {rel}")
+            extra = len(changed) + len(added) + len(removed) - min(len(changed), 12) \
+                - min(len(added), 6) - min(len(removed), 6)
+            if extra > 0:
+                print(f"      ... and {extra} more")
+        else:
+            print(f"  {t:22} clean")
+
+    if any_drift:
+        print("\nThe portal and the repo disagree. Either someone edited a theme in Design")
+        print("Manager -- which changes every client on it -- or a source fix was applied and")
+        print("never exported. Reconcile before any client build.")
+        return 1
+    print("\nNo drift. The product line matches the repo.")
+    return 0
+
+
 # ------------------------------------------------------------------------------ cli
 
 class KV(argparse.Action):
@@ -779,6 +895,14 @@ def main(argv=None):
     i.add_argument("--theme", required=True)
 
     au = sub.add_parser("audit", help="sweep all nine themes for known defects")
+
+    ex = sub.add_parser("export", help="write a theme's source to themes/source/ for review")
+    ex.add_argument("--theme")
+    ex.add_argument("--all", action="store_true", help="all nine")
+
+    dr = sub.add_parser("drift", help="diff the live portal against what's committed")
+    dr.add_argument("--theme")
+    dr.add_argument("--all", action="store_true", help="all nine")
 
     pl = sub.add_parser("plan", help="show (and optionally apply) a clone + re-skin")
     pl.add_argument("--theme", required=True, help="source theme, one of the nine")
@@ -818,7 +942,9 @@ def main(argv=None):
     if getattr(a, "apply", False) and not a.approved_by:
         raise SystemExit("--apply requires --approved-by \"<name>\". "
                          "Writes to a live portal are never unattributed.")
-    return {"inspect": cmd_inspect, "plan": cmd_plan, "audit": cmd_audit}[a.cmd](a, a.token) or 0
+    handlers = {"inspect": cmd_inspect, "plan": cmd_plan, "audit": cmd_audit,
+                "export": cmd_export, "drift": cmd_drift}
+    return handlers[a.cmd](a, a.token) or 0
 
 
 if __name__ == "__main__":

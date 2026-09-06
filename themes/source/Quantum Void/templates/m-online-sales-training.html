@@ -1,0 +1,33 @@
+<!--
+  templateType: page
+  label: QV online-sales-training
+  isAvailableForNewContent: true
+-->
+{% extends "./layouts/base.html" %}
+{% block body %}
+<main>
+  {% dnd_area "main" %}
+    {% dnd_section %}
+      {% dnd_module "s_hero" path="../modules/quantum-hero", width=12, layout="centered", eyebrow="Online Sales Training", heading="Transform Your Sales Team Into Pipeline Machines Practical, technology-powered sales training built on real-world frameworks used by 500+ businesses to accelerate outbound performance", subhead="", primary_label="Book a call", secondary_label="Learn more" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_0" path="../modules/quantum-rich-text", width=12, prose="<h2>500+ Businesses Trained 4 Core Modules 8-Week Program Duration 100% Hands-On Training</h2>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s_1" path="../modules/quantum-rich-text", width=12, prose="<h2>A Complete Sales Curriculum Prospecting Mastery Learn how to build hyper-targeted prospect lists using ZoomInfo, identify buying signals, and prioritize accounts that are ready to buy</h2><div class=q-cards><div class=q-card><h4>ICP-based list building</h4><p>Intent data analysis Account scoring models Multi-threading strategies Live Conversation Skills Master the art of live phone conversations using ConnectAndSell.</p></div><div class=q-card><h4>Power-dial methodology</h4><p>First 30 seconds mastery Objection reframing Meeting-set close techniques Pipeline Management Build a disciplined pipeline management system inside HubSpot that gives you real-time visibility and predictable forecasting.</p></div><div class=q-card><h4>Stage-gate criteria</h4><p>Deal velocity tracking Forecast accuracy Activity-to-outcome ratios Coaching & Accountability Weekly coaching sessions, call reviews, and performance scorecards to ensure continuous improvement and team accountability.</p></div></div>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_2" path="../modules/quantum-rich-text", width=12, prose="<h2>Ready to Transform Your Sales Team?</h2>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s_3" path="../modules/quantum-rich-text", width=12, prose="<h2>FAQ What's included in the online sales training?</h2><p>Four comprehensive modules covering prospecting mastery, live conversation skills, pipeline management, and coaching & accountability — with hands-on exercises and real-world frameworks. Who is this training designed for? SDRs, BDRs, account executives, and sales managers looking to improve outbound performance. The curriculum is built for teams using tools like HubSpot, ZoomInfo, and ConnectAndSell. How long does the training take to complete? The core curriculum runs 8 weeks with weekly coaching sessions. Each module includes on-demand content you can revisit at any time. Can training be customized for our industry? Yes. We tailor talk tracks, objection handling frameworks, and prospecting strategies to your specific market, ICP, and competitive landscape. How do you measure training effectiveness? Weekly KPI scorecards, call recording reviews, and pipeline metrics track improvement in real time — so you can see the direct impact on meetings booked and deals closed.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_4" path="../modules/quantum-rich-text", width=12, prose="<h2>Ready to Maximize Your Business Outcomes?</h2>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_cta" path="../modules/quantum-cta-band", width=12 %}{% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+</main>
+{% endblock %}

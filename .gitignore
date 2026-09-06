@@ -9,6 +9,11 @@ node_modules/
 .claude/skills/scroll-craft
 
 node_modules/
-verify-out/
+
 __pycache__/
 *.pyc
+
+# The gate writes screenshots + report.json here (ignored) but the score trendline is kept.
+!verify-out/
+verify-out/*
+!verify-out/scores.jsonl

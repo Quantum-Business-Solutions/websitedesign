@@ -1,0 +1,30 @@
+<!--
+  templateType: page
+  label: QV services/hubspot-admin-services
+  isAvailableForNewContent: true
+-->
+{% extends "./layouts/base.html" %}
+{% block body %}
+<main>
+  {% dnd_area "main" %}
+    {% dnd_section %}
+      {% dnd_module "s_hero" path="../modules/quantum-hero", width=12, layout="centered", eyebrow="HubSpot Admin", heading="Maximize Your HubSpot Potential with Quantum Business Solutions As a Super Admin, you have the power to manage your entire HubSpot account, but we recognize that this can be a daunting task", subhead="That’s where we come in. At Quantum, our team of experts is dedicated to ensuring you get the most out of HubSpot by managing your account and providing you with the necessary insights to make data-driven decisions.", primary_label="Book a call", secondary_label="Learn more" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_0" path="../modules/quantum-rich-text", width=12, prose="<h2>Why Choose Quantum for HubSpot Super Admin Services?</h2><p>As a HubSpot Diamond Partner Agency, we possess the knowledge and expertise to deliver exceptional service. Our team is committed to providing personalized support to help you harness the full power of HubSpot.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s_1" path="../modules/quantum-rich-text", width=12, prose="<h2>Our Comprehensive HubSpot Super Admin Services Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h2><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_2" path="../modules/quantum-rich-text", width=12, prose="<h2>Ready to Optimize Your HubSpot Experience?</h2><p>Contact us today to learn more about our HubSpot Super Admin Services and discover how we can help you maximize your HubSpot potential. Let’s work together to streamline your operations and drive growth for your business.</p>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module "s_3" path="../modules/quantum-rich-text", width=12, prose="<h2>What our customers say</h2>" %}{% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section background="alt" %}
+      {% dnd_module "s_cta" path="../modules/quantum-cta-band", width=12 %}{% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+</main>
+{% endblock %}

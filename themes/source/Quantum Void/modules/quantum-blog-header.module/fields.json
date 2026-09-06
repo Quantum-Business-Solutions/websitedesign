@@ -1,0 +1,11 @@
+[ {
+  "id" : "show_meta",
+  "name" : "show_meta",
+  "label" : "Show date and author",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "display_width" : null,
+  "default" : true
+} ]

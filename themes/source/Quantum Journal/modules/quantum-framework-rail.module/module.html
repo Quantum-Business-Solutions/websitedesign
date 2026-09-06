@@ -1,0 +1,17 @@
+<section class="q-section" id="framework" style="{% if module.section_bg != 'default' %}background:{{ {'void':'#080b12','navy':'#101725','paper':'#fbfaf6'}[module.section_bg] }};{% endif %}">
+  <div class="q-container">
+    <div style="text-align:center;display:flex;flex-direction:column;align-items:center;">
+      <div class="q-eyebrow">{{ module.eyebrow }}</div>
+      <h2 class="q-h2" style="margin-top:24px;max-width:760px;">{{ module.heading }}</h2>
+    </div>
+    <div class="q-grid-5" style="margin-top:72px;">
+      {% for s in module.stages %}
+      <div style="text-align:center;display:flex;flex-direction:column;align-items:center;">
+        <div class="q-stagenum">{{ s.num }}</div>
+        <h3 style="font-size:17px;font-weight:600;color:var(--fg);margin:20px 0 8px;">{{ s.title }}</h3>
+        <p style="font-size:14px;line-height:1.6;color:var(--fg-muted);margin:0;max-width:180px;">{{ s.stage_body }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
