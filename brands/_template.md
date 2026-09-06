@@ -23,6 +23,8 @@ Reading this as: **<page kind>** for **<audience>**, with a **<vibe>** language.
 
 ## Client-stated constraints — these outrank house defaults
 
+(These bullets render on the client-facing pitch page. Put the source in parentheses, and no em dashes: `mockup.py` rewrites them and warns, but write it clean the first time.)
+
 Verbatim where possible, with who said it and when. This section is the most valuable part of the
 file: it is the difference between designing for this client and designing for the category.
 

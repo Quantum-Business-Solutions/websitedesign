@@ -204,6 +204,9 @@ gate measures all of this at 390px; these are floors, not aspirations.
 
 ## 7 · The gate — nothing ships without it
 
+The four stations, the evidence bundle and who signs what are in `process/qa-process.md`. What the
+client was promised is `process/quality-standard.md`. Deliver the evidence, not a summary of it.
+
 - [ ] ```bash
       node scripts/verify.mjs <staging-url> --env staging --expect-org "<Client legal name>"
       ```

@@ -100,6 +100,8 @@ Re-skinning rewrites twelve CSS custom properties in one block — see `process/
 | `process/roadmap.md` | **What would make this world class**, ordered by leverage. |
 | `scripts/reskin.py` | Clone + re-skin + client schema in one pass. Read-only until `--apply`. |
 | `scripts/verify.mjs` | The launch gate as a command. Scores every page 0–100; nothing ships under 80. Exit 1 means it failed. |
+| `process/quality-standard.md` | **Client-facing.** What every site is guaranteed to have, and the evidence delivered. Goes in every proposal. |
+| `process/qa-process.md` | **The four QA stations** that produce that evidence, who signs each, and the 30-day fix rule. |
 | `process/decisions.md` | **Eight decision rules** — the judgement calls, written down so they can be delegated. |
 | `process/onboarding.md` | **How someone new earns the right to run a build** — three builds, graduated permissions. |
 | `themes/source/` | **The nine themes, in git.** 2,835 files. `reskin.py export` refreshes; `reskin.py drift` catches live edits. |

@@ -34,15 +34,15 @@ Secondary line, also theirs: *"Moving Business Forward Since 1947."* The BrandCo
 ## The design read
 
 Reading this as: **a regional office-technology dealer site** for **office, IT and facilities
-managers at 100–500-person North Carolina businesses**, with a **warm, established, approachable
-authority** language — heritage as proof, not nostalgia.
+managers at 100 to 500-person North Carolina businesses**, with a **warm, established, approachable
+authority** language: heritage as proof, not nostalgia.
 
 ## Client-stated constraints — these outrank house defaults
 
 None recorded yet from a design conversation. What the brand profile and the live site assert:
 
-- Green `#65BC7B` and navy `#000545` are the brand; the logo carries both — BrandCommand profile,
-  current site
+- Green `#65BC7B` and navy `#000545` are the brand; the logo carries both (BrandCommand profile,
+  current site)
 - Tone is "approachable authority": proof points over hype, North Carolina references, urgent but
   not pushy — BrandCommand `tone_and_voice`
 - Six service lines plus Mailing Solutions must all survive; Pure Technology (water, ice, coffee) is

@@ -253,12 +253,16 @@ node scripts/verify.mjs <staging-url> --env staging --expect-org "<Client legal 
 ```
 Exit 1 = not done. **A failure returns to the station that caused it**, not to step 1: contrast →
 22/23 · placeholder text → 18 · card orphan → 16 · QBS branding → 24.
+This is **Station A of `process/qa-process.md`**, and every check maps to a line in
+`process/quality-standard.md`, the guarantee the client was given at step 6.
 Every page also gets a **score out of 100** (correctness FAIL −8, quality FAIL −5, WARN −1.5).
 **Nothing ships under 80**, and the run appends to `verify-out/scores.jsonl` — the trendline that
 tells you whether builds are getting better, which pass/fail never could.
 
 ### 32 🤖→🏢 The agents that read what a script can't
-Quality · fact-check · copy · AEO · adversarial verifier — `process/agents.md`.
+Quality · fact-check · copy · AEO · adversarial verifier — `process/agents.md`. **Station B** of
+`process/qa-process.md`, then **Station C**: a person opens every page on a real phone and signs it.
+No em dashes anywhere a visitor reads (`design/guardrails.md`); the gate fails the page on one.
 **Halt on oscillation:** if two passes reverse each other, stop and name the conflict. The sticky-CTA
 rule and the 25%-of-viewport ceiling genuinely conflict on a phone, and a loop left alone resolves
 it by silently dropping a sold feature.

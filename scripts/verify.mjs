@@ -713,6 +713,13 @@ async function auditPage(browser, url) {
     rec(url, 'on-page form (in main)', conv.forms > 0 ? 'PASS' : 'WARN',
       `${conv.forms} form(s) — every click between intent and capture loses people`);
 
+    // ---- em dashes. The most reliable "a model wrote this" tell; one is enough to
+    // undo a page's credibility with the buyer we most want. design/guardrails.md.
+    const emDashes = (d.text.match(/\u2014/g) || []).length;
+    rec(url, 'no em dashes in copy', emDashes ? 'FAIL' : 'PASS',
+      emDashes ? `${emDashes} em dash(es) in visible text. Rewrite with a comma, a colon or a full stop`
+               : 'clean');
+
     // ---- placeholder text
     const hits = PLACEHOLDER.filter(r => r.test(d.text)).map(r => r.source);
     rec(url, 'no placeholder text', hits.length ? 'FAIL' : 'PASS',

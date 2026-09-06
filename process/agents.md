@@ -172,6 +172,7 @@ keyword alignment ⛔ *human reads it*
 **Fails at:** genericness that passes every automated check. One `<h1>`, no placeholders, real
 words — and copy that could belong to any company in the category. **That failure has no gate. Read
 it.**
+- **Hard rule:** no em dashes, ever, in anything the visitor reads. The gate fails the page on one (`no em dashes in copy`). Rewrite with a comma, a colon or a new sentence.
 
 ### Claims agent
 **Role:** Verify that every number on the page traces to a source.

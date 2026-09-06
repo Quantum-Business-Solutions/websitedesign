@@ -52,7 +52,18 @@ GOOGLE_FONTS = (
     "&display=swap"
 )
 
-E = lambda s: html.escape(str(s or ""), quote=True)
+DASH_HITS: list = []
+
+
+def E(s) -> str:
+    """Escape for HTML, and remove em/en dashes from anything client-facing. The dash is
+    the surest machine-written tell (design/guardrails.md). Rewritten as a comma and
+    recorded, so the writer can fix the source text properly."""
+    s = str(s or "")
+    if "\u2014" in s or "\u2013" in s:
+        DASH_HITS.append(s[:70])
+        s = re.sub(r"\s*[\u2014\u2013]\s*", ", ", s)
+    return html.escape(s, quote=True)
 
 FONT_QUERY = {
     "fraunces": "Fraunces:opsz,wght@9..144,400;9..144,600", "instrument serif": "Instrument+Serif:ital@0;1",
@@ -166,7 +177,7 @@ def option_card(idx, name, meta, tok, role, rationale):
     short = name.replace("Quantum ", "")
     cr = contrast_ratio(gold, cta_fg) if gold.startswith("#") and cta_fg.startswith("#") else 0
     warn = ("" if cr >= 4.5 else
-            f'<p class="a11y">Button contrast {cr:.2f}:1 — below the 4.5:1 minimum. '
+            f'<p class="a11y">Button contrast {cr:.2f}:1, below the 4.5:1 minimum. '
             f'Fixed during re-skin; the derived palette clears it.</p>')
     return f"""
 <section class="opt">
@@ -203,9 +214,9 @@ def option_card(idx, name, meta, tok, role, rationale):
   </div>
 
   <div class="type">
-    <p class="tspec">Headings — <b>{E(serif.split(',')[0].strip(chr(39)))}</b></p>
+    <p class="tspec">Headings, <b>{E(serif.split(',')[0].strip(chr(39)))}</b></p>
     <p class="tsample" style="font-family:{E(serif)}">{E(HEADLINE)}</p>
-    <p class="tspec">Body — <b>{E(sans.split(',')[0].strip(chr(39)))}</b></p>
+    <p class="tspec">Body, <b>{E(sans.split(',')[0].strip(chr(39)))}</b></p>
     <p class="tsample-b" style="font-family:{E(sans)}">{E(SUBHEAD)}</p>
   </div>
 
@@ -261,7 +272,7 @@ def check_selection(themes, tokens, accent=None):
     grounds = {t: tokens[t]["ground"] for t in themes if t in tokens}
     if len(set(grounds.values())) > 1:
         out.append(f"mixed grounds {sorted(set(grounds.values()))}. Ground is filtered by "
-                   f"the brief, not by taste — catalogue.md rule 1. If the client asked for "
+                   f"the brief, not by taste, catalogue.md rule 1. If the client asked for "
                    f"light, the dark themes are out. Full stop.")
     seen = {}
     for t in themes:
@@ -271,7 +282,7 @@ def check_selection(themes, tokens, accent=None):
         key = (m["ground"], face_class(m["tokens"].get("--q-serif", "")))
         if key in seen:
             out.append(f"{seen[key].replace('Quantum ','')} and {t.replace('Quantum ','')} are "
-                       f"both {key[0]} with {key[1]} headings — catalogue.md rule 5 says never "
+                       f"both {key[0]} with {key[1]} headings, catalogue.md rule 5 says never "
                        f"show two like that. One slot is wasted; swap one.")
         seen[key] = t
     if "Quantum Converter" in themes:
@@ -296,7 +307,7 @@ def check_selection(themes, tokens, accent=None):
     if fails:
         out.append(f"{', '.join(fails)} ship button contrast below WCAG AA "
                    f"(3.5-3.9:1 vs 4.5:1 required). The mockup corrects it via the derived "
-                   f"--cta-fg, but the THEME is still broken — fix at source before launch.")
+                   f"--cta-fg, but the THEME is still broken, fix at source before launch.")
     return out
 
 
@@ -342,13 +353,13 @@ def build(client, promise, read, themes, tokens, accent, brief, roles, rationale
     comps = brief.get("competitors") or []
     # The brief keeps the source after an em dash ("-- BrandCommand profile"); the
     # client page does not need to know where we read it.
-    cons_html = ("<ul>" + "".join(f"<li>{E(c.rsplit(' — ', 1)[0] if ' — ' in c else c)}</li>" for c in cons) + "</ul>"
-                 if cons else '<p class="gap">Not captured yet — this is the highest-trust '
+    cons_html = ("<ul>" + "".join(f"<li>{E(c.rsplit(', ', 1)[0] if ', ' in c else c)}</li>" for c in cons) + "</ul>"
+                 if cons else '<p class="gap">Not captured yet, this is the highest-trust '
                               'section on the page. Fill it from the call.</p>')
     comp_html = ('<div class="tablewrap"><table><tr><th>Competitor</th><th>Ingested</th><th>What the category looks like</th></tr>'
                  + "".join("<tr>" + "".join(f"<td>{E(c)}</td>" for c in r[:3]) + "</tr>"
                            for r in comps) + "</table></div>"
-                 if comps else '<p class="gap">None ingested yet — run <code>/design-ingest</code> '
+                 if comps else '<p class="gap">None ingested yet, run <code>/design-ingest</code> '
                                'before the meeting. Naming a competitor we haven\'t read is worse '
                                'than naming none.</p>')
     traffic = brief.get("traffic")
@@ -356,7 +367,7 @@ def build(client, promise, read, themes, tokens, accent, brief, roles, rationale
     traffic_html = (f'<p class="big">{E(traffic_num)} <span>organic visits a month today</span></p>'
                     '<p class="note">The baseline. Every number we report after launch is against this one.</p>'
                     if traffic else
-                    '<p class="gap">No baseline recorded. Pull it before the meeting — without it '
+                    '<p class="gap">No baseline recorded. Pull it before the meeting, without it '
                     'there is no way to prove the work worked.</p>')
 
     findings_html = ("<section class=\"blk\"><h2>What we found, and what we'd do about it</h2>"
@@ -367,10 +378,10 @@ def build(client, promise, read, themes, tokens, accent, brief, roles, rationale
                 'coming back to, that is the answer.</p>' if RECOMMEND else "")
     accent_note = (rec_html + f'<p class="note">All three directions re-skinned to {E(accent)}, '
                    'taken from your own site. Each theme keeps its own ground and '
-                   'typeface — that is what makes the three genuinely different.</p>'
+                   'typeface, that is what makes the three genuinely different.</p>'
                    if accent else "")
 
-    return f"""<title>{E(client)} — three directions</title>
+    return f"""<title>{E(client)}, three directions</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="{fonts_for(themes, tokens)}">
@@ -533,7 +544,7 @@ def main():
     p.add_argument("--accent", help="client accent hex; all three re-skin to it")
     p.add_argument("--promise", help="the one line a visitor must believe")
     p.add_argument("--read", help='"<page kind> for <audience>, with a <register> language"')
-    p.add_argument("--brief", help="brands/<slug>.md — fills the main page")
+    p.add_argument("--brief", help="brands/<slug>.md, fills the main page")
     p.add_argument("--roles", default="The safe one|The stretch|The wildcard",
                    help="pipe-separated, so prose can contain commas")
     p.add_argument("--rationales", default="||",
@@ -546,7 +557,7 @@ def main():
     p.add_argument("--promise-note", help="provenance of the promise line, e.g. 'your current homepage line; we confirm it on the first call'")
     p.add_argument("--cards", help="three service names, pipe-separated")
     p.add_argument("--card-body", help="one line under each card")
-    p.add_argument("--stats", help='three "value:label" pairs, pipe-separated — the stat-band')
+    p.add_argument("--stats", help='three "value:label" pairs, pipe-separated, the stat-band')
     p.add_argument("--cta", help="primary button label")
     p.add_argument("--cta2", help="secondary button label")
     p.add_argument("--nav", help="three or four nav labels, pipe-separated")
@@ -626,6 +637,11 @@ def main():
     with open(a.out, "w", encoding="utf-8") as fh:
         fh.write(doc)
     print(f"wrote {a.out}")
+    if DASH_HITS:
+        print(f"\nwarning: {len(DASH_HITS)} string(s) contained an em/en dash and were rewritten with a comma.")
+        print("Fix the source text; a comma is not always the right punctuation:")
+        for h in DASH_HITS[:12]:
+            print(f"  - {h}")
     for t in themes:
         m = tokens.get(t, {})
         print(f"  {t:20} {m.get('ground','?'):5} {m.get('readsAs','')}")

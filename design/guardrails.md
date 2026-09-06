@@ -8,6 +8,11 @@ one reference stays in that entry's prose in `design/references.md`.
 
 ## Never
 
+- **No em dashes in anything a client or a visitor reads.** Not in page copy, not in pitch pages,
+  not in proposals, not in emails. The em dash is the most reliable "a model wrote this" tell of
+  2026, and one is enough. Use a comma, a colon, a full stop, or two sentences. `verify.mjs` fails
+  a page on it (`no em dashes in copy`); `mockup.py` rewrites them and warns. Internal docs may
+  use them; nothing that leaves the building may.
 - No purple-to-blue gradient heroes on white. The single most recognizable AI-generated tell.
 - No Inter as a default just because it's safe. If Inter is the right call, it should be a call.
 - No three-equal-feature-card row as the section after the hero.

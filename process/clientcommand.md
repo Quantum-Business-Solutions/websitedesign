@@ -355,3 +355,11 @@ Each step is useful on its own, so none of it has to wait for the rest:
 - Is there a first-class asset object, or are assets just portal files with naming conventions?
 
 Answer those six and this becomes an implementation rather than a design.
+
+
+## The standard goes in every proposal
+
+`process/quality-standard.md` is a proposal section, not an appendix. It is the answer to "what do
+we actually get", and it is the only part of a website proposal a buyer can hold us to. Insert it
+verbatim as a shared proposal block in ClientCommand; the evidence bundle in `process/qa-process.md`
+is what gets delivered against it at launch.

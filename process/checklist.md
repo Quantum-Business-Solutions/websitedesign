@@ -1,5 +1,8 @@
 # Pre-ship checklist
 
+> The client-facing version of this list is `process/quality-standard.md`; the procedure that
+> produces the evidence is `process/qa-process.md`. This file is the working checklist behind both.
+
 Run end to end before anything reaches a client. Items 1-7 are adapted from a 7-point process by **AIS (AI
 Automation Society)** — the creator of the `scroll-craft` skill — cross-checked against what's
 actually held up on QBS builds.
