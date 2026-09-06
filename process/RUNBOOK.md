@@ -63,8 +63,10 @@ offer**.
 **Done when:** no `<placeholders>` remain.
 
 ### 6 ✋ Ask for everything the client owes, once, today
-Logo **light and dark**, photography, the gated asset, case-study permissions, portal access.
-**Every ask gets an owner and a date.**
+Logo **light and dark**, photography, the gated asset, case-study permissions, portal access —
+**and their process deck.** That last one is the highest-return ask in the call: their real internal
+process is the differentiator, it is already written down, and nobody has put it on their website
+(`design/patterns.md`). **Every ask gets an owner and a date.**
 **Done when:** the asset rows exist with owners. **The highest-leverage ten minutes in the runbook**
 — this is what decides 90 days versus 130.
 
@@ -201,7 +203,7 @@ The loop. Each agent has a gate that can fail it — `process/agents.md`.
 
 ### 25 ⚡🚦 The automated gate
 ```bash
-node scripts/verify.mjs <staging-url> --expect-org "<Client legal name>"
+node scripts/verify.mjs <staging-url> --env staging --expect-org "<Client legal name>"
 ```
 Exit 1 = not done. A11y at three widths, CLS, schema entity, card-grid balance, the mobile floors,
 placeholder text, conversion paths, links.
@@ -246,7 +248,7 @@ blocks AI Overviews. Remove the staging publish.
   model is only useful calibrated — and Phase 4 is the one most likely to be wrong.
 - **Case study from the measured delta.** Delivery becomes pipeline.
 - **The retainer conversation** — a task on the plan with a date, not a hope. $2,500/month at ten
-  hours is $250/hr against $171 for the build.
+  hours is $250/hr against $172 for the build.
 - **Promote what you learned:** a rule → `design/guardrails.md` · a task → the library · a theme
   defect → fix it **at source** so all nine benefit · a vertical pattern → `verticals/`.
 

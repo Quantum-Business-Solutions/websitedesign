@@ -15,7 +15,7 @@ lock-in, you own it" is a true claim almost nobody else can make.
 
 Three more things that are real:
 
-- **Every page is a `dnd_area`** (12 of 16 templates). "Editable by your team" is verified, not a
+- **12 of the 16 page templates are a `dnd_area`.** "Editable by your team" is verified, not a
   promise. Most agencies deliver a site the client must call them to change.
 - **The site and the CRM are the same platform.** This is the actual moat, and it's the one thing a
   design shop cannot copy. A competitor can buy nine themes. They cannot be a HubSpot partner with
@@ -50,15 +50,15 @@ Three consequences:
 
 ## The tiers are mispriced, and Transform is the problem
 
-Modelled per-page in `process/clientcommand.md`, the effective hourly rate is **$172 for Launch,
-$171 for Growth, and $101 for Transform.** The premium tier is the worst business — fifty pages of
+Modelled per-page in `process/clientcommand.md`, the effective hourly rate is **$155 for Launch,
+$172 for Growth, and $121 for Transform** — before Phase 4, which is not in the model. The premium tier is the worst business — fifty pages of
 page-by-page rewrite earns 40% less per hour than the cheapest tier while occupying five times the
 capacity. Price it at **$22–25k** or cut the allowance to 30 pages.
 
 The same model says a **Growth build is ~58 hours across 90 sold days** — 13% work, 87% waiting on
 the client. So the constraint on volume is latency, not our throughput, and the lever is running
 many builds concurrently rather than each one faster. And a retainer at $2,500/month for 10 hours
-is **$250/hour and $30,000/year per client** — 46% better than Growth, 2.5× Transform. That is the
+is **$250/hour and $30,000/year per client** — 45% better than Growth, 2× Transform. That is the
 arithmetic behind the point below.
 
 ## The product isn't finished, and that gates everything
@@ -91,7 +91,7 @@ That's exactly right, and it's now two commands:
 **The insight that made this possible:** mockups should never have been HubSpot clones. Cloning
 three 300-file themes into a live portal to show three directions is slow *and* commits the product
 line before anyone agreed to anything. `scripts/mockup.py` renders the same three directions from
-the themes' real cached tokens — so the colours and typefaces are what ships, not an approximation —
+the themes' real cached tokens — so the accent and typefaces are exactly what ships (each theme keeps its own ground, which is what keeps the three distinct) —
 and the clone happens once, at the end.
 
 That inverts the cost structure. Three options used to be the expensive part of the pitch. Now

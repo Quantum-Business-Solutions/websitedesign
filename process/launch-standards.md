@@ -331,5 +331,5 @@ one approved change:
 3. **`width`/`height` passed through** on every image module.
 4. **The `seo` field group and fail-safe `Organization` block** from `process/structured-data.md`.
 
-All four are writes to portal `20682069` and need approval first, per the
+These are writes to portal `20682069` and need approval first, per the
 `qbs-hubspot-private-app` propose-then-confirm protocol. Nothing has been executed.

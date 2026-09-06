@@ -98,7 +98,7 @@ async function installTransport(ctx) {
 }
 
 const args = process.argv.slice(2);
-const VALUE_FLAGS = ['out', 'expect-org'];
+const VALUE_FLAGS = ['out', 'expect-org', 'env', 'forbid'];
 const flag = n => { const i = args.indexOf(`--${n}`); return i === -1 ? null : args[i + 1]; };
 // Skip both the flag AND its value -- otherwise a flag value like
 // --expect-org "Meridian Dental" gets audited as if it were a URL.
@@ -113,6 +113,23 @@ for (let i = 0; i < args.length; i++) {
 }
 const OUT = flag('out') || 'verify-out';
 const EXPECT_ORG = flag('expect-org');
+// staging | production. A staging publish MUST be noindexed; production must not be.
+// Without this the gate contradicted the runbook: step 24 says publish to staging so a
+// page can be read at all, and a staging publish with no noindex is a crawlable
+// duplicate of the client's site.
+const ENV = (flag('env') || 'production').toLowerCase();
+if (!['staging', 'production'].includes(ENV)) {
+  console.error(`--env must be staging or production, got "${ENV}"`);
+  process.exit(2);
+}
+// Strings that must never survive into a client's markup. Checked against outerHTML,
+// not innerText, because the leaks live in src and href attributes.
+const DEFAULT_FORBID = [
+  'Quantum Business Solutions', 'thequantumleap.business', 'quantum-business-solutions',
+  'Quantum Academy', 'meetings.hubspot.com/shawn-peterson',
+  '/zoominfo-as-a-service', '/outbound-sales', '/connectandsell',
+];
+const FORBID = (flag('forbid') || '').split(',').map(x => x.trim()).filter(Boolean);
 if (urls.some(u => !/^https?:\/\//.test(u))) {
   console.error(`not a URL: ${urls.find(u => !/^https?:\/\//.test(u))}`);
   process.exit(2);
@@ -124,6 +141,7 @@ if (!urls.length) {
 }
 
 const results = [];
+const CHECKED_LINKS = new Set();   // same-origin links already HEADed this run
 const rec = (url, gate, status, detail) => results.push({ url, gate, status, detail });
 
 function findChromium() {
@@ -484,7 +502,9 @@ async function auditPage(browser, url) {
     // on tablet, so this runs at all three widths.
     {
       const grids = await page.evaluate(() => measureGrids());
-      const orphans = grids.filter(g => g.lastRow === 1 && g.cols >= 3);
+      // A lone card under two is still a lone card. The old `cols >= 3` let the common
+      // tablet case (5 cards rendering 2+2+1) through as a PASS.
+      const orphans = grids.filter(g => g.lastRow === 1 && g.cols >= 2);
       const weak = grids.filter(g => g.lastRow > 1 && g.lastRow <= g.cols / 2 && g.cols >= 4);
       const describe = g =>
         `${g.total} cards as ${g.rows.join('+')}${g.heading ? ` under "${g.heading}"` : ''}`;
@@ -610,29 +630,67 @@ async function auditPage(browser, url) {
     rec(url, 'structured data present', d.jsonld.length ? 'PASS' : 'FAIL',
       d.jsonld.length ? `${d.jsonld.length} block(s)` : 'none on this page');
 
+    // The failure the runbook ranks worst — a client site wearing our logo — had no gate
+    // at all: the only QBS check tested the schema NAME and sat in an else-if that was
+    // skipped whenever --expect-org was passed, i.e. on every real gated run.
+    {
+      const needles = FORBID.length ? FORBID : DEFAULT_FORBID;
+      const html = await page.evaluate(() => document.documentElement.outerHTML);
+      const hits = needles.filter(n => html.toLowerCase().includes(n.toLowerCase()));
+      rec(url, 'no QBS branding left', hits.length ? 'FAIL' : 'PASS',
+        hits.length ? `found: ${hits.join(', ')} — header/footer de-brand is incomplete`
+                    : `${needles.length} forbidden string(s) checked`);
+    }
+
     if (EXPECT_ORG) {
       const ok = orgName && orgName.toLowerCase().includes(EXPECT_ORG.toLowerCase());
       rec(url, 'Organization names the client', ok ? 'PASS' : 'FAIL',
         `schema says "${orgName || 'nothing'}", expected "${EXPECT_ORG}"`);
-    } else if (orgName) {
+    }
+    if (orgName) {
       const qbs = /quantum business solutions/i.test(orgName);
       rec(url, 'Organization entity', qbs ? 'FAIL' : 'WARN',
         qbs ? `names "${orgName}" — on a client site this is the wrong entity`
             : `names "${orgName}" — pass --expect-org to assert`);
     }
 
-    // ---- conversion paths
-    const hard = d.meetings + d.mailto + d.tel +
-      (/book a call|request a demo|schedule|contact us|get started/i.test(d.text) ? 1 : 0);
-    const soft = d.forms + d.hsForms +
-      (/download|free (guide|score|check|audit|assessment)|calculator|estimator|newsletter|subscribe/i.test(d.text) ? 1 : 0);
-    rec(url, 'hard conversion path', hard > 0 ? 'PASS' : 'FAIL',
-      `${d.meetings} meetings embeds, ${d.mailto} mailto, ${d.tel} tel`);
+    // ---- conversion paths, scoped to the page's own content.
+    // Counting against document.body.innerText meant a site-wide footer carrying
+    // "Contact us" and a newsletter box satisfied BOTH gates on every page, including
+    // pages with no offer at all -- which made the most commercially load-bearing line
+    // in the checklist unenforced.
+    const conv = await page.evaluate(() => {
+      const main = document.querySelector('main, [role=main], .body-wrapper main') || document.body;
+      const scoped = main.cloneNode(true);
+      for (const el of scoped.querySelectorAll('header,footer,nav,[role=banner],[role=contentinfo]')) {
+        el.remove();
+      }
+      const q = sel => Array.from(scoped.querySelectorAll(sel)).length;
+      return {
+        forms: q('form, .hs-form'),
+        meetings: q('[class*=meetings], iframe[src*=meetings]'),
+        mailto: q('a[href^=mailto]'),
+        tel: q('a[href^=tel]'),
+        gated: q('[class*=gated], [class*=download], [class*=calculator], [class*=estimator]'),
+        text: scoped.innerText || '',
+        scopedToMain: main !== document.body,
+      };
+    });
+    const hard = conv.meetings + conv.mailto + conv.tel +
+      (/book a call|request a demo|schedule|get started/i.test(conv.text) ? 1 : 0);
+    const soft = conv.forms + conv.gated +
+      (/download|free (guide|score|check|audit|assessment)|calculator|estimator/i.test(conv.text) ? 1 : 0);
+    if (!conv.scopedToMain) {
+      rec(url, 'conversion scope', 'WARN',
+        'no <main> found — conversion counts include header/footer and may be optimistic');
+    }
+    rec(url, 'hard conversion path (in main)', hard > 0 ? 'PASS' : 'FAIL',
+      `${conv.meetings} meetings embed(s), ${conv.mailto} mailto, ${conv.tel} tel`);
     rec(url, 'soft conversion path', soft > 0 ? 'PASS' : 'FAIL',
-      soft > 0 ? `${d.forms} form(s) / gated offer detected`
+      soft > 0 ? `${conv.forms} form(s), ${conv.gated} gated element(s)`
                : 'no form, no gated asset — visitors who are not ready to book cannot convert');
-    rec(url, 'on-page form', (d.forms + d.hsForms) > 0 ? 'PASS' : 'WARN',
-      `${d.forms + d.hsForms} form(s) — every click between intent and capture loses people`);
+    rec(url, 'on-page form (in main)', conv.forms > 0 ? 'PASS' : 'WARN',
+      `${conv.forms} form(s) — every click between intent and capture loses people`);
 
     // ---- placeholder text
     const hits = PLACEHOLDER.filter(r => r.test(d.text)).map(r => r.source);
@@ -640,8 +698,13 @@ async function auditPage(browser, url) {
       hits.length ? hits.join(', ') : 'clean');
 
     // ---- links (same-origin only, HEAD, capped)
+    // Nav links repeat on every page. Checking them once per run leaves the per-page
+    // budget for links inside the content -- previously the nav ate all 40 slots and the
+    // gate reported "40 checked", which read as coverage.
     const origin = new URL(url).origin;
-    const same = d.links.filter(h => h.startsWith(origin)).slice(0, 40);
+    const fresh = d.links.filter(h => h.startsWith(origin) && !CHECKED_LINKS.has(h));
+    const same = fresh.slice(0, 40);
+    for (const h of same) CHECKED_LINKS.add(h);
     const broken = [];
     for (const href of same) {
       try {
@@ -655,7 +718,8 @@ async function auditPage(browser, url) {
       } catch { /* HEAD not supported — not evidence of breakage */ }
     }
     rec(url, 'no broken internal links', broken.length ? 'FAIL' : 'PASS',
-      broken.length ? broken.slice(0, 6).join('; ') : `${same.length} checked`);
+      broken.length ? broken.slice(0, 6).join('; ')
+                    : `${same.length} new link(s) checked, ${CHECKED_LINKS.size} this run`);
 
     await ctx.close();
   }

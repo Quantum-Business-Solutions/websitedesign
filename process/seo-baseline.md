@@ -187,7 +187,7 @@ Record in `brands/<slug>.md`:
 - Site Health and the specific errors
 
 Then the pitch stops being "we'll improve your SEO" and becomes *"you get 146 visits a month; one
-blog post is stuck at position 11 for four keywords worth 1,700 searches; here's what fixing it is
+blog post is stuck at positions 11-14 for four keywords worth ~1,720 searches; here's what fixing it is
 worth."* That is a much easier thing to sell and a much easier thing to be held to.
 
 ### Phase 02 — traffic reality picks the page types

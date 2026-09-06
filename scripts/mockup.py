@@ -71,18 +71,28 @@ def parse_brief(path):
         return {}
     txt = open(path, encoding="utf-8").read()
     out = {}
-    m = re.search(r"^>\s*\"(.+?)\"", txt, re.M | re.S)
+    # Anchor on the heading, not on "the first blockquote" -- the only real brief in the
+    # repo opens with a pre-methodology banner, and a truncated field renders as a
+    # confident half-sentence, which is worse than a visible gap.
+    sec = re.search(r"##\s*The promise\s*\n(.*?)(?=\n##\s)", txt, re.S)
+    if sec:
+        m = re.search(r'>\s*[\"“](.+?)[\"”]', sec.group(1), re.S)
+        if m:
+            val = " ".join(m.group(1).split())
+            if val and not val.startswith("<"):
+                out["promise"] = val
+    # Multiline: the template's read wraps across lines.
+    m = re.search(r"Reading this as:\s*(.+?)(?=\n\s*\n|\n##\s)", txt, re.S)
     if m:
-        out["promise"] = " ".join(m.group(1).split())
-    m = re.search(r"^Reading this as:\s*(.+?)$", txt, re.M)
-    if m:
-        out["read"] = re.sub(r"\*\*", "", m.group(1)).strip()
+        val = " ".join(re.sub(r"\*\*", "", m.group(1)).split())
+        if val and "<page kind>" not in val:
+            out["read"] = val
     sec = re.search(r"## Client-stated constraints.*?\n(.*?)(?=\n## )", txt, re.S)
     if sec:
         out["constraints"] = [
             re.sub(r"\*\*", "", l).strip("- ").strip()
             for l in sec.group(1).splitlines()
-            if l.strip().startswith("- ") and "<constraint>" not in l
+            if l.strip().startswith("- ") and "<" not in l
         ]
     sec = re.search(r"## Competitors ingested.*?\n(.*?)(?=\n## )", txt, re.S)
     if sec:
@@ -93,7 +103,9 @@ def parse_brief(path):
         ]
     m = re.search(r"\*\*Organic traffic:\*\*\s*([^\n·]+)", txt)
     if m:
-        out["traffic"] = m.group(1).strip()
+        val = m.group(1).strip()
+        if val and "<" not in val:
+            out["traffic"] = val
     return out
 
 
@@ -195,7 +207,7 @@ def face_class(stack: str) -> str:
     return "sans"
 
 
-def check_selection(themes, tokens):
+def check_selection(themes, tokens, accent=None):
     """Encode the selection rules from themes/catalogue.md so the tool enforces them
     instead of relying on whoever is typing to remember. Rule 5 caught a bad set on
     this script's own first demo run."""
@@ -222,6 +234,19 @@ def check_selection(themes, tokens):
                    "justification of any theme before it goes in a set of three.")
     fails = [t.replace("Quantum ", "") for t in themes
              if tokens.get(t, {}).get("ctaPassesAA") is False]
+    # The build gate checks accent TEXT on ground at 4.5. Check it here too, or a
+    # direction sails through the pitch and is refused at clone time.
+    if accent:
+        for t in themes:
+            m = tokens.get(t)
+            if not m:
+                continue
+            d = derive_native(accent, m["ground"])
+            cr = contrast_ratio(d["--accent-ink"], d["--bg"])
+            if cr < 4.5:
+                out.append(f"{t.replace('Quantum ','')}: accent text derives to {cr:.2f}:1 on "
+                           f"its ground, under the 4.5 the build gate requires. "
+                           f"reskin.py will refuse this direction.")
     if fails:
         out.append(f"{', '.join(fails)} ship button contrast below WCAG AA "
                    f"(3.5-3.9:1 vs 4.5:1 required). The mockup corrects it via the derived "
@@ -259,6 +284,10 @@ def build(client, promise, read, themes, tokens, accent, brief, roles, rationale
             # what fixes the light themes' 3.5-3.9:1 button failure in the mockup.
             if derived.get("--cta-fg"):
                 tok["--cta-fg"] = derived["--cta-fg"]
+            # Same two-token accent the build will ship, so the pitch and the site agree.
+            for k in ("--accent-ink", "--accent-lift"):
+                if derived.get(k):
+                    tok[k] = derived[k]
         opts.append(option_card(i, name, meta, tok,
                                 roles[i - 1] if i <= len(roles) else "",
                                 rationales[i - 1] if i <= len(rationales) else ""))
@@ -451,6 +480,8 @@ def main():
                    help="pipe-separated, so prose can contain commas")
     p.add_argument("--rationales", default="||",
                    help="pipe-separated, one per direction")
+    p.add_argument("--override", metavar="REASON",
+                   help="proceed despite a selection-rule violation. Recorded in the output.")
     p.add_argument("--out", default="mockups.html")
     a = p.parse_args()
 
@@ -460,9 +491,19 @@ def main():
 
     tokens = load_tokens()
     brief = parse_brief(a.brief)
-    warn = check_selection(themes, tokens)
+    warn = check_selection(themes, tokens, a.accent)
     for w in warn:
         print(f"warning: {w}", file=sys.stderr)
+    # It was documented as a gate and behaved as a print statement -- stderr on a
+    # successful command is exactly what gets dropped by a wrapper or an agent loop.
+    # Rules 1 and 5 are about the SET being wrong, so they block; the contrast note
+    # fires on every light build by design and stays a warning.
+    blocking = [w for w in warn if "rule 1" in w or "rule 5" in w
+                or "mixed grounds" in w or "both" in w and "headings" in w]
+    if blocking and not a.override:
+        print("\nREFUSING: the set of three violates a selection rule (above).\n"
+              'Fix the set, or pass --override "<reason>" if you have one.', file=sys.stderr)
+        return 2
 
     doc = build(a.client,
                 a.promise or brief.get("promise"),
@@ -482,4 +523,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main() or 0)

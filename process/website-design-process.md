@@ -55,14 +55,15 @@ The repo's job is to collapse phases 02–05 from weeks of hand work into a day 
 | 02 Planning | **URL migration map.** Every page earning traffic today gets a 301 to its new home. A redesign that changes blog URLs without 301s destroys the only traffic the client has | Old → new URL map |
 | 03 Wireframing | The 57 shared modules *are* the wireframe vocabulary. Pick section order from the module inventory rather than drawing boxes | Section order per page |
 | 04 Content Writing | The three P's test in `process/checklist.md`. When a hero fails it, the fix is usually a missing persuasion module — `pain-bridge`, `is-this-you`, `cost-of-inaction` — not new adjectives | Copy that passes the gate |
-| 05 Design & Build | `scripts/reskin.py plan --apply` — clone the theme, six values, client schema in one pass. Higgsfield for hero imagery per `design/prompts.md`. `/impeccable polish`, `design-taste-frontend` | Re-skinned clone in HubSpot |
+| 05 Design & Build | `scripts/reskin.py plan --apply` — clone the theme, the twelve-token native block, client schema in one pass. Higgsfield for hero imagery per `design/prompts.md`. `/impeccable polish`, `design-taste-frontend` | Re-skinned clone in HubSpot |
 | 06 Test, Review & Launch | `process/checklist.md` end to end, `/impeccable audit`, mobile-width screenshot loop, `process/launch-standards.md` launch gate | Signed-off build |
 | Post-launch | `process/seo-baseline.md` monthly re-pull — trend, next striking-distance win, audit regressions. This is what makes growth-driven design falsifiable | Monthly report against the baseline |
 | Post-launch | Growth-driven design. New reference → `design/inbox.md`. Rule that generalises → `design/guardrails.md` | A faster next build |
 
 Phase 03 is the one that changed most. Wireframing used to mean drawing layouts; with a fixed
 57-module library it means **choosing from an inventory**, which is both faster and why the delivered
-site is genuinely editable — every page is a `dnd_area`, so the client reorders the sections they
+site is genuinely editable — 12 of the 16 page templates are a `dnd_area`, so the client reorders
+the sections they
 signed off on.
 
 ---
@@ -95,7 +96,7 @@ and its $7.5–10k HubSpot Starter option is a Launch/Growth hybrid.
 - **Launch** — a theme with its own colours, unchanged. **Still cloned.** The client gets
   `<Client> — <Theme>` with `appearance.mode` set correctly and their own `Organization` schema, and
   nothing else altered.
-- **Growth** — clone and re-skin. The six values. This is the standard operation.
+- **Growth** — clone and re-skin. The twelve native-direction tokens. The standard operation.
 - **Transform** — clone, re-skin, and extend. If the extension is structural, fix the theme **at
   source** so all nine benefit. Resist per-client structural forks.
 

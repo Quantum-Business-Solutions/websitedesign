@@ -2,7 +2,7 @@
 
 > **Status — 2026-09-03.** The methodology in this repo is **agreed and adopted.** Build order
 > confirmed as **item 1** (scripted clone-and-reskin, carrying the item-5 theme fixes in the same
-> approved change) then **item 2** (`/verify`). Item 7 (the retainer) is the business-changing one
+> approved change) then **item 2** (`scripts/verify.mjs`). Item 7 (the retainer) is the business-changing one
 > and follows. The nine-theme writes to portal `20682069` still need explicit approval before they
 > execute — propose-then-confirm, per the `qbs-hubspot-private-app` skill.
 
@@ -20,17 +20,17 @@ rework that eats the margin back.
 ## 1. Script the clone-and-reskin — the single biggest win
 
 **Today:** `process/reskin.md` is run by hand. Clone a theme in Design Manager, patch `fields.json`,
-create pages from 21 templates, wire the modules. Per direction. Times three directions.
+create pages from 16 page templates, wire the modules. Per direction. Times three.
 
-**Build:** one script that takes a client slug, a theme name and six values, and returns a preview
+**Build:** one script that takes a client slug, a theme name and an accent, and returns a preview
 URL.
 
 ```
-/reskin <client> <theme> --accent "#..." --mode light
+reskin.py plan --client "<client>" --theme "Quantum <Theme>" --accent "#..." --ground light
   → clone Quantum <Theme> → <Client> — <Theme>
-  → PATCH fields.json with the six values
+  → rewrite the NATIVE DIRECTION block in css/quantum.css
   → PATCH base.html with the client's Organization schema   ← fixes the bug in the same pass
-  → create pages from the 21 templates
+  → create pages from the 16 page templates
   → return preview URLs
 ```
 
@@ -43,7 +43,7 @@ It also makes the schema fix **structural** rather than a checklist item someone
 
 ---
 
-## 2. `/verify <url>` — make quality a command, not a discipline
+## 2. `scripts/verify.mjs` — make quality a command, not a discipline
 
 **Today:** `process/checklist.md` and `process/launch-standards.md` are human discipline. This
 repo's own history is the argument: two hand-coded graphics shipped with a written note admitting
@@ -76,7 +76,7 @@ lines: a lead magnet and an internal QA gate.
 ## 3. Kill the content bottleneck — it's the real long pole
 
 Look at the phase durations: **Content Writing is days 30–50, and Design & Build is 45–75.** Design
-is nine themes and six values; that problem is solved. **Copy is what the 90 days is actually spent
+is nine themes and twelve tokens; that problem is solved. **Copy is what the 90 days is actually spent
 on**, and it's the least systematised part of the process.
 
 **Build:** a copy pass that is *research-grounded* rather than generated from nothing —
@@ -111,16 +111,16 @@ Small build. Prevents the one mistake that turns a happy client into a refund.
 
 ## 5. Fix the nine themes at source
 
-Awaiting approval. Items 1-4 are specified in `process/structured-data.md` and
+**The single reconciled list is in `themes/architecture.md`.** Awaiting approval. Specified across `process/structured-data.md` and
 `process/launch-standards.md`; item 5 is specified in `themes/catalogue.md` and `process/reskin.md`.
-`launch-standards.md` counts four because it predates item 5 being added here:
+The single reconciled list lives in `themes/architecture.md`; this is the summary:
 
 1. **`seo` field group + fail-safe `Organization`** — stops nine themes asserting a false identity
 2. **Fonts via `<link>` + `preconnect`, or self-hosted woff2** — removes the CSS `@import` chain;
    biggest Core Web Vitals win available
 3. **`loading="lazy"` default with an above-the-fold toggle**, `fetchpriority="high"` on heroes
 4. **`width`/`height` passthrough** on image modules
-5. **`appearance.mode` defaults corrected** on the five light themes
+5. **The light-theme contrast failure** — `accent_ink` / `accent_lift`, per `themes/architecture.md`
 
 One approved change, every past and future client benefits. This is the whole argument for never
 forking themes per client, and it's cheap.
@@ -182,15 +182,15 @@ Two reasons it's the highest-value item on this list even though it's last:
 - **Phase exit criteria.** Six phases with dates, an output column, and no definition of done.
   Phase 03 is sold as "layout agreed before design" with no agreement artifact; Phase 06's output is
   "signed-off build" with no signature.
-- **A page-counting rule.** Growth is "up to 20 pages". Nothing says whether one template plus N
-  data-driven instances counts as one page or N — which decides whether a 12-location client fits
-  the tier at all.
+- **Re-test the page-counting rule.** `process/clientcommand.md` decided it (one template plus N
+  instances = one page), but if `layoutSections` really cannot be populated by API then N instances
+  means N hand-written templates and the rule is a promise the platform cannot honour. Settle it.
 
 ---
 
 ## If only two get built
 
-**Item 1** (scripted re-skin) and **item 2** (`/verify`). Together they make the three-option pitch
+**Item 1** (scripted re-skin) and **item 2** (`scripts/verify.mjs`). Together they make the three-option pitch
 cheap and the quality gate automatic — speed and provable quality, which are exactly the two things
 a fixed-price business runs on. Item 5 rides along with item 1 for almost nothing.
 

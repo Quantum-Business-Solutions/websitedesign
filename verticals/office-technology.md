@@ -80,8 +80,9 @@ a fleet assessment, a documented finding, a projected saving, a guarantee. That 
 
 ## The vertical module kit — already built
 
-Revolution's HubSpot theme carries **29 content modules**. These fifteen are the ones the nine
-themes have no equivalent for, and they are the layer-two kit:
+Revolution's HubSpot theme carries **29 content modules**. Seventeen of them have no equivalent in the nine, and they are the layer-two kit. Two apparent
+matches are **not** gaps — `before-after` and `stats-band` already exist in the 57, so don't port
+those:
 
 | Module | What it does | Why the category needs it |
 |---|---|---|

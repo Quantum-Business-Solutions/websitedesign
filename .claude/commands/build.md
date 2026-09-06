@@ -52,7 +52,7 @@ per the module inventory in `themes/catalogue.md`. The persuasion modules map on
 ## 6 — The gate
 
 ```bash
-node scripts/verify.mjs <preview-url> --expect-org "<Legal name>"
+node scripts/verify.mjs <staging-url> --env staging --expect-org "<Legal name>"
 ```
 
 Exit 1 means it failed. Then `process/checklist.md` end to end, `/impeccable audit`, and

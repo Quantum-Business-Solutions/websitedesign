@@ -126,3 +126,62 @@ client.**
 - Ten live sites in HubSpot, ten projects in ClientCommand.
 - A vertical layer that gets better every time a brief is added — which is the compounding property
   none of the alternatives have.
+
+---
+
+## Do we need Supabase and Vercel per client?
+
+**Supabase: no. Not for any client.** Nothing in a website build needs a database. There is one
+Supabase — BrandCommand's — and it is already brand-scoped by `brand_profile_id`. A second instance
+per client would hold nothing.
+
+**Vercel: almost never, and the reason is `mockup.py`.** It emits a single self-contained HTML file.
+That publishes as an **Artifact** — private by default, a shareable link, no build step, no hosting,
+no cost, seconds. That is what the three-option pitch needs, and it is what replaced the previous
+approach.
+
+Revolution used Next.js on a host because it predates `mockup.py` **and** because its preview does
+something a static file can't: a live direction switcher and a client edit mode. That is the
+threshold.
+
+| What you're publishing | Where | Cost |
+|---|---|---|
+| Three-option pitch | **Artifact** | none |
+| Interactive preview — direction switcher, live edit | Vercel project in the client repo | a project |
+| A calculator or tool that outlives the pitch | Vercel, or a HubSpot module | — |
+| **The actual site** | **HubSpot, client portal** | their subscription |
+
+One thing worth knowing: the QBS Vercel team (`quantum-business-solutions1`, Pro) currently shows
+**zero projects** via the API. If previews have been deployed, they are on a personal scope the
+integration can't see — which is itself a reason to standardise: a client preview on someone's
+personal account is not a company asset.
+
+## What Claude can do, and where you have to be involved
+
+**End to end without you:**
+
+- The diagnosis, the four Semrush pulls, the brand measurement
+- Mockups → published artifact
+- Clone, re-skin, client `Organization` schema — *proposed*; see below
+- Page build, asset generation, the gate, the agent loop
+- Vercel: creating a git project and deploying, when a preview needs one (the integration is
+  connected and authorised)
+
+**Needs you, and always will:**
+
+1. **DNS at cutover.** Only the domain owner can point a domain. This is the one genuinely
+   unavoidable human step in the whole process, and it belongs on the plan with a date — Revolution's
+   own plan asked for "access to DNS and the current host by Week 5."
+2. **Approving portal writes.** `reskin.py plan` prints the change table; a person says yes. That is
+   the protocol and it does not get automated.
+3. **Creating a new GitHub repo.** This session's GitHub access is scoped to attached repositories,
+   so a brand-new client repo is created by you (or attached after you create it).
+4. **Anything that spends money** — a HubSpot tier upgrade, Higgsfield credits, a domain.
+5. **The four questions.** Ground, register, the promise, the lane. The promise especially: it is the
+   one input that cannot be measured or inferred.
+6. **Client-facing claims about the client.** Any figure on their site — response times, technician
+   counts, devices under management — is theirs to confirm. An agent that cannot find a number will
+   write a plausible one, and no gate catches that.
+
+The honest summary: **Claude can do the build; you own the approvals, the domain, and the truth of
+anything the site claims.**

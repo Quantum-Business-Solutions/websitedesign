@@ -62,18 +62,18 @@ that check is the whole reason the brief exists.
 
 ### Lane A: full site (three of nine, re-skinned)
 
-Use `scripts/reskin.py`, which does the clone, the six values **and the client's `Organization`
-schema** in one pass — see `process/reskin.md` for the reasoning:
+Use `scripts/reskin.py`, which does the clone, the twelve-token native-direction block **and the
+client's `Organization` schema** in one pass — see `process/reskin.md` for the reasoning:
 
 ```bash
 python3 scripts/reskin.py audit                     # sweep the nine for known defects
 python3 scripts/reskin.py plan --theme "Quantum Press" --client "<Client>" \
-    --accent "#RRGGBB" --mode light \
+    --accent "#RRGGBB" --ground light \
     --org-name "<Legal name>" --org-url "https://<domain>"
 # read the proposal table, then re-run with:  --apply --approved-by "<name>"
 ```
 
-**Six values is not the whole re-skin.** Identity is not a field: `templates/layouts/base.html`
+**Colour is not the whole re-skin.** Identity is not a field: `templates/layouts/base.html`
 emits QBS's `Organization` JSON-LD, and a perfect colour re-skin leaves it naming the wrong company.
 The script patches it in the same pass so it cannot be forgotten. Never run `--apply` against one of
 the nine.
@@ -127,7 +127,7 @@ Run `process/checklist.md` end to end. Then:
 **Verification loop — run the harness, then look at what it produced:**
 
 ```bash
-node scripts/verify.mjs <preview-url> --expect-org "<Client legal name>"
+node scripts/verify.mjs <staging-url> --env staging --expect-org "<Client legal name>"
 ```
 
 It screenshots at 390 / 768 / 1440, runs axe-core, measures LCP and CLS on mobile, parses every

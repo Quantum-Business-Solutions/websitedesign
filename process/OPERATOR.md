@@ -3,8 +3,19 @@
 **Hand this one file to whoever is building. It is self-contained.** Read the rest of the repo only
 when a step says to.
 
-Portal `20682069`. Auth via PAT in `$QBS_HUBSPOT_TOKEN` — never write it to a file, never paste it
-into a commit.
+**Which portal.** The nine themes live in QBS portal `20682069`. **A client's site lives in the
+client's portal** — Revolution's is `47019673`. So:
+
+| Doing | Portal | Token |
+|---|---|---|
+| Reading or fixing the nine | `20682069` | `$QBS_HUBSPOT_TOKEN` |
+| Building a client's site | the **client's** | `$CLIENT_HUBSPOT_TOKEN` |
+
+Pass `--portal <id>` to `reskin.py` for a client build; it refuses to act unless the token's portal
+matches the one you named. Never use the QBS token against a client portal, and never the OAuth
+HubSpot MCP for either — it is bound to `20682069`.
+
+Never write a token to a file, never paste one into a commit.
 
 ---
 
@@ -183,10 +194,18 @@ gate measures all of this at 390px; these are floors, not aspirations.
 - [ ] **Then load it on an actual phone and scroll the whole thing.** The harness measures; it
       cannot tell you it feels wrong in the hand.
 
+## 6c · Make it readable by the gate
+
+- [ ] **Draft pages cannot be rendered anonymously.** Publish temporarily to the client's
+      `<portal>.hs-sites.com` staging subdomain, **with `noindex`** — an indexable staging copy is a
+      crawlable duplicate of their site.
+- [ ] Run the gate with `--env staging`, which requires the `noindex` rather than failing it.
+- [ ] At launch: remove the staging publish and confirm those URLs 404.
+
 ## 7 · The gate — nothing ships without it
 
 - [ ] ```bash
-      node scripts/verify.mjs <preview-url> --expect-org "<Client legal name>"
+      node scripts/verify.mjs <staging-url> --env staging --expect-org "<Client legal name>"
       ```
       **Exit code 1 means it failed.** It checks a11y (axe-core) at 390/768/1440, CLS, canonical,
       `og:image`, headings, lazy-loading, image dimensions, JSON-LD validity *and whose name is in

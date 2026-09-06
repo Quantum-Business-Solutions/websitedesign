@@ -18,7 +18,7 @@ The methodology here is **agreed and in use.** What's still being built, and in 
 ```
 
 Mockups are **not** HubSpot clones — that was the mistake. `scripts/mockup.py` renders the three
-directions from the themes' real cached tokens, so the colours and faces are what ships, and the
+directions from the themes' real cached tokens, so the accent and typefaces are exactly what ships, and the
 clone happens once at the end. Three options used to be the expensive part of a pitch; now they're
 free.
 
@@ -54,7 +54,7 @@ the tooling that does the work. Options get presented as **one main page, then t
 
 ## The nine themes are the product
 
-`themes/catalogue.md` — nine hand-built HubSpot themes, 21 templates each, identified by ground
+`themes/catalogue.md` — nine hand-built HubSpot themes, 19 files / 16 page templates each, identified by ground
 (light/dark) and heading typeface. Client options are **three of these nine re-skinned**, not designs
 generated from scratch. That's what makes the output reliably good: you start from something already
 built well rather than from a model's average.
@@ -69,7 +69,7 @@ Re-skinning rewrites twelve CSS custom properties in one block — see `process/
 | `process/website-design-process.md` | **The process QBS sells** — six phases, 90 days, three packages. Start here when scoping. |
 | `themes/catalogue.md` | **The nine themes**, what each is for, and the selection rules. |
 | `process/pitch-presentation.md` | How options get shown: one main page, then three. |
-| `process/reskin.md` | How a client's brand gets onto a theme. Six values. |
+| `process/reskin.md` | How a client's brand gets onto a theme. Twelve CSS tokens. |
 | `process/seo-baseline.md` | **The Semrush method** — four pulls, what the numbers mean, client project IDs. |
 | `process/launch-standards.md` | **The traffic-and-leads baseline.** Measured gaps, and the launch gate. |
 | `process/structured-data.md` | Schema for SEO/AEO — what ships, what's missing, and a bug in all nine themes. |
@@ -101,7 +101,7 @@ Re-skinning rewrites twelve CSS custom properties in one block — see `process/
 | `scripts/reskin.py` | Clone + re-skin + client schema in one pass. Read-only until `--apply`. |
 | `scripts/verify.mjs` | The launch gate as a command. Exit 1 means it failed. |
 | `brands/_template.md` | The brief template. Every field here is consumed by a later phase. |
-| `.claude/commands/` | `/website` (the entry point) and `/design-ingest`. |
+| `.claude/commands/` | `/mockups` and `/build` (the entry points), `/design-ingest`, `/website` (legacy). |
 | `brands/<client>.md` | Per-client brief. Client-stated constraints live here and **outrank house defaults**. |
 
 ## Gorgeous is half the job
@@ -118,7 +118,7 @@ sells websites.
 And `process/seo-baseline.md` is the evidence layer. We have Semrush with 13 projects already
 configured, so a real traffic baseline is a ten-minute pull per client. Worked through on QBS's own
 domain, it found that **blog posts drive 82% of organic traffic while the page that sells websites
-earns zero**, and that one article is parked at position 11 across four keywords worth ~1,700
+earns zero**, and that one article is parked at positions 11-14 across four keywords worth ~1,720
 monthly searches. That reframes what a website build is *for* — and it turns "we'll improve your
 SEO" into a number the client can hold us to.
 
@@ -161,10 +161,10 @@ Worth being explicit about, because every one of these is a place quality curren
    to every search engine and AI crawler. Re-skinning can't fix it: identity isn't a field. This is
    the most damaging gap on the list. Fix proposed in `process/structured-data.md`; needs approval
    before it touches the portal.
-2. **The nine themes default to the wrong mode.** All of them ship `appearance.mode: dark`,
-   including the five light ones — so Clean, Press, Paper, Journal and Showcase render dark out of
-   the box, contradicting their own descriptions. Worth fixing at source; until then, always set
-   `mode` explicitly.
+2. **The nine themes default to the wrong mode.** All of them ship `appearance.mode: dark` — but the
+   native-direction block in `quantum.css` overrides both modes, so **the light themes do render
+   light.** The field is vestigial for colour; it still drives `.only-dark` / `.only-light` logo
+   visibility, so set it to match the ground. See `process/qa-findings.md`.
 3. **Multi-location clients cannot be served.** No location/address/hours module exists in the 57,
    no `locations.html` template, and no `LocalBusiness` schema anywhere. For a practice group or
    dealer network, local visibility *is* the traffic. Out of tier until a `quantum-location` module
@@ -179,7 +179,7 @@ Worth being explicit about, because every one of these is a place quality curren
    source-code metadata API. Client-facing, undersells the product, cheap to fix.
 
 `process/roadmap.md` orders these and the rest by money per hour of build effort. The short version:
-script the clone-and-reskin, make quality a command (`/verify`) instead of a discipline, and
+script the clone-and-reskin, make quality a command (`node scripts/verify.mjs`) instead of a discipline, and
 productise the post-launch retainer — the first two are margin on fixed-price work, the third is the
 annuity.
 

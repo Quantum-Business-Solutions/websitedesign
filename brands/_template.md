@@ -6,6 +6,9 @@
 - **current site:** <url> (<platform>)
 - **tokens:** `design/tokens/<slug>.json` if ingested
 - **HubSpot subscription (client's):** <tier — required for blog, forms, meetings>
+- **Client portal id:** <id — the site lives here, NOT in QBS 20682069>
+- **Pages allowed by their subscription:** <n — free tier caps site pages at 30>
+- **Pages planned:** <n — if this exceeds the line above, stop>
 
 ## The promise
 
@@ -69,6 +72,17 @@ them destroys the only traffic the client has.
 
 | Old URL | Traffic | New URL | 301 in place |
 |---|---|---|---|
+
+## Their process — ask for the deck
+
+The single highest-return question in discovery. Their real internal process, staged, is the
+differentiator; the generic industry version is what every competitor publishes. See
+`design/patterns.md`.
+
+- **Deck received:** <y/n, date>
+- **Stages:** <name each, and what each one PRODUCES — the artifact, not the activity>
+- **Outcomes they attach to it:** <the "and then what">
+- **Does it loop?** <if it returns to stage one, that is the retainer argument>
 
 ## Brand assets
 

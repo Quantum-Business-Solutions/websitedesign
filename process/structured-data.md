@@ -57,7 +57,7 @@ depending on whose domain it's on — so don't escalate it as a QBS-site emergen
 Three reasons it has survived:
 
 1. **Schema is not in the re-skin surface.** `fields.json` has exactly two groups — `appearance.mode`
-   and `colors` (five hexes). Nothing about identity. So the six-value re-skin in
+   and `colors` (five hexes) — and the colour fields are wired to nothing. So the re-skin in
    `process/reskin.md` *cannot* fix it, and there's no field in the UI to make anyone notice.
 2. **It's in the layout, not a module.** It never appears in a `dnd_area`, so it's invisible to
    anyone editing the page in HubSpot — client or QBS.
@@ -109,7 +109,7 @@ Verified by grepping all 57 modules and every template in the Press kit for `ld+
 | Type | Where it belongs | Status | Why it matters |
 |---|---|---|---|
 | **Organization** | `layouts/base.html` | **Wrong** — hardcoded to QBS | The entity anchor. Everything else hangs off it |
-| **FAQPage** | `quantum-faq.module` | ✅ Done | The strongest AEO signal we ship |
+| **FAQPage** | `quantum-faq.module` | ✅ Done | Retired May 2026. Keep for clean Q&A; never sell it |
 | **BlogPosting** | `templates/blog-post.html` | Missing | Author, dates, headline. The most-cited page type |
 | **Article** | `templates/case-study.html` | Missing | Case studies are the proof pages; unattributed |
 | **Service** | `templates/interior.html` | Missing | What the business actually sells |

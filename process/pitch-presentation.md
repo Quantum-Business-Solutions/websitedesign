@@ -44,7 +44,7 @@ ground filtered by the brief.
 Each option page carries:
 
 - The theme name and what it reads as
-- Real palette swatches at the re-skinned values — the actual six
+- Real palette swatches at the re-skinned values, from the themes' live tokens
 - The type pairing **set in the actual faces**, not named in a caption
 - A representative hero block, live
 - One line of rationale — why this direction, for them
@@ -83,5 +83,5 @@ choose. The one live check that matters: open each link cold, on a phone, before
    `process/website-design-process.md`.
 3. A direction rejected for a reason that generalises past this client → `design/guardrails.md`.
 
-The rejected two aren't wasted. They cost a re-skin each, and knowing what the client turned down —
+The rejected two cost almost nothing — a mockup each, and no clone, and knowing what the client turned down —
 and why — is what makes the next presentation sharper.

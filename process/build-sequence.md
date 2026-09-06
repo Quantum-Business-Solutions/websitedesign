@@ -8,10 +8,14 @@ Follow it in order. Most slop comes from skipping step 1 (no brief, so the model
 **This file is rationale, and it is authoritative over nothing.** Where it disagrees with another
 document, the other document wins. The authority order is:
 
-1. **`process/website-design-process.md`** — commercials, phases, dates, tiers
-2. **`.claude/commands/website.md`** — the operational steps, and what runs in what order
-3. **`process/checklist.md`** + `launch-standards.md` + `structured-data.md` — the gates
-4. **this file** — why the shape is what it is
+1. **`process/RUNBOOK.md`** — production order. Eight phases, 28 steps. The one to follow
+2. **`process/website-design-process.md`** — commercials only: phases, dates, tiers
+3. **`process/OPERATOR.md`** — the mechanics of one build, self-contained
+4. **`process/clientcommand.md`** — the seven per-page stations, for *status* (orthogonal to phases)
+5. **`process/checklist.md`** + `launch-standards.md` + `structured-data.md` — the gates
+6. **this file** — why the shape is what it is
+
+`.claude/commands/website.md` is the older combined command and is **not** authoritative on order.
 
 Read it once for the reasoning, then work from the three above.
 
@@ -77,8 +81,9 @@ set and `process/reskin.md` for the clone-and-re-skin operation. For atlas-theme
 the `qbs-atlas-page-builder` skill has the `layoutSections` mechanics, `dnd_area` naming and the
 PATCH-plus-push-live flow.
 
-There is no hand-translation step. The themes are already HubSpot-native: 57 shared modules, every
-page a `dnd_area`. A design doesn't stop at a Tailwind config — it lands as six field values on a
+There is no hand-translation step. The themes are already HubSpot-native: 57 shared modules, 12
+of 16 page templates a `dnd_area`. A design doesn't stop at a Tailwind config — it lands as
+twelve CSS tokens on a
 cloned theme.
 
 ## 7. Feed what you learned back

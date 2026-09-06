@@ -110,9 +110,12 @@ one reference stays in that entry's prose in `design/references.md`.
   markup **agreeing with the visible text**. Don't sell `FAQPage` as an AI-citation driver, and
   don't build `llms.txt` — Google ignores it.
 - **Section-level schema belongs to the module that renders the content.** Delete the section,
-  delete its markup — correct behaviour, free. **Site-level entity markup is the exception**:
-  `Organization`, `BreadcrumbList` and `WebSite` describe the site, not a section, so they belong in
-  `templates/layouts/base.html`. A site's identity cannot live in a block a client can delete.
+  delete its markup — correct behaviour, free.
+- **Site-level entity markup goes where Google says, which is not everywhere.**
+  `Organization` on the **home page or one about page** ("you don't need to include it on every page
+  of your site"). `WebSite` on the **home page only** — that is a requirement, not a preference.
+  Only `BreadcrumbList` is site-wide. Putting `Organization` in `base.html` is what produced
+  "ORGANIZATION 9 valid" in the Semrush audit: nine copies of one entity.
 
 ## Typefaces on the watchlist
 

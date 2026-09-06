@@ -135,8 +135,7 @@ markup, which is correct for system pages.
 > `quantum-assistant` (the Ask Quantum widget), `quantum-growthmodel`, `quantum-pricing-matrix` and
 > `quantum-process-flow`, which are what render the packages table and the 90-day timeline on the
 > live site. Those four are QBS's own; they don't ship to clients. The client reorders sections and edits copy
-without touching code. Verified: `Quantum Press/templates/home.html` is one `dnd_area "main"` with
-14 `dnd_section`s, each holding one named module.
+without touching code. Verified: `Quantum Press/templates/home.html` 
 
 That matters commercially — "editable by your team" is a real deliverable, not a promise. Verified:
 `Quantum Press/templates/home.html` is one `dnd_area "main"` holding **7** `dnd_section`s, each with

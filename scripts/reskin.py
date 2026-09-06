@@ -23,7 +23,7 @@ USAGE
 
   # what would a re-skin change? (read-only -- prints the proposal table)
   reskin.py plan --theme "Quantum Press" --client "Meridian Dental" \
-      --accent "#1E6B8C" --mode light \
+      --accent "#1E6B8C" --ground light \
       --org-name "Meridian Dental Group" --org-url "https://meridiandental.com"
 
   # execute it
@@ -86,9 +86,11 @@ NATIVE_RE = re.compile(
 
 # custom property -> what it does. Order is the order they get written.
 SURFACE = [
-    ("--q-gold",        "primary accent: links, primary CTA"),
+    ("--q-gold",        "primary accent FILL: buttons, chips, rules, icons"),
     ("--q-gold-bright", "accent hover/active"),
     ("--q-gold-dim",    "accent, de-emphasised"),
+    ("--accent-ink",    "accent TEXT on a light ground -- darkened until it clears AA"),
+    ("--accent-lift",   "accent TEXT on a dark band"),
     ("--q-serif",       "heading face (theme identity)"),
     ("--q-sans",        "body face"),
     ("--bg",            "page ground"),
@@ -185,14 +187,31 @@ def put_file(path: str, token: str, content: str):
                 body=payload, ctype=f"multipart/form-data; boundary={boundary}")
 
 
-def verify_portal(token: str) -> dict:
+def verify_portal(token: str, expected: str | None = None) -> dict:
+    """Confirm the token belongs to the portal the caller NAMED.
+
+    The guard used to be "must be 20682069", which made this script unusable for the
+    case it exists to serve: a client's site lives in the client's portal, with
+    CLIENT_HUBSPOT_TOKEN. Revolution's theme is in 47019673. The real risk is not
+    "wrong portal" in the abstract -- it is acting on a portal you did not mean to,
+    so the check is now "the portal you named must equal the token's portal."
+
+    Touching one of the nine is prevented separately, by a PATH check on the target,
+    which is correct in any portal."""
     info = get_json("/account-info/v3/details", token)
     pid = str(info.get("portalId"))
-    if pid != EXPECTED_PORTAL:
+    want = str(expected or EXPECTED_PORTAL)
+    if pid != want:
         raise SystemExit(
-            f"REFUSING TO PROCEED. Expected QBS portal {EXPECTED_PORTAL}, got {pid}.\n"
-            "This script only operates on the QBS portal that owns the nine themes."
+            f"REFUSING TO PROCEED. You named portal {want}; this token belongs to {pid}.\n"
+            f"  - QBS portal {EXPECTED_PORTAL}: use $QBS_HUBSPOT_TOKEN\n"
+            f"  - a client portal: pass --portal <id> and use that client's token\n"
+            "Never use the QBS token against a client portal, or the OAuth MCP for either."
         )
+    if pid != EXPECTED_PORTAL:
+        print(f"note: operating on CLIENT portal {pid} "
+              f"({info.get('companyName') or 'unnamed'}), not QBS {EXPECTED_PORTAL}.",
+              file=sys.stderr)
     return info
 
 
@@ -348,6 +367,18 @@ def derive_native(accent: str, ground: str, neutral_hue: str | None = None,
         # Text ON the accent. Chosen for contrast against the accent, not for looks.
         "--cta-fg":   best_on(accent),
     }
+    # If neither near-black nor near-white clears AA on the accent, the accent itself is
+    # in the awkward mid band. Nudge the FILL until its own text colour clears -- the
+    # brand hue is preserved, and a button nobody can read is not a button.
+    if contrast_ratio(out["--q-gold"], out["--cta-fg"]) < 4.5:
+        out["--q-gold"] = darken_until(out["--q-gold"], out["--cta-fg"], 4.5)
+        out["--q-gold-bright"] = lighten(out["--q-gold"], 0.10 if light else -0.10)
+        out["--q-gold-dim"] = lighten(out["--q-gold"], -0.06)
+    # Accent text, on both grounds. Derived, never picked.
+    out["--accent-ink"] = darken_until(accent, out["--bg"], 4.5)
+    dark_band = out["--bg"] if not light else tinted_neutral(src, 0.10, 0.28)
+    out["--accent-lift"] = darken_until(accent, dark_band, 4.5)
+
     if serif:
         out["--q-serif"] = serif
     if sans:
@@ -371,6 +402,28 @@ def contrast_ratio(a: str, b: str) -> float:
     la, lb = relative_luminance(a), relative_luminance(b)
     hi, lo = max(la, lb), min(la, lb)
     return (hi + 0.05) / (lo + 0.05)
+
+
+def darken_until(fg: str, bg: str, target: float = 4.5, step: float = 0.02) -> str:
+    """Walk lightness down (or up, on a dark ground) until fg clears `target` on bg.
+
+    This is the two-token accent fix from themes/architecture.md, and it is the reason
+    a saturated brand colour can be both a working button and readable text. A single
+    accent cannot do both: Revolution's amber is ~2:1 on white, so as text it fails on
+    exactly the numbers a buyer most wants to read -- while darkening it far enough to
+    read would kill the button.
+
+    Hue and saturation are preserved, so it still looks like the brand."""
+    h, l, sat = colorsys.rgb_to_hls(*hex_to_rgb(fg))
+    going_darker = relative_luminance(bg) > 0.18
+    for _ in range(50):
+        cand = rgb_to_hex(*colorsys.hls_to_rgb(h, max(0.0, min(1.0, l)), sat))
+        if contrast_ratio(cand, bg) >= target:
+            return cand
+        l = l - step if going_darker else l + step
+        if l <= 0 or l >= 1:
+            break
+    return rgb_to_hex(*colorsys.hls_to_rgb(h, 0.02 if going_darker else 0.98, sat))
 
 
 def best_on(bg: str) -> str:
@@ -415,7 +468,7 @@ def table(rows, headers):
 # ------------------------------------------------------------------------ commands
 
 def cmd_inspect(a, token):
-    verify_portal(token)
+    verify_portal(token, a.portal)
     theme = a.theme
     print(f"\n=== {theme} ===\n")
 
@@ -483,7 +536,7 @@ def cmd_inspect(a, token):
 
 
 def cmd_plan(a, token):
-    info = verify_portal(token)
+    info = verify_portal(token, a.portal)
     src, client = a.theme, a.client
     target = a.target or f"{client} - {src.replace('Quantum ', '')}"
 
@@ -503,7 +556,21 @@ def cmd_plan(a, token):
         new_native[k if k.startswith("--") else "--" + k] = v
 
     base = read_source(f"{src}/templates/layouts/base.html", token)
-    old_orgs = re.findall(r'<script[^>]*application/ld\+json[^>]*>.*?</script>', base, re.S)
+    # Only the Organization block is ours to replace. Matching every ld+json block meant
+    # a Void clone got three identical Organization nodes and lost its WebSite (which
+    # still controls the site name in results) and its BreadcrumbList.
+    all_ld = re.findall(r'<script[^>]*application/ld\+json[^>]*>(.*?)</script>', base, re.S)
+    all_blocks = re.findall(r'<script[^>]*application/ld\+json[^>]*>.*?</script>', base, re.S)
+    old_orgs, kept_types = [], []
+    for blk, body in zip(all_blocks, all_ld):
+        try:
+            t = json.loads(body).get("@type")
+        except Exception:
+            t = None
+        if t == "Organization" or (isinstance(t, list) and "Organization" in t):
+            old_orgs.append(blk)
+        elif t:
+            kept_types.append(t)
     new_org = build_org_schema(a.org_name, a.org_url, a.org_description,
                                a.org_logo, a.org_sameas)
 
@@ -528,26 +595,40 @@ def cmd_plan(a, token):
 
     # Contrast gate. A direction that fails this does not go to a client.
     accent = new_native.get("--q-gold", old_native.get("--q-gold", ""))
-    problems = []
-    for fg_key, bg_key, need, what in (
-            ("--cta-fg", "--q-gold", 4.5, "CTA text on accent"),
-            ("--fg", "--bg", 4.5, "body text on ground"),
-            ("--fg-muted", "--bg", 4.5, "secondary text on ground"),
-            ("--q-gold", "--bg", 3.0, "accent on ground (links, large text)")):
+    problems, advisories = [], []
+    CHECKS = (
+        ("--cta-fg", "--q-gold", 4.5, "CTA text on accent", True),
+        ("--fg", "--bg", 4.5, "body text on ground", True),
+        ("--fg-muted", "--bg", 4.5, "secondary text on ground", True),
+        ("--accent-ink", "--bg", 4.5, "accent TEXT on ground", True),
+        # WCAG 1.4.11: a control's boundary needs 3:1 against what's behind it. A
+        # saturated brand colour on a light ground rarely clears that, and the fix is a
+        # border on the control -- not a different brand colour. Advisory, not blocking.
+        ("--q-gold", "--bg", 3.0, "accent FILL on ground (control edge)", False),
+    )
+    for fg_key, bg_key, need, what, blocking in CHECKS:
         fg = new_native.get(fg_key, old_native.get(fg_key, ""))
         bg = new_native.get(bg_key, old_native.get(bg_key, ""))
-        if fg.startswith("#") and bg.startswith("#"):
-            cr = contrast_ratio(fg, bg)
-            mark = "PASS" if cr >= need else "FAIL"
-            if cr < need:
-                problems.append(f"{what}: {cr:.2f}:1 (needs {need})")
-            print(f"  {mark}  {what:34} {cr:5.2f}:1  (needs {need})")
+        if not (fg.startswith("#") and bg.startswith("#")):
+            continue
+        cr = contrast_ratio(fg, bg)
+        ok = cr >= need
+        mark = "PASS" if ok else ("FAIL" if blocking else "WARN")
+        if not ok:
+            (problems if blocking else advisories).append(f"{what}: {cr:.2f}:1 (needs {need})")
+        print(f"  {mark}  {what:38} {cr:5.2f}:1  (needs {need})")
+    if advisories:
+        print("\n  ADVISORY (does not block):")
+        for ad in advisories:
+            print(f"    - {ad}")
+        print("    A brand accent this saturated needs a 1px border or an outline on")
+        print("    accent-filled controls so the control's edge is discernible.")
     if problems:
         print("\n  CONTRAST FAILURES:")
         for pr in problems:
             print(f"    - {pr}")
-        print("  Fix with --set before applying. Never solve contrast with opacity;")
-        print("  use a real colour. See design/guardrails.md.")
+        print("  Fix with e.g. --set bg=#ffffff before applying. Never solve contrast")
+        print("  with opacity; use a real colour. See design/guardrails.md.")
 
     print("\nfields.json:")
     print(f"  appearance.mode -> {ground}   (only live field; drives .only-dark/.only-light)")
@@ -557,6 +638,8 @@ def cmd_plan(a, token):
     for b in old_orgs:
         print(f"  REMOVE  {b[:130]}")
     print(f"  INSERT  {new_org[:130] or '(nothing - no --org-name given, omitted by design)'}")
+    if kept_types:
+        print(f"  KEEP    {', '.join(kept_types)} (left untouched)")
     if not a.org_name:
         print("\n  NOTE: with no --org-name the block is omitted entirely. That is the")
         print("        fail-safe: absent markup is safe, wrong markup is not.")
@@ -583,6 +666,8 @@ def cmd_plan(a, token):
 
     print(f"\n{'-' * 78}")
     print(f"APPLYING - approved by {a.approved_by}")
+    if problems and a.force:
+        print(f"CONTRAST GATE OVERRIDDEN. Reason given: {a.force_reason}")
     print(f"{'-' * 78}\n")
 
     written = 0
@@ -594,15 +679,17 @@ def cmd_plan(a, token):
         elif rel == "fields.json":
             content = patch_fields_json(content, {MODE_FIELD: ground})
         elif rel == "templates/layouts/base.html":
-            for b in old_orgs:
-                content = content.replace(b, new_org, 1)
+            for i, b in enumerate(old_orgs):
+                # first one becomes the client's; any duplicates are removed
+                content = content.replace(b, new_org if i == 0 else "", 1)
         put_file(f"{target}/{rel}", token, content)
         written += 1
         if written % 40 == 0:
             print(f"  ... {written}/{len(files)}")
     print(f"\n  wrote {written} files to draft: {target}")
     print("  Next: publish in Design Manager, then gate it:")
-    print(f'    node scripts/verify.mjs <preview-url> --expect-org "{a.org_name or client}"')
+    print(f'    node scripts/verify.mjs <staging-url> --env staging '
+          f'--expect-org "{a.org_name or client}"')
     return 0
 
 
@@ -623,7 +710,7 @@ def patch_fields_json(raw: str, new_six: dict) -> str:
 
 def cmd_audit(a, token):
     """Sweep all nine themes for the known defects. Read-only."""
-    verify_portal(token)
+    verify_portal(token, a.portal)
     rows = []
     for t in NINE:
         try:
@@ -681,7 +768,11 @@ class KV(argparse.Action):
 def main(argv=None):
     p = argparse.ArgumentParser(description=__doc__,
                                 formatter_class=argparse.RawDescriptionHelpFormatter)
-    p.add_argument("--token", default=os.environ.get("QBS_HUBSPOT_TOKEN"))
+    p.add_argument("--token", default=os.environ.get("QBS_HUBSPOT_TOKEN")
+                   or os.environ.get("CLIENT_HUBSPOT_TOKEN"))
+    p.add_argument("--portal", help="portal id you intend to act on. Defaults to QBS "
+                                    f"({EXPECTED_PORTAL}). Pass a client's id to build in "
+                                    "their portal, with their token.")
     sub = p.add_subparsers(dest="cmd", required=True)
 
     i = sub.add_parser("inspect", help="report a theme's current re-skin surface")
@@ -699,13 +790,16 @@ def main(argv=None):
     pl.add_argument("--serif", help="heading face, e.g. \"'Fraunces',Georgia,serif\"")
     pl.add_argument("--sans", help="body face")
     pl.add_argument("--force", action="store_true",
-                    help="apply despite a failed contrast gate. Needs a stated reason.")
+                    help="apply despite a failed contrast gate. Requires --force-reason.")
+    pl.add_argument("--force-reason", metavar="TEXT",
+                    help="why an accessibility gate is being overridden. Recorded in the "
+                         "output. Required with --force.")
     pl.add_argument("--neutral-hue", metavar="HEX",
                     help="hue for void/navy/paper. Defaults to the accent (house "
                          "guardrail). Pass a hex for a complementary scheme, which "
                          "is what the QBS originals actually use.")
     pl.add_argument("--set", nargs="+", action=KV, metavar="field=value",
-                    help="override a derived value, e.g. --set --bg=#ffffff")
+                    help="override a derived value, e.g. --set bg=#ffffff (leading -- optional)")
     pl.add_argument("--org-name")
     pl.add_argument("--org-url")
     pl.add_argument("--org-description")
@@ -718,6 +812,9 @@ def main(argv=None):
     a = p.parse_args(argv)
     if not a.token:
         raise SystemExit("No token. Set $QBS_HUBSPOT_TOKEN or pass --token.")
+    if getattr(a, "force", False) and not getattr(a, "force_reason", None):
+        raise SystemExit('--force requires --force-reason "<why>". Overriding an '
+                         "accessibility gate is never unattributed.")
     if getattr(a, "apply", False) and not a.approved_by:
         raise SystemExit("--apply requires --approved-by \"<name>\". "
                          "Writes to a live portal are never unattributed.")

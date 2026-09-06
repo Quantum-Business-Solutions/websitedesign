@@ -282,17 +282,17 @@ Effective rate by tier, using the model above:
 
 | Tier | Pages | Hours | $/hr | Concurrent per person |
 |---|---|---|---|---|
-| **Launch** $4,950 | 8 | 29 | **$172** | 16 |
-| **Growth** $9,950 | 20 | 58 | **$171** | 8 |
-| **Transform** $14,950 | 50 | 148 | **$101** | 3 |
+| **Launch** $4,950 | 8 | 32 | **$155** | 14 |
+| **Growth** $9,950 | 20 | 58 | **$172** | 8 |
+| **Transform** $14,950 | 50 | 123 | **$121** | 4 |
 
-**Transform is the premium tier and the worst business.** Fifty pages of page-by-page rewrite is
+**Transform is still the weakest of the three per hour** — and Phase 4 hits it hardest. Fifty pages of page-by-page rewrite is
 enormous, and it earns 40% less per hour than Launch while occupying five times the capacity. Two
 honest options: price it around **$22–25k**, or cut the page allowance to 30. Right now it is
 selling the least profitable work hardest.
 
-And for scale — a retainer at **$2,500/month for 10 hours is $250/hour**, 46% better than Growth and
-**2.5× Transform**, at **$30,000/year per client** against a one-time $9,950. That is the number
+And for scale — a retainer at **$2,500/month for 10 hours is $250/hour**, 45% better than Growth and
+**2× Transform**, at **$30,000/year per client** against a one-time $9,950. That is the number
 behind `process/strategy.md`: the belt should end at a retainer, not at a launch.
 
 > These are estimates, not measurements. **Track actuals from the first build** and replace them —
