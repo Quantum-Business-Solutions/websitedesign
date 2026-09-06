@@ -55,7 +55,7 @@ ground or the client's logo shows the wrong variant.
 
 ## 1 · Before you touch HubSpot
 
-- [ ] **Entity facts** in the brief: legal name, canonical URL, logo URL, `sameAs` (LinkedIn,
+- [ ] **Entity facts** in the brief: legal name, canonical URL, logo URL, `sameAs` (LinkedIn **company** page first — not a personal profile,
       Crunchbase). **Without these the clone ships our identity.** Non-negotiable.
 - [ ] **Tier purchased** — Launch, Growth or Transform. Decides re-skin depth and page count.
 - [ ] **Ground** — light or dark, taken from the brief, not from taste. If the client said light,

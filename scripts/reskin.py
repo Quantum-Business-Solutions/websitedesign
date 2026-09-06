@@ -436,6 +436,32 @@ def best_on(bg: str) -> str:
 
 # --------------------------------------------------------------------------- schema
 
+QBS_PROFILES = ("quantum-business-solutions", "thequantumleap", "shawn-peterson")
+
+
+def check_sameas(sameas):
+    """Advisories for the Organization's sameAs. sameAs is the entity-resolution
+    signal: it is how an answer engine confirms *this* Organization is *that*
+    LinkedIn company page, and not a namesake. The LinkedIn company URL is the
+    one that matters most, because it is the profile with the most corroborating
+    third-party data (headcount, location, employees) that engines already trust."""
+    notes = []
+    urls = list(sameas or [])
+    if not urls:
+        notes.append("ADVISORY sameAs is empty. Add at least the LinkedIn company URL "
+                     "(brands/<client>.md -> Entity facts). Without it the entity stands alone.")
+        return notes
+    if not any("linkedin.com/company/" in u for u in urls):
+        notes.append("ADVISORY sameAs has no linkedin.com/company/ URL - the single most useful "
+                     "one for entity resolution. Personal profiles (linkedin.com/in/) do not count.")
+    for u in urls:
+        if not u.startswith("https://"):
+            notes.append(f"ADVISORY sameAs entry is not an absolute https URL: {u}")
+        if any(q in u.lower() for q in QBS_PROFILES):
+            notes.append(f"BLOCKING sameAs points at a QBS profile on a client site: {u}")
+    return notes
+
+
 def build_org_schema(name, url, description=None, logo=None, sameas=None) -> str:
     """Fail-safe: with no name we emit NOTHING. Absent markup is safe -- an engine
     infers the entity from the page. Wrong markup is a false statement in the one
@@ -449,7 +475,9 @@ def build_org_schema(name, url, description=None, logo=None, sameas=None) -> str
         org["description"] = description
     if logo:
         org["logo"] = logo
-    org["sameAs"] = sameas or []
+    if sameas:
+        # An empty sameAs asserts nothing and reads as a template left unfilled. Omit it.
+        org["sameAs"] = list(sameas)
     return ('<script type="application/ld+json">'
             + json.dumps(org, separators=(",", ":"), ensure_ascii=False)
             + "</script>")
@@ -574,6 +602,7 @@ def cmd_plan(a, token):
             kept_types.append(t)
     new_org = build_org_schema(a.org_name, a.org_url, a.org_description,
                                a.org_logo, a.org_sameas)
+    sameas_notes = check_sameas(a.org_sameas) if a.org_name else []
 
     files = sorted(walk(src, token))
 
@@ -641,6 +670,10 @@ def cmd_plan(a, token):
     print(f"  INSERT  {new_org[:130] or '(nothing - no --org-name given, omitted by design)'}")
     if kept_types:
         print(f"  KEEP    {', '.join(kept_types)} (left untouched)")
+    for n in sameas_notes:
+        print(f"  {n}")
+        if n.startswith("BLOCKING"):
+            problems.append(n)
     if not a.org_name:
         print("\n  NOTE: with no --org-name the block is omitted entirely. That is the")
         print("        fail-safe: absent markup is safe, wrong markup is not.")

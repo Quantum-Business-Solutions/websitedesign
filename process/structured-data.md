@@ -215,6 +215,45 @@ ranking success or claim to use 'internal' Google metrics. No third-party tool h
 internal ranking or AI systems." Our own rule — never quote a score without reading what's underneath
 it — applies to the score we *sell*, not just the ones we buy.
 
+### `sameAs` — the entity-resolution signal, and the one field the themes leave empty
+
+All nine themes ship `"sameAs":[]`. That is the field that does the most AEO work per byte, and it
+is the one nobody fills in. `sameAs` is how an answer engine confirms that *this* Organization is
+*that* LinkedIn company page — the same entity, not a namesake — and then borrows everything the
+engine already trusts about that profile: headcount, locations, founding year, employees, the
+category the platform files it under. Without it, the entity on the client's site stands alone,
+and an engine asked "who is Kelly Office Solutions?" has to guess which of the candidates you mean.
+
+**What goes in, in priority order.** Company profiles, not personal ones. Absolute `https://`. Only
+profiles the client actually controls and whose name/address/phone match the site — an inconsistent
+profile in `sameAs` is worse than an absent one, because you are asserting the mismatch.
+
+| Priority | Profile | Why it earns its place |
+|---|---|---|
+| 1 | **LinkedIn company page** (`linkedin.com/company/…`) | The most corroborating third-party data engines already index. Not `linkedin.com/in/` — a founder's profile is a different entity |
+| 2 | **Google Business Profile** — the Maps share URL | Ties the web entity to the local one. Essential for any dealer with a showroom or service territory |
+| 3 | **Wikidata item**, if one exists | The identifier the Knowledge Graph resolves against. Most SMBs won't have one; don't create one for the purpose |
+| 4 | **Crunchbase**, **Clutch**, **G2**, **BBB** — whichever the category uses | Structured, third-party, and consistent |
+| 5 | **YouTube channel**, **Facebook page** | Only if active. A page last posted to in 2019 asserts neglect |
+| 6 | X / Instagram / TikTok | Only if active and business-named |
+
+**Office technology (`verticals/office-technology.md`) adds one row at priority 2:** the
+**manufacturer's authorized-dealer listing** — Canon, Ricoh, Xerox, Konica Minolta, Sharp, Kyocera
+all publish dealer-locator pages. That URL is a third-party statement that this company is an
+authorized dealer, which is exactly the claim a buyer's AI assistant is trying to verify.
+
+**Rules.**
+- **Never a QBS profile.** `scripts/reskin.py` treats a QBS URL in `--org-sameas` as blocking, and
+  `verify.mjs` fails the page. Void's theme block carries a founder `Person` with a LinkedIn URL —
+  that is the leak this catches.
+- `brands/<client>.md` → *Entity facts* is where the list lives. Collect it in Phase 01 with the
+  logo and legal name; it costs the client five minutes and it is the difference between a site that
+  owns its identity and one that hopes.
+- `reskin.py` now **omits** `sameAs` entirely when the list is empty rather than emitting `[]`. An
+  empty array asserts nothing and reads as a template nobody finished.
+- The same URLs go into HubSpot's **Settings → Website → Pages → Social** so `og:` tags and the
+  footer social links agree with the schema. Three places, one list.
+
 ### Missing from the process entirely, and all of it cheap
 
 - **Google Search Console.** The largest single omission. The **Generative AI performance report**

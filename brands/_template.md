@@ -36,7 +36,14 @@ they are the difference between a client site that owns its identity and one tha
 - **Legal name:** <exact>
 - **Canonical URL:** <https://…>
 - **Logo URL:** <absolute>
-- **`sameAs`:** LinkedIn, Crunchbase, anything authoritative
+- **`sameAs`** — company profiles the client controls, absolute `https://`, name/address/phone
+  matching the site. In priority order (`process/structured-data.md` → *sameAs*):
+  - LinkedIn **company** page: <https://www.linkedin.com/company/…>  ← the one that matters most
+  - Google Business Profile (Maps share URL): <…>
+  - Manufacturer authorized-dealer listing (office tech): <…>
+  - Crunchbase / Clutch / G2 / BBB, whichever the category uses: <…>
+  - YouTube / Facebook, only if active: <…>
+  - ⛔ Never a QBS profile. `reskin.py` blocks it; `verify.mjs` fails it.
 - **Locations:** <count, and addresses if local>
   - ⚠️ **More than one location?** No location/address/hours module exists in the 57 and there is no
     `LocalBusiness` schema. Multi-location is **out of tier** — scope it as custom. See

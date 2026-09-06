@@ -618,7 +618,7 @@ async function auditPage(browser, url) {
       `${d.preconnect} preconnect hints — a CSS @import chain costs extra round trips`);
 
     // ---- structured data, including WHOSE name is in it
-    let orgName = null, invalid = [], types = [];
+    let orgName = null, orgSameAs = null, invalid = [], types = [];
     for (const raw of d.jsonld) {
       try {
         const parsed = JSON.parse(raw);
@@ -626,7 +626,10 @@ async function auditPage(browser, url) {
           const t = node['@type'];
           types.push(Array.isArray(t) ? t.join('/') : t);
           if (t === 'Organization' || t === 'LocalBusiness' ||
-              (Array.isArray(t) && t.includes('Organization'))) orgName = node.name;
+              (Array.isArray(t) && t.includes('Organization'))) {
+            orgName = node.name;
+            orgSameAs = Array.isArray(node.sameAs) ? node.sameAs : (node.sameAs ? [node.sameAs] : []);
+          }
         }
       } catch (e) { invalid.push(String(e.message).slice(0, 80)); }
     }
@@ -658,6 +661,18 @@ async function auditPage(browser, url) {
       rec(url, 'Organization entity', qbs ? 'FAIL' : 'WARN',
         qbs ? `names "${orgName}" — on a client site this is the wrong entity`
             : `names "${orgName}" — pass --expect-org to assert`);
+      // sameAs is the entity-resolution signal: it is how an engine confirms this
+      // Organization is that LinkedIn company page and not a namesake. The one
+      // failure mode here is a client site pointing at *our* profiles.
+      const sa = orgSameAs || [];
+      const qbsProfile = sa.find(u => /quantum-business-solutions|thequantumleap|shawn-peterson/i.test(u));
+      const hasLinkedIn = sa.some(u => /linkedin\.com\/company\//i.test(u));
+      rec(url, 'Organization sameAs',
+        qbsProfile ? 'FAIL' : (sa.length && hasLinkedIn) ? 'PASS' : 'WARN',
+        qbsProfile ? `points at a QBS profile: ${qbsProfile}`
+        : !sa.length ? 'empty — add at least the LinkedIn company URL (brands/<client>.md → Entity facts)'
+        : !hasLinkedIn ? `${sa.length} URL(s) but no linkedin.com/company/ — personal profiles do not count`
+        : `${sa.length} profile(s), LinkedIn company page present`);
     }
 
     // ---- conversion paths, scoped to the page's own content.
@@ -762,7 +777,7 @@ try {
 // puts website pages on the same scale so there is one quality trendline. Weights
 // follow the runbook's own ranking: correctness failures cost most, quality next,
 // warnings least. Nothing ships under 80.
-const CORRECTNESS = /no QBS branding|Organization names the client|Organization entity|a11y@|indexable|noindex|JSON-LD parses|tap targets >= 24|inputs >= 16|viewport meta|no placeholder|no horizontal scroll|load@/;
+const CORRECTNESS = /no QBS branding|Organization names the client|Organization entity|Organization sameAs|a11y@|indexable|noindex|JSON-LD parses|tap targets >= 24|inputs >= 16|viewport meta|no placeholder|no horizontal scroll|load@/;
 const QUALITY = /og:image|lazy|width\/height|card grid balance|conversion path|exactly one h1|body text|structured data present|broken internal|CLS|canonical|meta description/;
 function scorePage(rows) {
   let score = 100;
