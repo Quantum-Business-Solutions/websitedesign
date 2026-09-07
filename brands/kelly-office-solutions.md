@@ -200,11 +200,11 @@ reveals appetite for an IT-forward register.
 
 **Preview:** https://kelly-office-solutions.vercel.app (hub; each direction opens in its own tab, every
 page built). Content source of truth: `brands/kelly-office-solutions.content.py`, which writes
-`brands/kelly-office-solutions.content.json`. Thirty-six pages per direction: home, what we do, seven
+`brands/kelly-office-solutions.content.json`. Fifty-five pages per direction (17 product pages and a catalogue added 2026-09-07, plus a fifth branch page for Swansboro): home, what we do, seven
 service pages, industries plus five industry pages, supplies and service, cost calculator,
 assessment, about, careers, locations plus four city pages with LocalBusiness schema, blog plus nine
 posts with BlogPosting schema, contact. Kelly's own brand film (Vimeo 271855836) on the home page
-behind a poster, and their production print film on the production page. Three QA passes applied
+behind a poster, and their production print film on the production page. Four QA passes applied
 (copy and fact, mobile and design, then the expansion pass); unverified claims stay on the hub's
 "To confirm" list. Managed print copy verified against the live page on 2026-09-06.
 

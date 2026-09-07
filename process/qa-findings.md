@@ -437,3 +437,42 @@ reports. The page now carries both, in their words.
 
 **Lesson:** when a direction gets its own CSS block, anything responsive that must survive it has to
 be emitted after it. Order is the cascade's first rule and the easiest one to break by appending.
+
+## 2026-09-07: pass four on the 36-page Kelly preview, three agents, then the expansion to 55 pages
+
+**Copy and fact (39 findings).** The two that mattered most: Kelly has a fifth office, Swansboro, on
+their live contact page, and the pages said "four" in 24 places; and "same-day response" was printed
+as a commitment 53 times when Kelly's site never states one (only a customer testimonial does).
+Also: "technicians carry parts for the models we sell" (unsourced), twelve meta descriptions cut
+mid-word by a character slice, the Winston-Salem region label leaking into prose as "Headquarters,
+the Triad", blog slugs that broke the migration rule (live slugs restored), a lead magnet that did
+not exist, the calculator's 22 percent saving as if it were Kelly's number, monthly reports where the
+live site says six-monthly, a hedged answer on the assessment price when Kelly's site says free,
+invented economics ("wins within the first year"), a water cooler post whose steps did not fit the
+bottleless units Kelly sells, and roughly twenty FAQs answered "Ask your branch". All fixed at the
+source in the content script; the ones that need Kelly's word are on the hub's To confirm list.
+
+**Mobile and quality.** Passed the mechanical layer on the new pages (links, images, axe, headings,
+tabs, sliders, checklist). The footer grid overflowed at 390 after a fifth column was added with an
+inline style (inline beats the theme's mobile rule); now a class with a desktop-only media query.
+The closed mobile menu's accordions were still laid out and pushed past the viewport; now hidden
+until open.
+
+**Design director (three tiers, 97 hours estimated).** Applied now: mega menu with every product,
+dropdowns on every top item, active state, breadcrumbs with BreadcrumbList schema; hero proof strip
+and a chrome ribbon; the second stats band removed; a North Carolina service-area map with five pins;
+a 94.4 proof numeral; testimonials as one feature quote plus a letters column, no stars; per-direction
+home compositions (Clean opens on the customer fast lane, Showcase on the checklist and film, Press
+on the heritage timeline); count-up no longer animates years or small numbers; tilt removed from
+text cards; parallax without the scale; header folds the utility bar after 80px; checklist CTA is a
+ghost until three ticks; Press logos static; the direction switcher moved to the corner. Proposed,
+not built: the film as a muted hero loop (needs an MP4 export from Kelly's Vimeo), fleet cutouts,
+office hotspots, ZIP lookup, per-direction headers, real photography of Tim and Peter.
+
+**Products.** Kelly's live pages name every product; the preview now has a page for each (17) plus a
+catalogue, reachable from the mega menu and the footer. Photography for four of them is generated
+and labelled as such in the repo.
+
+**Lesson:** a claim repeated is not a claim verified. "Same-day" survived three passes because it
+read like the category's default. The fact checker's brief now says: any response time, any parts
+policy, any cadence is unsourced until the client's own page or a signed document says it.

@@ -32,7 +32,12 @@ EXTRA_CSS = r'''
 .pv-tst figure{margin:0;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;gap:16px}
 .pv-tst blockquote{margin:0;font-family:var(--q-serif);font-size:19px;line-height:1.5;color:var(--fg)}
 .pv-tst figcaption{font-size:14px;color:var(--fg-muted)}.pv-tst figcaption b{display:block;color:var(--fg);font-weight:600}
-.pv-tst .stars{color:var(--accent-ink);letter-spacing:2px;font-size:16px}
+.pv-tst-feature{grid-template-columns:1.25fr 1fr;align-items:start}
+.pv-tst-feature figure.lead{background:none;border:0;padding:0}.pv-tst-feature figure.lead blockquote{font-size:clamp(24px,2.4vw,32px);line-height:1.35;letter-spacing:-.01em}
+.pv-tst-feature figure.lead blockquote::before{content:"\201C";display:block;color:var(--accent-ink);font-size:72px;line-height:.5;margin-bottom:18px}
+.pv-tst-letters{list-style:none;margin:0;padding:0}.pv-tst-letters li{padding:18px 0;border-top:1px solid var(--border)}.pv-tst-letters li:last-child{border-bottom:1px solid var(--border)}
+.pv-tst-letters blockquote{margin:0;font-size:15.5px;line-height:1.55;color:var(--fg)}.pv-tst-letters footer{margin-top:8px;font-size:13.5px;color:var(--fg-muted)}.pv-tst-letters footer b{color:var(--fg);font-weight:600}
+@media(max-width:1024px){.pv-tst-feature{grid-template-columns:1fr}}
 /* ===== timeline ===== */
 .pv-tl{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;position:relative;margin-top:48px}
 .pv-tl::before{content:"";position:absolute;left:0;right:0;top:9px;height:1px;background:var(--border)}
@@ -174,8 +179,13 @@ def _video(s, ctx):
 
 def _testimonials(s, ctx):
     E = ctx["E"]
+    if s.get("layout") == "feature":
+        q, who, org = s["items"][0]
+        rest = "".join(f'<li><blockquote>{E(x[0])}</blockquote><footer><b>{E(x[1])}</b> {E(x[2])}</footer></li>' for x in s["items"][1:])
+        items = f'<figure class="lead"><blockquote>{E(q.strip().strip(chr(34)))}</blockquote><figcaption><b>{E(who)}</b>{E(org)}</figcaption></figure><ol class="pv-tst-letters">{rest}</ol>'
+        return f'{ctx["sec_open"](s)} <div class="q-container"><div class="pv-center" style="margin-bottom:40px"><div class="q-eyebrow">{E(s.get("eyebrow", "What customers say"))}</div><h2 class="q-h2" style="margin-top:22px;max-width:720px">{E(s["heading"])}</h2></div><div class="pv-tst pv-tst-feature">{items}</div></div></section>'
     items = "".join(
-        f'<figure><div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"{E(q)}"</blockquote><figcaption><b>{E(who)}</b>{E(org)}</figcaption></figure>'
+        f'<figure><blockquote>{E(q.strip().strip(chr(34)))}</blockquote><figcaption><b>{E(who)}</b>{E(org)}</figcaption></figure>'
         for q, who, org in s["items"])
     return f'{ctx["sec_open"](s)} <div class="q-container"><div class="pv-center" style="margin-bottom:40px"><div class="q-eyebrow">{E(s.get("eyebrow", "What customers say"))}</div><h2 class="q-h2" style="margin-top:22px;max-width:720px">{E(s["heading"])}</h2></div><div class="pv-tst">{items}</div></div></section>'
 
@@ -195,8 +205,8 @@ def _tabs(s, ctx):
         bullets = "".join(f"<li>{E(b)}</li>" for b in t.get("bullets", []))
         img = f'<div class="img"><img src="{E(ctx["rel"](t["image"]))}" alt="{E(t.get("image_alt", ""))}" width="800" height="600" loading="lazy"></div>' if t.get("image") else ""
         link = f'<p><a class="q-btn-ghost" href="{E(ctx["L"](t["href"]))}">{E(t.get("link_label", "Learn more"))}<span style="width:22px;height:1px;background:currentColor;display:inline-block"></span></a></p>' if t.get("href") else ""
-        panels += f'<div role="tabpanel" id="{tid}-p{i}" aria-labelledby="{tid}-t{i}"{"" if i == 0 else " hidden"}><div><h3>{E(t["title"])}</h3><p>{E(t["body"])}</p>{f"<ul>{bullets}</ul>" if bullets else ""}{link}</div>{img}</div>'
-    js = f'''<script>(function(){{var r=document.getElementById("{tid}");if(!r)return;var tabs=r.querySelectorAll("[role=tab]"),panels=r.querySelectorAll("[role=tabpanel]");tabs.forEach(function(t,i){{t.addEventListener("click",function(){{tabs.forEach(function(x,j){{x.setAttribute("aria-selected",j===i?"true":"false");x.tabIndex=j===i?0:-1;panels[j].hidden=j!==i}})}});t.addEventListener("keydown",function(e){{var k=e.key==="ArrowRight"?1:e.key==="ArrowLeft"?-1:0;if(!k)return;var n=(i+k+tabs.length)%tabs.length;tabs[n].click();tabs[n].focus()}})}})}})();</script>'''
+        panels += f'<div role="tabpanel" tabindex="0" id="{tid}-p{i}" aria-labelledby="{tid}-t{i}"{"" if i == 0 else " hidden"}><div><h3>{E(t["title"])}</h3><p>{E(t["body"])}</p>{f"<ul>{bullets}</ul>" if bullets else ""}{link}</div>{img}</div>'
+    js = f'''<script>(function(){{var r=document.getElementById("{tid}");if(!r)return;var tabs=r.querySelectorAll("[role=tab]"),panels=r.querySelectorAll("[role=tabpanel]");tabs.forEach(function(t,i){{t.addEventListener("click",function(){{tabs.forEach(function(x,j){{x.setAttribute("aria-selected",j===i?"true":"false");x.tabIndex=j===i?0:-1;panels[j].hidden=j!==i}})}});t.addEventListener("keydown",function(e){{var k=e.key==="ArrowRight"?1:e.key==="ArrowLeft"?-1:0;var n;if(e.key==="Home")n=0;else if(e.key==="End")n=tabs.length-1;else{{if(!k)return;n=(i+k+tabs.length)%tabs.length}}e.preventDefault();tabs[n].click();tabs[n].focus()}})}})}})();</script>'''
     return f'{ctx["sec_open"](s)} <div class="q-container pv-tabs" id="{tid}"><div class="pv-center" style="margin-bottom:36px"><div class="q-eyebrow">{E(s.get("eyebrow"))}</div><h2 class="q-h2" style="margin-top:22px;max-width:760px">{E(s["heading"])}</h2></div><div role="tablist" aria-label="{E(s["heading"])}">{tabs}</div>{panels}</div>{js}</section>'
 
 
@@ -228,15 +238,53 @@ def _comparison(s, ctx):
     cols = s["columns"]
     head = "".join(f'<th{" class=rec" if c.get("recommended") else ""}>{E(c["label"])}{"<span class=tag>Most common</span>" if c.get("recommended") else ""}</th>' for c in cols)
     rows = "".join("<tr>" + f"<td>{E(row[0])}</td>" + "".join(f"<td>{E(v)}</td>" for v in row[1:]) + "</tr>" for row in s["rows"])
-    return f'{ctx["sec_open"](s)} <div class="q-container"><div class="pv-split"><h2 class="q-h2">{E(s["heading"])}</h2><p>{E(s.get("intro"))}</p></div><div class="pv-cmp" tabindex="0" role="region" aria-label="{E(s["heading"])}"><table><thead><tr><th scope="row">Option</th>{head}</tr></thead><tbody>{rows}</tbody></table></div>{f"<p style=font-size:14px;color:var(--fg-muted);margin-top:14px>{E(s[chr(110)+chr(111)+chr(116)+chr(101)])}</p>" if s.get("note") else ""}</div></section>'
+    return f'{ctx["sec_open"](s)} <div class="q-container"><div class="pv-split"><h2 class="q-h2">{E(s["heading"])}</h2><p>{E(s.get("intro"))}</p></div><div class="pv-cmp" tabindex="0" role="region" aria-label="{E(s["heading"])}"><table><thead><tr><th scope="row">Option</th>{head}</tr></thead><tbody>{rows}</tbody></table></div><p class="pv-cmp-hint">Swipe sideways to compare all three.</p>{f"<p style=font-size:14px;color:var(--fg-muted);margin-top:14px>{E(s[chr(110)+chr(111)+chr(116)+chr(101)])}</p>" if s.get("note") else ""}</div></section>'
 
 
 def _checklist(s, ctx):
     E = ctx["E"]
     cid = s.get("id", "check")
     items = "".join(f'<label><input type="checkbox">{E(t)}</label>' for t in s["items"])
-    return f'''{ctx["sec_open"](s)} <div class="q-container" id="{cid}"><div class="pv-center" style="margin-bottom:36px"><div class="q-eyebrow">{E(s.get("eyebrow", "Is this you?"))}</div><h2 class="q-h2" style="margin-top:22px;max-width:760px">{E(s["heading"])}</h2><p class="q-lead" style="max-width:600px;margin-top:14px">{E(s.get("intro"))}</p></div><div class="pv-check">{items}</div><p class="pv-check-out" data-out>{E(s.get("zero", "Tick what sounds familiar."))}</p><p style="margin-top:18px"><a class="q-btn" href="{E(ctx["L"](s.get("cta_href", "contact.html")))}">{E(s.get("cta_label", "Request an assessment"))}</a></p></div>
-<script>(function(){{var r=document.getElementById("{cid}");if(!r)return;var o=r.querySelector("[data-out]"),bs=r.querySelectorAll("input");var msgs={json.dumps(s.get("messages", ["Tick what sounds familiar.", "One is normal.", "Two is a pattern.", "Three or more is money leaving the building every month. The assessment finds how much."]))};function u(){{var n=0;bs.forEach(function(b){{if(b.checked)n++}});o.innerHTML="<b>"+n+" of "+bs.length+"</b> "+(msgs[Math.min(n,msgs.length-1)])}}bs.forEach(function(b){{b.addEventListener("change",u)}});u()}})();</script></section>'''
+    return f'''{ctx["sec_open"](s)} <div class="q-container" id="{cid}"><div class="pv-center" style="margin-bottom:36px"><div class="q-eyebrow">{E(s.get("eyebrow", "Is this you?"))}</div><h2 class="q-h2" style="margin-top:22px;max-width:760px">{E(s["heading"])}</h2><p class="q-lead" style="max-width:600px;margin-top:14px">{E(s.get("intro"))}</p></div><div class="pv-check">{items}</div><p class="pv-check-out" data-out>{E(s.get("zero", "Check what sounds familiar."))}</p><p style="margin-top:18px"><a class="q-btn-ghost" data-cta data-label="{E(s.get("cta_label", "See what the assessment finds"))}" href="{E(ctx["L"](s.get("cta_href", "contact.html")))}">{E(s.get("cta_label", "See what the assessment finds"))}<span style="width:22px;height:1px;background:currentColor;display:inline-block"></span></a></p></div>
+<script>(function(){{var r=document.getElementById("{cid}");if(!r)return;var o=r.querySelector("[data-out]"),bs=r.querySelectorAll("input");var msgs={json.dumps(s.get("messages", ["Tick what sounds familiar.", "One is normal.", "Two is a pattern.", "Three or more is money leaving the building every month. The assessment finds how much."]))};var cta=r.querySelector("[data-cta]");function u(){{var n=0;bs.forEach(function(b){{if(b.checked)n++}});o.innerHTML=(n?"<b>"+n+" of "+bs.length+"</b> ":"")+(msgs[Math.min(n,msgs.length-1)]);if(cta){{if(n>=3){{cta.className="q-btn";cta.textContent="Request an assessment"}}else{{cta.className="q-btn-ghost";cta.innerHTML=cta.getAttribute("data-label")+'<span style="width:22px;height:1px;background:currentColor;display:inline-block"></span>'}}}}}}bs.forEach(function(b){{b.addEventListener("change",u)}});u()}})();</script></section>'''
+
+
+def _proof(s, ctx):
+    E = ctx["E"]
+    src = f'<p class="src">{E(s["source"])}</p>' if s.get("source") else ""
+    return f'{ctx["sec_open"](s)} <div class="q-container pv-proof"><div class="q-eyebrow" style="justify-content:center">{E(s.get("eyebrow", ""))}</div><b>{E(s["value"])}</b><p class="q-lead">{E(s["text"])}</p>{src}</div></section>'
+
+
+# North Carolina outline, lon/lat, simplified. Drawn once, projected in _map.
+NC_OUTLINE = [(-84.32, 34.99), (-84.29, 35.22), (-84.02, 35.41), (-83.62, 35.57), (-83.11, 35.77), (-82.78, 35.95), (-82.60, 36.06), (-82.22, 36.16), (-81.91, 36.30), (-81.70, 36.58),
+              (-80.30, 36.55), (-78.50, 36.54), (-76.92, 36.55), (-75.87, 36.55), (-75.72, 36.23), (-75.55, 35.82), (-75.47, 35.43), (-75.53, 35.23), (-75.90, 35.10), (-76.20, 34.95),
+              (-76.50, 34.62), (-76.95, 34.68), (-77.35, 34.52), (-77.75, 34.30), (-77.92, 33.95), (-78.02, 33.86), (-78.55, 33.86), (-79.07, 34.30), (-79.68, 34.80), (-80.32, 34.82),
+              (-80.78, 34.82), (-80.93, 35.10), (-81.05, 35.15), (-81.38, 35.17), (-82.29, 35.20), (-82.78, 35.08), (-83.11, 35.00), (-84.32, 34.99)]
+
+
+def _map(s, ctx):
+    """Service-area map: the NC outline with a pin per branch, and the branch list beside it."""
+    E = ctx["E"]
+    import math
+    lat0 = 35.5
+    kx = math.cos(math.radians(lat0))
+    def proj(lon, lat):
+        return ((lon + 84.4) * kx * 100, (36.65 - lat) * 100)
+    pts = [proj(*p) for p in NC_OUTLINE]
+    xs = [x for x, _ in pts]; ys = [y for _, y in pts]
+    w, h = max(xs) - min(xs) + 40, max(ys) - min(ys) + 40
+    ox, oy = min(xs) - 20, min(ys) - 20
+    path = "M" + " L".join(f"{x - ox:.1f},{y - oy:.1f}" for x, y in pts) + " Z"
+    pins, rows = [], []
+    for it in s["items"]:
+        name, lon, lat, href, sub, hq = it["name"], it["lon"], it["lat"], it["href"], it.get("sub", ""), it.get("hq", False)
+        x, y = proj(lon, lat); x -= ox; y -= oy
+        dx, dy = it.get("label_dx", 10), it.get("label_dy", 4)
+        pins.append(f'<circle class="ring" cx="{x:.1f}" cy="{y:.1f}" r="{s.get("ring", 42)}"/><circle class="pin{" hq" if hq else ""}" cx="{x:.1f}" cy="{y:.1f}" r="5.5"/><text x="{x + dx:.1f}" y="{y + dy:.1f}">{E(name)}</text>')
+        rows.append(f'<li><div><b>{E(name)}{" (headquarters)" if hq else ""}</b><small>{E(sub)}</small></div><a href="{E(ctx["L"](href))}">{E(it.get("link", "Branch page"))}</a></li>')
+    svg = f'<svg class="pv-map-svg" viewBox="0 0 {w:.0f} {h:.0f}" role="img" aria-label="{E(s.get("alt", "Map of North Carolina with Kelly branch locations"))}"><path class="land" d="{path}"/>{"".join(pins)}</svg>'
+    head = f'<div class="pv-split" style="margin-bottom:40px"><h2 class="q-h2">{E(s["heading"])}</h2><p>{E(s.get("intro", ""))}</p></div>'
+    return f'{ctx["sec_open"](s)} <div class="q-container">{head}<div class="pv-map-wrap">{svg}<ul class="pv-map-list">{"".join(rows)}</ul></div></div></section>'
 
 
 def _values(s, ctx):
@@ -261,7 +309,7 @@ def _sticky(s, ctx):
 def _resources(s, ctx):
     E = ctx["E"]
     cards = "".join(f'<a class="pv-tilt" href="{E(ctx["L"](h))}"><span class="k">{E(k)}</span><h3>{E(t)}</h3><p>{E(d)}</p><span>{E(l)}</span></a>' for k, t, d, l, h in s["items"])
-    return f'{ctx["sec_open"](s)} <div class="q-container"><div class="pv-split"><h2 class="q-h2">{E(s["heading"])}</h2><p>{E(s.get("intro"))}</p></div><div class="pv-res" style="grid-template-columns:repeat({min(len(s["items"]), 3)},1fr)">{cards}</div></div></section>'
+    return f'{ctx["sec_open"](s)} <div class="q-container"><div class="pv-split"><h2 class="q-h2">{E(s["heading"])}</h2><p>{E(s.get("intro"))}</p></div><div class="pv-res{" pv-res-5" if len(s["items"]) == 5 else ""}" style="grid-template-columns:repeat({min(len(s["items"]), 3)},1fr)">{cards}</div></div></section>'
 
 
 def _article(s, ctx):
@@ -291,5 +339,5 @@ def _related(s, ctx):
 
 RENDER_EXTRA = {"hero-video": _hero_video, "video": _video, "testimonials": _testimonials, "timeline": _timeline,
                 "tabs": _tabs, "calculator": _calculator, "comparison": _comparison, "checklist": _checklist,
-                "values": _values, "leadership": _leadership, "sticky": _sticky, "resources": _resources,
+                "values": _values, "proof": _proof, "map": _map, "leadership": _leadership, "sticky": _sticky, "resources": _resources,
                 "article": _article, "related": _related}

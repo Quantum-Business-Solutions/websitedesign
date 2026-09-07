@@ -59,7 +59,22 @@ footer columns, legal links.
 
 `schema`: org_name, org_url, org_logo, org_description, sameAs, telephone.
 
-`nav`: label and file, five to seven items.
+`nav`: five to seven top items. Each is `[label, file]` for a plain link, or a dict with
+`children: [[label, file], ...]` for a dropdown, or `groups: [{title, items}]` plus an optional
+`featured` card for a mega menu. The mobile menu becomes accordions automatically, and the current
+section is marked on every page.
+
+`crumbs`: on any page, `[[label, file], ...]` renders a breadcrumb with BreadcrumbList schema.
+
+**Three compositions from one content file.** A page may carry `compose: {clean: [ids], showcase:
+[ids], press: [ids]}` to order and select its sections per direction, and any section may carry
+`variants: {press: {...}}` to override fields in one direction. Give every home section an `id`.
+This is how the three directions stop being three skins.
+
+**Products.** When the client sells things, every product gets a page under `products/` and a
+`products.html` catalogue, and the mega menu lists all of them in groups. The Kelly script's
+`PRODUCTS` list is the shape: slug, group, title, image, one-liner, body, benefits, bullets, FAQ,
+brands. Only what the client's own site or a signed brief states.
 
 `pages`: one entry per page with `file` (nested paths allowed: `services/managed-print.html`,
 `blog/<slug>.html`, `locations/<city>.html`), `title` (with the brand after a pipe), `description`
@@ -70,10 +85,10 @@ Section types, all in `scripts/preview.py` and `scripts/preview_sections.py`:
 
 | Family | Types |
 |---|---|
-| Openers | `hero` (split or centered, image, badge, note), `hero-video`, `partners` (auto-scrolling logo strip) |
-| Proof | `stats` (count-up on scroll), `testimonials`, `casestudy`, `leadership`, `timeline`, `values`, `video` (Vimeo behind a poster and play button, or a self-hosted mp4) |
+| Openers | `hero` (split or centered, image, badge, note, `stats` proof strip, `ribbon` band), `hero-video`, `partners` (auto-scrolling logo strip; static on Press) |
+| Proof | `stats` (count-up on scroll, years and small numbers stay still), `testimonials` (grid, or `layout: feature` for one big quote and a letters column), `proof` (one giant numeral), `casestudy`, `leadership`, `timeline`, `values`, `video` (Vimeo behind a poster and play button, or a self-hosted mp4) |
 | Offer | `services` (list), `cards` (3D tilt on hover), `resources`, `tabs` (industries or steps, with image), `process`, `comparison` (table), `checklist` (interactive), `calculator` (three sliders, live result), `detail`, `band` |
-| Local | `locations` (phone at the card foot), `faq` |
+| Local | `locations` (phone at the card foot), `map` (state outline with a pin per branch, from lon/lat), `faq` |
 | Content | `listing` (blog index), `article` (breadcrumb, table of contents, chapters, pull quote, callout, author), `related` |
 | Convert | `contact`, `leadform`, `cta` (suppressed automatically on pages with a form), `sticky` (mobile two-button bar, set once under `brand.sticky`) |
 

@@ -141,6 +141,7 @@ DIRECTION_CSS = {
 @media(max-width:767px){.pv-hero-grid > div:first-child{order:0}.q-h1{font-size:40px}.pv-stat b{font-size:48px}}
 ''',
     "press": r'''
+.pv-logos{flex-wrap:wrap;justify-content:center;mask-image:none;-webkit-mask-image:none;gap:28px 48px}.pv-logos-track{animation:none;flex-wrap:wrap;justify-content:center;gap:28px 48px}.pv-logos-track[aria-hidden]{display:none}
 /* Press: editorial. Serif reaches past the headline; hairline rules; plates around photographs; 2px corners; folios. */
 .q-lead,.pv-quote,.pv-cs .h,.pv-stat b,.pv-badge b,.pv-metric .v,.pv-svc h3,.pv-post h2,.pv-grid .q-card h3,.pv-loc .q-card h3,.pv-stage h3,.pv-faq summary{font-family:var(--q-serif)}
 .q-lead{font-size:21px;line-height:1.55}
@@ -208,6 +209,79 @@ h1,h2,h3{text-wrap:balance}
 .q-mnav-panel > a,.q-msub > summary{color:var(--chrome-fg)!important;border-bottom-color:var(--chrome-border)!important}
 .q-msub-links a{color:var(--chrome-muted)!important}
 .q-mnav-cta{color:var(--cta-fg)!important;background:var(--q-gold);border-color:var(--q-gold)!important}
+/* hero proof strip and ribbon */
+.pv-hero-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0;margin-top:56px;border-top:1px solid var(--border)}
+.pv-hero-stats > div{padding:22px 24px 0 0;border-left:1px solid var(--border);padding-left:24px}.pv-hero-stats > div:first-child{border-left:0;padding-left:0}
+.pv-hero-stats b{display:block;font-family:var(--q-serif);font-size:40px;line-height:1;font-weight:800;letter-spacing:-.03em;color:var(--accent-ink)}
+.pv-hero-stats span{display:block;margin-top:8px;font-size:13px;line-height:1.45;color:var(--fg-muted)}
+.pv-ribbon{background:var(--chrome-bg);color:var(--chrome-fg)}
+.pv-ribbon .q-container{display:flex;flex-wrap:wrap;gap:10px 36px;align-items:center;min-height:56px;padding-top:12px;padding-bottom:12px;font-size:14px}
+.pv-ribbon span{display:inline-flex;align-items:center;gap:10px}.pv-ribbon span::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--q-gold)}
+/* proof numeral */
+.pv-proof{text-align:center}.pv-proof b{display:block;font-family:var(--q-serif);font-size:clamp(96px,14vw,200px);line-height:.95;font-weight:800;letter-spacing:-.04em;color:var(--accent-ink)}
+.pv-proof .q-lead{max-width:640px;margin:22px auto 0}.pv-proof .src{margin-top:14px;font-size:13.5px;color:var(--fg-muted)}
+/* service-area map */
+.pv-map-wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center}
+.pv-map-svg{width:100%;height:auto;display:block}
+.pv-map-svg .land{fill:var(--bg-alt);stroke:var(--fg);stroke-width:1.2;stroke-linejoin:round}
+.pv-map-svg .ring{fill:var(--q-gold);fill-opacity:.12;stroke:var(--accent-ink);stroke-dasharray:3 3;stroke-width:.8}
+.pv-map-svg .pin{fill:var(--accent-ink);stroke:#fff;stroke-width:1.5}.pv-map-svg .pin.hq{fill:var(--chrome-bg)}
+.pv-map-svg text{font:600 11px/1 var(--q-sans);fill:var(--fg)}
+.pv-map-list{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.pv-map-list li{display:grid;grid-template-columns:1fr auto;gap:8px 18px;padding:14px 0;border-top:1px solid var(--border);align-items:baseline}
+.pv-map-list li:last-child{border-bottom:1px solid var(--border)}
+.pv-map-list b{font-weight:600;color:var(--fg)}.pv-map-list small{display:block;color:var(--fg-muted);font-size:13.5px;margin-top:2px}
+.pv-map-list a{white-space:nowrap;font-weight:600;color:var(--accent-ink)}
+@media(max-width:1024px){.pv-map-wrap{grid-template-columns:1fr;gap:28px}}
+/* header collapse */
+.q-header .pv-util{transition:max-height .25s ease,opacity .2s ease;max-height:60px;overflow:hidden}
+.q-header.is-scrolled .pv-util{max-height:0;opacity:0}
+.pv-grid-5 .q-card h3{min-height:2.6em}
+/* dropdowns, mega menu, breadcrumbs */
+@media(min-width:1025px){.q-footer-grid.pv-fcols-4{grid-template-columns:1.4fr repeat(4,1fr)}.q-footer-grid.pv-fcols-5{grid-template-columns:1.3fr repeat(5,1fr)}}
+@media(min-width:768px) and (max-width:1024px){.q-footer-grid.pv-fcols-4,.q-footer-grid.pv-fcols-5{grid-template-columns:1fr 1fr}}
+.q-mnav:not([open]) .q-mnav-panel{display:none}
+.pv-sticky.pv-sticky-off{opacity:0;pointer-events:none;transform:translateY(12px)}.pv-sticky{transition:opacity .2s,transform .2s}
+html{scroll-padding-bottom:72px}
+.pv-logos{position:relative}
+.pv-cmp{position:relative;mask-image:linear-gradient(90deg,#000 88%,transparent);-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent)}
+.pv-cmp table td:first-child,.pv-cmp table th:first-child{position:sticky;left:0;background:var(--bg);z-index:1}
+.pv-cmp-hint{display:none;font-size:13.5px;color:var(--fg-muted);margin:8px 0 0}
+@media(max-width:767px){.pv-cmp-hint{display:block}}
+@media(min-width:1200px){.pv-res.pv-res-5{grid-template-columns:repeat(5,1fr)!important}}
+@media(max-width:480px){.pv-grid-4{grid-template-columns:1fr!important}}
+.q-msub > summary{white-space:normal}
+.q-header .q-nav > a[aria-current],.q-header .q-nav-item > a[aria-current]{color:var(--q-gold)}
+.q-header .q-nav > a,.q-header .q-nav-item > a{position:relative}
+.q-header .q-nav > a[aria-current]::after,.q-header .q-nav-item > a[aria-current]::after{content:"";position:absolute;left:0;right:0;bottom:22px;height:2px;background:var(--q-gold);border-radius:2px}
+.q-subnav{padding:10px 0;border-radius:12px;box-shadow:0 24px 60px rgba(0,0,0,.22);z-index:80}
+.q-subnav a{padding:10px 22px;font-size:15px}
+.q-nav-item.pv-has-mega{position:static}
+.pv-mega{left:50%;transform:translate(-50%,6px);width:min(1180px,calc(100vw - 32px));padding:0;overflow:hidden}
+.q-nav-item:hover .pv-mega,.q-nav-item:focus-within .pv-mega{transform:translate(-50%,0)}
+.pv-mega-in{display:grid;grid-template-columns:repeat(4,minmax(0,1fr)) minmax(0,1.2fr);gap:0}
+.pv-mega .col{padding:26px 22px 22px;border-right:1px solid var(--border)}
+.pv-mega .gt{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--accent-ink);margin:0 0 10px;line-height:1.3}
+.pv-mega .feat .q-eyebrow{white-space:normal;line-height:1.3}
+.menu-open .pv-sticky,.menu-open .pv-switch-m{display:none!important}
+.pv-mega .col a{display:block;padding:8px 0;font-size:15px;white-space:normal;color:var(--fg);border-radius:0}
+.pv-mega .col a:hover{background:none;color:var(--accent-ink);text-decoration:underline;text-underline-offset:3px}
+.pv-mega .feat{display:flex;flex-direction:column;gap:8px;min-width:0;padding:26px 26px 22px;background:var(--bg-alt);color:var(--fg);white-space:normal}
+.pv-mega .feat b{font-size:20px;line-height:1.2;font-weight:700;letter-spacing:-.01em}
+.pv-mega .feat p{margin:0;color:var(--fg-muted);font-size:14.5px;line-height:1.55}
+.pv-mega .feat .more{color:var(--accent-ink);font-weight:600;font-size:14px;margin-top:auto}
+.pv-mega .feat:hover{background:var(--bg-alt)}.pv-mega .feat:hover b{color:var(--accent-ink)}
+.pv-mega-foot{border-top:1px solid var(--border);padding:12px 26px;background:var(--bg)}
+.pv-mega-foot a{display:inline;padding:0;font-weight:600;color:var(--accent-ink);font-size:14px}
+.pv-mgt{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--chrome-muted);padding:14px 14px 4px}
+.pv-mall{font-weight:600}
+.pv-crumbs{border-bottom:1px solid var(--border);background:var(--bg)}
+.pv-crumbs ol{list-style:none;margin:0;padding:12px 0;display:flex;flex-wrap:wrap;gap:6px 10px;font-size:14px;color:var(--fg-muted)}
+.pv-crumbs li + li::before{content:"/";margin-right:10px;color:var(--border)}
+.pv-crumbs a{color:var(--fg-muted);text-decoration:none;min-height:24px;display:inline-flex;align-items:center}.pv-crumbs a:hover{color:var(--accent-ink);text-decoration:underline}
+.pv-crumbs [aria-current]{color:var(--fg)}
+.q-msub-links a,.q-mnav-panel > a{color:var(--chrome-fg)!important}
+.q-msub > summary .q-caret{border-color:var(--q-gold)!important}
 /* footer on chrome */
 .q-footer{background:var(--chrome-bg);border-top:1px solid var(--chrome-border);color:var(--chrome-fg)}
 .q-footer-grid{grid-template-columns:1.6fr 1fr 1fr 1fr}
@@ -337,7 +411,7 @@ h1,h2,h3{text-wrap:balance}
 .pv-cta{text-align:center}
 .pv-cta .q-container{max-width:820px}
 /* direction switcher */
-.pv-switch{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:90;display:flex;gap:4px;align-items:center;background:rgba(20,23,28,.94);color:#fff;border-radius:999px;padding:6px 8px 6px 14px;font:13px/1 Inter,system-ui,sans-serif;box-shadow:0 10px 30px rgba(0,0,0,.25);backdrop-filter:blur(6px);white-space:nowrap}
+.pv-switch{position:fixed;right:14px;bottom:14px;z-index:90;display:flex;gap:4px;align-items:center;background:rgba(20,23,28,.94);color:#fff;border-radius:999px;padding:6px 8px 6px 14px;font:13px/1 Inter,system-ui,sans-serif;box-shadow:0 10px 30px rgba(0,0,0,.25);backdrop-filter:blur(6px);white-space:nowrap}
 .pv-switch .lbl{opacity:.7;margin-right:6px}
 .pv-switch a{color:#fff;text-decoration:none;padding:10px 12px;border-radius:999px;min-height:36px;display:inline-flex;align-items:center;white-space:nowrap}
 .pv-switch a[aria-current]{background:rgba(255,255,255,.18);box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)}
@@ -372,7 +446,7 @@ PREVIEW_JS = r"""
 (function(){
 var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
 /* count-up on stat numbers */
-var stats=document.querySelectorAll('.pv-stat b');
+var stats=[].filter.call(document.querySelectorAll('.pv-stat b,.pv-hero-stats b,.pv-proof b'),function(b){if(b.hasAttribute('data-static'))return false;var t=b.textContent.trim().replace(/,/g,''),n=parseFloat(t);return !isNaN(n)&&n>=100&&!(t.length===4&&n>1800&&n<2100)});
 if(!rm&&'IntersectionObserver' in window&&stats.length){
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;io.unobserve(e.target);var el=e.target,txt=el.textContent.trim(),m=txt.match(/^([^0-9]*)([0-9][0-9,]*)(\.[0-9]+)?(.*)$/);if(!m)return;var pre=m[1],intp=m[2].replace(/,/g,''),dec=m[3]||'',suf=m[4],target=parseFloat(intp+dec),places=dec?dec.length-1:0,comma=m[2].indexOf(',')>-1,t0=null;function fmt(v){var f=v.toFixed(places);if(comma){var parts=f.split('.');parts[0]=parts[0].replace(/\B(?=(\d{3})+(?!\d))/g,',');f=parts.join('.')}return pre+f+suf}function step(ts){if(t0===null)t0=ts;var k=Math.min(1,(ts-t0)/1400);k=1-Math.pow(1-k,3);el.textContent=fmt(target*k);if(k<1)requestAnimationFrame(step);else el.textContent=txt}el.textContent=fmt(0);requestAnimationFrame(step)})},{threshold:.4});
   stats.forEach(function(b){io.observe(b)});
@@ -380,7 +454,7 @@ if(!rm&&'IntersectionObserver' in window&&stats.length){
 /* hero image: slow parallax against the scroll */
 var hero=document.querySelector('.pv-hero-img img');
 if(hero&&!rm&&matchMedia('(min-width:1025px)').matches){
-  var raf=0;function move(){raf=0;var r=hero.getBoundingClientRect(),c=(r.top+r.height/2-innerHeight/2)/innerHeight;hero.style.transform='translateY('+(-c*26).toFixed(1)+'px) scale(1.06)'}
+  var raf=0;function move(){raf=0;var r=hero.getBoundingClientRect(),c=(r.top+r.height/2-innerHeight/2)/innerHeight;hero.style.transform='translateY('+(-c*14).toFixed(1)+'px)'}
   hero.style.willChange='transform';addEventListener('scroll',function(){if(!raf)raf=requestAnimationFrame(move)},{passive:true});move();
 }
 /* cards: light 3D tilt toward the pointer */
@@ -391,6 +465,13 @@ if(!rm&&matchMedia('(pointer:fine) and (min-width:1025px)').matches){
     c.addEventListener('pointerleave',function(){c.style.transform=''});
   });
 }
+/* bottom bar: stay out of the way while the hero's own buttons are on screen */
+var stk=document.querySelector('.pv-sticky'),hb=document.querySelector('main .pv-btns');
+if(stk&&hb&&'IntersectionObserver' in window){new IntersectionObserver(function(es){es.forEach(function(e){stk.classList.toggle('pv-sticky-off',e.isIntersecting)})},{threshold:.2}).observe(hb)}
+/* header: fold the utility bar away after the first scroll */
+var hd=document.querySelector('.q-header');if(hd){var sc=function(){hd.classList.toggle('is-scrolled',scrollY>80)};addEventListener('scroll',sc,{passive:true});sc()}
+/* mobile menu open: hide the bottom bars so the panel is not covered */
+var mn=document.querySelector('.q-mnav');if(mn){mn.addEventListener('toggle',function(){document.documentElement.classList.toggle('menu-open',mn.open)})}
 /* video facade: poster + play, iframe only on click */
 document.querySelectorAll('.pv-video[data-embed]').forEach(function(v){
   var b=v.querySelector('button');if(!b)return;
@@ -433,10 +514,17 @@ def r_hero(s, ctx):
     if s.get("layout") == "split" and s.get("image"):
         badge = (f'<div class="pv-badge"><b>{E(s["badge"]["value"])}</b><span>{E(s["badge"]["label"])}</span></div>'
                  if s.get("badge") else "")
+        stats = ""
+        if s.get("stats"):
+            cells = "".join(f'<div><b{" data-static" if not str(v).replace(",", "").replace(".", "").isdigit() or len(str(v)) == 4 or float(str(v).replace(",", "")) < 100 else ""}>{E(v)}</b><span>{E(l)}</span></div>' for v, l in s["stats"])
+            stats = f'<div class="pv-hero-stats">{cells}</div>'
+        ribbon = ""
+        if s.get("ribbon"):
+            ribbon = '<div class="pv-ribbon"><div class="q-container">' + "".join(f'<span>{E(x)}</span>' for x in s["ribbon"]) + "</div></div>"
         return f'''{sec_open(s)} <div class="q-container"><div class="pv-hero-grid"><div>{eyebrow}
 <h1 class="q-h1" style="margin-top:22px">{RAW(s["heading"])}</h1>
 <div class="q-lead" style="max-width:540px;margin:24px 0 0">{E(s.get("subhead"))}</div>{btns}{note}</div>
-<div class="pv-hero-img"><img src="{E(ctx["rel"](s["image"]))}"{ctx["srcset"](s["image"])} alt="{E(s.get("image_alt"))}" width="{s.get("image_w", 1200)}" height="{s.get("image_h", 800)}" fetchpriority="high" decoding="async">{badge}</div></div></div></section>'''
+<div class="pv-hero-img"><img src="{E(ctx["rel"](s["image"]))}"{ctx["srcset"](s["image"])} alt="{E(s.get("image_alt"))}" width="{s.get("image_w", 1200)}" height="{s.get("image_h", 800)}" fetchpriority="high" decoding="async">{badge}</div></div>{stats}</div></section>{ribbon}'''
     return f'''{sec_open(s)} <div class="q-container"><div class="pv-center pv-hero-c" style="max-width:860px;margin:0 auto">{eyebrow}
 <h1 class="q-h1" style="margin-top:22px">{RAW(s["heading"])}</h1>
 <div class="q-lead" style="max-width:640px;margin:24px 0 0">{E(s.get("subhead"))}</div>{btns.replace('class="pv-btns"', 'class="pv-btns" style="justify-content:center"')}{note}</div>{f'<div class="pv-hero-wide"><img src="{E(ctx["rel"](s["image"]))}"{ctx["srcset"](s["image"])} alt="{E(s.get("image_alt", ""))}" width="{s.get("image_w", 1200)}" height="{s.get("image_h", 675)}" fetchpriority="high" decoding="async"></div>' if s.get("image") else ""}</div></section>'''
@@ -451,7 +539,7 @@ def r_partners(s, ctx):
         else:
             items.append(f"<span>{E(name)}</span>")
     track = "".join(items)
-    return f'<section class="pv-partners"><div class="q-container"><p class="pv-cap">{E(s.get("caption", "Partners"))}</p></div><div class="pv-logos" aria-label="Technology partners"><div class="pv-logos-track">{track}</div><div class="pv-logos-track" aria-hidden="true">{track}</div></div></section>'
+    return f'<section class="pv-partners"><div class="q-container"><p class="pv-cap">{E(s.get("caption", "Partners"))}</p></div><div class="pv-logos" role="region" aria-label="Technology partners"><div class="pv-logos-track">{track}</div><div class="pv-logos-track" aria-hidden="true">{track}</div></div></section>'
 
 
 def r_stats(s, ctx):
@@ -483,7 +571,7 @@ def r_casestudy(s, ctx):
 
 def r_cards(s, ctx):
     n = len(s["items"]); cols = cols_for(n)
-    cards = "".join(f'<div class="q-card pv-tilt pv-tilt"><h3>{E(t)}</h3><p>{E(b)}</p></div>' for t, b in s["items"])
+    cards = "".join(f'<div class="q-card"><h3>{E(t)}</h3><p>{E(b)}</p></div>' for t, b in s["items"])
     head = ""
     if s.get("heading"):
         head = f'<div class="pv-center" style="margin-bottom:44px">{f"<div class=q-eyebrow>{E(s.get(chr(101)+chr(121)+chr(101)+chr(98)+chr(114)+chr(111)+chr(119)))}</div>" if s.get("eyebrow") else ""}<h2 class="q-h2" style="margin-top:22px;max-width:700px">{E(s["heading"])}</h2></div>'
@@ -553,8 +641,10 @@ def r_leadform(s, ctx):
     plus the phone for the visitor who would rather talk. process/quality-standard.md item 6."""
     brand = ctx["brand"]
     fid = s.get("id", "lead")
+    spec = s.get("fields") or [["Name", "text", "name"], ["Work email", "email", "email"], ["Phone", "tel", "tel"], ["Company", "text", "organization"]]
+    fields = "".join(f'<label for="{E(fid)}-{i}">{E(l)}</label><input id="{E(fid)}-{i}" type="{E(t)}" autocomplete="{E(a)}">' for i, (l, t, a) in enumerate(spec))
     return f'''{sec_open(s)} <div class="q-container pv-contact" style="align-items:center"><div><h2 class="q-h2">{E(s["heading"])}</h2><div class="q-lead" style="margin-top:16px">{E(s.get("body"))}</div><p style="margin-top:20px;font-size:15px;color:var(--fg-muted)">Or call <a href="{E(ctx["L"](brand["phone_href"]))}" style="color:var(--fg);font-weight:600;min-height:44px;display:inline-flex;align-items:center">{E(brand["phone"])}</a></p></div>
-<form class="q-form" onsubmit="return false"><label for="{E(fid)}-e">Work email</label><input id="{E(fid)}-e" type="email" autocomplete="email"><label for="{E(fid)}-c">Company</label><input id="{E(fid)}-c" type="text" autocomplete="organization"><input type="submit" class="hs-button" value="{E(s.get("submit", "Send"))}"><p class="pv-form-note">{E(s.get("note", ""))}</p></form></div></section>'''
+<form class="q-form" onsubmit="return false">{fields}<input type="submit" class="hs-button" value="{E(s.get("submit", "Send"))}"><p class="pv-form-note">{E(s.get("note", ""))}</p></form></div></section>'''
 
 
 def r_cta(s, ctx):
@@ -571,28 +661,89 @@ RENDER.update(preview_sections.RENDER_EXTRA)
 
 # ------------------------------------------------------------------------------ chrome
 
+def _nav_items(content):
+    """Normalise nav entries: [label, href] or {label, href, children|groups, featured, mega}."""
+    out = []
+    for it in content["nav"]:
+        if isinstance(it, dict):
+            out.append(it)
+        else:
+            out.append({"label": it[0], "href": it[1]})
+    return out
+
+
+def _active(item, file):
+    """True when the current page is this item or sits beneath it."""
+    hrefs = [item.get("href", "")]
+    hrefs += [c[1] for c in item.get("children", [])]
+    for g in item.get("groups", []):
+        hrefs += [c[1] for c in g["items"]]
+    hrefs = [h.split("#")[0] for h in hrefs if h]
+    if file in hrefs:
+        return True
+    top = item.get("href", "").split("#")[0].rsplit(".", 1)[0]
+    return bool(top) and file.startswith(top + "/")
+
+
 def header(content, ctx):
     b = content["brand"]
-    util = "".join(f'<a href="{E(ctx["L"](h))}"{" class=pv-keep" if i == 0 else ""}>{E(l)}</a>' for i, (l, h) in enumerate((u["label"], u["href"]) for u in b.get("utility", [])))
+    L, file = ctx["L"], ctx.get("file", "")
+    util = "".join(f'<a href="{E(L(h))}"{" class=pv-keep" if i == 0 else ""}>{E(l)}</a>' for i, (l, h) in enumerate((u["label"], u["href"]) for u in b.get("utility", [])))
     if b.get("phone"):
         util += f'<a class="pv-phone" href="{E(b["phone_href"])}">{E(b["phone"])}</a>'
-    nav = "".join(f'<a href="{E(ctx["L"](h))}">{E(l)}</a>' for l, h in content["nav"])
-    mnav = "".join(f'<a href="{E(ctx["L"](h))}">{E(l)}</a>' for l, h in content["nav"]) + "".join(f'<a href="{E(ctx["L"](u["href"]))}">{E(u["label"])}</a>' for u in b.get("utility", []))
+    nav, mnav = [], []
+    for it in _nav_items(content):
+        cur = ' aria-current="true"' if _active(it, file) else ""
+        label = E(it["label"])
+        if it.get("groups") or it.get("children"):
+            if it.get("groups"):
+                cols = "".join(f'<div class="col"><div class="gt">{E(g["title"])}</div>' + "".join(f'<a href="{E(L(h))}">{E(l)}</a>' for l, h in g["items"]) + "</div>" for g in it["groups"])
+                f = it.get("featured")
+                feat = (f'<a class="feat" href="{E(L(f["href"]))}"><span class="q-eyebrow">{E(f.get("eyebrow", ""))}</span><b>{E(f["title"])}</b><p>{E(f.get("body", ""))}</p><span class="more">{E(f.get("label", "Learn more"))}</span></a>' if f else "")
+                panel = f'<div class="q-subnav pv-mega"><div class="pv-mega-in">{cols}{feat}</div><div class="pv-mega-foot"><a href="{E(L(it["href"]))}">All {E(it["label"].lower())}</a></div></div>'
+            else:
+                panel = '<div class="q-subnav">' + "".join(f'<a href="{E(L(h))}">{E(l)}</a>' for l, h in it["children"]) + "</div>"
+            nav.append(f'<div class="q-nav-item{" pv-has-mega" if it.get("groups") else ""}"><a href="{E(L(it["href"]))}" aria-haspopup="true"{cur}>{label}<span class="q-caret" aria-hidden="true"></span></a>{panel}</div>')
+            # mobile accordion
+            links = ""
+            if it.get("groups"):
+                for g in it["groups"]:
+                    links += f'<div class="pv-mgt">{E(g["title"])}</div>' + "".join(f'<a href="{E(L(h))}">{E(l)}</a>' for l, h in g["items"])
+                links += f'<a href="{E(L(it["href"]))}" class="pv-mall">All {E(it["label"].lower())}</a>'
+            else:
+                links = "".join(f'<a href="{E(L(h))}">{E(l)}</a>' for l, h in it["children"])
+            mnav.append(f'<details class="q-msub"{" open" if cur else ""}><summary>{label}<span class="q-caret" aria-hidden="true"></span></summary><div class="q-msub-links">{links}</div></details>')
+        else:
+            nav.append(f'<a href="{E(L(it["href"]))}"{cur}>{label}</a>')
+            mnav.append(f'<a href="{E(L(it["href"]))}"{cur}>{label}</a>')
+    mnav_s = "".join(mnav) + "".join(f'<a href="{E(L(u["href"]))}">{E(u["label"])}</a>' for u in b.get("utility", []))
     if b.get("phone"):
-        mnav += f'<a href="{E(b["phone_href"])}">Call {E(b["phone"])}</a>'
-    cta = f'<a class="q-booknow" href="{E(ctx["L"](b["cta"]["href"]))}">{E(b["cta"]["label"])}</a>' if b.get("cta") else ""
-    mcta = f'<a class="q-mnav-cta" href="{E(ctx["L"](b["cta"]["href"]))}">{E(b["cta"]["label"])}</a>' if b.get("cta") else ""
+        mnav_s += f'<a href="{E(b["phone_href"])}">Call {E(b["phone"])}</a>'
+    cta = f'<a class="q-booknow" href="{E(L(b["cta"]["href"]))}">{E(b["cta"]["label"])}</a>' if b.get("cta") else ""
+    mcta = f'<a class="q-mnav-cta" href="{E(L(b["cta"]["href"]))}">{E(b["cta"]["label"])}</a>' if b.get("cta") else ""
     lw, lh = b.get("logo_w", 300), b.get("logo_h", 100)
     logo = (f'<img src="{E(ctx["rel"](b["logo"]))}" alt="{E(b.get("logo_alt", content["client"]))}" width="{round(40 * lw / lh)}" height="40" loading="eager">'
             if b.get("logo") else f'<span class="q-logo-text">{E(content["client"])}</span>')
     return f'''<header class="q-header"><a class="q-skip" href="#q-content">Skip to content</a>
 <div class="pv-util"><div class="q-container">{util}</div></div>
 <div class="q-container q-header-in">
-  <a href="{E(ctx["L"]("index.html"))}" class="q-header-logo" aria-label="{E(content["client"])} home">{logo}</a>
-  <nav class="q-nav" aria-label="Main navigation">{nav}{cta}</nav>
-  <details class="q-mnav"><summary aria-label="Open menu"><span></span><span></span><span></span></summary><div class="q-mnav-panel">{mnav}{mcta}</div></details>
+  <a href="{E(L("index.html"))}" class="q-header-logo" aria-label="{E(content["client"])} home">{logo}</a>
+  <nav class="q-nav" aria-label="Main navigation">{"".join(nav)}{cta}</nav>
+  <details class="q-mnav"><summary aria-label="Open menu"><span></span><span></span><span></span></summary><div class="q-mnav-panel">{mnav_s}{mcta}</div></details>
 </div></header>
 <div id="q-content" tabindex="-1">'''
+
+
+def crumbs(page, ctx):
+    c = page.get("crumbs")
+    if not c:
+        return ""
+    items = []
+    for i, (l, h) in enumerate(c):
+        last = i == len(c) - 1
+        items.append(f'<li>{"<span aria-current=page>" + E(l) + "</span>" if last else f"<a href={chr(34)}{E(ctx[chr(76)](h))}{chr(34)}>{E(l)}</a>"}</li>')
+    ld = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": l} for i, (l, h) in enumerate(c)]}
+    return f'<nav class="pv-crumbs" aria-label="Breadcrumb"><div class="q-container"><ol>{"".join(items)}</ol></div></nav><script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'
 
 
 def footer(content, ctx):
@@ -612,7 +763,7 @@ def footer(content, ctx):
         contact = f'<p class="q-footer-contact">{f"<a class=q-footer-phone href={E(b[chr(112)+chr(104)+chr(111)+chr(110)+chr(101)+chr(95)+chr(104)+chr(114)+chr(101)+chr(102)])}>{E(b[chr(112)+chr(104)+chr(111)+chr(110)+chr(101)])}</a>" if b.get("phone") else ""}{"<br>" if b.get("phone") and b.get("email") else ""}{f"<a href=mailto:{E(b[chr(101)+chr(109)+chr(97)+chr(105)+chr(108)])}>{E(b[chr(101)+chr(109)+chr(97)+chr(105)+chr(108)])}</a>" if b.get("email") else ""}</p>'
     legal = "".join(f'<span class="pv-legal-item"><a href="{E(ctx["L"](h))}">{E(l)}</a></span>' for l, h in b.get("legal", []))
     return f'''</div>
-<footer class="q-footer"><div class="q-container q-footer-grid"><div>{logo}<p class="q-footer-tag">{E(b.get("tagline"))}</p>{contact}<div class="q-footer-social" style="gap:8px;font-size:14px">{social}</div></div>{cols}</div>
+<footer class="q-footer"><div class="q-container q-footer-grid pv-fcols-{len(b.get("footer_columns", []))}"><div>{logo}<p class="q-footer-tag">{E(b.get("tagline"))}</p>{contact}<div class="q-footer-social" style="gap:8px;font-size:14px">{social}</div></div>{cols}</div>
 <div class="q-container q-footer-legal"><span class="pv-legal-item">Copyright &copy; {ctx["year"]} {E(content["client"])}</span>{legal}</div></footer>'''
 
 
@@ -693,9 +844,19 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
         ss = srcset_for(pth, out_dir)
         return ss.replace('"../', '"' + up).replace(', ../', ', ' + up)
 
-    ctx = {"rel": rel, "L": L, "partner_logo": partner_logo, "brand": b, "year": 2026, "srcset": srcset,
+    ctx = {"rel": rel, "L": L, "partner_logo": partner_logo, "brand": b, "year": 2026, "srcset": srcset, "file": page["file"],
            "E": E, "RAW": RAW, "sec_open": sec_open, "depth": depth}
-    secs = list(page["sections"])
+    secs = []
+    for sec in page["sections"]:
+        sec = dict(sec)
+        v = (sec.pop("variants", None) or {}).get(dslug)
+        if v:
+            sec.update(v)
+        secs.append(sec)
+    comp = (page.get("compose") or {}).get(dslug)
+    if comp:
+        by_id = {x.get("id"): x for x in secs if x.get("id")}
+        secs = [by_id[i] for i in comp if i in by_id]
     if any(x["type"] in ("leadform", "contact") for x in secs) and secs and secs[-1]["type"] == "cta":
         secs = secs[:-1]   # two "start with the assessment" blocks in a row read as a template bug
     body = "".join(RENDER[s["type"]](s, ctx) for s in secs)
@@ -744,7 +905,7 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
 </head>
 <body>
 {header(content, ctx)}
-<main id="main">
+{crumbs(page, ctx)}<main id="main">
 {body}
 </main>
 {footer(content, ctx)}
