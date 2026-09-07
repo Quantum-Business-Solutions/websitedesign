@@ -380,6 +380,9 @@ in this repo about tooling is optimising the 13%.
 5. `converted.py learn` — read what cleared the floor, and what almost did.
 6. Bump the version stamp at the top and the *next review* date. **A review that doesn't change the
    stamp didn't happen.**
+7. Re-upload any process document that changed this month to the ClientCommand knowledge base
+   (entry ids in `process/repos.md`). The repo is the source of truth; ClientCommand is where the
+   team reads it.
 
 Version numbers: patch for wording, minor for a step added or an owner changed, major when the phase
 list changes. `git log -- process/RUNBOOK.md` is the changelog.

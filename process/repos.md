@@ -211,3 +211,23 @@ personal account is not a company asset.
 
 The honest summary: **Claude can do the build; you own the approvals, the domain, and the truth of
 anything the site claims.**
+
+## ClientCommand copies of the process
+
+The process documents live here, in git, and are mirrored into the ClientCommand knowledge base so
+the team finds them where the client work happens. The repo is the source of truth; when a document
+changes here, re-upload it (tool `upload_to_knowledge_base`, category Process, visibility internal)
+and note the new entry id below.
+
+| Document | ClientCommand KB entry | Last mirrored |
+|---|---|---|
+| process/quality-standard.md | b1a5c1ad-0699-489c-8c1e-80d4715a7ef1 | 2026-09-07 |
+| process/qa-process.md | 5a9e9d1e-69d9-4aba-bda1-55afd771ef87 | 2026-09-07 |
+| process/INTAKE.md | 3cae827e-f270-44c8-bcfd-2719a6e7b624 | 2026-09-07 |
+| Kelly preview status and To confirm list | 8f895114-39e1-4ef5-8bbc-2ff2e9b52b82 | 2026-09-07 |
+| process/RUNBOOK.md | c6d5d076-e207-4443-a4bd-e6df7e0db3f4 | 2026-09-07 |
+| verticals/office-technology.md | 903bf50e-ec70-4f7c-b67d-9e1cbf35797b | 2026-09-07 |
+| process/agents.md | 5e07c4a1-4f03-4872-90d2-d2d04215807a (pointer with summary) | 2026-09-07 |
+
+Client status entries (category Client) are written per engagement at each milestone: preview
+live, direction chosen, build started, launched.
