@@ -239,7 +239,7 @@ h1,h2,h3{text-wrap:balance}
 .pv-grid-5 .q-card h3{min-height:2.6em}
 /* dropdowns, mega menu, breadcrumbs */
 @media(min-width:1025px){.q-footer-grid.pv-fcols-4{grid-template-columns:1.4fr repeat(4,1fr)}.q-footer-grid.pv-fcols-5{grid-template-columns:1.3fr repeat(5,1fr)}}
-@media(min-width:768px) and (max-width:1024px){.q-footer-grid.pv-fcols-4,.q-footer-grid.pv-fcols-5{grid-template-columns:1fr 1fr}}
+@media(min-width:768px) and (max-width:1024px){.q-footer-grid.pv-fcols-4,.q-footer-grid.pv-fcols-5{grid-template-columns:repeat(4,1fr)}.q-footer-grid.pv-fcols-4 > div:first-child,.q-footer-grid.pv-fcols-5 > div:first-child{grid-column:1/-1}}
 .q-mnav:not([open]) .q-mnav-panel{display:none}
 .pv-sticky.pv-sticky-off{opacity:0;pointer-events:none;transform:translateY(12px)}.pv-sticky{transition:opacity .2s,transform .2s}
 html{scroll-padding-bottom:72px}
@@ -385,7 +385,7 @@ html{scroll-padding-bottom:72px}
 .pv-contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}
 .q-form{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:32px}
 .q-form label{display:block;font-size:13px;color:var(--fg-muted);margin:0 0 6px}
-.q-form input[type=text],.q-form input[type=email],.q-form input[type=tel],.q-form select,.q-form textarea,.q-form input[type=submit],.q-form .hs-button{font-size:16px;min-height:44px}
+.q-form input[type=text],.q-form input[type=email],.q-form input[type=tel],.q-form input[type=url],.q-form select,.q-form textarea,.q-form input[type=submit],.q-form .hs-button{font-size:16px;min-height:44px}
 .q-form .hs-button{min-height:48px;font-size:16px;width:100%}
 .pv-form-note{font-size:13px;color:var(--fg-muted);margin:12px 0 0}
 /* detail */
