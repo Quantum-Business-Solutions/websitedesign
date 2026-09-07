@@ -228,6 +228,27 @@ and note the new entry id below.
 | process/RUNBOOK.md | c6d5d076-e207-4443-a4bd-e6df7e0db3f4 | 2026-09-07 |
 | verticals/office-technology.md | 903bf50e-ec70-4f7c-b67d-9e1cbf35797b | 2026-09-07 |
 | process/agents.md | 5e07c4a1-4f03-4872-90d2-d2d04215807a (pointer with summary) | 2026-09-07 |
+| process/OPERATOR.md | 1dc0b46f-d098-4d94-b600-1f29de3064bd | 2026-09-07 |
+| process/SCHEDULE.md | c5eb3035-4b55-448e-857c-7838c65498d9 | 2026-09-07 |
+| process/build-sequence.md + process/checklist.md | 3bc00dbd-9d7f-4f10-9f07-5e121654f76f | 2026-09-07 |
+| process/decisions.md | 11910d25-7e82-4381-a822-2a9b603fabf0 | 2026-09-07 |
+| process/onboarding.md | b4634bb5-79c7-40fe-aa66-bb7e133fc2ff | 2026-09-07 |
+| process/outbound-mockups.md + process/pitch-presentation.md | 637e07a8-9098-4c87-8990-4d63a6fc016e | 2026-09-07 |
+| process/launch-standards.md | 929d3633-7772-45d8-917e-79eb94e7fbd4 | 2026-09-07 |
+| process/clientcommand.md | 29ed1578-01b4-4d1e-a551-88e819942ccd | 2026-09-07 |
+| process/reskin.md | 7df7154b-6519-4e27-8b3f-3c41eb4ab72f | 2026-09-07 |
+| process/roadmap.md | 8893ab3c-a0f0-456f-85a5-14d4c6f889cc | 2026-09-07 |
+| process/seo-baseline.md | a824a957-da49-4cd0-8827-2e3cca7c98ad | 2026-09-07 |
+| process/strategy.md | 3149fcee-445c-4540-93d6-831ee2419e12 | 2026-09-07 |
+| process/website-design-process.md | f7daedbf-f882-4fd1-9d2e-cabd981bac4f | 2026-09-07 |
+| process/repos.md | 722e213c-d815-4e5c-a671-b146b4e62b0e | 2026-09-07 |
+| process/structured-data.md | fe5cca54-7840-4720-a915-da2399f04177 | 2026-09-07 |
+| design/guardrails.md | 86d31967-e45c-436a-b090-380fc4ca0576 | 2026-09-07 |
+| themes/catalogue.md + themes/architecture.md | 422622f9-8d8c-4fb6-8ae7-e5ff77690c28 | 2026-09-07 |
+| process/qa-findings.md | 1f460024-a9e3-4037-b38b-7f4d532c462b | 2026-09-07 |
+| .claude/commands (mockups, preview, build, website) | fb4bd691-a959-429d-a891-efc909a85384 | 2026-09-07 |
+
+Not mirrored, deliberately: design/inbox.md, design/prompts.md, design/SCHEMA.md, design/patterns.md, design/references.md (design-library tooling read in the repo) and the brands/ briefs (client-confidential; the Client status entries carry what the team needs).
 
 Client status entries (category Client) are written per engagement at each milestone: preview
 live, direction chosen, build started, launched.

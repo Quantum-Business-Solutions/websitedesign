@@ -8241,6 +8241,88 @@
         "Go live. Reads at 30, 60 and 90 days against the baseline, with what we would change next."
       ]
     ],
+    "search": {
+      "heading": "Where you stand in search today, and what changes",
+      "intro": "Measured before we touched anything, so the work can be judged against it. Numbers from Semrush and from your live home page on 6 and 7 September 2026.",
+      "as_of": "Semrush, 6 September 2026; live HTML, 7 September 2026",
+      "today_stats": [
+        [
+          "521",
+          "Organic visits a month"
+        ],
+        [
+          "80%",
+          "Of them from people searching your name"
+        ],
+        [
+          "638",
+          "Keywords ranking, most on page two or beyond"
+        ],
+        [
+          "1",
+          "Page earning strangers: the Charlotte contact page"
+        ]
+      ],
+      "today": [
+        "The site is a phone book for people who already know the name. Four visits in five come from branded searches.",
+        "One page earns non-branded traffic: the Charlotte contact page, at #1 for copiers charlotte and top ten for copier lease and rental in Charlotte. Managed print ranks #6 for managed print services charlotte nc; mailing solutions #9 for a 390-a-month term.",
+        "The blog ranks between 24 and 94 on real terms it could own, including how to sanitize a water cooler (260 searches a month, position 46).",
+        "No LocalBusiness markup for any of the five branches, so search and AI assistants cannot tie the branches to their towns.",
+        "The home page title is the company name and a year; no service or place word in it. The description ends with an email address.",
+        "The home page is 1.6 MB of HTML with 158 script tags and 32 stylesheets, and none of its 29 images is lazy-loaded.",
+        "A viewport tag blocks pinch-zoom (maximum-scale, user-scalable no), which fails WCAG 1.4.4 on every phone.",
+        "Forms are a third-party Jotform embed with a captcha; submissions do not land in a CRM record."
+      ],
+      "after": [
+        "Every URL that earns a visitor today keeps earning it: a permanent redirect for each one, tested individually at launch (the table below).",
+        "Five branch pages with LocalBusiness markup, hours where you state them, and the towns each branch serves, starting with the 13 named on the Charlotte page.",
+        "17 product pages and a catalogue for terms that have no page today: postage meters, folder inserters, parcel lockers, ice machines, coffee brewers, wide format, production print.",
+        "Nine posts on their existing slugs, rewritten to answer the question in the first sentence, with BlogPosting markup and a real author.",
+        "Titles and descriptions written for the terms you already rank for: Managed Print Services in Charlotte and the Triad; Copier Sales, Lease and Rental in Charlotte, NC.",
+        "Organization markup on the home page with your LinkedIn, Facebook, X and Google Business profiles as sameAs, so an AI assistant asked about Kelly resolves to the right company.",
+        "Every page under 80 kB of HTML before images, lazy-loading below the fold, pinch-zoom allowed, 16 px inputs, 44 px targets, one H1. Scored on our gate before you see it; the scores travel with the site.",
+        "HubSpot forms that create a contact, notify a named person, and show a thank-you page. A calculator whose result you can email."
+      ],
+      "keep_heading": "Every page that earns a visitor today keeps earning it",
+      "keep": [
+        [
+          "/contact-us/charlotte/",
+          "/locations/charlotte",
+          "copiers charlotte #1, office equipment company charlotte #3, copier rentals charlotte nc #6, copier lease charlotte nc #8"
+        ],
+        [
+          "/managed-print-services/",
+          "/services/managed-print",
+          "managed print services charlotte nc #6"
+        ],
+        [
+          "/mailing-solutions/",
+          "/services/mailing",
+          "mailing solutions #9 (390 a month)"
+        ],
+        [
+          "/water/, /ice/, /coffee/",
+          "/products/water-coolers, /products/ice-machines, /products/coffee-brewers",
+          "water kelly #3, office ice dispenser #9"
+        ],
+        [
+          "/key-markets/legal-organizations/",
+          "/industries/legal",
+          "legal print terms at 23 and 30, difficulty 1 to 2"
+        ],
+        [
+          "/contact-us/greensboro/, /contact-us/",
+          "/locations/greensboro, /contact",
+          "branded and Greensboro terms"
+        ],
+        [
+          "blog posts, all",
+          "/blog/<same slug>",
+          "document management compliance, benefits of managed print, workstation support, sanitize a water cooler (260 a month at 46)"
+        ]
+      ],
+      "note": "Rankings or traffic. Those depend on the market and on what you publish after launch. What we promise is that nothing about the build is the reason they do not come, that every number above is re-measured at 30, 60 and 90 days, and that you see the same report we do."
+    },
     "confirm": [
       "The BBB wording. We have written BBB-accredited, rated A+, and left the accreditation year off until you confirm it.",
       "Swansboro. Your contact page lists a fifth office at 109 Seth Thomas Ln. We have built it as a branch; tell us if it is a service point instead.",
