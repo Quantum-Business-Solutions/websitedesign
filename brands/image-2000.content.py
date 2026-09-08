@@ -305,7 +305,7 @@ BRANDS = [  # slug, name, group, one-line, body, catalogue label
 
 
 def brand_page(slug, name, group, one, body, label):
-    img = {"Wide format": "assets/wide-format-1200.jpg", "Scanning": "assets/doc-mgmt-1200.jpg", "Production": "assets/production-1200.jpg", "Mailing": "assets/mailroom-printer-1200.jpg", "Breakroom": "assets/water-cooler-1200.jpg", "Displays": "assets/hq-1200.jpg"}.get(group, "assets/printer-1200.jpg")
+    img = {"Wide format": "assets/wide-format-1200.jpg", "Scanning": "assets/doc-mgmt-1200.jpg", "Production": "assets/production-1200.jpg", "Mailing": "assets/mailroom-printer-1200.jpg", "Breakroom": "assets/water-cooler-1200.jpg", "Displays": "assets/hq-1200.jpg"}.get(group, "assets/kyocera-mfp-1200.jpg" if slug == "kyocera" else "assets/mfp-a3-1200.jpg")  # generated A3 MFP render from library/office-technology, labelled on the page
     return {"file": f"brands/{slug}.html", "title": f"{name} from Image 2000 | {group}", "description": desc(f"{one} {body}"),
             "crumbs": [["Home", "index.html"], ["Brands", "brands.html"], [name, f"brands/{slug}.html"]],
             "sections": [
