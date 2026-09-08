@@ -1,0 +1,12 @@
+import { chromium } from 'playwright';
+const [file, out] = process.argv.slice(2);
+const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome', args: ['--headless=new','--no-sandbox'] });
+const p = await b.newPage({ viewport: { width: 1440, height: 900 } });
+await p.route(/fonts\.(googleapis|gstatic)\.com/, r => r.abort());
+await p.goto('file://' + file); await p.waitForTimeout(300);
+const el = p.locator('.tblwrap.audit'); await el.scrollIntoViewIfNeeded(); await p.waitForTimeout(500);
+await el.evaluate(e => { e.scrollLeft = 0; });
+await el.screenshot({ path: out.replace('.jpg','-left.jpg'), type: 'jpeg', quality: 80 });
+await el.evaluate(e => { e.scrollLeft = e.scrollWidth; }); await p.waitForTimeout(300);
+await el.screenshot({ path: out.replace('.jpg','-right.jpg'), type: 'jpeg', quality: 80 });
+await b.close();

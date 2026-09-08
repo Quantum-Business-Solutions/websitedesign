@@ -29,6 +29,12 @@ SITE = "https://www.vanausdall.com"
 PREVIEW = "https://van-ausdall.vercel.app"
 _DEEP = os.path.join(os.path.dirname(os.path.abspath(__file__)), "vanausdall.seo-deep.json")
 SEO_FINDINGS = json.load(open(_DEEP, encoding="utf-8")).get("findings", []) if os.path.exists(_DEEP) else []
+_FULL = os.path.join(os.path.dirname(os.path.abspath(__file__)), "vanausdall.seo-full.json")
+SITE_AUDIT = json.load(open(_FULL, encoding="utf-8")) if os.path.exists(_FULL) else None
+if SITE_AUDIT:
+    SITE_AUDIT["domain"] = "www.vanausdall.com"
+    SITE_AUDIT["as_of"] = "8 September 2026"
+    SITE_AUDIT["csv_href"] = "seo-audit-pages.csv"
 MFP_MODEL = "assets/fleet/mfp.glb" if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "vanausdall", "assets", "fleet", "mfp.glb")) else None
 
 # ------------------------------------------------------------------ sourced facts (vanausdall.com)
@@ -1052,6 +1058,7 @@ def build():
             "as_of": "Semrush US database and live HTML, 8 September 2026",
             "report_href": "seo-report.html", "report_label": "Read the full SEO and AI search analysis",
             "findings": SEO_FINDINGS[:5],
+            "site_audit": SITE_AUDIT,
             "today_stats": [["1,081", "Organic visits a month; competitors earn 1,555 to 2,094"], ["80%", "Of them from people searching your name"], ["0", "Top-100 rankings for managed it services indianapolis (1,000 a month)"], ["21", "Authority Score, against Leap at 24 and Taylored at 27"]],
             "today": [
                 "Four visits in five come from branded searches: van ausdall & farrar, van ausdall and farrar, van ausdall. The home page earns 85% of the site's traffic.",
