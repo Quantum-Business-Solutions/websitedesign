@@ -60,13 +60,31 @@ EXTRA_CSS2 = r"""
 
 /* ===== services wheel ===== */
 .pv-wheel{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.pv-wheel svg{width:100%;max-width:560px;height:auto;display:block;margin:0 auto}
-.pv-wheel .seg{fill:var(--bg-alt);stroke:var(--bg);stroke-width:3;cursor:pointer;transition:fill .2s,transform .25s;transform-origin:center;transform-box:view-box}
-.pv-wheel .seg:hover,.pv-wheel .seg.on,.pv-wheel a:focus-visible .seg{fill:var(--q-gold)}
-.pv-wheel .lab{font:600 13px/1.2 var(--q-sans);fill:var(--fg);pointer-events:none}
-.pv-wheel .seg.on ~ .lab,.pv-wheel g:hover .lab{fill:var(--cta-fg)}
-.pv-wheel .hub{fill:var(--chrome-bg)}.pv-wheel .hubt{font:800 22px/1 var(--q-serif);fill:#fff;text-anchor:middle;letter-spacing:-.02em}.pv-wheel .hubs{font:600 11px/1 var(--q-sans);fill:rgba(255,255,255,.75);text-anchor:middle;letter-spacing:.12em;text-transform:uppercase}
+.pv-wheel svg{width:100%;max-width:580px;height:auto;display:block;margin:0 auto;overflow:visible}
+.pv-wheel .segg{transition:transform .35s cubic-bezier(.2,.7,.2,1);transform-box:view-box}
+.pv-wheel .seg{fill:url(#pvw-seg);stroke:var(--bg);stroke-width:3;cursor:pointer;transition:fill .25s}
+.pv-wheel .segg.on,.pv-wheel a:hover .segg,.pv-wheel a:focus-visible .segg{transform:translate(var(--dx),var(--dy))}
+.pv-wheel .segg.on .seg,.pv-wheel a:hover .seg,.pv-wheel a:focus-visible .seg{fill:url(#pvw-on);filter:url(#pvw-shadow)}
+.pv-wheel .lab{font:600 13px/1.2 var(--q-sans);fill:var(--fg);pointer-events:none;transition:fill .25s}
+.pv-wheel .num{font:800 11px/1 var(--q-sans);fill:var(--fg-muted);pointer-events:none;letter-spacing:.06em;transition:fill .25s}
+.pv-wheel .segg.on .lab,.pv-wheel a:hover .lab,.pv-wheel .segg.on .num,.pv-wheel a:hover .num{fill:var(--cta-fg)}
+.pv-wheel .orbit{fill:none;stroke:var(--q-gold);stroke-opacity:.45;stroke-width:1.2;stroke-dasharray:3 9;transform-box:view-box;transform-origin:center;animation:pv-orbit 90s linear infinite}
+.pv-wheel .orbit2{fill:none;stroke:var(--border);stroke-width:1}
+.pv-wheel .ticks{stroke:var(--border);stroke-width:1.5}
+@keyframes pv-orbit{to{transform:rotate(360deg)}}
+.pv-wheel .hub{fill:url(#pvw-hub);filter:url(#pvw-shadow)}
+.pv-wheel .hubring{fill:none;stroke:var(--q-gold);stroke-width:2;stroke-opacity:.9}
+.pv-wheel .pulse{fill:none;stroke:var(--q-gold);stroke-width:2;transform-box:fill-box;transform-origin:center;animation:pv-pulse 3.2s ease-out infinite;opacity:0}
+@keyframes pv-pulse{0%{transform:scale(.9);opacity:.7}100%{transform:scale(1.35);opacity:0}}
+.pv-wheel .hubt{font:800 22px/1 var(--q-serif);fill:#fff;text-anchor:middle;letter-spacing:-.02em}.pv-wheel .hubs{font:600 11px/1 var(--q-sans);fill:rgba(255,255,255,.75);text-anchor:middle;letter-spacing:.12em;text-transform:uppercase}
 .pv-wheel .ring{font:700 12px/1 var(--q-sans);fill:var(--fg-muted);letter-spacing:.22em}
+.pv-wheel .panel{position:relative}
+.pv-wheel .panel .bignum{position:absolute;right:0;top:-18px;font:800 120px/1 var(--q-serif);letter-spacing:-.05em;color:var(--q-gold);opacity:.12;pointer-events:none;user-select:none}
+.pv-wheel .panel .bar{height:3px;background:var(--border);border-radius:2px;margin:18px 0 6px;overflow:hidden}
+.pv-wheel .panel .bar i{display:block;height:100%;width:100%;background:var(--q-gold);transform-origin:left;animation:pv-wbar 3.2s linear forwards}
+@keyframes pv-wbar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.held .pv-wheel .panel .bar{display:none}
+@media(prefers-reduced-motion:reduce){.pv-wheel .orbit,.pv-wheel .pulse{animation:none}.pv-wheel .panel .bar{display:none}.pv-wheel .segg{transition:none}}
 .pv-wheel .panel{min-height:220px}
 .pv-wheel .panel .q-eyebrow{margin-bottom:12px}
 .pv-wheel .panel h3{margin:0 0 12px;font-size:28px;line-height:1.15;letter-spacing:-.02em}
@@ -250,47 +268,59 @@ if('IntersectionObserver' in window){{new IntersectionObserver(function(es){{es.
 
 
 def _wheel(s, ctx):
-    """Services wheel: N segments, each a link; hover or focus swaps the panel beside it."""
+    """Services wheel: N segments, each a link; hover or focus swaps the panel beside it. Segments lift toward the pointer."""
     E, L = ctx["E"], ctx["L"]
     wid = s.get("id", "wheel")
     items = s["items"]  # [title, blurb, href, short]
     n = len(items)
     cx = cy = 280
-    r_out, r_in = 250, 118
+    r_out, r_in = 246, 120
     segs = []
     labels = []
+    ticks = []
     for i, it in enumerate(items):
-        a0 = -math.pi / 2 + i * 2 * math.pi / n + 0.012
-        a1 = -math.pi / 2 + (i + 1) * 2 * math.pi / n - 0.012
+        a0 = -math.pi / 2 + i * 2 * math.pi / n + 0.014
+        a1 = -math.pi / 2 + (i + 1) * 2 * math.pi / n - 0.014
         def pt(r, a):
             return f"{cx + r * math.cos(a):.1f},{cy + r * math.sin(a):.1f}"
         large = 1 if (a1 - a0) > math.pi else 0
         d = f"M{pt(r_out, a0)} A{r_out},{r_out} 0 {large} 1 {pt(r_out, a1)} L{pt(r_in, a1)} A{r_in},{r_in} 0 {large} 0 {pt(r_in, a0)} Z"
         am = (a0 + a1) / 2
-        lx, ly = cx + (r_in + r_out) / 2 * math.cos(am), cy + (r_in + r_out) / 2 * math.sin(am)
+        lx, ly = cx + (r_in + r_out) / 2 * math.cos(am) , cy + (r_in + r_out) / 2 * math.sin(am)
+        nx, ny = cx + (r_out - 18) * math.cos(am), cy + (r_out - 18) * math.sin(am)
+        dx, dy = 9 * math.cos(am), 9 * math.sin(am)
         short = it[3] if len(it) > 3 else it[0]
         words = short.split()
         lines = [" ".join(words[:2]), " ".join(words[2:])] if len(words) > 2 else [short]
         tspans = "".join(f'<tspan x="{lx:.1f}" dy="{"0" if k == 0 else "1.2em"}">{E(t)}</tspan>' for k, t in enumerate(lines) if t)
-        segs.append(f'<a href="{E(L(it[2]))}" data-i="{i}" aria-label="{E(it[0])}"><g><path class="seg" d="{d}"/><text class="lab" x="{lx:.1f}" y="{ly - (6 if len(lines) > 1 else 0):.1f}" text-anchor="middle">{tspans}</text></g></a>')
+        segs.append(f'<a href="{E(L(it[2]))}" data-i="{i}" aria-label="{E(it[0])}"><g class="segg" style="--dx:{dx:.1f}px;--dy:{dy:.1f}px"><path class="seg" d="{d}"/>'
+                    f'<text class="num" x="{nx:.1f}" y="{ny + 4:.1f}" text-anchor="middle">{i + 1:02d}</text>'
+                    f'<text class="lab" x="{lx:.1f}" y="{ly + 4 - (6 if len(lines) > 1 else 0):.1f}" text-anchor="middle">{tspans}</text></g></a>')
         labels.append(f'<li><a href="{E(L(it[2]))}" data-i="{i}"><i></i>{E(it[0])}</a></li>')
+        ticks.append(f'<line x1="{cx + (r_in - 14) * math.cos(am):.1f}" y1="{cy + (r_in - 14) * math.sin(am):.1f}" x2="{cx + (r_in - 6) * math.cos(am):.1f}" y2="{cy + (r_in - 6) * math.sin(am):.1f}"/>')
     hub_t = E(s.get("hub", ctx.get("client_short", "One")))
     hub_s = E(s.get("hub_sub", "one partner"))
     ring_id = f"{wid}-ring"
-    svg = (f'<svg viewBox="0 0 560 560" role="group" aria-labelledby="{wid}-t"><title id="{wid}-t">{E(s.get("alt", "The service lines as a wheel"))}</title>'
-           f'<defs><path id="{ring_id}" d="M{cx},{cy} m-{r_out + 18},0 a{r_out + 18},{r_out + 18} 0 1,1 {2 * (r_out + 18)},0"/></defs>'
-           f'{"".join(segs)}<circle class="hub" cx="{cx}" cy="{cy}" r="{r_in - 10}"/><text class="hubt" x="{cx}" y="{cy + 2}">{hub_t}</text><text class="hubs" x="{cx}" y="{cy + 24}">{hub_s}</text>'
+    defs = ('<defs><radialGradient id="pvw-seg" cx="50%" cy="50%" r="50%"><stop offset="55%" style="stop-color:var(--card)"/><stop offset="100%" style="stop-color:var(--bg-alt)"/></radialGradient>'
+            '<linearGradient id="pvw-on" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--q-gold-bright)"/><stop offset="1" style="stop-color:var(--q-gold)"/></linearGradient>'
+            '<radialGradient id="pvw-hub" cx="35%" cy="30%" r="80%"><stop offset="0" style="stop-color:var(--chrome-bg);stop-opacity:.75"/><stop offset="1" style="stop-color:var(--chrome-bg)"/></radialGradient>'
+            '<filter id="pvw-shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000" flood-opacity=".22"/></filter>'
+            f'<path id="{ring_id}" d="M{cx},{cy} m-{r_out + 22},0 a{r_out + 22},{r_out + 22} 0 1,1 {2 * (r_out + 22)},0"/></defs>')
+    svg = (f'<svg viewBox="-16 -16 592 592" role="group" aria-labelledby="{wid}-t"><title id="{wid}-t">{E(s.get("alt", "The service lines as a wheel"))}</title>{defs}'
+           f'<circle class="orbit" cx="{cx}" cy="{cy}" r="{r_out + 12}"/><circle class="orbit2" cx="{cx}" cy="{cy}" r="{r_in - 4}"/><g class="ticks">{"".join(ticks)}</g>'
+           f'{"".join(segs)}<circle class="pulse" cx="{cx}" cy="{cy}" r="{r_in - 12}"/><circle class="hub" cx="{cx}" cy="{cy}" r="{r_in - 12}"/><circle class="hubring" cx="{cx}" cy="{cy}" r="{r_in - 20}"/>'
+           f'<text class="hubt" x="{cx}" y="{cy + 2}">{hub_t}</text><text class="hubs" x="{cx}" y="{cy + 24}">{hub_s}</text>'
            f'<text class="ring"><textPath href="#{ring_id}" startOffset="50%" text-anchor="middle">{E(s.get("ring", "EVERYTHING AN OFFICE RUNS ON"))}</textPath></text></svg>')
     first = items[0]
-    panel = (f'<div class="panel" data-panel><div class="q-eyebrow">{E(s.get("panel_eyebrow", "Hover a segment"))}</div><h3 data-t>{E(first[0])}</h3><p data-b>{E(first[1])}</p>'
-             f'<a class="go" data-l href="{E(L(first[2]))}">{E(s.get("link_label", "See the service"))}</a><ol>{"".join(labels)}</ol></div>')
+    panel = (f'<div class="panel" data-panel><div class="bignum" data-n aria-hidden="true">01</div><div class="q-eyebrow">{E(s.get("panel_eyebrow", "Hover a segment"))}</div><h3 data-t>{E(first[0])}</h3><p data-b>{E(first[1])}</p>'
+             f'<a class="go" data-l href="{E(L(first[2]))}">{E(s.get("link_label", "See the service"))}</a><div class="bar" aria-hidden="true"><i></i></div><ol>{"".join(labels)}</ol></div>')
     data = json.dumps([[it[0], it[1], L(it[2])] for it in items], ensure_ascii=False)
-    js = f"""<script>(function(){{var w=document.getElementById("{wid}");if(!w)return;var D={data},t=w.querySelector('[data-t]'),b=w.querySelector('[data-b]'),l=w.querySelector('[data-l]'),cur=0;
-function show(i){{cur=i;t.textContent=D[i][0];b.textContent=D[i][1];l.setAttribute('href',D[i][2]);w.querySelectorAll('.seg').forEach(function(p,j){{p.classList.toggle('on',j===i)}});w.querySelectorAll('ol a').forEach(function(a,j){{a.classList.toggle('on',j===i)}})}}
+    js = f"""<script>(function(){{var w=document.getElementById("{wid}-w");if(!w)return;var D={data},t=w.querySelector('[data-t]'),b=w.querySelector('[data-b]'),l=w.querySelector('[data-l]'),cur=0;
+var nn=w.querySelector('[data-n]'),bar=w.querySelector('.bar i');function show(i){{cur=i;t.textContent=D[i][0];b.textContent=D[i][1];l.setAttribute('href',D[i][2]);if(nn)nn.textContent=(i+1<10?'0':'')+(i+1);w.querySelectorAll('.segg').forEach(function(p,j){{p.classList.toggle('on',j===i)}});w.querySelectorAll('ol a').forEach(function(a,j){{a.classList.toggle('on',j===i)}});if(bar){{bar.style.animation='none';void bar.offsetWidth;bar.style.animation=''}}}}
 w.querySelectorAll('svg a, ol a').forEach(function(a){{var i=+a.getAttribute('data-i');a.addEventListener('mouseenter',function(){{show(i)}});a.addEventListener('focus',function(){{show(i)}})}});show(0);
-if(!matchMedia('(prefers-reduced-motion: reduce)').matches){{var tm=setInterval(function(){{if(w.matches(':hover'))return;show((cur+1)%D.length)}},3200);w.addEventListener('pointerenter',function(){{clearInterval(tm)}},{{once:true}})}}}})();</script>"""
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches){{var tm=setInterval(function(){{if(w.matches(':hover'))return;show((cur+1)%D.length)}},3200);w.addEventListener('pointerenter',function(){{clearInterval(tm);w.classList.add('held')}},{{once:true}})}}}})();</script>"""
     head = f'<div class="pv-center" style="margin-bottom:40px"><div class="q-eyebrow">{E(s.get("eyebrow", ""))}</div><h2 class="q-h2" style="margin-top:22px;max-width:760px">{E(s["heading"])}</h2>{f"<p class=q-lead style=max-width:640px;margin:16px_auto_0>{E(s[chr(105)+chr(110)+chr(116)+chr(114)+chr(111)])}</p>".replace("_", " ") if s.get("intro") else ""}</div>'
-    return f'{ctx["sec_open"](s)} <div class="q-container" id="{E(wid)}">{head}<div class="pv-wheel">{svg}{panel}</div></div></section>'
+    return f'{ctx["sec_open"](s)} <div class="q-container" id="{E(wid)}-w">{head}<div class="pv-wheel">{svg}{panel}</div></div>{js}</section>'
 
 
 def _flow(s, ctx):
