@@ -431,7 +431,7 @@ FLOW_ENGAGEMENT = {"type": "flow", "id": "flow", "eyebrow": "How an engagement r
          "body": "Proactive monitoring, predictive maintenance and fast local repair keep you running. The Customer Care Center processes requests Monday through Friday, 7:00am to 5:00pm, and responds within 24 hours.",
          "receive": ["Alerts handled before they become tickets", "Supplies before they run out", "A 25-point inspection on every service call"]}]}
 
-SEAL = {"type": "seal", "id": "seal", "eyebrow": "What every VAF customer gets", "heading": "Not a slogan. A list you can check.",
+SEAL = {"type": "seal", "id": "seal", "tone": "dark", "eyebrow": "What every VAF customer gets", "heading": "Not a slogan. A list you can check.",
     "intro": "Each line is on vanausdall.com or in an audited third-party report today. Nothing here is aspirational.",
     "items": [["1914", "Serving Indiana since 1914", "Chosen as a distributor for the Thomas Edison Company. Privately owned in Indianapolis ever since."],
               ["93.4", "A service score audited by someone else", "Net Promoter Score collected and audited by CEO Juice. World Class every year since 2019. The average US company scores 10."],
@@ -483,7 +483,7 @@ FLEET = {"type": "fleet", "id": "fleet", "heading": "The fleet, at a glance", "i
         {"title": "Wide format", "band": "Plans, posters, signage", "brands": "Canon, HP", "image": "assets/fleet/wide-format.png", "bullets": ["Plan sets in house", "Engineering and construction"], "href": "industries/engineering-construction.html", "label": "Engineering and construction"},
         {"title": "Production print", "band": "High volume, inline finishing", "brands": "EFI Fiery, Skyline web-to-print", "image": "assets/fleet/production.png", "bullets": ["Variable data", "Color management from profile to press"], "href": "services/production-print.html", "label": "Production print"}]}
 
-PROOF = {"type": "proof", "id": "proof", "alt": True, "eyebrow": "Measured, not claimed", "value": "93.4", "text": "Net Promoter Score, collected and audited by CEO Juice from VAF customers after every service call. World Class, above 70, every year since 2019. The average US company scores 10.", "source": "CEO Juice is an independent company with an audited process. The numbers cannot be changed, even when a customer scores us low in error."}
+PROOF = {"type": "proof", "id": "proof", "tone": "dark", "eyebrow": "Measured, not claimed", "value": "93.4", "text": "Net Promoter Score, collected and audited by CEO Juice from VAF customers after every service call. World Class, above 70, every year since 2019. The average US company scores 10.", "source": "CEO Juice is an independent company with an audited process. The numbers cannot be changed, even when a customer scores us low in error."}
 
 FILM = {"type": "video", "id": "film", "eyebrow": "Who we are", "heading": "Privately owned in Indianapolis since 1914", "intro": "Filmed with VAF people at the 75th Street headquarters.", "youtube": "i-q4U5SnvaM", "poster": "assets/careers-1200.jpg", "title": "What it's like to work at Van Ausdall & Farrar", "caption": "VAF's own film, from vanausdall.com"}
 
@@ -511,7 +511,7 @@ VALUES = {"type": "values", "id": "values", "alt": True, "eyebrow": "Mission and
               ["Vision", "To implement technology to improve the human experience."],
               ["Measured, not claimed", "Our Net Promoter Score is collected and audited by CEO Juice, an independent company whose process we do not control. It is 93.4. The average US company scores 10, and anything above 70 is World Class."]]}
 
-CS_QUOTE = {"type": "casestudy", "id": "casestudy", "eyebrow": "Case study", "heading": "1,200 devices became 300, and a school corporation saved a million dollars",
+CS_QUOTE = {"type": "casestudy", "id": "casestudy", "tone": "dark", "eyebrow": "Case study", "heading": "1,200 devices became 300, and a school corporation saved a million dollars",
     "quote": "Tippecanoe was won over by Van Ausdall's process. By cutting overall equipment from 1,200 machines to just over 300 new machines, the school corporation has seen $1,000,000 in savings over the life of the contract.",
     "attribution": "Tippecanoe School Corporation case study, vanausdall.com",
     "metrics": [["Devices", "1,200 to 300", "Fleet consolidated across every building"], ["Savings", "$1M", "Over the life of the contract"], ["IT time", "20%", "Of IT staff time was going to print issues"], ["Vendors", "10 to 1", "Copy and print vendors replaced by one"]]}
@@ -751,7 +751,7 @@ def blog_post_page(p, others):
 
 def build():
     brand = {
-        "accent": "#2A71AF", "ink_secondary": "#403D39", "short": SHORT,
+        "accent": "#2A71AF", "ink_secondary": "#403D39", "short": SHORT, "type_from": {"showcase": "clean"}, "bg_alt": "#eef4fa", "navy": "#0f1e33",
         "logo": "assets/logo-600.png", "logo_alt": "Van Ausdall & Farrar, Business Technology Simplified", "logo_w": 600, "logo_h": 119,
         "logo_note": "Charcoal wordmark with a blue striped V: built for a light ground. Ask for a vector and a reversed variant for dark bands.",
         "phone": PHONE, "phone_href": PHONE_HREF, "email": SUCCESS_EMAIL,
@@ -789,9 +789,9 @@ def build():
     # ---------------- home
     pages.append({"file": "index.html", "title": "Van Ausdall & Farrar | Managed IT, copiers, phone systems and office technology in Indianapolis",
                   "compose": {
-                      "clean": ["hero-light", "partners", "seal", "pillars", "office", "is-this-you", "fleet", "flow", "model", "markets", "map", "voices", "film", "faq", "contact"],
-                      "showcase": ["hero", "partners", "pillars", "fleet", "ba", "flow", "office", "model", "proof", "casestudy", "markets", "map", "voices", "film", "contact"],
-                      "press": ["hero-light", "story", "services", "office", "seal", "casestudy", "voices", "film", "flow", "map", "faq", "contact"]},
+                      "clean": ["hero-light", "partners", "pillars", "seal", "story", "office", "fleet", "ba", "flow", "model", "proof", "casestudy", "is-this-you", "markets", "map", "voices", "film", "faq", "contact"],
+                      "showcase": ["hero", "partners", "pillars", "fleet", "ba", "flow", "office", "model", "seal", "story", "proof", "casestudy", "markets", "map", "voices", "film", "faq", "contact"],
+                      "press": ["hero-light", "story", "pillars", "seal", "office", "fleet", "ba", "flow", "model", "proof", "casestudy", "voices", "film", "markets", "map", "faq", "contact"]},
                   "description": "Indiana's largest full-service office technology provider since 1914. Managed IT and cybersecurity, business phone systems, copiers and managed print, document management and AI consulting for Indianapolis and the Midwest.",
                   "sections": [
         {"type": "hero", "id": "hero-light", "layout": "split", "eyebrow": "Business technology simplified, since 1914",
@@ -855,7 +855,7 @@ def build():
                   "crumbs": [["Home", "index.html"], ["Case studies", "case-studies.html"]],
                   "sections": [
         {"type": "hero", "layout": "centered", "eyebrow": "Case studies", "heading": "Cost savings and outcomes, <em>on the record</em>.", "subhead": "Eighteen Indiana organizations, by industry. Four are written up in full here; the rest are one line each until the PDFs are migrated."},
-        {"type": "stats", "alt": True, "items": [["$1M", "Saved by Tippecanoe School Corporation"], ["70%", "Print cost savings at STAR Financial Bank"], ["1.5M", "Patient files scanned in 90 days for Johnson Memorial"], ["$40,000", "Annual savings for the City of Anderson"]]},
+        {"type": "stats", "tone": "dark", "items": [["$1M", "Saved by Tippecanoe School Corporation"], ["70%", "Print cost savings at STAR Financial Bank"], ["1.5M", "Patient files scanned in 90 days for Johnson Memorial"], ["$40,000", "Annual savings for the City of Anderson"]]},
         {"type": "related", "heading": "Written up in full", "items": [[c[2], c[1], c[3], f"case-studies/{c[0]}.html", CS_IMAGE[c[0]]] for c in CASE_STUDIES if c[6]]},
         {"type": "resources", "alt": True, "heading": "Every case study by industry", "intro": "Each is published on vanausdall.com with a PDF today; the PDFs migrate into pages in the build.", "items": [[c[2], c[1], c[3], "Read the case study" if c[6] else "PDF on vanausdall.com", f"case-studies/{c[0]}.html" if c[6] else f"{SITE}/case-studies/{c[0]}"] for c in CASE_STUDIES]},
         {"type": "faq", "heading": "Questions about the results", "items": [["How much did Tippecanoe School Corporation save with Van Ausdall & Farrar?", "$1,000,000 over the life of the contract, by consolidating 1,200 printers and copiers to just over 300 and replacing more than 10 vendors with one."], ["How much did STAR Financial Bank save on print?", "70% over the original arrangement after phase one, once expired leases were removed and contracts renegotiated statewide."], ["How fast can Van Ausdall & Farrar scan patient records?", "1.5 million files in 90 days for Johnson Memorial Health, inside budget, with a certificate of destruction for the paper."]]},
@@ -916,7 +916,7 @@ def build():
                   "crumbs": [["Home", "index.html"], ["About", "about.html"]],
                   "sections": [
         {"type": "hero", "layout": "split", "eyebrow": "About VAF", "heading": "Helping customers succeed <em>since 1914</em>.", "subhead": "In 1914, Van Ausdall & Farrar was chosen as a distributor for the Thomas Edison Company. Today it is one of the largest privately owned office solutions companies in Indiana, with a 57,000-square-foot headquarters in Indianapolis and a long-standing tradition of partnering with the most respected manufacturers in the industry.", "primary": {"label": "Why VAF", "href": "#why"}, "secondary": {"label": "Careers", "href": "careers.html"}, "image": "assets/hq-1200.jpg", "image_alt": "The front entrance of the Van Ausdall & Farrar office building", "image_w": 1200, "image_h": 800},
-        {"type": "stats", "alt": True, "items": [["1914", "Chosen as a Thomas Edison Company distributor"], ["93.4", "Net Promoter Score, audited by CEO Juice"], ["SOC 2", "Certified service organization"], ["57,000", "Square feet of headquarters, built 2006"]]},
+        {"type": "stats", "tone": "dark", "items": [["1914", "Chosen as a Thomas Edison Company distributor"], ["93.4", "Net Promoter Score, audited by CEO Juice"], ["SOC 2", "Certified service organization"], ["57,000", "Square feet of headquarters, built 2006"]]},
         TIMELINE,
         VALUES,
         {"type": "detail", "id": "why", "eyebrow": "Why VAF", "heading": "Experience you will profit from", "body": "More than a century in business, through two world wars, two pandemics and a few bad Colts teams. We know how to evolve and adapt to disruptive technology when we recognize it. We only support the industry-recognized leaders in each area we serve, including Gartner Magic Quadrant leaders like Fortinet, Sophos, 8x8 and RingCentral, and we fully support every product we recommend with our own local team.",

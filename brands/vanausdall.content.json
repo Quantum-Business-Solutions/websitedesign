@@ -6,6 +6,11 @@
     "accent": "#2A71AF",
     "ink_secondary": "#403D39",
     "short": "VAF",
+    "type_from": {
+      "showcase": "clean"
+    },
+    "bg_alt": "#eef4fa",
+    "navy": "#0f1e33",
     "logo": "assets/logo-600.png",
     "logo_alt": "Van Ausdall & Farrar, Business Technology Simplified",
     "logo_w": 600,
@@ -444,13 +449,17 @@
         "clean": [
           "hero-light",
           "partners",
-          "seal",
           "pillars",
+          "seal",
+          "story",
           "office",
-          "is-this-you",
           "fleet",
+          "ba",
           "flow",
           "model",
+          "proof",
+          "casestudy",
+          "is-this-you",
           "markets",
           "map",
           "voices",
@@ -467,24 +476,32 @@
           "flow",
           "office",
           "model",
+          "seal",
+          "story",
           "proof",
           "casestudy",
           "markets",
           "map",
           "voices",
           "film",
+          "faq",
           "contact"
         ],
         "press": [
           "hero-light",
           "story",
-          "services",
-          "office",
+          "pillars",
           "seal",
+          "office",
+          "fleet",
+          "ba",
+          "flow",
+          "model",
+          "proof",
           "casestudy",
           "voices",
           "film",
-          "flow",
+          "markets",
           "map",
           "faq",
           "contact"
@@ -722,6 +739,7 @@
         {
           "type": "seal",
           "id": "seal",
+          "tone": "dark",
           "eyebrow": "What every VAF customer gets",
           "heading": "Not a slogan. A list you can check.",
           "intro": "Each line is on vanausdall.com or in an audited third-party report today. Nothing here is aspirational.",
@@ -949,7 +967,7 @@
         {
           "type": "proof",
           "id": "proof",
-          "alt": true,
+          "tone": "dark",
           "eyebrow": "Measured, not claimed",
           "value": "93.4",
           "text": "Net Promoter Score, collected and audited by CEO Juice from VAF customers after every service call. World Class, above 70, every year since 2019. The average US company scores 10.",
@@ -993,6 +1011,7 @@
         {
           "type": "casestudy",
           "id": "casestudy",
+          "tone": "dark",
           "eyebrow": "Case study",
           "heading": "1,200 devices became 300, and a school corporation saved a million dollars",
           "quote": "Tippecanoe was won over by Van Ausdall's process. By cutting overall equipment from 1,200 machines to just over 300 new machines, the school corporation has seen $1,000,000 in savings over the life of the contract.",
@@ -5303,7 +5322,7 @@
         },
         {
           "type": "stats",
-          "alt": true,
+          "tone": "dark",
           "items": [
             [
               "$1M",
@@ -6543,7 +6562,7 @@
         },
         {
           "type": "stats",
-          "alt": true,
+          "tone": "dark",
           "items": [
             [
               "1914",

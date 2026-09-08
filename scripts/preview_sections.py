@@ -39,6 +39,16 @@ EXTRA_CSS = r'''
 .pv-tst-letters blockquote{margin:0;font-size:15.5px;line-height:1.55;color:var(--fg)}.pv-tst-letters footer{margin-top:8px;font-size:13.5px;color:var(--fg-muted)}.pv-tst-letters footer b{color:var(--fg);font-weight:600}
 @media(max-width:1024px){.pv-tst-feature{grid-template-columns:1fr}}
 /* ===== timeline ===== */
+.pv-tl2{position:relative;margin:52px auto 0;max-width:1040px;display:grid;gap:28px}
+.pv-tl2 .line{position:absolute;left:50%;top:10px;bottom:10px;width:2px;background:var(--border);transform:translateX(-1px)}
+.pv-tl2 .ev{display:grid;grid-template-columns:1fr 1fr;align-items:center;position:relative}
+.pv-tl2 .dot{position:absolute;left:50%;top:50%;width:18px;height:18px;border-radius:50%;background:var(--q-gold);border:4px solid var(--bg);transform:translate(-50%,-50%);z-index:2;box-shadow:0 0 0 2px var(--border)}
+.pv-tl2 .card{background:var(--card,var(--bg));border:1px solid var(--border);border-radius:calc(var(--radius) + 4px);padding:22px 26px;box-shadow:0 14px 34px rgba(0,0,0,.07);position:relative}
+.pv-tl2 .ev.l .card{grid-column:1;margin-right:48px}.pv-tl2 .ev.r .card{grid-column:2;margin-left:48px}
+.pv-tl2 .ev.l .card::after,.pv-tl2 .ev.r .card::after{content:"";position:absolute;top:50%;width:48px;height:2px;background:var(--border);transform:translateY(-1px)}.pv-tl2 .ev.l .card::after{right:-48px}.pv-tl2 .ev.r .card::after{left:-48px}
+.pv-tl2 .y{font-family:var(--q-serif);font-size:34px;line-height:1;color:var(--accent-ink);font-weight:700}
+.pv-tl2 h3{font-size:18px;font-weight:700;margin:10px 0 6px;color:var(--fg)}.pv-tl2 p{font-size:15px;line-height:1.6;color:var(--fg-muted);margin:0}
+@media(max-width:767px){.pv-tl2 .line{left:14px}.pv-tl2 .ev{grid-template-columns:1fr}.pv-tl2 .ev.l .card,.pv-tl2 .ev.r .card{grid-column:1;margin:0 0 0 40px}.pv-tl2 .ev.l .card::after,.pv-tl2 .ev.r .card::after{left:-26px;width:26px}.pv-tl2 .dot{left:14px}}
 .pv-tl{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;position:relative;margin-top:48px}
 .pv-tl::before{content:"";position:absolute;left:0;right:0;top:9px;height:1px;background:var(--border)}
 .pv-tl > div{position:relative;padding-top:30px}
@@ -195,8 +205,8 @@ def _testimonials(s, ctx):
 
 def _timeline(s, ctx):
     E = ctx["E"]
-    items = "".join(f'<div><div class="y">{E(y)}</div><h3>{E(t)}</h3><p>{E(d)}</p></div>' for y, t, d in s["items"])
-    return f'{ctx["sec_open"](s)} <div class="q-container"><div class="pv-center"><div class="q-eyebrow">{E(s.get("eyebrow"))}</div><h2 class="q-h2" style="margin-top:22px;max-width:760px">{E(s["heading"])}</h2></div><div class="pv-tl" style="grid-template-columns:repeat({min(len(s["items"]), 4)},1fr)">{items}</div></div></section>'
+    items = "".join(f'<div class="ev {"l" if i % 2 == 0 else "r"}"><div class="dot" aria-hidden="true"></div><div class="card"><div class="y">{E(y)}</div><h3>{E(tt)}</h3><p>{E(d)}</p></div></div>' for i, (y, tt, d) in enumerate(s["items"]))
+    return f'{ctx["sec_open"](s)} <div class="q-container"><div class="pv-center"><div class="q-eyebrow">{E(s.get("eyebrow"))}</div><h2 class="q-h2" style="margin-top:22px;max-width:760px">{E(s["heading"])}</h2></div><div class="pv-tl2"><div class="line" aria-hidden="true"></div>{items}</div></div></section>'
 
 
 def _tabs(s, ctx):

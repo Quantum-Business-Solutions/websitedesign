@@ -104,6 +104,29 @@ def client_tokens(theme: str, brand: dict) -> tuple[str, dict]:
         if face in FALLBACKS:
             tok[key] = FALLBACKS[face]
     chrome_bg = brand.get("chrome_bg") if brand.get("chrome") == "dark" else native["--bg"]
+    # Client-level type and ground overrides (brand.type_from: {"showcase": "clean"} borrows another theme's faces; brand.bg_alt tints the alternate ground on light themes)
+    tf = (brand.get("type_from") or {}).get(slug_of(theme))
+    if tf:
+        src_css = open(os.path.join(reskin.SOURCE_DIR, "Quantum " + tf.capitalize(), "css", "quantum.css"), encoding="utf-8").read().replace("\u2014", "-")
+        src_native = reskin.parse_native(src_css)
+        for key in ("--q-serif", "--q-sans"):
+            face = (src_native.get(key) or "").split(",")[0].strip().strip("'\"").lower()
+            tok[key] = FALLBACKS.get(face, src_native.get(key, tok.get(key, "")))
+    if ground == "light" and brand.get("bg_alt"):
+        tok["--bg-alt"] = brand["bg_alt"]
+    def _mix(a, c, k):
+        a = a.lstrip("#"); c = c.lstrip("#")
+        return "#" + "".join(f"{round(int(a[i:i+2], 16) * (1 - k) + int(c[i:i+2], 16) * k):02x}" for i in (0, 2, 4))
+    tok["--navy"] = brand.get("navy") or _mix(brand["accent"], "#0b1220", 0.72)
+    css += """
+/* tone: dark sections on a light site (section.tone == "dark") */
+.q-tone-dark{background:var(--navy);color:#fff}.q-tone-dark .q-h2,.q-tone-dark .q-h3,.q-tone-dark h2,.q-tone-dark h3,.q-tone-dark .q-lead,.q-tone-dark p,.q-tone-dark li,.q-tone-dark .pv-quote,.q-tone-dark .pv-attr,.q-tone-dark .h{color:#fff}
+.q-tone-dark .q-eyebrow{color:#fff;opacity:.85}.q-tone-dark .q-eyebrow::before{background:#fff}
+.q-tone-dark .q-card,.q-tone-dark .pv-metric{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.16);color:#fff}.q-tone-dark .q-card p,.q-tone-dark .pv-metric .d{color:rgba(255,255,255,.8)}.q-tone-dark .pv-metric .v,.q-tone-dark .pv-metric .k{color:#fff}
+.q-tone-dark .pv-seal .item h3,.q-tone-dark .pv-seal .item p,.q-tone-dark .pv-seal .src{color:#fff}.q-tone-dark .pv-seal .item p{opacity:.82}.q-tone-dark .pv-seal .badge{border-color:rgba(255,255,255,.25)}.q-tone-dark .pv-seal .badge b{color:#fff}
+.q-tone-dark .pv-stat b,.q-tone-dark .pv-stat span{color:#fff}.q-tone-dark .pv-proof b,.q-tone-dark .pv-proof .v{color:#fff}
+.q-tone-dark a{color:#fff}.q-tone-dark .q-btn{background:#fff;color:var(--navy)}
+"""
     tok["--chrome-bg"] = chrome_bg
     tok["--chrome-fg"] = reskin.best_on(chrome_bg)
     tok["--chrome-muted"] = "rgba(255,255,255,.72)" if tok["--chrome-fg"].lower().startswith("#f") else "rgba(0,0,0,.62)"
@@ -498,7 +521,7 @@ MOBILE_LAST_CSS = r"""
 # ----------------------------------------------------------------------------- sections
 
 def sec_open(s: dict, extra_cls: str = "") -> str:
-    cls = "q-section" + (" q-bg-alt" if s.get("alt") else "") + (" " + extra_cls if extra_cls else "")
+    cls = "q-section" + (" q-bg-alt" if s.get("alt") else "") + (" q-tone-dark" if s.get("tone") == "dark" else "") + (" " + extra_cls if extra_cls else "")
     idattr = f' id="{E(s["id"])}"' if s.get("id") else ""
     return f'<section class="{cls}"{idattr}>'
 
@@ -819,6 +842,9 @@ def srcset_for(path: str, out_dir: str) -> str:
 
 
 def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir, dslug):
+    extra_fonts = ""
+    if (content["brand"].get("type_from") or {}).get(slug_of(theme)):
+        extra_fonts = '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap">'
     b = content["brand"]
     partners_dir = os.path.join(out_dir, "assets", "partners")
     depth = page["file"].count("/")           # blog/post.html -> 1
@@ -883,7 +909,7 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{E(page["title"])}">
 <meta name="twitter:image" content="{E(og_img)}">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">{extra_fonts}
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <style>
 /* ===== {E(theme)}: css/quantum.css from themes/source, as patched by themefix.py ===== */
