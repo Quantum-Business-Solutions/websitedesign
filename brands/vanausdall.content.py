@@ -1203,7 +1203,7 @@ def build():
     }
     pitch["migration"] = MIGRATION
     if pitch["search"].get("site_audit"):
-        pitch["search"]["site_audit"]["migration"] = {k: v for k, v in MIGRATION.items() if k != "map"}
+        pitch["search"]["site_audit"]["migration"] = MIGRATION
     content = {"client": CLIENT, "slug": "vanausdall", "domain_hint": "vanausdall.com",
                "brand": brand, "schema": schema, "nav": nav, "pages": pages, "pitch": pitch}
     with open(OUT, "w", encoding="utf-8") as fh:

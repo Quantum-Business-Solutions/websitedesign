@@ -124,3 +124,16 @@ time). The hub renders the findings as ranked cards above the today/after lists.
    their copier page against ours, word for word.
 5. **Re-run monthly, automatically.** The two passes are subagent prompts; a routine that re-runs
    them on the first of the month and diffs the findings is the retainer's evidence.
+
+## Added 8 September: the whole-site half
+
+The two passes above sample ten pages. The full analysis now also crawls every page (171 for
+VAF), scores each with `scripts/site_audit.py`, and renders three more sections on the report:
+**Why the competitors are winning** (a side-by-side schema and depth table against the two
+strongest competitors), **Highest leverage moves** (five, each tagged build or plan), and
+**Whole site, every page**. A blog sample (40 posts, same parser) and a social and entity check
+(sameAs, YouTube, LinkedIn, Google Business Profile, via Firecrawl search when the sandbox cannot
+load the profiles) each get a section with stats, findings and actions. The report renderer takes
+`--full` and `--csv-href` for the whole-site block; the blog and social blocks live in the deep
+JSON as `blog` and `social`. See `process/page-for-page.md` for how the same score is applied to
+the build so the hub can show today against the rebuild, page by page.
