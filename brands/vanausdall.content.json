@@ -564,8 +564,8 @@
             "href": "contact.html"
           },
           "note": "Canon, Ricoh, Kyocera, HP, Mitel, Fortinet, Sophos and Microsoft partner",
-          "image": "assets/datacenter-1200.jpg",
-          "image_alt": "A technician with a tablet checking a row of servers",
+          "image": "assets/gen-technician-1200.jpg",
+          "image_alt": "A VAF technician replacing a toner unit in a bright office while the office manager looks on",
           "image_w": 1200,
           "image_h": 800,
           "badge": {
@@ -588,7 +588,7 @@
             "href": "contact.html"
           },
           "bg": "#0f1e33",
-          "image": "assets/hero-plate-2100.jpg",
+          "image": "assets/gen-hero-plate-2100.jpg",
           "image_w": 2100,
           "image_h": 891,
           "model": "assets/fleet/mfp.glb",
@@ -647,7 +647,7 @@
               ]
             ]
           },
-          "note": "Photography is from vanausdall.com today and the 3D device is a generated stand-in, labelled as such; a shoot at the 75th Street headquarters and Canon, Ricoh, Kyocera and HP product models replace them in the build."
+          "note": "The photography here is generated for the preview and labelled as such; a shoot at the 75th Street headquarters and with technicians in the field replaces it in the build, along with Canon, Ricoh, Kyocera and HP product models."
         },
         {
           "type": "wheel",
@@ -1807,7 +1807,7 @@
             "label": "Take the assessment",
             "href": "technology-strength-assessment.html"
           },
-          "image": "assets/datacenter-1200.jpg",
+          "image": "assets/gen-soc-1200.jpg",
           "image_alt": "Managed IT services",
           "image_w": 1200,
           "image_h": 800
@@ -1955,7 +1955,7 @@
             "Managed continuity planned around your recovery time objective",
             "Managed voice, managed cloud and managed AI from the same team"
           ],
-          "image": "assets/engineers-1200.jpg",
+          "image": "assets/gen-hero-1200.jpg",
           "flip": true
         },
         {
@@ -2074,7 +2074,7 @@
             "label": "Take the assessment",
             "href": "technology-strength-assessment.html"
           },
-          "image": "assets/security-1200.jpg",
+          "image": "assets/gen-soc-1200.jpg",
           "image_alt": "Managed security services",
           "image_w": 1200,
           "image_h": 800
@@ -2153,7 +2153,7 @@
             "Firewall available under a Hardware as a Service agreement or purchase",
             "Standalone managed cybersecurity for companies that keep IT in-house"
           ],
-          "image": "assets/it-1200.jpg",
+          "image": "assets/security-1200.jpg",
           "flip": true
         },
         {
@@ -2304,7 +2304,7 @@
             "Five internet carriers serving the data center for redundancy and bandwidth",
             "An IT service provider in Indiana for 25 years"
           ],
-          "image": "assets/datacenter-1200.jpg",
+          "image": "assets/gen-hero-1200.jpg",
           "flip": true
         },
         {
@@ -2562,7 +2562,7 @@
             "label": "Take the assessment",
             "href": "technology-strength-assessment.html"
           },
-          "image": "assets/phones-1200.jpg",
+          "image": "assets/gen-phone-1200.jpg",
           "image_alt": "Business phone systems",
           "image_w": 1200,
           "image_h": 800
@@ -2757,7 +2757,7 @@
             "label": "Take the assessment",
             "href": "technology-strength-assessment.html"
           },
-          "image": "assets/copier-1200.jpg",
+          "image": "assets/gen-technician-1200.jpg",
           "image_alt": "Copiers and printers",
           "image_w": 1200,
           "image_h": 800
@@ -3386,7 +3386,7 @@
             "label": "Take the assessment",
             "href": "technology-strength-assessment.html"
           },
-          "image": "assets/support-1200.jpg",
+          "image": "assets/gen-technician-1200.jpg",
           "image_alt": "Copier service and repair",
           "image_w": 1200,
           "image_h": 800
@@ -3864,7 +3864,7 @@
             "label": "Take the assessment",
             "href": "technology-strength-assessment.html"
           },
-          "image": "assets/support-1200.jpg",
+          "image": "assets/gen-conversion-1200.jpg",
           "image_alt": "Document conversion",
           "image_w": 1200,
           "image_h": 800
@@ -6605,8 +6605,8 @@
             "label": "Careers",
             "href": "careers.html"
           },
-          "image": "assets/hq-1200.jpg",
-          "image_alt": "The front entrance of the Van Ausdall & Farrar office building",
+          "image": "assets/gen-hq-1200.jpg",
+          "image_alt": "A modern two-story headquarters building with a service van outside",
           "image_w": 1200,
           "image_h": 800
         },
@@ -7540,8 +7540,8 @@
             "label": "Schedule a consultation",
             "href": "contact.html"
           },
-          "image": "assets/hq-1200.jpg",
-          "image_alt": "The Van Ausdall & Farrar headquarters in Indianapolis",
+          "image": "assets/gen-hq-1200.jpg",
+          "image_alt": "The headquarters building with a service van outside",
           "image_w": 1200,
           "image_h": 800,
           "badge": {
@@ -7704,8 +7704,8 @@
             "label": "Schedule a consultation",
             "href": "contact.html"
           },
-          "image": "assets/team-1200.jpg",
-          "image_alt": "Office technology professionals at work",
+          "image": "assets/gen-technician-1200.jpg",
+          "image_alt": "A VAF technician servicing a copier",
           "image_w": 1200,
           "image_h": 800,
           "badge": {
@@ -7866,8 +7866,8 @@
             "label": "Schedule a consultation",
             "href": "contact.html"
           },
-          "image": "assets/team-1200.jpg",
-          "image_alt": "Office technology professionals at work",
+          "image": "assets/gen-technician-1200.jpg",
+          "image_alt": "A VAF technician servicing a copier",
           "image_w": 1200,
           "image_h": 800,
           "badge": {
@@ -7998,21 +7998,21 @@
               "What a vCIO does, and when a 50-person company needs one",
               "A virtual chief information officer is a fractional executive, not a help desk.",
               "blog/what-is-a-vcio.html",
-              "assets/datacenter-1200.jpg"
+              "assets/gen-hero-1200.jpg"
             ],
             [
               "Communication",
               "Business phone systems in 2026: cloud, premise or hybrid, and how to choose",
               "The phone system decision is a five-year decision. Here is what changed, what each option costs you in flexibility, and the eight questions to ask before you sign with anyone, including us.",
               "blog/business-phone-systems-buyers-guide.html",
-              "assets/phones-1200.jpg"
+              "assets/gen-phone-1200.jpg"
             ],
             [
               "Process",
               "Document conversion services: what actually happens to your boxes",
               "Scanning is the easy part. The chain of custody, the indexing and the quality control are what make the files usable, and what keep you compliant.",
               "blog/document-conversion-services-what-to-expect.html",
-              "assets/support-1200.jpg"
+              "assets/gen-conversion-1200.jpg"
             ],
             [
               "Security",
@@ -8100,7 +8100,7 @@
           "@type": "BlogPosting",
           "headline": "What a vCIO does, and when a 50-person company needs one",
           "description": "A virtual chief information officer is a fractional executive, not a help desk. Here is what the role produces, what it costs relative to a hire, and the signs a business has outgrown IT without a strategy.",
-          "image": "https://van-ausdall.vercel.app/assets/datacenter-1200.jpg",
+          "image": "https://van-ausdall.vercel.app/assets/gen-hero-1200.jpg",
           "author": {
             "@type": "Organization",
             "name": "Van Ausdall & Farrar"
@@ -8120,8 +8120,8 @@
           "category": "Managed IT",
           "heading": "What a vCIO does, and when a 50-person company needs one",
           "standfirst": "A virtual chief information officer is a fractional executive, not a help desk. Here is what the role produces, what it costs relative to a hire, and the signs a business has outgrown IT without a strategy.",
-          "image": "assets/datacenter-1200.jpg",
-          "image_alt": "A technician with a tablet in front of server racks",
+          "image": "assets/gen-hero-1200.jpg",
+          "image_alt": "A technician with a tablet in front of server racks at dusk",
           "date_label": "September 2026",
           "read": "4 min read",
           "chapters": [
@@ -8200,14 +8200,14 @@
               "Business phone systems in 2026: cloud, premise or hybrid, and how to choose",
               "The phone system decision is a five-year decision. Here is what changed, what each option costs you in flexibility, and the eight questions to ask before you sign with anyone, including us.",
               "blog/business-phone-systems-buyers-guide.html",
-              "assets/phones-1200.jpg"
+              "assets/gen-phone-1200.jpg"
             ],
             [
               "Process",
               "Document conversion services: what actually happens to your boxes",
               "Scanning is the easy part. The chain of custody, the indexing and the quality control are what make the files usable, and what keep you compliant.",
               "blog/document-conversion-services-what-to-expect.html",
-              "assets/support-1200.jpg"
+              "assets/gen-conversion-1200.jpg"
             ],
             [
               "Security",
@@ -8230,7 +8230,7 @@
           "@type": "BlogPosting",
           "headline": "Business phone systems in 2026: cloud, premise or hybrid, and how to choose",
           "description": "The phone system decision is a five-year decision. Here is what changed, what each option costs you in flexibility, and the eight questions to ask before you sign with anyone, including us.",
-          "image": "https://van-ausdall.vercel.app/assets/phones-1200.jpg",
+          "image": "https://van-ausdall.vercel.app/assets/gen-phone-1200.jpg",
           "author": {
             "@type": "Organization",
             "name": "Van Ausdall & Farrar"
@@ -8250,8 +8250,8 @@
           "category": "Communication",
           "heading": "Business phone systems in 2026: cloud, premise or hybrid, and how to choose",
           "standfirst": "The phone system decision is a five-year decision. Here is what changed, what each option costs you in flexibility, and the eight questions to ask before you sign with anyone, including us.",
-          "image": "assets/phones-1200.jpg",
-          "image_alt": "A desk phone and headset in a modern office",
+          "image": "assets/gen-phone-1200.jpg",
+          "image_alt": "A professional on a desk phone and headset in a modern office",
           "date_label": "September 2026",
           "read": "4 min read",
           "chapters": [
@@ -8329,7 +8329,7 @@
               "Document conversion services: what actually happens to your boxes",
               "Scanning is the easy part. The chain of custody, the indexing and the quality control are what make the files usable, and what keep you compliant.",
               "blog/document-conversion-services-what-to-expect.html",
-              "assets/support-1200.jpg"
+              "assets/gen-conversion-1200.jpg"
             ],
             [
               "Security",
@@ -8359,7 +8359,7 @@
           "@type": "BlogPosting",
           "headline": "Document conversion services: what actually happens to your boxes",
           "description": "Scanning is the easy part. The chain of custody, the indexing and the quality control are what make the files usable, and what keep you compliant. Here is the process, step by step.",
-          "image": "https://van-ausdall.vercel.app/assets/support-1200.jpg",
+          "image": "https://van-ausdall.vercel.app/assets/gen-conversion-1200.jpg",
           "author": {
             "@type": "Organization",
             "name": "Van Ausdall & Farrar"
@@ -8379,7 +8379,7 @@
           "category": "Process",
           "heading": "Document conversion services: what actually happens to your boxes",
           "standfirst": "Scanning is the easy part. The chain of custody, the indexing and the quality control are what make the files usable, and what keep you compliant. Here is the process, step by step.",
-          "image": "assets/support-1200.jpg",
+          "image": "assets/gen-conversion-1200.jpg",
           "image_alt": "Boxes of records staged for scanning",
           "date_label": "September 2026",
           "read": "4 min read",
@@ -9413,7 +9413,7 @@
               "What a vCIO does, and when a 50-person company needs one",
               "A virtual chief information officer is a fractional executive, not a help desk.",
               "blog/what-is-a-vcio.html",
-              "assets/datacenter-1200.jpg"
+              "assets/gen-hero-1200.jpg"
             ]
           ]
         }
@@ -9540,14 +9540,14 @@
               "What a vCIO does, and when a 50-person company needs one",
               "A virtual chief information officer is a fractional executive, not a help desk.",
               "blog/what-is-a-vcio.html",
-              "assets/datacenter-1200.jpg"
+              "assets/gen-hero-1200.jpg"
             ],
             [
               "Communication",
               "Business phone systems in 2026: cloud, premise or hybrid, and how to choose",
               "The phone system decision is a five-year decision. Here is what changed, what each option costs you in flexibility, and the eight questions to ask before you sign with anyone, including us.",
               "blog/business-phone-systems-buyers-guide.html",
-              "assets/phones-1200.jpg"
+              "assets/gen-phone-1200.jpg"
             ]
           ]
         }
@@ -9667,21 +9667,21 @@
               "What a vCIO does, and when a 50-person company needs one",
               "A virtual chief information officer is a fractional executive, not a help desk.",
               "blog/what-is-a-vcio.html",
-              "assets/datacenter-1200.jpg"
+              "assets/gen-hero-1200.jpg"
             ],
             [
               "Communication",
               "Business phone systems in 2026: cloud, premise or hybrid, and how to choose",
               "The phone system decision is a five-year decision. Here is what changed, what each option costs you in flexibility, and the eight questions to ask before you sign with anyone, including us.",
               "blog/business-phone-systems-buyers-guide.html",
-              "assets/phones-1200.jpg"
+              "assets/gen-phone-1200.jpg"
             ],
             [
               "Process",
               "Document conversion services: what actually happens to your boxes",
               "Scanning is the easy part. The chain of custody, the indexing and the quality control are what make the files usable, and what keep you compliant.",
               "blog/document-conversion-services-what-to-expect.html",
-              "assets/support-1200.jpg"
+              "assets/gen-conversion-1200.jpg"
             ]
           ]
         }
@@ -9790,7 +9790,7 @@
       "Leap's new copier brand, leapcopierprinter.com, already sits at 9 for copier lease indianapolis, one place above your copy print page at 10.",
       "324 blog posts, 55% of your sitemap, live on query-string URLs (blog?p=...) that cannot carry their own titles, images or schema cleanly. Every post gets a real URL now, and every earning URL gets a redirect.",
       "Nine directories of city pages (Indianapolis, Carmel, Fishers, Noblesville, Greenwood, Bloomington, Columbus, Muncie, South Bend) share near-identical copy. Three real offices get real pages with LocalBusiness markup; the rest become a service area list.",
-      "Your own photography is limited to stock-style imagery on the live site. The 75th Street headquarters, the Document Conversion Center and technicians in the field would make the site un-copyable. Budget a day."
+      "Your own photography is limited to stock-style imagery on the live site, so the preview uses generated stand-ins that show the scenes we would shoot: a technician with a customer, the conversion center, the headquarters, the operations room. A half-day shoot replaces them and makes the site un-copyable."
     ],
     "choose_heading": "Three directions. Your call.",
     "choose_intro": "The words, the pages and the proof are identical in all three. What differs is the register: how plain, how modern, how established the company reads. Open each one on your phone, click through the pages your customers use, and tell us which one feels like Van Ausdall & Farrar.",
@@ -9854,7 +9854,48 @@
       "as_of": "Semrush US database and live HTML, 8 September 2026",
       "report_href": "seo-report.html",
       "report_label": "Read the full SEO and AI search analysis",
-      "findings": [],
+      "findings": [
+        {
+          "rank": 1,
+          "severity": "critical",
+          "title": "Absent from every top-10 result for best managed IT Indianapolis",
+          "evidence": "VAF appears in 0 of 10 results while leapmanagedit.com is #2, bradenonline.com #6 and two directories (cloudtango.net #1, clutch.co #9) that list Leap but not VAF.",
+          "impact": "The 1,000/mo core term plus the AI-answer lists that cite these results all route to competitors.",
+          "action": "Claim cloudtango.net and clutch.co profiles, point the new /indianapolis/ IT page at the term, and earn 10 local links in 90 days."
+        },
+        {
+          "rank": 2,
+          "severity": "high",
+          "title": "Largest-provider claim is not visible where the question is asked",
+          "evidence": "For 'who is the largest office technology provider in indiana' VAF is absent from 10 results although its home page states the claim; bradenonline.com ranks #4.",
+          "impact": "AI assistants answer the entity question with Braden or directory lists, eroding VAF's strongest positioning line.",
+          "action": "Publish a facts page (founded 1914, offices, headcount, brands) with Organization schema and get the claim cited on TechPoint, IBJ and Wikipedia-grade sources."
+        },
+        {
+          "rank": 3,
+          "severity": "high",
+          "title": "Brand reviews SERP is owned by employer ratings, not customers",
+          "evidence": "Indeed 2.8 (73 reviews) and Glassdoor 3.3 (104) fill 8 of 10 results; Facebook shows 0 reviews, Yelp 2, and no Google Business Profile or BBB result appears.",
+          "impact": "Prospects checking 'Van Ausdall & Farrar reviews' see low employer scores and no customer proof.",
+          "action": "Launch a post-ticket Google review request flow, add a customer-reviews page with Review schema, and claim the BBB profile."
+        },
+        {
+          "rank": 4,
+          "severity": "high",
+          "title": "City pages are the traffic engine competitors use and VAF lacks",
+          "evidence": "Leap's four /it-support-{city}/ pages earn 531 of 1,555 visits (34 percent); Taylored links 11 /location-{city}/ pages from its nav.",
+          "impact": "Carmel, Fishers, Noblesville, Greenwood and Muncie searches, including 'managed service provider carmel indiana' (720/mo, KD 13), go elsewhere.",
+          "action": "Build 6 suburb pages on the existing Indianapolis template with LocalBusiness schema and unique service proof per city."
+        },
+        {
+          "rank": 5,
+          "severity": "high",
+          "title": "Referring domains are job boards and data scrapers, not industry",
+          "evidence": "Of VAF's 15 strongest referring domains, 9 are employment or people-data sites (indeed, payscale, levels.fyi, rocketreach, leadiq); ringcentral.com (66) is the only vendor link.",
+          "impact": "Authority Score stays at 21 against 27 (AME, Taylored), 24 (Leap) and 23 (Braden) with 1,377 and 1,147 referring domains respectively.",
+          "action": "Secure partner-directory links from Canon, Ricoh, Kyocera, Mitel, 8x8 and Fortinet plus chamber and TechPoint listings in the 90-day plan."
+        }
+      ],
       "today_stats": [
         [
           "1,081",
@@ -9961,6 +10002,6 @@
       "Who approves. Brian decides on the website and others weigh in eventually; tell us who, so the copy and go-live approvals do not wait.",
       "The current partner's contract. Month to month at about $1,200; the plan assumes a fourth-quarter start with redirects handled before anything is switched off."
     ],
-    "footer": "Prepared for Brian Courtney and the Van Ausdall & Farrar team, following the 1 September call with Patrick Dodge. Nothing here is live or indexed. Every number we could source comes from vanausdall.com, the CEO Juice report it links to, or Semrush on 8 September 2026. Where we drafted a process or a commitment we think you make, it is listed under To confirm. Photographs are the ones on your site today; partner logos are the ones on your partners page."
+    "footer": "Prepared for Brian Courtney and the Van Ausdall & Farrar team, following the 1 September call with Patrick Dodge. Nothing here is live or indexed. Every number we could source comes from vanausdall.com, the CEO Juice report it links to, or Semrush on 8 September 2026. Where we drafted a process or a commitment we think you make, it is listed under To confirm. Hero and service photographs are generated stand-ins for the preview, marked as such, until a half-day shoot at the headquarters and in the field; secondary imagery is from your site today; partner logos are the ones on your partners page."
   }
 }

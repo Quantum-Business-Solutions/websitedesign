@@ -84,7 +84,7 @@ def render(basic: dict, deep: dict, client: str, domain: str, accent: str, as_of
     # ---------------- clusters
     cl_html = ""
     for c in deep.get("clusters") or []:
-        rows = [[E(t.get("keyword")), fmt(t.get("volume")), fmt(t.get("kd")), fmt(t.get("cpc")), E(t.get("intent", ""))] for t in (c.get("terms") or [])]
+        rows = [[E(t.get("keyword")), fmt(t.get("volume")), fmt(t.get("kd")), fmt(t.get("cpc")), E(t.get("intent", ""))] for t in (c.get("terms") or []) if isinstance(t, dict)]
         if rows:
             cl_html += f'<h3>{E(c.get("pillar", ""))}<small> seed: {E(c.get("seed", ""))}</small></h3>' + table(["Keyword", "Searches a month", "Difficulty", "CPC", "Intent"], rows)
     # ---------------- questions
@@ -92,7 +92,12 @@ def render(basic: dict, deep: dict, client: str, domain: str, accent: str, as_of
     for q in deep.get("questions") or []:
         items = q.get("items") or []
         if items:
-            q_html += f'<div class="qcol"><h3>{E(q.get("seed", ""))}</h3><ul>' + "".join(f'<li>{E(i.get("question"))} <span class="vol">{fmt(i.get("volume"))} a month</span></li>' for i in items) + "</ul></div>"
+            def _q(i):
+                if isinstance(i, dict):
+                    v = i.get("volume")
+                    return f'<li>{E(i.get("question") or i.get("keyword"))}' + (f' <span class="vol">{fmt(v)} a month</span>' if v not in (None, "") else "") + "</li>"
+                return f"<li>{E(i)}</li>"
+            q_html += f'<div class="qcol"><h3>{E(q.get("seed", ""))}</h3><ul>' + "".join(_q(i) for i in items) + "</ul></div>"
     if q_html:
         q_html = f'<div class="qgrid">{q_html}</div>'
     # ---------------- page audit
@@ -103,7 +108,7 @@ def render(basic: dict, deep: dict, client: str, domain: str, accent: str, as_of
     ca_rows = [[E(c.get("domain")), f'<code>{E(c.get("url"))}</code>', E(c.get("title", "")), fmt(c.get("words")), E(", ".join(c.get("schema_types") or []) or "none"), yn(c.get("has_faq")), yn(c.get("shows_pricing")), yn(c.get("shows_reviews")), yn(c.get("form_above_fold"))] for c in (deep.get("competitor_audit") or [])]
     ca = table(["Competitor", "Page", "Title", "Words", "Schema", "FAQ", "Pricing", "Reviews", "Form above fold"], ca_rows)
     # ---------------- AI visibility
-    ai_rows = [[E(a.get("query")), E(", ".join((a.get("top_domains") or [])[:10])), yn(a.get("vaf_present")), E(a.get("vaf_position", ""))] for a in (deep.get("ai_visibility") or [])]
+    ai_rows = [[E(a.get("query")), E(", ".join(str(d) for d in (a.get("top_domains") or [])[:10])), yn(a.get("vaf_present")), E(a.get("vaf_position", ""))] for a in (deep.get("ai_visibility") or []) if isinstance(a, dict)]
     ai = table(["Query", "Top results", f"{E(client.split()[0])} present", "Position"], ai_rows)
     robots = deep.get("robots") or {}
     rb = ""
