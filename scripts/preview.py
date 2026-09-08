@@ -811,28 +811,47 @@ def switcher(themes, this_theme, page_file, recommend):
 
 
 def schema_blocks(content, page, base, dslug):
+    """Organization and the headquarters LocalBusiness on every page, WebSite on the home page,
+    BreadcrumbList elsewhere. Pages that carry their own LocalBusiness (location pages) skip the HQ block."""
     sch = content.get("schema") or {}
     if not sch.get("org_name"):
         return ""
     site = sch.get("org_url") or base
+    org = {"@context": "https://schema.org", "@type": "Organization", "@id": f"{site}/#organization", "name": sch["org_name"], "url": site}
+    for k, v in (("logo", sch.get("org_logo")), ("description", sch.get("org_description")), ("sameAs", sch.get("sameAs")), ("foundingDate", sch.get("foundingDate")), ("slogan", sch.get("slogan")), ("areaServed", sch.get("areaServed"))):
+        if v:
+            org[k] = {"@type": "ImageObject", "url": v} if k == "logo" else v
+    hq = sch.get("hq") or {}
+    if hq.get("streetAddress"):
+        org["address"] = {"@type": "PostalAddress", "streetAddress": hq["streetAddress"], "addressLocality": hq.get("addressLocality"), "addressRegion": hq.get("addressRegion"), "postalCode": hq.get("postalCode"), "addressCountry": "US"}
+    if sch.get("telephone"):
+        org["telephone"] = sch["telephone"]
+        org["contactPoint"] = {"@type": "ContactPoint", "contactType": "Sales", "telephone": sch["telephone"], "areaServed": "US", "availableLanguage": "English"}
+    blocks = [org]
+    own = json.dumps(page.get("schema") or [])
+    if hq.get("streetAddress") and '"LocalBusiness"' not in own:
+        lb = {"@context": "https://schema.org", "@type": "LocalBusiness", "@id": f"{site}/#headquarters", "name": hq.get("name") or sch["org_name"], "url": site, "parentOrganization": {"@id": f"{site}/#organization"},
+              "address": org.get("address"), "telephone": sch.get("telephone"), "priceRange": hq.get("priceRange", "$$")}
+        if hq.get("lat") and hq.get("lon"):
+            lb["geo"] = {"@type": "GeoCoordinates", "latitude": hq["lat"], "longitude": hq["lon"]}
+        if hq.get("hours"):
+            lb["openingHoursSpecification"] = {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": hq["hours"][0], "closes": hq["hours"][1]}
+        if sch.get("org_logo"):
+            lb["image"] = sch["org_logo"]
+        if sch.get("sameAs"):
+            lb["sameAs"] = sch["sameAs"]
+        blocks.append(lb)
     if page["file"] == "index.html":
-        org = {"@context": "https://schema.org", "@type": "Organization", "@id": f"{site}/#organization", "name": sch["org_name"], "url": site}
-        for k, v in (("logo", sch.get("org_logo")), ("description", sch.get("org_description")), ("sameAs", sch.get("sameAs"))):
-            if v:
-                org[k] = {"@type": "ImageObject", "url": v} if k == "logo" else v
-        if sch.get("telephone"):
-            org["contactPoint"] = {"@type": "ContactPoint", "contactType": "Sales", "telephone": sch["telephone"], "areaServed": "US", "availableLanguage": "English"}
-        web = {"@context": "https://schema.org", "@type": "WebSite", "@id": f"{site}/#website", "url": site, "name": sch["org_name"], "publisher": {"@id": f"{site}/#organization"}, "inLanguage": "en-US"}
-        return (f'<script type="application/ld+json">{json.dumps(org, ensure_ascii=False)}</script>\n'
-                f'<script type="application/ld+json">{json.dumps(web, ensure_ascii=False)}</script>')
-    name = page["title"].split("|")[0].strip()
-    items = [{"@type": "ListItem", "position": 1, "name": "Home", "item": f"{site}/"}]
-    parts = page["file"].split("/")
-    if len(parts) > 1:
-        items.append({"@type": "ListItem", "position": 2, "name": parts[0].replace("-", " ").title(), "item": f"{site}/{parts[0]}"})
-    items.append({"@type": "ListItem", "position": len(items) + 1, "name": name, "item": f"{site}/{page['file'].replace('.html', '')}"})
-    bc = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": items}
-    return f'<script type="application/ld+json">{json.dumps(bc, ensure_ascii=False)}</script>'
+        blocks.append({"@context": "https://schema.org", "@type": "WebSite", "@id": f"{site}/#website", "url": site, "name": sch["org_name"], "publisher": {"@id": f"{site}/#organization"}, "inLanguage": "en-US"})
+    else:
+        name = page["title"].split("|")[0].strip()
+        items = [{"@type": "ListItem", "position": 1, "name": "Home", "item": f"{site}/"}]
+        parts = page["file"].split("/")
+        if len(parts) > 1:
+            items.append({"@type": "ListItem", "position": 2, "name": parts[0].replace("-", " ").title(), "item": f"{site}/{parts[0]}"})
+        items.append({"@type": "ListItem", "position": len(items) + 1, "name": name, "item": f"{site}/{page['file'].replace('.html', '')}"})
+        blocks.append({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": items})
+    return "\n".join(f'<script type="application/ld+json">{json.dumps(b, ensure_ascii=False)}</script>' for b in blocks)
 
 
 def srcset_for(path: str, out_dir: str) -> str:

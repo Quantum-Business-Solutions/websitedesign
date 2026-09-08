@@ -1,0 +1,2636 @@
+{
+ "summary": {
+  "pages": 168,
+  "avg_score": 93,
+  "faq": 168,
+  "service": 113,
+  "local": 168,
+  "review": 0,
+  "article": 30,
+  "breadcrumb": 167,
+  "city_in_title": 168,
+  "thin": 5,
+  "no_h1": 0,
+  "question_headings": 168,
+  "images_no_alt": 0,
+  "no_canonical": 0,
+  "stock_og": 0,
+  "has_form": 159,
+  "grades": {
+   "A": 168,
+   "B": 0,
+   "C": 0,
+   "D": 0,
+   "F": 0
+  },
+  "by_type": {
+   "case study": {
+    "pages": 18,
+    "avg": 100
+   },
+   "city": {
+    "pages": 35,
+    "avg": 92
+   },
+   "company": {
+    "pages": 21,
+    "avg": 92
+   },
+   "policy": {
+    "pages": 7,
+    "avg": 93
+   },
+   "post": {
+    "pages": 12,
+    "avg": 94
+   },
+   "service": {
+    "pages": 75,
+    "avg": 92
+   }
+  }
+ },
+ "per_option": {
+  "Clean": {
+   "pages": 168,
+   "avg_score": 93,
+   "grades": {
+    "A": 168,
+    "B": 0,
+    "C": 0,
+    "D": 0,
+    "F": 0
+   }
+  },
+  "Showcase": {
+   "pages": 168,
+   "avg_score": 93,
+   "grades": {
+    "A": 168,
+    "B": 0,
+    "C": 0,
+    "D": 0,
+    "F": 0
+   }
+  },
+  "Press": {
+   "pages": 168,
+   "avg_score": 93,
+   "grades": {
+    "A": 168,
+    "B": 0,
+    "C": 0,
+    "D": 0,
+    "F": 0
+   }
+  }
+ },
+ "rows": [
+  {
+   "url": "/about.html",
+   "type": "company",
+   "score": 94,
+   "grade": "A",
+   "words": 1253,
+   "faq": true,
+   "service": false,
+   "article": false,
+   "local": true,
+   "title": "About Van Ausdall & Farrar, Indianapolis",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/benefits.html",
+   "type": "company",
+   "score": 90,
+   "grade": "A",
+   "words": 415,
+   "faq": true,
+   "service": false,
+   "article": false,
+   "local": true,
+   "title": "Employee Benefits, Indiana | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/blog.html",
+   "type": "company",
+   "score": 90,
+   "grade": "A",
+   "words": 546,
+   "faq": true,
+   "service": false,
+   "article": false,
+   "local": true,
+   "title": "News and Insights, Indianapolis | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/blog/ai-acceptable-use-policy.html",
+   "type": "post",
+   "score": 90,
+   "grade": "A",
+   "words": 586,
+   "faq": true,
+   "service": false,
+   "article": true,
+   "local": true,
+   "title": "AI Acceptable Use Policy, Indiana Guide | Van Ausdall & Farrar",
+   "recommendations": [
+    "Retitle to 30 to 60 characters",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/blog/all-in-one-office-printer-options-navigating-the-market-for-the-best-choice.html",
+   "type": "post",
+   "score": 90,
+   "grade": "A",
+   "words": 521,
+   "faq": true,
+   "service": false,
+   "article": true,
+   "local": true,
+   "title": "All-in-One Office Printers, Indianapolis | Van Ausdall & Farrar",
+   "recommendations": [
+    "Retitle to 30 to 60 characters",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/blog/business-phone-systems-buyers-guide.html",
+   "type": "post",
+   "score": 100,
+   "grade": "A",
+   "words": 657,
+   "faq": true,
+   "service": false,
+   "article": true,
+   "local": true,
+   "title": "Business Phone Systems Guide, Indiana | Van Ausdall & Farrar",
+   "recommendations": []
+  },
+  {
+   "url": "/blog/copier-lease-vs-buy-indianapolis.html",
+   "type": "post",
+   "score": 96,
+   "grade": "A",
+   "words": 592,
+   "faq": true,
+   "service": false,
+   "article": true,
+   "local": true,
+   "title": "Copier Lease vs Buy in Indianapolis | Van Ausdall & Farrar",
+   "recommendations": [
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/blog/document-conversion-services-what-to-expect.html",
+   "type": "post",
+   "score": 100,
+   "grade": "A",
+   "words": 653,
+   "faq": true,
+   "service": false,
+   "article": true,
+   "local": true,
+   "title": "Document Conversion Services, Indiana | Van Ausdall & Farrar",
+   "recommendations": []
+  },
+  {
+   "url": "/blog/how-managed-print-services-transforms-business.html",
+   "type": "post",
+   "score": 90,
+   "grade": "A",
+   "words": 558,
+   "faq": true,
+   "service": false,
+   "article": true,
+   "local": true,
+   "title": "First 90 Days of Managed Print, Indiana | Van Ausdall & Farrar",
+   "recommendations": [
+    "Retitle to 30 to 60 characters",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/blog/physical-intrusion-detection-systems.html",
+   "type": "post",
+   "score": 96,
+   "grade": "A",
+   "words": 593,
+   "faq": true,
+   "service": false,
+   "article": true,
+   "local": true,
+   "title": "Physical Intrusion Detection, Indiana | Van Ausdall & Farrar",
+   "recommendations": [
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/blog/same-day-service-what-it-means.html",
+   "type": "post",
+   "score": 90,
+   "grade": "A",
+   "words": 586,
+   "faq": true,
+   "service": false,
+   "article": true,
+   "local": true,
+   "title": "Same-Day Copier Service in Indianapolis | Van Ausdall & Farrar",
+   "recommendations": [
+    "Retitle to 30 to 60 characters",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/blog/what-is-a-vcio.html",
+   "type": "post",
+   "score": 100,
+   "grade": "A",
+   "words": 677,
+   "faq": true,
+   "service": false,
+   "article": true,
+   "local": true,
+   "title": "What a vCIO Does, Indianapolis Guide | Van Ausdall & Farrar",
+   "recommendations": []
+  },
+  {
+   "url": "/blog/what-managed-print-costs.html",
+   "type": "post",
+   "score": 94,
+   "grade": "A",
+   "words": 815,
+   "faq": true,
+   "service": false,
+   "article": true,
+   "local": true,
+   "title": "Managed Print Services Cost in Indiana | Van Ausdall & Farrar",
+   "recommendations": [
+    "Retitle to 30 to 60 characters"
+   ]
+  },
+  {
+   "url": "/blog/wide-format-printer-buying-guide-making-the-right-decision.html",
+   "type": "post",
+   "score": 90,
+   "grade": "A",
+   "words": 541,
+   "faq": true,
+   "service": false,
+   "article": true,
+   "local": true,
+   "title": "Wide-Format Printers, Indianapolis Guide | Van Ausdall & Farrar",
+   "recommendations": [
+    "Retitle to 30 to 60 characters",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/blog/workstation-management-an-overview.html",
+   "type": "post",
+   "score": 96,
+   "grade": "A",
+   "words": 569,
+   "faq": true,
+   "service": false,
+   "article": true,
+   "local": true,
+   "title": "Workstation Management, Indianapolis | Van Ausdall & Farrar",
+   "recommendations": [
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/careers.html",
+   "type": "company",
+   "score": 90,
+   "grade": "A",
+   "words": 355,
+   "faq": true,
+   "service": false,
+   "article": false,
+   "local": true,
+   "title": "Careers at Van Ausdall & Farrar, Indianapolis",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/case-studies.html",
+   "type": "company",
+   "score": 94,
+   "grade": "A",
+   "words": 1121,
+   "faq": true,
+   "service": false,
+   "article": false,
+   "local": true,
+   "title": "Case Studies Across Indiana | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/case-studies/aspire.html",
+   "type": "case study",
+   "score": 100,
+   "grade": "A",
+   "words": 542,
+   "faq": true,
+   "service": false,
+   "article": true,
+   "local": true,
+   "title": "Healthcare Security Solution, Indiana | Van Ausdall & Farrar",
+   "recommendations": []
+  },
+  {
+   "url": "/case-studies/becks-hybrid.html",
+   "type": "case study",
+   "score": 100,
+   "grade": "A",
+   "words": 625,
+   "faq": true,
+   "service": false,
+   "article": true,
+   "local": true,
+   "title": "In-House Print Center, Indiana | Van Ausdall & Farrar",
+   "recommendations": []
+  },
+  {
+   "url": "/case-studies/berry-global.html",
+   "type": "case study",
+   "score": 100,
+   "grade": "A",
+   "words": 568,
+   "faq": true,
+   "service": false,
+   "article": true,
+   "local": true,
+   "title": "Multi-Location Solutions, Indiana | Van Ausdall & Farrar",
+   "recommendations": []
+  },
+  {
+   "url": "/case-studies/bowen-engineering.html",
+   "type": "case study",
+   "score": 100,
+   "grade": "A",
+   "words": 550,
+   "faq": true,
+   "service": false,
+   "article": true,
+   "local": true,
+   "title": "Field Operations Technology, Indiana | Van Ausdall & Farrar",
+   "recommendations": []
+  },
+  {
+   "url": "/case-studies/city-of-anderson.html",
+   "type": "case study",
+   "score": 100,
+   "grade": "A",
+   "words": 616,
+   "faq": true,
+   "service": false,
+   "article": true,
+   "local": true,
+   "title": "City of Anderson, IN case study, Indiana | VAF",
+   "recommendations": []
+  },
+  {
+   "url": "/case-studies/city-of-bloomington.html",
+   "type": "case study",
+   "score": 100,
+   "grade": "A",
+   "words": 523,
+   "faq": true,
+   "service": false,
+   "article": true,
+   "local": true,
+   "title": "Document Management System, Indiana | Van Ausdall & Farrar",
+   "recommendations": []
+  },
+  {
+   "url": "/case-studies/echo-engineering.html",
+   "type": "case study",
+   "score": 100,
+   "grade": "A",
+   "words": 1065,
+   "faq": true,
+   "service": false,
+   "article": true,
+   "local": true,
+   "title": "Scale Infrastructure Solution, Indiana | VAF",
+   "recommendations": []
+  },
+  {
+   "url": "/case-studies/ellinger-riggs.html",
+   "type": "case study",
+   "score": 100,
+   "grade": "A",
+   "words": 683,
+   "faq": true,
+   "service": false,
+   "article": true,
+   "local": true,
+   "title": "Scalable Phone System, Indiana | Van Ausdall & Farrar",
+   "recommendations": []
+  },
+  {
+   "url": "/case-studies/gailey-eye-clinic.html",
+   "type": "case study",
+   "score": 100,
+   "grade": "A",
+   "words": 638,
+   "faq": true,
+   "service": false,
+   "article": true,
+   "local": true,
+   "title": "Managed Service Provider, Indiana | Van Ausdall & Farrar",
+   "recommendations": []
+  },
+  {
+   "url": "/case-studies/johnson-memorial-hospital.html",
+   "type": "case study",
+   "score": 100,
+   "grade": "A",
+   "words": 649,
+   "faq": true,
+   "service": false,
+   "article": true,
+   "local": true,
+   "title": "Johnson Memorial Health case study, Indiana | VAF",
+   "recommendations": []
+  },
+  {
+   "url": "/case-studies/mid-city.html",
+   "type": "case study",
+   "score": 100,
+   "grade": "A",
+   "words": 702,
+   "faq": true,
+   "service": false,
+   "article": true,
+   "local": true,
+   "title": "SD-WAN & FortiGate Firewall, Indiana | Van Ausdall & Farrar",
+   "recommendations": []
+  },
+  {
+   "url": "/case-studies/phalen-leadership-academy.html",
+   "type": "case study",
+   "score": 100,
+   "grade": "A",
+   "words": 541,
+   "faq": true,
+   "service": false,
+   "article": true,
+   "local": true,
+   "title": "COVID-19 Business Continuity, Indiana | Van Ausdall & Farrar",
+   "recommendations": []
+  },
+  {
+   "url": "/case-studies/pools-of-fun.html",
+   "type": "case study",
+   "score": 100,
+   "grade": "A",
+   "words": 766,
+   "faq": true,
+   "service": false,
+   "article": true,
+   "local": true,
+   "title": "Point of Sale Security, Indiana | Van Ausdall & Farrar",
+   "recommendations": []
+  },
+  {
+   "url": "/case-studies/shiel-sexton.html",
+   "type": "case study",
+   "score": 100,
+   "grade": "A",
+   "words": 591,
+   "faq": true,
+   "service": false,
+   "article": true,
+   "local": true,
+   "title": "Print & Copy Management, Indiana | Van Ausdall & Farrar",
+   "recommendations": []
+  },
+  {
+   "url": "/case-studies/star-financial.html",
+   "type": "case study",
+   "score": 100,
+   "grade": "A",
+   "words": 570,
+   "faq": true,
+   "service": false,
+   "article": true,
+   "local": true,
+   "title": "STAR Financial Bank case study, Indiana | VAF",
+   "recommendations": []
+  },
+  {
+   "url": "/case-studies/the-town-of-bargersville.html",
+   "type": "case study",
+   "score": 100,
+   "grade": "A",
+   "words": 624,
+   "faq": true,
+   "service": false,
+   "article": true,
+   "local": true,
+   "title": "Hyland OnBase & Unity Forms, Indiana | Van Ausdall & Farrar",
+   "recommendations": []
+  },
+  {
+   "url": "/case-studies/tippecanoe-school-corporation-digital-document.html",
+   "type": "case study",
+   "score": 100,
+   "grade": "A",
+   "words": 648,
+   "faq": true,
+   "service": false,
+   "article": true,
+   "local": true,
+   "title": "Employee Records Digitization, Indiana | VAF",
+   "recommendations": []
+  },
+  {
+   "url": "/case-studies/tippecanoe-school-corporation.html",
+   "type": "case study",
+   "score": 100,
+   "grade": "A",
+   "words": 631,
+   "faq": true,
+   "service": false,
+   "article": true,
+   "local": true,
+   "title": "Tippecanoe School Corporation case study, Indiana | VAF",
+   "recommendations": []
+  },
+  {
+   "url": "/cio-ai-playbook.html",
+   "type": "company",
+   "score": 90,
+   "grade": "A",
+   "words": 370,
+   "faq": true,
+   "service": false,
+   "article": false,
+   "local": true,
+   "title": "2026 CIO AI Playbook, Indiana | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/contact.html",
+   "type": "company",
+   "score": 90,
+   "grade": "A",
+   "words": 440,
+   "faq": true,
+   "service": false,
+   "article": false,
+   "local": true,
+   "title": "Contact Van Ausdall & Farrar, Indianapolis",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/cost-calculator.html",
+   "type": "company",
+   "score": 90,
+   "grade": "A",
+   "words": 372,
+   "faq": true,
+   "service": false,
+   "article": false,
+   "local": true,
+   "title": "Print Cost Calculator, Indianapolis | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/downloads.html",
+   "type": "company",
+   "score": 90,
+   "grade": "A",
+   "words": 434,
+   "faq": true,
+   "service": false,
+   "article": false,
+   "local": true,
+   "title": "Software Drivers and Documentation Downloads, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/index.html",
+   "type": "company",
+   "score": 94,
+   "grade": "A",
+   "words": 2784,
+   "faq": true,
+   "service": false,
+   "article": false,
+   "local": true,
+   "title": "Van Ausdall & Farrar | Indianapolis Office Technology",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/industries.html",
+   "type": "company",
+   "score": 94,
+   "grade": "A",
+   "words": 1164,
+   "faq": true,
+   "service": false,
+   "article": false,
+   "local": true,
+   "title": "Industries We Serve in Indiana | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/industries/education.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 823,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Education Technology, Indiana | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/industries/engineering-construction.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 720,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Construction Technology, Indiana | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/industries/financial-services.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 743,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Financial Services IT, Indiana | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/industries/government.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 797,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Government Technology, Indiana | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/industries/healthcare.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 778,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Healthcare Technology, Indiana | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/industries/insurance.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 705,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Insurance Technology, Indiana | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/industries/manufacturing-logistics.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 694,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Manufacturing Technology, Indiana | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/industries/real-estate.html",
+   "type": "service",
+   "score": 90,
+   "grade": "A",
+   "words": 569,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Real Estate Technology, Indiana | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/locations.html",
+   "type": "company",
+   "score": 94,
+   "grade": "A",
+   "words": 1361,
+   "faq": true,
+   "service": false,
+   "article": false,
+   "local": true,
+   "title": "Locations Across Indiana | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/locations/bloomington-business-phone-systems.html",
+   "type": "city",
+   "score": 90,
+   "grade": "A",
+   "words": 496,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Phone Systems in Bloomington, IN",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/locations/bloomington-network-carrier-solutions.html",
+   "type": "city",
+   "score": 90,
+   "grade": "A",
+   "words": 545,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Carrier Solutions in Bloomington, IN",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/locations/bloomington-network-infrastructure.html",
+   "type": "city",
+   "score": 90,
+   "grade": "A",
+   "words": 447,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Network Infrastructure in Bloomington",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/locations/bloomington.html",
+   "type": "city",
+   "score": 90,
+   "grade": "A",
+   "words": 572,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Office Technology in Bloomington, IN",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/locations/carmel.html",
+   "type": "city",
+   "score": 90,
+   "grade": "A",
+   "words": 555,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Office Technology in Carmel, IN",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/locations/columbus-business-telephone-systems.html",
+   "type": "city",
+   "score": 90,
+   "grade": "A",
+   "words": 453,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Phone Systems in Columbus, IN | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/locations/columbus-carrier-solutions.html",
+   "type": "city",
+   "score": 94,
+   "grade": "A",
+   "words": 627,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Carrier Solutions in Columbus, IN",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/locations/columbus-network-infrastructure.html",
+   "type": "city",
+   "score": 90,
+   "grade": "A",
+   "words": 589,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Network Infrastructure in Columbus",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/locations/columbus.html",
+   "type": "city",
+   "score": 90,
+   "grade": "A",
+   "words": 549,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Office Technology in Columbus, IN",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/locations/evansville-business-phone-systems.html",
+   "type": "city",
+   "score": 90,
+   "grade": "A",
+   "words": 435,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Business Phone Systems in Evansville",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/locations/evansville-cloud-solutions.html",
+   "type": "city",
+   "score": 94,
+   "grade": "A",
+   "words": 876,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Cloud Solutions in Evansville, IN",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/locations/evansville-document-conversion-solutions.html",
+   "type": "city",
+   "score": 94,
+   "grade": "A",
+   "words": 893,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Document Conversion in Evansville, IN",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/locations/evansville-managed-it-solutions.html",
+   "type": "city",
+   "score": 94,
+   "grade": "A",
+   "words": 757,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Managed IT Services in Evansville, IN",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/locations/evansville-network-carrier-solutions.html",
+   "type": "city",
+   "score": 94,
+   "grade": "A",
+   "words": 675,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Carrier Solutions in Evansville, IN",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/locations/evansville-network-infrastructure.html",
+   "type": "city",
+   "score": 94,
+   "grade": "A",
+   "words": 650,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Network Infrastructure in Evansville",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/locations/evansville.html",
+   "type": "city",
+   "score": 90,
+   "grade": "A",
+   "words": 375,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Copiers and Managed IT, Evansville IN | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/locations/fishers.html",
+   "type": "city",
+   "score": 90,
+   "grade": "A",
+   "words": 573,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Office Technology in Fishers, IN",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/locations/fort-wayne-business-phone-systems.html",
+   "type": "city",
+   "score": 94,
+   "grade": "A",
+   "words": 604,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Business Phone Systems in Fort Wayne",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/locations/fort-wayne-cloud-solutions.html",
+   "type": "city",
+   "score": 94,
+   "grade": "A",
+   "words": 621,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Cloud Solutions in Fort Wayne, IN",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/locations/fort-wayne-managed-it-solutions.html",
+   "type": "city",
+   "score": 94,
+   "grade": "A",
+   "words": 908,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Managed IT Services in Fort Wayne, IN",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/locations/fort-wayne-network-carrier-solutions.html",
+   "type": "city",
+   "score": 94,
+   "grade": "A",
+   "words": 626,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Carrier Solutions in Fort Wayne, IN",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/locations/fort-wayne-network-infrastructure.html",
+   "type": "city",
+   "score": 94,
+   "grade": "A",
+   "words": 646,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Network Infrastructure in Fort Wayne",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/locations/fort-wayne.html",
+   "type": "city",
+   "score": 90,
+   "grade": "A",
+   "words": 379,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Copiers and Managed IT, Fort Wayne IN | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/locations/greenwood.html",
+   "type": "city",
+   "score": 90,
+   "grade": "A",
+   "words": 568,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Office Technology in Greenwood, IN",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/locations/indianapolis-network-infrastructure.html",
+   "type": "city",
+   "score": 94,
+   "grade": "A",
+   "words": 660,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Network Infrastructure, Indianapolis",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/locations/indianapolis.html",
+   "type": "city",
+   "score": 90,
+   "grade": "A",
+   "words": 364,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Copiers and Managed IT, Indianapolis | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/locations/muncie-business-phone-systems.html",
+   "type": "city",
+   "score": 90,
+   "grade": "A",
+   "words": 470,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Business Phone Systems in Muncie, IN",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/locations/muncie-network-carrier-solutions.html",
+   "type": "city",
+   "score": 90,
+   "grade": "A",
+   "words": 574,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Carrier Solutions in Muncie, IN",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/locations/muncie-network-infrastructure.html",
+   "type": "city",
+   "score": 94,
+   "grade": "A",
+   "words": 715,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Network Infrastructure in Muncie, IN",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/locations/muncie.html",
+   "type": "city",
+   "score": 90,
+   "grade": "A",
+   "words": 552,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Office Technology in Muncie, IN",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/locations/noblesville.html",
+   "type": "city",
+   "score": 90,
+   "grade": "A",
+   "words": 555,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Office Technology in Noblesville, IN",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/locations/south-bend-business-phone-systems.html",
+   "type": "city",
+   "score": 90,
+   "grade": "A",
+   "words": 449,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Business Phone Systems in South Bend",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/locations/south-bend-carrier-solutions.html",
+   "type": "city",
+   "score": 94,
+   "grade": "A",
+   "words": 646,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Carrier Solutions in South Bend, IN",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/locations/south-bend-network-infrastructure.html",
+   "type": "city",
+   "score": 94,
+   "grade": "A",
+   "words": 667,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Network Infrastructure in South Bend",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/locations/south-bend.html",
+   "type": "city",
+   "score": 90,
+   "grade": "A",
+   "words": 544,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Office Technology in South Bend, IN",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/partners.html",
+   "type": "company",
+   "score": 90,
+   "grade": "A",
+   "words": 384,
+   "faq": true,
+   "service": false,
+   "article": false,
+   "local": true,
+   "title": "Technology Partners, Indianapolis | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/policies/cookie.html",
+   "type": "policy",
+   "score": 90,
+   "grade": "A",
+   "words": 165,
+   "faq": true,
+   "service": false,
+   "article": false,
+   "local": true,
+   "title": "Cookie Policy for for Indiana | Van Ausdall & Farrar",
+   "recommendations": [
+    "Write at least 300 words of body copy; 600 to 900 for a service page"
+   ]
+  },
+  {
+   "url": "/policies/disclaimer.html",
+   "type": "policy",
+   "score": 90,
+   "grade": "A",
+   "words": 163,
+   "faq": true,
+   "service": false,
+   "article": false,
+   "local": true,
+   "title": "Disclaimer Policy for Solutions, Indiana | VAF",
+   "recommendations": [
+    "Write at least 300 words of body copy; 600 to 900 for a service page"
+   ]
+  },
+  {
+   "url": "/policies/do-not-share.html",
+   "type": "policy",
+   "score": 90,
+   "grade": "A",
+   "words": 221,
+   "faq": true,
+   "service": false,
+   "article": false,
+   "local": true,
+   "title": "Do Not Share My Personal Information Services, Indiana | VAF",
+   "recommendations": [
+    "Write at least 300 words of body copy; 600 to 900 for a service page"
+   ]
+  },
+  {
+   "url": "/policies/limit-the-use.html",
+   "type": "policy",
+   "score": 100,
+   "grade": "A",
+   "words": 302,
+   "faq": true,
+   "service": false,
+   "article": false,
+   "local": true,
+   "title": "Limit the Use of My Sensitive Personal, Indiana | VAF",
+   "recommendations": []
+  },
+  {
+   "url": "/policies/privacy.html",
+   "type": "policy",
+   "score": 90,
+   "grade": "A",
+   "words": 165,
+   "faq": true,
+   "service": false,
+   "article": false,
+   "local": true,
+   "title": "Privacy Policy for for Indiana",
+   "recommendations": [
+    "Write at least 300 words of body copy; 600 to 900 for a service page"
+   ]
+  },
+  {
+   "url": "/policies/terms-of-service.html",
+   "type": "policy",
+   "score": 90,
+   "grade": "A",
+   "words": 162,
+   "faq": true,
+   "service": false,
+   "article": false,
+   "local": true,
+   "title": "Terms of Service, Indiana | Van Ausdall & Farrar",
+   "recommendations": [
+    "Write at least 300 words of body copy; 600 to 900 for a service page"
+   ]
+  },
+  {
+   "url": "/policies/van-ausdall-farrar-customer-care-app-privacy-policy.html",
+   "type": "policy",
+   "score": 100,
+   "grade": "A",
+   "words": 1047,
+   "faq": true,
+   "service": false,
+   "article": false,
+   "local": true,
+   "title": "Customer Care App Privacy Policy, Indiana | VAF",
+   "recommendations": []
+  },
+  {
+   "url": "/print-assessment.html",
+   "type": "service",
+   "score": 90,
+   "grade": "A",
+   "words": 400,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Free Print Assessment, Indianapolis | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/services/ai-consulting.html",
+   "type": "service",
+   "score": 90,
+   "grade": "A",
+   "words": 372,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "AI Consulting for Indiana Businesses | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/services/automated-forms-processing.html",
+   "type": "service",
+   "score": 90,
+   "grade": "A",
+   "words": 497,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Automated Forms Processing Services, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/services/business-continuity.html",
+   "type": "service",
+   "score": 90,
+   "grade": "A",
+   "words": 379,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Backup and Recovery, Indianapolis | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/services/business-phone-systems.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 605,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Business Phone Systems Indianapolis | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/services/business-process-solutions.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 705,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Providing Process Solutions for Indiana Businesses",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/services/business-security-systems.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 657,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Business Security Systems, Indiana | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/services/call-center-services.html",
+   "type": "service",
+   "score": 90,
+   "grade": "A",
+   "words": 417,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Call Center & Customer Support, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/services/call-recording.html",
+   "type": "service",
+   "score": 90,
+   "grade": "A",
+   "words": 478,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Call Recording Solutions, Monitor Quality, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/services/carrier-services.html",
+   "type": "service",
+   "score": 90,
+   "grade": "A",
+   "words": 502,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Carrier Services Consultation, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/services/cloud-based-solutions.html",
+   "type": "service",
+   "score": 90,
+   "grade": "A",
+   "words": 528,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Cloud Voice & Text Solutions, Indiana | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/services/cloud-communications.html",
+   "type": "service",
+   "score": 90,
+   "grade": "A",
+   "words": 565,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Cloud VoIP & PBX Systems for Every Business, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/services/cloud.html",
+   "type": "service",
+   "score": 90,
+   "grade": "A",
+   "words": 347,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Cloud Services in Indianapolis | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/services/conference-and-collaboration.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 635,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Enterprise Web & Audio Conferencing, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/services/content-management.html",
+   "type": "service",
+   "score": 90,
+   "grade": "A",
+   "words": 570,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Content Management Solutions, Indiana | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/services/copier-service.html",
+   "type": "service",
+   "score": 90,
+   "grade": "A",
+   "words": 383,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Copier Repair Service, Indianapolis | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/services/copiers.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 713,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Copier Sales and Lease, Indianapolis | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/services/copy-print-solutions.html",
+   "type": "service",
+   "score": 90,
+   "grade": "A",
+   "words": 428,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Copy Print Solutions in Indianapolis",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/services/customer-training-videos.html",
+   "type": "service",
+   "score": 90,
+   "grade": "A",
+   "words": 546,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Mitel Connect Client Training Videos, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/services/cyber-security-assessment.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 872,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Cyber Threat Assessment, Indiana | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/services/cyber-security-solutions.html",
+   "type": "service",
+   "score": 90,
+   "grade": "A",
+   "words": 576,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Cyber Security: EDR, XDR & Firewalls, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/services/cybersecurity.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 634,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Managed Cybersecurity, Indianapolis | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/services/document-conversion.html",
+   "type": "service",
+   "score": 90,
+   "grade": "A",
+   "words": 585,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Document Conversion, Indianapolis | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/services/document-management-workflow.html",
+   "type": "service",
+   "score": 90,
+   "grade": "A",
+   "words": 530,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Document Management & Workflow, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/services/document-management.html",
+   "type": "service",
+   "score": 90,
+   "grade": "A",
+   "words": 458,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Document Management, Indianapolis | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/services/document-scanning.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 618,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Document Scanning Tools, Indiana | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/services/elevate.html",
+   "type": "service",
+   "score": 90,
+   "grade": "A",
+   "words": 429,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Elevate AI Cloud Communications Platform, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/services/enterprise-digital-dictation-solutions.html",
+   "type": "service",
+   "score": 90,
+   "grade": "A",
+   "words": 405,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Enterprise Digital Dictation, Indiana | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/services/facilities-management.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 671,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Facilities Management Solutions, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/services/free-security-awareness.html",
+   "type": "service",
+   "score": 90,
+   "grade": "A",
+   "words": 581,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Free Security Awareness Training, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/services/free-security-training-tools.html",
+   "type": "service",
+   "score": 90,
+   "grade": "A",
+   "words": 457,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Free Security Training Tools, Indiana | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/services/iphone-scanning.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 651,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Scan Documents with Your iPhone, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/services/it-support.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 606,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Indianapolis IT Support | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/services/knowbe4-can-hackers-spoof-email-address-domain.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 641,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "KnowBe4, Can Hackers Spoof Your Email Domain, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/services/knowbe4-free-phish-alert-button.html",
+   "type": "service",
+   "score": 90,
+   "grade": "A",
+   "words": 591,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "KnowBe4, Free Phish Alert Button Services, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/services/knowbe4-get-free-email-exposure-check.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 654,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "KnowBe4, Get Your Free Email Exposure Check, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/services/knowbe4-get-free-ransomware-simulator-tool.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 691,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "KnowBe4, Get Your Free Ransomware Simulator, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/services/knowbe4-get-free-weak-password-test.html",
+   "type": "service",
+   "score": 90,
+   "grade": "A",
+   "words": 581,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "KnowBe4, Get Your Free Weak Password Test, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/services/knowbe4-start-free-phishing-security-test.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 601,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "KnowBe4, Free Phishing Security Test, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/services/managed-it.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 765,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Managed IT Services Indianapolis | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/services/managed-mail-centers.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 633,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Managed Mail Center Solutions, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/services/managed-print-centers.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 664,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Managed Print Center Services, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/services/managed-print.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 830,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Managed Print Services Indianapolis | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/services/mobility-solutions.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 653,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Enterprise Mobile App & PBX Features, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/services/network-infrastructure.html",
+   "type": "service",
+   "score": 90,
+   "grade": "A",
+   "words": 482,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Local & Wide Area Network Infrastructure, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/services/network-security-secure-router-access.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 604,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Network Security & Secure Remote Access for Indiana",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/services/network-security.html",
+   "type": "service",
+   "score": 90,
+   "grade": "A",
+   "words": 566,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Indianapolis Network Security | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/services/networking-solutions.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 655,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Network Infrastructure & VoIP Solutions, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/services/office-security-solutions.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 878,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Video Surveillance & Office Security, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/services/office-security.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 602,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Office Security Solutions, Indiana | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/services/physical-security.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 867,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Physical Security Solutions, Indiana | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/services/print-application-solutions.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 624,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Printer Management Software Support, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/services/print-fulfillment.html",
+   "type": "service",
+   "score": 90,
+   "grade": "A",
+   "words": 574,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Print Fulfillment & On-Demand Print, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/services/print-management-software.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 604,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Print Security & Accounting Software, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/services/proactive-it-services.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 637,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Proactive IT Managed Services for Business, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/services/production-print.html",
+   "type": "service",
+   "score": 90,
+   "grade": "A",
+   "words": 344,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Production Print, Indianapolis | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/services/project-deployment.html",
+   "type": "service",
+   "score": 90,
+   "grade": "A",
+   "words": 461,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Information Technology Project Deployments, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/services/receptionist-services.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 618,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Receptionist & Visitor Screening, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/services/sd-wan.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 725,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "SD-WAN & Fortinet Hardware Solutions, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/services/state-of-the-art-voice-data-communication-systems.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 662,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "State-of-the-Art Voice & Data Communication, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/services/switch-to-cloud.html",
+   "type": "service",
+   "score": 90,
+   "grade": "A",
+   "words": 499,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "7 Reasons to Switch Your On-Premises PBX, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/services/transcription-services.html",
+   "type": "service",
+   "score": 90,
+   "grade": "A",
+   "words": 578,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Outsourced Dictation & Transcription, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/services/unified-communications.html",
+   "type": "service",
+   "score": 90,
+   "grade": "A",
+   "words": 471,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Unified Communications and Collaboration, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/services/voice-data-circuits.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 764,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Site to Site Voice & Data Telecommunication, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/services/voice-processing.html",
+   "type": "service",
+   "score": 90,
+   "grade": "A",
+   "words": 550,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Voice Processing Solutions Services, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/services/voice-recognition.html",
+   "type": "service",
+   "score": 94,
+   "grade": "A",
+   "words": 728,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Integrated Speech and Voice Recognition from, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/services/wids-format.html",
+   "type": "service",
+   "score": 90,
+   "grade": "A",
+   "words": 516,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Wide Format Printing & Scanning Services, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/solutions-communication.html",
+   "type": "company",
+   "score": 94,
+   "grade": "A",
+   "words": 841,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Unified Communications Solutions, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/solutions-information.html",
+   "type": "company",
+   "score": 94,
+   "grade": "A",
+   "words": 650,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Information Technology Services, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/solutions-process.html",
+   "type": "company",
+   "score": 94,
+   "grade": "A",
+   "words": 772,
+   "faq": true,
+   "service": true,
+   "article": false,
+   "local": true,
+   "title": "Business Process Management, Indiana | VAF",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/solutions.html",
+   "type": "company",
+   "score": 94,
+   "grade": "A",
+   "words": 2502,
+   "faq": true,
+   "service": false,
+   "article": false,
+   "local": true,
+   "title": "Technology Solutions Indianapolis | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews"
+   ]
+  },
+  {
+   "url": "/support.html",
+   "type": "company",
+   "score": 90,
+   "grade": "A",
+   "words": 454,
+   "faq": true,
+   "service": false,
+   "article": false,
+   "local": true,
+   "title": "Client Service Center, Indianapolis | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/technology-strength-assessment.html",
+   "type": "company",
+   "score": 90,
+   "grade": "A",
+   "words": 506,
+   "faq": true,
+   "service": false,
+   "article": false,
+   "local": true,
+   "title": "Tech Strength Assessment, Indiana | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/training.html",
+   "type": "company",
+   "score": 90,
+   "grade": "A",
+   "words": 482,
+   "faq": true,
+   "service": false,
+   "article": false,
+   "local": true,
+   "title": "About, Indiana | Van Ausdall & Farrar",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  },
+  {
+   "url": "/virtualsitevisit.html",
+   "type": "company",
+   "score": 90,
+   "grade": "A",
+   "words": 544,
+   "faq": true,
+   "service": false,
+   "article": false,
+   "local": true,
+   "title": "Virtual Site Visit for Indiana",
+   "recommendations": [
+    "Add Review or AggregateRating schema from real Google reviews",
+    "Deepen to 600 words or more"
+   ]
+  }
+ ]
+}

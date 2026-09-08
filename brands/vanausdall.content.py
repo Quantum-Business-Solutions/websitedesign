@@ -35,6 +35,8 @@ if SITE_AUDIT:
     SITE_AUDIT["domain"] = "www.vanausdall.com"
     SITE_AUDIT["as_of"] = "8 September 2026"
     SITE_AUDIT["csv_href"] = "seo-audit-pages.csv"
+    _BUILD = os.path.join(os.path.dirname(os.path.abspath(__file__)), "vanausdall.build-audit.json")
+    SITE_AUDIT["build"] = json.load(open(_BUILD, encoding="utf-8")) if os.path.exists(_BUILD) else None
 MFP_MODEL = "assets/fleet/mfp.glb" if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "vanausdall", "assets", "fleet", "mfp.glb")) else None
 
 # ------------------------------------------------------------------ sourced facts (vanausdall.com)
@@ -653,23 +655,36 @@ def industry_page(slug, name, image, one, body, bullets, cases):
         c = full[0]
         secs.append({"type": "casestudy", "alt": True, "eyebrow": "Case study", "heading": c[3], "quote": CS_QUOTES[c[0]], "attribution": f"{c[1]} case study, vanausdall.com", "metrics": CS_METRICS[c[0]]})
     if cases:
-        secs.append({"type": "resources", "heading": f"{name} customers on the record", "intro": "Every case study is published on vanausdall.com today.", "items": [[CS_INDEX[c][2], CS_INDEX[c][1], CS_INDEX[c][3], "Read the case study" if CS_INDEX[c][6] else "On the case studies page", f"case-studies/{c}.html" if CS_INDEX[c][6] else "case-studies.html"] for c in cases]})
+        secs.append({"type": "resources", "heading": f"{name} customers on the record", "intro": "Every case study is published on vanausdall.com today.", "items": [[CS_INDEX[c][2], CS_INDEX[c][1], CS_INDEX[c][3], "Read the case study", f"case-studies/{c}.html"] for c in cases]})
     secs += [
         {"type": "testimonials", "alt": True, "heading": "What customers say after a service call", "items": [COMMENTS[INDUSTRIES.index(IND_INDEX[slug]) % len(COMMENTS)], COMMENTS[(INDUSTRIES.index(IND_INDEX[slug]) + 4) % len(COMMENTS)]]},
         {"type": "leadform", "id": "consult", "heading": "Start with the Technology Strength Assessment", "body": f"Ten to fifteen minutes, then a specialist who knows {name.lower()} walks it with you.", "submit": "Schedule my consultation", "note": "A person from the Indianapolis office replies, not an autoresponder."},
     ]
-    return {"crumbs": [["Home", "index.html"], ["Industries", "industries.html"], [name, f"industries/{slug}.html"]], "file": f"industries/{slug}.html", "title": f"Technology solutions for {name.lower()} | Van Ausdall & Farrar",
+    orgs = ", ".join(CS_INDEX[c][1] for c in cases) if cases else "Customers across Indiana"
+    first = re.split(r"(?<=[.!?])\s+", body)[0]
+    faq = [[f"What does Van Ausdall & Farrar do for {name.lower()} organizations?", first + " " + " ".join(re.split(r"(?<=[.!?])\s+", body)[1:3])],
+           [f"Which {name.lower()} customers work with Van Ausdall & Farrar?", f"{orgs} are on the record in our published case studies, with the numbers."],
+           [f"What is included for {name.lower()}?", "; ".join(bullets) + ". All of it under one agreement with one Customer Care Center."],
+           [f"Does Van Ausdall & Farrar serve {name.lower()} across Indiana?", f"Yes. Indianapolis, Fort Wayne, Evansville and every town between, with a service fleet that covers the entire state and {name.lower()} customers throughout the Midwest served from Indianapolis."],
+           ["How does an engagement start?", "With the free Technology Strength Assessment: ten to fifteen minutes online, then a specialist who knows " + name.lower() + " walks the results with you and writes a roadmap of what to eliminate, optimize and leverage."]]
+    secs.insert(len(secs) - 1, {"type": "faq", "alt": True, "heading": f"Questions {name.lower()} leaders ask us", "items": faq})
+    secs.insert(2, {"type": "detail", "alt": True, "eyebrow": "The first ninety days", "heading": f"What changes first for {name.lower()}", "body": f"Every {name.lower()} engagement begins with the same three steps. First, the Technology Strength Assessment maps every device, contract, phone line and workflow you have today, so nothing is bought until it is understood. Second, the assessment produces a written roadmap sorted into eliminate, optimize and leverage, with the savings and the risks named. Third, the roadmap becomes one agreement: copiers, print, IT, phones and document services under one Customer Care Center, answered within 24 hours, with a 25-point inspection on every service call. {first}", "bullets": ["Week one: the assessment and a device-by-device inventory", "Weeks two to four: the roadmap, priced, with owners", "Month two: consolidation and installation, building by building", "Month three: the first quarterly review against the numbers"]})
+    service_schema = {"@context": "https://schema.org", "@type": "Service", "name": f"Technology solutions for {name.lower()}", "serviceType": f"Office technology for {name.lower()}", "provider": {"@type": "Organization", "name": "Van Ausdall & Farrar, Inc.", "url": SITE}, "areaServed": {"@type": "State", "name": "Indiana"}, "audience": {"@type": "Audience", "audienceType": name}, "description": one}
+    return {"crumbs": [["Home", "index.html"], ["Industries", "industries.html"], [name, f"industries/{slug}.html"]], "file": f"industries/{slug}.html", "title": f"Technology solutions for {name.lower()} | Van Ausdall & Farrar", "schema": [service_schema],
             "description": desc(f"{one} Managed IT, print, communications and process solutions for {name.lower()} across Indiana and the Midwest, from Van Ausdall & Farrar."), "sections": secs}
 
 
 def case_study_page(slug, org, industry, one, mv, ml, chapters, next_slug):
     n = CS_INDEX[next_slug]
-    return {"file": f"case-studies/{slug}.html", "title": f"{org} case study | Van Ausdall & Farrar", "description": desc(one + " " + chapters[0]["paras"][0]),
+    art = {"@context": "https://schema.org", "@type": "Article", "headline": f"{org}: {one}", "description": one, "author": {"@type": "Organization", "name": "Van Ausdall & Farrar, Inc."}, "publisher": {"@type": "Organization", "name": "Van Ausdall & Farrar, Inc.", "url": SITE}, "about": {"@type": "Organization", "name": org}, "articleSection": industry}
+    cs_faq = {"type": "faq", "alt": True, "heading": f"Questions about the {org} results", "items": [[f"What did {org} achieve with Van Ausdall & Farrar?", one], ["What was the measurable result?", f"{mv} {ml}, as published in the case study on vanausdall.com."], [f"Which services did {org} use?", chapters[0]["paras"][0][:360]], ["Can we get results like these?", "Every one of these engagements started with the free Technology Strength Assessment. A specialist maps your devices, contracts and workflows and shows where the savings are before you commit."]]}
+    return {"file": f"case-studies/{slug}.html", "title": f"{org} case study | Van Ausdall & Farrar", "description": desc(one + " " + chapters[0]["paras"][0]), "schema": [art],
             "crumbs": [["Home", "index.html"], ["Case studies", "case-studies.html"], [org, f"case-studies/{slug}.html"]],
             "sections": [
-                {"type": "article", "category": industry, "heading": org, "standfirst": one, "image": CS_IMAGE[slug], "image_alt": f"{org} case study", "date_label": "Case study", "read": "4 min read", "chapters": chapters,
+                {"type": "article", "category": industry, "crumb_label": "Case studies", "crumb_href": "case-studies.html", "heading": org, "standfirst": one, "image": CS_IMAGE[slug], "image_alt": f"{org} case study", "date_label": "Case study", "read": "4 min read", "chapters": chapters,
                  "author": {"name": "Van Ausdall & Farrar", "role": "Published case study, vanausdall.com"}},
                 {"type": "casestudy", "alt": True, "eyebrow": "The numbers", "heading": one, "quote": CS_QUOTES[slug], "attribution": f"{org} case study, vanausdall.com", "metrics": CS_METRICS[slug]},
+                cs_faq,
                 {"type": "leadform", "id": "consult", "heading": "Want results like these?", "body": "Every one of these engagements started with the Technology Strength Assessment. Yours can too.", "submit": "Schedule my consultation", "note": "A person from the Indianapolis office replies, not an autoresponder."},
                 {"type": "related", "heading": "More case studies", "items": [[n[2], n[1], n[3], f"case-studies/{n[0]}.html", CS_IMAGE[n[0]]]]},
             ]}
@@ -721,7 +736,7 @@ def location_page(slug, city, a1, a2, phone, phone_href, region, lat, lon, hq):
              "evansville": "Evansville is the commercial center of southwest Indiana, home to logistics, healthcare and manufacturing employers that depend on reliable office technology. VAF has served Evansville and the Tri-State area since 1914, with a local office for copier sales, service and repair."}[slug]
     return {"crumbs": [["Home", "index.html"], ["Locations", "locations.html"], [city, f"locations/{slug}.html"]], "file": f"locations/{slug}.html", "title": f"Office Technology, Copiers and Managed IT in {city}, IN | Van Ausdall & Farrar",
             "description": f"Van Ausdall & Farrar in {city}: copier sales, service and repair, managed print, managed IT and business phone systems for {region}. {phone}.",
-            "schema": [schema],
+            "schema": [schema, {"@context": "https://schema.org", "@type": "Service", "name": f"Office technology, copiers and managed IT in {city}", "serviceType": "Managed IT, copiers, managed print and business phone systems", "provider": {"@type": "Organization", "name": "Van Ausdall & Farrar, Inc.", "url": SITE}, "areaServed": {"@type": "City", "name": city}, "description": f"Copiers, managed print, managed IT and business phone systems for organizations in {city} and {region}."}],
             "sections": [
                 {"type": "hero", "layout": "split", "eyebrow": eyebrow, "heading": f"<em>{city}</em> copiers, managed IT and phone systems, serviced locally.",
                  "subhead": local, "primary": {"label": f"Call {phone}", "href": phone_href}, "secondary": {"label": "Schedule a consultation", "href": "contact.html"},
@@ -785,7 +800,9 @@ def build():
               "org_logo": f"{SITE}/images/logo.png",
               "org_description": "Indiana's largest full-service office technology provider, privately owned in Indianapolis since 1914: managed IT and cybersecurity, business phone systems, copiers and managed print, document management and conversion, and AI consulting.",
               "sameAs": ["https://www.linkedin.com/company/van-ausdall-&-farrar", "https://www.facebook.com/Vanausdallinc/", "https://www.instagram.com/vanausdallinc/", "https://goo.gl/maps/ekbY63gHTu56ifBd8"],
-              "telephone": "+1-317-634-2913"}
+              "telephone": "+1-317-634-2913", "foundingDate": "1914", "slogan": "Business technology simplified", "areaServed": {"@type": "State", "name": "Indiana"},
+              "hq": {"name": "Van Ausdall & Farrar Indianapolis", "streetAddress": "6430 E 75th Street", "addressLocality": "Indianapolis", "addressRegion": "IN", "postalCode": "46250", "lat": 39.887, "lon": -86.062, "hours": ["07:00", "17:00"]}}
+    schema["sameAs"].append("https://www.youtube.com/@vanausdallfarrar6346")
     nav = [
         {"label": "Solutions", "href": "solutions.html", "mega": True,
          "groups": [{"title": p[0], "items": [[s[2], f"services/{s[0]}.html"] for s in SERVICES if s[3] == p[0]]} for p in PILLARS],
@@ -891,7 +908,7 @@ def build():
         {"type": "faq", "heading": "Questions about the assessment", "items": [["What does it cost?", "Nothing. The assessment is complimentary."], ["How long does it take?", "Ten to fifteen minutes online. You can save for later and finish another day. A specialist then walks the results with you."], ["Who sees my answers?", "Your VAF technology advisor, whose average tenure with the company is fifteen years."]]},
         {"type": "leadform", "alt": True, "id": "consult", "heading": "Request the full assessment", "body": "A technology advisor from the Indianapolis office replies to set it up.", "submit": "Request my assessment", "note": "A person replies, not an autoresponder."},
     ]})
-    pages.append({"file": "print-assessment.html", "title": "Free print assessment | Van Ausdall & Farrar", "description": "Uncover hidden costs, identify inefficiencies and optimize your printing. A free print assessment from Van Ausdall & Farrar: comprehensive analysis, cost reduction strategies, tailored recommendations. No obligation.",
+    pages.append({"file": "print-assessment.html", "title": "Free print assessment | Van Ausdall & Farrar", "schema": [{"@context": "https://schema.org", "@type": "Service", "name": "Free print assessment", "serviceType": "Print fleet assessment", "provider": {"@type": "Organization", "name": "Van Ausdall & Farrar, Inc.", "url": SITE}, "areaServed": {"@type": "State", "name": "Indiana"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "A complimentary device-by-device assessment of print volumes, costs and staff time, with a written recommendation."}], "description": "Uncover hidden costs, identify inefficiencies and optimize your printing. A free print assessment from Van Ausdall & Farrar: comprehensive analysis, cost reduction strategies, tailored recommendations. No obligation.",
                   "crumbs": [["Home", "index.html"], ["Free print assessment", "print-assessment.html"]],
                   "sections": [
         {"type": "hero", "layout": "split", "eyebrow": "Free print assessment", "heading": "Ready to optimize your <em>print environment</em>?", "subhead": "Uncover hidden costs, identify inefficiencies and optimize your printing processes. Every print engagement starts here, so you see exact pricing for your office before you commit.", "primary": {"label": "Request the assessment", "href": "#request"}, "secondary": {"label": "Estimate first", "href": "cost-calculator.html"}, "image": "assets/copier-1200.jpg", "image_alt": "An office copier", "image_w": 1200, "image_h": 800},
@@ -1006,6 +1023,77 @@ def build():
         {"type": "locations", "alt": True, "heading": "Our offices", "intro": f"Toll-free {TOLLFREE}. Client success: {SUCCESS_EMAIL}.", "items": [[l[1], l[2] if l[2] != "Local office" else "Serving " + l[6], l[3], l[4], l[5]] for l in LOCATIONS]},
     ]})
 
+    # ---------------- page for page: every vanausdall.com URL gets a counterpart, then every page is normalised
+    import sys as _sys
+    _sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "scripts"))
+    from migrate_pages import fix_title, fix_desc, build_migrated, link_sections
+    _extract = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "vanausdall.pages.json"), encoding="utf-8"))
+    COVERED = {"/": "index.html", "/about/": "about.html", "/about/why": "about.html", "/about/history": "about.html", "/about/customer-comments": "about.html", "/net-promoter-score": "about.html",
+               "/contact/": "contact.html", "/contact/careers": "careers.html", "/get-started": "contact.html", "/customer-care": "support.html", "/support/": "support.html", "/vaf-auto-support": "support.html",
+               "/partners": "partners.html", "/best-in-class-partners": "partners.html", "/solutions": "solutions.html", "/blog": "blog.html", "/industries/": "industries.html", "/case-studies/": "case-studies.html",
+               "/technology-strength-assessment": "technology-strength-assessment.html", "/assessment/": "technology-strength-assessment.html", "/print/free-print-assessment": "print-assessment.html",
+               "/information/managed-it-services": "services/managed-it.html", "/information/cloud-solutions": "services/cloud.html", "/information/data-security": "services/cybersecurity.html", "/business-continuity-compliance": "services/business-continuity.html",
+               "/communication/business-phone-systems": "services/business-phone-systems.html", "/copiers/": "services/copiers.html", "/copier-service-repair": "services/copier-service.html", "/print/managed-print-services": "services/managed-print.html", "/managed-print": "services/managed-print.html",
+               "/production-print": "services/production-print.html", "/document-management": "services/document-management.html", "/document-conversion/": "services/document-conversion.html", "/ai": "services/ai-consulting.html",
+               "/industries/education-technology-solutions": "industries/education.html", "/industries/engineering-construction-technology-solutions": "industries/engineering-construction.html", "/industries/financial-technology-services": "industries/financial-services.html", "/industries/government-technology-solutions": "industries/government.html", "/industries/healthcare-technology-solutions": "industries/healthcare.html", "/industries/insurance-technology-solutions": "industries/insurance.html", "/industries/manufacturing-logistics-technology-solutions": "industries/manufacturing-logistics.html", "/industries/real-estate-technology-solutions": "industries/real-estate.html",
+               "/indianapolis/": "locations/indianapolis.html", "/fort-wayne/": "locations/fort-wayne.html", "/evansville/": "locations/evansville.html",
+               "/case-studies/tippecanoe-school-corporation": "case-studies/tippecanoe-school-corporation.html", "/case-studies/star-financial": "case-studies/star-financial.html", "/case-studies/johnson-memorial-hospital": "case-studies/johnson-memorial-hospital.html", "/case-studies/city-of-anderson": "case-studies/city-of-anderson.html"}
+    RETIRE = {"/covid-19-information", "/vaf-coronavirus-covid-19-policy", "/kiosk-assembly", "/kiosk-demo", "/kiosk-quote", "/tw-telecom", "/survey"}
+    IMAGES = {"Information": "assets/gen-soc-1200.jpg", "Communication": "assets/gen-phone-1200.jpg", "Print": "assets/copier-1200.jpg", "Process": "assets/gen-conversion-1200.jpg", "city": "assets/gen-hq-1200.jpg", "case study": "assets/team-1200.jpg", "default": "assets/gen-hq-1200.jpg"}
+    BLURBS = {p[0]: p[1] + " Every VAF service is delivered under one agreement with one Customer Care Center, so the copier technician, the network engineer and the phone specialist answer to the same account team." for p in PILLARS}
+    BLURBS["default"] = "Van Ausdall & Farrar has served Indiana since 1914 with four pillars under one roof: information, communication, print and process. One agreement, one Customer Care Center, one account team for every device and every service."
+    migrated, REDIRECTS = build_migrated(_extract, {p["file"] for p in pages}, COVERED, RETIRE, IMAGES, PHONE, BLURBS,
+                                         {"Solutions": "solutions.html", "Locations": "locations.html", "Case studies": "case-studies.html", "About": "about.html", "Policies": "about.html", "Industries": "industries.html"})
+    pages += migrated
+    def _insert(pg, sec):
+        last = pg["sections"][-1]["type"] if pg["sections"] else ""
+        if last in ("leadform", "contact", "locations", "related", "cta"):
+            pg["sections"].insert(len(pg["sections"]) - 1, sec)
+        else:
+            pg["sections"].append(sec)
+    for f, sec in link_sections(migrated).items():
+        pg = next((p for p in pages if p["file"] == f), None)
+        if pg:
+            _insert(pg, sec)
+    TSA = "Most engagements start with the free Technology Strength Assessment: ten to fifteen minutes online, then a specialist walks the results with you and writes a roadmap of what to eliminate, optimize and leverage."
+    FAQ_EXTRA = {
+        "blog.html": {"type": "faq", "alt": True, "heading": "Questions about News and insights", "items": [["How often does Van Ausdall & Farrar publish?", "About once a week, and it has for three years. Each guide is aimed at a question customers ask on the first call, from what managed print costs to whether to lease or buy a copier."], ["Who writes the guides?", "The VAF team in Indianapolis: technology advisors, service managers and the security team, with the author named on each post."], ["Can we ask for a topic?", f"Yes. Email {SUCCESS_EMAIL} or call {PHONE}. If three customers ask the same question, it becomes a guide."]]},
+        "careers.html": {"type": "faq", "alt": True, "heading": "Questions about working at Van Ausdall & Farrar", "items": [["Where are the jobs?", "Indianapolis headquarters at 6430 E 75th Street, the Fort Wayne and Evansville offices, and field service roles across Indiana."], ["What are the benefits?", "Medical, dental and vision, a 401(k) with match, generous paid time off and paid volunteer hours, in a privately owned company where the average technology advisor has been here fifteen years."], ["How do I apply?", f"Send a resume to {SUCCESS_EMAIL} or apply through the listing. A person replies, not an autoresponder."]]},
+        "contact.html": {"type": "faq", "alt": True, "heading": "Questions before you call", "items": [["What are your hours?", f"Monday through Friday, 7:00am to 5:00pm at {PHONE}. Existing customers reach the Client Service Center the same way, or through the Customer Care app."], ["Where are the offices?", "Headquarters at 6430 E 75th Street, Indianapolis, IN 46250, with offices in Fort Wayne and Evansville. The service fleet covers the entire state."], ["How fast do you respond?", "Requests are processed and answered within 24 hours. Most metro-area copier calls are same day."], ["I am not sure what I need. Where do I start?", TSA]]},
+        "industries.html": {"type": "faq", "alt": True, "heading": "Questions about industry solutions", "items": [["Which industries does Van Ausdall & Farrar serve?", "Education, engineering and construction, financial services, healthcare, insurance, manufacturing and logistics, real estate, and state and local government, across Indiana and the Midwest."], ["Why does the industry matter for office technology?", "Because a hospital's records retention, a school's print volume and a job site's phones each fail in their own way. The industry pages describe what VAF sets up for each and who is on the record."], ["Do you have references in my industry?", "Eighteen published case studies, from Tippecanoe School Corporation to STAR Financial Bank and Johnson Memorial Health. Each industry page lists its own."]]},
+        "solutions.html": {"type": "faq", "alt": True, "heading": "Questions about our solutions", "items": [["What does Van Ausdall & Farrar actually sell?", "Four pillars under one agreement: information (managed IT, cybersecurity, cloud, backup), communication (business phone systems and unified communications), print (copiers, managed print, production print) and process (document management, conversion and AI consulting)."], ["Can we buy one service, or is it all or nothing?", "Either. Most customers start with one pillar, usually copiers or managed IT, and add the others as contracts expire, because one invoice and one Customer Care Center is easier."], ["How do we know what we need?", TSA]]},
+        "print-assessment.html": {"type": "faq", "alt": True, "heading": "Questions about the print assessment", "items": [["What does the print assessment cost?", "Nothing. It is complimentary and there is no obligation."], ["What does it include?", "A device-by-device map of your fleet, volumes and costs per page, supply spend, service history and staff time, with a written recommendation of what to consolidate, replace or manage."], ["How long does it take?", "Two to three weeks, most of it monitoring software collecting real volumes. A specialist then walks the findings with you in one meeting."], ["What happens after?", "You keep the report. If you want VAF to act on it, managed print starts with a fleet plan and supplies shipped on usage."]]},
+    }
+    EXTRA_SECTIONS = {
+        "contact.html": {"type": "detail", "alt": True, "eyebrow": "What happens next", "heading": "Send the form, and here is what happens", "body": "A person from the Indianapolis office reads it the same business day and calls to set a time; there is no autoresponder and no sales sequence. If the question is about an existing device or agreement, it is routed to the Client Service Center, which answers within 24 hours and dispatches a certified technician locally. If it is a new need, a technology advisor, whose average tenure with the company is fifteen years, walks the Technology Strength Assessment with you: ten to fifteen minutes on your devices, contracts, phones and workflows, then a written roadmap of what to eliminate, optimize and leverage. You keep the roadmap either way.", "bullets": ["Same-day reply from a named person in Indianapolis", "Service requests answered within 24 hours", "Assessment first, quote second", "Offices in Indianapolis, Fort Wayne and Evansville; the fleet covers the state"]},
+        "cio-ai-playbook.html": {"type": "detail", "alt": True, "eyebrow": "What is inside", "heading": "Nine chapters, written for the person who has to decide", "body": "The playbook walks a CIO or owner from the first question, is our data ready, to the last, how do we measure it. It covers an AI acceptable use policy, the governance guardrails that keep employees productive without exposing customer data, the use cases that pay back first in a mid-sized company, how to evaluate vendors and models, what the security team needs before anything is switched on, and a ninety-day plan with owners and checkpoints. Each chapter ends with a one-page checklist you can take into a leadership meeting.", "bullets": ["Readiness: data, identity and the questions to ask before any pilot", "Policy: an acceptable use policy template and the guardrails that make it real", "Use cases: the six that pay back first in a fifty to five-hundred person company", "Security: what the SOC and the vCIO need before launch", "The ninety-day plan, with owners and checkpoints", "Measurement: the four numbers to report to the board"]},
+    }
+    TITLES = {
+        "index.html": "Van Ausdall & Farrar | Indianapolis Office Technology", "about.html": "About Van Ausdall & Farrar, Indianapolis", "contact.html": "Contact Van Ausdall & Farrar, Indianapolis", "careers.html": "Careers at Van Ausdall & Farrar, Indianapolis",
+        "solutions.html": "Technology Solutions Indianapolis | Van Ausdall & Farrar", "industries.html": "Industries We Serve in Indiana | Van Ausdall & Farrar", "locations.html": "Locations Across Indiana | Van Ausdall & Farrar", "partners.html": "Technology Partners, Indianapolis | Van Ausdall & Farrar",
+        "support.html": "Client Service Center, Indianapolis | Van Ausdall & Farrar", "technology-strength-assessment.html": "Tech Strength Assessment, Indiana | Van Ausdall & Farrar", "print-assessment.html": "Free Print Assessment, Indianapolis | Van Ausdall & Farrar", "cost-calculator.html": "Print Cost Calculator, Indianapolis | Van Ausdall & Farrar",
+        "cio-ai-playbook.html": "2026 CIO AI Playbook, Indiana | Van Ausdall & Farrar", "blog.html": "News and Insights, Indianapolis | Van Ausdall & Farrar", "case-studies.html": "Case Studies Across Indiana | Van Ausdall & Farrar",
+        "services/managed-it.html": "Managed IT Services Indianapolis | Van Ausdall & Farrar", "services/business-phone-systems.html": "Business Phone Systems Indianapolis | Van Ausdall & Farrar", "services/copiers.html": "Copier Sales and Lease, Indianapolis | Van Ausdall & Farrar", "services/managed-print.html": "Managed Print Services Indianapolis | Van Ausdall & Farrar",
+        "services/copier-service.html": "Copier Repair Service, Indianapolis | Van Ausdall & Farrar", "services/document-conversion.html": "Document Conversion, Indianapolis | Van Ausdall & Farrar", "services/cybersecurity.html": "Managed Cybersecurity, Indianapolis | Van Ausdall & Farrar", "services/cloud.html": "Cloud Services in Indianapolis | Van Ausdall & Farrar",
+        "services/ai-consulting.html": "AI Consulting for Indiana Businesses | Van Ausdall & Farrar", "services/business-continuity.html": "Backup and Recovery, Indianapolis | Van Ausdall & Farrar", "services/document-management.html": "Document Management, Indianapolis | Van Ausdall & Farrar", "services/production-print.html": "Production Print, Indianapolis | Van Ausdall & Farrar",
+        "industries/education.html": "Education Technology, Indiana | Van Ausdall & Farrar", "industries/engineering-construction.html": "Construction Technology, Indiana | Van Ausdall & Farrar", "industries/financial-services.html": "Financial Services IT, Indiana | Van Ausdall & Farrar", "industries/government.html": "Government Technology, Indiana | Van Ausdall & Farrar",
+        "industries/healthcare.html": "Healthcare Technology, Indiana | Van Ausdall & Farrar", "industries/insurance.html": "Insurance Technology, Indiana | Van Ausdall & Farrar", "industries/manufacturing-logistics.html": "Manufacturing Technology, Indiana | Van Ausdall & Farrar", "industries/real-estate.html": "Real Estate Technology, Indiana | Van Ausdall & Farrar",
+        "locations/indianapolis.html": "Copiers and Managed IT, Indianapolis | Van Ausdall & Farrar", "locations/fort-wayne.html": "Copiers and Managed IT, Fort Wayne IN | Van Ausdall & Farrar", "locations/evansville.html": "Copiers and Managed IT, Evansville IN | Van Ausdall & Farrar",
+        "blog/ai-acceptable-use-policy.html": "AI Acceptable Use Policy, Indiana Guide | Van Ausdall & Farrar", "blog/all-in-one-office-printer-options-navigating-the-market-for-the-best-choice.html": "All-in-One Office Printers, Indianapolis | Van Ausdall & Farrar", "blog/business-phone-systems-buyers-guide.html": "Business Phone Systems Guide, Indiana | Van Ausdall & Farrar",
+        "blog/copier-lease-vs-buy-indianapolis.html": "Copier Lease vs Buy in Indianapolis | Van Ausdall & Farrar", "blog/document-conversion-services-what-to-expect.html": "Document Conversion Services, Indiana | Van Ausdall & Farrar", "blog/how-managed-print-services-transforms-business.html": "First 90 Days of Managed Print, Indiana | Van Ausdall & Farrar",
+        "blog/physical-intrusion-detection-systems.html": "Physical Intrusion Detection, Indiana | Van Ausdall & Farrar", "blog/same-day-service-what-it-means.html": "Same-Day Copier Service in Indianapolis | Van Ausdall & Farrar", "blog/what-is-a-vcio.html": "What a vCIO Does, Indianapolis Guide | Van Ausdall & Farrar",
+        "blog/what-managed-print-costs.html": "Managed Print Services Cost in Indiana | Van Ausdall & Farrar", "blog/wide-format-printer-buying-guide-making-the-right-decision.html": "Wide-Format Printers, Indianapolis Guide | Van Ausdall & Farrar", "blog/workstation-management-an-overview.html": "Workstation Management, Indianapolis | Van Ausdall & Farrar",
+    }
+    for pg in pages:
+        if pg["file"] in FAQ_EXTRA and not any(s.get("type") == "faq" for s in pg["sections"]):
+            _insert(pg, FAQ_EXTRA[pg["file"]])
+        if pg["file"] in EXTRA_SECTIONS:
+            pg["sections"].insert(1, EXTRA_SECTIONS[pg["file"]])
+        pg["title"] = TITLES.get(pg["file"]) or fix_title(pg["title"])
+        pg["description"] = fix_desc(pg.get("description", ""))
+    MIGRATION = {"pages": len(migrated), "redirects": len(REDIRECTS), "retired": sorted(RETIRE), "map": REDIRECTS}
+    brand["legal"] = [["Privacy", "policies/privacy.html"], ["Terms of service", "policies/terms-of-service.html"], ["Cookie policy", "policies/cookie.html"]]
+
     pitch = {
         "qbs_contact": {"name": "Shawn Peterson", "email": "shawn@thequantumleap.business", "phone": "(712) 389-4639"},
         "prepared_for": "Brian Courtney and the Van Ausdall & Farrar team",
@@ -1113,6 +1201,9 @@ def build():
             "The current partner's contract. Month to month at about $1,200; the plan assumes a fourth-quarter start with redirects handled before anything is switched off."],
         "footer": "Prepared for Brian Courtney and the Van Ausdall & Farrar team, following the 1 September call with Patrick Dodge. Nothing here is live or indexed. Every number we could source comes from vanausdall.com, the CEO Juice report it links to, or Semrush on 8 September 2026. Where we drafted a process or a commitment we think you make, it is listed under To confirm. Hero and service photographs are generated stand-ins for the preview, marked as such, until a half-day shoot at the headquarters and in the field; secondary imagery is from your site today; partner logos are the ones on your partners page.",
     }
+    pitch["migration"] = MIGRATION
+    if pitch["search"].get("site_audit"):
+        pitch["search"]["site_audit"]["migration"] = {k: v for k, v in MIGRATION.items() if k != "map"}
     content = {"client": CLIENT, "slug": "vanausdall", "domain_hint": "vanausdall.com",
                "brand": brand, "schema": schema, "nav": nav, "pages": pages, "pitch": pitch}
     with open(OUT, "w", encoding="utf-8") as fh:
