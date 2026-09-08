@@ -191,9 +191,20 @@ def _testimonials(s, ctx):
 
 
 def _timeline(s, ctx):
+    """History rail: a line across the years, one card per milestone, optional image, vertical on phones."""
     E = ctx["E"]
-    items = "".join(f'<div><div class="y">{E(y)}</div><h3>{E(t)}</h3><p>{E(d)}</p></div>' for y, t, d in s["items"])
-    return f'{ctx["sec_open"](s)} <div class="q-container"><div class="pv-center"><div class="q-eyebrow">{E(s.get("eyebrow"))}</div><h2 class="q-h2" style="margin-top:22px;max-width:760px">{E(s["heading"])}</h2></div><div class="pv-tl" style="grid-template-columns:repeat({min(len(s["items"]), 4)},1fr)">{items}</div></div></section>'
+    tid = s.get("id", "story")
+    cards = []
+    for i, it in enumerate(s["items"]):
+        y, t, d = it[0], it[1], it[2]
+        img = f'<div class="img"><img src="{E(ctx["rel"](it[3]))}" alt="" width="600" height="400" loading="lazy"></div>' if len(it) > 3 and it[3] else ""
+        cards.append(f'<li style="--i:{i}"><span class="dot" aria-hidden="true"></span><div class="y">{E(y)}</div>{img}<h3>{E(t)}</h3><p>{E(d)}</p></li>')
+    n = len(cards)
+    head = f'<div class="pv-center"><div class="q-eyebrow">{E(s.get("eyebrow", ""))}</div><h2 class="q-h2" style="margin-top:22px;max-width:760px">{E(s["heading"])}</h2>{f"<p class=q-lead style=max-width:640px;margin:16px_auto_0>{E(s[chr(105)+chr(110)+chr(116)+chr(114)+chr(111)])}</p>".replace("_", " ") if s.get("intro") else ""}</div>'
+    nav = f'<div class="pv-tl2-nav"><button type="button" data-d="-1" aria-label="Earlier">&larr;</button><button type="button" data-d="1" aria-label="Later">&rarr;</button></div>' if n > 3 else ""
+    js = f"""<script>(function(){{var w=document.getElementById("{tid}-tl");if(!w)return;var r=w.querySelector('ol');w.querySelectorAll('.pv-tl2-nav button').forEach(function(b){{b.addEventListener('click',function(){{r.scrollBy({{left:(+b.getAttribute('data-d'))*Math.min(r.clientWidth*.8,720),behavior:'smooth'}})}})}});
+if('IntersectionObserver' in window){{new IntersectionObserver(function(es){{es.forEach(function(e){{if(e.isIntersecting)w.classList.add('in')}})}},{{threshold:.2}}).observe(w)}}else{{w.classList.add('in')}}}})();</script>"""
+    return f'{ctx["sec_open"](s)} <div class="q-container">{head}<div class="pv-tl2" id="{E(tid)}-tl" data-n="{n}">{nav}<div class="line" aria-hidden="true"><i></i></div><ol>{"".join(cards)}</ol></div></div>{js}</section>'
 
 
 def _tabs(s, ctx):
@@ -262,19 +273,33 @@ NC_OUTLINE = [(-84.32, 34.99), (-84.29, 35.22), (-84.02, 35.41), (-83.62, 35.57)
               (-80.78, 34.82), (-80.93, 35.10), (-81.05, 35.15), (-81.38, 35.17), (-82.29, 35.20), (-82.78, 35.08), (-83.11, 35.00), (-84.32, 34.99)]
 
 
+# Simplified state outlines, lon/lat. "nc" is the default; add a region here and reference it with "region" on the map section.
+CA_OUTLINE = [(-124.4, 42.0), (-120.0, 42.0), (-120.0, 39.0), (-114.63, 35.0), (-114.63, 34.87), (-114.13, 34.3), (-114.72, 33.4), (-114.72, 32.72), (-117.13, 32.53), (-117.3, 33.0),
+              (-118.4, 33.75), (-118.5, 34.03), (-119.2, 34.15), (-120.5, 34.5), (-120.65, 35.2), (-121.9, 36.6), (-122.4, 37.2), (-122.5, 37.8), (-123.0, 38.3), (-123.7, 38.95),
+              (-123.85, 39.8), (-124.2, 40.4), (-124.4, 41.0), (-124.2, 41.8), (-124.4, 42.0)]
+NV_OUTLINE = [(-120.0, 42.0), (-114.05, 42.0), (-114.05, 36.2), (-114.63, 35.0), (-120.0, 39.0), (-120.0, 42.0)]
+REGIONS = {"nc": {"name": "North Carolina", "outlines": [NC_OUTLINE], "scale": 100},
+           "west": {"name": "California and Nevada", "outlines": [CA_OUTLINE, NV_OUTLINE], "scale": 72}}
+
+
 def _map(s, ctx):
     """Service-area map: the NC outline with a pin per branch, and the branch list beside it."""
     E = ctx["E"]
     import math
-    lat0 = 35.5
+    region = REGIONS.get(s.get("region", "nc"), REGIONS["nc"])
+    outlines = region["outlines"]
+    all_pts = [p for o in outlines for p in o]
+    lat0 = (max(p[1] for p in all_pts) + min(p[1] for p in all_pts)) / 2
+    lon_w, lat_n = min(p[0] for p in all_pts), max(p[1] for p in all_pts)
     kx = math.cos(math.radians(lat0))
+    scale = region.get("scale", 100)
     def proj(lon, lat):
-        return ((lon + 84.4) * kx * 100, (36.65 - lat) * 100)
-    pts = [proj(*p) for p in NC_OUTLINE]
+        return ((lon - lon_w) * kx * scale, (lat_n - lat) * scale)
+    pts = [proj(*p) for p in all_pts]
     xs = [x for x, _ in pts]; ys = [y for _, y in pts]
     w, h = max(xs) - min(xs) + 40, max(ys) - min(ys) + 40
     ox, oy = min(xs) - 20, min(ys) - 20
-    path = "M" + " L".join(f"{x - ox:.1f},{y - oy:.1f}" for x, y in pts) + " Z"
+    path = " ".join("M" + " L".join(f"{x - ox:.1f},{y - oy:.1f}" for x, y in [proj(*p) for p in o]) + " Z" for o in outlines)
     pins, rows = [], []
     for it in s["items"]:
         name, lon, lat, href, sub, hq = it["name"], it["lon"], it["lat"], it["href"], it.get("sub", ""), it.get("hq", False)
@@ -282,7 +307,7 @@ def _map(s, ctx):
         dx, dy = it.get("label_dx", 10), it.get("label_dy", 4)
         pins.append(f'<circle class="ring" cx="{x:.1f}" cy="{y:.1f}" r="{s.get("ring", 42)}"/><circle class="pin{" hq" if hq else ""}" cx="{x:.1f}" cy="{y:.1f}" r="5.5"/><text x="{x + dx:.1f}" y="{y + dy:.1f}">{E(name)}</text>')
         rows.append(f'<li><div><b>{E(name)}{" (headquarters)" if hq else ""}</b><small>{E(sub)}</small></div><a href="{E(ctx["L"](href))}">{E(it.get("link", "Branch page"))}</a></li>')
-    svg = f'<svg class="pv-map-svg" viewBox="0 0 {w:.0f} {h:.0f}" role="img" aria-label="{E(s.get("alt", f"Map of North Carolina with {ctx.get(chr(99)+chr(108)+chr(105)+chr(101)+chr(110)+chr(116)+chr(95)+chr(115)+chr(104)+chr(111)+chr(114)+chr(116), chr(111)+chr(117)+chr(114))} locations"))}"><path class="land" d="{path}"/>{"".join(pins)}</svg>'
+    svg = f'<svg class="pv-map-svg" viewBox="0 0 {w:.0f} {h:.0f}" role="img" aria-label="{E(s.get("alt", f"Map of {region.get(chr(110)+chr(97)+chr(109)+chr(101), chr(78)+chr(67))} with {ctx.get(chr(99)+chr(108)+chr(105)+chr(101)+chr(110)+chr(116)+chr(95)+chr(115)+chr(104)+chr(111)+chr(114)+chr(116), chr(111)+chr(117)+chr(114))} locations"))}"><path class="land" d="{path}"/>{"".join(pins)}</svg>'
     head = f'<div class="pv-split" style="margin-bottom:40px"><h2 class="q-h2">{E(s["heading"])}</h2><p>{E(s.get("intro", ""))}</p></div>'
     return f'{ctx["sec_open"](s)} <div class="q-container">{head}<div class="pv-map-wrap">{svg}<ul class="pv-map-list">{"".join(rows)}</ul></div></div></section>'
 

@@ -1314,23 +1314,44 @@
         {
           "type": "timeline",
           "id": "story",
-          "eyebrow": "The story",
-          "heading": "From one office to five, and from copiers to the whole office",
+          "eyebrow": "Since 1947",
+          "heading": "Seventy-nine years in North Carolina, one office at a time",
+          "intro": "The dates we could source are here. The ones marked to confirm are on the hub list; tell us and they go in.",
           "items": [
             [
               "1947",
-              "Kelly opens",
-              "Selling and servicing office equipment in Winston-Salem."
+              "Kelly opens in Winston-Salem",
+              "Selling and servicing office equipment. The family has owned it ever since."
             ],
             [
-              "A+",
-              "BBB accredited",
-              "Accredited by the Better Business Bureau and rated A+."
+              "1960",
+              "Accredited by the Better Business Bureau",
+              "Rated A+ and accredited since 1960, sixty-six years and counting."
+            ],
+            [
+              "1990s",
+              "The Triad, then Charlotte",
+              "Greensboro and Charlotte branches bring local technicians to two more markets. Years to confirm."
+            ],
+            [
+              "2000s",
+              "Managed print and document management",
+              "Monitoring, supplies on usage and DocuWare workflows join the copier business. Years to confirm."
+            ],
+            [
+              "2010s",
+              "Raleigh and the coast",
+              "Raleigh and Swansboro make five offices, and Pure Technology adds water, ice and coffee. Years to confirm."
+            ],
+            [
+              "2025",
+              "Sharp joins the line",
+              "Sharp added to Ricoh, Savin, Konica Minolta, Brother and Epson, and now leads it."
             ],
             [
               "Today",
-              "Five offices, seven lines",
-              "Winston-Salem, Greensboro, Charlotte, Raleigh and Swansboro. Copiers to coffee, one number."
+              "About 4,000 customers, NPS 94.4",
+              "Audited by CEO Juice after every service call. Still family-owned, still answering the phone."
             ]
           ]
         },
@@ -7058,23 +7079,44 @@
         },
         {
           "type": "timeline",
-          "eyebrow": "The story",
-          "heading": "From one office to five, and from copiers to the whole office",
+          "eyebrow": "Since 1947",
+          "heading": "Seventy-nine years in North Carolina, one office at a time",
+          "intro": "The dates we could source are here. The ones marked to confirm are on the hub list; tell us and they go in.",
           "items": [
             [
               "1947",
-              "Kelly opens",
-              "Selling and servicing office equipment in Winston-Salem."
+              "Kelly opens in Winston-Salem",
+              "Selling and servicing office equipment. The family has owned it ever since."
             ],
             [
-              "A+",
-              "BBB accredited",
-              "Accredited by the Better Business Bureau and rated A+."
+              "1960",
+              "Accredited by the Better Business Bureau",
+              "Rated A+ and accredited since 1960, sixty-six years and counting."
+            ],
+            [
+              "1990s",
+              "The Triad, then Charlotte",
+              "Greensboro and Charlotte branches bring local technicians to two more markets. Years to confirm."
+            ],
+            [
+              "2000s",
+              "Managed print and document management",
+              "Monitoring, supplies on usage and DocuWare workflows join the copier business. Years to confirm."
+            ],
+            [
+              "2010s",
+              "Raleigh and the coast",
+              "Raleigh and Swansboro make five offices, and Pure Technology adds water, ice and coffee. Years to confirm."
+            ],
+            [
+              "2025",
+              "Sharp joins the line",
+              "Sharp added to Ricoh, Savin, Konica Minolta, Brother and Epson, and now leads it."
             ],
             [
               "Today",
-              "Five offices, seven lines",
-              "Winston-Salem, Greensboro, Charlotte, Raleigh and Swansboro. Copiers to coffee, one number."
+              "About 4,000 customers, NPS 94.4",
+              "Audited by CEO Juice after every service call. Still family-owned, still answering the phone."
             ]
           ]
         },
@@ -9834,6 +9876,7 @@
       "note": "Rankings or traffic. Those depend on the market and on what you publish after launch. What we promise is that nothing about the build is the reason they do not come, that every number above is re-measured at 30, 60 and 90 days, and that you see the same report we do."
     },
     "confirm": [
+      "Timeline years: when Greensboro, Charlotte, Raleigh and Swansboro opened, when managed print and DocuWare were added, when Pure Technology started. The story rail shows decades until you give us years.",
       "The BBB wording. We have written BBB-accredited, rated A+, and left the accreditation year off until you confirm it.",
       "Swansboro. Your contact page lists a fifth office at 109 Seth Thomas Ln. We have built it as a branch; tell us if it is a service point instead.",
       "The response commitment. Your site never states one, so we have not printed one. If you want same-day in writing, give us the wording and the conditions.",
