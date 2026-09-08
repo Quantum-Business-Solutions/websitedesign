@@ -1090,7 +1090,14 @@ def build():
         "blog/physical-intrusion-detection-systems.html": "Physical Intrusion Detection, Indiana | Van Ausdall & Farrar", "blog/same-day-service-what-it-means.html": "Same-Day Copier Service in Indianapolis | Van Ausdall & Farrar", "blog/what-is-a-vcio.html": "What a vCIO Does, Indianapolis Guide | Van Ausdall & Farrar",
         "blog/what-managed-print-costs.html": "Managed Print Services Cost in Indiana | Van Ausdall & Farrar", "blog/wide-format-printer-buying-guide-making-the-right-decision.html": "Wide-Format Printers, Indianapolis Guide | Van Ausdall & Farrar", "blog/workstation-management-an-overview.html": "Workstation Management, Indianapolis | Van Ausdall & Farrar",
     }
+    PAD_FAQ = [["How much does it cost?", TSA + " The quote follows the assessment, so you see the recommendation before the price."],
+               ["Where is this available?", "Indianapolis, Fort Wayne, Evansville and every town between; the service fleet covers all of Indiana and customers throughout the Midwest are served from Indianapolis. Call " + PHONE + "."]]
     for pg in pages:
+        if not pg["file"].startswith("policies/"):
+            for sec in pg["sections"]:
+                if sec.get("type") == "faq" and len(sec.get("items", [])) < 4:
+                    have = {q for q, a in sec["items"]}
+                    sec["items"] = sec["items"] + [qa for qa in PAD_FAQ if qa[0] not in have][: 4 - len(sec["items"])]
         if pg["file"] in FAQ_EXTRA and not any(s.get("type") == "faq" for s in pg["sections"]):
             _insert(pg, FAQ_EXTRA[pg["file"]])
         if pg["file"] in EXTRA_SECTIONS:

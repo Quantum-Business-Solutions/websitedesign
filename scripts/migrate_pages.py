@@ -53,6 +53,8 @@ def fix_title(title, brand=None, short=None, city_default=None):
             return base
         base = re.sub(_brand_rx(), "", base).strip(" ,-:") or base
     base = re.sub(r"\s+", " ", base)
+    base = re.sub(r"\b(for|and|of|at|by|with|to|the)\s+(for|and|of|at|by|with|to|the)\b", r"\1", base)
+    base = re.sub(r"\s+(for|and|of|at|by|with|to|the)$", "", base.strip())
     if not has_city(base):
         base = base.rstrip(".") + city_default
     for suf in (f" | {brand}", f" | {short}"):
@@ -93,11 +95,26 @@ def tidy(t):
     t = re.sub(r"\s*[\u2014\u2013]\s*", ", ", t or "")
     t = re.sub(r"\s*--\s*", ", ", t)
     t = re.sub(r",\s*,", ",", t)
+    t = re.sub(r"\s*[\"\u201c]?opens in a new window[\"\u201d]?\s*", " ", t, flags=re.I)
+    t = re.sub(r"(?<=[a-z?!.])(?=[A-Z][a-z])", " ", t)
     return re.sub(r"\s+", " ", t).strip()
+
+
+PLACEHOLDER = "Please wait while the policy is loaded"
+
+
+def templated_meta(m):
+    """The client's CMS pastes the title into the meta and truncates it; those are not descriptions."""
+    m = m or ""
+    return (not m) or (" | " in m) or ("and IT services from" in m) or re.search(r"\b[A-Za-z]{3,}i\b and IT", m) is not None
 
 
 def sanitise(o):
     o = dict(o)
+    if any(PLACEHOLDER in p for b in o.get("blocks", []) for p in b.get("paras", [])):
+        name = (o.get("h1") or o.get("title") or "This policy").split("|")[0].strip()
+        o["blocks"] = [{"heading": "", "paras": [f"{name} is published through Termly and embedded on this page at launch, so it stays current when the policy text changes. Until then, the policy in force is the one on the current site, linked below, and requests about personal information go to the headquarters address in the questions section."], "bullets": []}]
+        o["placeholder"] = True
     o["title"] = tidy(o.get("title")); o["meta"] = tidy(o.get("meta")); o["h1"] = tidy(o.get("h1"))
     o["blocks"] = [{"heading": tidy(b.get("heading")), "paras": [re.sub(r"\s*Explore [A-Z][^.]*$", "", tidy(p)).strip() for p in b.get("paras", []) if not is_junk(tidy(p))], "bullets": [tidy(x) for x in b.get("bullets", []) if not is_junk(tidy(x))]} for b in o.get("blocks", [])]
     return o
@@ -125,7 +142,9 @@ def clean_name(o):
     base = re.sub(r"\s*\|.*$", "", o.get("title") or "").strip()
     base = re.sub(_brand_rx(), "", base).strip(" ,-:")
     base = re.sub(r"^(KnowBe4)\s*[\u2013-]\s*", "", base)
-    return base or (o.get("h1") or "").strip() or "Page"
+    base = re.sub(r"\b(for|and|of|at|by|with|to|the)\s+(for|and|of|at|by|with|to|the)\b", r"\1", base)
+    base = re.sub(r"\s+(for|and|of|at|by|with|to|the|services|solutions)$", "", base.strip(), flags=re.I) if len(base.split()) > 2 else base
+    return base.strip(" ,-:") or (o.get("h1") or "").strip() or "Page"
 
 
 PILLAR_OF = {"information": "Information", "communication": "Communication", "print": "Print", "process": "Process", "knowbe4": "Information"}
@@ -180,25 +199,29 @@ def _faq_for(o, name, ptype, pillar, city, phone):
     qs = []
     for b in o["blocks"]:
         if b["heading"].rstrip().endswith("?") and b["paras"]:
-            qs.append([b["heading"].strip(), b["paras"][0][:400]])
-    first = next((p for b in o["blocks"] for p in b["paras"]), "")
+            qs.append([b["heading"].strip(), cut(b["paras"][0], 400)])
+    paras = [p for b in o["blocks"] for p in b["paras"]]
+    first = paras[0] if paras else ""
+    second = next((p for p in paras[1:] if len(p) > 60), "")
+    if not second:
+        second = f"{name} is one of {BRAND['name']}'s {(pillar.lower() + ' ') if pillar else ''}services, delivered under one agreement with {BRAND['service_line'][0].lower() + BRAND['service_line'][1:]}. " + (" ".join(x.rstrip('.') + '.' for x in next((b['bullets'] for b in o['blocks'] if b['bullets']), [])[:3]))
     subject = name
     if ptype == "city":
         c = city or BRAND["state"]
         pool = [[f"Does {BRAND['name']} serve {c}?", f"Yes. {c} is served from the nearest {BRAND['short']} office with the same service desk and response commitments as {BRAND['hq_city']}. The service fleet covers the entire state."],
-                [f"What does {BRAND['name']} provide in {c}?", (first or f"The full {BRAND['name']} service line for organizations in {c}.")[:400]],
+                [f"What does {BRAND['name']} provide in {c}?", cut(second or first or f"The full {BRAND['name']} service line for organizations in {c}.", 400)],
                 [f"How do we get started in {c}?", f"Call {phone} or schedule a consultation. Most engagements begin with the free {BRAND['assessment']}, then a specialist walks the results with you."],
                 ["Who supports us after installation?", f"{BRAND['service_line']}, with certified technicians dispatched locally."]]
     elif ptype == "case study":
-        pool = [[f"What did {subject} achieve with {BRAND['name']}?", (first or "The results are described in the case study above.")[:400]],
+        pool = [[f"What did {subject} achieve with {BRAND['name']}?", cut(first or "The results are described in the case study above.", 400)],
                 [f"Which services did {subject} use?", (pillar and f"{pillar} services from {BRAND['name']}, delivered under one agreement.") or f"Services from across {BRAND['name']}, under one agreement."],
                 ["Can we get results like these?", f"Every engagement starts with the free {BRAND['assessment']}. A specialist maps your devices, contracts and workflows and shows where the savings are before you commit."]]
     elif ptype == "policy":
-        pool = [["Who do I contact about this policy?", f"{BRAND['legal']}, {BRAND['hq_address']}, {phone}. Write to the same address for any request about your personal information."],
+        pool = ([["Where is the current policy text?", f"On the current site at {BRAND['site']}{o.get('url', '')}. It is embedded here at launch so the two never differ."]] if o.get("placeholder") else []) + [["Who do I contact about this policy?", f"{BRAND['legal']}, {BRAND['hq_address']}, {phone}. Write to the same address for any request about your personal information."],
                 ["Does this policy apply to the Customer Care app?", "The Customer Care app has its own privacy policy, linked from this site. Where the two differ, the app policy governs data collected in the app."],
                 ["When was this policy last updated?", f"The policy text on this page is carried over from the current site; a dated revision line is added when the new site goes live."]]
     else:
-        pool = [[f"What is {subject}?", (first or f"{subject} from {BRAND['name']}.")[:400]],
+        pool = [[f"What is {subject}?", cut(second or first or f"{subject} from {BRAND['name']}.", 400)],
                 [f"Who is {subject} for?", f"{BRAND['audience']} that want {pillar.lower() + ' technology' if pillar else 'technology'} from one local partner rather than several vendors."],
                 [f"How much does {subject} cost?", f"It depends on scope, so we do not publish a single price. The free {BRAND['assessment']} produces a written recommendation and a quote with no obligation."],
                 [f"Where is {subject} available?", f"{BRAND['coverage']} Call {phone}."]]
@@ -236,6 +259,9 @@ def build_migrated(extract, existing_files, covered, retire, images, phone, pill
         city = next((CITY_SLUGS[c] for c in CITY_SLUGS if url.strip("/").split("/")[0] == c), "")
         paras_all = [p for b in o["blocks"] for p in b["paras"]]
         sub = cut(paras_all[0] if paras_all else (o.get("meta") or ""), 280)
+        if len(h1) < 12 and len(name) >= 12 and ptype != "case study":
+            h1 = name
+        second = next((p for p in paras_all[1:] if len(p) > 60), "")
         img = images.get(pillar) or images.get(ptype) or images.get("default")
         eyebrow = f"{label}: {pillar}" if pillar else label
         secs = [{"type": "hero", "layout": "centered", "eyebrow": eyebrow, "heading": h1, "subhead": sub,
@@ -259,7 +285,10 @@ def build_migrated(extract, existing_files, covered, retire, images, phone, pill
                     continue
                 if n >= 6:
                     break
-                body = " ".join(b["paras"][:4])
+                paras = b["paras"][:4]
+                if n == 0 and len(paras) > 1 and paras[0] == paras_all[0]:
+                    paras = paras[1:]
+                body = " ".join(paras)
                 if not body and b["bullets"]:
                     body = f"What {name.lower() if not name.isupper() else name} covers, in VAF's words."
                 secs.append({"type": "detail", "alt": bool(n % 2), "eyebrow": pillar or label, "heading": b["heading"] or (f"About {name}" if n == 0 else "In practice"), "body": cut(body, 1400), "bullets": b["bullets"][:6]})
@@ -284,7 +313,8 @@ def build_migrated(extract, existing_files, covered, retire, images, phone, pill
         if ptype == "case study":
             schema.append({"@context": "https://schema.org", "@type": "Article", "headline": h1, "description": sub or name, "author": {"@type": "Organization", "name": BRAND["legal"]}, "publisher": {"@type": "Organization", "name": BRAND["legal"]}, "about": name})
         title_base = f"{name} in {city}, IN" if (city and not has_city(name)) else name
-        pages.append({"file": file, "title": fix_title(title_base), "description": fix_desc(o.get("meta") or sub or name), "crumbs": crumbs, "sections": secs, "schema": schema, "migrated_from": url, "ptype": ptype, "pillar": pillar, "name": name, "one": (sub or name)[:140]})
+        meta_src = sub if templated_meta(o.get("meta")) else o.get("meta")
+        pages.append({"file": file, "title": fix_title(title_base), "description": fix_desc(meta_src or sub or name), "crumbs": crumbs, "sections": secs, "schema": schema, "migrated_from": url, "ptype": ptype, "pillar": pillar, "name": name, "one": cut(sub or name, 140)})
     return pages, redirects
 
 

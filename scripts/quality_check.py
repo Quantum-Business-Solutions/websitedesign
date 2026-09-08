@@ -67,6 +67,16 @@ def check_page(path, rel, city_words, policy_prefix):
     vt = visible_text(h)
     if "—" in vt or "–" in vt: fails.append("em or en dash in visible text")
     if "u2019" in vt: fails.append("literal u2019 escape")
+    if "Please wait while the policy is loaded" in vt: fails.append("CMS placeholder text")
+    if re.search(r"\b(for|and|of|the|to|in|a) \1\b", title, re.I): fails.append("doubled word in title")
+    if len(re.findall(r'"@type":\s*"BreadcrumbList"', h)) > 1: fails.append("more than one BreadcrumbList")
+    lead = re.search(r'<div class="q-lead"[^>]*>(.*?)</div>', h, re.S)
+    if lead:
+        sent = re.sub(r"<[^>]+>", "", lead.group(1)).strip()
+        if len(sent) > 60 and vt.count(sent) >= 3: fails.append("hero sentence repeated three or more times")
+    teasers = re.findall(r"<p>([^<]{120,}?)</p>", h)
+    cut_mid = [t for t in teasers if not re.search(r"[.!?…:;\"')]\s*$", t.strip()) and len(t.strip()) in (139, 140, 400)]
+    if cut_mid: fails.append(f"{len(cut_mid)} paragraph(s) cut mid-sentence")
     return fails
 
 

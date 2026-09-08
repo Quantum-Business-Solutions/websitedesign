@@ -93,3 +93,16 @@ python3 brands/<slug>.content.py && python3 scripts/preview.py ...
 # 4 score the build and rebuild the hub
 python3 scripts/site_audit.py --dir <client-repo>/clean --base <preview-url>/clean --out build_clean.json
 ```
+
+## What the first Quality Agent run found on VAF, now in the gate
+
+Scores said 168 of 168 A. The agent, reading the files and the browser, found: Termly placeholder
+text on four policy pages that the CMS loads by script; "for for" in two titles where the brand
+name had been stripped from the middle of a phrase; meta descriptions inherited from the client's
+CMS that were titles pasted in and truncated mid-word; card teasers sliced at exactly 140 or 400
+characters; two BreadcrumbList blocks per page (one from the crumbs renderer, one from the schema
+builder); the hero sentence repeated three times on 110 pages (hero, first paragraph, first FAQ
+answer); horizontal overflow at 390 pixels on the three home pages from the logo marquee and hero
+layers; and the redirect map not linked from the hub. All are fixed in the generator and each has
+a check in `quality_check.py` (placeholder text, doubled words, duplicate BreadcrumbList, repeated
+hero sentence, paragraphs cut mid-sentence). Overflow needs a browser and stays with the agent.

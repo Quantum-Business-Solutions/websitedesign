@@ -120,7 +120,7 @@ def client_tokens(theme: str, brand: dict) -> tuple[str, dict]:
     tok["--navy"] = brand.get("navy") or _mix(brand["accent"], "#0b1220", 0.72)
     css += """
 /* tone: dark sections on a light site (section.tone == "dark") */
-.q-tone-dark{background:var(--navy);color:#fff}.q-tone-dark .q-h2,.q-tone-dark .q-h3,.q-tone-dark h2,.q-tone-dark h3,.q-tone-dark .q-lead,.q-tone-dark p,.q-tone-dark li,.q-tone-dark .pv-quote,.q-tone-dark .pv-attr,.q-tone-dark .h{color:#fff}
+html,body{overflow-x:clip}.q-tone-dark{background:var(--navy);color:#fff}.q-tone-dark .q-h2,.q-tone-dark .q-h3,.q-tone-dark h2,.q-tone-dark h3,.q-tone-dark .q-lead,.q-tone-dark p,.q-tone-dark li,.q-tone-dark .pv-quote,.q-tone-dark .pv-attr,.q-tone-dark .h{color:#fff}
 .q-tone-dark .q-eyebrow{color:#fff;opacity:.85}.q-tone-dark .q-eyebrow::before{background:#fff}
 .q-tone-dark .q-card,.q-tone-dark .pv-metric{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.16);color:#fff}.q-tone-dark .q-card p,.q-tone-dark .pv-metric .d{color:rgba(255,255,255,.8)}.q-tone-dark .pv-metric .v,.q-tone-dark .pv-metric .k{color:#fff}
 .q-tone-dark .pv-seal .item{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);box-shadow:none}.q-tone-dark .pv-seal .badge{border-bottom-color:rgba(255,255,255,.18)}.q-tone-dark .pv-seal .badge b{color:var(--q-gold)}
@@ -772,8 +772,7 @@ def crumbs(page, ctx):
     for i, (l, h) in enumerate(c):
         last = i == len(c) - 1
         items.append(f'<li>{"<span aria-current=page>" + E(l) + "</span>" if last else f"<a href={chr(34)}{E(ctx[chr(76)](h))}{chr(34)}>{E(l)}</a>"}</li>')
-    ld = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": l} for i, (l, h) in enumerate(c)]}
-    return f'<nav class="pv-crumbs" aria-label="Breadcrumb"><div class="q-container"><ol>{"".join(items)}</ol></div></nav><script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'
+    return f'<nav class="pv-crumbs" aria-label="Breadcrumb"><div class="q-container"><ol>{"".join(items)}</ol></div></nav>'
 
 
 def footer(content, ctx):
@@ -844,12 +843,15 @@ def schema_blocks(content, page, base, dslug):
     if page["file"] == "index.html":
         blocks.append({"@context": "https://schema.org", "@type": "WebSite", "@id": f"{site}/#website", "url": site, "name": sch["org_name"], "publisher": {"@id": f"{site}/#organization"}, "inLanguage": "en-US"})
     else:
-        name = page["title"].split("|")[0].strip()
-        items = [{"@type": "ListItem", "position": 1, "name": "Home", "item": f"{site}/"}]
-        parts = page["file"].split("/")
-        if len(parts) > 1:
-            items.append({"@type": "ListItem", "position": 2, "name": parts[0].replace("-", " ").title(), "item": f"{site}/{parts[0]}"})
-        items.append({"@type": "ListItem", "position": len(items) + 1, "name": name, "item": f"{site}/{page['file'].replace('.html', '')}"})
+        if page.get("crumbs"):
+            items = [{"@type": "ListItem", "position": i + 1, "name": l, "item": f"{site}/" if h == "index.html" else f"{site}/{h.replace('.html', '')}"} for i, (l, h) in enumerate(page["crumbs"])]
+        else:
+            name = page["title"].split("|")[0].strip()
+            items = [{"@type": "ListItem", "position": 1, "name": "Home", "item": f"{site}/"}]
+            parts = page["file"].split("/")
+            if len(parts) > 1:
+                items.append({"@type": "ListItem", "position": 2, "name": parts[0].replace("-", " ").title(), "item": f"{site}/{parts[0]}"})
+            items.append({"@type": "ListItem", "position": len(items) + 1, "name": name, "item": f"{site}/{page['file'].replace('.html', '')}"})
         blocks.append({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": items})
     return "\n".join(f'<script type="application/ld+json">{json.dumps(b, ensure_ascii=False)}</script>' for b in blocks)
 
