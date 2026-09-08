@@ -446,8 +446,10 @@
           "partners",
           "seal",
           "wheel",
+          "office",
           "is-this-you",
           "flow",
+          "model",
           "markets",
           "map",
           "voices",
@@ -458,8 +460,10 @@
           "hero",
           "partners",
           "wheel",
+          "office",
           "ba",
           "flow",
+          "model",
           "casestudy",
           "markets",
           "map",
@@ -470,6 +474,7 @@
           "hero-light",
           "story",
           "services",
+          "office",
           "seal",
           "casestudy",
           "voices",
@@ -556,6 +561,9 @@
           "image": "assets/hero-plate-2100.jpg",
           "image_w": 2100,
           "image_h": 891,
+          "model": "assets/fleet/mfp.glb",
+          "poster": "assets/fleet/mfp.png",
+          "model_alt": "A multifunction copier, rotating. Drag to turn it.",
           "stats": [
             [
               "1914",
@@ -609,7 +617,7 @@
               ]
             ]
           },
-          "note": "Photography is from vanausdall.com today; a shoot at the 75th Street headquarters and with technicians in the field replaces it in the build."
+          "note": "Photography is from vanausdall.com today and the 3D device is a generated stand-in, labelled as such; a shoot at the 75th Street headquarters and Canon, Ricoh, Kyocera and HP product models replace them in the build."
         },
         {
           "type": "wheel",
@@ -783,6 +791,96 @@
               "An AI acceptable use policy and a roadmap"
             ]
           }
+        },
+        {
+          "type": "hotspots",
+          "id": "office",
+          "eyebrow": "The whole office",
+          "heading": "Four pillars, one floor plan",
+          "intro": "Click a number. Everything an office runs on, and the VAF page for each.",
+          "image": "assets/office-iso-1600.jpg",
+          "image_w": 1600,
+          "image_h": 893,
+          "alt": "An overhead illustration of an office with a copier room, a server room, a records room, a lounge and desks",
+          "items": [
+            {
+              "x": 27,
+              "y": 46,
+              "k": "Print",
+              "title": "The copier room",
+              "body": "Canon, Ricoh, Kyocera and HP multifunction devices under one managed print agreement, with supplies that arrive before they run out.",
+              "href": "services/copiers.html",
+              "label": "Copiers and managed print"
+            },
+            {
+              "x": 82,
+              "y": 14,
+              "k": "Information",
+              "title": "The server room",
+              "body": "Managed IT, Vsecure cybersecurity, cloud and continuity. Monitored 24/7 from Indianapolis, with a vCIO planning what comes next.",
+              "href": "services/managed-it.html",
+              "label": "Managed IT services"
+            },
+            {
+              "x": 93,
+              "y": 42,
+              "k": "Communication",
+              "title": "The desk phone",
+              "body": "Mitel, RingCentral, 8x8 and Elevate unified communications that follow your people to their smartphones. In telecom since 1983.",
+              "href": "services/business-phone-systems.html",
+              "label": "Business phone systems"
+            },
+            {
+              "x": 64,
+              "y": 71,
+              "k": "Process",
+              "title": "The scan station",
+              "body": "Every multifunction device scans straight into OnBase or Square 9 workflows: accounts payable, HR, contracts, records.",
+              "href": "services/document-management.html",
+              "label": "Document management"
+            },
+            {
+              "x": 88,
+              "y": 66,
+              "k": "Process",
+              "title": "The records wall",
+              "body": "Boxes of paper become searchable records at the secure Document Conversion Center, with a certificate of destruction at the end.",
+              "href": "services/document-conversion.html",
+              "label": "Document conversion"
+            },
+            {
+              "x": 16,
+              "y": 58,
+              "k": "Print",
+              "title": "The desks",
+              "body": "Desktop printers right-sized to how many the office needs, folded into the same managed print report as the copiers.",
+              "href": "services/managed-print.html",
+              "label": "Managed print"
+            },
+            {
+              "x": 62,
+              "y": 38,
+              "k": "Process",
+              "title": "The meeting area",
+              "body": "Where AI shows up first: drafting, summarizing, automating. An acceptable use policy and a roadmap before the tools.",
+              "href": "services/ai-consulting.html",
+              "label": "AI consulting"
+            }
+          ]
+        },
+        {
+          "type": "model3d",
+          "id": "model",
+          "alt": "A white and charcoal multifunction copier on a cabinet, rotatable",
+          "eyebrow": "Take a closer look",
+          "heading": "Walk around one before it arrives",
+          "intro": "A generated stand-in multifunction device for the preview. Drag to rotate. Canon, Ricoh, Kyocera and HP product imagery replaces it in the build.",
+          "poster": "assets/mfp-poster-1200.jpg",
+          "cta": {
+            "label": "See copiers and printers",
+            "href": "services/copiers.html"
+          },
+          "model": "assets/fleet/mfp.glb"
         },
         {
           "type": "casestudy",
@@ -1276,6 +1374,82 @@
           ],
           "hub": "VAF",
           "hub_sub": "one roof"
+        },
+        {
+          "type": "hotspots",
+          "id": "office",
+          "eyebrow": "The whole office",
+          "heading": "Four pillars, one floor plan",
+          "intro": "Click a number. Everything an office runs on, and the VAF page for each.",
+          "image": "assets/office-iso-1600.jpg",
+          "image_w": 1600,
+          "image_h": 893,
+          "alt": "An overhead illustration of an office with a copier room, a server room, a records room, a lounge and desks",
+          "items": [
+            {
+              "x": 27,
+              "y": 46,
+              "k": "Print",
+              "title": "The copier room",
+              "body": "Canon, Ricoh, Kyocera and HP multifunction devices under one managed print agreement, with supplies that arrive before they run out.",
+              "href": "services/copiers.html",
+              "label": "Copiers and managed print"
+            },
+            {
+              "x": 82,
+              "y": 14,
+              "k": "Information",
+              "title": "The server room",
+              "body": "Managed IT, Vsecure cybersecurity, cloud and continuity. Monitored 24/7 from Indianapolis, with a vCIO planning what comes next.",
+              "href": "services/managed-it.html",
+              "label": "Managed IT services"
+            },
+            {
+              "x": 93,
+              "y": 42,
+              "k": "Communication",
+              "title": "The desk phone",
+              "body": "Mitel, RingCentral, 8x8 and Elevate unified communications that follow your people to their smartphones. In telecom since 1983.",
+              "href": "services/business-phone-systems.html",
+              "label": "Business phone systems"
+            },
+            {
+              "x": 64,
+              "y": 71,
+              "k": "Process",
+              "title": "The scan station",
+              "body": "Every multifunction device scans straight into OnBase or Square 9 workflows: accounts payable, HR, contracts, records.",
+              "href": "services/document-management.html",
+              "label": "Document management"
+            },
+            {
+              "x": 88,
+              "y": 66,
+              "k": "Process",
+              "title": "The records wall",
+              "body": "Boxes of paper become searchable records at the secure Document Conversion Center, with a certificate of destruction at the end.",
+              "href": "services/document-conversion.html",
+              "label": "Document conversion"
+            },
+            {
+              "x": 16,
+              "y": 58,
+              "k": "Print",
+              "title": "The desks",
+              "body": "Desktop printers right-sized to how many the office needs, folded into the same managed print report as the copiers.",
+              "href": "services/managed-print.html",
+              "label": "Managed print"
+            },
+            {
+              "x": 62,
+              "y": 38,
+              "k": "Process",
+              "title": "The meeting area",
+              "body": "Where AI shows up first: drafting, summarizing, automating. An acceptable use policy and a roadmap before the tools.",
+              "href": "services/ai-consulting.html",
+              "label": "AI consulting"
+            }
+          ]
         },
         {
           "type": "services",
@@ -2243,6 +2417,20 @@
               "LaserJet and PageWide multifunction printers for teams that need dependable everyday output."
             ]
           ]
+        },
+        {
+          "type": "model3d",
+          "id": "model",
+          "alt": true,
+          "eyebrow": "Take a closer look",
+          "heading": "Walk around one",
+          "intro": "A generated stand-in for the preview. Drag to rotate; your Canon, Ricoh, Kyocera and HP models replace it.",
+          "poster": "assets/mfp-poster-1200.jpg",
+          "cta": {
+            "label": "See copiers and printers",
+            "href": "services/copiers.html"
+          },
+          "model": "assets/fleet/mfp.glb"
         },
         {
           "type": "flow",

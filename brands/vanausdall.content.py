@@ -27,6 +27,7 @@ SUCCESS_EMAIL = "clientsuccess@vanausdall.com"
 CAREERS_URL = "https://workforcenow.cloud.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=76f18e20-dbb1-475b-98ad-e470199a4f66&ccId=19000101_000001&lang=en_US"
 SITE = "https://www.vanausdall.com"
 PREVIEW = "https://van-ausdall.vercel.app"
+MFP_MODEL = "assets/fleet/mfp.glb" if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "vanausdall", "assets", "fleet", "mfp.glb")) else None
 
 # ------------------------------------------------------------------ sourced facts (vanausdall.com)
 # Real customer comments, imported from VAF's after-service surveys and published on /about/customer-comments.
@@ -412,10 +413,24 @@ HERO_LAYERED = {"type": "hero-layered", "id": "hero", "eyebrow": "Business techn
     "subhead": "IT support, copiers and print, phone systems, document workflow and AI guidance for Indiana businesses. One local partner, one assessment to start, one number to call.",
     "primary": {"label": "Take the Technology Strength Assessment", "href": "technology-strength-assessment.html"}, "secondary": {"label": "Schedule a consultation", "href": "contact.html"},
     "image": "assets/hero-plate-2100.jpg", "image_w": 2100, "image_h": 891,
+    **({"model": MFP_MODEL, "poster": "assets/fleet/mfp.png", "model_alt": "A multifunction copier, rotating. Drag to turn it."} if MFP_MODEL else {}),
     "stats": [["1914", "Serving Indiana since"], ["93.4", "Net Promoter Score, audited"], ["SOC 2", "Certified service organization"], ["4,000+", "Phone systems deployed since 1983"]],
     "card_a": {"eyebrow": "Start here", "title": "The Technology Strength Assessment", "body": "Ten to fifteen minutes. Information, print, process and communication, scored.", "items": ["What to eliminate", "What to optimize", "What to leverage to grow"], "href": "technology-strength-assessment.html", "label": "How it works"},
     "card_b": {"eyebrow": "Already a customer?", "title": "The Client Service Center", "body": "A person answers. Monday to Friday, 7 to 5.", "links": [["Request support", "support.html#request"], ["Order supplies", "support.html#supplies"], ["IT support", "support.html#it"], [f"Call {PHONE}", PHONE_HREF]]},
-    "note": "Photography is from vanausdall.com today; a shoot at the 75th Street headquarters and with technicians in the field replaces it in the build."}
+    "note": "Photography is from vanausdall.com today and the 3D device is a generated stand-in, labelled as such; a shoot at the 75th Street headquarters and Canon, Ricoh, Kyocera and HP product models replace them in the build."}
+
+HOTSPOTS = {"type": "hotspots", "id": "office", "eyebrow": "The whole office", "heading": "Four pillars, one floor plan", "intro": "Click a number. Everything an office runs on, and the VAF page for each.",
+    "image": "assets/office-iso-1600.jpg", "image_w": 1600, "image_h": 893, "alt": "An overhead illustration of an office with a copier room, a server room, a records room, a lounge and desks",
+    "items": [
+        {"x": 27, "y": 46, "k": "Print", "title": "The copier room", "body": "Canon, Ricoh, Kyocera and HP multifunction devices under one managed print agreement, with supplies that arrive before they run out.", "href": "services/copiers.html", "label": "Copiers and managed print"},
+        {"x": 82, "y": 14, "k": "Information", "title": "The server room", "body": "Managed IT, Vsecure cybersecurity, cloud and continuity. Monitored 24/7 from Indianapolis, with a vCIO planning what comes next.", "href": "services/managed-it.html", "label": "Managed IT services"},
+        {"x": 93, "y": 42, "k": "Communication", "title": "The desk phone", "body": "Mitel, RingCentral, 8x8 and Elevate unified communications that follow your people to their smartphones. In telecom since 1983.", "href": "services/business-phone-systems.html", "label": "Business phone systems"},
+        {"x": 64, "y": 71, "k": "Process", "title": "The scan station", "body": "Every multifunction device scans straight into OnBase or Square 9 workflows: accounts payable, HR, contracts, records.", "href": "services/document-management.html", "label": "Document management"},
+        {"x": 88, "y": 66, "k": "Process", "title": "The records wall", "body": "Boxes of paper become searchable records at the secure Document Conversion Center, with a certificate of destruction at the end.", "href": "services/document-conversion.html", "label": "Document conversion"},
+        {"x": 16, "y": 58, "k": "Print", "title": "The desks", "body": "Desktop printers right-sized to how many the office needs, folded into the same managed print report as the copiers.", "href": "services/managed-print.html", "label": "Managed print"},
+        {"x": 62, "y": 38, "k": "Process", "title": "The meeting area", "body": "Where AI shows up first: drafting, summarizing, automating. An acceptable use policy and a roadmap before the tools.", "href": "services/ai-consulting.html", "label": "AI consulting"}]}
+
+MODEL3D = {"type": "model3d", "id": "model", "alt": False, "eyebrow": "Take a closer look", "heading": "Walk around one before it arrives", "intro": "A generated stand-in multifunction device for the preview. Drag to rotate. Canon, Ricoh, Kyocera and HP product imagery replaces it in the build.", "poster": "assets/mfp-poster-1200.jpg", "alt": "A white and charcoal multifunction copier on a cabinet, rotatable", "cta": {"label": "See copiers and printers", "href": "services/copiers.html"}, **({"model": MFP_MODEL} if MFP_MODEL else {})}
 
 TABS_MARKETS = {"type": "tabs", "id": "markets", "eyebrow": "Industries", "heading": "Built around how your industry runs",
     "items": [{"label": i[1], "title": i[1], "body": i[4], "bullets": i[5][:3], "image": i[2], "image_alt": i[1], "href": f"industries/{i[0]}.html", "link_label": f"Technology for {i[1].lower()}"} for i in INDUSTRIES]}
@@ -455,6 +470,8 @@ def service_page(slug, title, navlabel, pillar, image, eyebrow, heading, subhead
     ]
     for i, m in enumerate(SERVICE_MODULES.get(slug, [])):
         secs.insert(2 + i, m)
+    if slug == "copiers":
+        secs.insert(2, dict(MODEL3D, alt=True, heading="Walk around one", intro="A generated stand-in for the preview. Drag to rotate; your Canon, Ricoh, Kyocera and HP models replace it."))
     if slug == "managed-it":
         secs.insert(2, {"type": "proof", "id": "proof", "alt": True, "eyebrow": "In our own words", "value": "24/7", "text": SIGMON[0], "source": f"{SIGMON[1]}, {SIGMON[2]}"})
     if slug == "managed-print":
@@ -710,9 +727,9 @@ def build():
     # ---------------- home
     pages.append({"file": "index.html", "title": "Van Ausdall & Farrar | Managed IT, copiers, phone systems and office technology in Indianapolis",
                   "compose": {
-                      "clean": ["hero-light", "partners", "seal", "wheel", "is-this-you", "flow", "markets", "map", "voices", "faq", "contact"],
-                      "showcase": ["hero", "partners", "wheel", "ba", "flow", "casestudy", "markets", "map", "voices", "contact"],
-                      "press": ["hero-light", "story", "services", "seal", "casestudy", "voices", "flow", "map", "faq", "contact"]},
+                      "clean": ["hero-light", "partners", "seal", "wheel", "office", "is-this-you", "flow", "model", "markets", "map", "voices", "faq", "contact"],
+                      "showcase": ["hero", "partners", "wheel", "office", "ba", "flow", "model", "casestudy", "markets", "map", "voices", "contact"],
+                      "press": ["hero-light", "story", "services", "office", "seal", "casestudy", "voices", "flow", "map", "faq", "contact"]},
                   "description": "Indiana's largest full-service office technology provider since 1914. Managed IT and cybersecurity, business phone systems, copiers and managed print, document management and AI consulting for Indianapolis and the Midwest.",
                   "sections": [
         {"type": "hero", "id": "hero-light", "layout": "split", "eyebrow": "Business technology simplified, since 1914",
@@ -726,7 +743,7 @@ def build():
          "badge": {"value": "93.4", "label": "Net Promoter Score, independently audited"}},
         HERO_LAYERED,
         {"type": "wheel", "id": "wheel", "eyebrow": "Four pillars", "heading": "Information, communication, print and process, from one partner", "intro": "Hover a segment. Four pillars, one agreement, one Customer Care Center.", "items": WHEEL_ITEMS, "hub": SHORT, "hub_sub": "one roof", "ring": "BUSINESS TECHNOLOGY SIMPLIFIED"},
-        FLOW_ENGAGEMENT, SEAL, BEFORE_AFTER, CS_QUOTE, TABS_MARKETS, MAP, TIMELINE,
+        FLOW_ENGAGEMENT, SEAL, BEFORE_AFTER, HOTSPOTS, MODEL3D, CS_QUOTE, TABS_MARKETS, MAP, TIMELINE,
         {"type": "partners", "id": "partners", "caption": "Technology partners, including Gartner Magic Quadrant leaders", "items": PARTNERS},
         {"type": "checklist", "id": "is-this-you", "alt": True, "eyebrow": "Is this you?", "heading": "Six questions from the Technology Strength Assessment",
          "intro": "Check the ones you cannot answer yes to. They are six of the eighty.",
@@ -751,6 +768,7 @@ def build():
                   "sections": [
         {"type": "hero", "layout": "centered", "eyebrow": "Solutions", "heading": "Four pillars. Twelve solutions. <em>One roof.</em>", "subhead": "Every line below is designed, installed, serviced and supported by VAF's own people in Indiana. Most customers start with one pillar and add from there.", "primary": {"label": "Take the assessment", "href": "technology-strength-assessment.html"}},
         {"type": "wheel", "id": "wheel", "eyebrow": "The four pillars", "heading": "Information, communication, print and process", "intro": "Hover a segment to read it. Each pillar has its own solutions below.", "items": WHEEL_ITEMS, "hub": SHORT, "hub_sub": "one roof"},
+        HOTSPOTS,
     ] + [
         {"type": "services", "id": p[0].lower(), "alt": bool(i % 2), "heading": p[0], "intro": p[1], "items": [[s[1], brief(s[7]), f"services/{s[0]}.html"] for s in SERVICES if s[3] == p[0]]} for i, p in enumerate(PILLARS)
     ] + [
