@@ -49,7 +49,8 @@ def hub(content, themes, recommend, base, roles, standard, client_tokens, out_di
         fg = "#1e2124"
     muted = mix(fg, "#ffffff", 0.42)
     border = mix(b["accent"], "#ffffff", 0.84)
-    alt_bg = mix(b["accent"], "#ffffff", 0.95)
+    alt_bg = mix(b["accent"], "#ffffff", 0.91)
+    navy = mix(b["accent"], "#0b1220", 0.72)
     dark_chrome = b.get("chrome") == "dark"
     chrome = b.get("chrome_bg", "#111") if dark_chrome else "#ffffff"
     chrome_fg = "#ffffff" if dark_chrome else fg
@@ -124,7 +125,7 @@ def hub(content, themes, recommend, base, roles, standard, client_tokens, out_di
     phone_href = re.sub(r"[^0-9+]", "", qc.get("phone", ""))
 
     css = f"""
-:root{{--bg:#ffffff;--bg-alt:{alt_bg};--fg:{fg};--muted:{muted};--border:{border};--accent:{b["accent"]};--ink:{ink};--chrome:{chrome};--chrome-fg:{chrome_fg};--chrome-muted:{chrome_muted};--chrome-hover:{chrome_hover};--btn-fg:{btn_fg}}}
+:root{{--bg:#ffffff;--bg-alt:{alt_bg};--fg:{fg};--muted:{muted};--border:{border};--accent:{b["accent"]};--ink:{ink};--chrome:{chrome};--chrome-fg:{chrome_fg};--chrome-muted:{chrome_muted};--chrome-hover:{chrome_hover};--btn-fg:{btn_fg};--navy:{navy}}}
 {dark_css}
 *{{box-sizing:border-box}}body{{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 Inter,system-ui,sans-serif}}
 a{{color:var(--ink)}}
@@ -167,7 +168,7 @@ h3,.h3{{font-size:22px;margin:0 0 6px;letter-spacing:-.01em}}h4,.h4{{font-size:1
 .asof{{font-size:13px;color:var(--muted);font-weight:400;margin-left:8px}}
 .tblwrap{{overflow-x:auto;margin-top:14px}}table.seo{{width:100%;border-collapse:collapse;font-size:14.5px}}table.seo th,table.seo td{{text-align:left;padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:top}}table.seo th{{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}}table.seo code{{font-size:13px;background:var(--bg-alt);padding:2px 6px;border-radius:6px}}
 @media(max-width:767px){{.stiles{{grid-template-columns:1fr 1fr}}}}
-ul{{margin:0;padding-left:18px}}li{{margin:8px 0;color:var(--fg)}}li::marker{{color:var(--accent)}}
+section.band{{background:var(--navy);color:#fff}}section.band .eyebrow{{color:#fff;opacity:.85}}section.band h1,section.band h2{{color:#fff}}section.band .lead{{color:rgba(255,255,255,.85)}}.dir{{border-top:4px solid var(--accent);background:#fff;box-shadow:0 12px 34px rgba(0,0,0,.07)}}.why{{border-left:3px solid var(--accent);padding-left:16px}}.stile b{{color:var(--accent)}}.stile{{background:#fff;border-top:3px solid var(--accent)}}.turn{{background:var(--navy);color:#fff;border-color:var(--navy)}}.turn .eyebrow{{color:#fff;opacity:.85}}.turn h2{{color:#fff}}.turn .lead{{color:rgba(255,255,255,.85)}}.change{{border-left:4px solid var(--accent)}}section:nth-of-type(even):not(.band){{background:var(--bg-alt)}}ul{{margin:0;padding-left:18px}}li{{margin:8px 0;color:var(--fg)}}li::marker{{color:var(--accent)}}
 .plan{{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}}.step{{border-top:2px solid var(--accent);padding-top:12px}}.when{{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);font-weight:700}}.step p{{margin:8px 0 0;font-size:14.5px;color:var(--muted)}}
 .turn{{background:var(--bg-alt);border:1px solid var(--border);border-radius:14px;padding:28px}}.turn a.btn{{margin:0 12px 12px 0}}
 footer{{padding:36px 0 80px;color:var(--muted);font-size:13.5px;max-width:66ch}}
@@ -189,7 +190,7 @@ select{{max-width:100%}}
 <a class="skip" href="#main">Skip to content</a>
 <header class="top"><div class="wrap"><img src="{_e(b["logo"])}" alt="{_e(content["client"])}" height="36" width="99"><nav aria-label="Sections"><a href="#three">The three</a><a href="#pick">{"Our pick" if recommend else "How to choose"}</a><a href="#compare">Compare</a><a href="#search">Search</a><a href="#heard">Fixed</a><a href="#confirm">To confirm</a><a href="#every">Every page</a><a href="#plan">The plan</a><a href="#turn">Your turn</a>{ds_link}</nav></div></header>
 <main id="main">
-<section><div class="wrap"><p class="eyebrow">Quantum Business Solutions for {_e(content["client"])}</p><h1>Same site. Three ways to design it.</h1>
+<section class="band"><div class="wrap"><p class="eyebrow">Quantum Business Solutions for {_e(content["client"])}</p><h1>Same site. Three ways to design it.</h1>
 <p class="lead">Each one is the whole site, not a home page and two mockups: every page is built and live in all three. The words are the same in all three and the composition is not, so the decision in front of you is about direction, not copy. Open any one, then use the switcher pinned to the bottom of the page to flip between all three without losing your place.</p></div></section>
 <section id="three"><div class="wrap"><p class="eyebrow">The three</p><div class="dirs">{"".join(specs)}</div></div></section>
 <section id="pick"><div class="wrap"><p class="eyebrow">{"Our recommendation" if recommend else "How to choose"}</p><div class="pick"><div><h2>{("We would build " + _e(pick_short)) if recommend else _e(pitch.get("choose_heading", "Three directions. Your call."))}</h2><p class="lead">{_e(roles.get(pick, "")) if recommend else _e(pitch.get("choose_intro", ""))}</p>{reasons}{('<div class="change"><strong>The one thing we would change:</strong> ' + _e(pitch.get("pick_change", "")) + '</div><p style="margin-top:22px"><a class="btn" href="' + pick_slug + '/index.html" target="_blank" rel="noopener">Open ' + _e(pick_short) + '</a></p>') if recommend else ""}</div>
