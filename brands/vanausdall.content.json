@@ -6620,7 +6620,7 @@
           "parentOrganization": {
             "@id": "https://www.vanausdall.com/#organization"
           },
-          "image": "https://vanausdall.vercel.app/assets/hq-1200.jpg",
+          "image": "https://van-ausdall.vercel.app/assets/hq-1200.jpg",
           "telephone": "+1-317-634-2913",
           "url": "https://www.vanausdall.com/locations/indianapolis",
           "address": {
@@ -6796,7 +6796,7 @@
           "parentOrganization": {
             "@id": "https://www.vanausdall.com/#organization"
           },
-          "image": "https://vanausdall.vercel.app/assets/hq-1200.jpg",
+          "image": "https://van-ausdall.vercel.app/assets/hq-1200.jpg",
           "telephone": "+1-260-432-1547",
           "url": "https://www.vanausdall.com/locations/fort-wayne",
           "address": {
@@ -6960,7 +6960,7 @@
           "parentOrganization": {
             "@id": "https://www.vanausdall.com/#organization"
           },
-          "image": "https://vanausdall.vercel.app/assets/hq-1200.jpg",
+          "image": "https://van-ausdall.vercel.app/assets/hq-1200.jpg",
           "telephone": "+1-812-424-5736",
           "url": "https://www.vanausdall.com/locations/evansville",
           "address": {
@@ -7187,7 +7187,7 @@
           "@type": "BlogPosting",
           "headline": "What a vCIO does, and when a 50-person company needs one",
           "description": "A virtual chief information officer is a fractional executive, not a help desk. Here is what the role produces, what it costs relative to a hire, and the signs a business has outgrown IT without a strategy.",
-          "image": "https://vanausdall.vercel.app/assets/datacenter-1200.jpg",
+          "image": "https://van-ausdall.vercel.app/assets/datacenter-1200.jpg",
           "author": {
             "@type": "Organization",
             "name": "Van Ausdall & Farrar"
@@ -7317,7 +7317,7 @@
           "@type": "BlogPosting",
           "headline": "Business phone systems in 2026: cloud, premise or hybrid, and how to choose",
           "description": "The phone system decision is a five-year decision. Here is what changed, what each option costs you in flexibility, and the eight questions to ask before you sign with anyone, including us.",
-          "image": "https://vanausdall.vercel.app/assets/phones-1200.jpg",
+          "image": "https://van-ausdall.vercel.app/assets/phones-1200.jpg",
           "author": {
             "@type": "Organization",
             "name": "Van Ausdall & Farrar"
@@ -7446,7 +7446,7 @@
           "@type": "BlogPosting",
           "headline": "Document conversion services: what actually happens to your boxes",
           "description": "Scanning is the easy part. The chain of custody, the indexing and the quality control are what make the files usable, and what keep you compliant. Here is the process, step by step.",
-          "image": "https://vanausdall.vercel.app/assets/support-1200.jpg",
+          "image": "https://van-ausdall.vercel.app/assets/support-1200.jpg",
           "author": {
             "@type": "Organization",
             "name": "Van Ausdall & Farrar"
@@ -7581,7 +7581,7 @@
           "@type": "BlogPosting",
           "headline": "Physical intrusion detection: what it is, and why IT should own it now",
           "description": "Video surveillance used to be a specialist's coaxial system. Today it is IP devices on your network, which makes it an IT decision with an IT budget. Here is what a modern system does and how it fits with the rest of your security.",
-          "image": "https://vanausdall.vercel.app/assets/security-1200.jpg",
+          "image": "https://van-ausdall.vercel.app/assets/security-1200.jpg",
           "author": {
             "@type": "Organization",
             "name": "Van Ausdall & Farrar"
@@ -7709,7 +7709,7 @@
           "@type": "BlogPosting",
           "headline": "The AI acceptable use policy every business needs this year, section by section",
           "description": "Employees are already pasting things into AI tools. A policy is not a barrier to innovation; it is the foundation for it. Here are the four sections a usable policy needs and the mistakes that make policies get ignored.",
-          "image": "https://vanausdall.vercel.app/assets/ai-1200.jpg",
+          "image": "https://van-ausdall.vercel.app/assets/ai-1200.jpg",
           "author": {
             "@type": "Organization",
             "name": "Van Ausdall & Farrar"
@@ -7838,7 +7838,7 @@
           "@type": "BlogPosting",
           "headline": "Copier lease vs. buy vs. rent in Indianapolis: the decision in one page",
           "description": "Three ways to acquire the same device, three different totals. Most Indianapolis businesses lease. Here is when that is right, when it is not, and what to check at the end of the term.",
-          "image": "https://vanausdall.vercel.app/assets/copier-1200.jpg",
+          "image": "https://van-ausdall.vercel.app/assets/copier-1200.jpg",
           "author": {
             "@type": "Organization",
             "name": "Van Ausdall & Farrar"

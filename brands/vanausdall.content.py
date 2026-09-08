@@ -26,7 +26,7 @@ IT_EMAIL = "itsupport@vanausdall.com"
 SUCCESS_EMAIL = "clientsuccess@vanausdall.com"
 CAREERS_URL = "https://workforcenow.cloud.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=76f18e20-dbb1-475b-98ad-e470199a4f66&ccId=19000101_000001&lang=en_US"
 SITE = "https://www.vanausdall.com"
-PREVIEW = "https://vanausdall.vercel.app"
+PREVIEW = "https://van-ausdall.vercel.app"
 
 # ------------------------------------------------------------------ sourced facts (vanausdall.com)
 # Real customer comments, imported from VAF's after-service surveys and published on /about/customer-comments.
