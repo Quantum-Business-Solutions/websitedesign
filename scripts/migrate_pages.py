@@ -97,6 +97,7 @@ def tidy(t):
     t = re.sub(r",\s*,", ",", t)
     t = re.sub(r"\s*[\"\u201c]?opens in a new window[\"\u201d]?\s*", " ", t, flags=re.I)
     t = re.sub(r"(?<=[a-z?!.])(?=[A-Z][a-z])", " ", t)
+    t = re.sub(r"\s+([,.;:!?])", r"\1", t)
     return re.sub(r"\s+", " ", t).strip()
 
 
@@ -254,7 +255,7 @@ def build_migrated(extract, existing_files, covered, retire, images, phone, pill
         taken.add(file); redirects[url] = file
         name = clean_name(o)
         h1 = (o.get("h1") or name).strip()
-        if ptype == "case study" and h1:
+        if ptype in ("case study", "policy") and h1:
             name = h1
         city = next((CITY_SLUGS[c] for c in CITY_SLUGS if url.strip("/").split("/")[0] == c), "")
         paras_all = [p for b in o["blocks"] for p in b["paras"]]
@@ -285,12 +286,12 @@ def build_migrated(extract, existing_files, covered, retire, images, phone, pill
                     continue
                 if n >= 6:
                     break
+                if n == 0 and b["heading"].strip().lower() == h1.strip().lower():
+                    b = dict(b, heading="")
                 paras = b["paras"][:4]
                 if n == 0 and len(paras) > 1 and paras[0] == paras_all[0]:
                     paras = paras[1:]
                 body = " ".join(paras)
-                if not body and b["bullets"]:
-                    body = f"What {name.lower() if not name.isupper() else name} covers, in VAF's words."
                 secs.append({"type": "detail", "alt": bool(n % 2), "eyebrow": pillar or label, "heading": b["heading"] or (f"About {name}" if n == 0 else "In practice"), "body": cut(body, 1400), "bullets": b["bullets"][:6]})
                 n += 1
             if o["words"] < 200 and ptype != "policy":

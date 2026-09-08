@@ -1948,7 +1948,7 @@
             [
               "Information",
               "Information Technology",
-              "Cloud solutions, cybersecurity, IT support , and physical security, one partner, over a century of Indiana business technology expertise.",
+              "Cloud solutions, cybersecurity, IT support, and physical security, one partner, over a century of Indiana business technology expertise.",
               "Open the page",
               "solutions-information.html"
             ],
@@ -9479,21 +9479,14 @@
             ],
             [
               "About",
-              "Cookie Policy for Indiana",
+              "Cookie Policy",
               "We value your privacy very highly. Please read this Cookie Policy carefully before using the https://www.vanausdall.com/ Website (the.",
               "Open the page",
               "policies/cookie.html"
             ],
             [
               "About",
-              "Customer Care App Privacy Policy",
-              "This Policy contains sections with terms used by the European legislature for the adoption of the General Data Protection Regulation.",
-              "Open the page",
-              "policies/van-ausdall-farrar-customer-care-app-privacy-policy.html"
-            ],
-            [
-              "About",
-              "Disclaimer Policy for",
+              "Disclaimer Policy",
               "Please read this Disclaimer carefully before using the https://www.vanausdall.com/ website (the \"Website\") operated by Van Ausdall &.",
               "Open the page",
               "policies/disclaimer.html"
@@ -9521,7 +9514,7 @@
             ],
             [
               "About",
-              "Privacy Policy for Indiana",
+              "Privacy Policy",
               "We value your privacy very highly. Please read this Privacy Policy carefully before using the https://www.vanausdall.com/ website (the.",
               "Open the page",
               "policies/privacy.html"
@@ -9539,6 +9532,13 @@
               "Please read this Terms of Service (“Terms”, “Terms of Service”) carefully before using the https://www.vanausdall.com/ website (the.",
               "Open the page",
               "policies/terms-of-service.html"
+            ],
+            [
+              "About",
+              "Van Ausdall & Farrar Customer Care App Privacy Policy",
+              "This Policy contains sections with terms used by the European legislature for the adoption of the General Data Protection Regulation.",
+              "Open the page",
+              "policies/van-ausdall-farrar-customer-care-app-privacy-policy.html"
             ],
             [
               "About",
@@ -14483,7 +14483,7 @@
           "alt": true,
           "eyebrow": "About",
           "heading": "Health",
-          "body": "What employee benefits covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Medical (PPO & HDHP offerings)",
             "Dental",
@@ -14497,7 +14497,7 @@
           "alt": false,
           "eyebrow": "About",
           "heading": "Financial",
-          "body": "What employee benefits covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Competitive Pay and Annual Merit Increases",
             "Company-Funded Life Insurance",
@@ -14512,7 +14512,7 @@
           "alt": true,
           "eyebrow": "About",
           "heading": "PTO",
-          "body": "What employee benefits covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Generous PTO",
             "7 Paid Holidays + 1 Personal Holiday",
@@ -14524,7 +14524,7 @@
           "alt": false,
           "eyebrow": "About",
           "heading": "Wellness",
-          "body": "What employee benefits covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Monthly Fitness Reimbursement",
             "Annual Wellness Assessments",
@@ -14538,7 +14538,7 @@
           "alt": true,
           "eyebrow": "About",
           "heading": "Family & Community Focus",
-          "body": "What employee benefits covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "VAF Volunteers Community Outreach Program",
             "Monthly Paid Volunteer Hours",
@@ -14789,7 +14789,7 @@
           "alt": true,
           "eyebrow": "Locations",
           "heading": "Copier Sales & Service in Bloomington",
-          "body": "Van Ausdall & Farrar sells, leases, and services business copiers throughout Bloomington, Monroe County, and south-central Indiana. Explore copier sales and leasing , request copier service and repair .",
+          "body": "Van Ausdall & Farrar sells, leases, and services business copiers throughout Bloomington, Monroe County, and south-central Indiana. Explore copier sales and leasing, request copier service and repair.",
           "bullets": []
         },
         {
@@ -14842,7 +14842,7 @@
             ],
             [
               "What does Van Ausdall & Farrar provide in Bloomington?",
-              "Van Ausdall & Farrar sells, leases, and services business copiers throughout Bloomington, Monroe County, and south-central Indiana. Explore copier sales and leasing , request copier service and repair ."
+              "Van Ausdall & Farrar sells, leases, and services business copiers throughout Bloomington, Monroe County, and south-central Indiana. Explore copier sales and leasing, request copier service and repair."
             ],
             [
               "How do we get started in Bloomington?",
@@ -15715,7 +15715,7 @@
           "alt": true,
           "eyebrow": "Information",
           "heading": "Surveillance and Security Areas of Expertise",
-          "body": "What business security systems covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Digital Network Recorders - video system recording networks can be hooked up with new digital cameras or an analog camera. Compressed for storage size, video file quality remains impeccable.",
             "Video Management Software - allows you to remotely monitor and control as many cameras as needed, such as individual locations with network-specific access. Video clips can be burned to a disc."
@@ -15845,7 +15845,7 @@
           "alt": true,
           "eyebrow": "Locations",
           "heading": "Copier Sales & Service in Carmel",
-          "body": "Van Ausdall & Farrar sells, leases, and services business copiers throughout Carmel and Hamilton County. Explore copier sales and leasing , request copier service and repair .",
+          "body": "Van Ausdall & Farrar sells, leases, and services business copiers throughout Carmel and Hamilton County. Explore copier sales and leasing, request copier service and repair.",
           "bullets": []
         },
         {
@@ -15898,7 +15898,7 @@
             ],
             [
               "What does Van Ausdall & Farrar provide in Carmel?",
-              "Van Ausdall & Farrar sells, leases, and services business copiers throughout Carmel and Hamilton County. Explore copier sales and leasing , request copier service and repair ."
+              "Van Ausdall & Farrar sells, leases, and services business copiers throughout Carmel and Hamilton County. Explore copier sales and leasing, request copier service and repair."
             ],
             [
               "How do we get started in Carmel?",
@@ -18413,7 +18413,7 @@
           "alt": true,
           "eyebrow": "Information",
           "heading": "Healthcare",
-          "body": "What cloud voice & text covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Dictation Solutions/Systems",
             "Front End",
@@ -18427,7 +18427,7 @@
           "alt": false,
           "eyebrow": "Information",
           "heading": "Case Study, (click below)",
-          "body": "What cloud voice & text covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Riverside Regional Medical Center"
           ]
@@ -18437,7 +18437,7 @@
           "alt": true,
           "eyebrow": "Information",
           "heading": "Specification Sheet, (click below)",
-          "body": "What cloud voice & text covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "M*Modal - Dictation",
             "M*Modal - Medical Coding",
@@ -18450,7 +18450,7 @@
           "alt": false,
           "eyebrow": "Information",
           "heading": "Legal",
-          "body": "What cloud voice & text covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Dictation Solutions/Systems",
             "Cloud Based Solution",
@@ -18462,7 +18462,7 @@
           "alt": true,
           "eyebrow": "Information",
           "heading": "Case Studies - (click below)",
-          "body": "What cloud voice & text covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Butler Snow",
             "Isaac Jaroslawicz",
@@ -18716,7 +18716,7 @@
           "alt": true,
           "eyebrow": "Locations",
           "heading": "Copier Sales & Service in Columbus",
-          "body": "Van Ausdall & Farrar sells, leases, and services business copiers throughout Columbus, Bartholomew County, and south-central Indiana. Explore copier sales and leasing , request copier service and repair .",
+          "body": "Van Ausdall & Farrar sells, leases, and services business copiers throughout Columbus, Bartholomew County, and south-central Indiana. Explore copier sales and leasing, request copier service and repair.",
           "bullets": []
         },
         {
@@ -18769,7 +18769,7 @@
             ],
             [
               "What does Van Ausdall & Farrar provide in Columbus?",
-              "Van Ausdall & Farrar sells, leases, and services business copiers throughout Columbus, Bartholomew County, and south-central Indiana. Explore copier sales and leasing , request copier service and repair ."
+              "Van Ausdall & Farrar sells, leases, and services business copiers throughout Columbus, Bartholomew County, and south-central Indiana. Explore copier sales and leasing, request copier service and repair."
             ],
             [
               "How do we get started in Columbus?",
@@ -19654,7 +19654,7 @@
           "alt": false,
           "eyebrow": "Communication",
           "heading": "Products Include",
-          "body": "What unified communications covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Tradition Phone Systems",
             "Premise and Cloud Based Unified Communications Platforms",
@@ -19669,7 +19669,7 @@
           "alt": true,
           "eyebrow": "Communication",
           "heading": "Services Include",
-          "body": "What unified communications covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "24/7/365 Support Turnkey project management, programming, testing and training",
             "VAF Platinum unlimited support agreements available",
@@ -22122,7 +22122,7 @@
           "alt": true,
           "eyebrow": "About",
           "heading": "Want to See Which Classes Are Best Suited for Your Organization? See Below for More Information",
-          "body": "What about covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Empowering Your Team: The Crucial Role of Security Awareness Training in Modern Business",
             "Safeguarding Your Business: Why Security Awareness Training is Your Best Defense in 2025",
@@ -22361,7 +22361,7 @@
           "alt": true,
           "eyebrow": "Print",
           "heading": "Why Indianapolis Businesses Choose Our Print Solutions",
-          "body": "What copy print solutions in indianapolis covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Local service since 1914, Indiana's largest full-service office technology provider",
             "Cut printing costs by up to 30%",
@@ -22375,7 +22375,7 @@
           "alt": false,
           "eyebrow": "Print",
           "heading": "New Copy Machines",
-          "body": "What copy print solutions in indianapolis covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Copier sales, leasing, and rental options",
             "Canon, Ricoh, Kyocera, and HP multifunction printers",
@@ -22387,7 +22387,7 @@
           "alt": true,
           "eyebrow": "Print",
           "heading": "Managed Print Services",
-          "body": "What copy print solutions in indianapolis covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Transform how you manage your print environment",
             "Complete fleet optimization and monitoring",
@@ -22401,7 +22401,7 @@
           "alt": false,
           "eyebrow": "Print",
           "heading": "Print Optimization",
-          "body": "What copy print solutions in indianapolis covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Maximize your print investment",
             "Fleet right-sizing",
@@ -22788,7 +22788,7 @@
           "alt": true,
           "eyebrow": "Information",
           "heading": "Certified, Experienced Security Team including CISSP Resource",
-          "body": "What cyber security: edr, xdr & firewalls covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Average Tenure of IT Security Team is 15 Years",
             "Fortinet NSE 1,2,3,4,5,7 Certified Staff",
@@ -23061,7 +23061,7 @@
           "alt": true,
           "eyebrow": "Process",
           "heading": "Industries",
-          "body": "What document management & workflow covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Accounts Payable",
             "Banking, Credit Unions",
@@ -23076,7 +23076,7 @@
           "alt": false,
           "eyebrow": "Process",
           "heading": "Core Features",
-          "body": "What document management & workflow covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "DIP/ ERM processing",
             "Image management",
@@ -23584,7 +23584,7 @@
           "alt": true,
           "eyebrow": "About",
           "heading": "Copier & Printer Services",
-          "body": "What software drivers and documentation downloads covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Ricoh drivers, specifications and “how to” self-help",
             "Online interactive Ricoh training",
@@ -23597,7 +23597,7 @@
           "alt": false,
           "eyebrow": "About",
           "heading": "Document Management Services",
-          "body": "What software drivers and documentation downloads covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Fujitsu Scanner Drivers",
             "Canon Scanner Drivers",
@@ -23610,7 +23610,7 @@
           "alt": true,
           "eyebrow": "About",
           "heading": "Converged Communications Services",
-          "body": "What software drivers and documentation downloads covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Shoretel Self-Paced End-User Training",
             "Shoretel Conferencing Self-Paced End-User Training",
@@ -23861,7 +23861,7 @@
           "alt": true,
           "eyebrow": "Communication",
           "heading": "Get Dictation",
-          "body": "What enterprise digital dictation covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Authorized Solutions Partner for:",
             "Winscribe",
@@ -23874,7 +23874,7 @@
           "alt": false,
           "eyebrow": "Communication",
           "heading": "Phillips",
-          "body": "What enterprise digital dictation covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Mobile Dictation Video >, Speech Pad",
             "Desktop Dictation",
@@ -23887,7 +23887,7 @@
           "alt": true,
           "eyebrow": "Communication",
           "heading": "Olympus Professional Dictation",
-          "body": "What enterprise digital dictation covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Professional Dictation Video >, Pro Dictation Overview",
             "Health Care Dictation Video >, Healthcare Industry",
@@ -23899,7 +23899,7 @@
           "alt": false,
           "eyebrow": "Communication",
           "heading": "Grundig Business Systems",
-          "body": "What enterprise digital dictation covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Authorized Olympus & Grundig In-Warranty Repair Center"
           ]
@@ -24538,7 +24538,7 @@
           "alt": true,
           "eyebrow": "Process",
           "heading": "Van Ausdall & Farrar: Your Document Conversion Service Provider",
-          "body": "In Evansville, several companies offer document conversion services. But remember, not every company is created equal. Finding the most suitable document conversion company for your needs can be challenging. However, as a leader with a reputation and experience in this field, none match the exemplary services offered by Van Ausdall & Farrar. Training your staff for document conversion can be very costly for a business. This is why you need a trusted document conversion service provider. Using a document conversion company will help save you the money required to train your staff on matters of document conversion. As a leading document conversion service provider in Evansville , Van Ausdall & Farrar has a team of qualified experts ready to address all of your needs.",
+          "body": "In Evansville, several companies offer document conversion services. But remember, not every company is created equal. Finding the most suitable document conversion company for your needs can be challenging. However, as a leader with a reputation and experience in this field, none match the exemplary services offered by Van Ausdall & Farrar. Training your staff for document conversion can be very costly for a business. This is why you need a trusted document conversion service provider. Using a document conversion company will help save you the money required to train your staff on matters of document conversion. As a leading document conversion service provider in Evansville, Van Ausdall & Farrar has a team of qualified experts ready to address all of your needs.",
           "bullets": []
         },
         {
@@ -24668,7 +24668,7 @@
           "type": "detail",
           "alt": false,
           "eyebrow": "Information",
-          "heading": "Managed IT Solutions in Evansville, IN",
+          "heading": "About Managed IT Services in Evansville, IN",
           "body": "Many businesses are moving to managed IT solutions because of the convenience of allowing a third party to handle all of their IT. Managed IT solutions save money in many areas, give you an on-site expert to handle all of your problems, and increase your company’s efficiency. Businesses of all types, including healthcare, education, legal, automotive, financial, and production companies, among others, can benefit from having their information taken care of for them and making certain that it is secure and intact at all times.",
           "bullets": []
         },
@@ -25122,7 +25122,7 @@
           "alt": true,
           "eyebrow": "Locations",
           "heading": "Copier Sales & Service in Fishers",
-          "body": "Van Ausdall & Farrar sells, leases, and services business copiers throughout Fishers and Hamilton County. Explore copier sales and leasing , request copier service and repair .",
+          "body": "Van Ausdall & Farrar sells, leases, and services business copiers throughout Fishers and Hamilton County. Explore copier sales and leasing, request copier service and repair.",
           "bullets": []
         },
         {
@@ -25175,7 +25175,7 @@
             ],
             [
               "What does Van Ausdall & Farrar provide in Fishers?",
-              "Van Ausdall & Farrar sells, leases, and services business copiers throughout Fishers and Hamilton County. Explore copier sales and leasing , request copier service and repair ."
+              "Van Ausdall & Farrar sells, leases, and services business copiers throughout Fishers and Hamilton County. Explore copier sales and leasing, request copier service and repair."
             ],
             [
               "How do we get started in Fishers?",
@@ -27001,7 +27001,7 @@
           "alt": true,
           "eyebrow": "Locations",
           "heading": "Copier Sales & Service in Greenwood",
-          "body": "Van Ausdall & Farrar sells, leases, and services business copiers throughout Greenwood and Johnson County. Explore copier sales and leasing , request copier service and repair .",
+          "body": "Van Ausdall & Farrar sells, leases, and services business copiers throughout Greenwood and Johnson County. Explore copier sales and leasing, request copier service and repair.",
           "bullets": []
         },
         {
@@ -27054,7 +27054,7 @@
             ],
             [
               "What does Van Ausdall & Farrar provide in Greenwood?",
-              "Van Ausdall & Farrar sells, leases, and services business copiers throughout Greenwood and Johnson County. Explore copier sales and leasing , request copier service and repair ."
+              "Van Ausdall & Farrar sells, leases, and services business copiers throughout Greenwood and Johnson County. Explore copier sales and leasing, request copier service and repair."
             ],
             [
               "How do we get started in Greenwood?",
@@ -27259,7 +27259,7 @@
           "alt": false,
           "eyebrow": "Information",
           "heading": "We Can Also Offer Our Indianapolis Customers the Following Network Infrastructure Solutions",
-          "body": "To learn more about Van Ausdall & Farrar and to see how we can help advance your business’s network and infrastructure, get in touch with our experienced team today! We offer a free, no obligation initial assessment and discovery engagement. We’re always happy to work with our fellow Indianapolis businesses! Related solutions: network security and managed IT services .",
+          "body": "To learn more about Van Ausdall & Farrar and to see how we can help advance your business’s network and infrastructure, get in touch with our experienced team today! We offer a free, no obligation initial assessment and discovery engagement. We’re always happy to work with our fellow Indianapolis businesses! Related solutions: network security and managed IT services.",
           "bullets": [
             "Managed Service Packages, such as Infrastructure as a Service (IaaS)",
             "Volume Purchase Service Agreements (VPSA)",
@@ -27351,7 +27351,7 @@
           "layout": "centered",
           "eyebrow": "Solutions: Information",
           "heading": "Information Technology Services for Indianapolis Businesses",
-          "subhead": "Cloud solutions, cybersecurity, IT support , and physical security, one partner, over a century of Indiana business technology expertise.",
+          "subhead": "Cloud solutions, cybersecurity, IT support, and physical security, one partner, over a century of Indiana business technology expertise.",
           "primary": {
             "label": "Schedule a consultation",
             "href": "contact.html"
@@ -27370,7 +27370,7 @@
           "alt": false,
           "eyebrow": "Information",
           "heading": "About Information Technology",
-          "body": "Cloud solutions, cybersecurity, IT support , and physical security, one partner, over a century of Indiana business technology expertise.",
+          "body": "Cloud solutions, cybersecurity, IT support, and physical security, one partner, over a century of Indiana business technology expertise.",
           "bullets": []
         },
         {
@@ -27430,7 +27430,7 @@
           "alt": true,
           "eyebrow": "Information",
           "heading": "Data Quality vs. Data Quantity: Why More Isn't Always Better",
-          "body": "The Data Overload Paradox Business leaders today face a counterintuitive challenge: despite collecting more data than ever before, many organizations struggle to make better decisions. The problem isn't a lack of information - it's the overwhelming... Tags: data backup and recovery , data security , services Posted in: Data Security & Compliance Solutions",
+          "body": "The Data Overload Paradox Business leaders today face a counterintuitive challenge: despite collecting more data than ever before, many organizations struggle to make better decisions. The problem isn't a lack of information - it's the overwhelming... Tags: data backup and recovery, data security, services Posted in: Data Security & Compliance Solutions",
           "bullets": []
         },
         {
@@ -27480,14 +27480,14 @@
             "@type": "State",
             "name": "Indiana"
           },
-          "description": "Cloud solutions, cybersecurity, IT support , and physical security, one partner, over a century of Indiana business technology expertise."
+          "description": "Cloud solutions, cybersecurity, IT support, and physical security, one partner, over a century of Indiana business technology expertise."
         }
       ],
       "migrated_from": "/information/",
       "ptype": "service",
       "pillar": "Information",
       "name": "Information Technology",
-      "one": "Cloud solutions, cybersecurity, IT support , and physical security, one partner, over a century of Indiana business technology expertise."
+      "one": "Cloud solutions, cybersecurity, IT support, and physical security, one partner, over a century of Indiana business technology expertise."
     },
     {
       "file": "services/office-security.html",
@@ -27546,7 +27546,7 @@
           "alt": true,
           "eyebrow": "Information",
           "heading": "The VAF Difference",
-          "body": "Surveillance systems can be complicated, expensive, and unreliable to include in your company network infrastructure . But Forti Camera and Forti Recorder simplify IP video surveillance. Plus, there are no license fees! With Forti Cams, you can see everything: doors, POS terminals, public areas, whatever you need to keep an eye on. Forti Recorder captures the images for easy monitoring, storage, and retrieval. Just plug in your cameras, connect the Forti Recorder, open a web browser or client application, and you’re ready to go. It’s easy to navigate and configure with event timelines and profile-driven configuration. Forti Cameras with Forti Recorder give you everything you need for complete site video security:",
+          "body": "Surveillance systems can be complicated, expensive, and unreliable to include in your company network infrastructure. But Forti Camera and Forti Recorder simplify IP video surveillance. Plus, there are no license fees! With Forti Cams, you can see everything: doors, POS terminals, public areas, whatever you need to keep an eye on. Forti Recorder captures the images for easy monitoring, storage, and retrieval. Just plug in your cameras, connect the Forti Recorder, open a web browser or client application, and you’re ready to go. It’s easy to navigate and configure with event timelines and profile-driven configuration. Forti Cameras with Forti Recorder give you everything you need for complete site video security:",
           "bullets": [
             "Multiple recording options: continuous, event-based, scheduled, manual",
             "Access to live and recorded video from anywhere using Windows, Mac or Unix browsers, Android or iOS Mobile devices",
@@ -27784,7 +27784,7 @@
           "alt": true,
           "eyebrow": "Information",
           "heading": "Why Your Business Needs Physical Security",
-          "body": "Having well-established physical security is essential for your business. This will allow smooth operations of your business activities without any intrusion or access by unauthorized personnel. Further, this guarantees the safety of all your information. Van Ausdall & Farrar works with some of the most incredible solution partners in the Gartner Magic Quadrant. As IT professionals , we constantly assess our collaborations to guarantee that our clients receive services from the full spectrum of options. Businesses trust Van Ausdall & Farrar throughout the Midwest with their unique and developing needs. We can also partner with you to show you how you can secure your organization and best utilize your business information.",
+          "body": "Having well-established physical security is essential for your business. This will allow smooth operations of your business activities without any intrusion or access by unauthorized personnel. Further, this guarantees the safety of all your information. Van Ausdall & Farrar works with some of the most incredible solution partners in the Gartner Magic Quadrant. As IT professionals, we constantly assess our collaborations to guarantee that our clients receive services from the full spectrum of options. Businesses trust Van Ausdall & Farrar throughout the Midwest with their unique and developing needs. We can also partner with you to show you how you can secure your organization and best utilize your business information.",
           "bullets": []
         },
         {
@@ -27792,7 +27792,7 @@
           "alt": false,
           "eyebrow": "Information",
           "heading": "Benefits of Physical Security",
-          "body": "While these additional security procedures are not the only safeguards when attempting to secure an information system , they are a sensible place to start. Before carrying out the physical security measures at your organization, it is imperative to do a risk assessment to identify current threats and risks in your security plan and then figure out how these can be eliminated. Having the proper tool set in your organization can counter the likelihood of intrusions or loss and help streamline your business’ functioning in the long run.",
+          "body": "While these additional security procedures are not the only safeguards when attempting to secure an information system, they are a sensible place to start. Before carrying out the physical security measures at your organization, it is imperative to do a risk assessment to identify current threats and risks in your security plan and then figure out how these can be eliminated. Having the proper tool set in your organization can counter the likelihood of intrusions or loss and help streamline your business’ functioning in the long run.",
           "bullets": []
         },
         {
@@ -28160,7 +28160,7 @@
           "alt": true,
           "eyebrow": "Information",
           "heading": "IT Support Services",
-          "body": "What indianapolis it support covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Help Desk & End-User Support, U.S.-based technicians answer your team's questions by phone, email, or website",
             "Remote Support, our engineers connect to your equipment remotely and resolve many issues without a visit",
@@ -28174,7 +28174,7 @@
           "alt": false,
           "eyebrow": "Information",
           "heading": "Support Hours",
-          "body": "Our Customer Care Center processes requests Monday through Friday, 7:00am to 5:00pm EST, and responds within 24 hours. Call (317) 634-2913, toll-free (800) 467-7474, or email itsupport@vanausdall.com .",
+          "body": "Our Customer Care Center processes requests Monday through Friday, 7:00am to 5:00pm EST, and responds within 24 hours. Call (317) 634-2913, toll-free (800) 467-7474, or email itsupport@vanausdall.com.",
           "bullets": []
         },
         {
@@ -28218,7 +28218,7 @@
           "items": [
             [
               "What is Indianapolis IT Support?",
-              "Our Customer Care Center processes requests Monday through Friday, 7:00am to 5:00pm EST, and responds within 24 hours. Call (317) 634-2913, toll-free (800) 467-7474, or email itsupport@vanausdall.com ."
+              "Our Customer Care Center processes requests Monday through Friday, 7:00am to 5:00pm EST, and responds within 24 hours. Call (317) 634-2913, toll-free (800) 467-7474, or email itsupport@vanausdall.com."
             ],
             [
               "Who is Indianapolis IT Support for?",
@@ -28423,7 +28423,7 @@
           "alt": false,
           "eyebrow": "Information",
           "heading": "About Know Be4, Can Hackers Spoof Your Email Domain",
-          "body": "Now they can launch a “CEO fraud” spear phishing attack on your organization, and that type of attack is very hard to defend against, unless your users are highly ‘security awareness’ trained. Know Be4 can help you find out if this is the case with our free Domain Spoof Test . It’s quick, easy and often a shocking discovery.",
+          "body": "Now they can launch a “CEO fraud” spear phishing attack on your organization, and that type of attack is very hard to defend against, unless your users are highly ‘security awareness’ trained. Know Be4 can help you find out if this is the case with our free Domain Spoof Test. It’s quick, easy and often a shocking discovery.",
           "bullets": []
         },
         {
@@ -28572,7 +28572,7 @@
           "alt": true,
           "eyebrow": "Information",
           "heading": "Phish Alert Benefits",
-          "body": "What know be4, free phish alert button covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Reinforces your organization’s security culture",
             "Users can report suspicious emails with just one click",
@@ -28976,7 +28976,7 @@
           "alt": true,
           "eyebrow": "Information",
           "heading": "Here’s How Ran Sim Works:",
-          "body": "NOTE: Ran Sim was created for Windows-based workstations running Windows 7+. Ran Sim does not alter any existing files on disk . As part of the simulation Ran Sim does enumerate all files on the local disk(s). For the purposes of encryption, simulated data files are downloaded from the Internet.",
+          "body": "NOTE: Ran Sim was created for Windows-based workstations running Windows 7+. Ran Sim does not alter any existing files on disk. As part of the simulation Ran Sim does enumerate all files on the local disk(s). For the purposes of encryption, simulated data files are downloaded from the Internet.",
           "bullets": [
             "100% harmless simulation of a real ransomware",
             "Does not use any of your own files",
@@ -29380,7 +29380,7 @@
           "alt": true,
           "eyebrow": "Information",
           "heading": "Here’s How It Works",
-          "body": "What know be4, free phishing security test covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Immediately start your test for up to 100 users (no need to talk to anyone)",
             "Customize the phishing test template based on your environment",
@@ -29436,6 +29436,119 @@
             [
               "Where is Know Be4, Free Phishing Security Test available?",
               "Indianapolis, Fort Wayne, Evansville and every town between; the service fleet covers all of Indiana and customers throughout the Midwest are served from Indianapolis. Call (317) 634-2913."
+            ]
+          ]
+        },
+        {
+          "type": "resources",
+          "alt": true,
+          "heading": "More in Information",
+          "intro": "The pages that sit alongside this one, in the same pillar and under the same agreement.",
+          "items": [
+            [
+              "Solutions",
+              "Managed IT Services Indianapolis",
+              "",
+              "Open the page",
+              "services/managed-it.html"
+            ],
+            [
+              "Solutions",
+              "Managed Cybersecurity",
+              "Assessments, monitoring and response from a team that has seen it all.",
+              "Open the page",
+              "services/cybersecurity.html"
+            ],
+            [
+              "Solutions",
+              "Cloud Services in Indianapolis",
+              "Cloud migration, infrastructure as a service, and backup and disaster recovery.",
+              "Open the page",
+              "services/cloud.html"
+            ],
+            [
+              "Solutions",
+              "Backup and Recovery",
+              "Business continuity starts with that question.",
+              "Open the page",
+              "services/business-continuity.html"
+            ],
+            [
+              "Information",
+              "Carrier Solutions in Bloomington, IN",
+              "Experience and expertise, that’s what you’ll get when you work with Van Ausdall & Farrar.",
+              "Open the page",
+              "locations/bloomington-network-carrier-solutions.html"
+            ],
+            [
+              "Information",
+              "Network Infrastructure in Bloomington",
+              "Van Ausdall & Farrar is a leading specialist in network infrastructure and VOIP systems.",
+              "Open the page",
+              "locations/bloomington-network-infrastructure.html"
+            ]
+          ]
+        },
+        {
+          "type": "resources",
+          "heading": "Industries we serve",
+          "intro": "Each industry runs its office technology differently. These pages say what changes for each and who is on the record.",
+          "items": [
+            [
+              "Industry",
+              "Education",
+              "Schools are tasked with developing the brightest minds, and many still run on technology from another era.",
+              "How we set it up",
+              "industries/education.html"
+            ],
+            [
+              "Industry",
+              "Engineering and construction",
+              "Field operations need technology that is flexible, efficient and cost-effective, and most of it was never designed for a job site.",
+              "How we set it up",
+              "industries/engineering-construction.html"
+            ],
+            [
+              "Industry",
+              "Financial services",
+              "Banks and credit unions inherit expired leases, scattered vendors and print they cannot see. The fix starts with the assessment.",
+              "How we set it up",
+              "industries/financial-services.html"
+            ],
+            [
+              "Industry",
+              "Healthcare",
+              "Reliable, protected information is patient safety. VAF has worked in and around healthcare since 1914.",
+              "How we set it up",
+              "industries/healthcare.html"
+            ],
+            [
+              "Industry",
+              "Insurance",
+              "In an industry this competitive, solid business technology is the edge, and eliminating the unnecessary technology is half of it.",
+              "How we set it up",
+              "industries/insurance.html"
+            ],
+            [
+              "Industry",
+              "Manufacturing and logistics",
+              "Manufacturing has advanced light years in how it communicates, stores information and manages processes. The technology has to keep up.",
+              "How we set it up",
+              "industries/manufacturing-logistics.html"
+            ],
+            [
+              "Industry",
+              "Real estate",
+              "The industry moved online, and the technology behind a brokerage has to keep up with the buyers who did.",
+              "How we set it up",
+              "industries/real-estate.html"
+            ],
+            [
+              "Industry",
+              "State and local government",
+              "Out-of-date technology that is impossible to manage is a service problem for constituents.",
+              "How we set it up",
+              "industries/government.html"
             ]
           ]
         },
@@ -29523,7 +29636,7 @@
           "alt": true,
           "eyebrow": "Locations",
           "heading": "Copier Sales & Service in Muncie",
-          "body": "Van Ausdall & Farrar sells, leases, and services business copiers throughout Muncie, Delaware County, and east-central Indiana. Explore copier sales and leasing , request copier service and repair .",
+          "body": "Van Ausdall & Farrar sells, leases, and services business copiers throughout Muncie, Delaware County, and east-central Indiana. Explore copier sales and leasing, request copier service and repair.",
           "bullets": []
         },
         {
@@ -29576,7 +29689,7 @@
             ],
             [
               "What does Van Ausdall & Farrar provide in Muncie?",
-              "Van Ausdall & Farrar sells, leases, and services business copiers throughout Muncie, Delaware County, and east-central Indiana. Explore copier sales and leasing , request copier service and repair ."
+              "Van Ausdall & Farrar sells, leases, and services business copiers throughout Muncie, Delaware County, and east-central Indiana. Explore copier sales and leasing, request copier service and repair."
             ],
             [
               "How do we get started in Muncie?",
@@ -30374,7 +30487,7 @@
           "alt": true,
           "eyebrow": "Information",
           "heading": "Switching & Routing",
-          "body": "What local & wide area network infrastructure covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Layer 2/3 Managed Switches Line speeds up to 10 GE",
             "Virtual Chassis for Large Deployments",
@@ -31136,7 +31249,7 @@
           "alt": true,
           "eyebrow": "Locations",
           "heading": "Copier Sales & Service in Noblesville",
-          "body": "Van Ausdall & Farrar sells, leases, and services business copiers throughout Noblesville and Hamilton County. Explore copier sales and leasing , request copier service and repair .",
+          "body": "Van Ausdall & Farrar sells, leases, and services business copiers throughout Noblesville and Hamilton County. Explore copier sales and leasing, request copier service and repair.",
           "bullets": []
         },
         {
@@ -31189,7 +31302,7 @@
             ],
             [
               "What does Van Ausdall & Farrar provide in Noblesville?",
-              "Van Ausdall & Farrar sells, leases, and services business copiers throughout Noblesville and Hamilton County. Explore copier sales and leasing , request copier service and repair ."
+              "Van Ausdall & Farrar sells, leases, and services business copiers throughout Noblesville and Hamilton County. Explore copier sales and leasing, request copier service and repair."
             ],
             [
               "How do we get started in Noblesville?",
@@ -31385,7 +31498,7 @@
           "alt": true,
           "eyebrow": "Information",
           "heading": "THE VA&F DIFFERENCE",
-          "body": "Surveillance systems can be complicated, expensive, and unreliable to include in your company network infrastructure . But Forti Camera and Forti Recorder simplify IP video surveillance. Plus, there are no license fees! With Forti Cams, you can see everything: doors, POS terminals, public areas, whatever you need to keep an eye on. Forti Recorder captures the images for easy monitoring, storage, and retrieval. Just plug in your cameras, connect the Forti Recorder, open a web browser or client application, and you’re ready to go. It’s easy to navigate and configure with event timelines and profile-driven configuration.",
+          "body": "Surveillance systems can be complicated, expensive, and unreliable to include in your company network infrastructure. But Forti Camera and Forti Recorder simplify IP video surveillance. Plus, there are no license fees! With Forti Cams, you can see everything: doors, POS terminals, public areas, whatever you need to keep an eye on. Forti Recorder captures the images for easy monitoring, storage, and retrieval. Just plug in your cameras, connect the Forti Recorder, open a web browser or client application, and you’re ready to go. It’s easy to navigate and configure with event timelines and profile-driven configuration.",
           "bullets": []
         },
         {
@@ -31393,7 +31506,7 @@
           "alt": false,
           "eyebrow": "Information",
           "heading": "Forti Cameras with Forti Recorder Give You Everything You Need for Complete Site Video Security",
-          "body": "What video surveillance & office security covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Multiple recording options: continuous, event-based, scheduled, manual",
             "Access to live and recorded video from anywhere using Windows, Mac or Unix browsers, Android or iOS Mobile devices",
@@ -31408,7 +31521,7 @@
           "alt": true,
           "eyebrow": "Information",
           "heading": "PRODUCTS AND SERVICES INCLUDE",
-          "body": "What video surveillance & office security covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Video Surveillance Cameras and Management",
             "Sound Masking",
@@ -31490,7 +31603,7 @@
     },
     {
       "file": "policies/cookie.html",
-      "title": "Cookie Policy for Indiana | Van Ausdall & Farrar",
+      "title": "Cookie Policy, Indiana | Van Ausdall & Farrar",
       "description": "We value your privacy very highly. Please read this Cookie Policy carefully before using the https://www.vanausdall.com/ Website (the “Website”) operated by.",
       "crumbs": [
         [
@@ -31502,7 +31615,7 @@
           "about.html"
         ],
         [
-          "Cookie Policy for Indiana",
+          "Cookie Policy",
           "policies/cookie.html"
         ]
       ],
@@ -31522,7 +31635,7 @@
             "href": "technology-strength-assessment.html"
           },
           "image": "assets/gen-hq-1200.jpg",
-          "image_alt": "Cookie Policy for Indiana",
+          "image_alt": "Cookie Policy",
           "image_w": 1200,
           "image_h": 800
         },
@@ -31530,7 +31643,7 @@
           "type": "detail",
           "alt": false,
           "eyebrow": "Policies",
-          "heading": "Cookie Policy",
+          "heading": "About Cookie Policy",
           "body": "We value your privacy very highly. Please read this Cookie Policy carefully before using the https://www.vanausdall.com/ Website (the “Website”) operated by Van Ausdall & Farrar, Inc., a(n) Corporation formed in Indiana, United States (“us, we, our”) as this Cookie Policy contains important information regarding our setting of cookies and other tracking technologies, your privacy and how we may use the information that we collect about you. Please also read our Privacy Policy, which provides more information about our privacy practices, your choices and your privacy rights.",
           "bullets": []
         },
@@ -31582,7 +31695,7 @@
         {
           "type": "faq",
           "alt": true,
-          "heading": "Questions about Cookie Policy for Indiana",
+          "heading": "Questions about Cookie Policy",
           "items": [
             [
               "What are cookies?",
@@ -31611,7 +31724,7 @@
       "migrated_from": "/policies/cookie",
       "ptype": "policy",
       "pillar": "",
-      "name": "Cookie Policy for Indiana",
+      "name": "Cookie Policy",
       "one": "We value your privacy very highly. Please read this Cookie Policy carefully before using the https://www.vanausdall.com/ Website (the."
     },
     {
@@ -31628,7 +31741,7 @@
           "about.html"
         ],
         [
-          "Disclaimer Policy for",
+          "Disclaimer Policy",
           "policies/disclaimer.html"
         ]
       ],
@@ -31648,7 +31761,7 @@
             "href": "technology-strength-assessment.html"
           },
           "image": "assets/gen-hq-1200.jpg",
-          "image_alt": "Disclaimer Policy for",
+          "image_alt": "Disclaimer Policy",
           "image_w": 1200,
           "image_h": 800
         },
@@ -31656,7 +31769,7 @@
           "type": "detail",
           "alt": false,
           "eyebrow": "Policies",
-          "heading": "Disclaimer Policy",
+          "heading": "About Disclaimer Policy",
           "body": "By accessing or using the Website, you agree to be bound by this Disclaimer. If you disagree with any part of this Disclaimer, then you do not have our permission to access or use the Website.",
           "bullets": []
         },
@@ -31687,7 +31800,7 @@
         {
           "type": "faq",
           "alt": true,
-          "heading": "Questions about Disclaimer Policy for",
+          "heading": "Questions about Disclaimer Policy",
           "items": [
             [
               "Which version of this policy governs?",
@@ -31712,7 +31825,7 @@
       "migrated_from": "/policies/disclaimer",
       "ptype": "policy",
       "pillar": "",
-      "name": "Disclaimer Policy for",
+      "name": "Disclaimer Policy",
       "one": "Please read this Disclaimer carefully before using the https://www.vanausdall.com/ website (the \"Website\") operated by Van Ausdall &."
     },
     {
@@ -31795,14 +31908,14 @@
           "items": [
             [
               "Solutions",
-              "Cookie Policy for Indiana",
+              "Cookie Policy",
               "We value your privacy very highly.",
               "Open the page",
               "policies/cookie.html"
             ],
             [
               "Solutions",
-              "Disclaimer Policy for",
+              "Disclaimer Policy",
               "",
               "Open the page",
               "policies/disclaimer.html"
@@ -31816,7 +31929,7 @@
             ],
             [
               "Solutions",
-              "Privacy Policy for Indiana",
+              "Privacy Policy",
               "We value your privacy very highly.",
               "Open the page",
               "policies/privacy.html"
@@ -31830,7 +31943,7 @@
             ],
             [
               "Solutions",
-              "Customer Care App Privacy Policy",
+              "Van Ausdall & Farrar Customer Care App Privacy Policy",
               "This Policy contains sections with terms used by the European legislature for the adoption of the General Data Protection Regulation (“GDPR”).",
               "Open the page",
               "policies/van-ausdall-farrar-customer-care-app-privacy-policy.html"
@@ -31929,14 +32042,14 @@
           "items": [
             [
               "Solutions",
-              "Cookie Policy for Indiana",
+              "Cookie Policy",
               "We value your privacy very highly.",
               "Open the page",
               "policies/cookie.html"
             ],
             [
               "Solutions",
-              "Disclaimer Policy for",
+              "Disclaimer Policy",
               "",
               "Open the page",
               "policies/disclaimer.html"
@@ -31950,7 +32063,7 @@
             ],
             [
               "Solutions",
-              "Privacy Policy for Indiana",
+              "Privacy Policy",
               "We value your privacy very highly.",
               "Open the page",
               "policies/privacy.html"
@@ -31964,7 +32077,7 @@
             ],
             [
               "Solutions",
-              "Customer Care App Privacy Policy",
+              "Van Ausdall & Farrar Customer Care App Privacy Policy",
               "This Policy contains sections with terms used by the European legislature for the adoption of the General Data Protection Regulation (“GDPR”).",
               "Open the page",
               "policies/van-ausdall-farrar-customer-care-app-privacy-policy.html"
@@ -31981,7 +32094,7 @@
     },
     {
       "file": "policies/privacy.html",
-      "title": "Privacy Policy for Indiana | Van Ausdall & Farrar",
+      "title": "Privacy Policy, Indiana | Van Ausdall & Farrar",
       "description": "We value your privacy very highly. Please read this Privacy Policy carefully before using the https://www.vanausdall.com/ website (the “Website”) operated.",
       "crumbs": [
         [
@@ -31993,7 +32106,7 @@
           "about.html"
         ],
         [
-          "Privacy Policy for Indiana",
+          "Privacy Policy",
           "policies/privacy.html"
         ]
       ],
@@ -32013,7 +32126,7 @@
             "href": "technology-strength-assessment.html"
           },
           "image": "assets/gen-hq-1200.jpg",
-          "image_alt": "Privacy Policy for Indiana",
+          "image_alt": "Privacy Policy",
           "image_w": 1200,
           "image_h": 800
         },
@@ -32021,7 +32134,7 @@
           "type": "detail",
           "alt": false,
           "eyebrow": "Policies",
-          "heading": "Privacy Policy",
+          "heading": "About Privacy Policy",
           "body": "Your access to or use of the Website is conditional upon your acceptance of and compliance with this Privacy Policy. This Privacy Policy applies to everyone, including but not limited to visitors, users and others, who wish to access or use the Website. By accessing or using the Website, you agree to be bound by this Privacy Policy. If you disagree with any part of this Privacy Policy, you do not have our permission to access or use the Website.",
           "bullets": []
         },
@@ -32038,7 +32151,7 @@
           "alt": false,
           "eyebrow": "Policies",
           "heading": "Where we get this information",
-          "body": "What privacy policy for indiana covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Information submitted by the consumer",
             "Social networks",
@@ -32051,7 +32164,7 @@
           "alt": true,
           "eyebrow": "Policies",
           "heading": "Legal basis for processing this information",
-          "body": "What privacy policy for indiana covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "The user has provided consent to the processing of their information",
             "For geolocation information, processing is necessary for the purpose of a legitimate interest pursued by us or by a third party"
@@ -32062,7 +32175,7 @@
           "alt": false,
           "eyebrow": "Policies",
           "heading": "How we use this information",
-          "body": "What privacy policy for indiana covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Providing you with our website or application",
             "Analytics",
@@ -32083,7 +32196,7 @@
         {
           "type": "faq",
           "alt": true,
-          "heading": "Questions about Privacy Policy for Indiana",
+          "heading": "Questions about Privacy Policy",
           "items": [
             [
               "Which version of this policy governs?",
@@ -32108,7 +32221,7 @@
       "migrated_from": "/policies/privacy",
       "ptype": "policy",
       "pillar": "",
-      "name": "Privacy Policy for Indiana",
+      "name": "Privacy Policy",
       "one": "We value your privacy very highly. Please read this Privacy Policy carefully before using the https://www.vanausdall.com/ website (the."
     },
     {
@@ -32153,7 +32266,7 @@
           "type": "detail",
           "alt": false,
           "eyebrow": "Policies",
-          "heading": "Terms of Service",
+          "heading": "About Terms of Service",
           "body": "By accessing or using the Website, you agree to be bound by these Terms. If you disagree with any part of the Terms, then you do not have our permission to access or use the Website.",
           "bullets": []
         },
@@ -32294,7 +32407,7 @@
           "alt": false,
           "eyebrow": "Print",
           "heading": "Automated Data Capture Solutions",
-          "body": "What print security & accounting software covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "On Base- Any Doc Software",
             "Nuance- Auto Store",
@@ -32307,7 +32420,7 @@
           "alt": true,
           "eyebrow": "Print",
           "heading": "Document Capture, Manage, Store & Retrieve Solutions",
-          "body": "What print security & accounting software covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "On Base- Hyland",
             "Square 9- Smart Search",
@@ -32320,7 +32433,7 @@
           "alt": false,
           "eyebrow": "Print",
           "heading": "Document Routing & Workflow Solutions",
-          "body": "What print security & accounting software covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "uniFLOW- Capture",
             "Nuance- e Copy"
@@ -32331,7 +32444,7 @@
           "alt": true,
           "eyebrow": "Print",
           "heading": "Follow Me Printing Solutions",
-          "body": "What print security & accounting software covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Ricoh- Flex Release CX Cloud Print Service",
             "Paper Cut- Print Management Software",
@@ -32385,6 +32498,119 @@
             [
               "Where is Print Security & Accounting Software available?",
               "Indianapolis, Fort Wayne, Evansville and every town between; the service fleet covers all of Indiana and customers throughout the Midwest are served from Indianapolis. Call (317) 634-2913."
+            ]
+          ]
+        },
+        {
+          "type": "resources",
+          "alt": true,
+          "heading": "More in Print",
+          "intro": "The pages that sit alongside this one, in the same pillar and under the same agreement.",
+          "items": [
+            [
+              "Solutions",
+              "Copier Sales and Lease",
+              "",
+              "Open the page",
+              "services/copiers.html"
+            ],
+            [
+              "Solutions",
+              "Managed Print Services Indianapolis",
+              "Print security, proactive fleet management and cost reduction: automated, cloud-based management for your entire printer and copier fleet.",
+              "Open the page",
+              "services/managed-print.html"
+            ],
+            [
+              "Solutions",
+              "Copier Repair Service",
+              "Certified field service technicians are on the road across Indianapolis and central Indiana every day.",
+              "Open the page",
+              "services/copier-service.html"
+            ],
+            [
+              "Solutions",
+              "Production Print",
+              "",
+              "Open the page",
+              "services/production-print.html"
+            ],
+            [
+              "Print",
+              "Copy Print Solutions in Indianapolis",
+              "Reduce costs by up to 30% with Indianapolis copy print solutions, copiers, multifunction printers, and managed print services backed by local service.",
+              "Open the page",
+              "services/copy-print-solutions.html"
+            ],
+            [
+              "Print",
+              "Printer Management Software Support",
+              "Many companies need to control the parameters around print.",
+              "Open the page",
+              "services/print-application-solutions.html"
+            ]
+          ]
+        },
+        {
+          "type": "resources",
+          "heading": "Industries we serve",
+          "intro": "Each industry runs its office technology differently. These pages say what changes for each and who is on the record.",
+          "items": [
+            [
+              "Industry",
+              "Education",
+              "Schools are tasked with developing the brightest minds, and many still run on technology from another era.",
+              "How we set it up",
+              "industries/education.html"
+            ],
+            [
+              "Industry",
+              "Engineering and construction",
+              "Field operations need technology that is flexible, efficient and cost-effective, and most of it was never designed for a job site.",
+              "How we set it up",
+              "industries/engineering-construction.html"
+            ],
+            [
+              "Industry",
+              "Financial services",
+              "Banks and credit unions inherit expired leases, scattered vendors and print they cannot see. The fix starts with the assessment.",
+              "How we set it up",
+              "industries/financial-services.html"
+            ],
+            [
+              "Industry",
+              "Healthcare",
+              "Reliable, protected information is patient safety. VAF has worked in and around healthcare since 1914.",
+              "How we set it up",
+              "industries/healthcare.html"
+            ],
+            [
+              "Industry",
+              "Insurance",
+              "In an industry this competitive, solid business technology is the edge, and eliminating the unnecessary technology is half of it.",
+              "How we set it up",
+              "industries/insurance.html"
+            ],
+            [
+              "Industry",
+              "Manufacturing and logistics",
+              "Manufacturing has advanced light years in how it communicates, stores information and manages processes. The technology has to keep up.",
+              "How we set it up",
+              "industries/manufacturing-logistics.html"
+            ],
+            [
+              "Industry",
+              "Real estate",
+              "The industry moved online, and the technology behind a brokerage has to keep up with the buyers who did.",
+              "How we set it up",
+              "industries/real-estate.html"
+            ],
+            [
+              "Industry",
+              "State and local government",
+              "Out-of-date technology that is impossible to manage is a service problem for constituents.",
+              "How we set it up",
+              "industries/government.html"
             ]
           ]
         },
@@ -32472,7 +32698,7 @@
           "alt": true,
           "eyebrow": "Print",
           "heading": "Print Application Solution Benefits",
-          "body": "What printer management software support covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Helps Drive Cost Down, People print less if they are unable to print certain items, which helps save companies money in materials and equipment repair and maintenance.",
             "Regulate What Is Printed, Print application solutions give the company insight into who is printing and what they are printing, which cuts down on personal print jobs.",
@@ -33507,7 +33733,7 @@
           "alt": true,
           "eyebrow": "Process",
           "heading": "Benefits Facilities Management Solutions Offer",
-          "body": "What facilities management covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Reduce Turnover and Increase Efficiency. When dedicated managed services are in place, turnover goes down and efficiencies go up due to your resources being focused on core business needs.",
             "Print Room Management",
@@ -33582,6 +33808,119 @@
             [
               "Where is Facilities Management available?",
               "Indianapolis, Fort Wayne, Evansville and every town between; the service fleet covers all of Indiana and customers throughout the Midwest are served from Indianapolis. Call (317) 634-2913."
+            ]
+          ]
+        },
+        {
+          "type": "resources",
+          "alt": true,
+          "heading": "More in Process",
+          "intro": "The pages that sit alongside this one, in the same pillar and under the same agreement.",
+          "items": [
+            [
+              "Solutions",
+              "Document Management",
+              "Capture, store and automate business documents to cut paper and boost productivity.",
+              "Open the page",
+              "services/document-management.html"
+            ],
+            [
+              "Solutions",
+              "Document Conversion",
+              "",
+              "Open the page",
+              "services/document-conversion.html"
+            ],
+            [
+              "Solutions",
+              "AI Consulting for Indiana Businesses",
+              "From strategy to governance: adopt AI responsibly, protect client trust and company data, and stay ahead of the competition.",
+              "Open the page",
+              "services/ai-consulting.html"
+            ],
+            [
+              "Process",
+              "Automated Forms Processing",
+              "Enable your organization to exchange information automatically with anyone, anywhere, and in any format.",
+              "Open the page",
+              "services/automated-forms-processing.html"
+            ],
+            [
+              "Process",
+              "Document Management & Workflow",
+              "Frustrated by the Lack of Integration between Your Line-of-Business Application and Personal Productivity Tools?",
+              "Open the page",
+              "services/document-management-workflow.html"
+            ],
+            [
+              "Process",
+              "Document Scanning Tools",
+              "",
+              "Open the page",
+              "services/document-scanning.html"
+            ]
+          ]
+        },
+        {
+          "type": "resources",
+          "heading": "Industries we serve",
+          "intro": "Each industry runs its office technology differently. These pages say what changes for each and who is on the record.",
+          "items": [
+            [
+              "Industry",
+              "Education",
+              "Schools are tasked with developing the brightest minds, and many still run on technology from another era.",
+              "How we set it up",
+              "industries/education.html"
+            ],
+            [
+              "Industry",
+              "Engineering and construction",
+              "Field operations need technology that is flexible, efficient and cost-effective, and most of it was never designed for a job site.",
+              "How we set it up",
+              "industries/engineering-construction.html"
+            ],
+            [
+              "Industry",
+              "Financial services",
+              "Banks and credit unions inherit expired leases, scattered vendors and print they cannot see. The fix starts with the assessment.",
+              "How we set it up",
+              "industries/financial-services.html"
+            ],
+            [
+              "Industry",
+              "Healthcare",
+              "Reliable, protected information is patient safety. VAF has worked in and around healthcare since 1914.",
+              "How we set it up",
+              "industries/healthcare.html"
+            ],
+            [
+              "Industry",
+              "Insurance",
+              "In an industry this competitive, solid business technology is the edge, and eliminating the unnecessary technology is half of it.",
+              "How we set it up",
+              "industries/insurance.html"
+            ],
+            [
+              "Industry",
+              "Manufacturing and logistics",
+              "Manufacturing has advanced light years in how it communicates, stores information and manages processes. The technology has to keep up.",
+              "How we set it up",
+              "industries/manufacturing-logistics.html"
+            ],
+            [
+              "Industry",
+              "Real estate",
+              "The industry moved online, and the technology behind a brokerage has to keep up with the buyers who did.",
+              "How we set it up",
+              "industries/real-estate.html"
+            ],
+            [
+              "Industry",
+              "State and local government",
+              "Out-of-date technology that is impossible to manage is a service problem for constituents.",
+              "How we set it up",
+              "industries/government.html"
             ]
           ]
         },
@@ -34070,7 +34409,7 @@
           "alt": true,
           "eyebrow": "Process",
           "heading": "Print Fulfillment Solutions Benefits",
-          "body": "What print fulfillment & on-demand print covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Consistency in Print. All logos, colors, layouts, and parameters have been pre-approved so orders can be placed easily. Less room for error and more room for print efficiency.",
             "Organized Print Process. We help you develop a print process to help keep all print on demand jobs organized and on budget through approved user accounts, which drives efficiency.",
@@ -34827,7 +35166,7 @@
           "alt": false,
           "eyebrow": "Information",
           "heading": "Switched Topologies",
-          "body": "What information technology project deployments covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Cisco Catalyst Network Switches",
             "HP Pro Curve Core Network Switches",
@@ -34839,7 +35178,7 @@
           "alt": true,
           "eyebrow": "Information",
           "heading": "Wireless Networks & Mobility",
-          "body": "What information technology project deployments covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Cisco Aeronet Wireless Infrastructure"
           ]
@@ -34849,7 +35188,7 @@
           "alt": false,
           "eyebrow": "Information",
           "heading": "Security Firewalls",
-          "body": "What information technology project deployments covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Cisco PIX Firewalls",
             "Cisco Intrusion Protection",
@@ -34861,7 +35200,7 @@
           "alt": true,
           "eyebrow": "Information",
           "heading": "Storage Solutions",
-          "body": "What information technology project deployments covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "HP Modular Smart Arrays",
             "HP Storage Works Storage Area Networks"
@@ -35087,7 +35426,7 @@
           "alt": true,
           "eyebrow": "Locations",
           "heading": "Copier Sales & Service in South Bend",
-          "body": "Van Ausdall & Farrar sells, leases, and services business copiers throughout South Bend, Mishawaka, and northern Indiana. Explore copier sales and leasing , request copier service and repair .",
+          "body": "Van Ausdall & Farrar sells, leases, and services business copiers throughout South Bend, Mishawaka, and northern Indiana. Explore copier sales and leasing, request copier service and repair.",
           "bullets": []
         },
         {
@@ -35140,7 +35479,7 @@
             ],
             [
               "What does Van Ausdall & Farrar provide in South Bend?",
-              "Van Ausdall & Farrar sells, leases, and services business copiers throughout South Bend, Mishawaka, and northern Indiana. Explore copier sales and leasing , request copier service and repair ."
+              "Van Ausdall & Farrar sells, leases, and services business copiers throughout South Bend, Mishawaka, and northern Indiana. Explore copier sales and leasing, request copier service and repair."
             ],
             [
               "How do we get started in South Bend?",
@@ -35962,7 +36301,7 @@
           "alt": true,
           "eyebrow": "Communication",
           "heading": "Voice & Data Communications Areas of Expertise",
-          "body": "What state-of-the-art voice & data communication systems covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Network Infrastructure, ADTRAN’s comprehensive product line supports wired switching and routing, and wireless data networks.",
             "Network Security & Secure Remote Access, Fortinet’s Cybersecurity Platform provides end-to-end protection for users, networks, data centers and the cloud."
@@ -36074,7 +36413,7 @@
           "type": "detail",
           "alt": true,
           "eyebrow": "Information",
-          "heading": "84 .7%",
+          "heading": "84.7%",
           "body": "of enterprises currently use or plan to use a cloud PBX within the next 2 years",
           "bullets": []
         },
@@ -36554,7 +36893,7 @@
     },
     {
       "file": "policies/van-ausdall-farrar-customer-care-app-privacy-policy.html",
-      "title": "Customer Care App Privacy Policy, Indiana | VAF",
+      "title": "Customer Care App Privacy Policy, Indianapolis | VAF",
       "description": "This Policy contains sections with terms used by the European legislature for the adoption of the General Data Protection Regulation (“GDPR”).",
       "crumbs": [
         [
@@ -36566,7 +36905,7 @@
           "about.html"
         ],
         [
-          "Customer Care App Privacy Policy",
+          "Van Ausdall & Farrar Customer Care App Privacy Policy",
           "policies/van-ausdall-farrar-customer-care-app-privacy-policy.html"
         ]
       ],
@@ -36586,7 +36925,7 @@
             "href": "technology-strength-assessment.html"
           },
           "image": "assets/gen-hq-1200.jpg",
-          "image_alt": "Customer Care App Privacy Policy",
+          "image_alt": "Van Ausdall & Farrar Customer Care App Privacy Policy",
           "image_w": 1200,
           "image_h": 800
         },
@@ -36641,7 +36980,7 @@
         {
           "type": "faq",
           "alt": true,
-          "heading": "Questions about Customer Care App Privacy Policy",
+          "heading": "Questions about Van Ausdall & Farrar Customer Care App Privacy Policy",
           "items": [
             [
               "Which version of this policy governs?",
@@ -36666,7 +37005,7 @@
       "migrated_from": "/van-ausdall-farrar-customer-care-app-privacy-policy",
       "ptype": "policy",
       "pillar": "",
-      "name": "Customer Care App Privacy Policy",
+      "name": "Van Ausdall & Farrar Customer Care App Privacy Policy",
       "one": "This Policy contains sections with terms used by the European legislature for the adoption of the General Data Protection Regulation."
     },
     {
@@ -36972,7 +37311,7 @@
           "alt": true,
           "eyebrow": "Communication",
           "heading": "Why Choose Level 3?",
-          "body": "What site to site voice & data telecommunication covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Basic and Enhanced Phone Service",
             "Custom designed plan",
@@ -37123,7 +37462,7 @@
           "alt": true,
           "eyebrow": "Communication",
           "heading": "Additional Features",
-          "body": "What integrated speech and voice recognition from winscribe covers, in VAF's words.",
+          "body": "",
           "bullets": [
             "Over 300,000 active words in the dictionary for unprecedented flexibility.",
             "Vocabularies available in US English, UK English, Australian English, Indian English, SE Asian English, German, Spanish, French, Italian, Dutch and more…",
@@ -50895,7 +51234,7 @@
             "/voice-recognition": "services/voice-recognition.html",
             "/wids-format": "services/wids-format.html"
           },
-          "deepened": 93
+          "deepened": 96
         }
       },
       "today_stats": [
@@ -51183,7 +51522,7 @@
         "/voice-recognition": "services/voice-recognition.html",
         "/wids-format": "services/wids-format.html"
       },
-      "deepened": 93
+      "deepened": 96
     }
   }
 }
