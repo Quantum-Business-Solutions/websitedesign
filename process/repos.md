@@ -268,3 +268,12 @@ Full INTAKE.md and qa-findings.md entries are refreshed on the monthly re-upload
 | Website runbook version 2.1: the search and AI-answer package | 1b7faad6-a86b-44aa-8f4f-bac0526a85b5 |
 | Kelly Office Solutions: search and AI-answer baseline | daeaf5ae-6591-444a-87d3-236b52dcdfbf |
 | Nexus Network Technologies: search and AI-answer baseline | 8d9832e4-7874-4659-be75-15e4f2171249 |
+
+### Preview URLs (2026-09-08)
+| Client | Hub |
+|---|---|
+| Kelly Office Solutions | https://kelly-office-solutions.vercel.app |
+| Nexus Network Technologies | https://nexus-gold-beta.vercel.app/preview/ |
+| Image 2000 | https://image2000.vercel.app |
+| Van Ausdall & Farrar | https://van-ausdall.vercel.app |
+All noindex. Each hub links its design system page; Kelly, Nexus and VanAusdall link their search and AI-answer report.

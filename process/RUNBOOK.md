@@ -432,7 +432,7 @@ Every client gets a design system page (`design-system.html`, generated) and the
 Add to `verify.mjs` as the next job: the true-compositing contrast probe, all routes at 390, 768, 1280 and 1440 with exactly one h1, hub behaviour, page performance under CPU throttle, and the type scale check. Already added this week: a hard error when a compose id matches no section, and axe rules for nested interactive, contrast and heading order. The local LCP failure is the sandbox blocking Google Fonts; mark it staging-only rather than ignoring it.
 
 ### Housekeeping that cost time
-- Vercel projects are created by Shawn at intake, one per client, and connected to the client repo. The API can create a project but cannot link the repository. Nexus deploys from the Nexus repo under `/preview`; Image 2000 and VanAusdall need their projects.
+- Vercel projects are created by Shawn at intake, one per client, and connected to the client repo. The API can create a project but cannot link the repository. Live: kelly-office-solutions.vercel.app, image2000.vercel.app, van-ausdall.vercel.app, and Nexus from the Nexus repo at nexus-gold-beta.vercel.app/preview/.
 - The exact preview command is recorded in the client repo README on the first push.
 - Every session ends with the ClientCommand knowledge base entry for the client and, when a process changed, a re-upload of the changed process doc.
 - Scripts: never kill a process by a pattern that appears in the calling command line. Playwright screenshots either abort font requests or wait for them, never both.
