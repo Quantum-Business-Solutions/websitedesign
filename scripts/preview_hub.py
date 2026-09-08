@@ -75,13 +75,15 @@ def hub(content, themes, recommend, base, roles, standard, client_tokens, out_di
         f'<a class="alt" href="{_slug(t)}/index.html" target="_blank" rel="noopener"><h3 class="h4">{_e(t.replace("Quantum ", ""))}</h3>'
         f'<p>{_e(why)}</p><span>Open {_e(t.replace("Quantum ", ""))}</span></a>'
         for t, why in pitch.get("alternatives", []))
+    choice_intro = pitch.get("choice_intro", "All three are built to the same standard, with the same words, the same pages and the same proof. The difference is temperament. Open each one, live with it for a day, and tell us which feels like you.")
     if recommend:
-        pick_html = (f'<section id="pick"><div class="wrap"><p class="eyebrow">Our recommendation</p><div class="pick"><div><h2>We would build {_e(pick_short)}</h2><p class="lead">{_e(_role(roles, pick))}</p>{reasons}<div class="change"><strong>The one thing we would change:</strong> {_e(pitch.get("pick_change", ""))}</div><p style="margin-top:22px"><a class="btn" href="{pick_slug}/index.html" target="_blank" rel="noopener">Open {_e(pick_short)}</a></p></div>'
-                     f'<div><h3 class="h3" style="font-size:18px;margin-bottom:14px">If you would rather not</h3><div class="alts" style="grid-template-columns:1fr">{alts}</div></div></div></div></section>')
+        three_head = f'<p class="eyebrow">The three</p><h2>Three ways to design it</h2><p class="lead">{_e(choice_intro)}</p>'
+        pick_html = (f'<div id="pick" class="pickbox"><p class="eyebrow">Our recommendation</p><h3 class="h3">We would build {_e(pick_short)}</h3><p class="lead" style="margin-bottom:14px">{_e(_role(roles, pick))}</p>'
+                     f'<div class="whys">{reasons}</div><div class="change"><strong>The one thing we would change:</strong> {_e(pitch.get("pick_change", ""))}</div>'
+                     f'<p style="margin-top:22px"><a class="btn" href="{pick_slug}/index.html" target="_blank" rel="noopener">Open {_e(pick_short)}</a></p></div>')
     else:
-        cards = "".join(f'<a class="alt" href="{_slug(t)}/index.html" target="_blank" rel="noopener"><h3 class="h4">{_e(t.replace("Quantum ", ""))}</h3><p>{_e(_role(roles, t))}</p><span>Open {_e(t.replace("Quantum ", ""))}</span></a>' for t in themes)
-        pick_html = (f'<section id="pick"><div class="wrap"><p class="eyebrow">Your call</p><h2>Three ways to design it. You choose.</h2><p class="lead">{_e(pitch.get("choice_intro", "All three are built to the same standard, with the same words, the same pages and the same proof. The difference is temperament. Open each one, live with it for a day, and tell us which feels like you."))}</p>'
-                     f'<div class="alts">{cards}</div></div></section>')
+        three_head = f'<p class="eyebrow">Your call</p><h2>Three ways to design it. You choose.</h2><p class="lead">{_e(choice_intro)}</p>'
+        pick_html = ""
     sr = pitch.get("search")
     search_html = ""
     if sr:
@@ -109,10 +111,10 @@ def hub(content, themes, recommend, base, roles, standard, client_tokens, out_di
         f'<iframe title="{_e(t.replace("Quantum ", ""))} preview" loading="lazy" src="{_slug(t)}/index.html" data-dir="{_slug(t)}" width="1440" height="1000"></iframe></div>'
         f'<a class="open" href="{_slug(t)}/index.html" target="_blank" rel="noopener" data-dir="{_slug(t)}">Open full size</a></figure>'
         for t in themes)
-    every = ""
-    for t in themes:
-        every += f'<div class="col"><h3 class="h4">{_e(t.replace("Quantum ", ""))}</h3>' + "".join(
-            f'<a href="{_slug(t)}/{pg["file"]}" target="_blank" rel="noopener">{_e(_pname(pg))}</a>' for pg in pages) + "</div>"
+    every = "".join(
+        f'<div class="row"><span class="pn">{_e(_pname(pg))}</span><span class="links">' + "".join(
+            f'<a href="{_slug(t)}/{pg["file"]}" target="_blank" rel="noopener">{_e(t.replace("Quantum ", ""))}</a>' for t in themes) + "</span></div>"
+        for pg in pages)
     qc = pitch.get("qbs_contact", {})
     std = ('<a class="alt" href="standard.html" target="_blank" rel="noopener"><h3 class="h4">The Quantum Website Standard</h3>'
            '<p>The ten things every site we build is guaranteed to have at launch, and the evidence you receive for each.</p><span>Open</span></a>') if standard else ""
@@ -157,7 +159,8 @@ h3,.h3{{font-size:22px;margin:0 0 6px;letter-spacing:-.01em}}h4,.h4{{font-size:1
 .thumb{{display:block;border-radius:10px;overflow:hidden;border:1px solid var(--border);aspect-ratio:16/10;background:#fff}}.thumb img{{width:100%;height:100%;object-fit:cover;object-position:top;display:block}}
 .specd summary{{cursor:pointer;font-size:13.5px;color:var(--muted);min-height:44px;display:flex;align-items:center;list-style:none}}.specd summary::-webkit-details-marker{{display:none}}.specd summary::before{{content:"+";margin-right:8px;color:var(--ink);font-weight:700}}.specd[open] summary::before{{content:"\2212"}}
 .specd .spec{{margin-top:8px}}
-.every{{display:grid;grid-template-columns:repeat({n},1fr);gap:24px}}.every .col a{{display:flex;align-items:center;min-height:44px;text-decoration:none;color:var(--fg);border-top:1px solid var(--border);font-size:15px}}.every .col a:hover{{color:var(--ink)}}
+.every{{display:grid;grid-template-columns:1fr 1fr;gap:0 32px}}.every .row{{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:44px;border-top:1px solid var(--border);font-size:15px}}.every .pn{{color:var(--fg)}}.every .links{{display:flex;gap:4px;flex-shrink:0}}.every .links a{{display:inline-flex;align-items:center;min-height:36px;padding:0 10px;border-radius:8px;text-decoration:none;color:var(--ink);font-size:13px;font-weight:600}}.every .links a:hover{{background:var(--bg-alt)}}
+.pickbox{{margin-top:28px;padding:26px 28px;border:1px solid var(--border);border-radius:16px;background:var(--bg-alt)}}.pickbox .whys{{display:grid;grid-template-columns:repeat(3,1fr);gap:0 24px}}.pickbox .why{{border-top:1px solid var(--border);border-bottom:0}}.pickbox .change{{background:var(--bg)}}
 .two{{display:grid;grid-template-columns:1fr 1fr;gap:40px}}
 .stiles{{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}}.stile{{border:1px solid var(--border);border-radius:12px;padding:18px 20px;background:var(--bg-alt)}}.stile b{{display:block;font-size:34px;line-height:1;letter-spacing:-.02em;color:var(--ink)}}.stile span{{display:block;margin-top:8px;font-size:13.5px;color:var(--muted)}}
 .asof{{font-size:13px;color:var(--muted);font-weight:400;margin-left:8px}}
@@ -168,7 +171,7 @@ ul{{margin:0;padding-left:18px}}li{{margin:8px 0;color:var(--fg)}}li::marker{{co
 .turn{{background:var(--bg-alt);border:1px solid var(--border);border-radius:14px;padding:28px}}.turn a.btn{{margin:0 12px 12px 0}}
 footer{{padding:36px 0 80px;color:var(--muted);font-size:13.5px;max-width:66ch}}
 select{{max-width:100%}}
-@media(max-width:900px){{.dirs,.every,.plan{{grid-template-columns:1fr}}.pick,.alts,.two{{grid-template-columns:1fr}}.frames,.cmp-bar{{display:none}}.cmp-note{{display:block}}}}
+@media(max-width:900px){{.dirs,.every,.plan,.pickbox .whys{{grid-template-columns:1fr}}.pick,.alts,.two{{grid-template-columns:1fr}}.frames,.cmp-bar{{display:none}}.cmp-note{{display:block}}}}
 """
     return f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
@@ -183,17 +186,16 @@ select{{max-width:100%}}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
 <style>{css}{seo["css"] if seo else ""}</style></head><body data-first-dir="{_e(seo["first_dir"]) if seo else ""}">
 <a class="skip" href="#main">Skip to content</a>
-<header class="top"><div class="wrap"><img src="{_e(b["logo"])}" alt="{_e(content["client"])}" height="36" width="99"><nav aria-label="Sections"><a href="#three">The three</a><a href="#pick">Our pick</a><a href="#compare">Compare</a><a href="#search">Search</a>{seo["nav"] if seo else ""}<a href="#heard">Fixed</a><a href="#confirm">To confirm</a><a href="#every">Every page</a><a href="#plan">The plan</a><a href="#turn">Your turn</a>{ds_link}</nav></div></header>
+<header class="top"><div class="wrap"><img src="{_e(b["logo"])}" alt="{_e(content["client"])}" height="36" width="99"><nav aria-label="Sections"><a href="#three">The three</a>{'<a href="#pick">Our pick</a>' if recommend else ''}<a href="#compare">Compare</a><a href="#search">Search</a>{seo["nav"] if seo else ""}<a href="#heard">Fixed</a><a href="#confirm">To confirm</a><a href="#every">Every page</a><a href="#plan">The plan</a><a href="#turn">Your turn</a>{ds_link}</nav></div></header>
 <main id="main">
 <section><div class="wrap"><p class="eyebrow">Quantum Business Solutions for {_e(content["client"])}</p><h1>Same site. Three ways to design it.</h1>
 <p class="lead">Each one is the whole site, not a home page and two mockups: every page is built and live in all three. The words are the same in all three and the composition is not, so the decision in front of you is about direction, not copy. Open any one, then use the switcher pinned to the bottom of the page to flip between all three without losing your place.</p></div></section>
-<section id="three"><div class="wrap"><p class="eyebrow">The three</p><div class="dirs">{"".join(specs)}</div></div></section>
-{pick_html}
+<section id="three"><div class="wrap">{three_head}<div class="dirs">{"".join(specs)}</div>{pick_html}</div></section>
 <section id="compare"><div class="wrap"><p class="eyebrow">Side by side</p><h2>The same page, all three at once</h2><div class="cmp-bar"><label for="cmp">Pick a page</label><select id="cmp">{page_opts}</select></div><p class="cmp-note">Side by side needs a wider screen. On a phone, open each direction from the cards above.</p><div class="frames">{frames}</div></div></section>
 {search_html}
 <section id="heard"><div class="wrap"><div class="two"><div><p class="eyebrow">What we are treating as fixed</p><h2>What your site and brand profile already say</h2><p class="lead" style="margin-bottom:12px">{_e(heard_intro)}</p><ul>{heard}</ul></div><div><p class="eyebrow">What we found</p><h2>And what we would do about it</h2><ul>{found}</ul></div></div></div></section>
 <section id="confirm"><div class="wrap"><p class="eyebrow">To confirm with you</p><h2>Ten things we wrote as a draft, not a fact</h2><p class="lead">Each of these appears on the pages. None is built until you confirm or correct it.</p><ul class="confirm">{confirm}</ul></div></section>
-<section id="every"><div class="wrap"><p class="eyebrow">Every page</p><h2>Built and live in all three</h2><div class="every">{every}</div></div></section>
+<section id="every"><div class="wrap"><p class="eyebrow">Every page</p><h2>{len(pages)} pages, built and live in all three</h2><p class="lead">One row per page; the three links open it in each direction.</p><div class="every">{every}</div></div></section>
 <section id="plan"><div class="wrap"><p class="eyebrow">The plan</p><h2>From a choice to a live site</h2><div class="plan">{plan}</div>{('<div class="alts single" style="margin-top:28px">' + std + '</div>') if std else ""}</div></section>
 <section id="turn"><div class="wrap"><div class="turn"><p class="eyebrow">Your turn</p><h2>Tell us which one, and what you would change</h2><p class="lead" style="margin-bottom:18px">Reply with the direction and anything on any page you would change. Nothing is locked until you say so.</p><a class="btn" href="mailto:{_e(qc.get("email", ""))}?subject={_e(content["client"])}%20website%20direction">Email {_e(qc.get("name", "us"))}</a><a class="btn" style="background:transparent;border:1px solid var(--accent);color:var(--ink)" href="tel:{_e(phone_href)}">Call {_e(qc.get("phone", ""))}</a></div></div></section>
 </main>

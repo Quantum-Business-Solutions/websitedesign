@@ -1,0 +1,16 @@
+{
+ "content": "brands/<slug>.content.py",
+ "themes": [
+  "Quantum Showcase",
+  "Quantum Clean",
+  "Quantum Press"
+ ],
+ "recommend": null,
+ "roles": {
+  "Showcase": "...",
+  "Clean": "...",
+  "Press": "..."
+ },
+ "base_url": "https://<repo>.vercel.app",
+ "out": "../<repo>"
+}

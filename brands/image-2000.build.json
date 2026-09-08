@@ -1,0 +1,16 @@
+{
+ "content": "brands/image-2000.content.py",
+ "themes": [
+  "Quantum Showcase",
+  "Quantum Clean",
+  "Quantum Press"
+ ],
+ "recommend": null,
+ "roles": {
+  "Showcase": "the whole office made visible, layered, 3D, the most sales-forward",
+  "Clean": "disciplined and fast, the awards and the proof do the talking",
+  "Press": "editorial, serif, a company that has been at it since 1992"
+ },
+ "base_url": "https://image2000.vercel.app",
+ "out": "../image2000"
+}

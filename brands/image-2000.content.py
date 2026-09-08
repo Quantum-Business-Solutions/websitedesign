@@ -256,7 +256,12 @@ def brand_page(slug, name, group, one, body, label):
             "sections": [
                 {"type": "hero", "layout": "split", "eyebrow": f"Brands: {name}", "heading": f"{name}, <em>sold and serviced locally</em>.", "subhead": body, "primary": {"label": "Request a quote", "href": "contact.html"}, "secondary": {"label": label, "href": "https://www.image-2000.com/product-catalogs"}, "image": img, "image_alt": name, "image_w": 1200, "image_h": 800},
                 {"type": "cards", "alt": True, "heading": f"Why buy {name} from Image 2000", "items": [["Recommended, not pushed", "Eleven manufacturers means the badge is chosen for the job."], ["Local service", "Seven branches with local dispatch, parts and warehousing."], ["Audited results", "PROs Elite certified every year since 2016."], ["Lease, rent or buy", "Priced side by side with five leasing partners."]]},
-                {"type": "faq", "heading": f"Questions about {name}", "items": [["Where are the drivers?", "Sharp and Kyocera downloads are linked from the customer support page; ask the branch for others."], ["Can it join managed print?", "Yes. Any device Image 2000 places can come under one agreement."]]},
+                {"type": "faq", "heading": f"Questions about {name}", "items": [
+                    [f"Which {name} equipment does Image 2000 place?", f"{body} The specialist matches the model to the volume, finishing and software the office runs."],
+                    [f"Where can I see {name} equipment?", "At any of the seven branches: Santa Clarita, Los Angeles, Orange County, the Inland Empire, Bakersfield, Fresno and Las Vegas. The nearest branch can also demonstrate on site."],
+                    [f"How is {name} equipment priced?", "Lease, rent or buy, priced side by side with five leasing partners, with supplies and service on one agreement if the device comes under managed print."],
+                    ["Where are the drivers?", "Sharp and Kyocera downloads are linked from the customer support page; ask the branch for others."],
+                    ["Can it join managed print?", "Yes. Any device Image 2000 places can come under one agreement."]]},
                 LEADFORM]}
 
 
@@ -386,7 +391,13 @@ def build():
     }
     schema = {"org_name": "Image 2000, Inc.", "org_url": "https://www.image-2000.com", "org_logo": "https://www.image-2000.com/",
               "org_description": "Office technology dealer founded in 1992, headquartered in the Santa Clarita Valley, California, with branches across Southern California, the Central Valley and Las Vegas: copiers and printers from eleven manufacturers, managed print, document workflow software, managed IT, UCaaS phones, mailing equipment and bottleless water.",
-              "sameAs": ["https://www.linkedin.com/company/image2000", "https://www.facebook.com/Image-2000-Inc-127054597339857/", "https://www.instagram.com/image2000inc/"], "telephone": "+1-800-481-2250"}
+              "sameAs": ["https://www.linkedin.com/company/image2000", "https://www.facebook.com/Image-2000-Inc-127054597339857/", "https://www.instagram.com/image2000inc/"], "telephone": "+1-800-481-2250",
+              "founded": "1992", "short_name": "Image 2000", "title_city": "California",
+              "cities": ["Santa Clarita", "Valencia", "Los Angeles", "Orange County", "Irvine", "Inland Empire", "Ontario", "Bakersfield", "Fresno", "Las Vegas", "Southern California", "Central Valley", "California", "Nevada", "CA", "NV"],
+              "area_served": [{"@type": "State", "name": "California"}, {"@type": "State", "name": "Nevada"}],
+              "meta_tail": "Image 2000, office technology since 1992, seven offices across California and Las Vegas.",
+              "local": [{"slug": s_, "name": f"Image 2000 {c_}", "street": a1_, "city": a2_.rsplit(",", 1)[0], "region": a2_.split(",")[-1].split()[0], "postal": a2_.split()[-1],
+                         "telephone": "+1-" + ph_, "lon": lon_, "lat": lat_} for s_, c_, a1_, a2_, ph_, _h, _r, lon_, lat_ in LOCATIONS]}
     nav = [
         {"label": "Services", "href": "services.html", "mega": True,
          "groups": [{"title": "Print", "items": [[s[1], f"services/{s[0]}.html"] for s in SERVICES if s[0] in ("office-technology", "managed-print", "wide-format")]},
@@ -588,6 +599,57 @@ def build():
                     "Portal and payment links (i2kservice.com and mysfsgateway.com) carried over as they are today."],
         "footer": "Prepared for Rich Campbell, Joe Blatchford and Jeff Rudisel. Nothing here is live or indexed. Every number and claim comes from image-2000.com, the awarding organizations, ENX Magazine or public data. Photographs, renders and the 3D device are generated and labelled as such; your own imagery replaces them.",
     }
+    _FAQ_EXTRA = {
+        "about.html": ("Questions about Image 2000", [
+            ["When was Image 2000 founded?", "In 1992, in the Santa Clarita Valley, where the company is still headquartered."],
+            ["Where are the offices?", "Seven: Santa Clarita, Los Angeles, Orange County, the Inland Empire, Bakersfield, Fresno and Las Vegas. Technicians are dispatched from the nearest one."],
+            ["Which manufacturers does Image 2000 represent?", "Eleven for print alone, Sharp, Kyocera, Toshiba, Lexmark, HP, Brother, KIP, Canon, Kodak Alaris, RISO and Formax, plus FP Mailing, Waterlogic, DocuWare, Square 9, PaperCut and Intermedia."]]),
+        "awards.html": ("About the awards", [
+            ["Who gives these awards?", "The manufacturers Image 2000 represents and the industry press. Each award on this page names its source and year."],
+            ["Why do dealer awards matter to a customer?", "They are earned on service and retention numbers the manufacturer audits, not on sales volume alone, so they say something about how customers are treated after the sale."],
+            ["Can I verify them?", "Yes. Every award links to the manufacturer or publication that granted it."]]),
+        "brands.html": ("Brand questions", [
+            ["Why carry eleven print brands?", "So the device fits the work rather than the other way round. A law office, a print shop and a school district need different machines, and one brand rarely covers all three well."],
+            ["Which brand should I pick?", "Start with the volume, the finishing and the software you run, and the specialist will narrow it to two devices. The brand pages on this site say what each line is best at."],
+            ["Do you service brands you did not sell?", "Ask the nearest office. Many of the represented lines can be serviced regardless of where the device was bought."]]),
+        "careers.html": ("Working at Image 2000", [
+            ["What roles does Image 2000 hire for?", "Sales, field service technicians, IT engineers, customer care, delivery and administration, as openings arise across the seven offices."],
+            ["Where would I work?", "Any of the seven offices in California and Las Vegas, with field roles covering the customers nearest that office."],
+            ["How do I apply?", "Use the form on this page. A person from Image 2000 reads every application and replies."]]),
+        "community.html": ("About the community work", [
+            ["Which organizations does Image 2000 support?", "The ones named on this page, in the communities where the offices are. The list is current as of the last update shown."],
+            ["Can my organization apply?", "Contact the nearest office. Requests are considered locally, by the people who know the community."],
+            ["Do employees take part?", "Yes. Most of the work on this page is done by staff from the local office, on their own time and the company's."]]),
+        "contact.html": ("Before you write", [
+            ["Which office should I contact?", "The nearest of the seven. 800-481-2250 reaches all of them."],
+            ["How do I request service, supplies or a meter read?", "Existing customers use the customer support page or call the office. New customers start with the form here."],
+            ["Who replies?", "A person from the office, during business hours. The form is not an autoresponder."]]),
+        "customer-support.html": ("Support questions", [
+            ["How do I place a service call?", "Use the service request form on this page or call the office that installed the device. Have the model and serial number ready."],
+            ["How do I order toner or submit a meter read?", "Through the supplies and meter forms on this page, or by phone to the nearest office."],
+            ["What if my device is under a managed print agreement?", "Supplies and service are included; use the same forms and the agreement is applied automatically."]]),
+        "industries.html": ("Industry questions", [
+            ["Which industries does Image 2000 serve most?", "Education, healthcare, legal, government and print production across California and Nevada, along with businesses of every kind."],
+            ["My industry is not listed.", "The industry pages show how the same services fit different workflows; the assessment adapts them to yours."],
+            ["Do you have references in my industry?", "Ask the nearest office. Case examples and customer comments are on the site, and a reference in your field can be arranged."]]),
+        "services.html": ("How the services fit", [
+            ["What does Image 2000 do?", "Copiers and printers from eleven manufacturers, managed print, document workflow software, managed IT, UCaaS phones, mailing equipment, bottleless water and wide format."],
+            ["Do I have to take everything?", "No. Most customers start with the print fleet and add lines as the relationship earns it."],
+            ["Where does Image 2000 work?", "From seven offices: Santa Clarita, Los Angeles, Orange County, the Inland Empire, Bakersfield, Fresno and Las Vegas."]]),
+        "why-image-2000.html": ("Why Image 2000", [
+            ["What is different about Image 2000?", "Eleven manufacturers under one roof, thirty years in the same region, and awards earned on audited service numbers rather than sales volume."],
+            ["Is Image 2000 independent?", "Yes. Founded in 1992 and still independently owned, headquartered in the Santa Clarita Valley."],
+            ["How is service measured?", "By response, first-visit fix and retention, the numbers the manufacturer awards on this site are based on."]]),
+    }
+    for _pg in pages:
+        if _pg["file"] in _FAQ_EXTRA and not any(x.get("type") == "faq" for x in _pg["sections"]):
+            _h, _items = _FAQ_EXTRA[_pg["file"]]
+            _faq = {"type": "faq", "id": "faq", "heading": _h, "items": _items}
+            _secs = _pg["sections"]
+            if _secs and _secs[-1].get("type") in ("leadform", "cta", "contact"):
+                _secs.insert(len(_secs) - 1, _faq)
+            else:
+                _secs.append(_faq)
     return {"client": "Image 2000", "slug": "image-2000", "domain_hint": "image-2000.com",
             "brand": brand, "schema": schema, "nav": nav, "pages": pages, "pitch": pitch}
 

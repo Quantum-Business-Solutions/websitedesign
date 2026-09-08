@@ -1,0 +1,16 @@
+{
+ "content": "brands/kelly-office-solutions.content.py",
+ "themes": [
+  "Quantum Showcase",
+  "Quantum Clean",
+  "Quantum Press"
+ ],
+ "recommend": null,
+ "roles": {
+  "Showcase": "the whole office made visible, image-led, layered, the most sales-forward of the three",
+  "Clean": "the disciplined, fast, easy-to-read site that lets the proof do the talking",
+  "Press": "editorial, serif, the one that reads like a 75-year-old company"
+ },
+ "base_url": "https://kelly-office-solutions.vercel.app",
+ "out": "../kelly-office-solutions"
+}

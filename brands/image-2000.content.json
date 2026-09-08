@@ -258,7 +258,118 @@
    "https://www.facebook.com/Image-2000-Inc-127054597339857/",
    "https://www.instagram.com/image2000inc/"
   ],
-  "telephone": "+1-800-481-2250"
+  "telephone": "+1-800-481-2250",
+  "founded": "1992",
+  "short_name": "Image 2000",
+  "title_city": "California",
+  "cities": [
+   "Santa Clarita",
+   "Valencia",
+   "Los Angeles",
+   "Orange County",
+   "Irvine",
+   "Inland Empire",
+   "Ontario",
+   "Bakersfield",
+   "Fresno",
+   "Las Vegas",
+   "Southern California",
+   "Central Valley",
+   "California",
+   "Nevada",
+   "CA",
+   "NV"
+  ],
+  "area_served": [
+   {
+    "@type": "State",
+    "name": "California"
+   },
+   {
+    "@type": "State",
+    "name": "Nevada"
+   }
+  ],
+  "meta_tail": "Image 2000, office technology since 1992, seven offices across California and Las Vegas.",
+  "local": [
+   {
+    "slug": "santa-clarita",
+    "name": "Image 2000 Santa Clarita",
+    "street": "26037 Huntington Lane",
+    "city": "Valencia",
+    "region": "CA",
+    "postal": "91355",
+    "telephone": "+1-818-781-2200",
+    "lon": -118.57,
+    "lat": 34.42
+   },
+   {
+    "slug": "los-angeles",
+    "name": "Image 2000 Los Angeles",
+    "street": "10350 Heritage Park Drive, Suite 203",
+    "city": "Los Angeles",
+    "region": "CA",
+    "postal": "90670",
+    "telephone": "+1-818-974-0237",
+    "lon": -118.06,
+    "lat": 33.93
+   },
+   {
+    "slug": "orange-county",
+    "name": "Image 2000 Orange County",
+    "street": "18022 Cowan Street, Suite 240",
+    "city": "Irvine",
+    "region": "CA",
+    "postal": "92614",
+    "telephone": "+1-714-543-5234",
+    "lon": -117.85,
+    "lat": 33.69
+   },
+   {
+    "slug": "inland-empire",
+    "name": "Image 2000 Inland Empire",
+    "street": "1520 N. Mountain Avenue, Suite 203",
+    "city": "Ontario",
+    "region": "CA",
+    "postal": "91762",
+    "telephone": "+1-818-781-2200",
+    "lon": -117.67,
+    "lat": 34.07
+   },
+   {
+    "slug": "bakersfield",
+    "name": "Image 2000 Bakersfield",
+    "street": "6801 White Lane, Suite H-3",
+    "city": "Bakersfield",
+    "region": "CA",
+    "postal": "93309",
+    "telephone": "+1-661-835-4900",
+    "lon": -119.1,
+    "lat": 35.32
+   },
+   {
+    "slug": "fresno",
+    "name": "Image 2000 Fresno",
+    "street": "4910 E. Pontiac Way, Suite 102",
+    "city": "Fresno",
+    "region": "CA",
+    "postal": "93726",
+    "telephone": "+1-559-275-7476",
+    "lon": -119.74,
+    "lat": 36.8
+   },
+   {
+    "slug": "las-vegas",
+    "name": "Image 2000 Las Vegas",
+    "street": "3325 West Ali Baba Lane, Suite 606/606A",
+    "city": "Las Vegas",
+    "region": "NV",
+    "postal": "89118",
+    "telephone": "+1-702-513-3864",
+    "lon": -115.19,
+    "lat": 36.07
+   }
+  ]
  },
  "nav": [
   {
@@ -1591,6 +1702,25 @@
      ]
     },
     {
+     "type": "faq",
+     "id": "faq",
+     "heading": "Why Image 2000",
+     "items": [
+      [
+       "What is different about Image 2000?",
+       "Eleven manufacturers under one roof, thirty years in the same region, and awards earned on audited service numbers rather than sales volume."
+      ],
+      [
+       "Is Image 2000 independent?",
+       "Yes. Founded in 1992 and still independently owned, headquartered in the Santa Clarita Valley."
+      ],
+      [
+       "How is service measured?",
+       "By response, first-visit fix and retention, the numbers the manufacturer awards on this site are based on."
+      ]
+     ]
+    },
+    {
      "type": "leadform",
      "alt": true,
      "id": "quote",
@@ -1838,6 +1968,25 @@
        "Give them an opportunity to earn your business. If you don't, you're doing yourself a disservice.",
        "Robert O.",
        "Customer, image-2000.com"
+      ]
+     ]
+    },
+    {
+     "type": "faq",
+     "id": "faq",
+     "heading": "How the services fit",
+     "items": [
+      [
+       "What does Image 2000 do?",
+       "Copiers and printers from eleven manufacturers, managed print, document workflow software, managed IT, UCaaS phones, mailing equipment, bottleless water and wide format."
+      ],
+      [
+       "Do I have to take everything?",
+       "No. Most customers start with the print fleet and add lines as the relationship earns it."
+      ],
+      [
+       "Where does Image 2000 work?",
+       "From seven offices: Santa Clarita, Los Angeles, Orange County, the Inland Empire, Bakersfield, Fresno and Las Vegas."
       ]
      ]
     },
@@ -3668,6 +3817,25 @@
      ]
     },
     {
+     "type": "faq",
+     "id": "faq",
+     "heading": "Brand questions",
+     "items": [
+      [
+       "Why carry eleven print brands?",
+       "So the device fits the work rather than the other way round. A law office, a print shop and a school district need different machines, and one brand rarely covers all three well."
+      ],
+      [
+       "Which brand should I pick?",
+       "Start with the volume, the finishing and the software you run, and the specialist will narrow it to two devices. The brand pages on this site say what each line is best at."
+      ],
+      [
+       "Do you service brands you did not sell?",
+       "Ask the nearest office. Many of the represented lines can be serviced regardless of where the device was bought."
+      ]
+     ]
+    },
+    {
      "type": "leadform",
      "alt": true,
      "id": "quote",
@@ -3743,6 +3911,18 @@
      "type": "faq",
      "heading": "Questions about Sharp",
      "items": [
+      [
+       "Which Sharp equipment does Image 2000 place?",
+       "Sharp multifunction copiers, printers and production systems, plus Sharp NEC displays. Image 2000 has been recognized by Sharp with the Hyakuman Kai Elite Award four years running and is the 12th largest Sharp dealer in the United States, so parts, training and escalation paths are deep. The specialist matches the model to the volume, finishing and software the office runs."
+      ],
+      [
+       "Where can I see Sharp equipment?",
+       "At any of the seven branches: Santa Clarita, Los Angeles, Orange County, the Inland Empire, Bakersfield, Fresno and Las Vegas. The nearest branch can also demonstrate on site."
+      ],
+      [
+       "How is Sharp equipment priced?",
+       "Lease, rent or buy, priced side by side with five leasing partners, with supplies and service on one agreement if the device comes under managed print."
+      ],
       [
        "Where are the drivers?",
        "Sharp and Kyocera downloads are linked from the customer support page; ask the branch for others."
@@ -3830,6 +4010,18 @@
      "heading": "Questions about Kyocera",
      "items": [
       [
+       "Which Kyocera equipment does Image 2000 place?",
+       "Kyocera ECOSYS printers and TASKalfa multifunction systems, known for long-life drums and low running costs. Image 2000 is a Kyocera FY26 Platinum Partner, with Platinum Platter and Gold Partner recognitions before it. The specialist matches the model to the volume, finishing and software the office runs."
+      ],
+      [
+       "Where can I see Kyocera equipment?",
+       "At any of the seven branches: Santa Clarita, Los Angeles, Orange County, the Inland Empire, Bakersfield, Fresno and Las Vegas. The nearest branch can also demonstrate on site."
+      ],
+      [
+       "How is Kyocera equipment priced?",
+       "Lease, rent or buy, priced side by side with five leasing partners, with supplies and service on one agreement if the device comes under managed print."
+      ],
+      [
        "Where are the drivers?",
        "Sharp and Kyocera downloads are linked from the customer support page; ask the branch for others."
       ],
@@ -3915,6 +4107,18 @@
      "type": "faq",
      "heading": "Questions about Toshiba",
      "items": [
+      [
+       "Which Toshiba equipment does Image 2000 place?",
+       "Toshiba e-STUDIO color and mono multifunction systems for workgroups and departments. The specialist matches the model to the volume, finishing and software the office runs."
+      ],
+      [
+       "Where can I see Toshiba equipment?",
+       "At any of the seven branches: Santa Clarita, Los Angeles, Orange County, the Inland Empire, Bakersfield, Fresno and Las Vegas. The nearest branch can also demonstrate on site."
+      ],
+      [
+       "How is Toshiba equipment priced?",
+       "Lease, rent or buy, priced side by side with five leasing partners, with supplies and service on one agreement if the device comes under managed print."
+      ],
       [
        "Where are the drivers?",
        "Sharp and Kyocera downloads are linked from the customer support page; ask the branch for others."
@@ -4002,6 +4206,18 @@
      "heading": "Questions about Lexmark",
      "items": [
       [
+       "Which Lexmark equipment does Image 2000 place?",
+       "Lexmark printers and A4 multifunction devices for offices, branches and retail counters. The specialist matches the model to the volume, finishing and software the office runs."
+      ],
+      [
+       "Where can I see Lexmark equipment?",
+       "At any of the seven branches: Santa Clarita, Los Angeles, Orange County, the Inland Empire, Bakersfield, Fresno and Las Vegas. The nearest branch can also demonstrate on site."
+      ],
+      [
+       "How is Lexmark equipment priced?",
+       "Lease, rent or buy, priced side by side with five leasing partners, with supplies and service on one agreement if the device comes under managed print."
+      ],
+      [
        "Where are the drivers?",
        "Sharp and Kyocera downloads are linked from the customer support page; ask the branch for others."
       ],
@@ -4087,6 +4303,18 @@
      "type": "faq",
      "heading": "Questions about HP",
      "items": [
+      [
+       "Which HP equipment does Image 2000 place?",
+       "HP LaserJet and PageWide printers and multifunction devices, ScanJet scanners and DesignJet wide format. The specialist matches the model to the volume, finishing and software the office runs."
+      ],
+      [
+       "Where can I see HP equipment?",
+       "At any of the seven branches: Santa Clarita, Los Angeles, Orange County, the Inland Empire, Bakersfield, Fresno and Las Vegas. The nearest branch can also demonstrate on site."
+      ],
+      [
+       "How is HP equipment priced?",
+       "Lease, rent or buy, priced side by side with five leasing partners, with supplies and service on one agreement if the device comes under managed print."
+      ],
       [
        "Where are the drivers?",
        "Sharp and Kyocera downloads are linked from the customer support page; ask the branch for others."
@@ -4174,6 +4402,18 @@
      "heading": "Questions about Brother",
      "items": [
       [
+       "Which Brother equipment does Image 2000 place?",
+       "Brother desktop printers and compact multifunction devices for desks and small teams. The specialist matches the model to the volume, finishing and software the office runs."
+      ],
+      [
+       "Where can I see Brother equipment?",
+       "At any of the seven branches: Santa Clarita, Los Angeles, Orange County, the Inland Empire, Bakersfield, Fresno and Las Vegas. The nearest branch can also demonstrate on site."
+      ],
+      [
+       "How is Brother equipment priced?",
+       "Lease, rent or buy, priced side by side with five leasing partners, with supplies and service on one agreement if the device comes under managed print."
+      ],
+      [
        "Where are the drivers?",
        "Sharp and Kyocera downloads are linked from the customer support page; ask the branch for others."
       ],
@@ -4259,6 +4499,18 @@
      "type": "faq",
      "heading": "Questions about KIP",
      "items": [
+      [
+       "Which KIP equipment does Image 2000 place?",
+       "KIP wide format systems for plan sets and technical documents in architecture, engineering and construction. The specialist matches the model to the volume, finishing and software the office runs."
+      ],
+      [
+       "Where can I see KIP equipment?",
+       "At any of the seven branches: Santa Clarita, Los Angeles, Orange County, the Inland Empire, Bakersfield, Fresno and Las Vegas. The nearest branch can also demonstrate on site."
+      ],
+      [
+       "How is KIP equipment priced?",
+       "Lease, rent or buy, priced side by side with five leasing partners, with supplies and service on one agreement if the device comes under managed print."
+      ],
       [
        "Where are the drivers?",
        "Sharp and Kyocera downloads are linked from the customer support page; ask the branch for others."
@@ -4346,6 +4598,18 @@
      "heading": "Questions about Canon large format",
      "items": [
       [
+       "Which Canon large format equipment does Image 2000 place?",
+       "Canon imagePROGRAF large format printers for technical and graphics output. The specialist matches the model to the volume, finishing and software the office runs."
+      ],
+      [
+       "Where can I see Canon large format equipment?",
+       "At any of the seven branches: Santa Clarita, Los Angeles, Orange County, the Inland Empire, Bakersfield, Fresno and Las Vegas. The nearest branch can also demonstrate on site."
+      ],
+      [
+       "How is Canon large format equipment priced?",
+       "Lease, rent or buy, priced side by side with five leasing partners, with supplies and service on one agreement if the device comes under managed print."
+      ],
+      [
        "Where are the drivers?",
        "Sharp and Kyocera downloads are linked from the customer support page; ask the branch for others."
       ],
@@ -4431,6 +4695,18 @@
      "type": "faq",
      "heading": "Questions about Kodak Alaris",
      "items": [
+      [
+       "Which Kodak Alaris equipment does Image 2000 place?",
+       "Kodak Alaris document scanners, from desktop to production capture, feeding DocuWare and Square 9 workflows. The specialist matches the model to the volume, finishing and software the office runs."
+      ],
+      [
+       "Where can I see Kodak Alaris equipment?",
+       "At any of the seven branches: Santa Clarita, Los Angeles, Orange County, the Inland Empire, Bakersfield, Fresno and Las Vegas. The nearest branch can also demonstrate on site."
+      ],
+      [
+       "How is Kodak Alaris equipment priced?",
+       "Lease, rent or buy, priced side by side with five leasing partners, with supplies and service on one agreement if the device comes under managed print."
+      ],
       [
        "Where are the drivers?",
        "Sharp and Kyocera downloads are linked from the customer support page; ask the branch for others."
@@ -4518,6 +4794,18 @@
      "heading": "Questions about RISO",
      "items": [
       [
+       "Which RISO equipment does Image 2000 place?",
+       "RISO ComColor high-speed inkjet systems for forms, mailers and volume printing at a low cost per page. The specialist matches the model to the volume, finishing and software the office runs."
+      ],
+      [
+       "Where can I see RISO equipment?",
+       "At any of the seven branches: Santa Clarita, Los Angeles, Orange County, the Inland Empire, Bakersfield, Fresno and Las Vegas. The nearest branch can also demonstrate on site."
+      ],
+      [
+       "How is RISO equipment priced?",
+       "Lease, rent or buy, priced side by side with five leasing partners, with supplies and service on one agreement if the device comes under managed print."
+      ],
+      [
        "Where are the drivers?",
        "Sharp and Kyocera downloads are linked from the customer support page; ask the branch for others."
       ],
@@ -4603,6 +4891,18 @@
      "type": "faq",
      "heading": "Questions about Formax",
      "items": [
+      [
+       "Which Formax equipment does Image 2000 place?",
+       "Formax folder inserters, letter openers, pressure sealers and mailroom equipment. The specialist matches the model to the volume, finishing and software the office runs."
+      ],
+      [
+       "Where can I see Formax equipment?",
+       "At any of the seven branches: Santa Clarita, Los Angeles, Orange County, the Inland Empire, Bakersfield, Fresno and Las Vegas. The nearest branch can also demonstrate on site."
+      ],
+      [
+       "How is Formax equipment priced?",
+       "Lease, rent or buy, priced side by side with five leasing partners, with supplies and service on one agreement if the device comes under managed print."
+      ],
       [
        "Where are the drivers?",
        "Sharp and Kyocera downloads are linked from the customer support page; ask the branch for others."
@@ -4690,6 +4990,18 @@
      "heading": "Questions about Waterlogic",
      "items": [
       [
+       "Which Waterlogic equipment does Image 2000 place?",
+       "Waterlogic bottleless water, ice and sparkling water dispensers, installed free on trial. The specialist matches the model to the volume, finishing and software the office runs."
+      ],
+      [
+       "Where can I see Waterlogic equipment?",
+       "At any of the seven branches: Santa Clarita, Los Angeles, Orange County, the Inland Empire, Bakersfield, Fresno and Las Vegas. The nearest branch can also demonstrate on site."
+      ],
+      [
+       "How is Waterlogic equipment priced?",
+       "Lease, rent or buy, priced side by side with five leasing partners, with supplies and service on one agreement if the device comes under managed print."
+      ],
+      [
        "Where are the drivers?",
        "Sharp and Kyocera downloads are linked from the customer support page; ask the branch for others."
       ],
@@ -4775,6 +5087,18 @@
      "type": "faq",
      "heading": "Questions about Sharp NEC displays",
      "items": [
+      [
+       "Which Sharp NEC displays equipment does Image 2000 place?",
+       "Sharp NEC commercial displays and interactive boards for lobbies, classrooms, meeting rooms and signage. The specialist matches the model to the volume, finishing and software the office runs."
+      ],
+      [
+       "Where can I see Sharp NEC displays equipment?",
+       "At any of the seven branches: Santa Clarita, Los Angeles, Orange County, the Inland Empire, Bakersfield, Fresno and Las Vegas. The nearest branch can also demonstrate on site."
+      ],
+      [
+       "How is Sharp NEC displays equipment priced?",
+       "Lease, rent or buy, priced side by side with five leasing partners, with supplies and service on one agreement if the device comes under managed print."
+      ],
       [
        "Where are the drivers?",
        "Sharp and Kyocera downloads are linked from the customer support page; ask the branch for others."
@@ -4868,6 +5192,25 @@
        "Give them an opportunity to earn your business. If you don't, you're doing yourself a disservice.",
        "Robert O.",
        "Customer, image-2000.com"
+      ]
+     ]
+    },
+    {
+     "type": "faq",
+     "id": "faq",
+     "heading": "Industry questions",
+     "items": [
+      [
+       "Which industries does Image 2000 serve most?",
+       "Education, healthcare, legal, government and print production across California and Nevada, along with businesses of every kind."
+      ],
+      [
+       "My industry is not listed.",
+       "The industry pages show how the same services fit different workflows; the assessment adapts them to yours."
+      ],
+      [
+       "Do you have references in my industry?",
+       "Ask the nearest office. Case examples and customer comments are on the site, and a reference in your field can be arranged."
       ]
      ]
     },
@@ -7032,6 +7375,25 @@
      ]
     },
     {
+     "type": "faq",
+     "id": "faq",
+     "heading": "Questions about Image 2000",
+     "items": [
+      [
+       "When was Image 2000 founded?",
+       "In 1992, in the Santa Clarita Valley, where the company is still headquartered."
+      ],
+      [
+       "Where are the offices?",
+       "Seven: Santa Clarita, Los Angeles, Orange County, the Inland Empire, Bakersfield, Fresno and Las Vegas. Technicians are dispatched from the nearest one."
+      ],
+      [
+       "Which manufacturers does Image 2000 represent?",
+       "Eleven for print alone, Sharp, Kyocera, Toshiba, Lexmark, HP, Brother, KIP, Canon, Kodak Alaris, RISO and Formax, plus FP Mailing, Waterlogic, DocuWare, Square 9, PaperCut and Intermedia."
+      ]
+     ]
+    },
+    {
      "type": "cta",
      "heading": "Work here",
      "subhead": "Sales, service and administrative roles across seven branches.",
@@ -7136,6 +7498,25 @@
      "source": "Sources: image-2000.com (awards, why Image 2000), Sharp, Kyocera, PROs Elite, ENX Magazine Elite Dealers 2024, the Better Business Bureau."
     },
     {
+     "type": "faq",
+     "id": "faq",
+     "heading": "About the awards",
+     "items": [
+      [
+       "Who gives these awards?",
+       "The manufacturers Image 2000 represents and the industry press. Each award on this page names its source and year."
+      ],
+      [
+       "Why do dealer awards matter to a customer?",
+       "They are earned on service and retention numbers the manufacturer audits, not on sales volume alone, so they say something about how customers are treated after the sale."
+      ],
+      [
+       "Can I verify them?",
+       "Yes. Every award links to the manufacturer or publication that granted it."
+      ]
+     ]
+    },
+    {
      "type": "leadform",
      "alt": true,
      "id": "quote",
@@ -7178,6 +7559,25 @@
      ]
     },
     {
+     "type": "faq",
+     "id": "faq",
+     "heading": "About the community work",
+     "items": [
+      [
+       "Which organizations does Image 2000 support?",
+       "The ones named on this page, in the communities where the offices are. The list is current as of the last update shown."
+      ],
+      [
+       "Can my organization apply?",
+       "Contact the nearest office. Requests are considered locally, by the people who know the community."
+      ],
+      [
+       "Do employees take part?",
+       "Yes. Most of the work on this page is done by staff from the local office, on their own time and the company's."
+      ]
+     ]
+    },
+    {
      "type": "leadform",
      "alt": true,
      "id": "quote",
@@ -7216,6 +7616,25 @@
       [
        "Administration",
        "Branch administration and support."
+      ]
+     ]
+    },
+    {
+     "type": "faq",
+     "id": "faq",
+     "heading": "Working at Image 2000",
+     "items": [
+      [
+       "What roles does Image 2000 hire for?",
+       "Sales, field service technicians, IT engineers, customer care, delivery and administration, as openings arise across the seven offices."
+      ],
+      [
+       "Where would I work?",
+       "Any of the seven offices in California and Las Vegas, with field roles covering the customers nearest that office."
+      ],
+      [
+       "How do I apply?",
+       "Use the form on this page. A person from Image 2000 reads every application and replies."
       ]
      ]
     },
@@ -7308,6 +7727,25 @@
        "Drivers and manuals for Kyocera and Copystar devices.",
        "Kyocera downloads",
        "https://www.kyoceradocumentsolutions.com/support_product/index_en.html"
+      ]
+     ]
+    },
+    {
+     "type": "faq",
+     "id": "faq",
+     "heading": "Support questions",
+     "items": [
+      [
+       "How do I place a service call?",
+       "Use the service request form on this page or call the office that installed the device. Have the model and serial number ready."
+      ],
+      [
+       "How do I order toner or submit a meter read?",
+       "Through the supplies and meter forms on this page, or by phone to the nearest office."
+      ],
+      [
+       "What if my device is under a managed print agreement?",
+       "Supplies and service are included; use the same forms and the agreement is applied automatically."
       ]
      ]
     },
@@ -7464,6 +7902,25 @@
        "Las Vegas, NV 89118",
        "702-513-3864",
        "tel:7025133864"
+      ]
+     ]
+    },
+    {
+     "type": "faq",
+     "id": "faq",
+     "heading": "Before you write",
+     "items": [
+      [
+       "Which office should I contact?",
+       "The nearest of the seven. 800-481-2250 reaches all of them."
+      ],
+      [
+       "How do I request service, supplies or a meter read?",
+       "Existing customers use the customer support page or call the office. New customers start with the form here."
+      ],
+      [
+       "Who replies?",
+       "A person from the office, during business hours. The form is not an autoresponder."
       ]
      ]
     }

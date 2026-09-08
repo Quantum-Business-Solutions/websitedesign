@@ -1,6 +1,6 @@
 # The runbook
 
-> **Version 2.1 · 2026-09-08 · Owner: Shawn Peterson · Next review: 2026-10-08**
+> **Version 2.2 · 2026-09-08 · Owner: Shawn Peterson · Next review: 2026-10-08**
 > Version 2 folds in what Revolution, Kelly, Nexus, VanAusdall and Image 2000 taught us in one week. Section "What changed in version 2" at the bottom lists it; the steps below carry the changes inline.
 > Reviewed monthly, on the agenda in *Owner and cadence* at the bottom. If today is past the review
 > date, this document is unverified — read `process/qa-findings.md` for what tends to rot first.
@@ -459,3 +459,17 @@ The pulls, in order (about forty minutes with the MCP tools): sitemap index and 
 - The findings are ranked by what they cost, each with evidence, cost and fix, and each fix is either in the build or on a named day of the plan.
 - The redirect map covers every URL in the sitemap: rebuilt, merged, migrated (posts) or retired. Overrides for the money pages are written by hand; the rest is matched by slug.
 - The same report is re-run at 30, 60 and 90 days against the same baseline, with `seo_audit.py live` on the launched site.
+
+## The fifteen-minute path (2026-09-08, version 2.2)
+
+A new prospect goes from a name and a domain to a live hub in one sitting. Two scripts and one JSON per client carry it.
+
+1. `python3 scripts/newclient.py --slug <slug> --client "<Name>" --domain <domain> --repo ../<repo> --city-tag <NC> --cities "<City,City,ST>"` (two minutes). Writes `brands/<slug>.content.py` from the starter, `brands/<slug>.seo.json` from the starter, `brands/<slug>.build.json` (themes, roles, base URL, output folder), `brands/<slug>.types.json`, the client repo with `vercel.json` (noindex) and a README carrying the build command, then pulls the sitemap, fetches every URL and writes `brands/<slug>.audit.json`. The every-page audit exists before a word is written.
+2. Fill the facts in the content file from the client's site, call notes and awards (the slow part, and the part that must be true). Set `schema.short_name`, `title_city`, `cities`, `area_served`, `meta_tail`, `local`.
+3. The Semrush and live-result pulls into `seo.json` (INTAKE.md, the search baseline). About forty minutes with the MCP tools; skip on a first look and the hub still renders without the search sections.
+4. `python3 scripts/build.py <slug> --shots` (one minute). Content JSON, pages in three directions, hub, design system, search package, stale pages removed, the first direction scored, hub screenshots. Look at the screenshots.
+5. Create the GitHub repo, `git remote add origin`, then `python3 scripts/build.py <slug> --push`. Import the repo as a Vercel project in the dashboard (the API cannot link a repository). The hub is live at the base URL in `build.json`.
+
+Rebuilds are always `python3 scripts/build.py <slug> --push`. The long `preview.py` command is never retyped; `build.json` is the record. Kelly, Nexus and Image 2000 run this way now.
+
+Hub rule from the same day: the three directions are named twice on the hub, once as the cards (with the recommendation folded in below them when there is one) and once side by side. The every-page list is one row per page with three links. Nothing on the hub repeats a list.
