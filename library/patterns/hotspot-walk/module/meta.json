@@ -1,0 +1,10 @@
+{
+  "label": "Walk the building (hotspot map)",
+  "host_template_types": ["PAGE", "BLOG_POST", "BLOG_LISTING"],
+  "is_available_for_new_content": true,
+  "global": false,
+  "smart_type": "NOT_SMART",
+  "css_assets": [], "js_assets": [], "other_assets": [], "external_js": [],
+  "tags": ["revolution"],
+  "help_text": "An illustration with numbered hotspots. Each hotspot opens a finding card with a figure and a link. Hotspots marked 'before only' fade out when the visitor switches to the After view. Positions are percentages of the image width and height."
+}

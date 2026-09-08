@@ -1,0 +1,43 @@
+{#- Walk the building: illustration + numbered hotspots + finding card. All copy is real HTML in the
+    card list, so search and answer engines read every finding; the illustration is decoration. -#}
+{% set uid = name ~ '-' ~ module_id %}
+{% set spots = module.hotspots %}
+<section class="band band--{{ module.tone }} ro-walk" id="{{ uid }}">
+  <div class="wrap">
+    <div class="ro-walk__head">
+      {% if module.eyebrow %}<p class="band__eyebrow">{{ module.eyebrow }}</p>{% endif %}
+      {% if module.heading %}<h2 class="ro-walk__h2">{{ module.heading }}</h2>{% endif %}
+      {% if module.subtitle %}<div class="band__note ro-walk__sub">{{ module.subtitle }}</div>{% endif %}
+    </div>
+    <div class="ro-walk__stage" data-walk>
+      <div class="ro-walk__map">
+        {% if module.image.src %}<img class="ro-walk__img" src="{{ module.image.src }}" alt="{{ module.image.alt }}" loading="lazy" width="1600" height="900">{% endif %}
+        <div class="ro-walk__pins">
+          {% for h in spots %}
+          <button type="button" class="ro-walk__pin{% if h.state == 'before' %} ro-walk__pin--before{% endif %}{% if loop.first %} is-active{% endif %}" style="left:{{ h.x }}%;top:{{ h.y }}%;--d:{{ loop.index0 * 120 }}ms" data-pin="{{ loop.index0 }}" aria-controls="{{ uid }}-card-{{ loop.index }}" aria-expanded="{{ 'true' if loop.first else 'false' }}" aria-label="{{ h.place }}: {{ h.title }}">
+            <span class="ro-walk__ring" aria-hidden="true"></span><span class="ro-walk__num">{% if h.state == 'before' %}&times;{% else %}{{ loop.index }}{% endif %}</span>
+          </button>
+          {% endfor %}
+        </div>
+        {% if module.show_toggle %}
+        <div class="ro-walk__toggle" role="group" aria-label="Before or after">
+          <button type="button" class="ro-walk__tb is-on" data-state="before">{{ module.before_label }}</button>
+          <button type="button" class="ro-walk__tb" data-state="after">{{ module.after_label }}</button>
+        </div>
+        {% endif %}
+      </div>
+      <div class="ro-walk__cards">
+        {% for h in spots %}
+        <article class="card ro-walk__card{% if h.state == 'before' %} ro-walk__card--before{% endif %}{% if loop.first %} is-active{% endif %}" id="{{ uid }}-card-{{ loop.index }}" data-card="{{ loop.index0 }}">
+          <p class="ro-walk__place"><span class="ro-walk__badge">{% if h.state == 'before' %}&times;{% else %}{{ '%02d'|format(loop.index) }}{% endif %}</span>{{ h.place }}</p>
+          <h3 class="ro-walk__title">{{ h.title }}</h3>
+          <p class="ro-walk__copy">{{ h.copy }}</p>
+          {% if h.figure %}<p class="ro-walk__fig"><strong>{{ h.figure }}</strong>{% if h.figure_label %} <span>{{ h.figure_label }}</span>{% endif %}</p>{% endif %}
+          {% if h.to %}<a class="ro-walk__link" href="{{ h.to }}">{{ h.link_text or 'Learn more' }} <span aria-hidden="true">→</span></a>{% endif %}
+        </article>
+        {% endfor %}
+        <div class="ro-walk__nav" aria-hidden="true"><button type="button" class="ro-walk__arrow" data-step="-1" aria-label="Previous"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><span class="ro-walk__count" data-count>1 / {{ spots|length }}</span><button type="button" class="ro-walk__arrow" data-step="1" aria-label="Next"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+      </div>
+    </div>
+  </div>
+</section>

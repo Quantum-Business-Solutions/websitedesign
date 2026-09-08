@@ -50,3 +50,36 @@ no words, no logos, no labels, no icons, no symbols, no engravings on any face.
 The model produced 8 ring blocks rather than the 6 requested, and read "hexagonal ring" loosely.
 Composition is good regardless, but exact counts and arrangements aren't reliable — art-direct by
 choosing among generations rather than by tightening the count in the prompt.
+
+---
+
+## Isometric administration-building cutaway — hotspot walk plate
+
+- **model:** `nano_banana_pro` (Higgsfield; resolves to `nano_banana_2`)
+- **settings:** `aspect_ratio: "16:9"`, `count: 2`; then `upscale_image` (bytedance, 4k) → 4096×2294, saved at 2400 wide
+- **outcome:** 2/2 usable on the first run. Variant A (flat vector, polished) shipped; variant B (thin-line illustration) is a valid alternative for a warmer, editorial theme.
+- **used on:** Revolution Office, Home and Managed Print Services (`library/patterns/hotspot-walk/`)
+- **file:** `library/office-technology/scenes/isometric-admin-building-cutaway-2400.jpg`
+
+```
+Isometric cutaway illustration of one floor of a modern school administration building, seen from
+above at a 45 degree angle with the roof removed. Flat vector illustration style, clean geometry,
+soft matte shading, no outlines, no gradients banding. Palette: warm cream floors and walls
+(#F6F1E8), light oak desks, muted sage green and slate blue accents, warm amber (#E3A32B) used
+sparingly on a few objects like chairs and a rug. Rooms arranged left to right: a copier room with
+one large office multifunction printer; an open-plan office with eight desks where two desks each
+have a small desktop printer; a supply closet with shelves stacked with small toner boxes; a front
+office reception counter with a tray of papers; a small IT closet with a server rack and blinking
+lights; a business office with a desk, a monitor and filing cabinets; and along the far side a
+window wall looking out at a second smaller building across a courtyard with trees. Four simple
+stylized people with no facial detail. Absolutely no text, no letters, no labels, no numbers, no
+logos, no signage anywhere in the image. Even soft daylight with subtle long shadows. Wide
+composition centered on a plain cream background with generous empty margins around the building.
+```
+
+### What makes it work
+
+- **Rooms named in reading order** ("arranged left to right") so the markers have somewhere to land and the eye follows the sequence.
+- **The client's palette by hex**, which keeps the plate inside the theme without a re-colour pass.
+- **"No text" stated three ways.** The model still wanted signage on the copier room door in one early variant of a similar prompt.
+- **A window onto a second building** gives the "every location" marker a place to sit without a second illustration.

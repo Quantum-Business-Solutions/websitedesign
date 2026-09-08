@@ -1,0 +1,24 @@
+[
+  {"id": "tone", "name": "tone", "label": "Band tone", "type": "choice", "display": "select", "default": "surface", "choices": [["base", "Base"], ["surface", "Surface (tinted)"], ["dark", "Dark"]]},
+  {"id": "eyebrow", "name": "eyebrow", "label": "Eyebrow", "type": "text", "default": "Walk The Building"},
+  {"id": "heading", "name": "heading", "label": "Heading", "type": "text", "default": "Seven places the money hides"},
+  {"id": "subtitle", "name": "subtitle", "label": "Subtitle", "type": "richtext", "default": "<p>Every assessment walks every building. Tap a marker to see what we find there, and what it usually costs.</p>"},
+  {"id": "image", "name": "image", "label": "Illustration", "type": "image", "responsive": false, "resizable": false, "default": {"src": "", "alt": "Isometric cutaway of an administration building"}},
+  {"id": "show_toggle", "name": "show_toggle", "label": "Show the Before / After toggle", "type": "boolean", "default": true},
+  {"id": "before_label", "name": "before_label", "label": "Before label", "type": "text", "default": "Before: the fleet nobody planned"},
+  {"id": "after_label", "name": "after_label", "label": "After label", "type": "text", "default": "After: the fleet the data designs"},
+  {"id": "hotspots", "name": "hotspots", "label": "Hotspots", "type": "group", "occurrence": {"min": 1, "max": 16, "default": 7}, "children": [
+    {"id": "x", "name": "x", "label": "Left (% of image width)", "type": "number", "default": 50, "min": 0, "max": 100, "step": 0.5},
+    {"id": "y", "name": "y", "label": "Top (% of image height)", "type": "number", "default": 50, "min": 0, "max": 100, "step": 0.5},
+    {"id": "place", "name": "place", "label": "Place (short label)", "type": "text", "default": ""},
+    {"id": "title", "name": "title", "label": "Finding", "type": "text", "default": ""},
+    {"id": "copy", "name": "copy", "label": "What we find", "type": "text", "default": ""},
+    {"id": "figure", "name": "figure", "label": "Figure", "type": "text", "default": ""},
+    {"id": "figure_label", "name": "figure_label", "label": "Figure label", "type": "text", "default": ""},
+    {"id": "to", "name": "to", "label": "Link URL", "type": "text", "default": ""},
+    {"id": "link_text", "name": "link_text", "label": "Link text", "type": "text", "default": "Learn more"},
+    {"id": "state", "name": "state", "label": "Shown", "type": "choice", "display": "select", "default": "both", "choices": [["both", "Before and After"], ["before", "Before only (a device the design removes)"]]}
+  ], "default": [
+    {"x": 14, "y": 52, "place": "Copier room", "title": "One device doing the work of three", "copy": "The departmental copier runs at a fraction of its rated volume while desktop printers around it do the real work at ten times the page cost.", "figure": "192 → 158", "figure_label": "devices, one school", "to": "/solutions/fleet-optimization", "link_text": "Fleet optimization", "state": "both"}
+  ]}
+]
