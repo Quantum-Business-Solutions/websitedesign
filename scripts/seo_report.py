@@ -75,6 +75,25 @@ def render(basic: dict, deep: dict, client: str, domain: str, accent: str, as_of
         chips = "".join(f'<span class="chip" style="--sev:{SEVERITY[k][1]}">{counts[k]} {SEVERITY[k][0].lower()}</span>' for k in ("critical", "high", "medium", "low") if counts.get(k))
         top = f'<div class="chips">{chips}</div><div class="findings">{"".join(cards)}</div>'
     tiles = "".join(f'<div class="stile"><b>{E(v)}</b><span>{E(l)}</span></div>' for v, l in stats)
+    # ---------------- why beaten (side by side) and highest leverage
+    wb = deep.get("why_beaten") or {}
+    wb_html = ""
+    if wb.get("rows"):
+        def _cell(c, i):
+            if i == 0:
+                return f"<th scope=\"row\">{E(c)}</th>"
+            low = str(c).lower()
+            cls = "bad" if low.startswith(("none", "absent", "no")) and not low.startswith("no bot") else ("ok" if low.startswith("yes") else "")
+            return f'<td class="{cls}">{E(c)}</td>'
+        th = "".join(f"<th scope=\"col\">{E(h)}</th>" for h in wb.get("columns", []))
+        tr = "".join("<tr>" + "".join(_cell(c, i) for i, c in enumerate(r)) + "</tr>" for r in wb["rows"])
+        wb_html = f'<div class="tblwrap" tabindex="0"><table class="tbl cmp"><thead><tr>{th}</tr></thead><tbody>{tr}</tbody></table></div>' + (f'<div class="verdict">{E(wb["verdict"])}</div>' if wb.get("verdict") else "")
+    lv = deep.get("leverage") or {}
+    lv_html = ""
+    if lv.get("items"):
+        lv_html = '<div class="lev">' + "".join(
+            f'<div class="levi"><div class="n">{i + 1}</div><div><h3>{E(m.get("move"))}</h3><p class="meta"><span>{E(m.get("effort"))}</span><span class="tag">{"In the build" if m.get("in") == "build" else "In the 90-day plan"}</span></p><p>{E(m.get("payoff"))}</p></div></div>'
+            for i, m in enumerate(lv["items"])) + "</div>"
     # ---------------- competitors
     comp_rows = [[E(c.get("domain")), fmt(c.get("traffic")), fmt(c.get("keywords")), fmt(c.get("authority"))] for c in (basic.get("competitors") or [])]
     comp = table(["Domain", "Organic visits a month", "Keywords", "Authority Score"], comp_rows)
@@ -167,12 +186,17 @@ def render(basic: dict, deep: dict, client: str, domain: str, accent: str, as_of
 .ok{{color:#067647;font-weight:700}}.bad{{color:#b42318;font-weight:700}}.na{{color:var(--muted)}}.vol{{color:var(--muted);font-size:13px}}
 .qgrid{{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}}.qcol h3{{margin-top:8px}}ul{{padding-left:18px}}li{{margin:6px 0}}
 .steps{{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}}.step{{background:#fff;border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:12px;padding:16px 18px}}.step .when{{font-weight:700;color:var(--accent);margin-bottom:6px}}.step p{{margin:0;font-size:14.5px}}
+.tbl.cmp th[scope=row]{{text-align:left;font-weight:600;background:#fff}}.tbl.cmp td.bad{{color:#b3261e;font-weight:600}}.tbl.cmp td.ok{{color:#1b7f4b;font-weight:600}}.tbl.cmp td:nth-child(2){{background:color-mix(in srgb,var(--accent) 6%,#fff)}}
+.verdict{{margin-top:22px;padding:22px 26px;background:var(--navy,#0f1e33);color:#fff;border-radius:12px;font-size:18px;line-height:1.5}}
+.lev{{display:grid;gap:14px}}.levi{{display:grid;grid-template-columns:56px 1fr;gap:16px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 22px;box-shadow:0 10px 30px rgba(0,0,0,.05)}}.levi .n{{font-size:34px;font-weight:800;color:var(--accent);line-height:1}}.levi h3{{margin:6px 0 6px;font-size:20px}}.levi .meta{{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 8px;color:var(--muted);font-size:14px}}.levi .tag{{background:color-mix(in srgb,var(--accent) 12%,#fff);color:var(--accent);border-radius:999px;padding:2px 10px;font-weight:600}}.levi p{{margin:0}}
 .note{{background:#fff;border-left:4px solid var(--accent);padding:12px 18px;color:var(--muted);margin:24px 0 0}}
 @media(max-width:900px){{.stiles,.steps,.qgrid,.finding dl{{grid-template-columns:1fr 1fr}}}}@media(max-width:600px){{.stiles,.steps,.qgrid,.finding dl{{grid-template-columns:1fr}}.finding{{grid-template-columns:40px 1fr}}}}</style></head>
 <body><div class="top"><a href="{E(hub_href)}">&larr; Back to the three directions</a><span class="eyebrow" style="margin:0">Quantum Business Solutions for {E(client)}</span></div>
 <div class="hero"><div class="wrap"><p class="eyebrow">Search and AI answers, measured {E(as_of)}</p><h1>Where {E(domain)} stands, and what it is worth to fix</h1>
 <p class="lead">Every number here came from a Semrush or Firecrawl pull. Where a pull was not made, the table says so. This is the baseline the engagement is measured against at 30, 60 and 90 days.</p><div class="stiles">{tiles}</div></div></div>
 {section("findings", "Top findings", "Ranked by what they cost, with the fix", top, "Each finding carries its evidence, what it costs today, and what the build or the 90-day plan does about it.")}
+{section("why", "Why the competitors are winning", "The same pages, side by side", wb_html, wb.get("intro", ""))}
+{section("leverage", "Highest leverage moves", "Five moves, in the order we would make them", lv_html, lv.get("intro", ""))}
 {section("today", "Where the traffic comes from", "Today, in numbers", "<ul>" + tech + "</ul>" if tech else "")}
 {section("competitors", "Competitors", "Who earns the visits you should be earning", comp, "Indiana office-technology and managed-IT providers competing for the same terms.")}
 {section("opportunities", "Keyword opportunities", "The terms worth a page each", opp, "Volume and difficulty from Semrush. Where a competitor ranks and the client does not, the gap is a missing page, not missing authority.")}

@@ -1385,5 +1385,112 @@
    "impact": "No crawl barrier to AI visibility, so the gap is content and authority, not access.",
    "action": "Keep the policy, add an llms.txt and clean the 324 query-string blog URLs from the sitemap."
   }
- ]
+ ],
+ "why_beaten": {
+  "intro": "The same three money pages, side by side. Assistants and Google pick the entity with the most corroborating evidence. Today that is Leap for managed IT and Taylored for depth.",
+  "columns": [
+   "Signal",
+   "Van Ausdall & Farrar",
+   "Leap Managed IT",
+   "Taylored Systems"
+  ],
+  "rows": [
+   [
+    "Organization and LocalBusiness schema",
+    "yes, every page",
+    "yes",
+    "yes"
+   ],
+   [
+    "FAQPage schema",
+    "2 of 10 pages (managed IT, copiers)",
+    "none",
+    "none"
+   ],
+   [
+    "Service or ITService schema",
+    "2 of 10 pages (copiers, managed print)",
+    "none",
+    "yes: ITService, ProfessionalService, Offer, OfferCatalog"
+   ],
+   [
+    "Review or AggregateRating schema",
+    "none",
+    "yes: AggregateRating plus Review",
+    "yes: AggregateRating"
+   ],
+   [
+    "Words on the managed IT page",
+    "1,078",
+    "806",
+    "3,524"
+   ],
+   [
+    "Suburb city pages",
+    "none (Indianapolis, Fort Wayne, Evansville only)",
+    "4, earning 34 percent of all visits",
+    "11 /location-{city}/ pages"
+   ],
+   [
+    "Top referring domains",
+    "Indeed, Bing, Crunchbase, RocketReach (job boards and data sites)",
+    "vendors, local press",
+    "1,147 referring domains, vendor and chamber links"
+   ],
+   [
+    "Named for best managed IT services Indianapolis",
+    "absent from top 10",
+    "number 2",
+    "not in top 10"
+   ],
+   [
+    "Named for the largest office technology provider in Indiana",
+    "absent, despite the claim on the home page",
+    "no",
+    "no"
+   ],
+   [
+    "AI crawlers allowed (GPTBot, ClaudeBot, Perplexity)",
+    "yes, all four",
+    "yes",
+    "yes"
+   ]
+  ],
+  "verdict": "VAF tells engines who it is. Competitors tell engines why to pick them: ratings, more words per service, and a page for every suburb. The two VAF pages that carry FAQPage schema are the two that rank, so the pattern works. It has been applied to two pages out of ten."
+ },
+ "leverage": {
+  "intro": "The five moves with the biggest return for the least effort, in the order we would do them. Each one is either in the build or in the first 30 days of the plan.",
+  "items": [
+   {
+    "move": "FAQPage plus Service schema on all twelve service pages",
+    "effort": "Build, week one",
+    "payoff": "The two pages that have it are the only VAF pages ranking for non-branded terms (number 4 phones, number 6 managed print). Extending it to managed IT, cybersecurity and document services puts VAF in the answer set for 'what is managed IT services' (1,000 a month) and 'how much does managed IT cost' (720).",
+    "in": "build"
+   },
+   {
+    "move": "A Google review program and Review schema on the pages",
+    "effort": "30 days, sales and service teams",
+    "payoff": "'Best managed IT Indianapolis' returns ten results and VAF is not one. Both competitors carry AggregateRating. Ratings are the signal that gets a company into the 'best' list. Today the brand reviews query returns Indeed and Glassdoor employer ratings in 8 of 10 spots.",
+    "in": "plan"
+   },
+   {
+    "move": "Four suburb pages: Carmel, Fishers, Noblesville, Greenwood",
+    "effort": "Build, four pages",
+    "payoff": "Leap earns 34 percent of its traffic from four city pages. 'Managed service provider Carmel Indiana' is 720 searches a month at difficulty 13. The location page template in the build already carries LocalBusiness schema.",
+    "in": "build"
+   },
+   {
+    "move": "An entity facts page that states the largest-provider claim with evidence",
+    "effort": "Build, one page",
+    "payoff": "Assistants answer 'who is the largest office technology provider in Indiana' with Braden and directories. The claim is on VAF's home page but nowhere an engine can cite: founding year, headquarters size, four pillars, three offices, partner list, NPS and SOC 2 on one page with Organization schema.",
+    "in": "build"
+   },
+   {
+    "move": "Swap job-board backlinks for vendor and chamber links",
+    "effort": "90 days, marketing",
+    "payoff": "Authority Score 21 against 24 and 27 is level, but 9 of the top 15 referring domains are job boards. Partner directories (Canon, Ricoh, Kyocera, Mitel, Fortinet), Indy Chamber, the Indiana Business Journal and BBB are the links competitors have and VAF does not.",
+    "in": "plan"
+   }
+  ]
+ }
 }
