@@ -1131,6 +1131,36 @@
        "hq": true,
        "label_dx": -80,
        "label_dy": -12
+      },
+      {
+       "name": "Raleigh",
+       "lon": -78.638,
+       "lat": 35.779,
+       "href": "location.html",
+       "sub": "Served on site from Morrisville",
+       "link": "How we cover it",
+       "label_dx": 10,
+       "label_dy": 14
+      },
+      {
+       "name": "Durham",
+       "lon": -78.898,
+       "lat": 35.994,
+       "href": "location.html",
+       "sub": "Served on site from Morrisville",
+       "link": "How we cover it",
+       "label_dx": 8,
+       "label_dy": -10
+      },
+      {
+       "name": "Chapel Hill",
+       "lon": -79.056,
+       "lat": 35.913,
+       "href": "location.html",
+       "sub": "Served on site from Morrisville",
+       "link": "How we cover it",
+       "label_dx": -84,
+       "label_dy": 16
       }
      ]
     },

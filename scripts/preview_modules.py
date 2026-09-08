@@ -486,6 +486,7 @@ html.pv-js [data-dir="showcase"] .pv-lh .fcard.a{animation:pv-up .8s cubic-bezie
 .pv-story .step ul{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:8px}
 .pv-story .step li{display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.5}.pv-story .step li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--q-gold);flex:none;margin-top:8px}
 @media(max-width:900px){.pv-story{grid-template-columns:1fr;gap:18px}.pv-story .stage{top:64px;height:42vh;z-index:3}.pv-story .steps{gap:36px;padding:8px 0}.pv-story .step{color:var(--fg)}}
+@media print{html.pv-js .pv-rv{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){html.pv-js .pv-rv{opacity:1;transform:none}.pv-stage::before{animation:none}.pv-fleet .dev .img img{animation:none}html.pv-js [data-dir="showcase"] .pv-lh .q-container > div:first-child > *,html.pv-js [data-dir="showcase"] .pv-lh .hero3d,html.pv-js [data-dir="showcase"] .pv-lh .fcard.a{animation:none}.pv-story .step{color:var(--fg)}}
 """
 EXTRA_CSS2 = EXTRA_CSS2 + DEPTH_CSS
@@ -518,7 +519,10 @@ if(!rm&&'IntersectionObserver' in window){var first=document.querySelector('main
 var sel='main .q-card,main .pv-stat,main .pv-svc a,main .pv-seal .item,main .pv-flow .node,main .pv-fleet .dev,main .pv-hot-list li,main .pv-wheel,main .pv-ba,main .pv-3d,main .pv-cmp,main .pv-story .stage,main .pv-map-svg,main .pv-tl2 li,main .pv-post,main .pv-quote,main .pv-cs,main .pv-metric,main section .q-h2,main section .q-lead,main .pv-proof b';
 var els=[].slice.call(document.querySelectorAll(sel)).filter(function(e){return !(first&&first.contains(e))&&!e.closest('.pv-lh')});
 els.forEach(function(e){var p=e.parentElement;p.__pvN=p.__pvN||0;e.style.setProperty('--i',Math.min(p.__pvN,8));p.__pvN++;e.classList.add('pv-rv')});
-var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting||x.boundingClientRect.top<0){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting||x.boundingClientRect.top<0){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:0,rootMargin:'0px 0px 35% 0px'});
+/* safety: nothing stays hidden. A fast scroll, a hash jump or a print reveals everything at or above the fold */
+addEventListener('scroll',function(){var h=innerHeight*1.4;els.forEach(function(e){if(!e.classList.contains('in')&&e.getBoundingClientRect().top<h)e.classList.add('in')})},{passive:true});
+setTimeout(function(){els.forEach(function(e){if(e.getBoundingClientRect().top<innerHeight*1.4)e.classList.add('in')})},1200);
 addEventListener('hashchange',function(){els.forEach(function(e){if(e.getBoundingClientRect().top<innerHeight)e.classList.add('in')})});
 els.forEach(function(e){io.observe(e)});setTimeout(function(){els.forEach(function(e){var r=e.getBoundingClientRect();if(r.top<innerHeight)e.classList.add('in')})},900)}
 /* specular highlight follows the pointer on tilting cards */

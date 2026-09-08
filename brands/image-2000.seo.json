@@ -1,0 +1,1542 @@
+{
+ "measured": "8 September 2026",
+ "hero": {
+  "heading": "Where image-2000.com stands, and what it is worth to fix",
+  "intro": "Every number here came from a Semrush or Firecrawl pull or from the live HTML of the site. Where a pull was not made, the table says so. This is the baseline the engagement is measured against at 30, 60 and 90 days.",
+  "tiles": [
+   [
+    "103",
+    "organic keywords, about 88 percent of visits from the brand name"
+   ],
+   [
+    "492",
+    "organic visits a month; 465 of them land on the home page"
+   ],
+   [
+    "0",
+    "top-10 results for copier lease santa clarita, the headquarters market, or any of the seven buyer queries"
+   ],
+   [
+    "19",
+    "Authority Score, against C3 Tech 22, Advanced Office 21, Iotec 14, HBM 7"
+   ]
+  ]
+ },
+ "findings": [
+  {
+   "severity": "Critical",
+   "title": "The home page is the site, and the name is the traffic",
+   "evidence": "465 of 492 monthly visits land on the home page (89 percent on the https version, 5 percent on an http duplicate). image 2000, image2000, images 2000 and 2000 image are about 88 percent of visits. The remaining 343 product pages earn 21 visits between them, all on one RISO page.",
+   "cost": "Every new customer has to arrive already knowing the name. Search and AI assistants have nothing to send a stranger to in seven markets.",
+   "fix": "Forty-three pages, each built around one thing a buyer asks, with California or the branch city in the title, a FAQ marked up on every page, and seven location pages. In the build."
+  },
+  {
+   "severity": "Critical",
+   "title": "Absent from every buyer query in all seven markets",
+   "evidence": "copier lease santa clarita: HBM is number 1 with a Santa Clarita page and the rest of the result is filler pages, so the term is open. best copier company los angeles: Iotec, Yelp, HBM, Advanced Office, FlexTG. managed print services los angeles and orange county: Orange County Copiers and Printers, C3 Tech, Office1, Iotec, MBS Works. kyocera copier dealer orange county: Kyocera's locator, Advanced Office, Compare Business Systems, ABD. Image 2000 is in none of them.",
+   "cost": "The Kyocera Platinum Partner and the twelfth largest Sharp dealer in the country is invisible where the dealer question is asked, in Los Angeles, Orange County and its own headquarters city.",
+   "fix": "A location page per branch with LocalBusiness schema, brand pages that carry the awards with the city, and Service schema on every service page. In the build; directory profiles in the first 30 days."
+  },
+  {
+   "severity": "High",
+   "title": "No Organization, LocalBusiness or FAQPage schema anywhere; Product schema on 343 store pages",
+   "evidence": "Every page carries two Wix WebSite blocks; the 343 store pages add Wix's Product and Offer markup. No Organization record, no address, no phone, no sameAs, no LocalBusiness for any of seven branches, no FAQPage, no Service on the service pages, no og:image. C3 Tech's Orange County managed print page carries FAQPage, LocalBusiness and GeoCoordinates and scores 89 of 100 on the same checks.",
+   "cost": "An answer engine cannot tie Image 2000 to Valencia, Los Angeles, Irvine, Ontario, Bakersfield, Fresno or Las Vegas, cannot list what it sells, and has no question-and-answer text to lift.",
+   "fix": "Organization with legalName, foundingDate 1992, sameAs and the headquarters address on every page; a LocalBusiness per branch; Service schema on every service, industry and brand page; FAQPage on all 43. In the build."
+  },
+  {
+   "severity": "High",
+   "title": "The awards are invisible where the dealer question is asked",
+   "evidence": "Kyocera FY26 Platinum Partner, Sharp Hyakuman Kai Elite four years running, PROs Elite every year since 2016, ENX Elite Dealer seven years. /kyocera, /sharp and /copystar carry none of it with a city or in schema; /copystar ranks 12 for copystar (170 a month) and that is the only brand term in the top 20. For kyocera copier dealer orange county the result is Kyocera's locator, Advanced Office, Compare Business Systems and ABD Office Solutions.",
+   "cost": "Buyers who already want a Kyocera or a Sharp are sent to competing dealers or to the manufacturer.",
+   "fix": "Thirteen brand pages that state the dealer relationship and the award with its year, the branch cities, Service schema and a FAQ; the awards page with sources; Kyocera, Sharp and RISO dealer-locator listings in the plan."
+  },
+  {
+   "severity": "High",
+   "title": "The name resolves to a Canon printer",
+   "evidence": "For image 2000 copiers reviews, positions 6 and 9 are reviews of the Canon imagePROGRAF PRO-2000. Semrush lists the site's other rankings as image quest california, image watches inc california (590 a month), image microsystems and 2xl imaging. The Organization schema that would settle the question does not exist.",
+   "cost": "An assistant asked about Image 2000 in Southern California has nothing that ties the name to a copier dealer in Valencia, so it answers with a printer or another company.",
+   "fix": "Organization schema with legalName Image 2000, Inc., foundingDate, the Valencia address, phone and sameAs to LinkedIn, Facebook, Instagram, BBB and Yelp; Image 2000 plus California or the branch city in every title. In the build."
+  },
+  {
+   "severity": "High",
+   "title": "Managed IT is a page, not a presence",
+   "evidence": "managed it services los angeles is 1,900 searches a month and managed it services santa clarita 320. /managed-it (and a /copy-of-managed-it duplicate) is absent from the Santa Clarita result, which is FTI Services, Datalink Networks, Digital Uppercut, Expertise.com's list of eight, JNT TEK, Clutch's Los Angeles list and CMIT Santa Clarita.",
+   "cost": "The highest-volume service term in the portfolio goes entirely to IT-only competitors, several of them on the lists assistants read.",
+   "fix": "The managed IT page titled for Santa Clarita and Los Angeles with Service schema and a FAQ, in the build; Expertise.com, Clutch and Cloudtango profiles in the 90-day plan."
+  },
+  {
+   "severity": "Medium",
+   "title": "Eighty-six percent of the sitemap is a store that earns one page",
+   "evidence": "343 of 399 URLs are Wix store product pages. One earns visits: the RZ1090 RISO at 27 keywords and 21 visits a month (risograph printer for sale, number 8 of 480). The KIP 650/660 page is number 2 for kip 660 (70). The rest carry no city, no schema and a catalogue paragraph, and the store also lists itself at both /shop and /shop-1.",
+   "cost": "Crawl budget on 340 near-identical pages, and the two products that do rank sit inside a catalogue rather than on a page built for a buyer.",
+   "fix": "The store folds into thirteen brand pages and the catalogue PDFs, with a permanent redirect from every product URL; the RISO and KIP products keep pages of their own. The redirect map is in the download."
+  },
+  {
+   "severity": "Medium",
+   "title": "Reviews exist and none of them reach a buyer",
+   "evidence": "Yelp 3.7 from 36 reviews leads the brand query; Facebook 4.0 from 4; BBB A+ accredited. No Google Business Profile appears for any of the seven branches. birdeye.com links to the site, so reviews are being collected on a platform, but none surface in the result or on the site.",
+   "cost": "A prospect checking the name sees a 3.7 on Yelp and a Canon printer; the competitors on the Yelp and Clutch lists show 4.3 to 4.7 with hundreds of reviews.",
+   "fix": "Claim and complete the Google Business Profile for all seven branches, route the Birdeye requests to Google, show real reviews on the location pages, and add Review schema only when they exist."
+  },
+  {
+   "severity": "Medium",
+   "title": "Duplicate and leftover URLs Wix generated",
+   "evidence": "copy-of-holiday-2021-1, copy-of-managed-it, jobappdonotuse, projects-3, shop and shop-1, members, shared-gallery, file-share, body-temperature-scanner (a 2020 page still ranking at 35), three person pages named -more-about, and tech-san-diego for a market the site does not otherwise name.",
+   "cost": "A crawler sees a working draft indexed under the Image 2000 name.",
+   "fix": "Retire each with a permanent redirect to the nearest real page. In the redirect map."
+  },
+  {
+   "severity": "Medium",
+   "title": "The home page title is HOME and the H1 is a shout",
+   "evidence": "Title HOME | Image 2000 (17 characters). H1 SOUTHERN CALIFORNIA'S #1 DEALER FOR ALL YOUR OFFICE SOLUTIONS, an unsourced superlative in capitals. Meta description names no city. No share image. The page carries 94 percent of the traffic.",
+   "cost": "The strongest page on the site does not say what Image 2000 sells or where, and makes a claim an engine cannot verify.",
+   "fix": "Retitled to name copiers, managed print and IT with Southern California; an H1 with the audited proof (PROs Elite every year since 2016); a 150-character description; a branded share image; a FAQ. In the build."
+  },
+  {
+   "severity": "Medium",
+   "title": "RISO and wide format already rank nationally, from catalogue entries",
+   "evidence": "risograph printer for sale number 8 (480), riso printer for sale 8 (390), riso machine for sale 9, kip 660 number 2 (70). risograph is 9,900 searches a month, riso printer 1,900, risograph printer 1,600. For riso printer dealer los angeles the result is RISO Studio Arts (the official Los Angeles distributor), Print Shop LA and WiZiX (Northern California); Image 2000 is absent.",
+   "cost": "The two products with national pull sit in a store template with no dealer story, no city and no FAQ.",
+   "fix": "RISO and KIP brand pages with the dealer relationship, the Los Angeles branches, the models, and a FAQ answering how much a risograph costs and where to see one. In the build."
+  },
+  {
+   "severity": "Low",
+   "title": "Water and cloud phones have no local page",
+   "evidence": "bottleless water cooler for office is 480 searches a month and ucaas providers 1,300. For bottleless water cooler service los angeles the result is Aqualume, Culligan Quench, EcoWater, Cintas and Culligan; the Waterlogic dealer is absent. /waterlogic and /ucaas carry no city and no schema.",
+   "cost": "Two service lines that competitors sell on price alone have no page that says Image 2000 sells them in Los Angeles.",
+   "fix": "The water and UCaaS service pages with the branch cities, Service schema and a FAQ, in the build."
+  },
+  {
+   "severity": "Low",
+   "title": "Robots, sitemap and llms.txt are healthy",
+   "evidence": "Wix serves a robots.txt that allows all agents, blocks lightbox query strings and PetalBot, a sitemap index with four sitemaps (pages, products, posts, categories), and an llms.txt. GPTBot, ClaudeBot, PerplexityBot and Google-Extended are not blocked.",
+   "cost": "No crawl barrier, so the gap is content, schema and authority, not access.",
+   "fix": "Keep the policy; regenerate llms.txt from the new site at launch; drop the store and leftover URLs from the sitemap."
+  }
+ ],
+ "compare": {
+  "columns": [
+   "Image 2000",
+   "C3 Tech (Orange County)",
+   "Iotec Digital (Los Angeles)",
+   "HBM (Santa Clarita)"
+  ],
+  "intro": "The managed print or copier money page at Image 2000 and at the three dealers that hold the Los Angeles, Orange County and Santa Clarita results.",
+  "rows": [
+   [
+    "Organization or LocalBusiness schema",
+    "none; two Wix WebSite blocks",
+    "yes: LocalBusiness with GeoCoordinates and City",
+    "none",
+    "none"
+   ],
+   [
+    "FAQPage schema",
+    "none of 399 pages",
+    "yes",
+    "none",
+    "none"
+   ],
+   [
+    "Service or Product schema",
+    "Product and Offer on the store pages only; none on the service pages",
+    "none",
+    "none",
+    "none"
+   ],
+   [
+    "Review or AggregateRating schema",
+    "none",
+    "none",
+    "none",
+    "none"
+   ],
+   [
+    "Words on the money page",
+    "371 (home)",
+    "1,366",
+    "828",
+    "1,737"
+   ],
+   [
+    "City in the title",
+    "no: HOME | Image 2000",
+    "yes: Orange County",
+    "yes: Los Angeles",
+    "yes: Santa Clarita"
+   ],
+   [
+    "Readiness score on the sixteen checks",
+    "50 average",
+    "89",
+    "59",
+    "50"
+   ],
+   [
+    "Named for copier lease santa clarita",
+    "absent",
+    "absent",
+    "absent",
+    "number 1"
+   ],
+   [
+    "Named for managed print services orange county",
+    "absent",
+    "number 1",
+    "absent",
+    "absent"
+   ],
+   [
+    "Organic visits a month",
+    "492",
+    "570",
+    "2,694",
+    "18"
+   ],
+   [
+    "Authority Score and referring domains",
+    "19 and 269",
+    "22 and 382",
+    "14 and 413",
+    "7 and 166"
+   ]
+  ],
+  "verdict": "Image 2000 has the awards, the seven branches and an authority score level with the field. What it lacks is pages: a Wix home page carries 94 percent of the traffic and a 343-page store carries the rest. HBM wins Santa Clarita with one page; C3 Tech wins Orange County managed print with a FAQ and a LocalBusiness record. The gap is structure, not links."
+ },
+ "moves": [
+  {
+   "title": "A page for each of the seven branches, Valencia first",
+   "when": "Build, seven pages",
+   "where": "In the build",
+   "body": "copier lease santa clarita returns HBM and filler; nothing from the dealer headquartered there since 1992. Each location page carries the address, hours, a LocalBusiness record, the services that branch delivers and a local FAQ. The Irvine, Lakewood, Bakersfield, Fresno and Las Vegas pages redirect to their branch page."
+  },
+  {
+   "title": "Brand pages that carry the awards where the dealer question is asked",
+   "when": "Build, thirteen pages",
+   "where": "In the build",
+   "body": "Kyocera Platinum, Sharp Hyakuman Kai, PROs Elite and ENX Elite are on the site and nowhere an engine can match to kyocera dealer orange county. Thirteen brand pages state the relationship, the award and the year, name the branch cities, and carry Service schema and a FAQ; the RISO and KIP pages keep the two rankings the store already earns."
+  },
+  {
+   "title": "Make the entity unambiguous",
+   "when": "Build and day one",
+   "where": "In the build",
+   "body": "The brand result contains a Canon printer. Organization schema with legalName, foundingDate 1992, address, phone and sameAs to LinkedIn, Facebook, Instagram, BBB and Yelp; seven LocalBusiness records; Image 2000 with California or the branch city in every title."
+  },
+  {
+   "title": "A Google Business Profile for every branch, fed by the reviews already collected",
+   "when": "30 days, service and sales teams",
+   "where": "In the 90-day plan",
+   "body": "Yelp 3.7 leads the brand result and no Google profile appears. Claim the seven profiles, point the Birdeye requests at Google, show the real reviews on the location pages, and add Review schema when they exist."
+  },
+  {
+   "title": "Fold the store into the brand pages, retire the leftovers, take the managed IT term",
+   "when": "Build, then days 30 to 90",
+   "where": "In the build",
+   "body": "343 product URLs redirect to thirteen brand pages and the catalogues; fourteen leftover URLs redirect to the nearest page. The managed IT page is titled for Santa Clarita and Los Angeles, and the Expertise.com, Clutch and Cloudtango profiles put Image 2000 on the lists that hold the 1,900-a-month term."
+  }
+ ],
+ "blog": {
+  "heading": "Two posts, and a store that took the blog's place",
+  "intro": "The posts sitemap holds two entries. The store sitemap holds 343.",
+  "tiles": [
+   [
+    "2",
+    "posts in the sitemap"
+   ],
+   [
+    "343",
+    "store product pages in the sitemap"
+   ],
+   [
+    "1",
+    "product page that earns visits (the RZ1090 RISO, 21 a month)"
+   ],
+   [
+    "0",
+    "pages that answer a question a buyer types"
+   ]
+  ],
+  "found": [
+   "There is no publishing cadence to protect. The two posts are the whole archive.",
+   "The store did the blog's job by accident: the RISO product page earns the site's only non-brand rankings, because it is the only page that names a product a buyer searches for.",
+   "Question terms with volume and no home: how much does it cost to lease a copy machine (260), is it better to buy or lease a copier (110), what is managed print services (320), what is ucaas (720)."
+  ],
+  "do": [
+   [
+    "Build",
+    "The copier lease-versus-buy and managed print cost guides on real URLs with BlogPosting schema, a named author and a FAQ."
+   ],
+   [
+    "Build",
+    "The RISO and KIP brand pages answer what a risograph costs and where to see one, so the two rankings the store earns move to pages built for the buyer."
+   ],
+   [
+    "90 days",
+    "Two guides a month against the question keywords, each answering in the first sentence, filed under the service line they support."
+   ]
+  ]
+ },
+ "entity": {
+  "heading": "What connects the company across the web",
+  "intro": "Answer engines corroborate a company across the web before they name it. Image 2000's profiles exist and are active; the site connects five of them from the footer and none in schema, and the name is shared with a Canon printer.",
+  "tiles": [
+   [
+    "5",
+    "profiles linked from the footer: LinkedIn, Facebook, Instagram, BBB, Yelp"
+   ],
+   [
+    "0",
+    "sameAs, address or phone in schema; no Organization record at all"
+   ],
+   [
+    "A+",
+    "BBB accredited; ca.gov (96) and educause.edu (47) also link to the site"
+   ],
+   [
+    "2 of 10",
+    "brand review results that are Canon imagePROGRAF PRO-2000 reviews"
+   ]
+  ],
+  "found": [
+   "There is no Organization schema. Two Wix WebSite blocks name the site and a search action; nothing states who the company is, where it is or what it is called in full.",
+   "The footer links the right profiles, so the corroboration exists off-site. It is not declared on-site, which is what an engine reads first.",
+   "The strongest links are institutional: ca.gov, BBB, educause.edu, yellowpages and superpages (17 links), a NAICS listing. That is a public-sector and directory footprint a competitor cannot buy.",
+   "No Google Business Profile appeared for any branch. For a seven-branch dealer the profiles, their Q&A and their reviews are the largest local answer-engine input, and they are not being fed.",
+   "A Birdeye profile links to the site, so a review program exists somewhere. None of it reaches the result."
+  ],
+  "do": [
+   [
+    "Build",
+    "Organization schema with legalName Image 2000, Inc., foundingDate 1992, telephone, the Valencia headquarters address, sameAs to the five profiles, areaServed California and Nevada, and the seven branches as LocalBusiness records with coordinates."
+   ],
+   [
+    "Build",
+    "A facts block on the about page: founded 1992 by Richard Campbell and Joseph Blatchford, founder-owned, seven branches, eleven manufacturers, the awards with years."
+   ],
+   [
+    "30 days",
+    "Claim and complete the Google Business Profile for all seven branches: hours, services, photographs, Q&A seeded from the site FAQ, and the Birdeye request pointed at Google."
+   ],
+   [
+    "30 days",
+    "Kyocera, Sharp and RISO dealer-locator listings with the same name, address and phone as the site."
+   ],
+   [
+    "90 days",
+    "Expertise.com, Clutch and Cloudtango profiles for managed IT; the chambers in Santa Clarita, Irvine and Bakersfield."
+   ]
+  ]
+ },
+ "today": [
+  "Semrush US database: 103 organic keywords, 492 visits a month, traffic value 19 dollars a month. About 88 percent of visits are the brand name; the home page takes 465 of 492 across its https and http versions.",
+  "Wix site (generator Wix.com Website Builder), 12 script tags on the home page, Wix forms, no tag manager, no HubSpot. lang is en. No og:image.",
+  "Home title HOME | Image 2000 (17 characters); H1 SOUTHERN CALIFORNIA'S #1 DEALER FOR ALL YOUR OFFICE SOLUTIONS; meta description names copiers, printers, postage meters and software and no place.",
+  "Schema on every page: two Wix WebSite blocks, plus Wix Product and Offer markup on the 343 store pages. No Organization, LocalBusiness, FAQPage or Service anywhere.",
+  "Sitemap index with four sitemaps and 399 URLs: 343 store product pages, 2 posts, blog categories, and about 50 pages including fourteen duplicates and leftovers.",
+  "robots.txt allows all agents, blocks lightbox query strings and PetalBot, declares the sitemap; an llms.txt is served. AI crawlers are not blocked.",
+  "The average page scores 50 of 100 on the sixteen checks; 350 of 399 pages score D or F; 338 are under 300 words."
+ ],
+ "competitors": {
+  "intro": "Southern California office technology dealers holding the Los Angeles, Orange County and Santa Clarita results, from Semrush's US database.",
+  "rows": [
+   [
+    "flextg.com (FlexTG, national with a Los Angeles page)",
+    "8,164",
+    "3,665",
+    "not pulled"
+   ],
+   [
+    "iotecdigital.com (Iotec Digital, Santa Fe Springs)",
+    "2,694",
+    "1,954",
+    "14"
+   ],
+   [
+    "office1.com (Office1, national with California pages)",
+    "2,263",
+    "1,938",
+    "not pulled"
+   ],
+   [
+    "c3tech.com (C3 Tech, Orange County)",
+    "570",
+    "344",
+    "22"
+   ],
+   [
+    "image-2000.com",
+    "492",
+    "103",
+    "19"
+   ],
+   [
+    "goadvanced.com (Advanced Office, Los Angeles and Orange County)",
+    "364",
+    "604",
+    "21"
+   ],
+   [
+    "hbmla.com (HBM, Los Angeles and Santa Clarita)",
+    "18",
+    "278",
+    "7"
+   ]
+  ]
+ },
+ "opportunities": {
+  "intro": "Volume from Semrush's US database; difficulty where it was pulled. Local copier terms in Southern California are small and open; the volume is in managed IT, the national product terms and the questions.",
+  "rows": [
+   [
+    "managed it services los angeles",
+    "1,900",
+    "not pulled",
+    "not ranking",
+    "IT-only providers; Datalink Networks and FTI in Santa Clarita"
+   ],
+   [
+    "managed it services santa clarita",
+    "320",
+    "not pulled",
+    "not ranking",
+    "ftiservices.com, datalinknetworks.net, digitaluppercut.com, expertise.com"
+   ],
+   [
+    "managed print services",
+    "4,400",
+    "16",
+    "not ranking",
+    "national providers"
+   ],
+   [
+    "managed print services los angeles",
+    "110",
+    "not pulled",
+    "not ranking",
+    "orangecountycopiersandprinters.com, goadvanced.com, iotecdigital.com, office1.com"
+   ],
+   [
+    "managed print services orange county",
+    "30",
+    "not pulled",
+    "not ranking",
+    "c3tech.com, office1.com, circlemsp.com"
+   ],
+   [
+    "copier lease",
+    "2,400",
+    "19",
+    "not ranking",
+    "national lessors"
+   ],
+   [
+    "office copier lease",
+    "320",
+    "not pulled",
+    "not ranking",
+    "national lessors"
+   ],
+   [
+    "copier lease los angeles",
+    "20",
+    "not pulled",
+    "not ranking",
+    "iotecdigital.com, hbmla.com, copiersuperstore.com"
+   ],
+   [
+    "copier lease santa clarita",
+    "not pulled",
+    "not pulled",
+    "not ranking",
+    "hbmla.com number 1; filler pages"
+   ],
+   [
+    "risograph",
+    "9,900",
+    "not pulled",
+    "not ranking",
+    "manufacturers, studios, Wikipedia"
+   ],
+   [
+    "riso printer",
+    "1,900",
+    "not pulled",
+    "not ranking",
+    "us.riso.com, risostudioarts.com"
+   ],
+   [
+    "risograph printer for sale",
+    "480",
+    "not pulled",
+    "8",
+    "held through the RZ1090 store page"
+   ],
+   [
+    "ucaas providers",
+    "1,300",
+    "not pulled",
+    "not ranking",
+    "national UCaaS vendors"
+   ],
+   [
+    "bottleless water cooler for office",
+    "480",
+    "not pulled",
+    "not ranking",
+    "aqualume.com, quench.culligan.com, cintas.com"
+   ],
+   [
+    "copystar",
+    "170",
+    "not pulled",
+    "12",
+    "Kyocera and dealers"
+   ],
+   [
+    "kip 660",
+    "70",
+    "not pulled",
+    "2",
+    "held through the KIP store page"
+   ]
+  ]
+ },
+ "clusters": [
+  {
+   "name": "Copiers: lease, rent, buy",
+   "seed": "copier lease",
+   "rows": [
+    [
+     "copier lease",
+     "2,400",
+     "0.29",
+     "13.93",
+     "commercial"
+    ],
+    [
+     "office equipment rental",
+     "1,900",
+     "0.28",
+     "5.81",
+     "commercial"
+    ],
+    [
+     "printer lease",
+     "1,900",
+     "0.64",
+     "11.96",
+     "commercial"
+    ],
+    [
+     "copier leasing companies",
+     "590",
+     "0.11",
+     "19.40",
+     "commercial"
+    ],
+    [
+     "office copier lease",
+     "320",
+     "0.33",
+     "14.46",
+     "commercial"
+    ],
+    [
+     "copier repair los angeles",
+     "30",
+     "0.02",
+     "0",
+     "transactional, local"
+    ],
+    [
+     "copier lease los angeles",
+     "20",
+     "0.29",
+     "0",
+     "transactional, local"
+    ],
+    [
+     "copier lease orange county",
+     "20",
+     "0.99",
+     "0",
+     "transactional, local"
+    ]
+   ]
+  },
+  {
+   "name": "Managed print",
+   "seed": "managed print services los angeles",
+   "rows": [
+    [
+     "managed print services",
+     "4,400",
+     "0.09",
+     "20.85",
+     "informational"
+    ],
+    [
+     "managed print service",
+     "1,000",
+     "0.09",
+     "20.85",
+     "informational"
+    ],
+    [
+     "managed print solutions",
+     "1,000",
+     "0.07",
+     "15.55",
+     "informational"
+    ],
+    [
+     "best managed print services",
+     "880",
+     "0.02",
+     "0",
+     "commercial"
+    ],
+    [
+     "managed print services los angeles",
+     "110",
+     "0.03",
+     "0",
+     "commercial, local"
+    ],
+    [
+     "managed print services orange county",
+     "30",
+     "0",
+     "0",
+     "commercial, local"
+    ]
+   ]
+  },
+  {
+   "name": "Managed IT, Los Angeles",
+   "seed": "managed it services los angeles",
+   "rows": [
+    [
+     "managed it services near me",
+     "8,100",
+     "0.04",
+     "35.77",
+     "transactional"
+    ],
+    [
+     "managed it support",
+     "6,600",
+     "0.09",
+     "19.02",
+     "commercial"
+    ],
+    [
+     "managed it support services",
+     "5,400",
+     "0.10",
+     "27.36",
+     "commercial"
+    ],
+    [
+     "it support los angeles",
+     "2,400",
+     "0.29",
+     "51.21",
+     "commercial, local"
+    ],
+    [
+     "managed it services for small business",
+     "2,400",
+     "0.06",
+     "29.42",
+     "commercial"
+    ],
+    [
+     "managed it services los angeles",
+     "1,900",
+     "0.28",
+     "34.34",
+     "commercial, local"
+    ],
+    [
+     "managed it services santa clarita",
+     "320",
+     "0.04",
+     "0",
+     "commercial, local"
+    ]
+   ]
+  },
+  {
+   "name": "RISO and production",
+   "seed": "riso printer",
+   "rows": [
+    [
+     "risograph",
+     "9,900",
+     "0.04",
+     "0.98",
+     "informational"
+    ],
+    [
+     "risograph printing",
+     "2,900",
+     "0.47",
+     "1.18",
+     "commercial"
+    ],
+    [
+     "riso printing",
+     "2,400",
+     "0.13",
+     "1.61",
+     "commercial"
+    ],
+    [
+     "riso",
+     "1,900",
+     "0.05",
+     "0.73",
+     "informational"
+    ],
+    [
+     "riso printer",
+     "1,900",
+     "0.13",
+     "0.93",
+     "commercial"
+    ],
+    [
+     "risograph printer",
+     "1,600",
+     "0.13",
+     "0.93",
+     "commercial"
+    ],
+    [
+     "risograph near me",
+     "1,300",
+     "0.34",
+     "0.63",
+     "transactional"
+    ],
+    [
+     "risograph printer for sale",
+     "480",
+     "0.19",
+     "0.89",
+     "transactional"
+    ]
+   ]
+  },
+  {
+   "name": "Cloud phones",
+   "seed": "voip phone system for business",
+   "rows": [
+    [
+     "voip phone",
+     "22,200",
+     "0.63",
+     "11.90",
+     "commercial"
+    ],
+    [
+     "voip phone service",
+     "14,800",
+     "0.35",
+     "21.41",
+     "commercial"
+    ],
+    [
+     "business phone",
+     "12,100",
+     "0.83",
+     "29.38",
+     "commercial"
+    ],
+    [
+     "business phone systems",
+     "9,900",
+     "0.39",
+     "41.46",
+     "commercial"
+    ],
+    [
+     "voip services",
+     "9,900",
+     "0.07",
+     "18.37",
+     "commercial"
+    ],
+    [
+     "ucaas providers",
+     "1,300",
+     "0.10",
+     "17.70",
+     "commercial"
+    ]
+   ]
+  },
+  {
+   "name": "Bottleless water",
+   "seed": "bottleless water cooler",
+   "rows": [
+    [
+     "water dispenser",
+     "90,500",
+     "1.00",
+     "1.48",
+     "commercial"
+    ],
+    [
+     "water cooler",
+     "27,100",
+     "1.00",
+     "1.82",
+     "commercial"
+    ],
+    [
+     "water cooler dispenser",
+     "12,100",
+     "1.00",
+     "1.59",
+     "commercial"
+    ],
+    [
+     "bottleless water cooler for office",
+     "480",
+     "0.46",
+     "14.32",
+     "commercial"
+    ]
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "topic": "copier lease",
+   "items": [
+    [
+     "how much does it cost to lease a copy machine",
+     "260"
+    ],
+    [
+     "how to get out of a copier lease",
+     "140"
+    ],
+    [
+     "how do copier leases work",
+     "110"
+    ],
+    [
+     "how much does it cost to lease a copier",
+     "110"
+    ],
+    [
+     "is it better to buy or lease a copier",
+     "110"
+    ],
+    [
+     "how to negotiate a copier lease",
+     "90"
+    ],
+    [
+     "should i lease or buy a copier",
+     "70"
+    ]
+   ]
+  },
+  {
+   "topic": "managed print services",
+   "items": [
+    [
+     "what is managed print services",
+     "320"
+    ],
+    [
+     "what is managed printing services",
+     "320"
+    ],
+    [
+     "what are managed print services",
+     "260"
+    ],
+    [
+     "what is managed print service",
+     "140"
+    ],
+    [
+     "why managed print services",
+     "90"
+    ],
+    [
+     "are managed print services worth it",
+     "50"
+    ],
+    [
+     "how much does managed print services cost",
+     "20"
+    ]
+   ]
+  },
+  {
+   "topic": "managed it services",
+   "items": [
+    [
+     "what is managed it services",
+     "1,000"
+    ],
+    [
+     "how much does managed it services cost",
+     "720"
+    ],
+    [
+     "what are managed it services",
+     "720"
+    ],
+    [
+     "why choose managed it services",
+     "260"
+    ],
+    [
+     "what is included in managed it services",
+     "210"
+    ],
+    [
+     "how much do managed it services cost",
+     "170"
+    ]
+   ]
+  },
+  {
+   "topic": "cloud phones",
+   "items": [
+    [
+     "what is ucaas",
+     "720"
+    ]
+   ]
+  }
+ ],
+ "money_pages": [
+  "/",
+  "/managed-it",
+  "/kyocera",
+  "/sharp",
+  "/copystar",
+  "/riso",
+  "/ucaas",
+  "/waterlogic",
+  "/santa-clarita",
+  "/irvine",
+  "/lakewood",
+  "/las-vegas",
+  "/whyimage2000",
+  "/about",
+  "/customer-services",
+  "/awards"
+ ],
+ "competitor_pages": [
+  {
+   "domain": "c3tech.com",
+   "url": "https://c3tech.com/copier-services/managed-print/",
+   "title": "Managed Print Services for Orange County Businesses | C3 Tech",
+   "words": 1366,
+   "schema": "FAQPage, LocalBusiness, GeoCoordinates, City, AdministrativeArea, BreadcrumbList",
+   "faq": true,
+   "pricing": "no",
+   "reviews": false,
+   "form": "yes"
+  },
+  {
+   "domain": "iotecdigital.com",
+   "url": "https://iotecdigital.com/location/copiers-los-angeles/",
+   "title": "Copiers Los Angeles Location | Iotec Digital",
+   "words": 828,
+   "schema": "none",
+   "faq": false,
+   "pricing": "no",
+   "reviews": false,
+   "form": "yes"
+  },
+  {
+   "domain": "hbmla.com",
+   "url": "https://www.hbmla.com/santa-clarita",
+   "title": "Santa Clarita | Copier Repair | Sales, Lease, and Rental Services in Santa Clarita",
+   "words": 1737,
+   "schema": "none",
+   "faq": false,
+   "pricing": "no",
+   "reviews": false,
+   "form": "yes"
+  },
+  {
+   "domain": "goadvanced.com",
+   "url": "https://www.goadvanced.com/managed-print-services",
+   "title": "Managed Print Services | Advanced Office Solutions in California",
+   "words": 365,
+   "schema": "none",
+   "faq": false,
+   "pricing": "no",
+   "reviews": false,
+   "form": "no"
+  },
+  {
+   "domain": "flextg.com",
+   "url": "https://www.flextg.com/los-angeles/",
+   "title": "Office Copiers and Printers | FlexTG of Los Angeles",
+   "words": 654,
+   "schema": "Organization, BreadcrumbList, SearchAction",
+   "faq": false,
+   "pricing": "no",
+   "reviews": false,
+   "form": "yes"
+  }
+ ],
+ "aeo": {
+  "intro": "Live results for the questions a buyer types, fetched 8 September 2026 from the buyer's city. Presence here is the answer-engine scoreboard.",
+  "rows": [
+   {
+    "query": "copier lease santa clarita",
+    "results": [
+     "hbmla.com (Santa Clarita page)",
+     "yelp.com (Santa Clara, a mismatch)",
+     "officeequipment.blob.core.windows.net",
+     "linodeobjects.com (a filler page)",
+     "copierliquidationcenter.com",
+     "propertyshark.com",
+     "citydocs.santaclarita.gov",
+     "1800officesolutions.com (San Francisco)",
+     "ggoffice.com (Bay Area)",
+     "cortronsystems.com (Santa Clara)"
+    ],
+    "position": null
+   },
+   {
+    "query": "best copier company los angeles",
+    "results": [
+     "iotecdigital.com",
+     "yelp.com (E-Z Office Machines, Fidelity, Ecotech)",
+     "hbmla.com",
+     "copiersuperstore.com (Advanced Office)",
+     "reddit.com (Pacific Office Automation, Visual Edge IT)",
+     "flextg.com",
+     "perfectcopyproducts.com",
+     "thumbtack.com",
+     "losangelesofficesolutions.com",
+     "yellowpages.com"
+    ],
+    "position": null
+   },
+   {
+    "query": "managed print services los angeles",
+    "results": [
+     "orangecountycopiersandprinters.com",
+     "itprosmanagement.com",
+     "goadvanced.com",
+     "cdw.com",
+     "iotecdigital.com",
+     "mbsworks.com",
+     "yelp.com",
+     "tmgofficeservices.com",
+     "office1.com",
+     "mypbt.com"
+    ],
+    "position": null
+   },
+   {
+    "query": "managed print services orange county ca",
+    "results": [
+     "c3tech.com",
+     "orangecountycopiersandprinters.com",
+     "facebook.com (answers)",
+     "office1.com",
+     "mbsworks.com",
+     "yelp.com",
+     "maingraphics.net",
+     "circlemsp.com",
+     "wizixtech.com",
+     "printercopierquote.com"
+    ],
+    "position": null
+   },
+   {
+    "query": "kyocera copier dealer orange county",
+    "results": [
+     "kyoceradocumentsolutions.us (dealer locator)",
+     "copiersuperstore.com (Advanced Office)",
+     "comparebusiness.net",
+     "yelp.com (Orange County Copiers and Printers, 3.4 from 5)",
+     "wizixtech.com",
+     "abdofficesolutions.com",
+     "copierrepaircity.com",
+     "mapquest.com (Kyocera West, Irvine)",
+     "facebook.com",
+     "copiersuperstore.com"
+    ],
+    "position": null
+   },
+   {
+    "query": "best managed it services santa clarita",
+    "results": [
+     "ftiservices.com",
+     "datalinknetworks.net",
+     "digitaluppercut.com",
+     "expertise.com (8 best)",
+     "jnttek.com",
+     "clutch.co (Los Angeles list)",
+     "cmitsolutions.com (Santa Clarita)",
+     "facebook.com (answers)",
+     "yelp.com",
+     "dcgla.com"
+    ],
+    "position": null
+   },
+   {
+    "query": "riso printer dealer los angeles",
+    "results": [
+     "reddit.com",
+     "risostudioarts.com (official Los Angeles distributor)",
+     "us.riso.com",
+     "instagram.com (RISO Studio Arts)",
+     "theprintshopla.com",
+     "otis.edu",
+     "wizixtech.com (Northern California dealer)",
+     "facebook.com",
+     "peopleofprint.com",
+     "riso-studio-arts.webflow.io"
+    ],
+    "position": null
+   },
+   {
+    "query": "bottleless water cooler service los angeles office",
+    "results": [
+     "aqualume.com",
+     "quench.culligan.com",
+     "ecowatersocal.com",
+     "coffee-services.com",
+     "aqualume.com",
+     "instagram.com",
+     "specialtyocs.com",
+     "aqualume.com",
+     "cintas.com",
+     "culliganblc.com"
+    ],
+    "position": null
+   },
+   {
+    "query": "image 2000 copiers reviews",
+    "results": [
+     "yelp.com (3.7 from 36, Valencia)",
+     "image-2000.com",
+     "facebook.com (4.0 from 4)",
+     "bbb.org (A+ accredited)",
+     "instagram.com",
+     "northlight-images.co.uk (Canon PRO-2000 printer review)",
+     "printimagesolutions.com (another company)",
+     "mapquest.com (Bakersfield branch)",
+     "shutterbug.com (Canon PRO-2000 printer review)",
+     "youtube.com"
+    ],
+    "position": 2
+   }
+  ]
+ },
+ "crawlers": [
+  [
+   "GPTBot",
+   true
+  ],
+  [
+   "ClaudeBot",
+   true
+  ],
+  [
+   "PerplexityBot",
+   true
+  ],
+  [
+   "Google-Extended",
+   true
+  ],
+  [
+   "Sitemap declared",
+   true
+  ],
+  [
+   "llms.txt published",
+   true
+  ]
+ ],
+ "backlinks": {
+  "heading": "Authority is level with the field; the links are directories and institutions",
+  "rows": [
+   [
+    "image-2000.com",
+    "19",
+    "269",
+    "994 (748 nofollow)"
+   ],
+   [
+    "c3tech.com",
+    "22",
+    "382",
+    "2,258"
+   ],
+   [
+    "goadvanced.com",
+    "21",
+    "386",
+    "1,994"
+   ],
+   [
+    "iotecdigital.com",
+    "14",
+    "413",
+    "1,565"
+   ],
+   [
+    "hbmla.com",
+    "7",
+    "166",
+    "305"
+   ]
+  ],
+  "top_ref": [
+   [
+    "indeed.com",
+    "100"
+   ],
+   [
+    "yahoo.com (4 links)",
+    "100"
+   ],
+   [
+    "ca.gov",
+    "96"
+   ],
+   [
+    "bbb.org (2 links)",
+    "78"
+   ],
+   [
+    "glassdoor.com (2 links)",
+    "78"
+   ],
+   [
+    "crunchbase.com",
+    "73"
+   ],
+   [
+    "rocketreach.co",
+    "69"
+   ],
+   [
+    "yellowpages.com (8 links)",
+    "68"
+   ],
+   [
+    "birdeye.com",
+    "59"
+   ],
+   [
+    "atlassian.net",
+    "55"
+   ],
+   [
+    "naics.com",
+    "51"
+   ],
+   [
+    "prospeo.io",
+    "49"
+   ],
+   [
+    "constantcontact.com",
+    "47"
+   ],
+   [
+    "educause.edu",
+    "47"
+   ],
+   [
+    "superpages.com (17 links)",
+    "47"
+   ]
+  ]
+ },
+ "local": [
+  "Yelp (Valencia): 3.7 from 36 reviews, position 1 for the brand query",
+  "Facebook: 4.0 from 4 reviews, position 3",
+  "BBB: A+ rated, accredited, position 4; the profile links to the site",
+  "Instagram: active, position 5",
+  "Google Business Profile: no Maps or profile result for any of the seven branches in the brand query or the seven buyer queries; MapQuest lists the Bakersfield branch at 8",
+  "Birdeye: links to the site, so reviews are collected on a platform that does not surface in the result",
+  "Name collision: two of the ten brand results are reviews of the Canon imagePROGRAF PRO-2000 printer"
+ ],
+ "plan": [
+  [
+   "Days 1 to 10",
+   "Baseline locked: this report, a Semrush project on the domain, Search Console verified, Google Business Profile claimed for all seven branches, the http duplicate redirected to https. Every URL that earns a visitor mapped to its redirect."
+  ],
+  [
+   "Days 10 to 45",
+   "Build: 43 pages in the chosen direction, seven location pages with LocalBusiness records, Service schema on every service, industry and brand page, FAQPage on all 43, the store folded into the brand pages with 343 redirects. Forms into HubSpot."
+  ],
+  [
+   "Days 45 to 60",
+   "Launch with the 399 redirects tested one by one. Sitemap resubmitted, llms.txt regenerated. Kyocera, Sharp and RISO dealer-locator listings live with the site's name, address and phone."
+  ],
+  [
+   "Days 60 to 90",
+   "Content: two guides a month against the question keywords above, each answering in the first sentence. Expertise.com, Clutch and Cloudtango profiles for managed IT. Review requests pointed at Google from Birdeye."
+  ],
+  [
+   "Day 30, 60, 90",
+   "Reads against this baseline: organic visits, non-brand share, top-100 and top-10 counts for the target terms, answer presence for the nine queries, Google reviews per branch, leads created in HubSpot. The same report, re-run."
+  ]
+ ],
+ "measure": [
+  [
+   "Organic visits a month",
+   "Semrush domain overview, monthly",
+   "Up from 492, with the home page share falling below 60 percent"
+  ],
+  [
+   "Non-brand share of visits",
+   "Semrush organic keywords, branded filter",
+   "From about 12 percent toward 40 percent by day 90"
+  ],
+  [
+   "Top-100 and top-10 rankings for the target terms",
+   "Semrush position tracking on the clusters above",
+   "Every target term in the top 100 by day 60; copier lease santa clarita and managed print services orange county in the top 10 by day 90"
+  ],
+  [
+   "AI answer presence",
+   "The nine queries above, fetched from each city monthly",
+   "Image 2000 named for copier lease santa clarita and kyocera copier dealer orange county by day 90; the Canon printer gone from the brand result"
+  ],
+  [
+   "Google reviews per branch",
+   "Google Business Profile",
+   "A profile for every branch by day 10; reviews arriving weekly by day 60"
+  ],
+  [
+   "Readiness score",
+   "seo_audit.py on the live site",
+   "Average above 85 at launch and holding"
+  ],
+  [
+   "Leads",
+   "HubSpot contacts with source page",
+   "Every form submission a record; the source page known"
+  ]
+ ],
+ "hub": {
+  "heading": "Where Image 2000 stands in search today, and what changes",
+  "intro": "Measured before we touched anything, so the work can be judged against it. Numbers from Semrush, live search results and image-2000.com on 8 September 2026.",
+  "today": [
+   "About 88 percent of visits come from someone searching the name; the home page takes 465 of 492 monthly visits. The other 343 store pages earn 21 visits between them, all on one RISO page.",
+   "Copier lease santa clarita returns HBM and filler pages; nothing from the dealer headquartered in Valencia since 1992. Los Angeles, Orange County, managed print, Kyocera dealer, managed IT, RISO dealer and bottleless water: absent from all of them.",
+   "Zero Organization, LocalBusiness, FAQ or Service schema across 399 pages; seven branches and no LocalBusiness record; no share image. C3 Tech's Orange County page carries FAQ and LocalBusiness and scores 89 of 100.",
+   "The awards (Kyocera Platinum, Sharp Hyakuman Kai, PROs Elite since 2016, ENX Elite) are on the site and invisible where the dealer question is asked. Kyocera's own locator, Advanced Office and ABD hold the Orange County result.",
+   "The brand result contains two reviews of the Canon imagePROGRAF PRO-2000 printer, a Yelp 3.7 and no Google Business Profile for any branch.",
+   "Your authority is level with the field: 19 against C3 Tech 22, Advanced Office 21, Iotec 14, HBM 7. The gap is pages, not links.",
+   "343 of 399 URLs are Wix store pages; fourteen more are duplicates and leftovers (copy-of-managed-it, jobappdonotuse, shop and shop-1, a 2020 body temperature scanner page)."
+  ],
+  "after": [
+   "Every URL that earns a visitor today keeps earning it: a permanent redirect for each of the 399, tested individually at launch (the table below).",
+   "Seven location pages with LocalBusiness records, Valencia first, each naming the services that branch delivers; Organization schema with legalName, founding date, phone and every profile as sameAs, so an assistant asked about Image 2000 resolves to the dealer, not the Canon printer.",
+   "Thirteen brand pages that carry the awards with the year and the branch cities, so kyocera dealer orange county and riso dealer los angeles have an Image 2000 page to return; the RISO and KIP rankings the store earns move with them.",
+   "FAQPage on all 43 pages, Service schema on every service, industry and brand page, titles that name California or the city. Scored by the same script, the build averages above 90.",
+   "The store folded into the brand pages and the catalogues, the fourteen leftovers retired, the http duplicate redirected, the managed IT page titled for Santa Clarita and Los Angeles.",
+   "Every form a HubSpot form that creates a contact, so a lead from the site is a record with a source page."
+  ],
+  "keep": [
+   [
+    "/",
+    "/index.html",
+    "image 2000 #1 (390 a month), image2000 #1, images 2000 #1; 465 of 492 visits"
+   ],
+   [
+    "/product-page/rz1090-riso",
+    "/brands/riso.html",
+    "risograph printer for sale #8 (480), riso printer for sale #8 (390), riso machine for sale #9; 27 keywords"
+   ],
+   [
+    "/product-page/kip-650-kip-660",
+    "/brands/kip.html",
+    "kip 660 #2 (70), kip 860 #63"
+   ],
+   [
+    "/copystar",
+    "/brands/kyocera.html",
+    "copystar #12 (170)"
+   ],
+   [
+    "/kyocera, /sharp, /toshiba, /lexmark, /hp, /riso, /waterlogic",
+    "/brands/*.html",
+    "brand terms; the awards move with them"
+   ],
+   [
+    "/santa-clarita, /irvine, /lakewood, /inland-empire, /bakersfield, /fresno, /las-vegas",
+    "/locations/*.html",
+    "branch and address terms (2000 fivepoint irvine ca #26)"
+   ],
+   [
+    "/managed-it, /copy-of-managed-it",
+    "/services/managed-it.html",
+    "nothing yet; managed it services santa clarita is 320 a month"
+   ],
+   [
+    "/customer-services, /requestservice, /ordersupplies, /submit-meter-reads, /self-service-portal",
+    "/support.html",
+    "image phone number #29; branded support terms"
+   ],
+   [
+    "/product-page/* (341 more)",
+    "/brands.html",
+    "nothing; the store folds into the brand pages"
+   ]
+  ],
+  "note": "Rankings or traffic. Those depend on the market and on what you publish after launch. What we promise is that nothing about the build is the reason they do not come, that every number above is re-measured at 30, 60 and 90 days, and that you see the same report we do."
+ },
+ "sitewide": [
+  [
+   true,
+   "Served over HTTPS (an http duplicate still earns 25 visits a month and needs a redirect)"
+  ],
+  [
+   true,
+   "robots.txt allows Google and all four AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended)"
+  ],
+  [
+   true,
+   "Sitemap index declared, 399 URLs in four sitemaps"
+  ],
+  [
+   true,
+   "llms.txt served"
+  ],
+  [
+   false,
+   "Organization schema anywhere on the site"
+  ],
+  [
+   false,
+   "LocalBusiness schema for any of the seven branches"
+  ],
+  [
+   false,
+   "FAQPage schema anywhere on the site"
+  ],
+  [
+   false,
+   "Service schema on any service or brand page (Wix Product markup on the store only)"
+  ],
+  [
+   false,
+   "A share image (og:image) on any page"
+  ],
+  [
+   false,
+   "Store and leftover URLs kept out of the sitemap (357 of 399)"
+  ],
+  [
+   false,
+   "A blog or guide that answers a buyer's question"
+  ],
+  [
+   false,
+   "Forms create CRM records (Wix forms today)"
+  ]
+ ],
+ "redirect_overrides": {
+  "/": "index.html",
+  "/about": "about.html",
+  "/team": "about.html",
+  "/rich-more-about": "about.html",
+  "/jeff-more-about": "about.html",
+  "/joe-more-about": "about.html",
+  "/community": "about.html",
+  "/whyimage2000": "why-image-2000.html",
+  "/awards": "why-image-2000.html",
+  "/our-clients": "why-image-2000.html",
+  "/locations": "locations.html",
+  "/santa-clarita": "locations/valencia.html",
+  "/lakewood": "locations/los-angeles.html",
+  "/irvine": "locations/orange-county.html",
+  "/inland-empire": "locations/inland-empire.html",
+  "/bakersfield": "locations/bakersfield.html",
+  "/fresno": "locations/fresno.html",
+  "/las-vegas": "locations/las-vegas.html",
+  "/kyocera": "brands/kyocera.html",
+  "/copystar": "brands/kyocera.html",
+  "/sharp": "brands/sharp.html",
+  "/toshiba": "brands/toshiba.html",
+  "/lexmark": "brands/lexmark.html",
+  "/hp": "brands/hp.html",
+  "/riso": "brands/riso.html",
+  "/waterlogic": "brands/waterlogic.html",
+  "/product-page/rz1090-riso": "brands/riso.html",
+  "/product-page/kip-650-kip-660": "brands/kip.html",
+  "/managed-it": "services/managed-it.html",
+  "/copy-of-managed-it": "services/managed-it.html",
+  "/ucaas": "services/ucaas.html",
+  "/customer-services": "support.html",
+  "/requestservice": "support.html",
+  "/ordersupplies": "support.html",
+  "/submit-meter-reads": "support.html",
+  "/self-service-portal": "support.html",
+  "/customer-support-screen-share": "support.html",
+  "/contactus-getintouch": "contact.html",
+  "/careers": "careers.html",
+  "/careerapplication-sales": "careers.html",
+  "/administrative-bakersfield": "careers.html",
+  "/product-catalogs": "brands.html",
+  "/new-products": "brands.html",
+  "/shop": "brands.html",
+  "/shop-1": "brands.html",
+  "/blog": "what-we-do.html",
+  "/privacypolicy": "index.html",
+  "/ca-applicant-privacy-notice": "careers.html"
+ },
+ "redirect_rules": [
+  [
+   "^/product-page/",
+   "brands.html"
+  ],
+  [
+   "^/(blog|post)/",
+   "what-we-do.html"
+  ]
+ ],
+ "retire": [
+  "^/(copy-of-holiday-2021-1|jobappdonotuse|projects-3|members|shared-gallery|file-share|body-temperature-scanner|tech-san-diego)"
+ ],
+ "retire_target": "index.html",
+ "merge_target": "index.html",
+ "build_types": [
+  [
+   "^/services/",
+   "service"
+  ],
+  [
+   "^/industries/",
+   "industry"
+  ],
+  [
+   "^/brands/",
+   "service"
+  ],
+  [
+   "^/locations/",
+   "city"
+  ],
+  [
+   "^/blog/",
+   "post"
+  ]
+ ]
+}

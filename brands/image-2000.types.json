@@ -1,0 +1,7 @@
+[["^/product-page/", "product"], ["^/post/", "post"], ["^/blog", "archive"],
+ ["^/(santa-clarita|lakewood|irvine|inland-empire|bakersfield|fresno|las-vegas|locations)/?$", "city"],
+ ["^/(kyocera|copystar|sharp|toshiba|lexmark|hp|riso|waterlogic|product-catalogs|new-products|shop|shop-1)/?$", "brand"],
+ ["^/(managed-it|copy-of-managed-it|ucaas)/?$", "service"],
+ ["^/(customer-services|requestservice|ordersupplies|submit-meter-reads|self-service-portal|customer-support-screen-share|contactus-getintouch)/?$", "form"],
+ ["^/(privacypolicy|ca-applicant-privacy-notice)/?$", "policy"],
+ ["^/(copy-of-holiday-2021-1|jobappdonotuse|projects-3|members|shared-gallery|file-share|body-temperature-scanner|tech-san-diego|rich-more-about|jeff-more-about|joe-more-about)/?$", "leftover"]]
