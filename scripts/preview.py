@@ -123,7 +123,7 @@ def client_tokens(theme: str, brand: dict) -> tuple[str, dict]:
 .q-tone-dark{background:var(--navy);color:#fff}.q-tone-dark .q-h2,.q-tone-dark .q-h3,.q-tone-dark h2,.q-tone-dark h3,.q-tone-dark .q-lead,.q-tone-dark p,.q-tone-dark li,.q-tone-dark .pv-quote,.q-tone-dark .pv-attr,.q-tone-dark .h{color:#fff}
 .q-tone-dark .q-eyebrow{color:#fff;opacity:.85}.q-tone-dark .q-eyebrow::before{background:#fff}
 .q-tone-dark .q-card,.q-tone-dark .pv-metric{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.16);color:#fff}.q-tone-dark .q-card p,.q-tone-dark .pv-metric .d{color:rgba(255,255,255,.8)}.q-tone-dark .pv-metric .v,.q-tone-dark .pv-metric .k{color:#fff}
-.q-tone-dark .pv-seal .item{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);box-shadow:none}.q-tone-dark .pv-seal .badge{background:transparent}
+.q-tone-dark .pv-seal .item{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);box-shadow:none}.q-tone-dark .pv-seal .badge,.q-tone-dark .pv-seal .badge *{background:transparent!important;color:#fff!important}.q-tone-dark .pv-seal .badge{box-shadow:inset 0 0 0 2px rgba(255,255,255,.35)}
 .q-tone-dark .pv-seal .item h3,.q-tone-dark .pv-seal .item p,.q-tone-dark .pv-seal .src{color:#fff}.q-tone-dark .pv-seal .item p{opacity:.82}.q-tone-dark .pv-seal .badge{border-color:rgba(255,255,255,.25)}.q-tone-dark .pv-seal .badge b{color:#fff}
 .q-tone-dark .pv-stat b,.q-tone-dark .pv-stat span{color:#fff}.q-tone-dark .pv-proof b,.q-tone-dark .pv-proof .v{color:#fff}
 .q-tone-dark a{color:#fff}.q-tone-dark .q-btn{background:#fff;color:var(--navy)}
