@@ -105,10 +105,22 @@ def render(basic: dict, deep: dict, client: str, domain: str, accent: str, as_of
             grows.append([E("/" + seg + "/" if seg != "(top level)" else seg), len(rs), sum(1 for r in rs if r["faq"]), sum(1 for r in rs if r["service"]), sum(1 for r in rs if r["words"] < 300), f'{round(sum(r["words"] for r in rs) / len(rs)):,}'])
         gt = table(["Section", "Pages", "With FAQPage", "With Service", "Under 300 words", "Average words"], grows)
         money = [r for r in rows if any(k in r["url"] for k in ("/information/", "/communication/", "/print/", "/process/", "/copiers", "/copier-", "/document-", "/managed-", "/industries/"))]
-        mrows = [[f'<a href="https://{E(domain)}{E(r["url"])}" target="_blank" rel="noopener">{E(r["url"])}</a>', yn(r["faq"]), yn(r["service"]), f'{r["words"]:,}', yn(r["city"])] for r in sorted(money, key=lambda r: r["url"])]
-        mt2 = table(["Service and industry page", "FAQPage", "Service schema", "Words", "City in title"], mrows)
+        mrows = [[f'<a href="https://{E(domain)}{E(r["url"])}" target="_blank" rel="noopener">{E(r["url"])}</a>', f'<b class="sc" style="--g:{ {"A": "#1b7f4b", "B": "#2e7d32", "C": "#b54708", "D": "#c4320a", "F": "#b42318"}.get(r.get("grade", "C")) }">{r.get("score", "")} {E(r.get("grade", ""))}</b>', yn(r["faq"]), yn(r["service"]), yn(r.get("question_headings", 0) > 0), f'{r["words"]:,}', yn(r["city"]), E("; ".join((r.get("recommendations") or [])[:2]))] for r in sorted(money, key=lambda r: r.get("score", 0))]
+        mt2 = table(["Service and industry page", "Score", "FAQPage", "Service schema", "Question heading", "Words", "City in title", "First two fixes"], mrows)
+        g = sm.get("grades") or {}
+        if g:
+            tiles_f = [(f'{sm.get("avg_score", 0)}', "average readiness score out of 100"), (f'{g.get("A", 0) + g.get("B", 0)} of {n}', "pages scoring B or better"), (f'{g.get("D", 0) + g.get("F", 0)} of {n}', "pages scoring D or F")] + tiles_f[:3]
+            ft = "".join(f'<div class="stile dark"><b>{E(v)}</b><span>{E(l)}</span></div>' for v, l in tiles_f)
         link = f'<p style="margin-top:18px"><a class="btn" href="{E(csv_href)}" download>Download the page-by-page audit (CSV, {n} rows)</a></p>' if csv_href else ""
-        fa_html = f'<div class="stiles">{ft}</div><h3>By section of the site</h3>{gt}<h3>Every service and industry page</h3>{mt2}{link}<p class="fine">Method: every URL in the sitemap except the {E("blog?p=")} query-string posts and PDFs, fetched {E(as_of)} and parsed for JSON-LD types, title, H1, meta description and body word count. Word counts exclude navigation, header and footer.</p>'
+        fa_html = f'<div class="stiles">{ft}</div><h3>By section of the site</h3>{gt}<h3>Every service and industry page, worst first</h3>{mt2}<p class="fine">The complete 171-row spreadsheet with every check and the recommendations for each page is on the three-directions page under Every page audited.</p>{link}<p class="fine">Method: every URL in the sitemap except the {E("blog?p=")} query-string posts and PDFs, fetched {E(as_of)} and parsed for JSON-LD types, title, H1, meta description and body word count. Word counts exclude navigation, header and footer.</p>'
+    # ---------------- blog and social
+    def _bs(block):
+        if not block: return ""
+        st = "".join(f'<div class="stile dark"><b>{E(v)}</b><span>{E(l)}</span></div>' for v, l in block.get("stats", []))
+        fi = "".join(f"<li>{E(x)}</li>" for x in block.get("findings", []))
+        ac = "".join(f'<div class="levi"><div class="n"><span class="when">{E(w)}</span></div><div><p>{E(x)}</p></div></div>' for w, x in block.get("actions", []))
+        return f'<div class="stiles">{st}</div><div class="two" style="margin-top:26px"><div><h3>What we found</h3><ul>{fi}</ul></div><div><h3>What we would do</h3><div class="lev">{ac}</div></div></div>'
+    blog_html = _bs(deep.get("blog")); social_html = _bs(deep.get("social"))
     lv = deep.get("leverage") or {}
     lv_html = ""
     if lv.get("items"):
@@ -209,6 +221,7 @@ def render(basic: dict, deep: dict, client: str, domain: str, accent: str, as_of
 .steps{{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}}.step{{background:#fff;border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:12px;padding:16px 18px}}.step .when{{font-weight:700;color:var(--accent);margin-bottom:6px}}.step p{{margin:0;font-size:14.5px}}
 .tbl.cmp th[scope=row]{{text-align:left;font-weight:600;background:#fff}}.tbl.cmp td.bad{{color:#b3261e;font-weight:600}}.tbl.cmp td.ok{{color:#1b7f4b;font-weight:600}}.tbl.cmp td:nth-child(2){{background:color-mix(in srgb,var(--accent) 6%,#fff)}}
 .stile.dark{{background:var(--navy);color:#fff;border-color:var(--navy)}}.stile.dark b{{color:#fff}}.stile.dark span{{color:rgba(255,255,255,.8)}}.btn{{display:inline-block;background:var(--accent);color:#fff;padding:12px 20px;border-radius:999px;font-weight:600;text-decoration:none}}.fine{{font-size:13px;color:var(--muted);margin-top:14px}}
+.sc{{display:inline-block;color:#fff;background:var(--g);border-radius:6px;padding:2px 8px;font-size:13px}}.levi .when{{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);line-height:1.3;display:block}}
 .verdict{{margin-top:22px;padding:22px 26px;background:var(--navy,#0f1e33);color:#fff;border-radius:12px;font-size:18px;line-height:1.5}}
 .lev{{display:grid;gap:14px}}.levi{{display:grid;grid-template-columns:56px 1fr;gap:16px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 22px;box-shadow:0 10px 30px rgba(0,0,0,.05)}}.levi .n{{font-size:34px;font-weight:800;color:var(--accent);line-height:1}}.levi h3{{margin:6px 0 6px;font-size:20px}}.levi .meta{{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 8px;color:var(--muted);font-size:14px}}.levi .tag{{background:color-mix(in srgb,var(--accent) 12%,#fff);color:var(--accent);border-radius:999px;padding:2px 10px;font-weight:600}}.levi p{{margin:0}}
 .note{{background:#fff;border-left:4px solid var(--accent);padding:12px 18px;color:var(--muted);margin:24px 0 0}}
@@ -220,6 +233,8 @@ def render(basic: dict, deep: dict, client: str, domain: str, accent: str, as_of
 {section("why", "Why the competitors are winning", "The same pages, side by side", wb_html, wb.get("intro", ""))}
 {section("leverage", "Highest leverage moves", "Five moves, in the order we would make them", lv_html, lv.get("intro", ""))}
 {section("site", "Whole site, every page", f"{(full or {}).get('summary', {}).get('pages', 0)} pages, and what each one tells a crawler", fa_html, "The ten-page sample above holds across the whole site. Answer engines reward pages that answer questions and declare what they offer. Most of these pages do neither yet.")}
+{section("blog", "The blog", "Weekly for three years, and none of it marked up", blog_html, (deep.get("blog") or {}).get("intro", ""))}
+{section("social", "Social and the entity", "What connects the company across the web", social_html, (deep.get("social") or {}).get("intro", ""))}
 {section("today", "Where the traffic comes from", "Today, in numbers", "<ul>" + tech + "</ul>" if tech else "")}
 {section("competitors", "Competitors", "Who earns the visits you should be earning", comp, "Indiana office-technology and managed-IT providers competing for the same terms.")}
 {section("opportunities", "Keyword opportunities", "The terms worth a page each", opp, "Volume and difficulty from Semrush. Where a competitor ranks and the client does not, the gap is a missing page, not missing authority.")}

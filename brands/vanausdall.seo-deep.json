@@ -1492,5 +1492,105 @@
     "in": "plan"
    }
   ]
+ },
+ "blog": {
+  "intro": "324 posts, sampled 40 at random and parsed the same way as the pages. The blog is the most consistent thing VAF publishes and the least marked up.",
+  "stats": [
+   [
+    "324",
+    "posts in the sitemap, all on blog?p= query-string URLs"
+   ],
+   [
+    "61 / 58 / 43",
+    "posts in 2024, 2025 and 2026 so far: about one a week"
+   ],
+   [
+    "752",
+    "median words per post; only 4 of 40 sampled were under 400"
+   ],
+   [
+    "0 of 40",
+    "posts with BlogPosting or Article schema, a published date or an author in the markup"
+   ]
+  ],
+  "findings": [
+   "Cadence is the asset. About one post a week for three years is more than any Indiana competitor publishes. Leap's blog subfolder is minor in its traffic; VAF's second-highest traffic URL is a blog post.",
+   "Nothing tells an engine these are articles. No BlogPosting schema, no datePublished, no author, no visible date on the page. An assistant cannot judge freshness or authorship, which is what it weighs for how-to and cost questions.",
+   "Titles already ask questions ('How does content management make office procedures more productive?', 'What are data backup and recovery services?'). The first paragraph rarely answers them in one sentence, so there is nothing to lift into an AI answer.",
+   "URLs are query strings (blog?p=slug-YYMMDD). Google indexes them, but they carry no folder signal, cannot be grouped by pillar, and make 55 percent of the sitemap look like duplicates of one page.",
+   "Document conversion posts rank 2 to 7 for 'document conversion companies' and 'document conversion service' with no schema at all. That is what the rest of the blog could do with markup and internal links."
+  ],
+  "actions": [
+   [
+    "Build",
+    "BlogPosting schema on every post with datePublished, dateModified, author as a Person and the pillar as articleSection. The build's post template does this."
+   ],
+   [
+    "Build",
+    "Move to /blog/pillar/slug/ with a 301 from every blog?p= URL. The redirect map is generated from the sitemap."
+   ],
+   [
+    "Build",
+    "Answer-first rewrite of the top 30 posts by traffic: a one-sentence answer under the H1, a five-question FAQ marked up as FAQPage, and three links into the service page the post supports."
+   ],
+   [
+    "30 days",
+    "Author pages for the people who write: Person schema, role, credentials, LinkedIn as sameAs. Authorship is a ranking input for advice content."
+   ],
+   [
+    "Ongoing",
+    "Keep the weekly cadence, but pick topics from the question keyword pulls (720 to 1,000 searches a month) instead of vendor news, and refresh the top 30 every six months with a new dateModified."
+   ]
+  ]
+ },
+ "social": {
+  "intro": "Answer engines corroborate a company across the web before they name it. VAF's profiles exist and some are active, but nothing on the site connects them, and video is split across two channels nobody can find.",
+  "stats": [
+   [
+    "1,823",
+    "LinkedIn company followers; the COO's personal profile has about 2,000"
+   ],
+   [
+    "9",
+    "YouTube subscribers on the linked channel; 16 videos, top video 78 views; a second unlisted-looking channel also exists"
+   ],
+   [
+    "0",
+    "sameAs links in the Organization schema; no logo, no description, no foundingDate either"
+   ],
+   [
+    "Active",
+    "Facebook posts link back to blog posts; Instagram is linked from the footer"
+   ]
+  ],
+  "findings": [
+   "The Organization schema is an empty shell: type and address, nothing else. Without sameAs, an engine has to guess that the LinkedIn page, the Facebook page, the YouTube channels and the Crunchbase profile are the same entity as vanausdall.com. Both competitors' schema is richer.",
+   "YouTube is the most under-used channel. Seven site pages embed videos, but the channel is not linked from the site, has two identities, and the videos carry no VideoObject schema, so none of that watch time or transcript text counts toward the brand.",
+   "Individuals outrank the company. The COO's profile has more followers than the company page. Employee posts that repeat the site's FAQ answers, word for word, are the cheapest corroboration available.",
+   "No Google Business Profile appeared in the brand reviews search. For a three-office dealer, GBP posts, Q&A and reviews are the single largest local AEO input and are not being fed.",
+   "Facebook is the only channel that links to the blog. LinkedIn should carry the same posts with the same answer sentence, since LinkedIn is indexed and quoted by assistants far more often than Facebook."
+  ],
+  "actions": [
+   [
+    "Build",
+    "Organization schema with sameAs to LinkedIn, Facebook, Instagram, YouTube, Crunchbase and BBB, plus logo, description, foundingDate 1914, numberOfEmployees, areaServed and the three offices as LocalBusiness subOrganizations."
+   ],
+   [
+    "Build",
+    "One YouTube channel, linked from the footer, every embedded video wrapped in VideoObject schema with a transcript. Upload the existing customer testimonial and assessment videos there."
+   ],
+   [
+    "30 days",
+    "Claim and complete the Google Business Profile for all three offices: services, Q&A seeded with the site FAQ, weekly posts, review requests after every service ticket closes."
+   ],
+   [
+    "30 days",
+    "A LinkedIn cadence that mirrors the blog: one post a week, first line is the answer sentence from the post, link to the post. Three employees reshare with a sentence of their own."
+   ],
+   [
+    "90 days",
+    "Get listed where assistants look: Clutch, Cloudtango, the Indy Chamber directory and vendor partner locators (Canon, Ricoh, Kyocera, Mitel, Fortinet). Each is a citation with the same name, address and phone as the site."
+   ]
+  ]
  }
 }
