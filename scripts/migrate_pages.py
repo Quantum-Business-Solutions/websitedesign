@@ -113,7 +113,7 @@ def sanitise(o):
     o = dict(o)
     if any(PLACEHOLDER in p for b in o.get("blocks", []) for p in b.get("paras", [])):
         name = (o.get("h1") or o.get("title") or "This policy").split("|")[0].strip()
-        o["blocks"] = [{"heading": "", "paras": [f"{name} is published through Termly and embedded on this page at launch, so it stays current when the policy text changes. Until then, the policy in force is the one on the current site, linked below, and requests about personal information go to the headquarters address in the questions section."], "bullets": []}]
+        o["blocks"] = [{"heading": "", "paras": [f"{name} is published through Termageddon and embedded on this page at launch, so it stays current when the policy text changes. Until then, the policy in force is the one on the current site, linked below, and requests about personal information go to the headquarters address in the questions section."], "bullets": []}]
         o["placeholder"] = True
     o["title"] = tidy(o.get("title")); o["meta"] = tidy(o.get("meta")); o["h1"] = tidy(o.get("h1"))
     o["blocks"] = [{"heading": tidy(b.get("heading")), "paras": [re.sub(r"\s*Explore [A-Z][^.]*$", "", tidy(p)).strip() for p in b.get("paras", []) if not is_junk(tidy(p))], "bullets": [tidy(x) for x in b.get("bullets", []) if not is_junk(tidy(x))]} for b in o.get("blocks", [])]
@@ -217,7 +217,7 @@ def _faq_for(o, name, ptype, pillar, city, phone):
                 [f"Which services did {subject} use?", (pillar and f"{pillar} services from {BRAND['name']}, delivered under one agreement.") or f"Services from across {BRAND['name']}, under one agreement."],
                 ["Can we get results like these?", f"Every engagement starts with the free {BRAND['assessment']}. A specialist maps your devices, contracts and workflows and shows where the savings are before you commit."]]
     elif ptype == "policy":
-        pool = ([["Where is the current policy text?", f"On the current site at {BRAND['site']}{o.get('url', '')}. It is embedded here at launch so the two never differ."]] if o.get("placeholder") else []) + [["Who do I contact about this policy?", f"{BRAND['legal']}, {BRAND['hq_address']}, {phone}. Write to the same address for any request about your personal information."],
+        pool = ([["Where is the current policy text?", f"On the current site at {BRAND['site']}{o.get('url', '')}. It is embedded here at launch so the two never differ."]] if o.get("placeholder") else [["Which version of this policy governs?", f"The one published on the current site at {BRAND['site']}{o.get('url', '')} until the new site goes live. This page mirrors it and is re-synced from the policy provider at launch."]]) + [["Who do I contact about this policy?", f"{BRAND['legal']}, {BRAND['hq_address']}, {phone}. Write to the same address for any request about your personal information."],
                 ["Does this policy apply to the Customer Care app?", "The Customer Care app has its own privacy policy, linked from this site. Where the two differ, the app policy governs data collected in the app."],
                 ["When was this policy last updated?", f"The policy text on this page is carried over from the current site; a dated revision line is added when the new site goes live."]]
     else:

@@ -14,12 +14,24 @@ The client sees their own page, the rebuilt page, and exactly what changed, for 
 2. **Score every page.** `scripts/site_audit.py --fetch-log ... --pages ...` runs seventeen
    checks and writes `brands/<slug>.seo-full.json` plus a CSV for the client repo. The same
    script with `--dir` scores a build, so the client's site and the rebuild are judged identically.
-3. **Extract the copy and rebuild.** The crawl is parsed into `brands/<slug>.pages.json`
-   (title, meta, H1, headings, paragraphs, bullets). `scripts/migrate_pages.py` maps every URL to
+3. **Extract the copy and rebuild.** `scripts/extract_pages.py --fetch-log ... --pages ... --out
+   brands/<slug>.pages.json` parses the crawl (title, meta, H1, headings, paragraphs, bullets).
+   Policy pages served by an embed (Termageddon, Termly) have no text in the crawl; pass
+   `--policies DIR` with the rendered HTML when it can be fetched. On VAF the Termageddon render
+   endpoint refused a direct fetch ("Failed to load license"; it checks the browser origin), and
+   the sandbox browser cannot reach the client's site, so the policies were scraped with Firecrawl
+   (a real browser), saved as markdown and converted with `scripts/md_policy_to_html.py`. The
+   cookie, terms and disclaimer texts are verbatim. The privacy policy repeats an identical
+   collection, sharing and rights block for each of fourteen data types; the preview consolidates
+   those into one list each and says so on the page. The live policy governs until launch, when the
+   provider embed is wired in. `scripts/migrate_pages.py` maps every URL to
    a file in the build, turns the copy into hero, detail and FAQ sections, adds Service or Article
    schema and a form, and returns the 301 map. The content file decides what is `COVERED` by a
    hand-written page, what is `RETIRE`d, and what is migrated. `fix_title` and `fix_desc`
    normalise every page: 30 to 60 character titles with the city, 70 to 160 character metas.
+   Depth: any page that ends under 600 words gets a related-pages block built from the real
+   teasers of its siblings (same pillar, same city, other industries, other policies), which is
+   both internal linking and honest depth. Ninety-one VAF pages received one.
 4. **Score the build and show both.** Audit each option, write `brands/<slug>.build-audit.json`,
    rebuild. The hub's "Every page audited" section now renders one card per client URL: today's
    score, the build's score, each check side by side, a "what we did" list, and buttons for the
@@ -88,7 +100,8 @@ The whole sequence, for a new slug:
 cat urls.txt | xargs -P 16 -I{} sh -c 'f=$(printf "%s" "{}" | md5sum | cut -c1-12); c=$(curl -sL -o pages/$f.html -w "%{http_code}" "{}"); echo "$c $f {}"' > fetch.log
 # 2 score today
 python3 scripts/site_audit.py --fetch-log fetch.log --pages pages --out brands/<slug>.seo-full.json --csv <client-repo>/seo-audit-pages.csv
-# 3 extract copy (see the extraction snippet in this file's history), then build
+# 3 extract copy, then build
+python3 scripts/extract_pages.py --fetch-log fetch.log --pages pages --out brands/<slug>.pages.json
 python3 brands/<slug>.content.py && python3 scripts/preview.py ...
 # 4 score the build and rebuild the hub
 python3 scripts/site_audit.py --dir <client-repo>/clean --base <preview-url>/clean --out build_clean.json

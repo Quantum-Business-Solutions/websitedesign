@@ -79,7 +79,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/artificial-intelligence.jpg",
-  "words": 443
+  "words": 443,
+  "embedded_policy": false
  },
  {
   "url": "/business-security-systems",
@@ -126,7 +127,8 @@
    }
   ],
   "og": "/images/hero-information.jpg",
-  "words": 277
+  "words": 277,
+  "embedded_policy": false
  },
  {
   "url": "/about/",
@@ -158,7 +160,8 @@
    }
   ],
   "og": "/images/hero-about.jpg",
-  "words": 118
+  "words": 118,
+  "embedded_policy": false
  },
  {
   "url": "/bloomington/",
@@ -194,7 +197,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 105
+  "words": 105,
+  "embedded_policy": false
  },
  {
   "url": "/benefits",
@@ -205,14 +209,96 @@
    {
     "heading": "",
     "paras": [
-     "At Van Ausdall & Farrar, our people are our number one asset. Our employees are the",
-     "driving force that allows us to be successful now, and in the future. Below is an overview"
+     "At Van Ausdall & Farrar, our people are our number one asset. Our employees are the driving force that allows us to be successful now, and in the future. Below is an overview of our comprehensive benefits:"
     ],
     "bullets": []
+   },
+   {
+    "heading": "Health",
+    "paras": [],
+    "bullets": [
+     "Medical (PPO & HDHP offerings)",
+     "Dental",
+     "Vision",
+     "Healthcare Flexible Spending (FSA)",
+     "Health Savings Account (HSA)"
+    ]
+   },
+   {
+    "heading": "Financial",
+    "paras": [],
+    "bullets": [
+     "Competitive Pay and Annual Merit Increases",
+     "Company-Funded Life Insurance",
+     "401K Plan Company Match",
+     "Short-Term Disability",
+     "Long-Term Disability",
+     "Financial Wellness Programs",
+     "Tenure Program Bonus",
+     "Employee Referral Bonus Program",
+     "Tip Lead/Business Referral Program",
+     "Employee Discount Program"
+    ]
+   },
+   {
+    "heading": "PTO",
+    "paras": [],
+    "bullets": [
+     "Generous PTO",
+     "7 Paid Holidays + 1 Personal Holiday",
+     "Bereavement, Jury Duty, Voting Time Off"
+    ]
+   },
+   {
+    "heading": "Wellness",
+    "paras": [],
+    "bullets": [
+     "Monthly Fitness Reimbursement",
+     "Annual Wellness Assessments",
+     "Employee Assistance Program (EAP)",
+     "Flu Shot Clinics",
+     "Mental, Financial, and Physical Health Resources"
+    ]
+   },
+   {
+    "heading": "Family & Community Focus",
+    "paras": [],
+    "bullets": [
+     "VAF Volunteers Community Outreach Program",
+     "Monthly Paid Volunteer Hours",
+     "Dependent Care Flex Spending",
+     "Flexible Hours to promote Work-Life Balance",
+     "Seasonal and Engagement Events"
+    ]
+   },
+   {
+    "heading": "Recognition",
+    "paras": [],
+    "bullets": [
+     "Quarterly Sales Incentive Trips",
+     "President’s Club",
+     "MVP of the Year Program",
+     "Leader of the Year Program",
+     "Monthly Recognition for Displaying Core Values",
+     "Employee Appreciation Day Celebration",
+     "Employee of the Quarter"
+    ]
+   },
+   {
+    "heading": "Culture & Employee Experience",
+    "paras": [],
+    "bullets": [
+     "Open Door Policy with Management",
+     "Opportunities for Advancement",
+     "Locally Owned and Operated",
+     "Collaborative Team Environment",
+     "Rich History dating back to Thomas Edison"
+    ]
    }
   ],
   "og": "/images/careers/01.jpg",
-  "words": 33
+  "words": 195,
+  "embedded_policy": false
  },
  {
   "url": "/business-continuity-compliance",
@@ -245,7 +331,8 @@
    }
   ],
   "og": "/images/hero-information.jpg",
-  "words": 326
+  "words": 326,
+  "embedded_policy": false
  },
  {
   "url": "/about/why",
@@ -269,7 +356,8 @@
    }
   ],
   "og": "/images/hero-about.jpg",
-  "words": 353
+  "words": 353,
+  "embedded_policy": false
  },
  {
   "url": "/case-studies/",
@@ -435,7 +523,8 @@
    }
   ],
   "og": "/images/hero-about.jpg",
-  "words": 224
+  "words": 224,
+  "embedded_policy": false
  },
  {
   "url": "/case-studies/becks-hybrid",
@@ -486,7 +575,8 @@
    }
   ],
   "og": "/images/hero-about.jpg",
-  "words": 395
+  "words": 395,
+  "embedded_policy": false
  },
  {
   "url": "/automated-forms-processing",
@@ -584,7 +674,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 471
+  "words": 471,
+  "embedded_policy": false
  },
  {
   "url": "/bloomington/business-phone-systems-in-bloomington-in",
@@ -627,7 +718,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 362
+  "words": 362,
+  "embedded_policy": false
  },
  {
   "url": "/carmel/",
@@ -663,7 +755,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 97
+  "words": 97,
+  "embedded_policy": false
  },
  {
   "url": "/about/history",
@@ -684,7 +777,8 @@
    }
   ],
   "og": "/images/hero-about.jpg",
-  "words": 268
+  "words": 268,
+  "embedded_policy": false
  },
  {
   "url": "/best-in-class-partners",
@@ -738,7 +832,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 437
+  "words": 437,
+  "embedded_policy": false
  },
  {
   "url": "/case-studies/berry-global",
@@ -790,7 +885,8 @@
    }
   ],
   "og": "/images/hero-about.jpg",
-  "words": 389
+  "words": 389,
+  "embedded_policy": false
  },
  {
   "url": "/case-studies/city-of-anderson",
@@ -841,7 +937,8 @@
    }
   ],
   "og": "/images/hero-about.jpg",
-  "words": 407
+  "words": 407,
+  "embedded_policy": false
  },
  {
   "url": "/case-studies/aspire",
@@ -892,7 +989,8 @@
    }
   ],
   "og": "/images/hero-about.jpg",
-  "words": 342
+  "words": 342,
+  "embedded_policy": false
  },
  {
   "url": "/bloomington/network-carrier-solutions-in-bloomington-in",
@@ -939,7 +1037,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 428
+  "words": 428,
+  "embedded_policy": false
  },
  {
   "url": "/assessment/",
@@ -1261,7 +1360,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/assessment/images/headquarters.jpg",
-  "words": 3837
+  "words": 3837,
+  "embedded_policy": false
  },
  {
   "url": "/case-studies/city-of-bloomington",
@@ -1311,7 +1411,8 @@
    }
   ],
   "og": "/images/hero-about.jpg",
-  "words": 325
+  "words": 325,
+  "embedded_policy": false
  },
  {
   "url": "/case-studies/bowen-engineering",
@@ -1363,7 +1464,8 @@
    }
   ],
   "og": "/images/hero-about.jpg",
-  "words": 369
+  "words": 369,
+  "embedded_policy": false
  },
  {
   "url": "/case-studies/johnson-memorial-hospital",
@@ -1412,7 +1514,8 @@
    }
   ],
   "og": "/images/hero-about.jpg",
-  "words": 392
+  "words": 392,
+  "embedded_policy": false
  },
  {
   "url": "/case-studies/tippecanoe-school-corporation-digital-document",
@@ -1460,7 +1563,8 @@
    }
   ],
   "og": "/images/hero-about.jpg",
-  "words": 388
+  "words": 388,
+  "embedded_policy": false
  },
  {
   "url": "/case-studies/mid-city",
@@ -1506,7 +1610,8 @@
    }
   ],
   "og": "/images/hero-about.jpg",
-  "words": 438
+  "words": 438,
+  "embedded_policy": false
  },
  {
   "url": "/bloomington/network-infrastructure-in-bloomington-in",
@@ -1555,7 +1660,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 336
+  "words": 336,
+  "embedded_policy": false
  },
  {
   "url": "/case-studies/shiel-sexton",
@@ -1605,7 +1711,8 @@
    }
   ],
   "og": "/images/hero-about.jpg",
-  "words": 394
+  "words": 394,
+  "embedded_policy": false
  },
  {
   "url": "/about/customer-comments",
@@ -1614,7 +1721,8 @@
   "h1": "Real Customer Comments",
   "blocks": [],
   "og": "/images/hero-about.jpg",
-  "words": 0
+  "words": 0,
+  "embedded_policy": false
  },
  {
   "url": "/case-studies/pools-of-fun",
@@ -1660,7 +1768,8 @@
    }
   ],
   "og": "/images/hero-about.jpg",
-  "words": 511
+  "words": 511,
+  "embedded_policy": false
  },
  {
   "url": "/case-studies/tippecanoe-school-corporation",
@@ -1710,7 +1819,8 @@
    }
   ],
   "og": "/images/hero-about.jpg",
-  "words": 393
+  "words": 393,
+  "embedded_policy": false
  },
  {
   "url": "/case-studies/the-town-of-bargersville",
@@ -1758,7 +1868,8 @@
    }
   ],
   "og": "/images/hero-about.jpg",
-  "words": 387
+  "words": 387,
+  "embedded_policy": false
  },
  {
   "url": "/columbus/",
@@ -1794,7 +1905,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 95
+  "words": 95,
+  "embedded_policy": false
  },
  {
   "url": "/case-studies/star-financial",
@@ -1844,7 +1956,8 @@
    }
   ],
   "og": "/images/hero-about.jpg",
-  "words": 304
+  "words": 304,
+  "embedded_policy": false
  },
  {
   "url": "/communication/",
@@ -1920,7 +2033,8 @@
    }
   ],
   "og": "/images/hero-communication.jpg",
-  "words": 552
+  "words": 552,
+  "embedded_policy": false
  },
  {
   "url": "/columbus/business-telephone-systems-in-columbus-in",
@@ -1956,7 +2070,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 441
+  "words": 441,
+  "embedded_policy": false
  },
  {
   "url": "/cloud-based-solutions",
@@ -2062,7 +2177,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 118
+  "words": 118,
+  "embedded_policy": false
  },
  {
   "url": "/communication/call-center-services",
@@ -2109,7 +2225,8 @@
    }
   ],
   "og": "/images/hero-communication.jpg",
-  "words": 446
+  "words": 446,
+  "embedded_policy": false
  },
  {
   "url": "/communication/elevate",
@@ -2439,7 +2556,8 @@
    }
   ],
   "og": "/images/hero-communication.jpg",
-  "words": 1010
+  "words": 1010,
+  "embedded_policy": false
  },
  {
   "url": "/communication/mobility-solutions",
@@ -2464,7 +2582,8 @@
    }
   ],
   "og": "/images/hero-communication.jpg",
-  "words": 195
+  "words": 195,
+  "embedded_policy": false
  },
  {
   "url": "/communication/business-phone-systems",
@@ -2551,7 +2670,8 @@
    }
   ],
   "og": "/images/hero-communication.jpg",
-  "words": 511
+  "words": 511,
+  "embedded_policy": false
  },
  {
   "url": "/communication/customer-training-videos",
@@ -2632,7 +2752,8 @@
    }
   ],
   "og": "/images/hero-communication.jpg",
-  "words": 173
+  "words": 173,
+  "embedded_policy": false
  },
  {
   "url": "/case-studies/echo-engineering",
@@ -2687,7 +2808,8 @@
    }
   ],
   "og": "/images/hero-about.jpg",
-  "words": 729
+  "words": 729,
+  "embedded_policy": false
  },
  {
   "url": "/case-studies/ellinger-riggs",
@@ -2740,7 +2862,8 @@
    }
   ],
   "og": "/images/hero-about.jpg",
-  "words": 470
+  "words": 470,
+  "embedded_policy": false
  },
  {
   "url": "/communication/networking-solutions",
@@ -2804,7 +2927,8 @@
    }
   ],
   "og": "/images/hero-communication.jpg",
-  "words": 396
+  "words": 396,
+  "embedded_policy": false
  },
  {
   "url": "/communication/conference-and-collaboration",
@@ -2830,7 +2954,8 @@
    }
   ],
   "og": "/images/hero-communication.jpg",
-  "words": 153
+  "words": 153,
+  "embedded_policy": false
  },
  {
   "url": "/columbus/carrier-solutions-in-columbus-in",
@@ -2859,7 +2984,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 458
+  "words": 458,
+  "embedded_policy": false
  },
  {
   "url": "/communication/sd-wan",
@@ -2911,7 +3037,8 @@
    }
   ],
   "og": "/images/hero-communication.jpg",
-  "words": 503
+  "words": 503,
+  "embedded_policy": false
  },
  {
   "url": "/communication/unified-communications",
@@ -2930,7 +3057,8 @@
    }
   ],
   "og": "/images/hero-communication.jpg",
-  "words": 63
+  "words": 63,
+  "embedded_policy": false
  },
  {
   "url": "/case-studies/phalen-leadership-academy",
@@ -2977,7 +3105,8 @@
    }
   ],
   "og": "/images/hero-about.jpg",
-  "words": 309
+  "words": 309,
+  "embedded_policy": false
  },
  {
   "url": "/case-studies/gailey-eye-clinic",
@@ -3026,7 +3155,8 @@
    }
   ],
   "og": "/images/hero-about.jpg",
-  "words": 415
+  "words": 415,
+  "embedded_policy": false
  },
  {
   "url": "/copiers/",
@@ -3117,7 +3247,8 @@
    }
   ],
   "og": "/images/hero-print.jpg",
-  "words": 388
+  "words": 388,
+  "embedded_policy": false
  },
  {
   "url": "/ai",
@@ -3177,7 +3308,8 @@
    }
   ],
   "og": "/images/hero-ai.jpg",
-  "words": 371
+  "words": 371,
+  "embedded_policy": false
  },
  {
   "url": "/copier-service-repair",
@@ -3269,7 +3401,8 @@
    }
   ],
   "og": "/images/129153397.jpg",
-  "words": 366
+  "words": 366,
+  "embedded_policy": false
  },
  {
   "url": "/copy-print-solutions/",
@@ -3450,7 +3583,8 @@
    }
   ],
   "og": "/images/hero-print.jpg",
-  "words": 475
+  "words": 475,
+  "embedded_policy": false
  },
  {
   "url": "/columbus/network-infrastructure-in-columbus-in",
@@ -3480,7 +3614,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 250
+  "words": 250,
+  "embedded_policy": false
  },
  {
   "url": "/contact/",
@@ -3494,10 +3629,47 @@
      "At Van Ausdall & Farrar, our innovation experts improve your business efficiency by eliminating technology you don’t need, optimizing what you have, and creating a technology improvement roadmap that grows with you. And it all starts with our signature Technology Strength Assessment ™ ."
     ],
     "bullets": []
+   },
+   {
+    "heading": "Let's Talk",
+    "paras": [],
+    "bullets": []
+   },
+   {
+    "heading": "Our Offices",
+    "paras": [],
+    "bullets": []
+   },
+   {
+    "heading": "Indianapolis",
+    "paras": [],
+    "bullets": [
+     "P: (317) 634-2913",
+     "6430 E 75th Street",
+     "Indianapolis, IN 46250",
+     "clientsuccess@ vanausdall.com"
+    ]
+   },
+   {
+    "heading": "Evansville",
+    "paras": [],
+    "bullets": [
+     "P: (812) 424-5736"
+    ]
+   },
+   {
+    "heading": "Fort Wayne",
+    "paras": [],
+    "bullets": [
+     "P: (260) 432-1547",
+     "1241 N Wells Street",
+     "Fort Wayne, IN 46808"
+    ]
    }
   ],
   "og": "/images/hero-contact.jpg",
-  "words": 44
+  "words": 70,
+  "embedded_policy": false
  },
  {
   "url": "/communication/carrier-services",
@@ -3536,7 +3708,8 @@
    }
   ],
   "og": "/images/hero-communication.jpg",
-  "words": 243
+  "words": 243,
+  "embedded_policy": false
  },
  {
   "url": "/covid-19-information",
@@ -3663,7 +3836,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 1400
+  "words": 1400,
+  "embedded_policy": false
  },
  {
   "url": "/cyber-security-assessment",
@@ -3725,7 +3899,8 @@
    }
   ],
   "og": "/images/120759184.jpg",
-  "words": 598
+  "words": 598,
+  "embedded_policy": false
  },
  {
   "url": "/contact/careers",
@@ -3846,7 +4021,8 @@
    }
   ],
   "og": "/images/careers/01.jpg",
-  "words": 338
+  "words": 338,
+  "embedded_policy": false
  },
  {
   "url": "/cyber-security-solutions",
@@ -3922,7 +4098,8 @@
    }
   ],
   "og": "/images/hero-information.jpg",
-  "words": 645
+  "words": 645,
+  "embedded_policy": false
  },
  {
   "url": "/document-conversion/",
@@ -4037,7 +4214,8 @@
    }
   ],
   "og": "/images/hero-process.jpg",
-  "words": 713
+  "words": 713,
+  "embedded_policy": false
  },
  {
   "url": "/contact/training",
@@ -4080,7 +4258,8 @@
    }
   ],
   "og": "/images/hero-contact.jpg",
-  "words": 226
+  "words": 226,
+  "embedded_policy": false
  },
  {
   "url": "/customer-care",
@@ -4107,7 +4286,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 152
+  "words": 152,
+  "embedded_policy": false
  },
  {
   "url": "/communication/call-recording",
@@ -4125,7 +4305,8 @@
    }
   ],
   "og": "/images/hero-communication.jpg",
-  "words": 40
+  "words": 40,
+  "embedded_policy": false
  },
  {
   "url": "/document-management",
@@ -4162,7 +4343,8 @@
    }
   ],
   "og": "/images/hero-process.jpg",
-  "words": 280
+  "words": 280,
+  "embedded_policy": false
  },
  {
   "url": "/communication/cloud-communications",
@@ -4199,7 +4381,8 @@
    }
   ],
   "og": "/images/hero-communication.jpg",
-  "words": 285
+  "words": 285,
+  "embedded_policy": false
  },
  {
   "url": "/enterprise-digital-dictation-solutions",
@@ -4213,10 +4396,47 @@
      "Hardware partners - click on partner name to view product line."
     ],
     "bullets": []
+   },
+   {
+    "heading": "Get Dictation",
+    "paras": [],
+    "bullets": [
+     "Authorized Solutions Partner for:",
+     "Winscribe",
+     "Phillips",
+     "Olympus"
+    ]
+   },
+   {
+    "heading": "Phillips",
+    "paras": [],
+    "bullets": [
+     "Mobile Dictation Video > – Speech Pad",
+     "Desktop Dictation",
+     "Meeting Recording Video > – Voice Tracers",
+     "Transcription"
+    ]
+   },
+   {
+    "heading": "Olympus Professional Dictation",
+    "paras": [],
+    "bullets": [
+     "Professional Dictation Video > – Pro Dictation Overview",
+     "Health Care Dictation Video > – Healthcare Industry",
+     "Legal Dictation Video > – Legal Community"
+    ]
+   },
+   {
+    "heading": "Grundig Business Systems",
+    "paras": [],
+    "bullets": [
+     "Authorized Olympus & Grundig In-Warranty Repair Center"
+    ]
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 11
+  "words": 65,
+  "embedded_policy": false
  },
  {
   "url": "/evansville/business-phone-systems-in-evansville-in",
@@ -4255,7 +4475,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 337
+  "words": 337,
+  "embedded_policy": false
  },
  {
   "url": "/document-scanning",
@@ -4291,7 +4512,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 157
+  "words": 157,
+  "embedded_policy": false
  },
  {
   "url": "/evansville/network-infrastructure-in-evansville-in",
@@ -4351,7 +4573,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 271
+  "words": 271,
+  "embedded_policy": false
  },
  {
   "url": "/evansville/network-carrier-solutions-in-evansville-in",
@@ -4411,7 +4634,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 449
+  "words": 449,
+  "embedded_policy": false
  },
  {
   "url": "/evansville/managed-it-solutions-evansville-in",
@@ -4470,7 +4694,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 534
+  "words": 534,
+  "embedded_policy": false
  },
  {
   "url": "/evansville/",
@@ -4591,7 +4816,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 1126
+  "words": 1126,
+  "embedded_policy": false
  },
  {
   "url": "/fort-wayne/",
@@ -4720,7 +4946,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 877
+  "words": 877,
+  "embedded_policy": false
  },
  {
   "url": "/fort-wayne/business-phone-systems-in-fort-wayne-in",
@@ -4761,7 +4988,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 416
+  "words": 416,
+  "embedded_policy": false
  },
  {
   "url": "/evansville/cloud-solutions-evansville-in",
@@ -4842,7 +5070,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 755
+  "words": 755,
+  "embedded_policy": false
  },
  {
   "url": "/get-started",
@@ -4883,7 +5112,8 @@
    }
   ],
   "og": "/images/cloud-networking.jpg",
-  "words": 238
+  "words": 238,
+  "embedded_policy": false
  },
  {
   "url": "/fort-wayne/cloud-solutions-fort-wayne-in",
@@ -4963,7 +5193,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 579
+  "words": 579,
+  "embedded_policy": false
  },
  {
   "url": "/greenwood/",
@@ -4999,7 +5230,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 101
+  "words": 101,
+  "embedded_policy": false
  },
  {
   "url": "/fort-wayne/managed-it-solutions-fort-wayne-in",
@@ -5076,7 +5308,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 709
+  "words": 709,
+  "embedded_policy": false
  },
  {
   "url": "/fort-wayne/network-infrastructure-in-fort-wayne-in",
@@ -5135,7 +5368,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 325
+  "words": 325,
+  "embedded_policy": false
  },
  {
   "url": "/fort-wayne/network-carrier-solutions-in-fort-wayne-in",
@@ -5169,7 +5403,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 283
+  "words": 283,
+  "embedded_policy": false
  },
  {
   "url": "/indianapolis/network-infrastructure-in-indianapolis-in",
@@ -5223,7 +5458,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 398
+  "words": 398,
+  "embedded_policy": false
  },
  {
   "url": "/industries/education-technology-solutions",
@@ -5357,7 +5593,8 @@
    }
   ],
   "og": "/images/hero-industries.jpg",
-  "words": 1164
+  "words": 1164,
+  "embedded_policy": false
  },
  {
   "url": "/indianapolis/",
@@ -5495,7 +5732,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 1047
+  "words": 1047,
+  "embedded_policy": false
  },
  {
   "url": "/industries/",
@@ -5568,7 +5806,8 @@
    }
   ],
   "og": "/images/hero-industries.jpg",
-  "words": 404
+  "words": 404,
+  "embedded_policy": false
  },
  {
   "url": "/document-management-workflow",
@@ -5675,7 +5914,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 312
+  "words": 312,
+  "embedded_policy": false
  },
  {
   "url": "/downloads",
@@ -5689,10 +5929,42 @@
      "Visit any of the links below for fast access to manufacturer and developer driver pages, as well as various software downloads."
     ],
     "bullets": []
+   },
+   {
+    "heading": "Copier & Printer Services",
+    "paras": [],
+    "bullets": [
+     "Ricoh drivers, specifications and “how to” self-help",
+     "Online interactive Ricoh training",
+     "Canon drivers and specifications",
+     "HP drivers and product manuals"
+    ]
+   },
+   {
+    "heading": "Document Management Services",
+    "paras": [],
+    "bullets": [
+     "Fujitsu Scanner Drivers",
+     "Canon Scanner Drivers",
+     "Kodak Scanner Drivers",
+     "Panasonic Scanner Drivers"
+    ]
+   },
+   {
+    "heading": "Converged Communications Services",
+    "paras": [],
+    "bullets": [
+     "Shoretel Self-Paced End-User Training",
+     "Shoretel Conferencing Self-Paced End-User Training",
+     "Toshiba IP 5000 Series Video Training",
+     "Toshiba DP 5000 Series Video Training",
+     "Toshiba CIX System Date and Time Change Guide"
+    ]
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 21
+  "words": 82,
+  "embedded_policy": false
  },
  {
   "url": "/industries/financial-technology-services",
@@ -5803,7 +6075,8 @@
    }
   ],
   "og": "/images/hero-industries.jpg",
-  "words": 868
+  "words": 868,
+  "embedded_policy": false
  },
  {
   "url": "/industries/government-technology-solutions",
@@ -5920,7 +6193,8 @@
    }
   ],
   "og": "/images/hero-industries.jpg",
-  "words": 860
+  "words": 860,
+  "embedded_policy": false
  },
  {
   "url": "/free-security-training-tools",
@@ -5942,7 +6216,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 84
+  "words": 84,
+  "embedded_policy": false
  },
  {
   "url": "/industries/manufacturing-logistics-technology-solutions",
@@ -6045,7 +6320,8 @@
    }
   ],
   "og": "/images/hero-industries.jpg",
-  "words": 779
+  "words": 779,
+  "embedded_policy": false
  },
  {
   "url": "/industries/insurance-technology-solutions",
@@ -6128,7 +6404,8 @@
    }
   ],
   "og": "/images/hero-industries.jpg",
-  "words": 542
+  "words": 542,
+  "embedded_policy": false
  },
  {
   "url": "/fishers/",
@@ -6164,7 +6441,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 106
+  "words": 106,
+  "embedded_policy": false
  },
  {
   "url": "/industries/healthcare-technology-solutions",
@@ -6278,7 +6556,8 @@
    }
   ],
   "og": "/images/hero-industries.jpg",
-  "words": 845
+  "words": 845,
+  "embedded_policy": false
  },
  {
   "url": "/information/office-security",
@@ -6329,7 +6608,8 @@
    }
   ],
   "og": "/images/hero-information.jpg",
-  "words": 366
+  "words": 366,
+  "embedded_policy": false
  },
  {
   "url": "/industries/real-estate-technology-solutions",
@@ -6460,7 +6740,8 @@
    }
   ],
   "og": "/images/hero-industries.jpg",
-  "words": 900
+  "words": 900,
+  "embedded_policy": false
  },
  {
   "url": "/evansville/document-conversion-solutions",
@@ -6538,7 +6819,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 647
+  "words": 647,
+  "embedded_policy": false
  },
  {
   "url": "/information/cloud-solutions",
@@ -6597,7 +6879,8 @@
    }
   ],
   "og": "/images/hero-information.jpg",
-  "words": 333
+  "words": 333,
+  "embedded_policy": false
  },
  {
   "url": "/information/physical-security",
@@ -6720,7 +7003,8 @@
    }
   ],
   "og": "/images/hero-information.jpg",
-  "words": 1015
+  "words": 1015,
+  "embedded_policy": false
  },
  {
   "url": "/kiosk-assembly",
@@ -6737,7 +7021,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 11
+  "words": 11,
+  "embedded_policy": false
  },
  {
   "url": "/industries/engineering-construction-technology-solutions",
@@ -6850,7 +7135,8 @@
    }
   ],
   "og": "/images/hero-industries.jpg",
-  "words": 758
+  "words": 758,
+  "embedded_policy": false
  },
  {
   "url": "/kiosk-demo",
@@ -6867,7 +7153,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 33
+  "words": 33,
+  "embedded_policy": false
  },
  {
   "url": "/iphone-scanning",
@@ -6897,7 +7184,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 333
+  "words": 333,
+  "embedded_policy": false
  },
  {
   "url": "/information/managed-it-services",
@@ -7107,7 +7395,8 @@
    }
   ],
   "og": "/images/hero-information.jpg",
-  "words": 956
+  "words": 956,
+  "embedded_policy": false
  },
  {
   "url": "/knowbe4/can-hackers-spoof-email-address-domain",
@@ -7138,7 +7427,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 170
+  "words": 170,
+  "embedded_policy": false
  },
  {
   "url": "/kiosk-quote",
@@ -7147,7 +7437,8 @@
   "h1": "Request a Quote for Temperature Kiosks",
   "blocks": [],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 0
+  "words": 0,
+  "embedded_policy": false
  },
  {
   "url": "/free-security-awareness",
@@ -7179,7 +7470,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 156
+  "words": 156,
+  "embedded_policy": false
  },
  {
   "url": "/it-support",
@@ -7221,7 +7513,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 160
+  "words": 160,
+  "embedded_policy": false
  },
  {
   "url": "/knowbe4/get-free-ransomware-simulator-tool",
@@ -7259,7 +7552,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 183
+  "words": 183,
+  "embedded_policy": false
  },
  {
   "url": "/knowbe4/get-free-weak-password-test",
@@ -7299,7 +7593,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 204
+  "words": 204,
+  "embedded_policy": false
  },
  {
   "url": "/information/",
@@ -7428,7 +7723,8 @@
    }
   ],
   "og": "/images/hero-information.jpg",
-  "words": 669
+  "words": 669,
+  "embedded_policy": false
  },
  {
   "url": "/net-promoter-score",
@@ -7437,7 +7733,8 @@
   "h1": "",
   "blocks": [],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 0
+  "words": 0,
+  "embedded_policy": false
  },
  {
   "url": "/knowbe4/get-free-email-exposure-check",
@@ -7471,7 +7768,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 149
+  "words": 149,
+  "embedded_policy": false
  },
  {
   "url": "/muncie/network-infrastructure-in-muncie-in",
@@ -7530,7 +7828,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 404
+  "words": 404,
+  "embedded_policy": false
  },
  {
   "url": "/muncie/network-carrier-solutions-in-muncie-in",
@@ -7564,7 +7863,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 257
+  "words": 257,
+  "embedded_policy": false
  },
  {
   "url": "/managed-print",
@@ -7594,7 +7894,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 253
+  "words": 253,
+  "embedded_policy": false
  },
  {
   "url": "/network-security",
@@ -7735,7 +8036,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 607
+  "words": 607,
+  "embedded_policy": false
  },
  {
   "url": "/information/data-security",
@@ -7814,7 +8116,8 @@
    }
   ],
   "og": "/images/hero-information.jpg",
-  "words": 812
+  "words": 812,
+  "embedded_policy": false
  },
  {
   "url": "/office-security-solutions",
@@ -7886,7 +8189,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 606
+  "words": 606,
+  "embedded_policy": false
  },
  {
   "url": "/policies/do-not-share",
@@ -7899,13 +8203,17 @@
     "paras": [
      "The California Privacy Rights Act (CPRA) allows residents of California to opt out of the sharing of their personal information with third parties for the purpose of targeted advertising.",
      "To opt out of the sharing of personal information, please follow these instructions:",
-     "Under Categories, select the entry for Marketing and and toggle it to the off selection."
+     "Alternately, complete the CPRA request form."
     ],
-    "bullets": []
+    "bullets": [
+     "Open the Privacy Settings panel.",
+     "Under Categories, select the entry for Marketing and and toggle it to the off selection."
+    ]
    }
   ],
   "og": "/images/hero-contact.jpg",
-  "words": 57
+  "words": 68,
+  "embedded_policy": false
  },
  {
   "url": "/policies/cookie",
@@ -7914,15 +8222,165 @@
   "h1": "Cookie Policy",
   "blocks": [
    {
-    "heading": "",
+    "heading": "Cookie Policy",
     "paras": [
-     "Please wait while the policy is loaded. If it does not load, please click here to view the policy."
+     "We value your privacy very highly. Please read this Cookie Policy carefully before using the https://www.vanausdall.com/ Website (the “Website”) operated by Van Ausdall & Farrar, Inc., a(n) Corporation formed in Indiana, United States (“us, we, our”) as this Cookie Policy contains important information regarding our setting of cookies and other tracking technologies, your privacy and how we may use the information that we collect about you. Please also read our Privacy Policy, which provides more information about our privacy practices, your choices and your privacy rights."
+    ],
+    "bullets": []
+   },
+   {
+    "heading": "What are cookies?",
+    "paras": [
+     "A cookie is a small piece of data sent from a Website and stored on your device by your browser."
+    ],
+    "bullets": []
+   },
+   {
+    "heading": "Our placement and classification of cookies",
+    "paras": [
+     "This Website sets the cookies identified below. We have classified the cookies that we set by the purpose that they serve."
+    ],
+    "bullets": []
+   },
+   {
+    "heading": "Essential cookies",
+    "paras": [
+     "Essential cookies are cookies that are essential for you to browse this Website and use its features. For example, these cookies may be used for maintaining security, authenticating users, and preventing fraudulent actions. These cookies are enabled by default, and without them, the Website may not be fully functional. This Website collects the following strictly necessary/essential cookies:"
+    ],
+    "bullets": []
+   },
+   {
+    "heading": "Usercentrics Consent Management Platform",
+    "paras": [
+     "This is a consent management service. Usercentrics GmbH is used on websites and apps as a processor for the purpose of consent management. Provider: Usercentrics GmbH. Provenance: Third Party. Duration: Perpetual."
+    ],
+    "bullets": [
+     "Purpose: Compliance with legal obligations",
+     "Purpose: Consent storage"
+    ]
+   },
+   {
+    "heading": "cloudfront.net",
+    "paras": [
+     "This is a content delivery network provided by Amazon. The use of a CDN enables the user to make content available to you for retrieval more quickly with the help of regionally or internationally distributed servers. When you access this content, a connection is established between you and the respective servers of the CDN, whereby personal data may be transmitted. Provider: Amazon Web Services EMEA SARL. Provenance: Third Party. Duration: Perpetual."
+    ],
+    "bullets": [
+     "Purpose: Content Delivery"
+    ]
+   },
+   {
+    "heading": "Functional cookies",
+    "paras": [
+     "Functional cookies are cookies that allow a Website to remember the choices that you have made in the past and how you use the Website. For example, these cookies may be used for remembering what language you prefer, which pages you clicked on, or what your username and password are so that you can automatically log in to your account. These cookies are disabled by default and will be enabled only if you grant your consent to do so. If you do provide your consent‚ this Website will collect the following functional cookies:"
+    ],
+    "bullets": []
+   },
+   {
+    "heading": "LinkedIn Plugin",
+    "paras": [
+     "This tool adds Follow and Share buttons for the social media service LinkedIn to the website. LinkedIn is a social network that focuses on professional networking and career development. Provider: LinkedIn Ireland Unlimited Company. Provenance: Third Party. Duration: Perpetual. How to opt out: https://www.linkedin.com/help/linkedin/answer/62931/manage-advertising-preferences?lang=en"
+    ],
+    "bullets": [
+     "Purpose: Social Media"
+    ]
+   },
+   {
+    "heading": "ZoomInfo",
+    "paras": [
+     "This is a B2B data and software operating system platform. Provider: ZoomInfo Technologies LLC. Provenance: Third Party. Duration: Perpetual. How to opt out: visit the cookie provider's website."
+    ],
+    "bullets": [
+     "Purpose: Marketing",
+     "Purpose: Profiling",
+     "Purpose: Statistics",
+     "Purpose: Personalisation",
+     "Purpose: Providing Service",
+     "Purpose: Maintenance",
+     "Purpose: Verification of identity",
+     "Purpose: Compliance with legal obligations",
+     "Purpose: Ensure security, prevent fraud, and debug"
+    ]
+   },
+   {
+    "heading": "YouTube Video",
+    "paras": [
+     "This is a video player service. It can be used by user to watch, like, share, comment and upload videos. Provider: Google Ireland Limited. Provenance: Third Party. Duration: 8 months. How to opt out: https://safety.google/privacy/privacy-controls/"
+    ],
+    "bullets": [
+     "Purpose: Displaying Videos"
+    ]
+   },
+   {
+    "heading": "Google Fonts",
+    "paras": [
+     "This is a collection of fonts for commercial and personal use. Provider: Google Ireland Limited. Provenance: Third Party. Duration: Perpetual. How to opt out: visit the cookie provider's website."
+    ],
+    "bullets": [
+     "Purpose: Providing fonts",
+     "Purpose: Improvement of service"
+    ]
+   },
+   {
+    "heading": "Marketing cookies",
+    "paras": [
+     "Marketing cookies are cookies that track your online activity to, for example, help advertisers deliver more relevant advertisements or to limit how many times you see an advertisement. These cookies are disabled by default and will be enabled only if you grant your consent to do so. If you do provide your consent‚ this Website will collect the following marketing cookies:"
+    ],
+    "bullets": []
+   },
+   {
+    "heading": "LinkedIn Insight Tag",
+    "paras": [
+     "This is a conversion tracking and retargeting service. Provider: LinkedIn Ireland Unlimited Company. Provenance: Third Party. Duration: 6 months. How to opt out: https://www.linkedin.com/legal/privacy-policy"
+    ],
+    "bullets": [
+     "Purpose: Marketing",
+     "Purpose: Retargeting",
+     "Purpose: Analytics"
+    ]
+   },
+   {
+    "heading": "Google Ads",
+    "paras": [
+     "This is an advertising service. This service can be used to show personalised or non-personalised advertisement to users. Provider: Google Ireland Limited. Provenance: Third Party. Duration: 1 year, 1 month, 16 hours, 30 minutes. How to opt out: https://safety.google/privacy/privacy-controls/"
+    ],
+    "bullets": [
+     "Purpose: Advertisement",
+     "Purpose: Analytics",
+     "Purpose: Providing Service",
+     "Purpose: Statistics"
+    ]
+   },
+   {
+    "heading": "DoubleClick Ad",
+    "paras": [
+     "This is an advertising service. With this service it is possible to provide relevant ads to users and get campaign reports. Provider: Google Ireland Limited. Provenance: Third Party. Duration: 1 year. How to opt out: https://myaccount.google.com/data-and-privacy"
+    ],
+    "bullets": [
+     "Purpose: Advertisement",
+     "Purpose: Analytics",
+     "Purpose: Optimization"
+    ]
+   },
+   {
+    "heading": "Your choices regarding cookies",
+    "paras": [
+     "You have certain choices when it comes to the placing of cookies on your device. You may choose to accept or deny any functional or marketing cookies. If you consent to the placement of these cookies but would then like to withdraw your consent, you may do so at any time through our cookie consent tool, which can be found on the Website’s home page. You can control your cookie choices using the following means:"
+    ],
+    "bullets": [
+     "Through our cookie consent tool, where you can select the categories of cookies that you allow to be placed on your device and withdraw that consent; and"
+    ]
+   },
+   {
+    "heading": "Questions",
+    "paras": [
+     "If you have any questions about this Cookie Policy, please contact us at clientsuccess@vanausdall.com."
     ],
     "bullets": []
    }
   ],
   "og": "/images/hero-contact.jpg",
-  "words": 19
+  "words": 865,
+  "embedded_policy": true
  },
  {
   "url": "/muncie/",
@@ -7958,7 +8416,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 96
+  "words": 96,
+  "embedded_policy": false
  },
  {
   "url": "/muncie/business-phone-systems-in-muncie-in",
@@ -8005,7 +8464,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 356
+  "words": 356,
+  "embedded_policy": false
  },
  {
   "url": "/network-security-secure-router-access",
@@ -8027,7 +8487,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 153
+  "words": 153,
+  "embedded_policy": false
  },
  {
   "url": "/policies/limit-the-use",
@@ -8055,7 +8516,8 @@
    }
   ],
   "og": "/images/hero-contact.jpg",
-  "words": 151
+  "words": 151,
+  "embedded_policy": false
  },
  {
   "url": "/print-management-software",
@@ -8157,7 +8619,8 @@
    }
   ],
   "og": "/images/hero-print.jpg",
-  "words": 181
+  "words": 181,
+  "embedded_policy": false
  },
  {
   "url": "/policies/privacy",
@@ -8166,15 +8629,269 @@
   "h1": "Privacy Policy",
   "blocks": [
    {
-    "heading": "",
+    "heading": "Privacy Policy",
     "paras": [
-     "Please wait while the policy is loaded. If it does not load, please click here to view the policy."
+     "We value your privacy very highly. Please read this Privacy Policy carefully before using the https://www.vanausdall.com/ website (the “Website”) operated by Van Ausdall & Farrar, Inc., a(n) Corporation formed in Indiana, United States (“us, we, our”) as this Privacy Policy contains important information regarding your privacy and how we may use the information we collect about you.",
+     "Your access to or use of the Website is conditional upon your acceptance of and compliance with this Privacy Policy. This Privacy Policy applies to everyone, including but not limited to visitors, users and others, who wish to access or use the Website.",
+     "By accessing or using the Website, you agree to be bound by this Privacy Policy. If you disagree with any part of this Privacy Policy, you do not have our permission to access or use the Website."
+    ],
+    "bullets": []
+   },
+   {
+    "heading": "What information we collect and store",
+    "paras": [
+     "We collect and store any and all information that you enter on this Website. In the last 12 months, we have collected the following information about individuals using our Website: name, postal or shipping address, phone number, IP address, email address, device identifier, online identifier, browsing history, search history, information regarding your interaction with our website or application, information regarding your interactions with advertisements, geolocation information, social media user ID, and information regarding your interaction with embedded videos."
+    ],
+    "bullets": []
+   },
+   {
+    "heading": "Where we get this information",
+    "paras": [],
+    "bullets": [
+     "Information submitted by the consumer",
+     "Social networks",
+     "Tracking pixels",
+     "The observation and recording of activities by the business, such as through the use of cookies"
+    ]
+   },
+   {
+    "heading": "Legal basis for processing this information",
+    "paras": [],
+    "bullets": [
+     "The user has provided consent to the processing of their information",
+     "For geolocation information, processing is necessary for the purpose of a legitimate interest pursued by us or by a third party"
+    ]
+   },
+   {
+    "heading": "How we use this information",
+    "paras": [],
+    "bullets": [
+     "Providing you with our website or application",
+     "Analytics",
+     "Performing services",
+     "Providing customer service",
+     "Resolving disputes",
+     "Enforcing our Terms of Service",
+     "Responding to consumer messages",
+     "Counting ad impressions to unique visitors",
+     "Marketing and advertising",
+     "Targeted advertising",
+     "Verifying position and quality of ad impressions",
+     "Providing videos and tracking user interactions with such videos"
+    ]
+   },
+   {
+    "heading": "What happens if we don't have the information",
+    "paras": [
+     "If we do not have the information listed above, our use of your data for each of the purposes listed above will not be possible."
+    ],
+    "bullets": []
+   },
+   {
+    "heading": "With whom we share your personal information",
+    "paras": [
+     "In the last 12 months, we have shared the personal information listed above with the following categories of third parties for the following reasons."
+    ],
+    "bullets": []
+   },
+   {
+    "heading": "Categories of third parties with whom personal information is or was shared and disclosed",
+    "paras": [],
+    "bullets": [
+     "Advertising networks",
+     "Content Management Systems",
+     "Customer Management Systems",
+     "Data analytics providers",
+     "Data linking platforms",
+     "Email marketing vendors",
+     "Email service providers",
+     "Hosting providers",
+     "Social networks",
+     "Video embedding vendors",
+     "Website/application development and design vendors"
+    ]
+   },
+   {
+    "heading": "Reasons for sharing and disclosing",
+    "paras": [],
+    "bullets": [
+     "To analyze your interactions with us or our website",
+     "To build new website features",
+     "To detect and resolve security incidents",
+     "To fix bugs or identify and repair errors",
+     "To host our website",
+     "To market to you via email",
+     "To provide you with advertisements",
+     "To provide you with our website",
+     "To provide you with videos on our website and to track your interaction with such videos",
+     "To send you emails",
+     "To transfer your information onto different platforms that we use to manage our interactions with you"
+    ]
+   },
+   {
+    "heading": "How we protect your personal information",
+    "paras": [
+     "We have implemented the following measures to protect and safeguard your personal information:"
+    ],
+    "bullets": [
+     "Limiting the amount of personal information that we collect to strictly necessary only",
+     "Using SSL encryption or other secure technologies when receiving or sending personal information beyond internal networks",
+     "Destroying and/or deleting personal information once we no longer need it",
+     "Performing regular risk assessments",
+     "Mitigating risks by following a risk treatment plan",
+     "Having comprehensive written security policies and procedures",
+     "Screening (e.g. performing background checks) all employees with access to personal information",
+     "Training our employees on best security practices",
+     "Implementing and monitoring intrusion prevention and detection systems (e.g. anti-virus software)",
+     "Maintaining up-to-date software and safeguards",
+     "Performing regular due diligence of vendors who have access to personal information",
+     "Implementing physical security measures"
+    ]
+   },
+   {
+    "heading": "Sale of your information",
+    "paras": [
+     "We do not sell your personal information. Please see the “Your Rights” section below for more information about exercising your privacy rights regarding sales of your personal information."
+    ],
+    "bullets": []
+   },
+   {
+    "heading": "Cookies",
+    "paras": [
+     "A cookie is a small piece of data sent from a website and stored on your device by your browser. This Website sets cookies. Please visit our Cookie Policy to learn more about what cookies we set, why we set them, and how to change your cookie settings."
+    ],
+    "bullets": []
+   },
+   {
+    "heading": "Children's privacy",
+    "paras": [
+     "This Website is intended for use by a general audience and does not offer services to children. Should a child whom we know to be under 18 send personal information to us, we will use that information only to respond to that child to inform them that they cannot use this Website."
+    ],
+    "bullets": []
+   },
+   {
+    "heading": "Analytics programs",
+    "paras": [
+     "This Website uses the following analytics program(s) to collect information about you and your behaviors: Radar. To learn how to opt-out, please visit the website(s) of the analytics program(s) listed. You can also opt out of cookies by using our cookie consent banner."
+    ],
+    "bullets": []
+   },
+   {
+    "heading": "Advertising and remarketing",
+    "paras": [
+     "This Website uses the LinkedIn remarketing service. This remarketing service places a cookie or similar technology on your device that tracks your behavior online when you interact with advertisements and other content, this Website or other websites such as LinkedIn. This Website also uses the LinkedIn Insights Tag, which is an analytics tool that allows us to measure conversions from our advertisement campaigns on LinkedIn. You can opt out of this practice by visiting the LinkedIn opt out page or the LinkedIn advertising preferences page. You can also opt out of cookies by using our cookie consent banner."
+    ],
+    "bullets": []
+   },
+   {
+    "heading": "Information retention",
+    "paras": [
+     "We retain identifying information, internet or other electronic activity information, and sensitive personal information for a data retention period of 5 years."
+    ],
+    "bullets": []
+   },
+   {
+    "heading": "Direct marketing",
+    "paras": [
+     "We use the information that we collect about you for direct marketing purposes. Direct marketing is the act of selling products or services directly to consumers rather than through retailers. Please see the “Your rights” section below for more information regarding exercising your privacy rights related to direct marketing."
+    ],
+    "bullets": []
+   },
+   {
+    "heading": "Your rights",
+    "paras": [
+     "Depending upon where you reside‚ you may have the following rights with regard to your personal information:"
+    ],
+    "bullets": [
+     "The right to access the personal information that we hold about you (residents of California, Canada, Quebec, the European Union and/or the European Economic Area and the United Kingdom).",
+     "The right to know whether your personal information is sold or disclosed and to whom (residents of California).",
+     "The right to request that we amend any of the information that we have collected about you (residents of California, Canada, Quebec, the European Union and/or the European Economic Area and the United Kingdom).",
+     "The right to withdraw your consent to the processing of your personal information (residents of Canada, Quebec, the European Union and/or the European Economic Area and the United Kingdom).",
+     "The right to request that we restrict the processing of your personal information (residents of the European Union and/or the European Economic Area and the United Kingdom).",
+     "The right to request that we delete some or all of the personal information that we have collected about you (residents of California, the European Union and/or the European Economic Area and the United Kingdom).",
+     "The right to lodge a complaint regarding our collection, sharing, and processing of your personal information with us (residents of the United Kingdom).",
+     "The right to opt out of the use of your personal information for purposes of direct marketing (residents of the European Union and/or the European Economic Area and the United Kingdom).",
+     "The right to opt out of sales of your personal information (residents of California and Nevada).",
+     "The right to opt out of tracking of your location (residents of Quebec).",
+     "The right to opt out of the sharing of your personal information with third parties for the purpose of targeted advertising (residents of California).",
+     "The right to opt out of the use of your personal information for automated decision making purposes (residents of Quebec, the European Union and/or the European Economic Area and the United Kingdom).",
+     "The right to not be discriminated against based upon your exercise of your privacy rights (residents of California).",
+     "The right to limit the use and disclosure of your sensitive personal information (residents of California)."
+    ]
+   },
+   {
+    "heading": "Exercising your rights",
+    "paras": [
+     "You may exercise the rights specified above by submitting a consumer request to Brian Courtney, Director of Business Intelligence, BCourtney@vanausdall.com, (317) 974-7276, 6430 E 75th Street, Indianapolis, IN 46250, United States, or through https://www.vanausdall.com/contact/. See also the Do Not Share My Personal Information page and the Limit The Use Of My Sensitive Personal Information page.",
+     "You can opt out of us tracking your location by adjusting the settings on your browser or device.",
+     "If you use our cookie consent banner to exercise your privacy rights, the opt out signal will be applied to your browser. If you opt-out by contacting us as stated above, your preference will be applied to your account and our databases, including offline sales.",
+     "We will need to verify your identity prior to effectuating your request. To verify your identity, you will need to provide us with your name and email address with your request. Please note that we may be unable to process your request if you do not provide us with the above information.",
+     "You may also designate an authorized agent to exercise your rights on your behalf. You may designate an agent via any of the ways used to submit requests on your behalf. We will request the agent to verify that he or she has the authority to submit requests on your behalf. We will do so by asking the agent to submit the requester's valid government-issued ID and the authorized agent's valid government ID. Please note that we may not be able to process your request if your designated agent and/or you do not provide us with the above information.",
+     "We will respond to most consumer requests within 30 to 45 days of receipt, depending upon where you reside. However, some requests may take longer. We will notify you in writing if we need more time to respond. We have the ability to deny your request(s) if certain exceptions in the law apply. If we do deny your request, we will provide you with the reasons for such denial."
+    ],
+    "bullets": []
+   },
+   {
+    "heading": "Complaints",
+    "paras": [
+     "Residents of the United Kingdom may lodge a complaint with the United Kingdom Information Commissioner's Office by following the steps on the Lodge a Privacy Complaint (United Kingdom) page at ico.org.uk."
+    ],
+    "bullets": []
+   },
+   {
+    "heading": "Accountability",
+    "paras": [
+     "The following person is accountable and responsible for our privacy practices and procedures: Tim Mullen, CFO, (317) 974-7202, TMullen@vanausdall.com.",
+     "You may lodge a complaint with us by contacting the person accountable and responsible for our privacy practices and procedures at the contact information above. Residents of Canada may also lodge a complaint with the Office of the Privacy Commissioner of Canada by visiting the File a Privacy Complaint (Canada) page at priv.gc.ca or calling 1-800-282-1376. Residents of Quebec may also lodge a complaint with the Office of the Privacy Commissioner of Quebec by filling out the Quebec Privacy Commission form at cai.gouv.qc.ca or calling 1-888-528-7741."
+    ],
+    "bullets": []
+   },
+   {
+    "heading": "Location of data processing",
+    "paras": [
+     "All data processing activities undertaken by us take place in United States."
+    ],
+    "bullets": []
+   },
+   {
+    "heading": "Third-party websites",
+    "paras": [
+     "This Website may contain hyperlinks to websites operated by parties other than us. We provide such hyperlinks for your reference only. We do not control such websites and are not responsible for their contents or the privacy or other practices of such websites. It is up to you to read and fully understand their Privacy Policies. Our inclusion of hyperlinks to such websites does not imply any endorsement of the material on such websites or any association with their operators."
+    ],
+    "bullets": []
+   },
+   {
+    "heading": "Do Not Track",
+    "paras": [
+     "Do Not Track (“DNT”) is a preference you can set on your browser to inform websites that you do not want to be tracked. We do not support DNT. You can either enable or disable Do Not Track by visiting the Preferences or Settings page of your browser."
+    ],
+    "bullets": []
+   },
+   {
+    "heading": "Transferring data",
+    "paras": [
+     "We may transfer your personal information for processing to United States. This means that your information may be processed outside of your country of residence and it may be accessible to law enforcement and national security authorities of that country and jurisdiction. Please note that we use standard contractual clauses, additional safeguards, and adequacy decisions to transfer data."
+    ],
+    "bullets": []
+   },
+   {
+    "heading": "Questions",
+    "paras": [
+     "If you have any questions about this Privacy Policy, please contact us at clientsuccess@vanausdall.com."
+    ],
+    "bullets": []
+   },
+   {
+    "heading": "Changes to Privacy Policy",
+    "paras": [
+     "We reserve the right to amend this Privacy Policy at any time. We will notify you of any changes to this Privacy Policy by posting the updated Privacy Policy to this website."
     ],
     "bullets": []
    }
   ],
   "og": "/images/hero-contact.jpg",
-  "words": 19
+  "words": 2032,
+  "embedded_policy": true
  },
  {
   "url": "/knowbe4/start-free-phishing-security-test",
@@ -8206,7 +8923,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 181
+  "words": 181,
+  "embedded_policy": false
  },
  {
   "url": "/print/managed-print-services",
@@ -8257,7 +8975,8 @@
    }
   ],
   "og": "/images/hero-print.jpg",
-  "words": 203
+  "words": 203,
+  "embedded_policy": false
  },
  {
   "url": "/policies/disclaimer",
@@ -8266,15 +8985,39 @@
   "h1": "Disclaimer Policy",
   "blocks": [
    {
-    "heading": "",
+    "heading": "Disclaimer Policy",
     "paras": [
-     "Please wait while the policy is loaded. If it does not load, please click here to view the policy."
+     "Please read this Disclaimer carefully before using the https://www.vanausdall.com/ website (the \"Website\") operated by Van Ausdall & Farrar, Inc., a(n) Corporation formed in Indiana, United States (“us, we, our”) as this Disclaimer contains important information regarding limitations of our liability. Your access to and use of the Website is conditional upon your acceptance of and compliance with this Disclaimer. This Disclaimer applies to everyone, including but not limited to visitors, users, and others, who wish to access or use the Website.",
+     "By accessing or using the Website, you agree to be bound by this Disclaimer. If you disagree with any part of this Disclaimer, then you do not have our permission to access or use the Website."
+    ],
+    "bullets": []
+   },
+   {
+    "heading": "Testimonials, reviews and endorsements disclaimer",
+    "paras": [
+     "Any testimonials, reviews and endorsements displayed on this Website are received via text, audio or video submissions. They are real-life, individual experiences of those who have used our products or services. The results obtained by these individuals are not necessarily typical to what other consumers may achieve or experience. The testimonials, reviews and endorsements are displayed verbatim except for correction of grammatical and spelling errors and may have been shortened or edited for clarity. We are not responsible for the testimonials, reviews and endorsements displayed on this Website and do not necessarily share the opinions, views or commentary of such testimonials, reviews and endorsements.",
+     "The persons providing such testimonials, reviews and endorsements have not been compensated for doing so. The individuals providing the testimonials, reviews and endorsements displayed on this Website are not employed by us."
+    ],
+    "bullets": []
+   },
+   {
+    "heading": "Changes",
+    "paras": [
+     "We reserve the right to make changes to this Disclaimer at any time without any prior notice to you."
+    ],
+    "bullets": []
+   },
+   {
+    "heading": "Questions",
+    "paras": [
+     "If you have any questions about this Disclaimer, please contact us at clientsuccess@vanausdall.com."
     ],
     "bullets": []
    }
   ],
   "og": "/images/hero-contact.jpg",
-  "words": 19
+  "words": 285,
+  "embedded_policy": true
  },
  {
   "url": "/print/free-print-assessment",
@@ -8322,7 +9065,8 @@
    }
   ],
   "og": "/images/hero-print.jpg",
-  "words": 165
+  "words": 165,
+  "embedded_policy": false
  },
  {
   "url": "/process/business-process-solutions",
@@ -8419,7 +9163,8 @@
    }
   ],
   "og": "/images/hero-process.jpg",
-  "words": 688
+  "words": 688,
+  "embedded_policy": false
  },
  {
   "url": "/network-infrastructure",
@@ -8428,15 +9173,30 @@
   "h1": "Local & Wide Area Network Infrastructure",
   "blocks": [
    {
-    "heading": "",
+    "heading": "Network Infrastructure Services for Your Business",
     "paras": [
      "Van Ausdall & Farrar’s Converged Communications Group offers innovative and reliable network infrastructure solutions. ADTRAN’s product line is comprehensive. They support wired switching and routing, and wireless networks."
     ],
     "bullets": []
+   },
+   {
+    "heading": "Switching & Routing",
+    "paras": [],
+    "bullets": [
+     "Layer 2/3 Managed Switches Line speeds up to 10 GE",
+     "Virtual Chassis for Large Deployments",
+     "QoS for VoIP Deployments",
+     "Fixed & Modular Routers for MPLS, PTP WANs",
+     "Limited Lifetime Warranty on Switches",
+     "Industry Leading 5-Year Warranty on Routers ADTRAN",
+     "Technical Support Professional on Staff",
+     "ADTRAN Sales Professional on Staff"
+    ]
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 28
+  "words": 77,
+  "embedded_policy": false
  },
  {
   "url": "/knowbe4/free-phish-alert-button",
@@ -8467,7 +9227,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 153
+  "words": 153,
+  "embedded_policy": false
  },
  {
   "url": "/process/managed-mail-centers",
@@ -8498,7 +9259,8 @@
    }
   ],
   "og": "/images/hero-process.jpg",
-  "words": 136
+  "words": 136,
+  "embedded_policy": false
  },
  {
   "url": "/policies/terms-of-service",
@@ -8507,15 +9269,107 @@
   "h1": "Terms of Service",
   "blocks": [
    {
-    "heading": "",
+    "heading": "Terms of Service",
     "paras": [
-     "Please wait while the policy is loaded. If it does not load, please click here to view the policy."
+     "Please read this Terms of Service (“Terms”, “Terms of Service”) carefully before using the https://www.vanausdall.com/ website (the “Website”) operated by Van Ausdall & Farrar, Inc., a(n) Corporation formed in Indiana, United States (“us”, “we”, “our”) as this Terms of Service contains important information regarding limitations of our liability. Your access to and use of this Website is conditional upon your acceptance of and compliance with these Terms. These Terms apply to everyone, including but not limited to visitors, users and others, who wish to access and use the Website.",
+     "By accessing or using the Website, you agree to be bound by these Terms. If you disagree with any part of the Terms, then you do not have our permission to access or use the Website."
+    ],
+    "bullets": []
+   },
+   {
+    "heading": "Prohibited uses",
+    "paras": [
+     "You agree that you will use this Website in accordance with all applicable laws, rules, regulations and these Terms at all times. The following is a non-exhaustive list of prohibited uses of this Website. You agree that you will not perform any of the following prohibited uses:"
+    ],
+    "bullets": [
+     "Impersonating or attempting to impersonate Van Ausdall & Farrar, Inc. or its employees, representatives, subsidiaries or divisions;",
+     "Misrepresenting your identity or affiliation with any person or entity;",
+     "Sending or attempting to send any advertising or promotional material, including but not limited to spam, junk mail, chain mail or any similar material;",
+     "Using the Website in any manner that could disable, overburden, damage or impair the Website or interfere with another party’s use of the Website;",
+     "Using any robot, spider or other similar automatic technology, process or means to access or use the Website for any purpose, including monitoring or copying any of the material on this Website;",
+     "Using any manual process or means to monitor or copy any of the material on this Website or for any other unauthorized purpose;",
+     "Using any device, software, means or routine that interferes with the proper working of the Website, including but not limited to viruses, trojan horses, worms, logic bombs or other such materials;",
+     "Attempting to gain unauthorized access to, interfering with, damaging or disrupting any parts of the Website, the server(s) on which the Website is stored, or any server, computer or database connected to the Website;",
+     "Attempting to attack or attacking the Website via a denial-of-service attack or a distributed denial-of-service attack;",
+     "Otherwise attempting to interfere with the proper working of the Website;",
+     "Using the Website in any way that violates any applicable federal, state or local laws, rules or regulations."
+    ]
+   },
+   {
+    "heading": "No warranty on website",
+    "paras": [
+     "THIS WEBSITE IS PROVIDED “AS IS”. NO WARRANTY, EXPRESS OR IMPLIED (INCLUDING ANY IMPLIED WARRANTY OF MERCHANTABILITY, OF SATISFACTORY QUALITY OR FITNESS FOR A PARTICULAR PURPOSE OR USE) SHALL APPLY TO THIS WEBSITE, WHETHER ARISING BY LAW, COURSE OF DEALING, COURSE OF PERFORMANCE, USAGE OF TRADE OR OTHERWISE."
+    ],
+    "bullets": []
+   },
+   {
+    "heading": "Availability, errors and inaccuracies",
+    "paras": [
+     "We assume no liability for the availability, errors or inaccuracies of the information, products or services provided on this Website. We may experience delays in updating information on this Website and in our advertising on other websites. The information, products and services found on the Website may contain errors or inaccuracies or may not be complete or current. Products or services may be incorrectly priced or unavailable. We expressly reserve the right to correct any pricing errors on our Website. The inclusion or offering of any product or service on this Website does not constitute an endorsement or recommendation of such product or service by us."
+    ],
+    "bullets": []
+   },
+   {
+    "heading": "Damages and limitation of liability",
+    "paras": [
+     "IN NO EVENT SHALL VAN AUSDALL & FARRAR, INC. BE LIABLE FOR ANY DIRECT, INDIRECT, PUNITIVE, INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF, RELATING TO OR IN ANY WAY CONNECTED WITH YOUR ACCESS TO, DISPLAY OF OR USE OF THIS WEBSITE OR WITH THE DELAY OR INABILITY TO ACCESS, DISPLAY OR USE THIS WEBSITE, INCLUDING BUT NOT LIMITED TO YOUR RELIANCE UPON OPINIONS OR INFORMATION APPEARING ON THIS WEBSITE; ANY COMPUTER VIRUSES, INFORMATION, SOFTWARE, LINKED WEBSITES OPERATED BY THIRD PARTIES, PRODUCTS OR SERVICES OBTAINED THROUGH THIS WEBSITE, WHETHER BASED ON A THEORY OF NEGLIGENCE, CONTRACT, TORT, STRICT LIABILITY, CONSUMER PROTECTION STATUTES OR OTHERWISE, EVEN IF VAN AUSDALL & FARRAR, INC. HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.",
+     "THE AGGREGATE LIABILITY OF VAN AUSDALL & FARRAR, INC. ARISING OUT OF OR RELATING TO THIS WEBSITE, WHETHER ARISING OUT OF OR RELATED TO BREACH OF CONTRACT, TORT (INCLUDING NEGLIGENCE) OR OTHERWISE SHALL BE LIMITED TO THE AMOUNT OF FEES ACTUALLY RECEIVED BY VAN AUSDALL & FARRAR, INC. FROM YOU.",
+     "THIS LIMITATION OF LIABILITY REFLECTS THE ALLOCATION OF RISK BETWEEN YOU AND US. THE LIMITATIONS SPECIFIED IN THIS SECTION WILL SURVIVE AND APPLY EVEN IF ANY LIMITED REMEDY SPECIFIED IN THESE TERMS OF USE IS FOUND TO HAVE FAILED OF ITS ESSENTIAL PURPOSE. THE LIMITATIONS OF LIABILITY PROVIDED IN THESE TERMS OF USE INURE TO THE BENEFIT OF VAN AUSDALL & FARRAR, INC."
+    ],
+    "bullets": []
+   },
+   {
+    "heading": "Links to third party websites",
+    "paras": [
+     "This Website may contain hyperlinks to websites operated by third parties and not by us. We provide such hyperlinks for your reference only. We do not control such websites and are not responsible for their contents or the privacy or other practices of such websites. Further, it is your responsibility to take precautions to ensure that whatever links you click on or software that you download, whether from this Website or other websites or applications, is free of such items as viruses, worms, trojan horses, defects and other items of a destructive nature. Our inclusion of hyperlinks to such websites does not imply any endorsement of the material on such websites or any association with their operators."
+    ],
+    "bullets": []
+   },
+   {
+    "heading": "Intellectual property and DMCA notice and procedure for intellectual property infringement claims",
+    "paras": [
+     "All contents of this Website are © 1996 - 2026 Van Ausdall & Farrar, Inc. or third parties. All rights reserved. Unless specified otherwise, this Website and all content and other materials on this Website including but not limited to all logos, designs, text, graphics, pictures, information, data, software, sound files and arrangement thereof (collectively, “Content”) are the proprietary property of Van Ausdall & Farrar, Inc. and are either registered trademarks, trademarks or otherwise protected intellectual property of Van Ausdall & Farrar, Inc. or third parties in the United States and/or other countries.",
+     "If you are aware of a potential infringement of our intellectual property, please contact Tim Mullen at TMullen@vanausdall.com.",
+     "We respect the intellectual property rights of others. It is our policy to respond to any claim that Content posted on the Website infringes on the copyright, trademark or other intellectual property rights of any person or entity.",
+     "If you believe in good faith that the Content infringes on your intellectual property rights, you or your agent may send us a written notice of such infringement titled “Infringement of Intellectual Property Rights - DMCA.” Your notice to us must include the following information:",
+     "Please note that we will not process your complaint if it is not properly filled out or is incomplete. You may be held accountable for damages, including but not limited to costs and attorneys’ fees for any misrepresentation or bad faith claims regarding the infringement of your intellectual property rights by the Content on this Website.",
+     "You may submit your claim to us by contacting us at: Van Ausdall & Farrar, Inc., Tim Mullen, TMullen@vanausdall.com, (317) 974-7202, 6430 E 75th Street, Indianapolis, IN 46250, United States."
+    ],
+    "bullets": [
+     "An electronic or physical signature of the person authorized to act on behalf of the owner of the intellectual property right’s interest;",
+     "A description of the work that you claim has been infringed, including the URL (i.e., web page address) of the location where the work exists or a copy of the work;",
+     "Your name, email, address and telephone number; and",
+     "A statement by you that you have a good faith belief that the disputed use is not authorized by the owner of the work, its agent or the law."
+    ]
+   },
+   {
+    "heading": "Governing law, severability, dispute resolution, venue and class action waiver",
+    "paras": [
+     "These Terms shall be governed and construed in accordance with the laws of the state of Indiana, United States, without regard to its conflict of laws provisions. THESE TERMS SHALL NOT BE GOVERNED BY THE UNITED NATIONS CONVENTION ON CONTRACTS FOR THE SALE OF INTERNATIONAL GOODS, THE UNIFORM COMMERCIAL CODE, NOR INCOTERMS.",
+     "Our failure to enforce any right or provision of these Terms will not be considered a waiver of that right or provision. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. These Terms constitute the entire agreement between you and us regarding our Website, and supersede and replace any prior agreements we might have had with you regarding the Website.",
+     "Any controversy or claim arising out of or relating to these Terms including but not limited to the interpretation or breach thereof shall be resolved in a court of competent jurisdiction in Marion County, Indiana.",
+     "YOU AND VAN AUSDALL & FARRAR, INC. AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN YOUR OR ITS INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY CLASS OR REPRESENTATIVE ACTION."
+    ],
+    "bullets": []
+   },
+   {
+    "heading": "Changes to Terms of Service",
+    "paras": [
+     "We reserve the right to make changes to these Terms of Service at any time. We will not provide you with any notice when we make changes to this Terms of Service."
+    ],
+    "bullets": []
+   },
+   {
+    "heading": "Questions",
+    "paras": [
+     "If you have any questions about our Terms of Service, please contact us at clientsuccess@vanausdall.com."
     ],
     "bullets": []
    }
   ],
   "og": "/images/hero-contact.jpg",
-  "words": 19
+  "words": 1534,
+  "embedded_policy": true
  },
  {
   "url": "/process/facilities-management",
@@ -8557,7 +9411,8 @@
    }
   ],
   "og": "/images/hero-process.jpg",
-  "words": 145
+  "words": 145,
+  "embedded_policy": false
  },
  {
   "url": "/process/",
@@ -8642,7 +9497,8 @@
    }
   ],
   "og": "/images/hero-process.jpg",
-  "words": 617
+  "words": 617,
+  "embedded_policy": false
  },
  {
   "url": "/proactive-it-services",
@@ -8688,7 +9544,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 324
+  "words": 324,
+  "embedded_policy": false
  },
  {
   "url": "/process/print-fulfillment",
@@ -8733,7 +9590,8 @@
    }
   ],
   "og": "/images/hero-process.jpg",
-  "words": 249
+  "words": 249,
+  "embedded_policy": false
  },
  {
   "url": "/process/voice-processing",
@@ -8774,7 +9632,8 @@
    }
   ],
   "og": "/images/hero-process.jpg",
-  "words": 300
+  "words": 300,
+  "embedded_policy": false
  },
  {
   "url": "/production-print",
@@ -8831,7 +9690,8 @@
    }
   ],
   "og": "/images/hero-print.jpg",
-  "words": 249
+  "words": 249,
+  "embedded_policy": false
  },
  {
   "url": "/south-bend/",
@@ -8867,7 +9727,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 91
+  "words": 91,
+  "embedded_policy": false
  },
  {
   "url": "/solutions",
@@ -8910,7 +9771,8 @@
    }
   ],
   "og": "/images/hero-main.jpg",
-  "words": 432
+  "words": 432,
+  "embedded_policy": false
  },
  {
   "url": "/process/receptionist-services",
@@ -8941,7 +9803,8 @@
    }
   ],
   "og": "/images/hero-process.jpg",
-  "words": 127
+  "words": 127,
+  "embedded_policy": false
  },
  {
   "url": "/noblesville/",
@@ -8977,7 +9840,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 96
+  "words": 96,
+  "embedded_policy": false
  },
  {
   "url": "/process/managed-print-centers",
@@ -9008,7 +9872,8 @@
    }
   ],
   "og": "/images/hero-process.jpg",
-  "words": 169
+  "words": 169,
+  "embedded_policy": false
  },
  {
   "url": "/project-deployment",
@@ -9190,7 +10055,8 @@
    }
   ],
   "og": "/images/hero-information.jpg",
-  "words": 381
+  "words": 381,
+  "embedded_policy": false
  },
  {
   "url": "/print/print-application-solutions",
@@ -9227,7 +10093,8 @@
    }
   ],
   "og": "/images/hero-print.jpg",
-  "words": 224
+  "words": 224,
+  "embedded_policy": false
  },
  {
   "url": "/state-of-the-art-voice-data-communication-systems",
@@ -9280,7 +10147,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 353
+  "words": 353,
+  "embedded_policy": false
  },
  {
   "url": "/south-bend/carrier-solutions-in-south-bend-in",
@@ -9315,7 +10183,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 383
+  "words": 383,
+  "embedded_policy": false
  },
  {
   "url": "/technology-strength-assessment",
@@ -9334,7 +10203,8 @@
    }
   ],
   "og": "/images/120759184.jpg",
-  "words": 46
+  "words": 46,
+  "embedded_policy": false
  },
  {
   "url": "/partners",
@@ -9348,10 +10218,75 @@
      "Fortinet, Mitel, Canon, HP, OnBase, and more — our solution partners are among the best in the business, so your technology stack is too."
     ],
     "bullets": []
+   },
+   {
+    "heading": "Information",
+    "paras": [],
+    "bullets": [
+     "managed IT services",
+     "Cloud Transformation",
+     "Cybersecurity Assessments",
+     "IT Infrastructure",
+     "Virtual Infrastructure",
+     "Storage Area Networks",
+     "WiFi Solutions",
+     "SD-WAN",
+     "Endpoint Detection & Response (EDR/MDR)"
+    ]
+   },
+   {
+    "heading": "Communication",
+    "paras": [],
+    "bullets": [
+     "Cloud Communications",
+     "Managed Cloud Services",
+     "Contact Center Solutions",
+     "Premise Communications",
+     "Internet/ISP Services",
+     "SIP Trunk Services",
+     "Carrier/ISP Billing Analysis",
+     "Structured Wiring",
+     "Video Surveillance",
+     "Mass Notification"
+    ]
+   },
+   {
+    "heading": "Print",
+    "paras": [],
+    "bullets": [
+     "Managed Print Services",
+     "Copy & Print Production",
+     "Large Format Printing",
+     "Mobile Printing Solutions",
+     "Output Management",
+     "Off-Site Print Fulfillment"
+    ]
+   },
+   {
+    "heading": "Process",
+    "paras": [],
+    "bullets": [
+     "Facilities Management",
+     "Production Scanners",
+     "Content Management",
+     "Automated Data Capture",
+     "Document Scanning Service",
+     "Document Destruction",
+     "Litigation Support",
+     "Voice Processing"
+    ]
+   },
+   {
+    "heading": "Explore by Pillar",
+    "paras": [
+     "Information | Communication | Print | Process"
+    ],
+    "bullets": []
    }
   ],
   "og": "/images/hero-main.jpg",
-  "words": 24
+  "words": 113,
+  "embedded_policy": false
  },
  {
   "url": "/support/",
@@ -9404,7 +10339,8 @@
    }
   ],
   "og": "/images/129153397.jpg",
-  "words": 95
+  "words": 95,
+  "embedded_policy": false
  },
  {
   "url": "/process/content-management",
@@ -9458,7 +10394,8 @@
    }
   ],
   "og": "/images/hero-process.jpg",
-  "words": 359
+  "words": 359,
+  "embedded_policy": false
  },
  {
   "url": "/process/document-scanning",
@@ -9558,7 +10495,8 @@
    }
   ],
   "og": "/images/hero-process.jpg",
-  "words": 645
+  "words": 645,
+  "embedded_policy": false
  },
  {
   "url": "/south-bend/network-infrastructure-in-south-bend-in",
@@ -9594,7 +10532,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 281
+  "words": 281,
+  "embedded_policy": false
  },
  {
   "url": "/vaf-auto-support",
@@ -9615,7 +10554,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 106
+  "words": 106,
+  "embedded_policy": false
  },
  {
   "url": "/survey",
@@ -9655,7 +10595,8 @@
    }
   ],
   "og": "/images/hero-contact.jpg",
-  "words": 24
+  "words": 24,
+  "embedded_policy": false
  },
  {
   "url": "/voice-data-circuits",
@@ -9720,7 +10661,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 466
+  "words": 466,
+  "embedded_policy": false
  },
  {
   "url": "/voice-processing",
@@ -9761,7 +10703,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 283
+  "words": 283,
+  "embedded_policy": false
  },
  {
   "url": "/switch-to-cloud",
@@ -9859,7 +10802,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/switch-to-cloud/messages-list.png",
-  "words": 230
+  "words": 230,
+  "embedded_policy": false
  },
  {
   "url": "/voice-recognition",
@@ -9923,7 +10867,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 509
+  "words": 509,
+  "embedded_policy": false
  },
  {
   "url": "/transcription-services",
@@ -9969,7 +10914,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 238
+  "words": 238,
+  "embedded_policy": false
  },
  {
   "url": "/vaf-coronavirus-covid-19-policy",
@@ -9999,7 +10945,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 199
+  "words": 199,
+  "embedded_policy": false
  },
  {
   "url": "/south-bend/business-phone-systems-in-south-bend-in",
@@ -10034,7 +10981,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 383
+  "words": 383,
+  "embedded_policy": false
  },
  {
   "url": "/virtualsitevisit",
@@ -10056,7 +11004,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/van-ausdall-farrar-office.jpg",
-  "words": 271
+  "words": 271,
+  "embedded_policy": false
  },
  {
   "url": "/wids-format",
@@ -10075,7 +11024,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 75
+  "words": 75,
+  "embedded_policy": false
  },
  {
   "url": "/tw-telecom",
@@ -10103,7 +11053,8 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 304
+  "words": 304,
+  "embedded_policy": false
  },
  {
   "url": "/van-ausdall-farrar-customer-care-app-privacy-policy",
@@ -10299,6 +11250,7 @@
    }
   ],
   "og": "https://www.vanausdall.com/images/51749580.jpg",
-  "words": 3293
+  "words": 3293,
+  "embedded_policy": false
  }
 ]

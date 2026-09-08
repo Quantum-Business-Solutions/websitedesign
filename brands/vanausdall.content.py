@@ -1071,6 +1071,7 @@ def build():
         "print-assessment.html": {"type": "faq", "alt": True, "heading": "Questions about the print assessment", "items": [["What does the print assessment cost?", "Nothing. It is complimentary and there is no obligation."], ["What does it include?", "A device-by-device map of your fleet, volumes and costs per page, supply spend, service history and staff time, with a written recommendation of what to consolidate, replace or manage."], ["How long does it take?", "Two to three weeks, most of it monitoring software collecting real volumes. A specialist then walks the findings with you in one meeting."], ["What happens after?", "You keep the report. If you want VAF to act on it, managed print starts with a fleet plan and supplies shipped on usage."]]},
     }
     EXTRA_SECTIONS = {
+        "technology-strength-assessment.html": {"type": "detail", "alt": True, "eyebrow": "What it covers", "heading": "Four pillars, eighty questions, one score", "body": "The assessment walks the four areas every office depends on and scores each one. Information: how your network, devices, backups and security are managed, who watches them overnight, and whether anyone owns the roadmap. Communication: what your phone system costs per seat, whether it follows people between the office, the field and home, and what happens when it fails. Print: how many devices you have, who buys the toner, what a page really costs and how much staff time goes to chasing repairs. Process: where paper still lives, which approvals wait in an inbox, and what your records retention actually is. Each answer is weighted, the four scores roll into one, and the roadmap sorts what it finds into eliminate, optimize and leverage with an owner and a date against each item.", "bullets": ["Information: network, devices, backup, security, vCIO", "Communication: phone systems, unified communications, carrier spend", "Print: fleet, supplies, cost per page, service history", "Process: documents, workflow, retention, AI readiness", "One score, one roadmap, one meeting to walk it"]},
         "contact.html": {"type": "detail", "alt": True, "eyebrow": "What happens next", "heading": "Send the form, and here is what happens", "body": "A person from the Indianapolis office reads it the same business day and calls to set a time; there is no autoresponder and no sales sequence. If the question is about an existing device or agreement, it is routed to the Client Service Center, which answers within 24 hours and dispatches a certified technician locally. If it is a new need, a technology advisor, whose average tenure with the company is fifteen years, walks the Technology Strength Assessment with you: ten to fifteen minutes on your devices, contracts, phones and workflows, then a written roadmap of what to eliminate, optimize and leverage. You keep the roadmap either way.", "bullets": ["Same-day reply from a named person in Indianapolis", "Service requests answered within 24 hours", "Assessment first, quote second", "Offices in Indianapolis, Fort Wayne and Evansville; the fleet covers the state"]},
         "cio-ai-playbook.html": {"type": "detail", "alt": True, "eyebrow": "What is inside", "heading": "Nine chapters, written for the person who has to decide", "body": "The playbook walks a CIO or owner from the first question, is our data ready, to the last, how do we measure it. It covers an AI acceptable use policy, the governance guardrails that keep employees productive without exposing customer data, the use cases that pay back first in a mid-sized company, how to evaluate vendors and models, what the security team needs before anything is switched on, and a ninety-day plan with owners and checkpoints. Each chapter ends with a one-page checklist you can take into a leadership meeting.", "bullets": ["Readiness: data, identity and the questions to ask before any pilot", "Policy: an acceptable use policy template and the guardrails that make it real", "Use cases: the six that pay back first in a fifty to five-hundred person company", "Security: what the SOC and the vCIO need before launch", "The ninety-day plan, with owners and checkpoints", "Measurement: the four numbers to report to the board"]},
     }
@@ -1214,6 +1215,62 @@ def build():
             "The current partner's contract. Month to month at about $1,200; the plan assumes a fourth-quarter start with redirects handled before anything is switched off."],
         "footer": "Prepared for Brian Courtney and the Van Ausdall & Farrar team, following the 1 September call with Patrick Dodge. Nothing here is live or indexed. Every number we could source comes from vanausdall.com, the CEO Juice report it links to, or Semrush on 8 September 2026. Where we drafted a process or a commitment we think you make, it is listed under To confirm. Hero and service photographs are generated stand-ins for the preview, marked as such, until a half-day shoot at the headquarters and in the field; secondary imagery is from your site today; partner logos are the ones on your partners page.",
     }
+    # ---- depth: any page under 600 words of section copy gets a related-pages block built from real teasers
+    def _words(x):
+        if isinstance(x, str): return len(x.split())
+        if isinstance(x, dict): return sum(_words(v) for k, v in x.items() if k not in ("href", "file", "image", "id", "type", "layout", "crumbs", "schema"))
+        if isinstance(x, list): return sum(_words(v) for v in x)
+        return 0
+    by_file = {p["file"]: p for p in pages}
+    def _teaser(pg):
+        for sec in pg["sections"]:
+            for k in ("subhead", "standfirst", "intro", "body"):
+                if isinstance(sec.get(k), str) and len(sec[k]) > 60:
+                    return fix_desc(sec[k], tail="", lo=0, hi=150)
+        return pg.get("description", "")
+    def _label(pg):
+        return pg.get("name") or pg["title"].split("|")[0].split(",")[0].strip()
+    DEEPEN = 0
+    for pg in pages:
+        if _words(pg["sections"]) >= 600 or (pg["file"].startswith("policies/") and _words(pg["sections"]) >= 320):
+            continue
+        pool = []
+        if pg["file"].startswith("policies/"):
+            pool = [q for q in pages if q["file"].startswith("policies/") and q["file"] != pg["file"]]
+            heading, intro = "Your privacy choices", "The policies that apply to this site and to personal information, each on its own page."
+        elif pg.get("ptype") == "city" or pg["file"].startswith("locations/"):
+            city = pg["file"].split("/")[-1].split("-")[0]
+            pool = [q for q in pages if q["file"].startswith("locations/") and q["file"] != pg["file"] and (q["file"].split("/")[-1].split("-")[0] == city or q.get("ptype") != "city")]
+            heading, intro = "More for this area", "Every service page for the city, plus the offices that serve it."
+        elif pg.get("pillar") or pg["file"].startswith("services/"):
+            pillar = pg.get("pillar") or next((s_[3] for s_ in SERVICES if f"services/{s_[0]}.html" == pg["file"]), "")
+            pool = [q for q in pages if q["file"] != pg["file"] and (q.get("pillar") == pillar or f"services/{q['file'].split('/')[-1][:-5]}" in [f"services/{s_[0]}" for s_ in SERVICES if s_[3] == pillar])]
+            heading, intro = f"More in {pillar}" if pillar else "Related solutions", "The pages that sit alongside this one, in the same pillar and under the same agreement."
+        elif pg["file"].startswith("industries/"):
+            pool = [q for q in pages if q["file"].startswith("industries/") and q["file"] != pg["file"]]
+            heading, intro = "Other industries", "How the same four pillars are set up for the organizations next to yours."
+        elif pg["file"].startswith(("case-studies/", "blog/")):
+            pool = [q for q in pages if q["file"].startswith("case-studies/") and q["file"] != pg["file"]]
+            heading, intro = "More customers on the record", "Published case studies with the numbers."
+        else:
+            pool = [q for q in pages if q["file"].startswith("services/") and f"services/{q['file'].split('/')[-1][:-5]}" in [f"services/{s_[0]}" for s_ in SERVICES]]
+            heading, intro = "Where to go next", "The twelve solutions, each with its own page, FAQ and specialist."
+        items = [[(q.get("pillar") or ("Case study" if q["file"].startswith("case-studies/") else "Solutions")), _label(q), _teaser(q), "Open the page", q["file"]] for q in pool[:6]]
+        if len(items) >= 3:
+            _insert(pg, {"type": "resources", "alt": True, "heading": heading, "intro": intro, "items": items})
+            DEEPEN += 1
+        # second pass: still short after the related block, add real content the page type can carry
+        if not pg["file"].startswith("policies/") and _words(pg["sections"]) < 760:
+            is_city = pg.get("ptype") == "city" or pg["file"].startswith("locations/")
+            if is_city or pg["file"].startswith("services/") or pg.get("pillar"):
+                cityname = (pg.get("name", "").split(" in ")[-1].replace(", IN", "").strip() if is_city else "")
+                ind_items = [["Industry", i[1], fix_desc(i[3], tail="", lo=0, hi=150), "How we set it up", f"industries/{i[0]}.html"] for i in INDUSTRIES]
+                _insert(pg, {"type": "resources", "heading": f"Industries we serve{' in ' + cityname if cityname else ''}", "intro": "Each industry runs its office technology differently. These pages say what changes for each and who is on the record.", "items": ind_items})
+            else:
+                if _words(pg["sections"]) < 700:
+                    _insert(pg, {"type": "resources", "heading": "Industries we serve", "intro": "Each industry runs its office technology differently. These pages say what changes for each and who is on the record.", "items": [["Industry", i[1], fix_desc(i[3], tail="", lo=0, hi=150), "How we set it up", f"industries/{i[0]}.html"] for i in INDUSTRIES]})
+                _insert(pg, {"type": "detail", "alt": True, "eyebrow": "Why VAF", "heading": "What every Van Ausdall & Farrar customer gets", "body": "Indiana's largest full-service office technology provider, privately owned in Indianapolis since 1914. A Net Promoter Score of 93.4, collected and audited by CEO Juice, an independent company, against a US average of 10. SOC 2 certification for the way we protect customer data. Mitel Gold partner seven years running, in the telecom business since 1983 with more than 4,000 systems deployed. Technology advisors whose average tenure with the company is fifteen years, so the person who sold the system is still here when it needs attention.", "bullets": ["Serving Indiana since 1914", "NPS 93.4, audited by CEO Juice", "SOC 2 certified", "One Customer Care Center, answered within 24 hours"]})
+    MIGRATION["deepened"] = DEEPEN
     pitch["migration"] = MIGRATION
     if pitch["search"].get("site_audit"):
         pitch["search"]["site_audit"]["migration"] = MIGRATION
