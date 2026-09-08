@@ -5,15 +5,25 @@
 - **package purchased:** not yet. This is the pitch. Recommend **Growth** (48 pages per direction; 12 solutions, 8 industries, 3 offices, case studies, blog)
 - **current site:** https://www.vanausdall.com (custom CMS by Atomic8Ball / "Design by A8B"; Helium AI chat widget; ADP careers; forms embedded from a third party)
 - **client repo:** `Quantum-Business-Solutions/vanausdall`, connected to Vercel project `quantum-business-solutions1/van-ausdall`. Every push to `main` deploys.
-- **Preview:** https://van-ausdall.vercel.app (hub; each direction opens in its own tab, every page built)
+- **Preview:** https://van-ausdall.vercel.app (hub; each direction opens in its own tab, every page built). `seo-report.html` on the hub carries the full analysis.
 - **tokens:** measured 2026-09-08 via Firecrawl branding: accent `#2A71AF` (buttons, links), theme-color `#006fbf`, body `#403D39` on white, Poppins throughout, 5px radius
 - **HubSpot subscription (client's):** VAF runs AgentDealer on Salesforce and e-automate today (Hindsight, July 2026). A HubSpot demo and configurator project were in progress in July and August 2026 with Patrick Dodge. Portal id and tier: **to confirm**
-- **QBS contact on the account:** Shawn Peterson. **Client contacts seen in meetings:** Patrick Dodge, Brian Courtney, Nolan Flike, Hanna Bowden (Hindsight, June to August 2026). Who approves the website: **to confirm**
+- **QBS contacts on the account:** Shawn Peterson; Patrick Dodge (QBS, former Creative Side Marketing founder) ran the 1 September call. **Client:** Brian Courtney decides on the website and deals with the marketing company; others weigh in eventually (Zoom, 2026-09-01). TStratton (Salesforce/Agent Dealer admin) and Steve Sigmon (Director of IT) attended the HubSpot demos.
 - **Revenue, for scoping:** about $26M (Hindsight, July 2026). Indiana's largest full-service office technology provider, privately owned.
+
+## What Brian said on 1 September (Zoom, "Van Ausdall - HubSpot Discussion", with Patrick Dodge)
+
+- Focus has moved to the website, SEO and generative AI search; competitors are outpacing VAF in search and the president has noticed the company not appearing.
+- Wants MQL tracking through the website and the solutions page reworked to rank in LLM answers.
+- Current partner: Technology Assurance Group (TAG), month to month, about $1,200 a month (roughly $14K to $15K a year) since the 2021 rebuild; reporting on traffic and conversions but little advice; one blog post a month; some social.
+- A paid LinkedIn campaign spiked traffic with zero conversions; budget stays low and targeted; wants predictability and return.
+- Asked for a good, better, best proposal on the website plus HubSpot marketing recommendations; timeline question was a fourth-quarter start.
+- Renewing Agent Dealer one more year; not replacing the CRM now. Evolved Office contract to March; both reviewed in Q1.
+- Patrick committed to an SEO analysis versus competitors and mock designs; follow-up after Brian returns from South Carolina.
 
 ## The promise
 
-⚠️ **Not yet from an interview.** These are VAF's own published lines, verbatim, used until someone at VAF answers question 4 directly.
+⚠️ **Not yet from a design interview.** These are VAF's own published lines, verbatim, used until someone at VAF answers question 4 directly.
 
 > "Business Technology Simplified" (under the logo)
 > "Everything your business needs, under one roof since 1914" (home hero)
@@ -71,7 +81,7 @@ Semrush US database, 2026-09-08. **This is the number the engagement gets measur
   | `/knowbe4/free-phish-alert-button` | phish alert button #15 (390/mo) | partner page, keep |
 - **Striking distance:** "business phone systems" 9,900/mo at #25 via the Fort Wayne page; "cloud services brownsburg" #14; "managed it service munster" #18.
 - **What this means for the build:** (1) Indianapolis, the HQ market, does not appear in the top 50 for managed IT: the Indianapolis pages are the largest untapped local opportunity; (2) the Fort Wayne and Evansville pages are the non-brand earners and get 301s to the office pages; (3) blog posts live on `blog?p=` query-string URLs and need real URLs with per-post titles, images and `BlogPosting`; (4) the phone systems page and guide are aimed at the 9,900/mo term.
-- **Site defects seen on the live site (2026-09-08):** the contact form renders the placeholder string `as5d4f65s4f564we654fw` on the home, contact, support and print assessment pages; home `og:image` is a stock AI-hand image; the customer comments meta description says "since 1974" against 1914 everywhere else; "112 years" is hardcoded on the history and why pages.
+- **Site defects seen on the live site (2026-09-08):** forms use a hidden honeypot field (`as5d4f65s4f564we654fw`, not a broken embed) and have no CRM integration; home `og:image` is a stock AI-hand image; one Organization schema block, no LocalBusiness or Service; sitemap 586 URLs with 324 `blog?p=` posts and 90 PDFs; the customer comments meta description says "since 1974" against 1914 everywhere else; "112 years" is hardcoded on the history and why pages.
 
 ## Conversion paths
 
@@ -134,9 +144,17 @@ All on the record:
 
 CIOs and IT directors at 50 to 500-person Indiana organizations; office and facilities managers who own the copier and the phones; owners of SMBs and non-profits; administrators in schools, hospitals, cities and utilities. Cost-conscious, insurance-driven on security, burned by vendors who do not answer. They decide on **one accountable partner, local response, and proof someone else audited.**
 
-## Competitors ingested
+## Competitors (Semrush, 2026-09-08; full report in `brands/vanausdall.seo.md`)
 
-Not yet. Day-one task: measure two Indianapolis MSPs and one copier dealer with Firecrawl `branding`. The office-technology vertical read (`verticals/office-technology.md`) applies: light ground, saturated mid-tone accent, phone-number-forward.
+| Competitor | Organic traffic | Keywords | Authority | Note |
+|---|---|---|---|---|
+| taylored.com | 2,094 | 2,711 | 27 | it consulting indianapolis #6 |
+| theamegroup.com | 2,007 | 1,839 | not pulled | |
+| bradenonline.com | 1,807 | 1,595 | not pulled | |
+| leapmanagedit.com | 1,555 | 1,058 | 24 | #1 for managed it services indianapolis (1,000/mo), it support indianapolis (880), it services indianapolis (880). New copier brand leapcopierprinter.com at #9 for copier lease indianapolis; VAF #10 |
+| vanausdall.com | 1,081 | 365 | 21 | 486 referring domains |
+
+**Read:** authority is level; pages are the gap. Managed print services (4,400/mo, KD 16) and copier lease (2,400/mo, KD 19) have no VAF page. Design measurement of the competitors with Firecrawl `branding` is still a day-one task.
 
 ## Directions produced
 
