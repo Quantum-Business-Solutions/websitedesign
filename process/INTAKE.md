@@ -139,6 +139,8 @@ Place them with `compose` per direction; ids are what `compose` references.
 | `model3d` | `heading`, `poster` | `intro`, `model` (GLB path), `alt`, `cta`, `id` | `<model-viewer>` with the poster shown until the element is defined; plain image when `model` is absent |
 | `brand.launcher` | `label`, `links [[label, href]]`, `phone` | | Fixed bottom-left drawer, appears after 560px of scroll |
 
+Type borrowing: `brand.type_from = {"Quantum Showcase": "Quantum Clean"}` keeps a direction's geometry and motion but sets its headings and body in another direction's faces, and pulls that theme's font import along. Kelly runs Showcase in Clean's Open Sans at Shawn's request.
+
 Directions: pass `--recommend` only when we are recommending; without it the hub shows "Your call" with the three cards and the switcher carries no "(recommended)". Order in `--themes` is the order on the hub and in the switcher.
 
 Content-file helpers for Kelly: `_flow()` and `_ba()` build service-page modules from tuples; `SERVICE_MODULES[slug]` lists what each service page inserts after its benefits cards.

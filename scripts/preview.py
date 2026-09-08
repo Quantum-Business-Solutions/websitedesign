@@ -99,10 +99,21 @@ def client_tokens(theme: str, brand: dict) -> tuple[str, dict]:
         "--accent": "var(--q-gold)", "--accent-ink": ink, "--accent-lift": lift, "--cta-fg": cta_fg,
         "--border": d["--border"] if ground == "light" else native.get("--border", d["--border"]),
     }
+    # Typefaces: a brand may borrow another direction's type ("type_from": {"Quantum Showcase": "Quantum Clean"}),
+    # keeping this direction's geometry and motion but setting headings and body in the other direction's faces.
+    type_src = native
+    borrowed = (brand.get("type_from") or {}).get(theme)
+    if borrowed:
+        b_css = open(os.path.join(reskin.SOURCE_DIR, borrowed, "css", "quantum.css"), encoding="utf-8").read().replace("\u2014", "-")
+        type_src = reskin.parse_native(b_css)
+        imports = re.findall(r"@import url\([^)]*\);?", b_css)
+        css = "".join(i if i.endswith(";") else i + ";" for i in imports) + "\n" + css
     for key in ("--q-serif", "--q-sans"):
-        face = (native.get(key) or "").split(",")[0].strip().strip("'\"").lower()
+        face = (type_src.get(key) or "").split(",")[0].strip().strip("'\"").lower()
         if face in FALLBACKS:
             tok[key] = FALLBACKS[face]
+        elif borrowed and type_src.get(key):
+            tok[key] = type_src[key]
     chrome_bg = brand.get("chrome_bg") if brand.get("chrome") == "dark" else native["--bg"]
     tok["--chrome-bg"] = chrome_bg
     tok["--chrome-fg"] = reskin.best_on(chrome_bg)

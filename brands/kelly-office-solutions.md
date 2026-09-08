@@ -234,3 +234,4 @@ behind a poster, and their production print film on the production page. Four QA
 
 ## 2026-09-08, evening: no recommendation, Showcase first
 Shawn: "I really like the Showcase one, it looks amazing. I would not say we should recommend any of the three, let them choose, and move Showcase into first position." The hub now opens on Showcase, carries no recommendation, and the switcher shows no "(recommended)". Depth layer, 3D story and the redesigned wheel are on all three.
+Shawn: "I like the font type more on the Clean, could we get that on Showcase as well." Showcase now borrows Clean's typefaces (`type_from`), keeping its layout, motion and 3D.

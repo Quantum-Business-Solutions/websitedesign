@@ -7,6 +7,9 @@
     "ink_secondary": "#000545",
     "chrome": "dark",
     "chrome_bg": "#000545",
+    "type_from": {
+      "Quantum Showcase": "Quantum Clean"
+    },
     "logo": "assets/kelly-logo.png",
     "logo_alt": "Kelly Office Solutions",
     "logo_w": 300,

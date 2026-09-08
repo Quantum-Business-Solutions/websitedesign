@@ -788,6 +788,7 @@ HERO_LAYERED = {"type": "hero-layered", "id": "hero", "eyebrow": "Moving busines
 def build():
     brand = {
         "accent": "#65BC7B", "ink_secondary": "#000545", "chrome": "dark", "chrome_bg": "#000545",
+        "type_from": {"Quantum Showcase": "Quantum Clean"},  # Shawn 2026-09-08: Clean's type on the Showcase layout
         "logo": "assets/kelly-logo.png", "logo_alt": "Kelly Office Solutions", "logo_w": 300, "logo_h": 109,
         "logo_note": "300x109 raster with white subtext: built for a dark ground. Ask for a vector and a light-ground variant.",
         "phone": PHONE, "phone_href": PHONE_HREF, "email": "info@kellyofficesolutions.com",
