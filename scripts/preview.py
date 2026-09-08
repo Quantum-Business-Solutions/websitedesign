@@ -793,29 +793,172 @@ def switcher(themes, this_theme, page_file, recommend):
             '<script>if(top!==self){document.documentElement.classList.add("embedded")}</script>')
 
 
-def schema_blocks(content, page, base, dslug):
+def _head_tail(title, client, short):
+    head, sep, tail = title.partition(" | ")
+    if not sep:
+        return title, ""
+    if head.strip() in (client, short):          # "Client | what the page is" -> swap
+        head, tail = tail, head
+    tl = tail.strip().lower()
+    if tl.startswith((client.lower(), short.lower())):
+        return head.strip(), ""                   # brand suffix, rebuilt below
+    return f"{head.strip()}: {tail.strip()}", ""  # a real subtitle: keep it in the head
+
+
+def normalize_meta(page, content):
+    """Titles 30 to 60 characters with the brand and, where the schema block asks for it,
+    the service area; meta descriptions 70 to 160 characters cut at a sentence end.
+    Returns (title, description, notes)."""
+    sch = content.get("schema") or {}
+    client = content["client"]
+    short = sch.get("short_name") or client.split(" ")[0]
+    cities = [c.lower() for c in sch.get("cities", [])]
+    city_tag = sch.get("title_city")
+    notes = []
+    title = page["title"].strip()
+    head, _ = _head_tail(title, client, short)
+
+    def has_city(t):
+        tl = t.lower()
+        return any(re.search(r"(?<![a-z])" + re.escape(c) + r"(?![a-z])", tl) for c in cities)
+
+    def options(h, city_only=False):
+        need = bool(city_tag) and not has_city(h)
+        if need:
+            opts = [f"{h} | {client}, {city_tag}", f"{h} | {short}, {city_tag}", f"{h}, {city_tag} | {short}"]
+            if city_only:
+                return opts
+            return opts + [f"{h} | {client}", f"{h} | {short}"]
+        return [f"{h} | {client}", f"{h} | {short}"]
+
+    def fit(h, city_only=False):
+        for o in options(h, city_only):
+            if len(o) <= 60:
+                return o
+        return None
+
+    def shorten(h, city_only):
+        out = fit(h, city_only)
+        if out:
+            return out
+        for sep_ in (": ", ", ", " and ", " for "):
+            if sep_ in h and len(h.split(sep_)[0]) >= 18:
+                out = fit(h.split(sep_)[0], city_only)
+                if out:
+                    return out
+        words = h.split()
+        while len(words) > 3:
+            words.pop()
+            while words and words[-1].lower() in ("and", "of", "the", "a", "an", "in", "for", "to", "with", "or", "vs.", "vs"):
+                words.pop()
+            out = fit(" ".join(words).rstrip(",:;"), city_only)
+            if out:
+                return out
+        return None
+
+    # the service area in the title outranks the full brand name: try city-bearing forms first
+    out = shorten(head, city_only=True) if city_tag else None
+    if not out:
+        out = shorten(head, city_only=False)
+    if not out:
+        out = title[:60]
+    if out != title:
+        notes.append("title")
+    if city_tag and not has_city(title) and has_city(out):
+        notes.append("city")
+
+    desc = re.sub(r"\s+", " ", page.get("description", "")).strip()
+    if len(desc) > 160:
+        cut = desc[:158]
+        i = max(cut.rfind(". "), cut.rfind("? "), cut.rfind("! "))
+        if i >= 70:
+            desc2 = cut[: i + 1]
+        else:
+            j = max(cut.rfind(", "), cut.rfind(" "))
+            desc2 = cut[:j].rstrip(",;: ") + "."
+        desc, notes = desc2, notes + ["meta"]
+    elif len(desc) < 70 and sch.get("meta_tail"):
+        tail = sch["meta_tail"].strip()
+        cand = f"{desc} {tail}" if desc else tail
+        desc, notes = cand[:160].rstrip(), notes + ["meta"]
+    return out, desc, notes
+
+
+def schema_blocks(content, page, base, dslug, title=None, description=None):
+    """Organization and the headquarters LocalBusiness on every page; WebSite on the home page;
+    BreadcrumbList elsewhere; Service on service, industry and product pages; BlogPosting on posts.
+    Pages that carry their own LocalBusiness, Service or BlogPosting block are not duplicated."""
+    import fnmatch
     sch = content.get("schema") or {}
     if not sch.get("org_name"):
         return ""
     site = sch.get("org_url") or base
+    title = title or page["title"]
+    description = description or page.get("description", "")
+    own = set()
+    for blk in page.get("schema", []):
+        t = blk.get("@type")
+        own.update([t] if isinstance(t, str) else (t or []))
+    blocks = []
+    org = {"@context": "https://schema.org", "@type": "Organization", "@id": f"{site}/#organization", "name": sch["org_name"], "url": site}
+    if sch.get("legal_name"):
+        org["legalName"] = sch["legal_name"]
+    for k, v in (("logo", sch.get("org_logo")), ("description", sch.get("org_description")), ("sameAs", sch.get("sameAs")), ("foundingDate", sch.get("founded")),
+                 ("numberOfEmployees", sch.get("employees")), ("areaServed", sch.get("area_served")), ("slogan", sch.get("slogan"))):
+        if v:
+            org[k] = {"@type": "ImageObject", "url": v} if k == "logo" else ({"@type": "QuantitativeValue", "value": v} if k == "numberOfEmployees" else v)
+    if sch.get("telephone"):
+        org["telephone"] = sch["telephone"]
+        org["contactPoint"] = {"@type": "ContactPoint", "contactType": "Sales", "telephone": sch["telephone"], "areaServed": "US", "availableLanguage": "English"}
+    local = sch.get("local") or []
+    if local:
+        hq = local[0]
+        org["address"] = {"@type": "PostalAddress", "streetAddress": hq.get("street"), "addressLocality": hq.get("city"), "addressRegion": hq.get("region"), "postalCode": hq.get("postal"), "addressCountry": hq.get("country", "US")}
+        if len(local) > 1:
+            org["subOrganization"] = [{"@id": f"{site}/#local-{l['slug']}"} for l in local[1:]]
+    blocks.append(org)
     if page["file"] == "index.html":
-        org = {"@context": "https://schema.org", "@type": "Organization", "@id": f"{site}/#organization", "name": sch["org_name"], "url": site}
-        for k, v in (("logo", sch.get("org_logo")), ("description", sch.get("org_description")), ("sameAs", sch.get("sameAs"))):
-            if v:
-                org[k] = {"@type": "ImageObject", "url": v} if k == "logo" else v
-        if sch.get("telephone"):
-            org["contactPoint"] = {"@type": "ContactPoint", "contactType": "Sales", "telephone": sch["telephone"], "areaServed": "US", "availableLanguage": "English"}
-        web = {"@context": "https://schema.org", "@type": "WebSite", "@id": f"{site}/#website", "url": site, "name": sch["org_name"], "publisher": {"@id": f"{site}/#organization"}, "inLanguage": "en-US"}
-        return (f'<script type="application/ld+json">{json.dumps(org, ensure_ascii=False)}</script>\n'
-                f'<script type="application/ld+json">{json.dumps(web, ensure_ascii=False)}</script>')
-    name = page["title"].split("|")[0].strip()
-    items = [{"@type": "ListItem", "position": 1, "name": "Home", "item": f"{site}/"}]
-    parts = page["file"].split("/")
-    if len(parts) > 1:
-        items.append({"@type": "ListItem", "position": 2, "name": parts[0].replace("-", " ").title(), "item": f"{site}/{parts[0]}"})
-    items.append({"@type": "ListItem", "position": len(items) + 1, "name": name, "item": f"{site}/{page['file'].replace('.html', '')}"})
-    bc = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": items}
-    return f'<script type="application/ld+json">{json.dumps(bc, ensure_ascii=False)}</script>'
+        blocks.append({"@context": "https://schema.org", "@type": "WebSite", "@id": f"{site}/#website", "url": site, "name": sch["org_name"], "publisher": {"@id": f"{site}/#organization"}, "inLanguage": "en-US"})
+    if local and "LocalBusiness" not in own:
+        hq = local[0]
+        lb = {"@context": "https://schema.org", "@type": sch.get("local_type", "LocalBusiness"), "@id": f"{site}/#local-{hq['slug']}", "name": hq.get("name") or sch["org_name"], "url": site,
+              "parentOrganization": {"@id": f"{site}/#organization"},
+              "address": {"@type": "PostalAddress", "streetAddress": hq.get("street"), "addressLocality": hq.get("city"), "addressRegion": hq.get("region"), "postalCode": hq.get("postal"), "addressCountry": hq.get("country", "US")}}
+        for k in ("telephone", "priceRange", "openingHours"):
+            if hq.get(k):
+                lb[k] = hq[k]
+        if hq.get("lat") and hq.get("lon"):
+            lb["geo"] = {"@type": "GeoCoordinates", "latitude": hq["lat"], "longitude": hq["lon"]}
+        if sch.get("area_served"):
+            lb["areaServed"] = sch["area_served"]
+        if sch.get("org_logo"):
+            lb["image"] = sch["org_logo"]
+        blocks.append(lb)
+    if page["file"] != "index.html":
+        name = title.split("|")[0].strip()
+        items = [{"@type": "ListItem", "position": 1, "name": "Home", "item": f"{site}/"}]
+        parts = page["file"].split("/")
+        if len(parts) > 1:
+            items.append({"@type": "ListItem", "position": 2, "name": parts[0].replace("-", " ").title(), "item": f"{site}/{parts[0]}"})
+        items.append({"@type": "ListItem", "position": len(items) + 1, "name": name, "item": f"{site}/{page['file'].replace('.html', '')}"})
+        blocks.append({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": items})
+        page_url = f"{site}/{page['file'].replace('.html', '')}"
+        svc_globs = sch.get("service_globs", ["services/*", "industries/*", "products/*", "brands/*"])
+        post_globs = sch.get("post_globs", ["blog/*", "guides/*", "resources/*"])
+        if any(fnmatch.fnmatch(page["file"], g) for g in svc_globs) and not (own & {"Service", "ProfessionalService", "Product"}):
+            svc = {"@context": "https://schema.org", "@type": "Service", "@id": f"{page_url}#service", "name": name, "serviceType": name, "description": description,
+                   "provider": {"@id": f"{site}/#organization"}, "url": page_url}
+            if sch.get("area_served"):
+                svc["areaServed"] = sch["area_served"]
+            blocks.append(svc)
+        elif any(fnmatch.fnmatch(page["file"], g) for g in post_globs) and not (own & {"BlogPosting", "Article", "NewsArticle"}):
+            post = {"@context": "https://schema.org", "@type": "BlogPosting", "@id": f"{page_url}#article", "headline": name, "description": description, "url": page_url,
+                    "mainEntityOfPage": page_url, "author": {"@id": f"{site}/#organization"}, "publisher": {"@id": f"{site}/#organization"}, "inLanguage": "en-US"}
+            for k, v in (("datePublished", page.get("date")), ("dateModified", page.get("modified") or page.get("date")), ("articleSection", page.get("section"))):
+                if v:
+                    post[k] = v
+            blocks.append(post)
+    return "\n".join(f'<script type="application/ld+json">{json.dumps(b, ensure_ascii=False)}</script>' for b in blocks)
 
 
 def srcset_for(path: str, out_dir: str) -> str:
@@ -878,24 +1021,25 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
     body = "".join(RENDER[s["type"]](s, ctx) for s in secs)
     canonical = f"{base}/{dslug}/" if page["file"] == "index.html" else f"{base}/{dslug}/{page['file']}"
     og_img = f"{base}/assets/hero-og.jpg"
+    p_title, p_desc, _notes = normalize_meta(page, content)
     tokcss = "\n  ".join(f"{k}:{v};" for k, v in tok.items())
     return f'''<!doctype html>
 <html lang="en" data-dir="{E(dslug)}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{E(page["title"])}</title>
-<meta name="description" content="{E(page["description"])}">
+<title>{E(p_title)}</title>
+<meta name="description" content="{E(p_desc)}">
 <meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="{E(canonical)}">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="{E(content["client"])}">
-<meta property="og:title" content="{E(page["title"])}">
-<meta property="og:description" content="{E(page["description"])}">
+<meta property="og:title" content="{E(p_title)}">
+<meta property="og:description" content="{E(p_desc)}">
 <meta property="og:url" content="{E(canonical)}">
 <meta property="og:image" content="{E(og_img)}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{E(page["title"])}">
+<meta name="twitter:title" content="{E(p_title)}">
 <meta name="twitter:image" content="{E(og_img)}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -917,7 +1061,7 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
 /* ===== mobile, after the direction system so it wins ===== */
 {MOBILE_LAST_CSS}
 </style>
-{schema_blocks(content, page, base, dslug)}
+{schema_blocks(content, page, base, dslug, p_title, p_desc)}
 {"".join(f'<script type="application/ld+json">{json.dumps(blk, ensure_ascii=False)}</script>' for blk in page.get("schema", []))}
 </head>
 <body>
@@ -961,8 +1105,10 @@ def main(argv=None):
             open(dest, "w", encoding="utf-8").write(doc); written += 1
         print(f"  {t:20} {len(content['pages'])} pages  accent {tok['--q-gold']} ink {tok['--accent-ink']} cta-fg {tok['--cta-fg']} chrome {tok['--chrome-bg']}")
     import preview_design  # noqa: E402
+    import preview_seo  # noqa: E402
     preview_design.write(content, themes, roles, client_tokens, a.out)
-    open(os.path.join(a.out, "index.html"), "w", encoding="utf-8").write(hub(content, themes, a.recommend, base, roles, not a.no_standard, client_tokens, a.out))
+    seo = preview_seo.write(content, a.content, themes, roles, base, a.out, slug_of)
+    open(os.path.join(a.out, "index.html"), "w", encoding="utf-8").write(hub(content, themes, a.recommend, base, roles, not a.no_standard, client_tokens, a.out, seo))
     print(f"wrote {written} pages + hub to {a.out}")
     if DASH_HITS:
         print(f"\nwarning: {len(DASH_HITS)} string(s) contained an em/en dash and were rewritten with a comma. Fix the content file:")

@@ -809,8 +809,15 @@ def build():
     schema = {"org_name": "Kelly Office Solutions", "org_url": "https://kellyofficesolutions.com",
               "org_logo": "https://kellyofficesolutions.com/wp-content/uploads/2020/12/Kelly-Office-Solutions-Logo-copy-3.png",
               "org_description": "Family-owned office technology company headquartered in Winston-Salem, North Carolina, since 1947: copiers and managed print, document management, production print, IT services, mailing solutions, and water, ice and coffee service.",
-              "sameAs": ["https://www.linkedin.com/company/kelly-office-solutions/", "https://www.facebook.com/KellyOfficeSolutions", "https://twitter.com/kellyofficesolu"],
-              "telephone": "+1-800-345-3559"}
+              "sameAs": ["https://www.linkedin.com/company/kelly-office-solutions/", "https://www.facebook.com/KellyOfficeSolutions", "https://twitter.com/kellyofficesolu",
+                         "https://www.instagram.com/kellyofficesolutions/", "https://www.bbb.org/us/nc/winston-salem/profile/copier/kelly-office-solutions-0503-670"],
+              "telephone": "+1-800-345-3559", "founded": "1947", "slogan": "Moving business forward since 1947",
+              "short_name": "Kelly", "title_city": "NC", "cities": ["Winston-Salem", "Winston Salem", "Greensboro", "Charlotte", "Raleigh", "Swansboro", "Triad", "North Carolina", "NC"],
+              "area_served": [{"@type": "State", "name": "North Carolina"}],
+              "meta_tail": "Kelly Office Solutions, family-owned since 1947, five North Carolina offices.",
+              "local": [{"slug": s_, "name": f"Kelly Office Solutions {c_}", "street": a1_, "city": c_, "region": "NC", "postal": a2_.split()[-1], "telephone": ph_.replace("(", "+1-").replace(") ", "-")}
+                        for s_, c_, a1_, a2_, ph_, _h, _r in LOCATIONS] + [{"slug": "swansboro", "name": "Kelly Office Solutions Swansboro", "city": "Swansboro", "region": "NC"}]}
+    # every page answers questions: FAQ blocks for the pages that had none
     nav = [
         {"label": "Products", "href": "products.html", "mega": True,
          "groups": [{"title": g, "items": [[p[2].split(":")[0], f"products/{p[0]}.html"] for p in PRODUCTS if p[1] == g]} for g in PRODUCT_GROUPS],
@@ -826,7 +833,7 @@ def build():
     pages.append({"file": "index.html", "title": "Kelly Office Solutions | Copiers, managed print, IT and office technology in North Carolina",
                   "compose": {
                       "clean": ["hero-light", "partners", "seal", "wheel", "is-this-you", "flow", "map", "voices", "film", "faq", "contact"],
-                      "showcase": ["hero", "partners", "wheel", "fleet", "ba", "flow", "office", "device", "proof", "map", "voices", "film", "contact"],
+                      "showcase": ["hero", "partners", "wheel", "fleet", "ba", "flow", "office", "device", "proof", "map", "voices", "film", "faq", "contact"],
                       "press": ["hero-light", "story", "services", "seal", "voices", "film", "flow", "map", "faq", "contact"]},
                   "description": "Family-owned since 1947 and headquartered in Winston-Salem. Copiers and managed print, document management, IT, mailing, water and coffee for North Carolina businesses, from five local offices, with Fast local response from the nearest branch.",
                   "sections": [
@@ -1105,6 +1112,46 @@ def build():
             "The cost calculator's rates. They are typical North Carolina figures for orientation; replace them with yours or keep the disclaimer."],
         "footer": "Prepared for Claudia Coleman, Director of Marketing. Nothing here is live or indexed. Every number we could source comes from your current site, your brand profile or public data. Several service commitments on these pages (response time, the assessment report, the staged process, calculator rates) are our draft of what we think you do, and they are listed under To confirm. Photographs are yours where they exist on your site today (the van, the Greensboro office, the service pages); the rest are generated stand-ins until your own photography exists. Partner logos are the ones on your current site.",
     }
+    _FAQ_EXTRA = {
+        "about.html": ("Questions about Kelly", [
+            ["Who owns Kelly Office Solutions?", "Kelly is family-owned and independent. Co-owners Tim Renegar and Peter Kelly run the company from Winston-Salem, where it has been headquartered since 1947."],
+            ["Where are Kelly's offices?", "Five in North Carolina: Winston-Salem (headquarters), Greensboro, Charlotte, Raleigh and Swansboro. Technicians are dispatched from the nearest one."],
+            ["How is customer satisfaction measured?", "Through a Net Promoter Score survey after service; the current NPS rating shown on the site is 94.4 percent."],
+            ["Which brands does Kelly sell and service?", "Sharp first, then Ricoh, Savin, Konica Minolta and Brother for print; FP for mailing; Wellsys, Follett and Manitowoc for water and ice."]]),
+        "blog.html": ("About these guides", [
+            ["What does the Kelly blog cover?", "Managed print, copiers and printers, document management, office IT and the break room, written for North Carolina businesses deciding what to buy or lease next."],
+            ["Are the guides sales pitches?", "No. Each one answers a buyer's question in the first paragraph and shows the numbers behind the answer. Where Kelly sells the thing, it says so."],
+            ["Can I ask for a guide on a specific question?", "Yes. Send the question through the form on this page and the team will answer it directly and, if it comes up often, publish it."]]),
+        "careers.html": ("Working at Kelly", [
+            ["What kinds of roles does Kelly hire for?", "Sales, field service technicians, IT engineers, customer support, delivery and administration, as openings arise across the five North Carolina offices."],
+            ["Where would I work?", "Winston-Salem, Greensboro, Charlotte, Raleigh or Swansboro, with field roles covering the customers nearest that branch."],
+            ["How do I apply?", "Use the form on this page. A person from Kelly reads every application and replies."]]),
+        "contact.html": ("Before you call", [
+            ["Which office should I contact?", "The nearest branch: Winston-Salem, Greensboro, Charlotte or Raleigh. 1-800-34-KELLY reaches all of them."],
+            ["How do I request service or supplies?", "Existing customers use the service, supplies and meter-read links under Support, or call the branch. New customers start with the form here."],
+            ["Who replies?", "A person from the branch, during business hours. The form is not an autoresponder."]]),
+        "industries.html": ("Questions from specific industries", [
+            ["Which industries does Kelly work with most?", "Legal, healthcare, faith-based organizations, architecture and engineering, and manufacturing, plus education and local government across North Carolina."],
+            ["My industry is not listed. Can you still help?", "Yes. The industry pages show how the same services fit different workflows; the assessment adapts them to yours."],
+            ["Do you have references in my industry?", "Ask the branch. Case studies and customer comments are on the site, and a reference in your field can be arranged."]]),
+        "products.html": ("Product questions", [
+            ["Which brands does Kelly carry?", "Sharp, Ricoh, Savin, Konica Minolta and Brother for copiers and printers; FP for mailing; Wellsys, Follett and Manitowoc for water and ice; DocuWare for document management."],
+            ["Can I lease, rent or buy?", "All three. Leasing suits steady volume, renting suits peaks and projects, buying suits long-lived devices. The guide on this site walks through the decision."],
+            ["Where can I see the equipment?", "The Charlotte showroom is just off I-77, and each branch can demonstrate devices on site."]]),
+        "what-we-do.html": ("How the service lines fit", [
+            ["What does Kelly do?", "Seven service lines under one partner: copiers and office products, managed print, document management, production print, IT services, mailing solutions, and water, ice and coffee."],
+            ["Do I have to take everything?", "No. Most customers start with one line, usually copiers or managed print, and add others as the relationship earns it."],
+            ["Where does Kelly work?", "Across North Carolina from five offices: Winston-Salem, Greensboro, Charlotte, Raleigh and Swansboro."]]),
+    }
+    for _pg in pages:
+        if _pg["file"] in _FAQ_EXTRA and not any(x.get("type") == "faq" for x in _pg["sections"]):
+            _h, _items = _FAQ_EXTRA[_pg["file"]]
+            _faq = {"type": "faq", "id": "faq", "heading": _h, "items": _items}
+            _secs = _pg["sections"]
+            if _secs and _secs[-1].get("type") in ("leadform", "cta", "contact"):
+                _secs.insert(len(_secs) - 1, _faq)
+            else:
+                _secs.append(_faq)
     content = {"client": "Kelly Office Solutions", "slug": "kelly-office-solutions", "domain_hint": "kellyofficesolutions.com",
                "brand": brand, "schema": schema, "nav": nav, "pages": pages, "pitch": pitch}
     with open(OUT, "w", encoding="utf-8") as fh:

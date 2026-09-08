@@ -146,3 +146,24 @@ Directions: pass `--recommend` only when we are recommending; without it the hub
 Content-file helpers for Kelly: `_flow()` and `_ba()` build service-page modules from tuples; `SERVICE_MODULES[slug]` lists what each service page inserts after its benefits cards.
 Generated 3D: Higgsfield `generate_image_batch` (product render, plain white ground, no logos) then `remove_background(media_id=job_id)` then `generate_3d(model image_to_3d, should_texture:true)`; the textured GLB lands around 4MB. Label it generated in the intro.
 A brand's primary line goes first in every brand list (Kelly: Sharp).
+
+## The search and AI-answer baseline (added 2026-09-08, `scripts/seo_audit.py`, `scripts/preview_seo.py`)
+
+Pulled on day one, before copy. Three files next to the content file: `<slug>.audit.json` (every sitemap URL scored on sixteen checks), `<slug>.seo.json` (the written findings and every pulled number, from `_starter.seo.json`), and the content file's `schema` block (`short_name`, `title_city`, `cities`, `area_served`, `meta_tail`, `local` with the offices). `preview.py` then writes the report, the hub's Search and Every URL sections, the audit sheet and the redirect map, and scores the build with the same checks.
+
+Commands, in order:
+```bash
+# 1 the URL inventory: sitemap index, every child sitemap, one URL per line
+curl -sL https://<domain>/sitemap_index.xml | grep -o "<loc>[^<]*" | sed 's/<loc>//'   # then each child
+# 2 fetch and score the live site
+python3 scripts/seo_audit.py fetch --urls <slug>.urls.txt --html /tmp/<slug>
+python3 scripts/seo_audit.py live --urls <slug>.urls.txt --html /tmp/<slug> --domain <domain> \
+  --cities "<City>,<City>,<State>,<ST>" --types <slug>.types.json --out brands/<slug>.audit.json
+# 3 Semrush and live-result pulls (MCP), competitor pages through seo_audit.audit_html, then write brands/<slug>.seo.json
+# 4 build; the package renders when both files exist
+python3 scripts/preview.py --content brands/<slug>.content.json --themes "Quantum Showcase,Quantum Clean,Quantum Press" ...
+```
+
+The types file is a list of `[regex, type]` pairs over the URL path (service, industry, city, post, archive, form, policy, leftover, company). It drives the by-type averages and the filter on the hub. The redirect map takes `redirect_overrides` for the money pages, `redirect_rules` for archives, `retire` for theme leftovers, `post_target` for posts the build does not carry yet, and matches the rest by slug.
+
+What the report must contain, because the hub reads it: `hero.tiles` (four), `findings` (ranked, each with evidence, cost, fix), `compare` (columns, rows, verdict), `moves` (five), `entity`, `today`, `competitors`, `opportunities`, `clusters`, `questions`, `money_pages`, `competitor_pages`, `aeo.rows`, `crawlers`, `backlinks`, `local`, `plan`, `measure`, `hub.today`, `hub.after`, `hub.keep`, `sitewide`. `blog` is optional and omitted for a site with no posts.

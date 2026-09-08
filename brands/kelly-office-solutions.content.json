@@ -225,9 +225,86 @@
     "sameAs": [
       "https://www.linkedin.com/company/kelly-office-solutions/",
       "https://www.facebook.com/KellyOfficeSolutions",
-      "https://twitter.com/kellyofficesolu"
+      "https://twitter.com/kellyofficesolu",
+      "https://www.instagram.com/kellyofficesolutions/",
+      "https://www.bbb.org/us/nc/winston-salem/profile/copier/kelly-office-solutions-0503-670"
     ],
-    "telephone": "+1-800-345-3559"
+    "telephone": "+1-800-345-3559",
+    "founded": "1947",
+    "slogan": "Moving business forward since 1947",
+    "short_name": "Kelly",
+    "title_city": "NC",
+    "cities": [
+      "Winston-Salem",
+      "Winston Salem",
+      "Greensboro",
+      "Charlotte",
+      "Raleigh",
+      "Swansboro",
+      "Triad",
+      "North Carolina",
+      "NC"
+    ],
+    "area_served": [
+      {
+        "@type": "State",
+        "name": "North Carolina"
+      }
+    ],
+    "meta_tail": "Kelly Office Solutions, family-owned since 1947, five North Carolina offices.",
+    "local": [
+      {
+        "slug": "winston-salem",
+        "name": "Kelly Office Solutions Winston-Salem",
+        "street": "163 South Stratford Road",
+        "city": "Winston-Salem",
+        "region": "NC",
+        "postal": "27103",
+        "telephone": "+1-336-725-2566"
+      },
+      {
+        "slug": "greensboro",
+        "name": "Kelly Office Solutions Greensboro",
+        "street": "1040 E. Wendover Ave.",
+        "city": "Greensboro",
+        "region": "NC",
+        "postal": "27405",
+        "telephone": "+1-336-232-0399"
+      },
+      {
+        "slug": "charlotte",
+        "name": "Kelly Office Solutions Charlotte",
+        "street": "4205-B Stuart Andrew Blvd.",
+        "city": "Charlotte",
+        "region": "NC",
+        "postal": "28217",
+        "telephone": "+1-704-588-6891"
+      },
+      {
+        "slug": "raleigh",
+        "name": "Kelly Office Solutions Raleigh",
+        "street": "6001 Chapel Hill Rd, Suite 103",
+        "city": "Raleigh",
+        "region": "NC",
+        "postal": "27607",
+        "telephone": "+1-919-378-0172"
+      },
+      {
+        "slug": "swansboro",
+        "name": "Kelly Office Solutions Swansboro",
+        "street": "109 Seth Thomas Ln",
+        "city": "Swansboro",
+        "region": "NC",
+        "postal": "28584",
+        "telephone": "+1-252-393-1112"
+      },
+      {
+        "slug": "swansboro",
+        "name": "Kelly Office Solutions Swansboro",
+        "city": "Swansboro",
+        "region": "NC"
+      }
+    ]
   },
   "nav": [
     {
@@ -476,6 +553,7 @@
           "map",
           "voices",
           "film",
+          "faq",
           "contact"
         ],
         "press": [
@@ -1770,6 +1848,25 @@
               "Kelly Office Solutions has been one of our best vendors for six years running. The service department is prompt and efficient. In over 15 years of dealing with office equipment vendors, I have never seen a vendor that is so customer focused.",
               "Rick Aaronson",
               "Lexington Home Brands"
+            ]
+          ]
+        },
+        {
+          "type": "faq",
+          "id": "faq",
+          "heading": "How the service lines fit",
+          "items": [
+            [
+              "What does Kelly do?",
+              "Seven service lines under one partner: copiers and office products, managed print, document management, production print, IT services, mailing solutions, and water, ice and coffee."
+            ],
+            [
+              "Do I have to take everything?",
+              "No. Most customers start with one line, usually copiers or managed print, and add others as the relationship earns it."
+            ],
+            [
+              "Where does Kelly work?",
+              "Across North Carolina from five offices: Winston-Salem, Greensboro, Charlotte, Raleigh and Swansboro."
             ]
           ]
         },
@@ -3415,6 +3512,25 @@
               "DocuWare document management",
               "Cloud document management: find any file in seconds, route approvals automatically.",
               "products/docuware.html"
+            ]
+          ]
+        },
+        {
+          "type": "faq",
+          "id": "faq",
+          "heading": "Product questions",
+          "items": [
+            [
+              "Which brands does Kelly carry?",
+              "Sharp, Ricoh, Savin, Konica Minolta and Brother for copiers and printers; FP for mailing; Wellsys, Follett and Manitowoc for water and ice; DocuWare for document management."
+            ],
+            [
+              "Can I lease, rent or buy?",
+              "All three. Leasing suits steady volume, renting suits peaks and projects, buying suits long-lived devices. The guide on this site walks through the decision."
+            ],
+            [
+              "Where can I see the equipment?",
+              "The Charlotte showroom is just off I-77, and each branch can demonstrate devices on site."
             ]
           ]
         },
@@ -6094,6 +6210,25 @@
           ]
         },
         {
+          "type": "faq",
+          "id": "faq",
+          "heading": "Questions from specific industries",
+          "items": [
+            [
+              "Which industries does Kelly work with most?",
+              "Legal, healthcare, faith-based organizations, architecture and engineering, and manufacturing, plus education and local government across North Carolina."
+            ],
+            [
+              "My industry is not listed. Can you still help?",
+              "Yes. The industry pages show how the same services fit different workflows; the assessment adapts them to yours."
+            ],
+            [
+              "Do you have references in my industry?",
+              "Ask the branch. Case studies and customer comments are on the site, and a reference in your field can be arranged."
+            ]
+          ]
+        },
+        {
           "type": "leadform",
           "id": "assessment",
           "heading": "Start with the assessment",
@@ -7228,6 +7363,29 @@
           ]
         },
         {
+          "type": "faq",
+          "id": "faq",
+          "heading": "Questions about Kelly",
+          "items": [
+            [
+              "Who owns Kelly Office Solutions?",
+              "Kelly is family-owned and independent. Co-owners Tim Renegar and Peter Kelly run the company from Winston-Salem, where it has been headquartered since 1947."
+            ],
+            [
+              "Where are Kelly's offices?",
+              "Five in North Carolina: Winston-Salem (headquarters), Greensboro, Charlotte, Raleigh and Swansboro. Technicians are dispatched from the nearest one."
+            ],
+            [
+              "How is customer satisfaction measured?",
+              "Through a Net Promoter Score survey after service; the current NPS rating shown on the site is 94.4 percent."
+            ],
+            [
+              "Which brands does Kelly sell and service?",
+              "Sharp first, then Ricoh, Savin, Konica Minolta and Brother for print; FP for mailing; Wellsys, Follett and Manitowoc for water and ice."
+            ]
+          ]
+        },
+        {
           "type": "cta",
           "heading": "Work here",
           "subhead": "Kelly is always looking for energetic, creative problem solvers with an outstanding work ethic and advanced customer service skills.",
@@ -7294,6 +7452,25 @@
             [
               "Warehouse and delivery",
               "Devices staged, delivered and installed on the date the customer chose."
+            ]
+          ]
+        },
+        {
+          "type": "faq",
+          "id": "faq",
+          "heading": "Working at Kelly",
+          "items": [
+            [
+              "What kinds of roles does Kelly hire for?",
+              "Sales, field service technicians, IT engineers, customer support, delivery and administration, as openings arise across the five North Carolina offices."
+            ],
+            [
+              "Where would I work?",
+              "Winston-Salem, Greensboro, Charlotte, Raleigh or Swansboro, with field roles covering the customers nearest that branch."
+            ],
+            [
+              "How do I apply?",
+              "Use the form on this page. A person from Kelly reads every application and replies."
             ]
           ]
         },
@@ -8410,6 +8587,25 @@
               "Every dealer says fast. Here is what a real service commitment looks like in writing, how to read a response-time promise, and why an audited NPS matters more than a testimonial.",
               "blog/same-day-service-what-it-means.html",
               "assets/gso-office-1200.jpg"
+            ]
+          ]
+        },
+        {
+          "type": "faq",
+          "id": "faq",
+          "heading": "About these guides",
+          "items": [
+            [
+              "What does the Kelly blog cover?",
+              "Managed print, copiers and printers, document management, office IT and the break room, written for North Carolina businesses deciding what to buy or lease next."
+            ],
+            [
+              "Are the guides sales pitches?",
+              "No. Each one answers a buyer's question in the first paragraph and shows the numbers behind the answer. Where Kelly sells the thing, it says so."
+            ],
+            [
+              "Can I ask for a guide on a specific question?",
+              "Yes. Send the question through the form on this page and the team will answer it directly and, if it comes up often, publish it."
             ]
           ]
         },
@@ -9715,6 +9911,25 @@
               "Swansboro, NC 28584",
               "(252) 393-1112",
               "tel:2523931112"
+            ]
+          ]
+        },
+        {
+          "type": "faq",
+          "id": "faq",
+          "heading": "Before you call",
+          "items": [
+            [
+              "Which office should I contact?",
+              "The nearest branch: Winston-Salem, Greensboro, Charlotte or Raleigh. 1-800-34-KELLY reaches all of them."
+            ],
+            [
+              "How do I request service or supplies?",
+              "Existing customers use the service, supplies and meter-read links under Support, or call the branch. New customers start with the form here."
+            ],
+            [
+              "Who replies?",
+              "A person from the branch, during business hours. The form is not an autoresponder."
             ]
           ]
         }

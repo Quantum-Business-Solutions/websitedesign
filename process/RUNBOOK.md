@@ -1,6 +1,6 @@
 # The runbook
 
-> **Version 2.0 · 2026-09-08 · Owner: Shawn Peterson · Next review: 2026-10-08**
+> **Version 2.1 · 2026-09-08 · Owner: Shawn Peterson · Next review: 2026-10-08**
 > Version 2 folds in what Revolution, Kelly, Nexus, VanAusdall and Image 2000 taught us in one week. Section "What changed in version 2" at the bottom lists it; the steps below carry the changes inline.
 > Reviewed monthly, on the agenda in *Owner and cadence* at the bottom. If today is past the review
 > date, this document is unverified — read `process/qa-findings.md` for what tends to rot first.
@@ -52,11 +52,14 @@ sees them. These eight are **production**. They are not the same list.
 `node scripts/verify.mjs https://<their-domain>` — two minutes, and it's the diagnosis you open with.
 **Done:** their failure list exists.
 
-### 2 🤖 Pull the SEO baseline
-The four Semrush pulls in `process/seo-baseline.md`.
-**Done:** traffic, top pages and a striking-distance keyword are in the brief. **That traffic number
-is what the engagement gets measured against.** New client → **create the Semrush project today**;
-the crawl takes hours.
+### 2 🤖 Pull the search and AI-answer baseline
+The scripted package in `process/seo-baseline.md`, version 2: every sitemap URL fetched and scored by
+`scripts/seo_audit.py` (sixteen checks), the Semrush pulls for the client and each real competitor, six to
+eight buyer queries fetched live from the client's city, the brand-plus-reviews query, the competitor money
+pages parsed the same way, and `brands/<slug>.seo.json` written from `brands/_starter.seo.json`.
+**Done:** `preview.py` renders `seo-report.html`, the every-page audit on the hub with today against the
+build, `seo-audit-pages.csv` and `redirects.csv`. **The traffic number and the readiness average are what
+the engagement gets measured against.** New client → **create the Semrush project today**; the crawl takes hours.
 
 ### 3 🤖 Measure their brand
 `firecrawl_scrape`, `formats: ["branding"]`, on their site plus two or three competitors.
@@ -416,14 +419,14 @@ Rules that came from Shawn this week:
 
 The intake stage is explicit and scripted, in this order, and it is the top of the production chart:
 1. Scan the current website: `firecrawl_map` for the URL inventory, `firecrawl_scrape` of every top-level page, a note of the platform, the forms vendor, the cookie banner, broken links (Image 2000's Request a Quote linked to the home page) and any members-only links in public navigation.
-2. Pull the Semrush baseline: domain rank, keywords, traffic, top pages, and the branded share.
+2. Pull the search and AI-answer baseline (the version 2.1 package below): the page audit, the Semrush pulls, the live buyer queries, the competitor pages, the seo.json.
 3. Measure the live home page: HTML weight, scripts, stylesheets, images without lazy loading, pinch-zoom blocked, schema present, LocalBusiness present.
 4. Awards and press: the trade press profile (ENX, Industry Analysts), manufacturer award listings, the BBB record. These become the seal.
 5. Brand assets: logo files at full size, colours read from the logo, partner and award badges, team photographs, any film.
 6. Call notes and the proposal canvas, if there is one, read in full before a word is written.
 7. Write the To confirm list as you go, not at the end.
 
-Every client gets a design system page (`design-system.html`, generated) and an SEO report page from the Semrush pull, plus the hub's search before-and-after.
+Every client gets a design system page (`design-system.html`, generated) and the search and AI-answer package (`seo-report.html`, the every-page audit on the hub, the audit sheet and the redirect map), generated.
 
 ### QA, one gate
 Add to `verify.mjs` as the next job: the true-compositing contrast probe, all routes at 390, 768, 1280 and 1440 with exactly one h1, hub behaviour, page performance under CPU throttle, and the type scale check. Already added this week: a hard error when a compose id matches no section, and axe rules for nested interactive, contrast and heading order. The local LCP failure is the sandbox blocking Google Fonts; mark it staging-only rather than ignoring it.
@@ -434,3 +437,25 @@ Add to `verify.mjs` as the next job: the true-compositing contrast probe, all ro
 - Every session ends with the ClientCommand knowledge base entry for the client and, when a process changed, a re-upload of the changed process doc.
 - Scripts: never kill a process by a pattern that appears in the calling command line. Playwright screenshots either abort font requests or wait for them, never both.
 - Generated imagery is labelled on the page, every time, and is never described as the client's people or premises.
+
+## What changed in version 2.1 (2026-09-08, evening)
+
+Van Ausdall's hub showed what a client-facing search analysis should look like: ranked findings with evidence, cost and fix; the same page side by side with the competitors; every URL on the current site scored and set beside the page that replaces it; a redirect map. It was built by hand in one session. It is now generated for every client, and Kelly and Nexus carry it.
+
+### The search and AI-answer package
+Three files next to the content file, and one command:
+- `brands/<slug>.audit.json`, written by `scripts/seo_audit.py live` from the sitemap URLs fetched to disk (`seo_audit.py fetch`). Sixteen checks per page, weighted to what answer engines read (FAQPage, Service or Article, LocalBusiness, question headings, depth), a score out of 100 and a grade. The same script scores the build (`seo_audit.py build`), so the hub shows today against the build page for page.
+- `brands/<slug>.seo.json`, authored from `brands/_starter.seo.json` with the numbers from the pulls: hero tiles, thirteen ranked findings, the side-by-side table and verdict, five moves, blog and entity sections, competitors, keyword opportunities, clusters per service line, question keywords, the answer-engine scoreboard, crawlers, backlinks, reviews, the 90-day plan, the measures, the hub's today and after columns, the keep table, site-wide checks and the redirect overrides.
+- `scripts/preview_seo.py`, called by `preview.py` when both files exist. Writes `seo-report.html`, `seo-audit-pages.csv`, `redirects.csv`, `seo-build-scores.json`, and hands the hub its Search and Every URL sections.
+
+The pulls, in order (about forty minutes with the MCP tools): sitemap index and every child sitemap; `seo_audit.py fetch` then `live`; Semrush `domain_rank`, `domain_organic` (top 60 by traffic), `domain_organic_unique`, `domain_organic_organic`, `backlinks_overview`, `backlinks_refdomains` for the client; `phrase_organic` or `firecrawl_search` from the client's city for six to eight buyer queries plus the brand-and-reviews query; `domain_rank` and `backlinks_overview` for the four or five competitors those results name; `phrase_related` and `phrase_questions` per service line; `phrase_these` for the target list; robots.txt, llms.txt, the home page's scripts, forms vendor, tracking and schema; the competitor money pages fetched and parsed by `seo_audit.audit_html`. Semrush's own competitor list is a starting point only: for a brand with a common name it returns namesakes.
+
+### What the build now does on every page
+`preview.py` normalises every title to 30 to 60 characters with the brand and, where the schema block sets `title_city`, the service area, trying city-bearing forms first (`normalize_meta`); cuts every meta description to 160 at a sentence end; emits Organization (with legalName, foundingDate, sameAs, address, areaServed) and the headquarters LocalBusiness on every page from `schema.local`; Service schema on `services/*`, `industries/*`, `products/*`, `brands/*`; BlogPosting on `blog/*`; BreadcrumbList off the home page. Content files carry `schema.short_name`, `title_city`, `cities`, `area_served`, `meta_tail` and `local`. Every page needs a FAQ section; the content file adds one to any page without it. Kelly's build averages 93 with 54 of 55 A; Nexus 90 with 19 of 21 A. Review and AggregateRating are never marked up on self-published testimonials.
+
+### Rules
+- The baseline is pulled before the first word of copy, and the seo.json is written the same day as the pulls, while the numbers are fresh.
+- Every number in the report is from a pull or the live HTML. Where a pull was not made, the cell says not pulled. No estimates.
+- The findings are ranked by what they cost, each with evidence, cost and fix, and each fix is either in the build or on a named day of the plan.
+- The redirect map covers every URL in the sitemap: rebuilt, merged, migrated (posts) or retired. Overrides for the money pages are written by hand; the rest is matched by slug.
+- The same report is re-run at 30, 60 and 90 days against the same baseline, with `seo_audit.py live` on the launched site.

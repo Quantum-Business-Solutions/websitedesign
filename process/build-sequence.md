@@ -109,3 +109,5 @@ Keeping these straight prevents duplicated effort:
 | **Impeccable / taste-skill** | Craft execution and anti-slop critique. |
 
 This repo is deliberately **not** a builder. It's the spine the builders should be reading from.
+
+> **2026-09-08, version 2.1 of the runbook.** The search and AI-answer baseline is scripted and generated for every client: `scripts/seo_audit.py` scores every page of the live site and of the build, `brands/<slug>.seo.json` holds the pulled numbers and the ranked findings, and `preview.py` renders `seo-report.html`, the hub's Search and Every URL sections, the audit sheet and the redirect map. It runs on day one, before copy. Method in `INTAKE.md`; rules in `RUNBOOK.md`.

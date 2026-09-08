@@ -1,0 +1,1557 @@
+{
+  "measured": "8 September 2026",
+  "hero": {
+    "heading": "Where kellyofficesolutions.com stands, and what it is worth to fix",
+    "intro": "Every number here came from a Semrush or Firecrawl pull or from the live HTML of the site. Where a pull was not made, the table says so. This is the baseline the engagement is measured against at 30, 60 and 90 days.",
+    "tiles": [
+      [
+        "624",
+        "organic keywords (about 82 percent branded)"
+      ],
+      [
+        "518",
+        "organic visits a month, 91 percent landing on the home page"
+      ],
+      [
+        "0",
+        "top-10 results for copier lease winston salem, the headquarters city"
+      ],
+      [
+        "23",
+        "Authority Score, level with Copiers Plus at 24 and above Titan at 19"
+      ]
+    ]
+  },
+  "findings": [
+    {
+      "severity": "Critical",
+      "title": "Absent from every top-10 result for copier lease in the headquarters city",
+      "evidence": "For copier lease winston salem the ten results are RJ Young, Copier Lease Center, Novatech, Hartford Rents, Sharp's own branch page, Office Equipment Now, Titan's Winston-Salem page, 360Connect, 1800 Office Solutions and Copier Specialists of the Triad. Kelly has no Winston-Salem page; the headquarters is a paragraph on the contact page.",
+      "cost": "The home market's copier buyers, and every AI answer built from these results, go to national lessors and to Titan, a Charlotte competitor that built a page for Winston-Salem.",
+      "fix": "A Winston-Salem location page with LocalBusiness, Service and FAQPage schema, the Sharp dealer relationship stated, and the copier pages linked from it. It is in the build."
+    },
+    {
+      "severity": "High",
+      "title": "The site is a phone book for people who already know the name",
+      "evidence": "The five brand spellings (kelly office solutions, kelly's office, kelly office, kelly solutions, kellysolutions) bring about 80 percent of visits; kelly office solutions alone is 49 percent. The home page earns 473 of 518 monthly visits. Copier lease (2,400 searches a month), managed print services (4,400) and office coffee service (2,900) have no Kelly page in the top 100.",
+      "cost": "Every new customer has to arrive already knowing Kelly. Search and AI assistants have nothing to send a stranger to.",
+      "fix": "Fifty-five pages, each built around one thing a buyer asks, with the service area in the title and a FAQ marked up on every page."
+    },
+    {
+      "severity": "High",
+      "title": "Sharp's own branch pages outrank the Sharp dealer",
+      "evidence": "business.sharpusa.com/branches/winston-salem is number 5 for copier lease winston salem and business.sharpusa.com/branches/raleigh is number 1 for copier dealer raleigh nc sharp, with Gray and Creech at 2 as a Sharp dealer in Central NC. Kelly is absent from both, although Sharp is its first brand and the Raleigh branch page ranks for 11 keywords and earns no visits.",
+      "cost": "Buyers who already want a Sharp are sent to Sharp direct or to a competing dealer.",
+      "fix": "Brand and product pages that name Kelly as the local Sharp dealer by model family, Sharp first in every brand list, and a listing on Sharp's dealer locator in the 90-day plan."
+    },
+    {
+      "severity": "High",
+      "title": "No LocalBusiness, FAQPage or Service schema on any of 178 pages",
+      "evidence": "Every page carries the same Yoast Organization and WebSite block. Five offices and zero LocalBusiness records. Zero FAQPage. The 69 pages with any other schema are blog posts with Yoast's Article block. Competitors: Copiers Plus carries FAQPage on its managed print page; Vision Office Systems carries OfficeEquipmentStore, a LocalBusiness type.",
+      "cost": "An answer engine cannot tie Kelly to Winston-Salem, Greensboro, Charlotte, Raleigh or Swansboro, and has no question-and-answer text to lift into an answer.",
+      "fix": "Organization plus the headquarters LocalBusiness on every page, a LocalBusiness per office on the location pages, Service schema on every service, industry and product page, FAQPage on all 55. In the build."
+    },
+    {
+      "severity": "High",
+      "title": "One contact page does all the non-brand work",
+      "evidence": "/contact-us/charlotte/ ranks for 68 keywords: copiers charlotte number 1, copier companies in charlotte nc 3, office equipment company charlotte 3, copier lease charlotte nc 8. The Greensboro page ranks for 15 keywords and the Raleigh page for 11, and both earn zero visits. Winston-Salem has no page at all.",
+      "cost": "Four of five markets have no page an engine can match to a local copier or print query.",
+      "fix": "Five location pages, each with its address, hours, LocalBusiness record, the services that branch delivers and a local FAQ. The Charlotte page's terms carry across with a redirect."
+    },
+    {
+      "severity": "Medium",
+      "title": "The brand reviews result shows employer ratings and a one-star Yelp, not customers",
+      "evidence": "For kelly office solutions reviews: Indeed 3.1 from 8 employee reviews at 1, Facebook 3.9 (6 reviews) at 2, Glassdoor 3.9 at 4, Yelp Greensboro 1.0 from 2 reviews at 6. No Google Business Profile appears in the top ten, although Google reviews are embedded on the Charlotte page and the home page states an NPS of 94.4 percent. BBB A+ accredited profile at 9.",
+      "cost": "A prospect checking the name sees a 3.1 and a 1.0 before any customer proof.",
+      "fix": "Claim and complete the Google Business Profile for all five offices, ask for a Google review when every service ticket closes, and add Review schema only when real reviews exist. Answer the two Yelp reviews."
+    },
+    {
+      "severity": "Medium",
+      "title": "A quarter of the sitemap is archives and a theme demo",
+      "evidence": "45 of 178 URLs are tag, category, author and newsletter archives, with tags that are whole sentences (a-disaster-occurs-somewhere-in-the-world-almost-daily). 26 more are leftover theme pages: about-me, basic-data-entry, diary-management, my-services, travel-arrangements, sample-page, form-test, about-kelly-2, old-privacy-policy. An author archive exposes the agency's account name.",
+      "cost": "Crawl budget on pages that say nothing, and a personal-assistant theme demo indexed under the Kelly name.",
+      "fix": "Retire all 71 with permanent redirects to the nearest real page. The redirect map is generated from the sitemap and is in the download."
+    },
+    {
+      "severity": "Medium",
+      "title": "The blog is filed in the wrong drawers and signed by admin",
+      "evidence": "70 posts since 2020, about one a month, median 644 words, 63 with Article schema. 51 are authored by admin. Fourteen sit in /uncategorized/ and cyber security posts sit under /water-purification-system/. The best post, the business printer guide, earns 12 visits a month.",
+      "cost": "Consistent publishing that engines cannot attribute to a person or a topic, so none of it builds authority for the service pages.",
+      "fix": "Move the posts to /blog/ under the seven service lines, a named author with Person schema, an answer sentence under each H1 and a FAQ per post. The redirect map carries every post."
+    },
+    {
+      "severity": "Medium",
+      "title": "The home page title names no service and no city",
+      "evidence": "Title is Kelly Office Solutions - Since 1947 (35 characters); the meta description ends with the company email address; the H1 is Moving Business Forward Since 1947. The page carries 91 percent of the site's traffic.",
+      "cost": "The strongest page on the site does not say what Kelly sells or where.",
+      "fix": "Retitled to name copiers, managed print and IT with North Carolina, a description written for a buyer, and a FAQ marked up on the home page. In the build."
+    },
+    {
+      "severity": "Medium",
+      "title": "The managed print and copier pages carry no city, no FAQ and no schema",
+      "evidence": "/managed-print-services/ has 1,713 words and ranks 6 for managed print services charlotte nc (70 a month) with no city in its title; managed print services (4,400, difficulty 16) and copier lease (2,400, difficulty 19) have no Kelly page in the top 100. Copiers Plus's managed print page carries FAQPage and earns the Greensboro result.",
+      "cost": "The deepest pages on the site rank on the fringe of one city and nowhere nationally.",
+      "fix": "Service pages retitled with the service area, a FAQ and Service schema on each, and a managed print cost guide aimed at the question terms. In the build."
+    },
+    {
+      "severity": "Low",
+      "title": "robots.txt asks every crawler to wait ten seconds",
+      "evidence": "Crawl-delay: 10 at the top of robots.txt. Google ignores the directive; Bing and most AI crawlers honour it, so 178 URLs take half an hour to recrawl. AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended) are otherwise allowed. No llms.txt.",
+      "cost": "Slower discovery of every change, on the engines that feed Copilot and other assistants.",
+      "fix": "Remove the delay, keep AI crawlers open, add an llms.txt. Day one of the plan."
+    },
+    {
+      "severity": "Low",
+      "title": "Question keywords have no home on the site",
+      "evidence": "How much does it cost to lease a copy machine (260 a month), is it better to buy or lease a copier (110), what is managed print services (320), what is document management (720). Posts touch the topics without a question heading or FAQ schema.",
+      "cost": "AI Overviews and chat answers pull these definitions from competitors' blogs.",
+      "fix": "FAQ blocks on every page and the copier lease-versus-buy and managed print cost guides in the build; two more guides a month in the plan."
+    },
+    {
+      "severity": "Low",
+      "title": "Forms are Contact Form 7 beside a HubSpot tracking script",
+      "evidence": "The pages load the HubSpot tracking script and Google Tag Manager, but the request, supplies and meter-read forms are Contact Form 7. A submission is an email, not a contact record.",
+      "cost": "A lead from the site cannot be followed through the CRM or attributed to the page that produced it.",
+      "fix": "Every form in the build becomes a HubSpot form that creates a contact and records the source page."
+    }
+  ],
+  "compare": {
+    "columns": [
+      "Kelly Office Solutions",
+      "Copiers Plus",
+      "Titan Office Solutions",
+      "Vision Office Systems"
+    ],
+    "intro": "The same money pages side by side: Kelly's managed print page, Copiers Plus's managed print page, Titan's copier leasing page and Vision's home page. Assistants and Google pick the entity with the most corroborating evidence.",
+    "rows": [
+      [
+        "Organization or LocalBusiness schema",
+        "Organization only, no LocalBusiness for five offices",
+        "none on the page",
+        "none",
+        "yes: OfficeEquipmentStore, a LocalBusiness type, with Person"
+      ],
+      [
+        "FAQPage schema",
+        "none of 178 pages",
+        "yes",
+        "none",
+        "none"
+      ],
+      [
+        "Service schema",
+        "none",
+        "none",
+        "none",
+        "none"
+      ],
+      [
+        "Review or AggregateRating schema",
+        "none",
+        "none",
+        "none",
+        "none"
+      ],
+      [
+        "Words on the page",
+        "1,713",
+        "1,127",
+        "507",
+        "910"
+      ],
+      [
+        "City pages",
+        "3 contact pages (Greensboro, Charlotte, Raleigh); none for Winston-Salem or Swansboro",
+        "location pages per city, Greensboro included",
+        "a page per city on nc.titanofficesolutions.com, Winston-Salem included",
+        "Charlotte only"
+      ],
+      [
+        "Named for copier lease winston salem",
+        "absent from top 10",
+        "absent",
+        "number 7",
+        "absent"
+      ],
+      [
+        "Named for best copier company greensboro nc",
+        "number 6",
+        "number 1",
+        "absent",
+        "absent"
+      ],
+      [
+        "Organic visits a month",
+        "518",
+        "493",
+        "293",
+        "160"
+      ],
+      [
+        "Authority Score and referring domains",
+        "23 and 420",
+        "24 and 303",
+        "19 and 319",
+        "7 and 257"
+      ],
+      [
+        "Google reviews visible",
+        "on the Charlotte page only; no profile in the brand result",
+        "quoted in the search result",
+        "not shown",
+        "not shown"
+      ]
+    ],
+    "verdict": "Kelly has the authority, level with Copiers Plus and above Titan and Vision, and the most words per page. What it lacks is pages: no Winston-Salem page, no FAQ anywhere, no LocalBusiness for five offices. Titan wins Kelly's home city with one subdomain page; Copiers Plus wins Greensboro with a location page and a FAQ. The gap is structure, not links."
+  },
+  "moves": [
+    {
+      "title": "A page for each of the five offices, Winston-Salem first",
+      "when": "Build, five pages",
+      "where": "In the build",
+      "body": "Copier lease winston salem returns ten results and none is Kelly, in the city where Kelly has been since 1947. Each location page carries the address, hours, a LocalBusiness record, the services that branch delivers, the nearest Sharp showroom and a local FAQ. The Charlotte contact page's 68 keywords redirect to the Charlotte location page."
+    },
+    {
+      "title": "FAQPage on all 55 pages and Service schema on every service, industry and product page",
+      "when": "Build, week one",
+      "where": "In the build",
+      "body": "Zero FAQ and zero Service schema today against Copiers Plus's FAQ on the page that wins Greensboro. The question terms, from how much does it cost to lease a copy machine to what is managed print services, get a home on the pages that sell those things."
+    },
+    {
+      "title": "Brand pages that name Kelly as the Sharp dealer",
+      "when": "Build, product pages",
+      "where": "In the build",
+      "body": "Sharp's own branch pages rank where the dealer does not. Product pages by model family, Sharp first in every list, and the dealer relationship stated in text and in Organization schema, then a dealer-locator listing in the plan."
+    },
+    {
+      "title": "A Google review program across five offices",
+      "when": "30 days, service and sales teams",
+      "where": "In the 90-day plan",
+      "body": "The brand reviews result is an Indeed 3.1 and a Yelp 1.0. Claim the Google Business Profile for every office, ask for a review when each ticket closes, show the real reviews on the location pages, and add Review schema only when they exist."
+    },
+    {
+      "title": "Retire 71 archive and leftover URLs, move the blog under the service lines, drop the crawl delay",
+      "when": "Build and day one",
+      "where": "In the build",
+      "body": "A quarter of the sitemap is tags, author archives and a theme demo. Every one gets a permanent redirect; every post moves to /blog/ with a named author; robots.txt stops asking crawlers to wait ten seconds."
+    }
+  ],
+  "blog": {
+    "heading": "Seventy posts since 2020, filed in the wrong drawers",
+    "intro": "Every post in the sitemap, parsed the same way as the pages. Publishing is steady; attribution and structure are not.",
+    "tiles": [
+      [
+        "70",
+        "posts in the sitemap; about one a month since 2020"
+      ],
+      [
+        "644",
+        "median words per post"
+      ],
+      [
+        "63 of 70",
+        "posts with Article schema and a date (Yoast), 51 of them authored by admin"
+      ],
+      [
+        "14",
+        "posts in /uncategorized/; cyber security posts filed under /water-purification-system/"
+      ]
+    ],
+    "found": [
+      "Cadence is the asset. Roughly one post a month for six years is more than any Triad or Charlotte dealer publishes.",
+      "Nothing tells an engine who wrote them. Fifty-one posts are by admin; the two named authors are the agency writer and the marketing director, without Person schema or an author page.",
+      "The category is the URL. A cyber security post at /water-purification-system/cyber-security-brings-peace-of-mind tells a crawler the topic is water.",
+      "Titles already ask the questions buyers type (how to sanitize a water cooler, what is network management). The first paragraph rarely answers in one sentence, so nothing is lifted into an AI answer.",
+      "The business printer guide is the site's best non-brand page at 12 visits a month. That is what the rest of the blog could do with structure."
+    ],
+    "do": [
+      [
+        "Build",
+        "Every post moves to /blog/ under one of the seven service lines, with BlogPosting schema, a named author as a Person and the service line as articleSection. The post template does this."
+      ],
+      [
+        "Build",
+        "A one-sentence answer under the H1 and a FAQ marked up as FAQPage on every post, with links into the service page the post supports."
+      ],
+      [
+        "Build",
+        "A permanent redirect from every current post URL, and from every tag, category and author archive, generated from the sitemap."
+      ],
+      [
+        "30 days",
+        "Author pages for the people who write, with Person schema, role and LinkedIn as sameAs."
+      ],
+      [
+        "Ongoing",
+        "Keep the monthly cadence, but pick topics from the question keywords in this report instead of product news."
+      ]
+    ]
+  },
+  "entity": {
+    "heading": "What connects the company across the web",
+    "intro": "Answer engines corroborate a company across the web before they name it. Kelly's profiles exist and are active; the site connects only three of them and none to the five offices.",
+    "tiles": [
+      [
+        "A+",
+        "BBB accredited, and the BBB profile links to the site"
+      ],
+      [
+        "270",
+        "Instagram followers with 602 posts; Facebook 3.9 from 6 reviews; LinkedIn company page active"
+      ],
+      [
+        "3",
+        "sameAs links in the Organization schema today (LinkedIn, Facebook, X); no Instagram, BBB or Google profile"
+      ],
+      [
+        "0",
+        "LocalBusiness records for five offices; the Google reviews on the Charlotte page are not marked up"
+      ]
+    ],
+    "found": [
+      "The Organization schema carries name, URL and logo and points to LinkedIn, Facebook and X. It has no address, no founding date, no phone and no link to the BBB profile that Google already shows for the brand.",
+      "The Wake Forest athletics (godeacs.com) and Winston-Salem Dash (milb.com) sponsorships are the strongest local links Kelly has, and neither is mentioned on the site.",
+      "No Google Business Profile appeared in the brand reviews result. For a five-office dealer, the profiles, their Q&A and their reviews are the largest local answer-engine input, and they are not fed from the site.",
+      "The customer portal at meters.kellyofficesolutions.com is indexed as Login: Central. It should not be in the index at all.",
+      "The old site's tagline, the NPS of 94.4 percent and the 1947 founding date are the facts assistants repeat about Kelly. They should be on one page, marked up, with sources."
+    ],
+    "do": [
+      [
+        "Build",
+        "Organization schema with sameAs to LinkedIn, Facebook, X, Instagram and the BBB profile, plus foundingDate 1947, telephone, the headquarters address and the five offices as LocalBusiness records."
+      ],
+      [
+        "Build",
+        "A facts section on the about page: founded 1947, family-owned, five offices, about 90 people, the audited NPS, the sponsorships, with Organization schema behind it."
+      ],
+      [
+        "30 days",
+        "Claim and complete the Google Business Profile for all five offices: hours, services, photographs, Q&A seeded from the site FAQ, and a review request after every closed ticket."
+      ],
+      [
+        "30 days",
+        "noindex the meters subdomain, and link the Instagram and BBB profiles from the footer."
+      ],
+      [
+        "90 days",
+        "Listings where assistants look: Sharp's dealer locator, the Winston-Salem, Greensboro and Charlotte chambers, and the Yelp and Facebook profiles answered and kept current."
+      ]
+    ]
+  },
+  "today": [
+    "Semrush US database: 624 organic keywords, 518 visits a month, traffic value 112 dollars a month. The five brand spellings are about 80 percent of visits; the home page takes 91 percent.",
+    "The home page title Kelly Office Solutions - Since 1947 (35 characters) names no service and no city. The meta description ends with the info@ email address. One H1, Moving Business Forward Since 1947.",
+    "WordPress with Yoast and Divi; 73 script tags on the home page; Google Tag Manager and the HubSpot tracking script are present; forms are Contact Form 7 with reCAPTCHA; one Vimeo film.",
+    "lang is en-US, the canonical is set, and the og:image is the logo file, so shares are branded.",
+    "Schema on every page: Yoast Organization and WebSite, plus BreadcrumbList. No LocalBusiness, FAQPage or Service on any page; Article on 63 posts.",
+    "Sitemap index with five sitemaps and 178 URLs: 70 posts, 45 tag, category, author and newsletter archives, 26 leftover theme pages, and the real pages.",
+    "robots.txt allows all agents and declares the sitemap, but sets Crawl-delay: 10. No llms.txt. The meters.kellyofficesolutions.com portal is indexed.",
+    "The average page scores 46 of 100 on the sixteen checks; 120 of 178 pages score D or F; 68 are under 300 words."
+  ],
+  "competitors": {
+    "intro": "North Carolina office technology dealers competing for the same terms, from Semrush's US database and the live results above.",
+    "rows": [
+      [
+        "systeloa.com (Systel)",
+        "773",
+        "168",
+        "21"
+      ],
+      [
+        "kellyofficesolutions.com",
+        "518",
+        "624",
+        "23"
+      ],
+      [
+        "copiers-plus.com",
+        "493",
+        "610",
+        "24"
+      ],
+      [
+        "titanofficesolutions.com",
+        "293",
+        "1,690",
+        "19"
+      ],
+      [
+        "visionofficesystems.com",
+        "160",
+        "366",
+        "7"
+      ],
+      [
+        "gcoffice.solutions (Gray and Creech)",
+        "not pulled",
+        "not pulled",
+        "not pulled"
+      ],
+      [
+        "novatech.net (national, NC branches)",
+        "not pulled",
+        "not pulled",
+        "not pulled"
+      ]
+    ]
+  },
+  "opportunities": {
+    "intro": "Volume from Semrush's US database; difficulty where it was pulled. Where a competitor ranks and Kelly does not, the gap is a missing page, not missing authority.",
+    "rows": [
+      [
+        "managed print services",
+        "4,400",
+        "16",
+        "not ranking",
+        "national providers; Copiers Plus and Gray and Creech for the Greensboro form"
+      ],
+      [
+        "wide format printer",
+        "4,400",
+        "not pulled",
+        "not ranking",
+        "manufacturers and retailers"
+      ],
+      [
+        "office coffee service",
+        "2,900",
+        "not pulled",
+        "not ranking",
+        "national and regional coffee services"
+      ],
+      [
+        "copier lease",
+        "2,400",
+        "19",
+        "not ranking",
+        "national lessors"
+      ],
+      [
+        "office equipment rental",
+        "1,900",
+        "3",
+        "not ranking",
+        "national lessors"
+      ],
+      [
+        "printer lease",
+        "1,900",
+        "24",
+        "not ranking",
+        "national lessors"
+      ],
+      [
+        "production printer",
+        "720",
+        "not pulled",
+        "not ranking",
+        "manufacturers"
+      ],
+      [
+        "copier leasing companies",
+        "590",
+        "19",
+        "not ranking",
+        "national lessors"
+      ],
+      [
+        "mailing solutions",
+        "390",
+        "not pulled",
+        "9",
+        "national mailing vendors"
+      ],
+      [
+        "office water service",
+        "260",
+        "not pulled",
+        "not ranking",
+        "Le Bleu, Primo, local vendors"
+      ],
+      [
+        "managed it services winston salem",
+        "210",
+        "not pulled",
+        "not ranking",
+        "Charlotte IT Solutions, Net Friends, VC3, Solace"
+      ],
+      [
+        "it support greensboro nc",
+        "140",
+        "not pulled",
+        "not ranking",
+        "Gray and Creech, regional MSPs"
+      ],
+      [
+        "copier lease charlotte nc",
+        "70",
+        "not pulled",
+        "8",
+        "Copier Lease Charlotte, 1800 Office Solutions, Novatech, Titan, Vision"
+      ],
+      [
+        "managed print services charlotte nc",
+        "70",
+        "not pulled",
+        "6",
+        "national providers"
+      ],
+      [
+        "copiers charlotte",
+        "40",
+        "not pulled",
+        "1",
+        "Kelly holds it through the Charlotte contact page"
+      ],
+      [
+        "document management charlotte nc",
+        "30",
+        "not pulled",
+        "not ranking",
+        "not in gap set"
+      ]
+    ]
+  },
+  "clusters": [
+    {
+      "name": "Copiers: lease, rent, buy",
+      "seed": "copier lease",
+      "rows": [
+        [
+          "printer lease",
+          "1,900",
+          "0.64",
+          "11.96",
+          "commercial"
+        ],
+        [
+          "office equipment rental",
+          "1,900",
+          "0.28",
+          "5.81",
+          "commercial"
+        ],
+        [
+          "printer rental",
+          "1,600",
+          "0.50",
+          "12.93",
+          "commercial"
+        ],
+        [
+          "printer leasing",
+          "1,000",
+          "0.92",
+          "3.04",
+          "commercial"
+        ],
+        [
+          "office copy machine",
+          "1,000",
+          "0.99",
+          "3.64",
+          "commercial"
+        ],
+        [
+          "rental of photocopier",
+          "1,000",
+          "0.17",
+          "12.56",
+          "commercial"
+        ],
+        [
+          "copier leasing companies",
+          "590",
+          "0.11",
+          "19.40",
+          "commercial"
+        ],
+        [
+          "copier lease charlotte nc",
+          "70",
+          "0",
+          "0",
+          "transactional, local"
+        ]
+      ]
+    },
+    {
+      "name": "Managed print",
+      "seed": "managed print services",
+      "rows": [
+        [
+          "managed print service",
+          "1,000",
+          "0.09",
+          "20.85",
+          "informational"
+        ],
+        [
+          "managed print solutions",
+          "1,000",
+          "0.07",
+          "15.55",
+          "informational"
+        ],
+        [
+          "best managed print services",
+          "880",
+          "0.02",
+          "0",
+          "commercial"
+        ],
+        [
+          "printer management services",
+          "880",
+          "0.09",
+          "20.85",
+          "commercial"
+        ],
+        [
+          "managed print",
+          "720",
+          "0.18",
+          "16.48",
+          "informational"
+        ],
+        [
+          "managed print services companies",
+          "720",
+          "0.03",
+          "36.97",
+          "commercial"
+        ],
+        [
+          "managed print services near me",
+          "720",
+          "0.26",
+          "32.38",
+          "transactional"
+        ],
+        [
+          "print management services",
+          "720",
+          "0.09",
+          "20.85",
+          "informational"
+        ]
+      ]
+    },
+    {
+      "name": "Office coffee",
+      "seed": "office coffee service",
+      "rows": [
+        [
+          "office coffee",
+          "1,600",
+          "0.68",
+          "7.12",
+          "commercial"
+        ],
+        [
+          "coffee service",
+          "880",
+          "0.38",
+          "5.76",
+          "commercial"
+        ],
+        [
+          "coffee service for office",
+          "590",
+          "0.39",
+          "10.50",
+          "commercial"
+        ],
+        [
+          "corporate coffee",
+          "590",
+          "0.25",
+          "5.12",
+          "commercial"
+        ],
+        [
+          "office coffee services",
+          "590",
+          "0.49",
+          "11.14",
+          "commercial"
+        ],
+        [
+          "coffee products",
+          "480",
+          "0.87",
+          "1.01",
+          "commercial"
+        ],
+        [
+          "office water service",
+          "260",
+          "0.59",
+          "21.50",
+          "commercial"
+        ],
+        [
+          "coffee service for businesses",
+          "50",
+          "0.39",
+          "8.05",
+          "commercial"
+        ]
+      ]
+    },
+    {
+      "name": "Document management",
+      "seed": "document management software",
+      "rows": [
+        [
+          "document management",
+          "6,600",
+          "0.28",
+          "9.88",
+          "informational"
+        ],
+        [
+          "document management system",
+          "5,400",
+          "0.27",
+          "14.25",
+          "commercial"
+        ],
+        [
+          "what is dms",
+          "5,400",
+          "0.01",
+          "5.11",
+          "informational"
+        ],
+        [
+          "software document manager",
+          "3,600",
+          "0.10",
+          "13.37",
+          "commercial"
+        ],
+        [
+          "document management system software",
+          "2,900",
+          "0.10",
+          "13.37",
+          "commercial"
+        ],
+        [
+          "dms system software",
+          "2,400",
+          "0.10",
+          "13.37",
+          "commercial"
+        ],
+        [
+          "document storage management",
+          "70",
+          "0.08",
+          "30.94",
+          "commercial"
+        ],
+        [
+          "document management charlotte nc",
+          "30",
+          "0.33",
+          "0",
+          "commercial, local"
+        ]
+      ]
+    },
+    {
+      "name": "Local IT",
+      "seed": "managed it services winston salem",
+      "rows": [
+        [
+          "managed it services winston salem",
+          "210",
+          "0.01",
+          "0",
+          "commercial, local"
+        ],
+        [
+          "it support greensboro nc",
+          "140",
+          "0.24",
+          "8.91",
+          "commercial, local"
+        ],
+        [
+          "workstation support",
+          "140",
+          "0.06",
+          "0",
+          "informational"
+        ],
+        [
+          "manage network",
+          "390",
+          "0.12",
+          "9.60",
+          "informational"
+        ]
+      ]
+    },
+    {
+      "name": "Production and wide format",
+      "seed": "production printer",
+      "rows": [
+        [
+          "wide format printer",
+          "4,400",
+          "1.00",
+          "1.79",
+          "commercial"
+        ],
+        [
+          "production printer",
+          "720",
+          "1.00",
+          "4.40",
+          "commercial"
+        ],
+        [
+          "large format printer solutions",
+          "110",
+          "0.33",
+          "0",
+          "commercial"
+        ],
+        [
+          "all in one home office",
+          "140",
+          "1.00",
+          "1.01",
+          "commercial"
+        ]
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "topic": "copier lease",
+      "items": [
+        [
+          "how much does it cost to lease a copy machine",
+          "260"
+        ],
+        [
+          "how to get out of a copier lease",
+          "140"
+        ],
+        [
+          "how do copier leases work",
+          "110"
+        ],
+        [
+          "how much does it cost to lease a copier",
+          "110"
+        ],
+        [
+          "is it better to buy or lease a copier",
+          "110"
+        ],
+        [
+          "how to negotiate a copier lease",
+          "90"
+        ],
+        [
+          "should your small business buy or lease a digital copier",
+          "90"
+        ],
+        [
+          "how to lease a copier",
+          "70"
+        ],
+        [
+          "should i lease or buy a copier",
+          "70"
+        ]
+      ]
+    },
+    {
+      "topic": "managed print services",
+      "items": [
+        [
+          "what is managed print services",
+          "320"
+        ],
+        [
+          "what is managed printing services",
+          "320"
+        ],
+        [
+          "what are managed print services",
+          "260"
+        ],
+        [
+          "what is managed print service",
+          "140"
+        ],
+        [
+          "why managed print services",
+          "90"
+        ],
+        [
+          "what is print management services",
+          "70"
+        ],
+        [
+          "are managed print services worth it",
+          "50"
+        ],
+        [
+          "how does managed print services work",
+          "20"
+        ],
+        [
+          "how much does managed print services cost",
+          "20"
+        ]
+      ]
+    },
+    {
+      "topic": "document management",
+      "items": [
+        [
+          "what is document management software",
+          "1,000"
+        ],
+        [
+          "what is document management",
+          "720"
+        ],
+        [
+          "what is a document management system",
+          "320"
+        ],
+        [
+          "what is document management system",
+          "260"
+        ],
+        [
+          "what is document management system dms",
+          "140"
+        ],
+        [
+          "how document management systems support remote and hybrid work",
+          "110"
+        ],
+        [
+          "how hard is it to implement document management system",
+          "110"
+        ],
+        [
+          "what is electronic document management system",
+          "90"
+        ]
+      ]
+    },
+    {
+      "topic": "office coffee and water",
+      "items": [
+        [
+          "how to choose the right coffee machine for your office",
+          "40"
+        ],
+        [
+          "how to make coffee in office machine",
+          "40"
+        ],
+        [
+          "how to find office coffee supplier",
+          "30"
+        ],
+        [
+          "how to sanitize a water cooler",
+          "260"
+        ],
+        [
+          "how to use coffee machine in office",
+          "30"
+        ]
+      ]
+    }
+  ],
+  "money_pages": [
+    "/",
+    "/managed-print-services/",
+    "/it-services/",
+    "/document-management/",
+    "/production-print/",
+    "/mailing-solutions/",
+    "/pure-technology/",
+    "/office-products/",
+    "/contact-us/charlotte/",
+    "/contact-us/greensboro/",
+    "/contact-us/raleigh/",
+    "/contact-us/",
+    "/about-kelly/"
+  ],
+  "competitor_pages": [
+    {
+      "domain": "copiers-plus.com",
+      "url": "https://www.copiers-plus.com/managed-print-services/",
+      "title": "Managed Print & Commercial Printers in NC | Copiers Plus",
+      "words": 1127,
+      "schema": "FAQPage, Question, Answer",
+      "faq": true,
+      "pricing": "no",
+      "reviews": false,
+      "form": "yes"
+    },
+    {
+      "domain": "titanofficesolutions.com",
+      "url": "https://titanofficesolutions.com/copier-leasing",
+      "title": "Copier Leasing, Rentals Charlotte | Titan Office Solutions",
+      "words": 507,
+      "schema": "none",
+      "faq": false,
+      "pricing": "no",
+      "reviews": false,
+      "form": "no"
+    },
+    {
+      "domain": "visionofficesystems.com",
+      "url": "https://www.visionofficesystems.com/",
+      "title": "Printers & Copiers in Charlotte, NC | Locally Owned | Canon Dealer",
+      "words": 910,
+      "schema": "OfficeEquipmentStore, Organization, Person, ContactPoint, BreadcrumbList",
+      "faq": false,
+      "pricing": "no",
+      "reviews": false,
+      "form": "no"
+    },
+    {
+      "domain": "systeloa.com",
+      "url": "https://www.systeloa.com/",
+      "title": "Systel Business Equipment",
+      "words": 803,
+      "schema": "VideoObject",
+      "faq": false,
+      "pricing": "no",
+      "reviews": false,
+      "form": "yes"
+    }
+  ],
+  "aeo": {
+    "intro": "Live results for the questions a buyer types, fetched 8 September 2026 from the buyer's city. Presence here is the answer-engine scoreboard.",
+    "rows": [
+      {
+        "query": "copier lease winston salem",
+        "results": [
+          "rjyoung.com",
+          "copierleasecenter.com",
+          "novatech.net",
+          "hartfordrents.com",
+          "business.sharpusa.com",
+          "officeequipmentnow.com",
+          "nc.titanofficesolutions.com",
+          "360connect.com",
+          "1800officesolutions.com",
+          "csofthetriad.com"
+        ],
+        "position": null
+      },
+      {
+        "query": "copier lease charlotte nc",
+        "results": [
+          "copierleasecharlotte.com",
+          "1800officesolutions.com",
+          "novatech.net",
+          "titanofficesolutions.com",
+          "copierleasecenter.com",
+          "visionofficesystems.com",
+          "kellyofficesolutions.com",
+          "completecopiersalesandservice.com",
+          "titanofficesolutions.com",
+          "titanofficesolutions.com"
+        ],
+        "position": 7
+      },
+      {
+        "query": "best copier company greensboro nc",
+        "results": [
+          "copiers-plus.com",
+          "gcoffice.solutions",
+          "deximaging.com",
+          "yelp.com",
+          "novatech.net",
+          "kellyofficesolutions.com",
+          "yellowpages.com",
+          "youtube.com",
+          "csofthetriad.com",
+          "gcoffice.solutions"
+        ],
+        "position": 6
+      },
+      {
+        "query": "managed print services greensboro nc",
+        "results": [
+          "managedprint.com",
+          "its.uncg.edu",
+          "copiers-plus.com",
+          "gcoffice.solutions",
+          "officedepot.com",
+          "aux-services.unc.edu",
+          "bbb.org",
+          "visualedgeit.com",
+          "greensboro-nc.gov",
+          "kellyofficesolutions.com (a blog post)"
+        ],
+        "position": 10
+      },
+      {
+        "query": "office coffee and water service greensboro nc",
+        "results": [
+          "officecoffeelocal.com",
+          "vendtekofficecoffee.com",
+          "communitycoffee.com",
+          "greensboro-nc.gov",
+          "officecoffeedeals.net",
+          "coffeedasher.com",
+          "lebleuforyou.com",
+          "alisonvendingservice.com",
+          "fsioffice.com",
+          "kellyofficesolutions.com"
+        ],
+        "position": 10
+      },
+      {
+        "query": "copier dealer raleigh nc sharp",
+        "results": [
+          "business.sharpusa.com (Raleigh branch)",
+          "gcoffice.solutions",
+          "business.sharpusa.com (High Point)",
+          "novatech.net",
+          "visionofficesystems.com",
+          "copierrepairraleigh.com",
+          "mapquest.com",
+          "business.sharpusa.com (Lumberton)",
+          "thewilsongroup.com",
+          "accentimaging.com"
+        ],
+        "position": null
+      },
+      {
+        "query": "kelly office solutions reviews",
+        "results": [
+          "indeed.com (3.1, 8 employee reviews)",
+          "facebook.com (3.9, 6 reviews)",
+          "kellyofficesolutions.com",
+          "glassdoor.com (3.9)",
+          "indeed.com",
+          "yelp.com (1.0, 2 reviews, Greensboro)",
+          "linkedin.com",
+          "kellyofficesolutions.com (Charlotte)",
+          "bbb.org (A+ accredited)",
+          "instagram.com"
+        ],
+        "position": 3
+      }
+    ]
+  },
+  "crawlers": [
+    [
+      "GPTBot",
+      true
+    ],
+    [
+      "ClaudeBot",
+      true
+    ],
+    [
+      "PerplexityBot",
+      true
+    ],
+    [
+      "Google-Extended",
+      true
+    ],
+    [
+      "Sitemap declared",
+      true
+    ],
+    [
+      "No crawl delay",
+      false
+    ],
+    [
+      "llms.txt published",
+      false
+    ]
+  ],
+  "backlinks": {
+    "heading": "Authority is level; pages are the gap",
+    "rows": [
+      [
+        "kellyofficesolutions.com",
+        "23",
+        "420",
+        "12,531 (8,178 image links)"
+      ],
+      [
+        "copiers-plus.com",
+        "24",
+        "303",
+        "1,498"
+      ],
+      [
+        "systeloa.com",
+        "21",
+        "430",
+        "2,479"
+      ],
+      [
+        "titanofficesolutions.com",
+        "19",
+        "319",
+        "3,443"
+      ],
+      [
+        "visionofficesystems.com",
+        "7",
+        "257",
+        "667"
+      ]
+    ],
+    "top_ref": [
+      [
+        "indeed.com",
+        "100"
+      ],
+      [
+        "yahoo.com",
+        "100"
+      ],
+      [
+        "bing.com",
+        "92"
+      ],
+      [
+        "windy.com",
+        "81"
+      ],
+      [
+        "bit.ly",
+        "79"
+      ],
+      [
+        "bbb.org",
+        "78"
+      ],
+      [
+        "milb.com (Winston-Salem Dash)",
+        "74"
+      ],
+      [
+        "vocal.media",
+        "74"
+      ],
+      [
+        "zoominfo.com",
+        "74"
+      ],
+      [
+        "crunchbase.com",
+        "73"
+      ],
+      [
+        "rocketreach.co",
+        "69"
+      ],
+      [
+        "yellowpages.com",
+        "68"
+      ],
+      [
+        "podbean.com",
+        "55"
+      ],
+      [
+        "moleskine.com",
+        "54"
+      ],
+      [
+        "godeacs.com (Wake Forest athletics, 18 links)",
+        "47"
+      ]
+    ]
+  },
+  "local": [
+    "Indeed (employer): 3.1 from 8 reviews, position 1 for the brand reviews query",
+    "Facebook: 3.9, 78 percent recommend from 6 reviews, position 2",
+    "Glassdoor (employer): 3.9 from 8 ratings, 53 percent would recommend, position 4",
+    "Yelp (Greensboro): 1.0 from 2 reviews, position 6",
+    "Google Business Profile: no Maps or profile result in the top ten for the brand query; Google reviews exist and are embedded on the Charlotte contact page",
+    "BBB: A+ rated, accredited, position 9; the profile links to the site",
+    "Site claim: NPS rating 94.4 percent on the home page, unsourced on the page"
+  ],
+  "plan": [
+    [
+      "Days 1 to 10",
+      "Baseline locked: this report, a Semrush project on the domain, Search Console verified, Google Business Profile claimed for all five offices, crawl delay removed, meters subdomain set to noindex. Every URL that earns a visitor mapped to its redirect."
+    ],
+    [
+      "Days 10 to 45",
+      "Build: 55 pages in the chosen direction, five location pages with LocalBusiness, Service and FAQ schema on every service, industry and product page, the blog moved under the service lines with named authors. Forms into HubSpot."
+    ],
+    [
+      "Days 45 to 60",
+      "Launch with the 178 redirects tested one by one. Sitemap resubmitted. AI crawlers allowed, llms.txt published. Internal links from the home page to the five location pages and the copier and managed print pages."
+    ],
+    [
+      "Days 60 to 90",
+      "Content: two guides a month against the question keywords above, each answering in the first sentence. Sharp dealer locator, chambers and the BBB profile aligned to the site's name, address and phone. Review requests running after every closed ticket."
+    ],
+    [
+      "Day 30, 60, 90",
+      "Reads against this baseline: organic visits, non-brand share, top-100 and top-10 counts for the target terms, answer presence for the seven queries, leads created in HubSpot. The same report, re-run."
+    ]
+  ],
+  "measure": [
+    [
+      "Organic visits a month",
+      "Semrush domain overview, monthly",
+      "Up against 518, with non-brand share rising"
+    ],
+    [
+      "Non-brand share of visits",
+      "Semrush organic keywords, branded filter",
+      "From about 20 percent toward 40 percent by day 90"
+    ],
+    [
+      "Top-100 and top-10 rankings for the target terms",
+      "Semrush position tracking on the clusters above",
+      "Every target term in the top 100 by day 60; the low-difficulty local terms in the top 10 by day 90"
+    ],
+    [
+      "AI answer presence",
+      "The seven queries above, fetched from each city monthly",
+      "Kelly named for copier lease winston salem and copier dealer raleigh by day 90"
+    ],
+    [
+      "Google reviews per office",
+      "Google Business Profile",
+      "A profile for every office by day 30; reviews arriving weekly by day 60"
+    ],
+    [
+      "Readiness score",
+      "seo_audit.py on the live site",
+      "Average above 85 at launch and holding"
+    ],
+    [
+      "Leads",
+      "HubSpot contacts with source page",
+      "Every form submission a record; the source page known"
+    ]
+  ],
+  "hub": {
+    "heading": "Where you stand in search today, and what changes",
+    "intro": "Measured before we touched anything, so the work can be judged against it. Numbers from Semrush, live search results and kellyofficesolutions.com on 8 September 2026.",
+    "today": [
+      "Four visits in five come from someone searching your name; the home page earns 473 of 518 monthly visits. The site is a phone book for people who already know you.",
+      "Copier lease winston salem returns ten results and none is Kelly. Sharp's own branch page is fifth, Titan has a Winston-Salem page at seventh. You have no Winston-Salem page.",
+      "The Charlotte contact page is the only page earning strangers: copiers charlotte number 1, copier lease charlotte nc number 8, 68 keywords in all. Greensboro and Raleigh earn nothing; Swansboro has no page.",
+      "Zero LocalBusiness records for five offices, zero FAQ schema, zero Service schema across 178 pages. Copiers Plus carries FAQ on the page that wins Greensboro.",
+      "Your authority is level with the field: 23 against Copiers Plus at 24, Systel 21, Titan 19. The gap is pages, not links.",
+      "Seventy-one of 178 URLs are tag, category and author archives and leftover theme pages (diary-management, travel-arrangements, sample-page). robots.txt asks crawlers to wait ten seconds between pages.",
+      "The brand reviews result shows Indeed 3.1 and a Yelp 1.0 before any customer proof. No Google Business Profile appears, although your Google reviews are embedded on the Charlotte page."
+    ],
+    "after": [
+      "Every URL that earns a visitor today keeps earning it: a permanent redirect for each of the 178, tested individually at launch (the table below).",
+      "Five location pages with LocalBusiness records, the Winston-Salem headquarters first, each naming the services that branch delivers and the nearest showroom.",
+      "Organization schema with your five offices, founding date, phone and every profile as sameAs, so an assistant asked about Kelly resolves to the right company and the right city.",
+      "FAQPage on all 55 pages, Service schema on every service, industry and product page, and titles that name the service area. Scored by the same script, the build averages above 90.",
+      "The blog under the seven service lines with named authors and a redirect from every old post, tag and archive; the copier lease-versus-buy and managed print cost guides aimed at the question terms.",
+      "Every form a HubSpot form that creates a contact, so a lead from the site is a record with a source page, not an email."
+    ],
+    "keep": [
+      [
+        "/contact-us/charlotte/",
+        "/locations/charlotte.html",
+        "copiers charlotte #1 (40 a month), copier companies in charlotte nc #3, office equipment company charlotte #3 (110), copier lease charlotte nc #8 (70)"
+      ],
+      [
+        "/managed-print-services/",
+        "/services/managed-print.html",
+        "managed print services charlotte nc #6 (70 a month)"
+      ],
+      [
+        "/mailing-solutions/",
+        "/services/mailing.html",
+        "mailing solutions #9 (390 a month)"
+      ],
+      [
+        "/office-printers/business-printer-guide/",
+        "/blog/all-in-one-office-printer-options-navigating-the-market-for-the-best-choice.html",
+        "the site's best non-brand post, 12 visits a month"
+      ],
+      [
+        "/office-printers/how-wide-format-printers-help-businesses/",
+        "/blog/wide-format-printer-buying-guide-making-the-right-decision.html",
+        "large format printer solutions #7 (110 a month)"
+      ],
+      [
+        "/water/",
+        "/products/water-coolers.html",
+        "water kelly #3, 18 keywords"
+      ],
+      [
+        "/contact-us/greensboro/, /contact-us/raleigh/",
+        "/locations/greensboro.html, /locations/raleigh.html",
+        "branded and city terms, 15 and 11 keywords"
+      ],
+      [
+        "/tag/*, /category/*, /author/*, /newsletters/*",
+        "/blog.html",
+        "nothing; 45 archive pages retired"
+      ]
+    ],
+    "note": "Rankings or traffic. Those depend on the market and on what you publish after launch. What we promise is that nothing about the build is the reason they do not come, that every number above is re-measured at 30, 60 and 90 days, and that you see the same report we do."
+  },
+  "sitewide": [
+    [
+      true,
+      "Served over HTTPS with one canonical host"
+    ],
+    [
+      true,
+      "robots.txt allows Google and all four AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended)"
+    ],
+    [
+      true,
+      "Sitemap index declared, 178 URLs"
+    ],
+    [
+      true,
+      "Organization schema on every page (Yoast)"
+    ],
+    [
+      false,
+      "No crawl delay (robots.txt sets Crawl-delay: 10)"
+    ],
+    [
+      false,
+      "LocalBusiness schema for any of the five offices"
+    ],
+    [
+      false,
+      "FAQPage schema anywhere on the site"
+    ],
+    [
+      false,
+      "Service schema on any service page"
+    ],
+    [
+      false,
+      "Archive and theme-demo URLs kept out of the sitemap (71 of 178)"
+    ],
+    [
+      false,
+      "llms.txt published for AI assistants"
+    ],
+    [
+      false,
+      "Customer portal subdomain kept out of the index"
+    ],
+    [
+      false,
+      "Forms create CRM records (Contact Form 7 today)"
+    ]
+  ],
+  "redirect_overrides": {
+    "/": "index.html",
+    "/about-kelly/": "about.html",
+    "/about-kelly-2/": "about.html",
+    "/contact-us/": "contact.html",
+    "/contact-us/charlotte/": "locations/charlotte.html",
+    "/contact-us/greensboro/": "locations/greensboro.html",
+    "/contact-us/raleigh/": "locations/raleigh.html",
+    "/managed-print-services/": "services/managed-print.html",
+    "/it-services/": "services/it-services.html",
+    "/document-management/": "services/document-management.html",
+    "/production-print/": "services/production-print.html",
+    "/mailing-solutions/": "services/mailing.html",
+    "/pure-technology/": "services/pure-technology.html",
+    "/water/": "products/water-coolers.html",
+    "/ice/": "products/ice-machines.html",
+    "/coffee/": "products/coffee-brewers.html",
+    "/office-products/": "services/copiers.html",
+    "/products/": "products.html",
+    "/product-library/": "products.html",
+    "/product-catalog/": "products.html",
+    "/key-markets/": "industries.html",
+    "/key-markets/healthcare/": "industries/healthcare.html",
+    "/key-markets/legal-organizations/": "industries/legal.html",
+    "/key-markets/manufacturing/": "industries/manufacturing.html",
+    "/key-markets/faith-based-organizations/": "industries/faith-based.html",
+    "/key-markets/architecture/": "industries/architecture.html",
+    "/supplies-service/": "service-support.html",
+    "/supplies-service/meter-reads/": "service-support.html",
+    "/supplies-service/request-copier-supplies/": "service-support.html",
+    "/supplies-service/request-coffee-supplies/": "service-support.html",
+    "/supplies-service/request-service/": "service-support.html",
+    "/blog/": "blog.html",
+    "/privacy-policy/": "index.html",
+    "/old-privacy-policy/": "index.html",
+    "/sound-masking/": "what-we-do.html",
+    "/sound-masking-solutions/": "what-we-do.html",
+    "/it-services/it-management/": "services/it-services.html",
+    "/office-printers/business-printer-guide/": "blog/all-in-one-office-printer-options-navigating-the-market-for-the-best-choice.html",
+    "/office-printers/how-wide-format-printers-help-businesses/": "blog/wide-format-printer-buying-guide-making-the-right-decision.html",
+    "/office-copier/unraveling-ins-outs-copier-lease/": "blog/unraveling-ins-outs-copier-lease.html",
+    "/managed-print-services/how-managed-print-services-transforms-business/": "blog/how-managed-print-services-transforms-business.html",
+    "/document-management/document-management-how-it-works-and-why-it-matters/": "blog/document-management-how-it-works-and-why-it-matters.html",
+    "/pure-water-technology/clean-water-cooler-step-by-step-guide/": "blog/clean-water-cooler-step-by-step-guide.html",
+    "/greensboro-it-services/workstation-management-an-overview/": "blog/workstation-management-an-overview.html",
+    "/business-office-solutions/wide-format-printer-buying-guide-making-the-right-decision/": "blog/wide-format-printer-buying-guide-making-the-right-decision.html",
+    "/office-printers/all-in-one-office-printer-options-navigating-the-market-for-the-best-choice/": "blog/all-in-one-office-printer-options-navigating-the-market-for-the-best-choice.html",
+    "/managed-print-services/how-mps-benefits-businesses/": "blog/what-managed-print-costs.html"
+  },
+  "redirect_rules": [
+    [
+      "^/(tag|category|author)/",
+      "blog.html"
+    ],
+    [
+      "^/newsletters/",
+      "blog.html"
+    ],
+    [
+      "^/careers",
+      "careers.html"
+    ]
+  ],
+  "retire": [
+    "^/(about-me|basic-data-entry|contact-me|crystal-mountain-ice-giveaway|diary-management|form-test|journal|my-services|organizing-calendar|sample-page|travel-arrangements|thank-you|under-construction|giveaway)"
+  ],
+  "retire_target": "index.html",
+  "merge_target": "blog.html",
+  "build_types": [
+    [
+      "^/services/",
+      "service"
+    ],
+    [
+      "^/industries/",
+      "industry"
+    ],
+    [
+      "^/products/",
+      "service"
+    ],
+    [
+      "^/locations/",
+      "city"
+    ],
+    [
+      "^/blog/",
+      "post"
+    ]
+  ],
+  "post_target": "blog.html"
+}

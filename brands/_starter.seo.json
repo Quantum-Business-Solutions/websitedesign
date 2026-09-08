@@ -1,0 +1,57 @@
+{
+  "_readme": [
+    "Copy to brands/<slug>.seo.json and fill every field from pulls, not from memory. preview.py picks it up when brands/<slug>.audit.json also exists.",
+    "Sources, in order: seo_audit.py live (every sitemap URL), Semrush domain_rank / domain_organic / domain_organic_unique / domain_organic_organic / backlinks_overview / backlinks_refdomains for the client and each real competitor,",
+    "phrase_organic or firecrawl_search for six to eight buyer queries fetched from the client's city, phrase_related and phrase_questions per service line, the live robots.txt, sitemap and llms.txt, and the brand + reviews query.",
+    "Write 'not pulled' where a pull was not made. Never estimate a number. No em dashes, no exclamation marks, no response-time or pricing promises."
+  ],
+  "measured": "D Month YYYY",
+  "hero": {
+    "heading": "Where <domain> stands, and what it is worth to fix",
+    "intro": "Every number here came from a Semrush or Firecrawl pull or from the live HTML of the site. Where a pull was not made, the table says so. This is the baseline the engagement is measured against at 30, 60 and 90 days.",
+    "tiles": [["<keywords>", "organic keywords (about <n> percent branded)"], ["<visits>", "organic visits a month, <n> percent landing on the home page"], ["0", "top-10 results for <core local term>"], ["<AS>", "Authority Score, against <competitor> at <n>"]]
+  },
+  "findings": [
+    {"severity": "Critical", "title": "<what is missing where the buyer asks>", "evidence": "<the ten results, named; the client's position or absence>", "cost": "<the term volume and the AI answers that route elsewhere>", "fix": "<what the build does, or which day of the plan>"},
+    {"severity": "High", "title": "", "evidence": "", "cost": "", "fix": ""},
+    {"severity": "Medium", "title": "", "evidence": "", "cost": "", "fix": ""},
+    {"severity": "Low", "title": "", "evidence": "", "cost": "", "fix": ""}
+  ],
+  "compare": {
+    "columns": ["<Client>", "<Competitor 1>", "<Competitor 2>", "<Competitor 3>"],
+    "intro": "The same money page at the client and at the competitors that hold the results.",
+    "rows": [["Organization or LocalBusiness schema", "", "", "", ""], ["FAQPage schema", "", "", "", ""], ["Service or Offer schema", "", "", "", ""], ["Review or AggregateRating schema", "", "", "", ""], ["Words on the money page", "", "", "", ""], ["City in the title", "", "", "", ""], ["Google rating shown in the result", "", "", "", ""], ["Named for <core local term>", "", "", "", ""], ["Organic visits a month", "", "", "", ""], ["Authority Score and referring domains", "", "", "", ""], ["Location pages", "", "", "", ""]],
+    "verdict": "<one paragraph: what the client tells engines, what competitors tell them, whether the gap is pages or links>"
+  },
+  "moves": [
+    {"title": "", "when": "Build, week one", "where": "In the build", "body": ""},
+    {"title": "", "when": "Build", "where": "In the build", "body": ""},
+    {"title": "", "when": "30 days", "where": "In the 90-day plan", "body": ""},
+    {"title": "", "when": "30 to 60 days", "where": "In the 90-day plan", "body": ""},
+    {"title": "", "when": "Build, then days 60 to 90", "where": "In the build", "body": ""}
+  ],
+  "blog": {"heading": "", "intro": "", "tiles": [["", ""], ["", ""], ["", ""], ["", ""]], "found": [], "do": [["Build", ""], ["30 days", ""], ["Ongoing", ""]]},
+  "entity": {"heading": "What connects the company across the web", "intro": "", "tiles": [["", ""], ["", ""], ["", ""], ["", ""]], "found": [], "do": [["Build", ""], ["30 days", ""], ["90 days", ""]]},
+  "today": ["<Semrush line>", "<home page title, meta, H1>", "<platform, scripts, tracking, forms vendor>", "<lang, canonical, og:image>", "<schema on every page>", "<sitemap counts>", "<robots, llms.txt>", "<audit averages>"],
+  "competitors": {"intro": "", "rows": [["<domain>", "<visits>", "<keywords>", "<AS or not pulled>"]]},
+  "opportunities": {"intro": "Volume from Semrush's US database; difficulty where it was pulled.", "rows": [["<keyword>", "<volume>", "<KD or not pulled>", "<client position or not ranking>", "<who ranks>"]]},
+  "clusters": [{"name": "<service line>", "seed": "<seed phrase>", "rows": [["<keyword>", "<volume>", "<competition 0 to 1>", "<CPC>", "<intent>"]]}],
+  "questions": [{"topic": "<seed>", "items": [["<question>", "<volume>"]]}],
+  "money_pages": ["/", "/<service page>/"],
+  "competitor_pages": [{"domain": "", "url": "", "title": "", "words": 0, "schema": "", "faq": false, "pricing": "no", "reviews": false, "form": "no"}],
+  "aeo": {"intro": "Live results for the questions a buyer types, fetched <date> from <city>. Presence here is the answer-engine scoreboard.", "rows": [{"query": "", "results": [], "position": null}]},
+  "crawlers": [["GPTBot", true], ["ClaudeBot", true], ["PerplexityBot", true], ["Google-Extended", true], ["Sitemap declared", true], ["llms.txt published", false]],
+  "backlinks": {"heading": "", "rows": [["<domain>", "<AS>", "<referring domains>", "<backlinks>"]], "top_ref": [["<referring domain>", "<score>"]]},
+  "local": ["<each review platform: rating, count, position for the brand query>", "Google Business Profile: <found or not>"],
+  "plan": [["Days 1 to 10", ""], ["Days 10 to 45", ""], ["Days 45 to 60", ""], ["Days 60 to 90", ""], ["Day 30, 60, 90", "Reads against this baseline. The same report, re-run."]],
+  "measure": [["Organic visits a month", "Semrush domain overview, monthly", ""], ["Top-100 and top-10 rankings for the target terms", "Semrush position tracking", ""], ["AI answer presence", "The queries above, fetched monthly", ""], ["Google reviews", "Google Business Profile", ""], ["Readiness score", "seo_audit.py on the live site", "Average above 85 at launch and holding"], ["Leads", "HubSpot contacts with source page", "Every form submission a record"]],
+  "hub": {"heading": "Where you stand in search today, and what changes", "intro": "Measured before we touched anything, so the work can be judged against it.", "today": [], "after": [], "keep": [["<old path>", "<new file>", "<what it ranks for now>"]], "note": "Rankings or traffic. Those depend on the market and on what you publish after launch. What we promise is that nothing about the build is the reason they do not come, that every number above is re-measured at 30, 60 and 90 days, and that you see the same report we do."},
+  "sitewide": [[true, "Served over HTTPS with one canonical host"], [true, "robots.txt allows Google and all four AI crawlers"], [true, "Sitemap declared"], [false, "LocalBusiness schema"], [false, "FAQPage schema anywhere on the site"], [false, "Service schema on any service page"], [false, "llms.txt published for AI assistants"]],
+  "redirect_overrides": {"/": "index.html"},
+  "redirect_rules": [["^/(tag|category|author)/", "blog.html"]],
+  "retire": [],
+  "retire_target": "index.html",
+  "merge_target": "index.html",
+  "post_target": "blog.html",
+  "build_types": [["^/services/", "service"], ["^/industries/", "industry"], ["^/products/", "service"], ["^/locations/", "city"], ["^/blog/", "post"]]
+}

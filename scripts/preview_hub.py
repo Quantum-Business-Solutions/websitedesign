@@ -39,7 +39,7 @@ def _role(roles, t):
     return _re.sub(r"^[A-Za-z ]+:\s*", "", roles[t] if t in roles else "")
 
 
-def hub(content, themes, recommend, base, roles, standard, client_tokens, out_dir=None):
+def hub(content, themes, recommend, base, roles, standard, client_tokens, out_dir=None, seo=None):
     import os
     ds_link = '<a href="design-system.html">Design system</a>' if out_dir and os.path.exists(os.path.join(out_dir, "design-system.html")) else ""
     b = content["brand"]
@@ -95,6 +95,8 @@ def hub(content, themes, recommend, base, roles, standard, client_tokens, out_di
 <div class="two" style="margin-top:34px"><div><h3 class="h3">Today <span class="asof">{_e(sr.get("as_of", ""))}</span></h3><ul>{today}</ul></div><div><h3 class="h3">After launch</h3><ul>{after}</ul></div></div>
 {('<h3 class="h3" style="margin-top:34px">' + _e(sr.get("keep_heading", "Every page that earns a visitor today keeps earning it")) + '</h3>') if keep else ""}{keep_tbl}
 <div class="change" style="margin-top:22px"><strong>What we do not promise:</strong> {_e(sr.get("note", "Rankings or traffic. Those depend on the market and the content you publish after launch. We promise the inputs, and we measure the result against this baseline at 30, 60 and 90 days."))}</div></div></section>'''
+    if seo:
+        search_html = seo["search"] + "\n" + seo["audit"]
     heard = "".join(f"<li>{_e(x)}</li>" for x in pitch.get("heard", []))
     confirm = "".join(f"<li>{_e(x)}</li>" for x in pitch.get("confirm", []))
     heard_intro = pitch.get("heard_intro", "Tell us if any of this is wrong. It outranks our house defaults.")
@@ -179,9 +181,9 @@ select{{max-width:100%}}
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-<style>{css}</style></head><body>
+<style>{css}{seo["css"] if seo else ""}</style></head><body data-first-dir="{_e(seo["first_dir"]) if seo else ""}">
 <a class="skip" href="#main">Skip to content</a>
-<header class="top"><div class="wrap"><img src="{_e(b["logo"])}" alt="{_e(content["client"])}" height="36" width="99"><nav aria-label="Sections"><a href="#three">The three</a><a href="#pick">Our pick</a><a href="#compare">Compare</a><a href="#search">Search</a><a href="#heard">Fixed</a><a href="#confirm">To confirm</a><a href="#every">Every page</a><a href="#plan">The plan</a><a href="#turn">Your turn</a>{ds_link}</nav></div></header>
+<header class="top"><div class="wrap"><img src="{_e(b["logo"])}" alt="{_e(content["client"])}" height="36" width="99"><nav aria-label="Sections"><a href="#three">The three</a><a href="#pick">Our pick</a><a href="#compare">Compare</a><a href="#search">Search</a>{seo["nav"] if seo else ""}<a href="#heard">Fixed</a><a href="#confirm">To confirm</a><a href="#every">Every page</a><a href="#plan">The plan</a><a href="#turn">Your turn</a>{ds_link}</nav></div></header>
 <main id="main">
 <section><div class="wrap"><p class="eyebrow">Quantum Business Solutions for {_e(content["client"])}</p><h1>Same site. Three ways to design it.</h1>
 <p class="lead">Each one is the whole site, not a home page and two mockups: every page is built and live in all three. The words are the same in all three and the composition is not, so the decision in front of you is about direction, not copy. Open any one, then use the switcher pinned to the bottom of the page to flip between all three without losing your place.</p></div></section>

@@ -8,6 +8,14 @@ This file is the method, worked through on QBS's own domain so the numbers are r
 
 ---
 
+## Version 2 (2026-09-08): the package, generated
+
+The four pulls below are the start. The client-facing deliverable is now generated: `scripts/seo_audit.py` scores every page of the live site and of the build on sixteen checks; `brands/<slug>.seo.json` holds every pulled number and the written findings; `scripts/preview_seo.py` renders `seo-report.html`, the hub's Search and Every URL sections, `seo-audit-pages.csv` and `redirects.csv`. Van Ausdall, Kelly Office Solutions and Nexus Network Technologies carry it. The method and the command sequence are in `INTAKE.md` (the search and AI-answer baseline) and `RUNBOOK.md` (version 2.1).
+
+Pulls that go beyond the four: `domain_organic_organic` and `backlinks_overview` and `backlinks_refdomains` for the client and each competitor named by the live results; `phrase_organic` or `firecrawl_search` from the client's city for the buyer queries and the brand-plus-reviews query; `phrase_related` and `phrase_questions` per service line; `phrase_these` for the target list. Semrush's keyword-overlap competitor list is unreliable for common brand names (Nexus returned nexus.com.mt and nexusnetworks.in); take the competitors from the live results instead.
+
+---
+
 ## The four pulls, in order
 
 Run these in Phase 01 Information Gathering, before the interview. They cost API units, so don't

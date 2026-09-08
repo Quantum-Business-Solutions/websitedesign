@@ -116,6 +116,8 @@ What goes in the repo root so the URL is worth sharing (Kelly is the reference,
 | `content.json` | A copy of `brands/<slug>.content.json`, the source of truth, for the record |
 | `assets/` | Logo, hero, `hero-og.jpg`, `partners/` logos |
 | `standard.html` | The client-facing guarantee |
+| `design-system.html` | Tokens, type, modules and voice, generated from the same source as the pages |
+| `seo-report.html`, `seo-audit-pages.csv`, `redirects.csv`, `seo-build-scores.json` | The search and AI-answer package: the full analysis, every page and every check, the 301 map, the build scored by the same script (`scripts/preview_seo.py`, from `brands/<slug>.seo.json` and `.audit.json`) |
 | `vercel.json` | An `X-Robots-Tag: noindex, nofollow` header on every path. Plain file URLs, so relative links resolve inside each direction |
 
 Rules: **noindex everywhere** (a preview that gets indexed is a duplicate of the client's future

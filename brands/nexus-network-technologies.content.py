@@ -363,7 +363,12 @@ def build():
     }
     schema = {"org_name": "Nexus Network Technologies", "org_url": "https://www.nexusnt.com", "org_logo": "https://www.nexusnt.com/wp-content/uploads/2022/11/nexus-logo.svg",
               "org_description": "Founder-owned managed IT, network as a service, cybersecurity, meeting room, site intelligence and virtual CIO partner based in Morrisville, North Carolina, serving growing businesses across the Triangle and the Carolinas.",
-              "sameAs": ["https://www.linkedin.com/company/nexus-network-technologies/"], "telephone": "+1-919-897-2700"}
+              "sameAs": ["https://www.linkedin.com/company/nexus-networking-technologies/"], "telephone": "+1-919-897-2700",
+              "short_name": "Nexus", "title_city": "Raleigh-Durham", "cities": ["Raleigh", "Durham", "Cary", "Morrisville", "Triangle", "Chapel Hill", "North Carolina", "NC", "Carolinas"],
+              "area_served": [{"@type": "City", "name": "Raleigh"}, {"@type": "City", "name": "Durham"}, {"@type": "City", "name": "Cary"}, {"@type": "City", "name": "Morrisville"}, {"@type": "State", "name": "North Carolina"}],
+              "meta_tail": "Nexus Network Technologies, founder-owned in Morrisville, serving the Triangle and the Carolinas.",
+              "local": [{"slug": "morrisville", "name": "Nexus Network Technologies", "street": ADDRESS[0], "city": "Morrisville", "region": "NC", "postal": "27560", "telephone": "+1-919-897-2700",
+                         "openingHours": "Mo-Fr 08:00-17:00", "lat": 35.824, "lon": -78.826}]}
     nav = [
         {"label": "Services", "href": "services.html", "mega": True,
          "groups": [{"title": "Run", "items": [[s[1], f"services/{s[0]}.html"] for s in SERVICES[:3]]},
@@ -381,7 +386,7 @@ def build():
     pages.append({"file": "index.html", "title": "Nexus Network Technologies | Managed IT, networks, security and meeting rooms, Raleigh-Durham",
                   "compose": {
                       "clean": ["hero-light", "partners", "seal", "wheel", "is-this-you", "flow", "results", "map", "voices", "faq", "contact"],
-                      "showcase": ["hero", "partners", "wheel", "fleet", "ba", "flow", "building", "device", "proof", "results", "map", "voices", "contact"],
+                      "showcase": ["hero", "partners", "wheel", "fleet", "ba", "flow", "building", "device", "proof", "results", "map", "voices", "faq", "contact"],
                       "press": ["hero-light", "story", "services", "seal", "voices", "flow", "results", "map", "faq", "contact"]},
                   "description": "Founder-owned in Raleigh-Durham. Managed IT with 15-minute first-call resolution, Network as a Service with same-day replacement, layered cybersecurity, meeting rooms and site intelligence for growing businesses in the Triangle and the Carolinas.",
                   "sections": [
@@ -545,6 +550,41 @@ def build():
                     "Reply within an hour, any time of day, was said on the call. The site says one business day. We have printed one business day until you decide."],
         "footer": "Prepared for Mike Schwarzbauer, Shane Bull and Lin Cashwell. Nothing here is live or indexed. Every number and claim we could source comes from nexusnt.com, the July 21 call or public data. Items from the proposal alone are listed under To confirm. Photographs, renders and the 3D device are generated and labelled as such; your own imagery replaces them.",
     }
+    _FAQ_EXTRA = {
+        "about.html": ("Questions about Nexus", [
+            ["Who founded Nexus?", "Mike Schwarzbauer, to give companies an IT partner that treats customer advocacy as the priority rather than ticket volume."],
+            ["Is Nexus owned by private equity?", "No. Nexus is founder-owned and intends to stay that way, choosing to serve fewer clients well."],
+            ["Where is Nexus based?", "630 Davis Drive, Suite 220, Morrisville, North Carolina, between Raleigh, Durham and Chapel Hill, with demonstration meeting rooms you can visit."]]),
+        "contact.html": ("Before you write", [
+            ["How do I reach support?", "Existing clients email support@nexusnt.com or call (919) 897-2700. New conversations start with the form on this page."],
+            ["Where is the office?", "630 Davis Drive, Suite 220, Morrisville, NC 27560. Monday to Friday, 8am to 5pm."],
+            ["When will someone reply?", "Within one business day, from a person at Nexus."]]),
+        "industries.html": ("Industry questions", [
+            ["Which industries does Nexus serve?", "Life sciences, professional services, manufacturing and warehousing, and growing businesses of every kind across the Triangle and the Carolinas."],
+            ["Can you work in regulated environments?", "Yes. Life sciences clients rely on Nexus for audit-ready, compliant environments, and clients have credited the team's compliance knowledge in vendor and investor due diligence."],
+            ["My industry is not listed.", "Ask. The industry pages show how the same eight services fit different operations; the first conversation fits them to yours."]]),
+        "services.html": ("Questions about the services", [
+            ["What does Nexus offer?", "Managed IT, Network as a Service, cybersecurity, Nexus Collab meeting rooms, the Site Intelligence Platform, virtual CIO and projects, digital signage, and cabling, audio and cellular."],
+            ["Can we start with one service?", "Yes. Many clients begin with managed IT or the network and add the rooms, security and building systems as they grow."],
+            ["Who answers when we call?", "An engineer who knows your environment, not a scripted help desk."]]),
+        "voices.html": ("About these comments", [
+            ["Where do these quotes come from?", "Survey responses from clients who submitted support tickets and were asked what delighted them, shown with their role and organization type."],
+            ["Are they edited?", "Only for length. The words are the clients' own."],
+            ["Can I speak to a reference?", "Yes. Ask, and Nexus will connect you with a client in a similar industry."]]),
+        "why-nexus.html": ("How Nexus is different", [
+            ["What does first-call resolution in 15 minutes mean?", "Most support requests are resolved on the first call by the engineer who answers, typically within fifteen minutes, rather than logged and queued."],
+            ["What does founder-owned change for a client?", "Decisions are made by the people who serve you, with no private-equity growth targets pushing ticket volume over relationships."],
+            ["How does Nexus approach security?", "Networks are built to the NIST framework from day one, with layered protection and monitoring included rather than sold as add-ons."]]),
+    }
+    for _pg in pages:
+        if _pg["file"] in _FAQ_EXTRA and not any(x.get("type") == "faq" for x in _pg["sections"]):
+            _h, _items = _FAQ_EXTRA[_pg["file"]]
+            _faq = {"type": "faq", "id": "faq", "heading": _h, "items": _items}
+            _secs = _pg["sections"]
+            if _secs and _secs[-1].get("type") in ("leadform", "cta", "contact"):
+                _secs.insert(len(_secs) - 1, _faq)
+            else:
+                _secs.append(_faq)
     return {"client": "Nexus Network Technologies", "slug": "nexus-network-technologies", "domain_hint": "nexusnt.com",
             "brand": brand, "schema": schema, "nav": nav, "pages": pages, "pitch": pitch}
 
