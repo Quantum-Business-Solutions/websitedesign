@@ -135,9 +135,11 @@ Place them with `compose` per direction; ids are what `compose` references.
 | `fleet` | `heading`, `items [{title, band, brands, image (PNG cutout), bullets[], href}]` | `intro`, `alt` | Scroll-snap rail of tilting device cards |
 | `seal` | `heading`, `items [[mark, title, body]]` | `eyebrow`, `intro`, `source` | Conic badge grid; every line must be sourced |
 | `beforeafter` | `heading`, `before {title, body, items}`, `after {title, body, items}` | `eyebrow`, `before.eyebrow`, `after.eyebrow`, `hint`, `range_label` | Range-driven reveal; two stacked panels under 768px |
-| `hotspots` | `heading`, `image`, `image_w/h`, `alt`, `items [{x, y, k, title, body, href, label}]` (percent coords) | `eyebrow`, `intro` | Numbered points with popovers; numbered list fallback |
+| `hotspots` | `heading`, `image`, `image_w/h`, `alt`, `items [{x, y, k, title, body, href, label}]` (percent coords) | `eyebrow`, `intro` | Numbered points with popovers; numbered list fallback. Shawn: "a great concept on almost any client." Any business with a place works: an office floor for a dealer or MSP, a clinic, a plant floor, a campus, a warehouse, a storefront. Generate the isometric with the client's rooms named in the prompt, then place the points by measuring the render (scripts/_offsets.mjs and a screenshot). |
 | `model3d` | `heading`, `poster` | `intro`, `model` (GLB path), `alt`, `cta`, `id` | `<model-viewer>` with the poster shown until the element is defined; plain image when `model` is absent |
 | `brand.launcher` | `label`, `links [[label, href]]`, `phone` | | Fixed bottom-left drawer, appears after 560px of scroll |
+
+Directions: pass `--recommend` only when we are recommending; without it the hub shows "Your call" with the three cards and the switcher carries no "(recommended)". Order in `--themes` is the order on the hub and in the switcher.
 
 Content-file helpers for Kelly: `_flow()` and `_ba()` build service-page modules from tuples; `SERVICE_MODULES[slug]` lists what each service page inserts after its benefits cards.
 Generated 3D: Higgsfield `generate_image_batch` (product render, plain white ground, no logos) then `remove_background(media_id=job_id)` then `generate_3d(model image_to_3d, should_texture:true)`; the textured GLB lands around 4MB. Label it generated in the intro.

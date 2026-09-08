@@ -231,3 +231,6 @@ behind a poster, and their production print film on the production page. Four QA
 - Kelly's Vimeo film (271855836) is now on all three homes and the About page; Josh's production print video stays on the production print service page.
 - `design-system.html` on the preview: colour, type, directions, space, components, imagery, voice, logo. Linked from the hub nav.
 - Five logo concepts in `assets/logo-concepts/` (generated, for discussion only; a sixth was rejected). Recommended to explore: the connected K.
+
+## 2026-09-08, evening: no recommendation, Showcase first
+Shawn: "I really like the Showcase one, it looks amazing. I would not say we should recommend any of the three, let them choose, and move Showcase into first position." The hub now opens on Showcase, carries no recommendation, and the switcher shows no "(recommended)". Depth layer, 3D story and the redesigned wheel are on all three.

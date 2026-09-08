@@ -33,6 +33,12 @@ def _ground(bg: str) -> str:
     return "White"
 
 
+def _role(roles, t):
+    """Role text without the leading direction name, so cards do not say the name twice."""
+    import re as _re
+    return _re.sub(r"^[A-Za-z ]+:\s*", "", roles[t] if t in roles else "")
+
+
 def hub(content, themes, recommend, base, roles, standard, client_tokens, out_dir=None):
     import os
     ds_link = '<a href="design-system.html">Design system</a>' if out_dir and os.path.exists(os.path.join(out_dir, "design-system.html")) else ""
@@ -54,7 +60,7 @@ def hub(content, themes, recommend, base, roles, standard, client_tokens, out_di
                       if has_thumb else "")
         specs.append(
             '<article class="dir">' + thumb_html + '<div class="dir-h">'
-            f'<span class="n">{i} / {n}</span><h2 class="h3">{_e(short)}</h2>{rec}<p>{_e(roles.get(t, ""))}</p></div>'
+            f'<span class="n">{i} / {n}</span><h2 class="h3">{_e(short)}</h2>{rec}<p>{_e(_role(roles, t))}</p></div>'
             '<details class="specd"><summary>Design specifics</summary><dl class="spec">'
             f'<div><dt>Headings</dt><dd>{_e(face)}</dd></div>'
             f'<div><dt>Ground</dt><dd>{_e(_ground(nat["--bg"]))}</dd></div>'
@@ -69,6 +75,13 @@ def hub(content, themes, recommend, base, roles, standard, client_tokens, out_di
         f'<a class="alt" href="{_slug(t)}/index.html" target="_blank" rel="noopener"><h3 class="h4">{_e(t.replace("Quantum ", ""))}</h3>'
         f'<p>{_e(why)}</p><span>Open {_e(t.replace("Quantum ", ""))}</span></a>'
         for t, why in pitch.get("alternatives", []))
+    if recommend:
+        pick_html = (f'<section id="pick"><div class="wrap"><p class="eyebrow">Our recommendation</p><div class="pick"><div><h2>We would build {_e(pick_short)}</h2><p class="lead">{_e(_role(roles, pick))}</p>{reasons}<div class="change"><strong>The one thing we would change:</strong> {_e(pitch.get("pick_change", ""))}</div><p style="margin-top:22px"><a class="btn" href="{pick_slug}/index.html" target="_blank" rel="noopener">Open {_e(pick_short)}</a></p></div>'
+                     f'<div><h3 class="h3" style="font-size:18px;margin-bottom:14px">If you would rather not</h3><div class="alts" style="grid-template-columns:1fr">{alts}</div></div></div></div></section>')
+    else:
+        cards = "".join(f'<a class="alt" href="{_slug(t)}/index.html" target="_blank" rel="noopener"><h3 class="h4">{_e(t.replace("Quantum ", ""))}</h3><p>{_e(_role(roles, t))}</p><span>Open {_e(t.replace("Quantum ", ""))}</span></a>' for t in themes)
+        pick_html = (f'<section id="pick"><div class="wrap"><p class="eyebrow">Your call</p><h2>Three ways to design it. You choose.</h2><p class="lead">{_e(pitch.get("choice_intro", "All three are built to the same standard, with the same words, the same pages and the same proof. The difference is temperament. Open each one, live with it for a day, and tell us which feels like you."))}</p>'
+                     f'<div class="alts">{cards}</div></div></section>')
     sr = pitch.get("search")
     search_html = ""
     if sr:
@@ -173,8 +186,7 @@ select{{max-width:100%}}
 <section><div class="wrap"><p class="eyebrow">Quantum Business Solutions for {_e(content["client"])}</p><h1>Same site. Three ways to design it.</h1>
 <p class="lead">Each one is the whole site, not a home page and two mockups: every page is built and live in all three. The words are the same in all three and the composition is not, so the decision in front of you is about direction, not copy. Open any one, then use the switcher pinned to the bottom of the page to flip between all three without losing your place.</p></div></section>
 <section id="three"><div class="wrap"><p class="eyebrow">The three</p><div class="dirs">{"".join(specs)}</div></div></section>
-<section id="pick"><div class="wrap"><p class="eyebrow">Our recommendation</p><div class="pick"><div><h2>We would build {_e(pick_short)}</h2><p class="lead">{_e(roles.get(pick, ""))}</p>{reasons}<div class="change"><strong>The one thing we would change:</strong> {_e(pitch.get("pick_change", ""))}</div><p style="margin-top:22px"><a class="btn" href="{pick_slug}/index.html" target="_blank" rel="noopener">Open {_e(pick_short)}</a></p></div>
-<div><h3 class="h3" style="font-size:18px;margin-bottom:14px">If you would rather not</h3><div class="alts" style="grid-template-columns:1fr">{alts}</div></div></div></div></section>
+{pick_html}
 <section id="compare"><div class="wrap"><p class="eyebrow">Side by side</p><h2>The same page, all three at once</h2><div class="cmp-bar"><label for="cmp">Pick a page</label><select id="cmp">{page_opts}</select></div><p class="cmp-note">Side by side needs a wider screen. On a phone, open each direction from the cards above.</p><div class="frames">{frames}</div></div></section>
 {search_html}
 <section id="heard"><div class="wrap"><div class="two"><div><p class="eyebrow">What we are treating as fixed</p><h2>What your site and brand profile already say</h2><p class="lead" style="margin-bottom:12px">{_e(heard_intro)}</p><ul>{heard}</ul></div><div><p class="eyebrow">What we found</p><h2>And what we would do about it</h2><ul>{found}</ul></div></div></div></section>
