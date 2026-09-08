@@ -112,3 +112,65 @@ it more credible. See `process/outbound-mockups.md`.
 A hard offer for the ready buyer, a soft offer for the 95% who aren't. Why it works: without the
 soft one, everybody not buying today leaves unidentifiable — and that's most visitors.
 `process/launch-standards.md`.
+
+---
+
+## The hotspot walk
+
+**The buyer's own building, drawn once, with a marker on every place the engagement finds money,
+risk or time. Tap a marker, read the finding and the figure, follow the link. Flip to After and
+watch the things the engagement removes disappear.**
+
+Shipped on Revolution Office (Home, Managed Print Services) on 2026-09-08. Kit, module and example
+data in `library/patterns/hotspot-walk/`. It generalises to **any service that walks a site**:
+managed print, MSPs, security, facilities, insurance risk surveys, accountants doing a books review.
+
+Kelly Office Solutions' reference had the seed of this: an isometric office with numbered dots, one
+per product line. That version says *"we sell things in these rooms."* The rules below turn it into
+*"here is where your money hides,"* which is the version that sells.
+
+### 1 · Every marker is a finding, never a product
+
+"Copier room" is a place. "One device doing the work of three" is a finding. The card title is
+always the finding; the service is the link at the bottom. A marker without a finding is a catalogue
+entry and gets cut.
+
+### 2 · Every card carries a figure from the client's own record
+
+192 → 158 devices. 17× spread between the cheapest and dearest page in the same building. 20+ → 1–2
+monthly tickets. 19 → 1 agreements. The figures came from the results ledger and the assessment
+workbook, the same sources the rest of the site cites, so the map is proof restated spatially, not a
+new claim. No figure, no marker.
+
+### 3 · The illustration carries no words
+
+All copy lives in the HTML cards. Search engines, answer engines and screen readers get seven
+findings; the picture is decoration that could be swapped for a photograph tomorrow. Generated
+illustrations put text on things unless told not to, so the prompt says it three ways.
+
+### 4 · Before / After is the argument
+
+Two or three small red × markers sit on the devices the design removes. Toggle to After and they
+fade. That is the whole 192 → 158 story told on a floor plan in one gesture, and it is the moment
+people play with in a demo. Without the toggle the section is a legend; with it, it is a claim.
+
+### 5 · Place it right after the problem is named
+
+On Revolution's Home it follows "why nobody has the number" and precedes the method. The reader has
+just been told the cost is invisible; the map shows them where it is. On a service page it goes
+straight under the hero.
+
+### Layout detail worth keeping
+
+Map left at 1.55fr, one card right, arrows and a counter that count only the numbered findings (the
+× markers are excluded, or "1 / 10" confuses). Hover opens on a fine pointer, tap on touch. On phones
+the cards stack under the map and the After view hides the removed-device cards rather than fading
+them. Pins pulse on a staggered delay; the active pin goes ink-black so the eye finds it.
+
+### ⚠️ Traps
+
+- Restricted field names: HubSpot refuses a group child named `name`. Use `person_name`, `place`.
+- Position by percentage, never pixels; the module sets `left`/`top` inline from the two numbers.
+- Do not count on the illustration's own margins for composition. Generated scenes arrive with
+  uneven cream space; the card container crops nothing, so position markers on the objects and let
+  the margins be.
