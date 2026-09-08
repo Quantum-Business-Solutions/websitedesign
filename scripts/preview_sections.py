@@ -159,8 +159,11 @@ def _hero_video(s, ctx):
 def _video(s, ctx):
     E = ctx["E"]
     embed = ""
-    if s.get("vimeo"):
-        src = f'https://player.vimeo.com/video/{E(s["vimeo"])}?title=0&byline=0&portrait=0&dnt=1&autoplay=1'
+    if s.get("vimeo") or s.get("youtube"):
+        if s.get("vimeo"):
+            src = f'https://player.vimeo.com/video/{E(s["vimeo"])}?title=0&byline=0&portrait=0&dnt=1&autoplay=1'
+        else:
+            src = f'https://www.youtube-nocookie.com/embed/{E(s["youtube"])}?rel=0&modestbranding=1&autoplay=1'
         if s.get("poster"):
             inner = f'<img src="{E(ctx["rel"](s["poster"]))}" alt="" width="1280" height="720" loading="lazy"><button type="button" class="pv-play" aria-label="Play: {E(s.get("title", "Video"))}"><span></span></button>'
             embed = f' data-embed="{src}"'
@@ -262,15 +265,24 @@ NC_OUTLINE = [(-84.32, 34.99), (-84.29, 35.22), (-84.02, 35.41), (-83.62, 35.57)
               (-80.78, 34.82), (-80.93, 35.10), (-81.05, 35.15), (-81.38, 35.17), (-82.29, 35.20), (-82.78, 35.08), (-83.11, 35.00), (-84.32, 34.99)]
 
 
+# Indiana outline, lon/lat, simplified. Selected with "outline": "IN" on the map section.
+IN_OUTLINE = [(-87.53, 41.71), (-87.52, 41.30), (-87.53, 40.49), (-87.53, 39.35), (-87.60, 39.10), (-87.58, 38.87), (-87.50, 38.74), (-87.65, 38.57),
+              (-87.75, 38.42), (-87.93, 38.26), (-88.03, 37.80), (-87.90, 37.92), (-87.62, 37.90), (-87.40, 37.94), (-87.13, 37.78), (-86.80, 37.99),
+              (-86.52, 37.92), (-86.33, 38.19), (-86.07, 37.96), (-85.90, 38.02), (-85.65, 38.33), (-85.42, 38.73), (-85.20, 38.69), (-84.79, 38.79),
+              (-84.81, 39.10), (-84.82, 40.00), (-84.80, 41.00), (-84.81, 41.70), (-85.50, 41.76), (-86.50, 41.76), (-87.53, 41.71)]
+OUTLINES = {"NC": (None, 35.5, 84.4, 36.65), "IN": (None, 39.8, 88.1, 41.85)}
+
+
 def _map(s, ctx):
-    """Service-area map: the NC outline with a pin per branch, and the branch list beside it."""
+    """Service-area map: a state outline with a pin per branch, and the branch list beside it."""
     E = ctx["E"]
     import math
-    lat0 = 35.5
+    state = s.get("outline", "NC")
+    _, lat0, lon_off, lat_top = OUTLINES[state]
     kx = math.cos(math.radians(lat0))
     def proj(lon, lat):
-        return ((lon + 84.4) * kx * 100, (36.65 - lat) * 100)
-    pts = [proj(*p) for p in NC_OUTLINE]
+        return ((lon + lon_off) * kx * 100, (lat_top - lat) * 100)
+    pts = [proj(*p) for p in (IN_OUTLINE if state == "IN" else NC_OUTLINE)]
     xs = [x for x, _ in pts]; ys = [y for _, y in pts]
     w, h = max(xs) - min(xs) + 40, max(ys) - min(ys) + 40
     ox, oy = min(xs) - 20, min(ys) - 20
@@ -282,7 +294,7 @@ def _map(s, ctx):
         dx, dy = it.get("label_dx", 10), it.get("label_dy", 4)
         pins.append(f'<circle class="ring" cx="{x:.1f}" cy="{y:.1f}" r="{s.get("ring", 42)}"/><circle class="pin{" hq" if hq else ""}" cx="{x:.1f}" cy="{y:.1f}" r="5.5"/><text x="{x + dx:.1f}" y="{y + dy:.1f}">{E(name)}</text>')
         rows.append(f'<li><div><b>{E(name)}{" (headquarters)" if hq else ""}</b><small>{E(sub)}</small></div><a href="{E(ctx["L"](href))}">{E(it.get("link", "Branch page"))}</a></li>')
-    svg = f'<svg class="pv-map-svg" viewBox="0 0 {w:.0f} {h:.0f}" role="img" aria-label="{E(s.get("alt", "Map of North Carolina with Kelly branch locations"))}"><path class="land" d="{path}"/>{"".join(pins)}</svg>'
+    svg = f'<svg class="pv-map-svg" viewBox="0 0 {w:.0f} {h:.0f}" role="img" aria-label="{E(s.get("alt", "Map of " + ("Indiana" if state == "IN" else "North Carolina") + " with " + ctx["brand"].get("short", "branch") + " locations"))}"><path class="land" d="{path}"/>{"".join(pins)}</svg>'
     head = f'<div class="pv-split" style="margin-bottom:40px"><h2 class="q-h2">{E(s["heading"])}</h2><p>{E(s.get("intro", ""))}</p></div>'
     return f'{ctx["sec_open"](s)} <div class="q-container">{head}<div class="pv-map-wrap">{svg}<ul class="pv-map-list">{"".join(rows)}</ul></div></div></section>'
 
