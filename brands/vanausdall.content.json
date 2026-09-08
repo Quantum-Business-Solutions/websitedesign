@@ -445,7 +445,7 @@
           "hero-light",
           "partners",
           "seal",
-          "wheel",
+          "pillars",
           "office",
           "is-this-you",
           "fleet",
@@ -461,7 +461,7 @@
         "showcase": [
           "hero",
           "partners",
-          "wheel",
+          "pillars",
           "fleet",
           "ba",
           "flow",
@@ -772,6 +772,7 @@
         {
           "type": "beforeafter",
           "id": "ba",
+          "bg": "#0f1e33",
           "eyebrow": "One roof",
           "heading": "Drag to see what changes when the office has one number to call",
           "before": {
@@ -964,6 +965,30 @@
           "poster": "assets/careers-1200.jpg",
           "title": "What it's like to work at Van Ausdall & Farrar",
           "caption": "VAF's own film, from vanausdall.com"
+        },
+        {
+          "type": "cards",
+          "id": "pillars",
+          "eyebrow": "Four pillars",
+          "heading": "Information, communication, print and process, from one partner",
+          "items": [
+            [
+              "Information",
+              "Managed IT, cybersecurity, cloud, backup and continuity. A vCIO, 24/7 monitoring and a security operations center, from one team."
+            ],
+            [
+              "Communication",
+              "Business phone systems, unified communications and contact center, in the telecom business since 1983 with over 4,000 systems deployed."
+            ],
+            [
+              "Print",
+              "Copiers, printers, managed print and production print. Canon, Ricoh, Kyocera and HP, serviced by certified local technicians."
+            ],
+            [
+              "Process",
+              "Document management, document conversion, business process and AI consulting. The paper out, the workflow in."
+            ]
+          ]
         },
         {
           "type": "casestudy",
@@ -1424,39 +1449,29 @@
           }
         },
         {
-          "type": "wheel",
-          "id": "wheel",
-          "eyebrow": "The four pillars",
-          "heading": "Information, communication, print and process",
-          "intro": "Hover a segment to read it. Each pillar has its own solutions below.",
+          "type": "cards",
+          "id": "pillars",
+          "eyebrow": "Four pillars",
+          "heading": "Information, communication, print and process, from one partner",
           "items": [
             [
               "Information",
-              "Managed IT, cybersecurity, cloud, backup and continuity. A vCIO, 24/7 monitoring and a security operations center, from one team.",
-              "services/managed-it.html",
-              "Information"
+              "Managed IT, cybersecurity, cloud, backup and continuity. A vCIO, 24/7 monitoring and a security operations center, from one team."
             ],
             [
               "Communication",
-              "Business phone systems, unified communications and contact center, in the telecom business since 1983 with over 4,000 systems deployed.",
-              "services/business-phone-systems.html",
-              "Communication"
+              "Business phone systems, unified communications and contact center, in the telecom business since 1983 with over 4,000 systems deployed."
             ],
             [
               "Print",
-              "Copiers, printers, managed print and production print. Canon, Ricoh, Kyocera and HP, serviced by certified local technicians.",
-              "services/copiers.html",
-              "Print"
+              "Copiers, printers, managed print and production print. Canon, Ricoh, Kyocera and HP, serviced by certified local technicians."
             ],
             [
               "Process",
-              "Document management, document conversion, business process and AI consulting. The paper out, the workflow in.",
-              "services/document-management.html",
-              "Process"
+              "Document management, document conversion, business process and AI consulting. The paper out, the workflow in."
             ]
           ],
-          "hub": "VAF",
-          "hub_sub": "one roof"
+          "alt": true
         },
         {
           "type": "hotspots",
@@ -1661,6 +1676,39 @@
       "file": "services/managed-it.html",
       "title": "Indianapolis Managed IT Services and vCIO | Van Ausdall & Farrar",
       "description": "We become the extended arm of your business: vCIO guidance, 24/7 monitoring, security, backup, voice and cloud, delivered as one proactive partnership.",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "@id": "https://www.vanausdall.com/services/managed-it#service",
+          "name": "Managed IT services",
+          "serviceType": "Managed IT services",
+          "description": "We become the extended arm of your business: vCIO guidance, 24/7 monitoring, security, backup, voice and cloud, delivered as one proactive partnership. Not a break-fix shop that shows up after something breaks.",
+          "provider": {
+            "@id": "https://www.vanausdall.com/#organization"
+          },
+          "areaServed": [
+            {
+              "@type": "State",
+              "name": "Indiana"
+            },
+            {
+              "@type": "City",
+              "name": "Indianapolis"
+            },
+            {
+              "@type": "City",
+              "name": "Fort Wayne"
+            },
+            {
+              "@type": "City",
+              "name": "Evansville"
+            }
+          ],
+          "url": "https://www.vanausdall.com/services/managed-it",
+          "category": "Information"
+        }
+      ],
       "crumbs": [
         [
           "Home",
@@ -1739,6 +1787,7 @@
         {
           "type": "beforeafter",
           "id": "ba",
+          "bg": "#0f1e33",
           "eyebrow": "Before and after",
           "heading": "Drag to compare break-fix IT with a managed partnership",
           "before": {
@@ -1894,6 +1943,39 @@
       "file": "services/cybersecurity.html",
       "title": "Managed Cybersecurity and SOC as a Service, Indiana | Van Ausdall & Farrar",
       "description": "Assessments, monitoring and response from a team that has seen it all.",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "@id": "https://www.vanausdall.com/services/cybersecurity#service",
+          "name": "Managed security services",
+          "serviceType": "Managed security services",
+          "description": "Assessments, monitoring and response from a team that has seen it all. Every Vsecure support plan starts with EDR/XDR protection, proactive patching and monitoring, and a next-generation firewall: the coverage cyber insurers now require.",
+          "provider": {
+            "@id": "https://www.vanausdall.com/#organization"
+          },
+          "areaServed": [
+            {
+              "@type": "State",
+              "name": "Indiana"
+            },
+            {
+              "@type": "City",
+              "name": "Indianapolis"
+            },
+            {
+              "@type": "City",
+              "name": "Fort Wayne"
+            },
+            {
+              "@type": "City",
+              "name": "Evansville"
+            }
+          ],
+          "url": "https://www.vanausdall.com/services/cybersecurity",
+          "category": "Information"
+        }
+      ],
       "crumbs": [
         [
           "Home",
@@ -1963,6 +2045,7 @@
         {
           "type": "beforeafter",
           "id": "ba",
+          "bg": "#0f1e33",
           "eyebrow": "Before and after",
           "heading": "Drag to compare basic antivirus with Vsecure coverage",
           "before": {
@@ -2054,6 +2137,39 @@
       "file": "services/cloud.html",
       "title": "Cloud Services in Indianapolis | Van Ausdall & Farrar",
       "description": "Cloud migration, infrastructure as a service, and backup and disaster recovery.",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "@id": "https://www.vanausdall.com/services/cloud#service",
+          "name": "Cloud services",
+          "serviceType": "Cloud services",
+          "description": "Cloud migration, infrastructure as a service, and backup and disaster recovery. Cut hardware costs and keep your data reachable from anywhere, with hosted servers, SharePoint-type solutions and highly governed file sharing through our Egnyte partnership.",
+          "provider": {
+            "@id": "https://www.vanausdall.com/#organization"
+          },
+          "areaServed": [
+            {
+              "@type": "State",
+              "name": "Indiana"
+            },
+            {
+              "@type": "City",
+              "name": "Indianapolis"
+            },
+            {
+              "@type": "City",
+              "name": "Fort Wayne"
+            },
+            {
+              "@type": "City",
+              "name": "Evansville"
+            }
+          ],
+          "url": "https://www.vanausdall.com/services/cloud",
+          "category": "Information"
+        }
+      ],
       "crumbs": [
         [
           "Home",
@@ -2168,6 +2284,39 @@
       "file": "services/business-continuity.html",
       "title": "Backup and recovery | Van Ausdall & Farrar",
       "description": "Business continuity starts with that question.",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "@id": "https://www.vanausdall.com/services/business-continuity#service",
+          "name": "Backup and recovery",
+          "serviceType": "Backup and recovery",
+          "description": "Business continuity starts with that question. Your recovery time objective drives the solution: backup, disaster recovery, and the plan that gets you working again. Many SMBs believe they have continuity when they really only have backup. We close that gap.",
+          "provider": {
+            "@id": "https://www.vanausdall.com/#organization"
+          },
+          "areaServed": [
+            {
+              "@type": "State",
+              "name": "Indiana"
+            },
+            {
+              "@type": "City",
+              "name": "Indianapolis"
+            },
+            {
+              "@type": "City",
+              "name": "Fort Wayne"
+            },
+            {
+              "@type": "City",
+              "name": "Evansville"
+            }
+          ],
+          "url": "https://www.vanausdall.com/services/business-continuity",
+          "category": "Information"
+        }
+      ],
       "crumbs": [
         [
           "Home",
@@ -2282,6 +2431,39 @@
       "file": "services/business-phone-systems.html",
       "title": "Business Phone Systems in Indianapolis and Indiana | Van Ausdall & Farrar",
       "description": "VoIP, unified messaging and contact center technology for single locations and multi-office teams, designed, deployed and supported by one local partner.",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "@id": "https://www.vanausdall.com/services/business-phone-systems#service",
+          "name": "Business phone systems",
+          "serviceType": "Business phone systems",
+          "description": "VoIP, unified messaging and contact center technology for single locations and multi-office teams, designed, deployed and supported by one local partner. We do not dabble in phone systems: a dedicated engineering staff, more than 4,000 systems deployed, and Mitel Gold status seven years running.",
+          "provider": {
+            "@id": "https://www.vanausdall.com/#organization"
+          },
+          "areaServed": [
+            {
+              "@type": "State",
+              "name": "Indiana"
+            },
+            {
+              "@type": "City",
+              "name": "Indianapolis"
+            },
+            {
+              "@type": "City",
+              "name": "Fort Wayne"
+            },
+            {
+              "@type": "City",
+              "name": "Evansville"
+            }
+          ],
+          "url": "https://www.vanausdall.com/services/business-phone-systems",
+          "category": "Communication"
+        }
+      ],
       "crumbs": [
         [
           "Home",
@@ -2351,6 +2533,7 @@
         {
           "type": "beforeafter",
           "id": "ba",
+          "bg": "#0f1e33",
           "eyebrow": "Before and after",
           "heading": "Drag to compare point solutions with unified communications",
           "before": {
@@ -2443,6 +2626,39 @@
       "file": "services/copiers.html",
       "title": "Copier Sales, Lease and Rental in Indianapolis | Van Ausdall & Farrar",
       "description": "From a single multifunction printer for a startup to a fleet of production copiers across multiple locations.",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "@id": "https://www.vanausdall.com/services/copiers#service",
+          "name": "Copiers and printers",
+          "serviceType": "Copiers and printers",
+          "description": "From a single multifunction printer for a startup to a fleet of production copiers across multiple locations, we help you choose the right equipment: Canon, Ricoh, Kyocera and HP, with local sales, service and support since 1914.",
+          "provider": {
+            "@id": "https://www.vanausdall.com/#organization"
+          },
+          "areaServed": [
+            {
+              "@type": "State",
+              "name": "Indiana"
+            },
+            {
+              "@type": "City",
+              "name": "Indianapolis"
+            },
+            {
+              "@type": "City",
+              "name": "Fort Wayne"
+            },
+            {
+              "@type": "City",
+              "name": "Evansville"
+            }
+          ],
+          "url": "https://www.vanausdall.com/services/copiers",
+          "category": "Print"
+        }
+      ],
       "crumbs": [
         [
           "Home",
@@ -2724,6 +2940,39 @@
       "file": "services/managed-print.html",
       "title": "Managed Print Services in Indianapolis | Van Ausdall & Farrar",
       "description": "Print security, proactive fleet management and cost reduction: automated, cloud-based management for your entire printer and copier fleet.",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "@id": "https://www.vanausdall.com/services/managed-print#service",
+          "name": "Managed print services",
+          "serviceType": "Managed print services",
+          "description": "Print security, proactive fleet management and cost reduction: automated, cloud-based management for your entire printer and copier fleet. Companies often have devices from many vendors and no idea what they have, what they spend, or why. Managed print answers all three.",
+          "provider": {
+            "@id": "https://www.vanausdall.com/#organization"
+          },
+          "areaServed": [
+            {
+              "@type": "State",
+              "name": "Indiana"
+            },
+            {
+              "@type": "City",
+              "name": "Indianapolis"
+            },
+            {
+              "@type": "City",
+              "name": "Fort Wayne"
+            },
+            {
+              "@type": "City",
+              "name": "Evansville"
+            }
+          ],
+          "url": "https://www.vanausdall.com/services/managed-print",
+          "category": "Print"
+        }
+      ],
       "crumbs": [
         [
           "Home",
@@ -2834,6 +3083,7 @@
         {
           "type": "beforeafter",
           "id": "ba",
+          "bg": "#0f1e33",
           "eyebrow": "Before and after",
           "heading": "Drag to compare a fleet that is managed with one that is not",
           "before": {
@@ -3005,6 +3255,39 @@
       "file": "services/copier-service.html",
       "title": "Copier Service and Repair in Indianapolis | Van Ausdall & Farrar",
       "description": "Certified field service technicians are on the road across Indianapolis and central Indiana every day.",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "@id": "https://www.vanausdall.com/services/copier-service#service",
+          "name": "Copier service and repair",
+          "serviceType": "Copier service and repair",
+          "description": "Certified field service technicians are on the road across Indianapolis and central Indiana every day. Our Customer Care Center processes requests Monday through Friday, 7:00am to 5:00pm, and responds within 24 hours. Remote diagnostics fix many problems without a visit at all.",
+          "provider": {
+            "@id": "https://www.vanausdall.com/#organization"
+          },
+          "areaServed": [
+            {
+              "@type": "State",
+              "name": "Indiana"
+            },
+            {
+              "@type": "City",
+              "name": "Indianapolis"
+            },
+            {
+              "@type": "City",
+              "name": "Fort Wayne"
+            },
+            {
+              "@type": "City",
+              "name": "Evansville"
+            }
+          ],
+          "url": "https://www.vanausdall.com/services/copier-service",
+          "category": "Print"
+        }
+      ],
       "crumbs": [
         [
           "Home",
@@ -3123,6 +3406,39 @@
       "file": "services/production-print.html",
       "title": "Production print | Van Ausdall & Farrar",
       "description": "In-plant printing, variable data and color workflow for high-volume environments: presses, finishing.",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "@id": "https://www.vanausdall.com/services/production-print#service",
+          "name": "Production print",
+          "serviceType": "Production print",
+          "description": "In-plant printing, variable data and color workflow for high-volume environments: presses, finishing, media profiles and workflow management software from one local partner. Every printed piece must have value, and digital color is finally affordable.",
+          "provider": {
+            "@id": "https://www.vanausdall.com/#organization"
+          },
+          "areaServed": [
+            {
+              "@type": "State",
+              "name": "Indiana"
+            },
+            {
+              "@type": "City",
+              "name": "Indianapolis"
+            },
+            {
+              "@type": "City",
+              "name": "Fort Wayne"
+            },
+            {
+              "@type": "City",
+              "name": "Evansville"
+            }
+          ],
+          "url": "https://www.vanausdall.com/services/production-print",
+          "category": "Print"
+        }
+      ],
       "crumbs": [
         [
           "Home",
@@ -3237,6 +3553,39 @@
       "file": "services/document-management.html",
       "title": "Document management | Van Ausdall & Farrar",
       "description": "Capture, store and automate business documents to cut paper and boost productivity.",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "@id": "https://www.vanausdall.com/services/document-management#service",
+          "name": "Document management",
+          "serviceType": "Document management",
+          "description": "Capture, store and automate business documents to cut paper and boost productivity. Custom Enterprise Content Management with OnBase and Square 9 captures, manages, stores, preserves and delivers information across your whole enterprise, keeping you connected and compliant.",
+          "provider": {
+            "@id": "https://www.vanausdall.com/#organization"
+          },
+          "areaServed": [
+            {
+              "@type": "State",
+              "name": "Indiana"
+            },
+            {
+              "@type": "City",
+              "name": "Indianapolis"
+            },
+            {
+              "@type": "City",
+              "name": "Fort Wayne"
+            },
+            {
+              "@type": "City",
+              "name": "Evansville"
+            }
+          ],
+          "url": "https://www.vanausdall.com/services/document-management",
+          "category": "Process"
+        }
+      ],
       "crumbs": [
         [
           "Home",
@@ -3384,6 +3733,39 @@
       "file": "services/document-conversion.html",
       "title": "Document Conversion and Scanning Services, Indianapolis | Van Ausdall & Farrar",
       "description": "Paperless digital imaging and secure electronic storage from VAF's ultra-secure Document Conversion Center inside our 57,000-square-foot Indianapolis.",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "@id": "https://www.vanausdall.com/services/document-conversion#service",
+          "name": "Document conversion",
+          "serviceType": "Document conversion",
+          "description": "Paperless digital imaging and secure electronic storage from VAF's ultra-secure Document Conversion Center inside our 57,000-square-foot Indianapolis headquarters. Scan, index and retrieve your business documents without the cost of on-site or off-site storage.",
+          "provider": {
+            "@id": "https://www.vanausdall.com/#organization"
+          },
+          "areaServed": [
+            {
+              "@type": "State",
+              "name": "Indiana"
+            },
+            {
+              "@type": "City",
+              "name": "Indianapolis"
+            },
+            {
+              "@type": "City",
+              "name": "Fort Wayne"
+            },
+            {
+              "@type": "City",
+              "name": "Evansville"
+            }
+          ],
+          "url": "https://www.vanausdall.com/services/document-conversion",
+          "category": "Process"
+        }
+      ],
       "crumbs": [
         [
           "Home",
@@ -3626,6 +4008,39 @@
       "file": "services/ai-consulting.html",
       "title": "AI Consulting for Indiana Businesses | Van Ausdall & Farrar",
       "description": "From strategy to governance: adopt AI responsibly, protect client trust and company data, and stay ahead of the competition.",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "@id": "https://www.vanausdall.com/services/ai-consulting#service",
+          "name": "AI consulting",
+          "serviceType": "AI consulting",
+          "description": "From strategy to governance: adopt AI responsibly, protect client trust and company data, and stay ahead of the competition. Employees are using AI every day whether you approved it or not. The biggest risk is not AI. It is the lack of guardrails.",
+          "provider": {
+            "@id": "https://www.vanausdall.com/#organization"
+          },
+          "areaServed": [
+            {
+              "@type": "State",
+              "name": "Indiana"
+            },
+            {
+              "@type": "City",
+              "name": "Indianapolis"
+            },
+            {
+              "@type": "City",
+              "name": "Fort Wayne"
+            },
+            {
+              "@type": "City",
+              "name": "Evansville"
+            }
+          ],
+          "url": "https://www.vanausdall.com/services/ai-consulting",
+          "category": "Process"
+        }
+      ],
       "crumbs": [
         [
           "Home",
@@ -5077,6 +5492,24 @@
           ]
         },
         {
+          "type": "faq",
+          "heading": "Questions about the results",
+          "items": [
+            [
+              "How much did Tippecanoe School Corporation save with Van Ausdall & Farrar?",
+              "$1,000,000 over the life of the contract, by consolidating 1,200 printers and copiers to just over 300 and replacing more than 10 vendors with one."
+            ],
+            [
+              "How much did STAR Financial Bank save on print?",
+              "70% over the original arrangement after phase one, once expired leases were removed and contracts renegotiated statewide."
+            ],
+            [
+              "How fast can Van Ausdall & Farrar scan patient records?",
+              "1.5 million files in 90 days for Johnson Memorial Health, inside budget, with a certificate of destruction for the paper."
+            ]
+          ]
+        },
+        {
           "type": "leadform",
           "id": "consult",
           "heading": "Want results like these?",
@@ -6282,6 +6715,28 @@
           ]
         },
         {
+          "type": "faq",
+          "heading": "Questions people ask about Van Ausdall & Farrar",
+          "items": [
+            [
+              "Who owns Van Ausdall & Farrar?",
+              "Van Ausdall & Farrar, Inc. is privately owned and operated in Indianapolis. Eric von Grimmenstein, who joined in 1977, has been president since 1994."
+            ],
+            [
+              "How long has Van Ausdall & Farrar been in business?",
+              "Since 1914, when Oscar K. Van Ausdall was chosen as an Edison Business Phonograph dealer for Indiana. The company has been in the telecom business since 1983."
+            ],
+            [
+              "Where is Van Ausdall & Farrar located?",
+              "Headquarters at 6430 E 75th Street, Indianapolis, IN 46250, with offices in Fort Wayne and Evansville and a service fleet covering the entire state."
+            ],
+            [
+              "What does Van Ausdall & Farrar do?",
+              "Managed IT and cybersecurity, business phone systems, copiers and managed print, document management and conversion, and AI consulting, for businesses, schools, hospitals and municipalities across Indiana and the Midwest."
+            ]
+          ]
+        },
+        {
           "type": "cta",
           "heading": "Work here",
           "subhead": "Privately owned and operated in Indianapolis, and looking for people who take ownership, keep learning and have some fun while they are at it.",
@@ -6451,6 +6906,25 @@
             [
               "OPEX, Fujitsu and Canon",
               "Production scanners for the Document Conversion Center."
+            ]
+          ]
+        },
+        {
+          "type": "faq",
+          "alt": true,
+          "heading": "Questions about our partners",
+          "items": [
+            [
+              "Which copier brands does Van Ausdall & Farrar sell and service?",
+              "Canon, Ricoh, Kyocera and HP copiers and multifunction printers, plus Brother and Zebra printers, and most other major office equipment brands for service."
+            ],
+            [
+              "Which phone systems does Van Ausdall & Farrar install?",
+              "Mitel (MiExclusive Gold Partner), RingCentral, 8x8 and Elevate cloud communications, with Fortinet networking and a vendor-neutral carrier evaluation."
+            ],
+            [
+              "Which security vendors does Van Ausdall & Farrar use?",
+              "Fortinet firewalls and Fabric, Sophos Intercept X with XDR, Datto patching and monitoring, KnowBe4 awareness training, and Arctic Wolf and Tenable for detection and vulnerability management."
             ]
           ]
         },
@@ -7443,7 +7917,7 @@
           "layout": "centered",
           "eyebrow": "News and insights",
           "heading": "What we tell customers <em>before they ask</em>",
-          "subhead": "Six guides from the people who install and service the systems. No jargon, no vendor pitch."
+          "subhead": "Twelve guides from the people who install and service the systems. No jargon, no vendor pitch. Six are placeholders adapted from our category guides until VAF's own posts migrate."
         },
         {
           "type": "related",
@@ -7491,6 +7965,48 @@
               "Three ways to acquire the same device, three different totals.",
               "blog/copier-lease-vs-buy-indianapolis.html",
               "assets/copier-1200.jpg"
+            ],
+            [
+              "Managed print",
+              "What managed print services cost in Indiana, and what they replace",
+              "The honest answer is a range, and the range depends on four numbers you may not have in front of you.",
+              "blog/what-managed-print-costs.html",
+              "assets/support-1200.jpg"
+            ],
+            [
+              "Managed print",
+              "The first ninety days of managed print: what changes",
+              "Not a philosophy. A calendar.",
+              "blog/how-managed-print-services-transforms-business.html",
+              "assets/copier-1200.jpg"
+            ],
+            [
+              "Office IT",
+              "Workstation management: why the desk PC is where most support tickets start",
+              "Servers get the attention. Workstations get the tickets.",
+              "blog/workstation-management-an-overview.html",
+              "assets/it-1200.jpg"
+            ],
+            [
+              "Copiers",
+              "All-in-one office printers: when one device is enough, and when it is not",
+              "For a small office one multifunction device can do everything.",
+              "blog/all-in-one-office-printer-options-navigating-the-market-for-the-best-choice.html",
+              "assets/print-1200.jpg"
+            ],
+            [
+              "Wide format",
+              "Wide-format printing in house: the volume at which it pays for itself",
+              "Plans, signage and drawings from the print shop cost a day and a delivery fee each time.",
+              "blog/wide-format-printer-buying-guide-making-the-right-decision.html",
+              "assets/process-1200.jpg"
+            ],
+            [
+              "Service",
+              "What same-day service means, and the questions to ask any dealer",
+              "Every dealer says fast. Here is what a real service commitment looks like in writing, how to read a response-time promise, and why an audited NPS matters more than a testimonial.",
+              "blog/same-day-service-what-it-means.html",
+              "assets/hq-1200.jpg"
             ]
           ]
         },
@@ -8017,11 +8533,11 @@
               "assets/copier-1200.jpg"
             ],
             [
-              "Managed IT",
-              "What a vCIO does, and when a 50-person company needs one",
-              "A virtual chief information officer is a fractional executive, not a help desk.",
-              "blog/what-is-a-vcio.html",
-              "assets/datacenter-1200.jpg"
+              "Managed print",
+              "What managed print services cost in Indiana, and what they replace",
+              "The honest answer is a range, and the range depends on four numbers you may not have in front of you.",
+              "blog/what-managed-print-costs.html",
+              "assets/support-1200.jpg"
             ]
           ]
         }
@@ -8139,18 +8655,18 @@
               "assets/copier-1200.jpg"
             ],
             [
-              "Managed IT",
-              "What a vCIO does, and when a 50-person company needs one",
-              "A virtual chief information officer is a fractional executive, not a help desk.",
-              "blog/what-is-a-vcio.html",
-              "assets/datacenter-1200.jpg"
+              "Managed print",
+              "What managed print services cost in Indiana, and what they replace",
+              "The honest answer is a range, and the range depends on four numbers you may not have in front of you.",
+              "blog/what-managed-print-costs.html",
+              "assets/support-1200.jpg"
             ],
             [
-              "Communication",
-              "Business phone systems in 2026: cloud, premise or hybrid, and how to choose",
-              "The phone system decision is a five-year decision. Here is what changed, what each option costs you in flexibility, and the eight questions to ask before you sign with anyone, including us.",
-              "blog/business-phone-systems-buyers-guide.html",
-              "assets/phones-1200.jpg"
+              "Managed print",
+              "The first ninety days of managed print: what changes",
+              "Not a philosophy. A calendar.",
+              "blog/how-managed-print-services-transforms-business.html",
+              "assets/copier-1200.jpg"
             ]
           ]
         }
@@ -8251,6 +8767,817 @@
             [
               "Do you take over devices from another vendor?",
               "Usually. The assessment covers every device regardless of where it came from and shows which are worth keeping."
+            ]
+          ]
+        },
+        {
+          "type": "leadform",
+          "id": "guide",
+          "heading": "Request the free print assessment",
+          "body": "Tell us a little about your organization and a person from the Indianapolis office will call to set a time.",
+          "submit": "Schedule my consultation",
+          "note": "A person replies, not an autoresponder."
+        },
+        {
+          "type": "related",
+          "heading": "Keep reading",
+          "items": [
+            [
+              "Managed print",
+              "What managed print services cost in Indiana, and what they replace",
+              "The honest answer is a range, and the range depends on four numbers you may not have in front of you.",
+              "blog/what-managed-print-costs.html",
+              "assets/support-1200.jpg"
+            ],
+            [
+              "Managed print",
+              "The first ninety days of managed print: what changes",
+              "Not a philosophy. A calendar.",
+              "blog/how-managed-print-services-transforms-business.html",
+              "assets/copier-1200.jpg"
+            ],
+            [
+              "Office IT",
+              "Workstation management: why the desk PC is where most support tickets start",
+              "Servers get the attention. Workstations get the tickets.",
+              "blog/workstation-management-an-overview.html",
+              "assets/it-1200.jpg"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "file": "blog/what-managed-print-costs.html",
+      "title": "What managed print services cost in Indiana, and what they replace | Van Ausdall & Farrar",
+      "description": "The honest answer is a range, and the range depends on four numbers you may not have in front of you.",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": "What managed print services cost in Indiana, and what they replace",
+          "description": "The honest answer is a range, and the range depends on four numbers you may not have in front of you. Here is how to find them and what a managed agreement usually replaces.",
+          "image": "https://van-ausdall.vercel.app/assets/support-1200.jpg",
+          "author": {
+            "@type": "Organization",
+            "name": "Van Ausdall & Farrar"
+          },
+          "publisher": {
+            "@id": "https://www.vanausdall.com/#organization"
+          },
+          "mainEntityOfPage": "https://www.vanausdall.com/blog/what-managed-print-costs",
+          "datePublished": "2026-09-08",
+          "dateModified": "2026-09-08",
+          "articleSection": "Managed print"
+        }
+      ],
+      "sections": [
+        {
+          "type": "article",
+          "category": "Managed print",
+          "heading": "What managed print services cost in Indiana, and what they replace",
+          "standfirst": "The honest answer is a range, and the range depends on four numbers you may not have in front of you. Here is how to find them and what a managed agreement usually replaces.",
+          "image": "assets/support-1200.jpg",
+          "image_alt": "A service dispatcher at a desk with two monitors",
+          "date_label": "September 2026",
+          "read": "4 min read",
+          "chapters": [
+            {
+              "id": "the-four-numbers",
+              "title": "The four numbers that set the price",
+              "paras": [
+                "Every managed print quote is built on the same four inputs: how many devices you run, how many mono pages a month, how many color pages a month, and how much service those devices already need. If you do not know the page counts, the meter on each device does. Most organizations are surprised twice: once by the total, and again by how much of it is color.",
+                "ul:Device count, including the printers under desks nobody owns;;Mono pages per month, from the meters;;Color pages per month, from the meters;;Service history: how many calls, how many days down",
+                "callout:Why the assessment matters|VAF's assessment collects these four numbers across the whole fleet, including devices we did not sell you, and hands you the report. Our recommendation is that you keep it whether or not you buy."
+              ]
+            },
+            {
+              "id": "what-it-replaces",
+              "title": "What a managed agreement replaces",
+              "paras": [
+                "The price only makes sense against what it removes. Under a managed agreement, toner is included and ships automatically, service is included, and you receive one invoice that matches the meters. Against that you set retail toner, per-device service contracts, emergency repairs, and the hours your own staff spend ordering supplies and chasing technicians.",
+                "Printing is an overlooked and undermanaged business function, and many organizations spend up to 30% more than they should on it. The saving is rarely in the device. It is in the toner nobody tracked and the time nobody counted.",
+                "pq:The saving is rarely in the device. It is in the toner nobody tracked and the time nobody counted."
+              ]
+            },
+            {
+              "id": "cost-per-page",
+              "title": "Cost per page, and why blended is the number to watch",
+              "paras": [
+                "Vendors quote a mono rate and a color rate. The number that matters is the blended cost per page across your real mix, because a fleet that prints 20% color can cost more per page than one printing all mono at a higher mono rate. Ask any vendor for the blended figure on your volumes, and ask how it changes if color grows.",
+                "Our cost calculator uses typical Indiana rates to show the blended figure for your volumes. It is an estimate; the assessment replaces it with your meters."
+              ]
+            },
+            {
+              "id": "lease-rent-buy",
+              "title": "Lease, rent or buy: how the agreement changes the total",
+              "paras": [
+                "Leasing spreads the device cost over a term and keeps the fleet current. Rental covers a season or a project without a term. Purchase is cheapest over a long life if your volume is stable. Managed print sits on top of any of the three: the agreement covers supplies and service regardless of how you acquired the device.",
+                "ul:Lease: predictable, refreshes the fleet, best for steady volume;;Rental: flexible, no term, best for peaks and projects;;Buy: lowest lifetime cost for stable volume, highest up-front"
+              ]
+            },
+            {
+              "id": "questions-to-ask",
+              "title": "Five questions to ask before you sign",
+              "paras": [
+                "ul:What is the blended cost per page on our volumes, and what happens if color grows?;;What is the response commitment, and for which devices?;;What is included in service, and what is excluded?;;How are overages billed, and how are meters read?;;Who owns the devices at the end of the term?",
+                "A good provider answers all five in writing. VAF does, and the answers are in the plan we hand you after the assessment."
+              ]
+            }
+          ],
+          "author": {
+            "name": "The VAF team",
+            "role": "Indianapolis, Indiana"
+          }
+        },
+        {
+          "type": "faq",
+          "alt": true,
+          "heading": "Questions this guide gets asked",
+          "items": [
+            [
+              "Is managed print only for large companies?",
+              "No. A ten-device office often benefits most, because nobody is watching the toner."
+            ],
+            [
+              "Can we keep our current devices?",
+              "Often, yes. The assessment tells you which are worth keeping under agreement."
+            ],
+            [
+              "How fast can an agreement start?",
+              "Ask the Indianapolis office. Monitoring can usually be installed on existing devices within days."
+            ]
+          ]
+        },
+        {
+          "type": "leadform",
+          "id": "guide",
+          "heading": "Request the free print assessment",
+          "body": "Tell us a little about your organization and a person from the Indianapolis office will call to set a time.",
+          "submit": "Schedule my consultation",
+          "note": "A person replies, not an autoresponder."
+        },
+        {
+          "type": "related",
+          "heading": "Keep reading",
+          "items": [
+            [
+              "Managed print",
+              "The first ninety days of managed print: what changes",
+              "Not a philosophy. A calendar.",
+              "blog/how-managed-print-services-transforms-business.html",
+              "assets/copier-1200.jpg"
+            ],
+            [
+              "Office IT",
+              "Workstation management: why the desk PC is where most support tickets start",
+              "Servers get the attention. Workstations get the tickets.",
+              "blog/workstation-management-an-overview.html",
+              "assets/it-1200.jpg"
+            ],
+            [
+              "Copiers",
+              "All-in-one office printers: when one device is enough, and when it is not",
+              "For a small office one multifunction device can do everything.",
+              "blog/all-in-one-office-printer-options-navigating-the-market-for-the-best-choice.html",
+              "assets/print-1200.jpg"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "file": "blog/how-managed-print-services-transforms-business.html",
+      "title": "The first ninety days of managed print: what changes | Van Ausdall & Farrar",
+      "description": "Not a philosophy. A calendar.",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": "The first ninety days of managed print: what changes",
+          "description": "Not a philosophy. A calendar. Here is what happens in a business in the first three months after the fleet goes under one agreement, and the three costs nobody counted before.",
+          "image": "https://van-ausdall.vercel.app/assets/copier-1200.jpg",
+          "author": {
+            "@type": "Organization",
+            "name": "Van Ausdall & Farrar"
+          },
+          "publisher": {
+            "@id": "https://www.vanausdall.com/#organization"
+          },
+          "mainEntityOfPage": "https://www.vanausdall.com/blog/how-managed-print-services-transforms-business",
+          "datePublished": "2026-09-08",
+          "dateModified": "2026-09-08",
+          "articleSection": "Managed print"
+        }
+      ],
+      "sections": [
+        {
+          "type": "article",
+          "category": "Managed print",
+          "heading": "The first ninety days of managed print: what changes",
+          "standfirst": "Not a philosophy. A calendar. Here is what happens in a business in the first three months after the fleet goes under one agreement, and the three costs nobody counted before.",
+          "image": "assets/copier-1200.jpg",
+          "image_alt": "Business people at a copier",
+          "date_label": "September 2026",
+          "read": "4 min read",
+          "chapters": [
+            {
+              "id": "the-three-costs",
+              "title": "The three costs nobody counts",
+              "paras": [
+                "Retail toner bought in a hurry. Staff time spent ordering supplies and waiting on hold. Downtime while a device waits for a part. None of these appears on an invoice labelled print, which is why organizations spend up to 30% more than they should on it.",
+                "ul:Toner bought retail, often the wrong cartridge;;Staff hours on ordering, tracking and chasing;;Downtime, and the workarounds around it"
+              ]
+            },
+            {
+              "id": "days-1-30",
+              "title": "Days 1 to 30: the assessment and the plan",
+              "paras": [
+                "The assessment walks every device, reads every meter, and records the service history. The plan that follows prices lease, rental and purchase side by side for the fleet the data recommends, which is usually fewer devices, better placed.",
+                "callout:What you receive|A fleet and cost report, yours to keep, and a plan with the three acquisition options priced against your real volumes."
+              ]
+            },
+            {
+              "id": "days-31-60",
+              "title": "Days 31 to 60: install, connect, train",
+              "paras": [
+                "Devices arrive on a date you chose, go on the network the same day, and every user is trained before the technician leaves. Monitoring is switched on. The first toner ships before anyone asks."
+              ]
+            },
+            {
+              "id": "days-61-90",
+              "title": "Days 61 to 90: the first report",
+              "paras": [
+                "The first usage report shows pages, color share, uptime and cost per page by device. This is usually the first time anyone in the business has seen the number. It is also where the conversation about color policy starts.",
+                "pq:The first report is usually the first time anyone in the business has seen the number."
+              ]
+            },
+            {
+              "id": "after-90",
+              "title": "After ninety days: the loop",
+              "paras": [
+                "Quarterly, the numbers are reviewed and the plan adjusted. If a device is underused, it moves. If color grew, the policy or the device changes. Then back to the assessment. That loop is what managed means."
+              ]
+            }
+          ],
+          "author": {
+            "name": "The VAF team",
+            "role": "Indianapolis, Indiana"
+          }
+        },
+        {
+          "type": "faq",
+          "alt": true,
+          "heading": "Questions this guide gets asked",
+          "items": [
+            [
+              "Will we lose devices we like?",
+              "Only if the data says they cost more than they are worth, and only if you agree."
+            ],
+            [
+              "Who reads the meters?",
+              "The devices do, automatically, under monitoring."
+            ],
+            [
+              "What if a device fails in week two?",
+              "Under agreement the response is same day, and The technician is certified."
+            ]
+          ]
+        },
+        {
+          "type": "leadform",
+          "id": "guide",
+          "heading": "Request the free print assessment",
+          "body": "Tell us a little about your organization and a person from the Indianapolis office will call to set a time.",
+          "submit": "Schedule my consultation",
+          "note": "A person replies, not an autoresponder."
+        },
+        {
+          "type": "related",
+          "heading": "Keep reading",
+          "items": [
+            [
+              "Office IT",
+              "Workstation management: why the desk PC is where most support tickets start",
+              "Servers get the attention. Workstations get the tickets.",
+              "blog/workstation-management-an-overview.html",
+              "assets/it-1200.jpg"
+            ],
+            [
+              "Copiers",
+              "All-in-one office printers: when one device is enough, and when it is not",
+              "For a small office one multifunction device can do everything.",
+              "blog/all-in-one-office-printer-options-navigating-the-market-for-the-best-choice.html",
+              "assets/print-1200.jpg"
+            ],
+            [
+              "Wide format",
+              "Wide-format printing in house: the volume at which it pays for itself",
+              "Plans, signage and drawings from the print shop cost a day and a delivery fee each time.",
+              "blog/wide-format-printer-buying-guide-making-the-right-decision.html",
+              "assets/process-1200.jpg"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "file": "blog/workstation-management-an-overview.html",
+      "title": "Workstation management: why the desk PC is where most support tickets start | Van Ausdall & Farrar",
+      "description": "Servers get the attention. Workstations get the tickets.",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": "Workstation management: why the desk PC is where most support tickets start",
+          "description": "Servers get the attention. Workstations get the tickets. Here is what managed workstation support changes for a fifty-person office, and what it costs to leave alone.",
+          "image": "https://van-ausdall.vercel.app/assets/it-1200.jpg",
+          "author": {
+            "@type": "Organization",
+            "name": "Van Ausdall & Farrar"
+          },
+          "publisher": {
+            "@id": "https://www.vanausdall.com/#organization"
+          },
+          "mainEntityOfPage": "https://www.vanausdall.com/blog/workstation-management-an-overview",
+          "datePublished": "2026-09-08",
+          "dateModified": "2026-09-08",
+          "articleSection": "Office IT"
+        }
+      ],
+      "sections": [
+        {
+          "type": "article",
+          "category": "Office IT",
+          "heading": "Workstation management: why the desk PC is where most support tickets start",
+          "standfirst": "Servers get the attention. Workstations get the tickets. Here is what managed workstation support changes for a fifty-person office, and what it costs to leave alone.",
+          "image": "assets/it-1200.jpg",
+          "image_alt": "A technician checking a small office server rack",
+          "date_label": "September 2026",
+          "read": "4 min read",
+          "chapters": [
+            {
+              "id": "where-tickets-start",
+              "title": "Where the tickets start",
+              "paras": [
+                "In most small and mid-sized offices the majority of IT interruptions begin at a desk: an update that did not run, a laptop that did not back up, a browser extension nobody installed on purpose. Each one costs the person an hour and someone else two.",
+                "ul:Patching and updates that run on a schedule, not when someone remembers;;Endpoint security that is current;;Backup of the files that live on the machine;;Asset records: who has what, and when it is due for replacement"
+              ]
+            },
+            {
+              "id": "what-managed-means",
+              "title": "What managed workstation support means",
+              "paras": [
+                "Every workstation is enrolled, monitored and patched centrally. Security software reports in. Backups run and are tested. When a machine misbehaves, the help desk sees it before the user calls, and often fixes it remotely.",
+                "callout:The named help desk|VAF's IT services include a help desk with a name. Your people know who they are talking to, and so do we."
+              ]
+            },
+            {
+              "id": "security",
+              "title": "Security starts at the endpoint",
+              "paras": [
+                "Many breaches begin with an email opened at a desk. Fortinet firewalls, endpoint protection and email security, kept current across every machine, close the door that is most often left open.",
+                "pq:Many breaches begin with an email opened at a desk."
+              ]
+            },
+            {
+              "id": "lifecycle",
+              "title": "Lifecycle: replace on a plan, not on a failure",
+              "paras": [
+                "A workstation that dies on a Monday costs a day and a rush purchase. A fleet on a replacement plan costs a budget line. Managed support includes the asset record that makes the plan possible."
+              ]
+            },
+            {
+              "id": "with-kelly",
+              "title": "Why the copier company",
+              "paras": [
+                "VAF's devices are already on your network, and our technicians already know your building. Adding workstation support to the same relationship means one vendor, one invoice and one number to call."
+              ]
+            }
+          ],
+          "author": {
+            "name": "The VAF team",
+            "role": "Indianapolis, Indiana"
+          }
+        },
+        {
+          "type": "faq",
+          "alt": true,
+          "heading": "Questions this guide gets asked",
+          "items": [
+            [
+              "Do you support Mac and Windows?",
+              "Windows workstations. Ask about Mac for your office."
+            ],
+            [
+              "Can you work alongside our internal IT person?",
+              "Yes. Many customers keep one person in house and use VAF for monitoring, patching and after-hours."
+            ],
+            [
+              "What does onboarding look like?",
+              "An inventory, enrollment of every machine, then monitoring. Ask the Indianapolis office for the plan."
+            ]
+          ]
+        },
+        {
+          "type": "leadform",
+          "id": "guide",
+          "heading": "Request the free print assessment",
+          "body": "Tell us a little about your organization and a person from the Indianapolis office will call to set a time.",
+          "submit": "Schedule my consultation",
+          "note": "A person replies, not an autoresponder."
+        },
+        {
+          "type": "related",
+          "heading": "Keep reading",
+          "items": [
+            [
+              "Copiers",
+              "All-in-one office printers: when one device is enough, and when it is not",
+              "For a small office one multifunction device can do everything.",
+              "blog/all-in-one-office-printer-options-navigating-the-market-for-the-best-choice.html",
+              "assets/print-1200.jpg"
+            ],
+            [
+              "Wide format",
+              "Wide-format printing in house: the volume at which it pays for itself",
+              "Plans, signage and drawings from the print shop cost a day and a delivery fee each time.",
+              "blog/wide-format-printer-buying-guide-making-the-right-decision.html",
+              "assets/process-1200.jpg"
+            ],
+            [
+              "Service",
+              "What same-day service means, and the questions to ask any dealer",
+              "Every dealer says fast. Here is what a real service commitment looks like in writing, how to read a response-time promise, and why an audited NPS matters more than a testimonial.",
+              "blog/same-day-service-what-it-means.html",
+              "assets/hq-1200.jpg"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "file": "blog/all-in-one-office-printer-options-navigating-the-market-for-the-best-choice.html",
+      "title": "All-in-one office printers: when one device is enough, and when it is not | Van Ausdall & Farrar",
+      "description": "For a small office one multifunction device can do everything.",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": "All-in-one office printers: when one device is enough, and when it is not",
+          "description": "For a small office one multifunction device can do everything. Here is how to tell whether you are that office, and what to look for in duty cycle, security and cost per page.",
+          "image": "https://van-ausdall.vercel.app/assets/print-1200.jpg",
+          "author": {
+            "@type": "Organization",
+            "name": "Van Ausdall & Farrar"
+          },
+          "publisher": {
+            "@id": "https://www.vanausdall.com/#organization"
+          },
+          "mainEntityOfPage": "https://www.vanausdall.com/blog/all-in-one-office-printer-options-navigating-the-market-for-the-best-choice",
+          "datePublished": "2026-09-08",
+          "dateModified": "2026-09-08",
+          "articleSection": "Copiers"
+        }
+      ],
+      "sections": [
+        {
+          "type": "article",
+          "category": "Copiers",
+          "heading": "All-in-one office printers: when one device is enough, and when it is not",
+          "standfirst": "For a small office one multifunction device can do everything. Here is how to tell whether you are that office, and what to look for in duty cycle, security and cost per page.",
+          "image": "assets/print-1200.jpg",
+          "image_alt": "A technician kneeling beside an open office copier",
+          "date_label": "September 2026",
+          "read": "4 min read",
+          "chapters": [
+            {
+              "id": "one-device",
+              "title": "When one device is enough",
+              "paras": [
+                "A small team with moderate, mostly mono volume in one location is usually well served by one multifunction device that prints, copies, scans and faxes. The savings are real: one contract, one toner type, one thing to service."
+              ]
+            },
+            {
+              "id": "when-not",
+              "title": "When it is not",
+              "paras": [
+                "ul:Two teams who both need the device at 9am;;Color volume that grows every quarter;;Confidential printing that should not sit on a shared tray;;A second floor",
+                "The fix is rarely a bigger device. It is usually two right-sized devices placed where the work is."
+              ]
+            },
+            {
+              "id": "duty-cycle",
+              "title": "Duty cycle, and why it matters more than speed",
+              "paras": [
+                "Every device has a recommended monthly volume. Run it at twice that and it will fail early and often. Run it at half and you overpaid. Ask for the recommended monthly volume, not the maximum, and match it to your meters.",
+                "pq:Ask for the recommended monthly volume, not the maximum."
+              ]
+            },
+            {
+              "id": "security",
+              "title": "Security on a shared device",
+              "paras": [
+                "Secure print release, user authentication, hard drive encryption and a plan for the drive when the device leaves. These are configuration choices, and they should be made at install."
+              ]
+            },
+            {
+              "id": "cost-per-page",
+              "title": "The cost per page is the price",
+              "paras": [
+                "A cheap device with expensive toner costs more in a year than a dearer device with a managed rate. Ask for the blended cost per page on your volume before you compare device prices."
+              ]
+            }
+          ],
+          "author": {
+            "name": "The VAF team",
+            "role": "Indianapolis, Indiana"
+          }
+        },
+        {
+          "type": "faq",
+          "alt": true,
+          "heading": "Questions this guide gets asked",
+          "items": [
+            [
+              "Which all-in-one brands does VAF carry?",
+              "Canon, Ricoh, Kyocera and HP, matched to the job."
+            ],
+            [
+              "Can we add managed print to a single device?",
+              "Yes. One device, one agreement, the same monitoring and supplies."
+            ],
+            [
+              "Can you network it for us?",
+              "Yes, on the day of install, with every user trained."
+            ]
+          ]
+        },
+        {
+          "type": "leadform",
+          "id": "guide",
+          "heading": "Request the free print assessment",
+          "body": "Tell us a little about your organization and a person from the Indianapolis office will call to set a time.",
+          "submit": "Schedule my consultation",
+          "note": "A person replies, not an autoresponder."
+        },
+        {
+          "type": "related",
+          "heading": "Keep reading",
+          "items": [
+            [
+              "Wide format",
+              "Wide-format printing in house: the volume at which it pays for itself",
+              "Plans, signage and drawings from the print shop cost a day and a delivery fee each time.",
+              "blog/wide-format-printer-buying-guide-making-the-right-decision.html",
+              "assets/process-1200.jpg"
+            ],
+            [
+              "Service",
+              "What same-day service means, and the questions to ask any dealer",
+              "Every dealer says fast. Here is what a real service commitment looks like in writing, how to read a response-time promise, and why an audited NPS matters more than a testimonial.",
+              "blog/same-day-service-what-it-means.html",
+              "assets/hq-1200.jpg"
+            ],
+            [
+              "Managed IT",
+              "What a vCIO does, and when a 50-person company needs one",
+              "A virtual chief information officer is a fractional executive, not a help desk.",
+              "blog/what-is-a-vcio.html",
+              "assets/datacenter-1200.jpg"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "file": "blog/wide-format-printer-buying-guide-making-the-right-decision.html",
+      "title": "Wide-format printing in house: the volume at which it pays for itself | Van Ausdall & Farrar",
+      "description": "Plans, signage and drawings from the print shop cost a day and a delivery fee each time. Here is when the device pays for itself and what to look for.",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": "Wide-format printing in house: the volume at which it pays for itself",
+          "description": "Plans, signage and drawings from the print shop cost a day and a delivery fee each time. Here is when the device pays for itself and what to look for.",
+          "image": "https://van-ausdall.vercel.app/assets/process-1200.jpg",
+          "author": {
+            "@type": "Organization",
+            "name": "Van Ausdall & Farrar"
+          },
+          "publisher": {
+            "@id": "https://www.vanausdall.com/#organization"
+          },
+          "mainEntityOfPage": "https://www.vanausdall.com/blog/wide-format-printer-buying-guide-making-the-right-decision",
+          "datePublished": "2026-09-08",
+          "dateModified": "2026-09-08",
+          "articleSection": "Wide format"
+        }
+      ],
+      "sections": [
+        {
+          "type": "article",
+          "category": "Wide format",
+          "heading": "Wide-format printing in house: the volume at which it pays for itself",
+          "standfirst": "Plans, signage and drawings from the print shop cost a day and a delivery fee each time. Here is when the device pays for itself and what to look for.",
+          "image": "assets/process-1200.jpg",
+          "image_alt": "A wide-format inkjet printer",
+          "date_label": "September 2026",
+          "read": "4 min read",
+          "chapters": [
+            {
+              "id": "who-uses-it",
+              "title": "Who prints wide format",
+              "paras": [
+                "Architecture and engineering firms for plan sets and renderings. Contractors for site drawings. Retailers and schools for signage and posters. Marketing teams for event graphics. Anyone who sends a file out and waits a day for it."
+              ]
+            },
+            {
+              "id": "the-math",
+              "title": "The math",
+              "paras": [
+                "Add up a year of print-shop invoices and delivery fees, then add the hours lost waiting for revisions. Compare it to the monthly cost of a device under agreement, including ink and media. Bring a year of outsourced print invoices to the assessment; the plan shows the comparison.",
+                "callout:Bring the invoices|Bring a year of outsourced print invoices to the assessment. The comparison is the plan."
+              ]
+            },
+            {
+              "id": "what-to-look-for",
+              "title": "What to look for",
+              "paras": [
+                "ul:Print and scan in one device, so drawings can be copied and archived;;Color accuracy for renderings, not just line work;;Media handling: rolls, sheet sizes, cutting;;Network integration with your CAD or design software;;Service under the same agreement as your office devices"
+              ]
+            },
+            {
+              "id": "scanning",
+              "title": "Scanning large originals",
+              "paras": [
+                "Wide-format scanning turns paper drawings into files your document management system can index. For firms with decades of archived plans, that is often the reason to buy.",
+                "pq:For firms with decades of archived plans, scanning is often the reason to buy."
+              ]
+            },
+            {
+              "id": "with-kelly",
+              "title": "How VAF sets it up",
+              "paras": [
+                "Installation includes network setup and operator training on the day. Ink and media can be on automatic replenishment. Service comes from the nearest of three offices, with priority for devices under agreement."
+              ]
+            }
+          ],
+          "author": {
+            "name": "The VAF team",
+            "role": "Indianapolis, Indiana"
+          }
+        },
+        {
+          "type": "faq",
+          "alt": true,
+          "heading": "Questions this guide gets asked",
+          "items": [
+            [
+              "Can a wide-format device print on vinyl or canvas?",
+              "Some can. Tell us what you need to print and we will recommend the media path."
+            ],
+            [
+              "How much space does it need?",
+              "About the footprint of a large copier, plus room for rolls. We measure before we recommend."
+            ],
+            [
+              "Do you offer wide format on rental?",
+              "Yes, for projects and peaks."
+            ]
+          ]
+        },
+        {
+          "type": "leadform",
+          "id": "guide",
+          "heading": "Request the free print assessment",
+          "body": "Tell us a little about your organization and a person from the Indianapolis office will call to set a time.",
+          "submit": "Schedule my consultation",
+          "note": "A person replies, not an autoresponder."
+        },
+        {
+          "type": "related",
+          "heading": "Keep reading",
+          "items": [
+            [
+              "Service",
+              "What same-day service means, and the questions to ask any dealer",
+              "Every dealer says fast. Here is what a real service commitment looks like in writing, how to read a response-time promise, and why an audited NPS matters more than a testimonial.",
+              "blog/same-day-service-what-it-means.html",
+              "assets/hq-1200.jpg"
+            ],
+            [
+              "Managed IT",
+              "What a vCIO does, and when a 50-person company needs one",
+              "A virtual chief information officer is a fractional executive, not a help desk.",
+              "blog/what-is-a-vcio.html",
+              "assets/datacenter-1200.jpg"
+            ],
+            [
+              "Communication",
+              "Business phone systems in 2026: cloud, premise or hybrid, and how to choose",
+              "The phone system decision is a five-year decision. Here is what changed, what each option costs you in flexibility, and the eight questions to ask before you sign with anyone, including us.",
+              "blog/business-phone-systems-buyers-guide.html",
+              "assets/phones-1200.jpg"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "file": "blog/same-day-service-what-it-means.html",
+      "title": "What same-day service means, and the questions to ask any dealer | Van Ausdall & Farrar",
+      "description": "Every dealer says fast.",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": "What same-day service means, and the questions to ask any dealer",
+          "description": "Every dealer says fast. Here is what a real service commitment looks like in writing, how to read a response-time promise, and why an audited NPS matters more than a testimonial.",
+          "image": "https://van-ausdall.vercel.app/assets/hq-1200.jpg",
+          "author": {
+            "@type": "Organization",
+            "name": "Van Ausdall & Farrar"
+          },
+          "publisher": {
+            "@id": "https://www.vanausdall.com/#organization"
+          },
+          "mainEntityOfPage": "https://www.vanausdall.com/blog/same-day-service-what-it-means",
+          "datePublished": "2026-09-08",
+          "dateModified": "2026-09-08",
+          "articleSection": "Service"
+        }
+      ],
+      "sections": [
+        {
+          "type": "article",
+          "category": "Service",
+          "heading": "What same-day service means, and the questions to ask any dealer",
+          "standfirst": "Every dealer says fast. Here is what a real service commitment looks like in writing, how to read a response-time promise, and why an audited NPS matters more than a testimonial.",
+          "image": "assets/hq-1200.jpg",
+          "image_alt": "Inside the VAF Fort Wayne office",
+          "date_label": "September 2026",
+          "read": "4 min read",
+          "chapters": [
+            {
+              "id": "response-vs-resolution",
+              "title": "Response time is not resolution time",
+              "paras": [
+                "Response is when a technician is scheduled or arrives. Resolution is when the device works. A dealer can promise a fast response and still leave you down for days waiting on parts. Ask for both numbers, and ask what share of calls are resolved on the first visit.",
+                "callout:Ask about parts|Whether the technician arrives with the likely parts for your model is the single biggest factor in first-visit resolution. Ask any dealer how they stock the truck."
+              ]
+            },
+            {
+              "id": "in-writing",
+              "title": "Get it in writing, with conditions",
+              "paras": [
+                "A real commitment names the devices it covers, the hours it applies to, and what happens when it is missed. Ask any dealer, VAF included, for the response commitment in writing for your agreement.",
+                "pq:A promise without conditions is a slogan. A promise with conditions is a contract."
+              ]
+            },
+            {
+              "id": "nps",
+              "title": "Why an audited NPS beats a testimonial",
+              "paras": [
+                "Anyone can post a good review. Net Promoter Score measured by an independent third party cannot be edited by the dealer. VAF's NPS is collected and audited by CEO Juice, an independent company whose process the dealer does not control. VAF's score is 93.4; the average US company scores 10."
+              ]
+            },
+            {
+              "id": "local",
+              "title": "Why local still matters",
+              "paras": [
+                "A technician who is forty minutes away arrives in forty minutes. VAF serves Indianapolis, Fort Wayne and Evansville from three offices, and customers with field offices across Indiana from the nearest one."
+              ]
+            },
+            {
+              "id": "questions",
+              "title": "The questions to ask any dealer",
+              "paras": [
+                "ul:What is your response commitment, in hours, for my devices, and where is it written?;;What share of service calls do you resolve on the first visit?;;Do your technicians carry parts?;;Who measures your customer satisfaction, and can I see it?;;Where is the nearest technician to my office?"
+              ]
+            }
+          ],
+          "author": {
+            "name": "The VAF team",
+            "role": "Indianapolis, Indiana"
+          }
+        },
+        {
+          "type": "faq",
+          "alt": true,
+          "heading": "Questions this guide gets asked",
+          "items": [
+            [
+              "Is there a response commitment on every device?",
+              "Commitments apply to devices under a VAF agreement. Ask the Indianapolis office for the terms, in writing."
+            ],
+            [
+              "What about weekends?",
+              "Ask the Indianapolis office for the coverage on your agreement."
+            ],
+            [
+              "How do I request service?",
+              "The customer portal, the office number, or (317) 634-2913."
             ]
           ]
         },
@@ -8376,7 +9703,7 @@
       "The current site was rebuilt in 2021 by a month-to-month partner at about $1,200 a month, with reporting but little advice, and one blog post a month. (Brian, 1 September)",
       "You asked for a good, better, best proposal. Our three packages are Launch, Growth and Transform; this preview is built to the Growth page count, and the plan below fits a fourth-quarter start. (Brian, 1 September)",
       "Brian deals with the marketing company and decides on the website; others weigh in eventually. (Brian, 1 September)",
-      "Business Technology Simplified is the line under the logo, and Everything under one roof since 1914 is the hero. Both are on every direction.",
+      "Business Technology Simplified is the line under the logo, and Everything under one roof since 1914 is the hero. Both are on every direction. We are not recommending one; you choose.",
       "Your four pillars, Information, Communication, Print and Process, organize the partners page and the city pages. They are the navigation now.",
       "The Technology Strength Assessment is your signature process. It is the primary call to action on every page, ahead of Schedule a consultation.",
       "Your customers come to the site for the Client Service Center: support, supplies and IT support. Those stay one click from the top of every page.",
@@ -8396,29 +9723,38 @@
       "Nine directories of city pages (Indianapolis, Carmel, Fishers, Noblesville, Greenwood, Bloomington, Columbus, Muncie, South Bend) share near-identical copy. Three real offices get real pages with LocalBusiness markup; the rest become a service area list.",
       "Your own photography is limited to stock-style imagery on the live site. The 75th Street headquarters, the Document Conversion Center and technicians in the field would make the site un-copyable. Budget a day."
     ],
-    "pick_reasons": [
+    "choose_heading": "Three directions. Your call.",
+    "choose_intro": "The words, the pages and the proof are identical in all three. What differs is the register: how plain, how modern, how established the company reads. Open each one on your phone, click through the pages your customers use, and tell us which one feels like Van Ausdall & Farrar.",
+    "choose_reasons": [
       [
-        "Your line is Business Technology Simplified",
-        "Clean is the plainest-spoken of the three: a humanist sans, generous white space, one action per section. It is the design that says simplified without saying it."
+        "If Business Technology Simplified is the promise",
+        "Clean is the plainest-spoken: a humanist sans, generous white space, one action per section. Credible to a CIO and to an office manager alike."
       ],
       [
-        "You sell IT and AI to CIOs, and copiers to office managers",
-        "Clean reads as credible to both. It is neither a tech startup nor a print catalogue, and it scans fast on a phone, where most of your traffic is."
+        "If technology partner is the story",
+        "Showcase: a display grotesque, bigger rhythm, the rotating device in the hero, the fleet rail and the floor plan front and center. The modern managed technology partner."
       ],
       [
-        "The blue does real work",
-        "Clean reserves the accent for links and the primary action, so the assessment button is the bluest thing on every page."
+        "If 1914 is the story",
+        "Press: an editorial serif on warm paper, the narrowest measure, the most institutional. Edison, four generations of leadership and an audited service score land harder in a serif. Nobody in your category looks like this."
+      ],
+      [
+        "Whichever you choose",
+        "Every page, every case study, the Technology Strength Assessment, the SEO plan and the redirects come with it. Mix is allowed: a Showcase hero on a Clean site is a normal request."
       ]
     ],
-    "pick_change": "Clean's hero can read quiet. We would borrow Showcase's larger heading scale for the home hero and the section openers, keep Clean's rhythm everywhere else, and lead the hero with a real photograph of the 75th Street building.",
     "alternatives": [
       [
+        "Quantum Clean",
+        "The clear one. Light, humanist sans, maximum clarity. Says simplified without saying it."
+      ],
+      [
         "Quantum Showcase",
-        "If you want the site to say technology partner first: same light ground, a display grotesque, wider measure and bigger rhythm. The four pillars as a wheel, the seven-vendor comparison, and the process front and center."
+        "The technology-partner one. Same light ground, a display grotesque and bigger rhythm, with the 3D device, the fleet and the floor plan."
       ],
       [
         "Quantum Press",
-        "If heritage is the story: an editorial serif on warm paper, the narrowest measure and the most institutional. 1914, Edison, four generations of leadership and an audited service score land harder in a serif. Nobody in your category looks like this."
+        "The established one. Editorial serif on warm paper. 1914, Edison, four generations, an audited score."
       ]
     ],
     "plan": [
@@ -8483,7 +9819,7 @@
         "Every URL that earns a visitor today keeps earning it: a permanent redirect for each one, tested individually at launch (the table below).",
         "Three office pages with LocalBusiness markup, hours where you state them, and the cities each office serves, plus a service area list for the nine cities that had thin pages.",
         "A business phone systems page and a buyer's guide aimed at the 9,900-a-month term you already sit at 25 for (no competitor is in the top 100), a managed IT page with Indianapolis in the title, and standalone managed print and copier pages for the 4,400 and 2,400-a-month terms with no VAF page today.",
-        "Six guides on real URLs with BlogPosting markup, each aimed at a term you rank for on page one or two: document conversion, physical intrusion detection, vCIO, AI policy, copier lease, phone systems.",
+        "Twelve guides on real URLs with BlogPosting markup, six of them aimed at terms you rank for on page one or two: document conversion, physical intrusion detection, vCIO, AI policy, copier lease, phone systems. Every solution page carries Service schema, every page with questions carries FAQPage schema, and every office page LocalBusiness, so search engines and AI assistants can read what the page says.",
         "Titles and descriptions written for the terms you already rank for: Indianapolis Managed IT Services and vCIO; Copier Sales, Lease and Rental in Indianapolis; Document Conversion and Scanning Services, Indianapolis.",
         "Organization markup on the home page with your LinkedIn, Facebook, Instagram and Google Business profiles as sameAs, so an AI assistant asked about Van Ausdall resolves to the right company, founded 1914.",
         "Every page under 80 kB of HTML before images, lazy-loading below the fold, pinch-zoom allowed, 16 px inputs, 44 px targets, one H1. Scored on our gate before you see it.",
@@ -8549,7 +9885,7 @@
       "Steven Sigmon's quote and title, from your managed IT page, are used on the IT page and the About page. Confirm the spelling and that he is happy to be named.",
       "The eighteen case studies. Four are written in full from your pages; the other fourteen are one line each and link to your PDFs until the content is migrated.",
       "The Technology Strength Assessment. We reproduced ten of the eighty questions as a checklist. In the build it becomes a scored multi-step form; tell us how the scorecard is calculated today.",
-      "Blog dates. The six guides are new drafts aimed at terms you rank for; your existing posts keep their content on new URLs with their original dates.",
+      "Blog. Six guides are new drafts aimed at terms you rank for. Six more are placeholders adapted from the category guides we wrote for another dealer, to show the blog at its real size; they are replaced by your 324 existing posts, migrated to clean URLs with their original dates.",
       "The calculator's rates are typical figures for orientation; replace them with yours or keep the disclaimer.",
       "Permission to reproduce the customer comments, which are already public on your site, with first names as shown.",
       "Who approves. Brian decides on the website and others weigh in eventually; tell us who, so the copy and go-live approvals do not wait.",

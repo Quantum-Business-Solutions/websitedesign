@@ -137,7 +137,7 @@ EXTRA_CSS2 = r"""
 /* ===== before / after slider ===== */
 .pv-ba{margin-top:44px;position:relative;display:grid;border-radius:calc(var(--radius) + 8px);overflow:hidden;border:1px solid var(--border);background:var(--card);--pos:50%}.pv-ba .before,.pv-ba .after{grid-area:1/1}
 .pv-ba .pane{padding:40px 44px 56px;min-height:400px;box-sizing:border-box}.pv-ba .before .pane{max-width:50%;padding-right:64px}.pv-ba .after .pane{padding-left:calc(50% + 44px)}
-.pv-ba .after{position:relative;background:var(--chrome-bg);color:#fff;clip-path:inset(0 0 0 var(--pos));transition:clip-path .05s linear}
+.pv-ba .after{position:relative;background:var(--ba-bg,var(--chrome-bg));color:#fff;clip-path:inset(0 0 0 var(--pos));transition:clip-path .05s linear}
 .pv-ba .after .pane{height:100%}
 .pv-ba .k{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--accent-ink);margin-bottom:12px}.pv-ba .after .k{color:var(--q-gold)}
 .pv-ba h3{margin:0 0 14px;font-size:clamp(22px,2.2vw,30px);line-height:1.12;letter-spacing:-.02em;overflow-wrap:anywhere}
@@ -347,7 +347,8 @@ def _beforeafter(s, ctx):
     la = "".join(f"<li>{E(x)}</li>" for x in a.get("items", []))
     js = f"""<script>(function(){{var w=document.getElementById("{bid}");if(!w)return;var r=w.querySelector('input');r.addEventListener('input',function(){{w.style.setProperty('--pos',r.value+'%')}})}})();</script>"""
     head = f'<div class="pv-center"><div class="q-eyebrow">{E(s.get("eyebrow", ""))}</div><h2 class="q-h2" style="margin-top:22px;max-width:760px">{E(s["heading"])}</h2></div>'
-    return (f'{ctx["sec_open"](s)} <div class="q-container">{head}<div class="pv-ba" id="{E(bid)}">'
+    ba_style = (' style="--ba-bg:' + E(s['bg']) + '"') if s.get('bg') else ''
+    return (f'{ctx["sec_open"](s)} <div class="q-container">{head}<div class="pv-ba" id="{E(bid)}"{ba_style}>'
             f'<div class="pane before"><div class="k">{E(b.get("eyebrow", "Before"))}</div><h3>{E(b["title"])}</h3><p>{E(b.get("body", ""))}</p><ul>{lb}</ul></div>'
             f'<div class="after"><div class="pane"><div class="k">{E(a.get("eyebrow", "After"))}</div><h3>{E(a["title"])}</h3><p>{E(a.get("body", ""))}</p><ul>{la}</ul></div></div>'
             f'<div class="handle" aria-hidden="true"></div><div class="hint">{E(s.get("hint", "Drag to compare"))}</div>'

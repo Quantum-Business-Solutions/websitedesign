@@ -358,6 +358,49 @@ post("copier-lease-vs-buy-indianapolis", "Print", "Copier lease vs. buy vs. rent
      "copier lease indianapolis", "print-assessment.html", "Request the free print assessment")
 
 
+# ------------------------------------------------------------------ six placeholder posts adapted from the category guides written for Kelly Office Solutions
+KELLY_JSON = os.path.join(os.path.dirname(os.path.abspath(__file__)), "kelly-office-solutions.content.json")
+ADAPT = [("Kelly Office Solutions", "Van Ausdall & Farrar"), ("Kelly's", "VAF's"), ("Kelly", "VAF"), ("North Carolina", "Indiana"), ("the Triad, Charlotte and the Triangle", "Indianapolis, Fort Wayne and Evansville"),
+         ("Winston-Salem", "Indianapolis"), ("Greensboro", "Fort Wayne"), ("Charlotte", "Indianapolis"), ("Raleigh", "Evansville"), ("five branches", "three offices"), ("five North Carolina offices", "three Indiana offices"), ("five offices", "three offices"), ("the branch", "the office"), ("your branch", "the Indianapolis office"), ("nearest branch", "nearest office"),
+         ("Sharp, Ricoh, Savin, Konica Minolta and Brother", "Canon, Ricoh, Kyocera and HP"), ("Sharp, Ricoh, Savin, Konica Minolta, Brother and Epson", "Canon, Ricoh, Kyocera, HP and Brother"), ("Sharp, Ricoh and Savin, Konica Minolta, Brother and Epson", "Canon, Ricoh, Kyocera and HP"), ("Ricoh and Savin", "Canon and Ricoh"), ("Sharp", "Canon"), ("Savin", "Ricoh"), ("Konica Minolta", "Kyocera"),
+         ("1-800-34-KELLY", "(317) 634-2913"), ("94.4", "93.4"), ("the industry average is in the 70s", "the average US company scores 10"), ("The industry average is in the 70s.", "The average US company scores 10."), ("DocuWare", "OnBase"), ("WatchGuard", "Fortinet"), ("Datto and WatchGuard", "Datto and Fortinet"), ("Wellsys and FloWater", "our partners"),
+         ("since 1947", "since 1914"), ("factory-trained", "certified"), ("service-support.html#request", "support.html#request"), ("cost-calculator.html", "cost-calculator.html"), ("what-we-do.html#document-management", "services/document-management.html"), ("what-we-do.html#it", "services/managed-it.html"), ("what-we-do.html#copiers", "services/copiers.html"), ("assessment.html", "print-assessment.html")]
+ADAPT_IMG = {"assets/dispatch-1200.jpg": "assets/support-1200.jpg", "assets/mps-2-1200.jpg": "assets/copier-1200.jpg", "assets/it-1200.jpg": "assets/it-1200.jpg", "assets/hero-1200.jpg": "assets/print-1200.jpg", "assets/wide-format-1200.jpg": "assets/process-1200.jpg", "assets/gso-office-1200.jpg": "assets/hq-1200.jpg", "assets/doc-mgmt-1200.jpg": "assets/healthcare-process-1200.jpg"}
+ADAPT_SLUGS = ["what-managed-print-costs", "how-managed-print-services-transforms-business", "workstation-management-an-overview", "same-day-service-what-it-means", "all-in-one-office-printer-options-navigating-the-market-for-the-best-choice", "wide-format-printer-buying-guide-making-the-right-decision"]
+
+def _adapt(x):
+    if isinstance(x, str):
+        for a, b in ADAPT:
+            x = x.replace(a, b)
+        return x
+    if isinstance(x, list):
+        return [_adapt(i) for i in x]
+    if isinstance(x, dict):
+        return {k: _adapt(v) for k, v in x.items()}
+    return x
+
+def adapted_posts():
+    if not os.path.exists(KELLY_JSON):
+        return
+    kc = json.load(open(KELLY_JSON, encoding="utf-8"))
+    for pg in kc["pages"]:
+        if not pg["file"].startswith("blog/"):
+            continue
+        slug = pg["file"][5:-5]
+        if slug not in ADAPT_SLUGS:
+            continue
+        art = next(sec for sec in pg["sections"] if sec["type"] == "article")
+        faq = next((sec for sec in pg["sections"] if sec["type"] == "faq"), {"items": []})
+        title = _adapt(art["heading"]).replace("in Indiana, and what they replace", "in Indiana, and what they replace")
+        if slug == "what-managed-print-costs":
+            title = "What managed print services cost in Indiana, and what they replace"
+        chapters = _adapt(art["chapters"])
+        post(slug, _adapt(art["category"]), title, _adapt(art["standfirst"]), ADAPT_IMG.get(art["image"], "assets/print-1200.jpg"), _adapt(art.get("image_alt", "")), chapters, _adapt(faq["items"]), slug.replace("-", " "),
+             "print-assessment.html", "Request the free print assessment")
+
+adapted_posts()
+
+
 # ------------------------------------------------------------------ signature modules
 def _flow(fid, eyebrow, heading, intro, steps, receive_label="What you receive"):
     return {"type": "flow", "id": fid, "alt": True, "eyebrow": eyebrow, "heading": heading, "intro": intro, "receive_label": receive_label,
@@ -365,7 +408,7 @@ def _flow(fid, eyebrow, heading, intro, steps, receive_label="What you receive")
 
 
 def _ba(bid, heading, b_title, b_body, b_items, a_title, a_body, a_items, b_eyebrow="Today", a_eyebrow="With VAF"):
-    return {"type": "beforeafter", "id": bid, "eyebrow": "Before and after", "heading": heading,
+    return {"type": "beforeafter", "id": bid, "bg": "#0f1e33", "eyebrow": "Before and after", "heading": heading,
             "before": {"eyebrow": b_eyebrow, "title": b_title, "body": b_body, "items": b_items},
             "after": {"eyebrow": a_eyebrow, "title": a_title, "body": a_body, "items": a_items}}
 
@@ -400,7 +443,7 @@ SEAL = {"type": "seal", "id": "seal", "eyebrow": "What every VAF customer gets",
               ["57,000", "Square feet of headquarters", "Built in 2006 at 6430 E 75th Street, home to the secure Document Conversion Center."]],
     "source": "Sources: vanausdall.com (about, why VAF, copy print, support, document conversion pages), CEO Juice NPS report, SOC 2 certification as displayed on vanausdall.com."}
 
-BEFORE_AFTER = {"type": "beforeafter", "id": "ba", "eyebrow": "One roof", "heading": "Drag to see what changes when the office has one number to call",
+BEFORE_AFTER = {"type": "beforeafter", "id": "ba", "bg": "#0f1e33", "eyebrow": "One roof", "heading": "Drag to see what changes when the office has one number to call",
     "before": {"eyebrow": "Today, in most offices", "title": "Five vendors, five invoices", "body": "Nobody owns the whole picture, so nobody sees the cost.",
                "items": ["A copier dealer, an IT firm and a phone company who blame each other", "Toner bought at retail when a device runs dry", "Backups nobody has tested and a firewall nobody patches", "Records in a storage room scheduled for demolition", "Employees using AI tools nobody approved"]},
     "after": {"eyebrow": "With VAF", "title": "Everything under one roof", "body": "Information, communication, print and process from one Indiana partner since 1914.",
@@ -429,6 +472,9 @@ HOTSPOTS = {"type": "hotspots", "id": "office", "eyebrow": "The whole office", "
         {"x": 88, "y": 66, "k": "Process", "title": "The records wall", "body": "Boxes of paper become searchable records at the secure Document Conversion Center, with a certificate of destruction at the end.", "href": "services/document-conversion.html", "label": "Document conversion"},
         {"x": 16, "y": 58, "k": "Print", "title": "The desks", "body": "Desktop printers right-sized to how many the office needs, folded into the same managed print report as the copiers.", "href": "services/managed-print.html", "label": "Managed print"},
         {"x": 62, "y": 38, "k": "Process", "title": "The meeting area", "body": "Where AI shows up first: drafting, summarizing, automating. An acceptable use policy and a roadmap before the tools.", "href": "services/ai-consulting.html", "label": "AI consulting"}]}
+
+PILLARS_CARDS = {"type": "cards", "id": "pillars", "eyebrow": "Four pillars", "heading": "Information, communication, print and process, from one partner",
+    "items": [[p[0], p[1]] for p in PILLARS]}
 
 FLEET = {"type": "fleet", "id": "fleet", "heading": "The fleet, at a glance", "intro": "Every device family VAF sells and services. Generated product renders for the preview; Canon, Ricoh, Kyocera and HP models replace them.",
     "items": [
@@ -510,7 +556,11 @@ def service_page(slug, title, navlabel, pillar, image, eyebrow, heading, subhead
         {"type": "faq", "heading": "Questions we get about " + navlabel.lower(), "items": faq},
         {"type": "leadform", "alt": True, "id": "consult", "heading": "Speak with a solutions expert", "body": "Tell us a little about your organization. A person from the Indianapolis office replies to set a time, not an autoresponder.", "submit": "Schedule my consultation", "note": f"Or call {PHONE}, Monday through Friday, 7:00am to 5:00pm."},
     ]
-    return {"file": f"services/{slug}.html", "title": f"{SERVICE_TITLES.get(slug, title)} | Van Ausdall & Farrar", "description": desc(subhead), "crumbs": [["Home", "index.html"], ["Solutions", "solutions.html"], [navlabel, f"services/{slug}.html"]], "sections": secs}
+    service_schema = {"@context": "https://schema.org", "@type": "Service", "@id": f"{SITE}/services/{slug}#service", "name": title, "serviceType": title,
+                      "description": re.sub(r"<[^>]+>", "", subhead), "provider": {"@id": f"{SITE}/#organization"},
+                      "areaServed": [{"@type": "State", "name": "Indiana"}, {"@type": "City", "name": "Indianapolis"}, {"@type": "City", "name": "Fort Wayne"}, {"@type": "City", "name": "Evansville"}],
+                      "url": f"{SITE}/services/{slug}", "category": pillar}
+    return {"file": f"services/{slug}.html", "title": f"{SERVICE_TITLES.get(slug, title)} | Van Ausdall & Farrar", "description": desc(subhead), "schema": [service_schema], "crumbs": [["Home", "index.html"], ["Solutions", "solutions.html"], [navlabel, f"services/{slug}.html"]], "sections": secs}
 
 
 SERVICE_TITLES = {"managed-it": "Indianapolis Managed IT Services and vCIO", "business-phone-systems": "Business Phone Systems in Indianapolis and Indiana", "copiers": "Copier Sales, Lease and Rental in Indianapolis", "managed-print": "Managed Print Services in Indianapolis", "copier-service": "Copier Service and Repair in Indianapolis", "document-conversion": "Document Conversion and Scanning Services, Indianapolis", "cybersecurity": "Managed Cybersecurity and SOC as a Service, Indiana", "cloud": "Cloud Services in Indianapolis", "ai-consulting": "AI Consulting for Indiana Businesses"}
@@ -739,8 +789,8 @@ def build():
     # ---------------- home
     pages.append({"file": "index.html", "title": "Van Ausdall & Farrar | Managed IT, copiers, phone systems and office technology in Indianapolis",
                   "compose": {
-                      "clean": ["hero-light", "partners", "seal", "wheel", "office", "is-this-you", "fleet", "flow", "model", "markets", "map", "voices", "film", "faq", "contact"],
-                      "showcase": ["hero", "partners", "wheel", "fleet", "ba", "flow", "office", "model", "proof", "casestudy", "markets", "map", "voices", "film", "contact"],
+                      "clean": ["hero-light", "partners", "seal", "pillars", "office", "is-this-you", "fleet", "flow", "model", "markets", "map", "voices", "film", "faq", "contact"],
+                      "showcase": ["hero", "partners", "pillars", "fleet", "ba", "flow", "office", "model", "proof", "casestudy", "markets", "map", "voices", "film", "contact"],
                       "press": ["hero-light", "story", "services", "office", "seal", "casestudy", "voices", "film", "flow", "map", "faq", "contact"]},
                   "description": "Indiana's largest full-service office technology provider since 1914. Managed IT and cybersecurity, business phone systems, copiers and managed print, document management and AI consulting for Indianapolis and the Midwest.",
                   "sections": [
@@ -755,7 +805,7 @@ def build():
          "badge": {"value": "93.4", "label": "Net Promoter Score, independently audited"}},
         HERO_LAYERED,
         {"type": "wheel", "id": "wheel", "eyebrow": "Four pillars", "heading": "Information, communication, print and process, from one partner", "intro": "Hover a segment. Four pillars, one agreement, one Customer Care Center.", "items": WHEEL_ITEMS, "hub": SHORT, "hub_sub": "one roof", "ring": "BUSINESS TECHNOLOGY SIMPLIFIED"},
-        FLOW_ENGAGEMENT, SEAL, BEFORE_AFTER, HOTSPOTS, FLEET, MODEL3D, PROOF, FILM, CS_QUOTE, TABS_MARKETS, MAP, TIMELINE,
+        FLOW_ENGAGEMENT, SEAL, BEFORE_AFTER, HOTSPOTS, FLEET, MODEL3D, PROOF, FILM, PILLARS_CARDS, CS_QUOTE, TABS_MARKETS, MAP, TIMELINE,
         {"type": "partners", "id": "partners", "caption": "Technology partners, including Gartner Magic Quadrant leaders", "items": PARTNERS},
         {"type": "checklist", "id": "is-this-you", "alt": True, "eyebrow": "Is this you?", "heading": "Six questions from the Technology Strength Assessment",
          "intro": "Check the ones you cannot answer yes to. They are six of the eighty.",
@@ -779,7 +829,7 @@ def build():
                   "crumbs": [["Home", "index.html"], ["Solutions", "solutions.html"]],
                   "sections": [
         {"type": "hero", "layout": "centered", "eyebrow": "Solutions", "heading": "Four pillars. Twelve solutions. <em>One roof.</em>", "subhead": "Every line below is designed, installed, serviced and supported by VAF's own people in Indiana. Most customers start with one pillar and add from there.", "primary": {"label": "Take the assessment", "href": "technology-strength-assessment.html"}},
-        {"type": "wheel", "id": "wheel", "eyebrow": "The four pillars", "heading": "Information, communication, print and process", "intro": "Hover a segment to read it. Each pillar has its own solutions below.", "items": WHEEL_ITEMS, "hub": SHORT, "hub_sub": "one roof"},
+        dict(PILLARS_CARDS, alt=True),
         HOTSPOTS,
     ] + [
         {"type": "services", "id": p[0].lower(), "alt": bool(i % 2), "heading": p[0], "intro": p[1], "items": [[s[1], brief(s[7]), f"services/{s[0]}.html"] for s in SERVICES if s[3] == p[0]]} for i, p in enumerate(PILLARS)
@@ -808,6 +858,7 @@ def build():
         {"type": "stats", "alt": True, "items": [["$1M", "Saved by Tippecanoe School Corporation"], ["70%", "Print cost savings at STAR Financial Bank"], ["1.5M", "Patient files scanned in 90 days for Johnson Memorial"], ["$40,000", "Annual savings for the City of Anderson"]]},
         {"type": "related", "heading": "Written up in full", "items": [[c[2], c[1], c[3], f"case-studies/{c[0]}.html", CS_IMAGE[c[0]]] for c in CASE_STUDIES if c[6]]},
         {"type": "resources", "alt": True, "heading": "Every case study by industry", "intro": "Each is published on vanausdall.com with a PDF today; the PDFs migrate into pages in the build.", "items": [[c[2], c[1], c[3], "Read the case study" if c[6] else "PDF on vanausdall.com", f"case-studies/{c[0]}.html" if c[6] else f"{SITE}/case-studies/{c[0]}"] for c in CASE_STUDIES]},
+        {"type": "faq", "heading": "Questions about the results", "items": [["How much did Tippecanoe School Corporation save with Van Ausdall & Farrar?", "$1,000,000 over the life of the contract, by consolidating 1,200 printers and copiers to just over 300 and replacing more than 10 vendors with one."], ["How much did STAR Financial Bank save on print?", "70% over the original arrangement after phase one, once expired leases were removed and contracts renegotiated statewide."], ["How fast can Van Ausdall & Farrar scan patient records?", "1.5 million files in 90 days for Johnson Memorial Health, inside budget, with a certificate of destruction for the paper."]]},
         {"type": "leadform", "id": "consult", "heading": "Want results like these?", "body": "Every one of these engagements started with the Technology Strength Assessment.", "submit": "Schedule my consultation", "note": "A person from the Indianapolis office replies, not an autoresponder."},
     ]})
     full_cs = [c for c in CASE_STUDIES if c[6]]
@@ -875,6 +926,7 @@ def build():
         {"type": "leadership", "id": "leadership", "heading": "Leadership", "intro": "Eric von Grimmenstein grew up in the business. After graduating from Purdue University he began as a sales representative in 1977 and became president in 1994.", "people": [["Eric von Grimmenstein", "President"], ["Steven Sigmon", "Director of IT"]], "orgs_intro": "VAF's mission includes a positive impact on the community: paid volunteer hours for employees, and charity initiatives coordinated with customers like the City of Anderson.", "orgs": ["Women's shelter fundraising", "Shop with a cop programs", "Paid volunteer hours", "Sourcewell cooperative purchasing for public and non-profit customers"]},
         {"type": "video", "id": "film", "eyebrow": "Life at VAF", "heading": "What it is like to work here", "intro": "Filmed with VAF people in Indianapolis.", "youtube": "i-q4U5SnvaM", "poster": "assets/careers-1200.jpg", "title": "What it's like to work at Van Ausdall & Farrar", "caption": "VAF's own film, from the careers page"},
         {"type": "testimonials", "alt": True, "heading": "Real customer comments", "items": COMMENTS[4:8]},
+        {"type": "faq", "heading": "Questions people ask about Van Ausdall & Farrar", "items": [["Who owns Van Ausdall & Farrar?", "Van Ausdall & Farrar, Inc. is privately owned and operated in Indianapolis. Eric von Grimmenstein, who joined in 1977, has been president since 1994."], ["How long has Van Ausdall & Farrar been in business?", "Since 1914, when Oscar K. Van Ausdall was chosen as an Edison Business Phonograph dealer for Indiana. The company has been in the telecom business since 1983."], ["Where is Van Ausdall & Farrar located?", "Headquarters at 6430 E 75th Street, Indianapolis, IN 46250, with offices in Fort Wayne and Evansville and a service fleet covering the entire state."], ["What does Van Ausdall & Farrar do?", "Managed IT and cybersecurity, business phone systems, copiers and managed print, document management and conversion, and AI consulting, for businesses, schools, hospitals and municipalities across Indiana and the Midwest."]]},
         {"type": "cta", "heading": "Work here", "subhead": "Privately owned and operated in Indianapolis, and looking for people who take ownership, keep learning and have some fun while they are at it.", "primary": {"label": "See careers", "href": "careers.html"}},
     ]})
     pages.append({"file": "partners.html", "title": "Partners | Van Ausdall & Farrar", "description": "Fortinet, Mitel, Canon, HP, OnBase and more. Van Ausdall & Farrar's solution partners are among the best in the business, including Gartner Magic Quadrant leaders, so your technology stack is too.",
@@ -886,6 +938,7 @@ def build():
         {"type": "cards", "eyebrow": "Communication", "heading": "Communication partners", "items": [["Mitel", "MiExclusive Gold Partner seven consecutive years; MiVoice Connect, MiCloud Connect and Enterprise Contact Center Gold Certified."], ["RingCentral", "Customer Delivery Partner Certified."], ["8x8", "Sales Engineer Certified; a Gartner Magic Quadrant leader."], ["Elevate", "AI cloud communications with 99.999% uptime reliability."]]},
         {"type": "cards", "alt": True, "eyebrow": "Print", "heading": "Print partners", "items": [["Canon", "imageRUNNER ADVANCE copiers and multifunction printers."], ["Ricoh", "Black-and-white and color MFPs with document management built in."], ["Kyocera", "Low total cost of ownership and enterprise print security."], ["HP", "LaserJet and PageWide multifunction printers."], ["Brother and Zebra", "Desktop and label printing."], ["EFI Fiery and Skyline", "Production color management and web-to-print."]]},
         {"type": "cards", "eyebrow": "Process", "heading": "Process partners", "items": [["OnBase by Hyland", "Enterprise content management and Unity Forms."], ["Square 9", "Smart Search document management."], ["Kofax", "Intelligent capture and exchange for automated forms processing."], ["OPEX, Fujitsu and Canon", "Production scanners for the Document Conversion Center."]]},
+        {"type": "faq", "alt": True, "heading": "Questions about our partners", "items": [["Which copier brands does Van Ausdall & Farrar sell and service?", "Canon, Ricoh, Kyocera and HP copiers and multifunction printers, plus Brother and Zebra printers, and most other major office equipment brands for service."], ["Which phone systems does Van Ausdall & Farrar install?", "Mitel (MiExclusive Gold Partner), RingCentral, 8x8 and Elevate cloud communications, with Fortinet networking and a vendor-neutral carrier evaluation."], ["Which security vendors does Van Ausdall & Farrar use?", "Fortinet firewalls and Fabric, Sophos Intercept X with XDR, Datto patching and monitoring, KnowBe4 awareness training, and Arctic Wolf and Tenable for detection and vulnerability management."]]},
         {"type": "leadform", "alt": True, "id": "consult", "heading": "Speak with a solutions expert", "body": "Tell us what you run today. A technology advisor replies to set a time.", "submit": "Schedule my consultation", "note": "A person from the Indianapolis office replies, not an autoresponder."},
     ]})
     pages.append({"file": "careers.html", "title": "Careers | Van Ausdall & Farrar, Indianapolis", "description": "Build your career with a company that has been finding better ways forward since 1914. Privately owned in Indianapolis. Accountability, customer experience, together. Competitive benefits, generous PTO, paid volunteer hours.",
@@ -926,7 +979,7 @@ def build():
     pages.append({"file": "blog.html", "title": "News and insights | Van Ausdall & Farrar", "description": "Plain-spoken guides on managed IT, cybersecurity, business phone systems, document conversion, copiers and AI governance, from the Van Ausdall & Farrar team in Indianapolis.",
                   "crumbs": [["Home", "index.html"], ["News and insights", "blog.html"]],
                   "sections": [
-        {"type": "hero", "layout": "centered", "eyebrow": "News and insights", "heading": "What we tell customers <em>before they ask</em>", "subhead": "Six guides from the people who install and service the systems. No jargon, no vendor pitch."},
+        {"type": "hero", "layout": "centered", "eyebrow": "News and insights", "heading": "What we tell customers <em>before they ask</em>", "subhead": "Twelve guides from the people who install and service the systems. No jargon, no vendor pitch. Six are placeholders adapted from our category guides until VAF's own posts migrate."},
         {"type": "related", "heading": "The guides", "intro": "Start with the phone system guide or the AI policy.", "items": [[p["category"], p["title"], teaser(p["standfirst"]), f"blog/{p['slug']}.html", p["image"]] for p in BLOG]},
         {"type": "leadform", "alt": True, "id": "consult", "heading": "Start with the Technology Strength Assessment", "body": "Ten to fifteen minutes. Complimentary. A specialist walks the results with you.", "submit": "Request my assessment", "note": "A person from the Indianapolis office replies."},
     ]})
@@ -952,7 +1005,7 @@ def build():
             "The current site was rebuilt in 2021 by a month-to-month partner at about $1,200 a month, with reporting but little advice, and one blog post a month. (Brian, 1 September)",
             "You asked for a good, better, best proposal. Our three packages are Launch, Growth and Transform; this preview is built to the Growth page count, and the plan below fits a fourth-quarter start. (Brian, 1 September)",
             "Brian deals with the marketing company and decides on the website; others weigh in eventually. (Brian, 1 September)",
-            "Business Technology Simplified is the line under the logo, and Everything under one roof since 1914 is the hero. Both are on every direction.",
+            "Business Technology Simplified is the line under the logo, and Everything under one roof since 1914 is the hero. Both are on every direction. We are not recommending one; you choose.",
             "Your four pillars, Information, Communication, Print and Process, organize the partners page and the city pages. They are the navigation now.",
             "The Technology Strength Assessment is your signature process. It is the primary call to action on every page, ahead of Schedule a consultation.",
             "Your customers come to the site for the Client Service Center: support, supplies and IT support. Those stay one click from the top of every page.",
@@ -970,14 +1023,17 @@ def build():
             "324 blog posts, 55% of your sitemap, live on query-string URLs (blog?p=...) that cannot carry their own titles, images or schema cleanly. Every post gets a real URL now, and every earning URL gets a redirect.",
             "Nine directories of city pages (Indianapolis, Carmel, Fishers, Noblesville, Greenwood, Bloomington, Columbus, Muncie, South Bend) share near-identical copy. Three real offices get real pages with LocalBusiness markup; the rest become a service area list.",
             "Your own photography is limited to stock-style imagery on the live site. The 75th Street headquarters, the Document Conversion Center and technicians in the field would make the site un-copyable. Budget a day."],
-        "pick_reasons": [
-            ["Your line is Business Technology Simplified", "Clean is the plainest-spoken of the three: a humanist sans, generous white space, one action per section. It is the design that says simplified without saying it."],
-            ["You sell IT and AI to CIOs, and copiers to office managers", "Clean reads as credible to both. It is neither a tech startup nor a print catalogue, and it scans fast on a phone, where most of your traffic is."],
-            ["The blue does real work", "Clean reserves the accent for links and the primary action, so the assessment button is the bluest thing on every page."]],
-        "pick_change": "Clean's hero can read quiet. We would borrow Showcase's larger heading scale for the home hero and the section openers, keep Clean's rhythm everywhere else, and lead the hero with a real photograph of the 75th Street building.",
+        "choose_heading": "Three directions. Your call.",
+        "choose_intro": "The words, the pages and the proof are identical in all three. What differs is the register: how plain, how modern, how established the company reads. Open each one on your phone, click through the pages your customers use, and tell us which one feels like Van Ausdall & Farrar.",
+        "choose_reasons": [
+            ["If Business Technology Simplified is the promise", "Clean is the plainest-spoken: a humanist sans, generous white space, one action per section. Credible to a CIO and to an office manager alike."],
+            ["If technology partner is the story", "Showcase: a display grotesque, bigger rhythm, the rotating device in the hero, the fleet rail and the floor plan front and center. The modern managed technology partner."],
+            ["If 1914 is the story", "Press: an editorial serif on warm paper, the narrowest measure, the most institutional. Edison, four generations of leadership and an audited service score land harder in a serif. Nobody in your category looks like this."],
+            ["Whichever you choose", "Every page, every case study, the Technology Strength Assessment, the SEO plan and the redirects come with it. Mix is allowed: a Showcase hero on a Clean site is a normal request."]],
         "alternatives": [
-            ["Quantum Showcase", "If you want the site to say technology partner first: same light ground, a display grotesque, wider measure and bigger rhythm. The four pillars as a wheel, the seven-vendor comparison, and the process front and center."],
-            ["Quantum Press", "If heritage is the story: an editorial serif on warm paper, the narrowest measure and the most institutional. 1914, Edison, four generations of leadership and an audited service score land harder in a serif. Nobody in your category looks like this."]],
+            ["Quantum Clean", "The clear one. Light, humanist sans, maximum clarity. Says simplified without saying it."],
+            ["Quantum Showcase", "The technology-partner one. Same light ground, a display grotesque and bigger rhythm, with the 3D device, the fleet and the floor plan."],
+            ["Quantum Press", "The established one. Editorial serif on warm paper. 1914, Edison, four generations, an audited score."]],
         "plan": [
             ["Week 1", "Choose a direction. Confirm the items under To confirm. Send the logo as a vector."],
             ["Weeks 2 to 3", "Copy for every page, from your practice leaders and from you, in your words. Photography scheduled at the headquarters and in the field."],
@@ -1006,7 +1062,7 @@ def build():
                 "Every URL that earns a visitor today keeps earning it: a permanent redirect for each one, tested individually at launch (the table below).",
                 "Three office pages with LocalBusiness markup, hours where you state them, and the cities each office serves, plus a service area list for the nine cities that had thin pages.",
                 "A business phone systems page and a buyer's guide aimed at the 9,900-a-month term you already sit at 25 for (no competitor is in the top 100), a managed IT page with Indianapolis in the title, and standalone managed print and copier pages for the 4,400 and 2,400-a-month terms with no VAF page today.",
-                "Six guides on real URLs with BlogPosting markup, each aimed at a term you rank for on page one or two: document conversion, physical intrusion detection, vCIO, AI policy, copier lease, phone systems.",
+                "Twelve guides on real URLs with BlogPosting markup, six of them aimed at terms you rank for on page one or two: document conversion, physical intrusion detection, vCIO, AI policy, copier lease, phone systems. Every solution page carries Service schema, every page with questions carries FAQPage schema, and every office page LocalBusiness, so search engines and AI assistants can read what the page says.",
                 "Titles and descriptions written for the terms you already rank for: Indianapolis Managed IT Services and vCIO; Copier Sales, Lease and Rental in Indianapolis; Document Conversion and Scanning Services, Indianapolis.",
                 "Organization markup on the home page with your LinkedIn, Facebook, Instagram and Google Business profiles as sameAs, so an AI assistant asked about Van Ausdall resolves to the right company, founded 1914.",
                 "Every page under 80 kB of HTML before images, lazy-loading below the fold, pinch-zoom allowed, 16 px inputs, 44 px targets, one H1. Scored on our gate before you see it.",
@@ -1036,7 +1092,7 @@ def build():
             "Steven Sigmon's quote and title, from your managed IT page, are used on the IT page and the About page. Confirm the spelling and that he is happy to be named.",
             "The eighteen case studies. Four are written in full from your pages; the other fourteen are one line each and link to your PDFs until the content is migrated.",
             "The Technology Strength Assessment. We reproduced ten of the eighty questions as a checklist. In the build it becomes a scored multi-step form; tell us how the scorecard is calculated today.",
-            "Blog dates. The six guides are new drafts aimed at terms you rank for; your existing posts keep their content on new URLs with their original dates.",
+            "Blog. Six guides are new drafts aimed at terms you rank for. Six more are placeholders adapted from the category guides we wrote for another dealer, to show the blog at its real size; they are replaced by your 324 existing posts, migrated to clean URLs with their original dates.",
             "The calculator's rates are typical figures for orientation; replace them with yours or keep the disclaimer.",
             "Permission to reproduce the customer comments, which are already public on your site, with first names as shown.",
             "Who approves. Brian decides on the website and others weigh in eventually; tell us who, so the copy and go-live approvals do not wait.",

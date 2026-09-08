@@ -39,6 +39,25 @@ def hub(content, themes, recommend, base, roles, standard, client_tokens, out_di
     pitch = content.get("pitch", {})
     ds_link = '<a href="design-system.html">Design system</a>' if out_dir and os.path.exists(os.path.join(out_dir, "design-system.html")) else ""
     ink = reskin.darken_until(b["accent"], "#f6f7f6")
+    # The hub wears the client's scheme: their ground, their text colour, their accent. Neutrals lean toward the accent hue.
+    acc = b["accent"].lstrip("#"); ar, ag, ab = int(acc[0:2], 16), int(acc[2:4], 16), int(acc[4:6], 16)
+    def mix(hex_a, hex_b, k):
+        a = hex_a.lstrip("#"); c = hex_b.lstrip("#")
+        return "#" + "".join(f"{round(int(a[i:i+2], 16) * (1 - k) + int(c[i:i+2], 16) * k):02x}" for i in (0, 2, 4))
+    fg = b.get("ink_secondary") or "#1e2124"
+    if reskin.contrast_ratio(fg, "#ffffff") < 7:
+        fg = "#1e2124"
+    muted = mix(fg, "#ffffff", 0.42)
+    border = mix(b["accent"], "#ffffff", 0.84)
+    alt_bg = mix(b["accent"], "#ffffff", 0.95)
+    dark_chrome = b.get("chrome") == "dark"
+    chrome = b.get("chrome_bg", "#111") if dark_chrome else "#ffffff"
+    chrome_fg = "#ffffff" if dark_chrome else fg
+    chrome_muted = "rgba(255,255,255,.82)" if dark_chrome else muted
+    chrome_hover = "rgba(255,255,255,.08)" if dark_chrome else alt_bg
+    btn_fg = reskin.best_on(b["accent"])
+    dark_css = ("@media (prefers-color-scheme:dark){:root:not([data-theme=\"light\"]){--bg:#0e1412;--bg-alt:#141b18;--fg:#e6ebe7;--muted:#9cab9f;--border:#243328;--ink:" + b["accent"] + "}}\n"
+                ":root[data-theme=\"dark\"]{--bg:#0e1412;--bg-alt:#141b18;--fg:#e6ebe7;--muted:#9cab9f;--border:#243328;--ink:" + b["accent"] + "}") if dark_chrome else ""
     n = len(themes)
 
     specs = []
@@ -64,7 +83,7 @@ def hub(content, themes, recommend, base, roles, standard, client_tokens, out_di
 
     pick = recommend or themes[0]
     pick_short, pick_slug = pick.replace("Quantum ", ""), _slug(pick)
-    reasons = "".join(f'<div class="why"><h3 class="h4">{_e(h)}</h3><p>{_e(t)}</p></div>' for h, t in pitch.get("pick_reasons", []))
+    reasons = "".join(f'<div class="why"><h3 class="h4">{_e(h)}</h3><p>{_e(t)}</p></div>' for h, t in pitch.get("pick_reasons" if recommend else "choose_reasons", pitch.get("pick_reasons", [])))
     alts = "".join(
         f'<a class="alt" href="{_slug(t)}/index.html" target="_blank" rel="noopener"><h3 class="h4">{_e(t.replace("Quantum ", ""))}</h3>'
         f'<p>{_e(why)}</p><span>Open {_e(t.replace("Quantum ", ""))}</span></a>'
@@ -105,16 +124,15 @@ def hub(content, themes, recommend, base, roles, standard, client_tokens, out_di
     phone_href = re.sub(r"[^0-9+]", "", qc.get("phone", ""))
 
     css = f"""
-:root{{--bg:#ffffff;--bg-alt:#f6f7f6;--fg:#1e2420;--muted:#546358;--border:#e2e6e3;--accent:{b["accent"]};--ink:{ink};--chrome:{b.get("chrome_bg", "#111")}}}
-@media (prefers-color-scheme:dark){{:root:not([data-theme="light"]){{--bg:#0e1412;--bg-alt:#141b18;--fg:#e6ebe7;--muted:#9cab9f;--border:#243328;--ink:{b["accent"]}}}}}
-:root[data-theme="dark"]{{--bg:#0e1412;--bg-alt:#141b18;--fg:#e6ebe7;--muted:#9cab9f;--border:#243328;--ink:{b["accent"]}}}
+:root{{--bg:#ffffff;--bg-alt:{alt_bg};--fg:{fg};--muted:{muted};--border:{border};--accent:{b["accent"]};--ink:{ink};--chrome:{chrome};--chrome-fg:{chrome_fg};--chrome-muted:{chrome_muted};--chrome-hover:{chrome_hover};--btn-fg:{btn_fg}}}
+{dark_css}
 *{{box-sizing:border-box}}body{{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 Inter,system-ui,sans-serif}}
 a{{color:var(--ink)}}
-.skip{{position:absolute;top:-200px;left:8px;background:var(--accent);color:#000;padding:10px 16px;border-radius:6px}}.skip:focus{{top:8px}}
+.skip{{position:absolute;top:-200px;left:8px;background:var(--accent);color:var(--btn-fg);padding:10px 16px;border-radius:6px}}.skip:focus{{top:8px}}
 html{{scroll-padding-top:80px}}
-.top{{background:var(--chrome);position:sticky;top:0;z-index:20}}
+.top{{background:var(--chrome);color:var(--chrome-fg);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:20}}
 @media(max-width:900px){{.top{{position:static}}html{{scroll-padding-top:12px}}}}.top .wrap{{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:64px}}.top img{{height:36px}}
-.top nav{{display:flex;gap:4px;flex-wrap:wrap}}.top nav a{{color:rgba(255,255,255,.82);text-decoration:none;font-size:13.5px;padding:10px 10px;border-radius:8px;min-height:44px;display:inline-flex;align-items:center}}.top nav a:hover{{color:#fff;background:rgba(255,255,255,.08)}}
+.top nav{{display:flex;gap:4px;flex-wrap:wrap}}.top nav a{{color:var(--chrome-muted);text-decoration:none;font-size:13.5px;padding:10px 10px;border-radius:8px;min-height:44px;display:inline-flex;align-items:center}}.top nav a:hover{{color:var(--chrome-fg);background:var(--chrome-hover)}}
 .wrap{{max-width:1040px;margin:0 auto;padding:0 24px}}
 section{{padding:64px 0;border-bottom:1px solid var(--border)}}
 .eyebrow{{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);font-weight:600;margin:0 0 14px}}
@@ -128,7 +146,7 @@ h3,.h3{{font-size:22px;margin:0 0 6px;letter-spacing:-.01em}}h4,.h4{{font-size:1
 .dir .n{{font-size:13px;color:var(--muted);letter-spacing:.08em}}.dir p{{margin:6px 0 0;color:var(--muted);font-size:14.5px}}
 .rec{{display:inline-block;margin:6px 0 0;font-size:13px;font-weight:600;letter-spacing:.04em;color:var(--ink);border:1px solid var(--accent);border-radius:999px;padding:2px 10px;vertical-align:middle}}
 .spec{{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;margin:0}}.spec dt{{font-size:13px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}}.spec dd{{margin:2px 0 0;font-weight:600;font-size:14.5px}}
-.btn{{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;background:var(--accent);color:#000545;border-radius:8px;text-decoration:none;font-weight:600;margin-top:auto}}
+.btn{{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;background:var(--accent);color:var(--btn-fg);border-radius:8px;text-decoration:none;font-weight:600;margin-top:auto}}
 .btn:hover{{filter:brightness(.95)}}
 .pick{{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}}
 .why{{padding:16px 0;border-top:1px solid var(--border)}}.why:last-of-type{{border-bottom:1px solid var(--border)}}.why p{{margin:4px 0 0;color:var(--muted);font-size:15px}}
@@ -169,13 +187,13 @@ select{{max-width:100%}}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
 <style>{css}</style></head><body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="top"><div class="wrap"><img src="{_e(b["logo"])}" alt="{_e(content["client"])}" height="36" width="99"><nav aria-label="Sections"><a href="#three">The three</a><a href="#pick">Our pick</a><a href="#compare">Compare</a><a href="#search">Search</a><a href="#heard">Fixed</a><a href="#confirm">To confirm</a><a href="#every">Every page</a><a href="#plan">The plan</a><a href="#turn">Your turn</a>{ds_link}</nav></div></header>
+<header class="top"><div class="wrap"><img src="{_e(b["logo"])}" alt="{_e(content["client"])}" height="36" width="99"><nav aria-label="Sections"><a href="#three">The three</a><a href="#pick">{"Our pick" if recommend else "How to choose"}</a><a href="#compare">Compare</a><a href="#search">Search</a><a href="#heard">Fixed</a><a href="#confirm">To confirm</a><a href="#every">Every page</a><a href="#plan">The plan</a><a href="#turn">Your turn</a>{ds_link}</nav></div></header>
 <main id="main">
 <section><div class="wrap"><p class="eyebrow">Quantum Business Solutions for {_e(content["client"])}</p><h1>Same site. Three ways to design it.</h1>
 <p class="lead">Each one is the whole site, not a home page and two mockups: every page is built and live in all three. The words are the same in all three and the composition is not, so the decision in front of you is about direction, not copy. Open any one, then use the switcher pinned to the bottom of the page to flip between all three without losing your place.</p></div></section>
 <section id="three"><div class="wrap"><p class="eyebrow">The three</p><div class="dirs">{"".join(specs)}</div></div></section>
-<section id="pick"><div class="wrap"><p class="eyebrow">Our recommendation</p><div class="pick"><div><h2>We would build {_e(pick_short)}</h2><p class="lead">{_e(roles.get(pick, ""))}</p>{reasons}<div class="change"><strong>The one thing we would change:</strong> {_e(pitch.get("pick_change", ""))}</div><p style="margin-top:22px"><a class="btn" href="{pick_slug}/index.html" target="_blank" rel="noopener">Open {_e(pick_short)}</a></p></div>
-<div><h3 class="h3" style="font-size:18px;margin-bottom:14px">If you would rather not</h3><div class="alts" style="grid-template-columns:1fr">{alts}</div></div></div></div></section>
+<section id="pick"><div class="wrap"><p class="eyebrow">{"Our recommendation" if recommend else "How to choose"}</p><div class="pick"><div><h2>{("We would build " + _e(pick_short)) if recommend else _e(pitch.get("choose_heading", "Three directions. Your call."))}</h2><p class="lead">{_e(roles.get(pick, "")) if recommend else _e(pitch.get("choose_intro", ""))}</p>{reasons}{('<div class="change"><strong>The one thing we would change:</strong> ' + _e(pitch.get("pick_change", "")) + '</div><p style="margin-top:22px"><a class="btn" href="' + pick_slug + '/index.html" target="_blank" rel="noopener">Open ' + _e(pick_short) + '</a></p>') if recommend else ""}</div>
+<div><h3 class="h3" style="font-size:18px;margin-bottom:14px">{"If you would rather not" if recommend else "The three, in one line each"}</h3><div class="alts" style="grid-template-columns:1fr">{alts}</div></div></div></div></section>
 <section id="compare"><div class="wrap"><p class="eyebrow">Side by side</p><h2>The same page, all three at once</h2><div class="cmp-bar"><label for="cmp">Pick a page</label><select id="cmp">{page_opts}</select></div><p class="cmp-note">Side by side needs a wider screen. On a phone, open each direction from the cards above.</p><div class="frames">{frames}</div></div></section>
 {search_html}
 <section id="heard"><div class="wrap"><div class="two"><div><p class="eyebrow">What we are treating as fixed</p><h2>What your site and brand profile already say</h2><p class="lead" style="margin-bottom:12px">{_e(heard_intro)}</p><ul>{heard}</ul></div><div><p class="eyebrow">What we found</p><h2>And what we would do about it</h2><ul>{found}</ul></div></div></div></section>
