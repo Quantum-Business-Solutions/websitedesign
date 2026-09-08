@@ -470,6 +470,6 @@ A new prospect goes from a name and a domain to a live hub in one sitting. Two s
 4. `python3 scripts/build.py <slug> --shots` (one minute). Content JSON, pages in three directions, hub, design system, search package, stale pages removed, the first direction scored, hub screenshots. Look at the screenshots.
 5. Create the GitHub repo, `git remote add origin`, then `python3 scripts/build.py <slug> --push`. Import the repo as a Vercel project in the dashboard (the API cannot link a repository). The hub is live at the base URL in `build.json`.
 
-Rebuilds are always `python3 scripts/build.py <slug> --push`. The long `preview.py` command is never retyped; `build.json` is the record. Kelly, Nexus and Image 2000 run this way now.
+Rebuilds are always `python3 scripts/build.py <slug> --push`. The long `preview.py` command is never retyped; `build.json` is the record. Kelly, Nexus and Image 2000 run this way now. `--push` fetches first and refuses to push when the remote is ahead, so two sessions cannot overwrite each other; when it refuses, reset the client repo to the remote, rebuild, push.
 
 Hub rule from the same day: the three directions are named twice on the hub, once as the cards (with the recommendation folded in below them when there is one) and once side by side. The every-page list is one row per page with three links. Nothing on the hub repeats a list.

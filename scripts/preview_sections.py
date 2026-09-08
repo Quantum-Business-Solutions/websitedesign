@@ -204,7 +204,7 @@ def _timeline(s, ctx):
     nav = f'<div class="pv-tl2-nav"><button type="button" data-d="-1" aria-label="Earlier">&larr;</button><button type="button" data-d="1" aria-label="Later">&rarr;</button></div>' if n > 3 else ""
     js = f"""<script>(function(){{var w=document.getElementById("{tid}-tl");if(!w)return;var r=w.querySelector('ol');w.querySelectorAll('.pv-tl2-nav button').forEach(function(b){{b.addEventListener('click',function(){{r.scrollBy({{left:(+b.getAttribute('data-d'))*Math.min(r.clientWidth*.8,720),behavior:'smooth'}})}})}});
 if('IntersectionObserver' in window){{new IntersectionObserver(function(es){{es.forEach(function(e){{if(e.isIntersecting)w.classList.add('in')}})}},{{threshold:.2}}).observe(w)}}else{{w.classList.add('in')}}}})();</script>"""
-    return f'{ctx["sec_open"](s)} <div class="q-container">{head}<div class="pv-tl2" id="{E(tid)}-tl" data-n="{n}">{nav}<div class="line" aria-hidden="true"><i></i></div><ol>{"".join(cards)}</ol></div></div>{js}</section>'
+    return f'{ctx["sec_open"](s)} <div class="q-container">{head}<div class="pv-tl2" id="{E(tid)}-tl" data-n="{n}">{nav}<div class="line" aria-hidden="true"><i></i></div><ol tabindex="0" aria-label="{E(s["heading"])}">{"".join(cards)}</ol></div></div>{js}</section>'
 
 
 def _tabs(s, ctx):

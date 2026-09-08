@@ -119,7 +119,13 @@ def client_tokens(theme: str, brand: dict) -> tuple[str, dict]:
     tok["--chrome-fg"] = reskin.best_on(chrome_bg)
     tok["--chrome-muted"] = "rgba(255,255,255,.72)" if tok["--chrome-fg"].lower().startswith("#f") else "rgba(0,0,0,.62)"
     tok["--chrome-border"] = "rgba(255,255,255,.12)" if tok["--chrome-fg"].lower().startswith("#f") else "rgba(0,0,0,.1)"
-    tok["--chrome-accent"] = brand["accent"].lower() if tok["--chrome-fg"].lower().startswith("#f") else ink
+    if tok["--chrome-fg"].lower().startswith("#f"):
+        ca = (brand.get("chrome_accent") or brand["accent"]).lower()
+        while reskin.contrast_ratio(ca, chrome_bg) < 4.5 and reskin.relative_luminance(ca) < 0.95:
+            ca = reskin.lighten(ca, 0.06)
+        tok["--chrome-accent"] = ca
+    else:
+        tok["--chrome-accent"] = ink
     return css, tok
 
 
@@ -263,9 +269,9 @@ html{scroll-padding-bottom:72px}
 @media(min-width:1200px){.pv-res.pv-res-5{grid-template-columns:repeat(5,1fr)!important}}
 @media(max-width:480px){.pv-grid-4{grid-template-columns:1fr!important}}
 .q-msub > summary{white-space:normal}
-.q-header .q-nav > a[aria-current],.q-header .q-nav-item > a[aria-current]{color:var(--q-gold)}
+.q-header .q-nav > a[aria-current],.q-header .q-nav-item > a[aria-current]{color:var(--chrome-accent)}
 .q-header .q-nav > a,.q-header .q-nav-item > a{position:relative}
-.q-header .q-nav > a[aria-current]::after,.q-header .q-nav-item > a[aria-current]::after{content:"";position:absolute;left:0;right:0;bottom:22px;height:2px;background:var(--q-gold);border-radius:2px}
+.q-header .q-nav > a[aria-current]::after,.q-header .q-nav-item > a[aria-current]::after{content:"";position:absolute;left:0;right:0;bottom:22px;height:2px;background:var(--chrome-accent);border-radius:2px}
 .q-subnav{padding:10px 0;border-radius:12px;box-shadow:0 24px 60px rgba(0,0,0,.22);z-index:80}
 .q-subnav a{padding:10px 22px;font-size:15px}
 .q-nav-item.pv-has-mega{position:static}
@@ -551,7 +557,7 @@ def r_partners(s, ctx):
         else:
             items.append(f"<span>{E(name)}</span>")
     track = "".join(items)
-    return f'<section class="pv-partners"><div class="q-container"><p class="pv-cap">{E(s.get("caption", "Partners"))}</p></div><div class="pv-logos" role="region" aria-label="Technology partners"><div class="pv-logos-track">{track}</div><div class="pv-logos-track" aria-hidden="true">{track}</div></div></section>'
+    return f'<section class="pv-partners"><div class="q-container"><p class="pv-cap">{E(s.get("caption", "Partners"))}</p></div><div class="pv-logos" role="region" aria-label="{E(s.get("caption", "Partners"))}"><div class="pv-logos-track">{track}</div><div class="pv-logos-track" aria-hidden="true">{track}</div></div></section>'
 
 
 def r_stats(s, ctx):
@@ -1019,6 +1025,8 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
     if any(x["type"] in ("leadform", "contact") for x in secs) and secs and secs[-1]["type"] == "cta":
         secs = secs[:-1]   # two "start with the assessment" blocks in a row read as a template bug
     body = "".join(RENDER[s["type"]](s, ctx) for s in secs)
+    if not b.get("email"):
+        body = re.sub(r'<a href="mailto:"[^>]*></a>', "", body)
     canonical = f"{base}/{dslug}/" if page["file"] == "index.html" else f"{base}/{dslug}/{page['file']}"
     og_img = f"{base}/assets/hero-og.jpg"
     p_title, p_desc, _notes = normalize_meta(page, content)

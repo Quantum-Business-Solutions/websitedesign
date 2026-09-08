@@ -511,3 +511,9 @@ Design system, generated (2026-09-08, late): `scripts/preview_design.py` now wri
 - The today-against-build box overflowed at 390px: the column header is hidden on phones and each cell labels itself.
 - axe on both hubs and both reports: no violations. Kelly build 93 average (54 of 55 A), Nexus 90 (19 of 21 A); the remaining points are Review schema, which waits for real reviews, and Service schema on company pages, which is correct.
 - Element screenshots of the 178-card audit section exceed the JPEG size limit; `_clip.mjs` takes a clipped region of a tall element instead.
+
+## Two sessions, one client repo (2026-09-08, late)
+
+- The Image 2000 repo was rebuilt by another session (accuracy pass, real logos and named clients, hero film, redirect map) while this one was working from an older clone. The push was refused, which is the only reason nothing was lost. `build.py --push` now fetches first and stops if the remote is ahead.
+- Resolution: their `brief/image-2000.content.py` became the base of `brands/image-2000.content.py` (their facts win), with this session's additions layered on: the schema block (cities, title city, area served, seven LocalBusiness records), a FAQ on every page, thirteen brand pages and a brands index, deeper industry pages. Their generator patch (hero video background, nav accent contrast, partners region label, empty mailto removal, hub button contrast, timeline focus) was ported into websitedesign main so the repo no longer needs a patch file. 43 pages, 91 average, 40 of 43 A.
+- Rule: one source of truth per client, `brands/<slug>.content.py` in websitedesign, and one command, `scripts/build.py <slug> --push`. A content file living in a client repo is a record, not a source.

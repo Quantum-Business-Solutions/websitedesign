@@ -44,6 +44,7 @@ def hub(content, themes, recommend, base, roles, standard, client_tokens, out_di
     ds_link = '<a href="design-system.html">Design system</a>' if out_dir and os.path.exists(os.path.join(out_dir, "design-system.html")) else ""
     b = content["brand"]
     pitch = content.get("pitch", {})
+    btn_fg = "#ffffff" if reskin.relative_luminance(b["accent"]) < 0.3 else "#000545"
     ink = reskin.darken_until(b["accent"], "#f6f7f6")
     n = len(themes)
 
@@ -82,8 +83,10 @@ def hub(content, themes, recommend, base, roles, standard, client_tokens, out_di
                      f'<div class="whys">{reasons}</div><div class="change"><strong>The one thing we would change:</strong> {_e(pitch.get("pick_change", ""))}</div>'
                      f'<p style="margin-top:22px"><a class="btn" href="{pick_slug}/index.html" target="_blank" rel="noopener">Open {_e(pick_short)}</a></p></div>')
     else:
-        three_head = f'<p class="eyebrow">Your call</p><h2>Three ways to design it. You choose.</h2><p class="lead">{_e(choice_intro)}</p>'
-        pick_html = ""
+        choice_intro = pitch.get("choose_intro", choice_intro)
+        three_head = f'<p class="eyebrow">Your call</p><h2>{_e(pitch.get("choose_heading", "Three ways to design it. You choose."))}</h2><p class="lead">{_e(choice_intro)}</p>'
+        creasons = "".join(f'<div class="why"><h3 class="h4">{_e(h)}</h3><p>{_e(t)}</p></div>' for h, t in pitch.get("choose_reasons", []))
+        pick_html = f'<div class="pickbox"><p class="eyebrow">How to choose</p><div class="whys">{creasons}</div></div>' if creasons else ""
     sr = pitch.get("search")
     search_html = ""
     if sr:
@@ -144,7 +147,7 @@ h3,.h3{{font-size:22px;margin:0 0 6px;letter-spacing:-.01em}}h4,.h4{{font-size:1
 .dir .n{{font-size:13px;color:var(--muted);letter-spacing:.08em}}.dir p{{margin:6px 0 0;color:var(--muted);font-size:14.5px}}
 .rec{{display:inline-block;margin:6px 0 0;font-size:13px;font-weight:600;letter-spacing:.04em;color:var(--ink);border:1px solid var(--accent);border-radius:999px;padding:2px 10px;vertical-align:middle}}
 .spec{{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;margin:0}}.spec dt{{font-size:13px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}}.spec dd{{margin:2px 0 0;font-weight:600;font-size:14.5px}}
-.btn{{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;background:var(--accent);color:#000545;border-radius:8px;text-decoration:none;font-weight:600;margin-top:auto}}
+.btn{{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;background:var(--accent);color:{btn_fg};border-radius:8px;text-decoration:none;font-weight:600;margin-top:auto}}
 .btn:hover{{filter:brightness(.95)}}
 .pick{{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}}
 .why{{padding:16px 0;border-top:1px solid var(--border)}}.why:last-of-type{{border-bottom:1px solid var(--border)}}.why p{{margin:4px 0 0;color:var(--muted);font-size:15px}}

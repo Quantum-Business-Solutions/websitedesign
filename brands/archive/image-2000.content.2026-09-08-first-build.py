@@ -1,0 +1,666 @@
+#!/usr/bin/env python3
+"""Authoring script for brands/image-2000.content.json.
+
+    python3 brands/image-2000.content.py
+
+Every fact is SOURCED from image-2000.com (scraped 8 September 2026), ENX Magazine's 2024 Elite Dealers profile,
+or Sharp and Kyocera award listings on image-2000.com. Items that are Image 2000's own claims are quoted as theirs.
+Nothing about response times or pricing is promised that the company has not published. No em dashes.
+"""
+import json
+import os
+
+OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "image-2000.content.json")
+CLIENT_REPO = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "image2000")
+PHONE, PHONE_HREF = "800-481-2250", "tel:8004812250"
+PORTAL = "https://i2kservice.com/einfo/Gateway/Login?ReturnUrl=%2feinfo"
+PAY = "https://pay.mysfsgateway.com/Image2000-0889"
+SCREEN = "https://secure.logmeinrescue.com/Customer/Code.aspx"
+
+# ------------------------------------------------------------------ sourced facts
+TESTIMONIALS = [
+    ["We have been with Image 2000 for over 14 years, and their level of service has always been nothing less than superb.", "Cathy V.", "Customer, image-2000.com"],
+    ["Give them an opportunity to earn your business. If you don't, you're doing yourself a disservice.", "Robert O.", "Customer, image-2000.com"],
+]
+# slug, city label, address 1, address 2, phone, phone href, region, lon, lat
+LOCATIONS = [
+    ["santa-clarita", "Santa Clarita", "26037 Huntington Lane", "Valencia, CA 91355", "818-781-2200", "tel:8187812200", "the Santa Clarita Valley and the San Fernando Valley", -118.57, 34.42],
+    ["los-angeles", "Los Angeles", "10350 Heritage Park Drive, Suite 203", "Los Angeles, CA 90670", "818-974-0237", "tel:8189740237", "Los Angeles and the Gateway Cities", -118.06, 33.93],
+    ["orange-county", "Orange County", "18022 Cowan Street, Suite 240", "Irvine, CA 92614", "714-543-5234", "tel:7145435234", "Orange County", -117.85, 33.69],
+    ["inland-empire", "Inland Empire", "1520 N. Mountain Avenue, Suite 203", "Ontario, CA 91762", "818-781-2200", "tel:8187812200", "the Inland Empire", -117.67, 34.07],
+    ["bakersfield", "Bakersfield", "6801 White Lane, Suite H-3", "Bakersfield, CA 93309", "661-835-4900", "tel:6618354900", "Bakersfield and Kern County", -119.10, 35.32],
+    ["fresno", "Fresno", "4910 E. Pontiac Way, Suite 102", "Fresno, CA 93726", "559-275-7476", "tel:5592757476", "Fresno and the Central Valley", -119.74, 36.80],
+    ["las-vegas", "Las Vegas", "3325 West Ali Baba Lane, Suite 606/606A", "Las Vegas, NV 89118", "702-513-3864", "tel:7025133864", "Las Vegas and Southern Nevada", -115.19, 36.07],
+]
+PARTNERS = ["Sharp", "Kyocera", "Toshiba", "Lexmark", "HP", "Brother", "KIP", "Canon", "Kodak Alaris", "RISO", "Formax", "FP Mailing", "Waterlogic", "Sharp NEC", "DocuWare", "Square 9", "PaperCut", "Intermedia"]
+AWARDS = [["Sharp", "Hyakuman Kai Elite Award", "2021 through 2024, five years running by ENX Magazine's count. Image 2000 is the 12th largest Sharp dealer in the country."],
+          ["Kyocera", "FY26 Platinum Partner", "Kyocera's top partner tier, following the Platinum Platter and FY Gold Partner recognitions."],
+          ["PROs Elite", "PROs Elite 100 certified every year since 2016", "Only one dealer in any market holds it. Service results are audited continuously by PROs, and certification is re-earned every year."],
+          ["ENX Magazine", "Elite Dealer, 2018 through 2024", "The magazine's annual list of the best-run dealers in the country."],
+          ["Copystar", "Elite Dealer and Excellence in Customer Service, 2019", "Two Copystar awards in one year."],
+          ["Better Business Bureau", "Accredited, A rating", "Accredited business, rated A."]]
+TEAM = [["Rich Campbell", "President and Owner", "Co-founder in 1992, with 25 years developing one of the largest equipment providers in Southern California."],
+        ["Joe Blatchford", "CEO and Owner", "Co-founder in 1992, with 31 years of professional experience in the industry."],
+        ["Jeff Rudisel", "Chief Operations Officer", "32 years on the technical, distribution and sales sides of the business."]]
+
+# The lines. slug, nav label, short, one-line, image, eyebrow, heading, subhead, benefits, included, faq
+SERVICES = [
+    ["office-technology", "Copiers and printers", "copiers and printers", "Sharp, Kyocera, Toshiba, Lexmark, HP and Brother devices from an 11-manufacturer catalogue, matched to how you actually print.", "assets/hero-1200.jpg", "Office technology",
+     "The right device, <em>not the one in stock</em>.", "Image 2000 carries eleven manufacturers on purpose, so the recommendation follows your volume, your workflow and your budget rather than a single badge. Installed, networked and trained by a local team, and serviced by technicians whose results are audited by PROs Elite every year.",
+     [["Eleven manufacturers", "Sharp, Kyocera, Toshiba, Lexmark, HP, Brother, KIP, Canon large format, Kodak Alaris, RISO and Formax."], ["Award-winning service", "Hyakuman Kai Elite from Sharp, Platinum Partner from Kyocera, PROs Elite every year since 2016."], ["Local dispatch, local parts", "Seven branches with local dispatch, spare parts and warehousing, which PROs Elite requires."], ["Uptime above 95 percent", "The PROs Elite standard that certified dealers deliver, audited continuously."], ["Lease, rent or buy", "Priced side by side with DLL, Wells Fargo, PEAC, First Citizens and U.S. Bank as leasing partners."], ["Trained on install day", "Networked and every user trained before the technician leaves."]],
+     ["Multifunction copiers, A4 and A3, color and mono", "Desktop and workgroup printers", "Production print and RISO high-speed inkjet", "Wide format from KIP, Canon and HP", "Document scanners from Kodak Alaris", "Sharp NEC displays", "Drivers and manuals for Sharp and Kyocera linked from the support page"],
+     [["Which brands do you carry?", "Sharp and Kyocera lead, with Toshiba, Lexmark, HP, Brother, KIP, Canon large format, Kodak Alaris, RISO and Formax. The recommendation follows the job, not the badge."], ["Can we start with one device?", "Yes. Many customers start with one multifunction device and add managed print when they see what it saves."], ["Do you service what you sell?", "Yes, from the nearest of seven branches, with results audited by PROs Elite."]]],
+    ["managed-print", "Managed print", "managed print", "We manage your in-house printing and your entire fleet of printers, so toner arrives before it runs out and the invoice stops surprising you.", "assets/mps-1-1200.jpg", "Managed print services",
+     "Your whole fleet, <em>watched and supplied</em>.", "Image 2000 manages in-house printing and the entire fleet of printers: monitoring, supplies, service and reporting under one agreement, so the cost per page is known and the devices stop being anyone's afternoon.",
+     [["One agreement", "Copiers and printers from any of eleven manufacturers under a single contract."], ["Supplies before they run out", "Devices report their own levels; toner ships on usage."], ["Cost per page you can see", "Mono and color, by device, instead of retail toner runs."], ["Service that is audited", "PROs Elite certified since 2016, results monitored by PIVOT."], ["Right-sized fleet", "Consolidate, upgrade or relocate on evidence."], ["Meter reads handled", "Submit online or let the devices report automatically."]],
+     ["Fleet assessment and cost-per-page baseline", "Automatic supplies replenishment", "Priority service under agreement", "Meter read collection", "Usage reporting", "PaperCut for print control and secure release"],
+     [["Do you manage printers you did not sell?", "Ask the branch. Many fleets are mixed and the assessment tells us what can be brought under agreement."], ["How do meter reads work?", "Submit them on the support page or let the device report them automatically under agreement."], ["What is PaperCut?", "Print management software Image 2000 resells: secure release, rules and reporting across the fleet."]]],
+    ["software-solutions", "Software and workflow", "software and workflow automation", "DocuWare, Square 9, PaperCut and FormedAI: capture, content management, web forms and workflow, on premise or in the cloud.", "assets/doc-mgmt-1200.jpg", "Software solutions",
+     "The paperless office, <em>actually delivered</em>.", "Image 2000 has become a creative force in premise and cloud content management. With Square 9 Softworks, DocuWare and FormedAI, it delivers capture automation, business process automation and digital web forms that let organizations of any size embrace a paperless office.",
+     [["Capture automation", "Scans, email, fax, digital forms and raw data captured, classified, validated and put into motion."], ["Advanced data extraction", "OCR reads predefined index fields by document type and location."], ["Enterprise content management", "Store, manage and share every kind of content centrally, in the cloud or on premise."], ["Digital web forms", "Drag-and-drop forms with rules and logic, gathering only the data you need."], ["Workflow automation", "Customized document routes with approvals and automatic notifications."], ["Integrations", "QuickBooks, Dropbox, Salesforce, Dynamics and your MFP."]],
+     ["DocuWare and Square 9 content management", "FormedAI digital forms", "PaperCut print management", "AP automation", "Granular, user-based security with full audit visibility", "Scan-to-workflow from every multifunction device"],
+     [["Cloud or on premise?", "Either. The partners Image 2000 resells run both ways, and the choice follows your IT and compliance needs."], ["Where do we start?", "Accounts payable is the usual first workflow: invoices captured, indexed, routed for approval and filed."], ["Does it work with our accounting system?", "Integrations include QuickBooks, Dynamics, Salesforce and Dropbox; ask about yours."]]],
+    ["managed-it", "Managed IT", "managed IT", "24/7 monitoring, patching, backup and security for a flat monthly fee, delivered with The Core Group.", "assets/it-1200.jpg", "Managed IT",
+     "Don't leave it <em>to chance</em>.", "Image 2000's fully managed IT suite is designed for 24/7 peace of mind: systems monitored, patches applied, viruses blocked, backups verified. The little problems are caught and fixed before they become big ones, often before you know there was an issue. Delivered in partnership with The Core Group.",
+     [["Managed IT services", "Certified technicians design, maintain and monitor the whole infrastructure for a flat monthly fee."], ["Managed security", "Enterprise-level protection for small business budgets, for a predictable monthly fee."], ["Business continuity", "Backups encrypted and stored in multiple locations, with Remote Server Failover snapshots."], ["Cloud solutions", "Work from anywhere, any time, on any internet-ready device."], ["IT consulting", "An IT roadmap and recommendations built for your business, not one size fits all."], ["24/7 peace of mind", "Monitoring around the clock."]],
+     ["Network infrastructure: servers, LAN and WAN, wireless", "Virtualization and storage", "Email and collaboration: Exchange, SharePoint", "Network assessments: performance, security, disaster recovery", "Risk mitigation: backup, failover, anti-malware, firewall, web filtering", "Strategic consulting: IT budgeting, capacity planning, compliance"],
+     [["Who delivers the IT?", "Image 2000 partners with The Core Group, whose services are offered under the Image 2000 agreement."], ["Is it a flat fee?", "Yes. Managed IT, managed security and business continuity are each priced as a flat monthly fee."], ["Can we get a CIO without hiring one?", "Yes. Chief information officer consulting covers operations, risk, policy and strategy."]]],
+    ["ucaas", "Phones and UCaaS", "cloud phones and UCaaS", "Elevate: phone, video, chat and file sharing in one cloud service, with 99.999 percent reliability and no phone system hardware to buy.", "assets/hero-plate-1200.jpg", "UCaaS and VoIP",
+     "One communication experience, <em>in the office and on the road</em>.", "A consistent communication experience for every employee, in the office and mobile: phone service, video conferencing, chat and file management through Image 2000's Elevate UCaaS, with a desktop app, a mobile app and pre-configured desk phones that work wherever they are plugged in.",
+     [["High reliability", "99.999 percent reliability, so you are never out of touch."], ["Lower costs", "No phone system hardware to buy, install, manage, upgrade or replace."], ["Increased flexibility", "Collaborate from anywhere, on any device."], ["Simplified management", "Elevate scales with the business."], ["Business continuity", "Connected even when the power goes out."], ["Teams built in", "Elevate for the phone system, Teams for collaboration, one sign-on with Microsoft 365."]],
+     ["Desktop app for Mac and PC", "Mobile app for Apple and Android", "Pre-configured desk phones", "Integrated SMS and advanced call routing", "Contact Center: queues, web chat, email and SMS in one application, real-time dashboards, post-call surveys", "Industry guides for government, education, healthcare and religious organizations"],
+     [["Do we keep our numbers?", "Yes, numbers port to Elevate."], ["Does it work with Teams?", "Yes. Elevate handles the phone system, Teams the collaboration, with single sign-on through Microsoft 365."], ["What about a call center?", "Contact Center adds queues, skills, multi-channel handling and reporting inside Elevate."]]],
+    ["mailing", "Mailing", "mailing equipment", "FP Mailing postage meters and Formax folder inserters, the fastest-growing line in the business.", "assets/mailroom-1200.jpg", "Mailing solutions",
+     "Postage at commercial rates, <em>folded and stuffed by machine</em>.", "FP Mailing postage meters and Formax folder inserters and mailroom equipment, sold, installed and serviced by the same team as the copiers. ENX Magazine named mailing equipment one of Image 2000's fastest-growing segments.",
+     [["Commercial postage rates", "Metered mail costs less than stamps."], ["Folder inserters", "Fold, insert and seal by machine instead of by hand."], ["Postage tracked", "By department, by mailing."], ["One vendor", "The mailroom and the copier room on one agreement."], ["Serviced locally", "From the nearest of seven branches."], ["Supplies", "Ink and labels ordered from the same support page."]],
+     ["FP Mailing postage meters", "Formax folder inserters, letter openers and pressure sealers", "Installation and training", "Supplies and service", "Rate changes handled"],
+     [["Why a meter?", "Commercial postage rates and a record of what was spent where, instead of trips to the post office."], ["Can you handle a large mailing?", "Formax folder inserters fold, insert and seal at machine speed. Tell us the volume."]]],
+    ["water", "Bottleless water", "bottleless water", "Waterlogic bottleless coolers for clean, great-tasting water, ice and sparkling water, at a fraction of the cost of bottled delivery. Free trial.", "assets/breakroom-1200.jpg", "Waterlogic bottleless water",
+     "Better water, <em>no bottles</em>.", "Switch to bottleless drinking water for clean, great-tasting water, ice and sparkling water at a fraction of the cost of bottled water and delivery services. Image 2000 will install a system at no cost and no obligation so you can see why it is popular.",
+     [["Free trial", "Installed at no cost and no obligation."], ["Water, ice and sparkling", "One unit, three kinds of water."], ["A fraction of the cost", "Compared with bottled water and delivery."], ["Healthier for everyone", "Employees, visitors, patients and students."], ["Less hassle", "No jugs, no deliveries, no storage."], ["Serviced with the copier", "One visit, one vendor."]],
+     ["Waterlogic bottleless coolers", "Filtration and sanitization", "Installation and service", "Free trial offer"],
+     [["Is the trial really free?", "Yes. A system is installed at no cost and no obligation."], ["Who services it?", "Image 2000, on the same visits as the office equipment."]]],
+    ["wide-format", "Wide format and production", "wide format and production print", "KIP, Canon and HP wide format for plans and posters, RISO and Sharp production systems for volume.", "assets/wide-format-1200.jpg", "Wide format and production print",
+     "Plans, posters and print runs, <em>in house</em>.", "Wide format printers and scanners from KIP, Canon and HP for architects, engineers, schools and print rooms, and production print from RISO and Sharp for the jobs you have been sending out.",
+     [["KIP, Canon and HP wide format", "Technical and graphics printing."], ["RISO high-speed inkjet", "High volume at low cost per page."], ["Sharp production", "Color consistency and inline finishing."], ["Stop outsourcing", "Plan sets and mailers printed the same day."], ["Trained operators", "Included on install."], ["Serviced locally", "From the nearest branch."]],
+     ["Wide format printers and scanners", "Production print systems", "Finishing", "Media and ink supplies", "Operator training"],
+     [["Who buys wide format?", "Architects, engineers, contractors, school districts, retailers and churches."], ["Is production print for us?", "If you send out mailers, booklets or forms every month, the numbers usually say yes. Ask for the comparison."]]],
+]
+SERVICE_SLUGS = [s[0] for s in SERVICES]
+BRANDS = [  # slug, name, group, one-line, body, catalogue label
+    ["sharp", "Sharp", "Copiers and printers", "Hyakuman Kai Elite dealer, 2021 through 2024, and the 12th largest Sharp dealer in the country.", "Sharp multifunction copiers, printers and production systems, plus Sharp NEC displays. Image 2000 has been recognized by Sharp with the Hyakuman Kai Elite Award four years running and is the 12th largest Sharp dealer in the United States, so parts, training and escalation paths are deep.", "Sharp catalogue"],
+    ["kyocera", "Kyocera", "Copiers and printers", "FY26 Platinum Partner. ECOSYS and TASKalfa devices with long-life components.", "Kyocera ECOSYS printers and TASKalfa multifunction systems, known for long-life drums and low running costs. Image 2000 is a Kyocera FY26 Platinum Partner, with Platinum Platter and Gold Partner recognitions before it.", "Kyocera catalogue"],
+    ["toshiba", "Toshiba", "Copiers and printers", "e-STUDIO multifunction systems.", "Toshiba e-STUDIO color and mono multifunction systems for workgroups and departments.", "Toshiba catalogue"],
+    ["lexmark", "Lexmark", "Copiers and printers", "A4 printers and multifunction devices for offices and branches.", "Lexmark printers and A4 multifunction devices for offices, branches and retail counters.", "Lexmark catalogue"],
+    ["hp", "HP", "Copiers and printers", "LaserJet, PageWide and DesignJet.", "HP LaserJet and PageWide printers and multifunction devices, ScanJet scanners and DesignJet wide format.", "HP catalogue"],
+    ["brother", "Brother", "Copiers and printers", "Desktop printers and compact multifunction devices.", "Brother desktop printers and compact multifunction devices for desks and small teams.", "Brother catalogue"],
+    ["kip", "KIP", "Wide format", "Wide format print systems for technical documents.", "KIP wide format systems for plan sets and technical documents in architecture, engineering and construction.", "KIP catalogue"],
+    ["canon-large-format", "Canon large format", "Wide format", "imagePROGRAF large format printers.", "Canon imagePROGRAF large format printers for technical and graphics output.", "Canon large format catalogue"],
+    ["kodak-alaris", "Kodak Alaris", "Scanning", "Document scanners for capture at volume.", "Kodak Alaris document scanners, from desktop to production capture, feeding DocuWare and Square 9 workflows.", "Kodak Alaris catalogue"],
+    ["riso", "RISO", "Production", "High-speed inkjet for volume at low cost per page.", "RISO ComColor high-speed inkjet systems for forms, mailers and volume printing at a low cost per page.", "RISO catalogue"],
+    ["formax", "Formax", "Mailing", "Folder inserters and mailroom equipment.", "Formax folder inserters, letter openers, pressure sealers and mailroom equipment.", "Formax catalogue"],
+    ["waterlogic", "Waterlogic", "Breakroom", "Bottleless water coolers with a free trial.", "Waterlogic bottleless water, ice and sparkling water dispensers, installed free on trial.", "Waterlogic catalogue"],
+    ["sharp-nec", "Sharp NEC displays", "Displays", "Commercial displays for lobbies, classrooms and meeting rooms.", "Sharp NEC commercial displays and interactive boards for lobbies, classrooms, meeting rooms and signage.", "Sharp NEC catalogue"],
+]
+BRAND_GROUPS = ["Copiers and printers", "Wide format", "Scanning", "Production", "Mailing", "Breakroom", "Displays"]
+INDUSTRIES = [  # slug, name, image, one-line, body, bullets, faq
+    ["education", "Education", "assets/education-1200.jpg", "School districts that need software the last vendor could not deliver.",
+     "Image 2000 spent a recent summer installing for several school districts, including one large district with specific demands for software nobody had used before. Working with Sharp, Image 2000 built a solution that met every requirement. Print control with PaperCut, secure release, Sharp NEC classroom displays and Elevate phones for the front office.",
+     ["Fleet standardization across campuses", "PaperCut print control and student print quotas", "Sharp NEC interactive displays", "UCaaS for district offices, with an education guide", "Cooperative purchasing support"],
+     [["Do you work with purchasing cooperatives?", "Yes. Image 2000 holds public agency agreements, including a blanket order agreement for Sharp copiers with the City of Santa Ana."], ["Can students release prints securely?", "Yes, with PaperCut secure release and quotas."]]],
+    ["government", "Government", "assets/hero-plate-1200.jpg", "Public agencies buying on contract, with the paperwork done right.",
+     "Image 2000 holds public agency agreements, including a blanket order agreement for the purchase of Sharp copiers with the City of Santa Ana, and provides UCaaS guidance written for government. Multifunction devices, secure print, document management for records, and phones for departments.",
+     ["Contract and blanket order purchasing", "Secure print and records management", "DocuWare for public records workflows", "Elevate UCaaS with a government guide", "Local service from seven branches"],
+     [["Are you on a cooperative contract?", "Ask the branch for current agreements. The Santa Ana blanket order is public record."], ["Can you handle records retention?", "DocuWare and Square 9 handle retention rules and audit trails."]]],
+    ["healthcare", "Healthcare", "assets/doc-mgmt-1200.jpg", "Patient records, prescriptions and phones that cannot go down.",
+     "Clinics and practices run on documents and calls. Secure release at the device, scan to the patient record, DocuWare for intake forms and referrals, Elevate phones with a healthcare guide, and bottleless water in the waiting room.",
+     ["Secure print release", "Scan to record and intake automation", "HIPAA-aware document workflows", "UCaaS with a healthcare guide", "Waterlogic for waiting rooms"],
+     [["Do you understand HIPAA?", "The software partners Image 2000 resells are built for it, and the phones come with a healthcare guide. Ask for specifics for your practice."]]],
+    ["legal", "Legal", "assets/mailroom-1200.jpg", "Every page billed, filed and found.",
+     "Firms print, scan and mail more than almost any other business. Cost recovery by matter with PaperCut, scan to matter with DocuWare, high-volume mailing with Formax and FP Mailing, and production print for filings.",
+     ["Cost recovery by client and matter", "Scan to matter and retention", "Folder inserters and postage meters", "Production print for filings", "Confidential release at the device"],
+     [["Can you bill pages to a matter?", "Yes, with PaperCut account codes."], ["Do you handle our mailroom?", "Formax folder inserters and FP Mailing meters, serviced with the copiers."]]],
+    ["faith-based", "Churches and nonprofits", "assets/production-1200.jpg", "Bulletins, mailers and a phone that reaches the office.",
+     "Churches, ministries and nonprofits print bulletins and newsletters, mail appeals and need a phone system volunteers can use. RISO and production print bring the bulletin in house, Formax handles the mailings, Elevate has a guide for religious establishments, and Image 2000 gives to a community charity every month.",
+     ["Bulletins and newsletters in house", "Mailing equipment for appeals", "UCaaS with a guide for religious establishments", "Nonprofit-friendly leasing"],
+     [["We print thousands of bulletins a month.", "RISO high-speed inkjet exists for exactly that, at a cost per page that beats the copier."]]],
+]
+
+
+def desc(text, n=155):
+    if len(text) <= n:
+        return text
+    cut = text[:n]
+    return cut[:cut.rfind(" ")].rstrip(",;:") + "."
+
+
+def brief(text, n=150):
+    if len(text) <= n:
+        return text
+    cut = text[:n]
+    i = max(cut.rfind(". "), cut.rfind("! "), cut.rfind("? "))
+    return cut[:i + 1] if i > 60 else cut[:cut.rfind(" ")].rstrip(",;:") + "."
+
+
+LEADFORM = {"type": "leadform", "alt": True, "id": "quote", "heading": "Request a quote or an assessment", "body": "Tell us what you print, mail, store and say on the phone. The nearest branch replies with a quote or a time to walk your office.", "submit": "Request a quote", "note": "A person from your nearest branch replies, not an autoresponder."}
+
+
+def _flow(fid, eyebrow, heading, intro, steps, receive_label="What you receive"):
+    return {"type": "flow", "id": fid, "alt": True, "eyebrow": eyebrow, "heading": heading, "intro": intro, "receive_label": receive_label,
+            "steps": [{"label": a, "when": b, "summary": c, "title": d, "body": e, "receive": f} for a, b, c, d, e, f in steps]}
+
+
+def _ba(bid, heading, b_title, b_body, b_items, a_title, a_body, a_items, b_eyebrow="Today", a_eyebrow="With Image 2000"):
+    return {"type": "beforeafter", "id": bid, "eyebrow": "Before and after", "heading": heading,
+            "before": {"eyebrow": b_eyebrow, "title": b_title, "body": b_body, "items": b_items},
+            "after": {"eyebrow": a_eyebrow, "title": a_title, "body": a_body, "items": a_items}}
+
+
+SERVICE_MODULES = {
+    "office-technology": [
+        _ba("ba", "Drag to compare a single-brand dealer with an eleven-manufacturer one",
+            "One badge, whatever the job", "The dealer sells what it carries, so every office gets the same answer.",
+            ["One manufacturer, one price list", "The device that is in stock", "Service from the nearest big city", "A quote, then a lease, then silence"],
+            "The right device for the job", "Eleven manufacturers, so the recommendation follows your work.",
+            ["Sharp, Kyocera, Toshiba, Lexmark, HP, Brother and more", "Matched to volume, workflow and budget", "Local dispatch, parts and warehousing at seven branches", "Service audited by PROs Elite every year since 2016"]),
+        _flow("flow", "How a device is placed", "Assess, recommend, install, support", "Click a step.",
+              [["Assess", "Week 1", "What you print and how.", "A look at what you print and how", "Volume, color, scanning, finishing and the workflow around the device, with the people who use it.", ["Device counts and volumes", "Workflow notes", "A right-sized recommendation"]],
+               ["Recommend", "Week 1 to 2", "Two or three options, priced three ways.", "Options from eleven manufacturers", "Two or three devices that fit, priced as lease, rental and purchase with Image 2000's leasing partners.", ["Side-by-side options", "Lease, rent and buy pricing", "Service terms in writing"]],
+               ["Install", "A date you choose", "Networked and trained.", "Delivered, networked, trained", "On the network the day it arrives, every user trained, drivers installed, scan destinations set.", ["Installed and networked", "Users trained", "Supplies on hand"]],
+               ["Support", "Ongoing", "Local, audited.", "Serviced from the nearest branch", "Local dispatch and parts, results audited by PROs Elite, uptime above 95 percent as the certified standard.", ["Local technicians", "Audited service results", "Supplies and meter reads online"]]])],
+    "managed-print": [
+        _ba("ba", "Drag to compare buying toner with managed print",
+            "Toner when the light comes on", "Someone orders retail and nobody knows what a page costs.",
+            ["Retail toner runs", "No cost per page", "Service from whoever answers", "Devices nobody owns"],
+            "A fleet that reports on itself", "Supplies on usage, one agreement, one number to call.",
+            ["Toner ships before it runs out", "Cost per page by device", "Priority service under agreement", "Meter reads automatic"]),
+        _flow("flow", "How managed print starts", "Baseline, plan, switch on, report", "Click a step.",
+              [["Baseline", "Week 1", "Every device, every page.", "A baseline of the fleet", "Every device counted and metered, cost per page by device.", ["Fleet inventory", "Cost per page baseline", "Consolidation candidates"]],
+               ["Plan", "Week 2", "Right-sized.", "A right-sized plan", "Consolidate, upgrade or relocate, priced under one agreement.", ["Device plan", "One monthly number", "Service terms"]],
+               ["Switch on", "Install", "Monitoring live.", "Monitoring and supplies switched on", "Devices report levels and faults; toner ships on usage.", ["Monitoring live", "Automatic supplies", "PaperCut where wanted"]],
+               ["Report", "Ongoing", "What each device did.", "Usage and service reporting", "What each device printed, what it cost and what was fixed.", ["Usage reports", "Service history", "Plan adjustments"]]])],
+    "software-solutions": [
+        _ba("ba", "Drag to compare a filing cabinet with a workflow",
+            "Paper in, paper filed, paper lost", "Invoices walk between desks and approvals live in email.",
+            ["Invoices keyed by hand", "Approvals by email", "Filing cabinets and off-site boxes", "Nobody can find the signed copy"],
+            "Captured, indexed, routed, found", "DocuWare, Square 9 and FormedAI, from your MFP.",
+            ["Captured at the device or from email", "Indexed by OCR", "Routed for approval with reminders", "Found in seconds, with an audit trail"]),
+        _flow("flow", "How a workflow goes live", "Map, capture, route, integrate", "Click a step.",
+              [["Map", "Week 1", "One process first.", "Map one process", "Usually accounts payable: where documents arrive, who approves, where they end up.", ["Process map", "Index fields", "Success measure"]],
+               ["Capture", "Week 2", "Scan, email, forms.", "Capture configured", "Scan-to-workflow at the MFP, email capture, digital forms with FormedAI.", ["Capture rules", "OCR templates", "Forms"]],
+               ["Route", "Week 3", "Approvals with reminders.", "Routing and approvals", "Document routes, approval steps and automatic notifications.", ["Workflow live", "Notifications", "Audit trail"]],
+               ["Integrate", "Week 4", "Accounting and CRM.", "Integrated with your systems", "QuickBooks, Dynamics, Salesforce, Dropbox and the rest.", ["Integrations", "Training", "Next process"]]])],
+    "managed-it": [
+        _ba("ba", "Drag to compare break-fix IT with managed IT",
+            "Call when it breaks", "Every problem is a surprise and every invoice is different.",
+            ["Backups nobody checks", "Patches when someone remembers", "Security tools underspent", "A different invoice every month"],
+            "Watched, patched, backed up", "24/7 monitoring for a flat monthly fee, with The Core Group.",
+            ["Monitored around the clock", "Patched and protected", "Backups encrypted in multiple locations", "One flat monthly fee"]),
+        _flow("flow", "How managed IT starts", "Assess, plan, onboard, monitor", "Click a step.",
+              [["Assess", "Week 1", "Network, security, recovery.", "A network assessment", "Performance, security and disaster recovery analysis.", ["Assessment report", "Risk list", "Roadmap"]],
+               ["Plan", "Week 2", "Flat monthly fee.", "A plan and a flat fee", "Managed IT, managed security and business continuity, each a predictable monthly fee.", ["Scope", "Fee", "Continuity plan"]],
+               ["Onboard", "Weeks 3 to 4", "Agents, backups, policies.", "Onboarding", "Monitoring agents, backups, encryption and policies in place.", ["Monitoring live", "Backups verified", "Policies"]],
+               ["Monitor", "Ongoing", "24/7.", "Monitored 24/7", "Problems caught and fixed before they grow, often before you know.", ["24/7 monitoring", "Patching", "Reporting"]]])],
+    "ucaas": [
+        _ba("ba", "Drag to compare a phone closet with Elevate",
+            "A phone system in a closet", "Hardware to buy, upgrade and replace, and it stops when the power does.",
+            ["Hardware to buy and replace", "Desk-bound extensions", "Separate video and chat tools", "Down when the power is"],
+            "One cloud service, every device", "Phone, video, chat and files with 99.999 percent reliability.",
+            ["No hardware to buy", "Desktop, mobile and desk phone", "Teams integrated", "Connected when the power is out"]),
+        _flow("flow", "How phones move to Elevate", "Assess, design, port, train", "Click a step.",
+              [["Assess", "Week 1", "Users, sites, call flows.", "A phone assessment", "Users, locations, call flows and what the current system costs.", ["User count", "Call flow map", "Cost comparison"]],
+               ["Design", "Week 2", "Routing, queues, devices.", "Design", "Call routing, auto attendants, Contact Center queues if wanted, device choices.", ["Design", "Device list", "Monthly price"]],
+               ["Port", "Cutover day", "Numbers move.", "Numbers ported, phones live", "Numbers port, pre-configured phones plug in, apps installed.", ["Numbers live", "Phones live", "Apps installed"]],
+               ["Train", "Cutover week", "Everyone, ten minutes.", "Training", "Ten minutes per person on desk phone, desktop and mobile app.", ["Trained users", "Admin portal", "Support line"]]])],
+    "mailing": [
+        _ba("ba", "Drag to compare stamps with a metered mailroom",
+            "Stamps and the post office", "Full retail postage and a trip every time.",
+            ["Retail postage", "Trips to the post office", "Hand folding and stuffing", "No record of spend"],
+            "Metered, folded, tracked", "FP Mailing meters and Formax inserters.",
+            ["Commercial postage rates", "Printed at your desk", "Folded and sealed by machine", "Tracked by department"])],
+    "water": [
+        _flow("flow", "How the free trial works", "Ask, install, taste, decide", "Click a step.",
+              [["Ask", "Day 1", "One form.", "Request a free trial", "Tell us the location and how many people drink there.", ["A date", "A recommended unit", "No obligation"]],
+               ["Install", "Trial day", "No cost.", "Installed at no cost", "Connected to your water line and sanitized.", ["Installed unit", "Filtration in place", "Nothing owed"]],
+               ["Taste", "The trial", "Water, ice, sparkling.", "Try it", "Clean, great-tasting water, ice and sparkling water.", ["A quieter break room", "No jugs", "Staff opinions"]],
+               ["Decide", "End of trial", "Keep it or not.", "Decide", "Keep it on a monthly plan or have it removed. Either way, no obligation.", ["A monthly price", "Service with the copier", "Or nothing"]]])],
+    "wide-format": [
+        _ba("ba", "Drag to compare outsourcing with printing in house",
+            "Sent out, waited for", "Plan sets and mailers on someone else's schedule.",
+            ["Courier runs to the print shop", "Rush charges", "Days, not hours", "Color that changes batch to batch"],
+            "Printed here, today", "KIP, Canon and HP wide format, RISO and Sharp production.",
+            ["Plan sets in minutes", "Mailers and booklets in house", "Consistent color", "Operators trained by Image 2000"])],
+}
+
+
+def service_page(slug, navlabel, short, one, image, eyebrow, heading, subhead, benefits, included, faq):
+    secs = [
+        {"type": "hero", "layout": "split", "eyebrow": eyebrow, "heading": heading, "subhead": subhead,
+         "primary": {"label": "Request a quote", "href": "contact.html"}, "secondary": {"label": "Request service", "href": "customer-support.html#request"},
+         "image": image, "image_alt": navlabel, "image_w": 1200, "image_h": 800},
+        {"type": "cards", "alt": True, "eyebrow": "What changes", "heading": f"What changes with Image 2000 {short}", "items": benefits},
+    ]
+    secs += SERVICE_MODULES.get(slug, [])
+    secs.append({"type": "detail", "eyebrow": "What is included", "heading": "What you get", "body": "Sold, installed and serviced by the same local team, with results audited by PROs Elite every year since 2016.", "bullets": included, "image": image, "flip": True})
+    secs.append({"type": "testimonials", "alt": True, "heading": "What customers say", "items": [t[:3] for t in TESTIMONIALS]})
+    secs.append({"type": "faq", "heading": f"Questions about {navlabel.lower()}", "items": faq})
+    secs.append(LEADFORM)
+    return {"file": f"services/{slug}.html", "title": f"{navlabel} | Image 2000, Southern California and Las Vegas", "description": desc(f"{one} {subhead}"),
+            "crumbs": [["Home", "index.html"], ["Services", "services.html"], [navlabel, f"services/{slug}.html"]], "sections": secs}
+
+
+def brand_page(slug, name, group, one, body, label):
+    img = {"Wide format": "assets/wide-format-1200.jpg", "Scanning": "assets/doc-mgmt-1200.jpg", "Production": "assets/production-1200.jpg", "Mailing": "assets/mailroom-1200.jpg", "Breakroom": "assets/breakroom-1200.jpg", "Displays": "assets/hero-plate-1200.jpg"}.get(group, "assets/printer-1200.jpg")
+    return {"file": f"brands/{slug}.html", "title": f"{name} from Image 2000 | {group}", "description": desc(f"{one} {body}"),
+            "crumbs": [["Home", "index.html"], ["Brands", "brands.html"], [name, f"brands/{slug}.html"]],
+            "sections": [
+                {"type": "hero", "layout": "split", "eyebrow": f"Brands: {name}", "heading": f"{name}, <em>sold and serviced locally</em>.", "subhead": body, "primary": {"label": "Request a quote", "href": "contact.html"}, "secondary": {"label": label, "href": "https://www.image-2000.com/product-catalogs"}, "image": img, "image_alt": name, "image_w": 1200, "image_h": 800},
+                {"type": "cards", "alt": True, "heading": f"Why buy {name} from Image 2000", "items": [["Recommended, not pushed", "Eleven manufacturers means the badge is chosen for the job."], ["Local service", "Seven branches with local dispatch, parts and warehousing."], ["Audited results", "PROs Elite certified every year since 2016."], ["Lease, rent or buy", "Priced side by side with five leasing partners."]]},
+                {"type": "faq", "heading": f"Questions about {name}", "items": [
+                    [f"Which {name} equipment does Image 2000 place?", f"{body} The specialist matches the model to the volume, finishing and software the office runs."],
+                    [f"Where can I see {name} equipment?", "At any of the seven branches: Santa Clarita, Los Angeles, Orange County, the Inland Empire, Bakersfield, Fresno and Las Vegas. The nearest branch can also demonstrate on site."],
+                    [f"How is {name} equipment priced?", "Lease, rent or buy, priced side by side with five leasing partners, with supplies and service on one agreement if the device comes under managed print."],
+                    ["Where are the drivers?", "Sharp and Kyocera downloads are linked from the customer support page; ask the branch for others."],
+                    [f"Does Image 2000 stock {name} supplies and parts?", f"Yes. Toner and parts for the {name} devices it places are warehoused at the branches, and supply orders and meter reads go through the customer support page or the branch."],
+                    ["Can it join managed print?", "Yes. Any device Image 2000 places can come under one agreement, with supplies, service and reporting on one invoice."]]},
+                LEADFORM]}
+
+
+def industry_page(slug, name, image, one, body, bullets, faq):
+    return {"file": f"industries/{slug}.html", "title": f"Office technology for {name.lower()} | Image 2000", "description": desc(f"{one} {body}"),
+            "crumbs": [["Home", "index.html"], ["Industries", "industries.html"], [name, f"industries/{slug}.html"]],
+            "sections": [
+                {"type": "hero", "layout": "centered", "eyebrow": f"Industries: {name}", "heading": one, "subhead": brief(body, 220), "primary": {"label": "Request a quote", "href": "contact.html"}},
+                {"type": "detail", "eyebrow": "What Image 2000 sets up", "heading": f"Built for how {name.lower()} works", "body": body, "bullets": bullets, "image": image},
+                {"type": "testimonials", "alt": True, "heading": "What customers say", "items": [t[:3] for t in TESTIMONIALS]},
+                {"type": "faq", "heading": f"Questions from {name.lower()}", "items": list(faq) + [[f"Where does Image 2000 serve {name.lower()} customers?", "From seven branches in Santa Clarita, Los Angeles, Orange County, the Inland Empire, Bakersfield, Fresno and Las Vegas, with technicians dispatched from the nearest one and one agreement covering every site."]]},
+                LEADFORM]}
+
+
+def location_page(slug, city, a1, a2, phone, href, region, lon, lat):
+    return {"file": f"locations/{slug}.html", "title": f"Image 2000 {city} | Copiers, printers and service in {region}", "description": desc(f"Image 2000's {city} branch at {a1}, {a2}. {phone}. Copiers, printers, managed print, software, IT, phones, mailing and water for {region}, serviced locally."),
+            "crumbs": [["Home", "index.html"], ["Locations", "locations.html"], [city, f"locations/{slug}.html"]],
+            "sections": [
+                {"type": "hero", "layout": "centered", "eyebrow": f"Image 2000 {city}", "heading": f"Office technology for {region}, <em>serviced from {city}</em>.", "subhead": f"{a1}, {a2}. Local dispatch, local parts, local people. Call {phone} or 800-481-2250, which reaches every branch.", "primary": {"label": "Request a quote", "href": "contact.html"}, "secondary": {"label": f"Call {phone}", "href": href}},
+                {"type": "locations", "detailed": True, "heading": "The branch", "intro": "Monday to Friday, 8am to 5pm.", "items": [[city, a1, a2, phone, href]]},
+                {"type": "map", "heading": f"{city} and the rest of the West", "intro": "Seven branches across California and Nevada. Technicians are dispatched from the nearest.", "region": "west", "ring": 30,
+                 "items": [{"name": L[1], "lon": L[7], "lat": L[8], "href": f"locations/{L[0]}.html", "sub": L[2], "hq": L[0] == "santa-clarita", "label_dx": LABEL_DX.get(L[0], 10), "label_dy": LABEL_DY.get(L[0], 14)} for L in LOCATIONS]},
+                {"type": "services", "heading": f"What the {city} branch does", "intro": "Every line, sold and serviced locally.", "items": [[s[1], s[3], f"services/{s[0]}.html"] for s in SERVICES]},
+                {"type": "faq", "heading": f"Questions for {city}", "items": [["Do you cover my town?", f"The {city} branch serves {region}. If you are between branches, the nearest one dispatches."], ["Where do I request service?", "On the customer support page, or call the branch."]]},
+                LEADFORM]}
+
+
+LABEL_DX = {"santa-clarita": -96, "los-angeles": -94, "orange-county": 12, "inland-empire": 12, "bakersfield": -84, "fresno": -56, "las-vegas": 12}
+LABEL_DY = {"santa-clarita": -12, "los-angeles": 22, "orange-county": 24, "inland-empire": -8, "bakersfield": 6, "fresno": 6, "las-vegas": 6}
+MFP_MODEL = "assets/fleet/mfp.glb" if os.path.exists(os.path.join(CLIENT_REPO, "assets", "fleet", "mfp.glb")) else None
+WHEEL_ITEMS = [[s[1], brief(s[3], 140), f"services/{s[0]}.html", s[1]] for s in SERVICES]
+
+FLOW_ENGAGEMENT = {"type": "flow", "id": "flow", "eyebrow": "How an engagement runs", "heading": "Four stages, and every one hands you something",
+    "intro": "Click a stage. Each one produces something you keep.",
+    "steps": [
+        {"label": "Assess", "when": "Week 1", "summary": "What you print, mail, store and say.", "title": "A walk through the office", "body": "Devices, volumes, workflows, the mailroom, the phones and the break room, with the people who use them.", "receive": ["Device counts and volumes", "Workflow and mailroom notes", "A written recommendation"]},
+        {"label": "Recommend", "when": "Week 2", "summary": "Eleven manufacturers, three ways to pay.", "title": "Options that fit, priced three ways", "body": "Two or three device options from eleven manufacturers, with software, phones, mailing and water where they help, priced as lease, rental and purchase.", "receive": ["Side-by-side options", "Lease, rent and buy pricing", "Service terms in writing"]},
+        {"label": "Install", "when": "A date you choose", "summary": "Networked, trained, monitored.", "title": "Installed by the local branch", "body": "Devices on the network the day they arrive, every user trained, monitoring and supplies switched on.", "receive": ["Installed and networked", "Users trained", "Monitoring live"]},
+        {"label": "Support", "when": "Ongoing", "summary": "Local dispatch, audited results.", "title": "Serviced from the nearest branch", "body": "Local dispatch, parts and warehousing at seven branches. Service results audited by PROs Elite every year since 2016, with uptime above 95 percent as the certified standard.", "receive": ["Local technicians", "Audited service results", "Supplies, meter reads and payments online"]}]}
+
+FLEET = {"type": "fleet", "id": "fleet", "heading": "Everything the office runs on", "intro": "Generated product renders for the preview; manufacturer imagery replaces them.",
+    "items": [
+        {"title": "Multifunction copiers", "band": "Sharp, Kyocera, Toshiba", "brands": "Sharp, Kyocera, Toshiba, Lexmark", "image": "assets/fleet/mfp.png", "bullets": ["Print, scan, copy, fax", "Secure release with PaperCut"], "href": "services/office-technology.html"},
+        {"title": "Desktop printers", "band": "Desk and small team", "brands": "HP, Brother, Lexmark, Kyocera", "image": "assets/fleet/printer.png", "bullets": ["Color and mono", "Joins managed print"], "href": "services/office-technology.html"},
+        {"title": "Wide format", "band": "Plans, posters, signage", "brands": "KIP, Canon, HP", "image": "assets/fleet/wide-format.png", "bullets": ["Stop outsourcing plan sets", "Technical and graphics media"], "href": "services/wide-format.html"},
+        {"title": "Production print", "band": "Volume and finishing", "brands": "RISO, Sharp", "image": "assets/fleet/production.png", "bullets": ["Booklets, mailers, forms", "Low cost per page"], "href": "services/wide-format.html"},
+        {"title": "Postage and mailing", "band": "Mailroom", "brands": "FP Mailing, Formax", "image": "assets/fleet/postage.png", "bullets": ["Commercial postage rates", "Fold, insert, seal"], "href": "services/mailing.html"},
+        {"title": "Bottleless water", "band": "Break room", "brands": "Waterlogic", "image": "assets/fleet/breakroom.png", "bullets": ["Water, ice, sparkling", "Free trial"], "href": "services/water.html"},
+        {"title": "Displays", "band": "Lobby and classroom", "brands": "Sharp NEC", "image": "assets/fleet/signage.png", "bullets": ["Interactive boards", "Signage"], "href": "brands/sharp-nec.html"}]}
+
+SEAL = {"type": "seal", "id": "seal", "eyebrow": "What every Image 2000 customer gets", "heading": "Not a slogan. A list you can check.",
+    "intro": "Each line is published on image-2000.com or by the organization that awarded it.",
+    "items": [["2016", "PROs Elite 100 certified every year since 2016", "Only one dealer per market. Service results audited continuously by PROs and re-earned every year."],
+              ["95%", "Uptime above 95 percent", "The PROs Elite standard that certified dealers deliver through audited technician training."],
+              ["5x", "Sharp Hyakuman Kai Elite, five years running", "Sharp's top dealer award, 2021 through 2024, and the 12th largest Sharp dealer in the country."],
+              ["Platinum", "Kyocera FY26 Platinum Partner", "Kyocera's top partner tier."],
+              ["11", "Eleven manufacturers", "So the recommendation follows the job, not the badge."],
+              ["7", "Seven branches, California and Nevada", "Local dispatch, local parts, local warehousing, which PROs Elite requires."],
+              ["1992", "Founded in 1992, still owner-led", "Rich Campbell and Joe Blatchford, who started it, still run it."],
+              ["A", "BBB accredited, rated A", "Accredited by the Better Business Bureau."]],
+    "source": "Sources: image-2000.com (awards, why Image 2000), Sharp, Kyocera, PROs Elite, ENX Magazine Elite Dealers 2024, the Better Business Bureau."}
+
+BEFORE_AFTER = {"type": "beforeafter", "id": "ba", "eyebrow": "One partner", "heading": "Drag to see what changes when one dealer covers the whole office",
+    "before": {"eyebrow": "Today, in most offices", "title": "Six vendors, six invoices", "body": "Nobody owns the whole picture, so nobody sees the cost.",
+               "items": ["A copier dealer and a printer reseller", "An IT company that blames the copier company", "A phone system in a closet", "A postage meter on its own contract", "Water delivery on a truck", "Six numbers to call"]},
+    "after": {"eyebrow": "With Image 2000", "title": "One partner, one number, seven branches", "body": "Copiers to coffee-break water, serviced by the same people.",
+              "items": ["Copiers and printers from eleven manufacturers", "Managed print and PaperCut", "DocuWare, Square 9 and FormedAI workflows", "Managed IT with The Core Group", "Elevate phones, FP meters, Formax inserters, Waterlogic water", "800-481-2250 reaches every branch"]}}
+
+HOTSPOTS = {"type": "hotspots", "id": "office", "eyebrow": "The whole office", "heading": "Eight lines, one floor plan", "intro": "Click a number. Everything an office runs on, and the Image 2000 page for each.",
+    "image": "assets/office-iso-1600.jpg", "image_w": 1600, "image_h": 893, "alt": "An overhead illustration of an office with a copier room, a break room, a server room, a mailroom and desks",
+    "items": [
+        {"x": 27, "y": 46, "k": "Copiers and production", "title": "The copier room", "body": "Sharp and Kyocera multifunction devices and production systems, on one agreement.", "href": "services/office-technology.html", "label": "Copiers and printers"},
+        {"x": 47, "y": 21, "k": "Bottleless water", "title": "The break room", "body": "Waterlogic water, ice and sparkling, serviced on the same visit as the copier.", "href": "services/water.html", "label": "Bottleless water"},
+        {"x": 82, "y": 14, "k": "Managed IT", "title": "The server room", "body": "Monitoring, patching, backup and security for a flat monthly fee.", "href": "services/managed-it.html", "label": "Managed IT"},
+        {"x": 73, "y": 58, "k": "Mailing", "title": "The mailroom", "body": "FP Mailing meters and Formax folder inserters.", "href": "services/mailing.html", "label": "Mailing"},
+        {"x": 88, "y": 66, "k": "Phones", "title": "Every desk and every phone", "body": "Elevate UCaaS: desk phone, desktop app and mobile app on one service.", "href": "services/ucaas.html", "label": "Phones and UCaaS"},
+        {"x": 16, "y": 58, "k": "Desktop printers", "title": "The desks", "body": "HP, Brother and Lexmark printers folded into managed print.", "href": "services/managed-print.html", "label": "Managed print"},
+        {"x": 64, "y": 71, "k": "Software", "title": "Scan to DocuWare", "body": "Every MFP scans straight into indexed workflows: accounts payable, HR, records.", "href": "services/software-solutions.html", "label": "Software and workflow"},
+        {"x": 40, "y": 82, "k": "Wide format", "title": "The plan room", "body": "KIP, Canon and HP wide format for plans and posters.", "href": "services/wide-format.html", "label": "Wide format"}]}
+
+HERO_LAYERED = {"type": "hero-layered", "id": "hero", "eyebrow": "Southern California, the Central Valley and Las Vegas. Since 1992.",
+    "heading": "Every office technology, from a dealer <em>recognized year after year for service</em>.",
+    "subhead": "Copiers and printers from eleven manufacturers, managed print, document workflow, managed IT, cloud phones, mailing and bottleless water. Seven branches, local technicians, and service results audited by PROs Elite every year since 2016.",
+    "primary": {"label": "Request a quote", "href": "contact.html"}, "secondary": {"label": "See the awards", "href": "why-image-2000.html"},
+    "image": "assets/hero-plate-2100.jpg", "image_w": 2100, "image_h": 900,
+    **({"model": MFP_MODEL, "poster": "assets/fleet/mfp.png", "model_alt": "A Sharp-style multifunction copier, rotating. Drag to turn it."} if MFP_MODEL else {}),
+    "stats": [["1992", "Founded, still owner-led"], ["2016", "PROs Elite certified every year since"], ["11", "Manufacturers"], ["7", "Branches in California and Nevada"]],
+    "card_a": {"eyebrow": "Start here", "title": "A quote or an assessment", "body": "Tell us what you print, mail, store and say on the phone.", "items": ["Options from eleven manufacturers", "Lease, rent or buy, side by side", "A local branch replies"], "href": "contact.html", "label": "Request a quote"},
+    "card_b": {"eyebrow": "Already a customer?", "title": "The fast lane", "body": "Under a minute each.", "links": [["Request service", "customer-support.html#request"], ["Submit meter reads", "customer-support.html#meters"], ["Order supplies", "customer-support.html#supplies"], ["Pay an invoice", PAY]]},
+    "note": "Preview photography, renders and the 3D device are generated and labelled as such; Image 2000's own imagery and manufacturer product models replace them."}
+
+STORY3D = {"type": "story3d", "id": "device", "alt": False, "eyebrow": "Take a closer look", "heading": "Walk around one before it arrives",
+    "intro": "Scroll, and the device turns to the part being described. A generated Sharp-style stand-in for the preview; manufacturer models replace it in the build.",
+    "poster": "assets/fleet/mfp.png", "alt": "A Sharp-style multifunction copier that turns as you scroll", "hint": "Drag to turn",
+    "cta": {"label": "Copiers and printers", "href": "services/office-technology.html"},
+    "steps": [
+        {"k": "The panel", "title": "One screen for print, scan and release", "orbit": "28deg 72deg 100%", "body": "A tilting color touchscreen where people print, copy, scan and release held jobs with PaperCut. Scan straight into DocuWare or Square 9 from the same screen.", "points": ["Secure print release", "Scan to workflow", "Trained on install day"]},
+        {"k": "The feeder", "title": "Stacks in, indexed files out", "orbit": "0deg 40deg 108%", "body": "Mixed paper goes in the top. Named, indexed files land in the right workflow, so accounts payable, HR and records stop living in filing cabinets.", "points": ["Duplex scanning", "OCR into DocuWare or Square 9", "Routing rules set up by Image 2000"]},
+        {"k": "The paper path", "title": "Trays sized to how the office prints", "orbit": "-62deg 80deg 104%", "body": "Under managed print the device reports its own levels. Toner ships on usage, and the reports show what each device actually carried.", "points": ["Supplies shipped on usage", "Meter reads taken automatically", "Usage in the report"]},
+        {"k": "The service side", "title": "Serviced by a PROs Elite dealer", "orbit": "200deg 76deg 108%", "body": "Local dispatch, parts and warehousing at seven branches, and service results audited by PROs Elite every year since 2016.", "points": ["Local technicians", "Audited results", "Uptime above 95 percent as the standard"]}],
+    **({"model": MFP_MODEL} if MFP_MODEL else {})}
+
+MAP = {"type": "map", "id": "map", "heading": "Seven branches, one number, California and Nevada", "intro": "Headquartered in the Santa Clarita Valley. Technicians are dispatched from the branch nearest you. 800-481-2250 reaches every branch.", "region": "west", "ring": 30,
+       "items": [{"name": L[1], "lon": L[7], "lat": L[8], "href": f"locations/{L[0]}.html", "sub": L[2], "hq": L[0] == "santa-clarita", "label_dx": LABEL_DX.get(L[0], 10), "label_dy": LABEL_DY.get(L[0], 14)} for L in LOCATIONS]}
+
+
+def build():
+    brand = {
+        "accent": "#7DB4E6", "ink_secondary": "#0F2140", "chrome": "dark", "chrome_bg": "#0F2140",
+        "type_from": {"Quantum Showcase": "Quantum Clean"},
+        "logo": "assets/image2000-logo.jpg", "logo_alt": "Image 2000: Technology, Document Management, Consulting", "logo_w": 872, "logo_h": 164,
+        "logo_note": "The current logo is a JPG on a white field. It is shown on a white plate in the navy header until a vector with transparency arrives.", "logo_plate": True,
+        "phone": PHONE, "phone_href": PHONE_HREF, "email": "",
+        "utility": [{"label": "Customer portal", "href": PORTAL}, {"label": "Request service", "href": "customer-support.html#request"}, {"label": "Meter reads", "href": "customer-support.html#meters"}, {"label": "Order supplies", "href": "customer-support.html#supplies"}, {"label": "Pay invoice", "href": PAY}],
+        "cta": {"label": "Request a quote", "href": "contact.html"},
+        "sticky": {"primary": "Request a quote", "primary_href": "contact.html", "secondary": "Call 800-481-2250", "secondary_href": PHONE_HREF},
+        "launcher": {"label": "Already a customer?", "eyebrow": "The fast lane", "title": "What do you need today?", "links": [["Request service", "customer-support.html#request"], ["Submit meter reads", "customer-support.html#meters"], ["Order supplies", "customer-support.html#supplies"], ["Pay an invoice", PAY], ["Customer portal", PORTAL], ["Screen share with support", SCREEN]], "note": "A person from your branch replies. Monday to Friday, 8am to 5pm.", "phone": PHONE, "phone_href": PHONE_HREF},
+        "social": {"linkedin": "https://www.linkedin.com/company/image2000", "facebook": "https://www.facebook.com/Image-2000-Inc-127054597339857/", "instagram": "https://www.instagram.com/image2000inc/"},
+        "tagline": "Technology, document management and consulting since 1992. Headquartered in the Santa Clarita Valley, with branches across California and Nevada.",
+        "footer_columns": [
+            {"title": "Services", "links": [[s[1], f"services/{s[0]}.html"] for s in SERVICES]},
+            {"title": "Brands", "links": [[b[1], f"brands/{b[0]}.html"] for b in BRANDS[:8]] + [["All brands", "brands.html"]]},
+            {"title": "Customers", "links": [["Customer portal", PORTAL], ["Request service", "customer-support.html#request"], ["Submit meter reads", "customer-support.html#meters"], ["Order supplies", "customer-support.html#supplies"], ["Pay an invoice", PAY], ["Screen share", SCREEN], ["Drivers and manuals", "customer-support.html#drivers"]]},
+            {"title": "Company", "links": [["Why Image 2000", "why-image-2000.html"], ["About", "about.html"], ["Awards", "awards.html"], ["Locations", "locations.html"], ["Community", "community.html"], ["Careers", "careers.html"], ["Contact", "contact.html"]]},
+        ],
+        "legal": [["Privacy policy", "https://www.image-2000.com/privacypolicy"], ["CA applicant privacy notice", "https://www.image-2000.com/ca-applicant-privacy-notice"]],
+    }
+    schema = {"org_name": "Image 2000, Inc.", "org_url": "https://www.image-2000.com", "org_logo": "https://www.image-2000.com/",
+              "org_description": "Office technology dealer founded in 1992, headquartered in the Santa Clarita Valley, California, with branches across Southern California, the Central Valley and Las Vegas: copiers and printers from eleven manufacturers, managed print, document workflow software, managed IT, UCaaS phones, mailing equipment and bottleless water.",
+              "sameAs": ["https://www.linkedin.com/company/image2000", "https://www.facebook.com/Image-2000-Inc-127054597339857/", "https://www.instagram.com/image2000inc/"], "telephone": "+1-800-481-2250",
+              "founded": "1992", "short_name": "Image 2000", "title_city": "California",
+              "cities": ["Santa Clarita", "Valencia", "Los Angeles", "Orange County", "Irvine", "Inland Empire", "Ontario", "Bakersfield", "Fresno", "Las Vegas", "Southern California", "Central Valley", "California", "Nevada", "CA", "NV"],
+              "area_served": [{"@type": "State", "name": "California"}, {"@type": "State", "name": "Nevada"}],
+              "meta_tail": "Image 2000, office technology since 1992, seven offices across California and Las Vegas.",
+              "local": [{"slug": s_, "name": f"Image 2000 {c_}", "street": a1_, "city": a2_.rsplit(",", 1)[0], "region": a2_.split(",")[-1].split()[0], "postal": a2_.split()[-1],
+                         "telephone": "+1-" + ph_, "lon": lon_, "lat": lat_} for s_, c_, a1_, a2_, ph_, _h, _r, lon_, lat_ in LOCATIONS]}
+    nav = [
+        {"label": "Services", "href": "services.html", "mega": True,
+         "groups": [{"title": "Print", "items": [[s[1], f"services/{s[0]}.html"] for s in SERVICES if s[0] in ("office-technology", "managed-print", "wide-format")]},
+                    {"title": "Software and IT", "items": [[s[1], f"services/{s[0]}.html"] for s in SERVICES if s[0] in ("software-solutions", "managed-it", "ucaas")]},
+                    {"title": "Mailroom and break room", "items": [[s[1], f"services/{s[0]}.html"] for s in SERVICES if s[0] in ("mailing", "water")] + [["All services", "services.html"]]}],
+         "featured": {"eyebrow": "Not sure what you need?", "title": "Start with an assessment", "body": "A walk through the office: what you print, mail, store and say on the phone. Options from eleven manufacturers, priced three ways.", "href": "contact.html", "label": "Request an assessment"}},
+        {"label": "Brands", "href": "brands.html", "mega": True,
+         "groups": [{"title": g, "items": [[b[1], f"brands/{b[0]}.html"] for b in BRANDS if b[2] == g]} for g in BRAND_GROUPS if any(b[2] == g for b in BRANDS)],
+         "featured": {"eyebrow": "Eleven manufacturers", "title": "The badge follows the job", "body": "Sharp and Kyocera lead, and nine more mean the recommendation is about your work, not our inventory.", "href": "brands.html", "label": "All brands"}},
+        {"label": "Industries", "href": "industries.html", "children": [[i[1], f"industries/{i[0]}.html"] for i in INDUSTRIES] + [["All industries", "industries.html"]]},
+        {"label": "Support", "href": "customer-support.html", "children": [["Request service", "customer-support.html#request"], ["Submit meter reads", "customer-support.html#meters"], ["Order supplies", "customer-support.html#supplies"], ["Pay an invoice", PAY], ["Customer portal", PORTAL], ["Drivers and manuals", "customer-support.html#drivers"]]},
+        {"label": "About", "href": "about.html", "children": [["Why Image 2000", "why-image-2000.html"], ["About", "about.html"], ["Awards", "awards.html"], ["Locations", "locations.html"], ["Community", "community.html"], ["Careers", "careers.html"], ["Contact", "contact.html"]]},
+    ]
+
+    pages = []
+    services_list = [[s[1], s[3], f"services/{s[0]}.html"] for s in SERVICES]
+    # ---------------- home
+    pages.append({"file": "index.html", "title": "Image 2000 | Copiers, managed print, IT, phones and office technology in Southern California and Las Vegas",
+                  "compose": {
+                      "showcase": ["hero", "partners", "wheel", "fleet", "ba", "flow", "office", "device", "proof", "map", "voices", "faq", "contact"],
+                      "clean": ["hero-light", "partners", "seal", "wheel", "is-this-you", "flow", "map", "voices", "faq", "contact"],
+                      "press": ["hero-light", "story", "services", "seal", "voices", "flow", "map", "faq", "contact"]},
+                  "description": "Founded 1992, headquartered in Santa Clarita. Copiers and printers from eleven manufacturers, managed print, document software, managed IT, cloud phones, mailing and bottleless water from seven branches across California and Nevada. PROs Elite certified every year since 2016.",
+                  "sections": [
+        {"type": "hero", "id": "hero-light", "layout": "split", "eyebrow": "Southern California, the Central Valley and Las Vegas. Since 1992.",
+         "stats": [["1992", "Founded, still owner-led"], ["2016", "PROs Elite certified every year since"], ["11", "Manufacturers"], ["7", "Branches"]],
+         "ribbon": ["Sharp Hyakuman Kai Elite, five years running", "Kyocera FY26 Platinum Partner", "PROs Elite 100 since 2016", "BBB accredited, rated A"],
+         "variants": {"press": {"stats": None, "ribbon": ["Santa Clarita, California. Since 1992.", "PROs Elite 100 since 2016", "Sharp Hyakuman Kai Elite"]}},
+         "heading": "Every office technology, from a dealer <em>recognized year after year for service</em>.",
+         "subhead": "Copiers and printers from eleven manufacturers, managed print, document workflow, managed IT, cloud phones, mailing and bottleless water. Seven branches, local technicians, service audited by PROs Elite.",
+         "primary": {"label": "Request a quote", "href": "contact.html"}, "secondary": {"label": "See the awards", "href": "why-image-2000.html"},
+         "note": "Generated preview imagery, labelled as such", "image": "assets/hero-1200.jpg", "image_alt": "A technician replacing a toner unit in an open office copier", "image_w": 1200, "image_h": 800},
+        HERO_LAYERED,
+        {"type": "partners", "id": "partners", "caption": "Manufacturer and software partners", "items": PARTNERS},
+        SEAL,
+        {"type": "wheel", "id": "wheel", "eyebrow": "One partner", "heading": "Everything an office runs on, from one dealer", "intro": "Hover a segment. Eight lines, one agreement, one number.", "items": WHEEL_ITEMS, "panel_eyebrow": "Hover a segment", "link_label": "See the service", "ring": "EVERYTHING AN OFFICE RUNS ON"},
+        {"type": "checklist", "id": "is-this-you", "alt": True, "eyebrow": "Is this you?", "heading": "Six signs the office spends more than it knows", "intro": "Check what sounds familiar. Nobody is watching.",
+         "items": ["Someone orders toner from a retail site when a device runs out", "Nobody knows what a page costs, mono or color", "Invoices are approved by email and filed in a cabinet", "The phone system lives in a closet and dies with the power", "Stamps, not a meter, and trips to the post office", "Water arrives in jugs on a truck"],
+         "messages": ["Check what sounds familiar.", "One is normal.", "Two is worth an assessment.", "Three or more, and one dealer for the whole office pays for itself."], "cta_label": "Request an assessment", "cta_href": "contact.html"},
+        {"type": "services", "id": "services", "heading": "Everything an office runs on, from one dealer", "intro": "Most dealers sell copiers. Image 2000 covers the whole office and keeps it running, so you have one relationship instead of six vendors.", "items": services_list},
+        FLEET, BEFORE_AFTER, FLOW_ENGAGEMENT, HOTSPOTS, STORY3D,
+        {"type": "proof", "id": "proof", "alt": True, "eyebrow": "Audited, not claimed", "value": "2016", "text": "PROs Elite 100 certified every year since 2016. Only one dealer in any market holds it, service results are audited continuously, and it has to be earned again every year.", "source": "PROs Elite, the office imaging industry's service benchmark. Ask Image 2000 for the current audit."},
+        MAP,
+        {"type": "testimonials", "id": "voices", "alt": True, "layout": "feature", "eyebrow": "What customers say", "heading": "Customers, in their own words", "items": [t[:3] for t in TESTIMONIALS]},
+        {"type": "timeline", "id": "story", "eyebrow": "The story", "heading": "From two founders in 1992 to seven branches and eleven manufacturers", "items": [["1992", "Campbell and Blatchford", "A shared philosophy about the future of office technology: become so core-competent that clients can cut through the glut of hardware and software."], ["2016", "PROs Elite", "Certified every year since, the only dealer in the market to hold it."], ["2021", "Hyakuman Kai Elite", "Sharp's top dealer award, five years running by 2024, and the 12th largest Sharp dealer in the country."], ["Today", "Seven branches", "Santa Clarita, Los Angeles, Orange County, the Inland Empire, Bakersfield, Fresno and Las Vegas, with about 115 people."]]},
+        {"type": "faq", "id": "faq", "alt": True, "heading": "Questions we get on the first call", "items": [
+            ["Which brands do you carry?", "Sharp and Kyocera lead, with Toshiba, Lexmark, HP, Brother, KIP, Canon large format, Kodak Alaris, RISO and Formax. The recommendation follows the job."],
+            ["Where do you service?", "Southern California, the Central Valley and Las Vegas from seven branches, with local dispatch, parts and warehousing at each."],
+            ["What does PROs Elite mean for us?", "Only one dealer per market holds it. Service results are audited continuously, certification is re-earned every year, and the standard is uptime above 95 percent."],
+            ["Can we start with one thing?", "Yes. Many customers start with one device or the phones and add managed print, software or water later."],
+            ["How do we request service?", "On the customer support page, through the customer portal, or by calling the branch. 800-481-2250 reaches every one."]]},
+        {"type": "contact", "id": "contact", "heading": "Request a quote or an assessment", "body": "Tell us what you print, mail, store and say on the phone. The nearest branch replies with a quote or a time to walk your office.", "options": ["Copiers and printers", "Managed print", "Software and workflow", "Managed IT", "Phones and UCaaS", "Mailing", "Bottleless water", "Wide format or production", "I am a customer and need service"], "submit": "Request a quote", "note": "A person from your nearest branch replies, not an autoresponder."},
+    ]})
+    # ---------------- why
+    pages.append({"file": "why-image-2000.html", "title": "Why Image 2000 | Recognized year after year for service", "description": "PROs Elite 100 certified every year since 2016, Sharp Hyakuman Kai Elite five years running, Kyocera Platinum Partner, ENX Elite Dealer 2018 to 2024. What that means for a customer.",
+                  "sections": [
+        {"type": "hero", "layout": "centered", "eyebrow": "Why Image 2000", "heading": "Work with a company <em>recognized year after year</em> for superior service.", "subhead": "Every award below is given by someone other than Image 2000, and most have to be earned again every year.", "primary": {"label": "Request a quote", "href": "contact.html"}},
+        SEAL,
+        {"type": "cards", "alt": True, "eyebrow": "What PROs Elite means for you", "heading": "The national symbol of service distinction, held by one dealer per market", "intro": "PROs Elite 100 is awarded to one dealer in any market and about a hundred in the country. It is not a plaque; it is an audit.", "items": [["Audited continuously", "Service results monitored by PROs' Performance Improvement Virtual Operations Tool."], ["Re-earned every year", "Certification through demonstrated service excellence, year after year."], ["Uptime above 95 percent", "The standard certified dealers deliver through technician training and audited servicing."], ["Locally owned, local dispatch", "Local spare parts, local warehousing and complete account management, which PROs' benchmark authors rate above manufacturer-direct and mega dealers."], ["Trained top to bottom", "Service management, executives, the whole organization and the sales team, trained in Elite practices."], ["Coached and compared", "Ongoing coaching, and annual roundtables with the other PROs Elite 100 dealers."]]},
+        BEFORE_AFTER,
+        {"type": "cards", "id": "awards", "heading": "The awards", "items": [[f"{a[0]}: {a[1]}", a[2]] for a in AWARDS]},
+        {"type": "testimonials", "alt": True, "heading": "What customers say", "items": [t[:3] for t in TESTIMONIALS]},
+        LEADFORM]})
+    # ---------------- services index
+    pages.append({"file": "services.html", "title": "Services | Image 2000", "description": "Copiers and printers, managed print, software and workflow, managed IT, phones and UCaaS, mailing, bottleless water, wide format and production. One dealer for the whole office.",
+                  "sections": [
+        {"type": "hero", "layout": "centered", "eyebrow": "Services", "heading": "Eight things an office runs on. <em>One dealer.</em>", "subhead": "Every line below is sold, installed and serviced by Image 2000 people from seven branches.", "primary": {"label": "Request a quote", "href": "contact.html"}},
+        {"type": "wheel", "id": "wheel", "eyebrow": "The eight lines", "heading": "Hover a segment", "intro": "Each line has its own page.", "items": WHEEL_ITEMS, "panel_eyebrow": "Hover a segment", "link_label": "See the service"},
+        dict(HOTSPOTS, alt=True),
+        {"type": "resources", "heading": "The eight lines", "intro": "What changes, what is included, and the questions people ask.", "items": [[s[2], s[1], s[3], f"See {s[1].lower()}", f"services/{s[0]}.html"] for s in SERVICES]},
+        {"type": "testimonials", "alt": True, "heading": "What customers say", "items": [t[:3] for t in TESTIMONIALS]},
+        LEADFORM]})
+    for s in SERVICES:
+        pages.append(service_page(*s))
+    # ---------------- brands
+    pages.append({"file": "brands.html", "title": "Brands | Image 2000 carries eleven manufacturers", "description": "Sharp, Kyocera, Toshiba, Lexmark, HP, Brother, KIP, Canon large format, Kodak Alaris, RISO, Formax, Waterlogic and Sharp NEC. The badge follows the job.",
+                  "sections": [
+        {"type": "hero", "layout": "centered", "eyebrow": "Brands", "heading": "Eleven manufacturers, so the badge <em>follows the job</em>.", "subhead": "Sharp and Kyocera lead, with the awards to show for it. The rest are there so the recommendation is about your work, not our inventory.", "primary": {"label": "Request a quote", "href": "contact.html"}},
+        dict(FLEET, alt=True),
+        {"type": "resources", "heading": "Every brand", "intro": "Each has its own page and a catalogue.", "items": [[b[2], b[1], b[3], f"See {b[1]}", f"brands/{b[0]}.html"] for b in BRANDS]},
+        {"type": "partners", "caption": "Manufacturer and software partners", "items": PARTNERS},
+        LEADFORM]})
+    for b in BRANDS:
+        pages.append(brand_page(*b))
+    # ---------------- industries
+    pages.append({"file": "industries.html", "title": "Industries | Image 2000", "description": "Education, government, healthcare, legal, churches and nonprofits. Office technology configured for how each one works.",
+                  "sections": [
+        {"type": "hero", "layout": "centered", "eyebrow": "Industries", "heading": "Configured for <em>how your industry works</em>.", "subhead": "School districts, public agencies, clinics, law firms, churches and nonprofits.", "primary": {"label": "Request a quote", "href": "contact.html"}},
+        {"type": "resources", "heading": "Who Image 2000 serves", "intro": "Each has its own page.", "items": [[i[1], i[1], i[3], f"Office technology for {i[1].lower()}", f"industries/{i[0]}.html"] for i in INDUSTRIES]},
+        {"type": "testimonials", "alt": True, "heading": "What customers say", "items": [t[:3] for t in TESTIMONIALS]},
+        LEADFORM]})
+    for i in INDUSTRIES:
+        pages.append(industry_page(*i))
+    # ---------------- locations
+    pages.append({"file": "locations.html", "title": "Locations | Image 2000 branches in California and Nevada", "description": "Santa Clarita headquarters, Los Angeles, Orange County, Inland Empire, Bakersfield, Fresno and Las Vegas. Local dispatch, parts and people at every branch.",
+                  "sections": [
+        {"type": "hero", "layout": "centered", "eyebrow": "Locations", "heading": "Seven branches. <em>Local technicians at every one.</em>", "subhead": "Headquartered in the Santa Clarita Valley, with branches across Southern California, the Central Valley and Las Vegas. Call the branch nearest you, or 800-481-2250 reaches all of them.", "primary": {"label": "Request a quote", "href": "contact.html"}},
+        MAP,
+        {"type": "locations", "detailed": True, "heading": "Where we are", "intro": "Each branch has local dispatch, spare parts and warehousing, which PROs Elite requires.", "items": [[L[1], L[2], L[3], L[4], L[5]] for L in LOCATIONS]},
+        {"type": "faq", "heading": "Coverage questions", "items": [["Do you cover my town?", "Southern California, the Central Valley and Las Vegas are home. Ask the nearest branch; the answer will be honest."], ["What about Portland or San Diego?", "Image 2000's site mentions both. Ask the branch for current coverage; this preview lists the seven branches with published addresses."]]},
+        LEADFORM]})
+    for L in LOCATIONS:
+        pages.append(location_page(*L))
+    # ---------------- about
+    pages.append({"file": "about.html", "title": "About Image 2000 | Founded 1992, headquartered in Santa Clarita", "description": "In 1992 a shared philosophy about the future of office technology brought Richard Campbell and Joseph Blatchford together. Seven branches, eleven manufacturers, about 115 people, and awards earned again every year.",
+                  "sections": [
+        {"type": "hero", "layout": "centered", "eyebrow": "About Image 2000", "heading": "Founded in 1992 to cut through the glut. <em>Still doing exactly that.</em>", "subhead": "A shared philosophy about changing the future of office technology brought Richard Campbell and Joseph Blatchford together. Their goal was to become so core-competent that clients could rely on their expertise to cut through the flood of hardware and software. Thirty years on, the clients are happy to tell you about it.", "primary": {"label": "Request a quote", "href": "contact.html"}},
+        {"type": "stats", "alt": True, "items": [["1992", "Founded"], ["115", "People, approximately"], ["11", "Manufacturers"], ["7", "Branches in California and Nevada"]]},
+        {"type": "timeline", "eyebrow": "The story", "heading": "From two founders to seven branches", "items": [["1992", "Campbell and Blatchford", "A shared philosophy about the future of office technology."], ["2016", "PROs Elite", "Certified every year since."], ["2021", "Hyakuman Kai Elite", "Sharp's top award, five years running by 2024."], ["Today", "Seven branches", "Santa Clarita, Los Angeles, Orange County, the Inland Empire, Bakersfield, Fresno and Las Vegas."]]},
+        {"type": "leadership", "id": "team", "heading": "The executive team", "intro": "The founders still run the company.", "people": [[t[0], t[1]] for t in TEAM], "orgs_intro": "Manufacturer and software partners", "orgs": PARTNERS},
+        {"type": "values", "alt": True, "eyebrow": "Mission", "heading": "To facilitate and support the client's vision while providing flexible, responsive and personal service.", "items": [["Listen first", "A staunch commitment to enhancing each client's business is best achieved by listening to and supporting their vision."], ["Core-competent", "Deep enough expertise that clients can cut through the glut of hardware and software."], ["Best value", "An eleven-manufacturer offering and many software partners, so the dollars spent on document management buy the best value in the industry."], ["Trust", "Cost-reduction strategies, advanced workflows and an environment built on trust."]]},
+        {"type": "cards", "alt": False, "heading": "Community", "intro": "Each month Image 2000 selects a charity in its community to receive a donation, and team members suggest the next ones.", "items": [["A charity every month", "Chosen from the communities the branches serve."], ["Team-nominated", "Employees suggest organizations to support."], ["Local", "Santa Clarita to Las Vegas."]]},
+        {"type": "cta", "heading": "Work here", "subhead": "Sales, service and administrative roles across seven branches.", "primary": {"label": "See careers", "href": "careers.html"}},
+    ]})
+    pages.append({"file": "awards.html", "title": "Awards | Image 2000", "description": "Sharp Hyakuman Kai Elite 2021 to 2024, Kyocera FY26 Platinum Partner, PROs Elite 100 every year since 2016, ENX Elite Dealer 2018 to 2024, Copystar Elite Dealer and Excellence in Customer Service 2019, BBB A.",
+                  "sections": [
+        {"type": "hero", "layout": "centered", "eyebrow": "Awards", "heading": "Given by someone else. <em>Earned again every year.</em>", "subhead": "Manufacturers, the industry's service benchmark, the trade press and the Better Business Bureau."},
+        {"type": "cards", "alt": True, "heading": "The awards", "items": [[f"{a[0]}: {a[1]}", a[2]] for a in AWARDS]},
+        SEAL, LEADFORM]})
+    pages.append({"file": "community.html", "title": "Community | Image 2000", "description": "Each month Image 2000 selects a charity within its community to receive a donation. Team members suggest organizations to support.",
+                  "sections": [
+        {"type": "hero", "layout": "centered", "eyebrow": "Community", "heading": "A charity <em>every month</em>.", "subhead": "Each month Image 2000 selects a charity within its community to receive a donation, and team members offer suggestions for organizations to support in the future."},
+        {"type": "cards", "alt": True, "heading": "How it works", "items": [["Monthly", "One organization chosen each month."], ["Nominated by the team", "Employees across seven branches suggest the next."], ["Local", "The communities the branches serve, from Santa Clarita to Las Vegas."]]},
+        LEADFORM]})
+    pages.append({"file": "careers.html", "title": "Careers | Image 2000", "description": "Sales, service and administrative roles across seven branches in California and Nevada, at a dealer recognized year after year for service.",
+                  "sections": [
+        {"type": "hero", "layout": "centered", "eyebrow": "Careers", "heading": "Work for a dealer that is <em>audited for service</em>, and proud of it.", "subhead": "About 115 people across seven branches. Sales, technical service and administration."},
+        {"type": "cards", "alt": True, "heading": "Roles", "items": [["Sales", "Account executives in every branch territory."], ["Service", "Technicians trained in Elite service practices, with local dispatch."], ["Administration", "Branch administration and support."]]},
+        {"type": "cta", "heading": "Apply", "subhead": "Applications run through Image 2000's careers page.", "primary": {"label": "Careers at image-2000.com", "href": "https://www.image-2000.com/careers"}},
+    ]})
+    pages.append({"file": "customer-support.html", "title": "Customer support | Image 2000", "description": "Request service, submit meter reads, order supplies, pay an invoice, log in to the customer portal, screen share with support, and download Sharp and Kyocera drivers.",
+                  "sections": [
+        {"type": "hero", "layout": "centered", "eyebrow": "Customer support", "heading": "How can we <em>help you today</em>?", "subhead": "Everything a customer needs, under a minute each.", "primary": {"label": "Customer portal", "href": PORTAL}, "secondary": {"label": "Call 800-481-2250", "href": PHONE_HREF}},
+        {"type": "band", "id": "request", "eyebrow": "The fast lane", "heading": "Already a customer? This is the fast lane.", "subhead": "Request service, send a meter read, order supplies or pay an invoice.", "items": [["Request service", "A local technician is dispatched from your branch", "customer-support.html#form"], ["Submit meter reads", "Or let the device report them under agreement", "customer-support.html#form"], ["Order supplies", "Toner, ink and mailing supplies", "customer-support.html#form"], ["Pay an invoice", "By credit card, online", PAY], ["Customer portal", "Your account, devices and history", PORTAL], ["Screen share", "Let support see your screen", SCREEN]]},
+        {"type": "resources", "id": "drivers", "heading": "Drivers and manuals", "intro": "Download from the manufacturer.", "items": [["Sharp", "Sharp business products downloads", "Drivers, manuals and firmware for Sharp devices.", "Sharp downloads", "https://business.sharpusa.com/product-downloads"], ["Kyocera", "Kyocera Document Solutions downloads", "Drivers and manuals for Kyocera and Copystar devices.", "Kyocera downloads", "https://www.kyoceradocumentsolutions.com/support_product/index_en.html"]]},
+        {"type": "contact", "id": "form", "heading": "Request service, meter reads or supplies", "body": "Tell us the device and what you need.", "options": ["Request service", "Submit meter reads", "Order supplies", "Something else"], "submit": "Send to my branch", "note": "A person from your branch replies."},
+    ]})
+    pages.append({"file": "faq.html", "title": "FAQ | Image 2000", "description": "Brands, coverage, PROs Elite, pricing, starting small, service requests.",
+                  "sections": [
+        {"type": "hero", "layout": "centered", "eyebrow": "FAQ", "heading": "Questions, <em>answered plainly</em>."},
+        {"type": "faq", "heading": "Working with Image 2000", "items": [
+            ["Which brands do you carry?", "Sharp, Kyocera, Toshiba, Lexmark, HP, Brother, KIP, Canon large format, Kodak Alaris, RISO, Formax, Waterlogic and Sharp NEC. The recommendation follows the job."],
+            ["Where do you service?", "Seven branches: Santa Clarita, Los Angeles, Orange County, the Inland Empire, Bakersfield, Fresno and Las Vegas."],
+            ["What does PROs Elite mean?", "One dealer per market, service results audited continuously, certification re-earned every year, uptime above 95 percent as the standard."],
+            ["Lease, rent or buy?", "All three are priced side by side, with DLL, Wells Fargo, PEAC Solutions, First Citizens Bank and U.S. Bank as leasing partners."],
+            ["Can we start small?", "Yes. One device, or just the phones, or a free water trial."],
+            ["How do we pay an invoice?", "By credit card online, from the customer support page."]]},
+        LEADFORM]})
+    pages.append({"file": "contact.html", "title": "Contact | Image 2000", "description": "Request a quote or an assessment. 800-481-2250 reaches every branch. Headquarters: 26037 Huntington Lane, Valencia, CA 91355.",
+                  "sections": [
+        {"type": "hero", "layout": "centered", "eyebrow": "Contact", "heading": "Request a quote, or <em>just call</em>.", "subhead": "800-481-2250 reaches every branch. Or tell us what you need and the nearest branch replies."},
+        {"type": "contact", "id": "form", "heading": "Request a quote or an assessment", "body": "Tell us what you print, mail, store and say on the phone.", "options": ["Copiers and printers", "Managed print", "Software and workflow", "Managed IT", "Phones and UCaaS", "Mailing", "Bottleless water", "Wide format or production", "I am a customer and need service"], "submit": "Request a quote", "note": "A person from your nearest branch replies, not an autoresponder."},
+        {"type": "locations", "alt": True, "heading": "Or call the branch", "intro": "800-481-2250 reaches all seven.", "items": [[L[1], L[2], L[3], L[4], L[5]] for L in LOCATIONS]},
+    ]})
+
+    pitch = {
+        "qbs_contact": {"name": "Shawn Peterson", "email": "shawn@thequantumleap.business", "phone": "(712) 389-4639"},
+        "prepared_for": "Rich Campbell, Joe Blatchford and Jeff Rudisel, Image 2000",
+        "heard_intro": "Everything here comes from image-2000.com, your award listings and the trade press. Tell us where it is wrong; your words outrank ours.",
+        "heard": ["Recognized year after year for superior service is the headline on your site today, and it is the strongest true thing about Image 2000. It leads every direction.",
+                  "Eleven manufacturers on purpose, so the recommendation follows the job. That is a real difference from single-line dealers and it is said on the home page.",
+                  "Founded in 1992 by Rich and Joe, still owner-led, headquartered in the Santa Clarita Valley with seven branches with published addresses.",
+                  "Mailing equipment and VoIP are the fastest-growing segments; both have their own pages and their own process charts.",
+                  "You already run HubSpot as your CRM, so every form on this preview lands in a system you own."],
+        "found": ["image-2000.com earns about 490 organic visits a month on 103 keywords (Semrush, 8 September 2026), almost all branded. The awards that make the company different are not findable by anyone who does not already know the name.",
+                  "The site runs on Wix with a cookie banner, a video that is blocked until marketing cookies are accepted, and a navigation that lists File Share, Members and Shared Gallery to the public.",
+                  "The Request a Quote button on the home page links back to the home page. The Our Clients page is a single image with no text a search engine or a screen reader can use.",
+                  "Two customer quotes on the site, both first-name only. The awards page and PROs Elite copy are strong but two clicks deep.",
+                  "The locations page says eight branches and the team page says nine including Portland, but seven addresses are published. The preview uses the seven.",
+                  "No LocalBusiness markup for any branch, so search and AI assistants cannot tie Image 2000 to Santa Clarita, Fresno or Las Vegas."],
+        "pick_reasons": [], "pick_change": "", "alternatives": [],
+        "choice_intro": "All three are the whole site: the same fifty pages, the same words, the same awards. The difference is temperament. Open each one and tell us which feels like Image 2000.",
+        "plan": [["Week 1", "Choose a direction. Confirm the items under To confirm. Send the logo as a vector and any Sharp and Kyocera product imagery you are licensed to use."],
+                 ["Weeks 2 to 3", "Copy from Rich, Joe and Jeff in your words, customer quotes with names and companies, photography of the branches and the technicians."],
+                 ["Weeks 3 to 5", "Build in your HubSpot, forms to the right branch, every current URL redirected and tested."],
+                 ["Week 6", "QA on the same gate this preview passed, then launch. Month one after launch: the awards and service-mix email to your existing base."]],
+        "search": {"heading": "Where Image 2000 stands in search today, and what changes", "intro": "Measured before we touched anything, so the work can be judged against it.", "as_of": "Semrush and live HTML, 8 September 2026",
+                   "today_stats": [["492", "Organic visits a month"], ["103", "Keywords ranking"], ["7", "Branches with no local page that ranks"], ["2", "Customer quotes on the site"]],
+                   "today": ["About 490 visits a month from search, almost all of them the company name. A dealer with these awards should be found for copier lease Santa Clarita, managed print Fresno and business phones Las Vegas, and is not.",
+                             "Wix, a cookie banner, a blocked video, and public navigation entries for File Share, Members and Shared Gallery.",
+                             "Request a Quote on the home page links to the home page.",
+                             "The Our Clients page is one image; the two testimonials are first-name only.",
+                             "No LocalBusiness markup for any branch."],
+                   "after": ["Fifty pages, each built around one thing a buyer asks, with titles that name the place: Copiers and printers, Southern California and Las Vegas; Image 2000 Fresno.",
+                             "Seven branch pages with LocalBusiness markup, the towns each one serves, and a map of California and Nevada.",
+                             "Thirteen brand pages for terms that have no page today: Kyocera dealer Santa Clarita, Sharp copier Orange County, KIP wide format Bakersfield.",
+                             "The awards and PROs Elite on the home page, on Why Image 2000 and in a seal on every direction, with the auditor named.",
+                             "Forms to HubSpot with a branch owner, no cookie theatre, no blocked video, no members-only links in public navigation."],
+                   "keep": [['/', '/', 'Title rewritten with place and service'], ['/whyimage2000', '/why-image-2000.html', 'Redirect'], ['/awards', '/awards.html', 'Redirect'], ['/managed-it', '/services/managed-it.html', 'Redirect'], ['/copy-of-managed-it', '/services/software-solutions.html', 'Redirect'], ['/ucaas', '/services/ucaas.html', 'Redirect'], ['/waterlogic', '/services/water.html', 'Redirect'], ['/customer-services', '/customer-support.html', 'Redirect'], ['/locations', '/locations.html', 'Redirect, plus seven branch pages'], ['/santa-clarita, /bakersfield, /fresno, /inland-empire, /lakewood, /las-vegas, /irvine', '/locations/<branch>.html', 'Redirect each'], ['/product-catalogs', '/brands.html', 'Redirect, plus thirteen brand pages']],
+                   "note": "Every URL that exists today gets a permanent redirect, tested individually at launch. Numbers from Semrush's US database."},
+        "confirm": ["The branch count. The site says eight and nine (including Portland, Oregon) in different places and publishes seven addresses. The preview uses the seven; add Portland and San Diego when you send addresses.",
+                    "The Los Angeles branch address reads Los Angeles, CA 90670 on your site; 90670 is Santa Fe Springs. Confirm the city line.",
+                    "Response commitments. None are published, so none are promised here. Tell us what is in your service agreements and we will print it.",
+                    "The managed IT partnership with The Core Group, and how it is branded on the new site.",
+                    "Customer quotes. Two first-name quotes are on the site; we need six to eight with names, titles and companies, and permission.",
+                    "Employee count. ENX Magazine reported 115; the preview says about 115.",
+                    "Southern California's #1 dealer is your home page claim. It is not repeated here until you tell us the basis.",
+                    "The logo as a vector, and whether a refresh is on the table alongside the site.",
+                    "Portal and payment links (i2kservice.com and mysfsgateway.com) carried over as they are today."],
+        "footer": "Prepared for Rich Campbell, Joe Blatchford and Jeff Rudisel. Nothing here is live or indexed. Every number and claim comes from image-2000.com, the awarding organizations, ENX Magazine or public data. Photographs, renders and the 3D device are generated and labelled as such; your own imagery replaces them.",
+    }
+    _FAQ_EXTRA = {
+        "about.html": ("Questions about Image 2000", [
+            ["When was Image 2000 founded?", "In 1992, in the Santa Clarita Valley, where the company is still headquartered."],
+            ["Where are the offices?", "Seven: Santa Clarita, Los Angeles, Orange County, the Inland Empire, Bakersfield, Fresno and Las Vegas. Technicians are dispatched from the nearest one."],
+            ["Which manufacturers does Image 2000 represent?", "Eleven for print alone, Sharp, Kyocera, Toshiba, Lexmark, HP, Brother, KIP, Canon, Kodak Alaris, RISO and Formax, plus FP Mailing, Waterlogic, DocuWare, Square 9, PaperCut and Intermedia."]]),
+        "awards.html": ("About the awards", [
+            ["Who gives these awards?", "The manufacturers Image 2000 represents and the industry press. Each award on this page names its source and year."],
+            ["Why do dealer awards matter to a customer?", "They are earned on service and retention numbers the manufacturer audits, not on sales volume alone, so they say something about how customers are treated after the sale."],
+            ["Can I verify them?", "Yes. Every award links to the manufacturer or publication that granted it."]]),
+        "brands.html": ("Brand questions", [
+            ["Why carry eleven print brands?", "So the device fits the work rather than the other way round. A law office, a print shop and a school district need different machines, and one brand rarely covers all three well."],
+            ["Which brand should I pick?", "Start with the volume, the finishing and the software you run, and the specialist will narrow it to two devices. The brand pages on this site say what each line is best at."],
+            ["Do you service brands you did not sell?", "Ask the nearest office. Many of the represented lines can be serviced regardless of where the device was bought."]]),
+        "careers.html": ("Working at Image 2000", [
+            ["What roles does Image 2000 hire for?", "Sales, field service technicians, IT engineers, customer care, delivery and administration, as openings arise across the seven offices."],
+            ["Where would I work?", "Any of the seven offices in California and Las Vegas, with field roles covering the customers nearest that office."],
+            ["How do I apply?", "Use the form on this page. A person from Image 2000 reads every application and replies."],
+            ["What is it like to work at Image 2000?", "A family-run dealer since 1992 with seven branches, where technicians, sales and support work in the same building as the people who own the company. Training on eleven manufacturers' lines is part of the job, and manufacturer certifications are paid for."]]),
+        "community.html": ("About the community work", [
+            ["Which organizations does Image 2000 support?", "The ones named on this page, in the communities where the offices are. The list is current as of the last update shown."],
+            ["Can my organization apply?", "Contact the nearest office. Requests are considered locally, by the people who know the community."],
+            ["Do employees take part?", "Yes. Most of the work on this page is done by staff from the local office, on their own time and the company's."],
+            ["How long has Image 2000 supported these organizations?", "Since the company was founded in 1992 in the Santa Clarita Valley. Each branch supports the schools, nonprofits and events in its own community, and the list on this page grows as branches open."]]),
+        "contact.html": ("Before you write", [
+            ["Which office should I contact?", "The nearest of the seven. 800-481-2250 reaches all of them."],
+            ["How do I request service, supplies or a meter read?", "Existing customers use the customer support page or call the office. New customers start with the form here."],
+            ["Who replies?", "A person from the office, during business hours. The form is not an autoresponder."],
+            ["What happens after I send the form?", "A person from the nearest branch reads it and replies during business hours, Monday to Friday, 8am to 5pm. For a service call on an existing device, the customer support page is faster."]]),
+        "customer-support.html": ("Support questions", [
+            ["How do I place a service call?", "Use the service request form on this page or call the office that installed the device. Have the model and serial number ready."],
+            ["How do I order toner or submit a meter read?", "Through the supplies and meter forms on this page, or by phone to the nearest office."],
+            ["What if my device is under a managed print agreement?", "Supplies and service are included; use the same forms and the agreement is applied automatically."],
+            ["What are the support hours?", "Monday to Friday, 8am to 5pm at every branch. Service requests submitted overnight are dispatched the next morning from the branch nearest the device."]]),
+        "industries.html": ("Industry questions", [
+            ["Which industries does Image 2000 serve most?", "Education, healthcare, legal, government and print production across California and Nevada, along with businesses of every kind."],
+            ["My industry is not listed.", "The industry pages show how the same services fit different workflows; the assessment adapts them to yours."],
+            ["Do you have references in my industry?", "Ask the nearest office. Case examples and customer comments are on the site, and a reference in your field can be arranged."]]),
+        "services.html": ("How the services fit", [
+            ["What does Image 2000 do?", "Copiers and printers from eleven manufacturers, managed print, document workflow software, managed IT, UCaaS phones, mailing equipment, bottleless water and wide format."],
+            ["Do I have to take everything?", "No. Most customers start with the print fleet and add lines as the relationship earns it."],
+            ["Where does Image 2000 work?", "From seven offices: Santa Clarita, Los Angeles, Orange County, the Inland Empire, Bakersfield, Fresno and Las Vegas."]]),
+        "why-image-2000.html": ("Why Image 2000", [
+            ["What is different about Image 2000?", "Eleven manufacturers under one roof, thirty years in the same region, and awards earned on audited service numbers rather than sales volume."],
+            ["Is Image 2000 independent?", "Yes. Founded in 1992 and still independently owned, headquartered in the Santa Clarita Valley."],
+            ["How is service measured?", "By response, first-visit fix and retention, the numbers the manufacturer awards on this site are based on."]]),
+    }
+    for _pg in pages:
+        if _pg["file"] in _FAQ_EXTRA and not any(x.get("type") == "faq" for x in _pg["sections"]):
+            _h, _items = _FAQ_EXTRA[_pg["file"]]
+            _faq = {"type": "faq", "id": "faq", "heading": _h, "items": _items}
+            _secs = _pg["sections"]
+            if _secs and _secs[-1].get("type") in ("leadform", "cta", "contact"):
+                _secs.insert(len(_secs) - 1, _faq)
+            else:
+                _secs.append(_faq)
+    return {"client": "Image 2000", "slug": "image-2000", "domain_hint": "image-2000.com",
+            "brand": brand, "schema": schema, "nav": nav, "pages": pages, "pitch": pitch}
+
+
+if __name__ == "__main__":
+    data = build()
+    with open(OUT, "w") as f:
+        json.dump(data, f, ensure_ascii=False, indent=1)
+    print(f"wrote {OUT}: {len(data['pages'])} pages")

@@ -15,7 +15,8 @@ EXTRA_CSS2 = r"""
 /* ===== layered hero (dark, floating cards, pointer glow) ===== */
 .pv-lh{position:relative;overflow:hidden;background:var(--chrome-bg);color:#fff;isolation:isolate}
 .pv-lh .bg{position:absolute;inset:0;z-index:0}
-.pv-lh .bg img{width:100%;height:100%;object-fit:cover;display:block;opacity:.55;transform:scale(1.04);animation:pv-kb 38s ease-in-out infinite alternate}
+.pv-lh .bg img,.pv-lh .bg video{width:100%;height:100%;object-fit:cover;display:block;opacity:.55;transform:scale(1.04);animation:pv-kb 38s ease-in-out infinite alternate}
+.pv-lh .bg video{opacity:.62;animation:none;transform:none}
 @keyframes pv-kb{from{transform:scale(1.04) translate(0,0)}to{transform:scale(1.14) translate(-1.5%,1%)}}
 .pv-lh .net{position:absolute;inset:0;z-index:0;width:100%;height:100%;pointer-events:none;opacity:.9}
 .pv-lh .hero3d{position:relative;height:580px;margin-left:12%;animation:pv-float 8s ease-in-out infinite}
@@ -56,7 +57,7 @@ EXTRA_CSS2 = r"""
 .pv-lh .fcard.b .links a:hover{border-color:var(--accent-ink);color:var(--accent-ink)}
 .pv-lh .note{margin-top:22px;font-size:13.5px;color:rgba(255,255,255,.62)}
 @media(max-width:1024px){.pv-lh .q-container{grid-template-columns:1fr;gap:40px;padding-top:72px;padding-bottom:88px}.pv-lh .stack{min-height:0;display:grid;gap:16px;perspective:none}.pv-lh .fcard{position:static;width:100%;transform:none!important}.pv-lh .hero3d{height:380px;margin-left:0;animation:none}.pv-lh .stack.has3d .fcard.a{position:static;width:100%}}
-@media(prefers-reduced-motion:reduce){.pv-lh .glow{display:none}.pv-lh .fcard{transition:none}.pv-lh .bg img,.pv-lh .hero3d{animation:none}.pv-lh .net{display:none}}
+@media(prefers-reduced-motion:reduce){.pv-lh .glow{display:none}.pv-lh .fcard{transition:none}.pv-lh .bg img,.pv-lh .bg video,.pv-lh .hero3d{animation:none}.pv-lh .net{display:none}}
 
 /* ===== services wheel ===== */
 .pv-wheel{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
@@ -228,7 +229,11 @@ def _hero_layered(s, ctx):
     """Dark hero: background plate, pointer glow, headline, proof strip, two floating cards with depth."""
     E, RAW, L = ctx["E"], ctx["RAW"], ctx["L"]
     hid = s.get("id", "hero")
-    bg = f'<div class="bg"><img src="{E(ctx["rel"](s["image"]))}" alt="" width="{s.get("image_w", 2100)}" height="{s.get("image_h", 900)}" fetchpriority="high" decoding="async"></div>' if s.get("image") else '<div class="bg"></div>'
+    if s.get("video"):
+        poster = f' poster="{E(ctx["rel"](s["image"]))}"' if s.get("image") else ""
+        bg = f'<div class="bg"><video autoplay muted loop playsinline preload="metadata"{poster} aria-hidden="true" width="{s.get("image_w", 2100)}" height="{s.get("image_h", 900)}"><source src="{E(ctx["rel"](s["video"]))}" type="video/mp4"></video></div>'
+    else:
+        bg = f'<div class="bg"><img src="{E(ctx["rel"](s["image"]))}" alt="" width="{s.get("image_w", 2100)}" height="{s.get("image_h", 900)}" fetchpriority="high" decoding="async"></div>' if s.get("image") else '<div class="bg"></div>'
     stats = ""
     if s.get("stats"):
         cells = "".join(f'<div><b data-static>{E(v)}</b><span>{E(l)}</span></div>' for v, l in s["stats"])
