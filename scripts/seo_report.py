@@ -55,7 +55,7 @@ def section(sid, eyebrow, heading, body, intro=""):
     return f'<section id="{sid}"><div class="wrap"><p class="eyebrow">{E(eyebrow)}</p><h2>{E(heading)}</h2>{f"<p class=lead>{E(intro)}</p>" if intro else ""}{body}</div></section>'
 
 
-def render(basic: dict, deep: dict, client: str, domain: str, accent: str, as_of: str, prepared_for: str, hub_href: str = "index.html") -> str:
+def render(basic: dict, deep: dict, client: str, domain: str, accent: str, as_of: str, prepared_for: str, hub_href: str = "index.html", full: dict = None, csv_href: str = "") -> str:
     findings = deep.get("findings") or []
     stats = basic.get("summary_stats") or []
     # ---------------- top findings
@@ -88,6 +88,27 @@ def render(basic: dict, deep: dict, client: str, domain: str, accent: str, as_of
         th = "".join(f"<th scope=\"col\">{E(h)}</th>" for h in wb.get("columns", []))
         tr = "".join("<tr>" + "".join(_cell(c, i) for i, c in enumerate(r)) + "</tr>" for r in wb["rows"])
         wb_html = f'<div class="tblwrap" tabindex="0"><table class="tbl cmp"><thead><tr>{th}</tr></thead><tbody>{tr}</tbody></table></div>' + (f'<div class="verdict">{E(wb["verdict"])}</div>' if wb.get("verdict") else "")
+    # ---------------- whole-site audit (every non-blog, non-PDF URL in the sitemap)
+    fa_html = ""
+    if full and full.get("summary"):
+        sm = full["summary"]; rows = full.get("rows") or []; n = sm.get("pages", 0)
+        def pct(k): return f'{sm.get(k, 0)} of {n}'
+        tiles_f = [(pct("faq"), "pages with FAQPage schema"), (pct("service"), "pages with Service schema"), (f'{sm.get("review", 0)}', "pages with Review or rating schema"), (f'{sm.get("thin", 0)} of {n}', "pages under 300 words of body copy"), (pct("city_in_title"), "titles naming Indianapolis or Indiana"), (f'{sm.get("article", 0)}', "pages with Article or BlogPosting schema")]
+        ft = "".join(f'<div class="stile dark"><b>{E(v)}</b><span>{E(l)}</span></div>' for v, l in tiles_f)
+        from collections import Counter, defaultdict
+        groups = defaultdict(list)
+        for r in rows:
+            seg = r["url"].strip("/").split("/")[0] if r["url"].count("/") > 1 else "(top level)"
+            groups[seg].append(r)
+        grows = []
+        for seg, rs in sorted(groups.items(), key=lambda kv: -len(kv[1])):
+            grows.append([E("/" + seg + "/" if seg != "(top level)" else seg), len(rs), sum(1 for r in rs if r["faq"]), sum(1 for r in rs if r["service"]), sum(1 for r in rs if r["words"] < 300), f'{round(sum(r["words"] for r in rs) / len(rs)):,}'])
+        gt = table(["Section", "Pages", "With FAQPage", "With Service", "Under 300 words", "Average words"], grows)
+        money = [r for r in rows if any(k in r["url"] for k in ("/information/", "/communication/", "/print/", "/process/", "/copiers", "/copier-", "/document-", "/managed-", "/industries/"))]
+        mrows = [[f'<a href="https://{E(domain)}{E(r["url"])}" target="_blank" rel="noopener">{E(r["url"])}</a>', yn(r["faq"]), yn(r["service"]), f'{r["words"]:,}', yn(r["city"])] for r in sorted(money, key=lambda r: r["url"])]
+        mt2 = table(["Service and industry page", "FAQPage", "Service schema", "Words", "City in title"], mrows)
+        link = f'<p style="margin-top:18px"><a class="btn" href="{E(csv_href)}" download>Download the page-by-page audit (CSV, {n} rows)</a></p>' if csv_href else ""
+        fa_html = f'<div class="stiles">{ft}</div><h3>By section of the site</h3>{gt}<h3>Every service and industry page</h3>{mt2}{link}<p class="fine">Method: every URL in the sitemap except the {E("blog?p=")} query-string posts and PDFs, fetched {E(as_of)} and parsed for JSON-LD types, title, H1, meta description and body word count. Word counts exclude navigation, header and footer.</p>'
     lv = deep.get("leverage") or {}
     lv_html = ""
     if lv.get("items"):
@@ -187,6 +208,7 @@ def render(basic: dict, deep: dict, client: str, domain: str, accent: str, as_of
 .qgrid{{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}}.qcol h3{{margin-top:8px}}ul{{padding-left:18px}}li{{margin:6px 0}}
 .steps{{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}}.step{{background:#fff;border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:12px;padding:16px 18px}}.step .when{{font-weight:700;color:var(--accent);margin-bottom:6px}}.step p{{margin:0;font-size:14.5px}}
 .tbl.cmp th[scope=row]{{text-align:left;font-weight:600;background:#fff}}.tbl.cmp td.bad{{color:#b3261e;font-weight:600}}.tbl.cmp td.ok{{color:#1b7f4b;font-weight:600}}.tbl.cmp td:nth-child(2){{background:color-mix(in srgb,var(--accent) 6%,#fff)}}
+.stile.dark{{background:var(--navy);color:#fff;border-color:var(--navy)}}.stile.dark b{{color:#fff}}.stile.dark span{{color:rgba(255,255,255,.8)}}.btn{{display:inline-block;background:var(--accent);color:#fff;padding:12px 20px;border-radius:999px;font-weight:600;text-decoration:none}}.fine{{font-size:13px;color:var(--muted);margin-top:14px}}
 .verdict{{margin-top:22px;padding:22px 26px;background:var(--navy,#0f1e33);color:#fff;border-radius:12px;font-size:18px;line-height:1.5}}
 .lev{{display:grid;gap:14px}}.levi{{display:grid;grid-template-columns:56px 1fr;gap:16px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 22px;box-shadow:0 10px 30px rgba(0,0,0,.05)}}.levi .n{{font-size:34px;font-weight:800;color:var(--accent);line-height:1}}.levi h3{{margin:6px 0 6px;font-size:20px}}.levi .meta{{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 8px;color:var(--muted);font-size:14px}}.levi .tag{{background:color-mix(in srgb,var(--accent) 12%,#fff);color:var(--accent);border-radius:999px;padding:2px 10px;font-weight:600}}.levi p{{margin:0}}
 .note{{background:#fff;border-left:4px solid var(--accent);padding:12px 18px;color:var(--muted);margin:24px 0 0}}
@@ -197,6 +219,7 @@ def render(basic: dict, deep: dict, client: str, domain: str, accent: str, as_of
 {section("findings", "Top findings", "Ranked by what they cost, with the fix", top, "Each finding carries its evidence, what it costs today, and what the build or the 90-day plan does about it.")}
 {section("why", "Why the competitors are winning", "The same pages, side by side", wb_html, wb.get("intro", ""))}
 {section("leverage", "Highest leverage moves", "Five moves, in the order we would make them", lv_html, lv.get("intro", ""))}
+{section("site", "Whole site, every page", f"{(full or {}).get('summary', {}).get('pages', 0)} pages, and what each one tells a crawler", fa_html, "The ten-page sample above holds across the whole site. Answer engines reward pages that answer questions and declare what they offer. Most of these pages do neither yet.")}
 {section("today", "Where the traffic comes from", "Today, in numbers", "<ul>" + tech + "</ul>" if tech else "")}
 {section("competitors", "Competitors", "Who earns the visits you should be earning", comp, "Indiana office-technology and managed-IT providers competing for the same terms.")}
 {section("opportunities", "Keyword opportunities", "The terms worth a page each", opp, "Volume and difficulty from Semrush. Where a competitor ranks and the client does not, the gap is a missing page, not missing authority.")}
@@ -224,10 +247,13 @@ def main():
     ap.add_argument("--prepared-for", default="")
     ap.add_argument("--hub", default="index.html")
     ap.add_argument("--out", required=True)
+    ap.add_argument("--full", help="whole-site audit JSON (summary + rows)")
+    ap.add_argument("--csv-href", default="", help="relative href of the page-by-page CSV next to the report")
     a = ap.parse_args()
     basic = json.load(open(a.basic, encoding="utf-8"))
     deep = json.load(open(a.deep, encoding="utf-8")) if a.deep else {}
-    page = render(basic, deep, a.client, a.domain, a.accent, a.as_of, a.prepared_for or a.client, a.hub)
+    full = json.load(open(a.full)) if a.full else None
+    page = render(basic, deep, a.client, a.domain, a.accent, a.as_of, a.prepared_for or a.client, a.hub, full, a.csv_href)
     assert "—" not in page and "–" not in page
     open(a.out, "w", encoding="utf-8").write(page)
     print(f"wrote {a.out}: {len(deep.get('findings') or [])} findings, {len(page):,} bytes")

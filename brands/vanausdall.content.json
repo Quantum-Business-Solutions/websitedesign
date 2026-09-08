@@ -9882,10 +9882,10 @@
         {
           "rank": 4,
           "severity": "high",
-          "title": "City pages are the traffic engine competitors use and VAF lacks",
-          "evidence": "Leap's four /it-support-{city}/ pages earn 531 of 1,555 visits (34 percent); Taylored links 11 /location-{city}/ pages from its nav.",
-          "impact": "Carmel, Fishers, Noblesville, Greenwood and Muncie searches, including 'managed service provider carmel indiana' (720/mo, KD 13), go elsewhere.",
-          "action": "Build 6 suburb pages on the existing Indianapolis template with LocalBusiness schema and unique service proof per city."
+          "title": "Suburb pages exist but at 115 words they cannot rank",
+          "evidence": "Carmel, Fishers, Noblesville and Greenwood each have one page of 112 to 122 words with LocalBusiness schema only and no FAQ or Service schema. Leap's four suburb pages earn 34 percent of its traffic; 'managed service provider Carmel Indiana' is 720 searches a month at difficulty 13.",
+          "impact": "The pages are indexed but say nothing an engine can match to a query, so the suburb searches go to Leap and Taylored.",
+          "action": "Rebuild each as a full location page: services offered, a local case study, FAQ marked up as FAQPage, Service schema and a named contact. The location template in the build does this."
         },
         {
           "rank": 5,

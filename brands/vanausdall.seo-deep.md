@@ -30,5 +30,5 @@ The brand reviews query returns Indeed (2.8, 73 reviews) and Glassdoor (3.3, 104
 1. Critical: absent from all 10 results for best managed IT Indianapolis; claim cloudtango and clutch, build local links.
 2. High: the largest-provider claim is invisible; publish an entity facts page and earn citations.
 3. High: employer ratings own the brand reviews SERP; start a Google review program and add Review schema.
-4. High: no suburb city pages while Leap earns 34 percent of traffic from four of them.
+4. High: Carmel, Fishers, Noblesville and Greenwood pages exist at 112 to 122 words with no FAQ or Service schema, while Leap earns 34 percent of traffic from four suburb pages. Whole-site crawl of 171 pages: 4 with FAQPage, 3 with Service, 0 with Review, 68 under 300 words.
 5. High: referring domains are job boards; pursue vendor partner and chamber links.
