@@ -261,3 +261,5 @@ live, direction chosen, build started, launched.
 | QA findings pass five | 4fffccaf-20fd-460b-9d8b-80755e28f97d |
 Full INTAKE.md and qa-findings.md entries are refreshed on the monthly re-upload (RUNBOOK step 7).
 | Kelly preview gate result after the module library (evening) | a4fbebea-d5a3-4797-9440-b8a55c4a517b |
+| Image 2000 preview: 46 pages, three directions, no recommendation | 0f82fda1 (see ClientCommand, category Client) |
+| Website runbook version 2.0 | 5d97235d-22fc-4b6f-8d54-f458abcc6e17 |
