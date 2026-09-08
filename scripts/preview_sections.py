@@ -282,7 +282,7 @@ def _map(s, ctx):
         dx, dy = it.get("label_dx", 10), it.get("label_dy", 4)
         pins.append(f'<circle class="ring" cx="{x:.1f}" cy="{y:.1f}" r="{s.get("ring", 42)}"/><circle class="pin{" hq" if hq else ""}" cx="{x:.1f}" cy="{y:.1f}" r="5.5"/><text x="{x + dx:.1f}" y="{y + dy:.1f}">{E(name)}</text>')
         rows.append(f'<li><div><b>{E(name)}{" (headquarters)" if hq else ""}</b><small>{E(sub)}</small></div><a href="{E(ctx["L"](href))}">{E(it.get("link", "Branch page"))}</a></li>')
-    svg = f'<svg class="pv-map-svg" viewBox="0 0 {w:.0f} {h:.0f}" role="img" aria-label="{E(s.get("alt", "Map of North Carolina with Kelly branch locations"))}"><path class="land" d="{path}"/>{"".join(pins)}</svg>'
+    svg = f'<svg class="pv-map-svg" viewBox="0 0 {w:.0f} {h:.0f}" role="img" aria-label="{E(s.get("alt", f"Map of North Carolina with {ctx.get(chr(99)+chr(108)+chr(105)+chr(101)+chr(110)+chr(116)+chr(95)+chr(115)+chr(104)+chr(111)+chr(114)+chr(116), chr(111)+chr(117)+chr(114))} locations"))}"><path class="land" d="{path}"/>{"".join(pins)}</svg>'
     head = f'<div class="pv-split" style="margin-bottom:40px"><h2 class="q-h2">{E(s["heading"])}</h2><p>{E(s.get("intro", ""))}</p></div>'
     return f'{ctx["sec_open"](s)} <div class="q-container">{head}<div class="pv-map-wrap">{svg}<ul class="pv-map-list">{"".join(rows)}</ul></div></div></section>'
 
@@ -324,7 +324,7 @@ def _article(s, ctx):
              f'<div class="callout"><b>{E(p[8:].split("|")[0])}</b>{E(p[8:].split("|", 1)[1]) if "|" in p[8:] else ""}</div>' if p.startswith("callout:") else
              f'<ul>{"".join(f"<li>{E(x.strip())}</li>" for x in p[3:].split(";;"))}</ul>' if p.startswith("ul:") else
              f'<p>{RAW(p)}</p>') for p in c["paras"])
-    author = s.get("author", {"name": "The Kelly team", "role": "Service and sales, North Carolina"})
+    author = s.get("author", {"name": ("The " + ctx.get("client_short", "") + " team").replace("The  team", "The team"), "role": "North Carolina"})
     hero = f'<div class="pv-art-hero"><img src="{E(ctx["rel"](s["image"]))}"{ctx["srcset"](s["image"])} alt="{E(s.get("image_alt", ""))}" width="1200" height="800" fetchpriority="high"></div>' if s.get("image") else ""
     bc = f'<nav class="pv-bc" aria-label="Breadcrumb"><a href="{E(ctx["L"]("index.html"))}">Home</a><span>/</span><a href="{E(ctx["L"]("blog.html"))}">Blog</a><span>/</span>{E(s["category"])}</nav>'
     return f'''<section class="q-section" style="padding-top:28px"><div class="q-container">{bc}<div class="pv-art-head" style="margin-top:34px"><div class="q-eyebrow" style="justify-content:center">{E(s["category"])}</div><h1 class="q-h1" style="font-size:clamp(34px,4vw,56px);margin-top:20px">{RAW(s["heading"])}</h1><p class="q-lead" style="margin:20px auto 0;max-width:640px">{E(s.get("standfirst"))}</p><div class="pv-art-meta"><span><b>{E(author["name"])}</b></span><span>{E(s.get("date_label", ""))}</span><span>{E(s.get("read", ""))}</span></div></div>{hero}</div></section>

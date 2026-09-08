@@ -847,7 +847,7 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
         return ss.replace('"../', '"' + up).replace(', ../', ', ' + up)
 
     ctx = {"rel": rel, "L": L, "partner_logo": partner_logo, "brand": b, "year": 2026, "srcset": srcset, "file": page["file"],
-           "E": E, "RAW": RAW, "sec_open": sec_open, "depth": depth}
+           "E": E, "RAW": RAW, "sec_open": sec_open, "depth": depth, "client": content.get("client", ""), "client_short": content.get("client", "").split(" ")[0]}
     secs = []
     for sec in page["sections"]:
         sec = dict(sec)

@@ -274,7 +274,7 @@ def _wheel(s, ctx):
         tspans = "".join(f'<tspan x="{lx:.1f}" dy="{"0" if k == 0 else "1.2em"}">{E(t)}</tspan>' for k, t in enumerate(lines) if t)
         segs.append(f'<a href="{E(L(it[2]))}" data-i="{i}" aria-label="{E(it[0])}"><g><path class="seg" d="{d}"/><text class="lab" x="{lx:.1f}" y="{ly - (6 if len(lines) > 1 else 0):.1f}" text-anchor="middle">{tspans}</text></g></a>')
         labels.append(f'<li><a href="{E(L(it[2]))}" data-i="{i}"><i></i>{E(it[0])}</a></li>')
-    hub_t = E(s.get("hub", "Kelly"))
+    hub_t = E(s.get("hub", ctx.get("client_short", "One")))
     hub_s = E(s.get("hub_sub", "one partner"))
     ring_id = f"{wid}-ring"
     svg = (f'<svg viewBox="0 0 560 560" role="group" aria-labelledby="{wid}-t"><title id="{wid}-t">{E(s.get("alt", "The service lines as a wheel"))}</title>'

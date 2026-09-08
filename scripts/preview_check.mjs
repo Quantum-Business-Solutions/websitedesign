@@ -3,7 +3,7 @@
 // Pages are relative to ROOT (the client repo). Results in OUT/results.json.
 import { chromium } from 'playwright';
 import fs from 'fs'; import path from 'path';
-const ROOT = '/home/user/kelly-office-solutions';
+const ROOT = process.env.PV_ROOT || '/home/user/kelly-office-solutions';
 const OUT = '/tmp/claude-0/-home-user-Claude/798fbbce-ca0c-53c7-a6be-67c5e0055ed0/scratchpad/qa3';
 const pages = process.argv.slice(2);
 const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome', args: ['--headless=new','--no-sandbox'] });
