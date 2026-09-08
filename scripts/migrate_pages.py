@@ -9,25 +9,49 @@ migrated pages linked from the pillar pages.
 """
 import re
 
+# Defaults are Van Ausdall & Farrar's. Call configure(...) from the content file before using anything else.
 CITY_WORDS = ("indianapolis", "indiana", "fort wayne", "evansville", "bloomington", "carmel", "fishers", "noblesville", "greenwood", "muncie", "columbus", "south bend")
 CITY_SLUGS = {"indianapolis": "Indianapolis", "fort-wayne": "Fort Wayne", "evansville": "Evansville", "bloomington": "Bloomington", "carmel": "Carmel", "fishers": "Fishers", "noblesville": "Noblesville", "greenwood": "Greenwood", "muncie": "Muncie", "columbus": "Columbus", "south-bend": "South Bend"}
+BRAND = {"name": "Van Ausdall & Farrar", "legal": "Van Ausdall & Farrar, Inc.", "short": "VAF", "state": "Indiana", "hq_city": "Indianapolis", "site": "https://www.vanausdall.com",
+         "tail": "From Van Ausdall & Farrar, Indiana's largest office technology provider since 1914.", "hq_address": "6430 E 75th Street, Indianapolis, IN 46250",
+         "proof": ["Serving Indiana since 1914", "NPS 93.4, audited by CEO Juice", "SOC 2 certified", "250+ years of IT experience on staff"],
+         "proof_body": "Indiana's largest full-service office technology provider, privately owned in Indianapolis since 1914. A Net Promoter Score of 93.4, collected and audited by CEO Juice, an independent company, against a US average of 10. SOC 2 certification for the way we protect customer data. Mitel Gold partner seven years running, in the telecom business since 1983 with more than 4,000 systems deployed. Technology advisors whose average tenure with the company is fifteen years, so the person who sold the system is still here when it needs attention.",
+         "service_line": "One Customer Care Center, answered within 24 hours", "assessment": "Technology Strength Assessment",
+         "audience": "Businesses, schools, hospitals and municipalities across Indiana and the Midwest", "coverage": "Indianapolis, Fort Wayne, Evansville and every town between; the service fleet covers all of Indiana and customers throughout the Midwest are served from Indianapolis."}
+
+
+def configure(brand=None, city_words=None, city_slugs=None):
+    """Set the client. brand: keys as in BRAND (partial ok). city_words: lowercase words that count as a city in a title. city_slugs: {url-slug: City Name} for city pages."""
+    global CITY_WORDS, CITY_SLUGS
+    if brand:
+        BRAND.update(brand)
+    if city_words:
+        CITY_WORDS = tuple(w.lower() for w in city_words)
+    if city_slugs:
+        CITY_SLUGS = dict(city_slugs)
+
+
+def _brand_rx():
+    n = re.escape(BRAND["name"]).replace(r"\&", r"(&|and)").replace(r"\ ", r"\s+")
+    return rf"\b({n}|{re.escape(BRAND['short'])})('s)?\b[:,]?\s*"
 
 
 def has_city(s):
     return any(c in s.lower() for c in CITY_WORDS)
 
 
-def fix_title(title, brand="Van Ausdall & Farrar", short="VAF", city_default=", Indiana"):
+def fix_title(title, brand=None, short=None, city_default=None):
+    brand = brand or BRAND["name"]; short = short or BRAND["short"]; city_default = city_default or f", {BRAND['state']}"
     t = re.sub(r"\s+", " ", title).strip()
     if 30 <= len(t) <= 60 and has_city(t):
         return t
     base = re.sub(r"\s*\|.*$", "", t).strip()
     if brand.lower() in base.lower():
         if not has_city(base):
-            base = base.rstrip(".") + ", Indianapolis"
+            base = base.rstrip(".") + f", {BRAND['hq_city']}"
         if 30 <= len(base) <= 60:
             return base
-        base = re.sub(r"\b(Van Ausdall (&|and) Farrar|VA&F|VAF)('s)?\b[:,]?\s*", "", base).strip(" ,-:") or base
+        base = re.sub(_brand_rx(), "", base).strip(" ,-:") or base
     base = re.sub(r"\s+", " ", base)
     if not has_city(base):
         base = base.rstrip(".") + city_default
@@ -46,7 +70,8 @@ def fix_title(title, brand="Van Ausdall & Farrar", short="VAF", city_default=", 
     return cut + city_default + f" | {short}"
 
 
-def fix_desc(text, tail="From Van Ausdall & Farrar, Indiana's largest office technology provider since 1914.", lo=70, hi=160):
+def fix_desc(text, tail=None, lo=70, hi=160):
+    tail = tail or BRAND["tail"]
     t = re.sub(r"\s+", " ", (text or "")).strip()
     if len(t) > hi:
         out = ""
@@ -98,8 +123,8 @@ def is_junk(p):
 
 def clean_name(o):
     base = re.sub(r"\s*\|.*$", "", o.get("title") or "").strip()
-    base = re.sub(r"\b(Van Ausdall (&|and) Farrar|VA&F|VAF)('s)?\b[:,]?\s*", "", base).strip(" ,-:")
-    base = re.sub(r"^(KnowBe4)\s*[–-]\s*", "", base)
+    base = re.sub(_brand_rx(), "", base).strip(" ,-:")
+    base = re.sub(r"^(KnowBe4)\s*[\u2013-]\s*", "", base)
     return base or (o.get("h1") or "").strip() or "Page"
 
 
@@ -159,24 +184,24 @@ def _faq_for(o, name, ptype, pillar, city, phone):
     first = next((p for b in o["blocks"] for p in b["paras"]), "")
     subject = name
     if ptype == "city":
-        c = city or "Indiana"
-        pool = [[f"Does Van Ausdall & Farrar serve {c}?", f"Yes. {c} is served from the nearest VAF office with the same Customer Care Center, 25-point service inspections and 24-hour response as Indianapolis. The service fleet covers the entire state."],
-                [f"What does Van Ausdall & Farrar provide in {c}?", (first or f"Managed IT and cybersecurity, business phone systems, copiers and managed print, and document services for organizations in {c}.")[:400]],
-                [f"How do we get started in {c}?", f"Call {phone} or schedule a consultation. Most engagements begin with the free Technology Strength Assessment, then a specialist walks the results with you."],
-                ["Who supports us after installation?", "The Customer Care Center in Indianapolis, Monday through Friday, 7:00am to 5:00pm, with requests answered within 24 hours and certified technicians dispatched locally."]]
+        c = city or BRAND["state"]
+        pool = [[f"Does {BRAND['name']} serve {c}?", f"Yes. {c} is served from the nearest {BRAND['short']} office with the same service desk and response commitments as {BRAND['hq_city']}. The service fleet covers the entire state."],
+                [f"What does {BRAND['name']} provide in {c}?", (first or f"The full {BRAND['name']} service line for organizations in {c}.")[:400]],
+                [f"How do we get started in {c}?", f"Call {phone} or schedule a consultation. Most engagements begin with the free {BRAND['assessment']}, then a specialist walks the results with you."],
+                ["Who supports us after installation?", f"{BRAND['service_line']}, with certified technicians dispatched locally."]]
     elif ptype == "case study":
-        pool = [[f"What did {subject} achieve with Van Ausdall & Farrar?", (first or "The results are described in the case study above.")[:400]],
-                [f"Which services did {subject} use?", (pillar and f"{pillar} services from Van Ausdall & Farrar, delivered under one agreement.") or "Services from across VAF's four pillars: information, communication, print and process, under one agreement."],
-                ["Can we get results like these?", "Every engagement starts with the free Technology Strength Assessment. A specialist maps your devices, contracts and workflows and shows where the savings are before you commit."]]
+        pool = [[f"What did {subject} achieve with {BRAND['name']}?", (first or "The results are described in the case study above.")[:400]],
+                [f"Which services did {subject} use?", (pillar and f"{pillar} services from {BRAND['name']}, delivered under one agreement.") or f"Services from across {BRAND['name']}, under one agreement."],
+                ["Can we get results like these?", f"Every engagement starts with the free {BRAND['assessment']}. A specialist maps your devices, contracts and workflows and shows where the savings are before you commit."]]
     elif ptype == "policy":
-        pool = [["Who do I contact about this policy?", f"Van Ausdall & Farrar, Inc., 6430 E 75th Street, Indianapolis, IN 46250, {phone}. Write to the same address for any request about your personal information."],
+        pool = [["Who do I contact about this policy?", f"{BRAND['legal']}, {BRAND['hq_address']}, {phone}. Write to the same address for any request about your personal information."],
                 ["Does this policy apply to the Customer Care app?", "The Customer Care app has its own privacy policy, linked from this site. Where the two differ, the app policy governs data collected in the app."],
-                ["When was this policy last updated?", "The policy text on this page is carried over from vanausdall.com as of September 2026; a dated revision line is added when the new site goes live."]]
+                ["When was this policy last updated?", f"The policy text on this page is carried over from the current site; a dated revision line is added when the new site goes live."]]
     else:
-        pool = [[f"What is {subject.lower() if subject[:1].isupper() and not subject.isupper() else subject}?", (first or f"{subject} from Van Ausdall & Farrar, Indiana's largest office technology provider.")[:400]],
-                [f"Who is {subject.lower() if not subject.isupper() else subject} for?", f"Businesses, schools, hospitals and municipalities across Indiana and the Midwest that want {pillar.lower() + ' technology' if pillar else 'technology'} from one local partner rather than several vendors."],
-                [f"How much does {subject.lower() if not subject.isupper() else subject} cost?", "It depends on scope, so we do not publish a single price. The free Technology Strength Assessment produces a written recommendation and a quote with no obligation."],
-                [f"Where is {subject.lower() if not subject.isupper() else subject} available?", f"Indianapolis, Fort Wayne, Evansville and every town between; the service fleet covers all of Indiana and customers throughout the Midwest are served from Indianapolis. Call {phone}."]]
+        pool = [[f"What is {subject}?", (first or f"{subject} from {BRAND['name']}.")[:400]],
+                [f"Who is {subject} for?", f"{BRAND['audience']} that want {pillar.lower() + ' technology' if pillar else 'technology'} from one local partner rather than several vendors."],
+                [f"How much does {subject} cost?", f"It depends on scope, so we do not publish a single price. The free {BRAND['assessment']} produces a written recommendation and a quote with no obligation."],
+                [f"Where is {subject} available?", f"{BRAND['coverage']} Call {phone}."]]
     for q in pool:
         if len(qs) >= 5:
             break
@@ -214,7 +239,7 @@ def build_migrated(extract, existing_files, covered, retire, images, phone, pill
         img = images.get(pillar) or images.get(ptype) or images.get("default")
         eyebrow = f"{label}: {pillar}" if pillar else label
         secs = [{"type": "hero", "layout": "centered", "eyebrow": eyebrow, "heading": h1, "subhead": sub,
-                 "primary": {"label": "Schedule a consultation", "href": "contact.html"}, "secondary": {"label": "Take the assessment", "href": "technology-strength-assessment.html"},
+                 "primary": {"label": "Schedule a consultation", "href": "contact.html"}, "secondary": {"label": "Take the assessment", "href": BRAND.get("assessment_href", "technology-strength-assessment.html")},
                  "image": img, "image_alt": f"{name}", "image_w": 1200, "image_h": 800}]
         if ptype == "case study":
             chapters = []
@@ -226,7 +251,7 @@ def build_migrated(extract, existing_files, covered, retire, images, phone, pill
             if not chapters:
                 chapters = [{"id": "c0", "title": "Overview", "paras": [sub or name]}]
             secs = [{"type": "article", "category": "Case study", "crumb_label": "Case studies", "crumb_href": "case-studies.html", "heading": h1, "standfirst": sub, "image": img, "image_alt": f"{name} case study", "date_label": "Case study", "read": f"{max(2, o['words'] // 220)} min read", "chapters": chapters,
-                     "author": {"name": "Van Ausdall & Farrar", "role": "Published case study, vanausdall.com"}}]
+                     "author": {"name": BRAND["name"], "role": f"Published case study, {BRAND['site'].split('//')[-1].replace('www.', '')}"}}]
         else:
             n = 0
             for b in o["blocks"]:
@@ -240,25 +265,24 @@ def build_migrated(extract, existing_files, covered, retire, images, phone, pill
                 secs.append({"type": "detail", "alt": bool(n % 2), "eyebrow": pillar or label, "heading": b["heading"] or (f"About {name}" if n == 0 else "In practice"), "body": cut(body, 1400), "bullets": b["bullets"][:6]})
                 n += 1
             if o["words"] < 200 and ptype != "policy":
-                secs.append({"type": "detail", "alt": bool(n % 2), "eyebrow": "Why VAF", "heading": "What every Van Ausdall & Farrar customer gets", "body": "Indiana's largest full-service office technology provider, privately owned in Indianapolis since 1914. A Net Promoter Score of 93.4, collected and audited by CEO Juice, an independent company, against a US average of 10. SOC 2 certification for the way we protect customer data. Mitel Gold partner seven years running, in the telecom business since 1983 with more than 4,000 systems deployed. Technology advisors whose average tenure with the company is fifteen years, so the person who sold the system is still here when it needs attention.", "bullets": ["Serving Indiana since 1914", "NPS 93.4, audited by CEO Juice", "SOC 2 certified", "250+ years of IT experience on staff"]})
+                secs.append({"type": "detail", "alt": bool(n % 2), "eyebrow": "Why VAF", "heading": f"What every {BRAND['name']} customer gets", "body": BRAND["proof_body"], "bullets": BRAND["proof"]})
                 n += 1
             if o["words"] < 320 and ptype != "policy":
                 blurb = pillar_blurbs.get(pillar) or pillar_blurbs.get("default")
-                secs.append({"type": "detail", "alt": bool(n % 2), "eyebrow": "One agreement", "heading": "How it fits with the rest of Van Ausdall & Farrar", "body": blurb,
-                             "bullets": ["One Customer Care Center, answered within 24 hours", "25-point inspection on every service call", "Net Promoter Score 93.4, audited by CEO Juice", "Privately owned in Indianapolis since 1914"]})
+                secs.append({"type": "detail", "alt": bool(n % 2), "eyebrow": "One agreement", "heading": f"How it fits with the rest of {BRAND['name']}", "body": blurb, "bullets": [BRAND["service_line"]] + BRAND["proof"][:3]})
         faq = _faq_for(o, name, ptype, pillar, city, phone)
         if faq:
-            secs.append({"type": "faq", "alt": True, "heading": f"Questions about {name}" if ptype != "city" else f"Questions we get in {city or 'Indiana'}", "items": faq})
+            secs.append({"type": "faq", "alt": True, "heading": f"Questions about {name}" if ptype != "city" else f"Questions we get in {city or BRAND['state']}", "items": faq})
         if ptype != "policy":
-            secs.append({"type": "leadform", "id": "consult", "heading": "Start with the Technology Strength Assessment", "body": "Ten to fifteen minutes, then a specialist walks it with you.", "submit": "Schedule my consultation", "note": f"A person from the Indianapolis office replies, not an autoresponder. Or call {phone}."})
+            secs.append({"type": "leadform", "id": "consult", "heading": f"Start with the {BRAND['assessment']}", "body": "Ten to fifteen minutes, then a specialist walks it with you.", "submit": "Schedule my consultation", "note": f"A person from the {BRAND['hq_city']} office replies, not an autoresponder. Or call {phone}."})
         crumbs = [["Home", "index.html"], [label, section_index.get(label, "index.html")], [name, file]]
         schema = []
-        site = "https://www.vanausdall.com"
+        site = BRAND["site"]
         if ptype in ("service", "city"):
-            schema.append({"@context": "https://schema.org", "@type": "Service", "name": name, "serviceType": name, "provider": {"@type": "Organization", "name": "Van Ausdall & Farrar, Inc.", "url": site},
-                           "areaServed": [{"@type": "City", "name": city}] if city else {"@type": "State", "name": "Indiana"}, "description": sub or name})
+            schema.append({"@context": "https://schema.org", "@type": "Service", "name": name, "serviceType": name, "provider": {"@type": "Organization", "name": BRAND["legal"], "url": site},
+                           "areaServed": [{"@type": "City", "name": city}] if city else {"@type": "State", "name": BRAND["state"]}, "description": sub or name})
         if ptype == "case study":
-            schema.append({"@context": "https://schema.org", "@type": "Article", "headline": h1, "description": sub or name, "author": {"@type": "Organization", "name": "Van Ausdall & Farrar, Inc."}, "publisher": {"@type": "Organization", "name": "Van Ausdall & Farrar, Inc."}, "about": name})
+            schema.append({"@context": "https://schema.org", "@type": "Article", "headline": h1, "description": sub or name, "author": {"@type": "Organization", "name": BRAND["legal"]}, "publisher": {"@type": "Organization", "name": BRAND["legal"]}, "about": name})
         title_base = f"{name} in {city}, IN" if (city and not has_city(name)) else name
         pages.append({"file": file, "title": fix_title(title_base), "description": fix_desc(o.get("meta") or sub or name), "crumbs": crumbs, "sections": secs, "schema": schema, "migrated_from": url, "ptype": ptype, "pillar": pillar, "name": name, "one": (sub or name)[:140]})
     return pages, redirects
@@ -269,14 +293,14 @@ def link_sections(migrated):
     out = {}
     sol = [[p["pillar"] or "Solutions", p["name"], p["one"], "Open the page", p["file"]] for p in migrated if p["ptype"] == "service"]
     if sol:
-        out["solutions.html"] = {"type": "resources", "alt": True, "heading": "Every solution page, by pillar", "intro": "Each page from vanausdall.com today, rebuilt in the new templates with its FAQ and schema.", "items": sorted(sol, key=lambda x: (x[0], x[1]))}
+        out["solutions.html"] = {"type": "resources", "alt": True, "heading": "Every solution page, by pillar", "intro": "Each page from the current site, rebuilt in the new templates with its FAQ and schema.", "items": sorted(sol, key=lambda x: (x[0], x[1]))}
     cit = [[p["file"].split("/")[-1].split("-")[0].title(), p["name"], p["one"], "Open the page", p["file"]] for p in migrated if p["ptype"] == "city"]
     if cit:
         out["locations.html"] = {"type": "resources", "alt": True, "heading": "Every city page", "intro": "One page per city and per service in that city, each with LocalBusiness and Service schema.", "items": sorted(cit, key=lambda x: (x[0], x[1]))}
     cs = [["Case study", p["name"], p["one"], "Read the case study", p["file"]] for p in migrated if p["ptype"] == "case study"]
     if cs:
-        out["case-studies.html"] = {"type": "resources", "alt": True, "heading": "More case studies, in full", "intro": "Migrated from the PDFs and pages on vanausdall.com.", "items": sorted(cs, key=lambda x: x[1])}
+        out["case-studies.html"] = {"type": "resources", "alt": True, "heading": "More case studies, in full", "intro": "Migrated from the PDFs and pages on the current site.", "items": sorted(cs, key=lambda x: x[1])}
     co = [["About", p["name"], p["one"], "Open the page", p["file"]] for p in migrated if p["ptype"] in ("company", "policy")]
     if co:
-        out["about.html"] = {"type": "resources", "alt": True, "heading": "More from Van Ausdall & Farrar", "intro": "Every remaining page on vanausdall.com, kept and rebuilt.", "items": sorted(co, key=lambda x: x[1])}
+        out["about.html"] = {"type": "resources", "alt": True, "heading": f"More from {BRAND['name']}", "intro": "Every remaining page on the current site, kept and rebuilt.", "items": sorted(co, key=lambda x: x[1])}
     return out

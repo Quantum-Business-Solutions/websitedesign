@@ -1026,7 +1026,13 @@ def build():
     # ---------------- page for page: every vanausdall.com URL gets a counterpart, then every page is normalised
     import sys as _sys
     _sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "scripts"))
-    from migrate_pages import fix_title, fix_desc, build_migrated, link_sections
+    from migrate_pages import fix_title, fix_desc, build_migrated, link_sections, configure
+    configure(brand={"name": CLIENT, "legal": "Van Ausdall & Farrar, Inc.", "short": SHORT, "state": "Indiana", "hq_city": "Indianapolis", "site": SITE,
+                     "tail": "From Van Ausdall & Farrar, Indiana's largest office technology provider since 1914.", "hq_address": "6430 E 75th Street, Indianapolis, IN 46250",
+                     "service_line": "One Customer Care Center, answered within 24 hours", "assessment": "Technology Strength Assessment", "assessment_href": "technology-strength-assessment.html",
+                     "audience": "Businesses, schools, hospitals and municipalities across Indiana and the Midwest", "coverage": "Indianapolis, Fort Wayne, Evansville and every town between; the service fleet covers all of Indiana and customers throughout the Midwest are served from Indianapolis."},
+              city_words=("indianapolis", "indiana", "fort wayne", "evansville", "bloomington", "carmel", "fishers", "noblesville", "greenwood", "muncie", "columbus", "south bend"),
+              city_slugs={"indianapolis": "Indianapolis", "fort-wayne": "Fort Wayne", "evansville": "Evansville", "bloomington": "Bloomington", "carmel": "Carmel", "fishers": "Fishers", "noblesville": "Noblesville", "greenwood": "Greenwood", "muncie": "Muncie", "columbus": "Columbus", "south-bend": "South Bend"})
     _extract = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "vanausdall.pages.json"), encoding="utf-8"))
     COVERED = {"/": "index.html", "/about/": "about.html", "/about/why": "about.html", "/about/history": "about.html", "/about/customer-comments": "about.html", "/net-promoter-score": "about.html",
                "/contact/": "contact.html", "/contact/careers": "careers.html", "/get-started": "contact.html", "/customer-care": "support.html", "/support/": "support.html", "/vaf-auto-support": "support.html",
@@ -1089,7 +1095,7 @@ def build():
             _insert(pg, FAQ_EXTRA[pg["file"]])
         if pg["file"] in EXTRA_SECTIONS:
             pg["sections"].insert(1, EXTRA_SECTIONS[pg["file"]])
-        pg["title"] = TITLES.get(pg["file"]) or fix_title(pg["title"])
+        pg["title"] = fix_title(TITLES.get(pg["file"]) or pg["title"])
         pg["description"] = fix_desc(pg.get("description", ""))
     MIGRATION = {"pages": len(migrated), "redirects": len(REDIRECTS), "retired": sorted(RETIRE), "map": REDIRECTS}
     brand["legal"] = [["Privacy", "policies/privacy.html"], ["Terms of service", "policies/terms-of-service.html"], ["Cookie policy", "policies/cookie.html"]]

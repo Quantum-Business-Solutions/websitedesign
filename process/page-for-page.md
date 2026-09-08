@@ -54,11 +54,32 @@ favour what answer engines read, which is the point of the exercise.
 - **No invented facts in the FAQ.** Templated questions are answered from the page's own first
   paragraph or from facts already sourced in the brand file (phone, offices, NPS, founding year).
 
+## Step five: the quality gate
+
+The score is a grade; the gate is pass or fail. `scripts/quality_check.py --out <client-repo>
+--domain <client domain>` re-reads every built page and checks the claims the hub makes: title
+30 to 60 characters with the city, meta 70 to 160, one H1, two H2s, a question heading,
+canonical, og:image, Organization and LocalBusiness JSON-LD that parses, FAQPage on every
+non-policy page, Service on service, industry and city pages, Article on case studies and posts,
+a form or tel link, ten internal links, no em or en dashes in visible text. It then checks that
+every 301 target in `redirects.csv` exists in every option and that every link on the hub's page
+cards resolves. Exit code 1 on any failure. Run it before every push; on VAF it caught 35 titles
+of 61 to 67 characters that the score had let through as A grades.
+
+Independent of the script, a Quality Agent (a subagent with the claim list and the file paths,
+told to trust nothing and report discrepancies) does the same job with fresh eyes plus a browser
+pass: console errors, horizontal overflow at 1440 and 390, FAQ toggles, and a read of migrated
+copy for navigation residue and truncated sentences. Its prompt is in the session notes; the
+pattern is "verify the claims, do not fix, report counts and file paths".
+
 ## Reuse for the next prospect
 
-`site_audit.py` is generic. `migrate_pages.py` carries VAF's city list and brand names as module
-constants at the top; move them to the content file's brand block before the second client. The
-hub card renderer and the SEO report renderer read only the JSON files, so they need no changes.
+`site_audit.py` and `quality_check.py` are generic. `migrate_pages.py` is configured from the
+content file: call `configure(brand={...}, city_words=(...), city_slugs={...})` with the client's
+name, short name, state, headquarters city, site URL, meta tail sentence, proof points, service
+line and assessment name before building. Every client-facing string in the module reads from
+that block. The hub card renderer and the SEO report renderer read only the JSON files, so they
+need no changes.
 
 The whole sequence, for a new slug:
 
