@@ -430,6 +430,17 @@ HOTSPOTS = {"type": "hotspots", "id": "office", "eyebrow": "The whole office", "
         {"x": 16, "y": 58, "k": "Print", "title": "The desks", "body": "Desktop printers right-sized to how many the office needs, folded into the same managed print report as the copiers.", "href": "services/managed-print.html", "label": "Managed print"},
         {"x": 62, "y": 38, "k": "Process", "title": "The meeting area", "body": "Where AI shows up first: drafting, summarizing, automating. An acceptable use policy and a roadmap before the tools.", "href": "services/ai-consulting.html", "label": "AI consulting"}]}
 
+FLEET = {"type": "fleet", "id": "fleet", "heading": "The fleet, at a glance", "intro": "Every device family VAF sells and services. Generated product renders for the preview; Canon, Ricoh, Kyocera and HP models replace them.",
+    "items": [
+        {"title": "Multifunction copiers", "band": "Workgroup to department", "brands": "Canon, Ricoh, Kyocera, HP", "image": "assets/fleet/mfp.png", "bullets": ["Print, scan, copy, fax", "Secure release and scan to OnBase"], "href": "services/copiers.html", "label": "Copiers and printers"},
+        {"title": "Desktop printers", "band": "Desk and small team", "brands": "HP, Brother, Kyocera", "image": "assets/fleet/printer.png", "bullets": ["Color and mono", "Folded into managed print"], "href": "services/managed-print.html", "label": "Managed print"},
+        {"title": "Wide format", "band": "Plans, posters, signage", "brands": "Canon, HP", "image": "assets/fleet/wide-format.png", "bullets": ["Plan sets in house", "Engineering and construction"], "href": "industries/engineering-construction.html", "label": "Engineering and construction"},
+        {"title": "Production print", "band": "High volume, inline finishing", "brands": "EFI Fiery, Skyline web-to-print", "image": "assets/fleet/production.png", "bullets": ["Variable data", "Color management from profile to press"], "href": "services/production-print.html", "label": "Production print"}]}
+
+PROOF = {"type": "proof", "id": "proof", "alt": True, "eyebrow": "Measured, not claimed", "value": "93.4", "text": "Net Promoter Score, collected and audited by CEO Juice from VAF customers after every service call. World Class, above 70, every year since 2019. The average US company scores 10.", "source": "CEO Juice is an independent company with an audited process. The numbers cannot be changed, even when a customer scores us low in error."}
+
+FILM = {"type": "video", "id": "film", "eyebrow": "Who we are", "heading": "Privately owned in Indianapolis since 1914", "intro": "Filmed with VAF people at the 75th Street headquarters.", "youtube": "i-q4U5SnvaM", "poster": "assets/careers-1200.jpg", "title": "What it's like to work at Van Ausdall & Farrar", "caption": "VAF's own film, from vanausdall.com"}
+
 MODEL3D = {"type": "model3d", "id": "model", "alt": False, "eyebrow": "Take a closer look", "heading": "Walk around one before it arrives", "intro": "A generated stand-in multifunction device for the preview. Drag to rotate. Canon, Ricoh, Kyocera and HP product imagery replaces it in the build.", "poster": "assets/mfp-poster-1200.jpg", "alt": "A white and charcoal multifunction copier on a cabinet, rotatable", "cta": {"label": "See copiers and printers", "href": "services/copiers.html"}, **({"model": MFP_MODEL} if MFP_MODEL else {})}
 
 TABS_MARKETS = {"type": "tabs", "id": "markets", "eyebrow": "Industries", "heading": "Built around how your industry runs",
@@ -471,6 +482,7 @@ def service_page(slug, title, navlabel, pillar, image, eyebrow, heading, subhead
     for i, m in enumerate(SERVICE_MODULES.get(slug, [])):
         secs.insert(2 + i, m)
     if slug == "copiers":
+        secs.insert(3, dict(FLEET, alt=False, heading="The rest of the fleet"))
         secs.insert(2, dict(MODEL3D, alt=True, heading="Walk around one", intro="A generated stand-in for the preview. Drag to rotate; your Canon, Ricoh, Kyocera and HP models replace it."))
     if slug == "managed-it":
         secs.insert(2, {"type": "proof", "id": "proof", "alt": True, "eyebrow": "In our own words", "value": "24/7", "text": SIGMON[0], "source": f"{SIGMON[1]}, {SIGMON[2]}"})
@@ -727,9 +739,9 @@ def build():
     # ---------------- home
     pages.append({"file": "index.html", "title": "Van Ausdall & Farrar | Managed IT, copiers, phone systems and office technology in Indianapolis",
                   "compose": {
-                      "clean": ["hero-light", "partners", "seal", "wheel", "office", "is-this-you", "flow", "model", "markets", "map", "voices", "faq", "contact"],
-                      "showcase": ["hero", "partners", "wheel", "office", "ba", "flow", "model", "casestudy", "markets", "map", "voices", "contact"],
-                      "press": ["hero-light", "story", "services", "office", "seal", "casestudy", "voices", "flow", "map", "faq", "contact"]},
+                      "clean": ["hero-light", "partners", "seal", "wheel", "office", "is-this-you", "fleet", "flow", "model", "markets", "map", "voices", "film", "faq", "contact"],
+                      "showcase": ["hero", "partners", "wheel", "fleet", "ba", "flow", "office", "model", "proof", "casestudy", "markets", "map", "voices", "film", "contact"],
+                      "press": ["hero-light", "story", "services", "office", "seal", "casestudy", "voices", "film", "flow", "map", "faq", "contact"]},
                   "description": "Indiana's largest full-service office technology provider since 1914. Managed IT and cybersecurity, business phone systems, copiers and managed print, document management and AI consulting for Indianapolis and the Midwest.",
                   "sections": [
         {"type": "hero", "id": "hero-light", "layout": "split", "eyebrow": "Business technology simplified, since 1914",
@@ -743,7 +755,7 @@ def build():
          "badge": {"value": "93.4", "label": "Net Promoter Score, independently audited"}},
         HERO_LAYERED,
         {"type": "wheel", "id": "wheel", "eyebrow": "Four pillars", "heading": "Information, communication, print and process, from one partner", "intro": "Hover a segment. Four pillars, one agreement, one Customer Care Center.", "items": WHEEL_ITEMS, "hub": SHORT, "hub_sub": "one roof", "ring": "BUSINESS TECHNOLOGY SIMPLIFIED"},
-        FLOW_ENGAGEMENT, SEAL, BEFORE_AFTER, HOTSPOTS, MODEL3D, CS_QUOTE, TABS_MARKETS, MAP, TIMELINE,
+        FLOW_ENGAGEMENT, SEAL, BEFORE_AFTER, HOTSPOTS, FLEET, MODEL3D, PROOF, FILM, CS_QUOTE, TABS_MARKETS, MAP, TIMELINE,
         {"type": "partners", "id": "partners", "caption": "Technology partners, including Gartner Magic Quadrant leaders", "items": PARTNERS},
         {"type": "checklist", "id": "is-this-you", "alt": True, "eyebrow": "Is this you?", "heading": "Six questions from the Technology Strength Assessment",
          "intro": "Check the ones you cannot answer yes to. They are six of the eighty.",

@@ -448,11 +448,13 @@
           "wheel",
           "office",
           "is-this-you",
+          "fleet",
           "flow",
           "model",
           "markets",
           "map",
           "voices",
+          "film",
           "faq",
           "contact"
         ],
@@ -460,14 +462,17 @@
           "hero",
           "partners",
           "wheel",
-          "office",
+          "fleet",
           "ba",
           "flow",
+          "office",
           "model",
+          "proof",
           "casestudy",
           "markets",
           "map",
           "voices",
+          "film",
           "contact"
         ],
         "press": [
@@ -478,6 +483,7 @@
           "seal",
           "casestudy",
           "voices",
+          "film",
           "flow",
           "map",
           "faq",
@@ -870,6 +876,62 @@
           ]
         },
         {
+          "type": "fleet",
+          "id": "fleet",
+          "heading": "The fleet, at a glance",
+          "intro": "Every device family VAF sells and services. Generated product renders for the preview; Canon, Ricoh, Kyocera and HP models replace them.",
+          "items": [
+            {
+              "title": "Multifunction copiers",
+              "band": "Workgroup to department",
+              "brands": "Canon, Ricoh, Kyocera, HP",
+              "image": "assets/fleet/mfp.png",
+              "bullets": [
+                "Print, scan, copy, fax",
+                "Secure release and scan to OnBase"
+              ],
+              "href": "services/copiers.html",
+              "label": "Copiers and printers"
+            },
+            {
+              "title": "Desktop printers",
+              "band": "Desk and small team",
+              "brands": "HP, Brother, Kyocera",
+              "image": "assets/fleet/printer.png",
+              "bullets": [
+                "Color and mono",
+                "Folded into managed print"
+              ],
+              "href": "services/managed-print.html",
+              "label": "Managed print"
+            },
+            {
+              "title": "Wide format",
+              "band": "Plans, posters, signage",
+              "brands": "Canon, HP",
+              "image": "assets/fleet/wide-format.png",
+              "bullets": [
+                "Plan sets in house",
+                "Engineering and construction"
+              ],
+              "href": "industries/engineering-construction.html",
+              "label": "Engineering and construction"
+            },
+            {
+              "title": "Production print",
+              "band": "High volume, inline finishing",
+              "brands": "EFI Fiery, Skyline web-to-print",
+              "image": "assets/fleet/production.png",
+              "bullets": [
+                "Variable data",
+                "Color management from profile to press"
+              ],
+              "href": "services/production-print.html",
+              "label": "Production print"
+            }
+          ]
+        },
+        {
           "type": "model3d",
           "id": "model",
           "alt": "A white and charcoal multifunction copier on a cabinet, rotatable",
@@ -882,6 +944,26 @@
             "href": "services/copiers.html"
           },
           "model": "assets/fleet/mfp.glb"
+        },
+        {
+          "type": "proof",
+          "id": "proof",
+          "alt": true,
+          "eyebrow": "Measured, not claimed",
+          "value": "93.4",
+          "text": "Net Promoter Score, collected and audited by CEO Juice from VAF customers after every service call. World Class, above 70, every year since 2019. The average US company scores 10.",
+          "source": "CEO Juice is an independent company with an audited process. The numbers cannot be changed, even when a customer scores us low in error."
+        },
+        {
+          "type": "video",
+          "id": "film",
+          "eyebrow": "Who we are",
+          "heading": "Privately owned in Indianapolis since 1914",
+          "intro": "Filmed with VAF people at the 75th Street headquarters.",
+          "youtube": "i-q4U5SnvaM",
+          "poster": "assets/careers-1200.jpg",
+          "title": "What it's like to work at Van Ausdall & Farrar",
+          "caption": "VAF's own film, from vanausdall.com"
         },
         {
           "type": "casestudy",
@@ -2491,6 +2573,63 @@
               ]
             }
           ]
+        },
+        {
+          "type": "fleet",
+          "id": "fleet",
+          "heading": "The rest of the fleet",
+          "intro": "Every device family VAF sells and services. Generated product renders for the preview; Canon, Ricoh, Kyocera and HP models replace them.",
+          "items": [
+            {
+              "title": "Multifunction copiers",
+              "band": "Workgroup to department",
+              "brands": "Canon, Ricoh, Kyocera, HP",
+              "image": "assets/fleet/mfp.png",
+              "bullets": [
+                "Print, scan, copy, fax",
+                "Secure release and scan to OnBase"
+              ],
+              "href": "services/copiers.html",
+              "label": "Copiers and printers"
+            },
+            {
+              "title": "Desktop printers",
+              "band": "Desk and small team",
+              "brands": "HP, Brother, Kyocera",
+              "image": "assets/fleet/printer.png",
+              "bullets": [
+                "Color and mono",
+                "Folded into managed print"
+              ],
+              "href": "services/managed-print.html",
+              "label": "Managed print"
+            },
+            {
+              "title": "Wide format",
+              "band": "Plans, posters, signage",
+              "brands": "Canon, HP",
+              "image": "assets/fleet/wide-format.png",
+              "bullets": [
+                "Plan sets in house",
+                "Engineering and construction"
+              ],
+              "href": "industries/engineering-construction.html",
+              "label": "Engineering and construction"
+            },
+            {
+              "title": "Production print",
+              "band": "High volume, inline finishing",
+              "brands": "EFI Fiery, Skyline web-to-print",
+              "image": "assets/fleet/production.png",
+              "bullets": [
+                "Variable data",
+                "Color management from profile to press"
+              ],
+              "href": "services/production-print.html",
+              "label": "Production print"
+            }
+          ],
+          "alt": false
         },
         {
           "type": "detail",
