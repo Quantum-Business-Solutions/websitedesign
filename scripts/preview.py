@@ -916,6 +916,7 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
 {preview_modules._launcher(b["launcher"], ctx) if b.get("launcher") else ""}
 {switcher(themes, theme, page["file"], recommend)}
 <script>{PREVIEW_JS}</script>
+<script>{preview_modules.DEPTH_JS}</script>
 </body>
 </html>
 '''

@@ -663,7 +663,7 @@ def product_page(slug, group, title, image, one, body, benefits, bullets, faq, b
     siblings = [q for q in PRODUCTS if q[1] == group and q[0] != slug][:3]
     extra = []
     if slug == "multifunction-printers":
-        extra.append({"type": "model3d", "id": "model", "heading": "Walk around one", "intro": "A generated stand-in model for the preview. Drag to rotate; your real devices replace it.", "poster": "assets/mfp-poster-1200.jpg", "alt": "A multifunction copier with a finisher, rotatable", **({"model": MFP_MODEL} if MFP_MODEL else {})})
+        extra.append(dict(STORY3D, id="device", alt=True, cta=None))
     if slug in ("copiers", "printers", "production-printers", "wide-format-printers"):
         extra.append(dict(FLEET, alt=True, heading="The rest of the fleet"))
     secs = [
@@ -762,6 +762,17 @@ HOTSPOTS = {"type": "hotspots", "id": "office", "eyebrow": "The whole office", "
         {"x": 16, "y": 58, "k": "Desktop printers", "title": "The desks", "body": "Single-function printers, right-sized to how many the office needs and folded into managed print.", "href": "products/printers.html", "label": "Printers"},
         {"x": 64, "y": 71, "k": "Document management", "title": "Scan to DocuWare", "body": "Every MFP scans straight into indexed workflows: accounts payable, HR, contracts.", "href": "products/docuware.html", "label": "DocuWare"}]}
 
+STORY3D = {"type": "story3d", "id": "device", "alt": False, "eyebrow": "Take a closer look", "heading": "Walk around one before it arrives",
+    "intro": "Scroll, and the device turns to the part being described. A generated Sharp-style stand-in for the preview; Sharp product models replace it in the build.",
+    "poster": "assets/fleet/mfp.png", "alt": "A Sharp-style multifunction copier that turns as you scroll", "hint": "Drag to turn",
+    "cta": {"label": "See multifunction printers", "href": "products/multifunction-printers.html"},
+    "steps": [
+        {"k": "The panel", "title": "One screen for print, scan and release", "orbit": "28deg 72deg 100%", "body": "A tilting color touchscreen where people print, copy, scan and release held jobs with a badge or code. Scan to email or straight into DocuWare from the same screen.", "points": ["Secure print release", "Scan to DocuWare workflows", "Trained on install day"]},
+        {"k": "The feeder", "title": "Stacks in, indexed files out", "orbit": "0deg 40deg 108%", "body": "Mixed paper goes in the top. Named, indexed files land in the right folder or workflow, so accounts payable, HR and contracts stop living in filing cabinets.", "points": ["Duplex scanning", "Optical character recognition into DocuWare", "Routing rules set up by Kelly"]},
+        {"k": "The paper path", "title": "Trays sized to how the office prints", "orbit": "-62deg 80deg 104%", "body": "Under a managed print agreement the device reports its own levels. Toner ships on usage, before anyone notices it is low, and the six-month reports show what each tray actually carried.", "points": ["Supplies shipped on usage", "Meter reads taken automatically", "Utilization in the six-month report"]},
+        {"k": "The service side", "title": "Monitored, so the fault is seen first", "orbit": "200deg 76deg 108%", "body": "Every device on agreement is monitored. A failing part or a jam pattern is often on a Kelly technician's list before anyone in the office calls, and the call goes to the nearest of five offices.", "points": ["Monitoring on every device", "Priority service under agreement", "Dispatched from the nearest office"]}],
+    **({"model": MFP_MODEL} if MFP_MODEL else {})}
+
 HERO_LAYERED = {"type": "hero-layered", "id": "hero", "eyebrow": "Moving business forward since 1947",
     "heading": "Fully connected office systems, serviced by people who <em>answer the phone</em>.",
     "subhead": "Copiers and print, document management, IT, mailing, and the water and coffee that keep an office running. One North Carolina partner, five offices, one number to call.",
@@ -814,7 +825,7 @@ def build():
     pages.append({"file": "index.html", "title": "Kelly Office Solutions | Copiers, managed print, IT and office technology in North Carolina",
                   "compose": {
                       "clean": ["hero-light", "partners", "seal", "wheel", "is-this-you", "flow", "map", "voices", "film", "faq", "contact"],
-                      "showcase": ["hero", "partners", "wheel", "fleet", "ba", "flow", "office", "model", "proof", "map", "voices", "film", "contact"],
+                      "showcase": ["hero", "partners", "wheel", "fleet", "ba", "flow", "office", "device", "proof", "map", "voices", "film", "contact"],
                       "press": ["hero-light", "story", "services", "seal", "voices", "film", "flow", "map", "faq", "contact"]},
                   "description": "Family-owned since 1947 and headquartered in Winston-Salem. Copiers and managed print, document management, IT, mailing, water and coffee for North Carolina businesses, from five local offices, with Fast local response from the nearest branch.",
                   "sections": [
@@ -843,6 +854,7 @@ def build():
         {"type": "video", "id": "film", "alt": False, "eyebrow": "Who we are", "heading": "Thirty seconds on Kelly", "intro": "Family-owned since 1947, headquartered in Winston-Salem, with branches in Greensboro, Charlotte, Raleigh and Swansboro.", "vimeo": "271855836", "poster": "assets/vimeo-poster.jpg", "title": "Kelly Office Solutions", "caption": "Kelly's own film, from kellyofficesolutions.com"},
         {"type": "process", "id": "process", "eyebrow": "How we would stage an engagement", "heading": "Five stages, and every one of them hands you something",
          "stages": [["Assessment", "Produces: a fleet and cost report, yours to keep."], ["Plan", "Produces: a right-sized device plan with lease, rental or purchase priced side by side."], ["Install and connect", "Produces: every device on your network, every user trained, on a date you chose."], ["Monitor and supply", "Produces: toner that arrives before it runs out, and usage reports on the schedule in your agreement."], ["Review", "Produces: a quarterly look at cost per page and uptime, then back to stage one if anything moved."]]},
+        STORY3D,
         {"type": "model3d", "id": "model", "alt": False, "eyebrow": "Take a closer look", "heading": "Walk around one before it arrives", "intro": "A generated Sharp-style multifunction device for the preview. Drag to rotate. Your real models, with Sharp product imagery, replace it in the build.", "poster": "assets/mfp-poster-1200.jpg", "alt": "A white and charcoal multifunction copier on a cabinet, rotatable", "cta": {"label": "See multifunction printers", "href": "products/multifunction-printers.html"}, **({"model": MFP_MODEL} if MFP_MODEL else {})},
         {"type": "testimonials", "id": "voices", "alt": True, "layout": "feature", "eyebrow": "What customers say", "heading": "Customers, in their own words", "items": [TAX_SEASON] + [t[:3] for t in TESTIMONIALS]},
         {"type": "proof", "id": "proof", "alt": True, "eyebrow": "Measured, not claimed", "value": "94.4", "text": "Net Promoter Score, collected and audited by CEO Juice from Kelly customers after every service call. The industry average sits in the 70s.", "source": "Audited quarterly by an independent third party. Ask us for the latest report."},

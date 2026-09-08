@@ -397,3 +397,108 @@ RENDER_EXTRA2 = {
     "hero-layered": _hero_layered, "wheel": _wheel, "flow": _flow, "fleet": _fleet, "seal": _seal,
     "beforeafter": _beforeafter, "hotspots": _hotspots, "model3d": _model3d,
 }
+
+
+# ===== depth layer: reveals, specular tilt, stage floor, fleet float, glass header, hero choreography, 3D story =====
+DEPTH_CSS = r"""
+/* ===== depth layer ===== */
+html.pv-js .pv-rv{opacity:0;transform:translateY(22px)}
+html.pv-js .pv-rv.in{opacity:1;transform:none;transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--i,0)*70ms)}
+.pv-tilt{position:relative}
+.pv-tilt::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(420px circle at var(--px,50%) var(--py,50%),rgba(255,255,255,.26),transparent 60%);mix-blend-mode:soft-light;z-index:2}
+.pv-tilt:hover::after{opacity:1}
+[data-dir="showcase"] .pv-grid .q-card:hover,[data-dir="showcase"] .pv-loc .q-card:hover{box-shadow:0 30px 60px rgba(0,5,69,.16)}
+[data-dir="showcase"] main .q-bg-alt{box-shadow:inset 0 30px 50px -40px rgba(0,5,69,.35)}
+.q-header.is-scrolled{backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:color-mix(in srgb,var(--chrome-bg) 86%,transparent)}
+/* stage: perspective floor and a spotlight that follows the pointer */
+.pv-stage{position:relative;overflow:hidden;isolation:isolate}
+.pv-stage > .q-container{position:relative;z-index:2}
+.pv-stage::before{content:"";position:absolute;left:-20%;right:-20%;bottom:-2px;height:62%;z-index:0;background:repeating-linear-gradient(90deg,color-mix(in srgb,var(--q-gold) 55%,transparent) 0 1px,transparent 1px 90px),repeating-linear-gradient(0deg,color-mix(in srgb,var(--q-gold) 55%,transparent) 0 1px,transparent 1px 90px);transform:perspective(700px) rotateX(62deg);transform-origin:50% 100%;mask-image:linear-gradient(to top,rgba(0,0,0,.85),transparent 90%);-webkit-mask-image:linear-gradient(to top,rgba(0,0,0,.85),transparent 90%);animation:pv-floor 12s linear infinite;opacity:.75}
+@keyframes pv-floor{to{background-position:0 90px,0 90px}}
+.pv-stage::after{content:"";position:absolute;inset:-10%;z-index:1;pointer-events:none;background:radial-gradient(560px circle at var(--mx,50%) var(--my,30%),color-mix(in srgb,var(--q-gold) 20%,transparent),transparent 62%)}
+/* fleet: devices float over a floor shadow */
+.pv-fleet .dev .img{position:relative}
+.pv-fleet .dev .img::after{content:"";position:absolute;left:16%;right:16%;bottom:4px;height:24px;border-radius:50%;background:radial-gradient(ellipse at center,rgba(0,5,69,.30),transparent 70%);filter:blur(4px);z-index:0}
+.pv-fleet .dev .img img{position:relative;z-index:1;animation:pv-float 7s ease-in-out infinite}
+.pv-fleet .dev:nth-child(2) .img img{animation-delay:-1.1s}.pv-fleet .dev:nth-child(3) .img img{animation-delay:-2.3s}.pv-fleet .dev:nth-child(4) .img img{animation-delay:-3.4s}.pv-fleet .dev:nth-child(5) .img img{animation-delay:-4.6s}.pv-fleet .dev:nth-child(6) .img img{animation-delay:-5.7s}
+/* hero choreography, Showcase only, JS on */
+html.pv-js [data-dir="showcase"] .pv-lh .q-container > div:first-child > *{animation:pv-up .7s cubic-bezier(.2,.7,.2,1) both}
+html.pv-js [data-dir="showcase"] .pv-lh .q-container > div:first-child > :nth-child(2){animation-delay:.06s}
+html.pv-js [data-dir="showcase"] .pv-lh .q-container > div:first-child > :nth-child(3){animation-delay:.14s}
+html.pv-js [data-dir="showcase"] .pv-lh .q-container > div:first-child > :nth-child(4){animation-delay:.22s}
+html.pv-js [data-dir="showcase"] .pv-lh .q-container > div:first-child > :nth-child(5){animation-delay:.3s}
+html.pv-js [data-dir="showcase"] .pv-lh .q-container > div:first-child > :nth-child(6){animation-delay:.38s}
+html.pv-js [data-dir="showcase"] .pv-lh .q-container > div:first-child > :nth-child(7){animation-delay:.46s}
+html.pv-js [data-dir="showcase"] .pv-lh .hero3d{animation:pv-in3d 1s cubic-bezier(.2,.7,.2,1) both,pv-float 8s ease-in-out 1s infinite}
+html.pv-js [data-dir="showcase"] .pv-lh .fcard.a{animation:pv-up .8s cubic-bezier(.2,.7,.2,1) .5s both}
+@keyframes pv-up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes pv-in3d{from{opacity:0;transform:translateY(30px) scale(.94)}to{opacity:1;transform:none}}
+/* 3D story: the device stays put while the steps scroll */
+.pv-story{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-top:44px}
+.pv-story .stage{position:sticky;top:96px;height:min(70vh,640px);border-radius:calc(var(--radius) + 8px);background:radial-gradient(ellipse at 50% 85%,color-mix(in srgb,var(--q-gold) 16%,transparent),transparent 60%),var(--bg-alt);border:1px solid var(--border);overflow:hidden}
+.pv-story .stage model-viewer{width:100%;height:100%;display:block;--poster-color:transparent}
+.pv-story .stage .fallback{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:28px;box-sizing:border-box}
+.pv-story .stage model-viewer:defined + .fallback{display:none}
+.pv-story .stage .tag{position:absolute;left:18px;top:16px;z-index:2;font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--accent-ink);background:var(--card);border:1px solid var(--border);border-radius:999px;padding:8px 12px}
+.pv-story .stage .hint{position:absolute;right:18px;bottom:14px;z-index:2;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-muted);pointer-events:none}
+.pv-story .steps{display:grid;gap:10vh;padding:8vh 0 10vh}
+.pv-story .step{transition:color .4s,border-color .4s;padding:8px 0 8px 26px;border-left:2px solid var(--border);color:var(--fg-muted)}
+.pv-story .step h3{color:inherit}.pv-story .step:not(.on) li::before{background:var(--border)}
+.pv-story .step.on{color:var(--fg);border-left-color:var(--q-gold)}
+.pv-story .step .k{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--accent-ink)}
+.pv-story .step h3{margin:8px 0 10px;font-size:26px;line-height:1.15;letter-spacing:-.01em}
+.pv-story .step p{margin:0;color:var(--fg-muted);line-height:1.6;max-width:46ch}
+.pv-story .step ul{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:8px}
+.pv-story .step li{display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.5}.pv-story .step li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--q-gold);flex:none;margin-top:8px}
+@media(max-width:900px){.pv-story{grid-template-columns:1fr;gap:18px}.pv-story .stage{top:64px;height:42vh;z-index:3}.pv-story .steps{gap:36px;padding:8px 0}.pv-story .step{color:var(--fg)}}
+@media(prefers-reduced-motion:reduce){html.pv-js .pv-rv{opacity:1;transform:none}.pv-stage::before{animation:none}.pv-fleet .dev .img img{animation:none}html.pv-js [data-dir="showcase"] .pv-lh .q-container > div:first-child > *,html.pv-js [data-dir="showcase"] .pv-lh .hero3d,html.pv-js [data-dir="showcase"] .pv-lh .fcard.a{animation:none}.pv-story .step{color:var(--fg)}}
+"""
+EXTRA_CSS2 = EXTRA_CSS2 + DEPTH_CSS
+
+DEPTH_JS = r"""(function(){var d=document.documentElement;d.classList.add('pv-js');var rm=matchMedia('(prefers-reduced-motion: reduce)').matches,fine=matchMedia('(pointer:fine) and (min-width:1025px)').matches,dir=d.getAttribute('data-dir')||'';
+/* reveal below the first section, staggered per parent */
+if(!rm&&'IntersectionObserver' in window){var first=document.querySelector('main > section');
+var sel='main .q-card,main .pv-stat,main .pv-svc a,main .pv-seal .item,main .pv-flow .node,main .pv-fleet .dev,main .pv-hot-list li,main .pv-wheel,main .pv-ba,main .pv-3d,main .pv-cmp,main .pv-story .stage,main .pv-map-svg,main .pv-post,main .pv-quote,main .pv-cs,main .pv-metric,main section .q-h2,main section .q-lead,main .pv-proof b';
+var els=[].slice.call(document.querySelectorAll(sel)).filter(function(e){return !(first&&first.contains(e))&&!e.closest('.pv-lh')});
+els.forEach(function(e){var p=e.parentElement;p.__pvN=p.__pvN||0;e.style.setProperty('--i',Math.min(p.__pvN,8));p.__pvN++;e.classList.add('pv-rv')});
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting||x.boundingClientRect.top<0){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+addEventListener('hashchange',function(){els.forEach(function(e){if(e.getBoundingClientRect().top<innerHeight)e.classList.add('in')})});
+els.forEach(function(e){io.observe(e)});setTimeout(function(){els.forEach(function(e){var r=e.getBoundingClientRect();if(r.top<innerHeight)e.classList.add('in')})},900)}
+/* specular highlight follows the pointer on tilting cards */
+function tilt(c){c.style.transformStyle='preserve-3d';c.style.transition='transform .25s ease, box-shadow .25s ease';
+c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;c.style.setProperty('--px',(x*100).toFixed(1)+'%');c.style.setProperty('--py',(y*100).toFixed(1)+'%');c.style.transform='perspective(900px) rotateX('+((y-.5)*-6).toFixed(2)+'deg) rotateY('+((x-.5)*6).toFixed(2)+'deg) translateY(-3px)'});
+c.addEventListener('pointerleave',function(){c.style.transform=''})}
+if(!rm&&fine){document.querySelectorAll('.pv-tilt').forEach(function(c){c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--px',((e.clientX-r.left)/r.width*100).toFixed(1)+'%');c.style.setProperty('--py',((e.clientY-r.top)/r.height*100).toFixed(1)+'%')})});
+if(dir==='showcase'){document.querySelectorAll('main .pv-grid .q-card,main .pv-loc .q-card,main .pv-seal .item').forEach(function(c){if(!c.classList.contains('pv-tilt')){c.classList.add('pv-tilt');tilt(c)}})}}
+/* stage floor and spotlight on the proof band, Showcase */
+if(dir==='showcase'){var st=document.getElementById('proof');if(st){st.classList.add('pv-stage');if(!rm&&fine){st.addEventListener('pointermove',function(e){var r=st.getBoundingClientRect();st.style.setProperty('--mx',((e.clientX-r.left)/r.width*100).toFixed(1)+'%');st.style.setProperty('--my',((e.clientY-r.top)/r.height*100).toFixed(1)+'%')})}}}
+})();"""
+
+
+def _story3d(s, ctx):
+    """Scroll story: the device holds still in a sticky stage and turns to a new camera orbit for each step."""
+    E, L = ctx["E"], ctx["L"]
+    sid = s.get("id", "story")
+    steps = s["steps"]  # {k, title, body, points[], orbit}
+    poster = ctx["rel"](s["poster"])
+    if s.get("model"):
+        stage = (f'<model-viewer src="{E(ctx["rel"](s["model"]))}" poster="{E(poster)}" alt="{E(s.get("alt", "A rotatable device"))}" camera-controls disable-zoom interaction-prompt="none" interpolation-decay="260" camera-orbit="{E(steps[0].get("orbit", "35deg 78deg auto"))}" shadow-intensity="0" exposure="1.05" loading="lazy" reveal="auto"></model-viewer>'
+                 f'<img class="fallback" src="{E(poster)}" alt="" width="1200" height="1200" loading="lazy">'
+                 f'<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>')
+    else:
+        stage = f'<img src="{E(poster)}" alt="{E(s.get("alt", ""))}" width="1200" height="1200" loading="lazy" style="width:100%;height:100%;object-fit:contain;padding:28px;box-sizing:border-box">'
+    items = "".join(
+        f'<div class="step{" on" if i == 0 else ""}" data-orbit="{E(st.get("orbit", ""))}" data-k="{E(st.get("k", ""))}"><div class="k">{E(st.get("k", ""))}</div><h3>{E(st["title"])}</h3><p>{E(st.get("body", ""))}</p>'
+        + (f'<ul>{"".join(f"<li>{E(x)}</li>" for x in st["points"])}</ul>' if st.get("points") else "") + '</div>'
+        for i, st in enumerate(steps))
+    cta = f'<div style="margin-top:28px"><a class="q-btn" href="{E(L(s["cta"]["href"]))}">{E(s["cta"]["label"])}</a></div>' if s.get("cta") else ""
+    head = f'<div class="pv-center"><div class="q-eyebrow">{E(s.get("eyebrow", ""))}</div><h2 class="q-h2" style="margin-top:22px;max-width:760px">{E(s["heading"])}</h2>{f"<p class=q-lead style=max-width:640px;margin:16px_auto_0>{E(s[chr(105)+chr(110)+chr(116)+chr(114)+chr(111)])}</p>".replace("_", " ") if s.get("intro") else ""}</div>'
+    js = f"""<script>(function(){{var w=document.getElementById("{sid}");if(!w)return;var mv=w.querySelector('model-viewer'),tag=w.querySelector('.tag'),steps=w.querySelectorAll('.step');
+function on(el){{steps.forEach(function(x){{x.classList.toggle('on',x===el)}});if(tag)tag.textContent=el.getAttribute('data-k')||'';var o=el.getAttribute('data-orbit');if(mv&&o){{mv.setAttribute('camera-orbit',o)}}}}
+if('IntersectionObserver' in window){{new IntersectionObserver(function(es){{es.forEach(function(e){{if(e.isIntersecting)on(e.target)}})}},{{rootMargin:'-42% 0px -42% 0px',threshold:0}}).observe;var io=new IntersectionObserver(function(es){{es.forEach(function(e){{if(e.isIntersecting)on(e.target)}})}},{{rootMargin:'-42% 0px -42% 0px',threshold:0}});steps.forEach(function(x){{io.observe(x)}})}}}})();</script>"""
+    return (f'{ctx["sec_open"](s)} <div class="q-container">{head}<div class="pv-story" id="{E(sid)}">'
+            f'<div class="stage"><span class="tag">{E(steps[0].get("k", ""))}</span>{stage}<span class="hint">{E(s.get("hint", "Drag to turn"))}</span></div>'
+            f'<div class="steps">{items}{cta}</div></div></div>{js}</section>')
+
+
+RENDER_EXTRA2["story3d"] = _story3d

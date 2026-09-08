@@ -468,7 +468,7 @@
           "ba",
           "flow",
           "office",
-          "model",
+          "device",
           "proof",
           "map",
           "voices",
@@ -1133,6 +1133,67 @@
               "Produces: a quarterly look at cost per page and uptime, then back to stage one if anything moved."
             ]
           ]
+        },
+        {
+          "type": "story3d",
+          "id": "device",
+          "alt": "A Sharp-style multifunction copier that turns as you scroll",
+          "eyebrow": "Take a closer look",
+          "heading": "Walk around one before it arrives",
+          "intro": "Scroll, and the device turns to the part being described. A generated Sharp-style stand-in for the preview; Sharp product models replace it in the build.",
+          "poster": "assets/fleet/mfp.png",
+          "hint": "Drag to turn",
+          "cta": {
+            "label": "See multifunction printers",
+            "href": "products/multifunction-printers.html"
+          },
+          "steps": [
+            {
+              "k": "The panel",
+              "title": "One screen for print, scan and release",
+              "orbit": "28deg 72deg 100%",
+              "body": "A tilting color touchscreen where people print, copy, scan and release held jobs with a badge or code. Scan to email or straight into DocuWare from the same screen.",
+              "points": [
+                "Secure print release",
+                "Scan to DocuWare workflows",
+                "Trained on install day"
+              ]
+            },
+            {
+              "k": "The feeder",
+              "title": "Stacks in, indexed files out",
+              "orbit": "0deg 40deg 108%",
+              "body": "Mixed paper goes in the top. Named, indexed files land in the right folder or workflow, so accounts payable, HR and contracts stop living in filing cabinets.",
+              "points": [
+                "Duplex scanning",
+                "Optical character recognition into DocuWare",
+                "Routing rules set up by Kelly"
+              ]
+            },
+            {
+              "k": "The paper path",
+              "title": "Trays sized to how the office prints",
+              "orbit": "-62deg 80deg 104%",
+              "body": "Under a managed print agreement the device reports its own levels. Toner ships on usage, before anyone notices it is low, and the six-month reports show what each tray actually carried.",
+              "points": [
+                "Supplies shipped on usage",
+                "Meter reads taken automatically",
+                "Utilization in the six-month report"
+              ]
+            },
+            {
+              "k": "The service side",
+              "title": "Monitored, so the fault is seen first",
+              "orbit": "200deg 76deg 108%",
+              "body": "Every device on agreement is monitored. A failing part or a jam pattern is often on a Kelly technician's list before anyone in the office calls, and the call goes to the nearest of five offices.",
+              "points": [
+                "Monitoring on every device",
+                "Priority service under agreement",
+                "Dispatched from the nearest office"
+              ]
+            }
+          ],
+          "model": "assets/fleet/mfp.glb"
         },
         {
           "type": "model3d",
@@ -3821,12 +3882,61 @@
           "flip": true
         },
         {
-          "type": "model3d",
-          "id": "model",
-          "heading": "Walk around one",
-          "intro": "A generated stand-in model for the preview. Drag to rotate; your real devices replace it.",
-          "poster": "assets/mfp-poster-1200.jpg",
-          "alt": "A multifunction copier with a finisher, rotatable",
+          "type": "story3d",
+          "id": "device",
+          "alt": true,
+          "eyebrow": "Take a closer look",
+          "heading": "Walk around one before it arrives",
+          "intro": "Scroll, and the device turns to the part being described. A generated Sharp-style stand-in for the preview; Sharp product models replace it in the build.",
+          "poster": "assets/fleet/mfp.png",
+          "hint": "Drag to turn",
+          "cta": null,
+          "steps": [
+            {
+              "k": "The panel",
+              "title": "One screen for print, scan and release",
+              "orbit": "28deg 72deg 100%",
+              "body": "A tilting color touchscreen where people print, copy, scan and release held jobs with a badge or code. Scan to email or straight into DocuWare from the same screen.",
+              "points": [
+                "Secure print release",
+                "Scan to DocuWare workflows",
+                "Trained on install day"
+              ]
+            },
+            {
+              "k": "The feeder",
+              "title": "Stacks in, indexed files out",
+              "orbit": "0deg 40deg 108%",
+              "body": "Mixed paper goes in the top. Named, indexed files land in the right folder or workflow, so accounts payable, HR and contracts stop living in filing cabinets.",
+              "points": [
+                "Duplex scanning",
+                "Optical character recognition into DocuWare",
+                "Routing rules set up by Kelly"
+              ]
+            },
+            {
+              "k": "The paper path",
+              "title": "Trays sized to how the office prints",
+              "orbit": "-62deg 80deg 104%",
+              "body": "Under a managed print agreement the device reports its own levels. Toner ships on usage, before anyone notices it is low, and the six-month reports show what each tray actually carried.",
+              "points": [
+                "Supplies shipped on usage",
+                "Meter reads taken automatically",
+                "Utilization in the six-month report"
+              ]
+            },
+            {
+              "k": "The service side",
+              "title": "Monitored, so the fault is seen first",
+              "orbit": "200deg 76deg 108%",
+              "body": "Every device on agreement is monitored. A failing part or a jam pattern is often on a Kelly technician's list before anyone in the office calls, and the call goes to the nearest of five offices.",
+              "points": [
+                "Monitoring on every device",
+                "Priority service under agreement",
+                "Dispatched from the nearest office"
+              ]
+            }
+          ],
           "model": "assets/fleet/mfp.glb"
         },
         {
