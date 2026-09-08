@@ -38,7 +38,7 @@ LOCATIONS = [
 ]
 CHARLOTTE_TOWNS = ["Charlotte", "Huntersville", "Davidson", "Mooresville", "Concord", "Pineville", "Gastonia", "Matthews", "Mint Hill", "Monroe", "Waxhaw", "Fort Mill", "Rock Hill"]
 HOURS_CONFIRMED = {"greensboro", "charlotte", "raleigh"}  # M-F 8-5 stated on the live city pages
-PARTNERS = ["Ricoh", "Savin", "Konica Minolta", "Sharp", "Brother", "Epson", "FP Mailing Solutions", "Dell", "DocuWare", "Datto", "WatchGuard", "Microsoft 365", "Zultys", "Wellsys", "FloWater", "Manitowoc", "Follett", "NEWCO", "Bunn"]
+PARTNERS = ["Sharp", "Ricoh", "Savin", "Konica Minolta", "Brother", "Epson", "FP Mailing Solutions", "Dell", "DocuWare", "Datto", "WatchGuard", "Microsoft 365", "Zultys", "Wellsys", "FloWater", "Manitowoc", "Follett", "NEWCO", "Bunn"]
 INDUSTRIES = [  # slug, name, image, one-line, body, bullets, faq
     ["legal", "Legal", "assets/mps-1-1200.jpg",
      "Firms print, scan and file more than almost any other business, and every page can be billed or lost.",
@@ -69,10 +69,10 @@ INDUSTRIES = [  # slug, name, image, one-line, body, bullets, faq
 SERVICES = [  # slug, title, nav label, image, eyebrow, hero heading (with <em>), subhead, benefits (title, body), bullets, extra sections, faq
     ["copiers", "Office products and copiers", "Copiers and printers", "assets/mps-1-1200.jpg", "Office products",
      "The right copier is the one you <em>stop thinking about</em>.",
-     "Ricoh, Savin, Konica Minolta, Sharp and Brother printers, copiers, multifunction and wide-format devices, matched to your volume, networked on day one and serviced from the nearest branch.",
+     "Sharp, Ricoh, Savin, Konica Minolta and Brother printers, copiers, multifunction and wide-format devices, matched to your volume, networked on day one and serviced from the nearest branch.",
      [["Printers", "Desktop and workgroup printers for the pages that never touch the copier."], ["Copiers and multifunction", "Color and mono MFPs from small offices to departmental workhorses, with scanning built in."], ["Wide format", "Plans, drawings and signage in house."], ["Production", "High-volume color and mono with finishing, for organizations that print every day."]],
      ["Lease, rent or buy, priced side by side for your real volume", "Secure print release and scan-to-cloud, available on the devices we recommend", "Trade-in and takeover of devices you already own, where we support the model", "Driver downloads and online training for your team"],
-     [["Which brands do you carry?", "Ricoh and Savin, Konica Minolta, Sharp, Brother and Epson, depending on the job. We recommend the device, not the badge."], ["Can we start with one device?", "Yes. Many customers start with a single MFP and add managed print when they see the report."]]],
+     [["Which brands do you carry?", "Sharp, Ricoh and Savin, Konica Minolta, Brother and Epson, depending on the job. We recommend the device, not the badge."], ["Can we start with one device?", "Yes. Many customers start with a single MFP and add managed print when they see the report."]]],
     ["managed-print", "Managed print services", "Managed print", "assets/dispatch-1200.jpg", "Managed print",
      "Stop counting toner. <em>Start seeing the number.</em>",
      "Printing is an overlooked and undermanaged business function, and many organizations spend up to 30% more than they should on it. Managed print puts the fleet under one agreement: assessment, monitoring and reporting, supplies that arrive before they run out, and one invoice.",
@@ -290,7 +290,7 @@ post("all-in-one-office-printer-options-navigating-the-market-for-the-best-choic
          "Secure print release, user authentication, hard drive encryption and a plan for the drive when the device leaves. These are configuration choices, and they should be made at install."]},
       {"id": "cost-per-page", "title": "The cost per page is the price", "paras": [
          "A cheap device with expensive toner costs more in a year than a dearer device with a managed rate. Ask for the blended cost per page on your volume before you compare device prices."]}],
-     [["Which all-in-one brands does Kelly carry?", "Ricoh, Savin, Konica Minolta, Sharp and Brother, matched to the job."], ["Can we add managed print to a single device?", "Yes. One device, one agreement, the same monitoring and supplies."], ["Can you network it for us?", "Yes, on the day of install, with every user trained."]],
+     [["Which all-in-one brands does Kelly carry?", "Sharp, Ricoh, Savin, Konica Minolta and Brother, matched to the job."], ["Can we add managed print to a single device?", "Yes. One device, one agreement, the same monitoring and supplies."], ["Can you network it for us?", "Yes, on the day of install, with every user trained."]],
      "best all in one printer small business", "what-we-do.html#copiers", "Talk to us about copiers")
 
 post("wide-format-printer-buying-guide-making-the-right-decision", "Wide format", "Wide-format printing in house: the volume at which it pays for itself",
@@ -371,7 +371,7 @@ def location_page(slug, city, a1, a2, phone, phone_href, region):
                  "image": "assets/kelly-team-1024.jpg", "image_alt": "A Kelly technician beside a Kelly service van", "image_w": 1024, "image_h": 576,
                  "badge": {"value": "Local", "label": "Technicians dispatched from this branch"}},
                 {"type": "cards", "alt": True, "eyebrow": f"In {city}", "heading": f"What the {city} branch does", "items": [
-                    ["Copier sales, lease and rental", f"Ricoh, Savin, Konica Minolta, Sharp and Brother devices for {city} offices, installed and networked by the local team."],
+                    ["Copier sales, lease and rental", f"Sharp, Ricoh, Savin, Konica Minolta and Brother devices for {city} offices, installed and networked by the local team."],
                     ["Copier and printer repair", f"Fast local response from the nearest branch across {region}, by factory-trained technicians from the nearest branch."],
                     ["Managed print", "Assessment, monitoring and automatic supplies for the whole fleet."],
                     ["Document management and IT", "DocuWare workflows, managed IT, backup and security from the same local team."],
@@ -394,6 +394,79 @@ SERVICE_DISPLAY = {"it-services": "IT services", "pure-technology": "Pure Techno
 SERVICE_SLUGS = [x[0] for x in SERVICES]
 SERVICE_DETAIL_IMAGE = {"copiers": "assets/printer-1200.jpg", "managed-print": "assets/mps-2-1200.jpg", "document-management": "assets/gso-office-1200.jpg", "production-print": "assets/wide-format-1200.jpg", "it-services": "assets/forensics-1200.jpg", "mailing": "assets/folder-inserter-1200.jpg", "pure-technology": "assets/coffee-1200.jpg"}
 
+
+# Per-service signature modules: a process chart and a before/after for each line. Every line is on kellyofficesolutions.com
+# or in the FP Mailing Solutions material already cited; nothing is a promise Kelly has not made in writing.
+def _flow(fid, eyebrow, heading, intro, steps, receive_label="What you receive"):
+    return {"type": "flow", "id": fid, "alt": True, "eyebrow": eyebrow, "heading": heading, "intro": intro, "receive_label": receive_label,
+            "steps": [{"label": a, "when": b, "summary": c, "title": d, "body": e, "receive": f} for a, b, c, d, e, f in steps]}
+
+def _ba(bid, heading, b_title, b_body, b_items, a_title, a_body, a_items, b_eyebrow="Today", a_eyebrow="With Kelly"):
+    return {"type": "beforeafter", "id": bid, "eyebrow": "Before and after", "heading": heading,
+            "before": {"eyebrow": b_eyebrow, "title": b_title, "body": b_body, "items": b_items},
+            "after": {"eyebrow": a_eyebrow, "title": a_title, "body": a_body, "items": a_items}}
+
+SERVICE_MODULES = {
+    "copiers": [
+        _ba("ba", "Drag to compare buying a copier with having Kelly place one",
+            "A device chosen from a brochure", "Priced on the badge, not on the pages you print.",
+            ["Bought on speed and price, sized by guesswork", "Networked later by whoever is free", "Toner ordered when the light comes on", "Service from a number on a sticker", "Lease, rental and purchase never compared"],
+            "A device chosen from your meter counts", "Sharp, Ricoh, Savin, Konica Minolta or Brother, matched to your volume.",
+            ["Right-sized from a free assessment of what you print", "Networked and every user trained on install day", "Supplies shipped on usage under managed print", "Serviced from the nearest of five North Carolina offices", "Lease, rental and purchase priced side by side"]),
+        _flow("flow", "From first call to first page", "Five steps between the call and the first page", "Click a step. Each one ends with something in your hands.",
+            [("Assess", "Visit 1", "Count and meter the fleet.", "A free assessment of what you have", "A specialist counts every device, reads the meters and works out cost per page, mono and color. Free and without obligation, as it says on our managed print page.", ["Fleet inventory with meters", "Cost per page by device", "The recommendation in writing"]),
+             ("Recommend", "Week 1", "The device and the terms.", "The right device, priced three ways", "A model matched to your volume and finishing needs, with lease, rental and purchase shown side by side.", ["Model and configuration", "Lease, rent and buy compared", "Service and supplies shown separately"]),
+             ("Install", "A date you choose", "Networked the same visit.", "Delivered, networked and trained", "The device arrives on the day you chose, joins your network, and every user is trained before the technician leaves.", ["Drivers and scan destinations set up", "Users trained on site", "Old device removed if you ask"]),
+             ("Support", "Ongoing", "One number for service and supplies.", "Service and supplies from one number", "1-800-34-KELLY reaches all five offices. Request service, submit meter reads and order supplies online in under a minute each.", ["Online service request", "Meter reads and supplies online", "Technicians dispatched from the nearest branch"]),
+             ("Review", "Under agreement", "Reports every six months.", "The numbers, every six months", "Under a managed print agreement, service and usage reports arrive every six months so the fleet is adjusted on evidence.", ["Service call history", "Device utilization", "Executive snapshot"])])],
+    "managed-print": [
+        _ba("ba", "Drag to compare a fleet that is managed with one that is not",
+            "Every printer on its own", "Nobody knows what the fleet costs because nobody owns it.",
+            ["Toner bought at retail when a device runs dry", "Service calls placed by whoever notices first", "No count of devices, pages or cost", "IT staff clearing jams between real work", "Devices replaced on age, not on evidence"],
+            "One fleet, one report", "Monitored, supplied and reported on a schedule you can see on your invoice.",
+            ["Toner ships on usage, before it runs out", "Failing devices spotted before the office does", "Cost per page by device, mono and color", "IT time returned to IT", "Consolidate, upgrade or relocate on the data, every six months"])],
+    "document-management": [
+        _ba("ba", "Drag to see what changes when documents live in DocuWare",
+            "Paper and shared drives", "Filing cabinets, email attachments and a shared drive with three versions of everything.",
+            ["Invoices approved by walking them to a desk", "Contracts found by asking who had them last", "HR files in a locked cabinet nobody can search", "Compliance evidence assembled by hand", "Remote staff waiting for a scan"],
+            "Indexed, routed, searchable", "Scan from any Kelly MFP straight into workflows the office already follows.",
+            ["Invoices routed for approval the moment they are scanned", "Any document found by a search, from any office", "Access by role, with a record of who saw what", "Retention rules applied automatically", "The same view at home as at the desk"]),
+        _flow("flow", "How a DocuWare rollout runs", "Four stages, and the first one is a conversation", "Click a stage.",
+            [("Map", "Week 1", "Where documents come from and go.", "Map how paper moves today", "We sit with the people who handle invoices, contracts and personnel files and draw how each one travels, who touches it and where it waits.", ["Process maps for the workflows chosen", "Index fields agreed per document type", "A scope you sign off"]),
+             ("Configure", "Weeks 2 to 3", "Cabinets, indexes and routes.", "Build the cabinets and the routes", "Document trays, index fields, approval routes and permissions are configured to the map, and your MFPs get scan-to-DocuWare buttons.", ["Configured file cabinets", "Approval workflows", "Scan destinations on every MFP"]),
+             ("Train", "Go-live week", "Everyone who touches a document.", "Train the people, not just the admins", "Short sessions by role, with the office's own documents, before the first live scan.", ["Role-based training", "Quick guides at each MFP", "A named contact for the first month"]),
+             ("Refine", "First quarter", "Adjust on real use.", "Adjust on what the first quarter shows", "Routes that bottleneck get changed, new document types get added, and the next department is scoped.", ["Usage review", "Route adjustments", "Plan for the next workflow"])])],
+    "production-print": [
+        _ba("ba", "Drag to compare outsourcing with printing it in-house",
+            "Sent to a print shop", "Two days out, a rush fee back, and a box that arrives short.",
+            ["Booklets, proposals and manuals sent out", "Rush charges for the meeting that moved", "Color that varies from run to run", "Minimum quantities and leftover boxes", "Confidential documents leaving the building"],
+            "Printed down the hall", "Ricoh and Savin production systems with inline finishing, operated by your own people.",
+            ["Booklets stapled, folded and trimmed inline", "Print the quantity you need, the morning you need it", "Color consistency all day", "Confidential material stays in-house", "Operator training included"])],
+    "it-services": [
+        _ba("ba", "Drag to compare break-fix IT with managed IT",
+            "Call when it breaks", "Every problem is a surprise, and every invoice is a different size.",
+            ["Backups nobody has tested", "Updates applied when someone remembers", "Security that ends at the antivirus", "An hourly invoice after every outage", "The copier company and the IT firm blaming each other"],
+            "Managed, monitored, one invoice", "Monitoring, backup, security and Microsoft 365 for a fixed monthly amount, from the same team that services your copiers.",
+            ["Backups monitored and tested", "Patching on a schedule", "Layered security with Datto and WatchGuard", "A fixed monthly invoice", "One partner for the printer and the network it sits on"]),
+        _flow("flow", "How managed IT starts", "Four steps to a network someone is watching", "Click a step.",
+            [("Audit", "Week 1", "Every device, user and risk.", "A network and security audit", "Every workstation, server, user account and backup is inventoried, and the gaps are listed in plain English.", ["Asset inventory", "Risk list, ranked", "A recommendation in writing"]),
+             ("Plan", "Week 2", "Fix, replace, monitor.", "A plan with a fixed monthly number", "What to fix now, what to replace, what to monitor, and the monthly amount that covers it.", ["Remediation list", "Monthly scope and price", "Microsoft 365 licensing reviewed"]),
+             ("Onboard", "Weeks 3 to 4", "Agents, backup, security.", "Monitoring and protection go live", "Monitoring agents, backup and security tools are deployed, and users learn how to reach the help desk.", ["Monitoring on every device", "Backup running and verified", "Help desk live"]),
+             ("Run", "Ongoing", "Reviewed on a schedule.", "Run, report and review", "Patching, backup checks and security alerts are handled as they arise, and the plan is reviewed with you on a schedule.", ["Patch and backup reports", "Security alerts handled", "Scheduled review"])])],
+    "mailing": [
+        _ba("ba", "Drag to compare stamps with an FP postage meter",
+            "Stamps and the post office", "A trip, a queue, and full retail postage on every piece.",
+            ["Retail postage on every letter", "Trips to the post office", "Hand-folded, hand-stuffed mailings", "No record of what postage was spent where", "Meter compliance nobody has checked"],
+            "Metered, in the mailroom", "FP Mailing Solutions meters, folder inserters and mailroom printers through Kelly.",
+            ["Save up to five cents per stamp and up to 40 percent on priority labels", "Postage printed at your desk, at commercial rates", "Folded, inserted and sealed by machine", "Postage tracked by department", "The only fully IMI-compliant meter range"])],
+    "pure-technology": [
+        _ba("ba", "Drag to compare jugs and a coffee service with Pure Technology",
+            "Jugs, a delivery and a coffee vendor", "Two more vendors, two more invoices, and a break room that runs out.",
+            ["Five-gallon jugs lifted onto a cooler", "Deliveries missed, water run out", "A coffee vendor on a separate contract", "Ice from a machine nobody services", "Nobody checking the filter date"],
+            "Bottleless, filtered, serviced with the copier", "Wellsys, FloWater, Newco and Bunn equipment, on the same agreement and visit as your office technology.",
+            ["Bottleless water and ice, filtered on site", "Single-cup or high-volume coffee", "Serviced on the same visit as the copier", "Filters changed on schedule", "One invoice for the whole break room"])],
+}
+
 def service_page(slug, title, navlabel, image, eyebrow, heading, subhead, benefits, bullets, faq):
     secs = [
         {"type": "hero", "layout": "split", "eyebrow": eyebrow, "heading": heading, "subhead": subhead,
@@ -402,6 +475,8 @@ def service_page(slug, title, navlabel, image, eyebrow, heading, subhead, benefi
         {"type": "cards", "alt": True, "eyebrow": "Benefits", "heading": f"What changes with Kelly {SERVICE_DISPLAY.get(slug, title.lower().split(':')[0])}", "items": benefits},
         {"type": "detail", "eyebrow": "What is included", "heading": "What you get", "body": "In one agreement, on one invoice: " + ", ".join(b[0][0].lower() + b[0][1:] for b in benefits) + ". The list below is what arrives, and when. Nothing on it is an add-on.", "bullets": bullets, "image": SERVICE_DETAIL_IMAGE.get(slug, image), "flip": True},
     ]
+    for i, m in enumerate(SERVICE_MODULES.get(slug, [])):
+        secs.insert(2 + i, m)
     if slug == "production-print":
         secs.insert(2, {"type": "video", "heading": "Production print, in ninety seconds", "intro": "Josh from Kelly walks through what an in-house production system does.", "video": "assets/production-print-josh.mp4", "poster": "assets/vimeo-poster.jpg", "caption": "From kellyofficesolutions.com"})
     if slug == "managed-print":
@@ -409,12 +484,13 @@ def service_page(slug, title, navlabel, image, eyebrow, heading, subhead, benefi
             ["Assessment", "Produces: a fleet and cost report, yours to keep."],
             ["Monitoring and reporting", "Produces: toner before it runs out, and service and usage reports every six months."],
             ["Leasing and rental", "Produces: the fleet the data recommends, priced lease, rental or purchase, side by side."]]})
-        secs.insert(3, {"type": "tabs", "id": "assessment-steps", "alt": True, "eyebrow": "The assessment, step by step", "heading": "Four steps, and you keep the report either way",
-            "items": [
-                {"label": "Assess", "title": "Assess the fleet you have", "body": "A Kelly specialist evaluates your current imaging fleet for size, efficiency and cost, and talks with the people who use it about how the work flows.", "bullets": ["Every device counted, located and metered", "Cost per page by device, mono and color", "Interviews with the staff who print most"], "image": "assets/mps-1-1200.jpg", "image_alt": "A Kelly specialist reviewing a copier fleet with a customer"},
-                {"label": "Plan", "title": "Plan the fleet you should have", "body": "Recommendations to make workflows run smoother: consolidating or upgrading devices, moving a copier closer to the people who use it, or retiring the one that costs more than it is worth.", "bullets": ["Consolidate, upgrade or relocate", "Priced as lease, rental or purchase", "Nothing replaced that the data does not justify"], "image": "assets/mps-2-1200.jpg", "image_alt": "People collaborating near an office copier"},
-                {"label": "Measure", "title": "Agree what success looks like", "body": "Lower supply and maintenance cost, or IT time back for real work. We agree the measure with you and show how the data will prove it.", "bullets": ["Targets you set, not ones we pick", "Baseline captured before anything changes", "Reporting that shows the movement"], "image": "assets/doc-mgmt-1200.jpg", "image_alt": "A manager reviewing printed reports at a desk"},
-                {"label": "Manage", "title": "Manage it so problems never reach your staff", "body": "Next steps reviewed with your team, then a proactive approach that spots a failing device or an empty toner before anyone in the office does.", "bullets": ["Monitoring on every device", "Supplies shipped on usage, not on a call", "Same-day service response under agreement"], "image": "assets/dispatch-1200.jpg", "image_alt": "A Kelly dispatcher on a headset"}]})
+        secs.insert(3, {"type": "flow", "id": "assessment-steps", "alt": True, "eyebrow": "The assessment, step by step", "heading": "Four steps, and you keep the report either way", "intro": "The four steps on our managed print page, and what each one leaves you with.",
+            "receive_label": "What you leave with",
+            "steps": [
+                {"label": "Assess", "when": "Step 1", "summary": "The fleet you have.", "title": "Assess the fleet you have", "body": "A Kelly specialist evaluates your current imaging fleet for size, efficiency and cost, and talks with the people who use it about how the work flows.", "receive": ["Every device counted, located and metered", "Cost per page by device, mono and color", "Interviews with the staff who print most"]},
+                {"label": "Plan", "when": "Step 2", "summary": "The fleet you should have.", "title": "Plan the fleet you should have", "body": "Recommendations to make workflows run smoother: consolidating or upgrading devices, moving a copier closer to the people who use it, or retiring the one that costs more than it is worth.", "receive": ["Consolidate, upgrade or relocate", "Priced as lease, rental or purchase", "Nothing replaced that the data does not justify"]},
+                {"label": "Measure", "when": "Step 3", "summary": "Agree what success looks like.", "title": "Agree what success looks like", "body": "Lower supply and maintenance cost, or IT time back for real work. We agree the measure with you and show how the data will prove it.", "receive": ["Targets you set, not ones we pick", "Baseline captured before anything changes", "Reporting that shows the movement"]},
+                {"label": "Manage", "when": "Step 4", "summary": "Problems never reach your staff.", "title": "Manage it so problems never reach your staff", "body": "Next steps reviewed with your team, then a proactive approach that spots a failing device or an empty toner before anyone in the office does.", "receive": ["Monitoring on every device", "Supplies shipped on usage, not on a call", "Priority service under agreement"]}]})
         secs.insert(4, {"type": "cards", "eyebrow": "Monitoring and reporting", "heading": "Five reports, every six months, in plain English", "intro": "Depending on fleet size you receive service and usage reports with detailed summaries. These are the five.",
             "items": [["Service call history", "Every call, who made it, what the issue was and when it was resolved."],
                       ["Supplies order", "Exactly what you spend on toner and supplies, so you can budget for it."],
@@ -463,23 +539,23 @@ PRODUCTS = [
      "Single-function printers, sized to how many your office needs.",
      "Single-function printers are an essential part of an imaging fleet, and the easiest part to over-buy. Before the next purchase, the question is how many printers the office truly needs to keep work moving, whether they should be color or mono, and what each one costs to own once maintenance and consumables are counted. Your Kelly representative presents options that fit your output and your budget.",
      [["Right-sized", "How many, where, and color or mono, decided from your real volume."], ["Total cost of ownership", "Price, maintenance and consumables, so the cheap device does not cost the most."], ["Serviced locally", "Installed, networked and supported from the nearest Kelly branch."]],
-     ["Color and mono, desktop to workgroup", "Brother, Epson, Ricoh, Savin, Konica Minolta and Sharp", "Drivers and manuals linked from our support page", "Can join a managed print agreement"],
+     ["Color and mono, desktop to workgroup", "Sharp, Brother, Epson, Ricoh, Savin and Konica Minolta", "Drivers and manuals linked from our support page", "Can join a managed print agreement"],
      [["Should we buy printers or a multifunction device?", "Often one multifunction device replaces several printers and costs less to run. The assessment shows the numbers for your office."], ["Do you service printers we bought elsewhere?", "Often, yes. Ask the branch with the model number."]],
-     ["Brother", "Epson", "Ricoh", "Savin", "Konica Minolta", "Sharp"]],
+     ["Brother", "Epson", "Sharp", "Ricoh", "Savin", "Konica Minolta"]],
     ["copiers", "Print and imaging", "Copiers", "assets/mps-1-1200.jpg",
      "Modern office copiers with software that does more than duplicate.",
      "Producing copies is still part of daily work, so a copier is standard equipment for most teams. The devices have moved a long way from their origins: with software and integrations, an upgraded office copier scans to your systems, controls who prints what, and reports its own usage. Kelly matches the device to your volume and keeps it running.",
      [["Software and integrations", "Scan to email, folders and document management; user codes and secure release."], ["Matched to volume", "Speed and duty cycle chosen from your meter reads, not a brochure."], ["Serviced same day", "Under a Kelly agreement, by factory-trained technicians from the nearest branch."]],
      ["Ricoh, Savin, Konica Minolta and Sharp", "Lease, rent or buy", "Networked and trained on install day", "Meter reads read automatically under agreement"],
      [["Lease or buy?", "Depends on volume and how long you will keep it. Our lease, rent or buy guide walks through it, and the assessment prices all three."], ["How fast is service?", "Fast local response from the nearest branch across our North Carolina service area."]],
-     ["Ricoh", "Savin", "Konica Minolta", "Sharp"]],
+     ["Sharp", "Ricoh", "Savin", "Konica Minolta"]],
     ["multifunction-printers", "Print and imaging", "Multifunction printers", "assets/hero-1200.jpg",
      "Print, scan, copy and fax in one device, networked to the whole team.",
      "The versatility of multifunction printers makes them the workhorse of most offices. One device prints, scans, copies and faxes, so you maintain and supply one machine instead of four. Networked to every workstation, one MFP can serve a team or a whole small office, and printing costs drop with it.",
      [["One device, four jobs", "Print, scan, copy and fax, with one set of consumables."], ["Lower running cost", "Maintenance and supplies for one machine rather than several."], ["Networked to everyone", "Every workstation prints to it; scans land where the work is."]],
      ["A3 and A4, color and mono", "Secure print release and user authentication", "Scan to DocuWare, email and cloud folders", "Included in managed print reporting"],
      [["What size MFP do we need?", "Volume and the biggest paper you print decide it. The assessment counts both."], ["Can it replace our fax line?", "Most MFPs fax, and many offices move to scan-to-email instead. Ask the branch what fits."]],
-     ["Ricoh", "Savin", "Konica Minolta", "Sharp", "Brother"]],
+     ["Sharp", "Ricoh", "Savin", "Konica Minolta", "Brother"]],
     ["wide-format-printers", "Print and imaging", "Wide format printers", "assets/wide-format-1200.jpg",
      "Signage, window graphics and blueprints, printed in-house instead of outsourced.",
      "Sometimes a letter-size sheet does not cut it. Large print jobs are a reality for many industries, and outsourcing them adds up. A wide format printer produces large-scale, high-resolution output in-house: signage for a medical practice, advertising for a storefront window, or blueprints for an engineering firm.",
@@ -585,6 +661,11 @@ PRODUCT_INDEX = {p[0]: p for p in PRODUCTS}
 
 def product_page(slug, group, title, image, one, body, benefits, bullets, faq, brands):
     siblings = [q for q in PRODUCTS if q[1] == group and q[0] != slug][:3]
+    extra = []
+    if slug == "multifunction-printers":
+        extra.append({"type": "model3d", "id": "model", "heading": "Walk around one", "intro": "A generated stand-in model for the preview. Drag to rotate; your real devices replace it.", "poster": "assets/mfp-poster-1200.jpg", "alt": "A multifunction copier with a finisher, rotatable", **({"model": MFP_MODEL} if MFP_MODEL else {})})
+    if slug in ("copiers", "printers", "production-printers", "wide-format-printers"):
+        extra.append(dict(FLEET, alt=True, heading="The rest of the fleet"))
     secs = [
         {"type": "hero", "layout": "split", "eyebrow": group, "heading": PRODUCT_HEADINGS[slug], "subhead": one,
          "primary": {"label": "Request a quote", "href": "contact.html"}, "secondary": {"label": "Talk with your branch", "href": "locations.html"},
@@ -592,6 +673,7 @@ def product_page(slug, group, title, image, one, body, benefits, bullets, faq, b
         {"type": "detail", "eyebrow": "What to know", "heading": f"About {title.lower() if not title.startswith(('DocuWare', 'FP')) else title}", "body": body, "bullets": bullets, "image": image, "flip": True},
         {"type": "cards", "alt": True, "eyebrow": "Why it matters", "heading": f"What {title.split(':')[0].lower() if not title.startswith('DocuWare') else 'DocuWare'} changes", "items": benefits},
     ]
+    secs[2:2] = extra
     if brands:
         secs.append({"type": "partners", "caption": "Brands Kelly carries for this", "items": brands})
     secs.append({"type": "faq", "eyebrow": "Questions", "heading": "Asked on most first calls", "items": faq})
@@ -605,9 +687,10 @@ def product_page(slug, group, title, image, one, body, benefits, bullets, faq, b
 def products_index():
     secs = [{"type": "hero", "layout": "centered", "eyebrow": "Products", "heading": "Every product Kelly sells, <em>serviced by Kelly</em>.", "subhead": "Copiers to coffee brewers, postage meters to parcel lockers, managed IT to digital forensics. One partner, five North Carolina branches, one number.",
              "primary": {"label": "Request an assessment", "href": "contact.html"}, "secondary": {"label": "Estimate your print spend", "href": "cost-calculator.html"}}]
+    secs.append(dict(FLEET, alt=True))
     for i, g in enumerate(PRODUCT_GROUPS):
         items = [[p[2], brief(p[4], 120), f"products/{p[0]}.html"] for p in PRODUCTS if p[1] == g]
-        intro = {"Print and imaging": "Ricoh, Savin, Konica Minolta, Sharp, Brother and Epson devices, matched to your volume.",
+        intro = {"Print and imaging": "Sharp, Ricoh, Savin, Konica Minolta, Brother and Epson devices, matched to your volume.",
                  "Mail and shipping": "Through our partnership with FP Mailing Solutions, the whole mailroom from one supplier.",
                  "Water, ice and coffee": "Pure Technology: the breakroom, serviced on the same visit as the copier.",
                  "Technology and software": "Managed IT, digital forensics and DocuWare, from the same people who service your fleet."}[g]
@@ -615,6 +698,79 @@ def products_index():
     secs.append({"type": "leadform", "alt": True, "id": "quote", "heading": "Not sure which product?", "body": "Start with the assessment. A specialist walks the office, counts what you have and prices what you need.", "submit": "Request an assessment", "note": "A person from the nearest branch replies."})
     return {"file": "products.html", "title": "Products | Copiers, printers, mailing, water, ice, coffee and IT | Kelly Office Solutions", "description": "Every product Kelly Office Solutions sells and services in North Carolina: printers, copiers, MFPs, wide format, production print, postage meters, folder inserters, parcel lockers, water coolers, ice machines, coffee brewers, managed IT, digital forensics and DocuWare.",
             "crumbs": [["Home", "index.html"], ["Products", "products.html"]], "sections": secs}
+
+
+import os
+MFP_MODEL = "assets/fleet/mfp.glb" if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "kelly-office-solutions", "assets", "fleet", "mfp.glb")) else None
+
+WHEEL_ITEMS = [[x[1], brief(x[6], 140), f"services/{x[0]}.html", x[2]] for x in SERVICES]
+
+FLOW_ENGAGEMENT = {"type": "flow", "id": "flow", "eyebrow": "How an engagement runs", "heading": "Five stages, and every one of them hands you something",
+    "intro": "Click a stage. Nothing here is a sales step dressed up as a process; each one produces a document you keep.",
+    "steps": [
+        {"label": "Assessment", "when": "Week 1", "summary": "Free. One visit, one report.", "title": "A specialist walks the office and counts what you have",
+         "body": "Every device located and metered, cost per page by device, and a conversation with the people who print most. Free and without obligation, as it says on our managed print page. You keep the report whether or not you buy.",
+         "receive": ["Fleet inventory with meter counts", "Cost per page, mono and color, by device", "The recommendation, in writing"]},
+        {"label": "Plan", "when": "Week 2", "summary": "Lease, rent or buy, side by side.", "title": "A right-sized plan priced three ways",
+         "body": "Consolidate, upgrade or relocate, with lease, rental and purchase priced on your real volume. Nothing is replaced that the data does not justify.",
+         "receive": ["Device plan with placements", "Lease, rental and purchase side by side", "Service and supplies shown separately"]},
+        {"label": "Install and connect", "when": "A date you choose", "summary": "Networked and trained the same visit.", "title": "Devices arrive on the day you chose",
+         "body": "On the network the day they arrive, every user trained before the technician leaves, monitoring switched on, the first toner shipped before anyone asks.",
+         "receive": ["Install and training completed on site", "Monitoring live on every device", "Supplies on automatic replenishment"]},
+        {"label": "Monitor and supply", "when": "Ongoing", "summary": "Toner before it runs out.", "title": "The fleet reports on itself",
+         "body": "Devices report their own levels and faults. Supplies ship on usage, not on a call. Service and usage reports arrive on the schedule in your agreement, every six months on our managed print page.",
+         "receive": ["Supplies shipped on usage", "Service call history and supplies order reports", "Device utilization and executive snapshot"]},
+        {"label": "Review", "when": "On schedule", "summary": "Cost per page and uptime, then back to stage one.", "title": "A look at what moved",
+         "body": "Cost per page, uptime and what changed since the last report, then adjustments to the plan if the business moved. The cycle starts again from a known number.",
+         "receive": ["The five reports, explained in plain English", "Adjustments to the plan", "A fresh baseline for the next period"]}]}
+
+FLEET = {"type": "fleet", "id": "fleet", "heading": "The fleet, at a glance", "intro": "Every device family Kelly sells and services. Generated product renders for the preview; your real models replace them.",
+    "items": [
+        {"title": "Multifunction copiers", "band": "Workgroup to department", "brands": "Sharp, Ricoh, Savin, Konica Minolta", "image": "assets/fleet/mfp.png", "bullets": ["Print, scan, copy, fax", "Secure release and scan to DocuWare"], "href": "products/multifunction-printers.html"},
+        {"title": "Desktop printers", "band": "Desk and small team", "brands": "Brother, Epson, Ricoh", "image": "assets/fleet/printer.png", "bullets": ["Color and mono", "Joins a managed print agreement"], "href": "products/printers.html"},
+        {"title": "Wide format", "band": "Plans, posters, signage", "brands": "Epson, Ricoh", "image": "assets/fleet/wide-format.png", "bullets": ["Stop outsourcing plan sets", "Technical and graphics media"], "href": "products/wide-format-printers.html"},
+        {"title": "Production print", "band": "High volume, inline finishing", "brands": "Ricoh, Savin", "image": "assets/fleet/production.png", "bullets": ["Booklets, stapling, folding", "Color consistency all day"], "href": "products/production-printers.html"},
+        {"title": "Postage meters", "band": "Mailroom", "brands": "FP Mailing Solutions", "image": "assets/fleet/postage.png", "bullets": ["Commercial postage rates", "Fully IMI compliant"], "href": "products/postage-meters.html"},
+        {"title": "Water and coffee", "band": "Breakroom", "brands": "Wellsys, FloWater, Newco, Bunn", "image": "assets/fleet/breakroom.png", "bullets": ["Bottleless, filtered", "Serviced with your copier"], "href": "products/water-coolers.html"}]}
+
+SEAL = {"type": "seal", "id": "seal", "eyebrow": "What every Kelly customer gets", "heading": "Not a slogan. A list you can check.",
+    "intro": "Each line is on our site or in our agreements today. Nothing here is aspirational.",
+    "items": [["Free", "A free, no-obligation assessment", "One visit, one report, yours to keep whether or not you buy."],
+              ["94.4", "A service score audited by someone else", "Net Promoter Score collected and audited by CEO Juice. The industry average sits in the 70s."],
+              ["1947", "Family-owned since 1947", "Headquartered in Winston-Salem and still independent while the industry consolidated."],
+              ["5", "Five North Carolina offices", "Winston-Salem, Greensboro, Charlotte, Raleigh and Swansboro. Technicians dispatched from the nearest one."],
+              ["1", "One invoice for the whole office", "Copiers, print, IT, mailing, water and coffee under one agreement and one number."],
+              ["A+", "BBB accredited, rated A+", "Accredited by the Better Business Bureau."],
+              ["IMI", "The only fully IMI-compliant meter range", "Through our partnership with FP Mailing Solutions."],
+              ["6 mo", "Reports every six months", "Service call history, supplies, device utilization, device list and charts, executive snapshot."]],
+    "source": "Sources: kellyofficesolutions.com (managed print, mailing, about pages), CEO Juice, the Better Business Bureau."}
+
+BEFORE_AFTER = {"type": "beforeafter", "id": "ba", "eyebrow": "One partner", "heading": "Drag to see what changes when the office has one number to call",
+    "before": {"eyebrow": "Today, in most offices", "title": "Seven vendors, seven invoices", "body": "Nobody owns the whole picture, so nobody sees the cost.",
+               "items": ["A copier company, a printer reseller and a toner site", "An IT firm that blames the copier company", "A postage meter on its own contract", "A water delivery and a coffee service", "Four numbers to call and nobody who knows your name", "Toner ordered in a hurry at retail"]},
+    "after": {"eyebrow": "With Kelly", "title": "One partner, one invoice, one number", "body": "Copiers to coffee, serviced by the same people on the same visit.",
+              "items": ["Copiers, printers and production print under one agreement", "Managed IT and DocuWare from the same team", "FP postage meters, lockers and mailroom equipment", "Water, ice and coffee serviced with the copier", "1-800-34-KELLY reaches all five offices", "Supplies shipped on usage before they run out"]}}
+
+HOTSPOTS = {"type": "hotspots", "id": "office", "eyebrow": "The whole office", "heading": "Seven lines, one floor plan", "intro": "Click a number. Everything an office runs on, and the Kelly page for each.",
+    "image": "assets/office-iso-1600.jpg", "image_w": 1600, "image_h": 893, "alt": "An overhead illustration of an office with a copier room, a break room, a server room, a mailroom and desks",
+    "items": [
+        {"x": 27, "y": 46, "k": "Copiers and production", "title": "The copier room", "body": "Multifunction devices and a production system with inline finishing, on one agreement.", "href": "products/multifunction-printers.html", "label": "Multifunction printers"},
+        {"x": 47, "y": 21, "k": "Water, ice and coffee", "title": "The break room", "body": "Bottleless water, ice and single-cup or high-volume coffee, serviced on the same visit as the copier.", "href": "services/pure-technology.html", "label": "Pure Technology"},
+        {"x": 82, "y": 14, "k": "Managed IT", "title": "The server room", "body": "Monitoring, backup, security and Microsoft 365 for a fixed monthly invoice.", "href": "products/managed-it.html", "label": "Managed IT services"},
+        {"x": 73, "y": 58, "k": "Mailing", "title": "The mailroom", "body": "FP postage meters, folder inserters and mailroom printers that cost less per piece than the office copier.", "href": "products/postage-meters.html", "label": "Postage meters"},
+        {"x": 88, "y": 66, "k": "Parcel lockers", "title": "The package wall", "body": "Secure, contactless pickup for offices, campuses and properties.", "href": "products/parcel-lockers.html", "label": "Parcel lockers"},
+        {"x": 16, "y": 58, "k": "Desktop printers", "title": "The desks", "body": "Single-function printers, right-sized to how many the office needs and folded into managed print.", "href": "products/printers.html", "label": "Printers"},
+        {"x": 64, "y": 71, "k": "Document management", "title": "Scan to DocuWare", "body": "Every MFP scans straight into indexed workflows: accounts payable, HR, contracts.", "href": "products/docuware.html", "label": "DocuWare"}]}
+
+HERO_LAYERED = {"type": "hero-layered", "id": "hero", "eyebrow": "Moving business forward since 1947",
+    "heading": "Fully connected office systems, serviced by people who <em>answer the phone</em>.",
+    "subhead": "Copiers and print, document management, IT, mailing, and the water and coffee that keep an office running. One North Carolina partner, five offices, one number to call.",
+    "primary": {"label": "Request an assessment", "href": "contact.html"}, "secondary": {"label": "Estimate your print spend", "href": "cost-calculator.html"},
+    "image": "assets/hero-plate-2100.jpg", "image_w": 2100, "image_h": 891,
+    "stats": [["1947", "Family-owned since"], ["94.4", "Net Promoter Score, audited"], ["4,000", "Customers, approximately"], ["5", "North Carolina offices"]],
+    "card_a": {"eyebrow": "Start here", "title": "The free assessment", "body": "One visit. One report, yours to keep whether or not you buy.", "items": ["Every device counted and metered", "Cost per page, mono and color", "Lease, rental and purchase side by side"], "href": "assessment.html", "label": "How it works"},
+    "card_b": {"eyebrow": "Already a customer?", "title": "The fast lane", "body": "Under a minute each. A person replies.", "links": [["Request service", "service-support.html#request"], ["Meter reads", "service-support.html#meters"], ["Order supplies", "service-support.html#supplies"], ["Customer portal", PORTAL]]},
+    "note": "Preview photography is generated and labelled as such; Kelly's own imagery replaces it."}
 
 
 def build():
@@ -626,6 +782,7 @@ def build():
         "utility": [{"label": "Customer portal", "href": PORTAL}, {"label": "Request service", "href": "service-support.html#request"}, {"label": "Meter reads", "href": "service-support.html#meters"}, {"label": "Order supplies", "href": "service-support.html#supplies"}],
         "cta": {"label": "Request an assessment", "href": "contact.html"},
         "sticky": {"primary": "Get an assessment", "primary_href": "contact.html", "secondary": "Call Kelly", "secondary_href": PHONE_HREF},
+        "launcher": {"label": "Already a customer?", "eyebrow": "The fast lane", "title": "What do you need today?", "links": [["Request service", "service-support.html#request"], ["Meter reads", "service-support.html#meters"], ["Order supplies", "service-support.html#supplies"], ["Customer portal", PORTAL]], "note": "A person from the nearest branch replies. Under a Kelly agreement your call is dispatched first."},
         "social": {"linkedin": "https://www.linkedin.com/company/kelly-office-solutions/", "facebook": "https://www.facebook.com/KellyOfficeSolutions", "x": "https://twitter.com/kellyofficesolu"},
         "tagline": "Moving business forward since 1947. Family-owned, headquartered in Winston-Salem, and still answering the phone ourselves.",
         "footer_columns": [
@@ -655,20 +812,23 @@ def build():
     # ---------------- home
     pages.append({"file": "index.html", "title": "Kelly Office Solutions | Copiers, managed print, IT and office technology in North Carolina",
                   "compose": {
-                      "clean": ["hero", "partners", "fastlane", "services", "is-this-you", "map", "process", "voices", "faq", "contact"],
-                      "showcase": ["hero", "partners", "is-this-you", "services", "film", "markets", "proof", "map", "voices", "fastlane", "contact"],
-                      "press": ["hero", "story", "services", "voices", "film", "map", "process", "faq", "contact"]},
+                      "clean": ["hero-light", "partners", "seal", "wheel", "is-this-you", "flow", "map", "voices", "film", "faq", "contact"],
+                      "showcase": ["hero", "partners", "wheel", "fleet", "ba", "flow", "office", "model", "proof", "map", "voices", "film", "contact"],
+                      "press": ["hero-light", "story", "services", "seal", "voices", "film", "flow", "map", "faq", "contact"]},
                   "description": "Family-owned since 1947 and headquartered in Winston-Salem. Copiers and managed print, document management, IT, mailing, water and coffee for North Carolina businesses, from five local offices, with Fast local response from the nearest branch.",
                   "sections": [
-        {"type": "hero", "id": "hero", "layout": "split", "eyebrow": "Moving business forward since 1947",
+        {"type": "hero", "id": "hero-light", "layout": "split", "eyebrow": "Moving business forward since 1947",
          "stats": [["1947", "Family-owned since"], ["94.4", "Net Promoter Score, audited"], ["4,000", "Customers, approximately"], ["5", "North Carolina offices"]],
          "ribbon": ["BBB accredited, rated A+", "NPS 94.4, audited by CEO Juice. Industry average in the 70s", "Five North Carolina offices, one number"],
          "variants": {"press": {"stats": None, "ribbon": ["Winston-Salem, North Carolina. Since 1947.", "BBB accredited, rated A+", "NPS 94.4, audited by CEO Juice"]}},
          "heading": "Fully connected office systems, serviced by people who <em>answer the phone</em>.",
          "subhead": "Copiers and print, document management, IT, mailing, and the water and coffee that keep an office running. One North Carolina partner, five locations, one number to call.",
          "primary": {"label": "Request an assessment", "href": "contact.html"}, "secondary": {"label": "Estimate your print spend", "href": "cost-calculator.html"},
-         "note": "Ricoh, Savin, Konica Minolta, Sharp, Brother and Epson dealer", "image": "assets/hero-1200.jpg", "image_alt": "A technician kneeling beside an open office copier, replacing a toner unit", "image_w": 1200, "image_h": 800,
+         "note": "Sharp, Ricoh, Savin, Konica Minolta, Brother and Epson dealer", "image": "assets/hero-1200.jpg", "image_alt": "A technician kneeling beside an open office copier, replacing a toner unit", "image_w": 1200, "image_h": 800,
          "badge": {"value": "94.4", "label": "Net Promoter Score, independently audited"}},
+        HERO_LAYERED,
+        {"type": "wheel", "id": "wheel", "eyebrow": "One partner", "heading": "Everything an office runs on, from one partner", "intro": "Hover a segment. Seven lines, one agreement, one number.", "items": WHEEL_ITEMS, "hub": "Kelly", "hub_sub": "one partner", "ring": "EVERYTHING AN OFFICE RUNS ON"},
+        FLOW_ENGAGEMENT, FLEET, SEAL, BEFORE_AFTER, HOTSPOTS,
         {"type": "partners", "id": "partners", "caption": "Technology partners", "items": PARTNERS},
         {"type": "stats", "id": "stats", "alt": True, "items": [["1947", "Family-owned since"], ["94.4", "NPS, audited by CEO Juice (industry average: 70s)"], ["4,000", "Customers, approximately"], ["5", "Locations: Winston-Salem, Greensboro, Charlotte, Raleigh and Swansboro"]]},
         {"type": "checklist", "id": "is-this-you", "alt": True, "eyebrow": "Is this you?", "heading": "Six signs your office spends more on print than it knows",
@@ -682,6 +842,7 @@ def build():
         {"type": "video", "id": "film", "alt": False, "eyebrow": "Who we are", "heading": "Thirty seconds on Kelly", "intro": "Family-owned since 1947, headquartered in Winston-Salem, with branches in Greensboro, Charlotte, Raleigh and Swansboro.", "vimeo": "271855836", "poster": "assets/vimeo-poster.jpg", "title": "Kelly Office Solutions", "caption": "Kelly's own film, from kellyofficesolutions.com"},
         {"type": "process", "id": "process", "eyebrow": "How we would stage an engagement", "heading": "Five stages, and every one of them hands you something",
          "stages": [["Assessment", "Produces: a fleet and cost report, yours to keep."], ["Plan", "Produces: a right-sized device plan with lease, rental or purchase priced side by side."], ["Install and connect", "Produces: every device on your network, every user trained, on a date you chose."], ["Monitor and supply", "Produces: toner that arrives before it runs out, and usage reports on the schedule in your agreement."], ["Review", "Produces: a quarterly look at cost per page and uptime, then back to stage one if anything moved."]]},
+        {"type": "model3d", "id": "model", "alt": False, "eyebrow": "Take a closer look", "heading": "Walk around one before it arrives", "intro": "A generated Sharp-style multifunction device for the preview. Drag to rotate. Your real models, with Sharp product imagery, replace it in the build.", "poster": "assets/mfp-poster-1200.jpg", "alt": "A white and charcoal multifunction copier on a cabinet, rotatable", "cta": {"label": "See multifunction printers", "href": "products/multifunction-printers.html"}, **({"model": MFP_MODEL} if MFP_MODEL else {})},
         {"type": "testimonials", "id": "voices", "alt": True, "layout": "feature", "eyebrow": "What customers say", "heading": "Customers, in their own words", "items": [TAX_SEASON] + [t[:3] for t in TESTIMONIALS]},
         {"type": "proof", "id": "proof", "alt": True, "eyebrow": "Measured, not claimed", "value": "94.4", "text": "Net Promoter Score, collected and audited by CEO Juice from Kelly customers after every service call. The industry average sits in the 70s.", "source": "Audited quarterly by an independent third party. Ask us for the latest report."},
         {"type": "map", "id": "map", "heading": "Five offices, one number, most of North Carolina", "intro": "Technicians are dispatched from the branch nearest you. Call the branch directly or 1-800-34-KELLY, which reaches all five.", "ring": 40,
@@ -709,6 +870,8 @@ def build():
     # ---------------- what we do (overview) + service pages
     pages.append({"file": "what-we-do.html", "title": "What we do | Kelly Office Solutions", "description": "Seven service lines, one partner: copiers and office products, managed print, document management, production print, IT services, mailing solutions, and water, ice and coffee.",
                   "sections": [
+        {"type": "wheel", "id": "wheel", "eyebrow": "The seven lines", "heading": "Everything an office runs on, from one partner", "intro": "Hover a segment to read it. Each line has its own page.", "items": WHEEL_ITEMS, "hub": "Kelly", "hub_sub": "one partner"},
+        HOTSPOTS,
         {"type": "hero", "layout": "centered", "eyebrow": "What we do", "heading": "Seven things an office runs on. One partner who <em>answers the phone</em>.", "subhead": "Every line below is installed, serviced and supplied by Kelly people from five North Carolina offices. Mix and match; most customers start with print and add from there.", "primary": {"label": "Request an assessment", "href": "contact.html"}},
         {"type": "resources", "heading": "The seven lines", "intro": "Each one has its own page, with what changes and what is included.", "items": [[s[4], s[1], brief(s[6]), "Read more", f"services/{s[0]}.html"] for s in SERVICES[:6]]},
         {"type": "detail", "id": "pure", "alt": True, "eyebrow": "Pure Technology", "heading": SERVICES[6][1], "body": SERVICES[6][6], "bullets": SERVICES[6][8], "image": SERVICES[6][3], "image_alt": "An office break room"},
@@ -736,7 +899,7 @@ def build():
                   "sections": [
         {"type": "hero", "layout": "centered", "eyebrow": "Supplies and service", "heading": "Already a customer? <em>This is the fast lane.</em>", "subhead": "Everything an existing customer needs, one click deep. Fast local response from the nearest of five branches, by factory-trained technicians.", "primary": {"label": "Request service", "href": "#request"}, "secondary": {"label": f"Call {PHONE}", "href": PHONE_HREF}},
         {"type": "band", "eyebrow": "Fast lane", "heading": "Four things, under a minute each", "subhead": "Or call. A person answers.", "items": [["Request service", "Fast local response from the nearest branch", "#request"], ["Meter reads", "Send a read, or let us read them automatically", "#meters"], ["Copier supplies", "Toner and parts, shipped before you run out", "#supplies"], ["Coffee and water supplies", "Beans, filters and cups on your schedule", "#supplies"]]},
-        {"type": "detail", "id": "request", "eyebrow": "Service", "heading": "Request service", "body": "Tell us the device and what it is doing. Dispatch confirms a window for customers under a Kelly agreement, and a factory-trained technician comes from the nearest branch.", "bullets": ["Fast local response from the nearest branch, in all five territories", "Technicians for Ricoh, Savin, Konica Minolta, Sharp, Brother and Epson", "Every call tracked in the customer portal"], "form": {"fields": ["Company", "Device serial or location", "What is it doing?"], "submit": "Request service"}},
+        {"type": "detail", "id": "request", "eyebrow": "Service", "heading": "Request service", "body": "Tell us the device and what it is doing. Dispatch confirms a window for customers under a Kelly agreement, and a factory-trained technician comes from the nearest branch.", "bullets": ["Fast local response from the nearest branch, in all five territories", "Technicians for Sharp, Ricoh, Savin, Konica Minolta, Brother and Epson", "Every call tracked in the customer portal"], "form": {"fields": ["Company", "Device serial or location", "What is it doing?"], "submit": "Request service"}},
         {"type": "detail", "id": "meters", "alt": True, "eyebrow": "Meters", "heading": "Meter reads", "body": "Send a read in thirty seconds, or ask about automatic meter collection so you never do it again.", "bullets": ["Web form, email or automatic collection", "Reads feed billing directly, so invoices match usage", "Usage reports on managed fleets, on the schedule in your agreement"], "form": {"fields": ["Company", "Device serial", "Meter reading"], "submit": "Send meter read"}},
         {"type": "detail", "id": "supplies", "eyebrow": "Supplies", "heading": "Copier, coffee and water supplies", "body": "Toner and parts for your devices, beans and filters for your break room, shipped from the nearest branch or delivered on your service visit.", "bullets": ["Genuine supplies for every device we sell", "Automatic replenishment on managed fleets", "Coffee, cups, filters and sanitizing kits", "One invoice with your service agreement"], "form": {"fields": ["Company", "Device or item", "Quantity"], "submit": "Order supplies"}},
         {"type": "testimonials", "alt": True, "heading": "What customers say about service", "items": [TESTIMONIALS[1][:3], TAX_SEASON]},
@@ -781,6 +944,7 @@ def build():
                   "sections": [
         {"type": "hero", "layout": "centered", "eyebrow": "About Kelly", "heading": "Family-owned since 1947. <em>Still local, on purpose.</em>", "subhead": "Kelly started in 1947 selling office equipment and stayed independent while most of the industry consolidated. Today about 90 people across five North Carolina offices serve some 4,000 customers, and the phone is still answered by someone who works here.", "primary": {"label": "Meet the owners", "href": "#leadership"}, "image": "assets/kelly-team-1024.jpg", "image_alt": "A Kelly technician beside a Kelly service van", "image_w": 1024, "image_h": 576},
         {"type": "stats", "alt": True, "items": [["1947", "Founded in North Carolina"], ["90", "People, approximately, across five offices"], ["94.4", "Net Promoter Score, audited by CEO Juice"], ["4,000", "Customers, approximately"]]},
+        {"type": "video", "id": "film", "eyebrow": "Who we are", "heading": "Thirty seconds on Kelly", "intro": "Family-owned since 1947, headquartered in Winston-Salem, with branches in Greensboro, Charlotte, Raleigh and Swansboro.", "vimeo": "271855836", "poster": "assets/vimeo-poster.jpg", "title": "Kelly Office Solutions", "caption": "Kelly's own film, from kellyofficesolutions.com"},
         {"type": "timeline", "eyebrow": "The story", "heading": "From one office to five, and from copiers to the whole office", "items": [["1947", "Kelly opens", "Selling and servicing office equipment in Winston-Salem."], ["A+", "BBB accredited", "Accredited by the Better Business Bureau and rated A+."], ["Today", "Five offices, seven lines", "Winston-Salem, Greensboro, Charlotte, Raleigh and Swansboro. Copiers to coffee, one number."]]},
         {"type": "leadership", "id": "leadership", "heading": "The owners", "intro": "Tim and Peter are co-owners of Kelly Office Solutions, with over 45 years of experience in the industry.", "people": [["Tim Renegar", "Co-owner"], ["Peter Kelly", "Co-owner"]], "orgs_intro": "Kelly supports the organizations that serve its communities, and is a sponsor and member of the local chambers.", "orgs": COMMUNITY},
         {"type": "values", "alt": True, "eyebrow": "What we believe", "heading": "Mission, vision and the standard we hold ourselves to", "items": [["Mission", "To help our customers achieve the vision and success of their business."], ["Vision", "To seek out new technologies and innovations to deliver the best solution to our customer with integrity."], ["Measured, not claimed", "Our Net Promoter Score is collected and audited by CEO Juice, an independent company whose process we do not control. It is 94.4. The industry average is in the 70s."]]},
@@ -903,7 +1067,7 @@ def build():
             "Winston-Salem and Swansboro hours. Greensboro, Charlotte and Raleigh state 8 to 5 on your site; the other two do not.",
             "Blog dates. The nine posts keep your live slugs; give us the original publish dates so the schema does not claim they are new.",
             "The Ricoh standing. Your profile says sixth-largest Ricoh dealer in the Southeast; we left it off until Ricoh confirms it.",
-            "Manufacturer authorizations to show: Ricoh, Savin, Konica Minolta, Sharp, Brother, Epson, Dell, as on your site today.",
+            "Manufacturer authorizations to show: Sharp, Ricoh, Savin, Konica Minolta, Brother, Epson, Dell, as on your site today.",
             "Branch hours for each location. The location pages carry a placeholder of 8 to 5, Monday to Friday.",
             "The tagline. Moving Business Forward Since 1947 is on your site today; Office Technology Done Right Since 1947 has also been used.",
             "Your assessment process, stage by stage, and what each stage hands the customer. We drafted five stages from your three; they are ours until you replace them.",

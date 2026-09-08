@@ -476,3 +476,18 @@ and labelled as such in the repo.
 **Lesson:** a claim repeated is not a claim verified. "Same-day" survived three passes because it
 read like the category's default. The fact checker's brief now says: any response time, any parts
 policy, any cadence is unsourced until the client's own page or a signed document says it.
+
+## 2026-09-08: pass five, the signature module library on the 55-page Kelly preview
+Built after studying tomorrowsoffice.com, fisherstech.com and the Revolution process chart, then extended on Shawn's instruction to put process charts and before/after panels on every service page and to make the 3D device a Sharp.
+
+Found and fixed, all by Playwright screenshot at 1440 and 390:
+- **Layered hero cards overlapped** at 1440 (card B sat under card A). Stack given 640px min height, card B pinned at 340px.
+- **Before/after height** came from the before pane only, so the after list overflowed the panel. Both panes now share one grid cell; the panel is as tall as the taller side. Before heading clipped at the divider: 64px right padding and `overflow-wrap:anywhere`.
+- **Flow chart on phones** wrapped one word per line: the node's single child (the button) landed in the 54px dot column. The button is now the grid.
+- **3D module blank when the model-viewer script is blocked** (sandbox, strict CSP, offline). A poster image sits under the element and hides only once `model-viewer:defined`.
+- **Home compose referenced a section that did not exist** (`model` on Showcase) and was dropped silently. The preview now has a home `model3d` section; a compose id that matches nothing should be treated as a build error in the next preview.py pass.
+- **Design system page** logo cards stretched to the image's intrinsic height; art boxes are now a fixed 4:3 with the image absolutely positioned.
+
+Checked clean: nine pages (three homes, four service pages, multifunction, about) at 1440 and 390, zero broken links, zero horizontal overflow, zero em dashes. The two "bad image" hits on the Showcase phone run are lazy fleet images offscreen in the rail, not missing files. The single console error on every page is the blocked Google Fonts request in the sandbox; the second on the multifunction page is the blocked model-viewer CDN, which is what the poster fallback is for.
+
+Still open: the gate (`verify.mjs`) has not been rerun on the new pages this pass; Vercel deploy must be confirmed by loading the Showcase home and the multifunction page in a real browser so the GLB and model-viewer script are seen to load.

@@ -43,6 +43,30 @@
       "secondary": "Call Kelly",
       "secondary_href": "tel:18003453559"
     },
+    "launcher": {
+      "label": "Already a customer?",
+      "eyebrow": "The fast lane",
+      "title": "What do you need today?",
+      "links": [
+        [
+          "Request service",
+          "service-support.html#request"
+        ],
+        [
+          "Meter reads",
+          "service-support.html#meters"
+        ],
+        [
+          "Order supplies",
+          "service-support.html#supplies"
+        ],
+        [
+          "Customer portal",
+          "https://einfo.kellyofficesolutions.com:8890/"
+        ]
+      ],
+      "note": "A person from the nearest branch replies. Under a Kelly agreement your call is dispatched first."
+    },
     "social": {
       "linkedin": "https://www.linkedin.com/company/kelly-office-solutions/",
       "facebook": "https://www.facebook.com/KellyOfficeSolutions",
@@ -424,38 +448,42 @@
       "title": "Kelly Office Solutions | Copiers, managed print, IT and office technology in North Carolina",
       "compose": {
         "clean": [
-          "hero",
+          "hero-light",
           "partners",
-          "fastlane",
-          "services",
+          "seal",
+          "wheel",
           "is-this-you",
+          "flow",
           "map",
-          "process",
           "voices",
+          "film",
           "faq",
           "contact"
         ],
         "showcase": [
           "hero",
           "partners",
-          "is-this-you",
-          "services",
-          "film",
-          "markets",
+          "wheel",
+          "fleet",
+          "ba",
+          "flow",
+          "office",
+          "model",
           "proof",
           "map",
           "voices",
-          "fastlane",
+          "film",
           "contact"
         ],
         "press": [
-          "hero",
+          "hero-light",
           "story",
           "services",
+          "seal",
           "voices",
           "film",
+          "flow",
           "map",
-          "process",
           "faq",
           "contact"
         ]
@@ -464,7 +492,7 @@
       "sections": [
         {
           "type": "hero",
-          "id": "hero",
+          "id": "hero-light",
           "layout": "split",
           "eyebrow": "Moving business forward since 1947",
           "stats": [
@@ -510,7 +538,7 @@
             "label": "Estimate your print spend",
             "href": "cost-calculator.html"
           },
-          "note": "Ricoh, Savin, Konica Minolta, Sharp, Brother and Epson dealer",
+          "note": "Sharp, Ricoh, Savin, Konica Minolta, Brother and Epson dealer",
           "image": "assets/hero-1200.jpg",
           "image_alt": "A technician kneeling beside an open office copier, replacing a toner unit",
           "image_w": 1200,
@@ -521,14 +549,441 @@
           }
         },
         {
+          "type": "hero-layered",
+          "id": "hero",
+          "eyebrow": "Moving business forward since 1947",
+          "heading": "Fully connected office systems, serviced by people who <em>answer the phone</em>.",
+          "subhead": "Copiers and print, document management, IT, mailing, and the water and coffee that keep an office running. One North Carolina partner, five offices, one number to call.",
+          "primary": {
+            "label": "Request an assessment",
+            "href": "contact.html"
+          },
+          "secondary": {
+            "label": "Estimate your print spend",
+            "href": "cost-calculator.html"
+          },
+          "image": "assets/hero-plate-2100.jpg",
+          "image_w": 2100,
+          "image_h": 891,
+          "stats": [
+            [
+              "1947",
+              "Family-owned since"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited"
+            ],
+            [
+              "4,000",
+              "Customers, approximately"
+            ],
+            [
+              "5",
+              "North Carolina offices"
+            ]
+          ],
+          "card_a": {
+            "eyebrow": "Start here",
+            "title": "The free assessment",
+            "body": "One visit. One report, yours to keep whether or not you buy.",
+            "items": [
+              "Every device counted and metered",
+              "Cost per page, mono and color",
+              "Lease, rental and purchase side by side"
+            ],
+            "href": "assessment.html",
+            "label": "How it works"
+          },
+          "card_b": {
+            "eyebrow": "Already a customer?",
+            "title": "The fast lane",
+            "body": "Under a minute each. A person replies.",
+            "links": [
+              [
+                "Request service",
+                "service-support.html#request"
+              ],
+              [
+                "Meter reads",
+                "service-support.html#meters"
+              ],
+              [
+                "Order supplies",
+                "service-support.html#supplies"
+              ],
+              [
+                "Customer portal",
+                "https://einfo.kellyofficesolutions.com:8890/"
+              ]
+            ]
+          },
+          "note": "Preview photography is generated and labelled as such; Kelly's own imagery replaces it."
+        },
+        {
+          "type": "wheel",
+          "id": "wheel",
+          "eyebrow": "One partner",
+          "heading": "Everything an office runs on, from one partner",
+          "intro": "Hover a segment. Seven lines, one agreement, one number.",
+          "items": [
+            [
+              "Office products and copiers",
+              "Sharp, Ricoh, Savin, Konica Minolta and Brother printers, copiers, multifunction and wide-format devices, matched to your volume.",
+              "services/copiers.html",
+              "Copiers and printers"
+            ],
+            [
+              "Managed print services",
+              "Printing is an overlooked and undermanaged business function, and many organizations spend up to 30% more than they should on it.",
+              "services/managed-print.html",
+              "Managed print"
+            ],
+            [
+              "Document management",
+              "DocuWare workflows configured and supported by the Kelly team in North Carolina: accounts payable routing.",
+              "services/document-management.html",
+              "Document management"
+            ],
+            [
+              "Production print",
+              "In-house color and mono production with inline finishing for schools, churches, legal and marketing departments that print every day.",
+              "services/production-print.html",
+              "Production print"
+            ],
+            [
+              "IT services",
+              "Managed IT, backup and security with Datto, WatchGuard, Dell and Microsoft 365, plus digital forensic services.",
+              "services/it-services.html",
+              "IT services"
+            ],
+            [
+              "Mailing solutions",
+              "Postage meters, folder-inserters, mailroom printers, parcel lockers and parcel shipping.",
+              "services/mailing.html",
+              "Mailing"
+            ],
+            [
+              "Pure Technology: water, ice and coffee",
+              "Bottleless filtered water coolers from Wellsys and FloWater, commercial ice machines from Manitowoc and Follett.",
+              "services/pure-technology.html",
+              "Water, ice and coffee"
+            ]
+          ],
+          "hub": "Kelly",
+          "hub_sub": "one partner",
+          "ring": "EVERYTHING AN OFFICE RUNS ON"
+        },
+        {
+          "type": "flow",
+          "id": "flow",
+          "eyebrow": "How an engagement runs",
+          "heading": "Five stages, and every one of them hands you something",
+          "intro": "Click a stage. Nothing here is a sales step dressed up as a process; each one produces a document you keep.",
+          "steps": [
+            {
+              "label": "Assessment",
+              "when": "Week 1",
+              "summary": "Free. One visit, one report.",
+              "title": "A specialist walks the office and counts what you have",
+              "body": "Every device located and metered, cost per page by device, and a conversation with the people who print most. Free and without obligation, as it says on our managed print page. You keep the report whether or not you buy.",
+              "receive": [
+                "Fleet inventory with meter counts",
+                "Cost per page, mono and color, by device",
+                "The recommendation, in writing"
+              ]
+            },
+            {
+              "label": "Plan",
+              "when": "Week 2",
+              "summary": "Lease, rent or buy, side by side.",
+              "title": "A right-sized plan priced three ways",
+              "body": "Consolidate, upgrade or relocate, with lease, rental and purchase priced on your real volume. Nothing is replaced that the data does not justify.",
+              "receive": [
+                "Device plan with placements",
+                "Lease, rental and purchase side by side",
+                "Service and supplies shown separately"
+              ]
+            },
+            {
+              "label": "Install and connect",
+              "when": "A date you choose",
+              "summary": "Networked and trained the same visit.",
+              "title": "Devices arrive on the day you chose",
+              "body": "On the network the day they arrive, every user trained before the technician leaves, monitoring switched on, the first toner shipped before anyone asks.",
+              "receive": [
+                "Install and training completed on site",
+                "Monitoring live on every device",
+                "Supplies on automatic replenishment"
+              ]
+            },
+            {
+              "label": "Monitor and supply",
+              "when": "Ongoing",
+              "summary": "Toner before it runs out.",
+              "title": "The fleet reports on itself",
+              "body": "Devices report their own levels and faults. Supplies ship on usage, not on a call. Service and usage reports arrive on the schedule in your agreement, every six months on our managed print page.",
+              "receive": [
+                "Supplies shipped on usage",
+                "Service call history and supplies order reports",
+                "Device utilization and executive snapshot"
+              ]
+            },
+            {
+              "label": "Review",
+              "when": "On schedule",
+              "summary": "Cost per page and uptime, then back to stage one.",
+              "title": "A look at what moved",
+              "body": "Cost per page, uptime and what changed since the last report, then adjustments to the plan if the business moved. The cycle starts again from a known number.",
+              "receive": [
+                "The five reports, explained in plain English",
+                "Adjustments to the plan",
+                "A fresh baseline for the next period"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "fleet",
+          "id": "fleet",
+          "heading": "The fleet, at a glance",
+          "intro": "Every device family Kelly sells and services. Generated product renders for the preview; your real models replace them.",
+          "items": [
+            {
+              "title": "Multifunction copiers",
+              "band": "Workgroup to department",
+              "brands": "Sharp, Ricoh, Savin, Konica Minolta",
+              "image": "assets/fleet/mfp.png",
+              "bullets": [
+                "Print, scan, copy, fax",
+                "Secure release and scan to DocuWare"
+              ],
+              "href": "products/multifunction-printers.html"
+            },
+            {
+              "title": "Desktop printers",
+              "band": "Desk and small team",
+              "brands": "Brother, Epson, Ricoh",
+              "image": "assets/fleet/printer.png",
+              "bullets": [
+                "Color and mono",
+                "Joins a managed print agreement"
+              ],
+              "href": "products/printers.html"
+            },
+            {
+              "title": "Wide format",
+              "band": "Plans, posters, signage",
+              "brands": "Epson, Ricoh",
+              "image": "assets/fleet/wide-format.png",
+              "bullets": [
+                "Stop outsourcing plan sets",
+                "Technical and graphics media"
+              ],
+              "href": "products/wide-format-printers.html"
+            },
+            {
+              "title": "Production print",
+              "band": "High volume, inline finishing",
+              "brands": "Ricoh, Savin",
+              "image": "assets/fleet/production.png",
+              "bullets": [
+                "Booklets, stapling, folding",
+                "Color consistency all day"
+              ],
+              "href": "products/production-printers.html"
+            },
+            {
+              "title": "Postage meters",
+              "band": "Mailroom",
+              "brands": "FP Mailing Solutions",
+              "image": "assets/fleet/postage.png",
+              "bullets": [
+                "Commercial postage rates",
+                "Fully IMI compliant"
+              ],
+              "href": "products/postage-meters.html"
+            },
+            {
+              "title": "Water and coffee",
+              "band": "Breakroom",
+              "brands": "Wellsys, FloWater, Newco, Bunn",
+              "image": "assets/fleet/breakroom.png",
+              "bullets": [
+                "Bottleless, filtered",
+                "Serviced with your copier"
+              ],
+              "href": "products/water-coolers.html"
+            }
+          ]
+        },
+        {
+          "type": "seal",
+          "id": "seal",
+          "eyebrow": "What every Kelly customer gets",
+          "heading": "Not a slogan. A list you can check.",
+          "intro": "Each line is on our site or in our agreements today. Nothing here is aspirational.",
+          "items": [
+            [
+              "Free",
+              "A free, no-obligation assessment",
+              "One visit, one report, yours to keep whether or not you buy."
+            ],
+            [
+              "94.4",
+              "A service score audited by someone else",
+              "Net Promoter Score collected and audited by CEO Juice. The industry average sits in the 70s."
+            ],
+            [
+              "1947",
+              "Family-owned since 1947",
+              "Headquartered in Winston-Salem and still independent while the industry consolidated."
+            ],
+            [
+              "5",
+              "Five North Carolina offices",
+              "Winston-Salem, Greensboro, Charlotte, Raleigh and Swansboro. Technicians dispatched from the nearest one."
+            ],
+            [
+              "1",
+              "One invoice for the whole office",
+              "Copiers, print, IT, mailing, water and coffee under one agreement and one number."
+            ],
+            [
+              "A+",
+              "BBB accredited, rated A+",
+              "Accredited by the Better Business Bureau."
+            ],
+            [
+              "IMI",
+              "The only fully IMI-compliant meter range",
+              "Through our partnership with FP Mailing Solutions."
+            ],
+            [
+              "6 mo",
+              "Reports every six months",
+              "Service call history, supplies, device utilization, device list and charts, executive snapshot."
+            ]
+          ],
+          "source": "Sources: kellyofficesolutions.com (managed print, mailing, about pages), CEO Juice, the Better Business Bureau."
+        },
+        {
+          "type": "beforeafter",
+          "id": "ba",
+          "eyebrow": "One partner",
+          "heading": "Drag to see what changes when the office has one number to call",
+          "before": {
+            "eyebrow": "Today, in most offices",
+            "title": "Seven vendors, seven invoices",
+            "body": "Nobody owns the whole picture, so nobody sees the cost.",
+            "items": [
+              "A copier company, a printer reseller and a toner site",
+              "An IT firm that blames the copier company",
+              "A postage meter on its own contract",
+              "A water delivery and a coffee service",
+              "Four numbers to call and nobody who knows your name",
+              "Toner ordered in a hurry at retail"
+            ]
+          },
+          "after": {
+            "eyebrow": "With Kelly",
+            "title": "One partner, one invoice, one number",
+            "body": "Copiers to coffee, serviced by the same people on the same visit.",
+            "items": [
+              "Copiers, printers and production print under one agreement",
+              "Managed IT and DocuWare from the same team",
+              "FP postage meters, lockers and mailroom equipment",
+              "Water, ice and coffee serviced with the copier",
+              "1-800-34-KELLY reaches all five offices",
+              "Supplies shipped on usage before they run out"
+            ]
+          }
+        },
+        {
+          "type": "hotspots",
+          "id": "office",
+          "eyebrow": "The whole office",
+          "heading": "Seven lines, one floor plan",
+          "intro": "Click a number. Everything an office runs on, and the Kelly page for each.",
+          "image": "assets/office-iso-1600.jpg",
+          "image_w": 1600,
+          "image_h": 893,
+          "alt": "An overhead illustration of an office with a copier room, a break room, a server room, a mailroom and desks",
+          "items": [
+            {
+              "x": 27,
+              "y": 46,
+              "k": "Copiers and production",
+              "title": "The copier room",
+              "body": "Multifunction devices and a production system with inline finishing, on one agreement.",
+              "href": "products/multifunction-printers.html",
+              "label": "Multifunction printers"
+            },
+            {
+              "x": 47,
+              "y": 21,
+              "k": "Water, ice and coffee",
+              "title": "The break room",
+              "body": "Bottleless water, ice and single-cup or high-volume coffee, serviced on the same visit as the copier.",
+              "href": "services/pure-technology.html",
+              "label": "Pure Technology"
+            },
+            {
+              "x": 82,
+              "y": 14,
+              "k": "Managed IT",
+              "title": "The server room",
+              "body": "Monitoring, backup, security and Microsoft 365 for a fixed monthly invoice.",
+              "href": "products/managed-it.html",
+              "label": "Managed IT services"
+            },
+            {
+              "x": 73,
+              "y": 58,
+              "k": "Mailing",
+              "title": "The mailroom",
+              "body": "FP postage meters, folder inserters and mailroom printers that cost less per piece than the office copier.",
+              "href": "products/postage-meters.html",
+              "label": "Postage meters"
+            },
+            {
+              "x": 88,
+              "y": 66,
+              "k": "Parcel lockers",
+              "title": "The package wall",
+              "body": "Secure, contactless pickup for offices, campuses and properties.",
+              "href": "products/parcel-lockers.html",
+              "label": "Parcel lockers"
+            },
+            {
+              "x": 16,
+              "y": 58,
+              "k": "Desktop printers",
+              "title": "The desks",
+              "body": "Single-function printers, right-sized to how many the office needs and folded into managed print.",
+              "href": "products/printers.html",
+              "label": "Printers"
+            },
+            {
+              "x": 64,
+              "y": 71,
+              "k": "Document management",
+              "title": "Scan to DocuWare",
+              "body": "Every MFP scans straight into indexed workflows: accounts payable, HR, contracts.",
+              "href": "products/docuware.html",
+              "label": "DocuWare"
+            }
+          ]
+        },
+        {
           "type": "partners",
           "id": "partners",
           "caption": "Technology partners",
           "items": [
+            "Sharp",
             "Ricoh",
             "Savin",
             "Konica Minolta",
-            "Sharp",
             "Brother",
             "Epson",
             "FP Mailing Solutions",
@@ -601,7 +1056,7 @@
           "items": [
             [
               "Office products and copiers",
-              "Ricoh, Savin, Konica Minolta, Sharp and Brother printers, copiers, multifunction and wide-format devices, matched to your volume.",
+              "Sharp, Ricoh, Savin, Konica Minolta and Brother printers, copiers, multifunction and wide-format devices, matched to your volume.",
               "services/copiers.html"
             ],
             [
@@ -675,6 +1130,20 @@
               "Produces: a quarterly look at cost per page and uptime, then back to stage one if anything moved."
             ]
           ]
+        },
+        {
+          "type": "model3d",
+          "id": "model",
+          "alt": "A white and charcoal multifunction copier on a cabinet, rotatable",
+          "eyebrow": "Take a closer look",
+          "heading": "Walk around one before it arrives",
+          "intro": "A generated Sharp-style multifunction device for the preview. Drag to rotate. Your real models, with Sharp product imagery, replace it in the build.",
+          "poster": "assets/mfp-poster-1200.jpg",
+          "cta": {
+            "label": "See multifunction printers",
+            "href": "products/multifunction-printers.html"
+          },
+          "model": "assets/fleet/mfp.glb"
         },
         {
           "type": "testimonials",
@@ -996,6 +1465,135 @@
       "description": "Seven service lines, one partner: copiers and office products, managed print, document management, production print, IT services, mailing solutions, and water, ice and coffee.",
       "sections": [
         {
+          "type": "wheel",
+          "id": "wheel",
+          "eyebrow": "The seven lines",
+          "heading": "Everything an office runs on, from one partner",
+          "intro": "Hover a segment to read it. Each line has its own page.",
+          "items": [
+            [
+              "Office products and copiers",
+              "Sharp, Ricoh, Savin, Konica Minolta and Brother printers, copiers, multifunction and wide-format devices, matched to your volume.",
+              "services/copiers.html",
+              "Copiers and printers"
+            ],
+            [
+              "Managed print services",
+              "Printing is an overlooked and undermanaged business function, and many organizations spend up to 30% more than they should on it.",
+              "services/managed-print.html",
+              "Managed print"
+            ],
+            [
+              "Document management",
+              "DocuWare workflows configured and supported by the Kelly team in North Carolina: accounts payable routing.",
+              "services/document-management.html",
+              "Document management"
+            ],
+            [
+              "Production print",
+              "In-house color and mono production with inline finishing for schools, churches, legal and marketing departments that print every day.",
+              "services/production-print.html",
+              "Production print"
+            ],
+            [
+              "IT services",
+              "Managed IT, backup and security with Datto, WatchGuard, Dell and Microsoft 365, plus digital forensic services.",
+              "services/it-services.html",
+              "IT services"
+            ],
+            [
+              "Mailing solutions",
+              "Postage meters, folder-inserters, mailroom printers, parcel lockers and parcel shipping.",
+              "services/mailing.html",
+              "Mailing"
+            ],
+            [
+              "Pure Technology: water, ice and coffee",
+              "Bottleless filtered water coolers from Wellsys and FloWater, commercial ice machines from Manitowoc and Follett.",
+              "services/pure-technology.html",
+              "Water, ice and coffee"
+            ]
+          ],
+          "hub": "Kelly",
+          "hub_sub": "one partner"
+        },
+        {
+          "type": "hotspots",
+          "id": "office",
+          "eyebrow": "The whole office",
+          "heading": "Seven lines, one floor plan",
+          "intro": "Click a number. Everything an office runs on, and the Kelly page for each.",
+          "image": "assets/office-iso-1600.jpg",
+          "image_w": 1600,
+          "image_h": 893,
+          "alt": "An overhead illustration of an office with a copier room, a break room, a server room, a mailroom and desks",
+          "items": [
+            {
+              "x": 27,
+              "y": 46,
+              "k": "Copiers and production",
+              "title": "The copier room",
+              "body": "Multifunction devices and a production system with inline finishing, on one agreement.",
+              "href": "products/multifunction-printers.html",
+              "label": "Multifunction printers"
+            },
+            {
+              "x": 47,
+              "y": 21,
+              "k": "Water, ice and coffee",
+              "title": "The break room",
+              "body": "Bottleless water, ice and single-cup or high-volume coffee, serviced on the same visit as the copier.",
+              "href": "services/pure-technology.html",
+              "label": "Pure Technology"
+            },
+            {
+              "x": 82,
+              "y": 14,
+              "k": "Managed IT",
+              "title": "The server room",
+              "body": "Monitoring, backup, security and Microsoft 365 for a fixed monthly invoice.",
+              "href": "products/managed-it.html",
+              "label": "Managed IT services"
+            },
+            {
+              "x": 73,
+              "y": 58,
+              "k": "Mailing",
+              "title": "The mailroom",
+              "body": "FP postage meters, folder inserters and mailroom printers that cost less per piece than the office copier.",
+              "href": "products/postage-meters.html",
+              "label": "Postage meters"
+            },
+            {
+              "x": 88,
+              "y": 66,
+              "k": "Parcel lockers",
+              "title": "The package wall",
+              "body": "Secure, contactless pickup for offices, campuses and properties.",
+              "href": "products/parcel-lockers.html",
+              "label": "Parcel lockers"
+            },
+            {
+              "x": 16,
+              "y": 58,
+              "k": "Desktop printers",
+              "title": "The desks",
+              "body": "Single-function printers, right-sized to how many the office needs and folded into managed print.",
+              "href": "products/printers.html",
+              "label": "Printers"
+            },
+            {
+              "x": 64,
+              "y": 71,
+              "k": "Document management",
+              "title": "Scan to DocuWare",
+              "body": "Every MFP scans straight into indexed workflows: accounts payable, HR, contracts.",
+              "href": "products/docuware.html",
+              "label": "DocuWare"
+            }
+          ]
+        },
+        {
           "type": "hero",
           "layout": "centered",
           "eyebrow": "What we do",
@@ -1014,7 +1612,7 @@
             [
               "Office products",
               "Office products and copiers",
-              "Ricoh, Savin, Konica Minolta, Sharp and Brother printers, copiers, multifunction and wide-format devices, matched to your volume.",
+              "Sharp, Ricoh, Savin, Konica Minolta and Brother printers, copiers, multifunction and wide-format devices, matched to your volume.",
               "Read more",
               "services/copiers.html"
             ],
@@ -1101,7 +1699,7 @@
     {
       "file": "services/copiers.html",
       "title": "Copiers and Printers: Sales, Lease and Rental | Kelly Office Solutions",
-      "description": "Ricoh, Savin, Konica Minolta, Sharp and Brother printers, copiers, multifunction and wide-format devices, matched to your volume.",
+      "description": "Sharp, Ricoh, Savin, Konica Minolta and Brother printers, copiers, multifunction and wide-format devices, matched to your volume.",
       "crumbs": [
         [
           "Home",
@@ -1122,7 +1720,7 @@
           "layout": "split",
           "eyebrow": "Office products",
           "heading": "The right copier is the one you <em>stop thinking about</em>.",
-          "subhead": "Ricoh, Savin, Konica Minolta, Sharp and Brother printers, copiers, multifunction and wide-format devices, matched to your volume, networked on day one and serviced from the nearest branch.",
+          "subhead": "Sharp, Ricoh, Savin, Konica Minolta and Brother printers, copiers, multifunction and wide-format devices, matched to your volume, networked on day one and serviced from the nearest branch.",
           "primary": {
             "label": "Request an assessment",
             "href": "contact.html"
@@ -1158,6 +1756,107 @@
               "Production",
               "High-volume color and mono with finishing, for organizations that print every day."
             ]
+          ]
+        },
+        {
+          "type": "beforeafter",
+          "id": "ba",
+          "eyebrow": "Before and after",
+          "heading": "Drag to compare buying a copier with having Kelly place one",
+          "before": {
+            "eyebrow": "Today",
+            "title": "A device chosen from a brochure",
+            "body": "Priced on the badge, not on the pages you print.",
+            "items": [
+              "Bought on speed and price, sized by guesswork",
+              "Networked later by whoever is free",
+              "Toner ordered when the light comes on",
+              "Service from a number on a sticker",
+              "Lease, rental and purchase never compared"
+            ]
+          },
+          "after": {
+            "eyebrow": "With Kelly",
+            "title": "A device chosen from your meter counts",
+            "body": "Sharp, Ricoh, Savin, Konica Minolta or Brother, matched to your volume.",
+            "items": [
+              "Right-sized from a free assessment of what you print",
+              "Networked and every user trained on install day",
+              "Supplies shipped on usage under managed print",
+              "Serviced from the nearest of five North Carolina offices",
+              "Lease, rental and purchase priced side by side"
+            ]
+          }
+        },
+        {
+          "type": "flow",
+          "id": "flow",
+          "alt": true,
+          "eyebrow": "From first call to first page",
+          "heading": "Five steps between the call and the first page",
+          "intro": "Click a step. Each one ends with something in your hands.",
+          "receive_label": "What you receive",
+          "steps": [
+            {
+              "label": "Assess",
+              "when": "Visit 1",
+              "summary": "Count and meter the fleet.",
+              "title": "A free assessment of what you have",
+              "body": "A specialist counts every device, reads the meters and works out cost per page, mono and color. Free and without obligation, as it says on our managed print page.",
+              "receive": [
+                "Fleet inventory with meters",
+                "Cost per page by device",
+                "The recommendation in writing"
+              ]
+            },
+            {
+              "label": "Recommend",
+              "when": "Week 1",
+              "summary": "The device and the terms.",
+              "title": "The right device, priced three ways",
+              "body": "A model matched to your volume and finishing needs, with lease, rental and purchase shown side by side.",
+              "receive": [
+                "Model and configuration",
+                "Lease, rent and buy compared",
+                "Service and supplies shown separately"
+              ]
+            },
+            {
+              "label": "Install",
+              "when": "A date you choose",
+              "summary": "Networked the same visit.",
+              "title": "Delivered, networked and trained",
+              "body": "The device arrives on the day you chose, joins your network, and every user is trained before the technician leaves.",
+              "receive": [
+                "Drivers and scan destinations set up",
+                "Users trained on site",
+                "Old device removed if you ask"
+              ]
+            },
+            {
+              "label": "Support",
+              "when": "Ongoing",
+              "summary": "One number for service and supplies.",
+              "title": "Service and supplies from one number",
+              "body": "1-800-34-KELLY reaches all five offices. Request service, submit meter reads and order supplies online in under a minute each.",
+              "receive": [
+                "Online service request",
+                "Meter reads and supplies online",
+                "Technicians dispatched from the nearest branch"
+              ]
+            },
+            {
+              "label": "Review",
+              "when": "Under agreement",
+              "summary": "Reports every six months.",
+              "title": "The numbers, every six months",
+              "body": "Under a managed print agreement, service and usage reports arrive every six months so the fleet is adjusted on evidence.",
+              "receive": [
+                "Service call history",
+                "Device utilization",
+                "Executive snapshot"
+              ]
+            }
           ]
         },
         {
@@ -1197,7 +1896,7 @@
           "items": [
             [
               "Which brands do you carry?",
-              "Ricoh and Savin, Konica Minolta, Sharp, Brother and Epson, depending on the job. We recommend the device, not the badge."
+              "Sharp, Ricoh and Savin, Konica Minolta, Brother and Epson, depending on the job. We recommend the device, not the badge."
             ],
             [
               "Can we start with one device?",
@@ -1302,59 +2001,61 @@
           ]
         },
         {
-          "type": "tabs",
+          "type": "flow",
           "id": "assessment-steps",
           "alt": true,
           "eyebrow": "The assessment, step by step",
           "heading": "Four steps, and you keep the report either way",
-          "items": [
+          "intro": "The four steps on our managed print page, and what each one leaves you with.",
+          "receive_label": "What you leave with",
+          "steps": [
             {
               "label": "Assess",
+              "when": "Step 1",
+              "summary": "The fleet you have.",
               "title": "Assess the fleet you have",
               "body": "A Kelly specialist evaluates your current imaging fleet for size, efficiency and cost, and talks with the people who use it about how the work flows.",
-              "bullets": [
+              "receive": [
                 "Every device counted, located and metered",
                 "Cost per page by device, mono and color",
                 "Interviews with the staff who print most"
-              ],
-              "image": "assets/mps-1-1200.jpg",
-              "image_alt": "A Kelly specialist reviewing a copier fleet with a customer"
+              ]
             },
             {
               "label": "Plan",
+              "when": "Step 2",
+              "summary": "The fleet you should have.",
               "title": "Plan the fleet you should have",
               "body": "Recommendations to make workflows run smoother: consolidating or upgrading devices, moving a copier closer to the people who use it, or retiring the one that costs more than it is worth.",
-              "bullets": [
+              "receive": [
                 "Consolidate, upgrade or relocate",
                 "Priced as lease, rental or purchase",
                 "Nothing replaced that the data does not justify"
-              ],
-              "image": "assets/mps-2-1200.jpg",
-              "image_alt": "People collaborating near an office copier"
+              ]
             },
             {
               "label": "Measure",
+              "when": "Step 3",
+              "summary": "Agree what success looks like.",
               "title": "Agree what success looks like",
               "body": "Lower supply and maintenance cost, or IT time back for real work. We agree the measure with you and show how the data will prove it.",
-              "bullets": [
+              "receive": [
                 "Targets you set, not ones we pick",
                 "Baseline captured before anything changes",
                 "Reporting that shows the movement"
-              ],
-              "image": "assets/doc-mgmt-1200.jpg",
-              "image_alt": "A manager reviewing printed reports at a desk"
+              ]
             },
             {
               "label": "Manage",
+              "when": "Step 4",
+              "summary": "Problems never reach your staff.",
               "title": "Manage it so problems never reach your staff",
               "body": "Next steps reviewed with your team, then a proactive approach that spots a failing device or an empty toner before anyone in the office does.",
-              "bullets": [
+              "receive": [
                 "Monitoring on every device",
                 "Supplies shipped on usage, not on a call",
-                "Same-day service response under agreement"
-              ],
-              "image": "assets/dispatch-1200.jpg",
-              "image_alt": "A Kelly dispatcher on a headset"
+                "Priority service under agreement"
+              ]
             }
           ]
         },
@@ -1385,6 +2086,36 @@
               "Overall fleet performance with red flags for overuse or age, and the plan to resolve them before they stop work."
             ]
           ]
+        },
+        {
+          "type": "beforeafter",
+          "id": "ba",
+          "eyebrow": "Before and after",
+          "heading": "Drag to compare a fleet that is managed with one that is not",
+          "before": {
+            "eyebrow": "Today",
+            "title": "Every printer on its own",
+            "body": "Nobody knows what the fleet costs because nobody owns it.",
+            "items": [
+              "Toner bought at retail when a device runs dry",
+              "Service calls placed by whoever notices first",
+              "No count of devices, pages or cost",
+              "IT staff clearing jams between real work",
+              "Devices replaced on age, not on evidence"
+            ]
+          },
+          "after": {
+            "eyebrow": "With Kelly",
+            "title": "One fleet, one report",
+            "body": "Monitored, supplied and reported on a schedule you can see on your invoice.",
+            "items": [
+              "Toner ships on usage, before it runs out",
+              "Failing devices spotted before the office does",
+              "Cost per page by device, mono and color",
+              "IT time returned to IT",
+              "Consolidate, upgrade or relocate on the data, every six months"
+            ]
+          }
         },
         {
           "type": "detail",
@@ -1565,6 +2296,95 @@
           ]
         },
         {
+          "type": "beforeafter",
+          "id": "ba",
+          "eyebrow": "Before and after",
+          "heading": "Drag to see what changes when documents live in DocuWare",
+          "before": {
+            "eyebrow": "Today",
+            "title": "Paper and shared drives",
+            "body": "Filing cabinets, email attachments and a shared drive with three versions of everything.",
+            "items": [
+              "Invoices approved by walking them to a desk",
+              "Contracts found by asking who had them last",
+              "HR files in a locked cabinet nobody can search",
+              "Compliance evidence assembled by hand",
+              "Remote staff waiting for a scan"
+            ]
+          },
+          "after": {
+            "eyebrow": "With Kelly",
+            "title": "Indexed, routed, searchable",
+            "body": "Scan from any Kelly MFP straight into workflows the office already follows.",
+            "items": [
+              "Invoices routed for approval the moment they are scanned",
+              "Any document found by a search, from any office",
+              "Access by role, with a record of who saw what",
+              "Retention rules applied automatically",
+              "The same view at home as at the desk"
+            ]
+          }
+        },
+        {
+          "type": "flow",
+          "id": "flow",
+          "alt": true,
+          "eyebrow": "How a DocuWare rollout runs",
+          "heading": "Four stages, and the first one is a conversation",
+          "intro": "Click a stage.",
+          "receive_label": "What you receive",
+          "steps": [
+            {
+              "label": "Map",
+              "when": "Week 1",
+              "summary": "Where documents come from and go.",
+              "title": "Map how paper moves today",
+              "body": "We sit with the people who handle invoices, contracts and personnel files and draw how each one travels, who touches it and where it waits.",
+              "receive": [
+                "Process maps for the workflows chosen",
+                "Index fields agreed per document type",
+                "A scope you sign off"
+              ]
+            },
+            {
+              "label": "Configure",
+              "when": "Weeks 2 to 3",
+              "summary": "Cabinets, indexes and routes.",
+              "title": "Build the cabinets and the routes",
+              "body": "Document trays, index fields, approval routes and permissions are configured to the map, and your MFPs get scan-to-DocuWare buttons.",
+              "receive": [
+                "Configured file cabinets",
+                "Approval workflows",
+                "Scan destinations on every MFP"
+              ]
+            },
+            {
+              "label": "Train",
+              "when": "Go-live week",
+              "summary": "Everyone who touches a document.",
+              "title": "Train the people, not just the admins",
+              "body": "Short sessions by role, with the office's own documents, before the first live scan.",
+              "receive": [
+                "Role-based training",
+                "Quick guides at each MFP",
+                "A named contact for the first month"
+              ]
+            },
+            {
+              "label": "Refine",
+              "when": "First quarter",
+              "summary": "Adjust on real use.",
+              "title": "Adjust on what the first quarter shows",
+              "body": "Routes that bottleneck get changed, new document types get added, and the next department is scoped.",
+              "receive": [
+                "Usage review",
+                "Route adjustments",
+                "Plan for the next workflow"
+              ]
+            }
+          ]
+        },
+        {
           "type": "detail",
           "eyebrow": "What is included",
           "heading": "What you get",
@@ -1695,6 +2515,36 @@
           "caption": "From kellyofficesolutions.com"
         },
         {
+          "type": "beforeafter",
+          "id": "ba",
+          "eyebrow": "Before and after",
+          "heading": "Drag to compare outsourcing with printing it in-house",
+          "before": {
+            "eyebrow": "Today",
+            "title": "Sent to a print shop",
+            "body": "Two days out, a rush fee back, and a box that arrives short.",
+            "items": [
+              "Booklets, proposals and manuals sent out",
+              "Rush charges for the meeting that moved",
+              "Color that varies from run to run",
+              "Minimum quantities and leftover boxes",
+              "Confidential documents leaving the building"
+            ]
+          },
+          "after": {
+            "eyebrow": "With Kelly",
+            "title": "Printed down the hall",
+            "body": "Ricoh and Savin production systems with inline finishing, operated by your own people.",
+            "items": [
+              "Booklets stapled, folded and trimmed inline",
+              "Print the quantity you need, the morning you need it",
+              "Color consistency all day",
+              "Confidential material stays in-house",
+              "Operator training included"
+            ]
+          }
+        },
+        {
           "type": "detail",
           "eyebrow": "What is included",
           "heading": "What you get",
@@ -1817,6 +2667,95 @@
           ]
         },
         {
+          "type": "beforeafter",
+          "id": "ba",
+          "eyebrow": "Before and after",
+          "heading": "Drag to compare break-fix IT with managed IT",
+          "before": {
+            "eyebrow": "Today",
+            "title": "Call when it breaks",
+            "body": "Every problem is a surprise, and every invoice is a different size.",
+            "items": [
+              "Backups nobody has tested",
+              "Updates applied when someone remembers",
+              "Security that ends at the antivirus",
+              "An hourly invoice after every outage",
+              "The copier company and the IT firm blaming each other"
+            ]
+          },
+          "after": {
+            "eyebrow": "With Kelly",
+            "title": "Managed, monitored, one invoice",
+            "body": "Monitoring, backup, security and Microsoft 365 for a fixed monthly amount, from the same team that services your copiers.",
+            "items": [
+              "Backups monitored and tested",
+              "Patching on a schedule",
+              "Layered security with Datto and WatchGuard",
+              "A fixed monthly invoice",
+              "One partner for the printer and the network it sits on"
+            ]
+          }
+        },
+        {
+          "type": "flow",
+          "id": "flow",
+          "alt": true,
+          "eyebrow": "How managed IT starts",
+          "heading": "Four steps to a network someone is watching",
+          "intro": "Click a step.",
+          "receive_label": "What you receive",
+          "steps": [
+            {
+              "label": "Audit",
+              "when": "Week 1",
+              "summary": "Every device, user and risk.",
+              "title": "A network and security audit",
+              "body": "Every workstation, server, user account and backup is inventoried, and the gaps are listed in plain English.",
+              "receive": [
+                "Asset inventory",
+                "Risk list, ranked",
+                "A recommendation in writing"
+              ]
+            },
+            {
+              "label": "Plan",
+              "when": "Week 2",
+              "summary": "Fix, replace, monitor.",
+              "title": "A plan with a fixed monthly number",
+              "body": "What to fix now, what to replace, what to monitor, and the monthly amount that covers it.",
+              "receive": [
+                "Remediation list",
+                "Monthly scope and price",
+                "Microsoft 365 licensing reviewed"
+              ]
+            },
+            {
+              "label": "Onboard",
+              "when": "Weeks 3 to 4",
+              "summary": "Agents, backup, security.",
+              "title": "Monitoring and protection go live",
+              "body": "Monitoring agents, backup and security tools are deployed, and users learn how to reach the help desk.",
+              "receive": [
+                "Monitoring on every device",
+                "Backup running and verified",
+                "Help desk live"
+              ]
+            },
+            {
+              "label": "Run",
+              "when": "Ongoing",
+              "summary": "Reviewed on a schedule.",
+              "title": "Run, report and review",
+              "body": "Patching, backup checks and security alerts are handled as they arise, and the plan is reviewed with you on a schedule.",
+              "receive": [
+                "Patch and backup reports",
+                "Security alerts handled",
+                "Scheduled review"
+              ]
+            }
+          ]
+        },
+        {
           "type": "detail",
           "eyebrow": "What is included",
           "heading": "What you get",
@@ -1936,6 +2875,36 @@
           ]
         },
         {
+          "type": "beforeafter",
+          "id": "ba",
+          "eyebrow": "Before and after",
+          "heading": "Drag to compare stamps with an FP postage meter",
+          "before": {
+            "eyebrow": "Today",
+            "title": "Stamps and the post office",
+            "body": "A trip, a queue, and full retail postage on every piece.",
+            "items": [
+              "Retail postage on every letter",
+              "Trips to the post office",
+              "Hand-folded, hand-stuffed mailings",
+              "No record of what postage was spent where",
+              "Meter compliance nobody has checked"
+            ]
+          },
+          "after": {
+            "eyebrow": "With Kelly",
+            "title": "Metered, in the mailroom",
+            "body": "FP Mailing Solutions meters, folder inserters and mailroom printers through Kelly.",
+            "items": [
+              "Save up to five cents per stamp and up to 40 percent on priority labels",
+              "Postage printed at your desk, at commercial rates",
+              "Folded, inserted and sealed by machine",
+              "Postage tracked by department",
+              "The only fully IMI-compliant meter range"
+            ]
+          }
+        },
+        {
           "type": "detail",
           "eyebrow": "What is included",
           "heading": "What you get",
@@ -2050,6 +3019,36 @@
           ]
         },
         {
+          "type": "beforeafter",
+          "id": "ba",
+          "eyebrow": "Before and after",
+          "heading": "Drag to compare jugs and a coffee service with Pure Technology",
+          "before": {
+            "eyebrow": "Today",
+            "title": "Jugs, a delivery and a coffee vendor",
+            "body": "Two more vendors, two more invoices, and a break room that runs out.",
+            "items": [
+              "Five-gallon jugs lifted onto a cooler",
+              "Deliveries missed, water run out",
+              "A coffee vendor on a separate contract",
+              "Ice from a machine nobody services",
+              "Nobody checking the filter date"
+            ]
+          },
+          "after": {
+            "eyebrow": "With Kelly",
+            "title": "Bottleless, filtered, serviced with the copier",
+            "body": "Wellsys, FloWater, Newco and Bunn equipment, on the same agreement and visit as your office technology.",
+            "items": [
+              "Bottleless water and ice, filtered on site",
+              "Single-cup or high-volume coffee",
+              "Serviced on the same visit as the copier",
+              "Filters changed on schedule",
+              "One invoice for the whole break room"
+            ]
+          }
+        },
+        {
           "type": "detail",
           "eyebrow": "What is included",
           "heading": "What you get",
@@ -2136,11 +3135,86 @@
           }
         },
         {
+          "type": "fleet",
+          "id": "fleet",
+          "heading": "The fleet, at a glance",
+          "intro": "Every device family Kelly sells and services. Generated product renders for the preview; your real models replace them.",
+          "items": [
+            {
+              "title": "Multifunction copiers",
+              "band": "Workgroup to department",
+              "brands": "Sharp, Ricoh, Savin, Konica Minolta",
+              "image": "assets/fleet/mfp.png",
+              "bullets": [
+                "Print, scan, copy, fax",
+                "Secure release and scan to DocuWare"
+              ],
+              "href": "products/multifunction-printers.html"
+            },
+            {
+              "title": "Desktop printers",
+              "band": "Desk and small team",
+              "brands": "Brother, Epson, Ricoh",
+              "image": "assets/fleet/printer.png",
+              "bullets": [
+                "Color and mono",
+                "Joins a managed print agreement"
+              ],
+              "href": "products/printers.html"
+            },
+            {
+              "title": "Wide format",
+              "band": "Plans, posters, signage",
+              "brands": "Epson, Ricoh",
+              "image": "assets/fleet/wide-format.png",
+              "bullets": [
+                "Stop outsourcing plan sets",
+                "Technical and graphics media"
+              ],
+              "href": "products/wide-format-printers.html"
+            },
+            {
+              "title": "Production print",
+              "band": "High volume, inline finishing",
+              "brands": "Ricoh, Savin",
+              "image": "assets/fleet/production.png",
+              "bullets": [
+                "Booklets, stapling, folding",
+                "Color consistency all day"
+              ],
+              "href": "products/production-printers.html"
+            },
+            {
+              "title": "Postage meters",
+              "band": "Mailroom",
+              "brands": "FP Mailing Solutions",
+              "image": "assets/fleet/postage.png",
+              "bullets": [
+                "Commercial postage rates",
+                "Fully IMI compliant"
+              ],
+              "href": "products/postage-meters.html"
+            },
+            {
+              "title": "Water and coffee",
+              "band": "Breakroom",
+              "brands": "Wellsys, FloWater, Newco, Bunn",
+              "image": "assets/fleet/breakroom.png",
+              "bullets": [
+                "Bottleless, filtered",
+                "Serviced with your copier"
+              ],
+              "href": "products/water-coolers.html"
+            }
+          ],
+          "alt": true
+        },
+        {
           "type": "services",
           "id": "print-and-imaging",
           "alt": false,
           "heading": "Print and imaging",
-          "intro": "Ricoh, Savin, Konica Minolta, Sharp, Brother and Epson devices, matched to your volume.",
+          "intro": "Sharp, Ricoh, Savin, Konica Minolta, Brother and Epson devices, matched to your volume.",
           "items": [
             [
               "Printers",
@@ -2312,12 +3386,87 @@
           "body": "Single-function printers are an essential part of an imaging fleet, and the easiest part to over-buy. Before the next purchase, the question is how many printers the office truly needs to keep work moving, whether they should be color or mono, and what each one costs to own once maintenance and consumables are counted. Your Kelly representative presents options that fit your output and your budget.",
           "bullets": [
             "Color and mono, desktop to workgroup",
-            "Brother, Epson, Ricoh, Savin, Konica Minolta and Sharp",
+            "Sharp, Brother, Epson, Ricoh, Savin and Konica Minolta",
             "Drivers and manuals linked from our support page",
             "Can join a managed print agreement"
           ],
           "image": "assets/printer-1200.jpg",
           "flip": true
+        },
+        {
+          "type": "fleet",
+          "id": "fleet",
+          "heading": "The rest of the fleet",
+          "intro": "Every device family Kelly sells and services. Generated product renders for the preview; your real models replace them.",
+          "items": [
+            {
+              "title": "Multifunction copiers",
+              "band": "Workgroup to department",
+              "brands": "Sharp, Ricoh, Savin, Konica Minolta",
+              "image": "assets/fleet/mfp.png",
+              "bullets": [
+                "Print, scan, copy, fax",
+                "Secure release and scan to DocuWare"
+              ],
+              "href": "products/multifunction-printers.html"
+            },
+            {
+              "title": "Desktop printers",
+              "band": "Desk and small team",
+              "brands": "Brother, Epson, Ricoh",
+              "image": "assets/fleet/printer.png",
+              "bullets": [
+                "Color and mono",
+                "Joins a managed print agreement"
+              ],
+              "href": "products/printers.html"
+            },
+            {
+              "title": "Wide format",
+              "band": "Plans, posters, signage",
+              "brands": "Epson, Ricoh",
+              "image": "assets/fleet/wide-format.png",
+              "bullets": [
+                "Stop outsourcing plan sets",
+                "Technical and graphics media"
+              ],
+              "href": "products/wide-format-printers.html"
+            },
+            {
+              "title": "Production print",
+              "band": "High volume, inline finishing",
+              "brands": "Ricoh, Savin",
+              "image": "assets/fleet/production.png",
+              "bullets": [
+                "Booklets, stapling, folding",
+                "Color consistency all day"
+              ],
+              "href": "products/production-printers.html"
+            },
+            {
+              "title": "Postage meters",
+              "band": "Mailroom",
+              "brands": "FP Mailing Solutions",
+              "image": "assets/fleet/postage.png",
+              "bullets": [
+                "Commercial postage rates",
+                "Fully IMI compliant"
+              ],
+              "href": "products/postage-meters.html"
+            },
+            {
+              "title": "Water and coffee",
+              "band": "Breakroom",
+              "brands": "Wellsys, FloWater, Newco, Bunn",
+              "image": "assets/fleet/breakroom.png",
+              "bullets": [
+                "Bottleless, filtered",
+                "Serviced with your copier"
+              ],
+              "href": "products/water-coolers.html"
+            }
+          ],
+          "alt": true
         },
         {
           "type": "cards",
@@ -2345,10 +3494,10 @@
           "items": [
             "Brother",
             "Epson",
+            "Sharp",
             "Ricoh",
             "Savin",
-            "Konica Minolta",
-            "Sharp"
+            "Konica Minolta"
           ]
         },
         {
@@ -2458,6 +3607,81 @@
           "flip": true
         },
         {
+          "type": "fleet",
+          "id": "fleet",
+          "heading": "The rest of the fleet",
+          "intro": "Every device family Kelly sells and services. Generated product renders for the preview; your real models replace them.",
+          "items": [
+            {
+              "title": "Multifunction copiers",
+              "band": "Workgroup to department",
+              "brands": "Sharp, Ricoh, Savin, Konica Minolta",
+              "image": "assets/fleet/mfp.png",
+              "bullets": [
+                "Print, scan, copy, fax",
+                "Secure release and scan to DocuWare"
+              ],
+              "href": "products/multifunction-printers.html"
+            },
+            {
+              "title": "Desktop printers",
+              "band": "Desk and small team",
+              "brands": "Brother, Epson, Ricoh",
+              "image": "assets/fleet/printer.png",
+              "bullets": [
+                "Color and mono",
+                "Joins a managed print agreement"
+              ],
+              "href": "products/printers.html"
+            },
+            {
+              "title": "Wide format",
+              "band": "Plans, posters, signage",
+              "brands": "Epson, Ricoh",
+              "image": "assets/fleet/wide-format.png",
+              "bullets": [
+                "Stop outsourcing plan sets",
+                "Technical and graphics media"
+              ],
+              "href": "products/wide-format-printers.html"
+            },
+            {
+              "title": "Production print",
+              "band": "High volume, inline finishing",
+              "brands": "Ricoh, Savin",
+              "image": "assets/fleet/production.png",
+              "bullets": [
+                "Booklets, stapling, folding",
+                "Color consistency all day"
+              ],
+              "href": "products/production-printers.html"
+            },
+            {
+              "title": "Postage meters",
+              "band": "Mailroom",
+              "brands": "FP Mailing Solutions",
+              "image": "assets/fleet/postage.png",
+              "bullets": [
+                "Commercial postage rates",
+                "Fully IMI compliant"
+              ],
+              "href": "products/postage-meters.html"
+            },
+            {
+              "title": "Water and coffee",
+              "band": "Breakroom",
+              "brands": "Wellsys, FloWater, Newco, Bunn",
+              "image": "assets/fleet/breakroom.png",
+              "bullets": [
+                "Bottleless, filtered",
+                "Serviced with your copier"
+              ],
+              "href": "products/water-coolers.html"
+            }
+          ],
+          "alt": true
+        },
+        {
           "type": "cards",
           "alt": true,
           "eyebrow": "Why it matters",
@@ -2481,10 +3705,10 @@
           "type": "partners",
           "caption": "Brands Kelly carries for this",
           "items": [
+            "Sharp",
             "Ricoh",
             "Savin",
-            "Konica Minolta",
-            "Sharp"
+            "Konica Minolta"
           ]
         },
         {
@@ -2594,6 +3818,15 @@
           "flip": true
         },
         {
+          "type": "model3d",
+          "id": "model",
+          "heading": "Walk around one",
+          "intro": "A generated stand-in model for the preview. Drag to rotate; your real devices replace it.",
+          "poster": "assets/mfp-poster-1200.jpg",
+          "alt": "A multifunction copier with a finisher, rotatable",
+          "model": "assets/fleet/mfp.glb"
+        },
+        {
           "type": "cards",
           "alt": true,
           "eyebrow": "Why it matters",
@@ -2617,10 +3850,10 @@
           "type": "partners",
           "caption": "Brands Kelly carries for this",
           "items": [
+            "Sharp",
             "Ricoh",
             "Savin",
             "Konica Minolta",
-            "Sharp",
             "Brother"
           ]
         },
@@ -2729,6 +3962,81 @@
           ],
           "image": "assets/wide-format-1200.jpg",
           "flip": true
+        },
+        {
+          "type": "fleet",
+          "id": "fleet",
+          "heading": "The rest of the fleet",
+          "intro": "Every device family Kelly sells and services. Generated product renders for the preview; your real models replace them.",
+          "items": [
+            {
+              "title": "Multifunction copiers",
+              "band": "Workgroup to department",
+              "brands": "Sharp, Ricoh, Savin, Konica Minolta",
+              "image": "assets/fleet/mfp.png",
+              "bullets": [
+                "Print, scan, copy, fax",
+                "Secure release and scan to DocuWare"
+              ],
+              "href": "products/multifunction-printers.html"
+            },
+            {
+              "title": "Desktop printers",
+              "band": "Desk and small team",
+              "brands": "Brother, Epson, Ricoh",
+              "image": "assets/fleet/printer.png",
+              "bullets": [
+                "Color and mono",
+                "Joins a managed print agreement"
+              ],
+              "href": "products/printers.html"
+            },
+            {
+              "title": "Wide format",
+              "band": "Plans, posters, signage",
+              "brands": "Epson, Ricoh",
+              "image": "assets/fleet/wide-format.png",
+              "bullets": [
+                "Stop outsourcing plan sets",
+                "Technical and graphics media"
+              ],
+              "href": "products/wide-format-printers.html"
+            },
+            {
+              "title": "Production print",
+              "band": "High volume, inline finishing",
+              "brands": "Ricoh, Savin",
+              "image": "assets/fleet/production.png",
+              "bullets": [
+                "Booklets, stapling, folding",
+                "Color consistency all day"
+              ],
+              "href": "products/production-printers.html"
+            },
+            {
+              "title": "Postage meters",
+              "band": "Mailroom",
+              "brands": "FP Mailing Solutions",
+              "image": "assets/fleet/postage.png",
+              "bullets": [
+                "Commercial postage rates",
+                "Fully IMI compliant"
+              ],
+              "href": "products/postage-meters.html"
+            },
+            {
+              "title": "Water and coffee",
+              "band": "Breakroom",
+              "brands": "Wellsys, FloWater, Newco, Bunn",
+              "image": "assets/fleet/breakroom.png",
+              "bullets": [
+                "Bottleless, filtered",
+                "Serviced with your copier"
+              ],
+              "href": "products/water-coolers.html"
+            }
+          ],
+          "alt": true
         },
         {
           "type": "cards",
@@ -2863,6 +4171,81 @@
           ],
           "image": "assets/production-print-1200.jpg",
           "flip": true
+        },
+        {
+          "type": "fleet",
+          "id": "fleet",
+          "heading": "The rest of the fleet",
+          "intro": "Every device family Kelly sells and services. Generated product renders for the preview; your real models replace them.",
+          "items": [
+            {
+              "title": "Multifunction copiers",
+              "band": "Workgroup to department",
+              "brands": "Sharp, Ricoh, Savin, Konica Minolta",
+              "image": "assets/fleet/mfp.png",
+              "bullets": [
+                "Print, scan, copy, fax",
+                "Secure release and scan to DocuWare"
+              ],
+              "href": "products/multifunction-printers.html"
+            },
+            {
+              "title": "Desktop printers",
+              "band": "Desk and small team",
+              "brands": "Brother, Epson, Ricoh",
+              "image": "assets/fleet/printer.png",
+              "bullets": [
+                "Color and mono",
+                "Joins a managed print agreement"
+              ],
+              "href": "products/printers.html"
+            },
+            {
+              "title": "Wide format",
+              "band": "Plans, posters, signage",
+              "brands": "Epson, Ricoh",
+              "image": "assets/fleet/wide-format.png",
+              "bullets": [
+                "Stop outsourcing plan sets",
+                "Technical and graphics media"
+              ],
+              "href": "products/wide-format-printers.html"
+            },
+            {
+              "title": "Production print",
+              "band": "High volume, inline finishing",
+              "brands": "Ricoh, Savin",
+              "image": "assets/fleet/production.png",
+              "bullets": [
+                "Booklets, stapling, folding",
+                "Color consistency all day"
+              ],
+              "href": "products/production-printers.html"
+            },
+            {
+              "title": "Postage meters",
+              "band": "Mailroom",
+              "brands": "FP Mailing Solutions",
+              "image": "assets/fleet/postage.png",
+              "bullets": [
+                "Commercial postage rates",
+                "Fully IMI compliant"
+              ],
+              "href": "products/postage-meters.html"
+            },
+            {
+              "title": "Water and coffee",
+              "band": "Breakroom",
+              "brands": "Wellsys, FloWater, Newco, Bunn",
+              "image": "assets/fleet/breakroom.png",
+              "bullets": [
+                "Bottleless, filtered",
+                "Serviced with your copier"
+              ],
+              "href": "products/water-coolers.html"
+            }
+          ],
+          "alt": true
         },
         {
           "type": "cards",
@@ -5099,7 +6482,7 @@
           "body": "Tell us the device and what it is doing. Dispatch confirms a window for customers under a Kelly agreement, and a factory-trained technician comes from the nearest branch.",
           "bullets": [
             "Fast local response from the nearest branch, in all five territories",
-            "Technicians for Ricoh, Savin, Konica Minolta, Sharp, Brother and Epson",
+            "Technicians for Sharp, Ricoh, Savin, Konica Minolta, Brother and Epson",
             "Every call tracked in the customer portal"
           ],
           "form": {
@@ -5547,6 +6930,17 @@
           ]
         },
         {
+          "type": "video",
+          "id": "film",
+          "eyebrow": "Who we are",
+          "heading": "Thirty seconds on Kelly",
+          "intro": "Family-owned since 1947, headquartered in Winston-Salem, with branches in Greensboro, Charlotte, Raleigh and Swansboro.",
+          "vimeo": "271855836",
+          "poster": "assets/vimeo-poster.jpg",
+          "title": "Kelly Office Solutions",
+          "caption": "Kelly's own film, from kellyofficesolutions.com"
+        },
+        {
           "type": "timeline",
           "eyebrow": "The story",
           "heading": "From one office to five, and from copiers to the whole office",
@@ -5990,7 +7384,7 @@
           "items": [
             [
               "Copier sales, lease and rental",
-              "Ricoh, Savin, Konica Minolta, Sharp and Brother devices for Winston-Salem offices, installed and networked by the local team."
+              "Sharp, Ricoh, Savin, Konica Minolta and Brother devices for Winston-Salem offices, installed and networked by the local team."
             ],
             [
               "Copier and printer repair",
@@ -6166,7 +7560,7 @@
           "items": [
             [
               "Copier sales, lease and rental",
-              "Ricoh, Savin, Konica Minolta, Sharp and Brother devices for Greensboro offices, installed and networked by the local team."
+              "Sharp, Ricoh, Savin, Konica Minolta and Brother devices for Greensboro offices, installed and networked by the local team."
             ],
             [
               "Copier and printer repair",
@@ -6356,7 +7750,7 @@
           "items": [
             [
               "Copier sales, lease and rental",
-              "Ricoh, Savin, Konica Minolta, Sharp and Brother devices for Charlotte offices, installed and networked by the local team."
+              "Sharp, Ricoh, Savin, Konica Minolta and Brother devices for Charlotte offices, installed and networked by the local team."
             ],
             [
               "Copier and printer repair",
@@ -6532,7 +7926,7 @@
           "items": [
             [
               "Copier sales, lease and rental",
-              "Ricoh, Savin, Konica Minolta, Sharp and Brother devices for Raleigh offices, installed and networked by the local team."
+              "Sharp, Ricoh, Savin, Konica Minolta and Brother devices for Raleigh offices, installed and networked by the local team."
             ],
             [
               "Copier and printer repair",
@@ -6696,7 +8090,7 @@
           "items": [
             [
               "Copier sales, lease and rental",
-              "Ricoh, Savin, Konica Minolta, Sharp and Brother devices for Swansboro offices, installed and networked by the local team."
+              "Sharp, Ricoh, Savin, Konica Minolta and Brother devices for Swansboro offices, installed and networked by the local team."
             ],
             [
               "Copier and printer repair",
@@ -7778,7 +9172,7 @@
           "items": [
             [
               "Which all-in-one brands does Kelly carry?",
-              "Ricoh, Savin, Konica Minolta, Sharp and Brother, matched to the job."
+              "Sharp, Ricoh, Savin, Konica Minolta and Brother, matched to the job."
             ],
             [
               "Can we add managed print to a single device?",
@@ -8332,7 +9726,7 @@
       "Winston-Salem and Swansboro hours. Greensboro, Charlotte and Raleigh state 8 to 5 on your site; the other two do not.",
       "Blog dates. The nine posts keep your live slugs; give us the original publish dates so the schema does not claim they are new.",
       "The Ricoh standing. Your profile says sixth-largest Ricoh dealer in the Southeast; we left it off until Ricoh confirms it.",
-      "Manufacturer authorizations to show: Ricoh, Savin, Konica Minolta, Sharp, Brother, Epson, Dell, as on your site today.",
+      "Manufacturer authorizations to show: Sharp, Ricoh, Savin, Konica Minolta, Brother, Epson, Dell, as on your site today.",
       "Branch hours for each location. The location pages carry a placeholder of 8 to 5, Monday to Friday.",
       "The tagline. Moving Business Forward Since 1947 is on your site today; Office Technology Done Right Since 1947 has also been used.",
       "Your assessment process, stage by stage, and what each stage hands the customer. We drafted five stages from your three; they are ours until you replace them.",

@@ -122,3 +122,23 @@ stacks; write for their visitor, not for us.
 1. **The promise arrives late.** Everything hangs off it. Ask for it on day one and ship the default.
 2. **The logo is a small PNG.** Ask for the vector on day one. Check whether it needs a dark ground.
 3. **Nobody owns the form.** Name the recipient before the build starts, not at launch.
+
+### Signature modules (added 2026-09-08, `scripts/preview_modules.py`)
+Every one degrades to plain HTML: a list, a grid or a poster. Motion stops under `prefers-reduced-motion`.
+Place them with `compose` per direction; ids are what `compose` references.
+
+| type | Required fields | Optional | Renders |
+|---|---|---|---|
+| `hero-layered` | `heading`, `subhead`, `primary`, `image` (2100 wide plate), `image_w/h` | `eyebrow`, `secondary`, `stats [[value,label]]`, `card_a {eyebrow,title,body,items,cta}`, `card_b {eyebrow,title,body,links}`, `note` | Dark full-bleed hero, pointer glow, two floating cards with parallax and tilt, stats strip |
+| `wheel` | `heading`, `items [[label, blurb, href]]` (5 to 8) | `eyebrow`, `intro`, `panel_eyebrow`, `link_label` | SVG ring, hover or focus swaps the panel, autoplays until touched; ordered list fallback |
+| `flow` | `heading`, `steps [{label, when, summary, title, body, receive[]}]` | `eyebrow`, `intro`, `detail_eyebrow`, `receive_label`, `alt` | Numbered nodes on a self-drawing line, click for detail; vertical on phones |
+| `fleet` | `heading`, `items [{title, band, brands, image (PNG cutout), bullets[], href}]` | `intro`, `alt` | Scroll-snap rail of tilting device cards |
+| `seal` | `heading`, `items [[mark, title, body]]` | `eyebrow`, `intro`, `source` | Conic badge grid; every line must be sourced |
+| `beforeafter` | `heading`, `before {title, body, items}`, `after {title, body, items}` | `eyebrow`, `before.eyebrow`, `after.eyebrow`, `hint`, `range_label` | Range-driven reveal; two stacked panels under 768px |
+| `hotspots` | `heading`, `image`, `image_w/h`, `alt`, `items [{x, y, k, title, body, href, label}]` (percent coords) | `eyebrow`, `intro` | Numbered points with popovers; numbered list fallback |
+| `model3d` | `heading`, `poster` | `intro`, `model` (GLB path), `alt`, `cta`, `id` | `<model-viewer>` with the poster shown until the element is defined; plain image when `model` is absent |
+| `brand.launcher` | `label`, `links [[label, href]]`, `phone` | | Fixed bottom-left drawer, appears after 560px of scroll |
+
+Content-file helpers for Kelly: `_flow()` and `_ba()` build service-page modules from tuples; `SERVICE_MODULES[slug]` lists what each service page inserts after its benefits cards.
+Generated 3D: Higgsfield `generate_image_batch` (product render, plain white ground, no logos) then `remove_background(media_id=job_id)` then `generate_3d(model image_to_3d, should_texture:true)`; the textured GLB lands around 4MB. Label it generated in the intro.
+A brand's primary line goes first in every brand list (Kelly: Sharp).
