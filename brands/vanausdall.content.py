@@ -27,6 +27,8 @@ SUCCESS_EMAIL = "clientsuccess@vanausdall.com"
 CAREERS_URL = "https://workforcenow.cloud.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=76f18e20-dbb1-475b-98ad-e470199a4f66&ccId=19000101_000001&lang=en_US"
 SITE = "https://www.vanausdall.com"
 PREVIEW = "https://van-ausdall.vercel.app"
+_DEEP = os.path.join(os.path.dirname(os.path.abspath(__file__)), "vanausdall.seo-deep.json")
+SEO_FINDINGS = json.load(open(_DEEP, encoding="utf-8")).get("findings", []) if os.path.exists(_DEEP) else []
 MFP_MODEL = "assets/fleet/mfp.glb" if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "vanausdall", "assets", "fleet", "mfp.glb")) else None
 
 # ------------------------------------------------------------------ sourced facts (vanausdall.com)
@@ -473,6 +475,10 @@ HOTSPOTS = {"type": "hotspots", "id": "office", "eyebrow": "The whole office", "
         {"x": 16, "y": 58, "k": "Print", "title": "The desks", "body": "Desktop printers right-sized to how many the office needs, folded into the same managed print report as the copiers.", "href": "services/managed-print.html", "label": "Managed print"},
         {"x": 62, "y": 38, "k": "Process", "title": "The meeting area", "body": "Where AI shows up first: drafting, summarizing, automating. An acceptable use policy and a roadmap before the tools.", "href": "services/ai-consulting.html", "label": "AI consulting"}]}
 
+CUSTOMER_WALL = {"type": "partners", "id": "customers", "caption": "Trusted across Indiana: on the record in our case studies", "items": ["Tippecanoe School Corporation", "STAR Financial Bank", "Johnson Memorial Health", "City of Anderson", "City of Bloomington", "Berry Global", "Beck's Hybrids", "Shiel Sexton", "Bowen Engineering", "Gailey Eye Clinic", "Town of Bargersville", "Mid-City Supply", "Phalen Leadership Academy", "Ellinger Riggs Insurance"]}
+
+NUMBERS = {"type": "stats", "id": "numbers", "alt": True, "items": [["1,500,000", "Patient files scanned in 90 days for Johnson Memorial Health"], ["1,000,000", "Dollars saved over one contract for Tippecanoe School Corporation"], ["4,000", "Phone systems deployed since 1983"], ["250", "Years of combined IT experience on the Vsecure team"]]}
+
 PILLARS_CARDS = {"type": "cards", "id": "pillars", "eyebrow": "Four pillars", "heading": "Information, communication, print and process, from one partner",
     "items": [[p[0], p[1]] for p in PILLARS]}
 
@@ -789,9 +795,9 @@ def build():
     # ---------------- home
     pages.append({"file": "index.html", "title": "Van Ausdall & Farrar | Managed IT, copiers, phone systems and office technology in Indianapolis",
                   "compose": {
-                      "clean": ["hero-light", "partners", "pillars", "seal", "story", "office", "fleet", "ba", "flow", "model", "proof", "casestudy", "is-this-you", "markets", "map", "voices", "film", "faq", "contact"],
-                      "showcase": ["hero", "partners", "pillars", "fleet", "ba", "flow", "office", "model", "seal", "story", "proof", "casestudy", "markets", "map", "voices", "film", "faq", "contact"],
-                      "press": ["hero-light", "story", "pillars", "seal", "office", "fleet", "ba", "flow", "model", "proof", "casestudy", "voices", "film", "markets", "map", "faq", "contact"]},
+                      "clean": ["hero-light", "partners", "pillars", "seal", "customers", "story", "office", "fleet", "numbers", "ba", "flow", "model", "proof", "casestudy", "is-this-you", "markets", "map", "voices", "film", "faq", "contact"],
+                      "showcase": ["hero", "partners", "pillars", "customers", "fleet", "numbers", "ba", "flow", "office", "model", "seal", "story", "proof", "casestudy", "markets", "map", "voices", "film", "faq", "contact"],
+                      "press": ["hero-light", "story", "pillars", "customers", "seal", "office", "fleet", "numbers", "ba", "flow", "model", "proof", "casestudy", "voices", "film", "markets", "map", "faq", "contact"]},
                   "description": "Indiana's largest full-service office technology provider since 1914. Managed IT and cybersecurity, business phone systems, copiers and managed print, document management and AI consulting for Indianapolis and the Midwest.",
                   "sections": [
         {"type": "hero", "id": "hero-light", "layout": "split", "eyebrow": "Business technology simplified, since 1914",
@@ -805,7 +811,7 @@ def build():
          "badge": {"value": "93.4", "label": "Net Promoter Score, independently audited"}},
         HERO_LAYERED,
         {"type": "wheel", "id": "wheel", "eyebrow": "Four pillars", "heading": "Information, communication, print and process, from one partner", "intro": "Hover a segment. Four pillars, one agreement, one Customer Care Center.", "items": WHEEL_ITEMS, "hub": SHORT, "hub_sub": "one roof", "ring": "BUSINESS TECHNOLOGY SIMPLIFIED"},
-        FLOW_ENGAGEMENT, SEAL, BEFORE_AFTER, HOTSPOTS, FLEET, MODEL3D, PROOF, FILM, PILLARS_CARDS, CS_QUOTE, TABS_MARKETS, MAP, TIMELINE,
+        FLOW_ENGAGEMENT, SEAL, BEFORE_AFTER, HOTSPOTS, FLEET, MODEL3D, PROOF, FILM, PILLARS_CARDS, CUSTOMER_WALL, NUMBERS, CS_QUOTE, TABS_MARKETS, MAP, TIMELINE,
         {"type": "partners", "id": "partners", "caption": "Technology partners, including Gartner Magic Quadrant leaders", "items": PARTNERS},
         {"type": "checklist", "id": "is-this-you", "alt": True, "eyebrow": "Is this you?", "heading": "Six questions from the Technology Strength Assessment",
          "intro": "Check the ones you cannot answer yes to. They are six of the eighty.",
@@ -1044,7 +1050,8 @@ def build():
             "heading": "Where you stand in search today, and what changes",
             "intro": "Measured before we touched anything, so the work can be judged against it. Numbers from Semrush and from vanausdall.com on 8 September 2026.",
             "as_of": "Semrush US database and live HTML, 8 September 2026",
-            "report_href": "seo-report.html", "report_label": "Read the full SEO analysis: competitors, keyword gaps, backlinks, technical findings",
+            "report_href": "seo-report.html", "report_label": "Read the full SEO and AI search analysis",
+            "findings": SEO_FINDINGS[:5],
             "today_stats": [["1,081", "Organic visits a month; competitors earn 1,555 to 2,094"], ["80%", "Of them from people searching your name"], ["0", "Top-100 rankings for managed it services indianapolis (1,000 a month)"], ["21", "Authority Score, against Leap at 24 and Taylored at 27"]],
             "today": [
                 "Four visits in five come from branded searches: van ausdall & farrar, van ausdall and farrar, van ausdall. The home page earns 85% of the site's traffic.",

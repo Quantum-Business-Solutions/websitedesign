@@ -451,9 +451,11 @@
           "partners",
           "pillars",
           "seal",
+          "customers",
           "story",
           "office",
           "fleet",
+          "numbers",
           "ba",
           "flow",
           "model",
@@ -471,7 +473,9 @@
           "hero",
           "partners",
           "pillars",
+          "customers",
           "fleet",
+          "numbers",
           "ba",
           "flow",
           "office",
@@ -491,9 +495,11 @@
           "hero-light",
           "story",
           "pillars",
+          "customers",
           "seal",
           "office",
           "fleet",
+          "numbers",
           "ba",
           "flow",
           "model",
@@ -1005,6 +1011,50 @@
             [
               "Process",
               "Document management, document conversion, business process and AI consulting. The paper out, the workflow in."
+            ]
+          ]
+        },
+        {
+          "type": "partners",
+          "id": "customers",
+          "caption": "Trusted across Indiana: on the record in our case studies",
+          "items": [
+            "Tippecanoe School Corporation",
+            "STAR Financial Bank",
+            "Johnson Memorial Health",
+            "City of Anderson",
+            "City of Bloomington",
+            "Berry Global",
+            "Beck's Hybrids",
+            "Shiel Sexton",
+            "Bowen Engineering",
+            "Gailey Eye Clinic",
+            "Town of Bargersville",
+            "Mid-City Supply",
+            "Phalen Leadership Academy",
+            "Ellinger Riggs Insurance"
+          ]
+        },
+        {
+          "type": "stats",
+          "id": "numbers",
+          "alt": true,
+          "items": [
+            [
+              "1,500,000",
+              "Patient files scanned in 90 days for Johnson Memorial Health"
+            ],
+            [
+              "1,000,000",
+              "Dollars saved over one contract for Tippecanoe School Corporation"
+            ],
+            [
+              "4,000",
+              "Phone systems deployed since 1983"
+            ],
+            [
+              "250",
+              "Years of combined IT experience on the Vsecure team"
             ]
           ]
         },
@@ -9803,7 +9853,8 @@
       "intro": "Measured before we touched anything, so the work can be judged against it. Numbers from Semrush and from vanausdall.com on 8 September 2026.",
       "as_of": "Semrush US database and live HTML, 8 September 2026",
       "report_href": "seo-report.html",
-      "report_label": "Read the full SEO analysis: competitors, keyword gaps, backlinks, technical findings",
+      "report_label": "Read the full SEO and AI search analysis",
+      "findings": [],
       "today_stats": [
         [
           "1,081",

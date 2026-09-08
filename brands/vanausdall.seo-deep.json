@@ -1,0 +1,1389 @@
+{
+ "generated": "2026-09-08",
+ "source_note": "All numbers from Semrush (database us, 14 reports) and Firecrawl pulls made in this session. Fields marked 'not pulled' were not retrieved.",
+ "site_change_note": "Since the first pass the VAF site added LocalBusiness, City and GeoCoordinates JSON-LD to every audited page and FAQPage schema to /information/managed-it-services and /copiers/.",
+ "clusters": [
+  {
+   "pillar": "Managed IT (local)",
+   "seed": "managed it services indianapolis",
+   "terms": [
+    {
+     "keyword": "it managed services near me",
+     "volume": 4400,
+     "kd": 25,
+     "cpc": 35.77,
+     "intent": "transactional"
+    },
+    {
+     "keyword": "msp near me",
+     "volume": 3600,
+     "kd": 20,
+     "cpc": 21.3,
+     "intent": "transactional"
+    },
+    {
+     "keyword": "managed service provider near me",
+     "volume": 2400,
+     "kd": 7,
+     "cpc": 20.48,
+     "intent": "transactional"
+    },
+    {
+     "keyword": "managed it near me",
+     "volume": 1000,
+     "kd": 44,
+     "cpc": 25.26,
+     "intent": "transactional"
+    },
+    {
+     "keyword": "it services indianapolis",
+     "volume": 880,
+     "kd": 45,
+     "cpc": 0.0,
+     "intent": "commercial"
+    },
+    {
+     "keyword": "it support indianapolis",
+     "volume": 880,
+     "kd": 16,
+     "cpc": 16.68,
+     "intent": "commercial"
+    },
+    {
+     "keyword": "managed service provider carmel indiana",
+     "volume": 720,
+     "kd": 13,
+     "cpc": 0.0,
+     "intent": "commercial"
+    },
+    {
+     "keyword": "it consulting indianapolis",
+     "volume": 590,
+     "kd": 31,
+     "cpc": 6.15,
+     "intent": "commercial"
+    }
+   ]
+  },
+  {
+   "pillar": "Business phone systems",
+   "seed": "business phone systems",
+   "terms": [
+    {
+     "keyword": "voip phone",
+     "volume": 22200,
+     "kd": 44,
+     "cpc": 11.9,
+     "intent": "informational / commercial"
+    },
+    {
+     "keyword": "voip phone service",
+     "volume": 14800,
+     "kd": 74,
+     "cpc": 21.41,
+     "intent": "informational"
+    },
+    {
+     "keyword": "business phone",
+     "volume": 12100,
+     "kd": 53,
+     "cpc": 29.38,
+     "intent": "informational / commercial"
+    },
+    {
+     "keyword": "business phone service",
+     "volume": 9900,
+     "kd": 53,
+     "cpc": 46.34,
+     "intent": "informational"
+    },
+    {
+     "keyword": "business phone line",
+     "volume": 6600,
+     "kd": 49,
+     "cpc": 38.38,
+     "intent": "informational"
+    },
+    {
+     "keyword": "voip phone system",
+     "volume": 6600,
+     "kd": 59,
+     "cpc": 29.81,
+     "intent": "informational / commercial"
+    },
+    {
+     "keyword": "business phone system",
+     "volume": 4400,
+     "kd": 50,
+     "cpc": 41.46,
+     "intent": "informational / commercial"
+    },
+    {
+     "keyword": "phone systems for small business",
+     "volume": 4400,
+     "kd": 46,
+     "cpc": 41.98,
+     "intent": "informational / commercial"
+    }
+   ]
+  },
+  {
+   "pillar": "Copiers",
+   "seed": "copier lease",
+   "terms": [
+    {
+     "keyword": "office equipment rental",
+     "volume": 1900,
+     "kd": 3,
+     "cpc": 5.81,
+     "intent": "commercial"
+    },
+    {
+     "keyword": "printer lease",
+     "volume": 1900,
+     "kd": 24,
+     "cpc": 11.96,
+     "intent": "commercial"
+    },
+    {
+     "keyword": "printer rental",
+     "volume": 1600,
+     "kd": 17,
+     "cpc": 12.93,
+     "intent": "informational"
+    },
+    {
+     "keyword": "printer leasing",
+     "volume": 1000,
+     "kd": 17,
+     "cpc": 3.04,
+     "intent": "commercial"
+    },
+    {
+     "keyword": "copier leasing",
+     "volume": 880,
+     "kd": 22,
+     "cpc": 11.02,
+     "intent": "commercial"
+    },
+    {
+     "keyword": "copier rental",
+     "volume": 880,
+     "kd": 21,
+     "cpc": 13.68,
+     "intent": "commercial"
+    },
+    {
+     "keyword": "copy machine lease",
+     "volume": 720,
+     "kd": 23,
+     "cpc": 16.15,
+     "intent": "commercial"
+    },
+    {
+     "keyword": "copier leasing companies",
+     "volume": 590,
+     "kd": 19,
+     "cpc": 19.4,
+     "intent": "commercial"
+    }
+   ]
+  },
+  {
+   "pillar": "Managed print",
+   "seed": "managed print services",
+   "terms": [
+    {
+     "keyword": "managed print service",
+     "volume": 1000,
+     "kd": 22,
+     "cpc": 20.85,
+     "intent": "informational"
+    },
+    {
+     "keyword": "managed print solutions",
+     "volume": 1000,
+     "kd": 17,
+     "cpc": 15.55,
+     "intent": "informational"
+    },
+    {
+     "keyword": "best managed print services",
+     "volume": 880,
+     "kd": 30,
+     "cpc": 0.0,
+     "intent": "informational / commercial"
+    },
+    {
+     "keyword": "printer management services",
+     "volume": 880,
+     "kd": 19,
+     "cpc": 20.85,
+     "intent": "commercial"
+    },
+    {
+     "keyword": "managed print services companies",
+     "volume": 720,
+     "kd": 12,
+     "cpc": 36.97,
+     "intent": "informational"
+    },
+    {
+     "keyword": "managed print services near me",
+     "volume": 720,
+     "kd": 7,
+     "cpc": 32.38,
+     "intent": "transactional"
+    },
+    {
+     "keyword": "print management services",
+     "volume": 720,
+     "kd": 12,
+     "cpc": 20.85,
+     "intent": "informational"
+    },
+    {
+     "keyword": "managed print services providers",
+     "volume": 390,
+     "kd": 11,
+     "cpc": 33.49,
+     "intent": "informational"
+    }
+   ]
+  },
+  {
+   "pillar": "Document conversion",
+   "seed": "document scanning services",
+   "terms": [
+    {
+     "keyword": "scanning services near me",
+     "volume": 2400,
+     "kd": 41,
+     "cpc": 4.47,
+     "intent": "transactional"
+    },
+    {
+     "keyword": "document scanning services near me",
+     "volume": 1900,
+     "kd": 19,
+     "cpc": 7.8,
+     "intent": "transactional"
+    },
+    {
+     "keyword": "document scanning service",
+     "volume": 1600,
+     "kd": 23,
+     "cpc": 10.87,
+     "intent": "commercial"
+    },
+    {
+     "keyword": "scanning services",
+     "volume": 1300,
+     "kd": 39,
+     "cpc": 5.34,
+     "intent": "commercial"
+    },
+    {
+     "keyword": "document scanning company",
+     "volume": 880,
+     "kd": 20,
+     "cpc": 16.25,
+     "intent": "commercial"
+    },
+    {
+     "keyword": "bulk document scanning",
+     "volume": 720,
+     "kd": 22,
+     "cpc": 3.91,
+     "intent": "informational"
+    },
+    {
+     "keyword": "document digitization services",
+     "volume": 720,
+     "kd": 25,
+     "cpc": 12.49,
+     "intent": "commercial"
+    },
+    {
+     "keyword": "document scanning solutions",
+     "volume": 720,
+     "kd": 21,
+     "cpc": 9.84,
+     "intent": "informational / commercial"
+    }
+   ]
+  },
+  {
+   "pillar": "Cybersecurity (local)",
+   "seed": "cybersecurity services indianapolis",
+   "terms": [
+    {
+     "keyword": "managed it services indianapolis",
+     "volume": 1000,
+     "kd": 29,
+     "cpc": 20.83,
+     "intent": "commercial"
+    },
+    {
+     "keyword": "cybersecurity indianapolis",
+     "volume": 480,
+     "kd": 30,
+     "cpc": 11.01,
+     "intent": "commercial"
+    },
+    {
+     "keyword": "cyber security indianapolis",
+     "volume": 390,
+     "kd": 27,
+     "cpc": 11.01,
+     "intent": "commercial"
+    },
+    {
+     "keyword": "it outsourcing indianapolis",
+     "volume": 320,
+     "kd": 8,
+     "cpc": 0.0,
+     "intent": "commercial"
+    },
+    {
+     "keyword": "local cybersecurity services",
+     "volume": 260,
+     "kd": 23,
+     "cpc": 10.72,
+     "intent": "informational"
+    },
+    {
+     "keyword": "indianapolis cybersecurity companies",
+     "volume": 210,
+     "kd": 17,
+     "cpc": 0.0,
+     "intent": "commercial"
+    },
+    {
+     "keyword": "local cybersecurity provider",
+     "volume": 210,
+     "kd": 20,
+     "cpc": 0.0,
+     "intent": "informational"
+    },
+    {
+     "keyword": "cyber security monitoring companies",
+     "volume": 170,
+     "kd": 22,
+     "cpc": 0.0,
+     "intent": "informational"
+    }
+   ]
+  },
+  {
+   "pillar": "VoIP / UCaaS",
+   "seed": "voip phone system for small business",
+   "terms": [
+    {
+     "keyword": "business phone systems",
+     "volume": 9900,
+     "kd": 44,
+     "cpc": 41.46,
+     "intent": "commercial"
+    },
+    {
+     "keyword": "voip services",
+     "volume": 9900,
+     "kd": 71,
+     "cpc": 18.37,
+     "intent": "commercial"
+    },
+    {
+     "keyword": "business voip",
+     "volume": 5400,
+     "kd": 53,
+     "cpc": 50.13,
+     "intent": "commercial"
+    },
+    {
+     "keyword": "voip phones",
+     "volume": 5400,
+     "kd": 42,
+     "cpc": 11.9,
+     "intent": "commercial"
+    },
+    {
+     "keyword": "voip providers",
+     "volume": 5400,
+     "kd": 54,
+     "cpc": 22.39,
+     "intent": "commercial"
+    },
+    {
+     "keyword": "small business phone system",
+     "volume": 4400,
+     "kd": 44,
+     "cpc": 41.98,
+     "intent": "commercial"
+    },
+    {
+     "keyword": "phone systems for small business",
+     "volume": 4400,
+     "kd": 46,
+     "cpc": 41.98,
+     "intent": "informational / commercial"
+    },
+    {
+     "keyword": "ip phone service",
+     "volume": 3600,
+     "kd": 54,
+     "cpc": 21.41,
+     "intent": "informational"
+    }
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "seed": "managed print services",
+   "items": [
+    {
+     "question": "what is managed print services",
+     "volume": 320
+    },
+    {
+     "question": "what is managed printing services",
+     "volume": 320
+    },
+    {
+     "question": "what are managed print services",
+     "volume": 260
+    },
+    {
+     "question": "what is managed print service",
+     "volume": 140
+    },
+    {
+     "question": "why managed print services",
+     "volume": 90
+    },
+    {
+     "question": "what is print management services",
+     "volume": 70
+    },
+    {
+     "question": "are managed print services worth it",
+     "volume": 50
+    },
+    {
+     "question": "how managed print services reduce office hardware costs",
+     "volume": 50
+    },
+    {
+     "question": "how does managed print services work",
+     "volume": 20
+    },
+    {
+     "question": "how much does managed print services cost",
+     "volume": 20
+    }
+   ]
+  },
+  {
+   "seed": "copier lease",
+   "items": [
+    {
+     "question": "how much does it cost to lease a copy machine",
+     "volume": 260
+    },
+    {
+     "question": "how to get out of a copier lease",
+     "volume": 140
+    },
+    {
+     "question": "how do copier leases work",
+     "volume": 110
+    },
+    {
+     "question": "how much does it cost to lease a copier",
+     "volume": 110
+    },
+    {
+     "question": "is it better to buy or lease a copier",
+     "volume": 110
+    },
+    {
+     "question": "how to negotiate a copier lease",
+     "volume": 90
+    },
+    {
+     "question": "should your small business buy or lease a digital copier",
+     "volume": 90
+    },
+    {
+     "question": "how to lease a copier",
+     "volume": 70
+    },
+    {
+     "question": "should i lease or buy a copier",
+     "volume": 70
+    },
+    {
+     "question": "how can i get out of my copier lease",
+     "volume": 40
+    }
+   ]
+  },
+  {
+   "seed": "managed it services",
+   "items": [
+    {
+     "question": "what is it service management",
+     "volume": 1300
+    },
+    {
+     "question": "what is managed it services",
+     "volume": 1000
+    },
+    {
+     "question": "how much does managed it services cost",
+     "volume": 720
+    },
+    {
+     "question": "what are managed it services",
+     "volume": 720
+    },
+    {
+     "question": "why choose managed it services",
+     "volume": 260
+    },
+    {
+     "question": "why managed it services",
+     "volume": 260
+    },
+    {
+     "question": "what does managed it services mean",
+     "volume": 210
+    },
+    {
+     "question": "what is included in managed it services",
+     "volume": 210
+    },
+    {
+     "question": "how much do managed it services cost",
+     "volume": 170
+    },
+    {
+     "question": "what are the benefits of managed it services",
+     "volume": 170
+    }
+   ]
+  },
+  {
+   "seed": "vcio",
+   "items": "not pulled (14-report cap reached; slot used for backlinks_comparison)"
+  }
+ ],
+ "competitor_pages": {
+  "leapmanagedit.com": [
+   {
+    "url": "https://www.leapmanagedit.com/",
+    "keywords": 280,
+    "traffic": 608,
+    "traffic_pct": 39.09
+   },
+   {
+    "url": "https://www.leapmanagedit.com/it-support-fishers/",
+    "keywords": 200,
+    "traffic": 379,
+    "traffic_pct": 24.37
+   },
+   {
+    "url": "https://leapmanagedit.com/",
+    "keywords": 33,
+    "traffic": 342,
+    "traffic_pct": 21.99
+   },
+   {
+    "url": "https://www.leapmanagedit.com/it-support-fort-wayne/",
+    "keywords": 52,
+    "traffic": 95,
+    "traffic_pct": 6.1
+   },
+   {
+    "url": "https://www.leapmanagedit.com/it-support-muncie/",
+    "keywords": 18,
+    "traffic": 41,
+    "traffic_pct": 2.63
+   },
+   {
+    "url": "https://www.leapmanagedit.com/indianapolis-it-services/cloud-services/",
+    "keywords": 52,
+    "traffic": 20,
+    "traffic_pct": 1.28
+   },
+   {
+    "url": "https://www.leapmanagedit.com/indy-tech-news/it-consulting-services-examples-technology-for-business-success/",
+    "keywords": 6,
+    "traffic": 18,
+    "traffic_pct": 1.15
+   },
+   {
+    "url": "https://www.leapmanagedit.com/it-support-dayton/",
+    "keywords": 24,
+    "traffic": 16,
+    "traffic_pct": 1.02
+   },
+   {
+    "url": "https://www.leapmanagedit.com/indianapolis-it-services/network-server-support/",
+    "keywords": 24,
+    "traffic": 11,
+    "traffic_pct": 0.7
+   },
+   {
+    "url": "https://www.leapmanagedit.com/indianapolis-it-services/voip/",
+    "keywords": 29,
+    "traffic": 9,
+    "traffic_pct": 0.57
+   },
+   {
+    "url": "https://www.leapmanagedit.com/indy-tech-news/role-of-help-desk-support-in-it-service-management/",
+    "keywords": 37,
+    "traffic": 7,
+    "traffic_pct": 0.45
+   },
+   {
+    "url": "https://www.leapmanagedit.com/indianapolis-it-services/it-outsourcing/",
+    "keywords": 16,
+    "traffic": 7,
+    "traffic_pct": 0.45
+   },
+   {
+    "url": "https://www.leapmanagedit.com/indy-tech-news/indianapolis-data-loss-and-recovery/",
+    "keywords": 5,
+    "traffic": 1,
+    "traffic_pct": 0.06
+   },
+   {
+    "url": "https://www.leapmanagedit.com/indy-tech-news/what-is-it-or-information-technology/",
+    "keywords": 37,
+    "traffic": 1,
+    "traffic_pct": 0.06
+   },
+   {
+    "url": "https://www.leapmanagedit.com/indy-tech-news/5-key-cybersecurity-strategies-for-downtown-businesses-in-indianapolis/",
+    "keywords": 1,
+    "traffic": 0,
+    "traffic_pct": 0.0
+   }
+  ],
+  "taylored.com": [
+   {
+    "url": "https://www.taylored.com/",
+    "keywords": 35,
+    "traffic": 298,
+    "traffic_pct": 14.23
+   },
+   {
+    "url": "https://www.taylored.com/blog/managed-it-services-vs-in-house-it-which-is-right-for-your-business/",
+    "keywords": 120,
+    "traffic": 290,
+    "traffic_pct": 13.84
+   },
+   {
+    "url": "https://www.taylored.com/blog/white-noise-vs-pink-noise-vs-brown-noise/",
+    "keywords": 100,
+    "traffic": 168,
+    "traffic_pct": 8.02
+   },
+   {
+    "url": "https://www.taylored.com/?utm_campaign=gmb&utm_medium=organic&utm_source=gmblisting",
+    "keywords": 28,
+    "traffic": 98,
+    "traffic_pct": 4.68
+   },
+   {
+    "url": "https://www.taylored.com/solutions/cloud-services/cloud-computing/",
+    "keywords": 78,
+    "traffic": 93,
+    "traffic_pct": 4.44
+   },
+   {
+    "url": "https://www.taylored.com/solutions/it-solutions/managed-it/",
+    "keywords": 196,
+    "traffic": 82,
+    "traffic_pct": 3.91
+   },
+   {
+    "url": "https://www.taylored.com/solutions/security/access-control-systems/",
+    "keywords": 66,
+    "traffic": 77,
+    "traffic_pct": 3.67
+   },
+   {
+    "url": "https://www.taylored.com/solutions/structured-cabling/network-cabling/",
+    "keywords": 65,
+    "traffic": 69,
+    "traffic_pct": 3.29
+   },
+   {
+    "url": "https://www.taylored.com/solutions/security/office-building-surveillance/",
+    "keywords": 22,
+    "traffic": 60,
+    "traffic_pct": 2.86
+   },
+   {
+    "url": "https://www.taylored.com/location-carmel/",
+    "keywords": 26,
+    "traffic": 59,
+    "traffic_pct": 2.81
+   },
+   {
+    "url": "https://www.taylored.com/blog/top-5-features-of-nec-phone-systems/",
+    "keywords": 19,
+    "traffic": 58,
+    "traffic_pct": 2.76
+   },
+   {
+    "url": "https://www.taylored.com/location-whitestown/",
+    "keywords": 41,
+    "traffic": 41,
+    "traffic_pct": 1.95
+   },
+   {
+    "url": "https://www.taylored.com/solutions/it-solutions/it-consulting/",
+    "keywords": 45,
+    "traffic": 39,
+    "traffic_pct": 1.86
+   },
+   {
+    "url": "https://www.taylored.com/location-noblesville/",
+    "keywords": 61,
+    "traffic": 36,
+    "traffic_pct": 1.71
+   },
+   {
+    "url": "https://www.taylored.com/location-fishers/",
+    "keywords": 73,
+    "traffic": 35,
+    "traffic_pct": 1.67
+   }
+  ],
+  "url_pattern_notes": {
+   "leapmanagedit.com": "Home (two host variants) carries 950 of 1,555 visits (61 percent); four /it-support-{city}/ pages carry 531 visits (34 percent); the /indianapolis-it-services/ service subfolder earns 47 visits and the /indy-tech-news/ blog 27.",
+   "taylored.com": "Traffic is spread: home 396 incl. GMB-tagged URL (19 percent); three blog posts 516 visits (25 percent, one off-topic noise post at 168); /solutions/ service pages 420 visits; four /location-{city}/ pages 171 visits, with 11 location pages linked from the home nav."
+  }
+ },
+ "backlinks": {
+  "vaf_top_refdomains": [
+   {
+    "domain": "indeed.com",
+    "score": 100,
+    "backlinks": 1
+   },
+   {
+    "domain": "bing.com",
+    "score": 97,
+    "backlinks": 2
+   },
+   {
+    "domain": "crunchbase.com",
+    "score": 72,
+    "backlinks": 1
+   },
+   {
+    "domain": "rocketreach.co",
+    "score": 69,
+    "backlinks": 1
+   },
+   {
+    "domain": "ringcentral.com",
+    "score": 66,
+    "backlinks": 4
+   },
+   {
+    "domain": "builtin.com",
+    "score": 64,
+    "backlinks": 1
+   },
+   {
+    "domain": "payscale.com",
+    "score": 61,
+    "backlinks": 1
+   },
+   {
+    "domain": "mynewsdesk.com",
+    "score": 56,
+    "backlinks": 1
+   },
+   {
+    "domain": "levels.fyi",
+    "score": 55,
+    "backlinks": 1
+   },
+   {
+    "domain": "omsystem.com",
+    "score": 55,
+    "backlinks": 4
+   },
+   {
+    "domain": "leadiq.com",
+    "score": 50,
+    "backlinks": 12
+   },
+   {
+    "domain": "peoplesmart.com",
+    "score": 49,
+    "backlinks": 1
+   },
+   {
+    "domain": "constantcontact.com",
+    "score": 46,
+    "backlinks": 1
+   },
+   {
+    "domain": "ezilon.com",
+    "score": 45,
+    "backlinks": 1
+   },
+   {
+    "domain": "hub.biz",
+    "score": 45,
+    "backlinks": 2
+   }
+  ],
+  "overview": {
+   "theamegroup.com": {
+    "authority": 27,
+    "ref_domains": 1377,
+    "backlinks": 7493,
+    "follow": 5125,
+    "nofollow": 2388
+   },
+   "bradenonline.com": {
+    "authority": 23,
+    "ref_domains": 1147,
+    "backlinks": 96937,
+    "follow": 92916,
+    "nofollow": 4114
+   }
+  },
+  "note": "Overview pulled via backlinks_comparison (one report for both domains). First-pass values for reference: vanausdall.com 21 / 486 / 2,523; leapmanagedit.com 24 / 471 / 3,764; taylored.com 27 / 959 / 3,605."
+ },
+ "page_audit": [
+  {
+   "url": "https://www.vanausdall.com/",
+   "title": "Copier Sales & Managed IT | Van Ausdall & Farrar",
+   "title_len": 48,
+   "has_city_in_title": false,
+   "meta_len": 135,
+   "h1": "Indianapolis' Trusted Managed Technology Partner (H1 sits outside <main>)",
+   "h2_count": 10,
+   "schema_types": [
+    "City",
+    "GeoCoordinates",
+    "LocalBusiness",
+    "Organization",
+    "PostalAddress"
+   ],
+   "has_faq": false,
+   "og_image": "https://www.vanausdall.com/images/artificial-intelligence.jpg",
+   "words": 554,
+   "internal_links": 114
+  },
+  {
+   "url": "https://www.vanausdall.com/information/managed-it-services",
+   "title": "Indianapolis Managed IT Services | Van Ausdall & Farrar",
+   "title_len": 55,
+   "has_city_in_title": true,
+   "meta_len": 175,
+   "h1": "Indianapolis Managed IT Services",
+   "h2_count": 12,
+   "schema_types": [
+    "Answer",
+    "City",
+    "FAQPage",
+    "GeoCoordinates",
+    "LocalBusiness",
+    "Organization",
+    "PostalAddress",
+    "Question"
+   ],
+   "has_faq": true,
+   "og_image": "/images/hero-information.jpg",
+   "words": 1078,
+   "internal_links": 100
+  },
+  {
+   "url": "https://www.vanausdall.com/communication/business-phone-systems",
+   "title": "Indianapolis Business Phone Systems | Van Ausdall & Farrar",
+   "title_len": 58,
+   "has_city_in_title": true,
+   "meta_len": 145,
+   "h1": "Business Phone Systems in Indianapolis",
+   "h2_count": 3,
+   "schema_types": [
+    "City",
+    "GeoCoordinates",
+    "LocalBusiness",
+    "Organization",
+    "PostalAddress"
+   ],
+   "has_faq": false,
+   "og_image": "/images/hero-communication.jpg",
+   "words": 550,
+   "internal_links": 99
+  },
+  {
+   "url": "https://www.vanausdall.com/copiers/",
+   "title": "Copier Sales & Leasing Indianapolis | Van Ausdall & Farrar",
+   "title_len": 58,
+   "has_city_in_title": true,
+   "meta_len": 158,
+   "h1": "Copier Sales & Leasing in Indianapolis",
+   "h2_count": 6,
+   "schema_types": [
+    "Answer",
+    "City",
+    "FAQPage",
+    "GeoCoordinates",
+    "LocalBusiness",
+    "Organization",
+    "PostalAddress",
+    "Question",
+    "Service"
+   ],
+   "has_faq": true,
+   "og_image": "/images/hero-print.jpg",
+   "words": 493,
+   "internal_links": 90
+  },
+  {
+   "url": "https://www.vanausdall.com/print/managed-print-services",
+   "title": "Indianapolis Managed Print Services | Van Ausdall & Farrar",
+   "title_len": 58,
+   "has_city_in_title": true,
+   "meta_len": 135,
+   "h1": "Managed Print Services in Indianapolis",
+   "h2_count": 3,
+   "schema_types": [
+    "City",
+    "GeoCoordinates",
+    "LocalBusiness",
+    "Organization",
+    "PostalAddress",
+    "Service"
+   ],
+   "has_faq": false,
+   "og_image": "/images/hero-print.jpg",
+   "words": 574,
+   "internal_links": 92
+  },
+  {
+   "url": "https://www.vanausdall.com/document-conversion",
+   "title": "Document Conversion Indianapolis | Van Ausdall & Farrar",
+   "title_len": 55,
+   "has_city_in_title": true,
+   "meta_len": 174,
+   "h1": "Document Conversion in Indianapolis",
+   "h2_count": 4,
+   "schema_types": [
+    "City",
+    "GeoCoordinates",
+    "LocalBusiness",
+    "Organization",
+    "PostalAddress"
+   ],
+   "has_faq": false,
+   "og_image": "/images/hero-process.jpg",
+   "words": 765,
+   "internal_links": 98
+  },
+  {
+   "url": "https://www.vanausdall.com/ai",
+   "title": "AI & Automation Solutions | Van Ausdall & Farrar",
+   "title_len": 48,
+   "has_city_in_title": false,
+   "meta_len": 144,
+   "h1": "AI Consulting for Business",
+   "h2_count": 4,
+   "schema_types": [
+    "City",
+    "GeoCoordinates",
+    "LocalBusiness",
+    "Organization",
+    "PostalAddress"
+   ],
+   "has_faq": false,
+   "og_image": "/images/hero-ai.jpg",
+   "words": 400,
+   "internal_links": 91
+  },
+  {
+   "url": "https://www.vanausdall.com/industries/healthcare-technology-solutions",
+   "title": "Healthcare Technology Solutions | Van Ausdall & Farrar",
+   "title_len": 54,
+   "has_city_in_title": false,
+   "meta_len": 159,
+   "h1": "Healthcare Industry Solutions",
+   "h2_count": 3,
+   "schema_types": [
+    "City",
+    "GeoCoordinates",
+    "LocalBusiness",
+    "Organization",
+    "PostalAddress"
+   ],
+   "has_faq": false,
+   "og_image": "/images/hero-industries.jpg",
+   "words": 879,
+   "internal_links": 92
+  },
+  {
+   "url": "https://www.vanausdall.com/indianapolis/",
+   "title": "Office Technology in Indianapolis | Van Ausdall & Farrar",
+   "title_len": 56,
+   "has_city_in_title": true,
+   "meta_len": 153,
+   "h1": "Office Technology Services in Indianapolis, IN",
+   "h2_count": 6,
+   "schema_types": [
+    "City",
+    "GeoCoordinates",
+    "LocalBusiness",
+    "Organization",
+    "PostalAddress"
+   ],
+   "has_faq": false,
+   "og_image": "https://www.vanausdall.com/images/51749580.jpg",
+   "words": 1093,
+   "internal_links": 114
+  },
+  {
+   "url": "https://www.vanausdall.com/contact/",
+   "title": "Contact Van Ausdall & Farrar | Indianapolis Support",
+   "title_len": 51,
+   "has_city_in_title": true,
+   "meta_len": 143,
+   "h1": "Connect with Us",
+   "h2_count": 2,
+   "schema_types": [
+    "City",
+    "GeoCoordinates",
+    "LocalBusiness",
+    "Organization",
+    "PostalAddress"
+   ],
+   "has_faq": false,
+   "og_image": "/images/hero-contact.jpg",
+   "words": 87,
+   "internal_links": 85
+  }
+ ],
+ "competitor_audit": [
+  {
+   "domain": "leapmanagedit.com",
+   "url": "https://www.leapmanagedit.com/it-services/",
+   "title": "IT services - LEAP Managed IT Services Indianapolis",
+   "title_len": 51,
+   "h1": "Ridiculously Helpful IT Services",
+   "h2_count": 3,
+   "words": 806,
+   "words_note": "body text excluding scripts and styles; page has no <main> so nav and footer are included",
+   "schema_types": [
+    "AggregateRating",
+    "BreadcrumbList",
+    "EntryPoint",
+    "ImageObject",
+    "ListItem",
+    "Person",
+    "PostalAddress",
+    "PropertyValueSpecification",
+    "Rating",
+    "ReadAction",
+    "Review",
+    "SearchAction",
+    "WebPage",
+    "WebSite",
+    "organization"
+   ],
+   "has_faq": false,
+   "internal_links": 40,
+   "shows_pricing": false,
+   "shows_reviews": true,
+   "reviews_note": "AggregateRating and Review JSON-LD present; no visible star widget in hero",
+   "form_above_fold": false,
+   "form_note": "single Gravity form at 95 percent of body depth; hero has Start Here and Download our Brochure buttons"
+  },
+  {
+   "domain": "taylored.com",
+   "url": "https://www.taylored.com/solutions/it-solutions/managed-it/",
+   "title": "Managed IT Services Indianapolis | Business IT Support for business | Managed IT Provider| Taylored Systems",
+   "title_len": 107,
+   "h1": "Managed IT Services Indianapolis",
+   "h2_count": 9,
+   "words": 3524,
+   "words_note": "body text excluding scripts and styles; includes a large mega-menu and footer",
+   "schema_types": [
+    "AggregateRating",
+    "BreadcrumbList",
+    "EntryPoint",
+    "GeoCoordinates",
+    "ITService",
+    "ImageObject",
+    "ListItem",
+    "LocalBusiness",
+    "Offer",
+    "OfferCatalog",
+    "Organization",
+    "PostalAddress",
+    "ProfessionalService",
+    "PropertyValueSpecification",
+    "ReadAction",
+    "SearchAction",
+    "Service",
+    "State",
+    "WebPage",
+    "WebSite"
+   ],
+   "has_faq": false,
+   "internal_links": 208,
+   "shows_pricing": false,
+   "pricing_note": "no dollar figures; Offer and OfferCatalog schema present without prices",
+   "shows_reviews": true,
+   "reviews_note": "AggregateRating JSON-LD and a Testimonials nav link; no reviews in hero",
+   "form_above_fold": false,
+   "form_note": "two Gravity forms at 83 and 92 percent of body depth"
+  }
+ ],
+ "ai_visibility": [
+  {
+   "query": "best managed it services indianapolis",
+   "top_domains": [
+    "cloudtango.net",
+    "leapmanagedit.com",
+    "gadellnet.com",
+    "meriplex.com",
+    "resultant.com",
+    "bradenonline.com",
+    "visualedgeit.com",
+    "mis.tech",
+    "clutch.co",
+    "empigo.com"
+   ],
+   "vaf_present": false,
+   "vaf_position": null
+  },
+  {
+   "query": "copier lease indianapolis",
+   "top_domains": [
+    "visualedgeit.com",
+    "werentcopiers.com",
+    "copierleaseindianapolis.com",
+    "copierleasecenter.com",
+    "gflesch.com",
+    "bbb.org",
+    "iccbusinessproducts.com",
+    "copierleaseindianapolis.com",
+    "leapcopierprinter.com",
+    "vanausdall.com"
+   ],
+   "vaf_present": true,
+   "vaf_position": 10,
+   "vaf_url": "https://www.vanausdall.com/copy-print-solutions/"
+  },
+  {
+   "query": "managed print services indianapolis",
+   "top_domains": [
+    "visualedgeit.com",
+    "eojohnson.com",
+    "gflesch.com",
+    "bradenonline.com",
+    "managedprint.com",
+    "vanausdall.com",
+    "cdw.com",
+    "instagram.com",
+    "indybiz.net",
+    "fleximaging.com"
+   ],
+   "vaf_present": true,
+   "vaf_position": 6,
+   "vaf_url": "https://www.vanausdall.com/print/managed-print-services"
+  },
+  {
+   "query": "business phone systems indianapolis",
+   "top_domains": [
+    "sevenpointstg.com",
+    "taylored.com",
+    "bradenonline.com",
+    "vanausdall.com",
+    "bgibson.com",
+    "phonewire.com",
+    "tech365.support",
+    "wirefly.com",
+    "midwesttelephone.com",
+    "pickmta.com"
+   ],
+   "vaf_present": true,
+   "vaf_position": 4,
+   "vaf_url": "https://www.vanausdall.com/communication/business-phone-systems"
+  },
+  {
+   "query": "who is the largest office technology provider in indiana",
+   "top_domains": [
+    "cloudtango.net",
+    "builtin.com",
+    "techknowledgeyinc.com",
+    "bradenonline.com",
+    "in.gov",
+    "techpoint.org",
+    "mspcompanies.us",
+    "visualedgeit.com",
+    "powderkeg.com",
+    "gadellnet.com"
+   ],
+   "vaf_present": false,
+   "vaf_position": null,
+   "note": "VAF home page states it is Indiana's largest full-service office technology provider but no VAF URL appears; Braden and directories answer the question instead."
+  }
+ ],
+ "robots": {
+  "raw": "User-agent: *\nAllow: /\nDisallow: /ecampaign/\nSitemap: https://www.vanausdall.com/sitemap.xml",
+  "ai_crawlers_allowed": {
+   "GPTBot": true,
+   "ClaudeBot": true,
+   "PerplexityBot": true,
+   "Google-Extended": true
+  },
+  "note": "No bot-specific rules; all four inherit the wildcard Allow. Only /ecampaign/ is disallowed.",
+  "sitemap_declared": true,
+  "llms_txt": "not checked"
+ },
+ "reviews": [
+  {
+   "source": "Indeed (employer)",
+   "what_the_result_shows": "Rating 2.8 from 73 reviews; titles 'Working at Van Ausdall & Farrar: 72 Reviews'; positions 1, 3, 7, 9 of 10"
+  },
+  {
+   "source": "Glassdoor (employer)",
+   "what_the_result_shows": "Rating 3.3 from 104 reviews; positions 2, 6, 8, 10 of 10; one result headline 'You Can't Digest Poor Pay and Awful Training'"
+  },
+  {
+   "source": "Facebook",
+   "what_the_result_shows": "'Not yet rated (0 reviews)'; 6430 E 75th St listing; position 4"
+  },
+  {
+   "source": "Yelp",
+   "what_the_result_shows": "Rating 5.0 from 2 reviews; position 5"
+  },
+  {
+   "source": "Google Business Profile",
+   "what_the_result_shows": "No Google Maps or GBP result in the top 10; rating not shown in results"
+  },
+  {
+   "source": "BBB",
+   "what_the_result_shows": "No BBB result for VAF in the top 10 (BBB appears only as a category page in the copier lease query)"
+  }
+ ],
+ "findings": [
+  {
+   "rank": 1,
+   "severity": "critical",
+   "title": "Absent from every top-10 result for best managed IT Indianapolis",
+   "evidence": "VAF appears in 0 of 10 results while leapmanagedit.com is #2, bradenonline.com #6 and two directories (cloudtango.net #1, clutch.co #9) that list Leap but not VAF.",
+   "impact": "The 1,000/mo core term plus the AI-answer lists that cite these results all route to competitors.",
+   "action": "Claim cloudtango.net and clutch.co profiles, point the new /indianapolis/ IT page at the term, and earn 10 local links in 90 days."
+  },
+  {
+   "rank": 2,
+   "severity": "high",
+   "title": "Largest-provider claim is not visible where the question is asked",
+   "evidence": "For 'who is the largest office technology provider in indiana' VAF is absent from 10 results although its home page states the claim; bradenonline.com ranks #4.",
+   "impact": "AI assistants answer the entity question with Braden or directory lists, eroding VAF's strongest positioning line.",
+   "action": "Publish a facts page (founded 1914, offices, headcount, brands) with Organization schema and get the claim cited on TechPoint, IBJ and Wikipedia-grade sources."
+  },
+  {
+   "rank": 3,
+   "severity": "high",
+   "title": "Brand reviews SERP is owned by employer ratings, not customers",
+   "evidence": "Indeed 2.8 (73 reviews) and Glassdoor 3.3 (104) fill 8 of 10 results; Facebook shows 0 reviews, Yelp 2, and no Google Business Profile or BBB result appears.",
+   "impact": "Prospects checking 'Van Ausdall & Farrar reviews' see low employer scores and no customer proof.",
+   "action": "Launch a post-ticket Google review request flow, add a customer-reviews page with Review schema, and claim the BBB profile."
+  },
+  {
+   "rank": 4,
+   "severity": "high",
+   "title": "City pages are the traffic engine competitors use and VAF lacks",
+   "evidence": "Leap's four /it-support-{city}/ pages earn 531 of 1,555 visits (34 percent); Taylored links 11 /location-{city}/ pages from its nav.",
+   "impact": "Carmel, Fishers, Noblesville, Greenwood and Muncie searches, including 'managed service provider carmel indiana' (720/mo, KD 13), go elsewhere.",
+   "action": "Build 6 suburb pages on the existing Indianapolis template with LocalBusiness schema and unique service proof per city."
+  },
+  {
+   "rank": 5,
+   "severity": "high",
+   "title": "Referring domains are job boards and data scrapers, not industry",
+   "evidence": "Of VAF's 15 strongest referring domains, 9 are employment or people-data sites (indeed, payscale, levels.fyi, rocketreach, leadiq); ringcentral.com (66) is the only vendor link.",
+   "impact": "Authority Score stays at 21 against 27 (AME, Taylored), 24 (Leap) and 23 (Braden) with 1,377 and 1,147 referring domains respectively.",
+   "action": "Secure partner-directory links from Canon, Ricoh, Kyocera, Mitel, 8x8 and Fortinet plus chamber and TechPoint listings in the 90-day plan."
+  },
+  {
+   "rank": 6,
+   "severity": "medium",
+   "title": "Home page still lacks city in title and any FAQ",
+   "evidence": "Title is 48 characters without Indianapolis, 0 FAQ, og:image is the stock artificial-intelligence.jpg; the H1 sits outside the main element.",
+   "impact": "The page carrying 85 percent of traffic underperforms on the local modifier and answer-engine extraction.",
+   "action": "Retitle to 'Indianapolis Managed IT, Copiers & Phones | Van Ausdall & Farrar', add a 6-question FAQ with FAQPage schema and a branded og:image."
+  },
+  {
+   "rank": 7,
+   "severity": "medium",
+   "title": "Copier lease visibility comes from the wrong page",
+   "evidence": "VAF's only result for 'copier lease indianapolis' is /copy-print-solutions/ at #10, not /copiers/, while 'copier leasing' (880, KD 22) and 'office equipment rental' (1,900, KD 3) are open.",
+   "impact": "Two pages split the copier topic and leapcopierprinter.com holds #9 with a single focused page.",
+   "action": "Make /copiers/ the lease hub with a leasing FAQ, rental section and canonical links from copy-print-solutions."
+  },
+  {
+   "rank": 8,
+   "severity": "medium",
+   "title": "Question keywords have no home on the site",
+   "evidence": "'what is managed it services' (1,000), 'how much does managed it services cost' (720), 'what is managed print services' (320) and 'how much does it cost to lease a copy machine' (260) exist; only 2 of 10 audited pages carry FAQPage schema.",
+   "impact": "AI Overviews and chat answers pull these definitions from Taylored's blog (its managed IT vs in-house post earns 290 visits).",
+   "action": "Add FAQ blocks to all 8 service pages and publish 4 cost and definition guides in the 90-day content sprint."
+  },
+  {
+   "rank": 9,
+   "severity": "medium",
+   "title": "Phone systems page is thin for a 9,900/mo head term",
+   "evidence": "550 words, 3 H2s, no FAQ, and copy still references ShoreTel; yet the page is #4 in results for 'business phone systems indianapolis'.",
+   "impact": "VAF sits at position 25 for 'business phone systems' (9,900, KD 44) where no local competitor ranks top 100.",
+   "action": "Expand to 1,200 words with VoIP, UCaaS and contact-center sections, a pricing-factors FAQ and RingCentral, Mitel and 8x8 comparison."
+  },
+  {
+   "rank": 10,
+   "severity": "medium",
+   "title": "Managed print page ranks #6 but cannot hold the national term",
+   "evidence": "574 words, 3 H2s, no FAQ; opportunity terms 'managed print services near me' (720, KD 7) and 'managed print services companies' (720, KD 12).",
+   "impact": "A KD 16 term with 4,400 monthly searches stays unranked while the page already has Service schema and local visibility.",
+   "action": "Add an MPS assessment calculator, an 8-question FAQ and near-me copy for all three offices."
+  },
+  {
+   "rank": 11,
+   "severity": "low",
+   "title": "Document conversion page misses the scanning vocabulary",
+   "evidence": "'document scanning services near me' (1,900, KD 19) and 'document scanning company' (880, KD 20) do not appear in the 55-character title or H1.",
+   "impact": "765 words of good content target 'conversion', a phrase searchers rarely use.",
+   "action": "Retitle to 'Document Scanning Services Indianapolis' and add a bulk scanning section."
+  },
+  {
+   "rank": 12,
+   "severity": "low",
+   "title": "AI and healthcare pages drop the city and carry a typo",
+   "evidence": "/ai title (48 chars) and /industries/healthcare-technology-solutions title (54) omit Indianapolis; the healthcare meta reads 'Healthcare Indust'.",
+   "impact": "Two high-intent vertical pages miss the local modifier that all other service pages carry.",
+   "action": "Fix the meta and add Indianapolis to both titles in the build."
+  },
+  {
+   "rank": 13,
+   "severity": "low",
+   "title": "Robots and sitemap are healthy; keep AI crawlers open",
+   "evidence": "robots.txt allows all agents except /ecampaign/ and declares sitemap.xml; GPTBot, ClaudeBot, PerplexityBot and Google-Extended are not blocked.",
+   "impact": "No crawl barrier to AI visibility, so the gap is content and authority, not access.",
+   "action": "Keep the policy, add an llms.txt and clean the 324 query-string blog URLs from the sitemap."
+  }
+ ]
+}

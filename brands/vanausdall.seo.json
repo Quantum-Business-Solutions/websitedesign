@@ -1,0 +1,61 @@
+{
+  "summary_stats": [
+    ["365", "organic keywords (about 80 percent branded)"],
+    ["1,081", "organic visits per month, $1,015 monthly value"],
+    ["0", "top-100 rankings for managed it services indianapolis (1,000/mo) or it support indianapolis (880/mo)"],
+    ["21", "Authority Score vs Leap 24 and Taylored 27"]
+  ],
+  "competitors": [
+    {"domain": "taylored.com", "traffic": 2094, "keywords": 2711, "authority": 27},
+    {"domain": "theamegroup.com", "traffic": 2007, "keywords": 1839, "authority": null},
+    {"domain": "bradenonline.com", "traffic": 1807, "keywords": 1595, "authority": null},
+    {"domain": "leapmanagedit.com", "traffic": 1555, "keywords": 1058, "authority": 24},
+    {"domain": "vanausdall.com", "traffic": 1081, "keywords": 365, "authority": 21}
+  ],
+  "opportunities": [
+    {"keyword": "business phone systems", "volume": 9900, "kd": 44, "vaf_position": 25, "top_competitor": "none in top 100 (Leap or Taylored)"},
+    {"keyword": "managed print services", "volume": 4400, "kd": 16, "vaf_position": "not ranking", "top_competitor": "not in gap set"},
+    {"keyword": "copier lease", "volume": 2400, "kd": 19, "vaf_position": "not ranking", "top_competitor": "not in gap set"},
+    {"keyword": "managed it services indianapolis", "volume": 1000, "kd": 29, "vaf_position": "not ranking", "top_competitor": "leapmanagedit.com #1, taylored.com #13"},
+    {"keyword": "it support indianapolis", "volume": 880, "kd": 16, "vaf_position": "not ranking", "top_competitor": "leapmanagedit.com #1, taylored.com #21"},
+    {"keyword": "it services indianapolis", "volume": 880, "kd": 24, "vaf_position": "not ranking", "top_competitor": "leapmanagedit.com #1, taylored.com #12"},
+    {"keyword": "it consulting indianapolis", "volume": 590, "kd": 31, "vaf_position": "not ranking", "top_competitor": "taylored.com #6, leapmanagedit.com #13"},
+    {"keyword": "managed it indianapolis", "volume": 480, "kd": 31, "vaf_position": "not ranking", "top_competitor": "leapmanagedit.com #3, taylored.com #8"},
+    {"keyword": "cybersecurity indianapolis", "volume": 480, "kd": 24, "vaf_position": "not ranking", "top_competitor": "leapmanagedit.com #43"},
+    {"keyword": "it company indianapolis", "volume": 480, "kd": 23, "vaf_position": "not ranking", "top_competitor": "leapmanagedit.com #3, taylored.com #16"},
+    {"keyword": "managed print services indianapolis", "volume": 170, "kd": 6, "vaf_position": "not ranking", "top_competitor": "not in gap set"},
+    {"keyword": "office phone systems", "volume": 2900, "kd": 37, "vaf_position": "not ranking", "top_competitor": "taylored.com #40"},
+    {"keyword": "hosted pbx", "volume": 1900, "kd": 61, "vaf_position": "not ranking", "top_competitor": "taylored.com #19"},
+    {"keyword": "healthcare it services", "volume": 2400, "kd": 22, "vaf_position": "not ranking", "top_competitor": "taylored.com #17"},
+    {"keyword": "voip indianapolis", "volume": 40, "kd": 0, "vaf_position": "not ranking", "top_competitor": "not in gap set"},
+    {"keyword": "copier repair indianapolis", "volume": 20, "kd": 0, "vaf_position": "not ranking", "top_competitor": "not in gap set"}
+  ],
+  "technical": [
+    "Title 'Copier Sales & Managed IT | Van Ausdall & Farrar' is 56 characters and omits Indianapolis; meta description is 135 characters.",
+    "Single H1 'Indianapolis' Trusted Managed Technology Partner' with seven service H2s.",
+    "Viewport meta present, lang=en, canonical set to https://www.vanausdall.com/.",
+    "One JSON-LD Organization block only; no LocalBusiness, Service or FAQ schema.",
+    "og:image is a generic stock file (/images/artificial-intelligence.jpg).",
+    "15 script tags (6 external); no GTM, HubSpot or WordPress fingerprints, custom-built site.",
+    "73 images, 68 lazy-loaded, all with alt attributes.",
+    "Placeholder string as5d4f65s4f564we654fw is a hidden honeypot anti-spam field injected by the form script; forms work but have no CRM integration.",
+    "Sitemap has 586 URLs, no index; 324 (55 percent) are /blog?p=slug-YYMMDD query-string posts and 90 are PDFs."
+  ],
+  "backlinks": {
+    "vaf": {"authority": 21, "ref_domains": 486, "backlinks": 2523},
+    "competitors": [
+      {"domain": "leapmanagedit.com", "authority": 24, "ref_domains": 471, "backlinks": 3764},
+      {"domain": "taylored.com", "authority": 27, "ref_domains": 959, "backlinks": 3605}
+    ]
+  },
+  "implications": [
+    "Build a dedicated Indianapolis managed IT page: 28 local IT terms totaling roughly 11,000 searches per month where VAF ranks for none.",
+    "Reproduce the Fort Wayne (#6) and Evansville (#2) page template for Indianapolis; the format already ranks.",
+    "Create standalone pages for managed print services (4,400/mo, KD 16) and copier lease (2,400/mo, KD 19) where VAF has zero visibility.",
+    "Migrate 324 /blog?p= posts to clean /blog/slug paths with 301 redirects.",
+    "Add LocalBusiness schema per office location and Service schema per offering; only one Organization block exists today.",
+    "Add Indianapolis to the home page title and replace the stock og:image; the home page carries 85 percent of traffic.",
+    "Replace the honeypot form with a HubSpot form so leads from 1,081 monthly visits are tracked.",
+    "Defend copiers against leapcopierprinter.com, already #9 for copier lease indianapolis while VAF sits at #10."
+  ]
+}
