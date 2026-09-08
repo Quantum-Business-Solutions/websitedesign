@@ -263,7 +263,7 @@ h1,h2,h3{text-wrap:balance}
 .q-header.is-scrolled .pv-util{max-height:0;opacity:0}
 .pv-grid-5 .q-card h3{min-height:2.6em}
 /* dropdowns, mega menu, breadcrumbs */
-@media(min-width:1025px){.q-footer-grid.pv-fcols-4{grid-template-columns:1.4fr repeat(4,1fr)}.q-footer-grid.pv-fcols-5{grid-template-columns:1.3fr repeat(5,1fr)}}
+@media(min-width:1025px){.q-footer-grid.pv-fcols-4{grid-template-columns:1.3fr 1.7fr repeat(3,1fr)}.q-footer-grid.pv-fcols-5{grid-template-columns:1.3fr repeat(5,1fr)}}
 @media(min-width:768px) and (max-width:1024px){.q-footer-grid.pv-fcols-4,.q-footer-grid.pv-fcols-5{grid-template-columns:repeat(4,1fr)}.q-footer-grid.pv-fcols-4 > div:first-child,.q-footer-grid.pv-fcols-5 > div:first-child{grid-column:1/-1}}
 .q-mnav:not([open]) .q-mnav-panel{display:none}
 .pv-sticky.pv-sticky-off{opacity:0;pointer-events:none;transform:translateY(12px)}.pv-sticky{transition:opacity .2s,transform .2s}
@@ -313,8 +313,12 @@ html{scroll-padding-bottom:72px}
 .q-footer-tag,.q-footer-contact,.q-footer-contact a,.q-footer-links a,.q-footer-legal,.q-footer-legal a,.q-footer-social a{color:var(--chrome-muted)}
 .q-footer-head,.q-footer-contact .q-footer-phone{color:var(--chrome-fg)}
 .q-footer-links a:hover,.q-footer-social a:hover{color:var(--chrome-accent)}
-.q-footer-links a{min-height:44px;display:flex;align-items:center;padding:0}
-.q-footer-links{gap:0}
+.q-footer-links a{min-height:34px;display:flex;align-items:center;padding:0;font-size:14.5px;line-height:1.35}
+.q-footer-links{gap:0;display:block}.q-footer-links.pv-two{columns:2;column-gap:28px}.q-footer-links.pv-two a{break-inside:avoid}
+.q-footer{background:var(--bg-alt,var(--chrome-bg));padding-top:0}.q-footer::before{content:"";display:block;height:3px;background:linear-gradient(90deg,var(--accent),color-mix(in srgb,var(--accent) 20%,transparent))}
+.q-footer-grid{padding-top:56px;padding-bottom:40px;gap:32px 40px}.q-footer-head{font-size:12.5px;letter-spacing:.14em;margin-bottom:10px}
+.q-footer-tag{font-size:14.5px;line-height:1.55;max-width:300px;margin:14px 0 8px}
+.q-footer-legal{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 20px;font-size:13px;padding:18px 0 22px}.q-footer-legal .pv-legal-item:first-child{margin-right:auto}.q-footer-legal a{text-decoration:none;min-height:34px}.q-footer-legal .pv-legal-item+.pv-legal-item::before{content:"";margin:0}
 .pv-legal-item{display:inline-flex;align-items:center;white-space:nowrap}.pv-legal-item + .pv-legal-item::before{content:"|";margin:0 10px;color:var(--chrome-muted)}
 .q-header-logo{min-height:44px;display:inline-flex;align-items:center}
 .q-footer-legal{border-top-color:var(--chrome-border)}
@@ -345,8 +349,8 @@ html{scroll-padding-bottom:72px}
 .pv-logos-track{display:flex;align-items:center;gap:64px;flex:none;animation:pv-marquee 46s linear infinite}.pv-logos:hover .pv-logos-track{animation-play-state:paused}
 @keyframes pv-marquee{to{transform:translateX(calc(-100% - 64px))}}
 @media(prefers-reduced-motion:reduce){.pv-logos{flex-wrap:wrap;justify-content:center;mask-image:none;-webkit-mask-image:none}.pv-logos-track{animation:none;flex-wrap:wrap;justify-content:center}.pv-logos-track[aria-hidden]{display:none}}
-.pv-logos img{width:auto;max-width:170px;height:56px;object-fit:contain;mix-blend-mode:multiply;filter:grayscale(1) opacity(.82);transition:filter .2s}
-.pv-logos img:hover{filter:none}
+.pv-logos img{width:auto;max-width:170px;height:56px;object-fit:contain;mix-blend-mode:multiply;transition:transform .2s}
+.pv-logos img:hover{transform:translateY(-2px)}
 @media(max-width:767px){.pv-logos,.pv-logos-track{gap:40px}.pv-logos img{height:44px;max-width:130px}@keyframes pv-marquee{to{transform:translateX(calc(-100% - 40px))}}}
 .pv-logos span{font-family:var(--q-serif);font-size:20px;color:var(--fg-muted)}
 /* stats */
@@ -778,7 +782,7 @@ def footer(content, ctx):
     logo = (f'<img src="{E(ctx["rel"](b["logo"]))}" alt="{E(b.get("logo_alt", content["client"]))}" width="{round(36 * lw / lh)}" height="36" loading="lazy">'
             if b.get("logo") else f'<span class="q-logo-text">{E(content["client"])}</span>')
     cols = "".join(
-        f'<div><div class="q-footer-head">{E(c["title"])}</div><nav class="q-footer-links" aria-label="{E(c["title"])}">'
+        f'<div{" class=pv-fwide" if len(c["links"]) > 8 else ""}><div class="q-footer-head">{E(c["title"])}</div><nav class="q-footer-links{" pv-two" if len(c["links"]) > 8 else ""}" aria-label="{E(c["title"])}">'
         + "".join(f'<a href="{E(ctx["L"](h))}">{E(l)}</a>' for l, h in c["links"]) + "</nav></div>"
         for c in b.get("footer_columns", []))
     soc = b.get("social", {})
