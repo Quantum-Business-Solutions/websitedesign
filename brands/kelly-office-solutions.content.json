@@ -565,6 +565,9 @@
           "image": "assets/hero-plate-2100.jpg",
           "image_w": 2100,
           "image_h": 891,
+          "model": "assets/fleet/mfp.glb",
+          "poster": "assets/fleet/mfp.png",
+          "model_alt": "A Sharp-style multifunction copier, rotating. Drag to turn it.",
           "stats": [
             [
               "1947",
@@ -618,7 +621,7 @@
               ]
             ]
           },
-          "note": "Preview photography is generated and labelled as such; Kelly's own imagery replaces it."
+          "note": "Preview photography and the 3D device are generated and labelled as such; Kelly's own imagery and Sharp product models replace them."
         },
         {
           "type": "wheel",

@@ -15,7 +15,20 @@ EXTRA_CSS2 = r"""
 /* ===== layered hero (dark, floating cards, pointer glow) ===== */
 .pv-lh{position:relative;overflow:hidden;background:var(--chrome-bg);color:#fff;isolation:isolate}
 .pv-lh .bg{position:absolute;inset:0;z-index:0}
-.pv-lh .bg img{width:100%;height:100%;object-fit:cover;display:block;opacity:.55;transform:scale(1.04)}
+.pv-lh .bg img{width:100%;height:100%;object-fit:cover;display:block;opacity:.55;transform:scale(1.04);animation:pv-kb 38s ease-in-out infinite alternate}
+@keyframes pv-kb{from{transform:scale(1.04) translate(0,0)}to{transform:scale(1.14) translate(-1.5%,1%)}}
+.pv-lh .net{position:absolute;inset:0;z-index:0;width:100%;height:100%;pointer-events:none;opacity:.9}
+.pv-lh .hero3d{position:relative;height:580px;margin-left:12%;animation:pv-float 8s ease-in-out infinite}
+@keyframes pv-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.pv-lh .hero3d model-viewer{width:100%;height:100%;display:block;--poster-color:transparent}
+.pv-lh .hero3d .fallback{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 40px 60px rgba(0,0,0,.5))}
+.pv-lh .hero3d model-viewer:defined + .fallback{display:none}
+.pv-lh .hero3d .disc{position:absolute;left:10%;right:10%;bottom:26px;height:60px;border-radius:50%;background:radial-gradient(ellipse at center,color-mix(in srgb,var(--q-gold) 45%,transparent),transparent 70%);filter:blur(6px);z-index:-1}
+.pv-lh .stack.has3d .fcard.a{right:auto;left:-32px;top:auto;bottom:-16px;width:min(310px,100%);z-index:3;padding:22px 22px 20px}
+.pv-lh .lane{margin-top:26px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.pv-lh .lane .k{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.7);margin-right:6px}
+.pv-lh .lane a{display:inline-flex;align-items:center;min-height:40px;padding:0 14px;border-radius:999px;border:1px solid rgba(255,255,255,.28);color:#fff;text-decoration:none;font-size:14px;font-weight:600;background:rgba(255,255,255,.06)}
+.pv-lh .lane a:hover{border-color:var(--q-gold);color:var(--q-gold)}
 .pv-lh .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,color-mix(in srgb,var(--chrome-bg) 92%,transparent) 0%,color-mix(in srgb,var(--chrome-bg) 78%,transparent) 45%,color-mix(in srgb,var(--chrome-bg) 40%,transparent) 100%),linear-gradient(180deg,transparent 60%,var(--chrome-bg) 100%)}
 .pv-lh .glow{position:absolute;inset:-20%;z-index:0;pointer-events:none;background:radial-gradient(600px circle at var(--mx,70%) var(--my,40%),color-mix(in srgb,var(--q-gold) 26%,transparent),transparent 60%);transition:opacity .4s;opacity:.9}
 .pv-lh .q-container{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;padding-top:104px;padding-bottom:120px}
@@ -42,8 +55,8 @@ EXTRA_CSS2 = r"""
 .pv-lh .fcard.b .links a{display:flex;align-items:center;min-height:44px;padding:0 12px;border:1px solid var(--border,#ddd);border-radius:10px;text-decoration:none;color:var(--fg,#111);font-weight:600;font-size:14px;background:#fff}
 .pv-lh .fcard.b .links a:hover{border-color:var(--accent-ink);color:var(--accent-ink)}
 .pv-lh .note{margin-top:22px;font-size:13.5px;color:rgba(255,255,255,.62)}
-@media(max-width:1024px){.pv-lh .q-container{grid-template-columns:1fr;gap:40px;padding-top:72px;padding-bottom:88px}.pv-lh .stack{min-height:0;display:grid;gap:16px;perspective:none}.pv-lh .fcard{position:static;width:100%;transform:none!important}}
-@media(prefers-reduced-motion:reduce){.pv-lh .glow{display:none}.pv-lh .fcard{transition:none}}
+@media(max-width:1024px){.pv-lh .q-container{grid-template-columns:1fr;gap:40px;padding-top:72px;padding-bottom:88px}.pv-lh .stack{min-height:0;display:grid;gap:16px;perspective:none}.pv-lh .fcard{position:static;width:100%;transform:none!important}.pv-lh .hero3d{height:380px;margin-left:0;animation:none}.pv-lh .stack.has3d .fcard.a{position:static;width:100%}}
+@media(prefers-reduced-motion:reduce){.pv-lh .glow{display:none}.pv-lh .fcard{transition:none}.pv-lh .bg img,.pv-lh .hero3d{animation:none}.pv-lh .net{display:none}}
 
 /* ===== services wheel ===== */
 .pv-wheel{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
@@ -209,14 +222,31 @@ def _hero_layered(s, ctx):
           f'<a class="go" href="{E(L(a.get("href", "contact.html")))}">{E(a.get("label", "Start"))}</a></div>') if a else ""
     lb = "".join(f'<a href="{E(L(h))}">{E(t)}</a>' for t, h in b.get("links", []))
     cb = (f'<div class="fcard b pv-depth" data-depth="2"><div class="k">{E(b.get("eyebrow", ""))}</div><p class="t">{E(b.get("title", ""))}</p><p>{E(b.get("body", ""))}</p><div class="links">{lb}</div></div>') if b else ""
+    lane = ""
+    three = ""
+    if s.get("model"):
+        # the device takes the stack; the customer links move under the copy as a strip
+        lane = (f'<div class="lane"><span class="k">{E(b.get("eyebrow", "Already a customer?"))}</span>{lb}</div>') if b else ""
+        cb = ""
+        three = (f'<div class="hero3d pv-depth" data-depth="1"><div class="disc" aria-hidden="true"></div>'
+                 f'<model-viewer src="{E(ctx["rel"](s["model"]))}" poster="{E(ctx["rel"](s["poster"]))}" alt="{E(s.get("model_alt", "A rotatable multifunction device"))}" camera-controls disable-zoom auto-rotate rotation-per-second="14deg" shadow-intensity="0" exposure="1.1" interaction-prompt="none" camera-orbit="35deg 78deg auto" loading="eager" reveal="auto"></model-viewer>'
+                 f'<img class="fallback" src="{E(ctx["rel"](s["poster"]))}" alt="" width="1200" height="1200" decoding="async">'
+                 f'<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script></div>')
     note = f'<div class="note">{E(s["note"])}</div>' if s.get("note") else ""
     js = f"""<script>(function(){{var h=document.getElementById("{hid}");if(!h)return;var rm=matchMedia('(prefers-reduced-motion: reduce)').matches,fine=matchMedia('(pointer:fine) and (min-width:1025px)').matches;
 if(!rm&&fine){{var g=h.querySelector('.glow');h.addEventListener('pointermove',function(e){{var r=h.getBoundingClientRect();h.style.setProperty('--mx',((e.clientX-r.left)/r.width*100).toFixed(1)+'%');h.style.setProperty('--my',((e.clientY-r.top)/r.height*100).toFixed(1)+'%');
 h.querySelectorAll('.pv-depth').forEach(function(c){{var d=+c.getAttribute('data-depth')||1,x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform='translate3d('+(-x*10*d).toFixed(1)+'px,'+(-y*10*d).toFixed(1)+'px,0) rotateX('+(y*-4).toFixed(2)+'deg) rotateY('+(x*5).toFixed(2)+'deg)'}})}});
-h.addEventListener('pointerleave',function(){{h.querySelectorAll('.pv-depth').forEach(function(c){{c.style.transform=''}})}})}}}})();</script>"""
-    return f'''<section class="q-section pv-lh" id="{E(hid)}">{bg}<div class="glow" aria-hidden="true"></div><div class="q-container"><div>{f'<div class="q-eyebrow">{E(s["eyebrow"])}</div>' if s.get("eyebrow") else ""}
-<h1 class="q-h1">{RAW(s["heading"])}</h1><div class="q-lead">{E(s.get("subhead", ""))}</div>{_btns(s, ctx)}{note}{stats}</div>
-<div class="stack">{ca}{cb}</div></div>{js}</section>'''
+h.addEventListener('pointerleave',function(){{h.querySelectorAll('.pv-depth').forEach(function(c){{c.style.transform=''}})}})}}
+var cv=h.querySelector('canvas.net');if(cv&&!rm&&cv.getContext){{var cx=cv.getContext('2d'),W,H,P=[],run=false,raf=0,col=getComputedStyle(h).getPropertyValue('--q-gold').trim()||'#65bc7b';
+function size(){{var r=h.getBoundingClientRect();W=cv.width=Math.floor(r.width);H=cv.height=Math.floor(r.height);var n=W<768?22:W<1200?40:56;P=[];for(var i=0;i<n;i++)P.push({{x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.22,vy:(Math.random()-.5)*.22,r:1.2+Math.random()*1.8}})}}
+function tick(){{if(!run)return;cx.clearRect(0,0,W,H);var i,j,a,b,d;for(i=0;i<P.length;i++){{a=P[i];a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>W)a.vx*=-1;if(a.y<0||a.y>H)a.vy*=-1}}
+cx.lineWidth=1;for(i=0;i<P.length;i++){{a=P[i];for(j=i+1;j<P.length;j++){{b=P[j];d=Math.hypot(a.x-b.x,a.y-b.y);if(d<150){{cx.globalAlpha=(1-d/150)*.28;cx.strokeStyle=col;cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(b.x,b.y);cx.stroke()}}}}}}
+for(i=0;i<P.length;i++){{a=P[i];cx.globalAlpha=.75;cx.fillStyle=col;cx.beginPath();cx.arc(a.x,a.y,a.r,0,6.283);cx.fill()}}cx.globalAlpha=1;raf=requestAnimationFrame(tick)}}
+size();addEventListener('resize',size,{{passive:true}});
+if('IntersectionObserver' in window){{new IntersectionObserver(function(es){{es.forEach(function(e){{if(e.isIntersecting&&!run){{run=true;tick()}}else if(!e.isIntersecting){{run=false;cancelAnimationFrame(raf)}}}})}}).observe(h)}}else{{run=true;tick()}}}}}})();</script>"""
+    return f'''<section class="q-section pv-lh" id="{E(hid)}">{bg}<canvas class="net" aria-hidden="true"></canvas><div class="glow" aria-hidden="true"></div><div class="q-container"><div>{f'<div class="q-eyebrow">{E(s["eyebrow"])}</div>' if s.get("eyebrow") else ""}
+<h1 class="q-h1">{RAW(s["heading"])}</h1><div class="q-lead">{E(s.get("subhead", ""))}</div>{_btns(s, ctx)}{lane}{note}{stats}</div>
+<div class="stack{" has3d" if three else ""}">{three}{ca}{cb}</div></div>{js}</section>'''
 
 
 def _wheel(s, ctx):

@@ -767,10 +767,11 @@ HERO_LAYERED = {"type": "hero-layered", "id": "hero", "eyebrow": "Moving busines
     "subhead": "Copiers and print, document management, IT, mailing, and the water and coffee that keep an office running. One North Carolina partner, five offices, one number to call.",
     "primary": {"label": "Request an assessment", "href": "contact.html"}, "secondary": {"label": "Estimate your print spend", "href": "cost-calculator.html"},
     "image": "assets/hero-plate-2100.jpg", "image_w": 2100, "image_h": 891,
+    **({"model": MFP_MODEL, "poster": "assets/fleet/mfp.png", "model_alt": "A Sharp-style multifunction copier, rotating. Drag to turn it."} if MFP_MODEL else {}),
     "stats": [["1947", "Family-owned since"], ["94.4", "Net Promoter Score, audited"], ["4,000", "Customers, approximately"], ["5", "North Carolina offices"]],
     "card_a": {"eyebrow": "Start here", "title": "The free assessment", "body": "One visit. One report, yours to keep whether or not you buy.", "items": ["Every device counted and metered", "Cost per page, mono and color", "Lease, rental and purchase side by side"], "href": "assessment.html", "label": "How it works"},
     "card_b": {"eyebrow": "Already a customer?", "title": "The fast lane", "body": "Under a minute each. A person replies.", "links": [["Request service", "service-support.html#request"], ["Meter reads", "service-support.html#meters"], ["Order supplies", "service-support.html#supplies"], ["Customer portal", PORTAL]]},
-    "note": "Preview photography is generated and labelled as such; Kelly's own imagery replaces it."}
+    "note": "Preview photography and the 3D device are generated and labelled as such; Kelly's own imagery and Sharp product models replace them."}
 
 
 def build():
