@@ -1134,6 +1134,7 @@
       },
       {
        "name": "Raleigh",
+       "ring": false,
        "lon": -78.638,
        "lat": 35.779,
        "href": "location.html",
@@ -1144,6 +1145,7 @@
       },
       {
        "name": "Durham",
+       "ring": false,
        "lon": -78.898,
        "lat": 35.994,
        "href": "location.html",
@@ -1154,6 +1156,7 @@
       },
       {
        "name": "Chapel Hill",
+       "ring": false,
        "lon": -79.056,
        "lat": 35.913,
        "href": "location.html",

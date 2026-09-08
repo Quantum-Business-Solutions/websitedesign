@@ -305,7 +305,8 @@ def _map(s, ctx):
         name, lon, lat, href, sub, hq = it["name"], it["lon"], it["lat"], it["href"], it.get("sub", ""), it.get("hq", False)
         x, y = proj(lon, lat); x -= ox; y -= oy
         dx, dy = it.get("label_dx", 10), it.get("label_dy", 4)
-        pins.append(f'<circle class="ring" cx="{x:.1f}" cy="{y:.1f}" r="{s.get("ring", 42)}"/><circle class="pin{" hq" if hq else ""}" cx="{x:.1f}" cy="{y:.1f}" r="5.5"/><text x="{x + dx:.1f}" y="{y + dy:.1f}">{E(name)}</text>')
+        ring = f'<circle class="ring" cx="{x:.1f}" cy="{y:.1f}" r="{s.get("ring", 42)}"/>' if it.get("ring", True) else ""
+        pins.append(f'{ring}<circle class="pin{" hq" if hq else ""}" cx="{x:.1f}" cy="{y:.1f}" r="5.5"/><text x="{x + dx:.1f}" y="{y + dy:.1f}">{E(name)}</text>')
         rows.append(f'<li><div><b>{E(name)}{" (headquarters)" if hq else ""}</b><small>{E(sub)}</small></div><a href="{E(ctx["L"](href))}">{E(it.get("link", "Branch page"))}</a></li>')
     svg = f'<svg class="pv-map-svg" viewBox="0 0 {w:.0f} {h:.0f}" role="img" aria-label="{E(s.get("alt", f"Map of {region.get(chr(110)+chr(97)+chr(109)+chr(101), chr(78)+chr(67))} with {ctx.get(chr(99)+chr(108)+chr(105)+chr(101)+chr(110)+chr(116)+chr(95)+chr(115)+chr(104)+chr(111)+chr(114)+chr(116), chr(111)+chr(117)+chr(114))} locations"))}"><path class="land" d="{path}"/>{"".join(pins)}</svg>'
     head = f'<div class="pv-split" style="margin-bottom:40px"><h2 class="q-h2">{E(s["heading"])}</h2><p>{E(s.get("intro", ""))}</p></div>'
