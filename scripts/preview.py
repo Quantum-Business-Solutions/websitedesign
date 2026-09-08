@@ -869,7 +869,10 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
     comp = (page.get("compose") or {}).get(dslug)
     if comp:
         by_id = {x.get("id"): x for x in secs if x.get("id")}
-        secs = [by_id[i] for i in comp if i in by_id]
+        missing = [i for i in comp if i not in by_id]
+        if missing:
+            raise SystemExit(f"{page['file']} [{dslug}]: compose names sections that do not exist: {', '.join(missing)}")
+        secs = [by_id[i] for i in comp]
     if any(x["type"] in ("leadform", "contact") for x in secs) and secs and secs[-1]["type"] == "cta":
         secs = secs[:-1]   # two "start with the assessment" blocks in a row read as a template bug
     body = "".join(RENDER[s["type"]](s, ctx) for s in secs)
@@ -957,6 +960,8 @@ def main(argv=None):
             dest = os.path.join(d, page["file"]); os.makedirs(os.path.dirname(dest), exist_ok=True)
             open(dest, "w", encoding="utf-8").write(doc); written += 1
         print(f"  {t:20} {len(content['pages'])} pages  accent {tok['--q-gold']} ink {tok['--accent-ink']} cta-fg {tok['--cta-fg']} chrome {tok['--chrome-bg']}")
+    import preview_design  # noqa: E402
+    preview_design.write(content, themes, roles, client_tokens, a.out)
     open(os.path.join(a.out, "index.html"), "w", encoding="utf-8").write(hub(content, themes, a.recommend, base, roles, not a.no_standard, client_tokens, a.out))
     print(f"wrote {written} pages + hub to {a.out}")
     if DASH_HITS:

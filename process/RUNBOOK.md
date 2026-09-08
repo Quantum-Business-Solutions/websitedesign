@@ -1,6 +1,7 @@
 # The runbook
 
-> **Version 1.0 · 2026-09-06 · Owner: Shawn Peterson · Next review: 2026-10-06**
+> **Version 2.0 · 2026-09-08 · Owner: Shawn Peterson · Next review: 2026-10-08**
+> Version 2 folds in what Revolution, Kelly, Nexus, VanAusdall and Image 2000 taught us in one week. Section "What changed in version 2" at the bottom lists it; the steps below carry the changes inline.
 > Reviewed monthly, on the agenda in *Owner and cadence* at the bottom. If today is past the review
 > date, this document is unverified — read `process/qa-findings.md` for what tends to rot first.
 
@@ -391,3 +392,45 @@ list changes. `git log -- process/RUNBOOK.md` is the changelog.
 
 The four that are correctness, not quality: **entity facts in the schema** (22) · **the
 header/footer de-brand** (24) · **301s on trafficked URLs** (14, 35) · **`verify.mjs` passing** (31).
+
+
+## What changed in version 2 (2026-09-08)
+
+Five clients through the line in one week, three of them in a single day, showed where the process leaked. These are now the rules.
+
+### One toolchain
+The Python conveyor (`brands/<slug>.content.py` to `scripts/preview.py`) is the product. Revolution's Next.js path is retired for new clients; two things from it are being ported: the HubSpot theme pipeline (tokens generated from one source, pages built as drafts) and the measurement harness (true-compositing contrast, all routes at four widths, hub behaviour, page performance under CPU throttle, type scale). Until the port lands, run Revolution's `scripts/qa-contrast.mjs` logic against any translucent header by hand.
+
+Two build facts from Revolution go in every plan: layout sections pushed through the HubSpot API do not render, so page content is baked into per-page templates; and the free HubSpot tier caps site pages at 30. Check the client's tier against the page count on the hub before the plan is presented.
+
+### The standard package, version two
+Every client starts from `brands/_starter.content.py`, which places the full signature set by default: layered hero with the network canvas and a 3D hero object, wheel, process chart on the home and every service page, before/after on every service page, seal, fleet rail, floor plan hotspots, scroll story, history rail, map (region per client), film slot, launcher, depth layer. Removing a module is a decision; adding one is not.
+
+Rules that came from Shawn this week:
+- No recommended direction unless we have a reason we can say out loud. Showcase first in the order. Run `preview.py` without `--recommend` and the hub shows "Your call".
+- A direction may borrow another's typefaces (`brand.type_from`). Kelly runs Showcase in Clean's Open Sans.
+- Floor plan hotspots on every client with a physical place. Generate the isometric with the client's rooms named, measure once, place the points.
+- The history rail on every client with a founding date. Sourced years only; decades as honest placeholders, listed under To confirm.
+- Reusable renders and models go to `library/` with a README line the same day. Check the library before generating.
+- No em dashes anywhere client-facing. No exclamation marks. No unsourced response-time or pricing promises.
+
+The intake stage is explicit and scripted, in this order, and it is the top of the production chart:
+1. Scan the current website: `firecrawl_map` for the URL inventory, `firecrawl_scrape` of every top-level page, a note of the platform, the forms vendor, the cookie banner, broken links (Image 2000's Request a Quote linked to the home page) and any members-only links in public navigation.
+2. Pull the Semrush baseline: domain rank, keywords, traffic, top pages, and the branded share.
+3. Measure the live home page: HTML weight, scripts, stylesheets, images without lazy loading, pinch-zoom blocked, schema present, LocalBusiness present.
+4. Awards and press: the trade press profile (ENX, Industry Analysts), manufacturer award listings, the BBB record. These become the seal.
+5. Brand assets: logo files at full size, colours read from the logo, partner and award badges, team photographs, any film.
+6. Call notes and the proposal canvas, if there is one, read in full before a word is written.
+7. Write the To confirm list as you go, not at the end.
+
+Every client gets a design system page (`design-system.html`, generated) and an SEO report page from the Semrush pull, plus the hub's search before-and-after.
+
+### QA, one gate
+Add to `verify.mjs` as the next job: the true-compositing contrast probe, all routes at 390, 768, 1280 and 1440 with exactly one h1, hub behaviour, page performance under CPU throttle, and the type scale check. Already added this week: a hard error when a compose id matches no section, and axe rules for nested interactive, contrast and heading order. The local LCP failure is the sandbox blocking Google Fonts; mark it staging-only rather than ignoring it.
+
+### Housekeeping that cost time
+- Vercel projects are created by Shawn at intake, one per client, and connected to the client repo. The API can create a project but cannot link the repository. Nexus deploys from the Nexus repo under `/preview`; Image 2000 and VanAusdall need their projects.
+- The exact preview command is recorded in the client repo README on the first push.
+- Every session ends with the ClientCommand knowledge base entry for the client and, when a process changed, a re-upload of the changed process doc.
+- Scripts: never kill a process by a pattern that appears in the calling command line. Playwright screenshots either abort font requests or wait for them, never both.
+- Generated imagery is labelled on the page, every time, and is never described as the client's people or premises.
