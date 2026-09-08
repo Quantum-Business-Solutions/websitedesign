@@ -39,16 +39,20 @@ EXTRA_CSS = r'''
 .pv-tst-letters blockquote{margin:0;font-size:15.5px;line-height:1.55;color:var(--fg)}.pv-tst-letters footer{margin-top:8px;font-size:13.5px;color:var(--fg-muted)}.pv-tst-letters footer b{color:var(--fg);font-weight:600}
 @media(max-width:1024px){.pv-tst-feature{grid-template-columns:1fr}}
 /* ===== timeline ===== */
-.pv-tl2{position:relative;margin:52px auto 0;max-width:1040px;display:grid;gap:28px}
-.pv-tl2 .line{position:absolute;left:50%;top:10px;bottom:10px;width:2px;background:var(--border);transform:translateX(-1px)}
-.pv-tl2 .ev{display:grid;grid-template-columns:1fr 1fr;align-items:center;position:relative}
-.pv-tl2 .dot{position:absolute;left:50%;top:50%;width:18px;height:18px;border-radius:50%;background:var(--q-gold);border:4px solid var(--bg);transform:translate(-50%,-50%);z-index:2;box-shadow:0 0 0 2px var(--border)}
-.pv-tl2 .card{background:var(--card,var(--bg));border:1px solid var(--border);border-radius:calc(var(--radius) + 4px);padding:22px 26px;box-shadow:0 14px 34px rgba(0,0,0,.07);position:relative}
-.pv-tl2 .ev.l .card{grid-column:1;margin-right:48px}.pv-tl2 .ev.r .card{grid-column:2;margin-left:48px}
-.pv-tl2 .ev.l .card::after,.pv-tl2 .ev.r .card::after{content:"";position:absolute;top:50%;width:48px;height:2px;background:var(--border);transform:translateY(-1px)}.pv-tl2 .ev.l .card::after{right:-48px}.pv-tl2 .ev.r .card::after{left:-48px}
-.pv-tl2 .y{font-family:var(--q-serif);font-size:34px;line-height:1;color:var(--accent-ink);font-weight:700}
-.pv-tl2 h3{font-size:18px;font-weight:700;margin:10px 0 6px;color:var(--fg)}.pv-tl2 p{font-size:15px;line-height:1.6;color:var(--fg-muted);margin:0}
-@media(max-width:767px){.pv-tl2 .line{left:14px}.pv-tl2 .ev{grid-template-columns:1fr}.pv-tl2 .ev.l .card,.pv-tl2 .ev.r .card{grid-column:1;margin:0 0 0 40px}.pv-tl2 .ev.l .card::after,.pv-tl2 .ev.r .card::after{left:-26px;width:26px}.pv-tl2 .dot{left:14px}}
+.pv-tl2{position:relative;margin:44px auto 0;max-width:1080px;display:grid;grid-template-columns:1fr 56px 1fr;grid-auto-rows:minmax(0,auto);row-gap:0}
+.pv-tl2 .line{position:absolute;left:50%;top:14px;bottom:14px;width:2px;background:var(--border);transform:translateX(-1px)}
+.pv-tl2 .ev{display:contents}
+.pv-tl2 .card{background:var(--card,var(--bg));border:1px solid var(--border);border-radius:calc(var(--radius) + 4px);padding:18px 22px 18px;box-shadow:0 10px 26px rgba(0,0,0,.06);position:relative;grid-row:span 2;margin:8px 0}
+.pv-tl2 .ev.l .card{grid-column:1}.pv-tl2 .ev.r .card{grid-column:3}
+.pv-tl2 .ev:nth-of-type(2) .card{grid-row:1/span 2}.pv-tl2 .ev:nth-of-type(3) .card{grid-row:2/span 2}.pv-tl2 .ev:nth-of-type(4) .card{grid-row:3/span 2}.pv-tl2 .ev:nth-of-type(5) .card{grid-row:4/span 2}.pv-tl2 .ev:nth-of-type(6) .card{grid-row:5/span 2}.pv-tl2 .ev:nth-of-type(7) .card{grid-row:6/span 2}.pv-tl2 .ev:nth-of-type(8) .card{grid-row:7/span 2}.pv-tl2 .ev:nth-of-type(9) .card{grid-row:8/span 2}.pv-tl2 .ev:nth-of-type(10) .card{grid-row:9/span 2}.pv-tl2 .ev:nth-of-type(11) .card{grid-row:10/span 2}.pv-tl2 .ev:nth-of-type(12) .card{grid-row:11/span 2}.pv-tl2 .ev:nth-of-type(13) .card{grid-row:12/span 2}
+.pv-tl2 .dot{position:absolute;left:50%;width:16px;height:16px;border-radius:50%;background:var(--q-gold);border:4px solid var(--bg);transform:translate(-50%,-50%);z-index:2;box-shadow:0 0 0 2px var(--border);display:none}
+.pv-tl2 .card::before{content:"";position:absolute;top:50%;width:16px;height:16px;border-radius:50%;background:var(--q-gold);border:3px solid var(--bg);box-shadow:0 0 0 2px var(--border);transform:translateY(-50%);z-index:2}
+.pv-tl2 .card::after{content:"";position:absolute;top:50%;width:28px;height:2px;background:var(--border);transform:translateY(-1px)}
+.pv-tl2 .ev.l .card::before{right:-36px}.pv-tl2 .ev.l .card::after{right:-28px}
+.pv-tl2 .ev.r .card::before{left:-36px}.pv-tl2 .ev.r .card::after{left:-28px}
+.pv-tl2 .y{font-family:var(--q-serif);font-size:26px;line-height:1;color:var(--accent-ink);font-weight:700;display:inline-block;margin-right:12px;vertical-align:baseline}
+.pv-tl2 h3{font-size:17px;font-weight:700;margin:0;color:var(--fg);display:inline}.pv-tl2 p{font-size:14.5px;line-height:1.55;color:var(--fg-muted);margin:8px 0 0}
+@media(max-width:767px){.pv-tl2{grid-template-columns:1fr}.pv-tl2 .line{left:14px}.pv-tl2 .ev.l .card,.pv-tl2 .ev.r .card{grid-column:1;grid-row:auto;margin:0 0 14px 40px}.pv-tl2 .card::before{left:-33px!important;right:auto!important}.pv-tl2 .card::after{left:-26px!important;right:auto!important;width:26px}}
 .pv-tl{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;position:relative;margin-top:48px}
 .pv-tl::before{content:"";position:absolute;left:0;right:0;top:9px;height:1px;background:var(--border)}
 .pv-tl > div{position:relative;padding-top:30px}
@@ -205,7 +209,7 @@ def _testimonials(s, ctx):
 
 def _timeline(s, ctx):
     E = ctx["E"]
-    items = "".join(f'<div class="ev {"l" if i % 2 == 0 else "r"}"><div class="dot" aria-hidden="true"></div><div class="card"><div class="y">{E(y)}</div><h3>{E(tt)}</h3><p>{E(d)}</p></div></div>' for i, (y, tt, d) in enumerate(s["items"]))
+    items = "".join(f'<div class="ev {"l" if i % 2 == 0 else "r"}"><div class="card"><div><span class="y">{E(y)}</span><h3>{E(tt)}</h3></div><p>{E(d)}</p></div></div>' for i, (y, tt, d) in enumerate(s["items"]))
     return f'{ctx["sec_open"](s)} <div class="q-container"><div class="pv-center"><div class="q-eyebrow">{E(s.get("eyebrow"))}</div><h2 class="q-h2" style="margin-top:22px;max-width:760px">{E(s["heading"])}</h2></div><div class="pv-tl2"><div class="line" aria-hidden="true"></div>{items}</div></div></section>'
 
 

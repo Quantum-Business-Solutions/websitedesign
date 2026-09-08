@@ -123,16 +123,17 @@ EXTRA_CSS2 = r"""
 @media(max-width:767px){.pv-fleet .arrows{display:none}.pv-fleet .rail{grid-auto-columns:82%}}
 
 /* ===== commitments seal ===== */
-.pv-seal{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px}
-.pv-seal .item{display:grid;grid-template-columns:64px 1fr;gap:16px;align-items:start;padding:22px;border:1px solid var(--border);border-radius:calc(var(--radius) + 6px);background:var(--card)}
-.pv-seal .badge{width:64px;height:64px;border-radius:50%;background:conic-gradient(var(--q-gold) 0 75%,color-mix(in srgb,var(--q-gold) 30%,transparent) 75% 100%);display:grid;place-items:center;position:relative}
-.pv-seal .badge::before{content:"";position:absolute;inset:6px;border-radius:50%;background:var(--card)}
-.pv-seal .badge b{position:relative;font:800 15px/1 var(--q-serif);color:var(--fg);letter-spacing:-.02em;text-align:center}
-.pv-seal h3{margin:0 0 6px;font-size:16.5px;line-height:1.3;font-weight:700}
-.pv-seal p{margin:0;font-size:14px;line-height:1.5;color:var(--fg-muted)}
+.pv-seal{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px}
+.pv-seal .item{display:flex;flex-direction:column;gap:0;padding:28px 26px 26px;border:1px solid var(--border);border-radius:calc(var(--radius) + 6px);background:var(--card);position:relative;overflow:hidden;min-height:230px}
+.pv-seal .item::before{content:"";position:absolute;left:0;top:0;right:0;height:4px;background:linear-gradient(90deg,var(--q-gold),color-mix(in srgb,var(--q-gold) 35%,transparent))}
+.pv-seal .badge{display:block;width:auto;height:auto;border-radius:0;background:none;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--border)}
+.pv-seal .badge::before{display:none}
+.pv-seal .badge b{position:relative;font:800 42px/1 var(--q-serif);color:var(--accent-ink);letter-spacing:-.03em;text-align:left;display:block}
+.pv-seal h3{margin:0 0 8px;font-size:17px;line-height:1.3;font-weight:700}
+.pv-seal p{margin:0;font-size:14.5px;line-height:1.55;color:var(--fg-muted)}
 .pv-seal .src{grid-column:1/-1;font-size:13px;color:var(--fg-muted);margin-top:4px}
 @media(max-width:1024px){.pv-seal{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:480px){.pv-seal{grid-template-columns:1fr}}
+@media(max-width:480px){.pv-seal{grid-template-columns:1fr}.pv-seal .item{min-height:0}}
 
 /* ===== before / after slider ===== */
 .pv-ba{margin-top:44px;position:relative;display:grid;border-radius:calc(var(--radius) + 8px);overflow:hidden;border:1px solid var(--border);background:var(--card);--pos:50%}.pv-ba .before,.pv-ba .after{grid-area:1/1}
