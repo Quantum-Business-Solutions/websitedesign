@@ -29,9 +29,9 @@ EXTRA_CSS2 = r"""
 .pv-lh .stack{position:relative;min-height:640px;perspective:1200px}
 .pv-lh .fcard{position:absolute;width:min(350px,100%);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-radius:calc(var(--radius) + 8px);padding:26px 26px 22px;color:#fff;box-shadow:0 30px 80px rgba(0,0,0,.45);transform-style:preserve-3d;transition:transform .35s ease,box-shadow .35s ease;will-change:transform}
 .pv-lh .fcard.a{right:0;top:0;z-index:2}.pv-lh .fcard.b{left:0;top:340px;z-index:1;background:rgba(255,255,255,.96);color:var(--fg,#111);border-color:rgba(255,255,255,.9)}
-.pv-lh .fcard .k{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--q-gold);margin-bottom:10px}
+.pv-lh .fcard .k{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--q-gold);margin-bottom:10px}
 .pv-lh .fcard.b .k{color:var(--accent-ink)}
-.pv-lh .fcard h3{margin:0 0 8px;font-size:21px;line-height:1.2;font-weight:700;letter-spacing:-.01em}
+.pv-lh .fcard .t{margin:0 0 8px;font-size:21px;line-height:1.2;font-weight:700;letter-spacing:-.01em}
 .pv-lh .fcard p{margin:0;font-size:14.5px;line-height:1.55;color:rgba(255,255,255,.78)}.pv-lh .fcard.b p{color:var(--fg-muted,#555)}
 .pv-lh .fcard ul{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:8px}
 .pv-lh .fcard li{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.45}
@@ -60,8 +60,8 @@ EXTRA_CSS2 = r"""
 .pv-wheel .panel p{margin:0;color:var(--fg-muted);font-size:16px;line-height:1.6}
 .pv-wheel .panel .go{display:inline-flex;align-items:center;min-height:44px;margin-top:18px;font-weight:700;color:var(--accent-ink);text-decoration:none}
 .pv-wheel .panel .go::after{content:"";width:22px;height:1px;background:currentColor;margin-left:10px}
-.pv-wheel ol{list-style:none;margin:22px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:6px 18px}
-.pv-wheel ol a{display:flex;align-items:center;gap:10px;min-height:40px;text-decoration:none;color:var(--fg);font-size:14.5px;font-weight:600;border-bottom:1px solid var(--border)}
+.pv-wheel ol{list-style:none;margin:22px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:6px 18px}.pv-wheel ol li:last-child:nth-child(odd){grid-column:1/-1}
+.pv-wheel ol a{display:flex;align-items:center;gap:10px;min-height:44px;text-decoration:none;color:var(--fg);font-size:14.5px;font-weight:600;border-bottom:1px solid var(--border)}
 .pv-wheel ol a:hover,.pv-wheel ol a.on{color:var(--accent-ink)}
 .pv-wheel ol a i{width:8px;height:8px;border-radius:50%;background:var(--q-gold);flex:none}
 @media(max-width:1024px){.pv-wheel{grid-template-columns:1fr;gap:28px}.pv-wheel ol{grid-template-columns:1fr}}
@@ -78,10 +78,10 @@ EXTRA_CSS2 = r"""
 .pv-flow .node[aria-expanded="true"] .dot,.pv-flow .node:hover .dot{background:var(--q-gold);color:var(--cta-fg);border-color:var(--q-gold);transform:scale(1.08)}
 .pv-flow .node button{all:unset;cursor:pointer;display:block;width:100%}
 .pv-flow .node h3{margin:16px 0 6px;font-size:17px;line-height:1.25;font-weight:700}
-.pv-flow .node .when{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-ink);font-weight:700}
+.pv-flow .node .when{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-ink);font-weight:700}
 .pv-flow .node p{margin:8px 0 0;font-size:14px;line-height:1.5;color:var(--fg-muted)}
 .pv-flow .detail{margin-top:34px;border:1px solid var(--border);border-radius:calc(var(--radius) + 6px);background:var(--card);padding:28px 30px;display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:start}
-.pv-flow .detail .k{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--accent-ink);margin-bottom:8px}
+.pv-flow .detail .k{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--accent-ink);margin-bottom:8px}
 .pv-flow .detail h4{margin:0 0 8px;font-size:22px;line-height:1.2}
 .pv-flow .detail p{margin:0;color:var(--fg-muted);line-height:1.6}
 .pv-flow .detail ul{margin:0;padding-left:0;list-style:none;display:grid;gap:8px}
@@ -98,7 +98,7 @@ EXTRA_CSS2 = r"""
 .pv-fleet .dev .img{aspect-ratio:1;display:grid;place-items:center;position:relative}
 .pv-fleet .dev .img::after{content:"";position:absolute;left:14%;right:14%;bottom:8%;height:14px;border-radius:50%;background:radial-gradient(ellipse at center,rgba(0,0,0,.18),transparent 70%)}
 .pv-fleet .dev img{width:86%;height:86%;object-fit:contain;display:block;position:relative;z-index:1;filter:drop-shadow(0 18px 24px rgba(0,0,0,.14));transform:translateZ(30px)}
-.pv-fleet .dev .band{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--accent-ink);margin-top:10px}
+.pv-fleet .dev .band{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--accent-ink);margin-top:10px}
 .pv-fleet .dev h3{margin:6px 0 4px;font-size:19px;line-height:1.25;font-weight:700}
 .pv-fleet .dev .brands{font-size:13.5px;color:var(--fg-muted)}
 .pv-fleet .dev ul{margin:12px 0 0;padding:0;list-style:none;display:grid;gap:6px;font-size:14px;color:var(--fg)}
@@ -126,7 +126,7 @@ EXTRA_CSS2 = r"""
 .pv-ba .pane{padding:40px 44px 56px;min-height:400px;box-sizing:border-box}.pv-ba .before .pane{max-width:50%;padding-right:64px}.pv-ba .after .pane{padding-left:calc(50% + 44px)}
 .pv-ba .after{position:relative;background:var(--chrome-bg);color:#fff;clip-path:inset(0 0 0 var(--pos));transition:clip-path .05s linear}
 .pv-ba .after .pane{height:100%}
-.pv-ba .k{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--accent-ink);margin-bottom:12px}.pv-ba .after .k{color:var(--q-gold)}
+.pv-ba .k{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--accent-ink);margin-bottom:12px}.pv-ba .after .k{color:var(--q-gold)}
 .pv-ba h3{margin:0 0 14px;font-size:clamp(22px,2.2vw,30px);line-height:1.12;letter-spacing:-.02em;overflow-wrap:anywhere}
 .pv-ba ul{list-style:none;margin:0;padding:0;display:grid;gap:10px;max-width:46ch}
 .pv-ba li{display:flex;gap:10px;font-size:15.5px;line-height:1.5}.pv-ba .before li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--fg-muted);flex:none;margin-top:8px;opacity:.5}
@@ -135,7 +135,7 @@ EXTRA_CSS2 = r"""
 .pv-ba .handle{position:absolute;top:0;bottom:0;left:var(--pos);width:2px;background:var(--q-gold);transform:translateX(-1px);z-index:3;pointer-events:none}
 .pv-ba .handle::after{content:"\2194";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:var(--q-gold);color:var(--cta-fg);display:grid;place-items:center;font-size:20px;font-weight:700;box-shadow:0 10px 30px rgba(0,0,0,.25)}
 .pv-ba input[type=range]{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;z-index:4}
-.pv-ba .hint{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-muted);z-index:2;pointer-events:none}
+.pv-ba .hint{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-muted);z-index:2;pointer-events:none}
 @media(max-width:767px){.pv-ba{display:block}.pv-ba .pane{padding:26px 22px;min-height:0}.pv-ba .before .pane{max-width:none;padding-right:22px}.pv-ba .after{position:static;clip-path:none}.pv-ba .after .pane{height:auto;padding-left:22px}.pv-ba .handle,.pv-ba input,.pv-ba .hint{display:none}.pv-ba h3{font-size:24px}.pv-ba li{font-size:14.5px}}
 
 /* ===== office hotspots ===== */
@@ -153,8 +153,8 @@ EXTRA_CSS2 = r"""
 .pv-hot .pop a{display:inline-flex;align-items:center;min-height:36px;margin-top:8px;font-weight:700;color:var(--accent-ink);text-decoration:none;font-size:14px}
 .pv-hot-list{display:grid;grid-template-columns:repeat(4,1fr);gap:12px 24px;margin-top:22px;padding:0;list-style:none}
 .pv-hot-list a{display:flex;align-items:center;gap:10px;min-height:44px;text-decoration:none;color:var(--fg);font-size:14.5px;font-weight:600;border-bottom:1px solid var(--border)}
-.pv-hot-list a b{width:26px;height:26px;border-radius:50%;background:var(--q-gold);color:var(--cta-fg);display:grid;place-items:center;font-size:12.5px;flex:none}
-@media(max-width:1024px){.pv-hot-list{grid-template-columns:repeat(2,1fr)}}
+.pv-hot-list a b{width:26px;height:26px;border-radius:50%;background:var(--q-gold);color:var(--cta-fg);display:grid;place-items:center;font-size:13px;flex:none}
+@media(max-width:1024px){.pv-hot-list{grid-template-columns:repeat(2,1fr)}.pv-hot-list li:last-child:nth-child(odd){grid-column:1/-1}}
 @media(max-width:767px){.pv-hot .spot{width:30px;height:30px;font-size:13px}.pv-hot .pop{transform:translate(-50%,10px)}.pv-hot-list{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.pv-hot .spot::after{animation:none}}
 
@@ -177,7 +177,7 @@ EXTRA_CSS2 = r"""
 /* ===== 3D model ===== */
 .pv-3d{margin-top:44px;border-radius:calc(var(--radius) + 8px);overflow:hidden;border:1px solid var(--border);background:radial-gradient(ellipse at 50% 80%,color-mix(in srgb,var(--q-gold) 14%,transparent),transparent 60%),var(--bg-alt);position:relative}
 .pv-3d model-viewer{width:100%;height:520px;display:block;--poster-color:transparent}
-.pv-3d .hint{position:absolute;left:18px;bottom:14px;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-muted);pointer-events:none}
+.pv-3d .hint{position:absolute;left:18px;bottom:14px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-muted);pointer-events:none}
 .pv-3d img{width:100%;height:520px;object-fit:contain;display:block}.pv-3d .fallback{position:absolute;inset:0;height:100%;padding:24px;box-sizing:border-box}.pv-3d model-viewer:defined + .fallback{display:none}.pv-3d model-viewer:not(:defined){height:520px}
 @media(max-width:767px){.pv-3d model-viewer,.pv-3d img,.pv-3d model-viewer:not(:defined){height:360px}.pv-3d .fallback{height:100%}}
 """
@@ -205,10 +205,10 @@ def _hero_layered(s, ctx):
     a = s.get("card_a", {})
     b = s.get("card_b", {})
     la = "".join(f"<li>{E(x)}</li>" for x in a.get("items", []))
-    ca = (f'<div class="fcard a pv-depth" data-depth="1"><div class="k">{E(a.get("eyebrow", ""))}</div><h3>{E(a.get("title", ""))}</h3><p>{E(a.get("body", ""))}</p><ul>{la}</ul>'
+    ca = (f'<div class="fcard a pv-depth" data-depth="1"><div class="k">{E(a.get("eyebrow", ""))}</div><p class="t">{E(a.get("title", ""))}</p><p>{E(a.get("body", ""))}</p><ul>{la}</ul>'
           f'<a class="go" href="{E(L(a.get("href", "contact.html")))}">{E(a.get("label", "Start"))}</a></div>') if a else ""
     lb = "".join(f'<a href="{E(L(h))}">{E(t)}</a>' for t, h in b.get("links", []))
-    cb = (f'<div class="fcard b pv-depth" data-depth="2"><div class="k">{E(b.get("eyebrow", ""))}</div><h3>{E(b.get("title", ""))}</h3><p>{E(b.get("body", ""))}</p><div class="links">{lb}</div></div>') if b else ""
+    cb = (f'<div class="fcard b pv-depth" data-depth="2"><div class="k">{E(b.get("eyebrow", ""))}</div><p class="t">{E(b.get("title", ""))}</p><p>{E(b.get("body", ""))}</p><div class="links">{lb}</div></div>') if b else ""
     note = f'<div class="note">{E(s["note"])}</div>' if s.get("note") else ""
     js = f"""<script>(function(){{var h=document.getElementById("{hid}");if(!h)return;var rm=matchMedia('(prefers-reduced-motion: reduce)').matches,fine=matchMedia('(pointer:fine) and (min-width:1025px)').matches;
 if(!rm&&fine){{var g=h.querySelector('.glow');h.addEventListener('pointermove',function(e){{var r=h.getBoundingClientRect();h.style.setProperty('--mx',((e.clientX-r.left)/r.width*100).toFixed(1)+'%');h.style.setProperty('--my',((e.clientY-r.top)/r.height*100).toFixed(1)+'%');
@@ -247,7 +247,7 @@ def _wheel(s, ctx):
     hub_t = E(s.get("hub", "Kelly"))
     hub_s = E(s.get("hub_sub", "one partner"))
     ring_id = f"{wid}-ring"
-    svg = (f'<svg viewBox="0 0 560 560" role="img" aria-labelledby="{wid}-t"><title id="{wid}-t">{E(s.get("alt", "The service lines as a wheel"))}</title>'
+    svg = (f'<svg viewBox="0 0 560 560" role="group" aria-labelledby="{wid}-t"><title id="{wid}-t">{E(s.get("alt", "The service lines as a wheel"))}</title>'
            f'<defs><path id="{ring_id}" d="M{cx},{cy} m-{r_out + 18},0 a{r_out + 18},{r_out + 18} 0 1,1 {2 * (r_out + 18)},0"/></defs>'
            f'{"".join(segs)}<circle class="hub" cx="{cx}" cy="{cy}" r="{r_in - 10}"/><text class="hubt" x="{cx}" y="{cy + 2}">{hub_t}</text><text class="hubs" x="{cx}" y="{cy + 24}">{hub_s}</text>'
            f'<text class="ring"><textPath href="#{ring_id}" startOffset="50%" text-anchor="middle">{E(s.get("ring", "EVERYTHING AN OFFICE RUNS ON"))}</textPath></text></svg>')

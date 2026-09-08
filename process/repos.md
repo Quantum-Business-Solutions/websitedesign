@@ -252,3 +252,11 @@ Not mirrored, deliberately: design/inbox.md, design/prompts.md, design/SCHEMA.md
 
 Client status entries (category Client) are written per engagement at each milestone: preview
 live, direction chosen, build started, launched.
+
+### 2026-09-08 additions to the ClientCommand knowledge base
+| Entry | KB id |
+|---|---|
+| Kelly preview: signature modules, Sharp 3D device, design system and logo concepts | 9b753613-9573-4efa-86f9-ef1977a25fe8 |
+| INTAKE addendum: signature modules catalogue | 8baff922-c87e-437b-a3b1-64c5a84d974f |
+| QA findings pass five | 4fffccaf-20fd-460b-9d8b-80755e28f97d |
+Full INTAKE.md and qa-findings.md entries are refreshed on the monthly re-upload (RUNBOOK step 7).

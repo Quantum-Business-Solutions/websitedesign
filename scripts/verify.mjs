@@ -568,8 +568,8 @@ async function auditPage(browser, url) {
         meetings: q('[class*=meetings], iframe[src*=meetings]').length,
         mailto: q('a[href^=mailto]').length,
         tel: q('a[href^=tel]').length,
-        links: Array.from(new Set(q('a[href]').map(a => a.href)))
-          .filter(h => h.startsWith('http') && !h.includes('#')),
+        links: Array.from(new Set(q('a[href]').map(a => (typeof a.href === 'string' ? a.href : (a.href && a.href.baseVal) || a.getAttribute('href') || ''))))
+          .filter(h => typeof h === 'string' && h.startsWith('http') && !h.includes('#')),
         text: document.body.innerText,
         headings: q('h1,h2,h3,h4').map(h => +h.tagName[1]),
       };
