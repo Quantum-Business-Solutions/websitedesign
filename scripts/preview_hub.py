@@ -110,6 +110,7 @@ def hub(content, themes, recommend, base, roles, standard, client_tokens, out_di
 {('<h3 class="h3" style="margin-top:34px">' + _e(sr.get("keep_heading", "Every page that earns a visitor today keeps earning it")) + '</h3>') if keep else ""}{keep_tbl}
 {('<p style="margin-top:26px"><a class="btn" href="' + _e(sr["report_href"]) + '" target="_blank" rel="noopener">' + _e(sr.get("report_label", "Read the full SEO analysis")) + '</a></p>') if sr.get("report_href") else ""}
 <div class="change" style="margin-top:22px"><strong>What we do not promise:</strong> {_e(sr.get("note", "Rankings or traffic. Those depend on the market and the content you publish after launch. We promise the inputs, and we measure the result against this baseline at 30, 60 and 90 days."))}</div></div></section>'''
+    _n_saved = n
     # ---------------- whole-site audit: every page of the current site, every check, scored (vertical cards, no sideways scroll)
     audit_html = ""
     sa = (sr or {}).get("site_audit") if sr else None
@@ -149,6 +150,7 @@ def hub(content, themes, recommend, base, roles, standard, client_tokens, out_di
                       f'<div class="pglist" id="alist">{"".join(cards)}</div>'
                       f'<p class="fine">Scoring weights: FAQPage schema 14, Service or Article schema 10, at least 300 words 10, question-form headings 8, title length 6, city in title 6, Review schema 6, meta length 5, one H1 5, two or more H2s 5, depth over 600 words 4, LocalBusiness 4, alt text 4, form or call 4, internal links 3, canonical 3, branded share image 3. Grades: A 85 and up, B 70, C 55, D 40, F below. Word counts exclude navigation, header and footer. Image alt counts include the logo.</p>'
                       f'</div></section>{audit_js}')
+    n = _n_saved
     heard = "".join(f"<li>{_e(x)}</li>" for x in pitch.get("heard", []))
     confirm = "".join(f"<li>{_e(x)}</li>" for x in pitch.get("confirm", []))
     heard_intro = pitch.get("heard_intro", "Tell us if any of this is wrong. It outranks our house defaults.")
