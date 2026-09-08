@@ -260,3 +260,4 @@ live, direction chosen, build started, launched.
 | INTAKE addendum: signature modules catalogue | 8baff922-c87e-437b-a3b1-64c5a84d974f |
 | QA findings pass five | 4fffccaf-20fd-460b-9d8b-80755e28f97d |
 Full INTAKE.md and qa-findings.md entries are refreshed on the monthly re-upload (RUNBOOK step 7).
+| Kelly preview gate result after the module library (evening) | a4fbebea-d5a3-4797-9440-b8a55c4a517b |
