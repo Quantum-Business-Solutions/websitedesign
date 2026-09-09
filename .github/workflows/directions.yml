@@ -1,0 +1,105 @@
+name: Website directions
+
+# Client Command's "New website directions" button lands here. A teammate fills in the brief (client, domain,
+# the one line a visitor must believe, ground, accent, cities, service lines) and Client Command dispatches this
+# workflow with the build id. The job fetches the brief, scaffolds the client with newclient.py (sitemap, every
+# page fetched and audited), has Claude Code write the content file the way /preview does (sourced facts only,
+# the selection rules, the guardrails), renders the three directions with build.py, uploads the result into
+# Client Command as a site, and commits the brand files back to main so the client is on the fifteen-minute
+# path from then on. Nothing here touches HubSpot or Vercel.
+#
+# One secret: ANTHROPIC_API_KEY (the authoring). Client Command is reached with the job's OIDC token, which it
+# verifies was minted for this workflow in this repository; there is no shared key to leak or rotate.
+
+on:
+  workflow_dispatch:
+    inputs:
+      build_id:
+        description: "Client Command build id (site_builds.id). Start builds from Client Command, Web Pages, not from here."
+        required: true
+
+permissions:
+  contents: write
+  id-token: write
+
+concurrency:
+  group: directions-${{ inputs.build_id }}
+  cancel-in-progress: false
+
+jobs:
+  directions:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      CC_BUILD_ID: ${{ inputs.build_id }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Fetch the brief
+        id: brief
+        run: python3 scripts/cc.py brief "$CC_BUILD_ID" >> "$GITHUB_OUTPUT"
+
+      - name: Install
+        run: |
+          python3 scripts/cc.py progress "$CC_BUILD_ID" install "Setting up the build machine"
+          pip install -q -r requirements.txt
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Playwright, for the hub screenshots
+        run: |
+          npm ci --no-audit --no-fund
+          npx playwright install --with-deps chromium
+
+      - name: Scaffold the client and read their site
+        env:
+          DOMAIN: ${{ steps.brief.outputs.domain }}
+        run: |
+          python3 scripts/cc.py progress "$CC_BUILD_ID" read "Reading $DOMAIN: the sitemap, every page, the audit"
+          python3 scripts/cc.py scaffold "$CC_BUILD_ID"
+
+      - name: Write the content and render the three directions
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          prompt: "/directions ${{ steps.brief.outputs.slug }}"
+          claude_args: "--max-turns 300 --allowedTools Bash,Read,Write,Edit,MultiEdit,Glob,Grep,WebFetch,TodoWrite"
+
+      - name: Render once more, deterministically
+        env:
+          SLUG: ${{ steps.brief.outputs.slug }}
+        run: |
+          python3 scripts/cc.py progress "$CC_BUILD_ID" render "Rendering the three directions and the hub"
+          python3 scripts/build.py "$SLUG" --shots
+
+      - name: Upload into Client Command
+        env:
+          SLUG: ${{ steps.brief.outputs.slug }}
+        run: |
+          python3 scripts/cc.py progress "$CC_BUILD_ID" upload "Copying the pages and assets into Client Command"
+          ZIP=$(python3 scripts/cc.py upload "$CC_BUILD_ID" "$SLUG" "../out-$SLUG")
+          python3 scripts/cc.py finish "$CC_BUILD_ID" "$SLUG" "../out-$SLUG" "$ZIP"
+
+      - name: Keep the brand files on main
+        env:
+          SLUG: ${{ steps.brief.outputs.slug }}
+          CLIENT: ${{ steps.brief.outputs.client }}
+        run: |
+          git config user.name "QBS conveyor"
+          git config user.email "conveyor@thequantumleap.business"
+          rm -f "brands/$SLUG.brief.json" "$SLUG.site.zip"
+          git add "brands/$SLUG."*
+          git commit -q -m "$CLIENT: three directions from the Client Command brief (build $CC_BUILD_ID)" || { echo "nothing to commit"; exit 0; }
+          git pull -q --rebase origin main
+          git push -q origin HEAD:main
+
+      - name: Tell Client Command it failed
+        if: failure() || cancelled()
+        run: python3 scripts/cc.py fail "$CC_BUILD_ID" "The Website directions workflow stopped before the site was uploaded (${{ job.status }}). The run log has the step." || true
