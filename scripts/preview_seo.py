@@ -256,6 +256,12 @@ def map_pages(live, build_files, seo):
     return out
 
 
+def _link(url, text=None, cls=""):
+    """An anchor to a live or build page, opening in its own tab so the report stays put."""
+    k = f' class="{cls}"' if cls else ""
+    return f'<a href="{E(url)}" target="_blank" rel="noopener"{k}>{E(text if text is not None else url)}</a>'
+
+
 def _tbl(head, rows, cls="", scope_row=False):
     th = "".join(f'<th scope="col">{E(h)}</th>' for h in head)
     body = []
@@ -356,7 +362,7 @@ def report_html(content, seo, audit, build, cmp_rows, base, dslugs, roles_avg, b
     sec_tbl = _tbl(["Section", "Pages", "With FAQPage", "With Service", "Under 300 words", "Average words"], sec_rows)
     money = [p for p in audit["pages"] if p["type"] in ("service", "industry", "city")]
     money.sort(key=lambda p: p["score"])
-    worst_rows = [[p["path"], (f"<span class='sc' style='--g:{GRADE[p['grade']]}'>{p['score']} {p['grade']}</span>", ""), ("yes", "ok") if p["faq"] else ("no", "bad"), ("yes", "ok") if p["service"] else ("no", "bad"),
+    worst_rows = [[_link(p["url"], p["path"]), (f"<span class='sc' style='--g:{GRADE[p['grade']]}'>{p['score']} {p['grade']}</span>", ""), ("yes", "ok") if p["faq"] else ("no", "bad"), ("yes", "ok") if p["service"] else ("no", "bad"),
                    ("yes", "ok") if p["question_headings"] else ("no", "bad"), f"{p['words']:,}", ("yes", "ok") if p["checks"]["city"] else ("no", "bad"), "; ".join(p["recommendations"][:2])] for p in money[:24]]
     worst_tbl = _tbl(["Service, industry and location page", "Score", "FAQPage", "Service schema", "Question heading", "Words", "City in title", "First two fixes"], worst_rows)
 
@@ -384,11 +390,11 @@ def report_html(content, seo, audit, build, cmp_rows, base, dslugs, roles_avg, b
         p = by_path.get(path)
         if not p:
             continue
-        crawl_rows.append([f"https://{dom}{path}", f"{p['title']} ({p['title_len']} chars)", ("yes", "ok") if p["checks"]["city"] else ("no", "bad"), p["meta_len"] or "none", p["h1"] or "none", p["h2_count"],
+        crawl_rows.append([_link(f"https://{dom}{path}", path), f"{p['title']} ({p['title_len']} chars)", ("yes", "ok") if p["checks"]["city"] else ("no", "bad"), p["meta_len"] or "none", p["h1"] or "none", p["h2_count"],
                            ", ".join(t for t in p["schema"] if t not in ("ListItem", "EntryPoint", "ImageObject", "PropertyValueSpecification", "SearchAction", "ReadAction", "WebPage", "WebSite", "BreadcrumbList")) or "none",
                            ("yes", "ok") if p["faq"] else ("no", "bad"), f"{p['words']:,}"])
     crawl_tbl = _tbl(["Page", "Title", "City in title", "Meta length", "H1", "H2s", "Schema", "FAQ", "Words"], crawl_rows)
-    cp_rows = [[r["domain"], r["url"], r["title"], f"{r['words']:,}", r["schema"], ("yes", "ok") if r["faq"] else ("no", "bad"), r.get("pricing", "no"), ("yes", "ok") if r.get("reviews") else ("no", "bad"), r.get("form", "no")] for r in seo.get("competitor_pages", [])]
+    cp_rows = [[r["domain"], _link(r["url"], r["url"].replace("https://", "").replace("http://", "")), r["title"], f"{r['words']:,}", r["schema"], ("yes", "ok") if r["faq"] else ("no", "bad"), r.get("pricing", "no"), ("yes", "ok") if r.get("reviews") else ("no", "bad"), r.get("form", "no")] for r in seo.get("competitor_pages", [])]
     cp_tbl = _tbl(["Competitor", "Page", "Title", "Words", "Schema", "FAQ", "Pricing", "Reviews", "Form above fold"], cp_rows)
 
     aeo_rows = [[r["query"], ", ".join(r["results"]), ("yes", "ok") if r.get("position") else ("no", "bad"), r.get("position") or ""] for r in seo["aeo"]["rows"]]
