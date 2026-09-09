@@ -16,8 +16,11 @@ import io
 import json
 import os
 import re
+import sys
 
 import seo_audit as A
+
+HERE = os.path.dirname(os.path.abspath(__file__))
 
 E = lambda s: html.escape(str(s if s is not None else ""), quote=True)  # noqa: E731
 
@@ -63,6 +66,11 @@ def _gauge(today, build):
     circ = 2 * math.pi * r
     def arc(v, color, w):
         return f'<circle cx="{c}" cy="{c}" r="{r}" fill="none" stroke="{color}" stroke-width="{w}" stroke-linecap="round" stroke-dasharray="{circ * v / 100:.1f} {circ:.1f}" transform="rotate(-90 {c} {c})"/>'
+    if build is None:  # analysis only: one arc, today's score
+        return (f'<svg class="gauge" viewBox="0 0 140 140" role="img" aria-label="Readiness score today {today} of 100">'
+                f'<circle cx="{c}" cy="{c}" r="{r}" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="12"/>{arc(today, "#ffb4a8", 12)}'
+                f'<text x="{c}" y="{c - 4}" text-anchor="middle" font-size="30" font-weight="800" fill="#fff">{today}</text>'
+                f'<text x="{c}" y="{c + 18}" text-anchor="middle" font-size="12" fill="rgba(255,255,255,.8)">of 100 today</text></svg>')
     return (f'<svg class="gauge" viewBox="0 0 140 140" role="img" aria-label="Readiness score today {today} of 100, the build {build} of 100">'
             f'<circle cx="{c}" cy="{c}" r="{r}" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="12"/>{arc(build, "#8fe3b0", 12)}{arc(today, "#ffb4a8", 6)}'
             f'<text x="{c}" y="{c - 4}" text-anchor="middle" font-size="30" font-weight="800" fill="#fff">{build}</text>'
@@ -94,6 +102,10 @@ def _grades(pages_today, pages_build):
     """Grouped bars: how many pages sit at each grade today and in the build."""
     order = "ABCDF"
     ct = {g: sum(1 for p in pages_today if p["grade"] == g) for g in order}
+    if pages_build is None:
+        mx = max(ct.values()) or 1
+        cols = "".join(f'<div class="gcol"><div class="gbars"><i class="t" style="height:{ct[g] / mx * 100:.0f}%;background:{GRADE[g]}" title="{ct[g]} pages"></i></div><span class="gl"><b style="color:{GRADE[g]}">{g}</b><small>{ct[g]} pages</small></span></div>' for g in order)
+        return f'<figure class="grades" aria-label="Pages by grade today"><figcaption>Pages by grade today, {len(pages_today)} pages</figcaption><div class="grow">{cols}</div></figure>'
     cb = {g: sum(1 for p in pages_build if p["grade"] == g) for g in order}
     mx = max(list(ct.values()) + list(cb.values())) or 1
     cols = ""
@@ -322,7 +334,8 @@ def report_html(content, seo, audit, build, cmp_rows, base, dslugs, roles_avg, b
     ink2 = reskin.darken_until(accent, tint)
     navy = b.get("chrome_bg") or "#0f1e33"
     h = seo["hero"]
-    gauge = _gauge(audit["summary"]["avg_score"], build["summary"]["avg_score"])
+    solo = build is None
+    gauge = _gauge(audit["summary"]["avg_score"], None if solo else build["summary"]["avg_score"])
     every = _every_section("every", audit, seo, build_by_path, mapping, cmp_rows, roles_avg, dom, date)
     comp_bars = _bars(seo["competitors"]["rows"], 1, "Organic visits a month", dom) + _scatter(seo["competitors"]["rows"], dom)
     short = client.split(" ")[0]
@@ -330,7 +343,7 @@ def report_html(content, seo, audit, build, cmp_rows, base, dslugs, roles_avg, b
     donuts = ""
     if tr:
         donuts = '<div class="donuts">' + _donut(tr.get("home_share", 0), "Visits landing on the home page", tr.get("home_note", "one page carries the site"), "#ffb4a8") + _donut(tr.get("brand_share", 0), "Visits from the brand name", tr.get("brand_note", "people who already know the company"), "#ffb4a8") + _donut(tr.get("nonbrand_target", 40), "Non-brand share we build toward", "by day 90, measured against this baseline", "#8fe3b0") + "</div>"
-    grades = _grades(audit["pages"], build["pages"])
+    grades = _grades(audit["pages"], None if solo else build["pages"])
     opps = _opps(seo["opportunities"]["rows"], short)
     matrix = _aeo_matrix(seo["aeo"]["rows"], short)
     bytype = _bytype(audit["summary"])
@@ -362,7 +375,7 @@ def report_html(content, seo, audit, build, cmp_rows, base, dslugs, roles_avg, b
     sec_tbl = _tbl(["Section", "Pages", "With FAQPage", "With Service", "Under 300 words", "Average words"], sec_rows)
     money = [p for p in audit["pages"] if p["type"] in ("service", "industry", "city")]
     money.sort(key=lambda p: p["score"])
-    worst_rows = [[_link(p["url"], p["path"]), (f"<span class='sc' style='--g:{GRADE[p['grade']]}'>{p['score']} {p['grade']}</span>", ""), ("yes", "ok") if p["faq"] else ("no", "bad"), ("yes", "ok") if p["service"] else ("no", "bad"),
+    worst_rows = [[_link(p["url"], p["path"]), (f"<span class='sc' style='--g:{GRADE[p['grade']]}'>{p['score']} {p['grade']}</span>", ""), ("yes", "ok") if p["faq"] else (("shown, no schema", "warn") if p.get("faq_visible") else ("no", "bad")), ("yes", "ok") if p["service"] else ("no", "bad"),
                    ("yes", "ok") if p["question_headings"] else ("no", "bad"), f"{p['words']:,}", ("yes", "ok") if p["checks"]["city"] else ("no", "bad"), "; ".join(p["recommendations"][:2])] for p in money[:24]]
     worst_tbl = _tbl(["Service, industry and location page", "Score", "FAQPage", "Service schema", "Question heading", "Words", "City in title", "First two fixes"], worst_rows)
 
@@ -411,6 +424,8 @@ def report_html(content, seo, audit, build, cmp_rows, base, dslugs, roles_avg, b
     cmp_box = "".join(f'<div class="cmp-row"><span class="lbl">{E(l)}</span><span class="today">{E(t)}</span><span class="arrow" aria-hidden="true"></span><span class="build">{E(bd)}</span></div>' for l, t, bd in cmp_rows)
     opts = "".join(f'<span class="opt"><b>{E(d.title())}</b> {E(v)}</span>' for d, v in roles_avg)
 
+    cmp_section = "" if solo else f'''<div class="cmpbox"><h3>The same sixteen checks, run on the build</h3><p>Every recommendation in this report is already in place on all three directions. The right-hand column is the build, scored by the same script.</p><div class="cmp-rows"><div class="cmp-row head"><span class="lbl"></span><span class="today">{E(dom)} today</span><span class="arrow"></span><span class="build">The build, any direction</span></div>{cmp_box}</div><div class="opts">{opts}</div><p class="fine" style="color:rgba(255,255,255,.75)">What is deliberately not marked up: Review and AggregateRating. Those wait for the Google review program, because marking up self-published testimonials is against Google's guidelines. That is the gap between the build and 100.</p></div>'''
+    redir_note = "" if solo else '; the redirect map is <a href="redirects.csv">redirects.csv</a>'
     return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
 <title>SEO and AI search analysis of {E(dom)} | prepared for {E(client)}</title>
 <style>:root{{--accent:{accent};--ink:{ink};--ink2:{ink2};--fg:#1c1f24;--muted:#5b616b;--line:#dfe6ee;--border:#dfe6ee;--alt:#f3f6f9;--bg:#ffffff;--bg-alt:#f3f6f9;--navy:{navy};--chrome:{navy}}}*{{box-sizing:border-box}}body{{margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--fg);background:#fff}}
@@ -443,20 +458,20 @@ def report_html(content, seo, audit, build, cmp_rows, base, dslugs, roles_avg, b
 .scatter{{margin:18px 0 26px;padding:18px 20px;background:#fff;border:1px solid var(--line);border-radius:12px}}.scatter svg{{width:100%;height:auto;max-width:640px;display:block}}
 .bars.opps .bar-row{{grid-template-columns:260px 1fr 70px 110px}}.bar-p b{{font-size:12px;letter-spacing:.04em;text-transform:uppercase}}
 .matrix{{margin:18px 0 26px;padding:18px 20px;background:#fff;border:1px solid var(--line);border-radius:12px}}.mhead,.mrow{{display:grid;grid-template-columns:280px 1fr 70px;gap:14px;align-items:center;padding:6px 0;border-bottom:1px dotted var(--line);font-size:14px}}.mhead{{border-bottom:1px solid var(--line);color:var(--muted);font-size:11px}}.mcells{{display:grid;grid-template-columns:repeat(10,1fr);gap:4px}}.mcells i{{display:block;height:18px;border-radius:4px;background:var(--alt)}}.mcells i.me{{background:var(--accent);box-shadow:0 0 0 2px #fff,0 0 0 3px var(--accent)}}.mcells em{{font-style:normal;text-align:center;display:block}}.mv{{text-align:right;font-weight:700}}.mv:has(+ *){{}}
-.h3{{font-size:19px;margin:30px 0 8px}}.h4{{font-size:16px;margin:0}}.wrap.wide{{max-width:1200px}}.two{{display:grid;grid-template-columns:1fr 1fr;gap:32px}}.asof{{font-weight:400;color:var(--muted);font-size:13px;margin-left:8px}}
+.warn,b.warn{{color:#8a5a00;font-weight:700}}.h3{{font-size:19px;margin:30px 0 8px}}.h4{{font-size:16px;margin:0}}.wrap.wide{{max-width:1200px}}.two{{display:grid;grid-template-columns:1fr 1fr;gap:32px}}.asof{{font-weight:400;color:var(--muted);font-size:13px;margin-left:8px}}
 @media print{{.top,.afilter,.open-build{{display:none!important}}section{{padding:28px 0;break-inside:avoid}}.hero{{background:var(--navy)!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}}.pg{{break-inside:avoid}}.pglist{{display:block}}body{{font-size:13px}}h1{{font-size:32px}}h2{{font-size:22px}}}}
 @media(max-width:900px){{.stiles,.stiles.six,.steps,.qgrid,.finding dl{{grid-template-columns:1fr 1fr}}.hero-grid{{grid-template-columns:1fr}}.bar-row,.bars.opps .bar-row{{grid-template-columns:1fr 60px 90px}}.bar-t{{grid-column:1/-1}}.donuts{{grid-template-columns:1fr}}.grow{{gap:8px}}.gbars i{{width:22px}}.mhead,.mrow{{grid-template-columns:1fr 60px}}.mcells{{grid-column:1/-1}}}}@media(max-width:600px){{.stiles,.stiles.six,.steps,.qgrid,.finding dl{{grid-template-columns:1fr}}.finding,.levi{{grid-template-columns:40px 1fr}}.cmpbox{{padding:20px 16px}}.cmp-row{{grid-template-columns:1fr 1fr;gap:4px}}.cmp-row.head{{display:none}}.cmp-row .lbl{{grid-column:1/-1}}.cmp-row .arrow{{display:none}}.cmp-row .today{{text-align:left}}.cmp-row .today::before{{content:"Today";display:block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.65)}}.cmp-row .build::before{{content:"The build";display:block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.65)}}}}.cmp-row>span{{min-width:0;overflow-wrap:anywhere}}
 {PKG_CSS}</style></head>
-<body data-first-dir="{E(dslugs[0])}">
-<header class="top"><a href="index.html">&larr; Back to the three directions</a><span>Quantum Business Solutions for {E(client)}</span></header><main>
-<section class="hero"><div class="wrap"><div class="hero-grid"><div><p class="eyebrow">Search and AI answers, measured {E(date)}</p><h1>{E(h["heading"])}</h1><p class="lead">{E(h["intro"])}</p></div><div class="gauge-wrap">{gauge}<p>Readiness on sixteen checks, every page: the site today against the build, scored by the same script.</p></div></div>{_stiles(h["tiles"])}</div></section>
+<body data-first-dir="{E(dslugs[0]) if dslugs else ""}">
+<header class="top">{'<span>Search and AI answer analysis</span>' if solo else '<a href="index.html">&larr; Back to the three directions</a>'}<span>Quantum Business Solutions for {E(client)}</span></header><main>
+<section class="hero"><div class="wrap"><div class="hero-grid"><div><p class="eyebrow">Search and AI answers, measured {E(date)}</p><h1>{E(h["heading"])}</h1><p class="lead">{E(h["intro"])}</p></div><div class="gauge-wrap">{gauge}<p>{"Readiness on sixteen checks, averaged over every page in the sitemap." if solo else "Readiness on sixteen checks, every page: the site today against the build, scored by the same script."}</p></div></div>{_stiles(h["tiles"])}</div></section>
 {('<section class="donut-band"><div class="wrap">' + donuts + '</div></section>') if donuts else ""}
-<section><div class="wrap"><p class="eyebrow">Top findings</p><h2>Ranked by what they cost, with the fix</h2><p class="lead">Each finding carries its evidence, what it costs today, and what the build or the 90-day plan does about it.</p><div class="chips">{chips}</div><div class="findings">{_finding_cards(fnd)}</div></div></section>
+<section><div class="wrap"><p class="eyebrow">Top findings</p><h2>Ranked by what they cost, with the fix</h2><p class="lead">Each finding carries its evidence, what it costs today, and what {"we would do" if solo else "the build or the 90-day plan does"} about it.</p><div class="chips">{chips}</div><div class="findings">{_finding_cards(fnd)}</div></div></section>
 <section><div class="wrap"><p class="eyebrow">Why the competitors are winning</p><h2>The same pages, side by side</h2><p class="lead">{E(cmp["intro"])}</p>{cmp_tbl}<div class="verdict">{E(cmp["verdict"])}</div></div></section>
 <section><div class="wrap"><p class="eyebrow">Highest leverage moves</p><h2>Five moves, in the order we would make them</h2><p class="lead">The five moves with the biggest return for the least effort, in the order we would do them. Each one is either in the build or in the first 30 days of the plan.</p><div class="lev">{moves}</div></div></section>
 <section><div class="wrap"><p class="eyebrow">Whole site, every page</p><h2>{n} pages, and what each one tells a crawler</h2><p class="lead">Every URL in the sitemap, fetched {E(date)} and parsed for title, meta description, headings, words, images, links and JSON-LD schema. Each page gets a readiness score out of 100 across sixteen checks, weighted toward what answer engines read: FAQ schema, Service schema, question-form headings and depth.</p>{site_tiles}
-<div class="cmpbox"><h3>The same sixteen checks, run on the build</h3><p>Every recommendation in this report is already in place on all three directions. The right-hand column is the build, scored by the same script.</p><div class="cmp-rows"><div class="cmp-row head"><span class="lbl"></span><span class="today">{E(dom)} today</span><span class="arrow"></span><span class="build">The build, any direction</span></div>{cmp_box}</div><div class="opts">{opts}</div><p class="fine" style="color:rgba(255,255,255,.75)">What is deliberately not marked up: Review and AggregateRating. Those wait for the Google review program, because marking up self-published testimonials is against Google's guidelines. That is the gap between the build and 100.</p></div>
-{grades}{bytype}<h3>By section of the site</h3>{sec_tbl}<h3>Every service, industry and location page, worst first</h3>{worst_tbl}<p class="fine">Word counts exclude navigation, header and footer. The full sheet, all {n} pages and every check, is <a href="seo-audit-pages.csv">seo-audit-pages.csv</a>; the redirect map is <a href="redirects.csv">redirects.csv</a>.</p></div></section>
+{cmp_section}
+{grades}{bytype}<h3>By section of the site</h3>{sec_tbl}<h3>Every service, industry and location page, worst first</h3>{worst_tbl}<p class="fine">Word counts exclude navigation, header and footer. The full sheet, all {n} pages and every check, is <a href="seo-audit-pages.xlsx">seo-audit-pages.xlsx</a> (also as <a href="seo-audit-pages.csv">CSV</a>){redir_note}.</p></div></section>
 {every}
 {blog_html}
 {ent_html}
@@ -483,8 +498,9 @@ def _every_section(sec_id, audit, seo, build_by_path, mapping, cmp_rows, roles_a
                      (f"{s['question']} of {n}", "pages with a question-form heading"), (f"{s['under_300']} of {n}", "pages under 300 words")], "eight")
     cmp_box = "".join(f'<div class="cmp-row"><span class="lbl">{E(l)}</span><span class="today">{E(t)}</span><span class="arrow" aria-hidden="true"></span><span class="build">{E(bd)}</span></div>' for l, t, bd in cmp_rows)
     opts = "".join(f'<span class="opt"><b>{E(d.title())}</b> {E(v)}</span>' for d, v in roles_avg)
+    solo = build_by_path is None  # analysis only, no build to compare against
     kinds = {"rebuilt": 0, "merged": 0, "retired": 0, "migrated": 0}
-    for _, k in mapping.values():
+    for _, k in (mapping or {}).values():
         kinds[k] += 1
     migrated = f", {kinds['migrated']} posts migrate to the blog at launch under their service line" if kinds["migrated"] else ""
     measured = []
@@ -496,7 +512,10 @@ def _every_section(sec_id, audit, seo, build_by_path, mapping, cmp_rows, roles_a
                     (site.get("sitemap_declared", False), f"Sitemap declared in robots.txt, {site.get('sitemap_urls', 0)} URLs (measured)"),
                     (site.get("llms_txt", False), "llms.txt served (measured)"),
                     ("crawl_delay" not in site, "No crawl delay in robots.txt (measured)")]
-    sitechk = "".join(f'<li class="{"ok" if ok else "bad"}"><b>{"Yes" if ok else "No"}</b> {E(t)}</li>' for ok, t in measured + list(seo["sitewide"]))
+    # authored items that restate a measured one are dropped, so the list never says the same thing twice
+    dup = re.compile(r"https|canonical host|llms\.txt|gptbot|claudebot|sitemap|crawl delay", re.I)
+    authored = [(ok, t) for ok, t in seo["sitewide"] if not (measured and dup.search(t))]
+    sitechk = "".join(f'<li class="{"ok" if ok else "bad"}"><b>{"Yes" if ok else "No"}</b> {E(t)}</li>' for ok, t in measured + authored)
     types = {}
     for p in audit["pages"]:
         t = types.setdefault(p["type"], [0, 0]); t[0] += 1; t[1] += p["score"]
@@ -504,8 +523,8 @@ def _every_section(sec_id, audit, seo, build_by_path, mapping, cmp_rows, roles_a
 
     cards = []
     for p in sorted(audit["pages"], key=lambda x: x["score"]):
-        tgt, kind = mapping[p["path"]]
-        bp = build_by_path.get("/" + tgt)
+        tgt, kind = mapping[p["path"]] if mapping else ("", "rebuilt")
+        bp = build_by_path.get("/" + tgt) if build_by_path else None
         schs = "".join(f'<span class="sch">{E(t)}</span>' for t in p["schema"] if t in ("FAQPage", "Service", "LocalBusiness", "Organization", "BlogPosting", "Article", "Review", "AggregateRating", "VideoObject", "Product"))
         checks = []
         fixed = 0
@@ -517,8 +536,13 @@ def _every_section(sec_id, audit, seo, build_by_path, mapping, cmp_rows, roles_a
                 bv, bok = "", False
             if not tok and bok:
                 fixed += 1
-            checks.append(f'<span class="pl2"><i>{E(label)}</i><b class="{"ok" if tok else "bad"}">{E(tv)}</b><em aria-hidden="true"></em><b class="{"ok" if bok else "bad"}">{E(bv)}</b></span>')
-        did = [DONE[k] for k in p["failed"] if bp and bp["checks"].get(k)]
+            if solo:
+                checks.append(f'<span class="pl1"><i>{E(label)}</i><b class="{"ok" if tok else ("warn" if str(tv).startswith("shown") else "bad")}">{E(tv)}</b></span>')
+            else:
+                checks.append(f'<span class="pl2"><i>{E(label)}</i><b class="{"ok" if tok else "bad"}">{E(tv)}</b><em aria-hidden="true"></em><b class="{"ok" if bok else "bad"}">{E(bv)}</b></span>')
+        did = list(p["recommendations"]) if solo else [DONE[k] for k in p["failed"] if bp and bp["checks"].get(k)]
+        if solo and p["type"] == "form":  # a booking or request form is not a page to rank; say so instead of asking for 300 words
+            did = ["Take it out of the index (noindex) and out of the sitemap; keep one booking page per service and redirect the duplicate"] + [r for r in did if r.startswith(("Add the city", "Write a meta", "Give the page"))]
         if kind == "retired":
             did = []
         if kind == "merged":
@@ -530,18 +554,29 @@ def _every_section(sec_id, audit, seo, build_by_path, mapping, cmp_rows, roles_a
         did_li = "".join(f"<li>{E(x)}</li>" for x in did) or "<li>Nothing to fix on this page</li>"
         bscore = f'<b style="--g:{GRADE[bp["grade"]]}">{bp["score"]}<i>{bp["grade"]}</i></b><span>{fixed} checks fixed</span>' if bp else '<b style="--g:#5b616b">&ndash;</b><span>no page</span>'
         q = E(f"{p['path']} {p['title']} {p['h1']} {p['type']}".lower())
+        live_a = f'<a href="https://{E(dom)}{E(p["path"])}" target="_blank" rel="noopener">{E(p["path"] if p["path"] != "/" else "/ (home page)")}</a>'
+        if solo:
+            cards.append(f'''<article class="pg solo" data-q="{q}" data-issues="{p['issues']}" data-type="{E(p['type'])}" data-score="{p['score']}" data-words="{p['words']}" data-url="{E(p['path'])}">
+<div class="pg-id">{live_a}<small>{E(p['title'])}</small><span class="type">{E(p['type'])} page</span><div class="schs">{schs}</div></div>
+<div class="pg-scores"><div class="pg-score"><span class="k">Today</span><b style="--g:{GRADE[p['grade']]}">{p['score']}<i>{p['grade']}</i></b><span>of 100, {p['issues']} of 16 checks failing</span></div></div>
+<div class="pg-checks solo"><div class="legend"><span>Sixteen checks, <b class="ok">passing</b> and <b class="bad">failing</b> today</span></div>{"".join(checks)}</div>
+<div class="pg-new"><h4>What we would do on this page</h4><ul class="did">{did_li}</ul><a href="https://{E(dom)}{E(p['path'])}" class="open-build" target="_blank" rel="noopener">Open the live page</a></div></article>''')
+            continue
         cards.append(f'''<article class="pg" data-q="{q}" data-issues="{p['issues']}" data-type="{E(p['type'])}" data-score="{p['score']}" data-words="{p['words']}" data-url="{E(p['path'])}">
-<div class="pg-id"><a href="https://{E(dom)}{E(p['path'])}" target="_blank" rel="noopener">{E(p['path'])}</a><small>{E(p['title'])}</small><span class="type">{E(p['type'])} page</span><div class="schs">{schs}</div></div>
+<div class="pg-id">{live_a}<small>{E(p['title'])}</small><span class="type">{E(p['type'])} page</span><div class="schs">{schs}</div></div>
 <div class="pg-scores"><div class="pg-score"><span class="k">Today</span><b style="--g:{GRADE[p['grade']]}">{p['score']}<i>{p['grade']}</i></b><span>of 100</span></div><div class="pg-score build"><span class="k">In the build</span>{bscore}</div></div>
 <div class="pg-checks"><div class="legend"><span>Each check: <b class="bad">today</b> <em aria-hidden="true"></em> <b class="ok">the build</b></span></div>{"".join(checks)}</div>
 <div class="pg-new"><h4>What we did on this page</h4><ul class="did">{did_li}</ul><a href="{E(tgt)}" data-rel="{E(tgt)}" class="open-build" target="_blank" rel="noopener">Open the rebuilt page</a></div></article>''')
 
-    audit_html = f'''<section id="{sec_id}"><div class="wrap wide"><p class="eyebrow">Every page on {E(dom)}</p><h2>{n} pages today, and the page that replaces each one</h2><p class="lead">Every URL in the sitemap, fetched {E(date)} and parsed for title, meta description, headings, words, images, links and JSON-LD schema. Each page gets a readiness score out of 100 across sixteen checks, weighted toward what answer engines read: FAQ schema, Service schema, question-form headings and depth. Red is a check the page fails today. The fixes for each page are on the right.</p>{eight}
-<div class="cmpbox"><div class="cmphead"><h3 class="h3">The same sixteen checks, run on the build</h3><p>Every recommendation on the cards below is already in place on all three directions. The scores on the right are the build, scored by the same script.</p></div><div class="cmp-rows"><div class="cmp-row head"><span class="lbl"></span><span class="today">{E(dom)} today</span><span class="arrow"></span><span class="build">The build, any direction</span></div>{cmp_box}</div><div class="opts">{opts}</div>
+    h2 = f"{n} pages today, and what we would do on each" if solo else f"{n} pages today, and the page that replaces each one"
+    cmp_block = "" if solo else f'''<div class="cmpbox"><div class="cmphead"><h3 class="h3">The same sixteen checks, run on the build</h3><p>Every recommendation on the cards below is already in place on all three directions. The scores on the right are the build, scored by the same script.</p></div><div class="cmp-rows"><div class="cmp-row head"><span class="lbl"></span><span class="today">{E(dom)} today</span><span class="arrow"></span><span class="build">The build, any direction</span></div>{cmp_box}</div><div class="opts">{opts}</div>
 <p class="fine" style="margin-top:14px">Page for page: {kinds["rebuilt"]} URLs on {E(dom)} map to a rebuilt page, {kinds["merged"]} merge into a stronger page that carries their terms{migrated}, and {kinds["retired"]} retired pages redirect to the nearest page. The 301 map is in the download.</p>
-<p class="fine">What is deliberately not marked up: Review and AggregateRating. Those wait for the Google review program, because marking up self-published testimonials is against Google&#39;s guidelines and we will not do it. That is the gap between the build and 100.</p></div>
+<p class="fine">What is deliberately not marked up: Review and AggregateRating. Those wait for the Google review program, because marking up self-published testimonials is against Google&#39;s guidelines and we will not do it. That is the gap between the build and 100.</p></div>'''
+    downloads = '<a class="btn small" href="seo-audit-pages.xlsx" download>Download the spreadsheet (Excel)</a><a class="btn small ghost" href="seo-audit-pages.csv" download>CSV</a>' + ("" if solo else '<a class="btn small ghost" href="redirects.csv" download>Redirect map (CSV)</a>')
+    audit_html = f'''<section id="{sec_id}"><div class="wrap wide"><p class="eyebrow">Every page on {E(dom)}</p><h2>{h2}</h2><p class="lead">Every URL in the sitemap, fetched {E(date)} and parsed for title, meta description, headings, words, images, links and JSON-LD schema. Each page gets a readiness score out of 100 across sixteen checks, weighted toward what answer engines read: FAQ schema, Service schema, question-form headings and depth. Red is a check the page fails today. {"What we would do about each one is on the right, and every path opens the live page in a new tab." if solo else "The fixes for each page are on the right."}</p>{eight}
+{cmp_block}
 <h3 class="h3" style="margin-top:30px">Site-wide checks</h3><ul class="sitechk">{sitechk}</ul>
-<div class="afilter"><input type="search" id="aq" placeholder="Filter by URL, title or H1" aria-label="Filter pages"><select id="atype" aria-label="Page type"><option value="">All page types</option>{type_opts}</select><select id="asort" aria-label="Sort"><option value="score-asc">Lowest score first</option><option value="score-desc">Highest score first</option><option value="words">Fewest words first</option><option value="url">By URL</option></select><label><input type="checkbox" id="aprob"> Only pages failing five or more checks</label><span id="acount" aria-live="polite">{n} pages</span><a class="btn small" href="seo-audit-pages.csv" download>Download the spreadsheet (CSV)</a><a class="btn small ghost" href="redirects.csv" download>Redirect map (CSV)</a></div>
+<div class="afilter"><input type="search" id="aq" placeholder="Filter by URL, title or H1" aria-label="Filter pages"><select id="atype" aria-label="Page type"><option value="">All page types</option>{type_opts}</select><select id="asort" aria-label="Sort"><option value="score-asc">Lowest score first</option><option value="score-desc">Highest score first</option><option value="words">Fewest words first</option><option value="url">By URL</option></select><label><input type="checkbox" id="aprob"> Only pages failing five or more checks</label><span id="acount" aria-live="polite">{n} pages</span>{downloads}</div>
 <div class="pglist" id="alist">{"".join(cards)}</div></div>
 <script>(function(){{var w=document.getElementById("alist");if(!w)return;var cards=[].slice.call(w.querySelectorAll(".pg")),q=document.getElementById("aq"),pb=document.getElementById("aprob"),ty=document.getElementById("atype"),so=document.getElementById("asort"),c=document.getElementById("acount");
 var dir=(document.querySelector(".alt[href$='/index.html']")||{{}}).getAttribute?null:null;var first=document.querySelector(".pv-dirs a, .alt")?null:null;
@@ -569,7 +604,9 @@ PKG_CSS = '''
 .pg-checks{display:grid;grid-template-columns:1fr 1fr;gap:4px 14px;font-size:12.5px;align-content:start}.pg-checks .legend{grid-column:1/-1;color:var(--muted);font-size:12px;margin-bottom:2px}.pl2{display:grid;grid-template-columns:1fr auto 14px auto;gap:6px;align-items:center;padding:3px 0;border-bottom:1px dotted var(--border)}.pl2 i{font-style:normal;color:var(--muted)}.pl2 b.ok{color:#1b7f4b}.pl2 b.bad{color:#b3261e}.pl2 em,.legend em{display:inline-block;width:12px;height:2px;background:var(--muted);position:relative}.pl2 em::after,.legend em::after{content:"";position:absolute;right:-2px;top:-3px;border:4px solid transparent;border-left-color:var(--muted)}
 .pg-new h4{margin:0 0 6px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}.pg-new .did{margin:0;padding-left:16px;font-size:13.5px}.pg-new .did li{margin:2px 0}.pg-new .open-build{display:inline-block;margin-top:8px;font-size:13.5px;font-weight:600;color:var(--ink)}
 .cmp-row>span{min-width:0;overflow-wrap:anywhere}
-@media(max-width:1000px){.pg{grid-template-columns:1fr 1fr}.pg-checks{grid-column:1/-1}.stiles.eight{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.pg,.pg-checks,.sitechk{grid-template-columns:1fr}.cmpbox{padding:20px 16px}.cmp-row{grid-template-columns:1fr 1fr;gap:4px}.cmp-row.head{display:none}.cmp-row .lbl{grid-column:1/-1}.cmp-row .arrow{display:none}.cmp-row .today{text-align:left}.cmp-row .today::before{content:"Today ";font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.65);display:block}.cmp-row .build::before{content:"The build ";font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.65);display:block;font-weight:600}}
+.pg.solo{grid-template-columns:1.2fr .7fr 2fr 1.3fr}.pl1{display:grid;grid-template-columns:1fr auto;gap:8px;padding:2px 0;border-bottom:1px dotted var(--border)}.pl1 i{font-style:normal;color:var(--muted)}.pl1 b{font-weight:700;text-align:right}
+b.warn,.warn{color:#8a5a00;font-weight:700}
+@media(max-width:1000px){.pg,.pg.solo{grid-template-columns:1fr 1fr}.pg-checks{grid-column:1/-1}.stiles.eight{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.pg,.pg.solo,.pg-checks,.sitechk{grid-template-columns:1fr}.cmpbox{padding:20px 16px}.cmp-row{grid-template-columns:1fr 1fr;gap:4px}.cmp-row.head{display:none}.cmp-row .lbl{grid-column:1/-1}.cmp-row .arrow{display:none}.cmp-row .today{text-align:left}.cmp-row .today::before{content:"Today ";font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.65);display:block}.cmp-row .build::before{content:"The build ";font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.65);display:block;font-weight:600}}
 '''
 
 
@@ -594,6 +631,80 @@ def hub_fragments(content, seo, audit, build_by_path, mapping, cmp_rows, roles_a
     audit_html = _every_section("audit", audit, seo, build_by_path, mapping, cmp_rows, roles_avg, dom, date)
     css = PKG_CSS
     return {"search": search, "audit": audit_html, "css": css, "nav": '<a href="#audit">Every URL</a>'}
+
+
+def to_xlsx(audit, seo, mapping, path):
+    """Every table in the analysis as one workbook: every page with every check, findings, opportunities, questions,
+    answer-engine results, competitors, the redirect map when there is a build, and the measured site checks."""
+    from openpyxl import Workbook
+    from openpyxl.styles import Font, PatternFill, Alignment
+    from openpyxl.utils import get_column_letter
+    wb = Workbook()
+    head_font = Font(bold=True, color="FFFFFF"); head_fill = PatternFill("solid", fgColor="0F1E33")
+    grade_fill = {"A": "DDF3E4", "B": "EAF5DC", "C": "FFF1CC", "D": "FFE2D6", "F": "FFD2D2"}
+
+    def sheet(title, head, rows, widths=None, first=False):
+        ws = wb.active if first else wb.create_sheet()
+        ws.title = title[:31]
+        ws.append(head)
+        for c in ws[1]:
+            c.font = head_font; c.fill = head_fill; c.alignment = Alignment(vertical="center", wrap_text=True)
+        for r in rows:
+            ws.append([("" if v is None else v) for v in r])
+        ws.freeze_panes = "A2"
+        ws.auto_filter.ref = ws.dimensions
+        for i, w in enumerate(widths or [], 1):
+            ws.column_dimensions[get_column_letter(i)].width = w
+        return ws
+
+    yn = lambda v: "yes" if v else "no"
+    head = ["URL", "Path", "Page type", "Score", "Grade", "Checks failing", "Title", "Title length", "City in title", "Meta description", "Meta length", "H1", "H1 count", "H2 count",
+            "Question headings", "Words", "Images", "Images missing alt", "Internal links", "Canonical", "FAQPage schema", "FAQ shown on page", "Service or Article schema", "LocalBusiness schema", "Review schema", "Schema types", "Noindex", "Form on page", "What we would do"]
+    if mapping:
+        head += ["New path in the build", "Kind"]
+    rows = []
+    for p in sorted(audit["pages"], key=lambda x: x["score"]):
+        r = [p["url"], p["path"], p["type"], p["score"], p["grade"], p["issues"], p["title"], p["title_len"], yn(p["checks"]["city"]), p["meta"], p["meta_len"], p["h1"], p["h1_count"], p["h2_count"],
+             p["question_headings"], p["words"], p["images"], p["images_no_alt"], p["internal_links"], p["canonical"], yn(p["faq"]), yn(p.get("faq_visible")), yn(p["service"] or p["article"]), yn(p["local"]), yn(p["review"]),
+             ", ".join(p["schema"]), yn(p["noindex"]), yn(p["has_form"]), "; ".join(p["recommendations"])]
+        if mapping:
+            tgt, kind = mapping[p["path"]]
+            r += ["/" + tgt, kind]
+        rows.append(r)
+    ws = sheet("Every page", head, rows, [48, 30, 10, 7, 7, 9, 48, 8, 8, 60, 8, 40, 6, 6, 8, 8, 7, 8, 8, 40, 9, 9, 10, 10, 9, 40, 8, 8, 90] + ([36, 10] if mapping else []), first=True)
+    for row in ws.iter_rows(min_row=2):
+        g = row[4].value
+        if g in grade_fill:
+            row[3].fill = row[4].fill = PatternFill("solid", fgColor=grade_fill[g])
+    sheet("Findings", ["Rank", "Severity", "Finding", "Evidence", "What it costs", "What we do"], [[i, f["severity"], f["title"], f.get("evidence", ""), f.get("cost", ""), f.get("fix", "")] for i, f in enumerate(seo["findings"], 1)], [6, 10, 48, 90, 60, 70])
+    sheet("Moves", ["Order", "Move", "When", "Where", "Detail"], [[i, m["title"], m["when"], m["where"], m["body"]] for i, m in enumerate(seo["moves"], 1)], [6, 48, 18, 16, 110])
+    sheet("Opportunities", ["Keyword", "Searches a month", "Difficulty", "Position today", "Who ranks"], [list(r) for r in seo["opportunities"]["rows"]], [40, 14, 10, 16, 70])
+    sheet("Questions", ["Topic", "Question", "Searches a month"], [[q["topic"], it[0], it[1]] for q in seo["questions"] for it in q["items"]], [28, 70, 14])
+    sheet("AI answers", ["Query", "Position"] + [f"#{i}" for i in range(1, 11)], [[r["query"], r.get("position") or "absent"] + list(r["results"][:10]) + [""] * (10 - len(r["results"][:10])) for r in seo["aeo"]["rows"]], [40, 9] + [26] * 10)
+    sheet("Competitors", ["Domain", "Organic visits a month", "Organic keywords", "Authority Score"], [list(r) for r in seo["competitors"]["rows"]], [40, 16, 14, 12])
+    sheet("Backlinks", ["Domain", "Authority Score", "Referring domains", "Backlinks"], [list(r) for r in seo["backlinks"]["rows"]], [40, 12, 14, 20])
+    site = audit.get("site") or {}
+    sheet("Site checks", ["Check", "Result"], [[k, ("yes" if v is True else "no" if v is False else v)] for k, v in site.items()] + [[t, "yes" if ok else "no"] for ok, t in seo["sitewide"]], [70, 30])
+    if mapping:
+        sheet("Redirects", ["Old URL", "New path in the build", "Status", "Kind"], [[p["path"], "/" + mapping[p["path"]][0], 301, mapping[p["path"]][1]] for p in audit["pages"]], [50, 44, 8, 10])
+    wb.save(path)
+
+
+def write_analysis(slug, cfg, out_dir):
+    """Analysis only, for a prospect with no build yet: the same report, every-page cards, CSV and workbook, without the build column.
+    cfg: {"client", "domain", "accent", "chrome", "cities"}; seo and audit come from brands/<slug>.seo.json and .audit.json."""
+    root = os.path.dirname(HERE)
+    content_path = os.path.join(root, "brands", f"{slug}.content.json")
+    seo, audit = _load(content_path)
+    if not seo:
+        sys.exit(f"need brands/{slug}.seo.json and brands/{slug}.audit.json")
+    validate(seo, content_path.replace(".content.json", ".seo.json"))
+    content = {"client": cfg["client"], "brand": {"accent": cfg.get("accent", "#2f6f4e"), "chrome_bg": cfg.get("chrome", "#0f1e33")}, "schema": {"cities": cfg.get("cities", [])}}
+    os.makedirs(out_dir, exist_ok=True)
+    open(os.path.join(out_dir, "seo-report.html"), "w", encoding="utf-8").write(report_html(content, seo, audit, None, [], cfg.get("base_url", ""), [], [], None, None))
+    A.to_csv(audit, os.path.join(out_dir, "seo-audit-pages.csv"))
+    to_xlsx(audit, seo, None, os.path.join(out_dir, "seo-audit-pages.xlsx"))
+    print(f"  analysis: report, {audit['count']}-page audit, CSV and workbook in {out_dir}")
 
 
 def write(content, content_path, themes, roles, base, out_dir, slug_of):
@@ -631,6 +742,7 @@ def write(content, content_path, themes, roles, base, out_dir, slug_of):
 
     open(os.path.join(out_dir, "seo-report.html"), "w", encoding="utf-8").write(report_html(content, seo, audit, build, cmp_rows, base, dslugs, roles_avg, build_by_path, mapping))
     A.to_csv(audit, os.path.join(out_dir, "seo-audit-pages.csv"))
+    to_xlsx(audit, seo, mapping, os.path.join(out_dir, "seo-audit-pages.xlsx"))
     buf = io.StringIO()
     w = csv.writer(buf)
     w.writerow([f"old_url_on_{dom}", "new_path_in_build", "status", "kind"])

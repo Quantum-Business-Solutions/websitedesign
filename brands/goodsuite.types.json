@@ -1,0 +1,7 @@
+[["^/(printers-and-copiers|managed-print|production-print|cybersecurity|managed-it-services|backup-and-disaster-recovery|private-cloud|workflow-automation|unified-communications|audio-visual-solutions)/$", "service"],
+ ["^/service-areas/", "city"],
+ ["^/(blog|guides|webinar|webinars|news)/.+", "post"],
+ ["^/category/", "post"],
+ ["^/(work|case-studies)/.+", "post"],
+ ["(book-a-meeting|book-demo|book-meeting|assessment|-request|request-|tech-check|self-serve)", "form"],
+ ["^/(about-goodsuite|executive-leadership|careers|community|switching-to-goodsuite|goodsuite-guarantees)/", "company"]]

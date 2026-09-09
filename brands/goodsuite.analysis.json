@@ -1,0 +1,26 @@
+{
+  "client": "GoodSuite",
+  "domain": "goodsuite.com",
+  "accent": "#97d700",
+  "chrome": "#004b87",
+  "cities": [
+    "Chatsworth",
+    "Woodland Hills",
+    "Los Angeles",
+    "Fresno",
+    "Ventura",
+    "San Fernando Valley",
+    "Southern California",
+    "California",
+    "CA"
+  ],
+  "sitemaps": [
+    "https://goodsuite.com/page-sitemap.xml",
+    "https://goodsuite.com/post-sitemap.xml",
+    "https://goodsuite.com/portfolio-sitemap.xml"
+  ],
+  "skip": "feed|attachment|\\.(jpg|png|pdf)$",
+  "base_url": "https://qbs-analyses.vercel.app/goodsuite",
+  "out": "analyses/goodsuite",
+  "note": "Headquarters is 9629 Owensmouth Ave Suite 1, Chatsworth, CA 91311 (from Shawn, 9 September 2026). The site's service-areas page still lists Woodland Hills as HQ; that is a finding, not the address."
+}

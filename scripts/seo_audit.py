@@ -192,6 +192,9 @@ def audit_html(raw, url, domain, cities, is_build=False, site_root=None):
         canonical_self = bool(can) and can.rstrip("/").lower().replace("http://", "https://") in (u, u.replace("://www.", "://"), u.replace("://", "://www."))
     stock_og = bool(og) and bool(re.search(r"(stock|shutterstock|istock|unsplash|pexels|placeholder|default|wp-content/themes)", og.lower()))
     faq = "FAQPage" in types
+    # a FAQ the visitor can see (an accordion or a list of questions) that carries no FAQPage schema: the crawler never learns it is there
+    raw_text = raw.decode("utf-8", "ignore") if isinstance(raw, bytes) else raw
+    faq_visible = (not faq) and len(re.findall(r">\s*([^<>]{12,160}\?)\s*<", raw_text)) >= 3
     service = bool(types & {"Service", "ITService", "ProfessionalService", "Offer", "OfferCatalog"})
     article = bool(types & {"Article", "BlogPosting", "NewsArticle", "TechArticle"})
     local = bool(types & {"LocalBusiness", "ProfessionalService", "Store", "Dentist", "HomeAndConstructionBusiness"})
@@ -220,7 +223,7 @@ def audit_html(raw, url, domain, cities, is_build=False, site_root=None):
     values = {
         "title_len": f"{len(title)} chars", "city": "yes" if checks["city"] else "no", "meta_len": f"{len(meta)} chars" if meta else "none",
         "h1": str(len(h1s)), "h2": str(len(h2s)), "question": str(questions), "words": f"{words:,}", "alt": f"{no_alt} missing",
-        "links": str(internal), "faq": "yes" if faq else "no", "service": ("Article" if article else "yes") if checks["service"] else "no",
+        "links": str(internal), "faq": "yes" if faq else ("shown, no schema" if faq_visible else "no"), "service": ("Article" if article else "yes") if checks["service"] else "no",
         "local": "yes" if local else "no", "review": "yes" if review else "no", "canonical": "yes" if canonical_self else ("other" if can else "no"),
         "og": ("stock" if stock_og else "yes") if og else "no", "form": "yes" if checks["form"] else "no",
     }
@@ -229,7 +232,7 @@ def audit_html(raw, url, domain, cities, is_build=False, site_root=None):
         "url": url, "title": title, "title_len": len(title), "meta": meta, "meta_len": len(meta), "h1": h1s[0] if h1s else "", "h1_count": len(h1s),
         "h2_count": len(h2s), "h3_count": len(h3s), "question_headings": questions, "words": words, "images": len(imgs), "images_no_alt": no_alt,
         "internal_links": internal, "external_links": external, "canonical": can, "canonical_self": canonical_self, "og_image": og, "stock_og": stock_og,
-        "faq": faq, "service": service, "local": local, "review": review, "article": article, "breadcrumb": breadcrumb,
+        "faq": faq, "faq_visible": faq_visible, "service": service, "local": local, "review": review, "article": article, "breadcrumb": breadcrumb,
         "schema": sorted(types), "noindex": "noindex" in robots, "has_form": has_form, "has_video": has_video, "tel_link": tel > 0, "lang": lang,
         "checks": checks, "values": values, "score": score, "grade": grade, "failed": failed,
         "recommendations": [FIXES[k] for k in failed], "issues": len(failed),
@@ -371,7 +374,7 @@ def summarize(pages):
 
 def to_csv(audit, path):
     cols = ["url", "type", "title", "title_len", "city", "meta", "meta_len", "h1", "h1_count", "h2_count", "h3_count", "question_headings", "words", "images", "images_no_alt",
-            "internal_links", "external_links", "canonical", "canonical_self", "og_image", "stock_og", "faq", "service", "local", "review", "article", "breadcrumb", "schema",
+            "internal_links", "external_links", "canonical", "canonical_self", "og_image", "stock_og", "faq", "faq_visible", "service", "local", "review", "article", "breadcrumb", "schema",
             "noindex", "has_form", "has_video", "tel_link", "score", "grade", "recommendations", "issues"]
     buf = io.StringIO()
     w = csv.writer(buf)

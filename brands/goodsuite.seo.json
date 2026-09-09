@@ -1,0 +1,422 @@
+{
+  "measured": "9 September 2026",
+  "hero": {
+    "heading": "Where goodsuite.com stands, and what it is worth to fix",
+    "intro": "Every number here came from a Semrush or Firecrawl pull or from the live HTML of the site, fetched 9 September 2026. Where a pull was not made, the table says so. This is the baseline any work is measured against at 30, 60 and 90 days.",
+    "tiles": [
+      ["1,599", "organic keywords; about 52 percent of visits come from the two spellings of the brand name"],
+      ["534", "organic visits a month, worth about 3,485 dollars a month at Semrush's cost per click"],
+      ["0", "top-10 results for managed IT services Los Angeles, 1,900 searches a month, and for every other local query tested"],
+      ["16", "Authority Score, against 25 to 33 for the Los Angeles IT firms that hold the results"]
+    ]
+  },
+  "traffic": {
+    "home_share": 55,
+    "home_note": "the brand queries land on the home page; the service pages earn none of the top 50 terms",
+    "brand_share": 52,
+    "brand_note": "goodsuite and good suite, 350 searches a month between them",
+    "nonbrand_target": 60,
+    "nonbrand_note": "non-brand visits landing on a service or location page by day 90"
+  },
+  "findings": [
+    {
+      "severity": "Critical",
+      "title": "Absent from every local service result tested, in every city GoodSuite serves",
+      "evidence": "Managed it services los angeles (1,900 searches a month) returns AllSafe IT, Cloudtango, Red River, CyberDuo, ITS, Exigent, CAL IT Group, Clutch, BTI and Cortavo. Managed print services los angeles returns IOTEC Digital, Orange County Copiers, Visual Edge IT, Onsite Laser Medic, IT Pros Management, TMG, Yelp, CDW, Office1 and DocuProducts. Managed it services fresno returns CIO Solutions, Visual Edge IT, Cloudtango, Unity IT, TeamLogic IT, Cosmistack, Datapath, Xobee, Clutch and MSP Database. Copier dealer chatsworth ca returns Performance Group, Printer Repair Pros, Yelp, Marathon Services, The UPS Store and four directories. GoodSuite has an office in Chatsworth and one in Fresno and appears in none of the forty results.",
+      "cost": "Every buyer in Los Angeles, the San Fernando Valley, Ventura County and Fresno who does not already know the name is handed to a competitor, on every service line.",
+      "fix": "A page for each place GoodSuite works from: Chatsworth as headquarters, Los Angeles, Fresno and Ventura County, each with the address, hours, a LocalBusiness record, the services delivered from that office and a local FAQ marked up as FAQPage. Then one city page per service line for the two markets that search most, Los Angeles and Fresno."
+    },
+    {
+      "severity": "High",
+      "title": "Ninety-nine pages show a FAQ the crawler cannot read",
+      "evidence": "Ninety-nine of 317 pages carry an accordion of questions, including the home page, all ten service pages and the FAQ page itself with twenty questions. Not one page on the site has FAQPage schema. The pages that hold position one for managed it services los angeles (AllSafe IT, 4,486 words) and position four (CyberDuo, 3,147 words) both carry FAQPage, Question and Answer plus LocalBusiness and Service.",
+      "cost": "The work of writing the answers is done and earns nothing. Google's FAQ rich results and every AI assistant that reads structured data pass GoodSuite by on the exact questions it has already answered.",
+      "fix": "Mark every existing accordion up as FAQPage with Question and Answer. It is markup, not copy: the ninety-nine pages move from 0 to 12 points each on the readiness score the day it ships."
+    },
+    {
+      "severity": "High",
+      "title": "Half the visits are the brand name and a quarter are accessory listings; the service pages earn nothing",
+      "evidence": "Goodsuite and good suite are 52 percent of organic visits and land on the home page. About 24 percent more land on shop.goodsuite.com product listings for a Canon carrying case, headsets, a Logitech mouse, a 1TB SSD and monitors. About 15 percent land on blog posts about MFPs, HIPAA printing and church printers. In the top 50 keywords not one lands on a service page.",
+      "cost": "Someone who wants managed IT, managed print, cybersecurity or a copier lease and does not know GoodSuite has no page to arrive at. The site is a phone book for existing clients and a parts counter for bargain hunters.",
+      "fix": "Ten service pages rebuilt around the terms buyers use (managed IT services, managed print services, copier lease, cybersecurity services) with the city in the title, Service schema and the FAQ marked up, plus the location pages above. The shop stays where it is; it is a separate property and should be measured as one."
+    },
+    {
+      "severity": "High",
+      "title": "The site disagrees with itself about where GoodSuite is",
+      "evidence": "The service-areas page lists Los Angeles (HQ) at 5950 Canoga Ave, Woodland Hills first, Fresno second and 9629 Owensmouth Ave Suite 1, Chatsworth third. Yelp (5.0 from 3 reviews) and Facebook both list the Woodland Hills address. The headquarters is Chatsworth. No page carries LocalBusiness schema for any of the three offices; the Organization schema has no address at all.",
+      "cost": "Google and every answer engine corroborate a business across its site, its map listing and its profiles before naming it. Three addresses in three orders is a reason not to.",
+      "fix": "One name, address and phone for each office, written the same way everywhere: Chatsworth as headquarters on the site, in Organization schema, on Google Business Profile, Yelp, Facebook, LinkedIn, Bing Places and the dealer locators. A LocalBusiness record per office on its own location page."
+    },
+    {
+      "severity": "High",
+      "title": "Schema lives on the blog, not on the money pages",
+      "evidence": "244 pages carry Service or Article schema, and 185 of them are blog posts with Article. The ten service pages carry Organization only: no Service, no Offer, no FAQPage, no LocalBusiness. Managed Print Services in California scores 59 of 100; Workflow Automation scores 48 with no question heading on the page.",
+      "cost": "Assistants asked who provides managed print in Los Angeles find a structured answer on the IOTEC and Visual Edge pages and prose on GoodSuite's.",
+      "fix": "Service schema on each of the ten service pages with areaServed for the counties GoodSuite lists, provider pointing at the Organization, and the existing FAQ marked up."
+    },
+    {
+      "severity": "Medium",
+      "title": "Seventy-four pages have no meta description, fifteen have no H1 and nine have more than one",
+      "evidence": "Measured on all 317 URLs in the sitemap. Twenty-eight pages fall back to a theme image when shared. Thirteen titles carry a city; the service titles say in California, which is no city at all.",
+      "cost": "Google writes its own snippet for a quarter of the site and the shared cards show a stock image.",
+      "fix": "A title of 30 to 60 characters with the city, a meta description of 70 to 160 characters ending on a sentence, one H1 and a real image on every page. The workbook lists every page that needs each."
+    },
+    {
+      "severity": "Medium",
+      "title": "Twenty booking pages of 78 words each, two per service, sit in the index",
+      "evidence": "/managed-print-book-demo/ and /book-a-meeting-for-managed-print/ are the same page twice, and the pattern repeats for all ten services. With the request forms there are 41 form pages in the sitemap, 13 percent of the site, averaging 42 of 100.",
+      "cost": "Crawl budget and internal link equity spent on pages that should never rank, and near-duplicate content Google has to resolve.",
+      "fix": "One booking page per service, the other redirected; noindex on every request and thank-you form; the sitemap trimmed to pages meant to rank."
+    },
+    {
+      "severity": "Medium",
+      "title": "Three hosts answer for the company",
+      "evidence": "goodsuite.com is the canonical host and the technical checks pass: https, one canonical, sitemap declared, llms.txt served, every AI crawler allowed. But www3.goodsuite.com is indexed and holds position four for goodsuite reviews, and shop.goodsuite.com carries about a quarter of organic visits with no path back to the services.",
+      "cost": "Authority split three ways, and a buyer who searches the reviews lands on a stray subdomain.",
+      "fix": "www3 redirected to the canonical host, page for page. The shop kept as a separate property with a link to the service pages in its header and a canonical policy written down."
+    },
+    {
+      "severity": "Medium",
+      "title": "A 245-post blog, re-dated in one month and filed in ten drawers",
+      "evidence": "Every post in the sitemap carries a last-modified date between March and August 2026; 191 of them are March 2026, which is a migration, not a publishing schedule. Posts sit under blog (173), testimonials (14), chqs-blog (13), uncategorized-pages (12), forms (12), news (8), uncategorized (5), case-studies (3), chqs-news (3) and webinar (2). The old brand, Copier Headquarters, still ranks second for its own name and lives on in /category/chqs-news/. Posts average 1,156 words and 185 carry Article schema, the strongest part of the site.",
+      "cost": "Depth without structure. The posts that rank (MFPs, HIPAA printing, church printers, office copiers at position 9) do not point at a service page that could convert the reader.",
+      "fix": "One /blog/ tree by service line, BlogPosting with an honest datePublished, a named author as a Person, articleSection set to the service, and a link from each post to the service page it supports. Copier Headquarters redirected and acknowledged on the about page."
+    },
+    {
+      "severity": "Medium",
+      "title": "Reviews exist off the site and are not on it",
+      "evidence": "Yelp 5.0 from 3 reviews on the Woodland Hills listing, Facebook 5.0 from 1, Glassdoor 3.4 from 11 as an employer, Indeed 4.0 from 3. The Google Business Profile rating was not pulled. The site has 14 testimonial posts and no Review or AggregateRating schema. For goodsuite reviews the site's own pages do not appear in the top eight except the www3 subdomain.",
+      "cost": "Reviews are the strongest local ranking signal after proximity and the first thing an assistant cites when asked whether a company is any good.",
+      "fix": "A review program that asks every closed ticket for a Google review, a reviews page that embeds the Google reviews rather than self-published testimonials, and the Yelp listing moved to the Chatsworth address."
+    },
+    {
+      "severity": "Low",
+      "title": "Titles name the state, not the city",
+      "evidence": "Managed IT Services in California, Managed Cybersecurity Services in California, Managed Print Services in California. Thirteen of 317 titles carry a city, five of them blog posts. The Los Angeles pages that rank all carry Los Angeles in the title.",
+      "cost": "California is not a place a buyer searches from; Los Angeles and Fresno are.",
+      "fix": "City-bearing titles on the service and location pages, generated from one rule so they stay consistent."
+    },
+    {
+      "severity": "Low",
+      "title": "Authority is directory and wire links, not local ones",
+      "evidence": "Authority Score 16 with 546 referring domains. The strongest are Yahoo, Bing, ZoomInfo, Crunchbase, PR Newswire, Yellow Pages and Birdeye. The Los Angeles IT firms that rank score 25 to 33. IOTEC Digital ranks first for managed print in Los Angeles at Authority Score 14, below GoodSuite, because it has the page.",
+      "cost": "Small. Authority is not what is missing; pages are. But the gap widens every quarter it is ignored.",
+      "fix": "Dealer locator listings (Sharp, Canon, Kyocera, Lexmark, Datto, Microsoft partner directory), the Chatsworth and Fresno chambers, and the associations GoodSuite already belongs to, each with the Chatsworth address."
+    }
+  ],
+  "compare": {
+    "columns": ["GoodSuite", "AllSafe IT", "IOTEC Digital", "CIO Solutions"],
+    "intro": "The same money pages side by side: GoodSuite's managed IT page, AllSafe IT's Los Angeles managed IT page (position 1), IOTEC Digital's Los Angeles managed print page (position 1) and CIO Solutions' Fresno page (position 1). Assistants and Google pick the entity with the most structured, specific, corroborated answer.",
+    "rows": [
+      ["Organization or LocalBusiness schema", "Organization only, no address", "yes: LocalBusiness with address, hours and GeoCoordinates", "none on the page", "yes: ProfessionalService with address"],
+      ["FAQPage schema", "none of 317 pages", "yes: 22 questions marked up", "none", "none"],
+      ["Service schema", "none", "yes: Service, Offer, OfferCatalog", "none", "yes: ProfessionalService"],
+      ["Review or AggregateRating schema", "none", "none", "none", "yes: AggregateRating"],
+      ["Words on the page", "872", "4,486", "724", "2,870"],
+      ["City in the title", "no, California", "yes, Los Angeles", "yes, Los Angeles", "yes, Fresno"],
+      ["City pages", "one service-areas page for eleven counties", "a page per service per city, neighbourhoods listed", "a page per city", "a page per city"],
+      ["Pricing on the page", "no", "yes, flat-rate explained", "no", "no"],
+      ["Named for managed it services los angeles", "absent from the top 10", "number 1", "not competing", "not competing"]
+    ],
+    "verdict": "GoodSuite has more referring domains than IOTEC and a stronger blog than any of the three. What it lacks is the page: a city-named, schema-marked, FAQ-carrying page for each service in each market. IOTEC holds position one for managed print in Los Angeles at Authority Score 14, two points below GoodSuite, because it built that page."
+  },
+  "moves": [
+    {
+      "title": "Mark up the ninety-nine FAQs that already exist",
+      "when": "Days 1 to 10",
+      "where": "First 30 days",
+      "body": "The accordions on the home page, the ten service pages, the FAQ page and 87 posts become FAQPage with Question and Answer. No copy changes. It is the single largest score move on the site, 12 points on each of 99 pages, and it makes every answer GoodSuite has already written visible to the engines that answer questions."
+    },
+    {
+      "title": "One address, and a page for each office, Chatsworth first",
+      "when": "Days 1 to 30",
+      "where": "First 30 days",
+      "body": "Chatsworth becomes the headquarters everywhere: the service-areas page, Organization schema, Google Business Profile, Yelp, Facebook, LinkedIn, Bing Places. Then a location page for Chatsworth, Los Angeles, Fresno and Ventura County, each with LocalBusiness schema, the services delivered from that office, hours, a map and a local FAQ. Copier dealer chatsworth ca has no GoodSuite result today; it should have the first one."
+    },
+    {
+      "title": "Rebuild the ten service pages around the terms buyers use",
+      "when": "Days 10 to 45",
+      "where": "First 60 days",
+      "body": "Managed IT services, managed print services, copier lease, cybersecurity services, backup and disaster recovery, private cloud, VoIP phone systems: each page gets the city in the title, a meta description, one H1, Service schema with areaServed, the FAQ marked up, and the questions from the Semrush pull answered in the first sentence. Then the Los Angeles and Fresno variants for managed IT, which together are 2,490 searches a month with no GoodSuite result."
+    },
+    {
+      "title": "Trim the index: booking pages, forms and the third host",
+      "when": "Days 10 to 30",
+      "where": "First 30 days",
+      "body": "One booking page per service, the duplicate redirected. Noindex on 41 form pages. www3.goodsuite.com redirected page for page to goodsuite.com. Seventy-four meta descriptions and fifteen H1s written from the workbook. The sitemap then lists only pages meant to rank."
+    },
+    {
+      "title": "One blog tree, and a review program",
+      "when": "Days 30 to 90",
+      "where": "By day 90",
+      "body": "The 245 posts move under /blog/ by service line with BlogPosting, a named author and a link to the service page each supports. Copier Headquarters is redirected and acknowledged. Every closed ticket asks for a Google review; a reviews page embeds them. The report is re-run at 30, 60 and 90 days against this baseline."
+    }
+  ],
+  "blog": {
+    "heading": "Two hundred and forty-five posts, re-dated in a month and filed in ten drawers",
+    "intro": "Every post in the sitemap, parsed the same way as the pages. The depth is real; the structure and the dates are not.",
+    "tiles": [
+      ["245", "posts in the sitemap; 191 carry a March 2026 date, which is a migration"],
+      ["1,156", "words per post on average, the deepest content on the site"],
+      ["185", "posts with Article schema; none with FAQPage, none with a named author as a Person"],
+      ["10", "taxonomies, including chqs-blog, uncategorized and forms"]
+    ],
+    "found": [
+      "The blog is where GoodSuite ranks: mfps (position 5, 720 searches), office copiers (9, 1,000), commercial printers (18, 1,900), hipaa compliant printing (3, 260), best printer for church (4, 140), types of managed it services (16, 880).",
+      "Not one of those posts links to the service page that could convert the reader; the managed IT post points nowhere near the managed IT page.",
+      "Copier Headquarters, the old brand, ranks second for its own name and its posts live under /chqs-blog/ and /category/chqs-news/ with no explanation of the rename.",
+      "Fourteen testimonials and twelve forms are published as posts and appear in the post sitemap."
+    ],
+    "do": [
+      ["First 60 days", "One /blog/ tree by service line. Each post gets BlogPosting with an honest datePublished and dateModified, a named author as a Person, articleSection set to the service line, and a link to the service page it supports."],
+      ["First 30 days", "Testimonials and forms removed from the post type. Copier Headquarters redirected to the about page, where the rename is stated once so an assistant can connect the two names."],
+      ["Ongoing", "One post a month per service line, written to answer a question from the Semrush pull, with the FAQ marked up."]
+    ]
+  },
+  "entity": {
+    "heading": "What connects the company across the web",
+    "intro": "Answer engines corroborate a company across the web before they name it. GoodSuite's profiles exist and disagree about the address; the site connects LinkedIn and Facebook and nothing else.",
+    "tiles": [
+      ["3", "addresses in play: Woodland Hills on Yelp, Facebook and the site's HQ line; Chatsworth as the real headquarters; Fresno"],
+      ["25+", "years in business per LinkedIn; the Organization schema carries no foundingDate"],
+      ["546", "referring domains, led by Yahoo, Bing, ZoomInfo, Crunchbase and PR Newswire"],
+      ["yes", "llms.txt served and every AI crawler allowed: the plumbing is right"]
+    ],
+    "found": [
+      "The Organization schema carries name, URL and logo. It has no address, no telephone, no foundingDate and sameAs for LinkedIn and Facebook only.",
+      "Yelp and Facebook list 5950 Canoga Ave, Woodland Hills. The service-areas page lists it as Los Angeles (HQ). The company is at 9629 Owensmouth Ave Suite 1, Chatsworth, CA 91311.",
+      "ZoomInfo and Crunchbase link to the site; neither is linked from it. The Glassdoor profile (3.4 from 11) outranks every GoodSuite page for the reviews query."
+    ],
+    "do": [
+      ["First 30 days", "Organization schema with the Chatsworth address, telephone, foundingDate and sameAs to LinkedIn, Facebook, Yelp, Crunchbase, ZoomInfo and the Google Business Profile; each office as a LocalBusiness on its own page with the parent Organization named."],
+      ["First 30 days", "Every profile moved to the Chatsworth address, written identically."]
+    ]
+  },
+  "today": [
+    "Semrush US database: 1,599 organic keywords, 534 visits a month, traffic value about 3,485 dollars a month. The two brand spellings are about 52 percent of visits; shop.goodsuite.com accessory listings about 24 percent; blog posts about 15 percent; service pages none of the top 50.",
+    "Authority Score 16, 546 referring domains, 5,768 backlinks, 4,021 of them followed. The Los Angeles IT firms holding the results score 25 (AllSafe IT), 27 (CyberDuo) and 33 (Visual Edge IT); IOTEC Digital ranks first for managed print in Los Angeles at 14.",
+    "Live results 9 September 2026 from Los Angeles and Fresno: absent from the top ten for managed it services los angeles, managed print services los angeles, copier lease los angeles, copier dealer chatsworth ca, managed it services fresno and cybersecurity services for small business los angeles.",
+    "317 URLs in the sitemap, average readiness 57 of 100: no page scores A, 96 score D or F. No FAQPage on any page while 99 show a FAQ; no LocalBusiness; no Review schema; 74 pages without a meta description.",
+    "Technical: https with one canonical host, sitemap declared, llms.txt served, GPTBot, ClaudeBot, PerplexityBot and Google-Extended all allowed. Two more hosts answer: www3.goodsuite.com (indexed, ranks for the reviews query) and shop.goodsuite.com.",
+    "Where the blog ranks: mfps 5, office copiers 9, hipaa compliant printing 3, best printer for church 4, commercial printers 18, types of managed it services 16. Copier headquarters, the old name, position 2."
+  ],
+  "competitors": {
+    "intro": "The companies holding the Los Angeles and Fresno results GoodSuite is absent from, from Semrush's US database and the live results above. National directories (Clutch, Cloudtango, Yelp) are left out; they cannot be outranked, only listed in.",
+    "rows": [
+      ["visualedgeit.com (Visual Edge IT)", "6,383", "4,571", "33"],
+      ["cyberduo.com (CyberDuo, Glendale)", "3,446", "2,170", "27"],
+      ["iotecdigital.com (IOTEC Digital, Glendale)", "2,686", "1,961", "14"],
+      ["allsafeit.com (AllSafe IT)", "1,764", "2,017", "25"],
+      ["ciosolutions.com (CIO Solutions, Fresno)", "1,059", "820", "24"],
+      ["goodsuite.com", "534", "1,599", "16"],
+      ["marathonservice.com (Marathon Services, Chatsworth)", "427", "311", "13"]
+    ]
+  },
+  "opportunities": {
+    "intro": "Volume from Semrush's US database. Difficulty was not pulled for this set. Where a competitor ranks and GoodSuite does not, the gap is a missing page, not missing authority.",
+    "rows": [
+      ["managed it services", "49,500", "not pulled", "not ranking", "national providers and directories"],
+      ["managed print services", "4,400", "not pulled", "not ranking", "Xerox, HP, Canon and national dealers"],
+      ["it support los angeles", "2,400", "not pulled", "not ranking", "AllSafe IT, Be Structured, DCG, CyberDuo"],
+      ["copier lease", "2,400", "not pulled", "not ranking", "national lessors"],
+      ["managed it services los angeles", "1,900", "not pulled", "not ranking", "AllSafe IT, Red River, CyberDuo, Exigent, BTI"],
+      ["backup and disaster recovery services", "1,300", "not pulled", "not ranking", "Datto, Veeam, national MSPs"],
+      ["office copiers", "1,000", "not pulled", "9", "a GoodSuite blog post; the printers-and-copiers page does not rank"],
+      ["production printer", "720", "not pulled", "not ranking", "manufacturers"],
+      ["private cloud hosting", "720", "not pulled", "not ranking", "national hosts"],
+      ["managed it services fresno", "590", "not pulled", "not ranking", "CIO Solutions, Visual Edge IT, Unity IT, TeamLogic IT, Xobee"],
+      ["cybersecurity services los angeles", "590", "not pulled", "not ranking", "BTI, AllSafe IT, Xantrion, CompassMSP"],
+      ["msp los angeles", "390", "not pulled", "not ranking", "AllSafe IT, CyberDuo, Cloudtango"],
+      ["it support fresno", "320", "not pulled", "not ranking", "Unity IT, CIO Solutions, Xobee"],
+      ["managed print services los angeles", "110", "not pulled", "not ranking", "IOTEC Digital, Visual Edge IT, Office1"],
+      ["voip phone systems los angeles", "90", "not pulled", "not ranking", "national VoIP providers"],
+      ["copier lease los angeles", "20", "not pulled", "not ranking", "Marathon Services, from Chatsworth"]
+    ]
+  },
+  "clusters": [
+    {"name": "Managed IT and support", "seed": "managed it services", "rows": [
+      ["managed it services", "49,500", "0.06", "29.41", "commercial"],
+      ["managed service provider", "18,100", "0.32", "25.40", "commercial"],
+      ["it managed services", "9,900", "0.24", "18.46", "commercial"],
+      ["managed it services near me", "8,100", "0.04", "35.77", "local"],
+      ["managed it support", "6,600", "0.09", "19.02", "commercial"],
+      ["it support los angeles", "2,400", "0.29", "51.21", "local"],
+      ["managed it services los angeles", "1,900", "0.28", "34.34", "local"],
+      ["managed it services fresno", "590", "0.04", "12.00", "local"],
+      ["msp los angeles", "390", "0.19", "30.41", "local"],
+      ["it support fresno", "320", "0.04", "5.22", "local"]
+    ]},
+    {"name": "Managed print", "seed": "managed print services", "rows": [
+      ["managed print services", "4,400", "0.09", "20.85", "commercial"],
+      ["managed print service", "1,000", "0.09", "20.85", "commercial"],
+      ["managed print solutions", "1,000", "0.07", "15.55", "commercial"],
+      ["best managed print services", "880", "0.02", "0", "commercial"],
+      ["printer management services", "880", "0.09", "20.85", "commercial"],
+      ["managed print services near me", "720", "0.26", "32.38", "local"],
+      ["managed print services companies", "720", "0.03", "36.97", "commercial"],
+      ["managed print services los angeles", "110", "0.03", "0", "local"]
+    ]},
+    {"name": "Copiers: lease, rent, buy", "seed": "copier lease", "rows": [
+      ["copier lease", "2,400", "0.29", "13.93", "commercial"],
+      ["printer lease", "1,900", "0.64", "11.96", "commercial"],
+      ["office equipment rental", "1,900", "0.28", "5.81", "commercial"],
+      ["printer rental", "1,600", "0.50", "12.93", "commercial"],
+      ["printer leasing", "1,000", "0.92", "3.04", "commercial"],
+      ["office copy machine", "1,000", "0.99", "3.64", "commercial"],
+      ["commercial copy machine", "880", "0.50", "3.96", "commercial"],
+      ["production printer", "720", "1.00", "4.40", "commercial"]
+    ]},
+    {"name": "Cybersecurity", "seed": "cybersecurity services", "rows": [
+      ["cybersecurity solutions", "12,100", "0.03", "14.78", "commercial"],
+      ["cybersecurity companies", "9,900", "0.22", "12.03", "commercial"],
+      ["cyber security services", "6,600", "0.07", "17.20", "commercial"],
+      ["managed security service provider", "6,600", "0.17", "16.77", "commercial"],
+      ["cybersecurity services los angeles", "590", "0.12", "18.26", "local"]
+    ]},
+    {"name": "Phones and communications", "seed": "voip phone system for small business", "rows": [
+      ["voip phone service", "14,800", "0.35", "21.41", "commercial"],
+      ["business phone systems", "9,900", "0.39", "41.46", "commercial"],
+      ["business phone service", "9,900", "0.38", "46.34", "commercial"],
+      ["voip services", "9,900", "0.07", "18.37", "commercial"],
+      ["voip phone systems los angeles", "90", "0.01", "0", "local"]
+    ]},
+    {"name": "Continuity and cloud", "seed": "backup and disaster recovery", "rows": [
+      ["disaster recovery", "8,100", "0.25", "20.48", "commercial"],
+      ["data backup", "4,400", "0.18", "6.34", "commercial"],
+      ["disaster recovery plan", "4,400", "0.20", "8.83", "informational"],
+      ["backup and disaster recovery services", "1,300", "0.06", "37.46", "commercial"],
+      ["private cloud hosting", "720", "0.03", "11.27", "commercial"]
+    ]}
+  ],
+  "questions": [
+    {"topic": "managed IT services", "items": [
+      ["what is managed it services", "1,000"],
+      ["how much does managed it services cost", "720"],
+      ["what are managed it services", "720"],
+      ["why choose managed it services", "260"],
+      ["what is included in managed it services", "210"],
+      ["what does managed it services mean", "210"]
+    ]},
+    {"topic": "managed print", "items": [
+      ["what is managed print services", "320"],
+      ["what are managed print services", "260"],
+      ["why managed print services", "90"],
+      ["are managed print services worth it", "50"],
+      ["how does managed print services work", "20"],
+      ["how much does managed print services cost", "20"]
+    ]},
+    {"topic": "copier lease", "items": [
+      ["how much does it cost to lease a copy machine", "260"],
+      ["how to get out of a copier lease", "140"],
+      ["how do copier leases work", "110"],
+      ["is it better to buy or lease a copier", "110"],
+      ["how to negotiate a copier lease", "90"],
+      ["how to lease a copier", "70"]
+    ]},
+    {"topic": "cybersecurity for small business", "items": [
+      ["how to implement a cybersecurity strategy for small businesses", "140"],
+      ["how small businesses choose cybersecurity vendors", "50"],
+      ["what is the best entry level cybersecurity for small businesses", "50"],
+      ["what cybersecurity companies are best for small businesses", "40"],
+      ["how do cybersecurity advisory services help a small business", "30"]
+    ]}
+  ],
+  "money_pages": ["/", "/managed-it-services/", "/managed-print/", "/cybersecurity/", "/printers-and-copiers/", "/production-print/", "/backup-and-disaster-recovery/", "/private-cloud/", "/workflow-automation/", "/unified-communications/", "/audio-visual-solutions/", "/service-areas/", "/faq/"],
+  "competitor_pages": [
+    {"domain": "allsafeit.com", "url": "https://www.allsafeit.com/locations/managed-it-services-los-angeles", "title": "Managed IT Services Los Angeles | AllSafe IT", "words": 4486, "schema": "LocalBusiness, Service, Offer, OfferCatalog, FAQPage, Question, Answer, Person", "faq": true, "pricing": "yes", "reviews": false, "form": "yes"},
+    {"domain": "cyberduo.com", "url": "https://www.cyberduo.com/managed-it-services-los-angeles/", "title": "Managed IT Services Los Angeles | 24/7 IT Support in LA", "words": 3147, "schema": "LocalBusiness, Article, FAQPage, Question, Answer, Place, Person", "faq": true, "pricing": "yes", "reviews": false, "form": "yes"},
+    {"domain": "iotecdigital.com", "url": "https://iotecdigital.com/location/managed-print-services-los-angeles/", "title": "Managed Print Services Los Angeles | IOTEC Digital", "words": 724, "schema": "none", "faq": false, "pricing": "no", "reviews": false, "form": "yes"},
+    {"domain": "visualedgeit.com", "url": "https://visualedgeit.com/location/california/los-angeles/printer-leasing", "title": "Printer Leasing in Los Angeles, CA | Visual Edge IT", "words": 642, "schema": "Organization", "faq": false, "pricing": "yes", "reviews": false, "form": "yes"},
+    {"domain": "ciosolutions.com", "url": "https://www.ciosolutions.com/fresno/", "title": "Managed IT Services Fresno, Managed IT Fresno I CIO Solutions", "words": 2870, "schema": "ProfessionalService, AggregateRating, ContactPoint, OpeningHoursSpecification", "faq": false, "pricing": "no", "reviews": true, "form": "yes"},
+    {"domain": "marathonservice.com", "url": "https://marathonservice.com/", "title": "Home | Marathon Services", "words": 917, "schema": "Organization, Person", "faq": false, "pricing": "no", "reviews": false, "form": "yes"}
+  ],
+  "aeo": {
+    "intro": "Live results for the questions a buyer types, fetched 9 September 2026 from Los Angeles and from Fresno. Presence here is the answer-engine scoreboard: the ten sites an assistant reads before it answers.",
+    "rows": [
+      {"query": "managed it services los angeles", "results": ["allsafeit.com", "cloudtango.net", "redriver.com", "cyberduo.com", "itsasap.com", "exigent.net", "calitgroup.com", "clutch.co", "btigroup.com", "cortavo.com"], "position": null},
+      {"query": "managed print services los angeles", "results": ["iotecdigital.com", "orangecountycopiersandprinters.com", "visualedgeit.com", "onsitelasermedic.com", "itprosmanagement.com", "tmgofficeservices.com", "yelp.com", "cdw.com", "office1.com", "docuproducts.com"], "position": null},
+      {"query": "copier lease los angeles", "results": ["marathonservice.com", "copierrentalinc.com", "yelp.com", "supertechs3.com", "werentcopiers.com", "copierrental.com", "copierleaselosangeles.com", "visualedgeit.com", "iotecdigital.com", "copierrentallosangeles.com"], "position": null},
+      {"query": "copier dealer chatsworth ca", "results": ["performancegroupusa.com", "printerrepairpros.com", "yelp.com", "marathonservice.com", "theupsstore.com", "postalxtra.com", "yellowpages.com", "mapquest.com", "laprintcenter.com", "facebook.com"], "position": null},
+      {"query": "managed it services fresno", "results": ["ciosolutions.com", "visualedgeit.com", "cloudtango.net", "unityit.com", "teamlogicit.com", "cosmistack.com", "mydatapath.com", "xobee.com", "clutch.co", "mspdatabase.com"], "position": null},
+      {"query": "cybersecurity services for small business los angeles", "results": ["builtinla.com", "brightdefense.com", "btigroup.com", "clutch.co", "allsafeit.com", "myshyft.com", "yelp.com", "xantrion.com", "compassmsp.com", "cloudtango.net"], "position": null},
+      {"query": "goodsuite reviews", "results": ["glassdoor.com", "yelp.com", "indeed.com", "www3.goodsuite.com", "wheree.com", "facebook.com", "linkedin.com", "simplyhired.com"], "position": 4}
+    ]
+  },
+  "crawlers": [["GPTBot", true], ["ClaudeBot", true], ["PerplexityBot", true], ["Google-Extended", true], ["Bingbot", true], ["Googlebot", true], ["llms.txt served", true]],
+  "backlinks": {
+    "heading": "Authority is directory links; the local firms that rank have more, and pages",
+    "rows": [
+      ["goodsuite.com", "16", "546", "5,768 (4,021 followed)"],
+      ["visualedgeit.com", "33", "2,275", "50,633"],
+      ["cyberduo.com", "27", "621", "13,780"],
+      ["allsafeit.com", "25", "1,572", "11,173"],
+      ["ciosolutions.com", "24", "787", "3,454"],
+      ["iotecdigital.com", "14", "417", "1,569"],
+      ["marathonservice.com", "13", "372", "1,303"]
+    ],
+    "top_ref": [["yahoo.com", "100"], ["bing.com", "92"], ["zoominfo.com", "74"], ["crunchbase.com", "72"], ["prnewswire.com", "72"], ["yellowpages.com", "67"], ["birdeye.com", "62"], ["gridinsoft.com", "58"]]
+  },
+  "local": [
+    "Yelp: 5.0 from 3 reviews, listed at 5950 Canoga Ave, Woodland Hills; position 2 for the brand reviews query",
+    "Facebook: 5.0 from 1 review, Woodland Hills address",
+    "Glassdoor (employer): 3.4 from 11 reviews, position 1 for the brand reviews query",
+    "Indeed (employer): 4.0 from 3 reviews, Woodland Hills",
+    "Google Business Profile: rating and review count not pulled; the listing address should be verified against Chatsworth",
+    "Service-areas page: Los Angeles (HQ) at Woodland Hills, Fresno, Chatsworth, then eleven counties as a list; no LocalBusiness schema for any office",
+    "Site: 14 testimonial posts, no Review or AggregateRating schema anywhere"
+  ],
+  "plan": [
+    ["Days 1 to 10", "Baseline locked: this report, a Semrush project on the domain, Search Console verified, Google Business Profile claimed for Chatsworth, Los Angeles and Fresno at one written address each. FAQPage markup shipped on the 99 pages that already show a FAQ."],
+    ["Days 10 to 30", "Location pages for Chatsworth, Los Angeles, Fresno and Ventura County with LocalBusiness schema. Organization schema completed. www3 redirected. One booking page per service, forms set to noindex, 74 meta descriptions and 15 H1s written from the workbook."],
+    ["Days 30 to 60", "The ten service pages rebuilt with Service schema, city titles and the questions answered; the Los Angeles and Fresno managed IT pages published. Report re-run at day 30."],
+    ["Days 60 to 90", "Blog moved to one tree by service line with BlogPosting and authors; each ranking post linked to its service page. Review program live. Dealer-locator and chamber listings placed with the Chatsworth address. Report re-run at day 60."],
+    ["Day 90", "Report re-run against this baseline: readiness, local positions for the six queries, non-brand share, Google review count. The next 90 days planned from what moved."]
+  ],
+  "measure": [
+    ["Organic visits a month", "Semrush domain overview, monthly", "Up against 534, with non-brand visits landing on service and location pages"],
+    ["Position for the six local queries", "Live results from Los Angeles and Fresno, monthly", "Present in the top ten for managed it services los angeles and managed it services fresno by day 90"],
+    ["Readiness score, every page", "This audit re-run on the sitemap", "Average above 75 with no D or F on a service or location page"],
+    ["Pages with FAQPage schema", "This audit", "99 by day 10, every service and location page by day 60"],
+    ["LocalBusiness records", "This audit and Google Business Profile", "One per office, matching the profile word for word"],
+    ["Google reviews", "Google Business Profile, monthly", "Rising every month, with the count on the reviews page"],
+    ["Referring domains", "Semrush backlinks overview, monthly", "Up from 546, with dealer locators and local chambers among them"]
+  ],
+  "hub": {
+    "heading": "Where you stand in search today, and what changes",
+    "intro": "Measured before we touched anything, so the work can be judged against it. Numbers from Semrush, live search results and goodsuite.com on 9 September 2026.",
+    "today": [
+      "Half of all visits come from someone searching the name; a quarter land on accessory listings in the shop. The service pages earn none of the top 50 terms.",
+      "Absent from the top ten for managed IT, managed print, copier lease and cybersecurity in Los Angeles, for managed IT in Fresno, and for copier dealer in Chatsworth, where the headquarters is.",
+      "Ninety-nine pages show a FAQ; none is marked up. No LocalBusiness record for any of three offices, and the site lists Woodland Hills as headquarters.",
+      "The blog is the strongest part of the site: 245 posts averaging 1,156 words, 185 with Article schema, and the only pages that rank for anything but the name."
+    ],
+    "after": [
+      "Every existing FAQ visible to the engines that answer questions: 99 pages marked up as FAQPage in the first ten days.",
+      "One address everywhere, Chatsworth as headquarters, and a page with a LocalBusiness record for each office.",
+      "Ten service pages that name the city, carry Service schema and answer the questions people actually search, plus Los Angeles and Fresno pages for managed IT.",
+      "The index trimmed to pages meant to rank, the third host redirected, and the blog filed by service line with a link to the page each post supports."
+    ],
+    "keep": [
+      ["/blog/what-are-mfps-multi-function-printers/", "kept", "mfps #5 (720 a month), what are mfps #1, multifunction #9, what is an mfp #18"],
+      ["/blog/best-copiers-for-offices-a-comprehensive-guide-to-choosing-the-right-one/", "kept", "office copiers #9 (1,000 a month)"],
+      ["/blog/what-is-hipaa-compliant-printing/", "kept", "hipaa compliant printing #3 (260), hipaa compliant printing companies #10"],
+      ["/blog/top-printers-for-churches-religious-organizations/", "kept", "best printer for church #4 (140), printers for churches #4"],
+      ["/blog/understanding-the-different-levels-of-managed-it-services/", "kept", "types of managed it services #16 (880), advanced managed services #6"]
+    ],
+    "note": "Rankings or traffic. Those depend on the market and on what you publish after launch. What we promise is that nothing about the site is the reason they do not come, that every number above is re-measured at 30, 60 and 90 days, and that every page that earns a visitor today keeps earning it."
+  },
+  "sitewide": [
+    [true, "Served over HTTPS with one canonical host, goodsuite.com"],
+    [true, "Sitemap index declared in robots.txt; 317 page URLs"],
+    [true, "llms.txt served, which almost no competitor does"],
+    [true, "GPTBot, ClaudeBot, PerplexityBot and Google-Extended allowed"],
+    [false, "www3.goodsuite.com indexed and ranking for the brand reviews query"],
+    [false, "FAQPage schema on any page; 99 pages show a FAQ"],
+    [false, "LocalBusiness schema for any of the three offices"],
+    [false, "Organization schema with an address, telephone or foundingDate"],
+    [false, "Service schema on the ten service pages"],
+    [false, "A meta description on 74 pages; one H1 on 24 pages"],
+    [false, "The headquarters address on the site matches Chatsworth"],
+    [false, "Review or AggregateRating schema anywhere"]
+  ]
+}

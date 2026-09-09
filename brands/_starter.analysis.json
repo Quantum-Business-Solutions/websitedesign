@@ -1,0 +1,19 @@
+{
+  "client": "Client Name",
+  "domain": "example.com",
+  "accent": "#2f6f4e",
+  "chrome": "#0f1e33",
+  "cities": [
+    "Headquarters City",
+    "Second City",
+    "State",
+    "ST"
+  ],
+  "sitemaps": [
+    "https://example.com/sitemap.xml"
+  ],
+  "skip": "feed|attachment|\\.(jpg|png|pdf)$",
+  "base_url": "https://qbs-analyses.vercel.app/<slug>",
+  "out": "analyses/<slug>",
+  "note": "Take the headquarters and the other locations from the client's own site (home page footer, contact and locations pages) and from the client, never from a guess."
+}
