@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light">
+<title>Van Ausdall &amp; Farrar: One Partner for the Website, Search and Content</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+html,body{margin:0;padding:0}
+:root{
+--ink:#14181D;--ink-2:#2B3138;--paper:#F6F5F2;--surface:#FFFFFF;--surface-2:#EFEEEA;
+--graphite:#5D6874;--graphite-2:#8A939D;--rule:#D9D7D1;--rule-2:#E8E6E1;
+--cyan:#2A71AF;--cyan-soft:#E4EEF7;--magenta:#A81F5F;--magenta-soft:#F9E6EE;
+--ochre:#8A6412;--ochre-soft:#F7EEDA;--green:#256B4B;--green-soft:#E3F0E9;--navy:#0f1e33;
+--shadow:0 1px 2px rgba(20,24,29,.05),0 8px 24px rgba(20,24,29,.05);
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:"Source Serif 4",Georgia,"Times New Roman",serif;font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px 96px}
+.col{max-width:68ch}
+h1,h2,h3,h4,.eyebrow,.fig,th,.chip,.btn,.price,.tier-name{font-family:Archivo,"Helvetica Neue",Arial,sans-serif}
+h1{font-size:clamp(2.1rem,4.6vw,3.4rem);line-height:1.04;letter-spacing:-.022em;font-weight:700;margin:0;text-wrap:balance}
+h2{font-size:clamp(1.5rem,2.6vw,2rem);line-height:1.14;letter-spacing:-.017em;font-weight:700;margin:0;text-wrap:balance}
+h3{font-size:1.15rem;line-height:1.25;letter-spacing:-.01em;font-weight:600;margin:0;text-wrap:balance}
+h4{font-size:.95rem;line-height:1.3;font-weight:600;margin:0}
+p{margin:0}
+.eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.7rem;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--graphite)}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+.lede{font-size:1.24rem;line-height:1.5;color:var(--ink-2)}
+.small{font-size:.9rem;line-height:1.55;color:var(--graphite)}
+.xs{font-size:.8rem;line-height:1.5;color:var(--graphite)}
+a{color:var(--cyan);text-decoration-thickness:1px;text-underline-offset:2px}
+hr{border:0;border-top:1px solid var(--rule);margin:0}
+.cover{border-bottom:2px solid var(--ink);padding:56px 0 30px;display:flex;flex-direction:column;gap:26px}
+.cover-meta{display:flex;flex-wrap:wrap;gap:10px 30px;align-items:center}
+.cover-meta img{height:34px;width:auto}
+.cover-thesis{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,340px);gap:36px;align-items:end}
+@media(max-width:820px){.cover-thesis{grid-template-columns:1fr;align-items:start}}
+.readout{background:var(--surface);border:1px solid var(--rule);border-radius:3px;padding:20px 22px;display:flex;flex-direction:column;gap:14px}
+.readout-row{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.readout-row + .readout-row{border-top:1px solid var(--rule-2);padding-top:13px}
+.readout-k{font-family:Archivo,sans-serif;font-size:.83rem;color:var(--graphite);line-height:1.3}
+.readout-v{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;font-size:1.32rem;font-weight:600;letter-spacing:-.02em;white-space:nowrap}
+.v-bad{color:var(--magenta)}.v-good{color:var(--green)}
+section{padding:52px 0;border-bottom:1px solid var(--rule)}
+section:last-of-type{border-bottom:0}
+.sec-head{display:flex;flex-direction:column;gap:12px;margin-bottom:28px}
+.stack{display:flex;flex-direction:column;gap:18px}
+.stack-lg{display:flex;flex-direction:column;gap:34px}
+.ledger{display:flex;flex-direction:column;border-top:1px solid var(--ink)}
+.finding{display:grid;grid-template-columns:112px minmax(0,1fr) minmax(0,168px);gap:24px;padding:20px 0;border-bottom:1px solid var(--rule);align-items:start}
+@media(max-width:820px){.finding{grid-template-columns:1fr;gap:10px}}
+.chip{display:inline-block;font-size:.66rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:4px 8px;border-radius:2px;white-space:nowrap}
+.c-crit{background:var(--magenta-soft);color:var(--magenta)}.c-now{background:var(--cyan-soft);color:var(--cyan)}.c-opp{background:var(--green-soft);color:var(--green)}.c-hyp{background:var(--ochre-soft);color:var(--ochre)}
+.finding-fig{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;font-size:1.05rem;font-weight:600;text-align:right;line-height:1.3}
+@media(max-width:820px){.finding-fig{text-align:left}}
+.tw{overflow-x:auto;border:1px solid var(--rule);border-radius:3px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:Archivo,sans-serif;font-size:.88rem;min-width:520px}
+th{text-align:left;font-size:.68rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--graphite);padding:11px 14px;border-bottom:1px solid var(--ink);white-space:nowrap;background:var(--surface-2)}
+td{padding:10px 14px;border-bottom:1px solid var(--rule-2);vertical-align:top;line-height:1.45}
+tr:last-child td{border-bottom:0}
+td.n{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+th.n{text-align:right}
+.hi{color:var(--green);font-weight:600}.hi-bad{color:var(--magenta);font-weight:600}
+caption{caption-side:bottom;text-align:left;padding:10px 14px;font-family:Archivo,sans-serif;font-size:.76rem;color:var(--graphite);line-height:1.5}
+.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:3px;padding:22px;display:flex;flex-direction:column;gap:11px}
+.card img{width:100%;height:auto;border:1px solid var(--rule);border-radius:2px;display:block}
+.rail{border-left:3px solid var(--cyan);padding-left:20px;display:flex;flex-direction:column;gap:11px}
+.rail-mag{border-left-color:var(--magenta)}.rail-och{border-left-color:var(--ochre)}
+blockquote{margin:0;padding:0 0 0 22px;border-left:2px solid var(--ink);font-size:1.12rem;line-height:1.5;font-style:italic;color:var(--ink)}
+blockquote cite{display:block;margin-top:9px;font-family:Archivo,sans-serif;font-style:normal;font-size:.78rem;letter-spacing:.02em;color:var(--graphite)}
+.phase{display:grid;grid-template-columns:110px minmax(0,1fr);gap:24px;padding:20px 0;border-bottom:1px solid var(--rule)}
+.phase:first-child{border-top:1px solid var(--ink)}
+@media(max-width:700px){.phase{grid-template-columns:1fr;gap:8px}}
+.phase-when{font-family:"IBM Plex Mono",monospace;font-size:.8rem;font-weight:500;color:var(--cyan);letter-spacing:.02em;padding-top:2px}
+.split{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0;border:1px solid var(--rule);border-radius:3px;overflow:hidden;background:var(--surface)}
+.split > div{padding:22px;display:flex;flex-direction:column;gap:12px}
+.split > div + div{border-left:1px solid var(--rule)}
+@media(max-width:620px){.split > div + div{border-left:0;border-top:1px solid var(--rule)}}
+ul{margin:0;padding-left:1.15em;display:flex;flex-direction:column;gap:7px}
+li{line-height:1.5}
+ul.tight li{font-size:.92rem}
+.ws{background:var(--surface);border:1px solid var(--rule);border-radius:3px;overflow:hidden}
+.ws-head{display:flex;align-items:center;gap:14px;padding:16px 22px;border-bottom:1px solid var(--ink);background:var(--surface-2);flex-wrap:wrap}
+.ws-num{font-family:"IBM Plex Mono",monospace;font-size:.8rem;font-weight:600;color:var(--graphite-2);letter-spacing:.04em}
+.ws-head h3{flex:1 1 auto;min-width:160px}
+.ws-body{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:900px){.ws-body{grid-template-columns:1fr}}
+.ws-cell{padding:22px;display:flex;flex-direction:column;gap:12px}
+.ws-cell + .ws-cell{border-left:1px solid var(--rule)}
+@media(max-width:900px){.ws-cell + .ws-cell{border-left:0;border-top:1px solid var(--rule)}}
+.ws-res{background:var(--cyan-soft)}
+.tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;align-items:stretch}
+.tier{background:var(--surface);border:1px solid var(--rule);border-radius:3px;padding:26px;display:flex;flex-direction:column;gap:16px;position:relative}
+.tier.rec{border-color:var(--cyan);box-shadow:var(--shadow)}
+.tier .flag{position:absolute;top:-11px;left:22px;background:var(--cyan);color:#fff;font-family:Archivo,sans-serif;font-size:.66rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:4px 9px;border-radius:2px}
+.tier-name{font-size:1.2rem;font-weight:700;letter-spacing:-.01em}
+.price{font-family:"IBM Plex Mono",monospace;font-size:2rem;font-weight:600;letter-spacing:-.02em;line-height:1}
+.price small{font-size:.85rem;font-weight:500;color:var(--graphite);letter-spacing:0}
+.tier ul li{font-size:.94rem}
+.tier .grp{font-family:Archivo,sans-serif;font-size:.68rem;letter-spacing:.09em;text-transform:uppercase;color:var(--graphite);margin-top:6px}
+.btnrow{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn{display:inline-block;font-size:.88rem;font-weight:600;padding:12px 20px;border-radius:2px;background:var(--ink);color:var(--paper);text-decoration:none}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+.callout{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--ochre);border-radius:3px;padding:20px 22px;display:flex;flex-direction:column;gap:10px}
+.callout.acc{border-left-color:var(--cyan)}
+.dark{background:var(--navy);color:#fff;border-radius:3px;padding:30px 30px}
+.dark h2,.dark h3{color:#fff}.dark .eyebrow{color:rgba(255,255,255,.75)}.dark p{color:rgba(255,255,255,.88)}
+.cmp{display:grid;gap:6px;margin-top:18px}
+.cmp-row{display:grid;grid-template-columns:1.6fr 1fr 40px 1fr;align-items:center;gap:10px;padding:9px 12px;border-radius:3px;background:rgba(255,255,255,.06)}
+.cmp-row.head{background:none;font-family:"IBM Plex Mono",monospace;font-size:.68rem;letter-spacing:.09em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+.cmp-row .lbl{font-family:Archivo,sans-serif;font-weight:600;font-size:.92rem}
+.cmp-row .t{color:#ffb4a8;font-family:"IBM Plex Mono",monospace;font-weight:600;text-align:right}
+.cmp-row .b{color:#8fe3b0;font-family:"IBM Plex Mono",monospace;font-weight:700;font-size:1.05rem}
+.cmp-row .ar{width:40px;height:2px;background:rgba(255,255,255,.35);justify-self:center;position:relative}
+.cmp-row .ar::after{content:"";position:absolute;right:-1px;top:-4px;border:5px solid transparent;border-left-color:rgba(255,255,255,.35)}
+.cmp-row.head .ar{background:none}.cmp-row.head .ar::after{display:none}
+@media(max-width:700px){.cmp-row{grid-template-columns:1fr 1fr;gap:4px}.cmp-row .lbl{grid-column:1/-1}.cmp-row .ar{display:none}.cmp-row .t{text-align:left}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="cover">
+<div class="cover-meta">
+<img src="https://van-ausdall.vercel.app/assets/logo-600.png" alt="Van Ausdall &amp; Farrar">
+<span class="eyebrow">Website, Search and Content Proposal &nbsp;·&nbsp; Quantum Business Solutions</span>
+<span class="eyebrow">Prepared for Brian Courtney &nbsp;·&nbsp; Van Ausdall &amp; Farrar &nbsp;·&nbsp; Indianapolis</span>
+<span class="eyebrow">Draft for Tuesday 15 September &nbsp;·&nbsp; 9 September 2026</span>
+</div>
+<div class="cover-thesis">
+<div class="stack">
+<h1>You sell one roof.<br>Your marketing has four.</h1>
+<p class="lede">Van Ausdall &amp; Farrar tells every customer to put copiers, IT, phones and process under one agreement. Your website, SEO, content and email sit with four vendors who do not talk to each other, and the president has noticed the company is not appearing in search. This proposal puts the website, search and content under one partner, for about what you pay today, and shows the rebuilt site before you sign anything.</p>
+</div>
+<div class="readout">
+<div class="eyebrow">vanausdall.com &middot; Semrush and live crawl &middot; 8 Sept 2026</div>
+<div class="readout-row"><span class="readout-k">Organic visits a month</span><span class="readout-v">1,081</span></div>
+<div class="readout-row"><span class="readout-k">Of them searching your name</span><span class="readout-v v-bad">80%</span></div>
+<div class="readout-row"><span class="readout-k">Rank for managed IT services Indianapolis</span><span class="readout-v v-bad">not top 100</span></div>
+<div class="readout-row"><span class="readout-k">Pages with FAQ schema</span><span class="readout-v v-bad">4 of 171</span></div>
+<div class="readout-row"><span class="readout-k">Average page readiness</span><span class="readout-v v-bad">53 / 100</span></div>
+<div class="readout-row"><span class="readout-k">Same pages, rebuilt</span><span class="readout-v v-good">95 / 100</span></div>
+</div>
+</div>
+</header>
+
+<section>
+<div class="sec-head">
+<span class="eyebrow">Where this came from</span>
+<h2>Your own words, yesterday</h2>
+</div>
+<div class="col stack">
+<blockquote>
+We've just cobbled things together over the last five or six years. We're trying to drive more people to our website to get web leads, and we're just not getting it. What we're looking for is more of a holistic approach.
+<cite>Brian Courtney, Website and SEO analysis call, 8 September 2026</cite>
+</blockquote>
+<p>You also said the look and feel of the site is fine and the problem is results; that you pay about $1,500 a month to Atomic 8 Ball for the website and SEO at a TAG partner rate, roughly $2,500 between the two of them, with Evolved Office separate until March; that you get four blog posts and a press release a month and are not sure the blog is even optimized; and that a monthly operating expense is easier to budget than a capital project.</p>
+<p>Patrick asked the two questions that matter: do you know what you are investing in SEO and AEO, and do you know what results you are getting. The answer to the second was a shrug. So we measured it. Everything below comes from Semrush, from a crawl of all 171 pages of vanausdall.com, and from the three complete rebuilds we showed you on the call. Where we are estimating rather than measuring, we say so.</p>
+</div>
+</section>
+
+<section>
+<div class="sec-head">
+<span class="eyebrow">Findings</span>
+<h2>Ten things we found</h2>
+<p class="col small">Ordered by what they cost you, not by how hard they are to fix. The full report with every number is at <a href="https://van-ausdall.vercel.app/seo-report.html">van-ausdall.vercel.app/seo-report.html</a>.</p>
+</div>
+<div class="ledger">
+<div class="finding"><span class="chip c-crit">Critical</span><div class="stack"><h3>Absent for the term your headquarters market searches most</h3><p class="small">"Managed IT services Indianapolis" is searched 1,000 times a month at a difficulty of 29. Leap Managed IT is number one. Van Ausdall &amp; Farrar is not in the top 100, and neither is it there for "IT support Indianapolis" or "IT services Indianapolis" (880 each). Your best managed IT ranking is the Fort Wayne page, at position 6 for its own city.</p></div><div class="finding-fig">0 of 3<br><span class="xs">Indianapolis IT terms<br>in the top 100</span></div></div>
+<div class="finding"><span class="chip c-crit">Critical</span><div class="stack"><h3>Four visits in five already know your name</h3><p class="small">About 80 percent of organic traffic comes from people searching "Van Ausdall" or a variant, and the home page carries 85 percent of all visits. The site is a brochure for people who were referred to you. It is not finding anyone new.</p></div><div class="finding-fig">80%<br><span class="xs">branded share<br>of 1,081 visits</span></div></div>
+<div class="finding"><span class="chip c-crit">Critical</span><div class="stack"><h3>Not named when a buyer asks an assistant for the best</h3><p class="small">We ran the searches a buyer types into Google or an AI assistant. "Best managed IT services Indianapolis" returns ten results; Leap is second, Braden sixth, two directories bracket them, and VAF is absent. "Who is the largest office technology provider in Indiana" returns Braden and directories, despite the claim on your home page. Both competitors carry review schema. You carry none.</p></div><div class="finding-fig">0 of 10<br><span class="xs">results for "best<br>managed IT Indianapolis"</span></div></div>
+<div class="finding"><span class="chip c-now">Fix now</span><div class="stack"><h3>171 pages that tell engines who you are, not why to pick you</h3><p class="small">Every page carries Organization and LocalBusiness schema. Four carry FAQ schema, three carry Service schema, none carry Review or Article schema, and 68 are under 300 words. The two pages that do have FAQ schema are the two that rank for anything non-branded (business phones at 4, managed print at 6). The pattern works. It has been applied to two pages out of 171.</p></div><div class="finding-fig">4 / 3 / 0<br><span class="xs">pages with FAQ, Service,<br>Review schema</span></div></div>
+<div class="finding"><span class="chip c-now">Fix now</span><div class="stack"><h3>The suburb pages exist and say nothing</h3><p class="small">Carmel, Fishers, Noblesville and Greenwood each have a page of 112 to 122 words with no FAQ or Service schema. Leap earns 34 percent of its traffic from four suburb pages. "Managed service provider Carmel Indiana" is 720 searches a month at a difficulty of 13. The pages are indexed; they just have nothing an engine can match to a query.</p></div><div class="finding-fig">115<br><span class="xs">words on a typical<br>suburb page</span></div></div>
+<div class="finding"><span class="chip c-now">Fix now</span><div class="stack"><h3>324 blog posts, one a week for three years, none marked up</h3><p class="small">The cadence is the best asset you have; no Indiana competitor publishes as often. But no post carries BlogPosting schema, a published date or an author, and every URL is a query string (blog?p=slug). Titles already ask questions; the first paragraph rarely answers them, so there is nothing for an assistant to lift. Document conversion posts rank 2 to 7 for "document conversion companies" with no schema at all, which is what the rest of the blog could do.</p></div><div class="finding-fig">0 of 40<br><span class="xs">sampled posts with<br>Article schema or a date</span></div></div>
+<div class="finding"><span class="chip c-opp">Opportunity</span><div class="stack"><h3>Two large terms with no page</h3><p class="small">"Managed print services" is 4,400 searches a month at a difficulty of 16 and "copier lease" is 2,400 at 19. You have no page ranking for either. Leap's copier brand is already above you for "copier lease Indianapolis". "Business phone systems" is 9,900 a month with no competitor in the top 100; you rank 25th through the Fort Wayne page rather than the phone systems page.</p></div><div class="finding-fig">6,800<br><span class="xs">monthly searches,<br>no VAF page</span></div></div>
+<div class="finding"><span class="chip c-opp">Opportunity</span><div class="stack"><h3>Authority is level. Pages are the gap.</h3><p class="small">Authority Score 21 against Leap at 24 and Taylored at 27. Four Indiana competitors earn 1,555 to 2,094 visits a month from 1,058 to 2,711 keywords; you earn 1,081 from 365. This is the good news: you do not need years of link building, you need pages that answer the questions.</p></div><div class="finding-fig">365 vs 2,711<br><span class="xs">ranking keywords,<br>VAF vs Taylored</span></div></div>
+<div class="finding"><span class="chip c-hyp">Entity</span><div class="stack"><h3>Nothing connects the company across the web</h3><p class="small">The Organization schema has no sameAs, logo, description or founding date, so engines have to guess that the LinkedIn page (1,823 followers), the Facebook page, two YouTube channels (9 subscribers, top video 78 views) and the Crunchbase profile are you. No Google Business Profile appeared in the brand reviews search; Indeed and Glassdoor employer ratings fill eight of ten spots. The COO's own LinkedIn profile has more followers than the company page.</p></div><div class="finding-fig">0<br><span class="xs">sameAs links in<br>your schema</span></div></div>
+<div class="finding"><span class="chip c-hyp">Hygiene</span><div class="stack"><h3>The small things that cost a little every month</h3><p class="small">Home page title omits Indianapolis and the share image is a stock AI file. 324 of 586 sitemap URLs are query strings and 90 are PDFs. The healthcare meta description reads "Healthcare Indust". No llms.txt. All four AI crawlers are allowed, which is one thing that is right.</p></div><div class="finding-fig">55%<br><span class="xs">of sitemap URLs are<br>blog?p= strings</span></div></div>
+</div>
+</section>
+
+<section>
+<div class="sec-head">
+<span class="eyebrow">What we showed you</span>
+<h2>Three complete sites, not three mockups</h2>
+<p class="col small">Every one of your 171 URLs has a counterpart in each direction, in the new design, with the fixes above already applied. The words are the same in all three; the composition is not. Open any one and use the switcher at the bottom of the page to flip between them.</p>
+</div>
+<div class="grid-3">
+<div class="card"><a href="https://van-ausdall.vercel.app/clean/index.html"><img src="https://van-ausdall.vercel.app/screenshots/clean-home-1440.jpg" alt="Clean direction home page"></a><h3>Clean</h3><p class="small">The clear one. Bright, direct, built so a facilities manager can find the right service in one click.</p><a class="small" href="https://van-ausdall.vercel.app/clean/index.html">Open Clean</a></div>
+<div class="card"><a href="https://van-ausdall.vercel.app/showcase/index.html"><img src="https://van-ausdall.vercel.app/screenshots/showcase-home-1440.jpg" alt="Showcase direction home page"></a><h3>Showcase</h3><p class="small">The technology-partner one. Dark, layered, 3D and motion, built to make VAF feel like the most advanced option in Indiana.</p><a class="small" href="https://van-ausdall.vercel.app/showcase/index.html">Open Showcase</a></div>
+<div class="card"><a href="https://van-ausdall.vercel.app/press/index.html"><img src="https://van-ausdall.vercel.app/screenshots/press-home-1440.jpg" alt="Press direction home page"></a><h3>Press</h3><p class="small">The established one. Editorial and confident, built around 110 years of proof and the people behind it.</p><a class="small" href="https://van-ausdall.vercel.app/press/index.html">Open Press</a></div>
+</div>
+<div class="dark" style="margin-top:28px">
+<span class="eyebrow">The same seventeen checks, run on your site and on the build</span>
+<h3 style="margin-top:8px">This is what "optimized" means in numbers</h3>
+<p class="small" style="color:rgba(255,255,255,.8);margin-top:6px">The scoring script is the same one that produced the 53. It reads titles, metas, headings, word counts, images, links and every schema type on every page. Review schema is deliberately left out until you have a Google review program; marking up your own testimonials would break Google's guidelines. That is the six points between 95 and 100.</p>
+<div class="cmp">
+<div class="cmp-row head"><span class="lbl"></span><span class="t">vanausdall.com today</span><span class="ar"></span><span class="b">The build, any direction</span></div>
+<div class="cmp-row"><span class="lbl">Average readiness score</span><span class="t">53 of 100</span><span class="ar"></span><span class="b">95 of 100</span></div>
+<div class="cmp-row"><span class="lbl">Pages scoring A</span><span class="t">2 of 171</span><span class="ar"></span><span class="b">168 of 168</span></div>
+<div class="cmp-row"><span class="lbl">Pages with FAQ schema</span><span class="t">4 of 171</span><span class="ar"></span><span class="b">168 of 168</span></div>
+<div class="cmp-row"><span class="lbl">Pages with Service or Article schema</span><span class="t">3 of 171</span><span class="ar"></span><span class="b">143 of 168</span></div>
+<div class="cmp-row"><span class="lbl">Pages with a question-form heading</span><span class="t">26 of 171</span><span class="ar"></span><span class="b">168 of 168</span></div>
+<div class="cmp-row"><span class="lbl">Pages under 300 words</span><span class="t">68 of 171</span><span class="ar"></span><span class="b">5 of 168</span></div>
+<div class="cmp-row"><span class="lbl">Titles with the city in them</span><span class="t">58 of 171</span><span class="ar"></span><span class="b">168 of 168</span></div>
+</div>
+<p class="xs" style="color:rgba(255,255,255,.7);margin-top:14px">Page for page: 164 of your URLs map to a page in the build, 7 retired pages (COVID notices, kiosk pages, a survey) redirect to the nearest page, and the 301 map is written. On the three-directions page, every one of your pages sits beside its rebuilt counterpart with what changed and links to both: <a style="color:#8fe3b0" href="https://van-ausdall.vercel.app/#audit">van-ausdall.vercel.app/#audit</a>.</p>
+</div>
+</section>
+
+<section>
+<div class="sec-head">
+<span class="eyebrow">Why HubSpot CMS</span>
+<h2>One system instead of a WordPress site bolted to a CRM</h2>
+</div>
+<div class="grid-3">
+<div class="card"><h3>Every form lands in the CRM</h3><p class="small">Consultation requests, assessment results, supply orders and service requests create or update the contact, with the page and the campaign attached. Marketing qualified leads become a report, not a spreadsheet Evolved Office sends you.</p></div>
+<div class="card"><h3>Secure by design</h3><p class="small">HubSpot CMS runs on HubSpot's own infrastructure with a managed WAF, SSL and CDN. There are no plugins to patch and no open-source core to be exploited, which is where most WordPress compromises start. Your Vsecure team will approve.</p></div>
+<div class="card"><h3>Your team can edit it</h3><p class="small">Drag-and-drop pages, a blog with the schema built into the template, and the Technology Strength Assessment as a scored multi-step form. We hand it over with a walkthrough where you edit a page yourself. No developer needed for a price change.</p></div>
+</div>
+<p class="small col" style="margin-top:18px">Hosting is HubSpot Content Hub Starter at about $15 a month, paid to HubSpot. Everything you already use in HubSpot stays where it is. When Evolved Office ends in March, email and MQL nurturing move into the same system with no migration.</p>
+</section>
+
+<section>
+<div class="sec-head">
+<span class="eyebrow">The work</span>
+<h2>Seven workstreams, one partner</h2>
+</div>
+<div class="stack">
+<div class="ws"><div class="ws-head"><span class="ws-num">01</span><h3>Website</h3></div><div class="ws-body"><div class="ws-cell"><span class="eyebrow">Where you are</span><p class="small">Custom-built by Atomic 8 Ball, tweaked monthly, no measurable result. 171 pages averaging 53 out of 100. Four suburb pages at 115 words.</p></div><div class="ws-cell"><span class="eyebrow">What we do</span><p class="small">Build the direction you choose in HubSpot CMS: every page you have today, rebuilt with FAQ, Service and Organization schema, a form and click-to-call, plus 301s for all 171 URLs. Photography half-day at the headquarters and in the field.</p></div><div class="ws-cell ws-res"><span class="eyebrow">What changes</span><p class="small">You launch already scoring 95. Every lead is in the CRM with its source. Your team edits pages without a vendor.</p></div></div></div>
+<div class="ws"><div class="ws-head"><span class="ws-num">02</span><h3>SEO</h3></div><div class="ws-body"><div class="ws-cell"><span class="eyebrow">Where you are</span><p class="small">365 keywords, 80 percent branded. No page for managed print (4,400 a month) or copier lease (2,400). Fort Wayne outranks Indianapolis for your own services.</p></div><div class="ws-cell"><span class="eyebrow">What we do</span><p class="small">Pages for the two missing terms. Rebuild the four suburb pages, then one new city page a month. Monthly Semrush re-run against the September baseline, and six page optimizations a month chosen from the spreadsheet you saw.</p></div><div class="ws-cell ws-res"><span class="eyebrow">What changes</span><p class="small">Indianapolis, Carmel, Fishers and the two big product terms have a page each that can rank. Reads at 30, 60 and 90 days, then monthly.</p></div></div></div>
+<div class="ws"><div class="ws-head"><span class="ws-num">03</span><h3>AEO: answer engines</h3></div><div class="ws-body"><div class="ws-cell"><span class="eyebrow">Where you are</span><p class="small">Absent from the "best managed IT Indianapolis" answer set. FAQ schema on 4 pages. No entity facts an assistant can cite for the largest-provider claim.</p></div><div class="ws-cell"><span class="eyebrow">What we do</span><p class="small">FAQ schema on every page, an entity facts page that states the claim with evidence (1914, 57,000 square feet, four pillars, three offices, NPS 93.4, SOC 2), Organization schema with sameAs to every profile, llms.txt, and a monthly check of eight buyer questions across Google and the assistants.</p></div><div class="ws-cell ws-res"><span class="eyebrow">What changes</span><p class="small">Assistants can parse, quote and cite you. Presence in the eight answer sets becomes a number we report every month.</p></div></div></div>
+<div class="ws"><div class="ws-head"><span class="ws-num">04</span><h3>Local and reviews</h3></div><div class="ws-body"><div class="ws-cell"><span class="eyebrow">Where you are</span><p class="small">No Google Business Profile in the brand reviews results. Indeed and Glassdoor own eight of ten spots. Both competitors carry review schema; you carry none.</p></div><div class="ws-cell"><span class="eyebrow">What we do</span><p class="small">Claim and complete profiles for Indianapolis, Fort Wayne and Evansville, seed the Q&amp;A with the site FAQ, post weekly, and add a review request when every service ticket closes. Review schema goes on the pages once real reviews exist.</p></div><div class="ws-cell ws-res"><span class="eyebrow">What changes</span><p class="small">A path into the "best" lists and the map pack, which for a three-office dealer is most of the local volume Semrush never sees.</p></div></div></div>
+<div class="ws"><div class="ws-head"><span class="ws-num">05</span><h3>Content</h3></div><div class="ws-body"><div class="ws-cell"><span class="eyebrow">Where you are</span><p class="small">Four posts and a press release a month from TAG, shared with other dealers, on query-string URLs with no schema, date or author. You are paying for content you cannot rank.</p></div><div class="ws-cell"><span class="eyebrow">What we do</span><p class="small">Five pieces a month written for Indiana: four posts aimed at the question keywords (720 to 1,000 searches each) with an answer-first opening and a five-question FAQ, and one guide or case study. Migrate the 324 existing posts to clean URLs with BlogPosting schema and rewrite the top 30 answer-first.</p></div><div class="ws-cell ws-res"><span class="eyebrow">What changes</span><p class="small">The weekly cadence you already pay for starts earning. Author pages make the people behind the advice visible to engines.</p></div></div></div>
+<div class="ws"><div class="ws-head"><span class="ws-num">06</span><h3>Social and the entity</h3></div><div class="ws-body"><div class="ws-cell"><span class="eyebrow">Where you are</span><p class="small">LinkedIn 1,823 followers, video split across two YouTube channels nobody can find, Facebook the only channel linking to the blog.</p></div><div class="ws-cell"><span class="eyebrow">What we do</span><p class="small">One YouTube channel linked from the site with VideoObject schema on every embed. A LinkedIn post a week whose first line is the answer sentence from that week's post, reshared by three named people. Listings on Clutch, Cloudtango, the Indy Chamber and the Canon, Ricoh, Kyocera, Mitel and Fortinet partner locators.</p></div><div class="ws-cell ws-res"><span class="eyebrow">What changes</span><p class="small">Every profile corroborates the site, which is how assistants decide who is real. Your team keeps the creative voice; we supply the calendar and the wording.</p></div></div></div>
+<div class="ws"><div class="ws-head"><span class="ws-num">07</span><h3>Measurement</h3></div><div class="ws-body"><div class="ws-cell"><span class="eyebrow">Where you are</span><p class="small">A monthly call with a vendor president and a report with no advice. Nobody can say what the $2,500 produces.</p></div><div class="ws-cell"><span class="eyebrow">What we do</span><p class="small">The September baseline is the yardstick: rankings, visits, answer-set presence, leads by source, all in HubSpot. A call every two weeks with the numbers and the next six pages. A written read at 30, 60 and 90 days after launch.</p></div><div class="ws-cell ws-res"><span class="eyebrow">What changes</span><p class="small">You can answer Patrick's two questions. If a number is not moving, you see it the same month we do, and we say what we are changing.</p></div></div></div>
+</div>
+</section>
+
+<section>
+<div class="sec-head">
+<span class="eyebrow">Who does what</span>
+<h2>One partner, and what stays with you</h2>
+</div>
+<div class="split">
+<div><h3>Quantum runs</h3><ul class="tight"><li>The website build in HubSpot CMS and everything on it afterwards</li><li>SEO, AEO and the monthly analysis against the baseline</li><li>Content: five pieces a month, written for Indiana, published with schema</li><li>Local: three Google Business Profiles, listings, the review request flow</li><li>The social calendar and wording; measurement and the report</li></ul></div>
+<div><h3>Van Ausdall &amp; Farrar keeps</h3><ul class="tight"><li>Approving copy and choosing the direction; you know the customers</li><li>Posting to social in your own voice, from the calendar we supply</li><li>Asking for the review when a ticket closes; we build the request, your team sends it</li><li>The customer comments, case studies and photography subjects</li><li>Evolved Office through March 2027; email moves into HubSpot after</li></ul></div>
+<div><h3>What this replaces</h3><ul class="tight"><li>Atomic 8 Ball: website management and SEO, about $1,500 a month</li><li>The TAG content you cannot rank, about $1,000 a month of the partner fee</li><li>The monthly report with no advice</li><li>Not replaced: HubSpot licences, Evolved Office until March, any paid media</li></ul></div>
+</div>
+</section>
+
+<section>
+<div class="sec-head">
+<span class="eyebrow">The first ninety days</span>
+<h2>From a choice to a live site</h2>
+</div>
+<div>
+<div class="phase"><span class="phase-when">Week 1</span><div class="stack"><h3>Choose a direction and confirm the ten items marked "to confirm"</h3><p class="small">Logo as a vector, the people named on pages, the assessment scoring, the customer comments we may quote. HubSpot Content Hub Starter connected. Photography scheduled.</p></div></div>
+<div class="phase"><span class="phase-when">Weeks 2 to 3</span><div class="stack"><h3>Copy from your practice leaders, in your words</h3><p class="small">The migrated pages already carry your copy; the twelve service pages, eight industry pages and the entity facts page get a pass with the people who own them. Photography at the headquarters and in the field.</p></div></div>
+<div class="phase"><span class="phase-when">Weeks 3 to 5</span><div class="stack"><h3>Build in HubSpot</h3><p class="small">Theme cloned and re-skinned, blog templates with BlogPosting schema, every page built, forms wired to named people, the assessment as a scored multi-step form, 324 posts migrated to clean URLs.</p></div></div>
+<div class="phase"><span class="phase-when">Week 6</span><div class="stack"><h3>Quality gate and launch</h3><p class="small">The same seventeen checks on every page, on a real phone. All 171 redirects tested individually. You edit a page yourself in the walkthrough. Go live.</p></div></div>
+<div class="phase"><span class="phase-when">Weeks 6 to 12</span><div class="stack"><h3>The retainer begins</h3><p class="small">Google Business Profiles built, the first four suburb pages rebuilt, the first month of content published, LinkedIn cadence live, the 30-day read against the baseline.</p></div></div>
+</div>
+</section>
+
+<section>
+<div class="sec-head">
+<span class="eyebrow">Investment</span>
+<h2>Two ways to buy it, both as a monthly operating expense</h2>
+<p class="col small">You said a monthly number is easier to budget than a capital project, and that everything added up should not land at $5,000 a month. So the website build is spread across the term rather than invoiced up front. Both options are on a 24-month agreement; on a 12-month agreement add $500 a month to either. Figures are proposed for Tuesday's conversation.</p>
+</div>
+<div class="tiers">
+<div class="tier"><div class="tier-name">Website and Search</div><div class="price">$1,500<small> / month</small></div><p class="small">The site rebuilt and kept optimized, with content staying where it is today. Choose this if TAG's blog and press release keep coming and you want the pages and the schema fixed first.</p>
+<span class="grp">Website</span><ul><li>Your chosen direction built in HubSpot CMS, every page, all 171 redirects</li><li>Forms into the CRM, the scored assessment, a half-day of photography</li><li>Hosting on Content Hub Starter, paid to HubSpot</li></ul>
+<span class="grp">Search, monthly</span><ul><li>Semrush and answer-engine re-run against the September baseline</li><li>Six page optimizations a month from the spreadsheet</li><li>A call every two weeks; written reads at 30, 60 and 90 days</li></ul>
+<span class="grp">Not included</span><ul><li>Content, city page program, Google Business Profiles, social calendar</li></ul></div>
+<div class="tier rec"><span class="flag">Replaces what you pay today</span><div class="tier-name">Website, Search and Content</div><div class="price">$2,000<small> / month</small></div><p class="small">Everything in the first option plus the content, the local program and the entity work, so one partner owns the whole result. This is the holistic approach you described, and it costs less than the $2,500 a month split between Atomic 8 Ball and TAG today.</p>
+<span class="grp">Everything in Website and Search</span><ul><li>The build, the hosting, the monthly analysis, six optimizations, the calls</li></ul>
+<span class="grp">Content</span><ul><li>Five pieces a month: four answer-first posts on question keywords, one guide or case study</li><li>The 324 existing posts migrated with schema; the top 30 rewritten answer-first</li></ul>
+<span class="grp">Local and entity</span><ul><li>Four suburb pages rebuilt, then one new city page a month</li><li>Three Google Business Profiles and the review request flow</li><li>One YouTube channel with video schema; the weekly LinkedIn calendar; partner and chamber listings</li></ul></div>
+</div>
+<div class="tw" style="margin-top:22px"><table><thead><tr><th>Add-on, when you want it</th><th class="n">Monthly</th><th>What it is</th></tr></thead><tbody>
+<tr><td>Email and MQL program after Evolved Office ends</td><td class="n">$750</td><td>Monthly newsletter, three campaigns and the lifecycle journeys, in HubSpot, from March 2027</td></tr>
+<tr><td>Paid search, managed</td><td class="n">$600 + media</td><td>Only once the pages exist to land on. Copier service and managed print first. Media paid to Google, never marked up</td></tr>
+<tr><td>Additional content</td><td class="n">$250 each</td><td>Posts, guides or case studies beyond the five</td></tr>
+<tr><td>Second photography day</td><td class="n">$1,800 once</td><td>Fort Wayne and Evansville offices and technicians in the field</td></tr>
+</tbody><caption>Term pricing spreads the build across the agreement. If the agreement ends before month 24, the remaining months of the build portion are invoiced, so the arithmetic works for both of us.</caption></table></div>
+</section>
+
+<section>
+<div class="sec-head">
+<span class="eyebrow">Straight answers</span>
+<h2>What we promise, and what we do not</h2>
+</div>
+<div class="grid-2">
+<div class="callout acc"><h3>What we promise</h3><p class="small">A site that launches scoring 95 on the checks that scored yours at 53. Every one of your 171 URLs redirected. Every form in the CRM with its source. A re-measurement against the September baseline at 30, 60 and 90 days and every month after, with what we are changing next. Nothing about the build will be the reason results do not come.</p></div>
+<div class="callout"><h3>What we do not promise</h3><p class="small">Rankings or traffic by a date. Those depend on the market and on what gets published after launch. We also will not mark up your own testimonials as reviews to game the "best" lists; the review program earns that honestly. And the privacy policy in the preview is a consolidated rendering of yours; at launch we embed the live Termageddon policy so the text is always yours, word for word.</p></div>
+</div>
+</section>
+
+<section>
+<div class="sec-head">
+<span class="eyebrow">What we need from you</span>
+<h2>Before Tuesday, if you can</h2>
+</div>
+<div class="grid-2">
+<div class="card"><h3>Access, read-only is fine</h3><ul class="tight"><li>Google Search Console and Google Analytics for vanausdall.com, so the first-party numbers replace the modelled ones</li><li>Google Business Profile, if one exists for any office</li><li>The Atomic 8 Ball invoice and the TAG agreement, so the replacement math is exact</li><li>Your HubSpot portal for the Content Hub connection</li></ul></div>
+<div class="card"><h3>Four answers</h3><ul class="tight"><li>Which direction, or what you would change in one of them</li><li>Who approves copy besides you, so go-live does not wait</li><li>Whether the assessment scoring is something you can share</li><li>Twelve or twenty-four months</li></ul></div>
+</div>
+</section>
+
+<section>
+<div class="dark">
+<span class="eyebrow">Next</span>
+<h2 style="margin-top:8px">Tuesday 15 September, after 10:00am Eastern</h2>
+<p class="small" style="color:rgba(255,255,255,.85);margin-top:10px;max-width:70ch">We walk this together, you tell us the direction and the term, and we adjust the numbers on the call. Between now and then, open the three directions on your phone and click through the pages your customers use. Everything is live and nothing is indexed.</p>
+<div class="btnrow" style="margin-top:22px">
+<a class="btn" style="background:#fff;color:var(--navy)" href="https://van-ausdall.vercel.app/">Open the three directions</a>
+<a class="btn ghost" style="border-color:rgba(255,255,255,.6);color:#fff" href="https://van-ausdall.vercel.app/seo-report.html">Read the full analysis</a>
+<a class="btn ghost" style="border-color:rgba(255,255,255,.6);color:#fff" href="mailto:shawn@thequantumleap.business?subject=Van%20Ausdall%20%26%20Farrar%20website%20proposal">Email Shawn</a>
+</div>
+<p class="xs" style="color:rgba(255,255,255,.65);margin-top:22px">Shawn Peterson and Patrick Dodge, Quantum Business Solutions. (712) 389-4639. Prepared 9 September 2026 for Brian Courtney, Director of Business Intelligence, Van Ausdall &amp; Farrar, following the 1 September and 8 September calls. Every number is sourced to Semrush, the 8 September crawl of vanausdall.com, or the build itself.</p>
+</div>
+</section>
+
+</div>
+</body>
+</html>
