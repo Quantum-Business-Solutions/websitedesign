@@ -284,3 +284,7 @@ All noindex. Each hub links its design system page and its search and AI-answer 
 ## Prospect analyses (added 2026-09-09)
 
 `analyses/<slug>/` in this repo holds the analysis-only report, workbook and CSV for each prospect, written by `scripts/analyze.py` from `brands/<slug>.analysis.json`, `.seo.json`, `.audit.json` and `.types.json`. The `qbs-analyses` Vercel project (team Quantum Business Solutions) serves the `analyses/` folder with `X-Robots-Tag: noindex`; `analyses/index.html` lists every report. First one: GoodSuite, 317 pages, 9 September 2026.
+
+## Client Command attachments (added 2026-09-09)
+
+Portal files of type link, attached with `attach_portal_file`: Kelly Office Solutions portal `49a4b8c2-7f71-4b6d-b6de-99bda1338167` carries the preview hub (kelly-office-solutions.vercel.app) and the search report (seo-report.html). Client Command's site-hosting tools (`publish_site`, `publish_site_pages`, `put_site_asset`, `list_sites`, `get_site`) exist as of MCP version 156; TEAM.md explains why a server-side import is needed before a whole site is pushed through them.

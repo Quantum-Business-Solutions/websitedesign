@@ -1,0 +1,98 @@
+name: Client site
+
+# Any teammate with access to this repository can rebuild a client's three directions or a prospect's analysis
+# from the Actions tab: Run workflow, type the slug, choose the mode. No terminal, no Shawn.
+#
+#   build     brands/<slug>.build.json  -> the client repo (pushed; Vercel deploys it)
+#   analysis  brands/<slug>.analysis.json -> analyses/<slug>/ in this repo (committed; the qbs-analyses Vercel project serves it)
+#
+# One secret: CLIENT_REPOS_TOKEN, a fine-grained GitHub token with contents: write on the client site repos.
+
+on:
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: "Client slug, e.g. kelly-office-solutions"
+        required: true
+      mode:
+        description: "build (three directions to the client repo) or analysis (report only, into analyses/)"
+        required: true
+        default: build
+        type: choice
+        options: [build, analysis]
+      push:
+        description: "Push the result (build: to the client repo; analysis: commit to this repo)"
+        required: true
+        default: true
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: websitedesign
+
+      - name: Read the client config
+        id: cfg
+        working-directory: websitedesign
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json, os
+          slug = "${{ inputs.slug }}"; mode = "${{ inputs.mode }}"
+          if mode == "build":
+              cfg = json.load(open(f"brands/{slug}.build.json"))
+              print("repo=" + os.path.basename(os.path.normpath(cfg["out"])))
+              print("base_url=" + cfg.get("base_url", ""))
+          else:
+              cfg = json.load(open(f"brands/{slug}.analysis.json"))
+              print("repo=")
+              print("base_url=" + cfg.get("base_url", ""))
+          PY
+
+      - name: Check out the client repo
+        if: inputs.mode == 'build'
+        uses: actions/checkout@v4
+        with:
+          repository: Quantum-Business-Solutions/${{ steps.cfg.outputs.repo }}
+          token: ${{ secrets.CLIENT_REPOS_TOKEN }}
+          path: ${{ steps.cfg.outputs.repo }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install
+        working-directory: websitedesign
+        run: pip install -q -r requirements.txt
+
+      - name: Git identity
+        run: |
+          git config --global user.name "QBS conveyor"
+          git config --global user.email "conveyor@thequantumleap.business"
+
+      - name: Build the three directions
+        if: inputs.mode == 'build'
+        working-directory: websitedesign
+        run: python3 scripts/build.py "${{ inputs.slug }}" ${{ inputs.push && '--push' || '' }} --message "Rebuild from the Client site workflow (${{ github.actor }})"
+
+      - name: Render the analysis
+        if: inputs.mode == 'analysis'
+        working-directory: websitedesign
+        run: |
+          python3 scripts/analyze.py "${{ inputs.slug }}"
+          if [ "${{ inputs.push }}" = "true" ]; then
+            git add analyses && git commit -q -m "Analysis re-rendered for ${{ inputs.slug }} (${{ github.actor }})" || echo "nothing to commit"
+            git push -q origin HEAD:main
+          fi
+
+      - name: Where it went
+        run: |
+          echo "### Done" >> "$GITHUB_STEP_SUMMARY"
+          echo "- slug: ${{ inputs.slug }} (${{ inputs.mode }})" >> "$GITHUB_STEP_SUMMARY"
+          echo "- live: ${{ steps.cfg.outputs.base_url }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "- attach the link to the client's portal in Client Command (Files) or with attach_portal_file" >> "$GITHUB_STEP_SUMMARY"
