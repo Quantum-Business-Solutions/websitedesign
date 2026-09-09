@@ -473,3 +473,7 @@ A new prospect goes from a name and a domain to a live hub in one sitting. Two s
 Rebuilds are always `python3 scripts/build.py <slug> --push`. The long `preview.py` command is never retyped; `build.json` is the record. Kelly, Nexus and Image 2000 run this way now. `--push` fetches first and refuses to push when the remote is ahead, so two sessions cannot overwrite each other; when it refuses, reset the client repo to the remote, rebuild, push.
 
 Hub rule from the same day: the three directions are named twice on the hub, once as the cards (with the recommendation folded in below them when there is one) and once side by side. The every-page list is one row per page with three links. Nothing on the hub repeats a list.
+
+### Robustness, version 2.2 addendum (2026-09-09)
+- The seo.json is validated before a build; the technical site checks are measured, not typed; the every-page cards are one function for hub and report; `build.py --push` refuses to overwrite a remote that is ahead.
+- Still to add, in this order: a dated audit snapshot per run (`brands/history/<slug>-<date>.audit.json`) with a delta table in the report for the 30, 60 and 90 day re-reads; a live home-page performance and accessibility read (weight, requests, LCP, axe violations) through Playwright, today against the build; an internal-link check against the sitemap (links to pages that do not exist); an index count from a site: search against the sitemap count. Each is a column on the same report, never a new document.

@@ -32,6 +32,54 @@ DONE = {
 }
 
 
+REQUIRED = ["measured", "hero", "findings", "compare", "moves", "entity", "today", "competitors", "opportunities", "clusters", "questions",
+            "money_pages", "competitor_pages", "aeo", "crawlers", "backlinks", "local", "plan", "measure", "hub", "sitewide"]
+
+
+def validate(seo, path):
+    missing = [k for k in REQUIRED if k not in seo]
+    for k in ("today", "after", "keep", "heading", "intro"):
+        if "hub" in seo and k not in seo["hub"]:
+            missing.append(f"hub.{k}")
+    if len(seo.get("findings", [])) < 5:
+        missing.append("findings (fewer than five)")
+    if len(seo.get("moves", [])) != 5:
+        missing.append("moves (needs exactly five)")
+    if missing:
+        raise SystemExit(f"{path}: the search package is incomplete: {', '.join(missing)}")
+
+
+def _num(v):
+    try:
+        return float(str(v).replace(",", "").split(" ")[0])
+    except ValueError:
+        return None
+
+
+def _gauge(today, build):
+    """Two arcs on one track: today in the muted red, the build in green, the numbers in the middle."""
+    import math
+    r, c = 54, 70
+    circ = 2 * math.pi * r
+    def arc(v, color, w):
+        return f'<circle cx="{c}" cy="{c}" r="{r}" fill="none" stroke="{color}" stroke-width="{w}" stroke-linecap="round" stroke-dasharray="{circ * v / 100:.1f} {circ:.1f}" transform="rotate(-90 {c} {c})"/>'
+    return (f'<svg class="gauge" viewBox="0 0 140 140" role="img" aria-label="Readiness score today {today} of 100, the build {build} of 100">'
+            f'<circle cx="{c}" cy="{c}" r="{r}" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="12"/>{arc(build, "#8fe3b0", 12)}{arc(today, "#ffb4a8", 6)}'
+            f'<text x="{c}" y="{c - 4}" text-anchor="middle" font-size="30" font-weight="800" fill="#fff">{build}</text>'
+            f'<text x="{c}" y="{c + 18}" text-anchor="middle" font-size="12" fill="rgba(255,255,255,.8)">from {today} today</text></svg>')
+
+
+def _bars(rows, idx, label, highlight, fmt=lambda v: f"{int(v):,}"):
+    """Horizontal bars for one numeric column of a table; the client's row in the accent."""
+    data = [(r[0], _num(r[idx])) for r in rows]
+    data = [(k, v) for k, v in data if v is not None]
+    if not data:
+        return ""
+    mx = max(v for _, v in data) or 1
+    items = "".join(f'<div class="bar-row{" me" if highlight in k else ""}"><span class="bar-k">{E(k.split(" (")[0])}</span><span class="bar-t"><i style="width:{max(2, v / mx * 100):.1f}%"></i></span><span class="bar-v">{E(fmt(v))}</span></div>' for k, v in data)
+    return f'<figure class="bars"><figcaption>{E(label)}</figcaption>{items}</figure>'
+
+
 def _load(content_path):
     seo_p = content_path.replace(".content.json", ".seo.json")
     aud_p = content_path.replace(".content.json", ".audit.json")
@@ -139,14 +187,20 @@ def _cmp_rows(today, build, n_today, n_build):
     return rows
 
 
-def report_html(content, seo, audit, build, cmp_rows, base, dslugs, roles_avg):
+def report_html(content, seo, audit, build, cmp_rows, base, dslugs, roles_avg, build_by_path, mapping):
     b = content["brand"]
     client = content["client"]
     dom = audit["domain"]
     date = seo.get("measured") or audit.get("measured", "")
+    import reskin
     accent = b["accent"]
+    ink = reskin.darken_until(accent, "#ffffff")
     navy = b.get("chrome_bg") or "#0f1e33"
     h = seo["hero"]
+    gauge = _gauge(audit["summary"]["avg_score"], build["summary"]["avg_score"])
+    every = _every_section("every", audit, seo, build_by_path, mapping, cmp_rows, roles_avg, dom, date)
+    comp_bars = _bars(seo["competitors"]["rows"], 1, "Organic visits a month", dom)
+    auth_bars = _bars(seo["backlinks"]["rows"], 1, "Authority Score", dom, fmt=lambda v: str(int(v)))
     fnd = seo["findings"]
     sev_counts = {}
     for f in fnd:
@@ -225,7 +279,7 @@ def report_html(content, seo, audit, build, cmp_rows, base, dslugs, roles_avg):
 
     return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
 <title>SEO and AI search analysis of {E(dom)} | prepared for {E(client)}</title>
-<style>:root{{--accent:{accent};--ink:#1c1f24;--muted:#5b616b;--line:#dfe6ee;--alt:#f3f6f9;--navy:{navy}}}*{{box-sizing:border-box}}body{{margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff}}
+<style>:root{{--accent:{accent};--ink:{ink};--fg:#1c1f24;--muted:#5b616b;--line:#dfe6ee;--border:#dfe6ee;--alt:#f3f6f9;--bg:#ffffff;--bg-alt:#f3f6f9;--navy:{navy};--chrome:{navy}}}*{{box-sizing:border-box}}body{{margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--fg);background:#fff}}
 .wrap{{max-width:1040px;margin:0 auto;padding:0 24px}}section{{padding:56px 0;border-top:1px solid var(--line)}}section:nth-of-type(even){{background:var(--alt)}}
 .top{{display:flex;justify-content:space-between;align-items:center;gap:16px;border-bottom:1px solid var(--line);padding:14px 24px;flex-wrap:wrap}}.top a{{text-decoration:none;font-weight:600;color:var(--accent)}}
 .eyebrow{{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 12px}}h1{{font-size:clamp(34px,4.4vw,52px);line-height:1.05;letter-spacing:-.02em;margin:0 0 18px;text-wrap:balance}}h2{{font-size:30px;line-height:1.15;letter-spacing:-.01em;margin:0 0 14px;text-wrap:balance}}h3{{font-size:19px;margin:30px 0 8px}}h3 small{{font-weight:400;color:var(--muted);font-size:14px;margin-left:8px}}
@@ -248,50 +302,40 @@ def report_html(content, seo, audit, build, cmp_rows, base, dslugs, roles_avg):
 .btn{{display:inline-block;background:var(--accent);color:#000;padding:12px 20px;border-radius:999px;font-weight:600;text-decoration:none}}
 .cmpbox{{margin-top:28px;background:var(--navy);color:#fff;border-radius:16px;padding:26px 28px}}.cmpbox h3{{color:#fff;margin:0 0 6px}}.cmpbox p{{color:rgba(255,255,255,.8);margin:0 0 16px}}.cmp-rows{{display:grid;gap:6px}}.cmp-row{{display:grid;grid-template-columns:1.6fr 1fr 40px 1fr;align-items:center;gap:10px;padding:9px 12px;border-radius:10px;background:rgba(255,255,255,.06)}}.cmp-row.head{{background:none;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.7);padding-bottom:0}}.cmp-row .lbl{{font-weight:600}}.cmp-row .today{{color:#ffb4a8;font-weight:700;text-align:right}}.cmp-row .build{{color:#8fe3b0;font-weight:800;font-size:17px}}.cmp-row .arrow{{width:40px;height:2px;background:rgba(255,255,255,.35);justify-self:center;position:relative}}.cmp-row .arrow::after{{content:"";position:absolute;right:-1px;top:-4px;border:5px solid transparent;border-left-color:rgba(255,255,255,.35)}}.cmp-row.head .arrow{{background:none}}.cmp-row.head .arrow::after{{display:none}}
 .opts{{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}}.opt{{background:rgba(255,255,255,.1);border-radius:999px;padding:6px 12px;font-size:13.5px}}.opt b{{margin-right:4px}}
-@media(max-width:900px){{.stiles,.stiles.six,.steps,.qgrid,.finding dl{{grid-template-columns:1fr 1fr}}}}@media(max-width:600px){{.stiles,.stiles.six,.steps,.qgrid,.finding dl{{grid-template-columns:1fr}}.finding,.levi{{grid-template-columns:40px 1fr}}.cmpbox{{padding:20px 16px}}.cmp-row{{grid-template-columns:1fr 1fr;gap:4px}}.cmp-row.head{{display:none}}.cmp-row .lbl{{grid-column:1/-1}}.cmp-row .arrow{{display:none}}.cmp-row .today{{text-align:left}}.cmp-row .today::before{{content:"Today";display:block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.65)}}.cmp-row .build::before{{content:"The build";display:block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.65)}}}}.cmp-row>span{{min-width:0;overflow-wrap:anywhere}}</style></head>
-<body>
+.hero-grid{{display:grid;grid-template-columns:1fr 240px;gap:40px;align-items:center}}.gauge-wrap{{text-align:center}}.gauge{{width:200px;height:200px}}.gauge-wrap p{{font-size:13px;color:rgba(255,255,255,.75);margin:8px 0 0}}
+.bars{{margin:18px 0 26px;padding:18px 20px;background:#fff;border:1px solid var(--line);border-radius:12px}}.bars figcaption{{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:10px}}.bar-row{{display:grid;grid-template-columns:220px 1fr 70px;gap:12px;align-items:center;padding:5px 0;font-size:14px}}.bar-t{{height:10px;background:var(--alt);border-radius:999px;overflow:hidden}}.bar-t i{{display:block;height:100%;background:#9aa4b2;border-radius:999px}}.bar-row.me .bar-t i{{background:var(--accent)}}.bar-row.me .bar-k{{font-weight:700}}.bar-v{{text-align:right;font-variant-numeric:tabular-nums;color:var(--muted)}}
+.h3{{font-size:19px;margin:30px 0 8px}}.h4{{font-size:16px;margin:0}}.wrap.wide{{max-width:1200px}}.two{{display:grid;grid-template-columns:1fr 1fr;gap:32px}}.asof{{font-weight:400;color:var(--muted);font-size:13px;margin-left:8px}}
+@media print{{.top,.afilter,.open-build{{display:none!important}}section{{padding:28px 0;break-inside:avoid}}.hero{{background:var(--navy)!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}}.pg{{break-inside:avoid}}.pglist{{display:block}}body{{font-size:13px}}h1{{font-size:32px}}h2{{font-size:22px}}}}
+@media(max-width:900px){{.stiles,.stiles.six,.steps,.qgrid,.finding dl{{grid-template-columns:1fr 1fr}}.hero-grid{{grid-template-columns:1fr}}.bar-row{{grid-template-columns:1fr 60px}}.bar-t{{grid-column:1/-1}}}}@media(max-width:600px){{.stiles,.stiles.six,.steps,.qgrid,.finding dl{{grid-template-columns:1fr}}.finding,.levi{{grid-template-columns:40px 1fr}}.cmpbox{{padding:20px 16px}}.cmp-row{{grid-template-columns:1fr 1fr;gap:4px}}.cmp-row.head{{display:none}}.cmp-row .lbl{{grid-column:1/-1}}.cmp-row .arrow{{display:none}}.cmp-row .today{{text-align:left}}.cmp-row .today::before{{content:"Today";display:block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.65)}}.cmp-row .build::before{{content:"The build";display:block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.65)}}}}.cmp-row>span{{min-width:0;overflow-wrap:anywhere}}
+{PKG_CSS}</style></head>
+<body data-first-dir="{E(dslugs[0])}">
 <div class="top"><a href="index.html">&larr; Back to the three directions</a><span>Quantum Business Solutions for {E(client)}</span></div>
-<section class="hero"><div class="wrap"><p class="eyebrow">Search and AI answers, measured {E(date)}</p><h1>{E(h["heading"])}</h1><p class="lead">{E(h["intro"])}</p>{_stiles(h["tiles"])}</div></section>
+<section class="hero"><div class="wrap"><div class="hero-grid"><div><p class="eyebrow">Search and AI answers, measured {E(date)}</p><h1>{E(h["heading"])}</h1><p class="lead">{E(h["intro"])}</p></div><div class="gauge-wrap">{gauge}<p>Readiness on sixteen checks, every page: the site today against the build, scored by the same script.</p></div></div>{_stiles(h["tiles"])}</div></section>
 <section><div class="wrap"><p class="eyebrow">Top findings</p><h2>Ranked by what they cost, with the fix</h2><p class="lead">Each finding carries its evidence, what it costs today, and what the build or the 90-day plan does about it.</p><div class="chips">{chips}</div><div class="findings">{_finding_cards(fnd)}</div></div></section>
 <section><div class="wrap"><p class="eyebrow">Why the competitors are winning</p><h2>The same pages, side by side</h2><p class="lead">{E(cmp["intro"])}</p>{cmp_tbl}<div class="verdict">{E(cmp["verdict"])}</div></div></section>
 <section><div class="wrap"><p class="eyebrow">Highest leverage moves</p><h2>Five moves, in the order we would make them</h2><p class="lead">The five moves with the biggest return for the least effort, in the order we would do them. Each one is either in the build or in the first 30 days of the plan.</p><div class="lev">{moves}</div></div></section>
 <section><div class="wrap"><p class="eyebrow">Whole site, every page</p><h2>{n} pages, and what each one tells a crawler</h2><p class="lead">Every URL in the sitemap, fetched {E(date)} and parsed for title, meta description, headings, words, images, links and JSON-LD schema. Each page gets a readiness score out of 100 across sixteen checks, weighted toward what answer engines read: FAQ schema, Service schema, question-form headings and depth.</p>{site_tiles}
 <div class="cmpbox"><h3>The same sixteen checks, run on the build</h3><p>Every recommendation in this report is already in place on all three directions. The right-hand column is the build, scored by the same script.</p><div class="cmp-rows"><div class="cmp-row head"><span class="lbl"></span><span class="today">{E(dom)} today</span><span class="arrow"></span><span class="build">The build, any direction</span></div>{cmp_box}</div><div class="opts">{opts}</div><p class="fine" style="color:rgba(255,255,255,.75)">What is deliberately not marked up: Review and AggregateRating. Those wait for the Google review program, because marking up self-published testimonials is against Google's guidelines. That is the gap between the build and 100.</p></div>
 <h3>By section of the site</h3>{sec_tbl}<h3>Every service, industry and location page, worst first</h3>{worst_tbl}<p class="fine">Word counts exclude navigation, header and footer. The full sheet, all {n} pages and every check, is <a href="seo-audit-pages.csv">seo-audit-pages.csv</a>; the redirect map is <a href="redirects.csv">redirects.csv</a>.</p></div></section>
+{every}
 {blog_html}
 {ent_html}
 <section><div class="wrap"><p class="eyebrow">Where the traffic comes from</p><h2>Today, in numbers</h2><ul>{today_li}</ul></div></section>
-<section><div class="wrap"><p class="eyebrow">Competitors</p><h2>Who earns the visits you should be earning</h2><p class="lead">{E(seo["competitors"]["intro"])}</p>{comp_tbl}</div></section>
+<section><div class="wrap"><p class="eyebrow">Competitors</p><h2>Who earns the visits you should be earning</h2><p class="lead">{E(seo["competitors"]["intro"])}</p>{comp_bars}{comp_tbl}</div></section>
 <section><div class="wrap"><p class="eyebrow">Keyword opportunities</p><h2>The terms worth a page each</h2><p class="lead">{E(seo["opportunities"]["intro"])}</p>{opp_tbl}</div></section>
 <section><div class="wrap"><p class="eyebrow">Keyword clusters by service line</p><h2>What each page has to answer</h2><p class="lead">Each cluster becomes one page plus its FAQ. The terms are the headings. Volume, difficulty, cost per click and intent from Semrush, US database.</p>{clusters}</div></section>
 <section><div class="wrap"><p class="eyebrow">Questions people ask</p><h2>The answers AI assistants and Google both want</h2><p class="lead">Each question becomes an FAQ item marked up as FAQPage, answered in the first sentence.</p><div class="qgrid">{qcols}</div></div></section>
 <section><div class="wrap"><p class="eyebrow">Page audit</p><h2>What the pages say to a crawler today</h2>{crawl_tbl}<h3>The same pages at the competitors</h3>{cp_tbl}</div></section>
 <section><div class="wrap"><p class="eyebrow">AI answer visibility</p><h2>Who is named when someone asks</h2><p class="lead">{E(seo["aeo"]["intro"])}</p>{aeo_tbl}<h3>AI crawlers in robots.txt</h3><ul>{crawlers}</ul></div></section>
-<section><div class="wrap"><p class="eyebrow">Backlinks</p><h2>{E(bl["heading"])}</h2>{bl_tbl}<h3>Strongest referring domains</h3>{ref_tbl}</div></section>
+<section><div class="wrap"><p class="eyebrow">Backlinks</p><h2>{E(bl["heading"])}</h2>{auth_bars}{bl_tbl}<h3>Strongest referring domains</h3>{ref_tbl}</div></section>
 <section><div class="wrap"><p class="eyebrow">Local and reviews</p><h2>What a buyer sees next to the map</h2><ul>{local_li}</ul></div></section>
 <section><div class="wrap"><p class="eyebrow">The 90-day plan</p><h2>What happens, in order</h2><div class="steps">{plan}</div></div></section>
 <section><div class="wrap"><p class="eyebrow">What we measure</p><h2>The same report, re-run at 30, 60 and 90 days</h2>{measure_tbl}<h3>In one list</h3><ol>{one_list}</ol><p class="note">Every number here came from a Semrush or Firecrawl pull, or from the live HTML of {E(dom)}, on {E(date)}. Where a pull was not made, the table says so. Rankings and traffic are not promised; the inputs are, and they are re-measured against this baseline.</p></div></section>
 </body></html>'''
 
 
-def hub_fragments(content, seo, audit, build_by_path, mapping, cmp_rows, roles_avg, dom, date):
-    client = content["client"]
-    short = client.split(" ")[0]
-    h = seo["hub"]
-    tiles = _stiles(seo["hero"]["tiles"])
-    top = _finding_cards(seo["findings"][:5], "fnd")
-    today = "".join(f"<li>{E(x)}</li>" for x in h["today"])
-    after = "".join(f"<li>{E(x)}</li>" for x in h["after"])
-    keep = "".join(f"<tr><td><code>{E(o)}</code></td><td><code>{E(n)}</code></td><td>{E(w)}</td></tr>" for o, n, w in h.get("keep", []))
-    keep_tbl = (f'<h3 class="h3" style="margin-top:34px">{E(h.get("keep_heading", "Every page that earns a visitor today keeps earning it"))}</h3><div class="tblwrap" tabindex="0"><table class="seo"><thead><tr><th scope="col">Today</th><th scope="col">After launch (301)</th><th scope="col">What it ranks for now</th></tr></thead><tbody>{keep}</tbody></table></div>' if keep else "")
-    search = f'''<section id="search"><div class="wrap"><p class="eyebrow">Search and AI answers</p><h2>{E(h["heading"])}</h2><p class="lead">{E(h["intro"])}</p>
-{tiles}
-<h3 class="h3" style="margin-top:34px">Top findings, ranked by what they cost</h3><div class="fnds">{top}</div>
-<div class="two" style="margin-top:34px"><div><h3 class="h3">Today <span class="asof">Semrush US database and live HTML, {E(date)}</span></h3><ul>{today}</ul></div><div><h3 class="h3">After launch</h3><ul>{after}</ul></div></div>
-{keep_tbl}
-<p style="margin-top:26px"><a class="btn" href="seo-report.html" target="_blank" rel="noopener">Read the full SEO and AI search analysis</a></p>
-<div class="change" style="margin-top:22px"><strong>What we do not promise:</strong> {E(h.get("note", "Rankings or traffic. Those depend on the market and on what you publish after launch. What we promise is that nothing about the build is the reason they do not come, that every number above is re-measured at 30, 60 and 90 days, and that you see the same report we do."))}</div></div></section>'''
-
+def _every_section(sec_id, audit, seo, build_by_path, mapping, cmp_rows, roles_avg, dom, date):
+    """The every-page section: tiles, today against the build, site-wide checks, filters and one card per URL. Shared by the hub and the report."""
     s = audit["summary"]
     n = audit["count"]
     eight = _stiles([(s["avg_score"], "average readiness score out of 100"), (f"{s['grade_b_plus']} of {n}", "pages scoring B or better"), (f"{s['grade_d_f']} of {n}", "pages scoring D or F"),
@@ -303,7 +347,16 @@ def hub_fragments(content, seo, audit, build_by_path, mapping, cmp_rows, roles_a
     for _, k in mapping.values():
         kinds[k] += 1
     migrated = f", {kinds['migrated']} posts migrate to the blog at launch under their service line" if kinds["migrated"] else ""
-    sitechk = "".join(f'<li class="{"ok" if ok else "bad"}"><b>{"Yes" if ok else "No"}</b> {E(t)}</li>' for ok, t in seo["sitewide"])
+    measured = []
+    site = audit.get("site") or {}
+    if site:
+        measured = [(site.get("http_redirects_to_https", False), "http redirects to https (measured)"),
+                    (site.get("one_canonical_host", False), f"One canonical host ({site.get('canonical_host') or 'two hosts answer'}) (measured)"),
+                    (all(site.get(f"allows_{b}", False) for b in ("gptbot", "claudebot", "perplexitybot", "google-extended")), "robots.txt allows GPTBot, ClaudeBot, PerplexityBot and Google-Extended (measured)"),
+                    (site.get("sitemap_declared", False), f"Sitemap declared in robots.txt, {site.get('sitemap_urls', 0)} URLs (measured)"),
+                    (site.get("llms_txt", False), "llms.txt served (measured)"),
+                    ("crawl_delay" not in site, "No crawl delay in robots.txt (measured)")]
+    sitechk = "".join(f'<li class="{"ok" if ok else "bad"}"><b>{"Yes" if ok else "No"}</b> {E(t)}</li>' for ok, t in measured + list(seo["sitewide"]))
     types = {}
     for p in audit["pages"]:
         t = types.setdefault(p["type"], [0, 0]); t[0] += 1; t[1] += p["score"]
@@ -343,7 +396,7 @@ def hub_fragments(content, seo, audit, build_by_path, mapping, cmp_rows, roles_a
 <div class="pg-checks"><div class="legend"><span>Each check: <b class="bad">today</b> <em aria-hidden="true"></em> <b class="ok">the build</b></span></div>{"".join(checks)}</div>
 <div class="pg-new"><h4>What we did on this page</h4><ul class="did">{did_li}</ul><a href="{E(tgt)}" data-rel="{E(tgt)}" class="open-build" target="_blank" rel="noopener">Open the rebuilt page</a></div></article>''')
 
-    audit_html = f'''<section id="audit"><div class="wrap wide"><p class="eyebrow">Every page on {E(dom)}</p><h2>{n} pages today, and the page that replaces each one</h2><p class="lead">Every URL in the sitemap, fetched {E(date)} and parsed for title, meta description, headings, words, images, links and JSON-LD schema. Each page gets a readiness score out of 100 across sixteen checks, weighted toward what answer engines read: FAQ schema, Service schema, question-form headings and depth. Red is a check the page fails today. The fixes for each page are on the right.</p>{eight}
+    audit_html = f'''<section id="{sec_id}"><div class="wrap wide"><p class="eyebrow">Every page on {E(dom)}</p><h2>{n} pages today, and the page that replaces each one</h2><p class="lead">Every URL in the sitemap, fetched {E(date)} and parsed for title, meta description, headings, words, images, links and JSON-LD schema. Each page gets a readiness score out of 100 across sixteen checks, weighted toward what answer engines read: FAQ schema, Service schema, question-form headings and depth. Red is a check the page fails today. The fixes for each page are on the right.</p>{eight}
 <div class="cmpbox"><div class="cmphead"><h3 class="h3">The same sixteen checks, run on the build</h3><p>Every recommendation on the cards below is already in place on all three directions. The scores on the right are the build, scored by the same script.</p></div><div class="cmp-rows"><div class="cmp-row head"><span class="lbl"></span><span class="today">{E(dom)} today</span><span class="arrow"></span><span class="build">The build, any direction</span></div>{cmp_box}</div><div class="opts">{opts}</div>
 <p class="fine" style="margin-top:14px">Page for page: {kinds["rebuilt"]} URLs on {E(dom)} map to a rebuilt page, {kinds["merged"]} merge into a stronger page that carries their terms{migrated}, and {kinds["retired"]} retired pages redirect to the nearest page. The 301 map is in the download.</p>
 <p class="fine">What is deliberately not marked up: Review and AggregateRating. Those wait for the Google review program, because marking up self-published testimonials is against Google&#39;s guidelines and we will not do it. That is the gap between the build and 100.</p></div>
@@ -357,7 +410,10 @@ function srt(){{var v=so.value;cards.sort(function(a,b){{if(v==="score-asc")retu
 q.addEventListener("input",f);pb.addEventListener("change",f);ty.addEventListener("change",f);so.addEventListener("change",srt);srt();
 var d0=document.body.getAttribute("data-first-dir")||"";w.querySelectorAll("a.open-build").forEach(function(a){{a.setAttribute("href",d0+"/"+a.getAttribute("data-rel"))}})}})();</script></section>'''
 
-    css = '''
+    return audit_html
+
+
+PKG_CSS = '''
 .stiles.eight{grid-template-columns:repeat(4,1fr)}
 .fnds{display:grid;gap:12px;margin-top:16px}.fnd{display:grid;grid-template-columns:48px 1fr;gap:14px;background:var(--bg);border:1px solid var(--border);border-left:5px solid var(--accent);border-radius:12px;padding:18px 20px}.fnd .rank{font-size:30px;font-weight:800;color:var(--accent);line-height:1}.fnd h3{margin:6px 0 8px;font-size:19px}.fnd dl{margin:0;display:grid;gap:6px}.fnd dt{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}.fnd dd{margin:2px 0 0;font-size:14.5px}
 .sev{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--sev);border-radius:999px;padding:3px 9px}
@@ -375,6 +431,28 @@ var d0=document.body.getAttribute("data-first-dir")||"";w.querySelectorAll("a.op
 .cmp-row>span{min-width:0;overflow-wrap:anywhere}
 @media(max-width:1000px){.pg{grid-template-columns:1fr 1fr}.pg-checks{grid-column:1/-1}.stiles.eight{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.pg,.pg-checks,.sitechk{grid-template-columns:1fr}.cmpbox{padding:20px 16px}.cmp-row{grid-template-columns:1fr 1fr;gap:4px}.cmp-row.head{display:none}.cmp-row .lbl{grid-column:1/-1}.cmp-row .arrow{display:none}.cmp-row .today{text-align:left}.cmp-row .today::before{content:"Today ";font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.65);display:block}.cmp-row .build::before{content:"The build ";font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.65);display:block;font-weight:600}}
 '''
+
+
+def hub_fragments(content, seo, audit, build_by_path, mapping, cmp_rows, roles_avg, dom, date):
+    client = content["client"]
+    short = client.split(" ")[0]
+    h = seo["hub"]
+    tiles = _stiles(seo["hero"]["tiles"])
+    top = _finding_cards(seo["findings"][:5], "fnd")
+    today = "".join(f"<li>{E(x)}</li>" for x in h["today"])
+    after = "".join(f"<li>{E(x)}</li>" for x in h["after"])
+    keep = "".join(f"<tr><td><code>{E(o)}</code></td><td><code>{E(n)}</code></td><td>{E(w)}</td></tr>" for o, n, w in h.get("keep", []))
+    keep_tbl = (f'<h3 class="h3" style="margin-top:34px">{E(h.get("keep_heading", "Every page that earns a visitor today keeps earning it"))}</h3><div class="tblwrap" tabindex="0"><table class="seo"><thead><tr><th scope="col">Today</th><th scope="col">After launch (301)</th><th scope="col">What it ranks for now</th></tr></thead><tbody>{keep}</tbody></table></div>' if keep else "")
+    search = f'''<section id="search"><div class="wrap"><p class="eyebrow">Search and AI answers</p><h2>{E(h["heading"])}</h2><p class="lead">{E(h["intro"])}</p>
+{tiles}
+<h3 class="h3" style="margin-top:34px">Top findings, ranked by what they cost</h3><div class="fnds">{top}</div>
+<div class="two" style="margin-top:34px"><div><h3 class="h3">Today <span class="asof">Semrush US database and live HTML, {E(date)}</span></h3><ul>{today}</ul></div><div><h3 class="h3">After launch</h3><ul>{after}</ul></div></div>
+{keep_tbl}
+<p style="margin-top:26px"><a class="btn" href="seo-report.html" target="_blank" rel="noopener">Read the full SEO and AI search analysis</a></p>
+<div class="change" style="margin-top:22px"><strong>What we do not promise:</strong> {E(h.get("note", "Rankings or traffic. Those depend on the market and on what you publish after launch. What we promise is that nothing about the build is the reason they do not come, that every number above is re-measured at 30, 60 and 90 days, and that you see the same report we do."))}</div></div></section>'''
+
+    audit_html = _every_section("audit", audit, seo, build_by_path, mapping, cmp_rows, roles_avg, dom, date)
+    css = PKG_CSS
     return {"search": search, "audit": audit_html, "css": css, "nav": '<a href="#audit">Every URL</a>'}
 
 
@@ -382,6 +460,7 @@ def write(content, content_path, themes, roles, base, out_dir, slug_of):
     seo, audit = _load(content_path)
     if not seo:
         return None
+    validate(seo, content_path.replace(".content.json", ".seo.json"))
     sch = content.get("schema") or {}
     cities = ",".join(sch.get("cities", []))
     dslugs = [slug_of(t) for t in themes]
@@ -410,7 +489,7 @@ def write(content, content_path, themes, roles, base, out_dir, slug_of):
     dom = audit["domain"]
     date = seo.get("measured") or audit.get("measured", "")
 
-    open(os.path.join(out_dir, "seo-report.html"), "w", encoding="utf-8").write(report_html(content, seo, audit, build, cmp_rows, base, dslugs, roles_avg))
+    open(os.path.join(out_dir, "seo-report.html"), "w", encoding="utf-8").write(report_html(content, seo, audit, build, cmp_rows, base, dslugs, roles_avg, build_by_path, mapping))
     A.to_csv(audit, os.path.join(out_dir, "seo-audit-pages.csv"))
     buf = io.StringIO()
     w = csv.writer(buf)

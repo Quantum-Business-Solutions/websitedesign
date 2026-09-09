@@ -37889,5 +37889,22 @@
     "avg": 52
    }
   }
+ },
+ "site": {
+  "domain": "image-2000.com",
+  "sitemap_urls": 399,
+  "http_redirects_to_https": true,
+  "one_canonical_host": true,
+  "canonical_host": "www.image-2000.com",
+  "robots_status": 200,
+  "crawl_delay": "10",
+  "allows_gptbot": true,
+  "allows_claudebot": true,
+  "allows_perplexitybot": true,
+  "allows_google-extended": true,
+  "allows_bingbot": true,
+  "allows_googlebot": true,
+  "sitemap_declared": true,
+  "llms_txt": true
  }
 }

@@ -236,6 +236,53 @@ def audit_html(raw, url, domain, cities, is_build=False, site_root=None):
     }
 
 
+def site_checks(domain, urls):
+    """Technical facts measured live, not authored: scheme and host redirects, robots policy for AI crawlers, llms.txt, sitemap size."""
+    import urllib.error
+    out = {"domain": domain, "sitemap_urls": len(urls)}
+
+    def head(url):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (compatible; QBS-audit)"}, method="GET")
+            with urllib.request.urlopen(req, timeout=25) as r:
+                return r.status, r.geturl(), r.read(200000).decode("utf-8", "ignore")
+        except urllib.error.HTTPError as e:
+            return e.code, url, ""
+        except Exception:  # noqa: BLE001
+            return None, url, ""
+    bare = domain.replace("www.", "")
+    st, final, _ = head(f"http://{bare}/")
+    out["http_redirects_to_https"] = bool(final and final.startswith("https://"))
+    st1, f1, _ = head(f"https://{bare}/")
+    st2, f2, _ = head(f"https://www.{bare}/")
+    hosts = {urlparse(f).netloc for f in (f1, f2) if f}
+    out["one_canonical_host"] = len(hosts) == 1
+    out["canonical_host"] = sorted(hosts)[0] if hosts else ""
+    st, _, robots = head(f"{f1 or 'https://' + bare}robots.txt" if (f1 or "").endswith("/") else f"https://{bare}/robots.txt")
+    out["robots_status"] = st
+    blocks = {}
+    agent = None
+    for line in robots.splitlines():
+        line = line.split("#")[0].strip()
+        if not line:
+            continue
+        k, _, v = line.partition(":")
+        k, v = k.strip().lower(), v.strip()
+        if k == "user-agent":
+            agent = v.lower()
+        elif k == "disallow" and agent is not None:
+            blocks.setdefault(agent, []).append(v)
+        elif k == "crawl-delay":
+            out["crawl_delay"] = v
+    for bot in ("gptbot", "claudebot", "perplexitybot", "google-extended", "bingbot", "googlebot"):
+        rules = blocks.get(bot, blocks.get("*", []))
+        out[f"allows_{bot}"] = "/" not in rules
+    out["sitemap_declared"] = "sitemap:" in robots.lower()
+    st, _, _ = head(f"https://{out['canonical_host'] or bare}/llms.txt")
+    out["llms_txt"] = st == 200
+    return out
+
+
 def classify(path, rules):
     """rules: list of [regex, type]; first match wins. Default 'company'."""
     for rx, t in rules:
@@ -266,6 +313,8 @@ def live(a):
         r["type"] = classify(path, rules)
         pages.append(r)
     out = {"domain": a.domain, "measured": a.date, "count": len(pages), "pages": pages, "summary": summarize(pages)}
+    if not a.no_site:
+        out["site"] = site_checks(a.domain, urls)
     json.dump(out, open(a.out, "w", encoding="utf-8"), indent=1, ensure_ascii=False)
     print(json.dumps(out["summary"], indent=1))
 
@@ -348,7 +397,7 @@ def main(argv=None):
     f = sub.add_parser("fetch"); f.add_argument("--urls", required=True); f.add_argument("--html", required=True); f.add_argument("--delay", type=float, default=0.6)
     l = sub.add_parser("live"); l.add_argument("--urls", required=True); l.add_argument("--html", required=True); l.add_argument("--domain", required=True)
     l.add_argument("--cities", default=""); l.add_argument("--types"); l.add_argument("--skip", help="regex of URLs to leave out (feeds, attachments)")
-    l.add_argument("--date", default=time.strftime("%-d %B %Y")); l.add_argument("--out", required=True)
+    l.add_argument("--date", default=time.strftime("%-d %B %Y")); l.add_argument("--out", required=True); l.add_argument("--no-site", action="store_true", help="skip the live technical checks")
     b = sub.add_parser("build"); b.add_argument("--dir", required=True); b.add_argument("--cities", default=""); b.add_argument("--types"); b.add_argument("--out", required=True)
     c = sub.add_parser("csv"); c.add_argument("--audit", required=True); c.add_argument("--out", required=True)
     a = p.parse_args(argv)

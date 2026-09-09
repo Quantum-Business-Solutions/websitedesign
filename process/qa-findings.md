@@ -525,3 +525,9 @@ Design system, generated (2026-09-08, late): `scripts/preview_design.py` now wri
 - Playwright: `_clipscroll.mjs` scrolls the whole page before capturing so reveals fire; use it for any full-page or long-section screenshot.
 - Map: service rings are drawn only where the item asks for one (`"ring": false` on served cities), so a headquarters with three served cities does not read as four offices.
 - Image 2000: the audit counts Wix Product and Offer markup as Service or Article on the 343 store pages. The report says so in words rather than letting the tile imply Service schema on service pages.
+
+## The report as a visual, and what makes it robust (2026-09-09)
+
+- The standalone report now carries what only the hub had: the every-page breakdown with today against the build and what we did on each URL. It also gained a readiness gauge in the hero, bar charts on the competitor and authority tables, and a print stylesheet, so the same file reads well in ClientCommand, in a browser and as a PDF. ClientCommand's copy is ported from this renderer; when the renderer changes, the port is re-synced.
+- Three robustness rules landed the same night. `validate()` refuses to build when the seo.json is missing a section or has fewer than five findings or a number of moves other than five, so a report can never silently lose a section. `seo_audit.py live` measures the technical facts itself (http to https, one canonical host, robots policy for GPTBot, ClaudeBot, PerplexityBot and Google-Extended, crawl delay, sitemap declared, llms.txt) and the report lists them as measured, above the authored checks. The shared page-card code lives in one function used by the hub and the report, so they cannot drift.
+- Embedding CSS through an f-string expression must not double the braces; the value is inserted as is. The doubled braces broke every card style in the report for one build.

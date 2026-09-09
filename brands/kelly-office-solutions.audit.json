@@ -18679,5 +18679,22 @@
     "avg": 30
    }
   }
+ },
+ "site": {
+  "domain": "kellyofficesolutions.com",
+  "sitemap_urls": 178,
+  "http_redirects_to_https": true,
+  "one_canonical_host": true,
+  "canonical_host": "kellyofficesolutions.com",
+  "robots_status": 200,
+  "crawl_delay": "10",
+  "allows_gptbot": true,
+  "allows_claudebot": true,
+  "allows_perplexitybot": true,
+  "allows_google-extended": true,
+  "allows_bingbot": true,
+  "allows_googlebot": true,
+  "sitemap_declared": true,
+  "llms_txt": false
  }
 }
