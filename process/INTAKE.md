@@ -171,3 +171,15 @@ What the report must contain, because the hub reads it: `hero.tiles` (four), `fi
 ## One command per client (added 2026-09-08, `scripts/newclient.py`, `scripts/build.py`)
 
 `newclient.py` scaffolds the content file, the seo.json, the build.json, the types file, the client repo and the first audit. `build.py <slug> [--push] [--shots]` runs the content file, removes stale pages, builds the three directions and the hub, scores the first direction, screenshots the hub and pushes the client repo. `brands/<slug>.build.json` holds the themes, the recommendation (null for none), the role text per direction, the base URL and the output folder; it is the one place the build command lives. See RUNBOOK.md, the fifteen-minute path.
+
+## Analysis before a build (added 2026-09-09, `scripts/analyze.py`)
+
+A prospect gets the search and AI-answer report before anyone designs a page. It is the same report the build gets, without the build column: one arc on the gauge, today-only grade bars, every-page cards that say what we would do on each URL and open the live page in a new tab, the Excel workbook of every table.
+
+1. Copy `brands/_starter.analysis.json` to `brands/<slug>.analysis.json`. Client, domain, accent and chrome colours from the live site, the sitemaps, and the cities. The cities come from the client's own site (home page footer, contact and locations pages) and from the client, headquarters first. Never from a guess: GoodSuite's site still says Woodland Hills; the company is in Chatsworth.
+2. Optional `brands/<slug>.types.json`: regex rules that sort URLs into service, city, post, form and company so the by-type chart and the cards read right.
+3. `python3 scripts/analyze.py <slug> --fetch --audit --date "9 September 2026"` pulls every sitemap URL, runs the sixteen checks and the site checks, and writes `brands/<slug>.audit.json`.
+4. Author `brands/<slug>.seo.json` from the Semrush and Firecrawl pulls (domain overview, top organic keywords, competitors, backlinks, phrase questions and related terms; live results for six buyer queries from the buyer's city). Same keys as a build's seo.json; `validate()` refuses fewer than five findings or a number of moves other than five.
+5. `python3 scripts/analyze.py <slug>` writes `analyses/<slug>/` (report, CSV, workbook). Regenerate `analyses/index.html`, commit, push: the `qbs-analyses` Vercel project serves `analyses/` for every prospect at once, noindex.
+
+When the prospect signs, the same seo.json and audit carry into the build; `build.py` adds the build column and the redirect map. Nothing is redone.

@@ -118,7 +118,7 @@ What goes in the repo root so the URL is worth sharing (Kelly is the reference,
 | `assets/` | Logo, hero, `hero-og.jpg`, `partners/` logos |
 | `standard.html` | The client-facing guarantee |
 | `design-system.html` | Tokens, type, modules and voice, generated from the same source as the pages |
-| `seo-report.html`, `seo-audit-pages.csv`, `redirects.csv`, `seo-build-scores.json` | The search and AI-answer package: the full analysis, every page and every check, the 301 map, the build scored by the same script (`scripts/preview_seo.py`, from `brands/<slug>.seo.json` and `.audit.json`) |
+| `seo-report.html`, `seo-audit-pages.xlsx`, `seo-audit-pages.csv`, `redirects.csv`, `seo-build-scores.json` | The search and AI-answer package: the full analysis, every page and every check, the 301 map, the build scored by the same script (`scripts/preview_seo.py`, from `brands/<slug>.seo.json` and `.audit.json`) |
 | `vercel.json` | An `X-Robots-Tag: noindex, nofollow` header on every path. Plain file URLs, so relative links resolve inside each direction |
 
 Rules: **noindex everywhere** (a preview that gets indexed is a duplicate of the client's future
@@ -280,3 +280,7 @@ Full INTAKE.md and qa-findings.md entries are refreshed on the monthly re-upload
 | Image 2000 | https://image2000.vercel.app |
 | Van Ausdall & Farrar | https://van-ausdall.vercel.app |
 All noindex. Each hub links its design system page and its search and AI-answer report.
+
+## Prospect analyses (added 2026-09-09)
+
+`analyses/<slug>/` in this repo holds the analysis-only report, workbook and CSV for each prospect, written by `scripts/analyze.py` from `brands/<slug>.analysis.json`, `.seo.json`, `.audit.json` and `.types.json`. The `qbs-analyses` Vercel project (team Quantum Business Solutions) serves the `analyses/` folder with `X-Robots-Tag: noindex`; `analyses/index.html` lists every report. First one: GoodSuite, 317 pages, 9 September 2026.
