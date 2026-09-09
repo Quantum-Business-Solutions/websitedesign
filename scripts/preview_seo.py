@@ -132,15 +132,25 @@ def _scatter(rows, highlight):
         xx = pad + (i / 4) * (W - pad - 12)
         grid += f'<text x="{xx:.1f}" y="{H - pad + 16}" text-anchor="middle" font-size="11" fill="var(--muted)">{int(ma * i / 4)}</text>'
     placed = []  # (x, y, label_y, side, name, me)
+
+    def span(x, side, name):  # horizontal extent of a label, about 6.6 px a character at 12 px
+        w = 6.6 * len(name) + 4
+        lx = x + side * 12
+        return (lx, lx + w) if side > 0 else (lx - w, lx)
+
+    def clear(ly, sp):
+        return all(abs(ly - q[2]) >= 15 or sp[1] < span(q[0], q[3], q[4])[0] or sp[0] > span(q[0], q[3], q[4])[1] for q in placed)
     for name, v, a, me in sorted(pts, key=lambda p: p[1], reverse=True):
         x = pad + (a / ma) * (W - pad - 12)
         y = H - pad - (v / mv) * (H - pad - top)
         side = -1 if x > W * 0.62 else 1
+        sp = span(x, side, name)
         ly = y
-        for _ in range(12):  # push the label down until it clears every label on the same side
-            if all(abs(ly - q[2]) >= 15 or q[3] != side for q in placed):
+        for d in (0, 15, -15, 30, -30, 45, -45, 60, -60):  # nudge below, then above, staying inside the plot
+            cand = y + d
+            if top + 8 <= cand <= H - pad - 4 and clear(cand, sp):
+                ly = cand
                 break
-            ly += 15
         placed.append((x, y, ly, side, name, me))
     dots = ""
     for x, y, ly, side, name, me in placed:
