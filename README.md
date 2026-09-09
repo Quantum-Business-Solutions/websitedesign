@@ -24,6 +24,12 @@ free.
 
 `/website` is the older combined command, kept for the full interview-to-ship path.
 
+**No terminal at all:** Client Command → Web Pages → **New website directions**. A teammate fills the brief
+(client, domain, the promise, ground, accent, cities, service lines) and `.github/workflows/directions.yml`
+does the fifteen-minute path headless: `newclient.py`, then `/directions` (this repo's rules, nobody watching),
+then `build.py`, then the three directions are copied into a site in Client Command and the brand files land
+on `main`. Twenty to forty minutes. `process/TEAM.md` has who does what.
+
 **The design system document** is generated, never hand-written, so it cannot drift from what
 ships: `python3 scripts/designsystem.py --out /tmp/ds.html`. It sets all nine themes in their real
 typefaces at their real colours, and carries the colour roles, the card-grid table and the

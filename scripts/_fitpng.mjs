@@ -1,7 +1,8 @@
 import { chromium } from 'playwright'; import fs from 'fs';
+import { chromePath } from './_chrome.mjs';
 // node _fitpng.mjs in.png out.png maxW : scale keeping alpha, trim transparent margins
 const [inp, out, maxW] = process.argv.slice(2);
-const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome', args: ['--headless=new','--no-sandbox'] });
+const b = await chromium.launch({ executablePath: chromePath(), args: ['--headless=new','--no-sandbox'] });
 const p = await b.newPage(); const data = 'data:image/png;base64,' + fs.readFileSync(inp).toString('base64');
 const r = await p.evaluate(async ([d, mw]) => { const img = new Image(); img.src = d; await img.decode();
   const c0 = document.createElement('canvas'); c0.width = img.naturalWidth; c0.height = img.naturalHeight; const x0 = c0.getContext('2d'); x0.drawImage(img, 0, 0);

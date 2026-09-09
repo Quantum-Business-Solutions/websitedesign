@@ -1,7 +1,8 @@
 import { chromium } from 'playwright'; import fs from 'fs';
+import { chromePath } from './_chrome.mjs';
 // node _axe.mjs <file.html> <ruleId> : print nodes failing one axe rule
 const [file, rule] = process.argv.slice(2);
-const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome', args: ['--headless=new','--no-sandbox'] });
+const b = await chromium.launch({ executablePath: chromePath(), args: ['--headless=new','--no-sandbox'] });
 const p = await b.newPage({ viewport: { width: 1280, height: 900 } });
 await p.route(/fonts\.(googleapis|gstatic)\.com|ajax\.googleapis\.com/, r => r.abort());
 await p.goto('file://' + file); await p.addScriptTag({ path: 'node_modules/axe-core/axe.min.js' });

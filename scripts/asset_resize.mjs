@@ -1,7 +1,8 @@
 import { chromium } from 'playwright'; import fs from 'fs';
+import { chromePath } from './_chrome.mjs';
 // node _resize.mjs in.png outbase   -> outbase-1200.jpg (1200x800 cover) and outbase-600.jpg
 const [inp, outb] = process.argv.slice(2);
-const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome', args: ['--headless=new','--no-sandbox'] });
+const b = await chromium.launch({ executablePath: chromePath(), args: ['--headless=new','--no-sandbox'] });
 const p = await b.newPage();
 const data = 'data:image/png;base64,' + fs.readFileSync(inp).toString('base64');
 for (const [w, h] of [[1200, 800], [600, 400]]) {

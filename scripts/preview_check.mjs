@@ -1,4 +1,5 @@
 // Preview page check: full-page screenshots at 1440 and 390, link and image resolution, small text, em dashes, console errors.
+import { chromePath } from './_chrome.mjs';
 // Usage (from websitedesign): node scripts/preview_check.mjs clean/index.html clean/blog/<slug>.html ...
 // Pages are relative to ROOT (the client repo). Results in OUT/results.json.
 import { chromium } from 'playwright';
@@ -6,7 +7,7 @@ import fs from 'fs'; import path from 'path';
 const ROOT = process.env.PV_ROOT || '/home/user/kelly-office-solutions';
 const OUT = '/tmp/claude-0/-home-user-Claude/798fbbce-ca0c-53c7-a6be-67c5e0055ed0/scratchpad/qa3';
 const pages = process.argv.slice(2);
-const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome', args: ['--headless=new','--no-sandbox'] });
+const b = await chromium.launch({ executablePath: chromePath(), args: ['--headless=new','--no-sandbox'] });
 const results = [];
 for (const p of pages) {
   for (const w of [1440, 390]) {

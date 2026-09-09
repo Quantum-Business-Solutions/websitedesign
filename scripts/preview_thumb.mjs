@@ -1,8 +1,9 @@
 // Downscale the top of a full-page PNG into a hub thumbnail. node scripts/preview_thumb.mjs in.png out.jpg 900 720
+import { chromePath } from './_chrome.mjs';
 import { chromium } from 'playwright'; import fs from 'fs';
 // node _thumb.mjs in.png out.jpg srcH outW : top srcH px of the image, downscaled to outW wide
 const [inp, out, srcH, outW] = process.argv.slice(2);
-const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome', args: ['--headless=new','--no-sandbox'] });
+const b = await chromium.launch({ executablePath: chromePath(), args: ['--headless=new','--no-sandbox'] });
 const p = await b.newPage();
 const data = 'data:image/png;base64,' + fs.readFileSync(inp).toString('base64');
 const res = await p.evaluate(async ([d, srcH, outW]) => {

@@ -1,7 +1,8 @@
 import { chromium } from 'playwright';
+import { chromePath } from './_chrome.mjs';
 // node _clip.mjs <file.html> <width> <selector> <offsetY> <height> <out.jpg> : clipped screenshot of part of an element
 const [file, w, sel, off, h, out] = process.argv.slice(2);
-const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome', args: ['--headless=new','--no-sandbox'] });
+const b = await chromium.launch({ executablePath: chromePath(), args: ['--headless=new','--no-sandbox'] });
 const p = await b.newPage({ viewport: { width: +w, height: 900 } });
 await p.route(/fonts\.(googleapis|gstatic)\.com/, r => r.abort());
 await p.goto('file://' + file); await p.waitForTimeout(300);
