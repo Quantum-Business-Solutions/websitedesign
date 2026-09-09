@@ -80,6 +80,113 @@ def _bars(rows, idx, label, highlight, fmt=lambda v: f"{int(v):,}"):
     return f'<figure class="bars"><figcaption>{E(label)}</figcaption>{items}</figure>'
 
 
+
+def _donut(pct, label, sub, color):
+    import math
+    r, c = 40, 50
+    circ = 2 * math.pi * r
+    return (f'<figure class="donut" aria-label="{E(label)}: {pct} percent"><svg viewBox="0 0 100 100"><circle cx="{c}" cy="{c}" r="{r}" fill="none" stroke="var(--alt)" stroke-width="14"/>'
+            f'<circle cx="{c}" cy="{c}" r="{r}" fill="none" stroke="{color}" stroke-width="14" stroke-dasharray="{circ * pct / 100:.1f} {circ:.1f}" transform="rotate(-90 {c} {c})"/>'
+            f'<text x="{c}" y="{c + 8}" text-anchor="middle" font-size="24" font-weight="800" fill="var(--fg)">{pct}%</text></svg><figcaption><b>{E(label)}</b><span>{E(sub)}</span></figcaption></figure>')
+
+
+def _grades(pages_today, pages_build):
+    """Grouped bars: how many pages sit at each grade today and in the build."""
+    order = "ABCDF"
+    ct = {g: sum(1 for p in pages_today if p["grade"] == g) for g in order}
+    cb = {g: sum(1 for p in pages_build if p["grade"] == g) for g in order}
+    mx = max(list(ct.values()) + list(cb.values())) or 1
+    cols = ""
+    for g in order:
+        cols += (f'<div class="gcol"><div class="gbars"><i class="t" style="height:{ct[g] / mx * 100:.0f}%" title="today {ct[g]}"></i><i class="b" style="height:{cb[g] / mx * 100:.0f}%" title="build {cb[g]}"></i></div>'
+                 f'<span class="gl"><b style="color:{GRADE[g]}">{g}</b><small>{ct[g]} today<br>{cb[g]} build</small></span></div>')
+    return f'<figure class="grades" aria-label="Pages by grade, today against the build"><figcaption>Pages by grade, today against the build <span class="key"><i class="t"></i> today <i class="b"></i> the build</span></figcaption><div class="grow">{cols}</div></figure>'
+
+
+def _scatter(rows, highlight):
+    """Authority Score against organic visits, one dot per competitor, the client in the accent.
+    Linear scales from zero with ticks; labels swap side on the right half and are nudged apart when they collide."""
+    pts = []
+    for r in rows:
+        v, a = _num(r[1]), _num(r[3]) if len(r) > 3 else None
+        if v is None or a is None:
+            continue
+        pts.append((r[0].split(" (")[0], v, a, highlight in r[0]))
+    if len(pts) < 2:
+        return ""
+    import math
+    W, H, pad, top = 560, 280, 56, 20
+
+    def nice(m):  # axis top: four equal ticks landing on round numbers
+        m = max(m * 1.1, 1)
+        unit = 10 ** math.floor(math.log10(m / 4))
+        step = next(u for u in (unit, unit * 2, unit * 2.5, unit * 5, unit * 10) if u * 4 >= m)
+        return step * 4
+    mv = nice(max(p[1] for p in pts))
+    ma = nice(max(p[2] for p in pts))
+    grid = ""
+    for i in range(1, 4):
+        yy = H - pad - (i / 4) * (H - pad - top)
+        grid += f'<line x1="{pad}" y1="{yy:.1f}" x2="{W - 12}" y2="{yy:.1f}" stroke="var(--line)" stroke-dasharray="3 4"/><text x="{pad - 6}" y="{yy + 4:.1f}" text-anchor="end" font-size="11" fill="var(--muted)">{int(mv * i / 4):,}</text>'
+    for i in range(1, 5):
+        xx = pad + (i / 4) * (W - pad - 12)
+        grid += f'<text x="{xx:.1f}" y="{H - pad + 16}" text-anchor="middle" font-size="11" fill="var(--muted)">{int(ma * i / 4)}</text>'
+    placed = []  # (x, y, label_y, side, name, me)
+    for name, v, a, me in sorted(pts, key=lambda p: p[1], reverse=True):
+        x = pad + (a / ma) * (W - pad - 12)
+        y = H - pad - (v / mv) * (H - pad - top)
+        side = -1 if x > W * 0.62 else 1
+        ly = y
+        for _ in range(12):  # push the label down until it clears every label on the same side
+            if all(abs(ly - q[2]) >= 15 or q[3] != side for q in placed):
+                break
+            ly += 15
+        placed.append((x, y, ly, side, name, me))
+    dots = ""
+    for x, y, ly, side, name, me in placed:
+        lx = x + side * 12
+        if abs(ly - y) > 6:
+            dots += f'<line x1="{x:.1f}" y1="{y:.1f}" x2="{lx - side * 3:.1f}" y2="{ly - 3:.1f}" stroke="var(--muted)" stroke-width="0.8"/>'
+        dots += f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{9 if me else 6}" fill="{"var(--accent)" if me else "#9aa4b2"}"/><text x="{lx:.1f}" y="{ly + 4:.1f}" font-size="12" text-anchor="{"end" if side < 0 else "start"}" fill="var(--fg)" font-weight="{700 if me else 400}">{E(name)}</text>'
+    return (f'<figure class="scatter" aria-label="Authority Score against organic visits a month for the client and its competitors"><figcaption>Authority against visits: who converts links into traffic</figcaption>'
+            f'<svg viewBox="0 0 {W} {H}">{grid}<line x1="{pad}" y1="{H - pad}" x2="{W - 12}" y2="{H - pad}" stroke="var(--border)"/><line x1="{pad}" y1="{top}" x2="{pad}" y2="{H - pad}" stroke="var(--border)"/>'
+            f'<text x="{(W + pad) / 2}" y="{H - 8}" text-anchor="middle" font-size="12" fill="var(--muted)">Authority Score</text><text x="14" y="{(H - pad + top) / 2}" text-anchor="middle" font-size="12" fill="var(--muted)" transform="rotate(-90 14 {(H - pad + top) / 2})">Organic visits a month</text>{dots}</svg></figure>')
+
+
+def _opps(rows, short):
+    """Volume bars with the client's position as a tag: the gap made visible."""
+    data = [(r[0], _num(r[1]), str(r[3])) for r in rows if _num(r[1])]
+    data = sorted(data, key=lambda x: -x[1])[:12]
+    if not data:
+        return ""
+    mx = data[0][1]
+    items = ""
+    for kw, v, pos in data:
+        ranking = pos and not pos.lower().startswith("not")
+        tag = f'<b class="ok">#{E(pos)}</b>' if ranking and pos.replace(",", "").isdigit() else (f'<b class="ok">{E(pos)}</b>' if ranking else '<b class="bad">not ranking</b>')
+        items += f'<div class="bar-row"><span class="bar-k">{E(kw)}</span><span class="bar-t"><i style="width:{max(2, v / mx * 100):.1f}%"></i></span><span class="bar-v">{int(v):,}</span><span class="bar-p">{tag}</span></div>'
+    return f'<figure class="bars opps"><figcaption>Searches a month, and where {E(short)} stands</figcaption>{items}</figure>'
+
+
+def _aeo_matrix(rows, short):
+    """Ten cells per query: the client's position lit, everything else grey. Presence at a glance."""
+    out = ""
+    for r in rows:
+        pos = r.get("position")
+        cells = "".join(f'<i class="{"me" if pos == i else ""}" title="{E(r["results"][i - 1]) if i - 1 < len(r["results"]) else ""}"></i>' for i in range(1, 11))
+        out += f'<div class="mrow"><span class="mq">{E(r["query"])}</span><span class="mcells">{cells}</span><span class="mv">{("#" + str(pos)) if pos else "absent"}</span></div>'
+    return f'<figure class="matrix" aria-label="Answer-engine scoreboard: {E(short)} position in the top ten for each buyer query"><figcaption>The top ten for each query; the lit cell is {E(short)}</figcaption><div class="mhead"><span></span><span class="mcells">{"".join(f"<em>{i}</em>" for i in range(1, 11))}</span><span></span></div>{out}</figure>'
+
+
+def _bytype(summary):
+    bt = summary.get("by_type") or {}
+    if not bt:
+        return ""
+    rows = sorted(bt.items(), key=lambda kv: -kv[1]["count"])
+    items = "".join(f'<div class="bar-row"><span class="bar-k">{E(k.title())} pages ({v["count"]})</span><span class="bar-t"><i style="width:{v["avg"]}%;background:{GRADE["A" if v["avg"] >= 85 else "B" if v["avg"] >= 70 else "C" if v["avg"] >= 55 else "D" if v["avg"] >= 40 else "F"]}"></i></span><span class="bar-v">{v["avg"]}</span></div>' for k, v in rows)
+    return f'<figure class="bars"><figcaption>Average readiness by page type, out of 100</figcaption>{items}</figure>'
+
+
 def _load(content_path):
     seo_p = content_path.replace(".content.json", ".seo.json")
     aud_p = content_path.replace(".content.json", ".audit.json")
@@ -194,12 +301,23 @@ def report_html(content, seo, audit, build, cmp_rows, base, dslugs, roles_avg, b
     date = seo.get("measured") or audit.get("measured", "")
     import reskin
     accent = b["accent"]
-    ink = reskin.darken_until(accent, "#ffffff")
+    ink = reskin.darken_until(accent, "#f3f6f9")  # the alternating section tint, the harder of the two grounds ink sits on
+    tint = reskin.rgb_to_hex(*(a * 0.14 + 0.86 for a in reskin.hex_to_rgb(accent)))  # the 14 percent tint the tags sit on
+    ink2 = reskin.darken_until(accent, tint)
     navy = b.get("chrome_bg") or "#0f1e33"
     h = seo["hero"]
     gauge = _gauge(audit["summary"]["avg_score"], build["summary"]["avg_score"])
     every = _every_section("every", audit, seo, build_by_path, mapping, cmp_rows, roles_avg, dom, date)
-    comp_bars = _bars(seo["competitors"]["rows"], 1, "Organic visits a month", dom)
+    comp_bars = _bars(seo["competitors"]["rows"], 1, "Organic visits a month", dom) + _scatter(seo["competitors"]["rows"], dom)
+    short = client.split(" ")[0]
+    tr = seo.get("traffic") or {}
+    donuts = ""
+    if tr:
+        donuts = '<div class="donuts">' + _donut(tr.get("home_share", 0), "Visits landing on the home page", tr.get("home_note", "one page carries the site"), "#ffb4a8") + _donut(tr.get("brand_share", 0), "Visits from the brand name", tr.get("brand_note", "people who already know the company"), "#ffb4a8") + _donut(tr.get("nonbrand_target", 40), "Non-brand share we build toward", "by day 90, measured against this baseline", "#8fe3b0") + "</div>"
+    grades = _grades(audit["pages"], build["pages"])
+    opps = _opps(seo["opportunities"]["rows"], short)
+    matrix = _aeo_matrix(seo["aeo"]["rows"], short)
+    bytype = _bytype(audit["summary"])
     auth_bars = _bars(seo["backlinks"]["rows"], 1, "Authority Score", dom, fmt=lambda v: str(int(v)))
     fnd = seo["findings"]
     sev_counts = {}
@@ -279,59 +397,65 @@ def report_html(content, seo, audit, build, cmp_rows, base, dslugs, roles_avg, b
 
     return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
 <title>SEO and AI search analysis of {E(dom)} | prepared for {E(client)}</title>
-<style>:root{{--accent:{accent};--ink:{ink};--fg:#1c1f24;--muted:#5b616b;--line:#dfe6ee;--border:#dfe6ee;--alt:#f3f6f9;--bg:#ffffff;--bg-alt:#f3f6f9;--navy:{navy};--chrome:{navy}}}*{{box-sizing:border-box}}body{{margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--fg);background:#fff}}
+<style>:root{{--accent:{accent};--ink:{ink};--ink2:{ink2};--fg:#1c1f24;--muted:#5b616b;--line:#dfe6ee;--border:#dfe6ee;--alt:#f3f6f9;--bg:#ffffff;--bg-alt:#f3f6f9;--navy:{navy};--chrome:{navy}}}*{{box-sizing:border-box}}body{{margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--fg);background:#fff}}
 .wrap{{max-width:1040px;margin:0 auto;padding:0 24px}}section{{padding:56px 0;border-top:1px solid var(--line)}}section:nth-of-type(even){{background:var(--alt)}}
-.top{{display:flex;justify-content:space-between;align-items:center;gap:16px;border-bottom:1px solid var(--line);padding:14px 24px;flex-wrap:wrap}}.top a{{text-decoration:none;font-weight:600;color:var(--accent)}}
-.eyebrow{{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 12px}}h1{{font-size:clamp(34px,4.4vw,52px);line-height:1.05;letter-spacing:-.02em;margin:0 0 18px;text-wrap:balance}}h2{{font-size:30px;line-height:1.15;letter-spacing:-.01em;margin:0 0 14px;text-wrap:balance}}h3{{font-size:19px;margin:30px 0 8px}}h3 small{{font-weight:400;color:var(--muted);font-size:14px;margin-left:8px}}
+.top{{display:flex;justify-content:space-between;align-items:center;gap:16px;border-bottom:1px solid var(--line);padding:14px 24px;flex-wrap:wrap}}.top a{{text-decoration:none;font-weight:600;color:var(--ink)}}
+.eyebrow{{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);font-weight:700;margin:0 0 12px}}h1{{font-size:clamp(34px,4.4vw,52px);line-height:1.05;letter-spacing:-.02em;margin:0 0 18px;text-wrap:balance}}h2{{font-size:30px;line-height:1.15;letter-spacing:-.01em;margin:0 0 14px;text-wrap:balance}}h3{{font-size:19px;margin:30px 0 8px}}h3 small{{font-weight:400;color:var(--muted);font-size:14px;margin-left:8px}}
 .lead{{font-size:18px;color:var(--muted);max-width:760px;margin:0 0 22px}}.hero{{background:var(--navy);color:#fff;padding:64px 0;border-top:0}}.hero .eyebrow{{color:#fff;opacity:.85}}.hero .lead{{color:rgba(255,255,255,.85)}}.hero h1{{color:#fff}}
 .stiles{{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}}.stiles.six{{grid-template-columns:repeat(3,1fr)}}.stile{{background:#fff;border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:12px;padding:18px 20px}}.stile b{{display:block;font-size:34px;line-height:1;letter-spacing:-.02em;color:var(--ink)}}.stile span{{display:block;margin-top:8px;font-size:13.5px;color:var(--muted)}}
 .hero .stile{{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-top:3px solid var(--accent)}}.hero .stile b{{color:#fff}}.hero .stile span{{color:rgba(255,255,255,.8)}}
 .chips{{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 22px}}.chip,.sev{{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--sev);border-radius:999px;padding:4px 10px}}
-.findings{{display:grid;gap:14px}}.finding{{display:grid;grid-template-columns:56px 1fr;gap:16px;background:#fff;border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:12px;padding:20px 22px;box-shadow:0 10px 30px rgba(0,0,0,.05)}}.finding .rank{{font-size:34px;font-weight:800;color:var(--accent);line-height:1}}.finding h3{{margin:8px 0 10px;font-size:20px}}
+.findings{{display:grid;gap:14px}}.finding{{display:grid;grid-template-columns:56px 1fr;gap:16px;background:#fff;border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:12px;padding:20px 22px;box-shadow:0 10px 30px rgba(0,0,0,.05)}}.finding .rank{{font-size:34px;font-weight:800;color:var(--ink);line-height:1}}.finding h3{{margin:8px 0 10px;font-size:20px}}
 .finding dl{{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0}}.finding dt{{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}}.finding dd{{margin:4px 0 0;font-size:15px}}
 .tblwrap{{overflow-x:auto;margin:14px 0 6px}}table{{width:100%;border-collapse:collapse;font-size:14.5px;background:#fff}}th,td{{text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top}}th{{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:#f6f8fa}}code{{font-size:13px;background:#f3f4f6;padding:1px 5px;border-radius:4px}}
 .ok{{color:#067647;font-weight:700}}.bad{{color:#b42318;font-weight:700}}.na{{color:var(--muted)}}.vol{{color:var(--muted);font-size:13px}}
 .qgrid{{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}}.qcol h3{{margin-top:8px}}ul{{padding-left:18px}}li{{margin:6px 0}}
-.steps{{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}}.step{{background:#fff;border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:12px;padding:16px 18px}}.step .when{{font-weight:700;color:var(--accent);margin-bottom:6px}}.step p{{margin:0;font-size:14.5px}}
+.steps{{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}}.step{{background:#fff;border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:12px;padding:16px 18px}}.step .when{{font-weight:700;color:var(--ink);margin-bottom:6px}}.step p{{margin:0;font-size:14.5px}}
 .tbl.cmp th[scope=row]{{text-align:left;font-weight:600;background:#fff;font-size:14.5px;letter-spacing:0;text-transform:none;color:var(--ink)}}.tbl.cmp td:nth-child(2){{background:color-mix(in srgb,var(--accent) 8%,#fff)}}
 .sc{{display:inline-block;color:#fff;background:var(--g);border-radius:6px;padding:2px 8px;font-size:13px;font-weight:700}}
 .verdict{{margin-top:22px;padding:22px 26px;background:var(--navy);color:#fff;border-radius:12px;font-size:18px;line-height:1.5}}
-.lev{{display:grid;gap:14px}}.levi{{display:grid;grid-template-columns:56px 1fr;gap:16px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 22px;box-shadow:0 10px 30px rgba(0,0,0,.05)}}.levi .n{{font-size:34px;font-weight:800;color:var(--accent);line-height:1}}.levi h3{{margin:6px 0 6px;font-size:20px}}.levi .meta{{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 8px;color:var(--muted);font-size:14px;align-items:center}}.levi .tag{{background:color-mix(in srgb,var(--accent) 14%,#fff);color:var(--ink);border-radius:999px;padding:2px 10px;font-weight:600}}.levi .when{{font-weight:700;color:var(--accent)}}.levi p{{margin:0}}
-.dolist p{{margin:8px 0;padding-left:0}}.dolist .when{{display:inline-block;min-width:78px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}}
+.lev{{display:grid;gap:14px}}.levi{{display:grid;grid-template-columns:56px 1fr;gap:16px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 22px;box-shadow:0 10px 30px rgba(0,0,0,.05)}}.levi .n{{font-size:34px;font-weight:800;color:var(--ink);line-height:1}}.levi h3{{margin:6px 0 6px;font-size:20px}}.levi .meta{{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 8px;color:var(--muted);font-size:14px;align-items:center}}.levi .tag{{background:color-mix(in srgb,var(--accent) 14%,#fff);color:var(--ink2);border-radius:999px;padding:2px 10px;font-weight:600}}.levi .when{{font-weight:700;color:var(--ink)}}.levi p{{margin:0}}
+.dolist p{{margin:8px 0;padding-left:0}}.dolist .when{{display:inline-block;min-width:78px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}}
 .note{{background:#fff;border-left:4px solid var(--accent);padding:12px 18px;color:var(--muted);margin:24px 0 0}}.fine{{font-size:13px;color:var(--muted);margin-top:14px}}
 .btn{{display:inline-block;background:var(--accent);color:#000;padding:12px 20px;border-radius:999px;font-weight:600;text-decoration:none}}
 .cmpbox{{margin-top:28px;background:var(--navy);color:#fff;border-radius:16px;padding:26px 28px}}.cmpbox h3{{color:#fff;margin:0 0 6px}}.cmpbox p{{color:rgba(255,255,255,.8);margin:0 0 16px}}.cmp-rows{{display:grid;gap:6px}}.cmp-row{{display:grid;grid-template-columns:1.6fr 1fr 40px 1fr;align-items:center;gap:10px;padding:9px 12px;border-radius:10px;background:rgba(255,255,255,.06)}}.cmp-row.head{{background:none;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.7);padding-bottom:0}}.cmp-row .lbl{{font-weight:600}}.cmp-row .today{{color:#ffb4a8;font-weight:700;text-align:right}}.cmp-row .build{{color:#8fe3b0;font-weight:800;font-size:17px}}.cmp-row .arrow{{width:40px;height:2px;background:rgba(255,255,255,.35);justify-self:center;position:relative}}.cmp-row .arrow::after{{content:"";position:absolute;right:-1px;top:-4px;border:5px solid transparent;border-left-color:rgba(255,255,255,.35)}}.cmp-row.head .arrow{{background:none}}.cmp-row.head .arrow::after{{display:none}}
 .opts{{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}}.opt{{background:rgba(255,255,255,.1);border-radius:999px;padding:6px 12px;font-size:13.5px}}.opt b{{margin-right:4px}}
 .hero-grid{{display:grid;grid-template-columns:1fr 240px;gap:40px;align-items:center}}.gauge-wrap{{text-align:center}}.gauge{{width:200px;height:200px}}.gauge-wrap p{{font-size:13px;color:rgba(255,255,255,.75);margin:8px 0 0}}
 .bars{{margin:18px 0 26px;padding:18px 20px;background:#fff;border:1px solid var(--line);border-radius:12px}}.bars figcaption{{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:10px}}.bar-row{{display:grid;grid-template-columns:220px 1fr 70px;gap:12px;align-items:center;padding:5px 0;font-size:14px}}.bar-t{{height:10px;background:var(--alt);border-radius:999px;overflow:hidden}}.bar-t i{{display:block;height:100%;background:#9aa4b2;border-radius:999px}}.bar-row.me .bar-t i{{background:var(--accent)}}.bar-row.me .bar-k{{font-weight:700}}.bar-v{{text-align:right;font-variant-numeric:tabular-nums;color:var(--muted)}}
+.donut-band{{padding:28px 0;background:#fff;border-top:0}}.donuts{{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}}.donut{{margin:0;display:grid;grid-template-columns:110px 1fr;gap:14px;align-items:center;padding:14px 16px;border:1px solid var(--line);border-radius:12px}}.donut svg{{width:110px;height:110px}}.donut figcaption b{{display:block;font-size:15px}}.donut figcaption span{{display:block;font-size:13px;color:var(--muted);margin-top:4px}}
+.grades{{margin:22px 0;padding:18px 20px;background:#fff;border:1px solid var(--line);border-radius:12px}}.grades figcaption,.scatter figcaption,.matrix figcaption{{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}}.grades .key i{{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:middle;margin:0 4px 0 10px}}.grades i.t{{background:#ffb4a8}}.grades i.b{{background:#8fe3b0}}.grow{{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;align-items:end}}.gbars{{height:150px;display:flex;align-items:flex-end;gap:6px;justify-content:center;border-bottom:1px solid var(--line);padding:0 10px}}.gbars i{{display:block;width:34px;border-radius:6px 6px 0 0;min-height:2px}}.gbars i.t{{background:#ffb4a8}}.gbars i.b{{background:#8fe3b0}}.gl{{display:block;text-align:center;margin-top:8px;font-size:12px;color:var(--muted)}}.gl b{{display:block;font-size:20px}}
+.scatter{{margin:18px 0 26px;padding:18px 20px;background:#fff;border:1px solid var(--line);border-radius:12px}}.scatter svg{{width:100%;height:auto;max-width:640px;display:block}}
+.bars.opps .bar-row{{grid-template-columns:260px 1fr 70px 110px}}.bar-p b{{font-size:12px;letter-spacing:.04em;text-transform:uppercase}}
+.matrix{{margin:18px 0 26px;padding:18px 20px;background:#fff;border:1px solid var(--line);border-radius:12px}}.mhead,.mrow{{display:grid;grid-template-columns:280px 1fr 70px;gap:14px;align-items:center;padding:6px 0;border-bottom:1px dotted var(--line);font-size:14px}}.mhead{{border-bottom:1px solid var(--line);color:var(--muted);font-size:11px}}.mcells{{display:grid;grid-template-columns:repeat(10,1fr);gap:4px}}.mcells i{{display:block;height:18px;border-radius:4px;background:var(--alt)}}.mcells i.me{{background:var(--accent);box-shadow:0 0 0 2px #fff,0 0 0 3px var(--accent)}}.mcells em{{font-style:normal;text-align:center;display:block}}.mv{{text-align:right;font-weight:700}}.mv:has(+ *){{}}
 .h3{{font-size:19px;margin:30px 0 8px}}.h4{{font-size:16px;margin:0}}.wrap.wide{{max-width:1200px}}.two{{display:grid;grid-template-columns:1fr 1fr;gap:32px}}.asof{{font-weight:400;color:var(--muted);font-size:13px;margin-left:8px}}
 @media print{{.top,.afilter,.open-build{{display:none!important}}section{{padding:28px 0;break-inside:avoid}}.hero{{background:var(--navy)!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}}.pg{{break-inside:avoid}}.pglist{{display:block}}body{{font-size:13px}}h1{{font-size:32px}}h2{{font-size:22px}}}}
-@media(max-width:900px){{.stiles,.stiles.six,.steps,.qgrid,.finding dl{{grid-template-columns:1fr 1fr}}.hero-grid{{grid-template-columns:1fr}}.bar-row{{grid-template-columns:1fr 60px}}.bar-t{{grid-column:1/-1}}}}@media(max-width:600px){{.stiles,.stiles.six,.steps,.qgrid,.finding dl{{grid-template-columns:1fr}}.finding,.levi{{grid-template-columns:40px 1fr}}.cmpbox{{padding:20px 16px}}.cmp-row{{grid-template-columns:1fr 1fr;gap:4px}}.cmp-row.head{{display:none}}.cmp-row .lbl{{grid-column:1/-1}}.cmp-row .arrow{{display:none}}.cmp-row .today{{text-align:left}}.cmp-row .today::before{{content:"Today";display:block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.65)}}.cmp-row .build::before{{content:"The build";display:block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.65)}}}}.cmp-row>span{{min-width:0;overflow-wrap:anywhere}}
+@media(max-width:900px){{.stiles,.stiles.six,.steps,.qgrid,.finding dl{{grid-template-columns:1fr 1fr}}.hero-grid{{grid-template-columns:1fr}}.bar-row,.bars.opps .bar-row{{grid-template-columns:1fr 60px 90px}}.bar-t{{grid-column:1/-1}}.donuts{{grid-template-columns:1fr}}.grow{{gap:8px}}.gbars i{{width:22px}}.mhead,.mrow{{grid-template-columns:1fr 60px}}.mcells{{grid-column:1/-1}}}}@media(max-width:600px){{.stiles,.stiles.six,.steps,.qgrid,.finding dl{{grid-template-columns:1fr}}.finding,.levi{{grid-template-columns:40px 1fr}}.cmpbox{{padding:20px 16px}}.cmp-row{{grid-template-columns:1fr 1fr;gap:4px}}.cmp-row.head{{display:none}}.cmp-row .lbl{{grid-column:1/-1}}.cmp-row .arrow{{display:none}}.cmp-row .today{{text-align:left}}.cmp-row .today::before{{content:"Today";display:block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.65)}}.cmp-row .build::before{{content:"The build";display:block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.65)}}}}.cmp-row>span{{min-width:0;overflow-wrap:anywhere}}
 {PKG_CSS}</style></head>
 <body data-first-dir="{E(dslugs[0])}">
-<div class="top"><a href="index.html">&larr; Back to the three directions</a><span>Quantum Business Solutions for {E(client)}</span></div>
+<header class="top"><a href="index.html">&larr; Back to the three directions</a><span>Quantum Business Solutions for {E(client)}</span></header><main>
 <section class="hero"><div class="wrap"><div class="hero-grid"><div><p class="eyebrow">Search and AI answers, measured {E(date)}</p><h1>{E(h["heading"])}</h1><p class="lead">{E(h["intro"])}</p></div><div class="gauge-wrap">{gauge}<p>Readiness on sixteen checks, every page: the site today against the build, scored by the same script.</p></div></div>{_stiles(h["tiles"])}</div></section>
+{('<section class="donut-band"><div class="wrap">' + donuts + '</div></section>') if donuts else ""}
 <section><div class="wrap"><p class="eyebrow">Top findings</p><h2>Ranked by what they cost, with the fix</h2><p class="lead">Each finding carries its evidence, what it costs today, and what the build or the 90-day plan does about it.</p><div class="chips">{chips}</div><div class="findings">{_finding_cards(fnd)}</div></div></section>
 <section><div class="wrap"><p class="eyebrow">Why the competitors are winning</p><h2>The same pages, side by side</h2><p class="lead">{E(cmp["intro"])}</p>{cmp_tbl}<div class="verdict">{E(cmp["verdict"])}</div></div></section>
 <section><div class="wrap"><p class="eyebrow">Highest leverage moves</p><h2>Five moves, in the order we would make them</h2><p class="lead">The five moves with the biggest return for the least effort, in the order we would do them. Each one is either in the build or in the first 30 days of the plan.</p><div class="lev">{moves}</div></div></section>
 <section><div class="wrap"><p class="eyebrow">Whole site, every page</p><h2>{n} pages, and what each one tells a crawler</h2><p class="lead">Every URL in the sitemap, fetched {E(date)} and parsed for title, meta description, headings, words, images, links and JSON-LD schema. Each page gets a readiness score out of 100 across sixteen checks, weighted toward what answer engines read: FAQ schema, Service schema, question-form headings and depth.</p>{site_tiles}
 <div class="cmpbox"><h3>The same sixteen checks, run on the build</h3><p>Every recommendation in this report is already in place on all three directions. The right-hand column is the build, scored by the same script.</p><div class="cmp-rows"><div class="cmp-row head"><span class="lbl"></span><span class="today">{E(dom)} today</span><span class="arrow"></span><span class="build">The build, any direction</span></div>{cmp_box}</div><div class="opts">{opts}</div><p class="fine" style="color:rgba(255,255,255,.75)">What is deliberately not marked up: Review and AggregateRating. Those wait for the Google review program, because marking up self-published testimonials is against Google's guidelines. That is the gap between the build and 100.</p></div>
-<h3>By section of the site</h3>{sec_tbl}<h3>Every service, industry and location page, worst first</h3>{worst_tbl}<p class="fine">Word counts exclude navigation, header and footer. The full sheet, all {n} pages and every check, is <a href="seo-audit-pages.csv">seo-audit-pages.csv</a>; the redirect map is <a href="redirects.csv">redirects.csv</a>.</p></div></section>
+{grades}{bytype}<h3>By section of the site</h3>{sec_tbl}<h3>Every service, industry and location page, worst first</h3>{worst_tbl}<p class="fine">Word counts exclude navigation, header and footer. The full sheet, all {n} pages and every check, is <a href="seo-audit-pages.csv">seo-audit-pages.csv</a>; the redirect map is <a href="redirects.csv">redirects.csv</a>.</p></div></section>
 {every}
 {blog_html}
 {ent_html}
 <section><div class="wrap"><p class="eyebrow">Where the traffic comes from</p><h2>Today, in numbers</h2><ul>{today_li}</ul></div></section>
 <section><div class="wrap"><p class="eyebrow">Competitors</p><h2>Who earns the visits you should be earning</h2><p class="lead">{E(seo["competitors"]["intro"])}</p>{comp_bars}{comp_tbl}</div></section>
-<section><div class="wrap"><p class="eyebrow">Keyword opportunities</p><h2>The terms worth a page each</h2><p class="lead">{E(seo["opportunities"]["intro"])}</p>{opp_tbl}</div></section>
+<section><div class="wrap"><p class="eyebrow">Keyword opportunities</p><h2>The terms worth a page each</h2><p class="lead">{E(seo["opportunities"]["intro"])}</p>{opps}{opp_tbl}</div></section>
 <section><div class="wrap"><p class="eyebrow">Keyword clusters by service line</p><h2>What each page has to answer</h2><p class="lead">Each cluster becomes one page plus its FAQ. The terms are the headings. Volume, difficulty, cost per click and intent from Semrush, US database.</p>{clusters}</div></section>
 <section><div class="wrap"><p class="eyebrow">Questions people ask</p><h2>The answers AI assistants and Google both want</h2><p class="lead">Each question becomes an FAQ item marked up as FAQPage, answered in the first sentence.</p><div class="qgrid">{qcols}</div></div></section>
 <section><div class="wrap"><p class="eyebrow">Page audit</p><h2>What the pages say to a crawler today</h2>{crawl_tbl}<h3>The same pages at the competitors</h3>{cp_tbl}</div></section>
-<section><div class="wrap"><p class="eyebrow">AI answer visibility</p><h2>Who is named when someone asks</h2><p class="lead">{E(seo["aeo"]["intro"])}</p>{aeo_tbl}<h3>AI crawlers in robots.txt</h3><ul>{crawlers}</ul></div></section>
+<section><div class="wrap"><p class="eyebrow">AI answer visibility</p><h2>Who is named when someone asks</h2><p class="lead">{E(seo["aeo"]["intro"])}</p>{matrix}{aeo_tbl}<h3>AI crawlers in robots.txt</h3><ul>{crawlers}</ul></div></section>
 <section><div class="wrap"><p class="eyebrow">Backlinks</p><h2>{E(bl["heading"])}</h2>{auth_bars}{bl_tbl}<h3>Strongest referring domains</h3>{ref_tbl}</div></section>
 <section><div class="wrap"><p class="eyebrow">Local and reviews</p><h2>What a buyer sees next to the map</h2><ul>{local_li}</ul></div></section>
 <section><div class="wrap"><p class="eyebrow">The 90-day plan</p><h2>What happens, in order</h2><div class="steps">{plan}</div></div></section>
 <section><div class="wrap"><p class="eyebrow">What we measure</p><h2>The same report, re-run at 30, 60 and 90 days</h2>{measure_tbl}<h3>In one list</h3><ol>{one_list}</ol><p class="note">Every number here came from a Semrush or Firecrawl pull, or from the live HTML of {E(dom)}, on {E(date)}. Where a pull was not made, the table says so. Rankings and traffic are not promised; the inputs are, and they are re-measured against this baseline.</p></div></section>
-</body></html>'''
+</main></body></html>'''
 
 
 def _every_section(sec_id, audit, seo, build_by_path, mapping, cmp_rows, roles_avg, dom, date):
@@ -415,7 +539,7 @@ var d0=document.body.getAttribute("data-first-dir")||"";w.querySelectorAll("a.op
 
 PKG_CSS = '''
 .stiles.eight{grid-template-columns:repeat(4,1fr)}
-.fnds{display:grid;gap:12px;margin-top:16px}.fnd{display:grid;grid-template-columns:48px 1fr;gap:14px;background:var(--bg);border:1px solid var(--border);border-left:5px solid var(--accent);border-radius:12px;padding:18px 20px}.fnd .rank{font-size:30px;font-weight:800;color:var(--accent);line-height:1}.fnd h3{margin:6px 0 8px;font-size:19px}.fnd dl{margin:0;display:grid;gap:6px}.fnd dt{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}.fnd dd{margin:2px 0 0;font-size:14.5px}
+.fnds{display:grid;gap:12px;margin-top:16px}.fnd{display:grid;grid-template-columns:48px 1fr;gap:14px;background:var(--bg);border:1px solid var(--border);border-left:5px solid var(--accent);border-radius:12px;padding:18px 20px}.fnd .rank{font-size:30px;font-weight:800;color:var(--ink);line-height:1}.fnd h3{margin:6px 0 8px;font-size:19px}.fnd dl{margin:0;display:grid;gap:6px}.fnd dt{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}.fnd dd{margin:2px 0 0;font-size:14.5px}
 .sev{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--sev);border-radius:999px;padding:3px 9px}
 .wrap.wide{max-width:1200px}
 .cmpbox{margin-top:28px;background:var(--chrome);color:#fff;border-radius:16px;padding:26px 28px}.cmpbox .h3,.cmpbox h3{color:#fff;margin:0 0 6px}.cmpbox p{color:rgba(255,255,255,.8);margin:0 0 16px}.cmpbox .fine{color:rgba(255,255,255,.75)}

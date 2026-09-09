@@ -1538,5 +1538,12 @@
    "^/blog/",
    "post"
   ]
- ]
+ ],
+ "traffic": {
+  "home_share": 94,
+  "home_note": "465 of 492 visits on the home page and its http twin",
+  "brand_share": 88,
+  "brand_note": "four spellings of the company name",
+  "nonbrand_target": 40
+ }
 }
