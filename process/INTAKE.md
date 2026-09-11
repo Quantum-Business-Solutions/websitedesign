@@ -183,3 +183,11 @@ A prospect gets the search and AI-answer report before anyone designs a page. It
 5. `python3 scripts/analyze.py <slug>` writes `analyses/<slug>/` (report, CSV, workbook). Regenerate `analyses/index.html`, commit, push: the `qbs-analyses` Vercel project serves `analyses/` for every prospect at once, noindex.
 
 When the prospect signs, the same seo.json and audit carry into the build; `build.py` adds the build column and the redirect map. Nothing is redone.
+
+## Ask for the people (added 2026-09-11)
+
+Two or three names with job titles, and a LinkedIn address for each: the owner, the service manager, whoever the client
+would put in front of a buyer. They go in `schema.people` in the content file as `{"slug", "name", "title", "sameAs"}`
+and become Person nodes with `worksFor`, plus the author of every post. Google asks for an author that is a Person with
+a URL that identifies them, and the entity graph score fails the site until it has one. Never invent a person to pass
+the check.

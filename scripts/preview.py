@@ -26,6 +26,7 @@ from __future__ import annotations
 import argparse
 import html
 import json
+import datetime as _dt
 import os
 import re
 import sys
@@ -959,11 +960,32 @@ def schema_blocks(content, page, base, dslug, title=None, description=None):
             blocks.append(svc)
         elif any(fnmatch.fnmatch(page["file"], g) for g in post_globs) and not (own & {"BlogPosting", "Article", "NewsArticle"}):
             post = {"@context": "https://schema.org", "@type": "BlogPosting", "@id": f"{page_url}#article", "headline": name, "description": description, "url": page_url,
-                    "mainEntityOfPage": page_url, "author": {"@id": f"{site}/#organization"}, "publisher": {"@id": f"{site}/#organization"}, "inLanguage": "en-US"}
+                    "mainEntityOfPage": page_url, "author": {"@id": f"{site}/#person-{(sch.get('people') or [{}])[0].get('slug')}"} if sch.get("people") else {"@id": f"{site}/#organization"},
+                    "publisher": {"@id": f"{site}/#organization"}, "inLanguage": "en-US"}
             for k, v in (("datePublished", page.get("date")), ("dateModified", page.get("modified") or page.get("date")), ("articleSection", page.get("section"))):
                 if v:
                     post[k] = v
             blocks.append(post)
+    # WebPage on every page: the page as an entity, what it is about, and when it last changed.
+    # Answer engines read about/mentions to decide what a page can be cited for, and dateModified for freshness.
+    if "WebPage" not in own:
+        page_url = f"{site}/{page['file'].replace('.html', '')}" if page["file"] != "index.html" else f"{site}/"
+        primary_id = next((b["@id"] for b in blocks if b.get("@type") in ("Service", "BlogPosting") and b.get("@id")), None)
+        wp = {"@context": "https://schema.org", "@type": "WebPage", "@id": f"{page_url}#webpage", "url": page_url, "name": title,
+              "description": description, "isPartOf": {"@id": f"{site}/#website"}, "about": {"@id": primary_id or f"{site}/#organization"},
+              "publisher": {"@id": f"{site}/#organization"}, "inLanguage": "en-US"}
+        # the build date is the honest answer: this is when the page last changed
+        wp["dateModified"] = sch.get("updated") or _dt.date.today().isoformat()
+        if page.get("mentions"):
+            wp["mentions"] = [{"@type": "Thing", "name": m} for m in page["mentions"]]
+        blocks.append(wp)
+    # The people a buyer and an answer engine can attribute the work to.
+    for per in (sch.get("people") or []):
+        blocks.append({"@context": "https://schema.org", "@type": "Person", "@id": f"{site}/#person-{per['slug']}", "name": per["name"],
+                       **({"jobTitle": per["title"]} if per.get("title") else {}),
+                       **({"image": per["image"]} if per.get("image") else {}),
+                       **({"sameAs": per["sameAs"]} if per.get("sameAs") else {}),
+                       "worksFor": {"@id": f"{site}/#organization"}, "url": f"{site}/about"})
     return "\n".join(f'<script type="application/ld+json">{json.dumps(b, ensure_ascii=False)}</script>' for b in blocks)
 
 

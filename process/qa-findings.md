@@ -547,3 +547,23 @@ Design system, generated (2026-09-08, late): `scripts/preview_design.py` now wri
 - The ClientCommand runner failed GoodSuite twice today at the profile step (twelve attempts, the model stopped at its 16,000-token output limit). A run at 13:05 completed. The fix is in that runner's code, which the ClientCommand session owns; the conveyor's analysis does not depend on it.
 - Nested triple-quoted f-strings inside a triple-quoted f-string end the outer string. The conditional blocks in the report template are computed into variables first.
 - The card grid for analysis-only pages needed its own media rules; a more specific selector kept four columns on a phone until `.pg.solo` joined the narrow-screen rules.
+
+## Scoring the entity graph, and what it caught (2026-09-11)
+
+- Shawn asked whether the score factors in all the schema types. It read every type on the page and printed them, but
+  it scored only four families (FAQPage, Service/Article, LocalBusiness, Review) for 34 of 100, and it measured no
+  property at all: no sameAs, provider, areaServed, author, about or dateModified. Our own builds emitted a real graph
+  that the score could not see, so the build scored 93 for work worth more than that and a competitor with five bare
+  type names could have matched it.
+- First calibration was wrong in the other direction: a Yoast install scored 80 because the sitewide constants
+  (Organization, WebSite, BreadcrumbList, sameAs, ids) were worth nearly half the points, and `provider` auto-passed
+  whenever the page had no primary entity to link. Rebalanced so the page-specific checks carry the weight and
+  `provider` fails when there is nothing to connect. GoodSuite service pages went from 59 to 48, forms from 80 to 45.
+- Scoring our own build is the point, not a formality: it immediately failed on three checks and each one was a real
+  omission. We emitted no WebPage node, so nothing carried `about` or `dateModified`, and posts were authored by the
+  Organization rather than a Person. Fixed in `schema_blocks`; the build went from 87 to 97.
+- The build pages were being audited without their page type, so a service page was scored as though its primary
+  entity should be an Organization. Both call sites now classify first and pass the type in.
+- Old audit files have no `entity` key and crash the renderer. The four live audits were refreshed from the saved HTML
+  with each page's existing path, type and measured date preserved, so the readiness numbers are unchanged and only the
+  new dimension is added.

@@ -123,7 +123,7 @@ def _schema_types(doc):
     return types
 
 
-def audit_html(raw, url, domain, cities, is_build=False, site_root=None):
+def audit_html(raw, url, domain, cities, is_build=False, site_root=None, page_type="company", is_home=False):
     """Return a dict of measured fields for one page. url is absolute for live, relative file for build."""
     try:
         doc = LH.fromstring(raw)
@@ -177,6 +177,7 @@ def audit_html(raw, url, domain, cities, is_build=False, site_root=None):
         break
     robots = " ".join((m.get("content") or "").lower() for m in doc.xpath('//meta[@name="robots"]'))
     types = _schema_types(doc)
+    entity = entity_audit(_schema_nodes(doc), page_type, is_home)
     has_form = bool(doc.xpath("//form")) or bool(doc.xpath("//*[contains(@class,'hs-form') or contains(@class,'wpcf7') or contains(@class,'gform') or contains(@class,'pv-form')]"))
     has_video = bool(doc.xpath("//video|//iframe[contains(@src,'youtube') or contains(@src,'vimeo') or contains(@src,'wistia')]"))
     lang = (doc.get("lang") or "").strip()
@@ -233,9 +234,235 @@ def audit_html(raw, url, domain, cities, is_build=False, site_root=None):
         "h2_count": len(h2s), "h3_count": len(h3s), "question_headings": questions, "words": words, "images": len(imgs), "images_no_alt": no_alt,
         "internal_links": internal, "external_links": external, "canonical": can, "canonical_self": canonical_self, "og_image": og, "stock_og": stock_og,
         "faq": faq, "faq_visible": faq_visible, "service": service, "local": local, "review": review, "article": article, "breadcrumb": breadcrumb,
-        "schema": sorted(types), "noindex": "noindex" in robots, "has_form": has_form, "has_video": has_video, "tel_link": tel > 0, "lang": lang,
+        "schema": sorted(types), "entity": entity, "noindex": "noindex" in robots, "has_form": has_form, "has_video": has_video, "tel_link": tel > 0, "lang": lang,
         "checks": checks, "values": values, "score": score, "grade": grade, "failed": failed,
         "recommendations": [FIXES[k] for k in failed], "issues": len(failed),
+    }
+
+
+# ── The entity graph ──────────────────────────────────────────────────────────
+# The sixteen checks above read type names. These read the graph: which entities the page
+# names, whether they are connected to each other, and whether the connections resolve.
+# That is what makes a statement attributable to a known entity, which is what an answer
+# engine needs before it will name a company. Scored separately, out of 100, so a page can
+# be strong on copy and weak on structure and the report says which.
+
+ENTITY_CHECKS = [
+    # key, label, weight. Weighted so that a plugin's sitewide defaults cannot carry a page:
+    # the checks that say something specific about THIS page are worth the most.
+    # what the page names
+    ("org", "Organization identified", 6),
+    ("page_type", "Page type declared", 3),
+    ("primary", "Primary entity for this kind of page", 14),
+    ("website", "WebSite on the home page", 2),
+    ("breadcrumb", "BreadcrumbList", 3),
+    ("person", "A named Person, not a byline string", 6),
+    # how they connect
+    ("sameas", "sameAs to authoritative profiles", 6),
+    ("provider", "Primary entity linked to the Organization", 10),
+    ("area", "areaServed or a postal address", 8),
+    ("author", "author linked to a Person", 8),
+    ("contact", "contactPoint or telephone", 4),
+    ("about", "about, mentions or serviceType naming the topic", 8),
+    ("dates", "datePublished and dateModified", 8),
+    # whether it holds together
+    ("ids", "@id on the main entities", 4),
+    ("resolve", "Every @id reference resolves", 5),
+    ("clean", "No empty or placeholder values", 5),
+]
+assert sum(w for _, _, w in ENTITY_CHECKS) == 100
+
+ENTITY_FIXES = {
+    "org": "Add Organization schema naming the company",
+    "page_type": "Declare the page type (WebPage, Article, CollectionPage)",
+    "primary": "Add the entity this page is about (Service, LocalBusiness, Article or Product)",
+    "website": "Add WebSite schema on the home page",
+    "breadcrumb": "Add BreadcrumbList so the hierarchy is machine-readable",
+    "person": "Name the expert or author as a Person, with a URL that identifies them",
+    "sameas": "Add sameAs to the company's LinkedIn, Google Business Profile and other authoritative profiles",
+    "provider": "Link this page's entity to the Organization (provider, publisher or parentOrganization)",
+    "area": "Add areaServed or a postal address to the entity",
+    "author": "Point author at a Person object, not a plain string",
+    "contact": "Add contactPoint or a telephone to the Organization",
+    "about": "Name what the page is about with about, mentions or serviceType",
+    "dates": "Add datePublished and dateModified",
+    "ids": "Give the main entities a stable @id so they can be referenced",
+    "resolve": "Point every @id reference at an entity that exists",
+    "clean": "Remove empty and placeholder values from the markup",
+}
+
+ORG_T = {"Organization", "Corporation", "LocalBusiness", "ProfessionalService", "Store", "OfficeEquipmentStore",
+         "HomeAndConstructionBusiness", "MedicalBusiness", "FinancialService", "AutomotiveBusiness", "NGO", "EducationalOrganization"}
+LOCAL_T = {"LocalBusiness", "ProfessionalService", "Store", "OfficeEquipmentStore", "HomeAndConstructionBusiness",
+           "MedicalBusiness", "FinancialService", "AutomotiveBusiness", "Dentist", "Place"}
+ARTICLE_T = {"Article", "BlogPosting", "NewsArticle", "TechArticle", "Report", "ScholarlyArticle"}
+SERVICE_T = {"Service", "ITService", "FinancialProduct", "Offer", "OfferCatalog", "Product", "SoftwareApplication", "Course"}
+PAGE_T = {"WebPage", "CollectionPage", "AboutPage", "ContactPage", "ProfilePage", "FAQPage", "QAPage", "ItemPage", "SearchResultsPage", "CheckoutPage"}
+PLACEHOLDER = re.compile(r"(?i)\b(lorem ipsum|tbd|your company|company name here|example\.com|placeholder|coming soon)\b")
+# what the page's primary entity should be, by the type the conveyor assigns
+PRIMARY_FOR = {
+    "service": SERVICE_T, "industry": SERVICE_T, "product": SERVICE_T, "form": SERVICE_T,
+    "city": LOCAL_T, "post": ARTICLE_T, "company": ORG_T,
+}
+
+
+def _schema_nodes(doc):
+    """Every JSON-LD object that declares a @type, nesting and @graph included, as dicts."""
+    nodes = []
+    for s in doc.xpath('//script[@type="application/ld+json"]'):
+        try:
+            data = json.loads(s.text or "")
+        except Exception:  # noqa: BLE001
+            continue
+        stack = [data]
+        while stack:
+            x = stack.pop()
+            if isinstance(x, dict):
+                if x.get("@type"):
+                    nodes.append(x)
+                stack.extend(x.values())
+            elif isinstance(x, list):
+                stack.extend(x)
+    return nodes
+
+
+def _tset(node):
+    t = (node or {}).get("@type")
+    return {t} if isinstance(t, str) else {str(i) for i in t} if isinstance(t, list) else set()
+
+
+def _first(nodes, wanted):
+    for n in nodes:
+        if _tset(n) & wanted:
+            return n
+    return None
+
+
+def _has(node, *props):
+    """True when the node carries one of these properties with something in it."""
+    if not node:
+        return False
+    for pr in props:
+        v = node.get(pr)
+        if v in (None, "", [], {}):
+            continue
+        if isinstance(v, str) and not v.strip():
+            continue
+        return True
+    return False
+
+
+def _links_person(node, prop="author"):
+    """A property pointing at a Person or Organization object or reference, not a bare string."""
+    if not node:
+        return False
+    v = node.get(prop)
+    for x in (v if isinstance(v, list) else [v]):
+        if isinstance(x, dict) and (_tset(x) & {"Person", "Organization"} or x.get("@id")):
+            return True
+    return False
+
+
+def entity_audit(nodes, page_type, is_home=False):
+    """Score the graph on one page out of 100: the entities it names, how they connect, whether
+    the connections resolve. Checks that cannot apply to this kind of page are left out of the
+    total rather than failed, so a booking form is not marked down for having no author.
+    Returns the same shape as the sixteen readiness checks."""
+    ids = {str(n.get("@id")) for n in nodes if n.get("@id")}
+    refs = []
+    for n in nodes:
+        for v in n.values():
+            for x in (v if isinstance(v, list) else [v]):
+                if isinstance(x, dict) and set(x.keys()) <= {"@id", "@type"} and x.get("@id"):
+                    refs.append(str(x["@id"]))
+    # only a bare fragment can be judged from one page; a full URL may live on another page
+    dangling = sorted({r for r in refs if r.startswith("#") and r not in ids})
+
+    org = _first(nodes, ORG_T)
+    person = _first(nodes, {"Person"})
+    article = _first(nodes, ARTICLE_T)
+    primary = _first(nodes, PRIMARY_FOR.get(page_type, ORG_T))
+    page_node = _first(nodes, PAGE_T)
+    breadcrumb = _first(nodes, {"BreadcrumbList"})
+    website = _first(nodes, {"WebSite"})
+
+    blank = 0
+    for n in nodes:
+        for k, v in n.items():
+            if k.startswith("@"):
+                continue
+            if v in ("", [], {}) or (isinstance(v, str) and PLACEHOLDER.search(v)):
+                blank += 1
+
+    # the primary entity is connected to the company when it says so, or when it IS the company
+    linked = _has(primary, "provider", "publisher", "parentOrganization", "brand", "seller", "worksFor", "author")
+    if primary is not None and org is not None and primary is org:
+        linked = True
+
+    checks = {
+        "org": bool(org),
+        "page_type": bool(page_node) or bool(article),
+        "primary": bool(primary),
+        "website": bool(website),
+        "breadcrumb": bool(breadcrumb),
+        "person": bool(person) and _has(person, "name"),
+        "sameas": _has(org, "sameAs"),
+        "provider": bool(primary) and linked,
+        "area": _has(primary, "areaServed", "address", "location", "serviceArea") or _has(org, "address", "areaServed"),
+        "author": _links_person(article) if article else _has(person, "worksFor", "jobTitle", "url"),
+        "contact": _has(org, "contactPoint", "telephone", "email"),
+        "about": _has(primary, "about", "mentions", "keywords", "articleSection", "serviceType", "audience", "hasOfferCatalog")
+                 or _has(page_node, "about", "mentions", "keywords", "significantLink"),
+        "dates": (_has(article, "datePublished") and _has(article, "dateModified")) if article
+                 else (_has(primary, "dateModified", "datePublished") or _has(page_node, "dateModified", "datePublished")),
+        "ids": bool(ids),
+        "resolve": not dangling,
+        "clean": blank == 0,
+    }
+
+    # what this kind of page cannot be expected to carry
+    na = set()
+    if not is_home:
+        na.add("website")
+    else:
+        na.add("breadcrumb")
+    if page_type != "post":
+        na.add("author")
+    if page_type not in ("post", "company"):
+        na.add("person")
+    if page_type == "form":
+        na |= {"about", "dates", "breadcrumb"}
+    if page_type == "post":
+        na.add("area")
+
+    applied = [(k, w) for k, _, w in ENTITY_CHECKS if k not in na]
+    total = sum(w for _, w in applied) or 1
+    score = round(sum(w for k, w in applied if checks[k]) / total * 100)
+    grade = "A" if score >= 85 else "B" if score >= 70 else "C" if score >= 55 else "D" if score >= 40 else "F"
+    failed = [k for k, _ in applied if not checks[k]]
+    sameas_n = org.get("sameAs") if org else None
+    values = {
+        "org": (sorted(_tset(org))[0] if org else "no"),
+        "page_type": (sorted(_tset(page_node))[0] if page_node else ("article" if article else "no")),
+        "primary": (sorted(_tset(primary))[0] if primary else "no"),
+        "website": "yes" if website else "no",
+        "breadcrumb": "yes" if breadcrumb else "no",
+        "person": (str(person.get("name"))[:40] if checks["person"] else "no"),
+        "sameas": (f"{len(sameas_n) if isinstance(sameas_n, list) else 1} profiles" if checks["sameas"] else "no"),
+        "provider": "yes" if checks["provider"] else "no",
+        "area": "yes" if checks["area"] else "no",
+        "author": "yes" if checks["author"] else "no",
+        "contact": "yes" if checks["contact"] else "no",
+        "about": "yes" if checks["about"] else "no",
+        "dates": "yes" if checks["dates"] else "no",
+        "ids": (str(len(ids)) if ids else "none"),
+        "resolve": "yes" if checks["resolve"] else f"{len(dangling)} dangling",
+        "clean": "yes" if blank == 0 else f"{blank} empty",
+    }
+    return {
+        "score": score, "grade": grade, "checks": checks, "values": values, "failed": failed, "na": sorted(na),
+        "recommendations": [ENTITY_FIXES[k] for k in failed], "nodes": len(nodes), "ids": len(ids), "dangling": len(dangling),
+        "types": sorted({t for n in nodes for t in _tset(n)}),
     }
 
 
@@ -309,11 +536,12 @@ def live(a):
             print("missing", u, file=sys.stderr)
             continue
         raw = open(f, "rb").read()
-        r = audit_html(raw, u, a.domain, cities)
+        ptype = classify(path, rules)
+        r = audit_html(raw, u, a.domain, cities, page_type=ptype, is_home=(path in ("/", "")))
         if not r:
             continue
         r["path"] = path
-        r["type"] = classify(path, rules)
+        r["type"] = ptype
         pages.append(r)
     out = {"domain": a.domain, "measured": a.date, "count": len(pages), "pages": pages, "summary": summarize(pages)}
     if not a.no_site:
@@ -332,11 +560,12 @@ def build(a):
                 continue
             rel = os.path.relpath(os.path.join(root, fn), a.dir).replace(os.sep, "/")
             raw = open(os.path.join(root, fn), "rb").read()
-            r = audit_html(raw, rel, "", cities, is_build=True)
+            ptype = classify("/" + rel, rules)
+            r = audit_html(raw, rel, "", cities, is_build=True, page_type=ptype, is_home=(rel == "index.html"))
             if not r:
                 continue
             r["path"] = "/" + rel
-            r["type"] = classify("/" + rel, rules)
+            r["type"] = ptype
             pages.append(r)
     pages.sort(key=lambda p: p["path"])
     out = {"dir": a.dir, "count": len(pages), "pages": pages, "summary": summarize(pages)}
@@ -362,19 +591,29 @@ def summarize(pages):
         "breadcrumb": sum(1 for p in pages if p["breadcrumb"]),
         "no_alt_pages": sum(1 for p in pages if p["images_no_alt"] > 0),
         "avg_words": round(sum(p["words"] for p in pages) / n),
+        "entity_avg": round(sum(p["entity"]["score"] for p in pages) / n),
+        "entity_a": sum(1 for p in pages if p["entity"]["grade"] == "A"),
+        "entity_d_f": sum(1 for p in pages if p["entity"]["grade"] in "DF"),
     }
+    # how many pages pass each entity check, so a finding can name the one that is missing everywhere
+    s["entity_checks"] = {k: {"pass": sum(1 for p in pages if k not in p["entity"]["na"] and p["entity"]["checks"][k]),
+                              "of": sum(1 for p in pages if k not in p["entity"]["na"])} for k, _, _ in ENTITY_CHECKS}
+    s["schema_types"] = dict(sorted(
+        ((t, sum(1 for p in pages if t in p["schema"])) for t in {t for p in pages for t in p["schema"]}),
+        key=lambda kv: -kv[1]))
     by_type = {}
     for p in pages:
-        t = by_type.setdefault(p["type"], {"count": 0, "score": 0})
+        t = by_type.setdefault(p["type"], {"count": 0, "score": 0, "ent": 0})
         t["count"] += 1
         t["score"] += p["score"]
-    s["by_type"] = {k: {"count": v["count"], "avg": round(v["score"] / v["count"])} for k, v in by_type.items()}
+        t["ent"] += p["entity"]["score"]
+    s["by_type"] = {k: {"count": v["count"], "avg": round(v["score"] / v["count"]), "entity": round(v["ent"] / v["count"])} for k, v in by_type.items()}
     return s
 
 
 def to_csv(audit, path):
     cols = ["url", "type", "title", "title_len", "city", "meta", "meta_len", "h1", "h1_count", "h2_count", "h3_count", "question_headings", "words", "images", "images_no_alt",
-            "internal_links", "external_links", "canonical", "canonical_self", "og_image", "stock_og", "faq", "faq_visible", "service", "local", "review", "article", "breadcrumb", "schema",
+            "internal_links", "external_links", "canonical", "canonical_self", "og_image", "stock_og", "faq", "faq_visible", "entity_score", "entity_grade", "entity_missing", "schema_nodes", "service", "local", "review", "article", "breadcrumb", "schema",
             "noindex", "has_form", "has_video", "tel_link", "score", "grade", "recommendations", "issues"]
     buf = io.StringIO()
     w = csv.writer(buf)
@@ -387,7 +626,15 @@ def to_csv(audit, path):
             elif c == "schema":
                 row.append(", ".join(p["schema"]))
             elif c == "recommendations":
-                row.append(" | ".join(p["recommendations"]))
+                row.append(" | ".join(p["recommendations"] + p["entity"]["recommendations"]))
+            elif c == "entity_score":
+                row.append(p["entity"]["score"])
+            elif c == "entity_grade":
+                row.append(p["entity"]["grade"])
+            elif c == "entity_missing":
+                row.append(", ".join(p["entity"]["failed"]))
+            elif c == "schema_nodes":
+                row.append(p["entity"]["nodes"])
             else:
                 row.append(p.get(c, ""))
         w.writerow(row)

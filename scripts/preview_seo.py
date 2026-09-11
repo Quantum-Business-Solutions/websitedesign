@@ -77,6 +77,42 @@ def _gauge(today, build):
             f'<text x="{c}" y="{c + 18}" text-anchor="middle" font-size="12" fill="rgba(255,255,255,.8)">from {today} today</text></svg>')
 
 
+def _ring(score, label, sub=""):
+    """One small ring: a score out of 100 with its name under it. Used for the entity graph beside readiness."""
+    import math
+    r, c = 46, 60
+    circ = 2 * math.pi * r
+    col = "#8fe3b0" if score >= 70 else "#ffd08a" if score >= 40 else "#ffb4a8"
+    return (f'<figure class="ring" aria-label="{E(label)}: {score} of 100"><svg viewBox="0 0 120 120">'
+            f'<circle cx="{c}" cy="{c}" r="{r}" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="11"/>'
+            f'<circle cx="{c}" cy="{c}" r="{r}" fill="none" stroke="{col}" stroke-width="11" stroke-linecap="round" '
+            f'stroke-dasharray="{circ * score / 100:.1f} {circ:.1f}" transform="rotate(-90 {c} {c})"/>'
+            f'<text x="{c}" y="{c + 9}" text-anchor="middle" font-size="28" font-weight="800" fill="#fff">{score}</text></svg>'
+            f'<figcaption><b>{E(label)}</b>{f"<span>{E(sub)}</span>" if sub else ""}</figcaption></figure>')
+
+
+def _entity_bars(summary, build_summary=None):
+    """One row per entity check: how many pages carry it, out of the pages it applies to."""
+    ec = summary.get("entity_checks") or {}
+    if not ec:
+        return ""
+    labels = {k: lb for k, lb, _ in A.ENTITY_CHECKS}
+    rows = sorted(ec.items(), key=lambda kv: (kv[1]["pass"] / (kv[1]["of"] or 1)))
+    items = ""
+    for k, v in rows:
+        of = v["of"] or 1
+        pct = v["pass"] / of * 100
+        col = "#8fe3b0" if pct >= 85 else "#ffd08a" if pct >= 40 else "#ffb4a8"
+        bv = ""
+        if build_summary and (build_summary.get("entity_checks") or {}).get(k):
+            b = build_summary["entity_checks"][k]
+            bv = f'<span class="bar-p"><b class="{"ok" if b["pass"] >= b["of"] else "bad"}">{b["pass"]} of {b["of"]} in the build</b></span>'
+        items += (f'<div class="bar-row"><span class="bar-k">{E(labels.get(k, k))}</span><span class="bar-t">'
+                  f'<i style="width:{max(2, pct):.1f}%;background:{col}"></i></span>'
+                  f'<span class="bar-v">{v["pass"]} of {v["of"]}</span>{bv}</div>')
+    return f'<figure class="bars ent">{items}</figure>'
+
+
 def _bars(rows, idx, label, highlight, fmt=lambda v: f"{int(v):,}"):
     """Horizontal bars for one numeric column of a table; the client's row in the accent."""
     data = [(r[0], _num(r[idx])) for r in rows]
@@ -209,6 +245,42 @@ def _bytype(summary):
     return f'<figure class="bars"><figcaption>Average readiness by page type, out of 100</figcaption>{items}</figure>'
 
 
+def _entity_section(audit, build):
+    """What the site tells an answer engine about who it is: the entities named, how they connect,
+    whether the connections resolve. Scored apart from the sixteen readiness checks because a page
+    can read well and still say nothing a machine can attribute."""
+    s = audit["summary"]
+    if "entity_avg" not in s:
+        return ""
+    bs = (build or {}).get("summary") if build else None
+    n = audit["count"]
+    tiles = _stiles([
+        (f'{s["entity_avg"]} of 100', "average entity graph score" + (f", against {bs['entity_avg']} in the build" if bs else "")),
+        (f'{s["entity_a"]} of {n}', "pages whose graph scores A"),
+        (f'{s["entity_d_f"]} of {n}', "pages whose graph scores D or F"),
+        (f'{len(s.get("schema_types") or {})}', "distinct schema types found on the site"),
+    ])
+    types = s.get("schema_types") or {}
+    noise = {"ListItem", "EntryPoint", "PropertyValueSpecification", "SearchAction", "ReadAction", "Answer", "QuantitativeValue"}
+    rows = [[t, f"{c:,}", f"{round(c / n * 100)}%"] for t, c in list(types.items())[:26] if t not in noise]
+    type_tbl = _tbl(["Schema type found", "Pages", "Share of the site"], rows)
+    bytype = ""
+    if s.get("by_type"):
+        bt = sorted(s["by_type"].items(), key=lambda kv: kv[1].get("entity", 0))
+        items = "".join(f'<div class="bar-row"><span class="bar-k">{E(k.title())} pages ({v["count"]})</span><span class="bar-t">'
+                        f'<i style="width:{max(2, v.get("entity", 0)):.0f}%;background:{GRADE["A" if v.get("entity", 0) >= 85 else "B" if v.get("entity", 0) >= 70 else "C" if v.get("entity", 0) >= 55 else "D" if v.get("entity", 0) >= 40 else "F"]}"></i></span>'
+                        f'<span class="bar-v">{v.get("entity", 0)}</span></div>' for k, v in bt)
+        bytype = f'<figure class="bars"><figcaption>Entity graph score by page type, out of 100</figcaption>{items}</figure>'
+    lead = ("Type names alone do not make a page citable. These checks read the graph: which entities the page names, "
+            "whether they are joined to each other, and whether every reference resolves. That is what an answer engine "
+            "follows before it will name a company as the answer.")
+    return f'''<section id="entity"><div class="wrap"><p class="eyebrow">Entity graph</p><h2>What the markup says about who you are</h2>
+<p class="lead">{E(lead)}</p>{tiles}
+<h3 class="h3">Every check, and how much of the site carries it</h3>{_entity_bars(s, bs)}
+{bytype}<h3 class="h3">Schema types found across {n} pages</h3>{type_tbl}
+<p class="fine">Counted from the JSON-LD on every page, nesting and @graph included. The per-page scores and the exact checks each page fails are in the workbook.</p></div></section>'''
+
+
 def _load(content_path):
     seo_p = content_path.replace(".content.json", ".seo.json")
     aud_p = content_path.replace(".content.json", ".audit.json")
@@ -336,6 +408,11 @@ def report_html(content, seo, audit, build, cmp_rows, base, dslugs, roles_avg, b
     h = seo["hero"]
     solo = build is None
     gauge = _gauge(audit["summary"]["avg_score"], None if solo else build["summary"]["avg_score"])
+    ent_ring = ""
+    if "entity_avg" in audit["summary"]:
+        sub = "of 100 today" if solo else f'today, {build["summary"].get("entity_avg", 0)} in the build'
+        ent_ring = f'<a class="ringlink" href="#entity">{_ring(audit["summary"]["entity_avg"], "Entity graph", sub)}</a>'
+    ent_section = _entity_section(audit, build)
     every = _every_section("every", audit, seo, build_by_path, mapping, cmp_rows, roles_avg, dom, date)
     comp_bars = _bars(seo["competitors"]["rows"], 1, "Organic visits a month", dom) + _scatter(seo["competitors"]["rows"], dom)
     short = client.split(" ")[0]
@@ -464,7 +541,7 @@ def report_html(content, seo, audit, build, cmp_rows, base, dslugs, roles_avg, b
 {PKG_CSS}</style></head>
 <body data-first-dir="{E(dslugs[0]) if dslugs else ""}">
 <header class="top">{'<span>Search and AI answer analysis</span>' if solo else '<a href="index.html">&larr; Back to the three directions</a>'}<span>Quantum Business Solutions for {E(client)}</span></header><main>
-<section class="hero"><div class="wrap"><div class="hero-grid"><div><p class="eyebrow">Search and AI answers, measured {E(date)}</p><h1>{E(h["heading"])}</h1><p class="lead">{E(h["intro"])}</p></div><div class="gauge-wrap">{gauge}<p>{"Readiness on sixteen checks, averaged over every page in the sitemap." if solo else "Readiness on sixteen checks, every page: the site today against the build, scored by the same script."}</p></div></div>{_stiles(h["tiles"])}</div></section>
+<section class="hero"><div class="wrap"><div class="hero-grid"><div><p class="eyebrow">Search and AI answers, measured {E(date)}</p><h1>{E(h["heading"])}</h1><p class="lead">{E(h["intro"])}</p></div><div class="gauge-wrap">{gauge}<p>{"Readiness on sixteen checks, averaged over every page in the sitemap." if solo else "Readiness on sixteen checks, every page: the site today against the build, scored by the same script."}</p>{ent_ring}</div></div>{_stiles(h["tiles"])}</div></section>
 {('<section class="donut-band"><div class="wrap">' + donuts + '</div></section>') if donuts else ""}
 <section><div class="wrap"><p class="eyebrow">Top findings</p><h2>Ranked by what they cost, with the fix</h2><p class="lead">Each finding carries its evidence, what it costs today, and what {"we would do" if solo else "the build or the 90-day plan does"} about it.</p><div class="chips">{chips}</div><div class="findings">{_finding_cards(fnd)}</div></div></section>
 <section><div class="wrap"><p class="eyebrow">Why the competitors are winning</p><h2>The same pages, side by side</h2><p class="lead">{E(cmp["intro"])}</p>{cmp_tbl}<div class="verdict">{E(cmp["verdict"])}</div></div></section>
@@ -473,6 +550,7 @@ def report_html(content, seo, audit, build, cmp_rows, base, dslugs, roles_avg, b
 {cmp_section}
 {grades}{bytype}<h3>By section of the site</h3>{sec_tbl}<h3>Every service, industry and location page, worst first</h3>{worst_tbl}<p class="fine">Word counts exclude navigation, header and footer. The full sheet, all {n} pages and every check, is <a href="seo-audit-pages.xlsx">seo-audit-pages.xlsx</a> (also as <a href="seo-audit-pages.csv">CSV</a>){redir_note}.</p></div></section>
 {every}
+{ent_section}
 {blog_html}
 {ent_html}
 <section><div class="wrap"><p class="eyebrow">Where the traffic comes from</p><h2>Today, in numbers</h2><ul>{today_li}</ul></div></section>
@@ -525,7 +603,8 @@ def _every_section(sec_id, audit, seo, build_by_path, mapping, cmp_rows, roles_a
     for p in sorted(audit["pages"], key=lambda x: x["score"]):
         tgt, kind = mapping[p["path"]] if mapping else ("", "rebuilt")
         bp = build_by_path.get("/" + tgt) if build_by_path else None
-        schs = "".join(f'<span class="sch">{E(t)}</span>' for t in p["schema"] if t in ("FAQPage", "Service", "LocalBusiness", "Organization", "BlogPosting", "Article", "Review", "AggregateRating", "VideoObject", "Product"))
+        noise = ("ListItem", "EntryPoint", "PropertyValueSpecification", "SearchAction", "ReadAction", "Answer", "QuantitativeValue", "ImageObject")
+        schs = "".join(f'<span class="sch">{E(t)}</span>' for t in p["schema"] if t not in noise)
         checks = []
         fixed = 0
         for k, label, _w in A.CHECKS:
@@ -540,7 +619,15 @@ def _every_section(sec_id, audit, seo, build_by_path, mapping, cmp_rows, roles_a
                 checks.append(f'<span class="pl1"><i>{E(label)}</i><b class="{"ok" if tok else ("warn" if str(tv).startswith("shown") else "bad")}">{E(tv)}</b></span>')
             else:
                 checks.append(f'<span class="pl2"><i>{E(label)}</i><b class="{"ok" if tok else "bad"}">{E(tv)}</b><em aria-hidden="true"></em><b class="{"ok" if bok else "bad"}">{E(bv)}</b></span>')
-        did = list(p["recommendations"]) if solo else [DONE[k] for k in p["failed"] if bp and bp["checks"].get(k)]
+        ent = p.get("entity") or {}
+        bent = (bp or {}).get("entity") or {}
+        # the two dimensions overlap on one point: skip the entity wording when the readiness fix already says it
+        ent_recs = [A.ENTITY_FIXES[k] for k in (ent.get("failed") or [])
+                    if not (k == "primary" and ("service" in p["failed"] or "local" in p["failed"]))]
+        did = list(p["recommendations"]) + ent_recs if solo else (
+            [DONE[k] for k in p["failed"] if bp and bp["checks"].get(k)]
+            + [A.ENTITY_FIXES[k] for k in (ent.get("failed") or []) if bent.get("checks", {}).get(k)
+               and not (k == "primary" and ("service" in p["failed"] or "local" in p["failed"]))])
         if solo and p["type"] == "form":  # a booking or request form is not a page to rank; say so instead of asking for 300 words
             did = ["Take it out of the index (noindex) and out of the sitemap; keep one booking page per service and redirect the duplicate"] + [r for r in did if r.startswith(("Add the city", "Write a meta", "Give the page"))]
         if kind == "retired":
@@ -553,18 +640,24 @@ def _every_section(sec_id, audit, seo, build_by_path, mapping, cmp_rows, roles_a
             did.insert(0, f"Retired; a permanent redirect sends the URL to {tgt}")
         did_li = "".join(f"<li>{E(x)}</li>" for x in did) or "<li>Nothing to fix on this page</li>"
         bscore = f'<b style="--g:{GRADE[bp["grade"]]}">{bp["score"]}<i>{bp["grade"]}</i></b><span>{fixed} checks fixed</span>' if bp else '<b style="--g:#5b616b">&ndash;</b><span>no page</span>'
+        ent_block = ""
+        if ent:
+            ent_to = f'<b style="--g:{GRADE[ent["grade"]]}">{ent["score"]}<i>{ent["grade"]}</i></b>'
+            ent_bd = f' <em class="arr" aria-hidden="true"></em> <b style="--g:{GRADE[bent["grade"]]}">{bent["score"]}<i>{bent["grade"]}</i></b>' if bent else ""
+            ent_block = (f'<div class="pg-score ent"><span class="k">Entity graph</span>{ent_to}{ent_bd}'
+                         f'<span>{ent["nodes"]} schema nodes, {len(ent["failed"])} of {16 - len(ent["na"])} checks failing</span></div>')
         q = E(f"{p['path']} {p['title']} {p['h1']} {p['type']}".lower())
         live_a = f'<a href="https://{E(dom)}{E(p["path"])}" target="_blank" rel="noopener">{E(p["path"] if p["path"] != "/" else "/ (home page)")}</a>'
         if solo:
             cards.append(f'''<article class="pg solo" data-q="{q}" data-issues="{p['issues']}" data-type="{E(p['type'])}" data-score="{p['score']}" data-words="{p['words']}" data-url="{E(p['path'])}">
 <div class="pg-id">{live_a}<small>{E(p['title'])}</small><span class="type">{E(p['type'])} page</span><div class="schs">{schs}</div></div>
-<div class="pg-scores"><div class="pg-score"><span class="k">Today</span><b style="--g:{GRADE[p['grade']]}">{p['score']}<i>{p['grade']}</i></b><span>of 100, {p['issues']} of 16 checks failing</span></div></div>
+<div class="pg-scores"><div class="pg-score"><span class="k">Readiness today</span><b style="--g:{GRADE[p['grade']]}">{p['score']}<i>{p['grade']}</i></b><span>of 100, {p['issues']} of 16 checks failing</span></div>{ent_block}</div>
 <div class="pg-checks solo"><div class="legend"><span>Sixteen checks, <b class="ok">passing</b> and <b class="bad">failing</b> today</span></div>{"".join(checks)}</div>
 <div class="pg-new"><h4>What we would do on this page</h4><ul class="did">{did_li}</ul><a href="https://{E(dom)}{E(p['path'])}" class="open-build" target="_blank" rel="noopener">Open the live page</a></div></article>''')
             continue
         cards.append(f'''<article class="pg" data-q="{q}" data-issues="{p['issues']}" data-type="{E(p['type'])}" data-score="{p['score']}" data-words="{p['words']}" data-url="{E(p['path'])}">
 <div class="pg-id">{live_a}<small>{E(p['title'])}</small><span class="type">{E(p['type'])} page</span><div class="schs">{schs}</div></div>
-<div class="pg-scores"><div class="pg-score"><span class="k">Today</span><b style="--g:{GRADE[p['grade']]}">{p['score']}<i>{p['grade']}</i></b><span>of 100</span></div><div class="pg-score build"><span class="k">In the build</span>{bscore}</div></div>
+<div class="pg-scores"><div class="pg-score"><span class="k">Today</span><b style="--g:{GRADE[p['grade']]}">{p['score']}<i>{p['grade']}</i></b><span>of 100</span></div><div class="pg-score build"><span class="k">In the build</span>{bscore}</div>{ent_block}</div>
 <div class="pg-checks"><div class="legend"><span>Each check: <b class="bad">today</b> <em aria-hidden="true"></em> <b class="ok">the build</b></span></div>{"".join(checks)}</div>
 <div class="pg-new"><h4>What we did on this page</h4><ul class="did">{did_li}</ul><a href="{E(tgt)}" data-rel="{E(tgt)}" class="open-build" target="_blank" rel="noopener">Open the rebuilt page</a></div></article>''')
 
@@ -604,7 +697,11 @@ PKG_CSS = '''
 .pg-checks{display:grid;grid-template-columns:1fr 1fr;gap:4px 14px;font-size:12.5px;align-content:start}.pg-checks .legend{grid-column:1/-1;color:var(--muted);font-size:12px;margin-bottom:2px}.pl2{display:grid;grid-template-columns:1fr auto 14px auto;gap:6px;align-items:center;padding:3px 0;border-bottom:1px dotted var(--border)}.pl2 i{font-style:normal;color:var(--muted)}.pl2 b.ok{color:#1b7f4b}.pl2 b.bad{color:#b3261e}.pl2 em,.legend em{display:inline-block;width:12px;height:2px;background:var(--muted);position:relative}.pl2 em::after,.legend em::after{content:"";position:absolute;right:-2px;top:-3px;border:4px solid transparent;border-left-color:var(--muted)}
 .pg-new h4{margin:0 0 6px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}.pg-new .did{margin:0;padding-left:16px;font-size:13.5px}.pg-new .did li{margin:2px 0}.pg-new .open-build{display:inline-block;margin-top:8px;font-size:13.5px;font-weight:600;color:var(--ink)}
 .cmp-row>span{min-width:0;overflow-wrap:anywhere}
-.pg.solo{grid-template-columns:1.2fr .7fr 2fr 1.3fr}.pl1{display:grid;grid-template-columns:1fr auto;gap:8px;padding:2px 0;border-bottom:1px dotted var(--border)}.pl1 i{font-style:normal;color:var(--muted)}.pl1 b{font-weight:700;text-align:right}
+.pg.solo{grid-template-columns:1.2fr .9fr 2fr 1.3fr}
+.pg-score.ent b{font-size:22px}.pg-score.ent .arr{display:inline-block;width:14px;height:2px;background:var(--muted);vertical-align:middle;margin:0 2px}
+.bars.ent .bar-row{grid-template-columns:230px 1fr 90px 150px}
+.ring{margin:14px 0 0;display:grid;justify-items:center}.ring svg{width:104px;height:104px}.ring figcaption{text-align:center;margin-top:4px}.ring figcaption b{display:block;font-size:13px;color:#fff}.ring figcaption span{display:block;font-size:12px;color:rgba(255,255,255,.75)}
+a.ringlink{text-decoration:none}.pl1{display:grid;grid-template-columns:1fr auto;gap:8px;padding:2px 0;border-bottom:1px dotted var(--border)}.pl1 i{font-style:normal;color:var(--muted)}.pl1 b{font-weight:700;text-align:right}
 b.warn,.warn{color:#8a5a00;font-weight:700}
 @media(max-width:1000px){.pg,.pg.solo{grid-template-columns:1fr 1fr}.pg-checks{grid-column:1/-1}.stiles.eight{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.pg,.pg.solo,.pg-checks,.sitechk{grid-template-columns:1fr}.cmpbox{padding:20px 16px}.cmp-row{grid-template-columns:1fr 1fr;gap:4px}.cmp-row.head{display:none}.cmp-row .lbl{grid-column:1/-1}.cmp-row .arrow{display:none}.cmp-row .today{text-align:left}.cmp-row .today::before{content:"Today ";font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.65);display:block}.cmp-row .build::before{content:"The build ";font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.65);display:block;font-weight:600}}
 '''
@@ -659,24 +756,39 @@ def to_xlsx(audit, seo, mapping, path):
 
     yn = lambda v: "yes" if v else "no"
     head = ["URL", "Path", "Page type", "Score", "Grade", "Checks failing", "Title", "Title length", "City in title", "Meta description", "Meta length", "H1", "H1 count", "H2 count",
-            "Question headings", "Words", "Images", "Images missing alt", "Internal links", "Canonical", "FAQPage schema", "FAQ shown on page", "Service or Article schema", "LocalBusiness schema", "Review schema", "Schema types", "Noindex", "Form on page", "What we would do"]
+            "Question headings", "Words", "Images", "Images missing alt", "Internal links", "Canonical", "FAQPage schema", "FAQ shown on page", "Service or Article schema", "LocalBusiness schema", "Review schema", "Schema types", "Noindex", "Form on page",
+            "Entity score", "Entity grade", "Schema nodes", "Entity checks failing", "What we would do"]
     if mapping:
         head += ["New path in the build", "Kind"]
     rows = []
     for p in sorted(audit["pages"], key=lambda x: x["score"]):
+        ent = p.get("entity") or {}
         r = [p["url"], p["path"], p["type"], p["score"], p["grade"], p["issues"], p["title"], p["title_len"], yn(p["checks"]["city"]), p["meta"], p["meta_len"], p["h1"], p["h1_count"], p["h2_count"],
              p["question_headings"], p["words"], p["images"], p["images_no_alt"], p["internal_links"], p["canonical"], yn(p["faq"]), yn(p.get("faq_visible")), yn(p["service"] or p["article"]), yn(p["local"]), yn(p["review"]),
-             ", ".join(p["schema"]), yn(p["noindex"]), yn(p["has_form"]), "; ".join(p["recommendations"])]
+             ", ".join(p["schema"]), yn(p["noindex"]), yn(p["has_form"]),
+             ent.get("score", ""), ent.get("grade", ""), ent.get("nodes", ""), ", ".join(ent.get("failed") or []),
+             "; ".join(p["recommendations"] + list(ent.get("recommendations") or []))]
         if mapping:
             tgt, kind = mapping[p["path"]]
             r += ["/" + tgt, kind]
         rows.append(r)
-    ws = sheet("Every page", head, rows, [48, 30, 10, 7, 7, 9, 48, 8, 8, 60, 8, 40, 6, 6, 8, 8, 7, 8, 8, 40, 9, 9, 10, 10, 9, 40, 8, 8, 90] + ([36, 10] if mapping else []), first=True)
+    ws = sheet("Every page", head, rows, [48, 30, 10, 7, 7, 9, 48, 8, 8, 60, 8, 40, 6, 6, 8, 8, 7, 8, 8, 40, 9, 9, 10, 10, 9, 40, 8, 8, 8, 7, 8, 34, 90] + ([36, 10] if mapping else []), first=True)
     for row in ws.iter_rows(min_row=2):
         g = row[4].value
         if g in grade_fill:
             row[3].fill = row[4].fill = PatternFill("solid", fgColor=grade_fill[g])
     sheet("Findings", ["Rank", "Severity", "Finding", "Evidence", "What it costs", "What we do"], [[i, f["severity"], f["title"], f.get("evidence", ""), f.get("cost", ""), f.get("fix", "")] for i, f in enumerate(seo["findings"], 1)], [6, 10, 48, 90, 60, 70])
+    ec = (audit["summary"].get("entity_checks") or {})
+    if ec:
+        labels = {k: lb for k, lb, _ in A.ENTITY_CHECKS}
+        weights = {k: w for k, _, w in A.ENTITY_CHECKS}
+        sheet("Entity graph", ["Check", "Pages carrying it", "Pages it applies to", "Share", "Weight", "What it means"],
+              [[labels.get(k, k), v["pass"], v["of"], (f"{round(v['pass'] / v['of'] * 100)}%" if v["of"] else "n/a"), weights.get(k, ""), A.ENTITY_FIXES.get(k, "")]
+               for k, v in sorted(ec.items(), key=lambda kv: kv[1]["pass"] / (kv[1]["of"] or 1))], [40, 16, 18, 9, 8, 80])
+    st = (audit["summary"].get("schema_types") or {})
+    if st:
+        sheet("Schema types", ["Type", "Pages", "Share of the site"],
+              [[t, c, f"{round(c / (audit['count'] or 1) * 100)}%"] for t, c in st.items()], [34, 10, 16])
     sheet("Moves", ["Order", "Move", "When", "Where", "Detail"], [[i, m["title"], m["when"], m["where"], m["body"]] for i, m in enumerate(seo["moves"], 1)], [6, 48, 18, 16, 110])
     sheet("Opportunities", ["Keyword", "Searches a month", "Difficulty", "Position today", "Who ranks"], [list(r) for r in seo["opportunities"]["rows"]], [40, 14, 10, 16, 70])
     sheet("Questions", ["Topic", "Question", "Searches a month"], [[q["topic"], it[0], it[1]] for q in seo["questions"] for it in q["items"]], [28, 70, 14])
@@ -724,10 +836,12 @@ def write(content, content_path, themes, roles, base, out_dir, slug_of):
             for fn in files:
                 if fn.endswith(".html"):
                     rel = os.path.relpath(os.path.join(r_, fn), root).replace(os.sep, "/")
-                    res = A.audit_html(open(os.path.join(r_, fn), "rb").read(), rel, "", [c for c in cities.split(",") if c], is_build=True)
+                    ptype = A.classify("/" + rel, type_rules)
+                    res = A.audit_html(open(os.path.join(r_, fn), "rb").read(), rel, "", [c for c in cities.split(",") if c],
+                                       is_build=True, page_type=ptype, is_home=(rel == "index.html"))
                     if res:
                         res["path"] = "/" + rel
-                        res["type"] = A.classify("/" + rel, type_rules)
+                        res["type"] = ptype
                         pages.append(res)
         builds[d] = {"pages": pages, "summary": A.summarize(pages)}
     first = dslugs[0]

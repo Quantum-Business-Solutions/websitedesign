@@ -231,3 +231,36 @@ based on real behaviour" instead of an unfalsifiable claim.
    hear coverage.
 2. **Write the baseline down before you touch anything.** It's the only thing that makes the
    post-launch work provable, and it takes one call.
+
+## Version 3 (2026-09-11): the entity graph, scored
+
+The sixteen readiness checks read the page. Sixteen more read the graph, and they are scored separately out of 100,
+because a page can read well and still tell a machine nothing it can attribute. `ENTITY_CHECKS` in `seo_audit.py`:
+
+| Group | Checks | Weight |
+|---|---|---|
+| What the page names | Organization, page type, primary entity for this kind of page, WebSite on the home page, BreadcrumbList, a named Person | 34 |
+| How they connect | sameAs, primary entity linked to the Organization, areaServed or address, author linked to a Person, contactPoint, about or serviceType, datePublished and dateModified | 52 |
+| Whether it holds together | @id on the main entities, every @id reference resolves, no empty or placeholder values | 14 |
+
+Three rules make the number honest:
+
+- **The page-specific checks carry the weight.** A plugin's sitewide defaults (Organization, WebSite, BreadcrumbList,
+  sameAs, ids) earn 34 of 100 and no more. What a page says about *itself* is the rest.
+- **What cannot apply is not failed.** A booking form is not marked down for having no author, a post is not marked
+  down for having no address, and the home page is not marked down for having no breadcrumb. The excluded checks come
+  out of the denominator, so the score stays out of 100.
+- **The primary entity depends on the kind of page.** Service or Product on a service page, LocalBusiness on a location
+  page, Article on a post, Organization on a company page. `PRIMARY_FOR` holds the mapping and `brands/<slug>.types.json`
+  decides which page is which.
+
+Every type found is still listed, all 823 of them if they are there; only the scoring is opinionated. The report gains
+an Entity graph section (check bars, score by page type, every type found), the hero gains a second ring, every page
+card gains its entity score and the fixes for it, and the workbook gains Entity graph and Schema types sheets plus four
+columns on Every page.
+
+What it found the day it shipped: Image 2000 scores 27, a Wix store of 343 product pages with no graph at all; Nexus 57;
+Kelly 72; GoodSuite 81 overall but 48 on its service pages and 93 on its blog, which is the whole finding in two numbers.
+Our own builds score 97 and 98. It also found three gaps in our builder, now closed: no WebPage node, no dateModified,
+no Person. The one it still reports against us is `person`, and it is right to: we will not invent a client's people, so
+the check fails until the client names them.

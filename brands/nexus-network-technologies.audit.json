@@ -24,6 +24,7 @@
    "og_image": "",
    "stock_og": false,
    "faq": false,
+   "faq_visible": true,
    "service": false,
    "local": false,
    "review": false,
@@ -41,6 +42,77 @@
     "WebPage",
     "WebSite"
    ],
+   "entity": {
+    "score": 74,
+    "grade": "B",
+    "checks": {
+     "org": true,
+     "page_type": true,
+     "primary": true,
+     "website": true,
+     "breadcrumb": true,
+     "person": false,
+     "sameas": true,
+     "provider": true,
+     "area": false,
+     "author": false,
+     "contact": false,
+     "about": true,
+     "dates": true,
+     "ids": true,
+     "resolve": true,
+     "clean": false
+    },
+    "values": {
+     "org": "Organization",
+     "page_type": "WebPage",
+     "primary": "Organization",
+     "website": "yes",
+     "breadcrumb": "yes",
+     "person": "no",
+     "sameas": "1 profiles",
+     "provider": "yes",
+     "area": "no",
+     "author": "no",
+     "contact": "no",
+     "about": "yes",
+     "dates": "yes",
+     "ids": "5",
+     "resolve": "yes",
+     "clean": "1 empty"
+    },
+    "failed": [
+     "person",
+     "area",
+     "contact",
+     "clean"
+    ],
+    "na": [
+     "author",
+     "breadcrumb"
+    ],
+    "recommendations": [
+     "Name the expert or author as a Person, with a URL that identifies them",
+     "Add areaServed or a postal address to the entity",
+     "Add contactPoint or a telephone to the Organization",
+     "Remove empty and placeholder values from the markup"
+    ],
+    "nodes": 10,
+    "ids": 5,
+    "dangling": 0,
+    "types": [
+     "BreadcrumbList",
+     "EntryPoint",
+     "ImageObject",
+     "ListItem",
+     "Organization",
+     "PropertyValueSpecification",
+     "ReadAction",
+     "SearchAction",
+     "WebPage",
+     "WebSite"
+    ]
+   },
    "noindex": false,
    "has_form": false,
    "has_video": false,
@@ -74,7 +146,7 @@
     "words": "554",
     "alt": "0 missing",
     "links": "48",
-    "faq": "no",
+    "faq": "shown, no schema",
     "service": "no",
     "local": "no",
     "review": "no",
@@ -131,6 +203,7 @@
    "og_image": "",
    "stock_og": false,
    "faq": false,
+   "faq_visible": false,
    "service": false,
    "local": false,
    "review": false,
@@ -148,6 +221,77 @@
     "WebPage",
     "WebSite"
    ],
+   "entity": {
+    "score": 71,
+    "grade": "B",
+    "checks": {
+     "org": true,
+     "page_type": true,
+     "primary": true,
+     "website": true,
+     "breadcrumb": true,
+     "person": false,
+     "sameas": true,
+     "provider": true,
+     "area": false,
+     "author": false,
+     "contact": false,
+     "about": false,
+     "dates": true,
+     "ids": true,
+     "resolve": true,
+     "clean": true
+    },
+    "values": {
+     "org": "Organization",
+     "page_type": "WebPage",
+     "primary": "Organization",
+     "website": "yes",
+     "breadcrumb": "yes",
+     "person": "no",
+     "sameas": "1 profiles",
+     "provider": "yes",
+     "area": "no",
+     "author": "no",
+     "contact": "no",
+     "about": "no",
+     "dates": "yes",
+     "ids": "5",
+     "resolve": "yes",
+     "clean": "yes"
+    },
+    "failed": [
+     "person",
+     "area",
+     "contact",
+     "about"
+    ],
+    "na": [
+     "author",
+     "website"
+    ],
+    "recommendations": [
+     "Name the expert or author as a Person, with a URL that identifies them",
+     "Add areaServed or a postal address to the entity",
+     "Add contactPoint or a telephone to the Organization",
+     "Name what the page is about with about, mentions or serviceType"
+    ],
+    "nodes": 11,
+    "ids": 5,
+    "dangling": 0,
+    "types": [
+     "BreadcrumbList",
+     "EntryPoint",
+     "ImageObject",
+     "ListItem",
+     "Organization",
+     "PropertyValueSpecification",
+     "ReadAction",
+     "SearchAction",
+     "WebPage",
+     "WebSite"
+    ]
+   },
    "noindex": false,
    "has_form": false,
    "has_video": false,
@@ -238,6 +382,7 @@
    "og_image": "",
    "stock_og": false,
    "faq": false,
+   "faq_visible": false,
    "service": false,
    "local": false,
    "review": false,
@@ -255,6 +400,77 @@
     "WebPage",
     "WebSite"
    ],
+   "entity": {
+    "score": 71,
+    "grade": "B",
+    "checks": {
+     "org": true,
+     "page_type": true,
+     "primary": true,
+     "website": true,
+     "breadcrumb": true,
+     "person": false,
+     "sameas": true,
+     "provider": true,
+     "area": false,
+     "author": false,
+     "contact": false,
+     "about": false,
+     "dates": true,
+     "ids": true,
+     "resolve": true,
+     "clean": true
+    },
+    "values": {
+     "org": "Organization",
+     "page_type": "WebPage",
+     "primary": "Organization",
+     "website": "yes",
+     "breadcrumb": "yes",
+     "person": "no",
+     "sameas": "1 profiles",
+     "provider": "yes",
+     "area": "no",
+     "author": "no",
+     "contact": "no",
+     "about": "no",
+     "dates": "yes",
+     "ids": "5",
+     "resolve": "yes",
+     "clean": "yes"
+    },
+    "failed": [
+     "person",
+     "area",
+     "contact",
+     "about"
+    ],
+    "na": [
+     "author",
+     "website"
+    ],
+    "recommendations": [
+     "Name the expert or author as a Person, with a URL that identifies them",
+     "Add areaServed or a postal address to the entity",
+     "Add contactPoint or a telephone to the Organization",
+     "Name what the page is about with about, mentions or serviceType"
+    ],
+    "nodes": 11,
+    "ids": 5,
+    "dangling": 0,
+    "types": [
+     "BreadcrumbList",
+     "EntryPoint",
+     "ImageObject",
+     "ListItem",
+     "Organization",
+     "PropertyValueSpecification",
+     "ReadAction",
+     "SearchAction",
+     "WebPage",
+     "WebSite"
+    ]
+   },
    "noindex": false,
    "has_form": false,
    "has_video": false,
@@ -351,6 +567,7 @@
    "og_image": "",
    "stock_og": false,
    "faq": false,
+   "faq_visible": false,
    "service": false,
    "local": false,
    "review": false,
@@ -368,6 +585,77 @@
     "WebPage",
     "WebSite"
    ],
+   "entity": {
+    "score": 71,
+    "grade": "B",
+    "checks": {
+     "org": true,
+     "page_type": true,
+     "primary": true,
+     "website": true,
+     "breadcrumb": true,
+     "person": false,
+     "sameas": true,
+     "provider": true,
+     "area": false,
+     "author": false,
+     "contact": false,
+     "about": false,
+     "dates": true,
+     "ids": true,
+     "resolve": true,
+     "clean": true
+    },
+    "values": {
+     "org": "Organization",
+     "page_type": "WebPage",
+     "primary": "Organization",
+     "website": "yes",
+     "breadcrumb": "yes",
+     "person": "no",
+     "sameas": "1 profiles",
+     "provider": "yes",
+     "area": "no",
+     "author": "no",
+     "contact": "no",
+     "about": "no",
+     "dates": "yes",
+     "ids": "5",
+     "resolve": "yes",
+     "clean": "yes"
+    },
+    "failed": [
+     "person",
+     "area",
+     "contact",
+     "about"
+    ],
+    "na": [
+     "author",
+     "website"
+    ],
+    "recommendations": [
+     "Name the expert or author as a Person, with a URL that identifies them",
+     "Add areaServed or a postal address to the entity",
+     "Add contactPoint or a telephone to the Organization",
+     "Name what the page is about with about, mentions or serviceType"
+    ],
+    "nodes": 11,
+    "ids": 5,
+    "dangling": 0,
+    "types": [
+     "BreadcrumbList",
+     "EntryPoint",
+     "ImageObject",
+     "ListItem",
+     "Organization",
+     "PropertyValueSpecification",
+     "ReadAction",
+     "SearchAction",
+     "WebPage",
+     "WebSite"
+    ]
+   },
    "noindex": false,
    "has_form": false,
    "has_video": false,
@@ -464,6 +752,7 @@
    "og_image": "",
    "stock_og": false,
    "faq": false,
+   "faq_visible": false,
    "service": false,
    "local": false,
    "review": false,
@@ -481,6 +770,77 @@
     "WebPage",
     "WebSite"
    ],
+   "entity": {
+    "score": 71,
+    "grade": "B",
+    "checks": {
+     "org": true,
+     "page_type": true,
+     "primary": true,
+     "website": true,
+     "breadcrumb": true,
+     "person": false,
+     "sameas": true,
+     "provider": true,
+     "area": false,
+     "author": false,
+     "contact": false,
+     "about": false,
+     "dates": true,
+     "ids": true,
+     "resolve": true,
+     "clean": true
+    },
+    "values": {
+     "org": "Organization",
+     "page_type": "WebPage",
+     "primary": "Organization",
+     "website": "yes",
+     "breadcrumb": "yes",
+     "person": "no",
+     "sameas": "1 profiles",
+     "provider": "yes",
+     "area": "no",
+     "author": "no",
+     "contact": "no",
+     "about": "no",
+     "dates": "yes",
+     "ids": "5",
+     "resolve": "yes",
+     "clean": "yes"
+    },
+    "failed": [
+     "person",
+     "area",
+     "contact",
+     "about"
+    ],
+    "na": [
+     "author",
+     "website"
+    ],
+    "recommendations": [
+     "Name the expert or author as a Person, with a URL that identifies them",
+     "Add areaServed or a postal address to the entity",
+     "Add contactPoint or a telephone to the Organization",
+     "Name what the page is about with about, mentions or serviceType"
+    ],
+    "nodes": 11,
+    "ids": 5,
+    "dangling": 0,
+    "types": [
+     "BreadcrumbList",
+     "EntryPoint",
+     "ImageObject",
+     "ListItem",
+     "Organization",
+     "PropertyValueSpecification",
+     "ReadAction",
+     "SearchAction",
+     "WebPage",
+     "WebSite"
+    ]
+   },
    "noindex": false,
    "has_form": false,
    "has_video": false,
@@ -577,6 +937,7 @@
    "og_image": "",
    "stock_og": false,
    "faq": false,
+   "faq_visible": false,
    "service": false,
    "local": false,
    "review": false,
@@ -594,6 +955,77 @@
     "WebPage",
     "WebSite"
    ],
+   "entity": {
+    "score": 71,
+    "grade": "B",
+    "checks": {
+     "org": true,
+     "page_type": true,
+     "primary": true,
+     "website": true,
+     "breadcrumb": true,
+     "person": false,
+     "sameas": true,
+     "provider": true,
+     "area": false,
+     "author": false,
+     "contact": false,
+     "about": false,
+     "dates": true,
+     "ids": true,
+     "resolve": true,
+     "clean": true
+    },
+    "values": {
+     "org": "Organization",
+     "page_type": "WebPage",
+     "primary": "Organization",
+     "website": "yes",
+     "breadcrumb": "yes",
+     "person": "no",
+     "sameas": "1 profiles",
+     "provider": "yes",
+     "area": "no",
+     "author": "no",
+     "contact": "no",
+     "about": "no",
+     "dates": "yes",
+     "ids": "5",
+     "resolve": "yes",
+     "clean": "yes"
+    },
+    "failed": [
+     "person",
+     "area",
+     "contact",
+     "about"
+    ],
+    "na": [
+     "author",
+     "website"
+    ],
+    "recommendations": [
+     "Name the expert or author as a Person, with a URL that identifies them",
+     "Add areaServed or a postal address to the entity",
+     "Add contactPoint or a telephone to the Organization",
+     "Name what the page is about with about, mentions or serviceType"
+    ],
+    "nodes": 11,
+    "ids": 5,
+    "dangling": 0,
+    "types": [
+     "BreadcrumbList",
+     "EntryPoint",
+     "ImageObject",
+     "ListItem",
+     "Organization",
+     "PropertyValueSpecification",
+     "ReadAction",
+     "SearchAction",
+     "WebPage",
+     "WebSite"
+    ]
+   },
    "noindex": false,
    "has_form": false,
    "has_video": false,
@@ -684,6 +1116,7 @@
    "og_image": "",
    "stock_og": false,
    "faq": false,
+   "faq_visible": true,
    "service": false,
    "local": false,
    "review": false,
@@ -701,6 +1134,81 @@
     "WebPage",
     "WebSite"
    ],
+   "entity": {
+    "score": 45,
+    "grade": "D",
+    "checks": {
+     "org": true,
+     "page_type": true,
+     "primary": false,
+     "website": true,
+     "breadcrumb": true,
+     "person": false,
+     "sameas": true,
+     "provider": false,
+     "area": false,
+     "author": false,
+     "contact": false,
+     "about": false,
+     "dates": true,
+     "ids": true,
+     "resolve": true,
+     "clean": true
+    },
+    "values": {
+     "org": "Organization",
+     "page_type": "WebPage",
+     "primary": "no",
+     "website": "yes",
+     "breadcrumb": "yes",
+     "person": "no",
+     "sameas": "1 profiles",
+     "provider": "no",
+     "area": "no",
+     "author": "no",
+     "contact": "no",
+     "about": "no",
+     "dates": "yes",
+     "ids": "5",
+     "resolve": "yes",
+     "clean": "yes"
+    },
+    "failed": [
+     "primary",
+     "provider",
+     "area",
+     "contact"
+    ],
+    "na": [
+     "about",
+     "author",
+     "breadcrumb",
+     "dates",
+     "person",
+     "website"
+    ],
+    "recommendations": [
+     "Add the entity this page is about (Service, LocalBusiness, Article or Product)",
+     "Link this page's entity to the Organization (provider, publisher or parentOrganization)",
+     "Add areaServed or a postal address to the entity",
+     "Add contactPoint or a telephone to the Organization"
+    ],
+    "nodes": 11,
+    "ids": 5,
+    "dangling": 0,
+    "types": [
+     "BreadcrumbList",
+     "EntryPoint",
+     "ImageObject",
+     "ListItem",
+     "Organization",
+     "PropertyValueSpecification",
+     "ReadAction",
+     "SearchAction",
+     "WebPage",
+     "WebSite"
+    ]
+   },
    "noindex": false,
    "has_form": true,
    "has_video": false,
@@ -734,7 +1242,7 @@
     "words": "243",
     "alt": "0 missing",
     "links": "37",
-    "faq": "no",
+    "faq": "shown, no schema",
     "service": "no",
     "local": "no",
     "review": "no",
@@ -791,6 +1299,7 @@
    "og_image": "",
    "stock_og": false,
    "faq": false,
+   "faq_visible": true,
    "service": false,
    "local": false,
    "review": false,
@@ -808,6 +1317,81 @@
     "WebPage",
     "WebSite"
    ],
+   "entity": {
+    "score": 45,
+    "grade": "D",
+    "checks": {
+     "org": true,
+     "page_type": true,
+     "primary": false,
+     "website": true,
+     "breadcrumb": true,
+     "person": false,
+     "sameas": true,
+     "provider": false,
+     "area": false,
+     "author": false,
+     "contact": false,
+     "about": false,
+     "dates": true,
+     "ids": true,
+     "resolve": true,
+     "clean": true
+    },
+    "values": {
+     "org": "Organization",
+     "page_type": "WebPage",
+     "primary": "no",
+     "website": "yes",
+     "breadcrumb": "yes",
+     "person": "no",
+     "sameas": "1 profiles",
+     "provider": "no",
+     "area": "no",
+     "author": "no",
+     "contact": "no",
+     "about": "no",
+     "dates": "yes",
+     "ids": "5",
+     "resolve": "yes",
+     "clean": "yes"
+    },
+    "failed": [
+     "primary",
+     "provider",
+     "area",
+     "contact"
+    ],
+    "na": [
+     "about",
+     "author",
+     "breadcrumb",
+     "dates",
+     "person",
+     "website"
+    ],
+    "recommendations": [
+     "Add the entity this page is about (Service, LocalBusiness, Article or Product)",
+     "Link this page's entity to the Organization (provider, publisher or parentOrganization)",
+     "Add areaServed or a postal address to the entity",
+     "Add contactPoint or a telephone to the Organization"
+    ],
+    "nodes": 11,
+    "ids": 5,
+    "dangling": 0,
+    "types": [
+     "BreadcrumbList",
+     "EntryPoint",
+     "ImageObject",
+     "ListItem",
+     "Organization",
+     "PropertyValueSpecification",
+     "ReadAction",
+     "SearchAction",
+     "WebPage",
+     "WebSite"
+    ]
+   },
    "noindex": false,
    "has_form": true,
    "has_video": false,
@@ -841,7 +1425,7 @@
     "words": "217",
     "alt": "0 missing",
     "links": "37",
-    "faq": "no",
+    "faq": "shown, no schema",
     "service": "no",
     "local": "no",
     "review": "no",
@@ -896,6 +1480,7 @@
    "og_image": "",
    "stock_og": false,
    "faq": false,
+   "faq_visible": false,
    "service": false,
    "local": false,
    "review": false,
@@ -913,6 +1498,79 @@
     "WebPage",
     "WebSite"
    ],
+   "entity": {
+    "score": 66,
+    "grade": "C",
+    "checks": {
+     "org": true,
+     "page_type": true,
+     "primary": true,
+     "website": true,
+     "breadcrumb": true,
+     "person": false,
+     "sameas": true,
+     "provider": true,
+     "area": false,
+     "author": false,
+     "contact": false,
+     "about": false,
+     "dates": true,
+     "ids": true,
+     "resolve": true,
+     "clean": false
+    },
+    "values": {
+     "org": "Organization",
+     "page_type": "WebPage",
+     "primary": "Organization",
+     "website": "yes",
+     "breadcrumb": "yes",
+     "person": "no",
+     "sameas": "1 profiles",
+     "provider": "yes",
+     "area": "no",
+     "author": "no",
+     "contact": "no",
+     "about": "no",
+     "dates": "yes",
+     "ids": "5",
+     "resolve": "yes",
+     "clean": "1 empty"
+    },
+    "failed": [
+     "person",
+     "area",
+     "contact",
+     "about",
+     "clean"
+    ],
+    "na": [
+     "author",
+     "website"
+    ],
+    "recommendations": [
+     "Name the expert or author as a Person, with a URL that identifies them",
+     "Add areaServed or a postal address to the entity",
+     "Add contactPoint or a telephone to the Organization",
+     "Name what the page is about with about, mentions or serviceType",
+     "Remove empty and placeholder values from the markup"
+    ],
+    "nodes": 11,
+    "ids": 5,
+    "dangling": 0,
+    "types": [
+     "BreadcrumbList",
+     "EntryPoint",
+     "ImageObject",
+     "ListItem",
+     "Organization",
+     "PropertyValueSpecification",
+     "ReadAction",
+     "SearchAction",
+     "WebPage",
+     "WebSite"
+    ]
+   },
    "noindex": false,
    "has_form": true,
    "has_video": false,
@@ -1005,6 +1663,7 @@
    "og_image": "",
    "stock_og": false,
    "faq": false,
+   "faq_visible": true,
    "service": false,
    "local": false,
    "review": false,
@@ -1022,6 +1681,77 @@
     "WebPage",
     "WebSite"
    ],
+   "entity": {
+    "score": 71,
+    "grade": "B",
+    "checks": {
+     "org": true,
+     "page_type": true,
+     "primary": true,
+     "website": true,
+     "breadcrumb": true,
+     "person": false,
+     "sameas": true,
+     "provider": true,
+     "area": false,
+     "author": false,
+     "contact": false,
+     "about": false,
+     "dates": true,
+     "ids": true,
+     "resolve": true,
+     "clean": true
+    },
+    "values": {
+     "org": "Organization",
+     "page_type": "WebPage",
+     "primary": "Organization",
+     "website": "yes",
+     "breadcrumb": "yes",
+     "person": "no",
+     "sameas": "1 profiles",
+     "provider": "yes",
+     "area": "no",
+     "author": "no",
+     "contact": "no",
+     "about": "no",
+     "dates": "yes",
+     "ids": "5",
+     "resolve": "yes",
+     "clean": "yes"
+    },
+    "failed": [
+     "person",
+     "area",
+     "contact",
+     "about"
+    ],
+    "na": [
+     "author",
+     "website"
+    ],
+    "recommendations": [
+     "Name the expert or author as a Person, with a URL that identifies them",
+     "Add areaServed or a postal address to the entity",
+     "Add contactPoint or a telephone to the Organization",
+     "Name what the page is about with about, mentions or serviceType"
+    ],
+    "nodes": 11,
+    "ids": 5,
+    "dangling": 0,
+    "types": [
+     "BreadcrumbList",
+     "EntryPoint",
+     "ImageObject",
+     "ListItem",
+     "Organization",
+     "PropertyValueSpecification",
+     "ReadAction",
+     "SearchAction",
+     "WebPage",
+     "WebSite"
+    ]
+   },
    "noindex": false,
    "has_form": false,
    "has_video": false,
@@ -1055,7 +1785,7 @@
     "words": "645",
     "alt": "4 missing",
     "links": "40",
-    "faq": "no",
+    "faq": "shown, no schema",
     "service": "no",
     "local": "no",
     "review": "no",
@@ -1112,6 +1842,7 @@
    "og_image": "",
    "stock_og": false,
    "faq": false,
+   "faq_visible": false,
    "service": false,
    "local": false,
    "review": false,
@@ -1129,6 +1860,77 @@
     "WebPage",
     "WebSite"
    ],
+   "entity": {
+    "score": 71,
+    "grade": "B",
+    "checks": {
+     "org": true,
+     "page_type": true,
+     "primary": true,
+     "website": true,
+     "breadcrumb": true,
+     "person": false,
+     "sameas": true,
+     "provider": true,
+     "area": false,
+     "author": false,
+     "contact": false,
+     "about": false,
+     "dates": true,
+     "ids": true,
+     "resolve": true,
+     "clean": true
+    },
+    "values": {
+     "org": "Organization",
+     "page_type": "WebPage",
+     "primary": "Organization",
+     "website": "yes",
+     "breadcrumb": "yes",
+     "person": "no",
+     "sameas": "1 profiles",
+     "provider": "yes",
+     "area": "no",
+     "author": "no",
+     "contact": "no",
+     "about": "no",
+     "dates": "yes",
+     "ids": "5",
+     "resolve": "yes",
+     "clean": "yes"
+    },
+    "failed": [
+     "person",
+     "area",
+     "contact",
+     "about"
+    ],
+    "na": [
+     "author",
+     "website"
+    ],
+    "recommendations": [
+     "Name the expert or author as a Person, with a URL that identifies them",
+     "Add areaServed or a postal address to the entity",
+     "Add contactPoint or a telephone to the Organization",
+     "Name what the page is about with about, mentions or serviceType"
+    ],
+    "nodes": 12,
+    "ids": 5,
+    "dangling": 0,
+    "types": [
+     "BreadcrumbList",
+     "EntryPoint",
+     "ImageObject",
+     "ListItem",
+     "Organization",
+     "PropertyValueSpecification",
+     "ReadAction",
+     "SearchAction",
+     "WebPage",
+     "WebSite"
+    ]
+   },
    "noindex": false,
    "has_form": false,
    "has_video": false,
@@ -1219,6 +2021,7 @@
    "og_image": "",
    "stock_og": false,
    "faq": false,
+   "faq_visible": false,
    "service": false,
    "local": false,
    "review": false,
@@ -1236,6 +2039,77 @@
     "WebPage",
     "WebSite"
    ],
+   "entity": {
+    "score": 71,
+    "grade": "B",
+    "checks": {
+     "org": true,
+     "page_type": true,
+     "primary": true,
+     "website": true,
+     "breadcrumb": true,
+     "person": false,
+     "sameas": true,
+     "provider": true,
+     "area": false,
+     "author": false,
+     "contact": false,
+     "about": false,
+     "dates": true,
+     "ids": true,
+     "resolve": true,
+     "clean": true
+    },
+    "values": {
+     "org": "Organization",
+     "page_type": "WebPage",
+     "primary": "Organization",
+     "website": "yes",
+     "breadcrumb": "yes",
+     "person": "no",
+     "sameas": "1 profiles",
+     "provider": "yes",
+     "area": "no",
+     "author": "no",
+     "contact": "no",
+     "about": "no",
+     "dates": "yes",
+     "ids": "5",
+     "resolve": "yes",
+     "clean": "yes"
+    },
+    "failed": [
+     "person",
+     "area",
+     "contact",
+     "about"
+    ],
+    "na": [
+     "author",
+     "website"
+    ],
+    "recommendations": [
+     "Name the expert or author as a Person, with a URL that identifies them",
+     "Add areaServed or a postal address to the entity",
+     "Add contactPoint or a telephone to the Organization",
+     "Name what the page is about with about, mentions or serviceType"
+    ],
+    "nodes": 11,
+    "ids": 5,
+    "dangling": 0,
+    "types": [
+     "BreadcrumbList",
+     "EntryPoint",
+     "ImageObject",
+     "ListItem",
+     "Organization",
+     "PropertyValueSpecification",
+     "ReadAction",
+     "SearchAction",
+     "WebPage",
+     "WebSite"
+    ]
+   },
    "noindex": false,
    "has_form": false,
    "has_video": false,
@@ -1326,6 +2200,7 @@
    "og_image": "",
    "stock_og": false,
    "faq": false,
+   "faq_visible": false,
    "service": false,
    "local": false,
    "review": false,
@@ -1343,6 +2218,80 @@
     "WebPage",
     "WebSite"
    ],
+   "entity": {
+    "score": 48,
+    "grade": "D",
+    "checks": {
+     "org": true,
+     "page_type": true,
+     "primary": false,
+     "website": true,
+     "breadcrumb": true,
+     "person": false,
+     "sameas": true,
+     "provider": false,
+     "area": false,
+     "author": false,
+     "contact": false,
+     "about": false,
+     "dates": true,
+     "ids": true,
+     "resolve": true,
+     "clean": true
+    },
+    "values": {
+     "org": "Organization",
+     "page_type": "WebPage",
+     "primary": "no",
+     "website": "yes",
+     "breadcrumb": "yes",
+     "person": "no",
+     "sameas": "1 profiles",
+     "provider": "no",
+     "area": "no",
+     "author": "no",
+     "contact": "no",
+     "about": "no",
+     "dates": "yes",
+     "ids": "5",
+     "resolve": "yes",
+     "clean": "yes"
+    },
+    "failed": [
+     "primary",
+     "provider",
+     "area",
+     "contact",
+     "about"
+    ],
+    "na": [
+     "author",
+     "person",
+     "website"
+    ],
+    "recommendations": [
+     "Add the entity this page is about (Service, LocalBusiness, Article or Product)",
+     "Link this page's entity to the Organization (provider, publisher or parentOrganization)",
+     "Add areaServed or a postal address to the entity",
+     "Add contactPoint or a telephone to the Organization",
+     "Name what the page is about with about, mentions or serviceType"
+    ],
+    "nodes": 12,
+    "ids": 5,
+    "dangling": 0,
+    "types": [
+     "BreadcrumbList",
+     "EntryPoint",
+     "ImageObject",
+     "ListItem",
+     "Organization",
+     "PropertyValueSpecification",
+     "ReadAction",
+     "SearchAction",
+     "WebPage",
+     "WebSite"
+    ]
+   },
    "noindex": false,
    "has_form": false,
    "has_video": false,
@@ -1433,6 +2382,7 @@
    "og_image": "",
    "stock_og": false,
    "faq": false,
+   "faq_visible": false,
    "service": false,
    "local": false,
    "review": false,
@@ -1450,6 +2400,80 @@
     "WebPage",
     "WebSite"
    ],
+   "entity": {
+    "score": 48,
+    "grade": "D",
+    "checks": {
+     "org": true,
+     "page_type": true,
+     "primary": false,
+     "website": true,
+     "breadcrumb": true,
+     "person": false,
+     "sameas": true,
+     "provider": false,
+     "area": false,
+     "author": false,
+     "contact": false,
+     "about": false,
+     "dates": true,
+     "ids": true,
+     "resolve": true,
+     "clean": true
+    },
+    "values": {
+     "org": "Organization",
+     "page_type": "WebPage",
+     "primary": "no",
+     "website": "yes",
+     "breadcrumb": "yes",
+     "person": "no",
+     "sameas": "1 profiles",
+     "provider": "no",
+     "area": "no",
+     "author": "no",
+     "contact": "no",
+     "about": "no",
+     "dates": "yes",
+     "ids": "5",
+     "resolve": "yes",
+     "clean": "yes"
+    },
+    "failed": [
+     "primary",
+     "provider",
+     "area",
+     "contact",
+     "about"
+    ],
+    "na": [
+     "author",
+     "person",
+     "website"
+    ],
+    "recommendations": [
+     "Add the entity this page is about (Service, LocalBusiness, Article or Product)",
+     "Link this page's entity to the Organization (provider, publisher or parentOrganization)",
+     "Add areaServed or a postal address to the entity",
+     "Add contactPoint or a telephone to the Organization",
+     "Name what the page is about with about, mentions or serviceType"
+    ],
+    "nodes": 12,
+    "ids": 5,
+    "dangling": 0,
+    "types": [
+     "BreadcrumbList",
+     "EntryPoint",
+     "ImageObject",
+     "ListItem",
+     "Organization",
+     "PropertyValueSpecification",
+     "ReadAction",
+     "SearchAction",
+     "WebPage",
+     "WebSite"
+    ]
+   },
    "noindex": false,
    "has_form": false,
    "has_video": false,
@@ -1538,6 +2562,7 @@
    "og_image": "",
    "stock_og": false,
    "faq": false,
+   "faq_visible": false,
    "service": false,
    "local": false,
    "review": false,
@@ -1555,6 +2580,80 @@
     "WebPage",
     "WebSite"
    ],
+   "entity": {
+    "score": 48,
+    "grade": "D",
+    "checks": {
+     "org": true,
+     "page_type": true,
+     "primary": false,
+     "website": true,
+     "breadcrumb": true,
+     "person": false,
+     "sameas": true,
+     "provider": false,
+     "area": false,
+     "author": false,
+     "contact": false,
+     "about": false,
+     "dates": true,
+     "ids": true,
+     "resolve": true,
+     "clean": true
+    },
+    "values": {
+     "org": "Organization",
+     "page_type": "WebPage",
+     "primary": "no",
+     "website": "yes",
+     "breadcrumb": "yes",
+     "person": "no",
+     "sameas": "1 profiles",
+     "provider": "no",
+     "area": "no",
+     "author": "no",
+     "contact": "no",
+     "about": "no",
+     "dates": "yes",
+     "ids": "5",
+     "resolve": "yes",
+     "clean": "yes"
+    },
+    "failed": [
+     "primary",
+     "provider",
+     "area",
+     "contact",
+     "about"
+    ],
+    "na": [
+     "author",
+     "person",
+     "website"
+    ],
+    "recommendations": [
+     "Add the entity this page is about (Service, LocalBusiness, Article or Product)",
+     "Link this page's entity to the Organization (provider, publisher or parentOrganization)",
+     "Add areaServed or a postal address to the entity",
+     "Add contactPoint or a telephone to the Organization",
+     "Name what the page is about with about, mentions or serviceType"
+    ],
+    "nodes": 12,
+    "ids": 5,
+    "dangling": 0,
+    "types": [
+     "BreadcrumbList",
+     "EntryPoint",
+     "ImageObject",
+     "ListItem",
+     "Organization",
+     "PropertyValueSpecification",
+     "ReadAction",
+     "SearchAction",
+     "WebPage",
+     "WebSite"
+    ]
+   },
    "noindex": false,
    "has_form": false,
    "has_video": false,
@@ -1645,6 +2744,7 @@
    "og_image": "",
    "stock_og": false,
    "faq": false,
+   "faq_visible": false,
    "service": false,
    "local": false,
    "review": false,
@@ -1662,6 +2762,80 @@
     "WebPage",
     "WebSite"
    ],
+   "entity": {
+    "score": 48,
+    "grade": "D",
+    "checks": {
+     "org": true,
+     "page_type": true,
+     "primary": false,
+     "website": true,
+     "breadcrumb": true,
+     "person": false,
+     "sameas": true,
+     "provider": false,
+     "area": false,
+     "author": false,
+     "contact": false,
+     "about": false,
+     "dates": true,
+     "ids": true,
+     "resolve": true,
+     "clean": true
+    },
+    "values": {
+     "org": "Organization",
+     "page_type": "WebPage",
+     "primary": "no",
+     "website": "yes",
+     "breadcrumb": "yes",
+     "person": "no",
+     "sameas": "1 profiles",
+     "provider": "no",
+     "area": "no",
+     "author": "no",
+     "contact": "no",
+     "about": "no",
+     "dates": "yes",
+     "ids": "5",
+     "resolve": "yes",
+     "clean": "yes"
+    },
+    "failed": [
+     "primary",
+     "provider",
+     "area",
+     "contact",
+     "about"
+    ],
+    "na": [
+     "author",
+     "person",
+     "website"
+    ],
+    "recommendations": [
+     "Add the entity this page is about (Service, LocalBusiness, Article or Product)",
+     "Link this page's entity to the Organization (provider, publisher or parentOrganization)",
+     "Add areaServed or a postal address to the entity",
+     "Add contactPoint or a telephone to the Organization",
+     "Name what the page is about with about, mentions or serviceType"
+    ],
+    "nodes": 12,
+    "ids": 5,
+    "dangling": 0,
+    "types": [
+     "BreadcrumbList",
+     "EntryPoint",
+     "ImageObject",
+     "ListItem",
+     "Organization",
+     "PropertyValueSpecification",
+     "ReadAction",
+     "SearchAction",
+     "WebPage",
+     "WebSite"
+    ]
+   },
    "noindex": false,
    "has_form": false,
    "has_video": false,
@@ -1750,6 +2924,7 @@
    "og_image": "",
    "stock_og": false,
    "faq": false,
+   "faq_visible": true,
    "service": false,
    "local": false,
    "review": false,
@@ -1767,6 +2942,81 @@
     "WebPage",
     "WebSite"
    ],
+   "entity": {
+    "score": 45,
+    "grade": "D",
+    "checks": {
+     "org": true,
+     "page_type": true,
+     "primary": false,
+     "website": true,
+     "breadcrumb": true,
+     "person": false,
+     "sameas": true,
+     "provider": false,
+     "area": false,
+     "author": false,
+     "contact": false,
+     "about": false,
+     "dates": true,
+     "ids": true,
+     "resolve": true,
+     "clean": true
+    },
+    "values": {
+     "org": "Organization",
+     "page_type": "WebPage",
+     "primary": "no",
+     "website": "yes",
+     "breadcrumb": "yes",
+     "person": "no",
+     "sameas": "1 profiles",
+     "provider": "no",
+     "area": "no",
+     "author": "no",
+     "contact": "no",
+     "about": "no",
+     "dates": "yes",
+     "ids": "5",
+     "resolve": "yes",
+     "clean": "yes"
+    },
+    "failed": [
+     "primary",
+     "provider",
+     "area",
+     "contact"
+    ],
+    "na": [
+     "about",
+     "author",
+     "breadcrumb",
+     "dates",
+     "person",
+     "website"
+    ],
+    "recommendations": [
+     "Add the entity this page is about (Service, LocalBusiness, Article or Product)",
+     "Link this page's entity to the Organization (provider, publisher or parentOrganization)",
+     "Add areaServed or a postal address to the entity",
+     "Add contactPoint or a telephone to the Organization"
+    ],
+    "nodes": 11,
+    "ids": 5,
+    "dangling": 0,
+    "types": [
+     "BreadcrumbList",
+     "EntryPoint",
+     "ImageObject",
+     "ListItem",
+     "Organization",
+     "PropertyValueSpecification",
+     "ReadAction",
+     "SearchAction",
+     "WebPage",
+     "WebSite"
+    ]
+   },
    "noindex": false,
    "has_form": true,
    "has_video": false,
@@ -1800,7 +3050,7 @@
     "words": "247",
     "alt": "0 missing",
     "links": "37",
-    "faq": "no",
+    "faq": "shown, no schema",
     "service": "no",
     "local": "no",
     "review": "no",
@@ -1857,6 +3107,7 @@
    "og_image": "",
    "stock_og": false,
    "faq": false,
+   "faq_visible": true,
    "service": false,
    "local": false,
    "review": false,
@@ -1874,6 +3125,81 @@
     "WebPage",
     "WebSite"
    ],
+   "entity": {
+    "score": 45,
+    "grade": "D",
+    "checks": {
+     "org": true,
+     "page_type": true,
+     "primary": false,
+     "website": true,
+     "breadcrumb": true,
+     "person": false,
+     "sameas": true,
+     "provider": false,
+     "area": false,
+     "author": false,
+     "contact": false,
+     "about": false,
+     "dates": true,
+     "ids": true,
+     "resolve": true,
+     "clean": true
+    },
+    "values": {
+     "org": "Organization",
+     "page_type": "WebPage",
+     "primary": "no",
+     "website": "yes",
+     "breadcrumb": "yes",
+     "person": "no",
+     "sameas": "1 profiles",
+     "provider": "no",
+     "area": "no",
+     "author": "no",
+     "contact": "no",
+     "about": "no",
+     "dates": "yes",
+     "ids": "5",
+     "resolve": "yes",
+     "clean": "yes"
+    },
+    "failed": [
+     "primary",
+     "provider",
+     "area",
+     "contact"
+    ],
+    "na": [
+     "about",
+     "author",
+     "breadcrumb",
+     "dates",
+     "person",
+     "website"
+    ],
+    "recommendations": [
+     "Add the entity this page is about (Service, LocalBusiness, Article or Product)",
+     "Link this page's entity to the Organization (provider, publisher or parentOrganization)",
+     "Add areaServed or a postal address to the entity",
+     "Add contactPoint or a telephone to the Organization"
+    ],
+    "nodes": 11,
+    "ids": 5,
+    "dangling": 0,
+    "types": [
+     "BreadcrumbList",
+     "EntryPoint",
+     "ImageObject",
+     "ListItem",
+     "Organization",
+     "PropertyValueSpecification",
+     "ReadAction",
+     "SearchAction",
+     "WebPage",
+     "WebSite"
+    ]
+   },
    "noindex": false,
    "has_form": true,
    "has_video": false,
@@ -1907,7 +3233,7 @@
     "words": "262",
     "alt": "0 missing",
     "links": "37",
-    "faq": "no",
+    "faq": "shown, no schema",
     "service": "no",
     "local": "no",
     "review": "no",
@@ -1964,6 +3290,7 @@
    "og_image": "",
    "stock_og": false,
    "faq": false,
+   "faq_visible": false,
    "service": false,
    "local": false,
    "review": false,
@@ -1981,6 +3308,77 @@
     "WebPage",
     "WebSite"
    ],
+   "entity": {
+    "score": 71,
+    "grade": "B",
+    "checks": {
+     "org": true,
+     "page_type": true,
+     "primary": true,
+     "website": true,
+     "breadcrumb": true,
+     "person": false,
+     "sameas": true,
+     "provider": true,
+     "area": false,
+     "author": false,
+     "contact": false,
+     "about": false,
+     "dates": true,
+     "ids": true,
+     "resolve": true,
+     "clean": true
+    },
+    "values": {
+     "org": "Organization",
+     "page_type": "WebPage",
+     "primary": "Organization",
+     "website": "yes",
+     "breadcrumb": "yes",
+     "person": "no",
+     "sameas": "1 profiles",
+     "provider": "yes",
+     "area": "no",
+     "author": "no",
+     "contact": "no",
+     "about": "no",
+     "dates": "yes",
+     "ids": "5",
+     "resolve": "yes",
+     "clean": "yes"
+    },
+    "failed": [
+     "person",
+     "area",
+     "contact",
+     "about"
+    ],
+    "na": [
+     "author",
+     "website"
+    ],
+    "recommendations": [
+     "Name the expert or author as a Person, with a URL that identifies them",
+     "Add areaServed or a postal address to the entity",
+     "Add contactPoint or a telephone to the Organization",
+     "Name what the page is about with about, mentions or serviceType"
+    ],
+    "nodes": 11,
+    "ids": 5,
+    "dangling": 0,
+    "types": [
+     "BreadcrumbList",
+     "EntryPoint",
+     "ImageObject",
+     "ListItem",
+     "Organization",
+     "PropertyValueSpecification",
+     "ReadAction",
+     "SearchAction",
+     "WebPage",
+     "WebSite"
+    ]
+   },
    "noindex": false,
    "has_form": false,
    "has_video": false,
@@ -2073,6 +3471,7 @@
    "og_image": "",
    "stock_og": false,
    "faq": false,
+   "faq_visible": true,
    "service": false,
    "local": false,
    "review": false,
@@ -2090,6 +3489,80 @@
     "WebPage",
     "WebSite"
    ],
+   "entity": {
+    "score": 48,
+    "grade": "D",
+    "checks": {
+     "org": true,
+     "page_type": true,
+     "primary": false,
+     "website": true,
+     "breadcrumb": true,
+     "person": false,
+     "sameas": true,
+     "provider": false,
+     "area": false,
+     "author": false,
+     "contact": false,
+     "about": false,
+     "dates": true,
+     "ids": true,
+     "resolve": true,
+     "clean": true
+    },
+    "values": {
+     "org": "Organization",
+     "page_type": "WebPage",
+     "primary": "no",
+     "website": "yes",
+     "breadcrumb": "yes",
+     "person": "no",
+     "sameas": "1 profiles",
+     "provider": "no",
+     "area": "no",
+     "author": "no",
+     "contact": "no",
+     "about": "no",
+     "dates": "yes",
+     "ids": "5",
+     "resolve": "yes",
+     "clean": "yes"
+    },
+    "failed": [
+     "primary",
+     "provider",
+     "area",
+     "contact",
+     "about"
+    ],
+    "na": [
+     "author",
+     "person",
+     "website"
+    ],
+    "recommendations": [
+     "Add the entity this page is about (Service, LocalBusiness, Article or Product)",
+     "Link this page's entity to the Organization (provider, publisher or parentOrganization)",
+     "Add areaServed or a postal address to the entity",
+     "Add contactPoint or a telephone to the Organization",
+     "Name what the page is about with about, mentions or serviceType"
+    ],
+    "nodes": 11,
+    "ids": 5,
+    "dangling": 0,
+    "types": [
+     "BreadcrumbList",
+     "EntryPoint",
+     "ImageObject",
+     "ListItem",
+     "Organization",
+     "PropertyValueSpecification",
+     "ReadAction",
+     "SearchAction",
+     "WebPage",
+     "WebSite"
+    ]
+   },
    "noindex": false,
    "has_form": false,
    "has_video": false,
@@ -2123,7 +3596,7 @@
     "words": "778",
     "alt": "4 missing",
     "links": "49",
-    "faq": "no",
+    "faq": "shown, no schema",
     "service": "no",
     "local": "no",
     "review": "no",
@@ -2178,6 +3651,7 @@
    "og_image": "",
    "stock_og": false,
    "faq": false,
+   "faq_visible": true,
    "service": false,
    "local": false,
    "review": false,
@@ -2195,6 +3669,80 @@
     "WebPage",
     "WebSite"
    ],
+   "entity": {
+    "score": 48,
+    "grade": "D",
+    "checks": {
+     "org": true,
+     "page_type": true,
+     "primary": false,
+     "website": true,
+     "breadcrumb": true,
+     "person": false,
+     "sameas": true,
+     "provider": false,
+     "area": false,
+     "author": false,
+     "contact": false,
+     "about": false,
+     "dates": true,
+     "ids": true,
+     "resolve": true,
+     "clean": true
+    },
+    "values": {
+     "org": "Organization",
+     "page_type": "WebPage",
+     "primary": "no",
+     "website": "yes",
+     "breadcrumb": "yes",
+     "person": "no",
+     "sameas": "1 profiles",
+     "provider": "no",
+     "area": "no",
+     "author": "no",
+     "contact": "no",
+     "about": "no",
+     "dates": "yes",
+     "ids": "5",
+     "resolve": "yes",
+     "clean": "yes"
+    },
+    "failed": [
+     "primary",
+     "provider",
+     "area",
+     "contact",
+     "about"
+    ],
+    "na": [
+     "author",
+     "person",
+     "website"
+    ],
+    "recommendations": [
+     "Add the entity this page is about (Service, LocalBusiness, Article or Product)",
+     "Link this page's entity to the Organization (provider, publisher or parentOrganization)",
+     "Add areaServed or a postal address to the entity",
+     "Add contactPoint or a telephone to the Organization",
+     "Name what the page is about with about, mentions or serviceType"
+    ],
+    "nodes": 12,
+    "ids": 5,
+    "dangling": 0,
+    "types": [
+     "BreadcrumbList",
+     "EntryPoint",
+     "ImageObject",
+     "ListItem",
+     "Organization",
+     "PropertyValueSpecification",
+     "ReadAction",
+     "SearchAction",
+     "WebPage",
+     "WebSite"
+    ]
+   },
    "noindex": false,
    "has_form": false,
    "has_video": false,
@@ -2228,7 +3776,7 @@
     "words": "394",
     "alt": "0 missing",
     "links": "39",
-    "faq": "no",
+    "faq": "shown, no schema",
     "service": "no",
     "local": "no",
     "review": "no",
@@ -2281,6 +3829,7 @@
    "og_image": "",
    "stock_og": false,
    "faq": false,
+   "faq_visible": true,
    "service": false,
    "local": false,
    "review": false,
@@ -2298,6 +3847,80 @@
     "WebPage",
     "WebSite"
    ],
+   "entity": {
+    "score": 48,
+    "grade": "D",
+    "checks": {
+     "org": true,
+     "page_type": true,
+     "primary": false,
+     "website": true,
+     "breadcrumb": true,
+     "person": false,
+     "sameas": true,
+     "provider": false,
+     "area": false,
+     "author": false,
+     "contact": false,
+     "about": false,
+     "dates": true,
+     "ids": true,
+     "resolve": true,
+     "clean": true
+    },
+    "values": {
+     "org": "Organization",
+     "page_type": "WebPage",
+     "primary": "no",
+     "website": "yes",
+     "breadcrumb": "yes",
+     "person": "no",
+     "sameas": "1 profiles",
+     "provider": "no",
+     "area": "no",
+     "author": "no",
+     "contact": "no",
+     "about": "no",
+     "dates": "yes",
+     "ids": "5",
+     "resolve": "yes",
+     "clean": "yes"
+    },
+    "failed": [
+     "primary",
+     "provider",
+     "area",
+     "contact",
+     "about"
+    ],
+    "na": [
+     "author",
+     "person",
+     "website"
+    ],
+    "recommendations": [
+     "Add the entity this page is about (Service, LocalBusiness, Article or Product)",
+     "Link this page's entity to the Organization (provider, publisher or parentOrganization)",
+     "Add areaServed or a postal address to the entity",
+     "Add contactPoint or a telephone to the Organization",
+     "Name what the page is about with about, mentions or serviceType"
+    ],
+    "nodes": 12,
+    "ids": 5,
+    "dangling": 0,
+    "types": [
+     "BreadcrumbList",
+     "EntryPoint",
+     "ImageObject",
+     "ListItem",
+     "Organization",
+     "PropertyValueSpecification",
+     "ReadAction",
+     "SearchAction",
+     "WebPage",
+     "WebSite"
+    ]
+   },
    "noindex": false,
    "has_form": false,
    "has_video": false,
@@ -2331,7 +3954,7 @@
     "words": "779",
     "alt": "0 missing",
     "links": "41",
-    "faq": "no",
+    "faq": "shown, no schema",
     "service": "no",
     "local": "no",
     "review": "no",
@@ -2386,6 +4009,7 @@
    "og_image": "",
    "stock_og": false,
    "faq": false,
+   "faq_visible": true,
    "service": false,
    "local": false,
    "review": false,
@@ -2403,6 +4027,80 @@
     "WebPage",
     "WebSite"
    ],
+   "entity": {
+    "score": 48,
+    "grade": "D",
+    "checks": {
+     "org": true,
+     "page_type": true,
+     "primary": false,
+     "website": true,
+     "breadcrumb": true,
+     "person": false,
+     "sameas": true,
+     "provider": false,
+     "area": false,
+     "author": false,
+     "contact": false,
+     "about": false,
+     "dates": true,
+     "ids": true,
+     "resolve": true,
+     "clean": true
+    },
+    "values": {
+     "org": "Organization",
+     "page_type": "WebPage",
+     "primary": "no",
+     "website": "yes",
+     "breadcrumb": "yes",
+     "person": "no",
+     "sameas": "1 profiles",
+     "provider": "no",
+     "area": "no",
+     "author": "no",
+     "contact": "no",
+     "about": "no",
+     "dates": "yes",
+     "ids": "5",
+     "resolve": "yes",
+     "clean": "yes"
+    },
+    "failed": [
+     "primary",
+     "provider",
+     "area",
+     "contact",
+     "about"
+    ],
+    "na": [
+     "author",
+     "person",
+     "website"
+    ],
+    "recommendations": [
+     "Add the entity this page is about (Service, LocalBusiness, Article or Product)",
+     "Link this page's entity to the Organization (provider, publisher or parentOrganization)",
+     "Add areaServed or a postal address to the entity",
+     "Add contactPoint or a telephone to the Organization",
+     "Name what the page is about with about, mentions or serviceType"
+    ],
+    "nodes": 12,
+    "ids": 5,
+    "dangling": 0,
+    "types": [
+     "BreadcrumbList",
+     "EntryPoint",
+     "ImageObject",
+     "ListItem",
+     "Organization",
+     "PropertyValueSpecification",
+     "ReadAction",
+     "SearchAction",
+     "WebPage",
+     "WebSite"
+    ]
+   },
    "noindex": false,
    "has_form": false,
    "has_video": false,
@@ -2436,7 +4134,7 @@
     "words": "942",
     "alt": "0 missing",
     "links": "40",
-    "faq": "no",
+    "faq": "shown, no schema",
     "service": "no",
     "local": "no",
     "review": "no",
@@ -2493,6 +4191,7 @@
    "og_image": "",
    "stock_og": false,
    "faq": false,
+   "faq_visible": true,
    "service": false,
    "local": false,
    "review": false,
@@ -2510,6 +4209,80 @@
     "WebPage",
     "WebSite"
    ],
+   "entity": {
+    "score": 48,
+    "grade": "D",
+    "checks": {
+     "org": true,
+     "page_type": true,
+     "primary": false,
+     "website": true,
+     "breadcrumb": true,
+     "person": false,
+     "sameas": true,
+     "provider": false,
+     "area": false,
+     "author": false,
+     "contact": false,
+     "about": false,
+     "dates": true,
+     "ids": true,
+     "resolve": true,
+     "clean": true
+    },
+    "values": {
+     "org": "Organization",
+     "page_type": "WebPage",
+     "primary": "no",
+     "website": "yes",
+     "breadcrumb": "yes",
+     "person": "no",
+     "sameas": "1 profiles",
+     "provider": "no",
+     "area": "no",
+     "author": "no",
+     "contact": "no",
+     "about": "no",
+     "dates": "yes",
+     "ids": "5",
+     "resolve": "yes",
+     "clean": "yes"
+    },
+    "failed": [
+     "primary",
+     "provider",
+     "area",
+     "contact",
+     "about"
+    ],
+    "na": [
+     "author",
+     "person",
+     "website"
+    ],
+    "recommendations": [
+     "Add the entity this page is about (Service, LocalBusiness, Article or Product)",
+     "Link this page's entity to the Organization (provider, publisher or parentOrganization)",
+     "Add areaServed or a postal address to the entity",
+     "Add contactPoint or a telephone to the Organization",
+     "Name what the page is about with about, mentions or serviceType"
+    ],
+    "nodes": 12,
+    "ids": 5,
+    "dangling": 0,
+    "types": [
+     "BreadcrumbList",
+     "EntryPoint",
+     "ImageObject",
+     "ListItem",
+     "Organization",
+     "PropertyValueSpecification",
+     "ReadAction",
+     "SearchAction",
+     "WebPage",
+     "WebSite"
+    ]
+   },
    "noindex": false,
    "has_form": false,
    "has_video": false,
@@ -2543,7 +4316,7 @@
     "words": "705",
     "alt": "0 missing",
     "links": "40",
-    "faq": "no",
+    "faq": "shown, no schema",
     "service": "no",
     "local": "no",
     "review": "no",
@@ -2598,6 +4371,7 @@
    "og_image": "",
    "stock_og": false,
    "faq": false,
+   "faq_visible": true,
    "service": false,
    "local": false,
    "review": false,
@@ -2615,6 +4389,80 @@
     "WebPage",
     "WebSite"
    ],
+   "entity": {
+    "score": 48,
+    "grade": "D",
+    "checks": {
+     "org": true,
+     "page_type": true,
+     "primary": false,
+     "website": true,
+     "breadcrumb": true,
+     "person": false,
+     "sameas": true,
+     "provider": false,
+     "area": false,
+     "author": false,
+     "contact": false,
+     "about": false,
+     "dates": true,
+     "ids": true,
+     "resolve": true,
+     "clean": true
+    },
+    "values": {
+     "org": "Organization",
+     "page_type": "WebPage",
+     "primary": "no",
+     "website": "yes",
+     "breadcrumb": "yes",
+     "person": "no",
+     "sameas": "1 profiles",
+     "provider": "no",
+     "area": "no",
+     "author": "no",
+     "contact": "no",
+     "about": "no",
+     "dates": "yes",
+     "ids": "5",
+     "resolve": "yes",
+     "clean": "yes"
+    },
+    "failed": [
+     "primary",
+     "provider",
+     "area",
+     "contact",
+     "about"
+    ],
+    "na": [
+     "author",
+     "person",
+     "website"
+    ],
+    "recommendations": [
+     "Add the entity this page is about (Service, LocalBusiness, Article or Product)",
+     "Link this page's entity to the Organization (provider, publisher or parentOrganization)",
+     "Add areaServed or a postal address to the entity",
+     "Add contactPoint or a telephone to the Organization",
+     "Name what the page is about with about, mentions or serviceType"
+    ],
+    "nodes": 12,
+    "ids": 5,
+    "dangling": 0,
+    "types": [
+     "BreadcrumbList",
+     "EntryPoint",
+     "ImageObject",
+     "ListItem",
+     "Organization",
+     "PropertyValueSpecification",
+     "ReadAction",
+     "SearchAction",
+     "WebPage",
+     "WebSite"
+    ]
+   },
    "noindex": false,
    "has_form": false,
    "has_video": false,
@@ -2648,7 +4496,7 @@
     "words": "527",
     "alt": "0 missing",
     "links": "39",
-    "faq": "no",
+    "faq": "shown, no schema",
     "service": "no",
     "local": "no",
     "review": "no",
@@ -2705,6 +4553,7 @@
    "og_image": "",
    "stock_og": false,
    "faq": false,
+   "faq_visible": true,
    "service": false,
    "local": false,
    "review": false,
@@ -2722,6 +4571,81 @@
     "WebPage",
     "WebSite"
    ],
+   "entity": {
+    "score": 45,
+    "grade": "D",
+    "checks": {
+     "org": true,
+     "page_type": true,
+     "primary": false,
+     "website": true,
+     "breadcrumb": true,
+     "person": false,
+     "sameas": true,
+     "provider": false,
+     "area": false,
+     "author": false,
+     "contact": false,
+     "about": false,
+     "dates": true,
+     "ids": true,
+     "resolve": true,
+     "clean": true
+    },
+    "values": {
+     "org": "Organization",
+     "page_type": "WebPage",
+     "primary": "no",
+     "website": "yes",
+     "breadcrumb": "yes",
+     "person": "no",
+     "sameas": "1 profiles",
+     "provider": "no",
+     "area": "no",
+     "author": "no",
+     "contact": "no",
+     "about": "no",
+     "dates": "yes",
+     "ids": "5",
+     "resolve": "yes",
+     "clean": "yes"
+    },
+    "failed": [
+     "primary",
+     "provider",
+     "area",
+     "contact"
+    ],
+    "na": [
+     "about",
+     "author",
+     "breadcrumb",
+     "dates",
+     "person",
+     "website"
+    ],
+    "recommendations": [
+     "Add the entity this page is about (Service, LocalBusiness, Article or Product)",
+     "Link this page's entity to the Organization (provider, publisher or parentOrganization)",
+     "Add areaServed or a postal address to the entity",
+     "Add contactPoint or a telephone to the Organization"
+    ],
+    "nodes": 11,
+    "ids": 5,
+    "dangling": 0,
+    "types": [
+     "BreadcrumbList",
+     "EntryPoint",
+     "ImageObject",
+     "ListItem",
+     "Organization",
+     "PropertyValueSpecification",
+     "ReadAction",
+     "SearchAction",
+     "WebPage",
+     "WebSite"
+    ]
+   },
    "noindex": false,
    "has_form": true,
    "has_video": false,
@@ -2755,7 +4679,7 @@
     "words": "250",
     "alt": "0 missing",
     "links": "37",
-    "faq": "no",
+    "faq": "shown, no schema",
     "service": "no",
     "local": "no",
     "review": "no",
@@ -2808,22 +4732,107 @@
   "breadcrumb": 26,
   "no_alt_pages": 4,
   "avg_words": 506,
+  "entity_avg": 57,
+  "entity_a": 0,
+  "entity_d_f": 15,
+  "entity_checks": {
+   "org": {
+    "pass": 26,
+    "of": 26
+   },
+   "page_type": {
+    "pass": 26,
+    "of": 26
+   },
+   "primary": {
+    "pass": 11,
+    "of": 26
+   },
+   "website": {
+    "pass": 1,
+    "of": 1
+   },
+   "breadcrumb": {
+    "pass": 20,
+    "of": 20
+   },
+   "person": {
+    "pass": 0,
+    "of": 11
+   },
+   "sameas": {
+    "pass": 26,
+    "of": 26
+   },
+   "provider": {
+    "pass": 11,
+    "of": 26
+   },
+   "area": {
+    "pass": 0,
+    "of": 26
+   },
+   "author": {
+    "pass": 0,
+    "of": 0
+   },
+   "contact": {
+    "pass": 0,
+    "of": 26
+   },
+   "about": {
+    "pass": 1,
+    "of": 21
+   },
+   "dates": {
+    "pass": 21,
+    "of": 21
+   },
+   "ids": {
+    "pass": 26,
+    "of": 26
+   },
+   "resolve": {
+    "pass": 26,
+    "of": 26
+   },
+   "clean": {
+    "pass": 24,
+    "of": 26
+   }
+  },
+  "schema_types": {
+   "WebPage": 26,
+   "Organization": 26,
+   "PropertyValueSpecification": 26,
+   "ListItem": 26,
+   "BreadcrumbList": 26,
+   "SearchAction": 26,
+   "EntryPoint": 26,
+   "ImageObject": 26,
+   "ReadAction": 26,
+   "WebSite": 26
+  },
   "by_type": {
    "company": {
     "count": 11,
-    "avg": 32
+    "avg": 32,
+    "entity": 71
    },
    "form": {
     "count": 5,
-    "avg": 34
+    "avg": 34,
+    "entity": 45
    },
    "industry": {
     "count": 4,
-    "avg": 42
+    "avg": 42,
+    "entity": 48
    },
    "service": {
     "count": 6,
-    "avg": 44
+    "avg": 44,
+    "entity": 48
    }
   }
  },
