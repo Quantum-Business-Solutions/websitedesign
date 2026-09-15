@@ -1285,7 +1285,7 @@
    "rank": 1,
    "severity": "critical",
    "title": "The biggest IT search in the home city returns ten companies and none is VAF",
-   "evidence": "\"Managed it services indianapolis\" is 1,000 searches a month at difficulty 29. Asked from Indianapolis, the top ten are leapmanagedit.com, cloudtango.net, gadellnet.com, mis.tech, meriplex.com, exactitconsulting.com, esi.tech, visualedgeit.com, corsicatech.com and resultant.com. The page that should win it, /information/managed-it-services, is one of the best on the site at 81 of 100 with 1,070 words, five question headings and FAQPage markup. The same template in Fort Wayne ranks 6 and 4 for its city terms.",
+   "evidence": "\"Managed it services indianapolis\" is 1,000 searches a month at difficulty 29. Asked from Indianapolis, the top ten are leapmanagedit.com, cloudtango.net, gadellnet.com, mis.tech, meriplex.com, exactitconsulting.com, esi.tech, visualedgeit.com, revenuebase.ai and corsicatech.com. The page that should win it, /information/managed-it-services, is one of the best on the site at 86 of 100 with 1,070 words, five question headings and FAQPage markup. The same template in Fort Wayne ranks 6 and 4 for its city terms.",
    "impact": "The single largest managed IT search in the market VAF is headquartered in sends every click, and every AI answer built on those results, to ten other providers.",
    "action": "Rebuild /indianapolis/ and /information/managed-it-services as one linked pair with Service schema, an FAQPage block on cost and scope, and named Indianapolis proof. Link both from the home page and from all 35 city pages."
   },
