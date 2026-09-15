@@ -1284,212 +1284,223 @@
   {
    "rank": 1,
    "severity": "critical",
-   "title": "Absent from every top-10 result for best managed IT Indianapolis",
-   "evidence": "VAF appears in 0 of 10 results while leapmanagedit.com is #2, bradenonline.com #6 and two directories (cloudtango.net #1, clutch.co #9) that list Leap but not VAF.",
-   "impact": "The 1,000/mo core term plus the AI-answer lists that cite these results all route to competitors.",
-   "action": "Claim cloudtango.net and clutch.co profiles, point the new /indianapolis/ IT page at the term, and earn 10 local links in 90 days."
+   "title": "The biggest IT search in the home city returns ten companies and none is VAF",
+   "evidence": "\"Managed it services indianapolis\" is 1,000 searches a month at difficulty 29. Asked from Indianapolis, the top ten are leapmanagedit.com, cloudtango.net, gadellnet.com, mis.tech, meriplex.com, exactitconsulting.com, esi.tech, visualedgeit.com, corsicatech.com and resultant.com. The page that should win it, /information/managed-it-services, is one of the best on the site at 81 of 100 with 1,070 words, five question headings and FAQPage markup. The same template in Fort Wayne ranks 6 and 4 for its city terms.",
+   "impact": "The single largest managed IT search in the market VAF is headquartered in sends every click, and every AI answer built on those results, to ten other providers.",
+   "action": "Rebuild /indianapolis/ and /information/managed-it-services as one linked pair with Service schema, an FAQPage block on cost and scope, and named Indianapolis proof. Link both from the home page and from all 35 city pages."
   },
   {
    "rank": 2,
-   "severity": "high",
-   "title": "Largest-provider claim is not visible where the question is asked",
-   "evidence": "For 'who is the largest office technology provider in indiana' VAF is absent from 10 results although its home page states the claim; bradenonline.com ranks #4.",
-   "impact": "AI assistants answer the entity question with Braden or directory lists, eroding VAF's strongest positioning line.",
-   "action": "Publish a facts page (founded 1914, offices, headcount, brands) with Organization schema and get the claim cited on TechPoint, IBJ and Wikipedia-grade sources."
+   "severity": "critical",
+   "title": "Copier leasing in Indianapolis is invisible in both search results and AI answers",
+   "evidence": "Asked from Indianapolis, \"copier lease indianapolis\" returns visualedgeit.com, werentcopiers.com, copierleaseindianapolis.com, copierleasecenter.com, gflesch.com, hartfordrents.com, bbb.org, iccbusinessproducts.com and leapcopierprinter.com, with no VAF. Claude answered the same question after reading ten sources and vanausdall.com was not one. /copiers/ is the strongest page on the site at 96 of 100 with FAQPage and Service schema, so the content exists and nothing points it at the lease query.",
+   "impact": "Copier leasing is the oldest line and the door into print, phones and IT contracts, and the answer engines are handing that door to ICC, Visual Edge and two lease microsites.",
+   "action": "Extend /copiers/ with lease terms, cost ranges and the lease questions buyers ask, and give it an Indianapolis heading and title. Claim the directory listings that rank for the term."
   },
   {
    "rank": 3,
    "severity": "high",
-   "title": "Brand reviews SERP is owned by employer ratings, not customers",
-   "evidence": "Indeed 2.8 (73 reviews) and Glassdoor 3.3 (104) fill 8 of 10 results; Facebook shows 0 reviews, Yelp 2, and no Google Business Profile or BBB result appears.",
-   "impact": "Prospects checking 'Van Ausdall & Farrar reviews' see low employer scores and no customer proof.",
-   "action": "Launch a post-ticket Google review request flow, add a customer-reviews page with Review schema, and claim the BBB profile."
+   "title": "Four of every five organic visits come from people who already know the name",
+   "evidence": "Semrush records 373 organic keywords and 1,081 visits a month, worth about $960 in equivalent paid traffic. Branded share is 80 percent, and five brand phrases take 79.9 percent of the traffic between them. The home page alone accounts for 85.56 percent of site traffic on 32 keywords, while /indianapolis/ appears nowhere in the top pages list.",
+   "impact": "The site is a business card for existing customers, not a source of new ones. Almost no one who does not already know VAF arrives through search.",
+   "action": "The nine money pages get service and city targeting so non-brand demand has somewhere to land, and branded share is reported monthly."
   },
   {
    "rank": 4,
    "severity": "high",
-   "title": "Suburb pages exist but at 115 words they cannot rank",
-   "evidence": "Carmel, Fishers, Noblesville and Greenwood each have one page of 112 to 122 words with LocalBusiness schema only and no FAQ or Service schema. Leap's four suburb pages earn 34 percent of its traffic; 'managed service provider Carmel Indiana' is 720 searches a month at difficulty 13.",
-   "impact": "The pages are indexed but say nothing an engine can match to a query, so the suburb searches go to Leap and Taylored.",
-   "action": "Rebuild each as a full location page: services offered, a local case study, FAQ marked up as FAQPage, Service schema and a named contact. The location template in the build does this."
+   "title": "The site is not written in the shape an answer engine can quote",
+   "evidence": "Answer-shaped content scored 21 of 100, the lowest component on the scorecard. FAQ marked up as FAQPage appears on 4 of 110 service, industry and location pages, question headings on 23 of 110, and Service or Article schema on 3 of 113 buyer and blog pages. The assistants already know the name: asked six buyer questions, Claude named VAF in five and cited vanausdall.com in four, never as the first recommendation. On managed IT it named the company and then drew on 29 sources, none of them yours. Cyber security was the one answer that neither named nor cited the company.",
+   "impact": "When a buyer asks an assistant who to call in Indianapolis, VAF is named once in five. The named companies get the shortlist.",
+   "action": "Every money page gets three to six real buyer questions as H2s with short answers and FAQPage markup, plus Service schema naming the service and the area served. /copiers/ and /copier-service-repair are the template."
   },
   {
    "rank": 5,
    "severity": "high",
-   "title": "Referring domains are job boards and data scrapers, not industry",
-   "evidence": "Of VAF's 15 strongest referring domains, 9 are employment or people-data sites (indeed, payscale, levels.fyi, rocketreach, leadiq); ringcentral.com (66) is the only vendor link.",
-   "impact": "Authority Score stays at 21 against 27 (AME, Taylored), 24 (Leap) and 23 (Braden) with 1,377 and 1,147 referring domains respectively.",
-   "action": "Secure partner-directory links from Canon, Ricoh, Kyocera, Mitel, 8x8 and Fortinet plus chamber and TechPoint listings in the 90-day plan."
+   "title": "No review markup anywhere, and the reviews search is owned by job sites",
+   "evidence": "Review or AggregateRating schema is absent on all 171 pages. /about/customer-comments carries 20 words and scores 43 of 100. \"Van ausdall & farrar reviews\" asked from Indianapolis returns indeed.com in four positions, glassdoor.com in three, facebook.com and yelp.com, with vanausdall.com in none. gflesch.com, visualedgeit.com, appliedinnovation.com and bradenonline.com carry no review markup either.",
+   "impact": "A buyer checking VAF reads what former staff said about working there rather than what customers say about the service, and the engines have no rating to attach to the company.",
+   "action": "Collect customer reviews on Google, rebuild /about/customer-comments with Review markup, and pull three onto each money page. This is the one signal no competitor in this market has."
   },
   {
    "rank": 6,
-   "severity": "medium",
-   "title": "Home page still lacks city in title and any FAQ",
-   "evidence": "Title is 48 characters without Indianapolis, 0 FAQ, og:image is the stock artificial-intelligence.jpg; the H1 sits outside the main element.",
-   "impact": "The page carrying 85 percent of traffic underperforms on the local modifier and answer-engine extraction.",
-   "action": "Retitle to 'Indianapolis Managed IT, Copiers & Phones | Van Ausdall & Farrar', add a 6-question FAQ with FAQPage schema and a branded og:image."
+   "severity": "high",
+   "title": "Authority is a third of the market's and almost half the links come from one site",
+   "evidence": "Authority Score is 21 of 100 from 510 referring domains and 2,687 backlinks, against a competitor median of 1,211 referring domains: visualedgeit.com 2,353, gflesch.com 1,656, appliedinnovation.com 1,190, bradenonline.com 1,171. Only 41 of the 510 domains score 30 or better. One domain, indianaruralhealth.org, is the source of 45.6 percent of every link to the site, and 46.5 percent of links carry no anchor text because they are logos.",
+   "impact": "Low authority is why a good page such as /information/managed-it-services loses Indianapolis terms it wins in Fort Wayne, and one lapsed relationship would take nearly half the link profile with it.",
+   "action": "Fifteen new Indianapolis-area referring domains in 90 days from chambers, associations, customers, suppliers and sponsorships, and ask logo-linking partners for the company name in the image alt text."
   },
   {
    "rank": 7,
-   "severity": "medium",
-   "title": "Copier lease visibility comes from the wrong page",
-   "evidence": "VAF's only result for 'copier lease indianapolis' is /copy-print-solutions/ at #10, not /copiers/, while 'copier leasing' (880, KD 22) and 'office equipment rental' (1,900, KD 3) are open.",
-   "impact": "Two pages split the copier topic and leapcopierprinter.com holds #9 with a single focused page.",
-   "action": "Make /copiers/ the lease hub with a leasing FAQ, rental section and canonical links from copy-print-solutions."
+   "severity": "high",
+   "title": "The Indianapolis page is long enough to rank and built like a brochure",
+   "evidence": "/indianapolis/ runs 1,102 words and scores 66 of 100, but it has zero question headings, no FAQPage and no Service schema, and it does not appear in the Semrush top pages list at all. Across all 35 city pages, none carries FAQ or Service schema. The Fort Wayne and Evansville managed IT pages, which do carry question headings, are the only city pages earning measurable traffic, at 2.03 and 0.92 percent.",
+   "impact": "The page that should be the hub for the headquarters city earns nothing and passes no strength to the Indianapolis service pages.",
+   "action": "Rebuild /indianapolis/ as a hub with a service list linking to all nine money pages, two named local case studies, six FAQ questions in FAQPage markup and Service schema for each line."
   },
   {
    "rank": 8,
-   "severity": "medium",
-   "title": "Question keywords have no home on the site",
-   "evidence": "'what is managed it services' (1,000), 'how much does managed it services cost' (720), 'what is managed print services' (320) and 'how much does it cost to lease a copy machine' (260) exist; only 2 of 10 audited pages carry FAQPage schema.",
-   "impact": "AI Overviews and chat answers pull these definitions from Taylored's blog (its managed IT vs in-house post earns 290 visits).",
-   "action": "Add FAQ blocks to all 8 service pages and publish 4 cost and definition guides in the 90-day content sprint."
+   "severity": "high",
+   "title": "Ten location pages are too thin to say anything, including the two markets with demand",
+   "evidence": "Twenty-five of 35 location pages clear the word threshold and ten do not: /columbus/ at 120 words, /south-bend/ at 119, /bloomington/ at 129, /muncie/ at 122, /carmel/ at 123, /fishers/ at 131, /greenwood/ at 126 and /noblesville/ at 121. Two of those towns have measured demand: \"copiers columbus\" is 40 a month with VAF absent from the top ten, and \"copiers south bend\" is 10 a month where VAF sits at 2.",
+   "impact": "Columbus buyers get an Ohio result set and no VAF, and the thin suburb pages give an assistant nothing to quote when it is asked who serves those towns.",
+   "action": "Rebuild /columbus/ and /south-bend/ first on the location template with services, a local proof point, FAQPage markup and Service schema, then the remaining eight."
   },
   {
    "rank": 9,
    "severity": "medium",
-   "title": "Phone systems page is thin for a 9,900/mo head term",
-   "evidence": "550 words, 3 H2s, no FAQ, and copy still references ShoreTel; yet the page is #4 in results for 'business phone systems indianapolis'.",
-   "impact": "VAF sits at position 25 for 'business phone systems' (9,900, KD 44) where no local competitor ranks top 100.",
-   "action": "Expand to 1,200 words with VoIP, UCaaS and contact-center sections, a pricing-factors FAQ and RingCentral, Mitel and 8x8 comparison."
+   "title": "The phone systems page ranks third on a page that skips every answer signal",
+   "evidence": "/communication/business-phone-systems is 568 words, scores 66 of 100, and has no question headings, no FAQPage and no Service schema. It ranks 3 for \"business phone systems indianapolis\" (30 a month) and 5 for \"voip phone systems indianapolis\" (50 a month at difficulty 1). This is also the one query where Claude named VAF. The Fort Wayne version ranks 25 for the national term \"business phone systems\", 9,900 a month.",
+   "impact": "The page is already close and the two easiest lifts on the site, difficulty 1 and difficulty 0 city terms, sit at 5 and 3 instead of 1.",
+   "action": "Add six buyer questions with FAQPage markup, Service schema, a hosted voice comparison and the Indianapolis proof that supports the claim."
   },
   {
    "rank": 10,
    "severity": "medium",
-   "title": "Managed print page ranks #6 but cannot hold the national term",
-   "evidence": "574 words, 3 H2s, no FAQ; opportunity terms 'managed print services near me' (720, KD 7) and 'managed print services companies' (720, KD 12).",
-   "impact": "A KD 16 term with 4,400 monthly searches stays unranked while the page already has Service schema and local visibility.",
-   "action": "Add an MPS assessment calculator, an 8-question FAQ and near-me copy for all three offices."
+   "title": "The cyber security page names no city, asks no question and carries no service markup",
+   "evidence": "/cyber-security-solutions runs 662 words and scores 58 of 100, with no city in the title, zero question headings, no FAQPage and no Service schema. \"Cyber security services indianapolis\" is 10 a month and VAF is in none of the top ten. Claude read 16 sources answering the same question and used none from vanausdall.com. Meanwhile the Fort Wayne managed IT page ranks 8 for \"cybersecurity services fort wayne indiana\", 170 a month.",
+   "impact": "Security is the service buyers most often ask an assistant to recommend, and VAF is not in the source set the assistant reads.",
+   "action": "Rewrite with Indianapolis in the title and H1, question headings on cost, scope and compliance, FAQPage and Service schema, and links to /network-security and /information/managed-it-services."
   },
   {
    "rank": 11,
-   "severity": "low",
-   "title": "Document conversion page misses the scanning vocabulary",
-   "evidence": "'document scanning services near me' (1,900, KD 19) and 'document scanning company' (880, KD 20) do not appear in the 55-character title or H1.",
-   "impact": "765 words of good content target 'conversion', a phrase searchers rarely use.",
-   "action": "Retitle to 'Document Scanning Services Indianapolis' and add a bulk scanning section."
+   "severity": "medium",
+   "title": "Sixty-five pages are too short to compete and fifty-nine grade D or F",
+   "evidence": "Across 171 pages the average is 463 words and 65 sit under 300; 59 pages grade D or F and only three grade A. In the money set, /communication/call-recording is 72 words, /communication/unified-communications 84, /network-infrastructure 105 and /it-support 187 despite targeting \"Indianapolis IT Support\" in its title. The three A pages, /copiers/ at 96, /copier-service-repair at 91 and /copy-print-solutions/ at 86, are the only ones carrying FAQ, Service schema and question headings together.",
+   "impact": "Two thirds of the site adds no ranking or answering value, and it dilutes the strength the good pages need.",
+   "action": "Merge the sub-100-word feature pages into their parent service pages, rebuild /it-support on the /copiers/ template, and produce a keep, merge or retire list for the rest."
   },
   {
    "rank": 12,
-   "severity": "low",
-   "title": "AI and healthcare pages drop the city and carry a typo",
-   "evidence": "/ai title (48 chars) and /industries/healthcare-technology-solutions title (54) omit Indianapolis; the healthcare meta reads 'Healthcare Indust'.",
-   "impact": "Two high-intent vertical pages miss the local modifier that all other service pages carry.",
-   "action": "Fix the meta and add Indianapolis to both titles in the build."
+   "severity": "medium",
+   "title": "Three blog posts, none marked up, yet the blog is already ranking",
+   "evidence": "The crawl found three posts at a median of 589 words, none with Article schema and none with FAQ markup, though two of three answer a question outright. The physical intrusion detection post is the second highest traffic page on the whole site, carrying 4.16 percent of organic traffic and ranking 6 for its term at 110 a month. Two document conversion posts rank 2 and 7 for terms at 70 and 140 a month, outranking the service page. All of them sit on query-string URLs of the form /blog?p=, and the sitemap lists 325 such URLs.",
+   "impact": "The one part of the site that earns non-brand rankings has no markup, so it cannot be quoted as an article by an answer engine, and a crawler following links reaches three of the 325.",
+   "action": "Move posts to clean paths under /blog/ with 301s and Article schema, then publish two posts a month against the measured questions, starting with what managed IT services cost at 720 a month."
   },
   {
    "rank": 13,
    "severity": "low",
-   "title": "Robots and sitemap are healthy; keep AI crawlers open",
-   "evidence": "robots.txt allows all agents except /ecampaign/ and declares sitemap.xml; GPTBot, ClaudeBot, PerplexityBot and Google-Extended are not blocked.",
-   "impact": "No crawl barrier to AI visibility, so the gap is content and authority, not access.",
-   "action": "Keep the policy, add an llms.txt and clean the 324 query-string blog URLs from the sitemap."
+   "title": "Crawling and access are clean, with one file missing and no breadcrumbs anywhere",
+   "evidence": "Crawlability scored 100 of 100: robots.txt readable, one sitemap, HTTPS, canonical tags correct on 171 of 171 pages, no accidental noindex, 171 of 171 URLs answering. All eight crawlers checked are allowed, including GPTBot, ClaudeBot, anthropic-ai, PerplexityBot, CCBot and Google-Extended, giving 94 of 100 for AI access against visualedgeit.com at 100. The gap is llms.txt, which is not published. BreadcrumbList schema appears on 0 of 171 pages, and 4 of 141 meta descriptions fall outside a usable length.",
+   "impact": "Nothing is being blocked, so this is housekeeping rather than lost customers, but breadcrumbs and llms.txt are two free signals competitors have started to use.",
+   "action": "Publish llms.txt listing the money pages and the entity facts, add BreadcrumbList schema sitewide, and correct the four meta descriptions."
   }
  ],
  "why_beaten": {
-  "intro": "The same three money pages, side by side. Assistants and Google pick the entity with the most corroborating evidence. Today that is Leap for managed IT and Taylored for depth.",
+  "intro": "Each company's Indianapolis money page was parsed the same way on 15 September 2026, alongside the Semrush link figures and the live result set asked from Indianapolis. For Van Ausdall & Farrar the page measured is /indianapolis/.",
   "columns": [
    "Signal",
    "Van Ausdall & Farrar",
-   "Leap Managed IT",
-   "Taylored Systems"
+   "gflesch.com",
+   "visualedgeit.com",
+   "appliedinnovation.com"
   ],
   "rows": [
    [
-    "Organization and LocalBusiness schema",
-    "yes, every page",
-    "yes",
-    "yes"
+    "Organization or LocalBusiness schema",
+    "yes, both, on 170 of 171 pages",
+    "none on the money page",
+    "Organization only",
+    "yes, both"
    ],
    [
-    "FAQPage schema",
-    "2 of 10 pages (managed IT, copiers)",
-    "none",
-    "none"
-   ],
-   [
-    "Service or ITService schema",
-    "2 of 10 pages (copiers, managed print)",
-    "none",
-    "yes: ITService, ProfessionalService, Offer, OfferCatalog"
-   ],
-   [
-    "Review or AggregateRating schema",
-    "none",
-    "yes: AggregateRating plus Review",
-    "yes: AggregateRating"
-   ],
-   [
-    "Words on the managed IT page",
-    "1,078",
-    "806",
-    "3,524"
-   ],
-   [
-    "Suburb city pages",
-    "4 pages (Carmel, Fishers, Noblesville, Greenwood) at 112 to 122 words each, no FAQ or Service schema",
-    "4, earning 34 percent of all visits",
-    "11 /location-{city}/ pages"
-   ],
-   [
-    "Top referring domains",
-    "Indeed, Bing, Crunchbase, RocketReach (job boards and data sites)",
-    "vendors, local press",
-    "1,147 referring domains, vendor and chamber links"
-   ],
-   [
-    "Named for best managed IT services Indianapolis",
-    "absent from top 10",
-    "number 2",
-    "not in top 10"
-   ],
-   [
-    "Named for the largest office technology provider in Indiana",
-    "absent, despite the claim on the home page",
+    "FAQPage schema on the money page",
+    "no (4 pages sitewide)",
+    "no",
     "no",
     "no"
    ],
    [
-    "AI crawlers allowed (GPTBot, ClaudeBot, Perplexity)",
-    "yes, all four",
-    "yes",
-    "yes"
+    "Service schema on the money page",
+    "no (3 pages sitewide)",
+    "no",
+    "no",
+    "no"
+   ],
+   [
+    "Review or AggregateRating schema",
+    "none on all 171 pages",
+    "none",
+    "none",
+    "none"
+   ],
+   [
+    "Words on the money page",
+    "1,102",
+    "1,314",
+    "628",
+    "201"
+   ],
+   [
+    "Referring domains",
+    "492",
+    "1,656",
+    "2,353",
+    "1,190"
+   ],
+   [
+    "Authority Score",
+    "21",
+    "42",
+    "33",
+    "32"
+   ],
+   [
+    "Organic visits a month",
+    "1,081",
+    "66,688",
+    "6,571",
+    "5,986"
+   ],
+   [
+    "Position for managed print services Indianapolis, 170 a month",
+    "6",
+    "2",
+    "1",
+    "not in the top ten"
+   ],
+   [
+    "AI crawlers allowed",
+    "8 of 8 checked",
+    "4 of 4",
+    "4 of 4",
+    "4 of 4"
    ]
   ],
-  "verdict": "VAF tells engines who it is. Competitors tell engines why to pick them: ratings, more words per service, and a page for every suburb. The two VAF pages that carry FAQPage schema are the two that rank, so the pattern works. It has been applied to two pages out of ten."
+  "verdict": "Nobody in this market has FAQ, Service or Review markup on their Indianapolis page, so the answer-shaped signals are open ground rather than catch-up. What separates the leaders is authority and depth: visualedgeit.com wins managed print with 628 words and 2,353 referring domains, gflesch.com with 1,314 words and 1,656. The pattern to copy is one page per city per service, built on VAF's own /copiers/ template, which already scores 96 and is the only page type on the site carrying all three markup types."
  },
  "leverage": {
-  "intro": "The five moves with the biggest return for the least effort, in the order we would do them. Each one is either in the build or in the first 30 days of the plan.",
+  "intro": "The five moves with the biggest return for the least effort, in the order we would do them. Each is either in the build or in the first 30 to 90 days of the plan.",
   "items": [
    {
-    "move": "FAQPage plus Service schema on all twelve service pages",
+    "move": "Rebuild the Indianapolis pair around managed IT",
     "effort": "Build, week one",
-    "payoff": "The two pages that have it are the only VAF pages ranking for non-branded terms (number 4 phones, number 6 managed print). Extending it to managed IT, cybersecurity and document services puts VAF in the answer set for 'what is managed IT services' (1,000 a month) and 'how much does managed IT cost' (720).",
-    "in": "build"
+    "in": "build",
+    "payoff": "\"Managed it services indianapolis\" is 1,000 a month at difficulty 29 and VAF is in none of the top ten. The page that should win it already scores 81 with 1,070 words, five question headings and FAQPage markup, and the identical Fort Wayne page ranks 4 and 6 for its city terms, so the format is proven and only the Indianapolis targeting and internal linking are missing. This one term is larger than every other Indianapolis query measured put together."
    },
    {
-    "move": "A Google review program and Review schema on the pages",
+    "move": "Roll the /copiers/ template across the other eight money pages",
+    "effort": "Build, weeks two to four",
+    "in": "build",
+    "payoff": "/copiers/ scores 96, /copier-service-repair 91 and /copy-print-solutions/ 86, and they are the only pages carrying question headings, FAQPage and Service schema together. The others are missing all three: cyber security 58, IT support 56 at 187 words, network security 66, document management 66, phone systems 66. The phone systems page is first in the queue because it already ranks 3 and 5 for two city terms at difficulty 0 and 1."
+   },
+   {
+    "move": "Get listed where the engines and the buyers look",
+    "effort": "30 days, marketing",
+    "in": "plan",
+    "payoff": "cloudtango.net ranks 2 for managed IT in Indianapolis and was one of the sources Claude read. goodfirms.co ranks 1 for cyber security in the city, bbb.org ranks 7 for copier leasing, and clutch.co, builtin.com, expertise.com and chamberofcommerce.com all appear in the source sets. VAF is listed in none of them. This is the fastest route into AI answers VAF does not currently appear in."
+   },
+   {
+    "move": "Collect customer reviews and publish them with markup",
     "effort": "30 days, sales and service teams",
-    "payoff": "'Best managed IT Indianapolis' returns ten results and VAF is not one. Both competitors carry AggregateRating. Ratings are the signal that gets a company into the 'best' list. Today the brand reviews query returns Indeed and Glassdoor employer ratings in 8 of 10 spots.",
-    "in": "plan"
+    "in": "plan",
+    "payoff": "Review schema is absent on all 171 pages, and on all four competitors' Indianapolis pages, so this is the one differentiating signal available. Today \"van ausdall & farrar reviews\" returns nothing but Indeed, Glassdoor, Facebook and Yelp, so a buyer researching VAF reads employee opinions instead of customer ones."
    },
    {
-    "move": "Rebuild the four suburb pages: Carmel, Fishers, Noblesville, Greenwood",
-    "effort": "Build, four pages",
-    "payoff": "The pages exist but run 112 to 122 words each with no FAQ or Service schema, so they rank for nothing. Leap earns 34 percent of its traffic from four suburb pages. 'Managed service provider Carmel Indiana' is 720 searches a month at difficulty 13. The location template in the build carries LocalBusiness, Service and FAQPage schema.",
-    "in": "build"
-   },
-   {
-    "move": "An entity facts page that states the largest-provider claim with evidence",
-    "effort": "Build, one page",
-    "payoff": "Assistants answer 'who is the largest office technology provider in Indiana' with Braden and directories. The claim is on VAF's home page but nowhere an engine can cite: founding year, headquarters size, four pillars, three offices, partner list, NPS and SOC 2 on one page with Organization schema.",
-    "in": "build"
-   },
-   {
-    "move": "Swap job-board backlinks for vendor and chamber links",
+    "move": "Earn 15 local referring domains and reduce the single-source risk",
     "effort": "90 days, marketing",
-    "payoff": "Authority Score 21 against 24 and 27 is level, but 9 of the top 15 referring domains are job boards. Partner directories (Canon, Ricoh, Kyocera, Mitel, Fortinet), Indy Chamber, the Indiana Business Journal and BBB are the links competitors have and VAF does not.",
-    "in": "plan"
+    "in": "plan",
+    "payoff": "Authority Score 21 from 510 referring domains against a competitor median of 1,211, with indianaruralhealth.org alone accounting for 45.6 percent of all links and a further 46.5 percent carrying no anchor text because they are logos. Low authority is the reason a strong page wins Fort Wayne terms and loses the identical Indianapolis ones."
    }
   ]
  },

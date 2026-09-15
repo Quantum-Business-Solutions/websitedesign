@@ -37798,9 +37798,9 @@
       "The pages earning strangers today are the Fort Wayne and Evansville managed IT pages and a blog post on physical intrusion detection. Indianapolis, the headquarters market, has 28 ranking keywords, none above 140 searches a month.",
       "Business phone systems, 9,900 searches a month, ranks 25 through the Fort Wayne page. That is the single largest term within reach, and the new phone systems page and guide are aimed at it.",
       "Your forms work but land nowhere: the form script uses a hidden honeypot field and there is no CRM integration, so a lead from 1,081 monthly visits is an email, not a record. Every form here becomes a HubSpot form that creates a contact.",
-      "Four Indiana competitors (Taylored, The AME Group, Braden, Leap Managed IT) each earn 1.5 to 2 times your traffic from 3 to 7 times your keyword footprint. Leap is number 1 for managed it services indianapolis (1,000 searches a month) and it support indianapolis (880). You are not in the top 100 for either.",
-      "Your authority is competitive: Authority Score 21 and 486 referring domains against Leap at 24 and 471. The gap is missing pages, not missing links. Every page here is built for a term you can win.",
-      "Leap's new copier brand, leapcopierprinter.com, already sits at 9 for copier lease indianapolis, one place above your copy print page at 10.",
+      "The market leaders are gflesch.com at Authority Score 42 with 66,688 visits a month, visualedgeit.com at 33 with 6,571, and appliedinnovation.com at 32 with 5,986. Van Ausdall & Farrar has 1,081 visits from 380 keywords at Authority Score 21.",
+      "Authority is the gap as well as pages: 510 referring domains against a competitor median of 1,211, and one domain, indianaruralhealth.org, is the source of 45.6 percent of every link to the site.",
+      "Nobody in this market carries FAQ, Service or Review markup on their Indianapolis page, so the answer-shaped signals are open ground rather than catch-up.",
       "324 blog posts, 55% of your sitemap, live on query-string URLs (blog?p=...) that cannot carry their own titles, images or schema cleanly. Every post gets a real URL now, and every earning URL gets a redirect.",
       "Nine directories of city pages (Indianapolis, Carmel, Fishers, Noblesville, Greenwood, Bloomington, Columbus, Muncie, South Bend) share near-identical copy. Three real offices get real pages with LocalBusiness markup; the rest become a service area list.",
       "Your own photography is limited to stock-style imagery on the live site, so the preview uses generated stand-ins that show the scenes we would shoot: a technician with a customer, the conversion center, the headquarters, the operations room. A half-day shoot replaces them and makes the site un-copyable."
@@ -37863,50 +37863,50 @@
     ],
     "search": {
       "heading": "Where you stand in search today, and what changes",
-      "intro": "Measured before we touched anything, so the work can be judged against it. Numbers from Semrush and from vanausdall.com on 8 September 2026.",
-      "as_of": "Semrush US database and live HTML, 8 September 2026",
-      "report_href": "seo-report.html",
+      "intro": "Measured before we touched anything, so the work can be judged against it. Numbers from Semrush, a crawl of all 171 pages and eleven live buyer searches run from Indianapolis, Columbus and South Bend on 15 September 2026.",
+      "as_of": "Semrush, a crawl of all 171 pages and eleven live buyer searches, 15 September 2026",
+      "report_href": "https://clientcommand.thequantumleap.business/pages/0d27b48f-aec7-436e-87d5-0aa1cc08caf7",
       "report_label": "Read the full SEO and AI search analysis",
       "findings": [
         {
           "rank": 1,
           "severity": "critical",
-          "title": "Absent from every top-10 result for best managed IT Indianapolis",
-          "evidence": "VAF appears in 0 of 10 results while leapmanagedit.com is #2, bradenonline.com #6 and two directories (cloudtango.net #1, clutch.co #9) that list Leap but not VAF.",
-          "impact": "The 1,000/mo core term plus the AI-answer lists that cite these results all route to competitors.",
-          "action": "Claim cloudtango.net and clutch.co profiles, point the new /indianapolis/ IT page at the term, and earn 10 local links in 90 days."
+          "title": "The biggest IT search in the home city returns ten companies and none is VAF",
+          "evidence": "\"Managed it services indianapolis\" is 1,000 searches a month at difficulty 29. Asked from Indianapolis, the top ten are leapmanagedit.com, cloudtango.net, gadellnet.com, mis.tech, meriplex.com, exactitconsulting.com, esi.tech, visualedgeit.com, corsicatech.com and resultant.com. The page that should win it, /information/managed-it-services, is one of the best on the site at 81 of 100 with 1,070 words, five question headings and FAQPage markup. The same template in Fort Wayne ranks 6 and 4 for its city terms.",
+          "impact": "The single largest managed IT search in the market VAF is headquartered in sends every click, and every AI answer built on those results, to ten other providers.",
+          "action": "Rebuild /indianapolis/ and /information/managed-it-services as one linked pair with Service schema, an FAQPage block on cost and scope, and named Indianapolis proof. Link both from the home page and from all 35 city pages."
         },
         {
           "rank": 2,
-          "severity": "high",
-          "title": "Largest-provider claim is not visible where the question is asked",
-          "evidence": "For 'who is the largest office technology provider in indiana' VAF is absent from 10 results although its home page states the claim; bradenonline.com ranks #4.",
-          "impact": "AI assistants answer the entity question with Braden or directory lists, eroding VAF's strongest positioning line.",
-          "action": "Publish a facts page (founded 1914, offices, headcount, brands) with Organization schema and get the claim cited on TechPoint, IBJ and Wikipedia-grade sources."
+          "severity": "critical",
+          "title": "Copier leasing in Indianapolis is invisible in both search results and AI answers",
+          "evidence": "Asked from Indianapolis, \"copier lease indianapolis\" returns visualedgeit.com, werentcopiers.com, copierleaseindianapolis.com, copierleasecenter.com, gflesch.com, hartfordrents.com, bbb.org, iccbusinessproducts.com and leapcopierprinter.com, with no VAF. Claude answered the same question after reading ten sources and vanausdall.com was not one. /copiers/ is the strongest page on the site at 96 of 100 with FAQPage and Service schema, so the content exists and nothing points it at the lease query.",
+          "impact": "Copier leasing is the oldest line and the door into print, phones and IT contracts, and the answer engines are handing that door to ICC, Visual Edge and two lease microsites.",
+          "action": "Extend /copiers/ with lease terms, cost ranges and the lease questions buyers ask, and give it an Indianapolis heading and title. Claim the directory listings that rank for the term."
         },
         {
           "rank": 3,
           "severity": "high",
-          "title": "Brand reviews SERP is owned by employer ratings, not customers",
-          "evidence": "Indeed 2.8 (73 reviews) and Glassdoor 3.3 (104) fill 8 of 10 results; Facebook shows 0 reviews, Yelp 2, and no Google Business Profile or BBB result appears.",
-          "impact": "Prospects checking 'Van Ausdall & Farrar reviews' see low employer scores and no customer proof.",
-          "action": "Launch a post-ticket Google review request flow, add a customer-reviews page with Review schema, and claim the BBB profile."
+          "title": "Four of every five organic visits come from people who already know the name",
+          "evidence": "Semrush records 373 organic keywords and 1,081 visits a month, worth about $960 in equivalent paid traffic. Branded share is 80 percent, and five brand phrases take 79.9 percent of the traffic between them. The home page alone accounts for 85.56 percent of site traffic on 32 keywords, while /indianapolis/ appears nowhere in the top pages list.",
+          "impact": "The site is a business card for existing customers, not a source of new ones. Almost no one who does not already know VAF arrives through search.",
+          "action": "The nine money pages get service and city targeting so non-brand demand has somewhere to land, and branded share is reported monthly."
         },
         {
           "rank": 4,
           "severity": "high",
-          "title": "Suburb pages exist but at 115 words they cannot rank",
-          "evidence": "Carmel, Fishers, Noblesville and Greenwood each have one page of 112 to 122 words with LocalBusiness schema only and no FAQ or Service schema. Leap's four suburb pages earn 34 percent of its traffic; 'managed service provider Carmel Indiana' is 720 searches a month at difficulty 13.",
-          "impact": "The pages are indexed but say nothing an engine can match to a query, so the suburb searches go to Leap and Taylored.",
-          "action": "Rebuild each as a full location page: services offered, a local case study, FAQ marked up as FAQPage, Service schema and a named contact. The location template in the build does this."
+          "title": "The site is not written in the shape an answer engine can quote",
+          "evidence": "Answer-shaped content scored 21 of 100, the lowest component on the scorecard. FAQ marked up as FAQPage appears on 4 of 110 service, industry and location pages, question headings on 23 of 110, and Service or Article schema on 3 of 113 buyer and blog pages. The assistants already know the name: asked six buyer questions, Claude named VAF in five and cited vanausdall.com in four, never as the first recommendation. On managed IT it named the company and then drew on 29 sources, none of them yours. Cyber security was the one answer that neither named nor cited the company.",
+          "impact": "When a buyer asks an assistant who to call in Indianapolis, VAF is named once in five. The named companies get the shortlist.",
+          "action": "Every money page gets three to six real buyer questions as H2s with short answers and FAQPage markup, plus Service schema naming the service and the area served. /copiers/ and /copier-service-repair are the template."
         },
         {
           "rank": 5,
           "severity": "high",
-          "title": "Referring domains are job boards and data scrapers, not industry",
-          "evidence": "Of VAF's 15 strongest referring domains, 9 are employment or people-data sites (indeed, payscale, levels.fyi, rocketreach, leadiq); ringcentral.com (66) is the only vendor link.",
-          "impact": "Authority Score stays at 21 against 27 (AME, Taylored), 24 (Leap) and 23 (Braden) with 1,377 and 1,147 referring domains respectively.",
-          "action": "Secure partner-directory links from Canon, Ricoh, Kyocera, Mitel, 8x8 and Fortinet plus chamber and TechPoint listings in the 90-day plan."
+          "title": "No review markup anywhere, and the reviews search is owned by job sites",
+          "evidence": "Review or AggregateRating schema is absent on all 171 pages. /about/customer-comments carries 20 words and scores 43 of 100. \"Van ausdall & farrar reviews\" asked from Indianapolis returns indeed.com in four positions, glassdoor.com in three, facebook.com and yelp.com, with vanausdall.com in none. gflesch.com, visualedgeit.com, appliedinnovation.com and bradenonline.com carry no review markup either.",
+          "impact": "A buyer checking VAF reads what former staff said about working there rather than what customers say about the service, and the engines have no rating to attach to the company.",
+          "action": "Collect customer reviews on Google, rebuild /about/customer-comments with Review markup, and pull three onto each money page. This is the one signal no competitor in this market has."
         }
       ],
       "site_audit": {
@@ -51237,47 +51237,89 @@
           "deepened": 96
         }
       },
+      "compare_rows": [
+        [
+          "Pages with FAQPage schema",
+          "4 of 171",
+          "168 of 168"
+        ],
+        [
+          "Pages with Service or Article schema",
+          "3 of 171",
+          "143 of 168"
+        ],
+        [
+          "Pages with a question-form heading",
+          "22 of 171",
+          "168 of 168"
+        ],
+        [
+          "Pages under 300 words",
+          "65 of 171",
+          "0 of 168"
+        ],
+        [
+          "Average words per page",
+          "463",
+          "827"
+        ],
+        [
+          "Pages with BreadcrumbList schema",
+          "0 of 171",
+          "167 of 168"
+        ],
+        [
+          "Pages with Review or rating schema",
+          "0 of 171",
+          "0 of 168, until the review programme runs"
+        ],
+        [
+          "llms.txt published for AI assistants",
+          "no",
+          "yes"
+        ],
+        [
+          "Titles naming Indianapolis or an Indiana city",
+          "58 of 171",
+          "168 of 168"
+        ]
+      ],
+      "compare_lede": "The left column is the 15 September analysis of vanausdall.com. The right column is the same counts run on the build. Every recommendation on the cards below is already in place on all three options.",
+      "compare_note": "Review markup is deliberately left out until real Google reviews exist; no competitor in this market has it either.",
       "today_stats": [
         [
+          "373",
+          "Organic keywords; 80% of the traffic is people searching your name"
+        ],
+        [
           "1,081",
-          "Organic visits a month; competitors earn 1,555 to 2,094"
+          "Organic visits a month, worth about $960 in equivalent paid traffic"
         ],
         [
-          "80%",
-          "Of them from people searching your name"
-        ],
-        [
-          "0",
-          "Top-100 rankings for managed it services indianapolis (1,000 a month)"
+          "0 of 10",
+          "Top-ten results for managed it services indianapolis, 1,000 a month"
         ],
         [
           "21",
-          "Authority Score, against Leap at 24 and Taylored at 27"
+          "Authority Score, against gflesch.com 42, visualedgeit.com 33, appliedinnovation.com 32"
         ]
       ],
       "today": [
-        "Four visits in five come from branded searches: van ausdall & farrar, van ausdall and farrar, van ausdall. The home page earns 85% of the site's traffic.",
-        "The best non-brand page is the Fort Wayne managed IT page: 49 keywords, position 6 for managed it services fort wayne. Evansville managed IT ranks 2 for managed it evansville. Indianapolis, the headquarters market, has no top-100 ranking for managed it services indianapolis (1,000 a month), it support indianapolis (880) or it services indianapolis (880). Leap Managed IT is number 1 for all three.",
-        "Four Indiana competitors each earn 1.5 to 2 times your traffic: Taylored 2,094 visits from 2,711 keywords, The AME Group 2,007, Braden 1,807, Leap 1,555. Your authority (21, 486 referring domains) is in the same band as theirs, so the gap is pages, not links.",
-        "Managed print services (4,400 searches a month, difficulty 16) and copier lease (2,400, difficulty 19) have no VAF page ranking at all. Leap's copier brand is already above you for copier lease indianapolis.",
-        "Business phone systems (9,900 searches a month) ranks 25, through the Fort Wayne page rather than the phone systems page.",
-        "A blog post on physical intrusion detection is the second-highest traffic URL on the site. Document conversion posts rank 2 to 7 for document conversion companies and document conversion service.",
-        "324 of the 586 URLs in your sitemap are blog?p=... query-string posts that share one page's title and image; 90 more are PDFs.",
-        "The home page og:image is a stock AI hand image, and the customer comments page describes the company as trusted since 1974.",
-        "Forms work but have no CRM integration; the home page title omits Indianapolis and carries one Organization schema block with no LocalBusiness or Service markup.",
-        "No LocalBusiness markup for Indianapolis, Fort Wayne or Evansville, so search and AI assistants cannot tie the offices to their cities."
+        "Four visits in five come from people searching your name. Semrush records 373 organic keywords and 1,081 visits a month, worth about $960 in equivalent paid traffic, and five brand phrases take 79.9 percent of it. The home page alone carries 85.56 percent of site traffic.",
+        "\"Managed it services indianapolis\" is 1,000 searches a month at difficulty 29. Asked from Indianapolis the top ten are Leap, Cloudtango, GadellNet, mis.tech, Meriplex, Exact IT, ESI, Visual Edge, Corsica and Resultant. VAF is in none of them, while the identical page template in Fort Wayne ranks 4 and 6 for its own city terms.",
+        "Answer-shaped content scores 21 of 100, the lowest component on the scorecard. FAQPage markup appears on 4 of 110 service, industry and location pages, question headings on 23, and Service or Article schema on 3 of 113 buyer and blog pages.",
+        "Authority Score is 21 from 510 referring domains, against gflesch.com at 42 with 1,656 domains and 66,688 visits a month, visualedgeit.com at 33 with 2,353 domains, and appliedinnovation.com at 32. One domain, indianaruralhealth.org, is the source of 45.6 percent of every link to the site.",
+        "Review markup is absent from all 171 pages, and \"van ausdall & farrar reviews\" returns Indeed four times, Glassdoor three times, Facebook and Yelp, with vanausdall.com nowhere. Buyers read what former staff said about working there.",
+        "The three best pages on the site, /copiers/ at 96, /copier-service-repair at 91 and /copy-print-solutions/ at 86, are the only ones carrying question headings, FAQPage and Service schema together. That is the template, and it has been applied three times out of 171."
       ],
       "after": [
-        "Every URL that earns a visitor today keeps earning it: a permanent redirect for each one, tested individually at launch (the table below).",
-        "Three office pages with LocalBusiness markup, hours where you state them, and the cities each office serves, plus a service area list for the nine cities that had thin pages.",
-        "A business phone systems page and a buyer's guide aimed at the 9,900-a-month term you already sit at 25 for (no competitor is in the top 100), a managed IT page with Indianapolis in the title, and standalone managed print and copier pages for the 4,400 and 2,400-a-month terms with no VAF page today.",
-        "Twelve guides on real URLs with BlogPosting markup, six of them aimed at terms you rank for on page one or two: document conversion, physical intrusion detection, vCIO, AI policy, copier lease, phone systems. Every solution page carries Service schema, every page with questions carries FAQPage schema, and every office page LocalBusiness, so search engines and AI assistants can read what the page says.",
-        "Titles and descriptions written for the terms you already rank for: Indianapolis Managed IT Services and vCIO; Copier Sales, Lease and Rental in Indianapolis; Document Conversion and Scanning Services, Indianapolis.",
-        "Organization markup on the home page with your LinkedIn, Facebook, Instagram and Google Business profiles as sameAs, so an AI assistant asked about Van Ausdall resolves to the right company, founded 1914.",
-        "Every page under 80 kB of HTML before images, lazy-loading below the fold, pinch-zoom allowed, 16 px inputs, 44 px targets, one H1. Scored on our gate before you see it.",
-        "HubSpot forms that create a contact, notify a named person and show a thank-you page. A Technology Strength Assessment that scores as a multi-step form and lands in the CRM."
+        "Every page carries a five-question FAQ marked up as FAQPage, question-form headings an assistant can quote, and Service schema naming the service and the area served.",
+        "Indianapolis becomes a hub page linking to all nine money pages, paired with the managed IT page that already scores 81, which is the single change with the most measured demand behind it.",
+        "The ten thin location pages are rebuilt, Columbus and South Bend first, because those are the two with measured demand.",
+        "llms.txt and BreadcrumbList are published, closing the two free access signals the analysis flags, and every title names its city.",
+        "No page drops below 300 words; the build averages 827 against 463 today.",
+        "Review markup waits for real Google reviews. No competitor in this market has it either, so it stays the differentiating signal rather than a shortcut."
       ],
-      "keep_heading": "Every page that earns a visitor today keeps earning it",
       "keep": [
         [
           "/fort-wayne/managed-it-solutions-fort-wayne-in",
@@ -51343,7 +51385,7 @@
       "Who approves. Brian decides on the website and others weigh in eventually; tell us who, so the copy and go-live approvals do not wait.",
       "The current partner's contract. Month to month at about $1,200; the plan assumes a fourth-quarter start with redirects handled before anything is switched off."
     ],
-    "footer": "Prepared for Brian Courtney and the Van Ausdall & Farrar team, following the 1 September call with Patrick Dodge. Nothing here is live or indexed. Every number we could source comes from vanausdall.com, the CEO Juice report it links to, or Semrush on 8 September 2026. Where we drafted a process or a commitment we think you make, it is listed under To confirm. Hero and service photographs are generated stand-ins for the preview, marked as such, until a half-day shoot at the headquarters and in the field; secondary imagery is from your site today; partner logos are the ones on your partners page.",
+    "footer": "Prepared for Brian Courtney and the Van Ausdall & Farrar team, following the 1 September call with Patrick Dodge. Nothing here is live or indexed. Every number we could source comes from vanausdall.com, the CEO Juice report it links to, or Semrush on 15 September 2026. Where we drafted a process or a commitment we think you make, it is listed under To confirm. Hero and service photographs are generated stand-ins for the preview, marked as such, until a half-day shoot at the headquarters and in the field; secondary imagery is from your site today; partner logos are the ones on your partners page.",
     "migration": {
       "pages": 114,
       "redirects": 164,
