@@ -115,9 +115,12 @@ Straight from the Revolution build. These are not opinions.
    `verify.mjs` cannot gate a draft. Visual QA needs a logged-in browser or a **temporary publish to
    the `<portal>.hs-sites.com` staging subdomain.** Plan for the staging publish; it is not
    optional.
-3. **HubSpot free tier caps website pages at 30** (`contents limit 30 (cms-site-pages)`). CMS Hub
-   Starter lifts it. A 50-page Transform build on a free portal is impossible — **check the client's
-   tier at kickoff**, which is why it's step 4 of the runbook.
+3. **Website pages are capped at 30 on the free tier AND on Content Hub Starter** (`contents limit
+   30 (cms-site-pages)`; HubSpot's pricing page and product catalog, checked 9 October 2026). Only
+   **Content Hub Professional** ($450 to $500 a month) lifts it, to 10K pages. Starter also caps
+   landing pages at 30; its blog allows 10K posts. A 50-page Transform build needs Professional —
+   **check the client's tier at kickoff**, which is why it's step 4 of the runbook. Never quote
+   Starter hosting for a build over 30 pages.
 4. **Client portals use `CLIENT_HUBSPOT_TOKEN`**, never the QBS token, and never the OAuth MCP —
    which is bound to portal `20682069` and would silently corrupt the analysis.
 
