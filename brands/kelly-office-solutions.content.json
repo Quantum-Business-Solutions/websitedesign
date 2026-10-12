@@ -655,6 +655,7 @@
         {
           "type": "hero-layered",
           "id": "hero",
+          "video_bg": true,
           "eyebrow": "Moving business forward since 1947",
           "heading": "Fully connected office systems, serviced by people who <em>answer the phone</em>.",
           "subhead": "Copiers and print, document management, IT, mailing, and the water and coffee that keep an office running. One North Carolina partner, five offices, one number to call.",

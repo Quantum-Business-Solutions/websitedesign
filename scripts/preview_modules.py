@@ -260,7 +260,7 @@ def _hero_layered(s, ctx):
                  f'<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script></div>')
     if vid:
         # the film gets its own frame: customer links move under the copy, no words over the footage
-        bg = '<div class="bg"></div>'
+        bg = f'<div class="bg">{vhtml}</div>' if s.get("video_bg") else '<div class="bg"></div>'
         lane = (f'<div class="lane"><span class="k">{E(b.get("eyebrow", "Already a customer?"))}</span>{lb}</div>') if b else ""
         ca = cb = ""
     note = f'<div class="note">{E(s["note"])}</div>' if s.get("note") else ""
@@ -275,8 +275,8 @@ cx.lineWidth=1;for(i=0;i<P.length;i++){{a=P[i];for(j=i+1;j<P.length;j++){{b=P[j]
 for(i=0;i<P.length;i++){{a=P[i];cx.globalAlpha=.75;cx.fillStyle=col;cx.beginPath();cx.arc(a.x,a.y,a.r,0,6.283);cx.fill()}}cx.globalAlpha=1;raf=requestAnimationFrame(tick)}}
 size();addEventListener('resize',size,{{passive:true}});
 if('IntersectionObserver' in window){{new IntersectionObserver(function(es){{es.forEach(function(e){{if(e.isIntersecting&&!run){{run=true;tick()}}else if(!e.isIntersecting){{run=false;cancelAnimationFrame(raf)}}}})}}).observe(h)}}else{{run=true;tick()}}}}}})();</script>"""
-    stack = (f'<div class="vframe pv-depth" data-depth="1">{vhtml}<span class="vtag"><i></i>{E(s.get("video_caption", "Dispatched from the nearest of five offices"))}</span></div>') if vid else f'<div class="stack{" has3d" if three else ""}">{three}{ca}{cb}</div>'
-    return f'''<section class="q-section pv-lh{" vid" if vid else ""}" id="{E(hid)}">{bg}<canvas class="net" aria-hidden="true"></canvas><div class="glow" aria-hidden="true"></div><div class="q-container"><div>{f'<div class="q-eyebrow">{E(s["eyebrow"])}</div>' if s.get("eyebrow") else ""}
+    stack = "" if (vid and s.get("video_bg")) else (f'<div class="vframe pv-depth" data-depth="1">{vhtml}<span class="vtag"><i></i>{E(s.get("video_caption", "Dispatched from the nearest of five offices"))}</span></div>') if vid else f'<div class="stack{" has3d" if three else ""}">{three}{ca}{cb}</div>'
+    return f'''<section class="q-section pv-lh{" vid" if vid else ""}{" vbg" if (vid and s.get("video_bg")) else ""}" id="{E(hid)}">{bg}<canvas class="net" aria-hidden="true"></canvas><div class="glow" aria-hidden="true"></div><div class="q-container"><div>{f'<div class="q-eyebrow">{E(s["eyebrow"])}</div>' if s.get("eyebrow") else ""}
 <h1 class="q-h1">{RAW(s["heading"])}</h1><div class="q-lead">{E(s.get("subhead", ""))}</div>{_btns(s, ctx)}{lane}{note}{stats}</div>
 {stack}</div>{js}</section>'''
 

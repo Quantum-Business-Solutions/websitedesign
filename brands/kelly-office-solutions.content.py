@@ -936,7 +936,7 @@ SAVETEASE = {"type": "savingstease", "id": "savings", "eyebrow": "Full Office Ov
     "body": "One analysis across print, documents, production, IT, mailing and the break room. We set out to find at least 10 percent, and we tell you plainly if we cannot.",
     "href": "office-overview.html", "cta": "Run my Full Office Overview", "rate": 0.12}
 
-HERO_LAYERED = {"type": "hero-layered", "id": "hero", "eyebrow": "Moving business forward since 1947",
+HERO_LAYERED = {"type": "hero-layered", "id": "hero", "video_bg": True, "eyebrow": "Moving business forward since 1947",
     "heading": "Fully connected office systems, serviced by people who <em>answer the phone</em>.",
     "subhead": "Copiers and print, document management, IT, mailing, and the water and coffee that keep an office running. One North Carolina partner, five offices, one number to call.",
     "primary": {"label": "Request an assessment", "href": "contact.html"}, "secondary": {"label": "Run my Full Office Overview", "href": "office-overview.html"},

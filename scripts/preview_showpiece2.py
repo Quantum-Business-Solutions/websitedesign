@@ -44,6 +44,30 @@ def _svg(name: str) -> str:
 
 
 CSS4 = r'''
+.body-wrapper > div:has(> .hs_cos_wrapper > .q-header){position:sticky;top:0;z-index:70}
+.pv-crumbs:has(+ main > :is(.pv-dark,.pv-lh,.pv-cover):first-child){background:var(--chrome-bg);border-bottom-color:rgba(255,255,255,.1)}
+.pv-crumbs:has(+ main > :is(.pv-dark,.pv-lh,.pv-cover):first-child) :is(ol,a){color:rgba(255,255,255,.78)}
+.pv-crumbs:has(+ main > :is(.pv-dark,.pv-lh,.pv-cover):first-child) li + li::before{color:rgba(255,255,255,.4)}
+.pv-crumbs:has(+ main > :is(.pv-dark,.pv-lh,.pv-cover):first-child) [aria-current]{color:#fff}
+.pv-crumbs:has(+ main > :is(.pv-dark,.pv-lh,.pv-cover):first-child) a:hover{color:var(--q-gold)}
+.pv-guide-hsf{margin-top:18px}
+.pv-guide-hsf form{display:block!important;border:0!important;padding:0!important;background:none!important;box-shadow:none!important;margin:0!important;max-width:none!important}
+.pv-guide-hsf fieldset{display:grid!important;grid-template-columns:1fr 1fr;gap:12px 14px;border:0;margin:0 0 12px!important;padding:0;max-width:none!important;min-width:0}
+.pv-guide-hsf .hs-form-field{margin:0!important;width:auto!important;float:none!important;min-width:0}
+.pv-guide-hsf .hs_firstname{order:1}.pv-guide-hsf .hs_company{order:2}.pv-guide-hsf .hs_email{order:3;grid-column:1/-1}
+.pv-guide-hsf label{display:block;font:600 14px/1.3 var(--q-sans,inherit);color:var(--fg);margin:0 0 6px}
+.pv-guide-hsf .hs-form-required{color:#b3261e;margin-left:2px}
+.pv-guide-hsf .input{margin:0}
+.pv-guide-hsf input.hs-input:not([type=checkbox]):not([type=radio]){width:100%!important;min-height:50px;padding:12px 14px;border:1.5px solid var(--border);border-radius:12px;font:500 16px/1.3 var(--q-sans,inherit);background:var(--card);color:var(--fg);box-sizing:border-box}
+.pv-guide-hsf input.hs-input:focus{outline:3px solid var(--q-gold);outline-offset:1px;border-color:var(--fg)}
+.pv-guide-hsf .hs-error-msgs{list-style:none;margin:6px 0 0;padding:0}.pv-guide-hsf .hs-error-msg,.pv-guide-hsf .hs-error-msgs label{color:#b3261e;font-size:14px;font-weight:500}
+.pv-guide-hsf .hs_submit{margin:4px 0 0!important}.pv-guide-hsf .actions{margin:0!important;padding:0!important}
+.pv-guide-hsf input[type=submit],.pv-guide-hsf .hs-button{width:100%;min-height:52px;border:0;border-radius:999px;background:var(--q-gold);color:var(--cta-fg);font:800 16px/1 var(--q-sans,inherit);padding:15px 22px;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.pv-guide-hsf input[type=submit]:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,5,69,.25)}
+.pv-guide-hsf .submitted-message{font:600 17px/1.5 var(--q-sans,inherit);color:var(--fg);padding:18px;border-radius:14px;background:color-mix(in srgb,var(--q-gold) 18%,transparent)}
+.pv-guide-hsf .legal-consent-container,.pv-guide-hsf .hs-richtext{font-size:13px;line-height:1.5}
+@media(max-width:560px){.pv-guide-hsf fieldset{grid-template-columns:1fr}}
+@media(min-width:900px){.pv-fleet .rail{grid-auto-flow:row;grid-auto-columns:auto;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));overflow:visible;scroll-snap-type:none;padding-bottom:6px}}
 /* ===== showpiece 2: depth for sections that read flat ===== */
 @property --a{syntax:"<angle>";inherits:false;initial-value:0deg}
 .pv-head{max-width:760px;margin:0 auto 44px;text-align:center}
