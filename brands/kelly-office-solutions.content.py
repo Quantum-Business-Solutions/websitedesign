@@ -887,7 +887,7 @@ INDUSTRY_TILES = {"type": "tiles", "id": "markets", "eyebrow": "Key markets", "h
 ZOOMTOUR = {"type": "zoomtour", "id": "zoomtour", "eyebrow": "The whole office", "heading": "Fly through everything an office runs on",
     "intro": "Scroll. One floor plan, seven lines, one number to call.", "image": "assets/office-iso-3200.jpg", "image_w": 3200, "image_h": 1792,
     "alt": "An overhead illustration of an office with a copier room, a break room, a server room, a mailroom and desks", "hint": "Scroll to fly in",
-    "stops": [dict(x=it["x"], y=it["y"], scale=2.5, k=it["k"], title=it["title"], body=it["body"], href=it["href"], label=it["label"]) for it in HOTSPOTS["items"]]}
+    "stops": [dict(x=it["x"], y=it["y"], scale=1.6, k=it["k"], title=it["title"], body=it["body"], href=it["href"], label=it["label"]) for it in HOTSPOTS["items"]]}
 
 IT_LAYERS = {"type": "layers", "id": "layers", "eyebrow": "Layers of protection", "heading": "Five layers around everything your office runs on",
     "intro": "Hover a layer. Each one is watched, patched and backed up by the same Kelly team, on one fixed monthly invoice.",

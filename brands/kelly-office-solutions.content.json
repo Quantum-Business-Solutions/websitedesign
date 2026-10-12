@@ -903,7 +903,7 @@
             {
               "x": 27,
               "y": 46,
-              "scale": 2.5,
+              "scale": 1.6,
               "k": "Copiers and production",
               "title": "The copier room",
               "body": "Multifunction devices and a production system with inline finishing, on one agreement.",
@@ -913,7 +913,7 @@
             {
               "x": 47,
               "y": 21,
-              "scale": 2.5,
+              "scale": 1.6,
               "k": "Water, ice and coffee",
               "title": "The break room",
               "body": "Bottleless water, ice and single-cup or high-volume coffee, serviced on the same visit as the copier.",
@@ -923,7 +923,7 @@
             {
               "x": 82,
               "y": 14,
-              "scale": 2.5,
+              "scale": 1.6,
               "k": "Managed IT",
               "title": "The server room",
               "body": "Monitoring, backup, security and Microsoft 365 for a fixed monthly invoice.",
@@ -933,7 +933,7 @@
             {
               "x": 73,
               "y": 58,
-              "scale": 2.5,
+              "scale": 1.6,
               "k": "Mailing",
               "title": "The mailroom",
               "body": "FP postage meters, folder inserters and mailroom printers that cost less per piece than the office copier.",
@@ -943,7 +943,7 @@
             {
               "x": 88,
               "y": 66,
-              "scale": 2.5,
+              "scale": 1.6,
               "k": "Parcel lockers",
               "title": "The package wall",
               "body": "Secure, contactless pickup for offices, campuses and properties.",
@@ -953,7 +953,7 @@
             {
               "x": 16,
               "y": 58,
-              "scale": 2.5,
+              "scale": 1.6,
               "k": "Desktop printers",
               "title": "The desks",
               "body": "Single-function printers, right-sized to how many the office needs and folded into managed print.",
@@ -963,7 +963,7 @@
             {
               "x": 64,
               "y": 71,
-              "scale": 2.5,
+              "scale": 1.6,
               "k": "Document management",
               "title": "Scan to DocuWare",
               "body": "Every MFP scans straight into indexed workflows: accounts payable, HR, contracts.",
