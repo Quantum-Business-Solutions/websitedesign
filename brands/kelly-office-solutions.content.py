@@ -514,6 +514,11 @@ def service_page(slug, title, navlabel, image, eyebrow, heading, subhead, benefi
     if slug in SERVICE_FILM:
         _f = SERVICE_FILM[slug]
         secs[0].update(poster=f"assets/film-{_f}-poster.jpg", video=f"assets/film-{_f}.mp4", video_webm=f"assets/film-{_f}.webm", alt_text=FILMS[_f])
+    if slug == "mailing":
+        for _k in ("video", "video_webm", "photo"):
+            secs[0].pop(_k, None)
+        secs[0].update(eyebrow="Mailing solutions", heading="Signed, sealed, <em>delivered.</em>", alt_text="An FP PostBase Vision postage meter",
+                       cutout={"still": "assets/fp-vision-semi.png", "w": 981, "h": 488})
     _extra = {"managed-print": [FLEETBA, PULSEFLOW], "copiers": [PULSEFLOW], "pure-technology": [MUGS], "it-services": [ITDIRECTOR]}.get(slug, [])
     secs[1:1] = [TICKER] + [dict(x) for x in _extra]
     secs += [
@@ -704,7 +709,13 @@ def product_page(slug, group, title, image, one, body, benefits, bullets, faq, b
         hero.pop("model", None); hero["photo"] = False
         hero["cutout"] = {"webm": "assets/coffee-pour-v2.webm", "still": "assets/coffee-pour-still-v2.png", "w": 870, "h": 716, "steam_x": 12, "steam_y": 16}
         hero["subhead"] = "Fresh coffee, brewers and a stocked break room from the people who already keep your copiers and network running. One delivery, one invoice, one number to call."
+    if slug == "postage-meters":
+        hero.pop("model", None); hero["photo"] = False; hero["eyebrow"] = "FP Mailing Solutions"
+        hero["heading"] = "Signed, sealed, <em>delivered.</em>"
+        hero["cutout"] = {"still": "assets/fp-vision-semi.png", "w": 981, "h": 488}
     if slug == "ice-machines":
+        hero.pop("model", None); hero["photo"] = False; hero["alt_text"] = "A Manitowoc Indigo NXT ice machine with storage bin"
+        hero["cutout"] = {"still": "assets/mw-indigo-bin.png", "w": 392, "h": 598, "tumble": ["assets/ice-cube-1.png", "assets/ice-cube-2.png", "assets/ice-cube-3.png"]}
         hero["subhead"] = "Kelly freezes out the competition when it comes to bringing the best ice and water for your team."
     if slug == "managed-it":
         hero["facts"] = [["Fixed", "Monthly invoice, no surprises"], ["On site", "And remote, one team"], ["94.4", "Net Promoter Score, audited"]]
@@ -795,7 +806,7 @@ FLEET = {"type": "fleet", "id": "fleet", "heading": "The fleet, at a glance", "i
         {"title": "Desktop printers", "band": "Desk and small team", "brands": "Brother, Epson, Ricoh", "image": "assets/fleet/printer.png", "bullets": ["Color and mono", "Joins a managed print agreement"], "href": "products/printers.html"},
         {"title": "Wide format", "band": "Plans, posters, signage", "brands": "Epson, Ricoh", "image": "assets/fleet/wide-format.png", "bullets": ["Stop outsourcing plan sets", "Technical and graphics media"], "href": "products/wide-format-printers.html"},
         {"title": "Production print", "band": "High volume, inline finishing", "brands": "Ricoh, Savin", "image": "assets/fleet/production.png", "bullets": ["Booklets, stapling, folding", "Color consistency all day"], "href": "products/production-printers.html"},
-        {"title": "Postage meters", "band": "Mailroom", "brands": "FP Mailing Solutions", "image": "assets/fleet/postage.png", "bullets": ["Commercial postage rates", "Fully IMI compliant"], "href": "products/postage-meters.html"},
+        {"title": "Postage meters", "band": "Mailroom", "brands": "FP Mailing Solutions", "image": "assets/fp-vision-semi.png", "bullets": ["Commercial postage rates", "Fully IMI compliant"], "href": "products/postage-meters.html"},
         {"title": "Water and coffee", "band": "Breakroom", "brands": "Wellsys, FloWater, Newco, Bunn", "image": "assets/fleet/breakroom.png", "bullets": ["Bottleless, filtered", "Serviced with your copier"], "href": "products/water-coolers.html"}]}
 
 SEAL = {"type": "seal", "id": "seal", "eyebrow": "What every Kelly customer gets", "heading": "Not a slogan. A list you can check.",

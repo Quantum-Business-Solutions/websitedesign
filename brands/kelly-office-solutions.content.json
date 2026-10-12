@@ -1095,7 +1095,7 @@
               "title": "Postage meters",
               "band": "Mailroom",
               "brands": "FP Mailing Solutions",
-              "image": "assets/fleet/postage.png",
+              "image": "assets/fp-vision-semi.png",
               "bullets": [
                 "Commercial postage rates",
                 "Fully IMI compliant"
@@ -3840,7 +3840,7 @@
           "type": "product3d",
           "id": "hero",
           "eyebrow": "Mailing solutions",
-          "heading": "The mailroom nobody thinks about, <em>until it stops</em>.",
+          "heading": "Signed, sealed, <em>delivered.</em>",
           "subhead": "Postage meters, folder-inserters, mailroom printers, parcel lockers and parcel shipping, with software that keeps records straight and postage discounted.",
           "primary": {
             "label": "Request an assessment",
@@ -3885,11 +3885,13 @@
             ]
           ],
           "poster": "assets/film-mail-poster.jpg",
-          "photo": true,
-          "alt_text": "A mailroom printer feeding envelopes",
+          "alt_text": "An FP PostBase Vision postage meter",
           "orbit": "30deg 74deg 105%",
-          "video": "assets/film-mail.mp4",
-          "video_webm": "assets/film-mail.webm"
+          "cutout": {
+            "still": "assets/fp-vision-semi.png",
+            "w": 981,
+            "h": 488
+          }
         },
         {
           "type": "ticker",
@@ -4405,7 +4407,7 @@
               "title": "Postage meters",
               "band": "Mailroom",
               "brands": "FP Mailing Solutions",
-              "image": "assets/fleet/postage.png",
+              "image": "assets/fp-vision-semi.png",
               "bullets": [
                 "Commercial postage rates",
                 "Fully IMI compliant"
@@ -4820,7 +4822,7 @@
               "title": "Postage meters",
               "band": "Mailroom",
               "brands": "FP Mailing Solutions",
-              "image": "assets/fleet/postage.png",
+              "image": "assets/fp-vision-semi.png",
               "bullets": [
                 "Commercial postage rates",
                 "Fully IMI compliant"
@@ -5185,7 +5187,7 @@
               "title": "Postage meters",
               "band": "Mailroom",
               "brands": "FP Mailing Solutions",
-              "image": "assets/fleet/postage.png",
+              "image": "assets/fp-vision-semi.png",
               "bullets": [
                 "Commercial postage rates",
                 "Fully IMI compliant"
@@ -5628,7 +5630,7 @@
               "title": "Postage meters",
               "band": "Mailroom",
               "brands": "FP Mailing Solutions",
-              "image": "assets/fleet/postage.png",
+              "image": "assets/fp-vision-semi.png",
               "bullets": [
                 "Commercial postage rates",
                 "Fully IMI compliant"
@@ -6014,7 +6016,7 @@
               "title": "Postage meters",
               "band": "Mailroom",
               "brands": "FP Mailing Solutions",
-              "image": "assets/fleet/postage.png",
+              "image": "assets/fp-vision-semi.png",
               "bullets": [
                 "Commercial postage rates",
                 "Fully IMI compliant"
@@ -6375,7 +6377,7 @@
               "title": "Postage meters",
               "band": "Mailroom",
               "brands": "FP Mailing Solutions",
-              "image": "assets/fleet/postage.png",
+              "image": "assets/fp-vision-semi.png",
               "bullets": [
                 "Commercial postage rates",
                 "Fully IMI compliant"
@@ -6537,8 +6539,8 @@
         {
           "type": "product3d",
           "id": "hero",
-          "eyebrow": "Mail and shipping",
-          "heading": "Exact postage, <em>at commercial rates</em>.",
+          "eyebrow": "FP Mailing Solutions",
+          "heading": "Signed, sealed, <em>delivered.</em>",
           "subhead": "Weigh, rate and print exact postage, at commercial rates, from your own mailroom.",
           "primary": {
             "label": "Request a quote",
@@ -6587,7 +6589,11 @@
           "alt": "A 3D model of postage meters you can turn",
           "alt_text": "Postage meters from Kelly Office Solutions",
           "orbit": "30deg 74deg 105%",
-          "model": "assets/models/postage.glb"
+          "cutout": {
+            "still": "assets/fp-vision-semi.png",
+            "w": 981,
+            "h": 488
+          }
         },
         {
           "type": "ticker",
@@ -8232,9 +8238,18 @@
           "poster": "assets/fleet/breakroom.png",
           "photo": false,
           "alt": "A 3D model of ice machines you can turn",
-          "alt_text": "Ice machines from Kelly Office Solutions",
+          "alt_text": "A Manitowoc Indigo NXT ice machine with storage bin",
           "orbit": "30deg 74deg 105%",
-          "model": "assets/models/breakroom.glb"
+          "cutout": {
+            "still": "assets/mw-indigo-bin.png",
+            "w": 392,
+            "h": 598,
+            "tumble": [
+              "assets/ice-cube-1.png",
+              "assets/ice-cube-2.png",
+              "assets/ice-cube-3.png"
+            ]
+          }
         },
         {
           "type": "ticker",

@@ -122,6 +122,12 @@ CSS3 = r'''
 @keyframes pv-steam{0%{transform:translateY(25%) scaleX(.7);opacity:0}25%{opacity:.7}100%{transform:translateY(-70%) translateX(var(--dx)) scaleX(1.5);opacity:0}}
 @media(max-width:820px){.pv-hascut{align-items:flex-start;min-height:780px}.pv-cut{top:auto;bottom:6px;right:50%;width:min(88vw,440px);transform:translate(50%,40%) rotate(10deg)}@keyframes pv-cut-in{0%{transform:translate(50%,60%) rotate(10deg);opacity:0}25%{opacity:1}100%{transform:translate(50%,0) rotate(0);opacity:1}}}
 @media(prefers-reduced-motion:reduce){.pv-cut{opacity:1;transform:translate(0,-50%);animation:none!important}.pv-hascut.in .pv-cut{animation:none}.pv-cut video{display:none}.pv-cut img.still{display:block}.pv-cut .steam{opacity:1}.pv-cut .steam i{animation:none;opacity:.35}}
+.pv-cut img.still.static{display:block;object-fit:contain;filter:drop-shadow(0 40px 50px rgba(0,0,0,.55));animation:pv-float 8s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){.pv-cut img.still.static{animation:none}}
+.pv-ice{position:absolute;inset:0;z-index:5;pointer-events:none;perspective:900px;overflow:hidden}
+@media(prefers-reduced-motion:reduce){.pv-ice{display:none}}
+.pv-cut.tall{width:auto;height:min(84%,600px);right:max(8vw,0px)}
+@media(max-width:820px){.pv-cut.tall{height:58%;width:auto}}
 .pv-p3d-hint{position:absolute;right:4px;bottom:0;z-index:3;font-size:13px;color:rgba(255,255,255,.8);letter-spacing:.08em;text-transform:uppercase}
 
 /* countband */
@@ -361,16 +367,20 @@ def _product3d(s, ctx):
     cut = s.get("cutout")
     if cut:
         steam = "".join(f'<i style="--x:{x};--d:{d}s;--dx:{dx}px"></i>' for x, d, dx in ((8, 0, -14), (34, 1.1, 10), (58, 2.2, -8)))
-        cutter = (f'<div class="pv-cut" aria-hidden="true" style="--cw:{cut.get("w", 720)};--ch:{cut.get("h", 592)}"><video muted playsinline preload="auto" width="{cut.get("w", 720)}" height="{cut.get("h", 592)}">'
-                  f'<source src="{E(rel(cut["webm"]))}" type="video/webm"></video><img class="still" alt="" src="{E(rel(cut["still"]))}" width="{cut.get("w", 720)}" height="{cut.get("h", 592)}">'
+        cutter = (f'<div class="pv-cut{" tall" if cut.get("h", 592) > cut.get("w", 720) * 1.1 else ""}" aria-hidden="true" style="--cw:{cut.get("w", 720)};--ch:{cut.get("h", 592)}">{("<video muted playsinline preload=auto width=" + str(cut.get("w", 720)) + " height=" + str(cut.get("h", 592)) + "><source src=" + chr(34) + E(rel(cut["webm"])) + chr(34) + " type=video/webm></video>") if cut.get("webm") else ""}'
+                  f'<img class="still{" static" if not cut.get("webm") else ""}" alt="" src="{E(rel(cut["still"]))}" width="{cut.get("w", 720)}" height="{cut.get("h", 592)}">'
                   f'<div class="steam" style="left:{cut.get("steam_x", 12)}%;top:{cut.get("steam_y", 20)}%">{steam}</div></div>')
         sid = f' id="{E(s["id"])}"' if s.get("id") else ""
+        if cut.get("tumble"):
+            import json as _j
+            cutter += '<div class="pv-ice" aria-hidden="true" data-ice=' + chr(39) + _j.dumps([rel(x) for x in cut["tumble"]]) + chr(39) + '></div>'
         return (f'<section class="q-section pv-dark pv-p3d pv-hascut"{sid}><div class="pv-grid-bg" aria-hidden="true"></div><div class="pv-orb a" aria-hidden="true"></div><div class="pv-orb b" aria-hidden="true"></div>'
                 f'<div class="q-container pv-p3d-grid"><div><div class="q-eyebrow">{E(s.get("eyebrow", ""))}</div>'
                 f'<h1 class="q-h1">{RAW(s["heading"])}</h1><p class="q-lead">{E(s.get("subhead", ""))}</p>'
                 f'<div class="pv-p3d-btns">{btns}</div>{f"<ul class=pv-p3d-facts>{facts}</ul>" if facts else ""}</div></div>{cutter}'
-                '<script>(function(){var h=document.querySelector(".pv-hascut");if(!h)return;var v=h.querySelector(".pv-cut video"),rm=matchMedia("(prefers-reduced-motion: reduce)").matches;if(rm||!v)return;'
-                'var go=function(){h.classList.add("in");var p=v.play();if(p&&p.catch)p.catch(function(){})};v.addEventListener("ended",function(){try{v.currentTime=Math.max(0,v.duration-.05)}catch(e){}});'
+                '<script>(function(){var h=document.querySelector(".pv-hascut");if(!h)return;var v=h.querySelector(".pv-cut video"),rm=matchMedia("(prefers-reduced-motion: reduce)").matches;if(rm)return;'
+                'var ice=function(){var c=h.querySelector(".pv-ice");if(!c||!c.animate)return;var src=JSON.parse(c.getAttribute("data-ice")),W=c.clientWidth,H=c.clientHeight,N=W<700?9:15;for(var i=0;i<N;i++){(function(i){var im=new Image();im.src=src[i%src.length];im.alt="";var settle=i<5,sz=settle?60+Math.random()*40:90+Math.random()*90,sx=W*(.62+Math.random()*.2),sy=H*(.32+Math.random()*.14),ex=settle?W*(.55+Math.random()*.4):W*(Math.random()*1.0),ey=settle?H*(.78+Math.random()*.14):H*(.15+Math.random()*.9),rz=(Math.random()-.5)*720,rx=360+Math.random()*360,ry=360+Math.random()*360;im.style.cssText="position:absolute;left:0;top:0;width:"+sz+"px;height:auto;opacity:0;will-change:transform,opacity;filter:drop-shadow(0 20px 24px rgba(0,0,0,.45))";c.appendChild(im);var es=settle?.7+Math.random()*.5:1.6+Math.random()*1.6;var a=im.animate([{transform:"translate("+sx+"px,"+sy+"px) translateZ(-500px) rotateX(0) rotateY(0) rotateZ(0) scale(.2)",opacity:0,offset:0},{opacity:1,offset:.14},{transform:"translate("+ex+"px,"+ey+"px) translateZ("+(settle?0:260)+"px) rotateX("+rx+"deg) rotateY("+ry+"deg) rotateZ("+rz+"deg) scale("+es+")",opacity:settle?1:.0,offset:1}],{duration:1700+Math.random()*900,delay:350+i*110,easing:"cubic-bezier(.2,.7,.25,1)",fill:"forwards"})})(i)}};'
+                'var go=function(){h.classList.add("in");ice();if(v){var p=v.play();if(p&&p.catch)p.catch(function(){})}};if(v)v.addEventListener("ended",function(){try{v.currentTime=Math.max(0,v.duration-.05)}catch(e){}});'
                 'if("IntersectionObserver" in window){new IntersectionObserver(function(es,o){if(es[0].isIntersecting){go();o.disconnect()}},{threshold:.25}).observe(h)}else go()})();</script></section>')
     return (f'<section class="q-section pv-dark pv-p3d"{f" id={chr(34)}{E(s[chr(105)+chr(100)])}{chr(34)}" if s.get("id") else ""}>'
             f'<div class="pv-grid-bg" aria-hidden="true"></div><div class="pv-orb a" aria-hidden="true"></div><div class="pv-orb b" aria-hidden="true"></div>'
