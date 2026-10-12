@@ -506,7 +506,15 @@ def service_page(slug, title, navlabel, image, eyebrow, heading, subhead, benefi
                               ["Technology refresh", "Built in at end of term", "Any time", "When you buy again"],
                               ["Service and supplies", "Managed agreement, or separate", "Usually included", "Managed agreement, or separate"]],
                      "note": "Terms and rates are set in the plan after the assessment. Nothing here is a quote."})
+    secs[0] = {"type": "product3d", "id": "hero", "eyebrow": eyebrow, "heading": heading, "subhead": subhead,
+               "primary": {"label": "Request an assessment", "href": "contact.html"}, "secondary": {"label": "Run my Full Office Overview", "href": "office-overview.html"},
+               "facts": [["7 lines", "Under one agreement"], ["5 offices", "The nearest one dispatches"], ["94.4", "Net Promoter Score, audited"]],
+               "tags": [[b[0], "", x, y] for b, (x, y) in zip(benefits[:3], TAG_SPOTS)], "poster": "assets/fleet-after-1600.jpg" if slug == "managed-print" else image, "photo": True,
+               "alt_text": "A managed print fleet: matched copiers and a status dashboard" if slug == "managed-print" else title, "orbit": "30deg 74deg 105%"}
+    _extra = {"managed-print": [FLEETBA, PULSEFLOW], "copiers": [PULSEFLOW], "pure-technology": [MUGS], "it-services": [ITDIRECTOR]}.get(slug, [])
+    secs[1:1] = [TICKER] + [dict(x) for x in _extra]
     secs += [
+        COUNTBAND, dict(SAVETEASE, id="savings"),
         {"type": "testimonials", "alt": True, "heading": "What customers say", "items": [TESTIMONIALS[(SERVICE_SLUGS.index(slug)) % 4][:3], ([TAX_SEASON] + [t[:3] for t in TESTIMONIALS])[(SERVICE_SLUGS.index(slug) + 2) % 5]]},
         {"type": "faq", "heading": "Questions we get about " + SERVICE_DISPLAY.get(slug, title.lower().split(":")[0]), "items": faq},
         {"type": "leadform", "alt": True, "id": "assessment", "heading": "Start with the assessment", "body": "A specialist from your nearest branch walks your fleet and your workflows, and writes it up.", "submit": "Request my assessment", "note": "A person from the nearest branch replies, not an autoresponder."},
@@ -659,29 +667,58 @@ PRODUCT_HEADINGS = {'printers': 'Printers that <em>earn their desk space</em>.',
 PRODUCT_INDEX = {p[0]: p for p in PRODUCTS}
 
 
+PRODUCT_SHOW = {  # slug: (3D model, poster, orbit). No model: the photograph is shown in a frame instead.
+    "printers": ("assets/models/printer.glb", "assets/fleet/printer.png"),
+    "copiers": ("assets/models/multifunction.glb", "assets/fleet/mfp.png"),
+    "multifunction-printers": ("assets/models/multifunction.glb", "assets/fleet/mfp.png"),
+    "wide-format-printers": ("assets/models/wide-format.glb", "assets/fleet/wide-format.png"),
+    "production-printers": ("assets/models/production.glb", "assets/fleet/production.png"),
+    "postage-meters": ("assets/models/postage.glb", "assets/fleet/postage.png"),
+    "water-coolers": ("assets/models/breakroom.glb", "assets/fleet/breakroom.png"),
+    "ice-machines": ("assets/models/breakroom.glb", "assets/fleet/breakroom.png"),
+    "coffee-brewers": ("assets/models/breakroom.glb", "assets/fleet/breakroom.png"),
+    "managed-it": ("assets/models/network-stack.glb", None),
+}
+TAG_SPOTS = [[2, 24], [64, 9], [58, 76]]
+PRINT_GROUP = ("printers", "copiers", "multifunction-printers", "wide-format-printers", "production-printers")
+IT_GROUP = ("managed-it", "digital-forensics", "docuware", "mailing-software")
+BREAK_GROUP = ("water-coolers", "ice-machines", "coffee-brewers")
+
+
 def product_page(slug, group, title, image, one, body, benefits, bullets, faq, brands):
     siblings = [q for q in PRODUCTS if q[1] == group and q[0] != slug][:3]
-    extra = []
+    short = title.split(":")[0]
+    model, poster = PRODUCT_SHOW.get(slug, (None, None))
+    facts = [[f"{len(brands)} brands" if brands else "1 partner", ", ".join(brands[:3]) if brands else "Sold, installed and serviced by Kelly"],
+             ["5 offices", "The nearest one dispatches"], ["94.4", "Net Promoter Score, audited"]]
+    tags = [[b[0], "", x, y] for b, (x, y) in zip(benefits[:3], TAG_SPOTS)]
+    hero = {"type": "product3d", "id": "hero", "eyebrow": group, "heading": PRODUCT_HEADINGS[slug], "subhead": one,
+            "primary": {"label": "Request a quote", "href": "#quote"}, "secondary": {"label": "Run my Full Office Overview", "href": "office-overview.html"},
+            "facts": facts, "tags": tags, "poster": poster or image, "photo": not model, "alt": f"A 3D model of {short.lower()} you can turn",
+            "alt_text": f"{short} from Kelly Office Solutions", "orbit": "30deg 74deg 105%",
+            **({"model": model} if model else {})}
+    secs = [hero, TICKER,
+            {"type": "detail", "alt": True, "eyebrow": "What to know", "heading": f"About {title.lower() if not title.startswith(('DocuWare', 'FP')) else title}", "body": body, "bullets": bullets, "image": image, "flip": True},
+            {"type": "cards", "eyebrow": "Why it matters", "heading": f"What {short.lower() if not title.startswith('DocuWare') else 'DocuWare'} changes", "items": benefits}]
     if slug == "multifunction-printers":
-        extra.append(dict(STORY3D, id="device", alt=True, cta=None))
-    if slug in ("copiers", "printers", "production-printers", "wide-format-printers"):
-        extra.append(dict(FLEET, alt=True, heading="The rest of the fleet"))
-    secs = [
-        {"type": "hero", "layout": "split", "eyebrow": group, "heading": PRODUCT_HEADINGS[slug], "subhead": one,
-         "primary": {"label": "Request a quote", "href": "contact.html"}, "secondary": {"label": "Talk with your branch", "href": "locations.html"},
-         "image": image, "image_alt": title, "image_w": 1200, "image_h": 800},
-        {"type": "detail", "eyebrow": "What to know", "heading": f"About {title.lower() if not title.startswith(('DocuWare', 'FP')) else title}", "body": body, "bullets": bullets, "image": image, "flip": True},
-        {"type": "cards", "alt": True, "eyebrow": "Why it matters", "heading": f"What {title.split(':')[0].lower() if not title.startswith('DocuWare') else 'DocuWare'} changes", "items": benefits},
-    ]
-    secs[2:2] = extra
+        secs.append(dict(STORY3D, id="device", alt=True, cta=None))
+    if slug in PRINT_GROUP:
+        secs.append(PULSEFLOW)
+        secs.append(dict(FLEET, alt=True, heading="The rest of the fleet"))
+    if slug in BREAK_GROUP:
+        secs.append(MUGS)
+    secs.append(COUNTBAND)
+    if slug in IT_GROUP:
+        secs.append(ITDIRECTOR)
+    secs.append(dict(SAVETEASE, id="savings"))
     if brands:
         secs.append({"type": "partners", "caption": "Brands Kelly carries for this", "items": brands})
-    secs.append({"type": "faq", "eyebrow": "Questions", "heading": "Asked on most first calls", "items": faq})
+    secs.append({"type": "faq", "alt": True, "eyebrow": "Questions", "heading": "Asked on most first calls", "items": faq})
     if siblings:
-        secs.append({"type": "resources", "alt": True, "heading": f"More in {group.lower()}", "intro": "Every product Kelly sells is serviced by Kelly.", "items": [[q[1], q[2], brief(q[4], 110), "See the product", f"products/{q[0]}.html"] for q in siblings]})
-    secs.append({"type": "leadform", "id": "quote", "heading": f"Get a quote on {title.split(':')[0].lower() if not title.startswith('DocuWare') else 'DocuWare'}", "body": "Tell us the volume and the office. A specialist from the nearest branch replies with options and prices.", "submit": "Request a quote", "note": "No obligation. We answer the phone too: " + PHONE + "."})
-    return {"file": f"products/{slug}.html", "title": f"{title.split(':')[0]} | Kelly Office Solutions, North Carolina", "description": brief(one + " " + body, 155),
-            "crumbs": [["Home", "index.html"], ["Products", "products.html"], [title.split(':')[0], f"products/{slug}.html"]], "sections": secs}
+        secs.append({"type": "resources", "heading": f"More in {group.lower()}", "intro": "Every product Kelly sells is serviced by Kelly.", "items": [[q[1], q[2], brief(q[4], 110), "See the product", f"products/{q[0]}.html"] for q in siblings]})
+    secs.append({"type": "leadform", "alt": True, "id": "quote", "heading": f"Get a quote on {short.lower() if not title.startswith('DocuWare') else 'DocuWare'}", "body": "Tell us the volume and the office. A specialist from the nearest branch replies with options and prices.", "submit": "Request a quote", "note": "No obligation. We answer the phone too: " + PHONE + "."})
+    return {"file": f"products/{slug}.html", "title": f"{short} | Kelly Office Solutions, North Carolina", "description": brief(one + " " + body, 155),
+            "crumbs": [["Home", "index.html"], ["Products", "products.html"], [short, f"products/{slug}.html"]], "sections": secs}
 
 
 def products_index():
@@ -773,16 +810,66 @@ STORY3D = {"type": "story3d", "id": "device", "alt": False, "eyebrow": "Take a c
         {"k": "The service side", "title": "Monitored, so the fault is seen first", "orbit": "200deg 76deg 108%", "body": "Every device on agreement is monitored. A failing part or a jam pattern is often on a Kelly technician's list before anyone in the office calls, and the call goes to the nearest of five offices.", "points": ["Monitoring on every device", "Priority service under agreement", "Dispatched from the nearest office"]}],
     **({"model": MFP_MODEL} if MFP_MODEL else {})}
 
+
+# ---------------------------------------------------------------------------- showpiece blocks (preview_showpiece.py)
+TICKER = {"type": "ticker", "id": "ticker", "label": "What every Kelly agreement includes", "items": [
+    "Serviced by the people who sold it", "Meter reads taken automatically", "Supplies shipped on usage, before you run out",
+    "One agreement, one invoice, one number", "Five North Carolina offices", "1-800-34-KELLY reaches all five",
+    "Priority dispatch under agreement", "Family-owned since 1947", "Net Promoter Score 94.4, audited"]}
+
+COUNTBAND = {"type": "countband", "id": "numbers", "eyebrow": "Measured, not claimed", "items": [
+    ["4000", "Customers across North Carolina, approximately", "+"], ["5", "Offices, one number to call"], ["94.4", "Net Promoter Score, audited by CEO Juice"], ["79", "Years family-owned, since 1947"]]}
+
+PULSEFLOW = {"type": "pulseflow", "id": "monitor", "eyebrow": "Under agreement", "heading": "It reports in before anyone has to call",
+    "intro": "Every device on a Kelly agreement is watched. The fault, the low toner and the meter read reach Kelly first, and the fix is already moving.",
+    "nodes": [["device", "The device", "Reports its own levels and faults."], ["meter", "The meter", "Read automatically, never chased."],
+              ["dash", "Kelly sees it", "A technician has it on the list first."], ["truck", "Kelly acts", "Supplies ship. A technician rolls."], ["smile", "You carry on", "Nobody in the office made a call."]],
+    "feed": [[0, "<b>Device 14</b> toner at 18 percent, reorder threshold reached"], [1, "Meter read captured for 22 devices, no staff time"],
+             [2, "Jam pattern flagged on a feeder, technician notified"], [3, "<span class=\"ok\">Toner shipped</span> to the branch, arrives before it runs out"],
+             [4, "<span class=\"ok\">Resolved</span> before a ticket was opened"], [0, "<b>Device 3</b> firmware current, security patched"], [1, "Month-end meter report ready for review"]],
+    "note": "Illustrative example feed. A real feed shows your devices, your meters and your supply orders."}
+
+ITDIRECTOR = {"type": "itdirector", "id": "ita", "eyebrow": "Meanwhile, in the server room", "heading": "From 2 a.m. alerts to one number to call",
+    "intro": "Drag the slider. Same office, same IT director. The difference is who is watching the systems, the copiers and the invoices.",
+    "before": "assets/it-before-1600.jpg", "after": "assets/it-after-1600.jpg", "logo": "assets/kelly-logo.png",
+    "before_label": "Seven vendors", "after_label": "One partner",
+    "before_title": "Today, in most offices", "before_body": "A copier company, an IT firm that blames the copier company, a postage meter on its own contract. Four numbers to call and nobody who knows your name.",
+    "after_title": "With Kelly", "after_body": "Monitoring, backup and security from the KellyWay team, serviced on the same visit as the copier, on one agreement and one invoice. One number: 1-800-34-KELLY."}
+
+MUGS = {"type": "photoband", "id": "mugs", "alt": True, "eyebrow": "Pure Technology", "heading": "The break room people actually like",
+    "intro": "Water, ice and coffee, serviced on the same visit as the copier. One fewer delivery company, one fewer invoice.",
+    "image": "assets/break-mugs-1600.jpg", "alt_text": "", "alt": True,
+    "points": ["Bottleless, filtered water without the jugs", "Ice and coffee restocked on the same visit as the copier", "Single-cup or high-volume brewers, matched to the office", "One agreement and one number for the whole break room"],
+    "cta": {"label": "See Pure Technology", "href": "services/pure-technology.html"},
+    "steam": [[35, 38], [58, 54], [28, 64], [70, 64]]}
+MUGS["alt"] = True
+MUGS["alt_text"] = "Four coworkers laughing in an office break room, each holding a Kelly Office Solutions coffee mug"
+
+FLEETBA = {"type": "itdirector", "id": "fleetba", "eyebrow": "Your print fleet", "heading": "The fleet you have, and the fleet you should have",
+    "intro": "Drag the slider. Same room, same people. On the left, a fleet that grew one purchase at a time. On the right, the same space under a Kelly managed print agreement.",
+    "before": "assets/fleet-before-1600.jpg", "after": "assets/fleet-after-1600.jpg", "bubble": False,
+    "before_label": "Unmanaged", "after_label": "Managed by Kelly", "before_btn": "Unmanaged fleet", "after_btn": "Managed fleet",
+    "before_alt": "A cluttered print room with six mismatched copiers, a jammed machine, tangled cables, piles of toner boxes and a frustrated worker",
+    "after_alt": "The same room with three matched multifunction copiers in a row, a clear floor, a green status dashboard on the wall and a relaxed worker holding a coffee",
+    "before_chips": ["Six brands, nobody owns it", "Toner bought at retail", "Repairs found by the jam", "Cables and clutter"],
+    "after_chips": ["One matched, monitored fleet", "Toner ships on usage", "Reports every six months", "One agreement, one invoice"],
+    "before_title": "Expensive, and nobody can see why", "before_body": "Devices bought one at a time from whoever was cheapest that month. Toner ordered in a hurry at retail prices. Nobody knows what a page costs until the repair bill arrives.",
+    "after_title": "Efficient, and every number visible", "after_body": "A right-sized fleet the data recommends, watched by Kelly, supplied before it runs out, with a plain-English report showing what each device actually carried. Kelly's managed print page puts the saving at up to 30 percent.",
+    "note": "Generated images for the preview; your own fleet and technicians replace them once photography exists."}
+
+SAVETEASE = {"type": "savingstease", "id": "savings", "eyebrow": "Full Office Overview", "heading": "What would 10 percent be worth to your office?",
+    "body": "One analysis across print, documents, production, IT, mailing and the break room. We set out to find at least 10 percent, and we tell you plainly if we cannot.",
+    "href": "office-overview.html", "cta": "Run my Full Office Overview", "rate": 0.12}
+
 HERO_LAYERED = {"type": "hero-layered", "id": "hero", "eyebrow": "Moving business forward since 1947",
     "heading": "Fully connected office systems, serviced by people who <em>answer the phone</em>.",
     "subhead": "Copiers and print, document management, IT, mailing, and the water and coffee that keep an office running. One North Carolina partner, five offices, one number to call.",
-    "primary": {"label": "Request an assessment", "href": "contact.html"}, "secondary": {"label": "Estimate your print spend", "href": "cost-calculator.html"},
-    "image": "assets/hero-plate-2100.jpg", "image_w": 2100, "image_h": 891,
-    **({"model": MFP_MODEL, "poster": "assets/fleet/mfp.png", "model_alt": "A Sharp-style multifunction copier, rotating. Drag to turn it."} if MFP_MODEL else {}),
+    "primary": {"label": "Request an assessment", "href": "contact.html"}, "secondary": {"label": "Run my Full Office Overview", "href": "office-overview.html"},
+    "image": "assets/hero-loop-poster.jpg", "image_w": 1600, "image_h": 900, "video": "assets/kelly-hero-loop.mp4", "video_webm": "assets/kelly-hero-loop.webm",
     "stats": [["1947", "Family-owned since"], ["94.4", "Net Promoter Score, audited"], ["4,000", "Customers, approximately"], ["5", "North Carolina offices"]],
     "card_a": {"eyebrow": "Start here", "title": "The free assessment", "body": "One visit. One report, yours to keep whether or not you buy.", "items": ["Every device counted and metered", "Cost per page, mono and color", "Lease, rental and purchase side by side"], "href": "assessment.html", "label": "How it works"},
     "card_b": {"eyebrow": "Already a customer?", "title": "The fast lane", "body": "Under a minute each. A person replies.", "links": [["Request service", "service-support.html#request"], ["Meter reads", "service-support.html#meters"], ["Order supplies", "service-support.html#supplies"], ["Customer portal", PORTAL]]},
-    "note": "Preview photography and the 3D device are generated and labelled as such; Kelly's own imagery and Sharp product models replace them."}
+    "note": "Preview photography and video are generated and labelled as such; Kelly's own footage replaces them."}
 
 
 def build():
@@ -824,7 +911,7 @@ def build():
          "featured": {"eyebrow": "Not sure what you need?", "title": "Start with a free assessment", "body": "A specialist counts what you have and prices what you need. You keep the report either way.", "href": "assessment.html", "label": "How the assessment works"}},
         {"label": "Services", "href": "what-we-do.html", "children": [[x[2], f"services/{x[0]}.html"] for x in SERVICES] + [["Supplies and service", "service-support.html"]]},
         {"label": "Industries", "href": "industries.html", "children": [[x[1], f"industries/{x[0]}.html"] for x in INDUSTRIES] + [["All key markets", "industries.html"]]},
-        {"label": "Resources", "href": "blog.html", "children": [["Blog", "blog.html"], ["Cost calculator", "cost-calculator.html"], ["The assessment", "assessment.html"], ["Drivers, manuals and training", "service-support.html#drivers"]]},
+        {"label": "Resources", "href": "blog.html", "children": [["Full Office Overview", "office-overview.html"], ["Blog", "blog.html"], ["Cost calculator", "cost-calculator.html"], ["The assessment", "assessment.html"], ["Drivers, manuals and training", "service-support.html#drivers"]]},
         {"label": "About", "href": "about.html", "children": [["About Kelly", "about.html"], ["Locations", "locations.html"], ["Careers", "careers.html"], ["Contact", "contact.html"]]},
     ]
 
@@ -833,7 +920,7 @@ def build():
     pages.append({"file": "index.html", "title": "Kelly Office Solutions | Copiers, managed print, IT and office technology in North Carolina",
                   "compose": {
                       "clean": ["hero-light", "partners", "seal", "wheel", "is-this-you", "flow", "map", "voices", "film", "faq", "contact"],
-                      "showcase": ["hero", "partners", "wheel", "fleet", "ba", "flow", "office", "device", "proof", "map", "voices", "film", "faq", "contact"],
+                      "showcase": ["hero", "ticker", "partners", "wheel", "numbers", "fleet", "ita", "ba", "flow", "office", "savings", "mugs", "device", "proof", "map", "voices", "film", "faq", "contact"],
                       "press": ["hero-light", "story", "services", "seal", "voices", "film", "flow", "map", "faq", "contact"]},
                   "description": "Family-owned since 1947 and headquartered in Winston-Salem. Copiers and managed print, document management, IT, mailing, water and coffee for North Carolina businesses, from five local offices, with Fast local response from the nearest branch.",
                   "sections": [
@@ -848,6 +935,7 @@ def build():
          "badge": {"value": "94.4", "label": "Net Promoter Score, independently audited"}},
         HERO_LAYERED,
         {"type": "wheel", "id": "wheel", "eyebrow": "One partner", "heading": "Everything an office runs on, from one partner", "intro": "Hover a segment. Seven lines, one agreement, one number.", "items": WHEEL_ITEMS, "hub": "Kelly", "hub_sub": "one partner", "ring": "EVERYTHING AN OFFICE RUNS ON"},
+        TICKER, COUNTBAND, ITDIRECTOR, MUGS, SAVETEASE,
         FLOW_ENGAGEMENT, FLEET, SEAL, BEFORE_AFTER, HOTSPOTS,
         {"type": "partners", "id": "partners", "caption": "Technology partners", "items": PARTNERS},
         {"type": "stats", "id": "stats", "alt": True, "items": [["1947", "Family-owned since"], ["94.4", "NPS, audited by CEO Juice (industry average: 70s)"], ["4,000", "Customers, approximately"], ["5", "Locations: Winston-Salem, Greensboro, Charlotte, Raleigh and Swansboro"]]},
@@ -944,6 +1032,21 @@ def build():
                    ["Training", "Savin how-to videos", "Free online training for Savin copiers and printers.", "Watch", "https://howto.ricoh-usa.com/savin/"]]},
     ]})
     # ---------------- cost calculator + assessment
+    pages.append({"file": "office-overview.html", "title": "Full Office Overview and Analysis | Kelly Office Solutions",
+                  "description": "One analysis across copiers and managed print, document management, production print, IT, mailing and the break room. See an estimated saving and a written range. We set out to find at least 10 percent.",
+                  "sections": [
+        {"type": "overview", "id": "overview", "eyebrow": "Full Office Overview and Analysis", "heading": "Your whole office, analyzed. <em>We set out to find 10 percent.</em>",
+         "subhead": "Walk through the six lines your office pays for today. The estimate moves as you do, and the last page gives you a range, not a promise. A Kelly specialist then checks every number on site.",
+         "badges": ["About 3 minutes", "No obligation", "You keep the report", "Estimates, not quotes"],
+         "goal_label": "Set at 10 percent"},
+        {"type": "countband", "eyebrow": "Why it works", "items": [["7", "Service lines under one agreement"], ["1", "Number to call: 1-800-34-KELLY"], ["5", "North Carolina offices"], ["94.4", "Audited Net Promoter Score"]]},
+        {"type": "faq", "alt": True, "heading": "About the Full Office Overview", "items": [
+            ["Is the saving guaranteed?", "No. The page shows planning ranges, a low case and a high case, that Kelly will confirm. The on-site assessment replaces every estimate with your own meters and invoices, and a specialist tells you plainly if the real number is smaller."],
+            ["Why does it say 10 percent?", "That is the mark we set ourselves. Across most offices, taking several lines under one agreement clears it, because each line saves something and each vendor you stop managing saves admin time. If your numbers do not clear it, the result says so."],
+            ["What do I need to have ready?", "Rough numbers only: devices and page counts, what you spend on outside printing, IT, postage and the break room, and roughly how many hours go to paper handling. Guess if you must; you can adjust."],
+            ["Do I have to take every line?", "No. Turn off any line you would not hand to Kelly. The estimate drops the line and the consolidation saving shrinks with it."],
+            ["What happens to my numbers?", "They stay in the page until you send the form. If you send it, a person from your nearest Kelly branch gets the summary and replies, not an autoresponder."]]},
+    ]})
     pages.append({"file": "cost-calculator.html", "title": "Print cost calculator | Kelly Office Solutions", "description": "Estimate what your office spends on printing today: devices, mono and color pages, staff time. Typical North Carolina rates; the assessment replaces them with your meters.",
                   "sections": [
         {"type": "hero", "layout": "centered", "eyebrow": "Cost calculator", "heading": "What does your office <em>really</em> spend on print?", "subhead": "Move three sliders. The estimate uses typical North Carolina rates for toner, service and the staff time nobody counts. The assessment replaces every number here with yours."},

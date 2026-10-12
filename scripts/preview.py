@@ -37,6 +37,7 @@ import themefix  # noqa: E402
 from preview_hub import hub  # noqa: E402
 import preview_sections  # noqa: E402
 import preview_modules  # noqa: E402
+import preview_showpiece  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DASH_HITS: list[str] = []
@@ -677,6 +678,7 @@ RENDER = {"hero": r_hero, "partners": r_partners, "stats": r_stats, "services": 
           "leadform": r_leadform}
 RENDER.update(preview_sections.RENDER_EXTRA)
 RENDER.update(preview_modules.RENDER_EXTRA2)
+RENDER.update(preview_showpiece.RENDER_EXTRA3)
 
 
 # ------------------------------------------------------------------------------ chrome
@@ -1086,6 +1088,7 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
 {PREVIEW_CSS}
 {preview_sections.EXTRA_CSS}
 {preview_modules.EXTRA_CSS2}
+{preview_showpiece.CSS3}
 /* ===== direction system: {E(dslug)} ===== */
 {DIRECTION_CSS.get(dslug, "")}
 /* ===== mobile, after the direction system so it wins ===== */
@@ -1105,6 +1108,7 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
 {switcher(themes, theme, page["file"], recommend)}
 <script>{PREVIEW_JS}</script>
 <script>{preview_modules.DEPTH_JS}</script>
+<script>{preview_showpiece.JS3}</script>
 </body>
 </html>
 '''

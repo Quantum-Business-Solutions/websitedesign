@@ -229,9 +229,12 @@ def _hero_layered(s, ctx):
     """Dark hero: background plate, pointer glow, headline, proof strip, two floating cards with depth."""
     E, RAW, L = ctx["E"], ctx["RAW"], ctx["L"]
     hid = s.get("id", "hero")
+    vid = bool(s.get("video")) and not s.get("model")
+    vhtml = ""
     if s.get("video"):
         poster = f' poster="{E(ctx["rel"](s["image"]))}"' if s.get("image") else ""
-        bg = f'<div class="bg"><video autoplay muted loop playsinline preload="metadata"{poster} aria-hidden="true" width="{s.get("image_w", 2100)}" height="{s.get("image_h", 900)}"><source src="{E(ctx["rel"](s["video"]))}" type="video/mp4"></video></div>'
+        vhtml = f'<video autoplay muted loop playsinline preload="auto"{poster} aria-hidden="true" width="{s.get("image_w", 2100)}" height="{s.get("image_h", 900)}">{f'<source src="{E(ctx["rel"](s["video_webm"]))}" type="video/webm">' if s.get("video_webm") else ""}<source src="{E(ctx["rel"](s["video"]))}" type="video/mp4"></video>'
+        bg = f'<div class="bg"><video autoplay muted loop playsinline preload="metadata"{poster} aria-hidden="true" width="{s.get("image_w", 2100)}" height="{s.get("image_h", 900)}">{f'<source src="{E(ctx["rel"](s["video_webm"]))}" type="video/webm">' if s.get("video_webm") else ""}<source src="{E(ctx["rel"](s["video"]))}" type="video/mp4"></video></div>'
     else:
         bg = f'<div class="bg"><img src="{E(ctx["rel"](s["image"]))}" alt="" width="{s.get("image_w", 2100)}" height="{s.get("image_h", 900)}" fetchpriority="high" decoding="async"></div>' if s.get("image") else '<div class="bg"></div>'
     stats = ""
@@ -255,6 +258,11 @@ def _hero_layered(s, ctx):
                  f'<model-viewer src="{E(ctx["rel"](s["model"]))}" poster="{E(ctx["rel"](s["poster"]))}" alt="{E(s.get("model_alt", "A rotatable multifunction device"))}" camera-controls disable-zoom auto-rotate rotation-per-second="14deg" shadow-intensity="0" exposure="1.1" interaction-prompt="none" camera-orbit="35deg 78deg auto" loading="eager" reveal="auto"></model-viewer>'
                  f'<img class="fallback" src="{E(ctx["rel"](s["poster"]))}" alt="" width="1200" height="1200" decoding="async">'
                  f'<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script></div>')
+    if vid:
+        # the film gets its own frame: customer links move under the copy, no words over the footage
+        bg = '<div class="bg"></div>'
+        lane = (f'<div class="lane"><span class="k">{E(b.get("eyebrow", "Already a customer?"))}</span>{lb}</div>') if b else ""
+        ca = cb = ""
     note = f'<div class="note">{E(s["note"])}</div>' if s.get("note") else ""
     js = f"""<script>(function(){{var h=document.getElementById("{hid}");if(!h)return;var rm=matchMedia('(prefers-reduced-motion: reduce)').matches,fine=matchMedia('(pointer:fine) and (min-width:1025px)').matches;
 if(!rm&&fine){{var g=h.querySelector('.glow');h.addEventListener('pointermove',function(e){{var r=h.getBoundingClientRect();h.style.setProperty('--mx',((e.clientX-r.left)/r.width*100).toFixed(1)+'%');h.style.setProperty('--my',((e.clientY-r.top)/r.height*100).toFixed(1)+'%');
@@ -267,9 +275,10 @@ cx.lineWidth=1;for(i=0;i<P.length;i++){{a=P[i];for(j=i+1;j<P.length;j++){{b=P[j]
 for(i=0;i<P.length;i++){{a=P[i];cx.globalAlpha=.75;cx.fillStyle=col;cx.beginPath();cx.arc(a.x,a.y,a.r,0,6.283);cx.fill()}}cx.globalAlpha=1;raf=requestAnimationFrame(tick)}}
 size();addEventListener('resize',size,{{passive:true}});
 if('IntersectionObserver' in window){{new IntersectionObserver(function(es){{es.forEach(function(e){{if(e.isIntersecting&&!run){{run=true;tick()}}else if(!e.isIntersecting){{run=false;cancelAnimationFrame(raf)}}}})}}).observe(h)}}else{{run=true;tick()}}}}}})();</script>"""
-    return f'''<section class="q-section pv-lh" id="{E(hid)}">{bg}<canvas class="net" aria-hidden="true"></canvas><div class="glow" aria-hidden="true"></div><div class="q-container"><div>{f'<div class="q-eyebrow">{E(s["eyebrow"])}</div>' if s.get("eyebrow") else ""}
+    stack = (f'<div class="vframe pv-depth" data-depth="1">{vhtml}<span class="vtag"><i></i>{E(s.get("video_caption", "Dispatched from the nearest of five offices"))}</span></div>') if vid else f'<div class="stack{" has3d" if three else ""}">{three}{ca}{cb}</div>'
+    return f'''<section class="q-section pv-lh{" vid" if vid else ""}" id="{E(hid)}">{bg}<canvas class="net" aria-hidden="true"></canvas><div class="glow" aria-hidden="true"></div><div class="q-container"><div>{f'<div class="q-eyebrow">{E(s["eyebrow"])}</div>' if s.get("eyebrow") else ""}
 <h1 class="q-h1">{RAW(s["heading"])}</h1><div class="q-lead">{E(s.get("subhead", ""))}</div>{_btns(s, ctx)}{lane}{note}{stats}</div>
-<div class="stack{" has3d" if three else ""}">{three}{ca}{cb}</div></div>{js}</section>'''
+{stack}</div>{js}</section>'''
 
 
 def _wheel(s, ctx):

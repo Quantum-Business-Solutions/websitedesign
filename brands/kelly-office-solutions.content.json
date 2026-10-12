@@ -482,6 +482,10 @@
       "href": "blog.html",
       "children": [
         [
+          "Full Office Overview",
+          "office-overview.html"
+        ],
+        [
           "Blog",
           "blog.html"
         ],
@@ -542,12 +546,17 @@
         ],
         "showcase": [
           "hero",
+          "ticker",
           "partners",
           "wheel",
+          "numbers",
           "fleet",
+          "ita",
           "ba",
           "flow",
           "office",
+          "savings",
+          "mugs",
           "device",
           "proof",
           "map",
@@ -640,15 +649,14 @@
             "href": "contact.html"
           },
           "secondary": {
-            "label": "Estimate your print spend",
-            "href": "cost-calculator.html"
+            "label": "Run my Full Office Overview",
+            "href": "office-overview.html"
           },
-          "image": "assets/hero-plate-2100.jpg",
-          "image_w": 2100,
-          "image_h": 891,
-          "model": "assets/fleet/mfp.glb",
-          "poster": "assets/fleet/mfp.png",
-          "model_alt": "A Sharp-style multifunction copier, rotating. Drag to turn it.",
+          "image": "assets/hero-loop-poster.jpg",
+          "image_w": 1600,
+          "image_h": 900,
+          "video": "assets/kelly-hero-loop.mp4",
+          "video_webm": "assets/kelly-hero-loop.webm",
           "stats": [
             [
               "1947",
@@ -702,7 +710,7 @@
               ]
             ]
           },
-          "note": "Preview photography and the 3D device are generated and labelled as such; Kelly's own imagery and Sharp product models replace them."
+          "note": "Preview photography and video are generated and labelled as such; Kelly's own footage replaces them."
         },
         {
           "type": "wheel",
@@ -757,6 +765,110 @@
           "hub": "Kelly",
           "hub_sub": "one partner",
           "ring": "EVERYTHING AN OFFICE RUNS ON"
+        },
+        {
+          "type": "ticker",
+          "id": "ticker",
+          "label": "What every Kelly agreement includes",
+          "items": [
+            "Serviced by the people who sold it",
+            "Meter reads taken automatically",
+            "Supplies shipped on usage, before you run out",
+            "One agreement, one invoice, one number",
+            "Five North Carolina offices",
+            "1-800-34-KELLY reaches all five",
+            "Priority dispatch under agreement",
+            "Family-owned since 1947",
+            "Net Promoter Score 94.4, audited"
+          ]
+        },
+        {
+          "type": "countband",
+          "id": "numbers",
+          "eyebrow": "Measured, not claimed",
+          "items": [
+            [
+              "4000",
+              "Customers across North Carolina, approximately",
+              "+"
+            ],
+            [
+              "5",
+              "Offices, one number to call"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited by CEO Juice"
+            ],
+            [
+              "79",
+              "Years family-owned, since 1947"
+            ]
+          ]
+        },
+        {
+          "type": "itdirector",
+          "id": "ita",
+          "eyebrow": "Meanwhile, in the server room",
+          "heading": "From 2 a.m. alerts to one number to call",
+          "intro": "Drag the slider. Same office, same IT director. The difference is who is watching the systems, the copiers and the invoices.",
+          "before": "assets/it-before-1600.jpg",
+          "after": "assets/it-after-1600.jpg",
+          "logo": "assets/kelly-logo.png",
+          "before_label": "Seven vendors",
+          "after_label": "One partner",
+          "before_title": "Today, in most offices",
+          "before_body": "A copier company, an IT firm that blames the copier company, a postage meter on its own contract. Four numbers to call and nobody who knows your name.",
+          "after_title": "With Kelly",
+          "after_body": "Monitoring, backup and security from the KellyWay team, serviced on the same visit as the copier, on one agreement and one invoice. One number: 1-800-34-KELLY."
+        },
+        {
+          "type": "photoband",
+          "id": "mugs",
+          "alt": true,
+          "eyebrow": "Pure Technology",
+          "heading": "The break room people actually like",
+          "intro": "Water, ice and coffee, serviced on the same visit as the copier. One fewer delivery company, one fewer invoice.",
+          "image": "assets/break-mugs-1600.jpg",
+          "alt_text": "Four coworkers laughing in an office break room, each holding a Kelly Office Solutions coffee mug",
+          "points": [
+            "Bottleless, filtered water without the jugs",
+            "Ice and coffee restocked on the same visit as the copier",
+            "Single-cup or high-volume brewers, matched to the office",
+            "One agreement and one number for the whole break room"
+          ],
+          "cta": {
+            "label": "See Pure Technology",
+            "href": "services/pure-technology.html"
+          },
+          "steam": [
+            [
+              35,
+              38
+            ],
+            [
+              58,
+              54
+            ],
+            [
+              28,
+              64
+            ],
+            [
+              70,
+              64
+            ]
+          ]
+        },
+        {
+          "type": "savingstease",
+          "id": "savings",
+          "eyebrow": "Full Office Overview",
+          "heading": "What would 10 percent be worth to your office?",
+          "body": "One analysis across print, documents, production, IT, mailing and the break room. We set out to find at least 10 percent, and we tell you plainly if we cannot.",
+          "href": "office-overview.html",
+          "cta": "Run my Full Office Overview",
+          "rate": 0.12
         },
         {
           "type": "flow",
@@ -1901,8 +2013,8 @@
       ],
       "sections": [
         {
-          "type": "hero",
-          "layout": "split",
+          "type": "product3d",
+          "id": "hero",
           "eyebrow": "Office products",
           "heading": "The right copier is the one you <em>stop thinking about</em>.",
           "subhead": "Sharp, Ricoh, Savin, Konica Minolta and Brother printers, copiers, multifunction and wide-format devices, matched to your volume, networked on day one and serviced from the nearest branch.",
@@ -1911,13 +2023,128 @@
             "href": "contact.html"
           },
           "secondary": {
-            "label": "Request service",
-            "href": "service-support.html#request"
+            "label": "Run my Full Office Overview",
+            "href": "office-overview.html"
           },
-          "image": "assets/mps-1-1200.jpg",
-          "image_alt": "Office products and copiers",
-          "image_w": 1200,
-          "image_h": 800
+          "facts": [
+            [
+              "7 lines",
+              "Under one agreement"
+            ],
+            [
+              "5 offices",
+              "The nearest one dispatches"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited"
+            ]
+          ],
+          "tags": [
+            [
+              "Printers",
+              "",
+              2,
+              24
+            ],
+            [
+              "Copiers and multifunction",
+              "",
+              64,
+              9
+            ],
+            [
+              "Wide format",
+              "",
+              58,
+              76
+            ]
+          ],
+          "poster": "assets/mps-1-1200.jpg",
+          "photo": true,
+          "alt_text": "Office products and copiers",
+          "orbit": "30deg 74deg 105%"
+        },
+        {
+          "type": "ticker",
+          "id": "ticker",
+          "label": "What every Kelly agreement includes",
+          "items": [
+            "Serviced by the people who sold it",
+            "Meter reads taken automatically",
+            "Supplies shipped on usage, before you run out",
+            "One agreement, one invoice, one number",
+            "Five North Carolina offices",
+            "1-800-34-KELLY reaches all five",
+            "Priority dispatch under agreement",
+            "Family-owned since 1947",
+            "Net Promoter Score 94.4, audited"
+          ]
+        },
+        {
+          "type": "pulseflow",
+          "id": "monitor",
+          "eyebrow": "Under agreement",
+          "heading": "It reports in before anyone has to call",
+          "intro": "Every device on a Kelly agreement is watched. The fault, the low toner and the meter read reach Kelly first, and the fix is already moving.",
+          "nodes": [
+            [
+              "device",
+              "The device",
+              "Reports its own levels and faults."
+            ],
+            [
+              "meter",
+              "The meter",
+              "Read automatically, never chased."
+            ],
+            [
+              "dash",
+              "Kelly sees it",
+              "A technician has it on the list first."
+            ],
+            [
+              "truck",
+              "Kelly acts",
+              "Supplies ship. A technician rolls."
+            ],
+            [
+              "smile",
+              "You carry on",
+              "Nobody in the office made a call."
+            ]
+          ],
+          "feed": [
+            [
+              0,
+              "<b>Device 14</b> toner at 18 percent, reorder threshold reached"
+            ],
+            [
+              1,
+              "Meter read captured for 22 devices, no staff time"
+            ],
+            [
+              2,
+              "Jam pattern flagged on a feeder, technician notified"
+            ],
+            [
+              3,
+              "<span class=\"ok\">Toner shipped</span> to the branch, arrives before it runs out"
+            ],
+            [
+              4,
+              "<span class=\"ok\">Resolved</span> before a ticket was opened"
+            ],
+            [
+              0,
+              "<b>Device 3</b> firmware current, security patched"
+            ],
+            [
+              1,
+              "Month-end meter report ready for review"
+            ]
+          ],
+          "note": "Illustrative example feed. A real feed shows your devices, your meters and your supply orders."
         },
         {
           "type": "cards",
@@ -2059,6 +2286,40 @@
           "flip": true
         },
         {
+          "type": "countband",
+          "id": "numbers",
+          "eyebrow": "Measured, not claimed",
+          "items": [
+            [
+              "4000",
+              "Customers across North Carolina, approximately",
+              "+"
+            ],
+            [
+              "5",
+              "Offices, one number to call"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited by CEO Juice"
+            ],
+            [
+              "79",
+              "Years family-owned, since 1947"
+            ]
+          ]
+        },
+        {
+          "type": "savingstease",
+          "id": "savings",
+          "eyebrow": "Full Office Overview",
+          "heading": "What would 10 percent be worth to your office?",
+          "body": "One analysis across print, documents, production, IT, mailing and the break room. We set out to find at least 10 percent, and we tell you plainly if we cannot.",
+          "href": "office-overview.html",
+          "cta": "Run my Full Office Overview",
+          "rate": 0.12
+        },
+        {
           "type": "testimonials",
           "alt": true,
           "heading": "What customers say",
@@ -2120,8 +2381,8 @@
       ],
       "sections": [
         {
-          "type": "hero",
-          "layout": "split",
+          "type": "product3d",
+          "id": "hero",
           "eyebrow": "Managed print",
           "heading": "Stop counting toner. <em>Start seeing the number.</em>",
           "subhead": "Printing is an overlooked and undermanaged business function, and many organizations spend up to 30% more than they should on it. Managed print puts the fleet under one agreement: assessment, monitoring and reporting, supplies that arrive before they run out, and one invoice.",
@@ -2130,13 +2391,161 @@
             "href": "contact.html"
           },
           "secondary": {
-            "label": "Request service",
-            "href": "service-support.html#request"
+            "label": "Run my Full Office Overview",
+            "href": "office-overview.html"
           },
-          "image": "assets/dispatch-1200.jpg",
-          "image_alt": "Managed print services",
-          "image_w": 1200,
-          "image_h": 800
+          "facts": [
+            [
+              "7 lines",
+              "Under one agreement"
+            ],
+            [
+              "5 offices",
+              "The nearest one dispatches"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited"
+            ]
+          ],
+          "tags": [
+            [
+              "Reduced costs",
+              "",
+              2,
+              24
+            ],
+            [
+              "Automated toner replenishment",
+              "",
+              64,
+              9
+            ],
+            [
+              "Enhanced security",
+              "",
+              58,
+              76
+            ]
+          ],
+          "poster": "assets/fleet-after-1600.jpg",
+          "photo": true,
+          "alt_text": "A managed print fleet: matched copiers and a status dashboard",
+          "orbit": "30deg 74deg 105%"
+        },
+        {
+          "type": "ticker",
+          "id": "ticker",
+          "label": "What every Kelly agreement includes",
+          "items": [
+            "Serviced by the people who sold it",
+            "Meter reads taken automatically",
+            "Supplies shipped on usage, before you run out",
+            "One agreement, one invoice, one number",
+            "Five North Carolina offices",
+            "1-800-34-KELLY reaches all five",
+            "Priority dispatch under agreement",
+            "Family-owned since 1947",
+            "Net Promoter Score 94.4, audited"
+          ]
+        },
+        {
+          "type": "itdirector",
+          "id": "fleetba",
+          "eyebrow": "Your print fleet",
+          "heading": "The fleet you have, and the fleet you should have",
+          "intro": "Drag the slider. Same room, same people. On the left, a fleet that grew one purchase at a time. On the right, the same space under a Kelly managed print agreement.",
+          "before": "assets/fleet-before-1600.jpg",
+          "after": "assets/fleet-after-1600.jpg",
+          "bubble": false,
+          "before_label": "Unmanaged",
+          "after_label": "Managed by Kelly",
+          "before_btn": "Unmanaged fleet",
+          "after_btn": "Managed fleet",
+          "before_alt": "A cluttered print room with six mismatched copiers, a jammed machine, tangled cables, piles of toner boxes and a frustrated worker",
+          "after_alt": "The same room with three matched multifunction copiers in a row, a clear floor, a green status dashboard on the wall and a relaxed worker holding a coffee",
+          "before_chips": [
+            "Six brands, nobody owns it",
+            "Toner bought at retail",
+            "Repairs found by the jam",
+            "Cables and clutter"
+          ],
+          "after_chips": [
+            "One matched, monitored fleet",
+            "Toner ships on usage",
+            "Reports every six months",
+            "One agreement, one invoice"
+          ],
+          "before_title": "Expensive, and nobody can see why",
+          "before_body": "Devices bought one at a time from whoever was cheapest that month. Toner ordered in a hurry at retail prices. Nobody knows what a page costs until the repair bill arrives.",
+          "after_title": "Efficient, and every number visible",
+          "after_body": "A right-sized fleet the data recommends, watched by Kelly, supplied before it runs out, with a plain-English report showing what each device actually carried. Kelly's managed print page puts the saving at up to 30 percent.",
+          "note": "Generated images for the preview; your own fleet and technicians replace them once photography exists."
+        },
+        {
+          "type": "pulseflow",
+          "id": "monitor",
+          "eyebrow": "Under agreement",
+          "heading": "It reports in before anyone has to call",
+          "intro": "Every device on a Kelly agreement is watched. The fault, the low toner and the meter read reach Kelly first, and the fix is already moving.",
+          "nodes": [
+            [
+              "device",
+              "The device",
+              "Reports its own levels and faults."
+            ],
+            [
+              "meter",
+              "The meter",
+              "Read automatically, never chased."
+            ],
+            [
+              "dash",
+              "Kelly sees it",
+              "A technician has it on the list first."
+            ],
+            [
+              "truck",
+              "Kelly acts",
+              "Supplies ship. A technician rolls."
+            ],
+            [
+              "smile",
+              "You carry on",
+              "Nobody in the office made a call."
+            ]
+          ],
+          "feed": [
+            [
+              0,
+              "<b>Device 14</b> toner at 18 percent, reorder threshold reached"
+            ],
+            [
+              1,
+              "Meter read captured for 22 devices, no staff time"
+            ],
+            [
+              2,
+              "Jam pattern flagged on a feeder, technician notified"
+            ],
+            [
+              3,
+              "<span class=\"ok\">Toner shipped</span> to the branch, arrives before it runs out"
+            ],
+            [
+              4,
+              "<span class=\"ok\">Resolved</span> before a ticket was opened"
+            ],
+            [
+              0,
+              "<b>Device 3</b> firmware current, security patched"
+            ],
+            [
+              1,
+              "Month-end meter report ready for review"
+            ]
+          ],
+          "note": "Illustrative example feed. A real feed shows your devices, your meters and your supply orders."
         },
         {
           "type": "cards",
@@ -2373,6 +2782,40 @@
           "note": "Terms and rates are set in the plan after the assessment. Nothing here is a quote."
         },
         {
+          "type": "countband",
+          "id": "numbers",
+          "eyebrow": "Measured, not claimed",
+          "items": [
+            [
+              "4000",
+              "Customers across North Carolina, approximately",
+              "+"
+            ],
+            [
+              "5",
+              "Offices, one number to call"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited by CEO Juice"
+            ],
+            [
+              "79",
+              "Years family-owned, since 1947"
+            ]
+          ]
+        },
+        {
+          "type": "savingstease",
+          "id": "savings",
+          "eyebrow": "Full Office Overview",
+          "heading": "What would 10 percent be worth to your office?",
+          "body": "One analysis across print, documents, production, IT, mailing and the break room. We set out to find at least 10 percent, and we tell you plainly if we cannot.",
+          "href": "office-overview.html",
+          "cta": "Run my Full Office Overview",
+          "rate": 0.12
+        },
+        {
           "type": "testimonials",
           "alt": true,
           "heading": "What customers say",
@@ -2434,8 +2877,8 @@
       ],
       "sections": [
         {
-          "type": "hero",
-          "layout": "split",
+          "type": "product3d",
+          "id": "hero",
           "eyebrow": "Document management",
           "heading": "Take the paper out of approvals, invoices and files, and <em>keep the audit trail</em>.",
           "subhead": "DocuWare workflows configured and supported by the Kelly team in North Carolina: accounts payable routing, HR and contract files with retention rules, and search your people will use.",
@@ -2444,13 +2887,63 @@
             "href": "contact.html"
           },
           "secondary": {
-            "label": "Request service",
-            "href": "service-support.html#request"
+            "label": "Run my Full Office Overview",
+            "href": "office-overview.html"
           },
-          "image": "assets/gso-office-1200.jpg",
-          "image_alt": "Document management",
-          "image_w": 1200,
-          "image_h": 800
+          "facts": [
+            [
+              "7 lines",
+              "Under one agreement"
+            ],
+            [
+              "5 offices",
+              "The nearest one dispatches"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited"
+            ]
+          ],
+          "tags": [
+            [
+              "Reduce costs",
+              "",
+              2,
+              24
+            ],
+            [
+              "Improve security",
+              "",
+              64,
+              9
+            ],
+            [
+              "Streamline workflows",
+              "",
+              58,
+              76
+            ]
+          ],
+          "poster": "assets/gso-office-1200.jpg",
+          "photo": true,
+          "alt_text": "Document management",
+          "orbit": "30deg 74deg 105%"
+        },
+        {
+          "type": "ticker",
+          "id": "ticker",
+          "label": "What every Kelly agreement includes",
+          "items": [
+            "Serviced by the people who sold it",
+            "Meter reads taken automatically",
+            "Supplies shipped on usage, before you run out",
+            "One agreement, one invoice, one number",
+            "Five North Carolina offices",
+            "1-800-34-KELLY reaches all five",
+            "Priority dispatch under agreement",
+            "Family-owned since 1947",
+            "Net Promoter Score 94.4, audited"
+          ]
         },
         {
           "type": "cards",
@@ -2584,6 +3077,40 @@
           "flip": true
         },
         {
+          "type": "countband",
+          "id": "numbers",
+          "eyebrow": "Measured, not claimed",
+          "items": [
+            [
+              "4000",
+              "Customers across North Carolina, approximately",
+              "+"
+            ],
+            [
+              "5",
+              "Offices, one number to call"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited by CEO Juice"
+            ],
+            [
+              "79",
+              "Years family-owned, since 1947"
+            ]
+          ]
+        },
+        {
+          "type": "savingstease",
+          "id": "savings",
+          "eyebrow": "Full Office Overview",
+          "heading": "What would 10 percent be worth to your office?",
+          "body": "One analysis across print, documents, production, IT, mailing and the break room. We set out to find at least 10 percent, and we tell you plainly if we cannot.",
+          "href": "office-overview.html",
+          "cta": "Run my Full Office Overview",
+          "rate": 0.12
+        },
+        {
           "type": "testimonials",
           "alt": true,
           "heading": "What customers say",
@@ -2645,8 +3172,8 @@
       ],
       "sections": [
         {
-          "type": "hero",
-          "layout": "split",
+          "type": "product3d",
+          "id": "hero",
           "eyebrow": "Production print",
           "heading": "Print rooms that hit the deadline <em>outsourcing cannot</em>.",
           "subhead": "In-house color and mono production with inline finishing for schools, churches, legal and marketing departments that print every day. Control costs, print on demand, keep confidential work in the building.",
@@ -2655,13 +3182,63 @@
             "href": "contact.html"
           },
           "secondary": {
-            "label": "Request service",
-            "href": "service-support.html#request"
+            "label": "Run my Full Office Overview",
+            "href": "office-overview.html"
           },
-          "image": "assets/production-print-1200.jpg",
-          "image_alt": "Production print",
-          "image_w": 1200,
-          "image_h": 800
+          "facts": [
+            [
+              "7 lines",
+              "Under one agreement"
+            ],
+            [
+              "5 offices",
+              "The nearest one dispatches"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited"
+            ]
+          ],
+          "tags": [
+            [
+              "Control costs",
+              "",
+              2,
+              24
+            ],
+            [
+              "On-demand printing",
+              "",
+              64,
+              9
+            ],
+            [
+              "Confidentiality",
+              "",
+              58,
+              76
+            ]
+          ],
+          "poster": "assets/production-print-1200.jpg",
+          "photo": true,
+          "alt_text": "Production print",
+          "orbit": "30deg 74deg 105%"
+        },
+        {
+          "type": "ticker",
+          "id": "ticker",
+          "label": "What every Kelly agreement includes",
+          "items": [
+            "Serviced by the people who sold it",
+            "Meter reads taken automatically",
+            "Supplies shipped on usage, before you run out",
+            "One agreement, one invoice, one number",
+            "Five North Carolina offices",
+            "1-800-34-KELLY reaches all five",
+            "Priority dispatch under agreement",
+            "Family-owned since 1947",
+            "Net Promoter Score 94.4, audited"
+          ]
         },
         {
           "type": "cards",
@@ -2744,6 +3321,40 @@
           "flip": true
         },
         {
+          "type": "countband",
+          "id": "numbers",
+          "eyebrow": "Measured, not claimed",
+          "items": [
+            [
+              "4000",
+              "Customers across North Carolina, approximately",
+              "+"
+            ],
+            [
+              "5",
+              "Offices, one number to call"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited by CEO Juice"
+            ],
+            [
+              "79",
+              "Years family-owned, since 1947"
+            ]
+          ]
+        },
+        {
+          "type": "savingstease",
+          "id": "savings",
+          "eyebrow": "Full Office Overview",
+          "heading": "What would 10 percent be worth to your office?",
+          "body": "One analysis across print, documents, production, IT, mailing and the break room. We set out to find at least 10 percent, and we tell you plainly if we cannot.",
+          "href": "office-overview.html",
+          "cta": "Run my Full Office Overview",
+          "rate": 0.12
+        },
+        {
           "type": "testimonials",
           "alt": true,
           "heading": "What customers say",
@@ -2805,8 +3416,8 @@
       ],
       "sections": [
         {
-          "type": "hero",
-          "layout": "split",
+          "type": "product3d",
+          "id": "hero",
           "eyebrow": "IT services",
           "heading": "Managed IT from the team that <em>already knows your network</em>.",
           "subhead": "Managed IT, backup and security with Datto, WatchGuard, Dell and Microsoft 365, plus digital forensic services. Proactive monitoring, fixed monthly invoices, and a help desk with a name.",
@@ -2815,13 +3426,79 @@
             "href": "contact.html"
           },
           "secondary": {
-            "label": "Request service",
-            "href": "service-support.html#request"
+            "label": "Run my Full Office Overview",
+            "href": "office-overview.html"
           },
-          "image": "assets/it-1200.jpg",
-          "image_alt": "IT services",
-          "image_w": 1200,
-          "image_h": 800
+          "facts": [
+            [
+              "7 lines",
+              "Under one agreement"
+            ],
+            [
+              "5 offices",
+              "The nearest one dispatches"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited"
+            ]
+          ],
+          "tags": [
+            [
+              "Reduced costs",
+              "",
+              2,
+              24
+            ],
+            [
+              "Proactive monitoring",
+              "",
+              64,
+              9
+            ],
+            [
+              "Optimized security",
+              "",
+              58,
+              76
+            ]
+          ],
+          "poster": "assets/it-1200.jpg",
+          "photo": true,
+          "alt_text": "IT services",
+          "orbit": "30deg 74deg 105%"
+        },
+        {
+          "type": "ticker",
+          "id": "ticker",
+          "label": "What every Kelly agreement includes",
+          "items": [
+            "Serviced by the people who sold it",
+            "Meter reads taken automatically",
+            "Supplies shipped on usage, before you run out",
+            "One agreement, one invoice, one number",
+            "Five North Carolina offices",
+            "1-800-34-KELLY reaches all five",
+            "Priority dispatch under agreement",
+            "Family-owned since 1947",
+            "Net Promoter Score 94.4, audited"
+          ]
+        },
+        {
+          "type": "itdirector",
+          "id": "ita",
+          "eyebrow": "Meanwhile, in the server room",
+          "heading": "From 2 a.m. alerts to one number to call",
+          "intro": "Drag the slider. Same office, same IT director. The difference is who is watching the systems, the copiers and the invoices.",
+          "before": "assets/it-before-1600.jpg",
+          "after": "assets/it-after-1600.jpg",
+          "logo": "assets/kelly-logo.png",
+          "before_label": "Seven vendors",
+          "after_label": "One partner",
+          "before_title": "Today, in most offices",
+          "before_body": "A copier company, an IT firm that blames the copier company, a postage meter on its own contract. Four numbers to call and nobody who knows your name.",
+          "after_title": "With Kelly",
+          "after_body": "Monitoring, backup and security from the KellyWay team, serviced on the same visit as the copier, on one agreement and one invoice. One number: 1-800-34-KELLY."
         },
         {
           "type": "cards",
@@ -2956,6 +3633,40 @@
           "flip": true
         },
         {
+          "type": "countband",
+          "id": "numbers",
+          "eyebrow": "Measured, not claimed",
+          "items": [
+            [
+              "4000",
+              "Customers across North Carolina, approximately",
+              "+"
+            ],
+            [
+              "5",
+              "Offices, one number to call"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited by CEO Juice"
+            ],
+            [
+              "79",
+              "Years family-owned, since 1947"
+            ]
+          ]
+        },
+        {
+          "type": "savingstease",
+          "id": "savings",
+          "eyebrow": "Full Office Overview",
+          "heading": "What would 10 percent be worth to your office?",
+          "body": "One analysis across print, documents, production, IT, mailing and the break room. We set out to find at least 10 percent, and we tell you plainly if we cannot.",
+          "href": "office-overview.html",
+          "cta": "Run my Full Office Overview",
+          "rate": 0.12
+        },
+        {
           "type": "testimonials",
           "alt": true,
           "heading": "What customers say",
@@ -3017,8 +3728,8 @@
       ],
       "sections": [
         {
-          "type": "hero",
-          "layout": "split",
+          "type": "product3d",
+          "id": "hero",
           "eyebrow": "Mailing solutions",
           "heading": "The mailroom nobody thinks about, <em>until it stops</em>.",
           "subhead": "Postage meters, folder-inserters, mailroom printers, parcel lockers and parcel shipping, with software that keeps records straight and postage discounted.",
@@ -3027,13 +3738,63 @@
             "href": "contact.html"
           },
           "secondary": {
-            "label": "Request service",
-            "href": "service-support.html#request"
+            "label": "Run my Full Office Overview",
+            "href": "office-overview.html"
           },
-          "image": "assets/postage-1200.jpg",
-          "image_alt": "Mailing solutions",
-          "image_w": 1200,
-          "image_h": 800
+          "facts": [
+            [
+              "7 lines",
+              "Under one agreement"
+            ],
+            [
+              "5 offices",
+              "The nearest one dispatches"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited"
+            ]
+          ],
+          "tags": [
+            [
+              "Reduced costs",
+              "",
+              2,
+              24
+            ],
+            [
+              "Streamline recordkeeping",
+              "",
+              64,
+              9
+            ],
+            [
+              "Increase security",
+              "",
+              58,
+              76
+            ]
+          ],
+          "poster": "assets/postage-1200.jpg",
+          "photo": true,
+          "alt_text": "Mailing solutions",
+          "orbit": "30deg 74deg 105%"
+        },
+        {
+          "type": "ticker",
+          "id": "ticker",
+          "label": "What every Kelly agreement includes",
+          "items": [
+            "Serviced by the people who sold it",
+            "Meter reads taken automatically",
+            "Supplies shipped on usage, before you run out",
+            "One agreement, one invoice, one number",
+            "Five North Carolina offices",
+            "1-800-34-KELLY reaches all five",
+            "Priority dispatch under agreement",
+            "Family-owned since 1947",
+            "Net Promoter Score 94.4, audited"
+          ]
         },
         {
           "type": "cards",
@@ -3104,6 +3865,40 @@
           "flip": true
         },
         {
+          "type": "countband",
+          "id": "numbers",
+          "eyebrow": "Measured, not claimed",
+          "items": [
+            [
+              "4000",
+              "Customers across North Carolina, approximately",
+              "+"
+            ],
+            [
+              "5",
+              "Offices, one number to call"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited by CEO Juice"
+            ],
+            [
+              "79",
+              "Years family-owned, since 1947"
+            ]
+          ]
+        },
+        {
+          "type": "savingstease",
+          "id": "savings",
+          "eyebrow": "Full Office Overview",
+          "heading": "What would 10 percent be worth to your office?",
+          "body": "One analysis across print, documents, production, IT, mailing and the break room. We set out to find at least 10 percent, and we tell you plainly if we cannot.",
+          "href": "office-overview.html",
+          "cta": "Run my Full Office Overview",
+          "rate": 0.12
+        },
+        {
           "type": "testimonials",
           "alt": true,
           "heading": "What customers say",
@@ -3165,8 +3960,8 @@
       ],
       "sections": [
         {
-          "type": "hero",
-          "layout": "split",
+          "type": "product3d",
+          "id": "hero",
           "eyebrow": "Pure Technology",
           "heading": "Water, ice and coffee, serviced on the <em>same visit as your copier</em>.",
           "subhead": "Bottleless filtered water coolers from Wellsys and FloWater, commercial ice machines from Manitowoc and Follett, and single-cup and high-volume coffee brewers from Newco and Bunn. One invoice, one technician, one less vendor.",
@@ -3175,13 +3970,101 @@
             "href": "contact.html"
           },
           "secondary": {
-            "label": "Request service",
-            "href": "service-support.html#request"
+            "label": "Run my Full Office Overview",
+            "href": "office-overview.html"
           },
-          "image": "assets/breakroom-1200.jpg",
-          "image_alt": "Pure Technology: water, ice and coffee",
-          "image_w": 1200,
-          "image_h": 800
+          "facts": [
+            [
+              "7 lines",
+              "Under one agreement"
+            ],
+            [
+              "5 offices",
+              "The nearest one dispatches"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited"
+            ]
+          ],
+          "tags": [
+            [
+              "Water",
+              "",
+              2,
+              24
+            ],
+            [
+              "Ice",
+              "",
+              64,
+              9
+            ],
+            [
+              "Coffee",
+              "",
+              58,
+              76
+            ]
+          ],
+          "poster": "assets/breakroom-1200.jpg",
+          "photo": true,
+          "alt_text": "Pure Technology: water, ice and coffee",
+          "orbit": "30deg 74deg 105%"
+        },
+        {
+          "type": "ticker",
+          "id": "ticker",
+          "label": "What every Kelly agreement includes",
+          "items": [
+            "Serviced by the people who sold it",
+            "Meter reads taken automatically",
+            "Supplies shipped on usage, before you run out",
+            "One agreement, one invoice, one number",
+            "Five North Carolina offices",
+            "1-800-34-KELLY reaches all five",
+            "Priority dispatch under agreement",
+            "Family-owned since 1947",
+            "Net Promoter Score 94.4, audited"
+          ]
+        },
+        {
+          "type": "photoband",
+          "id": "mugs",
+          "alt": true,
+          "eyebrow": "Pure Technology",
+          "heading": "The break room people actually like",
+          "intro": "Water, ice and coffee, serviced on the same visit as the copier. One fewer delivery company, one fewer invoice.",
+          "image": "assets/break-mugs-1600.jpg",
+          "alt_text": "Four coworkers laughing in an office break room, each holding a Kelly Office Solutions coffee mug",
+          "points": [
+            "Bottleless, filtered water without the jugs",
+            "Ice and coffee restocked on the same visit as the copier",
+            "Single-cup or high-volume brewers, matched to the office",
+            "One agreement and one number for the whole break room"
+          ],
+          "cta": {
+            "label": "See Pure Technology",
+            "href": "services/pure-technology.html"
+          },
+          "steam": [
+            [
+              35,
+              38
+            ],
+            [
+              58,
+              54
+            ],
+            [
+              28,
+              64
+            ],
+            [
+              70,
+              64
+            ]
+          ]
         },
         {
           "type": "cards",
@@ -3246,6 +4129,40 @@
           ],
           "image": "assets/coffee-1200.jpg",
           "flip": true
+        },
+        {
+          "type": "countband",
+          "id": "numbers",
+          "eyebrow": "Measured, not claimed",
+          "items": [
+            [
+              "4000",
+              "Customers across North Carolina, approximately",
+              "+"
+            ],
+            [
+              "5",
+              "Offices, one number to call"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited by CEO Juice"
+            ],
+            [
+              "79",
+              "Years family-owned, since 1947"
+            ]
+          ]
+        },
+        {
+          "type": "savingstease",
+          "id": "savings",
+          "eyebrow": "Full Office Overview",
+          "heading": "What would 10 percent be worth to your office?",
+          "body": "One analysis across print, documents, production, IT, mailing and the break room. We set out to find at least 10 percent, and we tell you plainly if we cannot.",
+          "href": "office-overview.html",
+          "cta": "Run my Full Office Overview",
+          "rate": 0.12
         },
         {
           "type": "testimonials",
@@ -3565,26 +4482,79 @@
       ],
       "sections": [
         {
-          "type": "hero",
-          "layout": "split",
+          "type": "product3d",
+          "id": "hero",
           "eyebrow": "Print and imaging",
           "heading": "Printers that <em>earn their desk space</em>.",
           "subhead": "Single-function printers, sized to how many your office needs.",
           "primary": {
             "label": "Request a quote",
-            "href": "contact.html"
+            "href": "#quote"
           },
           "secondary": {
-            "label": "Talk with your branch",
-            "href": "locations.html"
+            "label": "Run my Full Office Overview",
+            "href": "office-overview.html"
           },
-          "image": "assets/printer-1200.jpg",
-          "image_alt": "Printers",
-          "image_w": 1200,
-          "image_h": 800
+          "facts": [
+            [
+              "6 brands",
+              "Brother, Epson, Sharp"
+            ],
+            [
+              "5 offices",
+              "The nearest one dispatches"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited"
+            ]
+          ],
+          "tags": [
+            [
+              "Right-sized",
+              "",
+              2,
+              24
+            ],
+            [
+              "Total cost of ownership",
+              "",
+              64,
+              9
+            ],
+            [
+              "Serviced locally",
+              "",
+              58,
+              76
+            ]
+          ],
+          "poster": "assets/fleet/printer.png",
+          "photo": false,
+          "alt": "A 3D model of printers you can turn",
+          "alt_text": "Printers from Kelly Office Solutions",
+          "orbit": "30deg 74deg 105%",
+          "model": "assets/models/printer.glb"
+        },
+        {
+          "type": "ticker",
+          "id": "ticker",
+          "label": "What every Kelly agreement includes",
+          "items": [
+            "Serviced by the people who sold it",
+            "Meter reads taken automatically",
+            "Supplies shipped on usage, before you run out",
+            "One agreement, one invoice, one number",
+            "Five North Carolina offices",
+            "1-800-34-KELLY reaches all five",
+            "Priority dispatch under agreement",
+            "Family-owned since 1947",
+            "Net Promoter Score 94.4, audited"
+          ]
         },
         {
           "type": "detail",
+          "alt": true,
           "eyebrow": "What to know",
           "heading": "About printers",
           "body": "Single-function printers are an essential part of an imaging fleet, and the easiest part to over-buy. Before the next purchase, the question is how many printers the office truly needs to keep work moving, whether they should be color or mono, and what each one costs to own once maintenance and consumables are counted. Your Kelly representative presents options that fit your output and your budget.",
@@ -3596,6 +4566,90 @@
           ],
           "image": "assets/printer-1200.jpg",
           "flip": true
+        },
+        {
+          "type": "cards",
+          "eyebrow": "Why it matters",
+          "heading": "What printers changes",
+          "items": [
+            [
+              "Right-sized",
+              "How many, where, and color or mono, decided from your real volume."
+            ],
+            [
+              "Total cost of ownership",
+              "Price, maintenance and consumables, so the cheap device does not cost the most."
+            ],
+            [
+              "Serviced locally",
+              "Installed, networked and supported from the nearest Kelly branch."
+            ]
+          ]
+        },
+        {
+          "type": "pulseflow",
+          "id": "monitor",
+          "eyebrow": "Under agreement",
+          "heading": "It reports in before anyone has to call",
+          "intro": "Every device on a Kelly agreement is watched. The fault, the low toner and the meter read reach Kelly first, and the fix is already moving.",
+          "nodes": [
+            [
+              "device",
+              "The device",
+              "Reports its own levels and faults."
+            ],
+            [
+              "meter",
+              "The meter",
+              "Read automatically, never chased."
+            ],
+            [
+              "dash",
+              "Kelly sees it",
+              "A technician has it on the list first."
+            ],
+            [
+              "truck",
+              "Kelly acts",
+              "Supplies ship. A technician rolls."
+            ],
+            [
+              "smile",
+              "You carry on",
+              "Nobody in the office made a call."
+            ]
+          ],
+          "feed": [
+            [
+              0,
+              "<b>Device 14</b> toner at 18 percent, reorder threshold reached"
+            ],
+            [
+              1,
+              "Meter read captured for 22 devices, no staff time"
+            ],
+            [
+              2,
+              "Jam pattern flagged on a feeder, technician notified"
+            ],
+            [
+              3,
+              "<span class=\"ok\">Toner shipped</span> to the branch, arrives before it runs out"
+            ],
+            [
+              4,
+              "<span class=\"ok\">Resolved</span> before a ticket was opened"
+            ],
+            [
+              0,
+              "<b>Device 3</b> firmware current, security patched"
+            ],
+            [
+              1,
+              "Month-end meter report ready for review"
+            ]
+          ],
+          "note": "Illustrative example feed. A real feed shows your devices, your meters and your supply orders."
         },
         {
           "type": "fleet",
@@ -3673,24 +4727,38 @@
           "alt": true
         },
         {
-          "type": "cards",
-          "alt": true,
-          "eyebrow": "Why it matters",
-          "heading": "What printers changes",
+          "type": "countband",
+          "id": "numbers",
+          "eyebrow": "Measured, not claimed",
           "items": [
             [
-              "Right-sized",
-              "How many, where, and color or mono, decided from your real volume."
+              "4000",
+              "Customers across North Carolina, approximately",
+              "+"
             ],
             [
-              "Total cost of ownership",
-              "Price, maintenance and consumables, so the cheap device does not cost the most."
+              "5",
+              "Offices, one number to call"
             ],
             [
-              "Serviced locally",
-              "Installed, networked and supported from the nearest Kelly branch."
+              "94.4",
+              "Net Promoter Score, audited by CEO Juice"
+            ],
+            [
+              "79",
+              "Years family-owned, since 1947"
             ]
           ]
+        },
+        {
+          "type": "savingstease",
+          "id": "savings",
+          "eyebrow": "Full Office Overview",
+          "heading": "What would 10 percent be worth to your office?",
+          "body": "One analysis across print, documents, production, IT, mailing and the break room. We set out to find at least 10 percent, and we tell you plainly if we cannot.",
+          "href": "office-overview.html",
+          "cta": "Run my Full Office Overview",
+          "rate": 0.12
         },
         {
           "type": "partners",
@@ -3706,6 +4774,7 @@
         },
         {
           "type": "faq",
+          "alt": true,
           "eyebrow": "Questions",
           "heading": "Asked on most first calls",
           "items": [
@@ -3721,7 +4790,6 @@
         },
         {
           "type": "resources",
-          "alt": true,
           "heading": "More in print and imaging",
           "intro": "Every product Kelly sells is serviced by Kelly.",
           "items": [
@@ -3750,6 +4818,7 @@
         },
         {
           "type": "leadform",
+          "alt": true,
           "id": "quote",
           "heading": "Get a quote on printers",
           "body": "Tell us the volume and the office. A specialist from the nearest branch replies with options and prices.",
@@ -3778,26 +4847,79 @@
       ],
       "sections": [
         {
-          "type": "hero",
-          "layout": "split",
+          "type": "product3d",
+          "id": "hero",
           "eyebrow": "Print and imaging",
           "heading": "Copiers that <em>do more than copy</em>.",
           "subhead": "Modern office copiers with software that does more than duplicate.",
           "primary": {
             "label": "Request a quote",
-            "href": "contact.html"
+            "href": "#quote"
           },
           "secondary": {
-            "label": "Talk with your branch",
-            "href": "locations.html"
+            "label": "Run my Full Office Overview",
+            "href": "office-overview.html"
           },
-          "image": "assets/mps-1-1200.jpg",
-          "image_alt": "Copiers",
-          "image_w": 1200,
-          "image_h": 800
+          "facts": [
+            [
+              "4 brands",
+              "Sharp, Ricoh, Savin"
+            ],
+            [
+              "5 offices",
+              "The nearest one dispatches"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited"
+            ]
+          ],
+          "tags": [
+            [
+              "Software and integrations",
+              "",
+              2,
+              24
+            ],
+            [
+              "Matched to volume",
+              "",
+              64,
+              9
+            ],
+            [
+              "Serviced same day",
+              "",
+              58,
+              76
+            ]
+          ],
+          "poster": "assets/fleet/mfp.png",
+          "photo": false,
+          "alt": "A 3D model of copiers you can turn",
+          "alt_text": "Copiers from Kelly Office Solutions",
+          "orbit": "30deg 74deg 105%",
+          "model": "assets/models/multifunction.glb"
+        },
+        {
+          "type": "ticker",
+          "id": "ticker",
+          "label": "What every Kelly agreement includes",
+          "items": [
+            "Serviced by the people who sold it",
+            "Meter reads taken automatically",
+            "Supplies shipped on usage, before you run out",
+            "One agreement, one invoice, one number",
+            "Five North Carolina offices",
+            "1-800-34-KELLY reaches all five",
+            "Priority dispatch under agreement",
+            "Family-owned since 1947",
+            "Net Promoter Score 94.4, audited"
+          ]
         },
         {
           "type": "detail",
+          "alt": true,
           "eyebrow": "What to know",
           "heading": "About copiers",
           "body": "Producing copies is still part of daily work, so a copier is standard equipment for most teams. The devices have moved a long way from their origins: with software and integrations, an upgraded office copier scans to your systems, controls who prints what, and reports its own usage. Kelly matches the device to your volume and keeps it running.",
@@ -3809,6 +4931,90 @@
           ],
           "image": "assets/mps-1-1200.jpg",
           "flip": true
+        },
+        {
+          "type": "cards",
+          "eyebrow": "Why it matters",
+          "heading": "What copiers changes",
+          "items": [
+            [
+              "Software and integrations",
+              "Scan to email, folders and document management; user codes and secure release."
+            ],
+            [
+              "Matched to volume",
+              "Speed and duty cycle chosen from your meter reads, not a brochure."
+            ],
+            [
+              "Serviced same day",
+              "Under a Kelly agreement, by factory-trained technicians from the nearest branch."
+            ]
+          ]
+        },
+        {
+          "type": "pulseflow",
+          "id": "monitor",
+          "eyebrow": "Under agreement",
+          "heading": "It reports in before anyone has to call",
+          "intro": "Every device on a Kelly agreement is watched. The fault, the low toner and the meter read reach Kelly first, and the fix is already moving.",
+          "nodes": [
+            [
+              "device",
+              "The device",
+              "Reports its own levels and faults."
+            ],
+            [
+              "meter",
+              "The meter",
+              "Read automatically, never chased."
+            ],
+            [
+              "dash",
+              "Kelly sees it",
+              "A technician has it on the list first."
+            ],
+            [
+              "truck",
+              "Kelly acts",
+              "Supplies ship. A technician rolls."
+            ],
+            [
+              "smile",
+              "You carry on",
+              "Nobody in the office made a call."
+            ]
+          ],
+          "feed": [
+            [
+              0,
+              "<b>Device 14</b> toner at 18 percent, reorder threshold reached"
+            ],
+            [
+              1,
+              "Meter read captured for 22 devices, no staff time"
+            ],
+            [
+              2,
+              "Jam pattern flagged on a feeder, technician notified"
+            ],
+            [
+              3,
+              "<span class=\"ok\">Toner shipped</span> to the branch, arrives before it runs out"
+            ],
+            [
+              4,
+              "<span class=\"ok\">Resolved</span> before a ticket was opened"
+            ],
+            [
+              0,
+              "<b>Device 3</b> firmware current, security patched"
+            ],
+            [
+              1,
+              "Month-end meter report ready for review"
+            ]
+          ],
+          "note": "Illustrative example feed. A real feed shows your devices, your meters and your supply orders."
         },
         {
           "type": "fleet",
@@ -3886,24 +5092,38 @@
           "alt": true
         },
         {
-          "type": "cards",
-          "alt": true,
-          "eyebrow": "Why it matters",
-          "heading": "What copiers changes",
+          "type": "countband",
+          "id": "numbers",
+          "eyebrow": "Measured, not claimed",
           "items": [
             [
-              "Software and integrations",
-              "Scan to email, folders and document management; user codes and secure release."
+              "4000",
+              "Customers across North Carolina, approximately",
+              "+"
             ],
             [
-              "Matched to volume",
-              "Speed and duty cycle chosen from your meter reads, not a brochure."
+              "5",
+              "Offices, one number to call"
             ],
             [
-              "Serviced same day",
-              "Under a Kelly agreement, by factory-trained technicians from the nearest branch."
+              "94.4",
+              "Net Promoter Score, audited by CEO Juice"
+            ],
+            [
+              "79",
+              "Years family-owned, since 1947"
             ]
           ]
+        },
+        {
+          "type": "savingstease",
+          "id": "savings",
+          "eyebrow": "Full Office Overview",
+          "heading": "What would 10 percent be worth to your office?",
+          "body": "One analysis across print, documents, production, IT, mailing and the break room. We set out to find at least 10 percent, and we tell you plainly if we cannot.",
+          "href": "office-overview.html",
+          "cta": "Run my Full Office Overview",
+          "rate": 0.12
         },
         {
           "type": "partners",
@@ -3917,6 +5137,7 @@
         },
         {
           "type": "faq",
+          "alt": true,
           "eyebrow": "Questions",
           "heading": "Asked on most first calls",
           "items": [
@@ -3932,7 +5153,6 @@
         },
         {
           "type": "resources",
-          "alt": true,
           "heading": "More in print and imaging",
           "intro": "Every product Kelly sells is serviced by Kelly.",
           "items": [
@@ -3961,6 +5181,7 @@
         },
         {
           "type": "leadform",
+          "alt": true,
           "id": "quote",
           "heading": "Get a quote on copiers",
           "body": "Tell us the volume and the office. A specialist from the nearest branch replies with options and prices.",
@@ -3989,26 +5210,79 @@
       ],
       "sections": [
         {
-          "type": "hero",
-          "layout": "split",
+          "type": "product3d",
+          "id": "hero",
           "eyebrow": "Print and imaging",
           "heading": "One device. <em>Print, scan, copy, fax.</em>",
           "subhead": "Print, scan, copy and fax in one device, networked to the whole team.",
           "primary": {
             "label": "Request a quote",
-            "href": "contact.html"
+            "href": "#quote"
           },
           "secondary": {
-            "label": "Talk with your branch",
-            "href": "locations.html"
+            "label": "Run my Full Office Overview",
+            "href": "office-overview.html"
           },
-          "image": "assets/hero-1200.jpg",
-          "image_alt": "Multifunction printers",
-          "image_w": 1200,
-          "image_h": 800
+          "facts": [
+            [
+              "5 brands",
+              "Sharp, Ricoh, Savin"
+            ],
+            [
+              "5 offices",
+              "The nearest one dispatches"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited"
+            ]
+          ],
+          "tags": [
+            [
+              "One device, four jobs",
+              "",
+              2,
+              24
+            ],
+            [
+              "Lower running cost",
+              "",
+              64,
+              9
+            ],
+            [
+              "Networked to everyone",
+              "",
+              58,
+              76
+            ]
+          ],
+          "poster": "assets/fleet/mfp.png",
+          "photo": false,
+          "alt": "A 3D model of multifunction printers you can turn",
+          "alt_text": "Multifunction printers from Kelly Office Solutions",
+          "orbit": "30deg 74deg 105%",
+          "model": "assets/models/multifunction.glb"
+        },
+        {
+          "type": "ticker",
+          "id": "ticker",
+          "label": "What every Kelly agreement includes",
+          "items": [
+            "Serviced by the people who sold it",
+            "Meter reads taken automatically",
+            "Supplies shipped on usage, before you run out",
+            "One agreement, one invoice, one number",
+            "Five North Carolina offices",
+            "1-800-34-KELLY reaches all five",
+            "Priority dispatch under agreement",
+            "Family-owned since 1947",
+            "Net Promoter Score 94.4, audited"
+          ]
         },
         {
           "type": "detail",
+          "alt": true,
           "eyebrow": "What to know",
           "heading": "About multifunction printers",
           "body": "The versatility of multifunction printers makes them the workhorse of most offices. One device prints, scans, copies and faxes, so you maintain and supply one machine instead of four. Networked to every workstation, one MFP can serve a team or a whole small office, and printing costs drop with it.",
@@ -4020,6 +5294,25 @@
           ],
           "image": "assets/hero-1200.jpg",
           "flip": true
+        },
+        {
+          "type": "cards",
+          "eyebrow": "Why it matters",
+          "heading": "What multifunction printers changes",
+          "items": [
+            [
+              "One device, four jobs",
+              "Print, scan, copy and fax, with one set of consumables."
+            ],
+            [
+              "Lower running cost",
+              "Maintenance and supplies for one machine rather than several."
+            ],
+            [
+              "Networked to everyone",
+              "Every workstation prints to it; scans land where the work is."
+            ]
+          ]
         },
         {
           "type": "story3d",
@@ -4080,24 +5373,178 @@
           "model": "assets/fleet/mfp.glb"
         },
         {
-          "type": "cards",
-          "alt": true,
-          "eyebrow": "Why it matters",
-          "heading": "What multifunction printers changes",
+          "type": "pulseflow",
+          "id": "monitor",
+          "eyebrow": "Under agreement",
+          "heading": "It reports in before anyone has to call",
+          "intro": "Every device on a Kelly agreement is watched. The fault, the low toner and the meter read reach Kelly first, and the fix is already moving.",
+          "nodes": [
+            [
+              "device",
+              "The device",
+              "Reports its own levels and faults."
+            ],
+            [
+              "meter",
+              "The meter",
+              "Read automatically, never chased."
+            ],
+            [
+              "dash",
+              "Kelly sees it",
+              "A technician has it on the list first."
+            ],
+            [
+              "truck",
+              "Kelly acts",
+              "Supplies ship. A technician rolls."
+            ],
+            [
+              "smile",
+              "You carry on",
+              "Nobody in the office made a call."
+            ]
+          ],
+          "feed": [
+            [
+              0,
+              "<b>Device 14</b> toner at 18 percent, reorder threshold reached"
+            ],
+            [
+              1,
+              "Meter read captured for 22 devices, no staff time"
+            ],
+            [
+              2,
+              "Jam pattern flagged on a feeder, technician notified"
+            ],
+            [
+              3,
+              "<span class=\"ok\">Toner shipped</span> to the branch, arrives before it runs out"
+            ],
+            [
+              4,
+              "<span class=\"ok\">Resolved</span> before a ticket was opened"
+            ],
+            [
+              0,
+              "<b>Device 3</b> firmware current, security patched"
+            ],
+            [
+              1,
+              "Month-end meter report ready for review"
+            ]
+          ],
+          "note": "Illustrative example feed. A real feed shows your devices, your meters and your supply orders."
+        },
+        {
+          "type": "fleet",
+          "id": "fleet",
+          "heading": "The rest of the fleet",
+          "intro": "Every device family Kelly sells and services. Generated product renders for the preview; your real models replace them.",
+          "items": [
+            {
+              "title": "Multifunction copiers",
+              "band": "Workgroup to department",
+              "brands": "Sharp, Ricoh, Savin, Konica Minolta",
+              "image": "assets/fleet/mfp.png",
+              "bullets": [
+                "Print, scan, copy, fax",
+                "Secure release and scan to DocuWare"
+              ],
+              "href": "products/multifunction-printers.html"
+            },
+            {
+              "title": "Desktop printers",
+              "band": "Desk and small team",
+              "brands": "Brother, Epson, Ricoh",
+              "image": "assets/fleet/printer.png",
+              "bullets": [
+                "Color and mono",
+                "Joins a managed print agreement"
+              ],
+              "href": "products/printers.html"
+            },
+            {
+              "title": "Wide format",
+              "band": "Plans, posters, signage",
+              "brands": "Epson, Ricoh",
+              "image": "assets/fleet/wide-format.png",
+              "bullets": [
+                "Stop outsourcing plan sets",
+                "Technical and graphics media"
+              ],
+              "href": "products/wide-format-printers.html"
+            },
+            {
+              "title": "Production print",
+              "band": "High volume, inline finishing",
+              "brands": "Ricoh, Savin",
+              "image": "assets/fleet/production.png",
+              "bullets": [
+                "Booklets, stapling, folding",
+                "Color consistency all day"
+              ],
+              "href": "products/production-printers.html"
+            },
+            {
+              "title": "Postage meters",
+              "band": "Mailroom",
+              "brands": "FP Mailing Solutions",
+              "image": "assets/fleet/postage.png",
+              "bullets": [
+                "Commercial postage rates",
+                "Fully IMI compliant"
+              ],
+              "href": "products/postage-meters.html"
+            },
+            {
+              "title": "Water and coffee",
+              "band": "Breakroom",
+              "brands": "Wellsys, FloWater, Newco, Bunn",
+              "image": "assets/fleet/breakroom.png",
+              "bullets": [
+                "Bottleless, filtered",
+                "Serviced with your copier"
+              ],
+              "href": "products/water-coolers.html"
+            }
+          ],
+          "alt": true
+        },
+        {
+          "type": "countband",
+          "id": "numbers",
+          "eyebrow": "Measured, not claimed",
           "items": [
             [
-              "One device, four jobs",
-              "Print, scan, copy and fax, with one set of consumables."
+              "4000",
+              "Customers across North Carolina, approximately",
+              "+"
             ],
             [
-              "Lower running cost",
-              "Maintenance and supplies for one machine rather than several."
+              "5",
+              "Offices, one number to call"
             ],
             [
-              "Networked to everyone",
-              "Every workstation prints to it; scans land where the work is."
+              "94.4",
+              "Net Promoter Score, audited by CEO Juice"
+            ],
+            [
+              "79",
+              "Years family-owned, since 1947"
             ]
           ]
+        },
+        {
+          "type": "savingstease",
+          "id": "savings",
+          "eyebrow": "Full Office Overview",
+          "heading": "What would 10 percent be worth to your office?",
+          "body": "One analysis across print, documents, production, IT, mailing and the break room. We set out to find at least 10 percent, and we tell you plainly if we cannot.",
+          "href": "office-overview.html",
+          "cta": "Run my Full Office Overview",
+          "rate": 0.12
         },
         {
           "type": "partners",
@@ -4112,6 +5559,7 @@
         },
         {
           "type": "faq",
+          "alt": true,
           "eyebrow": "Questions",
           "heading": "Asked on most first calls",
           "items": [
@@ -4127,7 +5575,6 @@
         },
         {
           "type": "resources",
-          "alt": true,
           "heading": "More in print and imaging",
           "intro": "Every product Kelly sells is serviced by Kelly.",
           "items": [
@@ -4156,6 +5603,7 @@
         },
         {
           "type": "leadform",
+          "alt": true,
           "id": "quote",
           "heading": "Get a quote on multifunction printers",
           "body": "Tell us the volume and the office. A specialist from the nearest branch replies with options and prices.",
@@ -4184,26 +5632,79 @@
       ],
       "sections": [
         {
-          "type": "hero",
-          "layout": "split",
+          "type": "product3d",
+          "id": "hero",
           "eyebrow": "Print and imaging",
           "heading": "Big print, <em>printed in-house</em>.",
           "subhead": "Signage, window graphics and blueprints, printed in-house instead of outsourced.",
           "primary": {
             "label": "Request a quote",
-            "href": "contact.html"
+            "href": "#quote"
           },
           "secondary": {
-            "label": "Talk with your branch",
-            "href": "locations.html"
+            "label": "Run my Full Office Overview",
+            "href": "office-overview.html"
           },
-          "image": "assets/wide-format-1200.jpg",
-          "image_alt": "Wide format printers",
-          "image_w": 1200,
-          "image_h": 800
+          "facts": [
+            [
+              "2 brands",
+              "Epson, Ricoh"
+            ],
+            [
+              "5 offices",
+              "The nearest one dispatches"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited"
+            ]
+          ],
+          "tags": [
+            [
+              "Stop outsourcing",
+              "",
+              2,
+              24
+            ],
+            [
+              "High resolution",
+              "",
+              64,
+              9
+            ],
+            [
+              "Right media",
+              "",
+              58,
+              76
+            ]
+          ],
+          "poster": "assets/fleet/wide-format.png",
+          "photo": false,
+          "alt": "A 3D model of wide format printers you can turn",
+          "alt_text": "Wide format printers from Kelly Office Solutions",
+          "orbit": "30deg 74deg 105%",
+          "model": "assets/models/wide-format.glb"
+        },
+        {
+          "type": "ticker",
+          "id": "ticker",
+          "label": "What every Kelly agreement includes",
+          "items": [
+            "Serviced by the people who sold it",
+            "Meter reads taken automatically",
+            "Supplies shipped on usage, before you run out",
+            "One agreement, one invoice, one number",
+            "Five North Carolina offices",
+            "1-800-34-KELLY reaches all five",
+            "Priority dispatch under agreement",
+            "Family-owned since 1947",
+            "Net Promoter Score 94.4, audited"
+          ]
         },
         {
           "type": "detail",
+          "alt": true,
           "eyebrow": "What to know",
           "heading": "About wide format printers",
           "body": "Sometimes a letter-size sheet does not cut it. Large print jobs are a reality for many industries, and outsourcing them adds up. A wide format printer produces large-scale, high-resolution output in-house: signage for a medical practice, advertising for a storefront window, or blueprints for an engineering firm.",
@@ -4215,6 +5716,90 @@
           ],
           "image": "assets/wide-format-1200.jpg",
           "flip": true
+        },
+        {
+          "type": "cards",
+          "eyebrow": "Why it matters",
+          "heading": "What wide format printers changes",
+          "items": [
+            [
+              "Stop outsourcing",
+              "Print the poster, the plan set and the banner the day you need it."
+            ],
+            [
+              "High resolution",
+              "Crisp output at large sizes for graphics and technical drawings alike."
+            ],
+            [
+              "Right media",
+              "Paper, vinyl and technical stock, chosen for the job."
+            ]
+          ]
+        },
+        {
+          "type": "pulseflow",
+          "id": "monitor",
+          "eyebrow": "Under agreement",
+          "heading": "It reports in before anyone has to call",
+          "intro": "Every device on a Kelly agreement is watched. The fault, the low toner and the meter read reach Kelly first, and the fix is already moving.",
+          "nodes": [
+            [
+              "device",
+              "The device",
+              "Reports its own levels and faults."
+            ],
+            [
+              "meter",
+              "The meter",
+              "Read automatically, never chased."
+            ],
+            [
+              "dash",
+              "Kelly sees it",
+              "A technician has it on the list first."
+            ],
+            [
+              "truck",
+              "Kelly acts",
+              "Supplies ship. A technician rolls."
+            ],
+            [
+              "smile",
+              "You carry on",
+              "Nobody in the office made a call."
+            ]
+          ],
+          "feed": [
+            [
+              0,
+              "<b>Device 14</b> toner at 18 percent, reorder threshold reached"
+            ],
+            [
+              1,
+              "Meter read captured for 22 devices, no staff time"
+            ],
+            [
+              2,
+              "Jam pattern flagged on a feeder, technician notified"
+            ],
+            [
+              3,
+              "<span class=\"ok\">Toner shipped</span> to the branch, arrives before it runs out"
+            ],
+            [
+              4,
+              "<span class=\"ok\">Resolved</span> before a ticket was opened"
+            ],
+            [
+              0,
+              "<b>Device 3</b> firmware current, security patched"
+            ],
+            [
+              1,
+              "Month-end meter report ready for review"
+            ]
+          ],
+          "note": "Illustrative example feed. A real feed shows your devices, your meters and your supply orders."
         },
         {
           "type": "fleet",
@@ -4292,24 +5877,38 @@
           "alt": true
         },
         {
-          "type": "cards",
-          "alt": true,
-          "eyebrow": "Why it matters",
-          "heading": "What wide format printers changes",
+          "type": "countband",
+          "id": "numbers",
+          "eyebrow": "Measured, not claimed",
           "items": [
             [
-              "Stop outsourcing",
-              "Print the poster, the plan set and the banner the day you need it."
+              "4000",
+              "Customers across North Carolina, approximately",
+              "+"
             ],
             [
-              "High resolution",
-              "Crisp output at large sizes for graphics and technical drawings alike."
+              "5",
+              "Offices, one number to call"
             ],
             [
-              "Right media",
-              "Paper, vinyl and technical stock, chosen for the job."
+              "94.4",
+              "Net Promoter Score, audited by CEO Juice"
+            ],
+            [
+              "79",
+              "Years family-owned, since 1947"
             ]
           ]
+        },
+        {
+          "type": "savingstease",
+          "id": "savings",
+          "eyebrow": "Full Office Overview",
+          "heading": "What would 10 percent be worth to your office?",
+          "body": "One analysis across print, documents, production, IT, mailing and the break room. We set out to find at least 10 percent, and we tell you plainly if we cannot.",
+          "href": "office-overview.html",
+          "cta": "Run my Full Office Overview",
+          "rate": 0.12
         },
         {
           "type": "partners",
@@ -4321,6 +5920,7 @@
         },
         {
           "type": "faq",
+          "alt": true,
           "eyebrow": "Questions",
           "heading": "Asked on most first calls",
           "items": [
@@ -4336,7 +5936,6 @@
         },
         {
           "type": "resources",
-          "alt": true,
           "heading": "More in print and imaging",
           "intro": "Every product Kelly sells is serviced by Kelly.",
           "items": [
@@ -4365,6 +5964,7 @@
         },
         {
           "type": "leadform",
+          "alt": true,
           "id": "quote",
           "heading": "Get a quote on wide format printers",
           "body": "Tell us the volume and the office. A specialist from the nearest branch replies with options and prices.",
@@ -4393,26 +5993,79 @@
       ],
       "sections": [
         {
-          "type": "hero",
-          "layout": "split",
+          "type": "product3d",
+          "id": "hero",
           "eyebrow": "Print and imaging",
           "heading": "Your print shop, <em>down the hall</em>.",
           "subhead": "High-volume print with booklet, binding and stapling finishing, in-house.",
           "primary": {
             "label": "Request a quote",
-            "href": "contact.html"
+            "href": "#quote"
           },
           "secondary": {
-            "label": "Talk with your branch",
-            "href": "locations.html"
+            "label": "Run my Full Office Overview",
+            "href": "office-overview.html"
           },
-          "image": "assets/production-print-1200.jpg",
-          "image_alt": "Production printers",
-          "image_w": 1200,
-          "image_h": 800
+          "facts": [
+            [
+              "2 brands",
+              "Ricoh, Savin"
+            ],
+            [
+              "5 offices",
+              "The nearest one dispatches"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited"
+            ]
+          ],
+          "tags": [
+            [
+              "Volume without the wait",
+              "",
+              2,
+              24
+            ],
+            [
+              "Finishing inline",
+              "",
+              64,
+              9
+            ],
+            [
+              "Color you can trust",
+              "",
+              58,
+              76
+            ]
+          ],
+          "poster": "assets/fleet/production.png",
+          "photo": false,
+          "alt": "A 3D model of production printers you can turn",
+          "alt_text": "Production printers from Kelly Office Solutions",
+          "orbit": "30deg 74deg 105%",
+          "model": "assets/models/production.glb"
+        },
+        {
+          "type": "ticker",
+          "id": "ticker",
+          "label": "What every Kelly agreement includes",
+          "items": [
+            "Serviced by the people who sold it",
+            "Meter reads taken automatically",
+            "Supplies shipped on usage, before you run out",
+            "One agreement, one invoice, one number",
+            "Five North Carolina offices",
+            "1-800-34-KELLY reaches all five",
+            "Priority dispatch under agreement",
+            "Family-owned since 1947",
+            "Net Promoter Score 94.4, audited"
+          ]
         },
         {
           "type": "detail",
+          "alt": true,
           "eyebrow": "What to know",
           "heading": "About production printers",
           "body": "Need to print at high volume or produce a specific finished piece, a booklet or a manual? Production printers are designed for large quantities and offer finishing options like binding and stapling. Schools, churches, legal and marketing departments bring the print shop in-house and control the schedule.",
@@ -4424,6 +6077,90 @@
           ],
           "image": "assets/production-print-1200.jpg",
           "flip": true
+        },
+        {
+          "type": "cards",
+          "eyebrow": "Why it matters",
+          "heading": "What production printers changes",
+          "items": [
+            [
+              "Volume without the wait",
+              "Thousands of pages an hour, finished as they print."
+            ],
+            [
+              "Finishing inline",
+              "Booklets, stapling, folding and binding on the device."
+            ],
+            [
+              "Color you can trust",
+              "Consistent color from the first sheet to the last."
+            ]
+          ]
+        },
+        {
+          "type": "pulseflow",
+          "id": "monitor",
+          "eyebrow": "Under agreement",
+          "heading": "It reports in before anyone has to call",
+          "intro": "Every device on a Kelly agreement is watched. The fault, the low toner and the meter read reach Kelly first, and the fix is already moving.",
+          "nodes": [
+            [
+              "device",
+              "The device",
+              "Reports its own levels and faults."
+            ],
+            [
+              "meter",
+              "The meter",
+              "Read automatically, never chased."
+            ],
+            [
+              "dash",
+              "Kelly sees it",
+              "A technician has it on the list first."
+            ],
+            [
+              "truck",
+              "Kelly acts",
+              "Supplies ship. A technician rolls."
+            ],
+            [
+              "smile",
+              "You carry on",
+              "Nobody in the office made a call."
+            ]
+          ],
+          "feed": [
+            [
+              0,
+              "<b>Device 14</b> toner at 18 percent, reorder threshold reached"
+            ],
+            [
+              1,
+              "Meter read captured for 22 devices, no staff time"
+            ],
+            [
+              2,
+              "Jam pattern flagged on a feeder, technician notified"
+            ],
+            [
+              3,
+              "<span class=\"ok\">Toner shipped</span> to the branch, arrives before it runs out"
+            ],
+            [
+              4,
+              "<span class=\"ok\">Resolved</span> before a ticket was opened"
+            ],
+            [
+              0,
+              "<b>Device 3</b> firmware current, security patched"
+            ],
+            [
+              1,
+              "Month-end meter report ready for review"
+            ]
+          ],
+          "note": "Illustrative example feed. A real feed shows your devices, your meters and your supply orders."
         },
         {
           "type": "fleet",
@@ -4501,24 +6238,38 @@
           "alt": true
         },
         {
-          "type": "cards",
-          "alt": true,
-          "eyebrow": "Why it matters",
-          "heading": "What production printers changes",
+          "type": "countband",
+          "id": "numbers",
+          "eyebrow": "Measured, not claimed",
           "items": [
             [
-              "Volume without the wait",
-              "Thousands of pages an hour, finished as they print."
+              "4000",
+              "Customers across North Carolina, approximately",
+              "+"
             ],
             [
-              "Finishing inline",
-              "Booklets, stapling, folding and binding on the device."
+              "5",
+              "Offices, one number to call"
             ],
             [
-              "Color you can trust",
-              "Consistent color from the first sheet to the last."
+              "94.4",
+              "Net Promoter Score, audited by CEO Juice"
+            ],
+            [
+              "79",
+              "Years family-owned, since 1947"
             ]
           ]
+        },
+        {
+          "type": "savingstease",
+          "id": "savings",
+          "eyebrow": "Full Office Overview",
+          "heading": "What would 10 percent be worth to your office?",
+          "body": "One analysis across print, documents, production, IT, mailing and the break room. We set out to find at least 10 percent, and we tell you plainly if we cannot.",
+          "href": "office-overview.html",
+          "cta": "Run my Full Office Overview",
+          "rate": 0.12
         },
         {
           "type": "partners",
@@ -4530,6 +6281,7 @@
         },
         {
           "type": "faq",
+          "alt": true,
           "eyebrow": "Questions",
           "heading": "Asked on most first calls",
           "items": [
@@ -4545,7 +6297,6 @@
         },
         {
           "type": "resources",
-          "alt": true,
           "heading": "More in print and imaging",
           "intro": "Every product Kelly sells is serviced by Kelly.",
           "items": [
@@ -4574,6 +6325,7 @@
         },
         {
           "type": "leadform",
+          "alt": true,
           "id": "quote",
           "heading": "Get a quote on production printers",
           "body": "Tell us the volume and the office. A specialist from the nearest branch replies with options and prices.",
@@ -4602,26 +6354,79 @@
       ],
       "sections": [
         {
-          "type": "hero",
-          "layout": "split",
+          "type": "product3d",
+          "id": "hero",
           "eyebrow": "Mail and shipping",
           "heading": "Exact postage, <em>at commercial rates</em>.",
           "subhead": "Weigh, rate and print exact postage, at commercial rates, from your own mailroom.",
           "primary": {
             "label": "Request a quote",
-            "href": "contact.html"
+            "href": "#quote"
           },
           "secondary": {
-            "label": "Talk with your branch",
-            "href": "locations.html"
+            "label": "Run my Full Office Overview",
+            "href": "office-overview.html"
           },
-          "image": "assets/postage-1200.jpg",
-          "image_alt": "Postage meters",
-          "image_w": 1200,
-          "image_h": 800
+          "facts": [
+            [
+              "1 brands",
+              "FP Mailing Solutions"
+            ],
+            [
+              "5 offices",
+              "The nearest one dispatches"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited"
+            ]
+          ],
+          "tags": [
+            [
+              "Discounted postage",
+              "",
+              2,
+              24
+            ],
+            [
+              "Exact postage",
+              "",
+              64,
+              9
+            ],
+            [
+              "IMI compliant",
+              "",
+              58,
+              76
+            ]
+          ],
+          "poster": "assets/fleet/postage.png",
+          "photo": false,
+          "alt": "A 3D model of postage meters you can turn",
+          "alt_text": "Postage meters from Kelly Office Solutions",
+          "orbit": "30deg 74deg 105%",
+          "model": "assets/models/postage.glb"
+        },
+        {
+          "type": "ticker",
+          "id": "ticker",
+          "label": "What every Kelly agreement includes",
+          "items": [
+            "Serviced by the people who sold it",
+            "Meter reads taken automatically",
+            "Supplies shipped on usage, before you run out",
+            "One agreement, one invoice, one number",
+            "Five North Carolina offices",
+            "1-800-34-KELLY reaches all five",
+            "Priority dispatch under agreement",
+            "Family-owned since 1947",
+            "Net Promoter Score 94.4, audited"
+          ]
         },
         {
           "type": "detail",
+          "alt": true,
           "eyebrow": "What to know",
           "heading": "About postage meters",
           "body": "Postage meters have become standard for businesses that send medium or large volumes of mail. They are digitally connected, automate mailroom processes, and weigh, rate and print exact postage. A meter earns discounted rates compared to stamps. Kelly partners with FP Mailing Solutions, whose meter range is fully IMI compliant.",
@@ -4636,7 +6441,6 @@
         },
         {
           "type": "cards",
-          "alt": true,
           "eyebrow": "Why it matters",
           "heading": "What postage meters changes",
           "items": [
@@ -4655,6 +6459,40 @@
           ]
         },
         {
+          "type": "countband",
+          "id": "numbers",
+          "eyebrow": "Measured, not claimed",
+          "items": [
+            [
+              "4000",
+              "Customers across North Carolina, approximately",
+              "+"
+            ],
+            [
+              "5",
+              "Offices, one number to call"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited by CEO Juice"
+            ],
+            [
+              "79",
+              "Years family-owned, since 1947"
+            ]
+          ]
+        },
+        {
+          "type": "savingstease",
+          "id": "savings",
+          "eyebrow": "Full Office Overview",
+          "heading": "What would 10 percent be worth to your office?",
+          "body": "One analysis across print, documents, production, IT, mailing and the break room. We set out to find at least 10 percent, and we tell you plainly if we cannot.",
+          "href": "office-overview.html",
+          "cta": "Run my Full Office Overview",
+          "rate": 0.12
+        },
+        {
           "type": "partners",
           "caption": "Brands Kelly carries for this",
           "items": [
@@ -4663,6 +6501,7 @@
         },
         {
           "type": "faq",
+          "alt": true,
           "eyebrow": "Questions",
           "heading": "Asked on most first calls",
           "items": [
@@ -4678,7 +6517,6 @@
         },
         {
           "type": "resources",
-          "alt": true,
           "heading": "More in mail and shipping",
           "intro": "Every product Kelly sells is serviced by Kelly.",
           "items": [
@@ -4707,6 +6545,7 @@
         },
         {
           "type": "leadform",
+          "alt": true,
           "id": "quote",
           "heading": "Get a quote on postage meters",
           "body": "Tell us the volume and the office. A specialist from the nearest branch replies with options and prices.",
@@ -4735,26 +6574,78 @@
       ],
       "sections": [
         {
-          "type": "hero",
-          "layout": "split",
+          "type": "product3d",
+          "id": "hero",
           "eyebrow": "Mail and shipping",
           "heading": "The envelope-stuffing afternoon, <em>gone</em>.",
           "subhead": "Fold, stuff and seal large mailings automatically, accurately and fast.",
           "primary": {
             "label": "Request a quote",
-            "href": "contact.html"
+            "href": "#quote"
           },
           "secondary": {
-            "label": "Talk with your branch",
-            "href": "locations.html"
+            "label": "Run my Full Office Overview",
+            "href": "office-overview.html"
           },
-          "image": "assets/folder-inserter-1200.jpg",
-          "image_alt": "Folder inserters",
-          "image_w": 1200,
-          "image_h": 800
+          "facts": [
+            [
+              "1 brands",
+              "FP Mailing Solutions"
+            ],
+            [
+              "5 offices",
+              "The nearest one dispatches"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited"
+            ]
+          ],
+          "tags": [
+            [
+              "Hours back",
+              "",
+              2,
+              24
+            ],
+            [
+              "Accuracy",
+              "",
+              64,
+              9
+            ],
+            [
+              "Speed",
+              "",
+              58,
+              76
+            ]
+          ],
+          "poster": "assets/folder-inserter-1200.jpg",
+          "photo": true,
+          "alt": "A 3D model of folder inserters you can turn",
+          "alt_text": "Folder inserters from Kelly Office Solutions",
+          "orbit": "30deg 74deg 105%"
+        },
+        {
+          "type": "ticker",
+          "id": "ticker",
+          "label": "What every Kelly agreement includes",
+          "items": [
+            "Serviced by the people who sold it",
+            "Meter reads taken automatically",
+            "Supplies shipped on usage, before you run out",
+            "One agreement, one invoice, one number",
+            "Five North Carolina offices",
+            "1-800-34-KELLY reaches all five",
+            "Priority dispatch under agreement",
+            "Family-owned since 1947",
+            "Net Promoter Score 94.4, audited"
+          ]
         },
         {
           "type": "detail",
+          "alt": true,
           "eyebrow": "What to know",
           "heading": "About folder inserters",
           "body": "Folder inserters process and send large volumes of mail quickly. An adjustable feeder and automated folding and inserting system replace the manual labor of stuffing each envelope, so invoices, statements and direct mail go out faster and more accurately. Ideal for any office that processes customer invoices or marketing mailings regularly.",
@@ -4769,7 +6660,6 @@
         },
         {
           "type": "cards",
-          "alt": true,
           "eyebrow": "Why it matters",
           "heading": "What folder inserters changes",
           "items": [
@@ -4788,6 +6678,40 @@
           ]
         },
         {
+          "type": "countband",
+          "id": "numbers",
+          "eyebrow": "Measured, not claimed",
+          "items": [
+            [
+              "4000",
+              "Customers across North Carolina, approximately",
+              "+"
+            ],
+            [
+              "5",
+              "Offices, one number to call"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited by CEO Juice"
+            ],
+            [
+              "79",
+              "Years family-owned, since 1947"
+            ]
+          ]
+        },
+        {
+          "type": "savingstease",
+          "id": "savings",
+          "eyebrow": "Full Office Overview",
+          "heading": "What would 10 percent be worth to your office?",
+          "body": "One analysis across print, documents, production, IT, mailing and the break room. We set out to find at least 10 percent, and we tell you plainly if we cannot.",
+          "href": "office-overview.html",
+          "cta": "Run my Full Office Overview",
+          "rate": 0.12
+        },
+        {
           "type": "partners",
           "caption": "Brands Kelly carries for this",
           "items": [
@@ -4796,6 +6720,7 @@
         },
         {
           "type": "faq",
+          "alt": true,
           "eyebrow": "Questions",
           "heading": "Asked on most first calls",
           "items": [
@@ -4811,7 +6736,6 @@
         },
         {
           "type": "resources",
-          "alt": true,
           "heading": "More in mail and shipping",
           "intro": "Every product Kelly sells is serviced by Kelly.",
           "items": [
@@ -4840,6 +6764,7 @@
         },
         {
           "type": "leadform",
+          "alt": true,
           "id": "quote",
           "heading": "Get a quote on folder inserters",
           "body": "Tell us the volume and the office. A specialist from the nearest branch replies with options and prices.",
@@ -4868,26 +6793,78 @@
       ],
       "sections": [
         {
-          "type": "hero",
-          "layout": "split",
+          "type": "product3d",
+          "id": "hero",
           "eyebrow": "Mail and shipping",
           "heading": "Envelopes and labels, <em>done right</em>.",
           "subhead": "Envelope, address and label printers with a lower cost per print than your MFP.",
           "primary": {
             "label": "Request a quote",
-            "href": "contact.html"
+            "href": "#quote"
           },
           "secondary": {
-            "label": "Talk with your branch",
-            "href": "locations.html"
+            "label": "Run my Full Office Overview",
+            "href": "office-overview.html"
           },
-          "image": "assets/mailroom-printer-1200.jpg",
-          "image_alt": "Mailroom printers",
-          "image_w": 1200,
-          "image_h": 800
+          "facts": [
+            [
+              "1 brands",
+              "FP Mailing Solutions"
+            ],
+            [
+              "5 offices",
+              "The nearest one dispatches"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited"
+            ]
+          ],
+          "tags": [
+            [
+              "Lower cost per print",
+              "",
+              2,
+              24
+            ],
+            [
+              "Fast",
+              "",
+              64,
+              9
+            ],
+            [
+              "Compact",
+              "",
+              58,
+              76
+            ]
+          ],
+          "poster": "assets/mailroom-printer-1200.jpg",
+          "photo": true,
+          "alt": "A 3D model of mailroom printers you can turn",
+          "alt_text": "Mailroom printers from Kelly Office Solutions",
+          "orbit": "30deg 74deg 105%"
+        },
+        {
+          "type": "ticker",
+          "id": "ticker",
+          "label": "What every Kelly agreement includes",
+          "items": [
+            "Serviced by the people who sold it",
+            "Meter reads taken automatically",
+            "Supplies shipped on usage, before you run out",
+            "One agreement, one invoice, one number",
+            "Five North Carolina offices",
+            "1-800-34-KELLY reaches all five",
+            "Priority dispatch under agreement",
+            "Family-owned since 1947",
+            "Net Promoter Score 94.4, audited"
+          ]
         },
         {
           "type": "detail",
+          "alt": true,
           "eyebrow": "What to know",
           "heading": "About mailroom printers",
           "body": "Printers designed for mailroom work, envelope printers, address printers and label printers, are essential for businesses that send direct mail. They offer a low cost per print compared with an office multifunction device, with the speed and versatility a mailroom needs. If your office prints envelopes, address labels or return labels regularly, a dedicated mailroom printer is the answer.",
@@ -4902,7 +6879,6 @@
         },
         {
           "type": "cards",
-          "alt": true,
           "eyebrow": "Why it matters",
           "heading": "What mailroom printers changes",
           "items": [
@@ -4921,6 +6897,40 @@
           ]
         },
         {
+          "type": "countband",
+          "id": "numbers",
+          "eyebrow": "Measured, not claimed",
+          "items": [
+            [
+              "4000",
+              "Customers across North Carolina, approximately",
+              "+"
+            ],
+            [
+              "5",
+              "Offices, one number to call"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited by CEO Juice"
+            ],
+            [
+              "79",
+              "Years family-owned, since 1947"
+            ]
+          ]
+        },
+        {
+          "type": "savingstease",
+          "id": "savings",
+          "eyebrow": "Full Office Overview",
+          "heading": "What would 10 percent be worth to your office?",
+          "body": "One analysis across print, documents, production, IT, mailing and the break room. We set out to find at least 10 percent, and we tell you plainly if we cannot.",
+          "href": "office-overview.html",
+          "cta": "Run my Full Office Overview",
+          "rate": 0.12
+        },
+        {
           "type": "partners",
           "caption": "Brands Kelly carries for this",
           "items": [
@@ -4929,6 +6939,7 @@
         },
         {
           "type": "faq",
+          "alt": true,
           "eyebrow": "Questions",
           "heading": "Asked on most first calls",
           "items": [
@@ -4944,7 +6955,6 @@
         },
         {
           "type": "resources",
-          "alt": true,
           "heading": "More in mail and shipping",
           "intro": "Every product Kelly sells is serviced by Kelly.",
           "items": [
@@ -4973,6 +6983,7 @@
         },
         {
           "type": "leadform",
+          "alt": true,
           "id": "quote",
           "heading": "Get a quote on mailroom printers",
           "body": "Tell us the volume and the office. A specialist from the nearest branch replies with options and prices.",
@@ -5001,26 +7012,78 @@
       ],
       "sections": [
         {
-          "type": "hero",
-          "layout": "split",
+          "type": "product3d",
+          "id": "hero",
           "eyebrow": "Mail and shipping",
           "heading": "Packages, <em>secured and collected</em>.",
           "subhead": "Secure, contactless package pickup for offices, campuses and properties.",
           "primary": {
             "label": "Request a quote",
-            "href": "contact.html"
+            "href": "#quote"
           },
           "secondary": {
-            "label": "Talk with your branch",
-            "href": "locations.html"
+            "label": "Run my Full Office Overview",
+            "href": "office-overview.html"
           },
-          "image": "assets/lockers-1200.jpg",
-          "image_alt": "Parcel lockers",
-          "image_w": 1200,
-          "image_h": 800
+          "facts": [
+            [
+              "1 brands",
+              "FP Mailing Solutions"
+            ],
+            [
+              "5 offices",
+              "The nearest one dispatches"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited"
+            ]
+          ],
+          "tags": [
+            [
+              "Secure",
+              "",
+              2,
+              24
+            ],
+            [
+              "Contactless",
+              "",
+              64,
+              9
+            ],
+            [
+              "Less staff time",
+              "",
+              58,
+              76
+            ]
+          ],
+          "poster": "assets/lockers-1200.jpg",
+          "photo": true,
+          "alt": "A 3D model of parcel lockers you can turn",
+          "alt_text": "Parcel lockers from Kelly Office Solutions",
+          "orbit": "30deg 74deg 105%"
+        },
+        {
+          "type": "ticker",
+          "id": "ticker",
+          "label": "What every Kelly agreement includes",
+          "items": [
+            "Serviced by the people who sold it",
+            "Meter reads taken automatically",
+            "Supplies shipped on usage, before you run out",
+            "One agreement, one invoice, one number",
+            "Five North Carolina offices",
+            "1-800-34-KELLY reaches all five",
+            "Priority dispatch under agreement",
+            "Family-owned since 1947",
+            "Net Promoter Score 94.4, audited"
+          ]
         },
         {
           "type": "detail",
+          "alt": true,
           "eyebrow": "What to know",
           "heading": "About parcel lockers",
           "body": "Parcel lockers provide a secure, practical and contactless way to receive packages. E-commerce has multiplied parcel volume, and anyone who accepts items on behalf of recipients, property managers, campuses, offices, feels it. Lockers benefit the whole chain, from carrier to recipient, and have become the expected solution since the pandemic.",
@@ -5035,7 +7098,6 @@
         },
         {
           "type": "cards",
-          "alt": true,
           "eyebrow": "Why it matters",
           "heading": "What parcel lockers changes",
           "items": [
@@ -5054,6 +7116,40 @@
           ]
         },
         {
+          "type": "countband",
+          "id": "numbers",
+          "eyebrow": "Measured, not claimed",
+          "items": [
+            [
+              "4000",
+              "Customers across North Carolina, approximately",
+              "+"
+            ],
+            [
+              "5",
+              "Offices, one number to call"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited by CEO Juice"
+            ],
+            [
+              "79",
+              "Years family-owned, since 1947"
+            ]
+          ]
+        },
+        {
+          "type": "savingstease",
+          "id": "savings",
+          "eyebrow": "Full Office Overview",
+          "heading": "What would 10 percent be worth to your office?",
+          "body": "One analysis across print, documents, production, IT, mailing and the break room. We set out to find at least 10 percent, and we tell you plainly if we cannot.",
+          "href": "office-overview.html",
+          "cta": "Run my Full Office Overview",
+          "rate": 0.12
+        },
+        {
           "type": "partners",
           "caption": "Brands Kelly carries for this",
           "items": [
@@ -5062,6 +7158,7 @@
         },
         {
           "type": "faq",
+          "alt": true,
           "eyebrow": "Questions",
           "heading": "Asked on most first calls",
           "items": [
@@ -5077,7 +7174,6 @@
         },
         {
           "type": "resources",
-          "alt": true,
           "heading": "More in mail and shipping",
           "intro": "Every product Kelly sells is serviced by Kelly.",
           "items": [
@@ -5106,6 +7202,7 @@
         },
         {
           "type": "leadform",
+          "alt": true,
           "id": "quote",
           "heading": "Get a quote on parcel lockers",
           "body": "Tell us the volume and the office. A specialist from the nearest branch replies with options and prices.",
@@ -5134,26 +7231,78 @@
       ],
       "sections": [
         {
-          "type": "hero",
-          "layout": "split",
+          "type": "product3d",
+          "id": "hero",
           "eyebrow": "Mail and shipping",
           "heading": "Ship, sign and account, <em>from one screen</em>.",
           "subhead": "Ship with tracking, sign documents electronically, and account for every dollar of postage.",
           "primary": {
             "label": "Request a quote",
-            "href": "contact.html"
+            "href": "#quote"
           },
           "secondary": {
-            "label": "Talk with your branch",
-            "href": "locations.html"
+            "label": "Run my Full Office Overview",
+            "href": "office-overview.html"
           },
-          "image": "assets/it-1-1200.jpg",
-          "image_alt": "Mailing software: parcel shipping, FP Sign, RemoteOne and MailOne",
-          "image_w": 1200,
-          "image_h": 800
+          "facts": [
+            [
+              "1 brands",
+              "FP Mailing Solutions"
+            ],
+            [
+              "5 offices",
+              "The nearest one dispatches"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited"
+            ]
+          ],
+          "tags": [
+            [
+              "Parcel shipping",
+              "",
+              2,
+              24
+            ],
+            [
+              "FP Sign",
+              "",
+              64,
+              9
+            ],
+            [
+              "RemoteOne and MailOne",
+              "",
+              58,
+              76
+            ]
+          ],
+          "poster": "assets/it-1-1200.jpg",
+          "photo": true,
+          "alt": "A 3D model of mailing software you can turn",
+          "alt_text": "Mailing software from Kelly Office Solutions",
+          "orbit": "30deg 74deg 105%"
+        },
+        {
+          "type": "ticker",
+          "id": "ticker",
+          "label": "What every Kelly agreement includes",
+          "items": [
+            "Serviced by the people who sold it",
+            "Meter reads taken automatically",
+            "Supplies shipped on usage, before you run out",
+            "One agreement, one invoice, one number",
+            "Five North Carolina offices",
+            "1-800-34-KELLY reaches all five",
+            "Priority dispatch under agreement",
+            "Family-owned since 1947",
+            "Net Promoter Score 94.4, audited"
+          ]
         },
         {
           "type": "detail",
+          "alt": true,
           "eyebrow": "What to know",
           "heading": "About mailing software: parcel shipping, fp sign, remoteone and mailone",
           "body": "FP Parcel Shipping is a step-by-step online program that produces shipping labels with tracking and offers insurance for extra security. FP Sign lets businesses exchange, sign and manage critical documents online, which suits legal, accounting and medical work. RemoteOne manages, tracks and routes mail from anywhere, and MailOne gives accounting departments integrated mailing, shipping and three-tier cost accounting for FP equipment.",
@@ -5168,7 +7317,6 @@
         },
         {
           "type": "cards",
-          "alt": true,
           "eyebrow": "Why it matters",
           "heading": "What mailing software changes",
           "items": [
@@ -5187,6 +7335,56 @@
           ]
         },
         {
+          "type": "countband",
+          "id": "numbers",
+          "eyebrow": "Measured, not claimed",
+          "items": [
+            [
+              "4000",
+              "Customers across North Carolina, approximately",
+              "+"
+            ],
+            [
+              "5",
+              "Offices, one number to call"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited by CEO Juice"
+            ],
+            [
+              "79",
+              "Years family-owned, since 1947"
+            ]
+          ]
+        },
+        {
+          "type": "itdirector",
+          "id": "ita",
+          "eyebrow": "Meanwhile, in the server room",
+          "heading": "From 2 a.m. alerts to one number to call",
+          "intro": "Drag the slider. Same office, same IT director. The difference is who is watching the systems, the copiers and the invoices.",
+          "before": "assets/it-before-1600.jpg",
+          "after": "assets/it-after-1600.jpg",
+          "logo": "assets/kelly-logo.png",
+          "before_label": "Seven vendors",
+          "after_label": "One partner",
+          "before_title": "Today, in most offices",
+          "before_body": "A copier company, an IT firm that blames the copier company, a postage meter on its own contract. Four numbers to call and nobody who knows your name.",
+          "after_title": "With Kelly",
+          "after_body": "Monitoring, backup and security from the KellyWay team, serviced on the same visit as the copier, on one agreement and one invoice. One number: 1-800-34-KELLY."
+        },
+        {
+          "type": "savingstease",
+          "id": "savings",
+          "eyebrow": "Full Office Overview",
+          "heading": "What would 10 percent be worth to your office?",
+          "body": "One analysis across print, documents, production, IT, mailing and the break room. We set out to find at least 10 percent, and we tell you plainly if we cannot.",
+          "href": "office-overview.html",
+          "cta": "Run my Full Office Overview",
+          "rate": 0.12
+        },
+        {
           "type": "partners",
           "caption": "Brands Kelly carries for this",
           "items": [
@@ -5195,6 +7393,7 @@
         },
         {
           "type": "faq",
+          "alt": true,
           "eyebrow": "Questions",
           "heading": "Asked on most first calls",
           "items": [
@@ -5210,7 +7409,6 @@
         },
         {
           "type": "resources",
-          "alt": true,
           "heading": "More in mail and shipping",
           "intro": "Every product Kelly sells is serviced by Kelly.",
           "items": [
@@ -5239,6 +7437,7 @@
         },
         {
           "type": "leadform",
+          "alt": true,
           "id": "quote",
           "heading": "Get a quote on mailing software",
           "body": "Tell us the volume and the office. A specialist from the nearest branch replies with options and prices.",
@@ -5267,26 +7466,78 @@
       ],
       "sections": [
         {
-          "type": "hero",
-          "layout": "split",
+          "type": "product3d",
+          "id": "hero",
           "eyebrow": "Mail and shipping",
           "heading": "Everything else <em>the mailroom needs</em>.",
           "subhead": "Pressure sealers, letter openers, joggers, scales and furniture that make the mailroom run.",
           "primary": {
             "label": "Request a quote",
-            "href": "contact.html"
+            "href": "#quote"
           },
           "secondary": {
-            "label": "Talk with your branch",
-            "href": "locations.html"
+            "label": "Run my Full Office Overview",
+            "href": "office-overview.html"
           },
-          "image": "assets/gso-office-1200.jpg",
-          "image_alt": "Mailroom accessories",
-          "image_w": 1200,
-          "image_h": 800
+          "facts": [
+            [
+              "1 brands",
+              "FP Mailing Solutions"
+            ],
+            [
+              "5 offices",
+              "The nearest one dispatches"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited"
+            ]
+          ],
+          "tags": [
+            [
+              "Pressure sealers",
+              "",
+              2,
+              24
+            ],
+            [
+              "Letter openers",
+              "",
+              64,
+              9
+            ],
+            [
+              "Scales, joggers and furniture",
+              "",
+              58,
+              76
+            ]
+          ],
+          "poster": "assets/gso-office-1200.jpg",
+          "photo": true,
+          "alt": "A 3D model of mailroom accessories you can turn",
+          "alt_text": "Mailroom accessories from Kelly Office Solutions",
+          "orbit": "30deg 74deg 105%"
+        },
+        {
+          "type": "ticker",
+          "id": "ticker",
+          "label": "What every Kelly agreement includes",
+          "items": [
+            "Serviced by the people who sold it",
+            "Meter reads taken automatically",
+            "Supplies shipped on usage, before you run out",
+            "One agreement, one invoice, one number",
+            "Five North Carolina offices",
+            "1-800-34-KELLY reaches all five",
+            "Priority dispatch under agreement",
+            "Family-owned since 1947",
+            "Net Promoter Score 94.4, audited"
+          ]
         },
         {
           "type": "detail",
+          "alt": true,
           "eyebrow": "What to know",
           "heading": "About mailroom accessories",
           "body": "Alongside meters, inserters and printers, the FP partnership lets Kelly supply the rest of the mailroom: pressure sealers for secure, tamper-evident documents; letter openers running from 24,000 to 40,000 pieces an hour; mailroom furniture that steadies equipment and cuts service calls; paper joggers that align stacks for accurate processing; power line conditioners for stable supply; and postal scales for exact postage.",
@@ -5301,7 +7552,6 @@
         },
         {
           "type": "cards",
-          "alt": true,
           "eyebrow": "Why it matters",
           "heading": "What mailroom accessories changes",
           "items": [
@@ -5320,6 +7570,40 @@
           ]
         },
         {
+          "type": "countband",
+          "id": "numbers",
+          "eyebrow": "Measured, not claimed",
+          "items": [
+            [
+              "4000",
+              "Customers across North Carolina, approximately",
+              "+"
+            ],
+            [
+              "5",
+              "Offices, one number to call"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited by CEO Juice"
+            ],
+            [
+              "79",
+              "Years family-owned, since 1947"
+            ]
+          ]
+        },
+        {
+          "type": "savingstease",
+          "id": "savings",
+          "eyebrow": "Full Office Overview",
+          "heading": "What would 10 percent be worth to your office?",
+          "body": "One analysis across print, documents, production, IT, mailing and the break room. We set out to find at least 10 percent, and we tell you plainly if we cannot.",
+          "href": "office-overview.html",
+          "cta": "Run my Full Office Overview",
+          "rate": 0.12
+        },
+        {
           "type": "partners",
           "caption": "Brands Kelly carries for this",
           "items": [
@@ -5328,6 +7612,7 @@
         },
         {
           "type": "faq",
+          "alt": true,
           "eyebrow": "Questions",
           "heading": "Asked on most first calls",
           "items": [
@@ -5339,7 +7624,6 @@
         },
         {
           "type": "resources",
-          "alt": true,
           "heading": "More in mail and shipping",
           "intro": "Every product Kelly sells is serviced by Kelly.",
           "items": [
@@ -5368,6 +7652,7 @@
         },
         {
           "type": "leadform",
+          "alt": true,
           "id": "quote",
           "heading": "Get a quote on mailroom accessories",
           "body": "Tell us the volume and the office. A specialist from the nearest branch replies with options and prices.",
@@ -5396,26 +7681,79 @@
       ],
       "sections": [
         {
-          "type": "hero",
-          "layout": "split",
+          "type": "product3d",
+          "id": "hero",
           "eyebrow": "Water, ice and coffee",
           "heading": "Better water, <em>no jugs</em>.",
           "subhead": "Purified water on tap, for the office that wants people hydrated and at their desks.",
           "primary": {
             "label": "Request a quote",
-            "href": "contact.html"
+            "href": "#quote"
           },
           "secondary": {
-            "label": "Talk with your branch",
-            "href": "locations.html"
+            "label": "Run my Full Office Overview",
+            "href": "office-overview.html"
           },
-          "image": "assets/water-1200.jpg",
-          "image_alt": "Water coolers",
-          "image_w": 1200,
-          "image_h": 800
+          "facts": [
+            [
+              "2 brands",
+              "Wellsys, FloWater"
+            ],
+            [
+              "5 offices",
+              "The nearest one dispatches"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited"
+            ]
+          ],
+          "tags": [
+            [
+              "Purified, filtered water",
+              "",
+              2,
+              24
+            ],
+            [
+              "Sanitizing on schedule",
+              "",
+              64,
+              9
+            ],
+            [
+              "Serviced with your copier",
+              "",
+              58,
+              76
+            ]
+          ],
+          "poster": "assets/fleet/breakroom.png",
+          "photo": false,
+          "alt": "A 3D model of water coolers you can turn",
+          "alt_text": "Water coolers from Kelly Office Solutions",
+          "orbit": "30deg 74deg 105%",
+          "model": "assets/models/breakroom.glb"
+        },
+        {
+          "type": "ticker",
+          "id": "ticker",
+          "label": "What every Kelly agreement includes",
+          "items": [
+            "Serviced by the people who sold it",
+            "Meter reads taken automatically",
+            "Supplies shipped on usage, before you run out",
+            "One agreement, one invoice, one number",
+            "Five North Carolina offices",
+            "1-800-34-KELLY reaches all five",
+            "Priority dispatch under agreement",
+            "Family-owned since 1947",
+            "Net Promoter Score 94.4, audited"
+          ]
         },
         {
           "type": "detail",
+          "alt": true,
           "eyebrow": "What to know",
           "heading": "About water coolers",
           "body": "Employers are required to provide drinking water, but lukewarm tap water impresses neither customers nor staff. Purified water tastes better and keeps people hydrated, and the walk to the cooler and back is a small reset that helps focus. A water cooler is one of the most affordable upgrades an office can make, and cheaper than stocking sodas.",
@@ -5430,7 +7768,6 @@
         },
         {
           "type": "cards",
-          "alt": true,
           "eyebrow": "Why it matters",
           "heading": "What water coolers changes",
           "items": [
@@ -5449,6 +7786,78 @@
           ]
         },
         {
+          "type": "photoband",
+          "id": "mugs",
+          "alt": true,
+          "eyebrow": "Pure Technology",
+          "heading": "The break room people actually like",
+          "intro": "Water, ice and coffee, serviced on the same visit as the copier. One fewer delivery company, one fewer invoice.",
+          "image": "assets/break-mugs-1600.jpg",
+          "alt_text": "Four coworkers laughing in an office break room, each holding a Kelly Office Solutions coffee mug",
+          "points": [
+            "Bottleless, filtered water without the jugs",
+            "Ice and coffee restocked on the same visit as the copier",
+            "Single-cup or high-volume brewers, matched to the office",
+            "One agreement and one number for the whole break room"
+          ],
+          "cta": {
+            "label": "See Pure Technology",
+            "href": "services/pure-technology.html"
+          },
+          "steam": [
+            [
+              35,
+              38
+            ],
+            [
+              58,
+              54
+            ],
+            [
+              28,
+              64
+            ],
+            [
+              70,
+              64
+            ]
+          ]
+        },
+        {
+          "type": "countband",
+          "id": "numbers",
+          "eyebrow": "Measured, not claimed",
+          "items": [
+            [
+              "4000",
+              "Customers across North Carolina, approximately",
+              "+"
+            ],
+            [
+              "5",
+              "Offices, one number to call"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited by CEO Juice"
+            ],
+            [
+              "79",
+              "Years family-owned, since 1947"
+            ]
+          ]
+        },
+        {
+          "type": "savingstease",
+          "id": "savings",
+          "eyebrow": "Full Office Overview",
+          "heading": "What would 10 percent be worth to your office?",
+          "body": "One analysis across print, documents, production, IT, mailing and the break room. We set out to find at least 10 percent, and we tell you plainly if we cannot.",
+          "href": "office-overview.html",
+          "cta": "Run my Full Office Overview",
+          "rate": 0.12
+        },
+        {
           "type": "partners",
           "caption": "Brands Kelly carries for this",
           "items": [
@@ -5458,6 +7867,7 @@
         },
         {
           "type": "faq",
+          "alt": true,
           "eyebrow": "Questions",
           "heading": "Asked on most first calls",
           "items": [
@@ -5473,7 +7883,6 @@
         },
         {
           "type": "resources",
-          "alt": true,
           "heading": "More in water, ice and coffee",
           "intro": "Every product Kelly sells is serviced by Kelly.",
           "items": [
@@ -5495,6 +7904,7 @@
         },
         {
           "type": "leadform",
+          "alt": true,
           "id": "quote",
           "heading": "Get a quote on water coolers",
           "body": "Tell us the volume and the office. A specialist from the nearest branch replies with options and prices.",
@@ -5523,26 +7933,79 @@
       ],
       "sections": [
         {
-          "type": "hero",
-          "layout": "split",
+          "type": "product3d",
+          "id": "hero",
           "eyebrow": "Water, ice and coffee",
           "heading": "125 pounds of ice a day, <em>from a small footprint</em>.",
           "subhead": "Energy-efficient commercial ice, up to 125 pounds a day, from a compact footprint.",
           "primary": {
             "label": "Request a quote",
-            "href": "contact.html"
+            "href": "#quote"
           },
           "secondary": {
-            "label": "Talk with your branch",
-            "href": "locations.html"
+            "label": "Run my Full Office Overview",
+            "href": "office-overview.html"
           },
-          "image": "assets/ice-1200.jpg",
-          "image_alt": "Ice machines",
-          "image_w": 1200,
-          "image_h": 800
+          "facts": [
+            [
+              "2 brands",
+              "Manitowoc, Follett"
+            ],
+            [
+              "5 offices",
+              "The nearest one dispatches"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited"
+            ]
+          ],
+          "tags": [
+            [
+              "Up to 125 lb a day",
+              "",
+              2,
+              24
+            ],
+            [
+              "Sanitation first",
+              "",
+              64,
+              9
+            ],
+            [
+              "Installed and serviced",
+              "",
+              58,
+              76
+            ]
+          ],
+          "poster": "assets/fleet/breakroom.png",
+          "photo": false,
+          "alt": "A 3D model of ice machines you can turn",
+          "alt_text": "Ice machines from Kelly Office Solutions",
+          "orbit": "30deg 74deg 105%",
+          "model": "assets/models/breakroom.glb"
+        },
+        {
+          "type": "ticker",
+          "id": "ticker",
+          "label": "What every Kelly agreement includes",
+          "items": [
+            "Serviced by the people who sold it",
+            "Meter reads taken automatically",
+            "Supplies shipped on usage, before you run out",
+            "One agreement, one invoice, one number",
+            "Five North Carolina offices",
+            "1-800-34-KELLY reaches all five",
+            "Priority dispatch under agreement",
+            "Family-owned since 1947",
+            "Net Promoter Score 94.4, audited"
+          ]
         },
         {
           "type": "detail",
+          "alt": true,
           "eyebrow": "What to know",
           "heading": "About ice machines",
           "body": "Kelly's ice machines are energy-efficient, reliable and built with sanitation and purity as the priorities. Compact units deliver up to 125 pounds of ice a day, with a wide selection of water filters, serving systems and accessories. Ordering is easy, delivery is fast, and installation is professional and simple.",
@@ -5557,7 +8020,6 @@
         },
         {
           "type": "cards",
-          "alt": true,
           "eyebrow": "Why it matters",
           "heading": "What ice machines changes",
           "items": [
@@ -5576,6 +8038,78 @@
           ]
         },
         {
+          "type": "photoband",
+          "id": "mugs",
+          "alt": true,
+          "eyebrow": "Pure Technology",
+          "heading": "The break room people actually like",
+          "intro": "Water, ice and coffee, serviced on the same visit as the copier. One fewer delivery company, one fewer invoice.",
+          "image": "assets/break-mugs-1600.jpg",
+          "alt_text": "Four coworkers laughing in an office break room, each holding a Kelly Office Solutions coffee mug",
+          "points": [
+            "Bottleless, filtered water without the jugs",
+            "Ice and coffee restocked on the same visit as the copier",
+            "Single-cup or high-volume brewers, matched to the office",
+            "One agreement and one number for the whole break room"
+          ],
+          "cta": {
+            "label": "See Pure Technology",
+            "href": "services/pure-technology.html"
+          },
+          "steam": [
+            [
+              35,
+              38
+            ],
+            [
+              58,
+              54
+            ],
+            [
+              28,
+              64
+            ],
+            [
+              70,
+              64
+            ]
+          ]
+        },
+        {
+          "type": "countband",
+          "id": "numbers",
+          "eyebrow": "Measured, not claimed",
+          "items": [
+            [
+              "4000",
+              "Customers across North Carolina, approximately",
+              "+"
+            ],
+            [
+              "5",
+              "Offices, one number to call"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited by CEO Juice"
+            ],
+            [
+              "79",
+              "Years family-owned, since 1947"
+            ]
+          ]
+        },
+        {
+          "type": "savingstease",
+          "id": "savings",
+          "eyebrow": "Full Office Overview",
+          "heading": "What would 10 percent be worth to your office?",
+          "body": "One analysis across print, documents, production, IT, mailing and the break room. We set out to find at least 10 percent, and we tell you plainly if we cannot.",
+          "href": "office-overview.html",
+          "cta": "Run my Full Office Overview",
+          "rate": 0.12
+        },
+        {
           "type": "partners",
           "caption": "Brands Kelly carries for this",
           "items": [
@@ -5585,6 +8119,7 @@
         },
         {
           "type": "faq",
+          "alt": true,
           "eyebrow": "Questions",
           "heading": "Asked on most first calls",
           "items": [
@@ -5600,7 +8135,6 @@
         },
         {
           "type": "resources",
-          "alt": true,
           "heading": "More in water, ice and coffee",
           "intro": "Every product Kelly sells is serviced by Kelly.",
           "items": [
@@ -5622,6 +8156,7 @@
         },
         {
           "type": "leadform",
+          "alt": true,
           "id": "quote",
           "heading": "Get a quote on ice machines",
           "body": "Tell us the volume and the office. A specialist from the nearest branch replies with options and prices.",
@@ -5650,26 +8185,79 @@
       ],
       "sections": [
         {
-          "type": "hero",
-          "layout": "split",
+          "type": "product3d",
+          "id": "hero",
           "eyebrow": "Water, ice and coffee",
           "heading": "Good coffee, <em>and someone who brings the beans</em>.",
           "subhead": "Single-cup to high-volume brewers, with beans and supplies delivered on your schedule.",
           "primary": {
             "label": "Request a quote",
-            "href": "contact.html"
+            "href": "#quote"
           },
           "secondary": {
-            "label": "Talk with your branch",
-            "href": "locations.html"
+            "label": "Run my Full Office Overview",
+            "href": "office-overview.html"
           },
-          "image": "assets/coffee-1200.jpg",
-          "image_alt": "Coffee brewers",
-          "image_w": 1200,
-          "image_h": 800
+          "facts": [
+            [
+              "1 brands",
+              "NEWCO"
+            ],
+            [
+              "5 offices",
+              "The nearest one dispatches"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited"
+            ]
+          ],
+          "tags": [
+            [
+              "Single-cup to high volume",
+              "",
+              2,
+              24
+            ],
+            [
+              "Supplies on schedule",
+              "",
+              64,
+              9
+            ],
+            [
+              "One vendor",
+              "",
+              58,
+              76
+            ]
+          ],
+          "poster": "assets/fleet/breakroom.png",
+          "photo": false,
+          "alt": "A 3D model of coffee brewers you can turn",
+          "alt_text": "Coffee brewers from Kelly Office Solutions",
+          "orbit": "30deg 74deg 105%",
+          "model": "assets/models/breakroom.glb"
+        },
+        {
+          "type": "ticker",
+          "id": "ticker",
+          "label": "What every Kelly agreement includes",
+          "items": [
+            "Serviced by the people who sold it",
+            "Meter reads taken automatically",
+            "Supplies shipped on usage, before you run out",
+            "One agreement, one invoice, one number",
+            "Five North Carolina offices",
+            "1-800-34-KELLY reaches all five",
+            "Priority dispatch under agreement",
+            "Family-owned since 1947",
+            "Net Promoter Score 94.4, audited"
+          ]
         },
         {
           "type": "detail",
+          "alt": true,
           "eyebrow": "What to know",
           "heading": "About coffee brewers",
           "body": "A coffee break helps people recharge, and a cup offered to a visitor is hospitality that builds a reputation. Whether you want a single-cup brewer or a higher-volume machine, Kelly carries brewers from leading brands that are customizable, easy to use and energy-efficient, and delivers the beans, filters and cups to go with them.",
@@ -5684,7 +8272,6 @@
         },
         {
           "type": "cards",
-          "alt": true,
           "eyebrow": "Why it matters",
           "heading": "What coffee brewers changes",
           "items": [
@@ -5703,6 +8290,78 @@
           ]
         },
         {
+          "type": "photoband",
+          "id": "mugs",
+          "alt": true,
+          "eyebrow": "Pure Technology",
+          "heading": "The break room people actually like",
+          "intro": "Water, ice and coffee, serviced on the same visit as the copier. One fewer delivery company, one fewer invoice.",
+          "image": "assets/break-mugs-1600.jpg",
+          "alt_text": "Four coworkers laughing in an office break room, each holding a Kelly Office Solutions coffee mug",
+          "points": [
+            "Bottleless, filtered water without the jugs",
+            "Ice and coffee restocked on the same visit as the copier",
+            "Single-cup or high-volume brewers, matched to the office",
+            "One agreement and one number for the whole break room"
+          ],
+          "cta": {
+            "label": "See Pure Technology",
+            "href": "services/pure-technology.html"
+          },
+          "steam": [
+            [
+              35,
+              38
+            ],
+            [
+              58,
+              54
+            ],
+            [
+              28,
+              64
+            ],
+            [
+              70,
+              64
+            ]
+          ]
+        },
+        {
+          "type": "countband",
+          "id": "numbers",
+          "eyebrow": "Measured, not claimed",
+          "items": [
+            [
+              "4000",
+              "Customers across North Carolina, approximately",
+              "+"
+            ],
+            [
+              "5",
+              "Offices, one number to call"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited by CEO Juice"
+            ],
+            [
+              "79",
+              "Years family-owned, since 1947"
+            ]
+          ]
+        },
+        {
+          "type": "savingstease",
+          "id": "savings",
+          "eyebrow": "Full Office Overview",
+          "heading": "What would 10 percent be worth to your office?",
+          "body": "One analysis across print, documents, production, IT, mailing and the break room. We set out to find at least 10 percent, and we tell you plainly if we cannot.",
+          "href": "office-overview.html",
+          "cta": "Run my Full Office Overview",
+          "rate": 0.12
+        },
+        {
           "type": "partners",
           "caption": "Brands Kelly carries for this",
           "items": [
@@ -5711,6 +8370,7 @@
         },
         {
           "type": "faq",
+          "alt": true,
           "eyebrow": "Questions",
           "heading": "Asked on most first calls",
           "items": [
@@ -5726,7 +8386,6 @@
         },
         {
           "type": "resources",
-          "alt": true,
           "heading": "More in water, ice and coffee",
           "intro": "Every product Kelly sells is serviced by Kelly.",
           "items": [
@@ -5748,6 +8407,7 @@
         },
         {
           "type": "leadform",
+          "alt": true,
           "id": "quote",
           "heading": "Get a quote on coffee brewers",
           "body": "Tell us the volume and the office. A specialist from the nearest branch replies with options and prices.",
@@ -5776,26 +8436,79 @@
       ],
       "sections": [
         {
-          "type": "hero",
-          "layout": "split",
+          "type": "product3d",
+          "id": "hero",
           "eyebrow": "Technology and software",
           "heading": "IT that is <em>watched before it breaks</em>.",
           "subhead": "Monitoring, security, backup and support for a fixed monthly invoice.",
           "primary": {
             "label": "Request a quote",
-            "href": "contact.html"
+            "href": "#quote"
           },
           "secondary": {
-            "label": "Talk with your branch",
-            "href": "locations.html"
+            "label": "Run my Full Office Overview",
+            "href": "office-overview.html"
           },
-          "image": "assets/it-1-1200.jpg",
-          "image_alt": "Managed IT services",
-          "image_w": 1200,
-          "image_h": 800
+          "facts": [
+            [
+              "5 brands",
+              "Datto, WatchGuard, Dell"
+            ],
+            [
+              "5 offices",
+              "The nearest one dispatches"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited"
+            ]
+          ],
+          "tags": [
+            [
+              "Proactive monitoring",
+              "",
+              2,
+              24
+            ],
+            [
+              "Security",
+              "",
+              64,
+              9
+            ],
+            [
+              "Fixed monthly invoice",
+              "",
+              58,
+              76
+            ]
+          ],
+          "poster": "assets/it-1-1200.jpg",
+          "photo": false,
+          "alt": "A 3D model of managed it services you can turn",
+          "alt_text": "Managed IT services from Kelly Office Solutions",
+          "orbit": "30deg 74deg 105%",
+          "model": "assets/models/network-stack.glb"
+        },
+        {
+          "type": "ticker",
+          "id": "ticker",
+          "label": "What every Kelly agreement includes",
+          "items": [
+            "Serviced by the people who sold it",
+            "Meter reads taken automatically",
+            "Supplies shipped on usage, before you run out",
+            "One agreement, one invoice, one number",
+            "Five North Carolina offices",
+            "1-800-34-KELLY reaches all five",
+            "Priority dispatch under agreement",
+            "Family-owned since 1947",
+            "Net Promoter Score 94.4, audited"
+          ]
         },
         {
           "type": "detail",
+          "alt": true,
           "eyebrow": "What to know",
           "heading": "About managed it services",
           "body": "Managing an IT infrastructure, hardware, software, network and security, is costly and time-consuming, and an in-house expert can be the highest-paid person on staff. Managed IT from Kelly puts your systems under proactive monitoring and maintenance, on site and remote, for a fixed monthly invoice, so your teams focus on the work instead of the interruptions.",
@@ -5812,7 +8525,6 @@
         },
         {
           "type": "cards",
-          "alt": true,
           "eyebrow": "Why it matters",
           "heading": "What managed it services changes",
           "items": [
@@ -5831,6 +8543,56 @@
           ]
         },
         {
+          "type": "countband",
+          "id": "numbers",
+          "eyebrow": "Measured, not claimed",
+          "items": [
+            [
+              "4000",
+              "Customers across North Carolina, approximately",
+              "+"
+            ],
+            [
+              "5",
+              "Offices, one number to call"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited by CEO Juice"
+            ],
+            [
+              "79",
+              "Years family-owned, since 1947"
+            ]
+          ]
+        },
+        {
+          "type": "itdirector",
+          "id": "ita",
+          "eyebrow": "Meanwhile, in the server room",
+          "heading": "From 2 a.m. alerts to one number to call",
+          "intro": "Drag the slider. Same office, same IT director. The difference is who is watching the systems, the copiers and the invoices.",
+          "before": "assets/it-before-1600.jpg",
+          "after": "assets/it-after-1600.jpg",
+          "logo": "assets/kelly-logo.png",
+          "before_label": "Seven vendors",
+          "after_label": "One partner",
+          "before_title": "Today, in most offices",
+          "before_body": "A copier company, an IT firm that blames the copier company, a postage meter on its own contract. Four numbers to call and nobody who knows your name.",
+          "after_title": "With Kelly",
+          "after_body": "Monitoring, backup and security from the KellyWay team, serviced on the same visit as the copier, on one agreement and one invoice. One number: 1-800-34-KELLY."
+        },
+        {
+          "type": "savingstease",
+          "id": "savings",
+          "eyebrow": "Full Office Overview",
+          "heading": "What would 10 percent be worth to your office?",
+          "body": "One analysis across print, documents, production, IT, mailing and the break room. We set out to find at least 10 percent, and we tell you plainly if we cannot.",
+          "href": "office-overview.html",
+          "cta": "Run my Full Office Overview",
+          "rate": 0.12
+        },
+        {
           "type": "partners",
           "caption": "Brands Kelly carries for this",
           "items": [
@@ -5843,6 +8605,7 @@
         },
         {
           "type": "faq",
+          "alt": true,
           "eyebrow": "Questions",
           "heading": "Asked on most first calls",
           "items": [
@@ -5858,7 +8621,6 @@
         },
         {
           "type": "resources",
-          "alt": true,
           "heading": "More in technology and software",
           "intro": "Every product Kelly sells is serviced by Kelly.",
           "items": [
@@ -5880,6 +8642,7 @@
         },
         {
           "type": "leadform",
+          "alt": true,
           "id": "quote",
           "heading": "Get a quote on managed it services",
           "body": "Tell us the volume and the office. A specialist from the nearest branch replies with options and prices.",
@@ -5908,26 +8671,78 @@
       ],
       "sections": [
         {
-          "type": "hero",
-          "layout": "split",
+          "type": "product3d",
+          "id": "hero",
           "eyebrow": "Technology and software",
           "heading": "Digital evidence, <em>recognized in court</em>.",
           "subhead": "Court-recognized examiners who recover, preserve and interpret digital evidence.",
           "primary": {
             "label": "Request a quote",
-            "href": "contact.html"
+            "href": "#quote"
           },
           "secondary": {
-            "label": "Talk with your branch",
-            "href": "locations.html"
+            "label": "Run my Full Office Overview",
+            "href": "office-overview.html"
           },
-          "image": "assets/forensics-1200.jpg",
-          "image_alt": "Digital forensic services",
-          "image_w": 1200,
-          "image_h": 800
+          "facts": [
+            [
+              "1 partner",
+              "Sold, installed and serviced by Kelly"
+            ],
+            [
+              "5 offices",
+              "The nearest one dispatches"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited"
+            ]
+          ],
+          "tags": [
+            [
+              "Breach response analysis",
+              "",
+              2,
+              24
+            ],
+            [
+              "Mobile device investigations",
+              "",
+              64,
+              9
+            ],
+            [
+              "Employee misuse investigations",
+              "",
+              58,
+              76
+            ]
+          ],
+          "poster": "assets/forensics-1200.jpg",
+          "photo": true,
+          "alt": "A 3D model of digital forensic services you can turn",
+          "alt_text": "Digital forensic services from Kelly Office Solutions",
+          "orbit": "30deg 74deg 105%"
+        },
+        {
+          "type": "ticker",
+          "id": "ticker",
+          "label": "What every Kelly agreement includes",
+          "items": [
+            "Serviced by the people who sold it",
+            "Meter reads taken automatically",
+            "Supplies shipped on usage, before you run out",
+            "One agreement, one invoice, one number",
+            "Five North Carolina offices",
+            "1-800-34-KELLY reaches all five",
+            "Priority dispatch under agreement",
+            "Family-owned since 1947",
+            "Net Promoter Score 94.4, audited"
+          ]
         },
         {
           "type": "detail",
+          "alt": true,
           "eyebrow": "What to know",
           "heading": "About digital forensic services",
           "body": "Digital forensics reveals what a user did: documents accessed, deleted or transferred, and internet activity. Kelly's examiners are current and former law enforcement officers specializing in cyber operations, hold numerous forensic certifications, and have been recognized as experts in state and federal courts. They recover voice, video, image and metadata from mobile devices, even when deleted, and conduct social media research and archiving for legal cases.",
@@ -5943,7 +8758,6 @@
         },
         {
           "type": "cards",
-          "alt": true,
           "eyebrow": "Why it matters",
           "heading": "What digital forensic services changes",
           "items": [
@@ -5962,7 +8776,58 @@
           ]
         },
         {
+          "type": "countband",
+          "id": "numbers",
+          "eyebrow": "Measured, not claimed",
+          "items": [
+            [
+              "4000",
+              "Customers across North Carolina, approximately",
+              "+"
+            ],
+            [
+              "5",
+              "Offices, one number to call"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited by CEO Juice"
+            ],
+            [
+              "79",
+              "Years family-owned, since 1947"
+            ]
+          ]
+        },
+        {
+          "type": "itdirector",
+          "id": "ita",
+          "eyebrow": "Meanwhile, in the server room",
+          "heading": "From 2 a.m. alerts to one number to call",
+          "intro": "Drag the slider. Same office, same IT director. The difference is who is watching the systems, the copiers and the invoices.",
+          "before": "assets/it-before-1600.jpg",
+          "after": "assets/it-after-1600.jpg",
+          "logo": "assets/kelly-logo.png",
+          "before_label": "Seven vendors",
+          "after_label": "One partner",
+          "before_title": "Today, in most offices",
+          "before_body": "A copier company, an IT firm that blames the copier company, a postage meter on its own contract. Four numbers to call and nobody who knows your name.",
+          "after_title": "With Kelly",
+          "after_body": "Monitoring, backup and security from the KellyWay team, serviced on the same visit as the copier, on one agreement and one invoice. One number: 1-800-34-KELLY."
+        },
+        {
+          "type": "savingstease",
+          "id": "savings",
+          "eyebrow": "Full Office Overview",
+          "heading": "What would 10 percent be worth to your office?",
+          "body": "One analysis across print, documents, production, IT, mailing and the break room. We set out to find at least 10 percent, and we tell you plainly if we cannot.",
+          "href": "office-overview.html",
+          "cta": "Run my Full Office Overview",
+          "rate": 0.12
+        },
+        {
           "type": "faq",
+          "alt": true,
           "eyebrow": "Questions",
           "heading": "Asked on most first calls",
           "items": [
@@ -5978,7 +8843,6 @@
         },
         {
           "type": "resources",
-          "alt": true,
           "heading": "More in technology and software",
           "intro": "Every product Kelly sells is serviced by Kelly.",
           "items": [
@@ -6000,6 +8864,7 @@
         },
         {
           "type": "leadform",
+          "alt": true,
           "id": "quote",
           "heading": "Get a quote on digital forensic services",
           "body": "Tell us the volume and the office. A specialist from the nearest branch replies with options and prices.",
@@ -6028,26 +8893,78 @@
       ],
       "sections": [
         {
-          "type": "hero",
-          "layout": "split",
+          "type": "product3d",
+          "id": "hero",
           "eyebrow": "Technology and software",
           "heading": "Any document, <em>in seconds</em>.",
           "subhead": "Cloud document management: find any file in seconds, route approvals automatically.",
           "primary": {
             "label": "Request a quote",
-            "href": "contact.html"
+            "href": "#quote"
           },
           "secondary": {
-            "label": "Talk with your branch",
-            "href": "locations.html"
+            "label": "Run my Full Office Overview",
+            "href": "office-overview.html"
           },
-          "image": "assets/doc-mgmt-1200.jpg",
-          "image_alt": "DocuWare document management",
-          "image_w": 1200,
-          "image_h": 800
+          "facts": [
+            [
+              "1 brands",
+              "DocuWare"
+            ],
+            [
+              "5 offices",
+              "The nearest one dispatches"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited"
+            ]
+          ],
+          "tags": [
+            [
+              "Reduce costs",
+              "",
+              2,
+              24
+            ],
+            [
+              "Security and compliance",
+              "",
+              64,
+              9
+            ],
+            [
+              "Automated workflows",
+              "",
+              58,
+              76
+            ]
+          ],
+          "poster": "assets/doc-mgmt-1200.jpg",
+          "photo": true,
+          "alt": "A 3D model of docuware document management you can turn",
+          "alt_text": "DocuWare document management from Kelly Office Solutions",
+          "orbit": "30deg 74deg 105%"
+        },
+        {
+          "type": "ticker",
+          "id": "ticker",
+          "label": "What every Kelly agreement includes",
+          "items": [
+            "Serviced by the people who sold it",
+            "Meter reads taken automatically",
+            "Supplies shipped on usage, before you run out",
+            "One agreement, one invoice, one number",
+            "Five North Carolina offices",
+            "1-800-34-KELLY reaches all five",
+            "Priority dispatch under agreement",
+            "Family-owned since 1947",
+            "Net Promoter Score 94.4, audited"
+          ]
         },
         {
           "type": "detail",
+          "alt": true,
           "eyebrow": "What to know",
           "heading": "About DocuWare document management",
           "body": "Every day a company creates contracts, proposals, invoices, manuals and more, scattered across devices and filing cabinets. A document management system creates, stores, indexes, protects, tracks and retrieves digital files, in the cloud, from anywhere, in seconds. Kelly configures and supports DocuWare for North Carolina offices: accounts payable routing, HR files, contracts, with the compliance controls legal, accounting and healthcare require.",
@@ -6062,7 +8979,6 @@
         },
         {
           "type": "cards",
-          "alt": true,
           "eyebrow": "Why it matters",
           "heading": "What DocuWare changes",
           "items": [
@@ -6081,6 +8997,56 @@
           ]
         },
         {
+          "type": "countband",
+          "id": "numbers",
+          "eyebrow": "Measured, not claimed",
+          "items": [
+            [
+              "4000",
+              "Customers across North Carolina, approximately",
+              "+"
+            ],
+            [
+              "5",
+              "Offices, one number to call"
+            ],
+            [
+              "94.4",
+              "Net Promoter Score, audited by CEO Juice"
+            ],
+            [
+              "79",
+              "Years family-owned, since 1947"
+            ]
+          ]
+        },
+        {
+          "type": "itdirector",
+          "id": "ita",
+          "eyebrow": "Meanwhile, in the server room",
+          "heading": "From 2 a.m. alerts to one number to call",
+          "intro": "Drag the slider. Same office, same IT director. The difference is who is watching the systems, the copiers and the invoices.",
+          "before": "assets/it-before-1600.jpg",
+          "after": "assets/it-after-1600.jpg",
+          "logo": "assets/kelly-logo.png",
+          "before_label": "Seven vendors",
+          "after_label": "One partner",
+          "before_title": "Today, in most offices",
+          "before_body": "A copier company, an IT firm that blames the copier company, a postage meter on its own contract. Four numbers to call and nobody who knows your name.",
+          "after_title": "With Kelly",
+          "after_body": "Monitoring, backup and security from the KellyWay team, serviced on the same visit as the copier, on one agreement and one invoice. One number: 1-800-34-KELLY."
+        },
+        {
+          "type": "savingstease",
+          "id": "savings",
+          "eyebrow": "Full Office Overview",
+          "heading": "What would 10 percent be worth to your office?",
+          "body": "One analysis across print, documents, production, IT, mailing and the break room. We set out to find at least 10 percent, and we tell you plainly if we cannot.",
+          "href": "office-overview.html",
+          "cta": "Run my Full Office Overview",
+          "rate": 0.12
+        },
+        {
           "type": "partners",
           "caption": "Brands Kelly carries for this",
           "items": [
@@ -6089,6 +9055,7 @@
         },
         {
           "type": "faq",
+          "alt": true,
           "eyebrow": "Questions",
           "heading": "Asked on most first calls",
           "items": [
@@ -6104,7 +9071,6 @@
         },
         {
           "type": "resources",
-          "alt": true,
           "heading": "More in technology and software",
           "intro": "Every product Kelly sells is serviced by Kelly.",
           "items": [
@@ -6126,6 +9092,7 @@
         },
         {
           "type": "leadform",
+          "alt": true,
           "id": "quote",
           "heading": "Get a quote on DocuWare",
           "body": "Tell us the volume and the office. A specialist from the nearest branch replies with options and prices.",
@@ -6912,6 +9879,76 @@
               "Free online training for Savin copiers and printers.",
               "Watch",
               "https://howto.ricoh-usa.com/savin/"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "file": "office-overview.html",
+      "title": "Full Office Overview and Analysis | Kelly Office Solutions",
+      "description": "One analysis across copiers and managed print, document management, production print, IT, mailing and the break room. See an estimated saving and a written range. We set out to find at least 10 percent.",
+      "sections": [
+        {
+          "type": "overview",
+          "id": "overview",
+          "eyebrow": "Full Office Overview and Analysis",
+          "heading": "Your whole office, analyzed. <em>We set out to find 10 percent.</em>",
+          "subhead": "Walk through the six lines your office pays for today. The estimate moves as you do, and the last page gives you a range, not a promise. A Kelly specialist then checks every number on site.",
+          "badges": [
+            "About 3 minutes",
+            "No obligation",
+            "You keep the report",
+            "Estimates, not quotes"
+          ],
+          "goal_label": "Set at 10 percent"
+        },
+        {
+          "type": "countband",
+          "eyebrow": "Why it works",
+          "items": [
+            [
+              "7",
+              "Service lines under one agreement"
+            ],
+            [
+              "1",
+              "Number to call: 1-800-34-KELLY"
+            ],
+            [
+              "5",
+              "North Carolina offices"
+            ],
+            [
+              "94.4",
+              "Audited Net Promoter Score"
+            ]
+          ]
+        },
+        {
+          "type": "faq",
+          "alt": true,
+          "heading": "About the Full Office Overview",
+          "items": [
+            [
+              "Is the saving guaranteed?",
+              "No. The page shows planning ranges, a low case and a high case, that Kelly will confirm. The on-site assessment replaces every estimate with your own meters and invoices, and a specialist tells you plainly if the real number is smaller."
+            ],
+            [
+              "Why does it say 10 percent?",
+              "That is the mark we set ourselves. Across most offices, taking several lines under one agreement clears it, because each line saves something and each vendor you stop managing saves admin time. If your numbers do not clear it, the result says so."
+            ],
+            [
+              "What do I need to have ready?",
+              "Rough numbers only: devices and page counts, what you spend on outside printing, IT, postage and the break room, and roughly how many hours go to paper handling. Guess if you must; you can adjust."
+            ],
+            [
+              "Do I have to take every line?",
+              "No. Turn off any line you would not hand to Kelly. The estimate drops the line and the consolidation saving shrinks with it."
+            ],
+            [
+              "What happens to my numbers?",
+              "They stay in the page until you send the form. If you send it, a person from your nearest Kelly branch gets the summary and replies, not an autoresponder."
             ]
           ]
         }
