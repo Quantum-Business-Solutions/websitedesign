@@ -44,6 +44,27 @@ def _svg(name: str) -> str:
 
 
 CSS4 = r'''
+.pv-mkt{scroll-margin-top:150px}
+.pv-mkt-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px);align-items:center}
+.pv-mkt.flip .pv-mkt-img{order:2}
+.pv-mkt-img{position:relative;border-radius:calc(var(--radius) + 10px);overflow:hidden;aspect-ratio:4/3;box-shadow:0 30px 70px rgba(0,5,69,.2)}
+.pv-mkt-img img{width:100%;height:100%;object-fit:cover;display:block}
+.pv-mkt h2{margin:14px 0 0}
+.pv-mkt .k{font:700 13px/1 var(--q-sans);letter-spacing:.16em;text-transform:uppercase;color:var(--accent-ink)}
+.pv-mkt .lead2{font-size:clamp(20px,1.9vw,26px);line-height:1.3;font-weight:700;margin:14px 0 0;color:var(--fg)}
+.pv-mkt p{margin:16px 0 0;color:var(--fg-muted);line-height:1.65;max-width:56ch}
+.pv-mkt ul{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:10px}
+.pv-mkt li{display:flex;gap:12px;align-items:flex-start;font-size:16px;line-height:1.5}
+.pv-mkt li::before{content:"";flex:none;width:9px;height:9px;border-radius:50%;background:var(--q-gold);margin-top:8px}
+.pv-mkt .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+@media(max-width:860px){.pv-mkt-grid{grid-template-columns:1fr}.pv-mkt.flip .pv-mkt-img{order:0}}
+@media(max-width:820px){.pv-lh.vbg .q-container{grid-template-columns:minmax(0,1fr)!important}}
+section.q-section.pv-st{padding:clamp(36px,4.5vw,64px) clamp(26px,4.5vw,68px)}
+@media(max-width:820px){section.q-section.pv-st{padding:32px 22px;gap:22px}}
+@media(max-width:820px){.pv-lh.vbg .q-container,.pv-hascut > .q-container{box-sizing:border-box;padding-left:20px;padding-right:20px;max-width:100%}
+.pv-lh.vbg{min-height:0}.pv-lh.vbg .q-h1{font-size:clamp(30px,8.4vw,40px)}
+.pv-guide-pill{bottom:calc(84px + env(safe-area-inset-bottom,0px))!important;right:12px!important;min-height:44px}
+.pv-lh.vbg .pv-hero-stats{margin-top:28px}}
 .body-wrapper > div:has(> .hs_cos_wrapper > .q-header){top:-48px!important}
 .body-wrapper .q-header{position:relative!important;top:auto!important}
 .q-header.is-scrolled .pv-util{max-height:none!important;opacity:1!important}
