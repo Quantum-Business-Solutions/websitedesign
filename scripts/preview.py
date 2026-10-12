@@ -38,6 +38,7 @@ from preview_hub import hub  # noqa: E402
 import preview_sections  # noqa: E402
 import preview_modules  # noqa: E402
 import preview_showpiece  # noqa: E402
+import preview_showpiece2  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DASH_HITS: list[str] = []
@@ -679,6 +680,7 @@ RENDER = {"hero": r_hero, "partners": r_partners, "stats": r_stats, "services": 
 RENDER.update(preview_sections.RENDER_EXTRA)
 RENDER.update(preview_modules.RENDER_EXTRA2)
 RENDER.update(preview_showpiece.RENDER_EXTRA3)
+RENDER.update(preview_showpiece2.RENDER_EXTRA4)
 
 
 # ------------------------------------------------------------------------------ chrome
@@ -1089,6 +1091,7 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
 {preview_sections.EXTRA_CSS}
 {preview_modules.EXTRA_CSS2}
 {preview_showpiece.CSS3}
+{preview_showpiece2.CSS4}
 /* ===== direction system: {E(dslug)} ===== */
 {DIRECTION_CSS.get(dslug, "")}
 /* ===== mobile, after the direction system so it wins ===== */
@@ -1105,10 +1108,12 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
 {footer(content, ctx)}
 {preview_sections.RENDER_EXTRA["sticky"](b.get("sticky", {}), ctx) if b.get("sticky") else ""}
 {preview_modules._launcher(b["launcher"], ctx) if b.get("launcher") else ""}
+{preview_showpiece2.guide(b["guide"], ctx) if b.get("guide") else ""}
 {switcher(themes, theme, page["file"], recommend)}
 <script>{PREVIEW_JS}</script>
 <script>{preview_modules.DEPTH_JS}</script>
 <script>{preview_showpiece.JS3}</script>
+<script>{preview_showpiece2.JS4}</script>
 </body>
 </html>
 '''

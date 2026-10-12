@@ -511,6 +511,9 @@ def service_page(slug, title, navlabel, image, eyebrow, heading, subhead, benefi
                "facts": [["7 lines", "Under one agreement"], ["5 offices", "The nearest one dispatches"], ["94.4", "Net Promoter Score, audited"]],
                "tags": [[b[0], "", x, y] for b, (x, y) in zip(benefits[:3], TAG_SPOTS)], "poster": "assets/fleet-after-1600.jpg" if slug == "managed-print" else image, "photo": True,
                "alt_text": "A managed print fleet: matched copiers and a status dashboard" if slug == "managed-print" else title, "orbit": "30deg 74deg 105%"}
+    if slug in SERVICE_FILM:
+        _f = SERVICE_FILM[slug]
+        secs[0].update(poster=f"assets/film-{_f}-poster.jpg", video=f"assets/film-{_f}.mp4", video_webm=f"assets/film-{_f}.webm", alt_text=FILMS[_f])
     _extra = {"managed-print": [FLEETBA, PULSEFLOW], "copiers": [PULSEFLOW], "pure-technology": [MUGS], "it-services": [ITDIRECTOR]}.get(slug, [])
     secs[1:1] = [TICKER] + [dict(x) for x in _extra]
     secs += [
@@ -677,7 +680,7 @@ PRODUCT_SHOW = {  # slug: (3D model, poster, orbit). No model: the photograph is
     "water-coolers": ("assets/models/breakroom.glb", "assets/fleet/breakroom.png"),
     "ice-machines": ("assets/models/breakroom.glb", "assets/fleet/breakroom.png"),
     "coffee-brewers": ("assets/models/breakroom.glb", "assets/fleet/breakroom.png"),
-    "managed-it": ("assets/models/network-stack.glb", None),
+    "managed-it": ("assets/models/network-stack.glb", "assets/fleet/network-stack.png"),
 }
 TAG_SPOTS = [[2, 24], [64, 9], [58, 76]]
 PRINT_GROUP = ("printers", "copiers", "multifunction-printers", "wide-format-printers", "production-printers")
@@ -697,6 +700,22 @@ def product_page(slug, group, title, image, one, body, benefits, bullets, faq, b
             "facts": facts, "tags": tags, "poster": poster or image, "photo": not model, "alt": f"A 3D model of {short.lower()} you can turn",
             "alt_text": f"{short} from Kelly Office Solutions", "orbit": "30deg 74deg 105%",
             **({"model": model} if model else {})}
+    if slug == "managed-it":
+        hero["facts"] = [["Fixed", "Monthly invoice, no surprises"], ["On site", "And remote, one team"], ["94.4", "Net Promoter Score, audited"]]
+        secs = [hero, TICKER,
+                film("it", type="photoband", id="itfilm", eyebrow="Watched before it breaks", heading="Your systems, under watch, on site and remote",
+                     intro="Managed IT from Kelly puts your hardware, software, network and security under proactive monitoring and maintenance, for one fixed monthly invoice, so your team focuses on the work instead of the interruptions.",
+                     points=bullets[:4], cta={"label": "Request a quote", "href": "#quote"}),
+                IT_LAYERS, IT_PULSE,
+                {"type": "cards", "alt": True, "eyebrow": "Why it matters", "heading": "What managed IT changes", "items": benefits},
+                dict(ITDIRECTOR, alt=False), IT_HW, COUNTBAND, dict(SAVETEASE, id="savings"),
+                {"type": "partners", "caption": "Brands Kelly carries for this", "items": brands},
+                {"type": "faq", "alt": True, "eyebrow": "Questions", "heading": "Asked on most first calls", "items": faq}]
+        if siblings:
+            secs.append({"type": "resources", "heading": f"More in {group.lower()}", "intro": "Every product Kelly sells is serviced by Kelly.", "items": [[q[1], q[2], brief(q[4], 110), "See the product", f"products/{q[0]}.html"] for q in siblings]})
+        secs.append({"type": "leadform", "alt": True, "id": "quote", "heading": "Get a quote on managed IT", "body": "Tell us what you run now and how many people use it. A specialist from the nearest branch replies with options and a fixed monthly price.", "submit": "Request a quote", "note": "No obligation. We answer the phone too: " + PHONE + "."})
+        return {"file": f"products/{slug}.html", "title": f"{short} | Kelly Office Solutions, North Carolina", "description": brief(one + " " + body, 155),
+                "crumbs": [["Home", "index.html"], ["Products", "products.html"], [short, f"products/{slug}.html"]], "sections": secs}
     secs = [hero, TICKER,
             {"type": "detail", "alt": True, "eyebrow": "What to know", "heading": f"About {title.lower() if not title.startswith(('DocuWare', 'FP')) else title}", "body": body, "bullets": bullets, "image": image, "flip": True},
             {"type": "cards", "eyebrow": "Why it matters", "heading": f"What {short.lower() if not title.startswith('DocuWare') else 'DocuWare'} changes", "items": benefits}]
@@ -706,7 +725,10 @@ def product_page(slug, group, title, image, one, body, benefits, bullets, faq, b
         secs.append(PULSEFLOW)
         secs.append(dict(FLEET, alt=True, heading="The rest of the fleet"))
     if slug in BREAK_GROUP:
-        secs.append(MUGS)
+        secs.append(dict(MUGS, **film("mugs")))
+    if slug in FILM_BANDS:
+        _n, _e, _h, _i, _p = FILM_BANDS[slug]
+        secs.append(film(_n, type="photoband", id="film", alt=True, eyebrow=_e, heading=_h, intro=_i, points=_p, cta={"label": "Request a quote", "href": "#quote"}))
     secs.append(COUNTBAND)
     if slug in IT_GROUP:
         secs.append(ITDIRECTOR)
@@ -836,9 +858,9 @@ ITDIRECTOR = {"type": "itdirector", "id": "ita", "eyebrow": "Meanwhile, in the s
     "before_title": "Today, in most offices", "before_body": "A copier company, an IT firm that blames the copier company, a postage meter on its own contract. Four numbers to call and nobody who knows your name.",
     "after_title": "With Kelly", "after_body": "Monitoring, backup and security from the KellyWay team, serviced on the same visit as the copier, on one agreement and one invoice. One number: 1-800-34-KELLY."}
 
-MUGS = {"type": "photoband", "id": "mugs", "alt": True, "eyebrow": "Pure Technology", "heading": "The break room people actually like",
+MUGS = {"type": "photoband", "id": "mugs", "alt": True, "video": "assets/film-mugs.mp4", "video_webm": "assets/film-mugs.webm", "eyebrow": "Pure Technology", "heading": "The break room people actually like",
     "intro": "Water, ice and coffee, serviced on the same visit as the copier. One fewer delivery company, one fewer invoice.",
-    "image": "assets/break-mugs-1600.jpg", "alt_text": "", "alt": True,
+    "image": "assets/film-mugs-poster.jpg", "alt_text": "", "alt": True,
     "points": ["Bottleless, filtered water without the jugs", "Ice and coffee restocked on the same visit as the copier", "Single-cup or high-volume brewers, matched to the office", "One agreement and one number for the whole break room"],
     "cta": {"label": "See Pure Technology", "href": "services/pure-technology.html"},
     "steam": [[35, 38], [58, 54], [28, 64], [70, 64]]}
@@ -856,6 +878,59 @@ FLEETBA = {"type": "itdirector", "id": "fleetba", "eyebrow": "Your print fleet",
     "before_title": "Expensive, and nobody can see why", "before_body": "Devices bought one at a time from whoever was cheapest that month. Toner ordered in a hurry at retail prices. Nobody knows what a page costs until the repair bill arrives.",
     "after_title": "Efficient, and every number visible", "after_body": "A right-sized fleet the data recommends, watched by Kelly, supplied before it runs out, with a plain-English report showing what each device actually carried. Kelly's managed print page puts the saving at up to 30 percent.",
     "note": "Generated images for the preview; your own fleet and technicians replace them once photography exists."}
+
+IND_IMG = {"legal": ("ind-legal", "legal"), "healthcare": ("ind-health", "health"), "faith-based": ("ind-faith", "faith"), "architecture": ("ind-arch", "arch"), "manufacturing": ("ind-manuf", "gear")}
+INDUSTRY_TILES = {"type": "tiles", "id": "markets", "eyebrow": "Key markets", "heading": "The industries we know best", "intro": "Six markets where Kelly has done the work many times. Tap a tile to see what we set up.", "go": "See how",
+    "items": [[i[1], i[3], f"assets/{IND_IMG[i[0]][0]}-800.jpg", f"industries/{i[0]}.html", IND_IMG[i[0]][1]] for i in INDUSTRIES]
+             + [["Professional services", "Accounting and staffing firms with seasonal peaks, and a technician who answers the same day.", "assets/ind-prof-800.jpg", "contact.html", "brief"]]}
+
+ZOOMTOUR = {"type": "zoomtour", "id": "zoomtour", "eyebrow": "The whole office", "heading": "Fly through everything an office runs on",
+    "intro": "Scroll. One floor plan, seven lines, one number to call.", "image": "assets/office-iso-3200.jpg", "image_w": 3200, "image_h": 1792,
+    "alt": "An overhead illustration of an office with a copier room, a break room, a server room, a mailroom and desks", "hint": "Scroll to fly in",
+    "stops": [dict(x=it["x"], y=it["y"], scale=2.5, k=it["k"], title=it["title"], body=it["body"], href=it["href"], label=it["label"]) for it in HOTSPOTS["items"]]}
+
+IT_LAYERS = {"type": "layers", "id": "layers", "eyebrow": "Layers of protection", "heading": "Five layers around everything your office runs on",
+    "intro": "Hover a layer. Each one is watched, patched and backed up by the same Kelly team, on one fixed monthly invoice.",
+    "items": [["Workstations and servers", "Workstation and server management, with patches and updates handled before they become problems.", "disk"],
+              ["Network and wireless", "Remote network management and wireless implementation, on site and remote.", "wifi"],
+              ["Security", "WatchGuard with intrusion prevention and detection, against ransomware, breaches and downtime.", "lock"],
+              ["Backup and recovery", "Datto managed cloud and backup, with retention, restore and disaster planning.", "cloud"],
+              ["Monitoring and support", "Proactive monitoring from one team, so issues are found and fixed before they reach your staff.", "radar"]]}
+
+IT_PULSE = dict(PULSEFLOW, id="itmonitor", heading="Watched around the clock, fixed before it hurts",
+    intro="Servers, workstations and the network report in. Kelly sees the fault, the missed patch and the failed backup first, and the fix is already moving.",
+    nodes=[["it", "Your systems", "Servers, workstations and network report their health."], ["meter", "The checks", "Patches, backups and threat checks run around the clock."],
+           ["dash", "Kelly sees it", "An engineer has it on the list first."], ["truck", "Kelly fixes it", "Remotely when possible, on site when not."], ["smile", "You carry on", "Nobody in the office made a call."]],
+    feed=[[0, "<b>Server 2</b> disk health warning, replacement scheduled"], [1, "Patch cycle complete on 38 workstations"], [2, "Backup verified, restore test passed"],
+          [3, "<span class=\"ok\">Intrusion attempt blocked</span> at the firewall"], [4, "<span class=\"ok\">Resolved</span> before a ticket was opened"], [1, "Certificate renewal queued, 12 days ahead"], [2, "Monthly security report ready for review"]],
+    note="Illustrative example feed. A real feed shows your servers, your backups and your alerts.")
+
+IT_HW = {"type": "hwgrid", "id": "hardware", "alt": True, "eyebrow": "What we deploy", "heading": "The hardware behind the service",
+    "intro": "A sample of what Kelly places, installs and services for managed IT. Ask the branch which fits your office.",
+    "items": [["Datto", "ALTO", "A desktop-size appliance that helps small businesses maintain dependable backups and minimize downtime during disruptions.", "disk"],
+              ["Datto", "SIRIS", "An all-in-one, turnkey business continuity and disaster recovery (BCDR) solution.", "cloud"],
+              ["WatchGuard", "Network security", "Protection against ransomware and breaches, with intrusion prevention and detection.", "lock"],
+              ["Dell and Microsoft 365", "Hardware and cloud", "Kelly works with Dell and Microsoft 365, among others. Tell the branch what you run now and they will say what fits.", "gear"]]}
+
+FILMS = {"fleet": "Managed print fleet running", "mugs": "Coworkers laughing over Kelly mugs", "it": "A relaxed IT director with calm dashboards", "press": "A production press running", "mail": "A mailroom printer feeding envelopes"}
+
+
+def film(name, **kw):
+    d = {"image": f"assets/film-{name}-poster.jpg", "video": f"assets/film-{name}.mp4", "video_webm": f"assets/film-{name}.webm", "alt_text": FILMS[name]}
+    d.update(kw)
+    return d
+
+
+FILM_BANDS = {
+    "production-printers": ("press", "Production print", "Your print shop, running down the hall", "Booklets, stapling, folding and color consistency all day, on one agreement with your copiers.", ["Inline finishing for booklets, stapling and folding", "Color consistency all day", "Serviced by the same Kelly technicians", "No more outsourcing the rush job"]),
+    "postage-meters": ("mail", "The mailroom", "Mail that costs less per piece", "Commercial postage rates and equipment that is serviced on the same visit as the copier.", ["Commercial postage rates", "Fully IMI compliant", "Folder inserters and mailroom printers from the same supplier", "One agreement and one number"]),
+    "folder-inserters": ("mail", "The mailroom", "The envelope-stuffing afternoon, gone", "Folder inserters and mailroom printers that take the hand work out of every mailing.", ["Folds, inserts and seals at speed", "Pairs with a postage meter", "Serviced with your copiers", "One number to call"]),
+    "mailroom-printers": ("mail", "The mailroom", "Envelopes and labels, done right", "Print envelopes and labels in the mailroom for less per piece than the office copier.", ["Envelopes and labels printed on demand", "Pairs with a postage meter", "Serviced with your copiers", "One agreement and one number"]),
+    "copiers": ("fleet", "Under agreement", "A fleet that runs itself", "Matched devices, watched and supplied before they run out, with a plain-English report on what each one carried.", ["Toner ships on usage", "Meter reads taken automatically", "Priority service under agreement", "One agreement, one invoice"]),
+    "multifunction-printers": ("fleet", "Under agreement", "A fleet that runs itself", "Matched devices, watched and supplied before they run out, with a plain-English report on what each one carried.", ["Toner ships on usage", "Meter reads taken automatically", "Priority service under agreement", "One agreement, one invoice"]),
+}
+
+SERVICE_FILM = {"managed-print": "fleet", "pure-technology": "mugs", "it-services": "it", "production-print": "press", "mailing": "mail"}
 
 SAVETEASE = {"type": "savingstease", "id": "savings", "eyebrow": "Full Office Overview", "heading": "What would 10 percent be worth to your office?",
     "body": "One analysis across print, documents, production, IT, mailing and the break room. We set out to find at least 10 percent, and we tell you plainly if we cannot.",
@@ -883,6 +958,11 @@ def build():
         "cta": {"label": "Request an assessment", "href": "contact.html"},
         "sticky": {"primary": "Get an assessment", "primary_href": "contact.html", "secondary": "Call Kelly", "secondary_href": PHONE_HREF},
         "launcher": {"label": "Already a customer?", "eyebrow": "The fast lane", "title": "What do you need today?", "links": [["Request service", "service-support.html#request"], ["Meter reads", "service-support.html#meters"], ["Order supplies", "service-support.html#supplies"], ["Customer portal", PORTAL]], "note": "A person from the nearest branch replies. Under a Kelly agreement your call is dispatched first."},
+        "guide": {"label": "Free guide: 27 Ways", "eyebrow": "Free guide", "title": "27 Ways to Streamline Your Office in 2027",
+                  "intro": "Practical ideas for print, paper and IT, from a team that has kept North Carolina offices running since 1947.",
+                  "bullets": ["Cut hidden print and supply costs", "Get paper out of the way for good", "Spot IT and security gaps early"],
+                  "book": "assets/guide-book.webp", "book_alt": "The hardcover guide 27 Ways to Streamline Your Office in 2027, with the Kelly Office Solutions logo",
+                  "submit": "Send me the guide"},
         "social": {"linkedin": "https://www.linkedin.com/company/kelly-office-solutions/", "facebook": "https://www.facebook.com/KellyOfficeSolutions", "x": "https://twitter.com/kellyofficesolu"},
         "tagline": "Moving business forward since 1947. Family-owned, headquartered in Winston-Salem, and still answering the phone ourselves.",
         "footer_columns": [
@@ -920,7 +1000,7 @@ def build():
     pages.append({"file": "index.html", "title": "Kelly Office Solutions | Copiers, managed print, IT and office technology in North Carolina",
                   "compose": {
                       "clean": ["hero-light", "partners", "seal", "wheel", "is-this-you", "flow", "map", "voices", "film", "faq", "contact"],
-                      "showcase": ["hero", "ticker", "partners", "wheel", "numbers", "fleet", "ita", "ba", "flow", "office", "savings", "mugs", "device", "proof", "map", "voices", "film", "faq", "contact"],
+                      "showcase": ["hero", "ticker", "partners", "wheel", "numbers", "fleet", "ita", "ba", "flow", "zoomtour", "savings", "mugs", "device", "proof", "map", "voices", "film", "faq", "contact"],
                       "press": ["hero-light", "story", "services", "seal", "voices", "film", "flow", "map", "faq", "contact"]},
                   "description": "Family-owned since 1947 and headquartered in Winston-Salem. Copiers and managed print, document management, IT, mailing, water and coffee for North Carolina businesses, from five local offices, with Fast local response from the nearest branch.",
                   "sections": [
@@ -934,8 +1014,8 @@ def build():
          "note": "Sharp, Ricoh, Savin, Konica Minolta, Brother and Epson dealer", "image": "assets/hero-1200.jpg", "image_alt": "A technician kneeling beside an open office copier, replacing a toner unit", "image_w": 1200, "image_h": 800,
          "badge": {"value": "94.4", "label": "Net Promoter Score, independently audited"}},
         HERO_LAYERED,
-        {"type": "wheel", "id": "wheel", "eyebrow": "One partner", "heading": "Everything an office runs on, from one partner", "intro": "Hover a segment. Seven lines, one agreement, one number.", "items": WHEEL_ITEMS, "hub": "Kelly", "hub_sub": "one partner", "ring": "EVERYTHING AN OFFICE RUNS ON"},
-        TICKER, COUNTBAND, ITDIRECTOR, MUGS, SAVETEASE,
+        {"type": "wheel", "id": "wheel", "eyebrow": "One partner", "heading": "Everything an office runs on, from one partner", "intro": "Hover a segment. Seven lines, one agreement, one number.", "items": WHEEL_ITEMS, "hub": "Kelly", "hub_sub": "one partner", "hub_orb": True, "ring": "EVERYTHING AN OFFICE RUNS ON"},
+        TICKER, COUNTBAND, ITDIRECTOR, MUGS, SAVETEASE, ZOOMTOUR,
         FLOW_ENGAGEMENT, FLEET, SEAL, BEFORE_AFTER, HOTSPOTS,
         {"type": "partners", "id": "partners", "caption": "Technology partners", "items": PARTNERS},
         {"type": "stats", "id": "stats", "alt": True, "items": [["1947", "Family-owned since"], ["94.4", "NPS, audited by CEO Juice (industry average: 70s)"], ["4,000", "Customers, approximately"], ["5", "Locations: Winston-Salem, Greensboro, Charlotte, Raleigh and Swansboro"]]},
@@ -986,7 +1066,7 @@ def build():
     # ---------------- what we do (overview) + service pages
     pages.append({"file": "what-we-do.html", "title": "What we do | Kelly Office Solutions", "description": "Seven service lines, one partner: copiers and office products, managed print, document management, production print, IT services, mailing solutions, and water, ice and coffee.",
                   "sections": [
-        {"type": "wheel", "id": "wheel", "eyebrow": "The seven lines", "heading": "Everything an office runs on, from one partner", "intro": "Hover a segment to read it. Each line has its own page.", "items": WHEEL_ITEMS, "hub": "Kelly", "hub_sub": "one partner"},
+        {"type": "wheel", "id": "wheel", "eyebrow": "The seven lines", "heading": "Everything an office runs on, from one partner", "intro": "Hover a segment to read it. Each line has its own page.", "items": WHEEL_ITEMS, "hub": "Kelly", "hub_sub": "one partner", "hub_orb": True},
         HOTSPOTS,
         {"type": "hero", "layout": "centered", "eyebrow": "What we do", "heading": "Seven things an office runs on. One partner who <em>answers the phone</em>.", "subhead": "Every line below is installed, serviced and supplied by Kelly people from five North Carolina offices. Mix and match; most customers start with print and add from there.", "primary": {"label": "Request an assessment", "href": "contact.html"}},
         {"type": "resources", "heading": "The seven lines", "intro": "Each one has its own page, with what changes and what is included.", "items": [[s[4], s[1], brief(s[6]), "Read more", f"services/{s[0]}.html"] for s in SERVICES[:6]]},
@@ -1004,7 +1084,7 @@ def build():
     pages.append({"file": "industries.html", "title": "Key markets | Kelly Office Solutions", "description": "Office technology built around how legal, healthcare, faith-based, architecture and manufacturing organizations in North Carolina use paper and technology.",
                   "sections": [
         {"type": "hero", "layout": "centered", "eyebrow": "Key markets", "heading": "Built around how your industry <em>uses paper</em>.", "subhead": "Five markets where Kelly has done the work many times. If yours is not here, the assessment still starts the same way.", "primary": {"label": "Request an assessment", "href": "contact.html"}},
-        {"type": "resources", "heading": "Five markets", "intro": "Each page covers what we set up, what customers ask, and how to start.", "items": [["Key market", i[1], i[3], f"Office technology for {i[1].lower()}", f"industries/{i[0]}.html"] for i in INDUSTRIES]},
+        dict(INDUSTRY_TILES, heading="Six markets", eyebrow="Pick yours", intro="Each page covers what we set up, what customers ask, and how to start."),
         {"type": "testimonials", "alt": True, "heading": "Across North Carolina", "items": [TESTIMONIALS[0][:3], TAX_SEASON]},
         {"type": "leadform", "id": "assessment", "heading": "Start with the assessment", "body": "A specialist from your nearest branch walks your fleet and your workflows, and writes it up.", "submit": "Request my assessment", "note": "A person from the nearest branch replies, not an autoresponder."},
     ]})
@@ -1073,10 +1153,13 @@ def build():
     # ---------------- about, careers
     pages.append({"file": "about.html", "title": "About Kelly | Family-owned office technology since 1947, Winston-Salem", "description": "Kelly Office Solutions has served North Carolina since 1947: co-owners Tim Renegar and Peter Kelly, about 90 people, five offices, an audited NPS of 94.4, and a long record of community support in the Triad.",
                   "sections": [
-        {"type": "hero", "layout": "centered", "eyebrow": "About Kelly", "heading": "Family-owned since 1947. <em>Still local, on purpose.</em>", "subhead": "Kelly started in 1947 selling office equipment and stayed independent while most of the industry consolidated. Today about 90 people across five North Carolina offices serve some 4,000 customers, and the phone is still answered by someone who works here.", "primary": {"label": "Meet the owners", "href": "#leadership"}, "image": "assets/kelly-team-1024.jpg", "image_alt": "A Kelly technician beside a Kelly service van", "image_w": 1024, "image_h": 576},
+        {"type": "herocover", "id": "hero", "eyebrow": "About Kelly", "heading": "Family-owned since 1947. <em>Still local, on purpose.</em>", "subhead": "Kelly started in 1947 selling office equipment and stayed independent while most of the industry consolidated. Today about 90 people across five North Carolina offices serve some 4,000 customers, and the phone is still answered by someone who works here.",
+         "primary": {"label": "Meet the owners", "href": "#leadership"}, "secondary": {"label": "Request an assessment", "href": "contact.html"},
+         "image": "assets/about-hero-2400.jpg", "image_w": 2400, "image_h": 1350, "align": "right", "alt": "A Kelly team member beside a Kelly service van on a North Carolina main street",
+         "chips": [["1947", "founded"], ["90", "people"], ["5", "offices"], ["94.4", "NPS"]]},
         {"type": "stats", "alt": True, "items": [["1947", "Founded in North Carolina"], ["90", "People, approximately, across five offices"], ["94.4", "Net Promoter Score, audited by CEO Juice"], ["4,000", "Customers, approximately"]]},
         {"type": "video", "id": "film", "eyebrow": "Who we are", "heading": "Thirty seconds on Kelly", "intro": "Family-owned since 1947, headquartered in Winston-Salem, with branches in Greensboro, Charlotte, Raleigh and Swansboro.", "vimeo": "271855836", "poster": "assets/vimeo-poster.jpg", "title": "Kelly Office Solutions", "caption": "Kelly's own film, from kellyofficesolutions.com"},
-        {"type": "timeline", "eyebrow": "Since 1947", "heading": "Seventy-nine years in North Carolina, one office at a time", "intro": "The dates we could source are here. The ones marked to confirm are on the hub list; tell us and they go in.",
+        {"type": "timelive", "id": "tl3", "eyebrow": "Since 1947", "heading": "Seventy-nine years in North Carolina, one office at a time", "intro": "The dates we could source are here. The ones marked to confirm are on the hub list; tell us and they go in.",
          "items": [["1947", "Kelly opens in Winston-Salem", "Selling and servicing office equipment. The family has owned it ever since."],
                    ["1960", "Accredited by the Better Business Bureau", "Rated A+ and accredited since 1960, sixty-six years and counting."],
                    ["1990s", "The Triad, then Charlotte", "Greensboro and Charlotte branches bring local technicians to two more markets. Years to confirm."],
@@ -1085,9 +1168,9 @@ def build():
                    ["2025", "Sharp joins the line", "Sharp added to Ricoh, Savin, Konica Minolta, Brother and Epson, and now leads it."],
                    ["Today", "About 4,000 customers, NPS 94.4", "Audited by CEO Juice after every service call. Still family-owned, still answering the phone."]]},
         {"type": "leadership", "id": "leadership", "heading": "The owners", "intro": "Tim and Peter are co-owners of Kelly Office Solutions, with over 45 years of experience in the industry.", "people": [["Tim Renegar", "Co-owner"], ["Peter Kelly", "Co-owner"]], "orgs_intro": "Kelly supports the organizations that serve its communities, and is a sponsor and member of the local chambers.", "orgs": COMMUNITY},
-        {"type": "values", "alt": True, "eyebrow": "What we believe", "heading": "Mission, vision and the standard we hold ourselves to", "items": [["Mission", "To help our customers achieve the vision and success of their business."], ["Vision", "To seek out new technologies and innovations to deliver the best solution to our customer with integrity."], ["Measured, not claimed", "Our Net Promoter Score is collected and audited by CEO Juice, an independent company whose process we do not control. It is 94.4. The industry average is in the 70s."]]},
+        {"type": "pillars", "eyebrow": "What we believe", "heading": "Mission, vision and the standard we hold ourselves to", "items": [["Mission", "To help our customers achieve the vision and success of their business."], ["Vision", "To seek out new technologies and innovations to deliver the best solution to our customer with integrity."], ["Measured, not claimed", "Our Net Promoter Score is collected and audited by CEO Juice, an independent company whose process we do not control. It is 94.4. The industry average is in the 70s."]]},
         {"type": "casestudy", "eyebrow": "What customers say", "heading": "A repair the same day, in a customer's words", "quote": TAX_SEASON[0], "attribution": f"{TAX_SEASON[1]}, {TAX_SEASON[2]}", "metrics": [["Since", "1947", "Independent and family-owned"], ["BBB", "A+", "Accredited since 1960"], ["Offices", "4", "Winston-Salem, Greensboro, Charlotte, Raleigh"], ["Service", "Same day", "Under a Kelly agreement, all five territories"]]},
-        {"type": "cards", "alt": True, "id": "markets", "eyebrow": "Key markets", "heading": "The industries we know best", "items": [[i[1], i[3]] for i in INDUSTRIES] + [["Professional services", "Accounting and staffing firms with seasonal peaks, and a technician who calls back the same day in tax season."]]},
+        dict(INDUSTRY_TILES, alt=True),
         {"type": "cta", "heading": "Work here", "subhead": "Kelly is always looking for energetic, creative problem solvers with an outstanding work ethic and advanced customer service skills.", "primary": {"label": "See careers", "href": "careers.html"}},
     ]})
     pages.append({"file": "careers.html", "title": "Careers | Kelly Office Solutions", "description": "Kelly Office Solutions is always looking for energetic, creative problem solvers with an outstanding work ethic and advanced customer service skills. Headquartered in Winston-Salem, with branches in Greensboro, Charlotte, Raleigh and Swansboro.",

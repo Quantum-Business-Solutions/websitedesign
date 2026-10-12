@@ -48,6 +48,9 @@ CSS3 = r'''
 .vtag{position:absolute;left:16px;bottom:16px;z-index:2;display:inline-flex;align-items:center;gap:10px;background:rgba(8,14,40,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.22);color:#fff;border-radius:999px;padding:9px 16px 9px 12px;font-size:13.5px;font-weight:600}
 .vtag i{width:10px;height:10px;border-radius:50%;background:var(--q-gold);animation:pv-pulse 2.2s ease-out infinite}
 @media(max-width:1024px){.pv-lh.vid .q-container{grid-template-columns:1fr}.vframe{max-width:640px}}
+.pv-wheel .hub-orb{animation:pv-orbfloat 6s ease-in-out infinite;filter:drop-shadow(0 0 14px rgba(99,210,58,.55))}
+@keyframes pv-orbfloat{50%{transform:scale(1.045)}}
+@media(prefers-reduced-motion:reduce){.pv-wheel .hub-orb{animation:none}}
 /* product3d */
 .pv-p3d{padding:clamp(56px,7vw,104px) 0}
 .pv-p3d-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(24px,4vw,64px);align-items:center}
@@ -72,7 +75,8 @@ CSS3 = r'''
 .pv-p3d-tag b{font-size:13.5px;font-weight:600;color:#fff}.pv-p3d-tag em{font-style:normal;font-size:13.5px;color:var(--q-gold);font-weight:700}
 .pv-p3d-tag:nth-of-type(2){animation-delay:-1.7s}.pv-p3d-tag:nth-of-type(3){animation-delay:-3.1s}.pv-p3d-tag:nth-of-type(4){animation-delay:-4.4s}
 @keyframes pv-pulse{70%{box-shadow:0 0 0 12px transparent}100%{box-shadow:0 0 0 0 transparent}}
-.pv-p3d-stage.photo{aspect-ratio:4/3}.pv-p3d-stage.photo > img.fb{object-fit:cover;border-radius:28px;border:1px solid rgba(255,255,255,.2);box-shadow:0 40px 90px rgba(0,0,0,.5);animation:none}.pv-p3d-stage.photo .pv-p3d-ring{display:none}.pv-p3d-stage.photo .pv-p3d-hint{display:none}
+.pv-p3d-stage.photo{aspect-ratio:4/3}.pv-p3d-stage.photo.vid{aspect-ratio:16/9}.pv-p3d-stage.photo.vid .pv-p3d-tag{display:none}.pv-p3d-stage.photo > video.fb{object-fit:cover;border-radius:28px;border:1px solid rgba(255,255,255,.2);box-shadow:0 40px 90px rgba(0,0,0,.5);width:100%;height:100%}
+.pv-p3d-stage.photo > img.fb{object-fit:cover;border-radius:28px;border:1px solid rgba(255,255,255,.2);box-shadow:0 40px 90px rgba(0,0,0,.5);animation:none}.pv-p3d-stage.photo .pv-p3d-ring{display:none}.pv-p3d-stage.photo .pv-p3d-hint{display:none}
 .pv-p3d-hint{position:absolute;right:4px;bottom:0;z-index:3;font-size:13px;color:rgba(255,255,255,.8);letter-spacing:.08em;text-transform:uppercase}
 
 /* countband */
@@ -148,6 +152,7 @@ CSS3 = r'''
 /* photoband */
 .pv-pb{display:grid;grid-template-columns:5fr 7fr;gap:clamp(24px,4vw,60px);align-items:center}
 .pv-pb-img{position:relative;border-radius:calc(var(--radius) + 8px);overflow:hidden;aspect-ratio:16/9;border:1px solid var(--border);box-shadow:0 40px 90px rgba(0,5,69,.22);order:2}
+.pv-pb-img video{width:100%;height:100%;object-fit:cover;display:block}
 .pv-pb-img img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.04);transition:transform 1.6s cubic-bezier(.2,.7,.2,1)}
 .pv-pb-img:hover img{transform:scale(1.09)}
 .pv-steam{position:absolute;width:5.5%;aspect-ratio:1/2;pointer-events:none}
@@ -302,9 +307,12 @@ def _product3d(s, ctx):
                  f'shadow-intensity="0" exposure="1.1" interaction-prompt="none" camera-orbit="{E(orbit)}" loading="eager" reveal="auto"></model-viewer>'
                  f'<img class="fb" src="{E(poster)}" alt="" width="1200" height="1200">'
                  f'<script type="module" src="{MV_SRC}"></script>')
+    elif s.get("video"):
+        webm = f'<source src="{E(rel(s["video_webm"]))}" type="video/webm">' if s.get("video_webm") else ""
+        stage = (f'<video class="fb" autoplay muted loop playsinline preload="auto" poster="{E(poster)}" aria-label="{E(s.get("alt_text", ""))}" width="1280" height="720">{webm}<source src="{E(rel(s["video"]))}" type="video/mp4"></video>')
     else:
         stage = f'<img class="fb" src="{E(poster)}" alt="{E(s.get("alt_text", ""))}" width="1200" height="900">'
-    photo = " photo" if not s.get("model") and s.get("photo") else ""
+    photo = (" photo" + (" vid" if s.get("video") else "")) if not s.get("model") and s.get("photo") else ""
     return (f'<section class="q-section pv-dark pv-p3d"{f" id={chr(34)}{E(s[chr(105)+chr(100)])}{chr(34)}" if s.get("id") else ""}>'
             f'<div class="pv-grid-bg" aria-hidden="true"></div><div class="pv-orb a" aria-hidden="true"></div><div class="pv-orb b" aria-hidden="true"></div>'
             f'<div class="q-container pv-p3d-grid"><div><div class="q-eyebrow">{E(s.get("eyebrow", ""))}</div>'
@@ -394,12 +402,17 @@ def _itdirector(s, ctx):
 
 def _photoband(s, ctx):
     E, rel, L = ctx["E"], ctx["rel"], ctx["L"]
+    if s.get("video"):
+        webm = f'<source src="{E(rel(s["video_webm"]))}" type="video/webm">' if s.get("video_webm") else ""
+        media = f'<video autoplay muted loop playsinline preload="metadata" poster="{E(rel(s["image"]))}" aria-label="{E(s.get("alt_text", ""))}" width="1280" height="720">{webm}<source src="{E(rel(s["video"]))}" type="video/mp4"></video>'
+    else:
+        media = f'<img src="{E(rel(s["image"]))}" alt="{E(s.get("alt_text", ""))}" width="1600" height="900" loading="lazy">'
     steam = "".join(f'<span class="pv-steam" style="left:{x}%;top:{y}%"><i></i><i></i><i></i></span>' for x, y in s.get("steam", []))
     lis = "".join(f"<li>{E(t)}</li>" for t in s.get("points", []))
     cta = f'<p style="margin-top:28px"><a class="q-btn" href="{E(L(s["cta"]["href"]))}">{E(s["cta"]["label"])}</a></p>' if s.get("cta") else ""
     return (f'{ctx["sec_open"](s)} <div class="q-container pv-pb"><div><div class="q-eyebrow">{E(s.get("eyebrow", ""))}</div><h2 class="q-h2" style="margin-top:20px">{E(s["heading"])}</h2>'
             f'<p class="q-lead" style="margin-top:16px;max-width:520px">{E(s.get("intro", ""))}</p><ul>{lis}</ul>{cta}</div>'
-            f'<div class="pv-pb-img"><img src="{E(rel(s["image"]))}" alt="{E(s.get("alt_text", ""))}" width="1600" height="900" loading="lazy">{steam}</div></div></section>')
+            f'<div class="pv-pb-img">{media}{"" if s.get("video") else steam}</div></div></section>')
 
 
 # ------------------------------------------------------------------------------ savings teaser

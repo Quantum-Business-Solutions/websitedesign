@@ -315,15 +315,26 @@ def _wheel(s, ctx):
     hub_t = E(s.get("hub", ctx.get("client_short", "One")))
     hub_s = E(s.get("hub_sub", "one partner"))
     ring_id = f"{wid}-ring"
+    if s.get("hub_orb"):
+        # the real Kelly orb, as vector, in the hub: green sphere, three silver blades (paths from the logo session's mark)
+        k = (r_in - 36) / 310
+        hub_mark = (f'<g transform="translate({cx} {cy})"><g class="hub-orb"><g transform="scale({k:.4f}) translate(-335 -320)"><title>{hub_t}, {hub_s}</title>'
+                    '<circle cx="335" cy="320" r="310" fill="url(#pvw-og)"/><circle cx="335" cy="320" r="310" fill="url(#pvw-oh)"/>'
+                    '<path d="M520 86 C360 100 250 210 205 350 C270 230 400 160 585 142 C570 115 550 98 520 86 Z M138 82 C120 200 160 400 315 505 C200 470 100 340 75 170 C90 130 115 100 138 82 Z M250 365 C380 330 520 380 610 460 C600 485 590 495 578 505 C500 420 380 370 250 365 Z" fill="#D5D6DB"/>'
+                    '</g></g></g>')
+    else:
+        hub_mark = f'<text class="hubt" x="{cx}" y="{cy + 2}">{hub_t}</text><text class="hubs" x="{cx}" y="{cy + 24}">{hub_s}</text>'
     defs = ('<defs><radialGradient id="pvw-seg" cx="50%" cy="50%" r="50%"><stop offset="55%" style="stop-color:var(--card)"/><stop offset="100%" style="stop-color:var(--bg-alt)"/></radialGradient>'
             '<linearGradient id="pvw-on" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--q-gold-bright)"/><stop offset="1" style="stop-color:var(--q-gold)"/></linearGradient>'
+            '<radialGradient id="pvw-og" cx="62%" cy="36%" r="78%"><stop offset="0" stop-color="#63D23A"/><stop offset=".5" stop-color="#2FBE1B"/><stop offset="1" stop-color="#198514"/></radialGradient>'
+            '<radialGradient id="pvw-oh" cx="28%" cy="78%" r="34%"><stop offset="0" stop-color="#9BE87A" stop-opacity=".55"/><stop offset="1" stop-color="#9BE87A" stop-opacity="0"/></radialGradient>'
             '<radialGradient id="pvw-hub" cx="35%" cy="30%" r="80%"><stop offset="0" style="stop-color:var(--chrome-bg);stop-opacity:.75"/><stop offset="1" style="stop-color:var(--chrome-bg)"/></radialGradient>'
             '<filter id="pvw-shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000" flood-opacity=".22"/></filter>'
             f'<path id="{ring_id}" d="M{cx},{cy} m-{r_out + 22},0 a{r_out + 22},{r_out + 22} 0 1,1 {2 * (r_out + 22)},0"/></defs>')
     svg = (f'<svg viewBox="-16 -16 592 592" role="group" aria-labelledby="{wid}-t"><title id="{wid}-t">{E(s.get("alt", "The service lines as a wheel"))}</title>{defs}'
            f'<circle class="orbit" cx="{cx}" cy="{cy}" r="{r_out + 12}"/><circle class="orbit2" cx="{cx}" cy="{cy}" r="{r_in - 4}"/><g class="ticks">{"".join(ticks)}</g>'
            f'{"".join(segs)}<circle class="pulse" cx="{cx}" cy="{cy}" r="{r_in - 12}"/><circle class="hub" cx="{cx}" cy="{cy}" r="{r_in - 12}"/><circle class="hubring" cx="{cx}" cy="{cy}" r="{r_in - 20}"/>'
-           f'<text class="hubt" x="{cx}" y="{cy + 2}">{hub_t}</text><text class="hubs" x="{cx}" y="{cy + 24}">{hub_s}</text>'
+           f'{hub_mark}'
            f'<text class="ring"><textPath href="#{ring_id}" startOffset="50%" text-anchor="middle">{E(s.get("ring", "EVERYTHING AN OFFICE RUNS ON"))}</textPath></text></svg>')
     first = items[0]
     panel = (f'<div class="panel" data-panel><div class="bignum" data-n aria-hidden="true">01</div><div class="q-eyebrow">{E(s.get("panel_eyebrow", "Hover a segment"))}</div><h3 data-t>{E(first[0])}</h3><p data-b>{E(first[1])}</p>'

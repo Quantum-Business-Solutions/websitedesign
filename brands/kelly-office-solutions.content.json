@@ -70,6 +70,20 @@
       ],
       "note": "A person from the nearest branch replies. Under a Kelly agreement your call is dispatched first."
     },
+    "guide": {
+      "label": "Free guide: 27 Ways",
+      "eyebrow": "Free guide",
+      "title": "27 Ways to Streamline Your Office in 2027",
+      "intro": "Practical ideas for print, paper and IT, from a team that has kept North Carolina offices running since 1947.",
+      "bullets": [
+        "Cut hidden print and supply costs",
+        "Get paper out of the way for good",
+        "Spot IT and security gaps early"
+      ],
+      "book": "assets/guide-book.webp",
+      "book_alt": "The hardcover guide 27 Ways to Streamline Your Office in 2027, with the Kelly Office Solutions logo",
+      "submit": "Send me the guide"
+    },
     "social": {
       "linkedin": "https://www.linkedin.com/company/kelly-office-solutions/",
       "facebook": "https://www.facebook.com/KellyOfficeSolutions",
@@ -554,7 +568,7 @@
           "ita",
           "ba",
           "flow",
-          "office",
+          "zoomtour",
           "savings",
           "mugs",
           "device",
@@ -764,6 +778,7 @@
           ],
           "hub": "Kelly",
           "hub_sub": "one partner",
+          "hub_orb": true,
           "ring": "EVERYTHING AN OFFICE RUNS ON"
         },
         {
@@ -826,10 +841,12 @@
           "type": "photoband",
           "id": "mugs",
           "alt": true,
+          "video": "assets/film-mugs.mp4",
+          "video_webm": "assets/film-mugs.webm",
           "eyebrow": "Pure Technology",
           "heading": "The break room people actually like",
           "intro": "Water, ice and coffee, serviced on the same visit as the copier. One fewer delivery company, one fewer invoice.",
-          "image": "assets/break-mugs-1600.jpg",
+          "image": "assets/film-mugs-poster.jpg",
           "alt_text": "Four coworkers laughing in an office break room, each holding a Kelly Office Solutions coffee mug",
           "points": [
             "Bottleless, filtered water without the jugs",
@@ -869,6 +886,90 @@
           "href": "office-overview.html",
           "cta": "Run my Full Office Overview",
           "rate": 0.12
+        },
+        {
+          "type": "zoomtour",
+          "id": "zoomtour",
+          "eyebrow": "The whole office",
+          "heading": "Fly through everything an office runs on",
+          "intro": "Scroll. One floor plan, seven lines, one number to call.",
+          "image": "assets/office-iso-3200.jpg",
+          "image_w": 3200,
+          "image_h": 1792,
+          "alt": "An overhead illustration of an office with a copier room, a break room, a server room, a mailroom and desks",
+          "hint": "Scroll to fly in",
+          "stops": [
+            {
+              "x": 27,
+              "y": 46,
+              "scale": 2.5,
+              "k": "Copiers and production",
+              "title": "The copier room",
+              "body": "Multifunction devices and a production system with inline finishing, on one agreement.",
+              "href": "products/multifunction-printers.html",
+              "label": "Multifunction printers"
+            },
+            {
+              "x": 47,
+              "y": 21,
+              "scale": 2.5,
+              "k": "Water, ice and coffee",
+              "title": "The break room",
+              "body": "Bottleless water, ice and single-cup or high-volume coffee, serviced on the same visit as the copier.",
+              "href": "services/pure-technology.html",
+              "label": "Pure Technology"
+            },
+            {
+              "x": 82,
+              "y": 14,
+              "scale": 2.5,
+              "k": "Managed IT",
+              "title": "The server room",
+              "body": "Monitoring, backup, security and Microsoft 365 for a fixed monthly invoice.",
+              "href": "products/managed-it.html",
+              "label": "Managed IT services"
+            },
+            {
+              "x": 73,
+              "y": 58,
+              "scale": 2.5,
+              "k": "Mailing",
+              "title": "The mailroom",
+              "body": "FP postage meters, folder inserters and mailroom printers that cost less per piece than the office copier.",
+              "href": "products/postage-meters.html",
+              "label": "Postage meters"
+            },
+            {
+              "x": 88,
+              "y": 66,
+              "scale": 2.5,
+              "k": "Parcel lockers",
+              "title": "The package wall",
+              "body": "Secure, contactless pickup for offices, campuses and properties.",
+              "href": "products/parcel-lockers.html",
+              "label": "Parcel lockers"
+            },
+            {
+              "x": 16,
+              "y": 58,
+              "scale": 2.5,
+              "k": "Desktop printers",
+              "title": "The desks",
+              "body": "Single-function printers, right-sized to how many the office needs and folded into managed print.",
+              "href": "products/printers.html",
+              "label": "Printers"
+            },
+            {
+              "x": 64,
+              "y": 71,
+              "scale": 2.5,
+              "k": "Document management",
+              "title": "Scan to DocuWare",
+              "body": "Every MFP scans straight into indexed workflows: accounts payable, HR, contracts.",
+              "href": "products/docuware.html",
+              "label": "DocuWare"
+            }
+          ]
         },
         {
           "type": "flow",
@@ -1793,7 +1894,8 @@
             ]
           ],
           "hub": "Kelly",
-          "hub_sub": "one partner"
+          "hub_sub": "one partner",
+          "hub_orb": true
         },
         {
           "type": "hotspots",
@@ -2428,10 +2530,12 @@
               76
             ]
           ],
-          "poster": "assets/fleet-after-1600.jpg",
+          "poster": "assets/film-fleet-poster.jpg",
           "photo": true,
-          "alt_text": "A managed print fleet: matched copiers and a status dashboard",
-          "orbit": "30deg 74deg 105%"
+          "alt_text": "Managed print fleet running",
+          "orbit": "30deg 74deg 105%",
+          "video": "assets/film-fleet.mp4",
+          "video_webm": "assets/film-fleet.webm"
         },
         {
           "type": "ticker",
@@ -3219,10 +3323,12 @@
               76
             ]
           ],
-          "poster": "assets/production-print-1200.jpg",
+          "poster": "assets/film-press-poster.jpg",
           "photo": true,
-          "alt_text": "Production print",
-          "orbit": "30deg 74deg 105%"
+          "alt_text": "A production press running",
+          "orbit": "30deg 74deg 105%",
+          "video": "assets/film-press.mp4",
+          "video_webm": "assets/film-press.webm"
         },
         {
           "type": "ticker",
@@ -3463,10 +3569,12 @@
               76
             ]
           ],
-          "poster": "assets/it-1200.jpg",
+          "poster": "assets/film-it-poster.jpg",
           "photo": true,
-          "alt_text": "IT services",
-          "orbit": "30deg 74deg 105%"
+          "alt_text": "A relaxed IT director with calm dashboards",
+          "orbit": "30deg 74deg 105%",
+          "video": "assets/film-it.mp4",
+          "video_webm": "assets/film-it.webm"
         },
         {
           "type": "ticker",
@@ -3775,10 +3883,12 @@
               76
             ]
           ],
-          "poster": "assets/postage-1200.jpg",
+          "poster": "assets/film-mail-poster.jpg",
           "photo": true,
-          "alt_text": "Mailing solutions",
-          "orbit": "30deg 74deg 105%"
+          "alt_text": "A mailroom printer feeding envelopes",
+          "orbit": "30deg 74deg 105%",
+          "video": "assets/film-mail.mp4",
+          "video_webm": "assets/film-mail.webm"
         },
         {
           "type": "ticker",
@@ -4007,10 +4117,12 @@
               76
             ]
           ],
-          "poster": "assets/breakroom-1200.jpg",
+          "poster": "assets/film-mugs-poster.jpg",
           "photo": true,
-          "alt_text": "Pure Technology: water, ice and coffee",
-          "orbit": "30deg 74deg 105%"
+          "alt_text": "Coworkers laughing over Kelly mugs",
+          "orbit": "30deg 74deg 105%",
+          "video": "assets/film-mugs.mp4",
+          "video_webm": "assets/film-mugs.webm"
         },
         {
           "type": "ticker",
@@ -4032,10 +4144,12 @@
           "type": "photoband",
           "id": "mugs",
           "alt": true,
+          "video": "assets/film-mugs.mp4",
+          "video_webm": "assets/film-mugs.webm",
           "eyebrow": "Pure Technology",
           "heading": "The break room people actually like",
           "intro": "Water, ice and coffee, serviced on the same visit as the copier. One fewer delivery company, one fewer invoice.",
-          "image": "assets/break-mugs-1600.jpg",
+          "image": "assets/film-mugs-poster.jpg",
           "alt_text": "Four coworkers laughing in an office break room, each holding a Kelly Office Solutions coffee mug",
           "points": [
             "Bottleless, filtered water without the jugs",
@@ -5092,6 +5206,28 @@
           "alt": true
         },
         {
+          "image": "assets/film-fleet-poster.jpg",
+          "video": "assets/film-fleet.mp4",
+          "video_webm": "assets/film-fleet.webm",
+          "alt_text": "Managed print fleet running",
+          "type": "photoband",
+          "id": "film",
+          "alt": true,
+          "eyebrow": "Under agreement",
+          "heading": "A fleet that runs itself",
+          "intro": "Matched devices, watched and supplied before they run out, with a plain-English report on what each one carried.",
+          "points": [
+            "Toner ships on usage",
+            "Meter reads taken automatically",
+            "Priority service under agreement",
+            "One agreement, one invoice"
+          ],
+          "cta": {
+            "label": "Request a quote",
+            "href": "#quote"
+          }
+        },
+        {
           "type": "countband",
           "id": "numbers",
           "eyebrow": "Measured, not claimed",
@@ -5511,6 +5647,28 @@
             }
           ],
           "alt": true
+        },
+        {
+          "image": "assets/film-fleet-poster.jpg",
+          "video": "assets/film-fleet.mp4",
+          "video_webm": "assets/film-fleet.webm",
+          "alt_text": "Managed print fleet running",
+          "type": "photoband",
+          "id": "film",
+          "alt": true,
+          "eyebrow": "Under agreement",
+          "heading": "A fleet that runs itself",
+          "intro": "Matched devices, watched and supplied before they run out, with a plain-English report on what each one carried.",
+          "points": [
+            "Toner ships on usage",
+            "Meter reads taken automatically",
+            "Priority service under agreement",
+            "One agreement, one invoice"
+          ],
+          "cta": {
+            "label": "Request a quote",
+            "href": "#quote"
+          }
         },
         {
           "type": "countband",
@@ -6238,6 +6396,28 @@
           "alt": true
         },
         {
+          "image": "assets/film-press-poster.jpg",
+          "video": "assets/film-press.mp4",
+          "video_webm": "assets/film-press.webm",
+          "alt_text": "A production press running",
+          "type": "photoband",
+          "id": "film",
+          "alt": true,
+          "eyebrow": "Production print",
+          "heading": "Your print shop, running down the hall",
+          "intro": "Booklets, stapling, folding and color consistency all day, on one agreement with your copiers.",
+          "points": [
+            "Inline finishing for booklets, stapling and folding",
+            "Color consistency all day",
+            "Serviced by the same Kelly technicians",
+            "No more outsourcing the rush job"
+          ],
+          "cta": {
+            "label": "Request a quote",
+            "href": "#quote"
+          }
+        },
+        {
           "type": "countband",
           "id": "numbers",
           "eyebrow": "Measured, not claimed",
@@ -6459,6 +6639,28 @@
           ]
         },
         {
+          "image": "assets/film-mail-poster.jpg",
+          "video": "assets/film-mail.mp4",
+          "video_webm": "assets/film-mail.webm",
+          "alt_text": "A mailroom printer feeding envelopes",
+          "type": "photoband",
+          "id": "film",
+          "alt": true,
+          "eyebrow": "The mailroom",
+          "heading": "Mail that costs less per piece",
+          "intro": "Commercial postage rates and equipment that is serviced on the same visit as the copier.",
+          "points": [
+            "Commercial postage rates",
+            "Fully IMI compliant",
+            "Folder inserters and mailroom printers from the same supplier",
+            "One agreement and one number"
+          ],
+          "cta": {
+            "label": "Request a quote",
+            "href": "#quote"
+          }
+        },
+        {
           "type": "countband",
           "id": "numbers",
           "eyebrow": "Measured, not claimed",
@@ -6678,6 +6880,28 @@
           ]
         },
         {
+          "image": "assets/film-mail-poster.jpg",
+          "video": "assets/film-mail.mp4",
+          "video_webm": "assets/film-mail.webm",
+          "alt_text": "A mailroom printer feeding envelopes",
+          "type": "photoband",
+          "id": "film",
+          "alt": true,
+          "eyebrow": "The mailroom",
+          "heading": "The envelope-stuffing afternoon, gone",
+          "intro": "Folder inserters and mailroom printers that take the hand work out of every mailing.",
+          "points": [
+            "Folds, inserts and seals at speed",
+            "Pairs with a postage meter",
+            "Serviced with your copiers",
+            "One number to call"
+          ],
+          "cta": {
+            "label": "Request a quote",
+            "href": "#quote"
+          }
+        },
+        {
           "type": "countband",
           "id": "numbers",
           "eyebrow": "Measured, not claimed",
@@ -6895,6 +7119,28 @@
               "Sits on the mailroom counter beside the meter."
             ]
           ]
+        },
+        {
+          "image": "assets/film-mail-poster.jpg",
+          "video": "assets/film-mail.mp4",
+          "video_webm": "assets/film-mail.webm",
+          "alt_text": "A mailroom printer feeding envelopes",
+          "type": "photoband",
+          "id": "film",
+          "alt": true,
+          "eyebrow": "The mailroom",
+          "heading": "Envelopes and labels, done right",
+          "intro": "Print envelopes and labels in the mailroom for less per piece than the office copier.",
+          "points": [
+            "Envelopes and labels printed on demand",
+            "Pairs with a postage meter",
+            "Serviced with your copiers",
+            "One agreement and one number"
+          ],
+          "cta": {
+            "label": "Request a quote",
+            "href": "#quote"
+          }
         },
         {
           "type": "countband",
@@ -7789,11 +8035,13 @@
           "type": "photoband",
           "id": "mugs",
           "alt": true,
+          "video": "assets/film-mugs.mp4",
+          "video_webm": "assets/film-mugs.webm",
           "eyebrow": "Pure Technology",
           "heading": "The break room people actually like",
           "intro": "Water, ice and coffee, serviced on the same visit as the copier. One fewer delivery company, one fewer invoice.",
-          "image": "assets/break-mugs-1600.jpg",
-          "alt_text": "Four coworkers laughing in an office break room, each holding a Kelly Office Solutions coffee mug",
+          "image": "assets/film-mugs-poster.jpg",
+          "alt_text": "Coworkers laughing over Kelly mugs",
           "points": [
             "Bottleless, filtered water without the jugs",
             "Ice and coffee restocked on the same visit as the copier",
@@ -8041,11 +8289,13 @@
           "type": "photoband",
           "id": "mugs",
           "alt": true,
+          "video": "assets/film-mugs.mp4",
+          "video_webm": "assets/film-mugs.webm",
           "eyebrow": "Pure Technology",
           "heading": "The break room people actually like",
           "intro": "Water, ice and coffee, serviced on the same visit as the copier. One fewer delivery company, one fewer invoice.",
-          "image": "assets/break-mugs-1600.jpg",
-          "alt_text": "Four coworkers laughing in an office break room, each holding a Kelly Office Solutions coffee mug",
+          "image": "assets/film-mugs-poster.jpg",
+          "alt_text": "Coworkers laughing over Kelly mugs",
           "points": [
             "Bottleless, filtered water without the jugs",
             "Ice and coffee restocked on the same visit as the copier",
@@ -8293,11 +8543,13 @@
           "type": "photoband",
           "id": "mugs",
           "alt": true,
+          "video": "assets/film-mugs.mp4",
+          "video_webm": "assets/film-mugs.webm",
           "eyebrow": "Pure Technology",
           "heading": "The break room people actually like",
           "intro": "Water, ice and coffee, serviced on the same visit as the copier. One fewer delivery company, one fewer invoice.",
-          "image": "assets/break-mugs-1600.jpg",
-          "alt_text": "Four coworkers laughing in an office break room, each holding a Kelly Office Solutions coffee mug",
+          "image": "assets/film-mugs-poster.jpg",
+          "alt_text": "Coworkers laughing over Kelly mugs",
           "points": [
             "Bottleless, filtered water without the jugs",
             "Ice and coffee restocked on the same visit as the copier",
@@ -8451,12 +8703,12 @@
           },
           "facts": [
             [
-              "5 brands",
-              "Datto, WatchGuard, Dell"
+              "Fixed",
+              "Monthly invoice, no surprises"
             ],
             [
-              "5 offices",
-              "The nearest one dispatches"
+              "On site",
+              "And remote, one team"
             ],
             [
               "94.4",
@@ -8483,7 +8735,7 @@
               76
             ]
           ],
-          "poster": "assets/it-1-1200.jpg",
+          "poster": "assets/fleet/network-stack.png",
           "photo": false,
           "alt": "A 3D model of managed it services you can turn",
           "alt_text": "Managed IT services from Kelly Office Solutions",
@@ -8507,26 +8759,130 @@
           ]
         },
         {
-          "type": "detail",
-          "alt": true,
-          "eyebrow": "What to know",
-          "heading": "About managed it services",
-          "body": "Managing an IT infrastructure, hardware, software, network and security, is costly and time-consuming, and an in-house expert can be the highest-paid person on staff. Managed IT from Kelly puts your systems under proactive monitoring and maintenance, on site and remote, for a fixed monthly invoice, so your teams focus on the work instead of the interruptions.",
-          "bullets": [
+          "image": "assets/film-it-poster.jpg",
+          "video": "assets/film-it.mp4",
+          "video_webm": "assets/film-it.webm",
+          "alt_text": "A relaxed IT director with calm dashboards",
+          "type": "photoband",
+          "id": "itfilm",
+          "eyebrow": "Watched before it breaks",
+          "heading": "Your systems, under watch, on site and remote",
+          "intro": "Managed IT from Kelly puts your hardware, software, network and security under proactive monitoring and maintenance, for one fixed monthly invoice, so your team focuses on the work instead of the interruptions.",
+          "points": [
             "Remote monitoring, security and network management",
             "Intrusion prevention and detection",
             "Managed cloud, backup, retention and restore",
-            "Workstation and server management",
-            "Disaster planning, wireless, telecom carrier and vendor consulting",
-            "Project management and consultation"
+            "Workstation and server management"
           ],
-          "image": "assets/it-1-1200.jpg",
-          "flip": true
+          "cta": {
+            "label": "Request a quote",
+            "href": "#quote"
+          }
+        },
+        {
+          "type": "layers",
+          "id": "layers",
+          "eyebrow": "Layers of protection",
+          "heading": "Five layers around everything your office runs on",
+          "intro": "Hover a layer. Each one is watched, patched and backed up by the same Kelly team, on one fixed monthly invoice.",
+          "items": [
+            [
+              "Workstations and servers",
+              "Workstation and server management, with patches and updates handled before they become problems.",
+              "disk"
+            ],
+            [
+              "Network and wireless",
+              "Remote network management and wireless implementation, on site and remote.",
+              "wifi"
+            ],
+            [
+              "Security",
+              "WatchGuard with intrusion prevention and detection, against ransomware, breaches and downtime.",
+              "lock"
+            ],
+            [
+              "Backup and recovery",
+              "Datto managed cloud and backup, with retention, restore and disaster planning.",
+              "cloud"
+            ],
+            [
+              "Monitoring and support",
+              "Proactive monitoring from one team, so issues are found and fixed before they reach your staff.",
+              "radar"
+            ]
+          ]
+        },
+        {
+          "type": "pulseflow",
+          "id": "itmonitor",
+          "eyebrow": "Under agreement",
+          "heading": "Watched around the clock, fixed before it hurts",
+          "intro": "Servers, workstations and the network report in. Kelly sees the fault, the missed patch and the failed backup first, and the fix is already moving.",
+          "nodes": [
+            [
+              "it",
+              "Your systems",
+              "Servers, workstations and network report their health."
+            ],
+            [
+              "meter",
+              "The checks",
+              "Patches, backups and threat checks run around the clock."
+            ],
+            [
+              "dash",
+              "Kelly sees it",
+              "An engineer has it on the list first."
+            ],
+            [
+              "truck",
+              "Kelly fixes it",
+              "Remotely when possible, on site when not."
+            ],
+            [
+              "smile",
+              "You carry on",
+              "Nobody in the office made a call."
+            ]
+          ],
+          "feed": [
+            [
+              0,
+              "<b>Server 2</b> disk health warning, replacement scheduled"
+            ],
+            [
+              1,
+              "Patch cycle complete on 38 workstations"
+            ],
+            [
+              2,
+              "Backup verified, restore test passed"
+            ],
+            [
+              3,
+              "<span class=\"ok\">Intrusion attempt blocked</span> at the firewall"
+            ],
+            [
+              4,
+              "<span class=\"ok\">Resolved</span> before a ticket was opened"
+            ],
+            [
+              1,
+              "Certificate renewal queued, 12 days ahead"
+            ],
+            [
+              2,
+              "Monthly security report ready for review"
+            ]
+          ],
+          "note": "Illustrative example feed. A real feed shows your servers, your backups and your alerts."
         },
         {
           "type": "cards",
+          "alt": true,
           "eyebrow": "Why it matters",
-          "heading": "What managed it services changes",
+          "heading": "What managed IT changes",
           "items": [
             [
               "Proactive monitoring",
@@ -8539,6 +8895,57 @@
             [
               "Fixed monthly invoice",
               "Service, support and maintenance under one predictable bill."
+            ]
+          ]
+        },
+        {
+          "type": "itdirector",
+          "id": "ita",
+          "eyebrow": "Meanwhile, in the server room",
+          "heading": "From 2 a.m. alerts to one number to call",
+          "intro": "Drag the slider. Same office, same IT director. The difference is who is watching the systems, the copiers and the invoices.",
+          "before": "assets/it-before-1600.jpg",
+          "after": "assets/it-after-1600.jpg",
+          "logo": "assets/kelly-logo.png",
+          "before_label": "Seven vendors",
+          "after_label": "One partner",
+          "before_title": "Today, in most offices",
+          "before_body": "A copier company, an IT firm that blames the copier company, a postage meter on its own contract. Four numbers to call and nobody who knows your name.",
+          "after_title": "With Kelly",
+          "after_body": "Monitoring, backup and security from the KellyWay team, serviced on the same visit as the copier, on one agreement and one invoice. One number: 1-800-34-KELLY.",
+          "alt": false
+        },
+        {
+          "type": "hwgrid",
+          "id": "hardware",
+          "alt": true,
+          "eyebrow": "What we deploy",
+          "heading": "The hardware behind the service",
+          "intro": "A sample of what Kelly places, installs and services for managed IT. Ask the branch which fits your office.",
+          "items": [
+            [
+              "Datto",
+              "ALTO",
+              "A desktop-size appliance that helps small businesses maintain dependable backups and minimize downtime during disruptions.",
+              "disk"
+            ],
+            [
+              "Datto",
+              "SIRIS",
+              "An all-in-one, turnkey business continuity and disaster recovery (BCDR) solution.",
+              "cloud"
+            ],
+            [
+              "WatchGuard",
+              "Network security",
+              "Protection against ransomware and breaches, with intrusion prevention and detection.",
+              "lock"
+            ],
+            [
+              "Dell and Microsoft 365",
+              "Hardware and cloud",
+              "Kelly works with Dell and Microsoft 365, among others. Tell the branch what you run now and they will say what fits.",
+              "gear"
             ]
           ]
         },
@@ -8565,22 +8972,6 @@
               "Years family-owned, since 1947"
             ]
           ]
-        },
-        {
-          "type": "itdirector",
-          "id": "ita",
-          "eyebrow": "Meanwhile, in the server room",
-          "heading": "From 2 a.m. alerts to one number to call",
-          "intro": "Drag the slider. Same office, same IT director. The difference is who is watching the systems, the copiers and the invoices.",
-          "before": "assets/it-before-1600.jpg",
-          "after": "assets/it-after-1600.jpg",
-          "logo": "assets/kelly-logo.png",
-          "before_label": "Seven vendors",
-          "after_label": "One partner",
-          "before_title": "Today, in most offices",
-          "before_body": "A copier company, an IT firm that blames the copier company, a postage meter on its own contract. Four numbers to call and nobody who knows your name.",
-          "after_title": "With Kelly",
-          "after_body": "Monitoring, backup and security from the KellyWay team, serviced on the same visit as the copier, on one agreement and one invoice. One number: 1-800-34-KELLY."
         },
         {
           "type": "savingstease",
@@ -8644,8 +9035,8 @@
           "type": "leadform",
           "alt": true,
           "id": "quote",
-          "heading": "Get a quote on managed it services",
-          "body": "Tell us the volume and the office. A specialist from the nearest branch replies with options and prices.",
+          "heading": "Get a quote on managed IT",
+          "body": "Tell us what you run now and how many people use it. A specialist from the nearest branch replies with options and a fixed monthly price.",
           "submit": "Request a quote",
           "note": "No obligation. We answer the phone too: 1-800-34-KELLY."
         }
@@ -9118,44 +9509,54 @@
           }
         },
         {
-          "type": "resources",
-          "heading": "Five markets",
+          "type": "tiles",
+          "id": "markets",
+          "eyebrow": "Pick yours",
+          "heading": "Six markets",
           "intro": "Each page covers what we set up, what customers ask, and how to start.",
+          "go": "See how",
           "items": [
             [
-              "Key market",
               "Legal",
               "Firms print, scan and file more than almost any other business, and every page can be billed or lost.",
-              "Office technology for legal",
-              "industries/legal.html"
+              "assets/ind-legal-800.jpg",
+              "industries/legal.html",
+              "legal"
             ],
             [
-              "Key market",
               "Healthcare",
               "Practices need print that protects patient information and keeps working at seven in the morning.",
-              "Office technology for healthcare",
-              "industries/healthcare.html"
+              "assets/ind-health-800.jpg",
+              "industries/healthcare.html",
+              "health"
             ],
             [
-              "Key market",
               "Faith-based",
               "Bulletins, mailings and programs every week, on a budget that answers to a congregation.",
-              "Office technology for faith-based",
-              "industries/faith-based.html"
+              "assets/ind-faith-800.jpg",
+              "industries/faith-based.html",
+              "faith"
             ],
             [
-              "Key market",
               "Architecture and engineering",
               "Plans, drawings and renderings in house, in color, at the size the job site needs.",
-              "Office technology for architecture and engineering",
-              "industries/architecture.html"
+              "assets/ind-arch-800.jpg",
+              "industries/architecture.html",
+              "arch"
             ],
             [
-              "Key market",
               "Manufacturing",
               "Documents available where the work happens, approvals that do not wait on a desk, and IT handled so the plant can focus.",
-              "Office technology for manufacturing",
-              "industries/manufacturing.html"
+              "assets/ind-manuf-800.jpg",
+              "industries/manufacturing.html",
+              "gear"
+            ],
+            [
+              "Professional services",
+              "Accounting and staffing firms with seasonal peaks, and a technician who answers the same day.",
+              "assets/ind-prof-800.jpg",
+              "contact.html",
+              "brief"
             ]
           ]
         },
@@ -10202,8 +10603,8 @@
       "description": "Kelly Office Solutions has served North Carolina since 1947: co-owners Tim Renegar and Peter Kelly, about 90 people, five offices, an audited NPS of 94.4, and a long record of community support in the Triad.",
       "sections": [
         {
-          "type": "hero",
-          "layout": "centered",
+          "type": "herocover",
+          "id": "hero",
           "eyebrow": "About Kelly",
           "heading": "Family-owned since 1947. <em>Still local, on purpose.</em>",
           "subhead": "Kelly started in 1947 selling office equipment and stayed independent while most of the industry consolidated. Today about 90 people across five North Carolina offices serve some 4,000 customers, and the phone is still answered by someone who works here.",
@@ -10211,10 +10612,33 @@
             "label": "Meet the owners",
             "href": "#leadership"
           },
-          "image": "assets/kelly-team-1024.jpg",
-          "image_alt": "A Kelly technician beside a Kelly service van",
-          "image_w": 1024,
-          "image_h": 576
+          "secondary": {
+            "label": "Request an assessment",
+            "href": "contact.html"
+          },
+          "image": "assets/about-hero-2400.jpg",
+          "image_w": 2400,
+          "image_h": 1350,
+          "align": "right",
+          "alt": "A Kelly team member beside a Kelly service van on a North Carolina main street",
+          "chips": [
+            [
+              "1947",
+              "founded"
+            ],
+            [
+              "90",
+              "people"
+            ],
+            [
+              "5",
+              "offices"
+            ],
+            [
+              "94.4",
+              "NPS"
+            ]
+          ]
         },
         {
           "type": "stats",
@@ -10250,7 +10674,8 @@
           "caption": "Kelly's own film, from kellyofficesolutions.com"
         },
         {
-          "type": "timeline",
+          "type": "timelive",
+          "id": "tl3",
           "eyebrow": "Since 1947",
           "heading": "Seventy-nine years in North Carolina, one office at a time",
           "intro": "The dates we could source are here. The ones marked to confirm are on the hub list; tell us and they go in.",
@@ -10318,8 +10743,7 @@
           ]
         },
         {
-          "type": "values",
-          "alt": true,
+          "type": "pillars",
           "eyebrow": "What we believe",
           "heading": "Mission, vision and the standard we hold ourselves to",
           "items": [
@@ -10367,37 +10791,57 @@
           ]
         },
         {
-          "type": "cards",
-          "alt": true,
+          "type": "tiles",
           "id": "markets",
           "eyebrow": "Key markets",
           "heading": "The industries we know best",
+          "intro": "Six markets where Kelly has done the work many times. Tap a tile to see what we set up.",
+          "go": "See how",
           "items": [
             [
               "Legal",
-              "Firms print, scan and file more than almost any other business, and every page can be billed or lost."
+              "Firms print, scan and file more than almost any other business, and every page can be billed or lost.",
+              "assets/ind-legal-800.jpg",
+              "industries/legal.html",
+              "legal"
             ],
             [
               "Healthcare",
-              "Practices need print that protects patient information and keeps working at seven in the morning."
+              "Practices need print that protects patient information and keeps working at seven in the morning.",
+              "assets/ind-health-800.jpg",
+              "industries/healthcare.html",
+              "health"
             ],
             [
               "Faith-based",
-              "Bulletins, mailings and programs every week, on a budget that answers to a congregation."
+              "Bulletins, mailings and programs every week, on a budget that answers to a congregation.",
+              "assets/ind-faith-800.jpg",
+              "industries/faith-based.html",
+              "faith"
             ],
             [
               "Architecture and engineering",
-              "Plans, drawings and renderings in house, in color, at the size the job site needs."
+              "Plans, drawings and renderings in house, in color, at the size the job site needs.",
+              "assets/ind-arch-800.jpg",
+              "industries/architecture.html",
+              "arch"
             ],
             [
               "Manufacturing",
-              "Documents available where the work happens, approvals that do not wait on a desk, and IT handled so the plant can focus."
+              "Documents available where the work happens, approvals that do not wait on a desk, and IT handled so the plant can focus.",
+              "assets/ind-manuf-800.jpg",
+              "industries/manufacturing.html",
+              "gear"
             ],
             [
               "Professional services",
-              "Accounting and staffing firms with seasonal peaks, and a technician who calls back the same day in tax season."
+              "Accounting and staffing firms with seasonal peaks, and a technician who answers the same day.",
+              "assets/ind-prof-800.jpg",
+              "contact.html",
+              "brief"
             ]
-          ]
+          ],
+          "alt": true
         },
         {
           "type": "faq",
