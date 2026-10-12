@@ -666,7 +666,7 @@ PRODUCTS = [
      [["How long does a DocuWare rollout take?", "Depends on the first workflow. Accounts payable is the usual start. Ask the branch for a scoping call."], ["Does it work with our copiers?", "Yes. Scan straight into indexed DocuWare workflows from Kelly MFPs."]],
      ["DocuWare"]],
 ]
-PRODUCT_HEADINGS = {'printers': 'Printers that <em>earn their desk space</em>.', 'copiers': 'Copiers that <em>do more than copy</em>.', 'multifunction-printers': 'One device. <em>Print, scan, copy, fax.</em>', 'wide-format-printers': 'Big print, <em>printed in-house</em>.', 'production-printers': 'Your print shop, <em>down the hall</em>.', 'postage-meters': 'Exact postage, <em>at commercial rates</em>.', 'folder-inserters': 'The envelope-stuffing afternoon, <em>gone</em>.', 'mailroom-printers': 'Envelopes and labels, <em>done right</em>.', 'parcel-lockers': 'Packages, <em>secured and collected</em>.', 'mailing-software': 'Ship, sign and account, <em>from one screen</em>.', 'mailroom-accessories': 'Everything else <em>the mailroom needs</em>.', 'water-coolers': 'Better water, <em>no jugs</em>.', 'ice-machines': '125 pounds of ice a day, <em>from a small footprint</em>.', 'coffee-brewers': 'Good coffee, <em>and someone who brings the beans</em>.', 'managed-it': 'IT that is <em>watched before it breaks</em>.', 'digital-forensics': 'Digital evidence, <em>recognized in court</em>.', 'docuware': 'Any document, <em>in seconds</em>.'}
+PRODUCT_HEADINGS = {'printers': 'Printers that <em>earn their desk space</em>.', 'copiers': 'Copiers that <em>do more than copy</em>.', 'multifunction-printers': 'One device. <em>Print, scan, copy, fax.</em>', 'wide-format-printers': 'Big print, <em>printed in-house</em>.', 'production-printers': 'Your print shop, <em>down the hall</em>.', 'postage-meters': 'Exact postage, <em>at commercial rates</em>.', 'folder-inserters': 'The envelope-stuffing afternoon, <em>gone</em>.', 'mailroom-printers': 'Envelopes and labels, <em>done right</em>.', 'parcel-lockers': 'Packages, <em>secured and collected</em>.', 'mailing-software': 'Ship, sign and account, <em>from one screen</em>.', 'mailroom-accessories': 'Everything else <em>the mailroom needs</em>.', 'water-coolers': 'Better water, <em>no jugs</em>.', 'ice-machines': 'Breaking the Ice: <em>Kelly freezes out the competition.</em>', 'coffee-brewers': 'Wake up to Kelly <em>in your cup!</em>', 'managed-it': 'IT that is <em>watched before it breaks</em>.', 'digital-forensics': 'Digital evidence, <em>recognized in court</em>.', 'docuware': 'Any document, <em>in seconds</em>.'}
 PRODUCT_INDEX = {p[0]: p for p in PRODUCTS}
 
 
@@ -692,14 +692,20 @@ def product_page(slug, group, title, image, one, body, benefits, bullets, faq, b
     siblings = [q for q in PRODUCTS if q[1] == group and q[0] != slug][:3]
     short = title.split(":")[0]
     model, poster = PRODUCT_SHOW.get(slug, (None, None))
-    facts = [[f"{len(brands)} brands" if brands else "1 partner", ", ".join(brands[:3]) if brands else "Sold, installed and serviced by Kelly"],
+    facts = [[(f"{len(brands)} brand" + ("s" if len(brands) != 1 else "")) if brands else "1 partner", ", ".join(brands[:3]) if brands else "Sold, installed and serviced by Kelly"],
              ["5 offices", "The nearest one dispatches"], ["94.4", "Net Promoter Score, audited"]]
     tags = [[b[0], "", x, y] for b, (x, y) in zip(benefits[:3], TAG_SPOTS)]
-    hero = {"type": "product3d", "id": "hero", "eyebrow": group, "heading": PRODUCT_HEADINGS[slug], "subhead": one,
+    hero = {"type": "product3d", "id": "hero", "eyebrow": {"managed-it": "Kelly keeps you safe", "coffee-brewers": "Kelly takes caffeine seriously!"}.get(slug, group), "heading": PRODUCT_HEADINGS[slug], "subhead": one,
             "primary": {"label": "Request a quote", "href": "#quote"}, "secondary": {"label": "Run my Full Office Overview", "href": "office-overview.html"},
             "facts": facts, "tags": tags, "poster": poster or image, "photo": not model, "alt": f"A 3D model of {short.lower()} you can turn",
             "alt_text": f"{short} from Kelly Office Solutions", "orbit": "30deg 74deg 105%",
             **({"model": model} if model else {})}
+    if slug == "coffee-brewers":
+        hero.pop("model", None); hero["photo"] = False
+        hero["cutout"] = {"webm": "assets/coffee-pour-v2.webm", "still": "assets/coffee-pour-still-v2.png", "w": 870, "h": 716, "steam_x": 12, "steam_y": 16}
+        hero["subhead"] = "Fresh coffee, brewers and a stocked break room from the people who already keep your copiers and network running. One delivery, one invoice, one number to call."
+    if slug == "ice-machines":
+        hero["subhead"] = "Kelly freezes out the competition when it comes to bringing the best ice and water for your team."
     if slug == "managed-it":
         hero["facts"] = [["Fixed", "Monthly invoice, no surprises"], ["On site", "And remote, one team"], ["94.4", "Net Promoter Score, audited"]]
         secs = [hero, TICKER,

@@ -6550,7 +6550,7 @@
           },
           "facts": [
             [
-              "1 brands",
+              "1 brand",
               "FP Mailing Solutions"
             ],
             [
@@ -6792,7 +6792,7 @@
           },
           "facts": [
             [
-              "1 brands",
+              "1 brand",
               "FP Mailing Solutions"
             ],
             [
@@ -7033,7 +7033,7 @@
           },
           "facts": [
             [
-              "1 brands",
+              "1 brand",
               "FP Mailing Solutions"
             ],
             [
@@ -7274,7 +7274,7 @@
           },
           "facts": [
             [
-              "1 brands",
+              "1 brand",
               "FP Mailing Solutions"
             ],
             [
@@ -7493,7 +7493,7 @@
           },
           "facts": [
             [
-              "1 brands",
+              "1 brand",
               "FP Mailing Solutions"
             ],
             [
@@ -7728,7 +7728,7 @@
           },
           "facts": [
             [
-              "1 brands",
+              "1 brand",
               "FP Mailing Solutions"
             ],
             [
@@ -8185,8 +8185,8 @@
           "type": "product3d",
           "id": "hero",
           "eyebrow": "Water, ice and coffee",
-          "heading": "125 pounds of ice a day, <em>from a small footprint</em>.",
-          "subhead": "Energy-efficient commercial ice, up to 125 pounds a day, from a compact footprint.",
+          "heading": "Breaking the Ice: <em>Kelly freezes out the competition.</em>",
+          "subhead": "Kelly freezes out the competition when it comes to bringing the best ice and water for your team.",
           "primary": {
             "label": "Request a quote",
             "href": "#quote"
@@ -8438,9 +8438,9 @@
         {
           "type": "product3d",
           "id": "hero",
-          "eyebrow": "Water, ice and coffee",
-          "heading": "Good coffee, <em>and someone who brings the beans</em>.",
-          "subhead": "Single-cup to high-volume brewers, with beans and supplies delivered on your schedule.",
+          "eyebrow": "Kelly takes caffeine seriously!",
+          "heading": "Wake up to Kelly <em>in your cup!</em>",
+          "subhead": "Fresh coffee, brewers and a stocked break room from the people who already keep your copiers and network running. One delivery, one invoice, one number to call.",
           "primary": {
             "label": "Request a quote",
             "href": "#quote"
@@ -8451,7 +8451,7 @@
           },
           "facts": [
             [
-              "1 brands",
+              "1 brand",
               "NEWCO"
             ],
             [
@@ -8488,7 +8488,14 @@
           "alt": "A 3D model of coffee brewers you can turn",
           "alt_text": "Coffee brewers from Kelly Office Solutions",
           "orbit": "30deg 74deg 105%",
-          "model": "assets/models/breakroom.glb"
+          "cutout": {
+            "webm": "assets/coffee-pour-v2.webm",
+            "still": "assets/coffee-pour-still-v2.png",
+            "w": 870,
+            "h": 716,
+            "steam_x": 12,
+            "steam_y": 16
+          }
         },
         {
           "type": "ticker",
@@ -8691,7 +8698,7 @@
         {
           "type": "product3d",
           "id": "hero",
-          "eyebrow": "Technology and software",
+          "eyebrow": "Kelly keeps you safe",
           "heading": "IT that is <em>watched before it breaks</em>.",
           "subhead": "Monitoring, security, backup and support for a fixed monthly invoice.",
           "primary": {
@@ -9300,7 +9307,7 @@
           },
           "facts": [
             [
-              "1 brands",
+              "1 brand",
               "DocuWare"
             ],
             [

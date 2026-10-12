@@ -44,6 +44,21 @@ def _svg(name: str) -> str:
 
 
 CSS4 = r'''
+.body-wrapper > div:has(> .hs_cos_wrapper > .q-header){top:-48px!important}
+.body-wrapper .q-header{position:relative!important;top:auto!important}
+.q-header.is-scrolled .pv-util{max-height:none!important;opacity:1!important}
+.q-header .pv-util{transition:none!important}
+.pv-hw,.pv-grid.pv-grid-3{display:flex!important;flex-wrap:wrap;justify-content:center;gap:20px}
+.pv-hw>*{flex:0 1 calc((100% - 40px)/3);min-width:240px}
+.pv-grid.pv-grid-3>*{flex:0 1 calc((100% - 40px)/3);min-width:260px}
+@media(max-width:700px){.pv-hw>*,.pv-grid.pv-grid-3>*{flex-basis:100%}}
+.pv-story{align-items:center;gap:40px}
+.pv-story .stage{position:relative!important;top:auto!important;height:min(60vh,560px)}
+.pv-story .steps{gap:26px!important;padding:0!important}
+.pv-story .step{color:var(--fg)!important}
+.pv-story model-viewer{touch-action:pan-y}
+@media(max-width:900px){.pv-story{grid-template-columns:1fr}}
+html[data-dir="showcase"] *,html[data-dir="showcase"] *::before,html[data-dir="showcase"] *::after{--q-serif:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif!important;--q-sans:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif!important}
 .body-wrapper > div:has(> .hs_cos_wrapper > .q-header){position:sticky;top:0;z-index:70}
 .pv-crumbs:has(+ main > :is(.pv-dark,.pv-lh,.pv-cover):first-child){background:var(--chrome-bg);border-bottom-color:rgba(255,255,255,.1)}
 .pv-crumbs:has(+ main > :is(.pv-dark,.pv-lh,.pv-cover):first-child) :is(ol,a){color:rgba(255,255,255,.78)}

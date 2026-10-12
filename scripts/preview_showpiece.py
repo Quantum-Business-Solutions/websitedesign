@@ -48,6 +48,12 @@ CSS3 = r'''
 .pv-lh.vbg .pv-hero-stats{margin-top:38px;max-width:640px}
 .pv-lh.vbg .bg video{object-position:72% 50%}
 .pv-lh.vbg .net{opacity:.35}
+.pv-lh.vbg .lane{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;max-width:640px;margin-top:26px;align-items:stretch}
+.pv-lh.vbg .lane .k{grid-column:1/-1;margin:0 0 2px}
+.pv-lh.vbg .lane a{justify-content:center;text-align:center;min-height:46px;padding:0 10px;white-space:nowrap;background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.3);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:background .2s,border-color .2s,transform .2s}
+.pv-lh.vbg .lane a:hover{background:rgba(255,255,255,.16);transform:translateY(-2px)}
+@media(max-width:640px){.pv-lh.vbg .lane{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
 .pv-lh.vbg .q-container,.pv-p3d:has(.pv-p3d-stage.photo) > .q-container{width:100%}
 @media(max-width:820px){.pv-lh.vbg .bg::after{background:linear-gradient(180deg,rgba(0,5,45,.9),rgba(0,5,45,.72))}}
 
@@ -101,6 +107,21 @@ CSS3 = r'''
 .pv-p3d:has(.pv-p3d-stage.photo) .q-lead{font-size:clamp(16px,1.3vw,19px);line-height:1.55;max-width:560px}
 .pv-p3d:has(.pv-p3d-stage.photo) .pv-p3d-hint{display:none}
 @media(max-width:820px){.pv-p3d-stage.photo::after{background:linear-gradient(180deg,rgba(0,5,45,.9),rgba(0,5,45,.74))}}
+.pv-hascut{position:relative;overflow:hidden;min-height:min(80vh,720px);display:flex;align-items:center}
+.pv-hascut .pv-p3d-grid{grid-template-columns:minmax(0,600px)}
+.pv-hascut > .q-container{width:100%;position:relative;z-index:2}
+.pv-cut{position:absolute;z-index:4;right:max(1vw,0px);top:50%;width:min(54vw,720px);aspect-ratio:var(--cw)/var(--ch);transform:translate(130%,-50%) rotate(14deg);opacity:0;pointer-events:none}
+.pv-cut video,.pv-cut img.still{position:absolute;inset:0;width:100%;height:100%;display:block}
+.pv-cut img.still{display:none}
+.pv-hascut.in .pv-cut{animation:pv-cut-in 1.5s cubic-bezier(.2,.85,.25,1) .1s forwards}
+@keyframes pv-cut-in{0%{transform:translate(130%,-50%) rotate(14deg);opacity:0}25%{opacity:1}100%{transform:translate(0,-50%) rotate(0);opacity:1}}
+.pv-cut .steam{position:absolute;width:22%;height:32%;opacity:0;pointer-events:none}
+.pv-hascut.in .pv-cut .steam{animation:pv-cut-fade .8s 1.8s forwards}
+@keyframes pv-cut-fade{to{opacity:1}}
+.pv-cut .steam i{position:absolute;bottom:0;left:calc(var(--x)*1%);width:16%;height:100%;border-radius:50%;background:radial-gradient(ellipse at 50% 80%,rgba(255,255,255,.55),rgba(255,255,255,0) 68%);filter:blur(9px);opacity:0;animation:pv-steam 4.2s var(--d) infinite ease-out}
+@keyframes pv-steam{0%{transform:translateY(25%) scaleX(.7);opacity:0}25%{opacity:.7}100%{transform:translateY(-70%) translateX(var(--dx)) scaleX(1.5);opacity:0}}
+@media(max-width:820px){.pv-hascut{align-items:flex-start;min-height:780px}.pv-cut{top:auto;bottom:6px;right:50%;width:min(88vw,440px);transform:translate(50%,40%) rotate(10deg)}@keyframes pv-cut-in{0%{transform:translate(50%,60%) rotate(10deg);opacity:0}25%{opacity:1}100%{transform:translate(50%,0) rotate(0);opacity:1}}}
+@media(prefers-reduced-motion:reduce){.pv-cut{opacity:1;transform:translate(0,-50%);animation:none!important}.pv-hascut.in .pv-cut{animation:none}.pv-cut video{display:none}.pv-cut img.still{display:block}.pv-cut .steam{opacity:1}.pv-cut .steam i{animation:none;opacity:.35}}
 .pv-p3d-hint{position:absolute;right:4px;bottom:0;z-index:3;font-size:13px;color:rgba(255,255,255,.8);letter-spacing:.08em;text-transform:uppercase}
 
 /* countband */
@@ -337,6 +358,20 @@ def _product3d(s, ctx):
     else:
         stage = f'<img class="fb" src="{E(poster)}" alt="{E(s.get("alt_text", ""))}" width="1200" height="900">'
     photo = (" photo" + (" vid" if s.get("video") else "")) if not s.get("model") and s.get("photo") else ""
+    cut = s.get("cutout")
+    if cut:
+        steam = "".join(f'<i style="--x:{x};--d:{d}s;--dx:{dx}px"></i>' for x, d, dx in ((8, 0, -14), (34, 1.1, 10), (58, 2.2, -8)))
+        cutter = (f'<div class="pv-cut" aria-hidden="true" style="--cw:{cut.get("w", 720)};--ch:{cut.get("h", 592)}"><video muted playsinline preload="auto" width="{cut.get("w", 720)}" height="{cut.get("h", 592)}">'
+                  f'<source src="{E(rel(cut["webm"]))}" type="video/webm"></video><img class="still" alt="" src="{E(rel(cut["still"]))}" width="{cut.get("w", 720)}" height="{cut.get("h", 592)}">'
+                  f'<div class="steam" style="left:{cut.get("steam_x", 12)}%;top:{cut.get("steam_y", 20)}%">{steam}</div></div>')
+        sid = f' id="{E(s["id"])}"' if s.get("id") else ""
+        return (f'<section class="q-section pv-dark pv-p3d pv-hascut"{sid}><div class="pv-grid-bg" aria-hidden="true"></div><div class="pv-orb a" aria-hidden="true"></div><div class="pv-orb b" aria-hidden="true"></div>'
+                f'<div class="q-container pv-p3d-grid"><div><div class="q-eyebrow">{E(s.get("eyebrow", ""))}</div>'
+                f'<h1 class="q-h1">{RAW(s["heading"])}</h1><p class="q-lead">{E(s.get("subhead", ""))}</p>'
+                f'<div class="pv-p3d-btns">{btns}</div>{f"<ul class=pv-p3d-facts>{facts}</ul>" if facts else ""}</div></div>{cutter}'
+                '<script>(function(){var h=document.querySelector(".pv-hascut");if(!h)return;var v=h.querySelector(".pv-cut video"),rm=matchMedia("(prefers-reduced-motion: reduce)").matches;if(rm||!v)return;'
+                'var go=function(){h.classList.add("in");var p=v.play();if(p&&p.catch)p.catch(function(){})};v.addEventListener("ended",function(){try{v.currentTime=Math.max(0,v.duration-.05)}catch(e){}});'
+                'if("IntersectionObserver" in window){new IntersectionObserver(function(es,o){if(es[0].isIntersecting){go();o.disconnect()}},{threshold:.25}).observe(h)}else go()})();</script></section>')
     return (f'<section class="q-section pv-dark pv-p3d"{f" id={chr(34)}{E(s[chr(105)+chr(100)])}{chr(34)}" if s.get("id") else ""}>'
             f'<div class="pv-grid-bg" aria-hidden="true"></div><div class="pv-orb a" aria-hidden="true"></div><div class="pv-orb b" aria-hidden="true"></div>'
             f'<div class="q-container pv-p3d-grid"><div><div class="q-eyebrow">{E(s.get("eyebrow", ""))}</div>'
