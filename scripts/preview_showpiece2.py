@@ -44,6 +44,11 @@ def _svg(name: str) -> str:
 
 
 CSS4 = r'''
+@media(max-width:820px){.pv-hascut{flex-direction:column;align-items:stretch;min-height:0;padding-bottom:36px}
+.pv-hascut .pv-cx,.pv-hascut .pv-cx.tall{position:relative;top:auto;right:auto;bottom:auto;align-self:center;width:min(88vw,440px);height:auto;margin:30px auto 0;transform:translateY(40px);opacity:0}
+.pv-hascut .pv-cx.tall{width:auto;height:min(480px,118vw)}
+.pv-hascut.in .pv-cx{animation:pv-cx-up 1.1s cubic-bezier(.2,.85,.25,1) .1s forwards}
+@keyframes pv-cx-up{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}}
 .pv-trust li > b.pv-tic{display:grid;place-items:center;flex:none;width:54px;height:54px;border-radius:16px;font-size:0;line-height:0;color:#fff;background:linear-gradient(145deg,#0b1480,#143a7a 55%,#2f8f55);box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 10px 24px rgba(0,5,69,.28);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
 .pv-trust li:hover > b.pv-tic{transform:translateY(-3px) rotate(-4deg)}
 .pv-trust li > b.pv-tic svg{width:28px;height:28px;color:#fff}
