@@ -44,6 +44,9 @@ def _svg(name: str) -> str:
 
 
 CSS4 = r'''
+.pv-trust li > b.pv-tic{display:grid;place-items:center;flex:none;width:54px;height:54px;border-radius:16px;font-size:0;line-height:0;color:#fff;background:linear-gradient(145deg,#0b1480,#143a7a 55%,#2f8f55);box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 10px 24px rgba(0,5,69,.28);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.pv-trust li:hover > b.pv-tic{transform:translateY(-3px) rotate(-4deg)}
+.pv-trust li > b.pv-tic svg{width:28px;height:28px;color:#fff}
 @media(max-width:820px){.pv-guide-pill{font-size:0!important;gap:0!important;width:52px;height:52px;min-height:52px;padding:0!important;justify-content:center;border-radius:50%}.pv-guide-pill svg{width:24px;height:24px;margin:0}}
 .pv-mkt{scroll-margin-top:150px}
 .pv-mkt-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px);align-items:center}

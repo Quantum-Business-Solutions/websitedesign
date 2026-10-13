@@ -713,6 +713,10 @@ def product_page(slug, group, title, image, one, body, benefits, bullets, faq, b
         hero.pop("model", None); hero["photo"] = False; hero["eyebrow"] = "FP Mailing Solutions"
         hero["heading"] = "Signed, sealed, <em>delivered.</em>"
         hero["cutout"] = {"still": "assets/fp-vision-semi.png", "w": 981, "h": 488}
+    if slug == "water-coolers":
+        hero.pop("model", None); hero["photo"] = False; hero["alt_text"] = "A Wellsys hydration center"
+        hero["cutout"] = {"still": "assets/water-wellsys.png", "w": 368, "h": 1264, "mode": "toss", "tumble": ["assets/water-jug-1.png", "assets/water-jug-2.png"]}
+        hero["subhead"] = "Purified water on tap for the office that wants people hydrated and at their desks. Kelly takes the jugs away and installs the system."
     if slug == "ice-machines":
         hero.pop("model", None); hero["photo"] = False; hero["alt_text"] = "A Manitowoc Indigo NXT ice machine with storage bin"
         hero["cutout"] = {"still": "assets/mw-indigo-bin.png", "w": 392, "h": 598, "tumble": ["assets/ice-cube-1.png", "assets/ice-cube-2.png", "assets/ice-cube-3.png"]}

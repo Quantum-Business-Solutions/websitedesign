@@ -7938,7 +7938,7 @@
           "id": "hero",
           "eyebrow": "Water, ice and coffee",
           "heading": "Better water, <em>no jugs</em>.",
-          "subhead": "Purified water on tap, for the office that wants people hydrated and at their desks.",
+          "subhead": "Purified water on tap for the office that wants people hydrated and at their desks. Kelly takes the jugs away and installs the system.",
           "primary": {
             "label": "Request a quote",
             "href": "#quote"
@@ -7984,9 +7984,18 @@
           "poster": "assets/fleet/breakroom.png",
           "photo": false,
           "alt": "A 3D model of water coolers you can turn",
-          "alt_text": "Water coolers from Kelly Office Solutions",
+          "alt_text": "A Wellsys hydration center",
           "orbit": "30deg 74deg 105%",
-          "model": "assets/models/breakroom.glb"
+          "cutout": {
+            "still": "assets/water-wellsys.png",
+            "w": 368,
+            "h": 1264,
+            "mode": "toss",
+            "tumble": [
+              "assets/water-jug-1.png",
+              "assets/water-jug-2.png"
+            ]
+          }
         },
         {
           "type": "ticker",
