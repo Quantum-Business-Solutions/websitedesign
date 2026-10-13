@@ -593,7 +593,7 @@ PRODUCTS = [
      ["FP Mailing Solutions meters", "Password-protected usage tracking", "Reporting for budgets and chargebacks", "RemoteOne and MailOne software options"],
      [["How much mail justifies a meter?", "If someone is buying stamps or making post office runs every week, a meter usually pays for itself. Ask the branch to size it."], ["What does IMI compliant mean?", "USPS's current standard for postage evidencing. FP's line meets it fully, so you are not buying a meter with an expiry date."]],
      ["FP Mailing Solutions"]],
-    ["folder-inserters", "Mail and shipping", "Folder inserters", "assets/folder-inserter-1200.jpg",
+    ["folder-inserters", "Mail and shipping", "Folder inserters", "assets/fp-fpi700.png",
      "Fold, stuff and seal large mailings automatically, accurately and fast.",
      "Folder inserters process and send large volumes of mail quickly. An adjustable feeder and automated folding and inserting system replace the manual labor of stuffing each envelope, so invoices, statements and direct mail go out faster and more accurately. Ideal for any office that processes customer invoices or marketing mailings regularly.",
      [["Hours back", "The envelope stuffing afternoon disappears."], ["Accuracy", "The right pages in the right envelope, every time."], ["Speed", "Large runs finished in a fraction of the manual time."]],

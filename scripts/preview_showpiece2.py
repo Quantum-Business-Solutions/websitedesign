@@ -44,6 +44,7 @@ def _svg(name: str) -> str:
 
 
 CSS4 = r'''
+@media(max-width:820px){.pv-guide-pill{font-size:0!important;gap:0!important;width:52px;height:52px;min-height:52px;padding:0!important;justify-content:center;border-radius:50%}.pv-guide-pill svg{width:24px;height:24px;margin:0}}
 .pv-mkt{scroll-margin-top:150px}
 .pv-mkt-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px);align-items:center}
 .pv-mkt.flip .pv-mkt-img{order:2}
