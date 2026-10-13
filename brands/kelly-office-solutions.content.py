@@ -519,6 +519,11 @@ def service_page(slug, title, navlabel, image, eyebrow, heading, subhead, benefi
             secs[0].pop(_k, None)
         secs[0].update(eyebrow="Mailing solutions", heading="Signed, sealed, <em>delivered.</em>", alt_text="An FP PostBase Vision postage meter",
                        cutout={"still": "assets/fp-vision-semi.png", "w": 981, "h": 488})
+    if slug == "document-management":
+        for _k in ("video", "video_webm", "photo"):
+            secs[0].pop(_k, None)
+        secs[0].update(alt_text="A multifunction device scanning paper into DocuWare",
+                       cutout={"still": "assets/fleet/mfp.png", "w": 900, "h": 900, "tumble": ["assets/paper-sheet-1.png", "assets/paper-sheet-2.png", "assets/paper-sheet-3.png"]})
     _extra = {"managed-print": [FLEETBA, PULSEFLOW], "copiers": [PULSEFLOW], "pure-technology": [MUGS], "it-services": [ITDIRECTOR]}.get(slug, [])
     secs[1:1] = [TICKER] + [dict(x) for x in _extra]
     secs += [

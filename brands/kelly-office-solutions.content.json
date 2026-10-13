@@ -3030,9 +3030,18 @@
             ]
           ],
           "poster": "assets/gso-office-1200.jpg",
-          "photo": true,
-          "alt_text": "Document management",
-          "orbit": "30deg 74deg 105%"
+          "alt_text": "A multifunction device scanning paper into DocuWare",
+          "orbit": "30deg 74deg 105%",
+          "cutout": {
+            "still": "assets/fleet/mfp.png",
+            "w": 900,
+            "h": 900,
+            "tumble": [
+              "assets/paper-sheet-1.png",
+              "assets/paper-sheet-2.png",
+              "assets/paper-sheet-3.png"
+            ]
+          }
         },
         {
           "type": "ticker",
