@@ -15,7 +15,15 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap">
   {{ require_css(get_asset_url('../../css/vaf.css')) }}
   {{ require_css(get_asset_url('../../css/vaf-polish.css')) }}
+  {{ require_css(get_asset_url('../../css/vaf-visit.css')) }}
   {{ require_js(get_asset_url('../../js/vaf.js'), 'footer') }}
+  {% if 'technology-strength-assessment' in request.path %}
+  {{ require_css(get_asset_url('../../css/vaf-assess.css')) }}
+  {{ require_js(get_asset_url('../../js/vaf-assess.js'), 'footer') }}
+  {% endif %}
+  {% if '/policies/' in request.path %}
+  <style>.vaf-hero .pv-btns,.vaf-hero .pv-hero-wide{display:none}.vaf-hero{padding-bottom:24px}</style>
+  {% endif %}
   {% block head_extra %}{% endblock %}
   {{ standard_header_includes }}
 </head>

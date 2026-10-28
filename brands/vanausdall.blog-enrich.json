@@ -6854,5 +6854,591 @@
  "culture---who-cares": {
   "skip": true,
   "reason": "Off-topic opinion essay on workplace culture (July 2016) with no technology buying guidance."
+ },
+ "data-security---on-a-small-scale": {
+  "tldr": [
+   "Data security protects data from destructive forces and unauthorized users, and businesses of every size hold data they cannot afford to have shared.",
+   "Data is most exposed when users view, edit, print or scan it, and the post calls multi-function devices a weak point for data security.",
+   "Examine data before it is printed, scanned or, in extreme situations, copied, and do not let users decide the security strategy."
+  ],
+  "faq": [
+   {
+    "q": "What counts as sensitive data in a small business?",
+    "a": "The post says data can be sensitive personal information about employees or customers, pay rates and price structures, or contact lists and sales leads. All businesses from the smallest to the largest have data they do not want or cannot afford to have shared outside the company."
+   },
+   {
+    "q": "Why is high-level data security not enough?",
+    "a": "The post says IT can encrypt, require logins, set password schemes and mask data, but when an end user needs to view, edit or print the data, it is exposed in its most unsecure form, and the question is whether users end up deciding the security strategy."
+   },
+   {
+    "q": "Why are multi-function devices a data security risk?",
+    "a": "The post says studies and reports point to multi-function devices as the weakest point of security for data and in many cases the network itself, and notes that pressing print or scan transforms data between physical and digital form."
+   },
+   {
+    "q": "What should be examined to prevent data leaks at output?",
+    "a": "The post says data needs to be examined before output, examined when scanned, and in some extreme situations examined before being copied, and that users should not decide the security strategy by objecting to measures they find cumbersome."
+   }
+  ],
+  "skip": false
+ },
+ "communication-collaboration-control-the-keys-to-an-effective-business-phone-system": {
+  "tldr": [
+   "Treat your business phone system as an important asset, not just an expense line, and look for the three Cs: communication, collaboration and control.",
+   "Communication means robust calling features such as call handling, presence, conferencing, voicemail to email and CRM integration, in a system simple to operate.",
+   "Collaboration tools such as messaging, conferencing, video chat and desktop sharing should be easy to use, and control means choosing cloud, onsite or both."
+  ],
+  "faq": [
+   {
+    "q": "Why should a phone system be treated as more than an expense?",
+    "a": "The post says telecom is usually a line item on an expense budget, but a business phone system should be considered one of the most important assets in a company, a tool for building relationships and improving productivity, not just for connecting calls."
+   },
+   {
+    "q": "What are the three Cs of a business phone system?",
+    "a": "The post names communication, collaboration and control, and says each is an important element that should be considered carefully in a purchasing decision. If a system lacks one, the post says it is time to see how a new system can help."
+   },
+   {
+    "q": "What calling features make up communication?",
+    "a": "The post lists robust calling features such as personalized call handling and presence, conferencing, voicemail to email and interactive voice response voicemail access, plus integration with third-party systems such as CRM, and says the system must be simple to operate."
+   },
+   {
+    "q": "What collaboration tools should a phone system include?",
+    "a": "The post lists instant messaging, web and audio conferencing, peer-to-peer video chat, desktop sharing and file transfer, which can increase productivity by letting employees communicate beyond voice effectively and easily, provided they are seamless to the communications experience and easy to use."
+   },
+   {
+    "q": "How do I choose between cloud and onsite phone systems?",
+    "a": "The post says onsite suits companies that like to control apps in-house and have the IT resources to do it, while cloud suits companies that no longer want to manage their phone system or are light on IT resources."
+   }
+  ],
+  "skip": false
+ },
+ "shoretel-connect-cloud-is-more-than-just-a-phone-system": {
+  "tldr": [
+   "A hybrid communications system combines the control and performance of an onsite system with the flexibility, scalability and features of a cloud service.",
+   "Hybrid lets you reuse your onsite system, add cloud services on subscription as needed, and expand without necessarily adding hardware, software or capital expense.",
+   "It offers a way to try the cloud, gives all branches the same functionality and can pave the way to an eventual all-cloud solution."
+  ],
+  "faq": [
+   {
+    "q": "What is a hybrid communications system?",
+    "a": "The post says a hybrid system gives you the control and performance of an onsite system with the flexibility, scalability and features of a cloud-based service, using your current onsite communications system with new functionality delivered via the cloud."
+   },
+   {
+    "q": "How does a hybrid system scale?",
+    "a": "The post says adding new users or features does not necessarily mean adding new hardware or software, since you can expand via the cloud and give all users the same reliability and user experience, and scalability delivered via the cloud requires no capital expenses."
+   },
+   {
+    "q": "Can I try the cloud without moving everything?",
+    "a": "Yes. The post says a hybrid environment lets you try the cloud while keeping control as with an on-premises system, and cloud services can be added and removed quickly so you can explore a fit, paying only for what you need on a subscription basis."
+   },
+   {
+    "q": "How does a hybrid system support branch offices?",
+    "a": "The post says users get the same functionality whether their branch location is served by a cloud system or has equipment onsite, and provisioning new or additional services is done via the cloud and is as easy as granting permission to users."
+   },
+   {
+    "q": "Is hybrid a path to the cloud?",
+    "a": "The post says a hybrid system can help pave the way to an eventual all-cloud solution, particularly for companies with an increasingly mobile workforce, and as more communications and system maintenance move to a hosted environment, IT can shift its focus to activities that enhance the bottom line."
+   }
+  ],
+  "skip": false
+ },
+ "i-got-a-guy": {
+  "skip": true,
+  "reason": "Thin (300 words) opinion piece that promotes a proprietary benchmarking process without concrete steps."
+ },
+ "5-key-steps-to-successful-lifecycle-it-asset-management": {
+  "tldr": [
+   "Record serial numbers and assignments so you know what you have and who has it, with agreements making assignees responsible for devices and data.",
+   "Conduct a physical inventory at least annually, including equipment from acquired businesses, and keep devices secure with a high-quality firewall and spam filter.",
+   "Recover assets from departing employees, and dispose of retired equipment securely by wiping or destroying data following NIST guidelines for clearing, purging or destruction."
+  ],
+  "faq": [
+   {
+    "q": "Why record serial numbers and assignments?",
+    "a": "The post says you must know what you have and who has it at any given time. Tracking systems record where assets are, who has them and when they are due back, and the assignee should understand responsibility for both the asset and its data."
+   },
+   {
+    "q": "Why is an annual physical inventory necessary?",
+    "a": "The post says devices can break, be lost or be stolen in a year, and if events are not recorded properly your records are worthless. The only true way to reconcile the database is a physical inventory at least annually, including equipment that comes with an acquired business."
+   },
+   {
+    "q": "How should IT assets be secured?",
+    "a": "The post says to protect data and assets with a high-quality firewall and spam filter, and that if a device is corrupted or security is breached, IT and loss prevention departments must get involved immediately, since compromised customer data could spell disaster."
+   },
+   {
+    "q": "How should assets be recovered from departing employees?",
+    "a": "The post says assets must be recovered when employees leave, an often overlooked step. It describes one company using a recovery service that visits the former employee's home with an itemized list, gives a receipt, and ships items back to IT, keeping any customer information secure."
+   },
+   {
+    "q": "How should retired IT equipment be disposed of?",
+    "a": "The post says to find the safest, most secure and environmentally sound way to dispose of devices that cannot be recycled or repurposed, ensuring information is wiped or equipment is properly destroyed, and notes NIST guidelines for clearing, purging or destruction provide a basis to follow."
+   }
+  ],
+  "skip": false
+ },
+ "information-governance-panel-discussion": {
+  "skip": true,
+  "reason": "Event notice (panel discussion on August 4, 2016) with speaker biographies and logistics; time-bound."
+ },
+ "3-best-practices-in-using-collaboration-apps": {
+  "tldr": [
+   "Choose a communications platform that is intuitive and easy to operate, because employees will quickly abandon a system they struggle to use.",
+   "Hold a weekly group meeting over collaboration technology, with a check-in at the start and a virtual water cooler to reinforce personal connection.",
+   "Keep one-on-one meetings, since engaged managers have more productive, satisfied staff, and occasional virtual team-building strengthens connection."
+  ],
+  "faq": [
+   {
+    "q": "What is the downside of collaboration tools for a virtual workforce?",
+    "a": "The post says what companies gain in expanded reach and productivity can sometimes be lost in personal relationships with employees, which is why it recommends practices that keep dispersed workers connected whether the setup is onsite, cloud-based or a hybrid of both."
+   },
+   {
+    "q": "Why does platform simplicity matter?",
+    "a": "The post says technology is only useful if it is used, and if employees struggle to connect or find it difficult to operate, they will quickly abandon the platform. It recommends choosing a system that is intuitive, easy to operate, and includes features that enhance collaboration."
+   },
+   {
+    "q": "Why hold a weekly meeting over collaboration technology?",
+    "a": "The post says a weekly meeting lets employees update you on progress and reinforces a personal connection that can get lost when a workforce is separated by many miles, whether they are in the office or on the road."
+   },
+   {
+    "q": "What is a virtual water cooler?",
+    "a": "The post cites a Harvard Business Review article suggesting companies create a virtual water cooler during meetings so employees can share information and reinforce social bonds, starting with a check-in where each member briefly discusses what they are doing, what is going well and what is challenging."
+   },
+   {
+    "q": "Do one-on-one meetings still matter for remote employees?",
+    "a": "Yes. The post says employees need individual feedback whether in the office or remote, and research shows managers who are more engaged with their employees have a more productive, satisfied staff, with deeper trust and a more objective view of how the business is really operating."
+   }
+  ],
+  "skip": false
+ },
+ "records-management-vs-information-governance---whats-the-difference": {
+  "tldr": [
+   "Information governance is an overarching discipline, not a software tool, and records management is a subset covering classification, retention and destruction.",
+   "Governance spans email servers, archives, ECM libraries, drives and cloud locations for structured and unstructured data, while records management focuses on document lifecycles.",
+   "Companies typically need ECM to automate processes like accounts payable and HR, and information governance to manage unstructured data and compliance risk."
+  ],
+  "faq": [
+   {
+    "q": "How does records management fit inside information governance?",
+    "a": "The post says records management, like document management, is a subset of information governance. Governance defines all aspects of how information is managed, from definition and creation to use, security, ownership and deletion, while records management manages parts of that information."
+   },
+   {
+    "q": "What does information governance cover?",
+    "a": "The post lists all sources of data, including records management systems, email servers, PST and data file archives, enterprise content management libraries, network and local drives, and SharePoint and cloud service locations, and says it applies policies to both structured and unstructured data."
+   },
+   {
+    "q": "Where do records management and information governance sit in an organization?",
+    "a": "The post says information governance often reports to Security, IT, Legal, HR, Compliance and Operations and has enterprise responsibility for data security, storage, disposition and archiving policies, while records management is usually an individual department focused on classifying, securely storing and destroying business records."
+   },
+   {
+    "q": "Why do companies need both ECM and information governance?",
+    "a": "The post says companies usually need ECM to automate day-to-day critical processes such as accounts payable and receivable, human resources and contract management, and need information governance to manage unstructured data and mitigate risks associated with compliance and data security."
+   }
+  ],
+  "skip": false
+ },
+ "innovative-solutions-2016": {
+  "skip": true,
+  "reason": "Event notice (3rd Annual Innovative Solutions Expo on September 15, 2016) with logistics and attendance claims; time-bound."
+ },
+ "how-smbs-can-benefit-from-cloud-communications": {
+  "tldr": [
+   "Cloud communications offers SMBs little to no upfront investment, low IT involvement and flexibility, benefits the post says make it a smart investment.",
+   "Cloud may fit if IT is overloaded or absent, your budget covers only a basic phone system, or employees often work outside the office.",
+   "A monthly subscription can offer customers phone, web chat and click-to-call options, and employees messaging and screen share on any device."
+  ],
+  "faq": [
+   {
+    "q": "Why do SMBs need to be careful with technology purchases?",
+    "a": "The post says SMBs want the most productivity from their technology, most do not have an IT staff and some do not even have an IT budget, so every technology purchase must have a direct impact on the bottom line."
+   },
+   {
+    "q": "What are the benefits of cloud communications for a small business?",
+    "a": "The post names little to no upfront investment, low IT involvement and flexibility, and says a cloud system hosted offsite eliminates the need for a dedicated IT or telecom person to manage communication needs."
+   },
+   {
+    "q": "Is cloud a good fit if my budget only covers a basic phone system?",
+    "a": "The post says customers want to reach a company by phone, web chat and click-to-call from the website at any time, and cloud communications can give those options at a price you need through a monthly subscription rather than a hardware upgrade."
+   },
+   {
+    "q": "How does cloud communications support employees who work out of the office?",
+    "a": "The post says employees demand flexibility to work from anywhere with the same functionality as at their desks, and a cloud system can provide a feature-rich experience on any device, including many onsite phone system features plus collaboration features such as instant messaging and screen share."
+   }
+  ],
+  "skip": false
+ },
+ "3-ways-cloud-communications-can-improve-customer-relationships": {
+  "tldr": [
+   "Cloud communications hosted in data centers with redundant technology can keep your company reachable with little to no downtime, even in a disaster.",
+   "Integrating with CRM or business intelligence systems brings up customer information automatically when a customer calls, reducing hold times and gaps in service.",
+   "Contact center tools like workgroups, hunt groups and flexible routing, and anywhere access with desk-level features, help employees serve customers from any location."
+  ],
+  "faq": [
+   {
+    "q": "Why does a communications system affect customer relationships?",
+    "a": "The post says frequent dropped calls, clueless customer service reps or trouble connecting can send customers to competitors, so the communications system is a critical component of customer service strategy, enabling employees to provide good interactions and customers to reach the company anytime."
+   },
+   {
+    "q": "How does cloud communications provide high availability?",
+    "a": "Because cloud communications is a hosted service located offsite in data centers with redundant technology, the post says communications stay up even in a disaster, employees can work from anywhere with the full suite of capabilities, and customers can still reach the company."
+   },
+   {
+    "q": "How does integrating with CRM improve calls?",
+    "a": "When integrated with a CRM or business intelligence system, the post says the communications system can bring up a comprehensive view of customer information automatically when a customer calls, reducing hold times and letting employees give care with no delay and no gaps in service."
+   },
+   {
+    "q": "Which contact center features reduce hold times?",
+    "a": "The post names workgroups, hunt groups and flexible call routing, saying they can enhance the customer experience by reducing hold times and ensuring calls are answered in a timely fashion."
+   },
+   {
+    "q": "Can employees serve customers well from anywhere with a cloud system?",
+    "a": "The post says employees can work from a coffee shop, hotel room or airport with access to the same features they would have at their desks, so they are not hamstrung by basic functionality or limited customer data."
+   }
+  ],
+  "skip": false
+ },
+ "techday-2016-was-a-success": {
+  "skip": true,
+  "reason": "Thin (120 words) internal event recap about a June 2016 team-building event for print technicians; no buyer guidance."
+ },
+ "a4-print-strategy-size-can-be-deceiving": {
+  "tldr": [
+   "A4 multi-function printers now offer finishing and speed once lacking, and the post calls them the printing industry's largest growth area as A3 sales stagnate.",
+   "Compare A3 and A4 by total cost of ownership, not just cost per page, because low A3 page costs can hide higher device costs.",
+   "Ask whether every department needs 11x17 capability, and consider standardizing on a few models with most devices being A4 multi-function printers."
+  ],
+  "faq": [
+   {
+    "q": "Why are companies looking harder at printing?",
+    "a": "The post says printing is for many companies one of the largest monthly expenses, but only recently have organizations looked hard at it, because multi-function printers integrate with backend software and help automate manual, paper-based processes, freeing employee time and saving costs."
+   },
+   {
+    "q": "Have A4 multi-function printers improved?",
+    "a": "The post says many A4 devices lacked the finishing and speed most businesses expected until the last few years, but by 2016 A4 multi-function printer sales were gaining ground while A3 sales were stagnant at best, as companies want to do more with less."
+   },
+   {
+    "q": "Should I compare A3 and A4 devices by cost per page?",
+    "a": "The post says to look at total cost of ownership, not just cost per page. Many decision makers are swayed to A3 by the extremely low cost per page but, factoring in device cost, can end up spending far more than with an A4 device with a slightly higher cost per page."
+   },
+   {
+    "q": "Does every department need 11x17 printing?",
+    "a": "The post asks whether your organization needs 11x17 in every department and suggests you could standardize on a few models, with the bulk of devices being A4 multi-function printers, and develop an all-encompassing print strategy balancing single-function desktop printers, A4 and A3 devices."
+   }
+  ],
+  "skip": false
+ },
+ "3-ways-to-achieve-enterprise-grade-collaboration-at-an-smb-price-point": {
+  "skip": true,
+  "reason": "Thin (273 words) vendor product promotion for a named platform's deployment options; no standalone buyer guidance."
+ },
+ "a-phone-system-that-maximizes-your-control": {
+  "tldr": [
+   "An onsite phone system gives control over care: you choose when to upgrade and who administers moves, adds and changes, even a non-technical person.",
+   "Owning the system gives custody, a choice to lease, rent or buy, control over maintenance spending, and potential long-term savings and higher book value.",
+   "Control over administration lets the system work with applications you own or built, such as Outlook and custom paging, without disrupting users."
+  ],
+  "faq": [
+   {
+    "q": "What does control over care mean for an onsite phone system?",
+    "a": "The post says an onsite system gives physical control, so you decide when to make changes and upgrades, who administers them, and can have a non-technical person manage moves, adds and changes, with single-image administration from anywhere no matter how many sites you have."
+   },
+   {
+    "q": "What does ownership of an onsite phone system mean financially?",
+    "a": "The post says you have complete custody and own the equipment, which can reduce long-term system costs while increasing the company's book value. You are not necessarily committed to large capital outlays because leasing, renting or buying is your choice."
+   },
+   {
+    "q": "Can an onsite phone system work with our custom applications?",
+    "a": "The post says an onsite system integrates easily with applications you have purchased, developed or customized, such as Microsoft Outlook, custom paging and other business applications, so you keep what you have built without affecting user productivity or customer experience."
+   },
+   {
+    "q": "How should I decide between onsite and cloud?",
+    "a": "The post says some companies want to move to the cloud while others want to maintain control of assets they own. It suggests considering whether onsite control helps you minimize disruptions, integrate customized applications and manage how you pay for the system."
+   }
+  ],
+  "skip": false
+ },
+ "4-reasons-why-cloud-communications-should-be-a-part-of-your-disaster-recovery-strategy": {
+  "tldr": [
+   "Most businesses plan for applications and files after a disaster but overlook communications, though customers and employees must be able to reach you.",
+   "Cloud services hosted away from your site support continuity, and softphones let employees work from home or elsewhere with the system's full functionality.",
+   "Collaboration features and low-cost monthly subscription pricing make cloud communications a cost-effective, more productive addition to disaster recovery planning."
+  ],
+  "faq": [
+   {
+    "q": "Why include communications in disaster recovery planning?",
+    "a": "The post says most businesses focus on accessing applications and files after a disaster but do not consider losing their communications system. In emergencies, customers, employees and others need to reach you and you need to reach them, and if the system is offline everyone is out of luck."
+   },
+   {
+    "q": "How does cloud communications support business continuity?",
+    "a": "The post says cloud-based communications services are hosted in data centers away from your business and safe from harm, so customers can still reach you for post-disaster information or day-to-day business, and you can continue communicating with customers and employees."
+   },
+   {
+    "q": "How can employees work if they cannot get to the office?",
+    "a": "The post says employees may end up working from home, libraries or coffee shops with an internet connection, and with cloud communications they can use a softphone on a computer or mobile device to access all the functions of the system and conduct business as if in the office."
+   },
+   {
+    "q": "What collaboration features are available through cloud communications?",
+    "a": "The post lists instant messaging, audio conference calling, web collaboration, desktop sharing, point-to-point video calling and room-based video conferencing, saying they help employees work at an optimal level no matter the circumstances."
+   },
+   {
+    "q": "Is cloud communications cost-effective for disaster recovery?",
+    "a": "The post says the monthly subscription-based pricing model makes the move to the cloud a cost-effective option in disaster recovery planning, and notes that you probably already have other apps and services in the cloud, so communications can join that list."
+   }
+  ],
+  "skip": false
+ },
+ "fly-over-county": {
+  "skip": true,
+  "reason": "Off-topic regional commentary on Indiana life sciences and business rankings (June 2016) with time-bound statistics; no technology buying guidance."
+ },
+ "a-10-question-evaluation-for-your-phone-system": {
+  "tldr": [
+   "Test your phone system on call quality, integrations, support, security, routing tools, redundancy, training, status visibility, provider experience and ease of use.",
+   "Check for business intelligence from call data and integration with CRM, ERP and applicant tracking systems.",
+   "The post says more than 3 unchecked boxes suggests your phone system may not be driving value for your business."
+  ],
+  "faq": [
+   {
+    "q": "How do I know if my phone system is delivering full value?",
+    "a": "The post offers a 10-question test, saying any items you cannot check off suggest you may not be harnessing a modern phone system's full power, and more than 3 unchecked boxes means you should think about what your current system does to drive value."
+   },
+   {
+    "q": "What call quality and security questions should I ask?",
+    "a": "The post asks whether you have a clear, secure connection without voice delays, lag or call quality issues, and whether you are confident the system is secure and completely protected against hackers, both via the handset and the cloud data center."
+   },
+   {
+    "q": "What integrations should a business phone system offer?",
+    "a": "The post asks whether the system provides business intelligence based on call data and elegant integration with important business applications such as CRM, ERP and applicant tracking systems."
+   },
+   {
+    "q": "What reliability and visibility questions does the checklist include?",
+    "a": "The post asks whether your provider uses redundancy and failover to prevent catastrophic failure, whether you can view the provider's system status and average wait times at all times, and whether the provider has been in VoIP long enough to build robust data center infrastructure."
+   },
+   {
+    "q": "How easy should it be to manage a modern phone system?",
+    "a": "The post asks whether you have intuitive tools for phone routing and find-me and follow-me rules, on-demand training for new and current users, and a system so easy to use that there are no two-week lead times to add an employee or headaches managing changes."
+   }
+  ],
+  "skip": false
+ },
+ "10-ways-your-phone-system-improves-your-customers-experience": {
+  "tldr": [
+   "Use the checklist to see if your phone system gives customers the experience they expect, covering reachability, productivity and cost effectiveness.",
+   "Reachability means routing office calls to sales mobiles and making outbound smartphone calls show the main company number, with CRM and Outlook conversation history.",
+   "Scoring 8-10 means your system serves customers well, 5-7 suggests unused features, and under 5 means it is time to look at new capabilities."
+  ],
+  "faq": [
+   {
+    "q": "What reachability and professionalism features should my phone system have?",
+    "a": "The post lists mobile capability that sends incoming office calls to sales staff mobile phones, outbound calls that look professional from the main company number even on smartphones, and CRM tools connected with Outlook for conversation history with each client."
+   },
+   {
+    "q": "How can call records improve sales and staffing?",
+    "a": "The post says merging call records with customer records increases employee productivity by improving sales trending projections and staffing optimization. It lists this alongside CRM and Outlook integration as ways to keep customer focus."
+   },
+   {
+    "q": "What employee productivity features does the checklist include?",
+    "a": "The post lists easy, intuitive audio and web conferencing regardless of where people work, presence features showing whether someone is in the office, out of office or in a meeting, and teamwork through voice and video calling with screen sharing."
+   },
+   {
+    "q": "What cost-effectiveness items does the checklist include?",
+    "a": "The post lists easy administration that is not labor intensive, such as adding a new employee, local support to train staff on features that improve customer experience, and the option to outsource phone system management to an experienced local company."
+   },
+   {
+    "q": "How do I score the phone system checklist?",
+    "a": "The post says a score of 8-10 means you are using your phone system to improve customer experience, 5-7 means some features could improve competitive positioning, and less than 5 means it is time to look at capabilities that make staff more reachable, professional and customer-focused."
+   }
+  ],
+  "skip": false
+ },
+ "is-your-old-pbx-system-hindering-your-employees-productivity": {
+  "tldr": [
+   "Legacy PBX systems often offer basic calling and lack mobility, flexibility and collaboration, tethering employees to their desks or forcing them onto mobile phones.",
+   "Employees need desktop calling features on any device, audio and video conferencing, instant messaging and online meetings, and integrated customer information on one platform.",
+   "A cloud-based system adds scalability and flexibility at a price the post says is much lower than upgrading your PBX, plus quick disaster recovery."
+  ],
+  "faq": [
+   {
+    "q": "How can I tell if my PBX is holding employees back?",
+    "a": "The post asks whether employees have full desktop phone functionality wherever they are, can access customer information through the PBX, and can collaborate on the fly with one button. It says a basic calling system plus a separate collaboration platform means employees must maneuver two systems."
+   },
+   {
+    "q": "What do employees need from a communications system to be productive?",
+    "a": "The post lists desktop phone calling features on any device including PC, tablet and smartphone, collaboration capabilities such as audio and video conferencing, instant messaging and online meetings, and integrated customer information to enable richer customer contact experiences."
+   },
+   {
+    "q": "What are the limitations of legacy PBX systems?",
+    "a": "The post says most legacy PBX systems lack mobility, flexibility and collaborative capabilities, keeping employees tethered to their desk or forcing them to use their mobile phones to conduct business away from the office, without an integrated communications and collaboration platform."
+   },
+   {
+    "q": "How does a cloud-based communications system compare with upgrading a PBX?",
+    "a": "The post says a cloud-based system provides a robust, integrated communications and collaboration platform accessible anywhere, with scalability and flexibility, at a price much less than the cost of upgrading your current PBX, which most likely does not include collaboration capabilities."
+   },
+   {
+    "q": "What other benefits does a cloud communications system offer?",
+    "a": "The post says a cloud system lets you get back online quickly after a natural disaster, fire or weather-related event, and gives the IT department low or no hassle because it is a hosted system managed offsite."
+   }
+  ],
+  "skip": false
+ },
+ "get-the-most-from-your-communications-in-the-cloud": {
+  "skip": true,
+  "reason": "Vendor product promotion (a named cloud platform, its CRM integrations and security claims) from May 2016 with contact line; no standalone buyer guidance."
+ },
+ "3-ways-cloud-communications-can-save-your-company-money": {
+  "tldr": [
+   "Cloud communications avoids maintaining an onsite system, shifting costs from CAPEX hardware and software to a monthly OPEX subscription.",
+   "Multi-location companies need only an internet connection instead of a PBX at each branch, and IT manages the service like any other cloud service.",
+   "Hosted redundancy reduces downtime from outages, severe weather or attacks by routing service to unaffected servers, with constant monitoring to restore service."
+  ],
+  "faq": [
+   {
+    "q": "How does cloud communications reduce infrastructure costs?",
+    "a": "The post says the system sits offsite in a hosted data center, so you do not worry about upgrades, maintenance or oversight. It can be billed monthly, shifting cost from hardware and software-intensive CAPEX to OPEX and greatly reducing capital outlays for servers, software and other infrastructure."
+   },
+   {
+    "q": "Does cloud communications save money for multi-location companies?",
+    "a": "The post says savings can be even greater for companies with multiple locations because, instead of separate hardware or a PBX system for each branch office, an internet connection is all that is needed."
+   },
+   {
+    "q": "How does cloud communications reduce staffing needs?",
+    "a": "The post says rather than paying for a separate telecom person, IT can manage the system as it would any other cloud service without gaining additional knowledge, and remote workers can set up their own phones and use online training, so IT need not set up remote locations."
+   },
+   {
+    "q": "How does the cloud reduce the risk of phone downtime?",
+    "a": "The post says onsite PBX systems may be vulnerable to power outages and equipment failure, while cloud services are protected by multiple layers of hardware and software and hosted offsite, so service is routed to unaffected servers and the data center is monitored constantly."
+   }
+  ],
+  "skip": false
+ },
+ "communications-as-a-service-cloudifying-the-pbx": {
+  "tldr": [
+   "Cloud communications saves money by removing equipment purchase and maintenance and providing up-to-date software versions at all times.",
+   "Pay only for the licenses you need, add functionality as required, and change user counts through a simple web interface without costly software upgrades.",
+   "Employees get full features on desk phones, softphones or apps, and the post says large data centers typically beat onsite security and reliability."
+  ],
+  "faq": [
+   {
+    "q": "How does cloud communications save money?",
+    "a": "The post says a cloud-based system runs in the cloud, so companies no longer buy and maintain equipment, and the cloud offers the most up-to-date software versions at all times, which saves time. A subscription model also means no capital outlays or expensive upgrades."
+   },
+   {
+    "q": "How does cloud communications improve productivity?",
+    "a": "The post says employees can access the full features of a cloud system on any device anywhere they can reach the web, through desk phones, softphones on PCs or smartphone apps, and use those features to collaborate with colleagues or clients no matter where they are."
+   },
+   {
+    "q": "Do I pay for licenses I do not use with cloud communications?",
+    "a": "The post asks why pay for 50 user licenses with 40 employees, or 500 with 400. With cloud communications, you only pay for what you need and can add more functionality as required, giving a cost-effective offering that works for you."
+   },
+   {
+    "q": "How easily can a cloud system scale?",
+    "a": "The post says the cloud enables easy scaling to meet company needs: you can increase or decrease your number of users through a simple web interface, eliminating costly software upgrades or complicated provisioning."
+   },
+   {
+    "q": "How secure is cloud communications?",
+    "a": "The post says cloud communications services are maintained in large data centers, so companies of any size can enjoy enterprise-grade or higher security and reliability, typically higher than what they could provide onsite."
+   }
+  ],
+  "skip": false
+ },
+ "i-still-havent-found-what-im-looking-for": {
+  "tldr": [
+   "Leaving important documents in mailboxes or PST files fractures data across the network, creates potential liabilities and removes organizational control.",
+   "Locally stored PST files are vulnerable to theft or loss when an employee leaves, a drive crashes or the file is deleted.",
+   "Centrally manage corporate email with a message archiver that improves server performance, offers easy search, collects PST files and supports litigation holds."
+  ],
+  "faq": [
+   {
+    "q": "Why do important documents end up trapped in email?",
+    "a": "The post says many people have become lax about centrally storing documents, and email is self-archiving, so important documents received digitally stay in the mailbox or on a hard drive instead of being printed and filed, which goes against the push to go paperless."
+   },
+   {
+    "q": "What problems do email quotas and PST files cause?",
+    "a": "The post says when mailboxes reach quota, users cannot send email until storage is added or old email is removed, and auto-archiving to a PST file isolates documents on a local drive, beyond central archiving, backup or removal, and more vulnerable to theft or loss."
+   },
+   {
+    "q": "What risks come from fractured email data?",
+    "a": "The post says email data fractured and isolated in pockets across the network creates potential liabilities, and the organization loses control of it, including the ability to back it up, remove emails or disable access."
+   },
+   {
+    "q": "How does a message archiver help?",
+    "a": "The post says message archivers improve email server performance and provide easy-to-use search, can automatically collect PST files and import their contents, and let the organization keep management control, including the ability to disposition emails and create litigation holds."
+   }
+  ],
+  "skip": false
+ },
+ "whats-new-in-vmware-vsphere-60": {
+  "skip": true,
+  "reason": "Vendor release-note content for VMware vSphere 6.0 (April 2016) with superseded product features and capacity figures; not evergreen."
+ },
+ "van-ausdall--farrar-hosts-super-event": {
+  "skip": true,
+  "reason": "Thin (131 words) event recap of a joint customer event with a security vendor and a movie screening (April 2016); no buyer guidance."
+ },
+ "tips-for-navigating-your-email-safely": {
+  "tldr": [
+   "Phishing emails look like they come from trusted organizations to gather personal and financial information, and legitimate organizations should never request your password.",
+   "Distrust urgent requests and too-good-to-be-true offers, avoid links from doubtful senders, and never send passwords or financial information by email.",
+   "Avoid unexpected, unusual or stranger attachments, since even Word and Excel files can contain harmful macros, and keep virus protection software up to date."
+  ],
+  "faq": [
+   {
+    "q": "What is a phishing scam?",
+    "a": "The post says a phishing scam is an email in which the perpetrator sends legitimate-looking messages that appear to come from a well-known, trustworthy organization or website to gather personal and financial information, and notes phishing can also arrive in other forms such as fax."
+   },
+   {
+    "q": "What are the two common types of phishing scams?",
+    "a": "The post says the first asks you to reply with your account password or Social Security number to prevent immediate closure of an account, and the second asks you to click a link to a fake site and log in to verify your account. Legitimate organizations should never request your password."
+   },
+   {
+    "q": "What guidelines help avoid phishing?",
+    "a": "The post says to be suspicious of urgent requests for personal information, not click links if a message may not be authentic or the sender is unknown, never share password, personal or financial information over email, and not trust offers that seem too good to be true."
+   },
+   {
+    "q": "How can I check whether an email is a scam?",
+    "a": "The post says if you are still not convinced, copy and paste the text of the email body into a Google search box, being careful not to click anything, because the search results may indicate whether the email is actually a scam."
+   },
+   {
+    "q": "Why are email attachments risky?",
+    "a": "The post says attachments are one of the most common ways viruses and worms spread, and opened attachments can give hackers control of a machine, start an attack on another machine, or send copies to addresses in your address book. It adds that even Word and Excel files can contain macros that initiate harm."
+   }
+  ],
+  "skip": false
+ },
+ "creating-better-customer-experiences-one-call-at-a-time": {
+  "tldr": [
+   "Phone latency depends on rings before answer, transfers needed to find the right person, and connection quality such as choppy audio or echo.",
+   "Work groups let you route calls to match campaigns, weather or seasonal volume, sending each call to a top-down or longest-idle agent.",
+   "Reachability improves with external assignment rules, simultaneous ringing, Outlook integration and find me/follow me features that make staff reachable wherever they are."
+  ],
+  "faq": [
+   {
+    "q": "What is phone system latency?",
+    "a": "The post calls it the mouth-to-ear delay, based on the number of rings it takes for someone to answer, the number of transfers needed to find the right team member, and whether the phone connection is choppy, breaks up or has echoes."
+   },
+   {
+    "q": "Why does an unanswered call hurt a business?",
+    "a": "The post says when a customer or prospect calls and the phone rings endlessly or goes to a general mystery voicemail box, they may question how capable your business is, so you want to give the impression you can serve them the way they want."
+   },
+   {
+    "q": "How can work groups reduce phone latency?",
+    "a": "The post says work groups can be created to respond to what is happening, such as an advertising campaign needing more people to answer, changing weather affecting support, call center routing by top-down or longest-idle patterns, or seasonal greetings and auto attendants during high call volumes."
+   },
+   {
+    "q": "What is reachability and how can a phone system improve it?",
+    "a": "The post says reachability is how easily a customer or prospect can locate you or your team. External assignment rules can ring phones wherever an employee is, even several phones at once such as desk and cell, and find me/follow me and Outlook integration add accessibility."
+   }
+  ],
+  "skip": false
+ },
+ "residents-in-317-area-code-urged-to-start-dialing-10-digits": {
+  "skip": true,
+  "reason": "Dated 2016 regional notice about 10-digit dialing in the 317 area code with a September 17, 2016 effective date; time-bound and thin."
+ },
+ "copier-service--supply-portal-now-available-for-customers": {
+  "skip": true,
+  "reason": "Thin (74 words) July 2015 product announcement for a customer portal with a contact line; no buyer guidance."
+ },
+ "van-ausdall-to-introduce-phone-app-this-summer": {
+  "skip": true,
+  "reason": "Thin (91 words) June 2015 announcement of an upcoming app with a third-quarter 2015 launch; time-bound."
  }
 }

@@ -3,5 +3,27 @@
   label: VAF Footer
   isAvailableForNewContent: false
 -->
+{% set vv_addr = "6430 E 75th Street, Indianapolis, IN 46250" %}
+<section class="vaf-visit" aria-labelledby="vv-h">
+  <div class="q-container vv__grid">
+    <div>
+      <p class="vv__eyebrow">Visit or call</p>
+      <h2 class="vv__h" id="vv-h">Van Ausdall &amp; Farrar, Indianapolis</h2>
+      <address><a class="vv__addr" href="https://www.google.com/maps/dir/?api=1&destination={{ ('Van Ausdall & Farrar ' ~ vv_addr)|urlencode }}" target="_blank" rel="noopener">6430 E 75th Street<br>Indianapolis, IN 46250</a></address>
+      <ul class="vv__meta">
+        <li>Monday to Friday, 7:00am to 5:00pm</li>
+        <li><a href="tel:+13176342913">(317) 634-2913</a></li>
+        <li><a href="mailto:clientsuccess@vanausdall.com">clientsuccess@vanausdall.com</a></li>
+      </ul>
+      <div class="vv__btns">
+        <a class="p" href="https://www.google.com/maps/dir/?api=1&destination={{ ('Van Ausdall & Farrar ' ~ vv_addr)|urlencode }}" target="_blank" rel="noopener">Get directions</a>
+        <a class="g" href="tel:+13176342913">Call (317) 634-2913</a>
+      </div>
+    </div>
+    <div class="vv__map"><iframe title="Map of the Van Ausdall &amp; Farrar office at {{ vv_addr }}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q={{ vv_addr|urlencode }}&amp;output=embed"></iframe></div>
+  </div>
+</section>
 {% module "vaf_footer" path="../../modules/vaf-footer" %}
+{% if 'policies' not in request.path and 'technology-strength-assessment' not in request.path %}
 {% module "vaf_quickbar" path="../../modules/vaf-quickbar" %}
+{% endif %}

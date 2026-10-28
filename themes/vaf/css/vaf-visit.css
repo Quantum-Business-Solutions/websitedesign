@@ -1,0 +1,18 @@
+/* Visit band above the footer: address, hours, directions, map */
+.vaf-visit{background:#f3f7fb;border-top:1px solid #dbe5f0;padding:56px 0}
+.vv__grid{display:grid;grid-template-columns:1fr 1.15fr;gap:40px;align-items:stretch}
+.vv__eyebrow{margin:0 0 8px;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#2a71af}
+.vv__h{margin:0 0 14px;font-size:clamp(24px,2.6vw,32px);line-height:1.15;color:#0f1e33}
+.vaf-visit address{font-style:normal;margin:0 0 14px}
+.vv__addr{font-size:19px;line-height:1.5;font-weight:600;color:#0f1e33;text-decoration:none}
+.vv__addr:hover{color:#2a71af}
+.vv__meta{list-style:none;margin:0 0 22px;padding:0;display:grid;gap:6px;font-size:16px;color:#42546b}
+.vv__meta a{color:#0f1e33;font-weight:600;text-decoration:none}
+.vv__meta a:hover{color:#2a71af}
+.vv__btns{display:flex;gap:12px;flex-wrap:wrap}
+.vv__btns a{display:inline-flex;align-items:center;justify-content:center;text-align:center;line-height:1.2;padding:13px 24px;border-radius:999px;font-weight:700;font-size:15px;text-decoration:none;border:1.5px solid #2a71af}
+.vv__btns .p{background:#2a71af;color:#fff}.vv__btns .p:hover{background:#205686}
+.vv__btns .g{background:#fff;color:#0f1e33;border-color:#c9d7e6}.vv__btns .g:hover{border-color:#2a71af}
+.vv__map{min-height:280px;border-radius:18px;overflow:hidden;border:1px solid #dbe5f0;box-shadow:0 18px 44px color-mix(in srgb,#0f1e33 12%,transparent)}
+.vv__map iframe{display:block;width:100%;height:100%;min-height:280px;border:0}
+@media(max-width:860px){.vv__grid{grid-template-columns:1fr}.vaf-visit{padding:40px 0}}

@@ -36,6 +36,8 @@ for _f in sorted(glob.glob(os.path.join(ROOT, "scripts/vaf_map_*.py"))):
 def page_for(slug):
     for p in CONTENT["pages"]:
         if slug_of(p["file"]) == slug:
+            if p["file"].startswith("policies/") and p.get("crumbs"):
+                p = dict(p, crumbs=[c for c in p["crumbs"] if c[0] != "Policies"])   # the "Policies" crumb pointed at /about
             return p
     raise SystemExit(f"no page for slug {slug!r}")
 
@@ -44,10 +46,28 @@ def tpl_name(slug):
     return "templates/vaf/" + (slug.replace("/", "--") or "home") + ".html"
 
 
+def policy_sections(secs):
+    """Legal pages read as documents: no sales buttons in the hero, no empty generic FAQ, no tool promo."""
+    out = []
+    for s in secs:
+        s = dict(s)
+        if s["type"] in ("hero", "hero-layered"):
+            for k in ("primary", "secondary", "stats", "note", "image", "image_alt", "poster", "video", "bg"):
+                s.pop(k, None)
+            s["layout"] = "centered"
+        if s["type"] == "faq" and not s.get("items"):
+            continue
+        out.append(s)
+    return out
+
+
 def order(page):
     comp = page.get("compose")
     comp = comp.get("showcase") if isinstance(comp, dict) else None
     secs = page["sections"]
+    if page["file"].startswith("policies/"):
+        secs = policy_sections(secs)
+        page = dict(page, sections=secs)
     if not comp:
         return secs
     by = {s.get("id"): s for s in secs if s.get("id")}
