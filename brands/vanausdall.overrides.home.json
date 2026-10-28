@@ -1,1129 +1,1184 @@
 {
- "index.html": {
-  "sections": [
-   {
-    "type": "hero",
-    "id": "hero-light",
-    "layout": "split",
-    "eyebrow": "Business technology simplified, since 1914",
-    "stats": [
-     [
-      "1914",
-      "Serving Indiana since"
-     ],
-     [
-      "93.4",
-      "Net Promoter Score, audited"
-     ],
-     [
-      "SOC 2",
-      "Certified service organization"
-     ],
-     [
-      "4,000+",
-      "Phone systems deployed since 1983"
-     ]
+  "index.html": {
+    "sections": [
+      {
+        "type": "hero",
+        "id": "hero-light",
+        "layout": "split",
+        "eyebrow": "Business technology simplified, since 1914",
+        "stats": [
+          [
+            "1914",
+            "Serving Indiana since"
+          ],
+          [
+            "93.4",
+            "Net Promoter Score, audited"
+          ],
+          [
+            "SOC 2",
+            "Certified service organization"
+          ],
+          [
+            "4,000+",
+            "Phone systems deployed since 1983"
+          ]
+        ],
+        "ribbon": [
+          "SOC 2 certified",
+          "NPS 93.4, audited by CEO Juice. World Class since 2019",
+          "Mitel Gold, seven consecutive years"
+        ],
+        "variants": {
+          "press": {
+            "stats": null,
+            "ribbon": [
+              "Indianapolis, Indiana. Since 1914.",
+              "SOC 2 certified",
+              "NPS 93.4, audited by CEO Juice"
+            ]
+          }
+        },
+        "heading": "Everything your business runs on, <em>under one roof</em>.",
+        "subhead": "IT support, copiers and print, phone systems, document workflow and AI guidance for Indiana businesses. One local partner, one assessment to start, one number to call.",
+        "primary": {
+          "label": "Take the Technology Strength Assessment",
+          "href": "technology-strength-assessment.html"
+        },
+        "secondary": {
+          "label": "Schedule a consultation",
+          "href": "contact.html"
+        },
+        "note": "Canon, Ricoh, Kyocera, HP, Mitel, Fortinet, Sophos and Microsoft partner",
+        "image": "assets/gen-technician-1200.jpg",
+        "image_alt": "A VAF technician replacing a toner unit in a bright office while the office manager looks on",
+        "image_w": 1200,
+        "image_h": 800,
+        "badge": {
+          "value": "93.4",
+          "label": "Net Promoter Score, independently audited"
+        }
+      },
+      {
+        "type": "hero-layered",
+        "id": "hero",
+        "eyebrow": "Business technology simplified, since 1914",
+        "heading": "Everything your business runs on, <em>under one roof</em>.",
+        "subhead": "IT support, copiers and print, phone systems, document workflow and AI guidance for Indiana businesses. One local partner, one assessment to start, one number to call.",
+        "primary": {
+          "label": "Take the Technology Strength Assessment",
+          "href": "technology-strength-assessment.html"
+        },
+        "secondary": {
+          "label": "Schedule a consultation",
+          "href": "contact.html"
+        },
+        "bg": "#0f1e33",
+        "image": "assets/gen-hero-plate-2100.jpg",
+        "image_w": 2100,
+        "image_h": 891,
+        "stats": [
+          [
+            "1914",
+            "Serving Indiana since"
+          ],
+          [
+            "93.4",
+            "Net Promoter Score, audited"
+          ],
+          [
+            "SOC 2",
+            "Certified service organization"
+          ],
+          [
+            "4,000+",
+            "Phone systems deployed since 1983"
+          ]
+        ],
+        "card_a": {
+          "eyebrow": "Start here",
+          "title": "The Technology Strength Assessment",
+          "body": "Ten to fifteen minutes. Information, print, process and communication, scored.",
+          "items": [
+            "What to eliminate",
+            "What to optimize",
+            "What to leverage to grow"
+          ],
+          "href": "technology-strength-assessment.html",
+          "label": "How it works"
+        },
+        "card_b": {
+          "eyebrow": "Already a customer?",
+          "title": "The Client Service Center",
+          "body": "A person answers. Monday to Friday, 7 to 5.",
+          "links": [
+            [
+              "Request support",
+              "support.html#request"
+            ],
+            [
+              "Order supplies",
+              "support.html#supplies"
+            ],
+            [
+              "IT support",
+              "support.html#it"
+            ],
+            [
+              "Call (317) 634-2913",
+              "tel:3176342913"
+            ]
+          ]
+        },
+        "note": "The photography here is generated for the preview and labelled as such; a shoot at the 75th Street headquarters and with technicians in the field replaces it in the build, along with Canon, Ricoh, Kyocera and HP product models."
+      },
+      {
+        "type": "wheel",
+        "id": "wheel",
+        "eyebrow": "Four pillars",
+        "heading": "Information, communication, print and process, from one partner",
+        "intro": "Pick a pillar. Four pillars, one agreement, one Customer Care Center.",
+        "items": [
+          [
+            "Information",
+            "Managed IT, cybersecurity, cloud, backup and continuity. A vCIO, 24/7 monitoring and a security operations center, from one team.",
+            "services/managed-it.html",
+            "Information",
+            "Managed IT|Cybersecurity|Cloud and backup|vCIO",
+            "SOC 2 certified, 24/7 monitoring"
+          ],
+          [
+            "Communication",
+            "Business phone systems, unified communications and contact center, in the telecom business since 1983 with over 4,000 systems deployed.",
+            "services/business-phone-systems.html",
+            "Communication",
+            "Business phones|Unified communications|Contact center|Mitel, RingCentral, 8x8",
+            "Mitel Gold, seven consecutive years"
+          ],
+          [
+            "Print",
+            "Copiers, printers, managed print and production print. Canon, Ricoh, Kyocera and HP, serviced by certified local technicians.",
+            "services/copiers.html",
+            "Print",
+            "Copiers and MFPs|Managed print|Production print|Canon, Ricoh, Kyocera, HP",
+            "Certified local technicians"
+          ],
+          [
+            "Process",
+            "Document management, document conversion, business process and AI consulting. The paper out, the workflow in.",
+            "services/document-management.html",
+            "Process",
+            "Document management|Document conversion|Business process|AI consulting",
+            "Paper out, workflow in"
+          ]
+        ],
+        "hub": "VAF",
+        "hub_sub": "one roof",
+        "ring": "BUSINESS TECHNOLOGY SIMPLIFIED"
+      },
+      {
+        "type": "flow",
+        "id": "flow",
+        "eyebrow": "How an engagement runs",
+        "heading": "Four stages, and every one of them hands you something",
+        "intro": "Click a stage. It starts with the Technology Strength Assessment and ends with a partner who is watching.",
+        "steps": [
+          {
+            "label": "Assess",
+            "when": "10 to 15 minutes, then a visit",
+            "summary": "Your Technology Strength Score.",
+            "title": "Know your Technology Strength Score",
+            "body": "Four assessments in two parts each: information, print, process and communication. Ten to fifteen minutes online, then a specialist walks the office and confirms the answers against what is actually running.",
+            "receive": [
+              "A Technology Summary Scorecard",
+              "Every device, system and vendor inventoried",
+              "The gaps, in plain English"
+            ]
+          },
+          {
+            "label": "Roadmap",
+            "when": "Week 2",
+            "summary": "Eliminate. Optimize. Leverage.",
+            "title": "A roadmap that grows with you",
+            "body": "What to eliminate because you do not need it, what to optimize because you already own it, and what to leverage to grow. Priced, sequenced, and tied to your business goals.",
+            "receive": [
+              "Eliminate, optimize and leverage lists",
+              "Options priced side by side",
+              "A sequence with dates"
+            ]
+          },
+          {
+            "label": "Implement",
+            "when": "A date you choose",
+            "summary": "Handled for you.",
+            "title": "We implement",
+            "body": "Right-sized equipment, software, security and supplies, installed by VAF's own local people. Users trained before the technician leaves. Numbers ported. Monitoring switched on.",
+            "receive": [
+              "Install and training completed on site",
+              "Monitoring live on every device",
+              "One point of contact for every line"
+            ]
+          },
+          {
+            "label": "Monitor",
+            "when": "Ongoing",
+            "summary": "24/7, from Indianapolis.",
+            "title": "We monitor 24/7",
+            "body": "Proactive monitoring, predictive maintenance and fast local repair keep you running. The Customer Care Center processes requests Monday through Friday, 7:00am to 5:00pm, and responds within 24 hours.",
+            "receive": [
+              "Alerts handled before they become tickets",
+              "Supplies before they run out",
+              "A 25-point inspection on every service call"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "seal",
+        "id": "seal",
+        "tone": "dark",
+        "eyebrow": "What every VAF customer gets",
+        "heading": "Not a slogan. A list you can check.",
+        "intro": "Each line is on vanausdall.com or in an audited third-party report today. Nothing here is aspirational.",
+        "items": [
+          [
+            "1914",
+            "Serving Indiana since 1914",
+            "Chosen as a distributor for the Thomas Edison Company. Privately owned in Indianapolis ever since."
+          ],
+          [
+            "93.4",
+            "A service score audited by someone else",
+            "Net Promoter Score collected and audited by CEO Juice. World Class every year since 2019. The average US company scores 10."
+          ],
+          [
+            "SOC 2",
+            "SOC 2 certified",
+            "Our SOC for Service Organizations certification means we meet the highest standards for protecting your data."
+          ],
+          [
+            "Gold",
+            "Mitel Gold, seven years running",
+            "Top 7% of 1,400 Mitel partners in North America. In the telecom business since 1983, over 4,000 systems deployed."
+          ],
+          [
+            "250+",
+            "Years of IT experience on staff",
+            "The Vsecure IT team collectively, with CISSP personnel and NSE-7 certified Fortinet engineers."
+          ],
+          [
+            "25",
+            "Points of inspection, every call",
+            "A total call process on every service visit, so the next failure is caught early."
+          ],
+          [
+            "24 hr",
+            "Response from the Customer Care Center",
+            "Requests processed Monday through Friday, 7:00am to 5:00pm, and answered within 24 hours."
+          ],
+          [
+            "57,000",
+            "Square feet of headquarters",
+            "Built in 2006 at 6430 E 75th Street, home to the secure Document Conversion Center."
+          ]
+        ],
+        "source": "Sources: vanausdall.com (about, why VAF, copy print, support, document conversion pages), CEO Juice NPS report, SOC 2 certification as displayed on vanausdall.com."
+      },
+      {
+        "type": "beforeafter",
+        "id": "ba",
+        "bg": "#0f1e33",
+        "eyebrow": "One roof",
+        "heading": "Drag to see what changes when the office has one number to call",
+        "before": {
+          "eyebrow": "Today, in most offices",
+          "title": "Five vendors, five invoices",
+          "body": "Nobody owns the whole picture, so nobody sees the cost.",
+          "items": [
+            "A copier dealer, an IT firm and a phone company who blame each other",
+            "Toner bought at retail when a device runs dry",
+            "Backups nobody has tested and a firewall nobody patches",
+            "Records in a storage room scheduled for demolition",
+            "Employees using AI tools nobody approved"
+          ]
+        },
+        "after": {
+          "eyebrow": "With VAF",
+          "title": "Everything under one roof",
+          "body": "Information, communication, print and process from one Indiana partner since 1914.",
+          "items": [
+            "Copiers, print, IT and phones under one agreement and one Customer Care Center",
+            "Supplies shipped on usage, 24/7 monitoring, 25-point inspections",
+            "vCIO, security operations center and managed continuity",
+            "Records scanned, indexed and searchable, paper destroyed with a certificate",
+            "An AI acceptable use policy and a roadmap"
+          ]
+        }
+      },
+      {
+        "type": "hotspots",
+        "id": "office",
+        "eyebrow": "The whole office",
+        "heading": "Four pillars, one floor plan",
+        "intro": "Click a number. Everything an office runs on, and the VAF page for each.",
+        "image": "assets/office-iso-1600.jpg",
+        "image_w": 1600,
+        "image_h": 893,
+        "alt": "An overhead illustration of an office with a copier room, a server room, a records room, a lounge and desks",
+        "items": [
+          {
+            "x": 27,
+            "y": 46,
+            "k": "Print",
+            "title": "The copier room",
+            "body": "Canon, Ricoh, Kyocera and HP multifunction devices under one managed print agreement, with supplies that arrive before they run out.",
+            "href": "services/copiers.html",
+            "label": "Copiers and managed print"
+          },
+          {
+            "x": 82,
+            "y": 14,
+            "k": "Information",
+            "title": "The server room",
+            "body": "Managed IT, Vsecure cybersecurity, cloud and continuity. Monitored 24/7 from Indianapolis, with a vCIO planning what comes next.",
+            "href": "services/managed-it.html",
+            "label": "Managed IT services"
+          },
+          {
+            "x": 93,
+            "y": 42,
+            "k": "Communication",
+            "title": "The desk phone",
+            "body": "Mitel, RingCentral, 8x8 and Elevate unified communications that follow your people to their smartphones. In telecom since 1983.",
+            "href": "services/business-phone-systems.html",
+            "label": "Business phone systems"
+          },
+          {
+            "x": 64,
+            "y": 71,
+            "k": "Process",
+            "title": "The scan station",
+            "body": "Every multifunction device scans straight into OnBase or Square 9 workflows: accounts payable, HR, contracts, records.",
+            "href": "services/document-management.html",
+            "label": "Document management"
+          },
+          {
+            "x": 88,
+            "y": 66,
+            "k": "Process",
+            "title": "The records wall",
+            "body": "Boxes of paper become searchable records at the secure Document Conversion Center, with a certificate of destruction at the end.",
+            "href": "services/document-conversion.html",
+            "label": "Document conversion"
+          },
+          {
+            "x": 16,
+            "y": 58,
+            "k": "Print",
+            "title": "The desks",
+            "body": "Desktop printers right-sized to how many the office needs, folded into the same managed print report as the copiers.",
+            "href": "services/managed-print.html",
+            "label": "Managed print"
+          },
+          {
+            "x": 62,
+            "y": 38,
+            "k": "Process",
+            "title": "The meeting area",
+            "body": "Where AI shows up first: drafting, summarizing, automating. An acceptable use policy and a roadmap before the tools.",
+            "href": "services/ai-consulting.html",
+            "label": "AI consulting"
+          }
+        ]
+      },
+      {
+        "type": "fleet",
+        "id": "fleet",
+        "heading": "The fleet, at a glance",
+        "intro": "Every device family VAF sells and services. Generated product renders for the preview; Canon, Ricoh, Kyocera and HP models replace them.",
+        "items": [
+          {
+            "title": "Multifunction copiers",
+            "band": "Workgroup to department",
+            "brands": "Canon, Ricoh, Kyocera, HP",
+            "image": "assets/fleet/mfp.png",
+            "bullets": [
+              "Print, scan, copy, fax",
+              "Secure release and scan to OnBase"
+            ],
+            "href": "services/copiers.html",
+            "label": "Copiers and printers"
+          },
+          {
+            "title": "Desktop printers",
+            "band": "Desk and small team",
+            "brands": "HP, Brother, Kyocera",
+            "image": "assets/fleet/printer.png",
+            "bullets": [
+              "Color and mono",
+              "Folded into managed print"
+            ],
+            "href": "services/managed-print.html",
+            "label": "Managed print"
+          },
+          {
+            "title": "Wide format",
+            "band": "Plans, posters, signage",
+            "brands": "Canon, HP",
+            "image": "assets/fleet/wide-format.png",
+            "bullets": [
+              "Plan sets in house",
+              "Engineering and construction"
+            ],
+            "href": "industries/engineering-construction.html",
+            "label": "Engineering and construction"
+          },
+          {
+            "title": "Production print",
+            "band": "High volume, inline finishing",
+            "brands": "EFI Fiery, Skyline web-to-print",
+            "image": "assets/fleet/production.png",
+            "bullets": [
+              "Variable data",
+              "Color management from profile to press"
+            ],
+            "href": "services/production-print.html",
+            "label": "Production print"
+          }
+        ]
+      },
+      {
+        "type": "model3d",
+        "id": "model",
+        "alt": "A white and charcoal multifunction copier on a cabinet, rotatable",
+        "eyebrow": "Take a closer look",
+        "heading": "Walk around one before it arrives",
+        "intro": "A generated stand-in multifunction device for the preview. Drag to rotate. Canon, Ricoh, Kyocera and HP product imagery replaces it in the build.",
+        "poster": "assets/mfp-poster-1200.jpg",
+        "cta": {
+          "label": "See copiers and printers",
+          "href": "services/copiers.html"
+        }
+      },
+      {
+        "type": "proof",
+        "id": "proof",
+        "tone": "dark",
+        "eyebrow": "Measured, not claimed",
+        "value": "93.4",
+        "text": "Net Promoter Score, collected and audited by CEO Juice from VAF customers after every service call. World Class, above 70, every year since 2019. The average US company scores 10.",
+        "source": "CEO Juice is an independent company with an audited process. The numbers cannot be changed, even when a customer scores us low in error."
+      },
+      {
+        "type": "video",
+        "id": "film",
+        "eyebrow": "Who we are",
+        "heading": "Privately owned in Indianapolis since 1914",
+        "intro": "Filmed with VAF people at the 75th Street headquarters.",
+        "youtube": "i-q4U5SnvaM",
+        "poster": "assets/careers-1200.jpg",
+        "title": "What it's like to work at Van Ausdall & Farrar",
+        "caption": "VAF's own film, from vanausdall.com"
+      },
+      {
+        "type": "cards",
+        "id": "pillars",
+        "eyebrow": "Four pillars",
+        "heading": "Information, communication, print and process, from one partner",
+        "items": [
+          [
+            "Information",
+            "Managed IT, cybersecurity, cloud, backup and continuity. A vCIO, 24/7 monitoring and a security operations center, from one team."
+          ],
+          [
+            "Communication",
+            "Business phone systems, unified communications and contact center, in the telecom business since 1983 with over 4,000 systems deployed."
+          ],
+          [
+            "Print",
+            "Copiers, printers, managed print and production print. Canon, Ricoh, Kyocera and HP, serviced by certified local technicians."
+          ],
+          [
+            "Process",
+            "Document management, document conversion, business process and AI consulting. The paper out, the workflow in."
+          ]
+        ]
+      },
+      {
+        "type": "partners",
+        "id": "customers",
+        "caption": "Trusted across Indiana: on the record in our case studies",
+        "items": [
+          "Tippecanoe School Corporation",
+          "STAR Financial Bank",
+          "Johnson Memorial Health",
+          "City of Anderson",
+          "City of Bloomington",
+          "Berry Global",
+          "Beck's Hybrids",
+          "Shiel Sexton",
+          "Bowen Engineering",
+          "Gailey Eye Clinic",
+          "Town of Bargersville",
+          "Mid-City Supply",
+          "Phalen Leadership Academy",
+          "Ellinger Riggs Insurance"
+        ]
+      },
+      {
+        "type": "stats",
+        "id": "numbers",
+        "alt": true,
+        "items": [
+          [
+            "1,500,000",
+            "Patient files scanned in 90 days for Johnson Memorial Health"
+          ],
+          [
+            "1,000,000",
+            "Dollars saved over one contract for Tippecanoe School Corporation"
+          ],
+          [
+            "4,000",
+            "Phone systems deployed since 1983"
+          ],
+          [
+            "250",
+            "Years of combined IT experience on the Vsecure team"
+          ]
+        ]
+      },
+      {
+        "type": "casestudy",
+        "id": "casestudy",
+        "tone": "dark",
+        "eyebrow": "Case study",
+        "heading": "1,200 devices became 300, and a school corporation saved a million dollars",
+        "quote": "Tippecanoe was won over by Van Ausdall's process. By cutting overall equipment from 1,200 machines to just over 300 new machines, the school corporation has seen $1,000,000 in savings over the life of the contract.",
+        "attribution": "Tippecanoe School Corporation case study, vanausdall.com",
+        "metrics": [
+          [
+            "Devices",
+            "1,200 to 300",
+            "Fleet consolidated across every building"
+          ],
+          [
+            "Savings",
+            "$1M",
+            "Over the life of the contract"
+          ],
+          [
+            "IT time",
+            "20%",
+            "Of IT staff time was going to print issues"
+          ],
+          [
+            "Vendors",
+            "10 to 1",
+            "Copy and print vendors replaced by one"
+          ]
+        ]
+      },
+      {
+        "type": "tabs",
+        "id": "markets",
+        "eyebrow": "Industries",
+        "heading": "Built around how your industry runs",
+        "items": [
+          {
+            "label": "Education",
+            "title": "Education",
+            "body": "Districts and schools print more than almost any organization their size, across more buildings, with an IT staff stretched thin. VAF consolidates the fleet, puts every device under one agreement, and adds the mobile and cloud printing students and staff expect. Tippecanoe School Corporation cut 1,200 devices to just over 300 and saved a million dollars over the contract.",
+            "bullets": [
+              "Fleet consolidation across every building, priced as one agreement",
+              "Mobile and cloud printing for staff and students",
+              "Document conversion for student records with a retention policy"
+            ],
+            "image": "assets/team-1200.jpg",
+            "image_alt": "Education",
+            "href": "industries/education.html",
+            "link_label": "Technology for education"
+          },
+          {
+            "label": "Engineering and construction",
+            "title": "Engineering and construction",
+            "body": "Firms that run projects from trailers and site offices need phones, print and IT that travel with the work. VAF supplies short-term copier rental for job sites, wide-format print for plan sets, unified communications that follow a project manager between the office and the field, and managed IT that keeps estimating and accounting up. Shiel Sexton, Bowen Engineering and Echo Engineering are on the record.",
+            "bullets": [
+              "Short-term copier and printer rental for trailers and temporary offices",
+              "Wide-format print and scan for plan sets and submittals",
+              "Unified communications that follow the project team"
+            ],
+            "image": "assets/process-1200.jpg",
+            "image_alt": "Engineering and construction",
+            "href": "industries/engineering-construction.html",
+            "link_label": "Technology for engineering and construction"
+          },
+          {
+            "label": "Financial services",
+            "title": "Financial services",
+            "body": "When STAR Financial Bank needed a new print strategy, VAF removed expired leases, negotiated new contracts on upgraded equipment across the state, and implemented a print platform that cut waste and raised security. The result was 70% savings. The same assessment covers cybersecurity, continuity and the phone system that answers your customers.",
+            "bullets": [
+              "Print assessment across every branch, with expired leases retired",
+              "Secure print release and authenticated scanning for customer documents",
+              "Managed detection and response, MFA and security awareness training"
+            ],
+            "image": "assets/security-1200.jpg",
+            "image_alt": "Financial services",
+            "href": "industries/financial-services.html",
+            "link_label": "Technology for financial services"
+          },
+          {
+            "label": "Healthcare",
+            "title": "Healthcare",
+            "body": "Print needs that keep growing, records that must stay confidential, and communications that cannot fail when a patient needs urgent care. VAF supplies authenticated print release and scanning, tools that aid HIPAA compliance around patient records, unified communications and contact center for clinics, and a Document Conversion Center that scanned 1.5 million patient files for Johnson Memorial Health in 90 days.",
+            "bullets": [
+              "Consolidated print spend, centralized management and authenticated release",
+              "Tools to aid HIPAA compliance around patient records",
+              "Cloud, premise and hybrid unified communications, telehealth platforms and overhead paging"
+            ],
+            "image": "assets/healthcare-print-1200.jpg",
+            "image_alt": "Healthcare",
+            "href": "industries/healthcare.html",
+            "link_label": "Technology for healthcare"
+          },
+          {
+            "label": "Insurance",
+            "title": "Insurance",
+            "body": "Agencies run on documents, phone calls and the systems that connect them. VAF eliminates the technology an agency no longer needs, optimizes what it has, and builds a roadmap for the rest: document management for policy files, call recording and contact center for the phones, and managed security for the client data an agency is trusted with. Ellinger Riggs Insurance used VAF communications technology to keep customers on the line and expand to new locations.",
+            "bullets": [
+              "Document management for policy and claim files with retention rules",
+              "Call recording and contact center that meet PCI DSS requirements",
+              "Managed security and MFA for client data"
+            ],
+            "image": "assets/meeting-1200.jpg",
+            "image_alt": "Insurance",
+            "href": "industries/insurance.html",
+            "link_label": "Technology for insurance"
+          },
+          {
+            "label": "Manufacturing and logistics",
+            "title": "Manufacturing and logistics",
+            "body": "Plants and warehouses need print where the work happens, networks that reach the floor, and documents that move without a paper chase. VAF brought in-house print and facilities management to Berry Global, planted new print solutions at Beck's Hybrids, and improved network performance and reliability for Mid-City Supply.",
+            "bullets": [
+              "In-house print and facilities management for plants and distribution centers",
+              "Networking, Wi-Fi and SD-WAN that reach the floor",
+              "Document workflow for orders, quality and compliance records"
+            ],
+            "image": "assets/engineers-1200.jpg",
+            "image_alt": "Manufacturing and logistics",
+            "href": "industries/manufacturing-logistics.html",
+            "link_label": "Technology for manufacturing and logistics"
+          },
+          {
+            "label": "Real estate",
+            "title": "Real estate",
+            "body": "Brokerages and property managers live on their phones and their documents. VAF supplies cloud communications with mobility for agents who work from anywhere, document management for transaction files, and managed IT and security for offices that hold client financial information.",
+            "bullets": [
+              "Cloud phone systems with mobile apps for agents in the field",
+              "Document management for transaction and lease files",
+              "Managed IT and security for client financial data"
+            ],
+            "image": "assets/innovation-1200.jpg",
+            "image_alt": "Real estate",
+            "href": "industries/real-estate.html",
+            "link_label": "Technology for real estate"
+          },
+          {
+            "label": "State and local government",
+            "title": "State and local government",
+            "body": "Cities, towns and utilities need billing, records and communications that constituents can trust. For the City of Anderson, VAF's on-site Facilities Management program refreshed print and billing technology, added 2D bar code document security and postal optimization, and streamlined purchasing, for over $40,000 in annual savings. Bloomington's utility department and the Town of Bargersville run on VAF content management.",
+            "bullets": [
+              "On-site facilities management with full-time VAF personnel",
+              "Print and mail security for billing and records",
+              "Enterprise content management for utilities and clerks"
+            ],
+            "image": "assets/hq-1200.jpg",
+            "image_alt": "State and local government",
+            "href": "industries/government.html",
+            "link_label": "Technology for state and local government"
+          }
+        ]
+      },
+      {
+        "type": "map",
+        "id": "map",
+        "outline": "IN",
+        "alt": "Map of Indiana with Van Ausdall & Farrar offices",
+        "heading": "Three offices, one service fleet, the whole state",
+        "intro": "Headquartered in Indianapolis with offices in Fort Wayne and Evansville. A computer-dispatched, vendor-certified service fleet covers the Indianapolis metro and the entire state of Indiana.",
+        "ring": 44,
+        "items": [
+          {
+            "name": "Indianapolis",
+            "lon": -86.062,
+            "lat": 39.887,
+            "href": "locations/indianapolis.html",
+            "sub": "6430 E 75th Street, headquarters",
+            "hq": true,
+            "label_dx": 10,
+            "label_dy": 4
+          },
+          {
+            "name": "Fort Wayne",
+            "lon": -85.145,
+            "lat": 41.089,
+            "href": "locations/fort-wayne.html",
+            "sub": "1241 N Wells Street",
+            "label_dx": -96,
+            "label_dy": -10
+          },
+          {
+            "name": "Evansville",
+            "lon": -87.556,
+            "lat": 37.975,
+            "href": "locations/evansville.html",
+            "sub": "(812) 424-5736",
+            "label_dx": 10,
+            "label_dy": 16
+          }
+        ]
+      },
+      {
+        "type": "timeline",
+        "id": "story",
+        "eyebrow": "The story",
+        "heading": "From an Edison dealership to Indiana's largest office technology provider",
+        "items": [
+          [
+            "1914",
+            "Oscar K. Van Ausdall",
+            "Chosen as an Edison Business Phonograph dealer for the state of Indiana. The Thomas Edison Company invented the wax cylinder dictating machine."
+          ],
+          [
+            "1940",
+            "Carl F. Farrar",
+            "Joins as general manager and partner, later buying the business. Mr. Van Ausdall stays on until retiring in 1957 at 73."
+          ],
+          [
+            "1960",
+            "Clyde von Grimmenstein",
+            "Becomes president after joining in sales in 1950, and stays active until retiring at 84."
+          ],
+          [
+            "1983",
+            "Telecom",
+            "VAF enters the telephone business. More than 4,000 systems deployed since."
+          ],
+          [
+            "1994",
+            "Eric von Grimmenstein",
+            "Grew up in the business, joined in 1977 after Purdue, and becomes president."
+          ],
+          [
+            "2006",
+            "6430 E 75th Street",
+            "The 57,000-square-foot corporate headquarters opens in Indianapolis."
+          ],
+          [
+            "Today",
+            "Four pillars, one roof",
+            "Information, communication, print and process for Indiana and the Midwest. Privately owned, still in Indianapolis."
+          ]
+        ]
+      },
+      {
+        "type": "partners",
+        "id": "partners",
+        "caption": "Technology partners, including Gartner Magic Quadrant leaders",
+        "items": [
+          "Canon",
+          "Ricoh",
+          "Kyocera",
+          "HP",
+          "Brother",
+          "Fortinet",
+          "Sophos",
+          "Mitel",
+          "RingCentral",
+          "8x8",
+          "Elevate",
+          "Microsoft",
+          "Datto",
+          "KnowBe4",
+          "Arctic Wolf",
+          "OnBase",
+          "Square 9",
+          "Fujitsu",
+          "OPEX",
+          "Zebra",
+          "VMware",
+          "Juniper",
+          "N-able",
+          "Tenable"
+        ]
+      },
+      {
+        "type": "checklist",
+        "id": "is-this-you",
+        "alt": true,
+        "eyebrow": "Is this you?",
+        "heading": "Six questions from the Technology Strength Assessment",
+        "intro": "Check the ones you cannot answer yes to. They are six of the eighty.",
+        "items": [
+          "Is your server data backed up nightly with more than one copy off-site or in the cloud?",
+          "Do you have a procedure to test that your backups actually restore?",
+          "Do you know how much you spend annually on printer supplies and service?",
+          "Do you have a written disaster recovery plan for your phone system?",
+          "Does your company have a formal records retention schedule?",
+          "Do you have a written AI acceptable use policy?"
+        ],
+        "messages": [
+          "Check what you cannot answer yes to.",
+          "One is normal.",
+          "Two is a pattern.",
+          "Three or more is the reason the assessment exists. Ten to fifteen minutes gives you the full score."
+        ],
+        "cta_label": "Take the assessment",
+        "cta_href": "technology-strength-assessment.html"
+      },
+      {
+        "type": "testimonials",
+        "id": "voices",
+        "alt": true,
+        "layout": "feature",
+        "eyebrow": "Real customer comments",
+        "heading": "Imported directly from our after-service surveys",
+        "items": [
+          [
+            "He was incredibly efficient and personable, answering all of my questions thoroughly and thoughtfully. He also laughed at my jokes, which is always appreciated.",
+            "Elaine",
+            "After-service survey, June 2026"
+          ],
+          [
+            "The guy is totally awesome. He has been working on our equipment for at least 12 years and I would not want anyone else.",
+            "Teresa",
+            "After-service survey, May 2026"
+          ],
+          [
+            "We always look forward to Jerome coming. He is kind and professional. We always know our problem will be resolved.",
+            "Stacy",
+            "After-service survey, May 2026"
+          ],
+          [
+            "Brent is amazing. Always there when we need him and he is very knowledgeable and helpful. It is a pleasure to work with him.",
+            "Megan",
+            "After-service survey, April 2026"
+          ],
+          [
+            "He went above and beyond to ask and answer questions so we both were on the same page with the problem and ultimately the solution. He explained what we at the office needed to do differently to prevent this situation in the future as well.",
+            "Elaine",
+            "After-service survey, June 2026"
+          ]
+        ]
+      },
+      {
+        "type": "faq",
+        "id": "faq",
+        "alt": true,
+        "heading": "Questions we get on the first call",
+        "items": [
+          [
+            "Do you only work with large companies?",
+            "No. From a single multifunction printer for a startup to a fleet of production copiers across multiple locations, and from a ten-person office on managed IT to a school corporation with 13,000 students."
+          ],
+          [
+            "Can you take over equipment or systems from another vendor?",
+            "Usually. The Technology Strength Assessment covers everything you run regardless of where it came from, and the roadmap says honestly what to eliminate, what to optimize and what to leverage."
+          ],
+          [
+            "How fast do you respond?",
+            "The Customer Care Center processes requests Monday through Friday, 7:00am to 5:00pm, and responds within 24 hours. Same-day service for most Indianapolis metro copier calls. Managed IT is monitored 24/7."
+          ],
+          [
+            "Do you serve outside Indianapolis?",
+            "Yes. Offices in Indianapolis, Fort Wayne and Evansville, and a computer-dispatched, vendor-certified service fleet that covers the entire state of Indiana and customers throughout the Midwest."
+          ]
+        ]
+      },
+      {
+        "type": "contact",
+        "id": "contact",
+        "heading": "Speak with a solutions expert",
+        "body": "Tell us what you run and what is not working. A person from the Indianapolis office replies to set a time. Or start with the ten-minute assessment.",
+        "options": [
+          "Managed IT and security",
+          "Business phone systems",
+          "Copiers and managed print",
+          "Document management or conversion",
+          "AI consulting",
+          "Something else"
+        ],
+        "submit": "Schedule my consultation",
+        "note": "Or call (317) 634-2913, Monday through Friday, 7:00am to 5:00pm."
+      },
+      {
+        "type": "detail",
+        "id": "security",
+        "alt": true,
+        "eyebrow": "Managed security",
+        "heading": "Security that never clocks out",
+        "body": "Protect organizational data against common cyber attacks including malware, viruses, ransomware and phishing. Every Vsecure plan starts with EDR/XDR protection, proactive patching and monitoring, and a next-generation firewall, with a security operations center watching.",
+        "bullets": [
+          "SOC 2 certified, audited as a service organization",
+          "A CISSP on staff for security planning and incident response",
+          "Security awareness training with simulated phishing",
+          "Backup for Microsoft and Google, tested by restore"
+        ],
+        "image": "assets/security-1200.jpg",
+        "image_alt": "A security analyst reviewing network alerts on a large monitor"
+      },
+      {
+        "type": "related",
+        "id": "articles",
+        "heading": "Latest from the VAF blog",
+        "intro": "Industry insight and technology trends from Van Ausdall & Farrar's experts.",
+        "items": [
+          [
+            "Managed Print Services",
+            "Print & Copy Solutions: Where Document Workflows Start",
+            "Your multifunction printer is the fastest place to capture a document. How print and copy solutions turn each scan into a routed, searchable workflow.",
+            "blog/print-copy-solutions-where-document-workflows-start.html",
+            "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/blog/developer-team.jpg"
+          ],
+          [
+            "Cybersecurity",
+            "Data Discovery and Classification: Find Your Sensitive Data",
+            "Van Ausdall & Farrar expands data discovery and classification to show where sensitive data lives, who can access it, and how to cut compliance risk.",
+            "blog/data-discovery-and-classification.html",
+            "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/blog/networking-servers-computers.jpg"
+          ],
+          [
+            "Managed IT Services",
+            "Digital Transformation: What It Looks Like Mid-Market",
+            "Most mid-market digital transformation is not a megaproject. It is a sequence of unglamorous fixes to paper, phones, print, and identity that nobody announces.",
+            "blog/digital-transformation-what-it-looks-like-mid-market.html",
+            "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/blog/data-visualization.jpg"
+          ]
+        ]
+      },
+      {
+        "type": "related",
+        "id": "casecards",
+        "heading": "Results on the record",
+        "intro": "Three of VAF's published case studies. Each one names the customer and the number.",
+        "items": [
+          [
+            "Education",
+            "Tippecanoe School Corporation",
+            "1,200 devices became 300, and the school corporation saved $1M over the life of the contract.",
+            "case-studies/tippecanoe-school-corporation.html",
+            "assets/team-1200.jpg"
+          ],
+          [
+            "Healthcare",
+            "Johnson Memorial Health",
+            "1.5 million patient files scanned and indexed in 90 days, under HIPAA.",
+            "case-studies/johnson-memorial-hospital.html",
+            "assets/healthcare-process-1200.jpg"
+          ],
+          [
+            "Financial services",
+            "STAR Financial Bank",
+            "Over 70% cost savings after five months with Van Ausdall & Farrar.",
+            "case-studies/star-financial.html",
+            "assets/security-1200.jpg"
+          ]
+        ]
+      },
+      {
+        "type": "showcase",
+        "id": "services",
+        "alt": false,
+        "eyebrow": "What we do",
+        "heading": "Everything your office runs on, from one partner",
+        "intro": "Six services, one agreement, one Customer Care Center. Start with any of them, or with the assessment.",
+        "link_label": "Explore the service",
+        "items": [
+          {
+            "tag": "Information",
+            "title": "Managed IT and security",
+            "copy": "Help desk, network security, cloud infrastructure and IT consulting, with a vCIO and 24/7 monitoring. Protect your data against ransomware, malware and phishing.",
+            "bullets": [
+              "Help desk",
+              "Cybersecurity",
+              "Cloud and backup",
+              "vCIO"
+            ],
+            "stat": "SOC 2",
+            "stat_label": "Certified service organization",
+            "href": "services/managed-it.html",
+            "image": "assets/it-1200.jpg",
+            "alt": "Technician monitoring a server room"
+          },
+          {
+            "tag": "Communication",
+            "title": "Business phone systems",
+            "copy": "VoIP phone systems and unified communications for Indianapolis businesses. One platform for voice, video, team chat and contact center, from anywhere.",
+            "bullets": [
+              "Voice and video",
+              "Team chat",
+              "Contact center",
+              "Mitel, RingCentral, 8x8"
+            ],
+            "stat": "4,000+",
+            "stat_label": "Phone systems deployed since 1983",
+            "href": "services/business-phone-systems.html",
+            "image": "assets/gen-phone-1200.jpg",
+            "alt": "Business phone system in use"
+          },
+          {
+            "tag": "Print",
+            "title": "Copiers and printers",
+            "copy": "Canon, Ricoh, Kyocera and HP equipment backed by local sales, service and support since 1914.",
+            "bullets": [
+              "Canon",
+              "Ricoh",
+              "Kyocera",
+              "HP"
+            ],
+            "stat": "1914",
+            "stat_label": "Serving Indiana since",
+            "href": "services/copiers.html",
+            "image": "assets/copier-1200.jpg",
+            "alt": "Office copier"
+          },
+          {
+            "tag": "Print",
+            "title": "Managed print services",
+            "copy": "Proactive fleet management, print security and automatic supply replenishment. Cut printing costs by up to 30 percent.",
+            "bullets": [
+              "Fleet management",
+              "Print security",
+              "Automatic supplies",
+              "Usage reporting"
+            ],
+            "stat": "93.4",
+            "stat_label": "Net Promoter Score, independently audited",
+            "href": "services/managed-print.html",
+            "image": "assets/print-1200.jpg",
+            "alt": "Managed print fleet"
+          },
+          {
+            "tag": "Process",
+            "title": "Document conversion",
+            "copy": "Go paperless with secure electronic storage, searchable digital archives and a smaller on-site footprint.",
+            "bullets": [
+              "Scanning",
+              "Searchable archives",
+              "Secure storage",
+              "Workflow"
+            ],
+            "stat": "Paper out",
+            "stat_label": "Workflow in",
+            "href": "services/document-conversion.html",
+            "image": "assets/gen-conversion-1200.jpg",
+            "alt": "Document scanning"
+          },
+          {
+            "tag": "Process",
+            "title": "AI consulting",
+            "copy": "An AI acceptable use policy, high-impact automation opportunities and a responsible AI roadmap, starting with the free Technology Strength Assessment.",
+            "bullets": [
+              "Acceptable use policy",
+              "Automation",
+              "AI roadmap"
+            ],
+            "stat": "Free",
+            "stat_label": "Technology Strength Assessment",
+            "href": "services/ai-consulting.html",
+            "image": "assets/ai-1200.jpg",
+            "alt": "AI consulting"
+          }
+        ]
+      },
+      {
+        "type": "detail",
+        "id": "soc",
+        "alt": true,
+        "eyebrow": "Certified",
+        "heading": "SOC 2 certified",
+        "body": "Your data security is our highest priority. Our SOC for Service Organizations certification means we meet the highest standards for protecting your data, and the report is audited by an independent third party.",
+        "bullets": [],
+        "image": "badges/aicpa-soc",
+        "image_alt": "AICPA SOC 2 Service Organization Controls badge",
+        "flip": true
+      },
+      {
+        "type": "detail",
+        "id": "playbook",
+        "eyebrow": "Free guide",
+        "heading": "Is your business ready for AI in 2026?",
+        "body": "<p>Get the 2026 CIO AI Playbook: your step-by-step guide to secure, strategic AI implementation, written for Indiana businesses.</p><p><a class=\"q-btn\" href=\"/cio-ai-playbook\">Download your free playbook</a></p>",
+        "bullets": [],
+        "image": "assets/ai-playbook-photo",
+        "image_alt": "A hand holding glowing AI letters, the cover image of the 2026 CIO AI Playbook"
+      }
     ],
-    "ribbon": [
-     "SOC 2 certified",
-     "NPS 93.4, audited by CEO Juice. World Class since 2019",
-     "Mitel Gold, seven consecutive years"
-    ],
-    "variants": {
-     "press": {
-      "stats": null,
-      "ribbon": [
-       "Indianapolis, Indiana. Since 1914.",
-       "SOC 2 certified",
-       "NPS 93.4, audited by CEO Juice"
+    "compose": {
+      "clean": [
+        "hero-light",
+        "partners",
+        "pillars",
+        "is-this-you",
+        "seal",
+        "customers",
+        "story",
+        "office",
+        "numbers",
+        "ba",
+        "flow",
+        "proof",
+        "casestudy",
+        "markets",
+        "map",
+        "voices",
+        "film",
+        "faq",
+        "contact"
+      ],
+      "showcase": [
+        "hero",
+        "partners",
+        "wheel",
+        "services",
+        "is-this-you",
+        "proof",
+        "ba",
+        "flow",
+        "office",
+        "seal",
+        "story",
+        "casecards",
+        "markets",
+        "map",
+        "voices",
+        "soc",
+        "playbook",
+        "articles",
+        "film",
+        "faq",
+        "contact"
+      ],
+      "press": [
+        "hero-light",
+        "story",
+        "pillars",
+        "is-this-you",
+        "customers",
+        "seal",
+        "office",
+        "numbers",
+        "ba",
+        "flow",
+        "proof",
+        "casestudy",
+        "voices",
+        "film",
+        "markets",
+        "map",
+        "faq",
+        "contact"
       ]
-     }
-    },
-    "heading": "Everything your business runs on, <em>under one roof</em>.",
-    "subhead": "IT support, copiers and print, phone systems, document workflow and AI guidance for Indiana businesses. One local partner, one assessment to start, one number to call.",
-    "primary": {
-     "label": "Take the Technology Strength Assessment",
-     "href": "technology-strength-assessment.html"
-    },
-    "secondary": {
-     "label": "Schedule a consultation",
-     "href": "contact.html"
-    },
-    "note": "Canon, Ricoh, Kyocera, HP, Mitel, Fortinet, Sophos and Microsoft partner",
-    "image": "assets/gen-technician-1200.jpg",
-    "image_alt": "A VAF technician replacing a toner unit in a bright office while the office manager looks on",
-    "image_w": 1200,
-    "image_h": 800,
-    "badge": {
-     "value": "93.4",
-     "label": "Net Promoter Score, independently audited"
     }
-   },
-   {
-    "type": "hero-layered",
-    "id": "hero",
-    "eyebrow": "Business technology simplified, since 1914",
-    "heading": "Everything your business runs on, <em>under one roof</em>.",
-    "subhead": "IT support, copiers and print, phone systems, document workflow and AI guidance for Indiana businesses. One local partner, one assessment to start, one number to call.",
-    "primary": {
-     "label": "Take the Technology Strength Assessment",
-     "href": "technology-strength-assessment.html"
-    },
-    "secondary": {
-     "label": "Schedule a consultation",
-     "href": "contact.html"
-    },
-    "bg": "#0f1e33",
-    "image": "assets/gen-hero-plate-2100.jpg",
-    "image_w": 2100,
-    "image_h": 891,
-    "stats": [
-     [
-      "1914",
-      "Serving Indiana since"
-     ],
-     [
-      "93.4",
-      "Net Promoter Score, audited"
-     ],
-     [
-      "SOC 2",
-      "Certified service organization"
-     ],
-     [
-      "4,000+",
-      "Phone systems deployed since 1983"
-     ]
-    ],
-    "card_a": {
-     "eyebrow": "Start here",
-     "title": "The Technology Strength Assessment",
-     "body": "Ten to fifteen minutes. Information, print, process and communication, scored.",
-     "items": [
-      "What to eliminate",
-      "What to optimize",
-      "What to leverage to grow"
-     ],
-     "href": "technology-strength-assessment.html",
-     "label": "How it works"
-    },
-    "card_b": {
-     "eyebrow": "Already a customer?",
-     "title": "The Client Service Center",
-     "body": "A person answers. Monday to Friday, 7 to 5.",
-     "links": [
-      [
-       "Request support",
-       "support.html#request"
-      ],
-      [
-       "Order supplies",
-       "support.html#supplies"
-      ],
-      [
-       "IT support",
-       "support.html#it"
-      ],
-      [
-       "Call (317) 634-2913",
-       "tel:3176342913"
-      ]
-     ]
-    },
-    "note": "The photography here is generated for the preview and labelled as such; a shoot at the 75th Street headquarters and with technicians in the field replaces it in the build, along with Canon, Ricoh, Kyocera and HP product models."
-   },
-   {
-    "type": "wheel",
-    "id": "wheel",
-    "eyebrow": "Four pillars",
-    "heading": "Information, communication, print and process, from one partner",
-    "intro": "Pick a pillar. Four pillars, one agreement, one Customer Care Center.",
-    "items": [
-     [
-      "Information",
-      "Managed IT, cybersecurity, cloud, backup and continuity. A vCIO, 24/7 monitoring and a security operations center, from one team.",
-      "services/managed-it.html",
-      "Information",
-      "Managed IT|Cybersecurity|Cloud and backup|vCIO",
-      "SOC 2 certified, 24/7 monitoring"
-     ],
-     [
-      "Communication",
-      "Business phone systems, unified communications and contact center, in the telecom business since 1983 with over 4,000 systems deployed.",
-      "services/business-phone-systems.html",
-      "Communication",
-      "Business phones|Unified communications|Contact center|Mitel, RingCentral, 8x8",
-      "Mitel Gold, seven consecutive years"
-     ],
-     [
-      "Print",
-      "Copiers, printers, managed print and production print. Canon, Ricoh, Kyocera and HP, serviced by certified local technicians.",
-      "services/copiers.html",
-      "Print",
-      "Copiers and MFPs|Managed print|Production print|Canon, Ricoh, Kyocera, HP",
-      "Certified local technicians"
-     ],
-     [
-      "Process",
-      "Document management, document conversion, business process and AI consulting. The paper out, the workflow in.",
-      "services/document-management.html",
-      "Process",
-      "Document management|Document conversion|Business process|AI consulting",
-      "Paper out, workflow in"
-     ]
-    ],
-    "hub": "VAF",
-    "hub_sub": "one roof",
-    "ring": "BUSINESS TECHNOLOGY SIMPLIFIED"
-   },
-   {
-    "type": "flow",
-    "id": "flow",
-    "eyebrow": "How an engagement runs",
-    "heading": "Four stages, and every one of them hands you something",
-    "intro": "Click a stage. It starts with the Technology Strength Assessment and ends with a partner who is watching.",
-    "steps": [
-     {
-      "label": "Assess",
-      "when": "10 to 15 minutes, then a visit",
-      "summary": "Your Technology Strength Score.",
-      "title": "Know your Technology Strength Score",
-      "body": "Four assessments in two parts each: information, print, process and communication. Ten to fifteen minutes online, then a specialist walks the office and confirms the answers against what is actually running.",
-      "receive": [
-       "A Technology Summary Scorecard",
-       "Every device, system and vendor inventoried",
-       "The gaps, in plain English"
-      ]
-     },
-     {
-      "label": "Roadmap",
-      "when": "Week 2",
-      "summary": "Eliminate. Optimize. Leverage.",
-      "title": "A roadmap that grows with you",
-      "body": "What to eliminate because you do not need it, what to optimize because you already own it, and what to leverage to grow. Priced, sequenced, and tied to your business goals.",
-      "receive": [
-       "Eliminate, optimize and leverage lists",
-       "Options priced side by side",
-       "A sequence with dates"
-      ]
-     },
-     {
-      "label": "Implement",
-      "when": "A date you choose",
-      "summary": "Handled for you.",
-      "title": "We implement",
-      "body": "Right-sized equipment, software, security and supplies, installed by VAF's own local people. Users trained before the technician leaves. Numbers ported. Monitoring switched on.",
-      "receive": [
-       "Install and training completed on site",
-       "Monitoring live on every device",
-       "One point of contact for every line"
-      ]
-     },
-     {
-      "label": "Monitor",
-      "when": "Ongoing",
-      "summary": "24/7, from Indianapolis.",
-      "title": "We monitor 24/7",
-      "body": "Proactive monitoring, predictive maintenance and fast local repair keep you running. The Customer Care Center processes requests Monday through Friday, 7:00am to 5:00pm, and responds within 24 hours.",
-      "receive": [
-       "Alerts handled before they become tickets",
-       "Supplies before they run out",
-       "A 25-point inspection on every service call"
-      ]
-     }
-    ]
-   },
-   {
-    "type": "seal",
-    "id": "seal",
-    "tone": "dark",
-    "eyebrow": "What every VAF customer gets",
-    "heading": "Not a slogan. A list you can check.",
-    "intro": "Each line is on vanausdall.com or in an audited third-party report today. Nothing here is aspirational.",
-    "items": [
-     [
-      "1914",
-      "Serving Indiana since 1914",
-      "Chosen as a distributor for the Thomas Edison Company. Privately owned in Indianapolis ever since."
-     ],
-     [
-      "93.4",
-      "A service score audited by someone else",
-      "Net Promoter Score collected and audited by CEO Juice. World Class every year since 2019. The average US company scores 10."
-     ],
-     [
-      "SOC 2",
-      "SOC 2 certified",
-      "Our SOC for Service Organizations certification means we meet the highest standards for protecting your data."
-     ],
-     [
-      "Gold",
-      "Mitel Gold, seven years running",
-      "Top 7% of 1,400 Mitel partners in North America. In the telecom business since 1983, over 4,000 systems deployed."
-     ],
-     [
-      "250+",
-      "Years of IT experience on staff",
-      "The Vsecure IT team collectively, with CISSP personnel and NSE-7 certified Fortinet engineers."
-     ],
-     [
-      "25",
-      "Points of inspection, every call",
-      "A total call process on every service visit, so the next failure is caught early."
-     ],
-     [
-      "24 hr",
-      "Response from the Customer Care Center",
-      "Requests processed Monday through Friday, 7:00am to 5:00pm, and answered within 24 hours."
-     ],
-     [
-      "57,000",
-      "Square feet of headquarters",
-      "Built in 2006 at 6430 E 75th Street, home to the secure Document Conversion Center."
-     ]
-    ],
-    "source": "Sources: vanausdall.com (about, why VAF, copy print, support, document conversion pages), CEO Juice NPS report, SOC 2 certification as displayed on vanausdall.com."
-   },
-   {
-    "type": "beforeafter",
-    "id": "ba",
-    "bg": "#0f1e33",
-    "eyebrow": "One roof",
-    "heading": "Drag to see what changes when the office has one number to call",
-    "before": {
-     "eyebrow": "Today, in most offices",
-     "title": "Five vendors, five invoices",
-     "body": "Nobody owns the whole picture, so nobody sees the cost.",
-     "items": [
-      "A copier dealer, an IT firm and a phone company who blame each other",
-      "Toner bought at retail when a device runs dry",
-      "Backups nobody has tested and a firewall nobody patches",
-      "Records in a storage room scheduled for demolition",
-      "Employees using AI tools nobody approved"
-     ]
-    },
-    "after": {
-     "eyebrow": "With VAF",
-     "title": "Everything under one roof",
-     "body": "Information, communication, print and process from one Indiana partner since 1914.",
-     "items": [
-      "Copiers, print, IT and phones under one agreement and one Customer Care Center",
-      "Supplies shipped on usage, 24/7 monitoring, 25-point inspections",
-      "vCIO, security operations center and managed continuity",
-      "Records scanned, indexed and searchable, paper destroyed with a certificate",
-      "An AI acceptable use policy and a roadmap"
-     ]
-    }
-   },
-   {
-    "type": "hotspots",
-    "id": "office",
-    "eyebrow": "The whole office",
-    "heading": "Four pillars, one floor plan",
-    "intro": "Click a number. Everything an office runs on, and the VAF page for each.",
-    "image": "assets/office-iso-1600.jpg",
-    "image_w": 1600,
-    "image_h": 893,
-    "alt": "An overhead illustration of an office with a copier room, a server room, a records room, a lounge and desks",
-    "items": [
-     {
-      "x": 27,
-      "y": 46,
-      "k": "Print",
-      "title": "The copier room",
-      "body": "Canon, Ricoh, Kyocera and HP multifunction devices under one managed print agreement, with supplies that arrive before they run out.",
-      "href": "services/copiers.html",
-      "label": "Copiers and managed print"
-     },
-     {
-      "x": 82,
-      "y": 14,
-      "k": "Information",
-      "title": "The server room",
-      "body": "Managed IT, Vsecure cybersecurity, cloud and continuity. Monitored 24/7 from Indianapolis, with a vCIO planning what comes next.",
-      "href": "services/managed-it.html",
-      "label": "Managed IT services"
-     },
-     {
-      "x": 93,
-      "y": 42,
-      "k": "Communication",
-      "title": "The desk phone",
-      "body": "Mitel, RingCentral, 8x8 and Elevate unified communications that follow your people to their smartphones. In telecom since 1983.",
-      "href": "services/business-phone-systems.html",
-      "label": "Business phone systems"
-     },
-     {
-      "x": 64,
-      "y": 71,
-      "k": "Process",
-      "title": "The scan station",
-      "body": "Every multifunction device scans straight into OnBase or Square 9 workflows: accounts payable, HR, contracts, records.",
-      "href": "services/document-management.html",
-      "label": "Document management"
-     },
-     {
-      "x": 88,
-      "y": 66,
-      "k": "Process",
-      "title": "The records wall",
-      "body": "Boxes of paper become searchable records at the secure Document Conversion Center, with a certificate of destruction at the end.",
-      "href": "services/document-conversion.html",
-      "label": "Document conversion"
-     },
-     {
-      "x": 16,
-      "y": 58,
-      "k": "Print",
-      "title": "The desks",
-      "body": "Desktop printers right-sized to how many the office needs, folded into the same managed print report as the copiers.",
-      "href": "services/managed-print.html",
-      "label": "Managed print"
-     },
-     {
-      "x": 62,
-      "y": 38,
-      "k": "Process",
-      "title": "The meeting area",
-      "body": "Where AI shows up first: drafting, summarizing, automating. An acceptable use policy and a roadmap before the tools.",
-      "href": "services/ai-consulting.html",
-      "label": "AI consulting"
-     }
-    ]
-   },
-   {
-    "type": "fleet",
-    "id": "fleet",
-    "heading": "The fleet, at a glance",
-    "intro": "Every device family VAF sells and services. Generated product renders for the preview; Canon, Ricoh, Kyocera and HP models replace them.",
-    "items": [
-     {
-      "title": "Multifunction copiers",
-      "band": "Workgroup to department",
-      "brands": "Canon, Ricoh, Kyocera, HP",
-      "image": "assets/fleet/mfp.png",
-      "bullets": [
-       "Print, scan, copy, fax",
-       "Secure release and scan to OnBase"
-      ],
-      "href": "services/copiers.html",
-      "label": "Copiers and printers"
-     },
-     {
-      "title": "Desktop printers",
-      "band": "Desk and small team",
-      "brands": "HP, Brother, Kyocera",
-      "image": "assets/fleet/printer.png",
-      "bullets": [
-       "Color and mono",
-       "Folded into managed print"
-      ],
-      "href": "services/managed-print.html",
-      "label": "Managed print"
-     },
-     {
-      "title": "Wide format",
-      "band": "Plans, posters, signage",
-      "brands": "Canon, HP",
-      "image": "assets/fleet/wide-format.png",
-      "bullets": [
-       "Plan sets in house",
-       "Engineering and construction"
-      ],
-      "href": "industries/engineering-construction.html",
-      "label": "Engineering and construction"
-     },
-     {
-      "title": "Production print",
-      "band": "High volume, inline finishing",
-      "brands": "EFI Fiery, Skyline web-to-print",
-      "image": "assets/fleet/production.png",
-      "bullets": [
-       "Variable data",
-       "Color management from profile to press"
-      ],
-      "href": "services/production-print.html",
-      "label": "Production print"
-     }
-    ]
-   },
-   {
-    "type": "model3d",
-    "id": "model",
-    "alt": "A white and charcoal multifunction copier on a cabinet, rotatable",
-    "eyebrow": "Take a closer look",
-    "heading": "Walk around one before it arrives",
-    "intro": "A generated stand-in multifunction device for the preview. Drag to rotate. Canon, Ricoh, Kyocera and HP product imagery replaces it in the build.",
-    "poster": "assets/mfp-poster-1200.jpg",
-    "cta": {
-     "label": "See copiers and printers",
-     "href": "services/copiers.html"
-    }
-   },
-   {
-    "type": "proof",
-    "id": "proof",
-    "tone": "dark",
-    "eyebrow": "Measured, not claimed",
-    "value": "93.4",
-    "text": "Net Promoter Score, collected and audited by CEO Juice from VAF customers after every service call. World Class, above 70, every year since 2019. The average US company scores 10.",
-    "source": "CEO Juice is an independent company with an audited process. The numbers cannot be changed, even when a customer scores us low in error."
-   },
-   {
-    "type": "video",
-    "id": "film",
-    "eyebrow": "Who we are",
-    "heading": "Privately owned in Indianapolis since 1914",
-    "intro": "Filmed with VAF people at the 75th Street headquarters.",
-    "youtube": "i-q4U5SnvaM",
-    "poster": "assets/careers-1200.jpg",
-    "title": "What it's like to work at Van Ausdall & Farrar",
-    "caption": "VAF's own film, from vanausdall.com"
-   },
-   {
-    "type": "cards",
-    "id": "pillars",
-    "eyebrow": "Four pillars",
-    "heading": "Information, communication, print and process, from one partner",
-    "items": [
-     [
-      "Information",
-      "Managed IT, cybersecurity, cloud, backup and continuity. A vCIO, 24/7 monitoring and a security operations center, from one team."
-     ],
-     [
-      "Communication",
-      "Business phone systems, unified communications and contact center, in the telecom business since 1983 with over 4,000 systems deployed."
-     ],
-     [
-      "Print",
-      "Copiers, printers, managed print and production print. Canon, Ricoh, Kyocera and HP, serviced by certified local technicians."
-     ],
-     [
-      "Process",
-      "Document management, document conversion, business process and AI consulting. The paper out, the workflow in."
-     ]
-    ]
-   },
-   {
-    "type": "partners",
-    "id": "customers",
-    "caption": "Trusted across Indiana: on the record in our case studies",
-    "items": [
-     "Tippecanoe School Corporation",
-     "STAR Financial Bank",
-     "Johnson Memorial Health",
-     "City of Anderson",
-     "City of Bloomington",
-     "Berry Global",
-     "Beck's Hybrids",
-     "Shiel Sexton",
-     "Bowen Engineering",
-     "Gailey Eye Clinic",
-     "Town of Bargersville",
-     "Mid-City Supply",
-     "Phalen Leadership Academy",
-     "Ellinger Riggs Insurance"
-    ]
-   },
-   {
-    "type": "stats",
-    "id": "numbers",
-    "alt": true,
-    "items": [
-     [
-      "1,500,000",
-      "Patient files scanned in 90 days for Johnson Memorial Health"
-     ],
-     [
-      "1,000,000",
-      "Dollars saved over one contract for Tippecanoe School Corporation"
-     ],
-     [
-      "4,000",
-      "Phone systems deployed since 1983"
-     ],
-     [
-      "250",
-      "Years of combined IT experience on the Vsecure team"
-     ]
-    ]
-   },
-   {
-    "type": "casestudy",
-    "id": "casestudy",
-    "tone": "dark",
-    "eyebrow": "Case study",
-    "heading": "1,200 devices became 300, and a school corporation saved a million dollars",
-    "quote": "Tippecanoe was won over by Van Ausdall's process. By cutting overall equipment from 1,200 machines to just over 300 new machines, the school corporation has seen $1,000,000 in savings over the life of the contract.",
-    "attribution": "Tippecanoe School Corporation case study, vanausdall.com",
-    "metrics": [
-     [
-      "Devices",
-      "1,200 to 300",
-      "Fleet consolidated across every building"
-     ],
-     [
-      "Savings",
-      "$1M",
-      "Over the life of the contract"
-     ],
-     [
-      "IT time",
-      "20%",
-      "Of IT staff time was going to print issues"
-     ],
-     [
-      "Vendors",
-      "10 to 1",
-      "Copy and print vendors replaced by one"
-     ]
-    ]
-   },
-   {
-    "type": "tabs",
-    "id": "markets",
-    "eyebrow": "Industries",
-    "heading": "Built around how your industry runs",
-    "items": [
-     {
-      "label": "Education",
-      "title": "Education",
-      "body": "Districts and schools print more than almost any organization their size, across more buildings, with an IT staff stretched thin. VAF consolidates the fleet, puts every device under one agreement, and adds the mobile and cloud printing students and staff expect. Tippecanoe School Corporation cut 1,200 devices to just over 300 and saved a million dollars over the contract.",
-      "bullets": [
-       "Fleet consolidation across every building, priced as one agreement",
-       "Mobile and cloud printing for staff and students",
-       "Document conversion for student records with a retention policy"
-      ],
-      "image": "assets/team-1200.jpg",
-      "image_alt": "Education",
-      "href": "industries/education.html",
-      "link_label": "Technology for education"
-     },
-     {
-      "label": "Engineering and construction",
-      "title": "Engineering and construction",
-      "body": "Firms that run projects from trailers and site offices need phones, print and IT that travel with the work. VAF supplies short-term copier rental for job sites, wide-format print for plan sets, unified communications that follow a project manager between the office and the field, and managed IT that keeps estimating and accounting up. Shiel Sexton, Bowen Engineering and Echo Engineering are on the record.",
-      "bullets": [
-       "Short-term copier and printer rental for trailers and temporary offices",
-       "Wide-format print and scan for plan sets and submittals",
-       "Unified communications that follow the project team"
-      ],
-      "image": "assets/process-1200.jpg",
-      "image_alt": "Engineering and construction",
-      "href": "industries/engineering-construction.html",
-      "link_label": "Technology for engineering and construction"
-     },
-     {
-      "label": "Financial services",
-      "title": "Financial services",
-      "body": "When STAR Financial Bank needed a new print strategy, VAF removed expired leases, negotiated new contracts on upgraded equipment across the state, and implemented a print platform that cut waste and raised security. The result was 70% savings. The same assessment covers cybersecurity, continuity and the phone system that answers your customers.",
-      "bullets": [
-       "Print assessment across every branch, with expired leases retired",
-       "Secure print release and authenticated scanning for customer documents",
-       "Managed detection and response, MFA and security awareness training"
-      ],
-      "image": "assets/security-1200.jpg",
-      "image_alt": "Financial services",
-      "href": "industries/financial-services.html",
-      "link_label": "Technology for financial services"
-     },
-     {
-      "label": "Healthcare",
-      "title": "Healthcare",
-      "body": "Print needs that keep growing, records that must stay confidential, and communications that cannot fail when a patient needs urgent care. VAF supplies authenticated print release and scanning, tools that aid HIPAA compliance around patient records, unified communications and contact center for clinics, and a Document Conversion Center that scanned 1.5 million patient files for Johnson Memorial Health in 90 days.",
-      "bullets": [
-       "Consolidated print spend, centralized management and authenticated release",
-       "Tools to aid HIPAA compliance around patient records",
-       "Cloud, premise and hybrid unified communications, telehealth platforms and overhead paging"
-      ],
-      "image": "assets/healthcare-print-1200.jpg",
-      "image_alt": "Healthcare",
-      "href": "industries/healthcare.html",
-      "link_label": "Technology for healthcare"
-     },
-     {
-      "label": "Insurance",
-      "title": "Insurance",
-      "body": "Agencies run on documents, phone calls and the systems that connect them. VAF eliminates the technology an agency no longer needs, optimizes what it has, and builds a roadmap for the rest: document management for policy files, call recording and contact center for the phones, and managed security for the client data an agency is trusted with. Ellinger Riggs Insurance used VAF communications technology to keep customers on the line and expand to new locations.",
-      "bullets": [
-       "Document management for policy and claim files with retention rules",
-       "Call recording and contact center that meet PCI DSS requirements",
-       "Managed security and MFA for client data"
-      ],
-      "image": "assets/meeting-1200.jpg",
-      "image_alt": "Insurance",
-      "href": "industries/insurance.html",
-      "link_label": "Technology for insurance"
-     },
-     {
-      "label": "Manufacturing and logistics",
-      "title": "Manufacturing and logistics",
-      "body": "Plants and warehouses need print where the work happens, networks that reach the floor, and documents that move without a paper chase. VAF brought in-house print and facilities management to Berry Global, planted new print solutions at Beck's Hybrids, and improved network performance and reliability for Mid-City Supply.",
-      "bullets": [
-       "In-house print and facilities management for plants and distribution centers",
-       "Networking, Wi-Fi and SD-WAN that reach the floor",
-       "Document workflow for orders, quality and compliance records"
-      ],
-      "image": "assets/engineers-1200.jpg",
-      "image_alt": "Manufacturing and logistics",
-      "href": "industries/manufacturing-logistics.html",
-      "link_label": "Technology for manufacturing and logistics"
-     },
-     {
-      "label": "Real estate",
-      "title": "Real estate",
-      "body": "Brokerages and property managers live on their phones and their documents. VAF supplies cloud communications with mobility for agents who work from anywhere, document management for transaction files, and managed IT and security for offices that hold client financial information.",
-      "bullets": [
-       "Cloud phone systems with mobile apps for agents in the field",
-       "Document management for transaction and lease files",
-       "Managed IT and security for client financial data"
-      ],
-      "image": "assets/innovation-1200.jpg",
-      "image_alt": "Real estate",
-      "href": "industries/real-estate.html",
-      "link_label": "Technology for real estate"
-     },
-     {
-      "label": "State and local government",
-      "title": "State and local government",
-      "body": "Cities, towns and utilities need billing, records and communications that constituents can trust. For the City of Anderson, VAF's on-site Facilities Management program refreshed print and billing technology, added 2D bar code document security and postal optimization, and streamlined purchasing, for over $40,000 in annual savings. Bloomington's utility department and the Town of Bargersville run on VAF content management.",
-      "bullets": [
-       "On-site facilities management with full-time VAF personnel",
-       "Print and mail security for billing and records",
-       "Enterprise content management for utilities and clerks"
-      ],
-      "image": "assets/hq-1200.jpg",
-      "image_alt": "State and local government",
-      "href": "industries/government.html",
-      "link_label": "Technology for state and local government"
-     }
-    ]
-   },
-   {
-    "type": "map",
-    "id": "map",
-    "outline": "IN",
-    "alt": "Map of Indiana with Van Ausdall & Farrar offices",
-    "heading": "Three offices, one service fleet, the whole state",
-    "intro": "Headquartered in Indianapolis with offices in Fort Wayne and Evansville. A computer-dispatched, vendor-certified service fleet covers the Indianapolis metro and the entire state of Indiana.",
-    "ring": 44,
-    "items": [
-     {
-      "name": "Indianapolis",
-      "lon": -86.062,
-      "lat": 39.887,
-      "href": "locations/indianapolis.html",
-      "sub": "6430 E 75th Street, headquarters",
-      "hq": true,
-      "label_dx": 10,
-      "label_dy": 4
-     },
-     {
-      "name": "Fort Wayne",
-      "lon": -85.145,
-      "lat": 41.089,
-      "href": "locations/fort-wayne.html",
-      "sub": "1241 N Wells Street",
-      "label_dx": -96,
-      "label_dy": -10
-     },
-     {
-      "name": "Evansville",
-      "lon": -87.556,
-      "lat": 37.975,
-      "href": "locations/evansville.html",
-      "sub": "(812) 424-5736",
-      "label_dx": 10,
-      "label_dy": 16
-     }
-    ]
-   },
-   {
-    "type": "timeline",
-    "id": "story",
-    "eyebrow": "The story",
-    "heading": "From an Edison dealership to Indiana's largest office technology provider",
-    "items": [
-     [
-      "1914",
-      "Oscar K. Van Ausdall",
-      "Chosen as an Edison Business Phonograph dealer for the state of Indiana. The Thomas Edison Company invented the wax cylinder dictating machine."
-     ],
-     [
-      "1940",
-      "Carl F. Farrar",
-      "Joins as general manager and partner, later buying the business. Mr. Van Ausdall stays on until retiring in 1957 at 73."
-     ],
-     [
-      "1960",
-      "Clyde von Grimmenstein",
-      "Becomes president after joining in sales in 1950, and stays active until retiring at 84."
-     ],
-     [
-      "1983",
-      "Telecom",
-      "VAF enters the telephone business. More than 4,000 systems deployed since."
-     ],
-     [
-      "1994",
-      "Eric von Grimmenstein",
-      "Grew up in the business, joined in 1977 after Purdue, and becomes president."
-     ],
-     [
-      "2006",
-      "6430 E 75th Street",
-      "The 57,000-square-foot corporate headquarters opens in Indianapolis."
-     ],
-     [
-      "Today",
-      "Four pillars, one roof",
-      "Information, communication, print and process for Indiana and the Midwest. Privately owned, still in Indianapolis."
-     ]
-    ]
-   },
-   {
-    "type": "partners",
-    "id": "partners",
-    "caption": "Technology partners, including Gartner Magic Quadrant leaders",
-    "items": [
-     "Canon",
-     "Ricoh",
-     "Kyocera",
-     "HP",
-     "Brother",
-     "Fortinet",
-     "Sophos",
-     "Mitel",
-     "RingCentral",
-     "8x8",
-     "Elevate",
-     "Microsoft",
-     "Datto",
-     "KnowBe4",
-     "Arctic Wolf",
-     "OnBase",
-     "Square 9",
-     "Fujitsu",
-     "OPEX",
-     "Zebra",
-     "VMware",
-     "Juniper",
-     "N-able",
-     "Tenable"
-    ]
-   },
-   {
-    "type": "checklist",
-    "id": "is-this-you",
-    "alt": true,
-    "eyebrow": "Is this you?",
-    "heading": "Six questions from the Technology Strength Assessment",
-    "intro": "Check the ones you cannot answer yes to. They are six of the eighty.",
-    "items": [
-     "Is your server data backed up nightly with more than one copy off-site or in the cloud?",
-     "Do you have a procedure to test that your backups actually restore?",
-     "Do you know how much you spend annually on printer supplies and service?",
-     "Do you have a written disaster recovery plan for your phone system?",
-     "Does your company have a formal records retention schedule?",
-     "Do you have a written AI acceptable use policy?"
-    ],
-    "messages": [
-     "Check what you cannot answer yes to.",
-     "One is normal.",
-     "Two is a pattern.",
-     "Three or more is the reason the assessment exists. Ten to fifteen minutes gives you the full score."
-    ],
-    "cta_label": "Take the assessment",
-    "cta_href": "technology-strength-assessment.html"
-   },
-   {
-    "type": "testimonials",
-    "id": "voices",
-    "alt": true,
-    "layout": "feature",
-    "eyebrow": "Real customer comments",
-    "heading": "Imported directly from our after-service surveys",
-    "items": [
-     [
-      "He was incredibly efficient and personable, answering all of my questions thoroughly and thoughtfully. He also laughed at my jokes, which is always appreciated.",
-      "Elaine",
-      "After-service survey, June 2026"
-     ],
-     [
-      "The guy is totally awesome. He has been working on our equipment for at least 12 years and I would not want anyone else.",
-      "Teresa",
-      "After-service survey, May 2026"
-     ],
-     [
-      "We always look forward to Jerome coming. He is kind and professional. We always know our problem will be resolved.",
-      "Stacy",
-      "After-service survey, May 2026"
-     ],
-     [
-      "Brent is amazing. Always there when we need him and he is very knowledgeable and helpful. It is a pleasure to work with him.",
-      "Megan",
-      "After-service survey, April 2026"
-     ],
-     [
-      "He went above and beyond to ask and answer questions so we both were on the same page with the problem and ultimately the solution. He explained what we at the office needed to do differently to prevent this situation in the future as well.",
-      "Elaine",
-      "After-service survey, June 2026"
-     ]
-    ]
-   },
-   {
-    "type": "faq",
-    "id": "faq",
-    "alt": true,
-    "heading": "Questions we get on the first call",
-    "items": [
-     [
-      "Do you only work with large companies?",
-      "No. From a single multifunction printer for a startup to a fleet of production copiers across multiple locations, and from a ten-person office on managed IT to a school corporation with 13,000 students."
-     ],
-     [
-      "Can you take over equipment or systems from another vendor?",
-      "Usually. The Technology Strength Assessment covers everything you run regardless of where it came from, and the roadmap says honestly what to eliminate, what to optimize and what to leverage."
-     ],
-     [
-      "How fast do you respond?",
-      "The Customer Care Center processes requests Monday through Friday, 7:00am to 5:00pm, and responds within 24 hours. Same-day service for most Indianapolis metro copier calls. Managed IT is monitored 24/7."
-     ],
-     [
-      "Do you serve outside Indianapolis?",
-      "Yes. Offices in Indianapolis, Fort Wayne and Evansville, and a computer-dispatched, vendor-certified service fleet that covers the entire state of Indiana and customers throughout the Midwest."
-     ]
-    ]
-   },
-   {
-    "type": "contact",
-    "id": "contact",
-    "heading": "Speak with a solutions expert",
-    "body": "Tell us what you run and what is not working. A person from the Indianapolis office replies to set a time. Or start with the ten-minute assessment.",
-    "options": [
-     "Managed IT and security",
-     "Business phone systems",
-     "Copiers and managed print",
-     "Document management or conversion",
-     "AI consulting",
-     "Something else"
-    ],
-    "submit": "Schedule my consultation",
-    "note": "Or call (317) 634-2913, Monday through Friday, 7:00am to 5:00pm."
-   },
-   {
-    "type": "detail",
-    "id": "security",
-    "alt": true,
-    "eyebrow": "Managed security",
-    "heading": "Security that never clocks out",
-    "body": "Protect organizational data against common cyber attacks including malware, viruses, ransomware and phishing. Every Vsecure plan starts with EDR/XDR protection, proactive patching and monitoring, and a next-generation firewall, with a security operations center watching.",
-    "bullets": [
-     "SOC 2 certified, audited as a service organization",
-     "A CISSP on staff for security planning and incident response",
-     "Security awareness training with simulated phishing",
-     "Backup for Microsoft and Google, tested by restore"
-    ],
-    "image": "assets/security-1200.jpg",
-    "image_alt": "A security analyst reviewing network alerts on a large monitor"
-   },
-   {
-    "type": "related",
-    "id": "articles",
-    "heading": "Latest from the VAF blog",
-    "intro": "Industry insight and technology trends from Van Ausdall & Farrar's experts.",
-    "items": [
-     [
-      "Managed Print Services",
-      "Print & Copy Solutions: Where Document Workflows Start",
-      "Your multifunction printer is the fastest place to capture a document. How print and copy solutions turn each scan into a routed, searchable workflow.",
-      "blog/print-copy-solutions-where-document-workflows-start.html",
-      "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/blog/developer-team.jpg"
-     ],
-     [
-      "Cybersecurity",
-      "Data Discovery and Classification: Find Your Sensitive Data",
-      "Van Ausdall & Farrar expands data discovery and classification to show where sensitive data lives, who can access it, and how to cut compliance risk.",
-      "blog/data-discovery-and-classification.html",
-      "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/blog/networking-servers-computers.jpg"
-     ],
-     [
-      "Managed IT Services",
-      "Digital Transformation: What It Looks Like Mid-Market",
-      "Most mid-market digital transformation is not a megaproject. It is a sequence of unglamorous fixes to paper, phones, print, and identity that nobody announces.",
-      "blog/digital-transformation-what-it-looks-like-mid-market.html",
-      "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/blog/data-visualization.jpg"
-     ]
-    ]
-   },
-   {
-    "type": "related",
-    "id": "casecards",
-    "heading": "Results on the record",
-    "intro": "Three of VAF's published case studies. Each one names the customer and the number.",
-    "items": [
-     [
-      "Education",
-      "Tippecanoe School Corporation",
-      "1,200 devices became 300, and the school corporation saved $1M over the life of the contract.",
-      "case-studies/tippecanoe-school-corporation.html",
-      "assets/team-1200.jpg"
-     ],
-     [
-      "Healthcare",
-      "Johnson Memorial Health",
-      "1.5 million patient files scanned and indexed in 90 days, under HIPAA.",
-      "case-studies/johnson-memorial-hospital.html",
-      "assets/healthcare-process-1200.jpg"
-     ],
-     [
-      "Financial services",
-      "STAR Financial Bank",
-      "Over 70% cost savings after five months with Van Ausdall & Farrar.",
-      "case-studies/star-financial.html",
-      "assets/security-1200.jpg"
-     ]
-    ]
-   },
-   {
-    "type": "related",
-    "id": "services",
-    "alt": true,
-    "heading": "Everything your office runs on, from one partner",
-    "intro": "Six services, one agreement, one Customer Care Center. Start with any of them or with the assessment.",
-    "items": [
-     [
-      "Information",
-      "Managed IT and security",
-      "Help desk, network security, cloud infrastructure and IT consulting, with a vCIO and 24/7 monitoring. Protect your data against ransomware, malware and phishing.",
-      "services/managed-it.html",
-      "assets/it-1200.jpg"
-     ],
-     [
-      "Communication",
-      "Business phone systems",
-      "VoIP phone systems and unified communications for Indianapolis businesses. One platform for voice, video, team chat and contact center, from anywhere.",
-      "services/business-phone-systems.html",
-      "assets/gen-phone-1200.jpg"
-     ],
-     [
-      "Print",
-      "Copiers and printers",
-      "Canon, Ricoh, Kyocera and HP equipment backed by local sales, service and support since 1914.",
-      "services/copiers.html",
-      "assets/copier-1200.jpg"
-     ],
-     [
-      "Print",
-      "Managed print services",
-      "Proactive fleet management, print security and automatic supply replenishment. Cut printing costs by up to 30 percent.",
-      "services/managed-print.html",
-      "assets/print-1200.jpg"
-     ],
-     [
-      "Process",
-      "Document conversion",
-      "Go paperless with secure electronic storage, searchable digital archives and a smaller on-site footprint.",
-      "services/document-conversion.html",
-      "assets/gen-conversion-1200.jpg"
-     ],
-     [
-      "Process",
-      "AI consulting",
-      "An AI acceptable use policy, high-impact automation opportunities and a responsible AI roadmap, starting with the free Technology Strength Assessment.",
-      "services/ai-consulting.html",
-      "assets/ai-1200.jpg"
-     ]
-    ]
-   },
-   {
-    "type": "detail",
-    "id": "soc",
-    "alt": true,
-    "eyebrow": "Certified",
-    "heading": "SOC 2 certified",
-    "body": "Your data security is our highest priority. Our SOC for Service Organizations certification means we meet the highest standards for protecting your data, and the report is audited by an independent third party.",
-    "bullets": [],
-    "image": "badges/aicpa-soc",
-    "image_alt": "AICPA SOC 2 Service Organization Controls badge",
-    "flip": true
-   },
-   {
-    "type": "detail",
-    "id": "playbook",
-    "eyebrow": "Free guide",
-    "heading": "Is your business ready for AI in 2026?",
-    "body": "<p>Get the 2026 CIO AI Playbook: your step-by-step guide to secure, strategic AI implementation, written for Indiana businesses.</p><p><a class=\"q-btn\" href=\"/cio-ai-playbook\">Download your free playbook</a></p>",
-    "bullets": [],
-    "image": "assets/ai-playbook-photo",
-    "image_alt": "A hand holding glowing AI letters, the cover image of the 2026 CIO AI Playbook"
-   }
-  ],
-  "compose": {
-   "clean": [
-    "hero-light",
-    "partners",
-    "pillars",
-    "is-this-you",
-    "seal",
-    "customers",
-    "story",
-    "office",
-    "numbers",
-    "ba",
-    "flow",
-    "proof",
-    "casestudy",
-    "markets",
-    "map",
-    "voices",
-    "film",
-    "faq",
-    "contact"
-   ],
-   "showcase": [
-    "hero",
-    "partners",
-    "wheel",
-    "services",
-    "is-this-you",
-    "proof",
-    "ba",
-    "flow",
-    "office",
-    "seal",
-    "story",
-    "casecards",
-    "markets",
-    "map",
-    "voices",
-    "soc",
-    "playbook",
-    "articles",
-    "film",
-    "faq",
-    "contact"
-   ],
-   "press": [
-    "hero-light",
-    "story",
-    "pillars",
-    "is-this-you",
-    "customers",
-    "seal",
-    "office",
-    "numbers",
-    "ba",
-    "flow",
-    "proof",
-    "casestudy",
-    "voices",
-    "film",
-    "markets",
-    "map",
-    "faq",
-    "contact"
-   ]
   }
- }
 }

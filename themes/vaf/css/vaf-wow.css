@@ -1,0 +1,46 @@
+/* VAF wow layer: progress, open-now, command palette, spotlight, page cross-fade, print, back to top */
+@view-transition{navigation:auto}
+::view-transition-old(root),::view-transition-new(root){animation-duration:.28s}
+.wow-prog{position:fixed;top:0;left:0;right:0;height:3px;z-index:300;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,#2a71af,#8fc2f2);pointer-events:none}
+.wow-skip{position:absolute;left:12px;top:-60px;z-index:400;background:#0f1e33;color:#fff;padding:12px 18px;border-radius:0 0 12px 12px;font-weight:700;text-decoration:none;transition:top .2s}
+.wow-skip:focus{top:0}
+/* open now */
+.wow-open{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:13px;color:inherit;white-space:nowrap}
+.wow-open i{width:9px;height:9px;border-radius:50%;background:#9aa7b8;box-shadow:0 0 0 0 transparent}
+.wow-open.is-open i{background:#1fa85a;animation:wowpulse 2s infinite}
+@keyframes wowpulse{0%{box-shadow:0 0 0 0 rgba(31,168,90,.5)}70%{box-shadow:0 0 0 8px rgba(31,168,90,0)}100%{box-shadow:0 0 0 0 rgba(31,168,90,0)}}
+.vv__meta .wow-open{font-size:16px;color:#42546b}
+/* search button in the utility bar */
+.wow-k{display:inline-flex;align-items:center;gap:8px;border:1px solid color-mix(in srgb,currentColor 22%,transparent);background:transparent;color:inherit;border-radius:999px;padding:4px 12px;font:inherit;font-size:13px;font-weight:600;cursor:pointer}
+.wow-k kbd{font:inherit;font-size:11px;padding:1px 6px;border-radius:6px;background:color-mix(in srgb,currentColor 12%,transparent)}
+.wow-k:hover{border-color:#2a71af;color:#2a71af}
+/* command palette */
+.wow-pal{position:fixed;inset:0;z-index:500;display:grid;place-items:start center;padding:12vh 16px 16px;background:color-mix(in srgb,#0a1626 60%,transparent);opacity:0;transition:opacity .18s}
+.wow-pal.is-open{opacity:1}
+.wow-pal__box{width:min(640px,100%);background:#fff;border-radius:18px;box-shadow:0 40px 100px #060d18;overflow:hidden;transform:translateY(-8px);transition:transform .18s}
+.wow-pal.is-open .wow-pal__box{transform:none}
+.wow-pal input{width:100%;box-sizing:border-box;border:0;border-bottom:1px solid #e3ebf4;padding:20px 22px;font:inherit;font-size:18px;color:#0f1e33;outline:0}
+.wow-pal ul{list-style:none;margin:0;padding:8px;max-height:min(52vh,420px);overflow:auto}
+.wow-pal li a,.wow-pal li button{display:flex;width:100%;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px;border:0;background:none;border-radius:10px;font:inherit;font-size:16px;color:#0f1e33;text-decoration:none;text-align:left;cursor:pointer}
+.wow-pal li.is-on a,.wow-pal li.is-on button{background:#eaf2fa;color:#205686}
+.wow-pal small{color:#6a7b90;font-size:12.5px;white-space:nowrap}
+.wow-pal__foot{padding:10px 18px;border-top:1px solid #e3ebf4;font-size:12.5px;color:#6a7b90;display:flex;gap:16px}
+/* spotlight glow */
+.wow-spot{position:relative}
+.wow-spot::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .25s;background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(143,194,242,.22),transparent 60%)}
+.wow-spot:hover::after{opacity:1}
+/* back to top */
+.wow-top{position:fixed;right:18px;bottom:88px;z-index:90;width:46px;height:46px;border-radius:50%;border:0;background:#0f1e33;color:#fff;box-shadow:0 10px 26px rgba(6,13,24,.35);cursor:pointer;opacity:0;pointer-events:none;transform:translateY(10px);transition:opacity .25s,transform .25s}
+.wow-top.is-on{opacity:1;pointer-events:auto;transform:none}
+.wow-top:hover{background:#2a71af}
+.wow-toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);z-index:600;background:#0f1e33;color:#fff;padding:12px 20px;border-radius:999px;font-weight:600;font-size:14.5px;box-shadow:0 14px 34px rgba(6,13,24,.35)}
+@media(max-width:700px){.wow-k kbd{display:none}.wow-top{bottom:96px}}
+@media print{
+  .wow-prog,.wow-top,.wow-k,.pv-sticky,.vp,.vaf-hdr .pv-util,.vv__map,.vaf-visit .vv__btns,.q-footer-social,.q-btn,.q-btn-ghost,video,iframe{display:none!important}
+  body{background:#fff!important;color:#000!important}
+  .vaf-hdr{position:static!important}
+  .q-section{padding:18px 0!important;break-inside:avoid}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:.8em;color:#555}
+  .vaf-hdr::before{content:"Van Ausdall & Farrar  |  Indianapolis  |  (317) 634-2913  |  vanausdall.com";display:block;padding:8px 0 12px;border-bottom:2px solid #2a71af;font:700 12pt Arial,sans-serif;margin-bottom:12px}
+}
+@media(prefers-reduced-motion:reduce){.wow-prog,.wow-pal,.wow-pal__box,.wow-top,.wow-spot::after{transition:none}.wow-open.is-open i{animation:none}@view-transition{navigation:none}}

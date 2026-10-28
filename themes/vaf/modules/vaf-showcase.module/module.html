@@ -1,0 +1,32 @@
+{% set n = module.items|length %}
+<section class="q-section vaf-sc{% if module.alt_bg %} q-bg-alt{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %} data-vaf-sc>
+  <div class="q-container vaf-sc__wrap">
+    <aside class="vaf-sc__rail">
+      <div class="vaf-sc__rail-in">
+        {% if module.eyebrow %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+        <h2 class="q-h2">{{ module.heading }}</h2>
+        {% if module.intro %}<p class="q-lead">{{ module.intro }}</p>{% endif %}
+        <ol class="vaf-sc__nav" aria-label="Services">
+          {% for it in module.items %}<li><a href="#{{ module.anchor or 'services' }}-{{ loop.index }}" data-i="{{ loop.index0 }}"><b>{{ '%02d'|format(loop.index) }}</b><span>{{ it.sv_title }}</span></a></li>{% endfor %}
+        </ol>
+        <div class="vaf-sc__prog" aria-hidden="true"><i></i></div>
+      </div>
+    </aside>
+    <div class="vaf-sc__list">
+      {% for it in module.items %}
+      <article class="vaf-sc__panel" id="{{ module.anchor or 'services' }}-{{ loop.index }}" data-i="{{ loop.index0 }}">
+        <div class="vaf-sc__media">{% if it.sv_image.src %}<img src="{{ it.sv_image.src }}" alt="{{ it.sv_image.alt or it.sv_title }}" loading="lazy" decoding="async">{% endif %}</div>
+        <div class="vaf-sc__shade" aria-hidden="true"></div>
+        {% if it.sv_stat %}<div class="vaf-sc__stat"><b>{{ it.sv_stat }}</b><span>{{ it.sv_stat_label }}</span></div>{% endif %}
+        <div class="vaf-sc__body">
+          <div class="vaf-sc__top"><span class="vaf-sc__num">{{ '%02d'|format(loop.index) }}</span>{% if it.sv_tag %}<span class="vaf-sc__tag">{{ it.sv_tag }}</span>{% endif %}</div>
+          <h3>{{ it.sv_title }}</h3>
+          {% if it.sv_copy %}<p>{{ it.sv_copy }}</p>{% endif %}
+          {% if it.sv_bullets %}<ul class="vaf-sc__chips">{% for b in it.sv_bullets|split("|") %}{% if b|trim %}<li>{{ b|trim }}</li>{% endif %}{% endfor %}</ul>{% endif %}
+          <a class="vaf-sc__go" href="{{ it.sv_link.url.href }}"{% if it.sv_link.open_in_new_tab %} target="_blank" rel="noopener"{% endif %}>{{ module.link_label }}<svg viewBox="0 0 24 24" width="18" height="18" focusable="false" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

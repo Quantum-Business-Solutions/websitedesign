@@ -1,0 +1,42 @@
+/* VAF Service Showcase: a sticky list on the left, big image panels on the right that come into focus as you scroll */
+.vaf-sc{--sc-navy:#0f1e33;--sc-blue:#2a71af;--sc-sky:#8fc2f2}
+.vaf-sc__wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.35fr);gap:clamp(32px,5vw,72px);align-items:start}
+.vaf-sc__rail{align-self:stretch}
+.vaf-sc__rail-in{position:sticky;top:120px}
+.vaf-sc__rail .q-h2{margin-top:18px}
+.vaf-sc__rail .q-lead{margin-top:14px}
+.vaf-sc__nav{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:4px;border-left:2px solid color-mix(in srgb,var(--sc-navy) 12%,transparent)}
+.vaf-sc__nav a{display:flex;gap:14px;align-items:baseline;padding:11px 0 11px 18px;margin-left:-2px;border-left:2px solid transparent;text-decoration:none;color:color-mix(in srgb,var(--sc-navy) 62%,transparent);font-weight:600;font-size:17px;transition:color .25s,border-color .25s,transform .25s}
+.vaf-sc__nav b{font-size:13px;letter-spacing:.06em;color:color-mix(in srgb,var(--sc-navy) 42%,transparent);transition:color .25s}
+.vaf-sc__nav a:hover{color:var(--sc-navy)}
+.vaf-sc__nav a.is-on{color:var(--sc-navy);border-left-color:var(--sc-blue);transform:translateX(4px)}
+.vaf-sc__nav a.is-on b{color:var(--sc-blue)}
+.vaf-sc__prog{height:4px;border-radius:4px;background:color-mix(in srgb,var(--sc-navy) 10%,transparent);margin-top:26px;overflow:hidden}
+.vaf-sc__prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--sc-blue),var(--sc-sky));border-radius:4px;transition:width .35s}
+.vaf-sc__list{display:grid;gap:28px}
+.vaf-sc__panel{position:relative;min-height:540px;border-radius:26px;overflow:hidden;background:var(--sc-navy);color:#fff;isolation:isolate;box-shadow:0 30px 70px color-mix(in srgb,var(--sc-navy) 22%,transparent);display:flex;align-items:flex-end;scroll-margin-top:110px;transition:transform .6s cubic-bezier(.2,.7,.2,1),box-shadow .6s}
+.vaf-sc__media{position:absolute;inset:0;z-index:-2}
+.vaf-sc__media img{width:100%;height:100%;object-fit:cover;transform:scale(1.12);transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
+.vaf-sc__panel.is-on .vaf-sc__media img{transform:scale(1)}
+.vaf-sc__shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(15,30,51,.05) 0%,rgba(15,30,51,.45) 45%,rgba(10,22,38,.94) 100%)}
+.vaf-sc__stat{position:absolute;top:22px;right:22px;padding:14px 18px;border-radius:16px;background:rgba(255,255,255,.94);color:var(--sc-navy);text-align:right;box-shadow:0 14px 34px rgba(6,13,24,.25)}
+.vaf-sc__stat b{display:block;font-size:28px;line-height:1;color:var(--sc-blue);letter-spacing:-.02em}
+.vaf-sc__stat span{display:block;margin-top:6px;font-size:12.5px;line-height:1.3;font-weight:600;color:#42546b;max-width:170px}
+.vaf-sc__body{padding:clamp(24px,3.2vw,40px);width:100%}
+.vaf-sc__top{display:flex;gap:12px;align-items:center;margin-bottom:12px}
+.vaf-sc__num{font-size:15px;font-weight:800;letter-spacing:.08em;color:var(--sc-sky)}
+.vaf-sc__tag{padding:5px 12px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);font-size:12.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+.vaf-sc__body h3{margin:0 0 10px;font-size:clamp(28px,3vw,40px);line-height:1.08;color:#fff;text-wrap:balance}
+.vaf-sc__body p{margin:0 0 16px;max-width:56ch;font-size:17px;line-height:1.55;color:#dbe7f3}
+.vaf-sc__chips{list-style:none;margin:0 0 20px;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.vaf-sc__chips li{padding:7px 13px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);font-size:13.5px;font-weight:600}
+.vaf-sc__go{display:inline-flex;align-items:center;gap:10px;padding:13px 22px;border-radius:999px;background:#fff;color:var(--sc-navy);font-weight:700;font-size:15.5px;text-decoration:none;transition:gap .2s,background .2s}
+.vaf-sc__go:hover{gap:16px;background:var(--sc-sky)}
+@media(max-width:1000px){
+  .vaf-sc__wrap{grid-template-columns:1fr}
+  .vaf-sc__rail-in{position:static}
+  .vaf-sc__nav,.vaf-sc__prog{display:none}
+  .vaf-sc__panel{min-height:460px}
+}
+@media(max-width:560px){.vaf-sc__stat{position:static;margin:20px 20px 0;align-self:flex-start;text-align:left}.vaf-sc__panel{flex-direction:column;justify-content:flex-end;align-items:stretch}.vaf-sc__body{padding-top:90px}}
+@media(prefers-reduced-motion:reduce){.vaf-sc *{transition:none!important}.vaf-sc__media img{transform:none}}

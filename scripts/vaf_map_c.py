@@ -83,6 +83,14 @@ def related(s):
                             for tag, t, d, h, img in s.get("items", [])]})
 
 
+def showcase(s):
+    """Sticky-scroll service panels. Items: dicts with tag, title, copy, bullets (list), stat, stat_label, href, image."""
+    return clean({**_common(s), "eyebrow": s.get("eyebrow", ""), "heading": s.get("heading", ""), "intro": s.get("intro", ""), "link_label": s.get("link_label", "Explore the service"),
+                  "items": [{"sv_tag": i.get("tag", ""), "sv_title": i["title"], "sv_copy": i.get("copy", ""), "sv_bullets": " | ".join(i.get("bullets", [])),
+                             "sv_stat": i.get("stat", ""), "sv_stat_label": i.get("stat_label", ""), "sv_link": _lnk(i.get("href", "")), "sv_image": image(i.get("image", ""), i.get("alt", ""), 1200, 800)}
+                            for i in s.get("items", [])]})
+
+
 def locations(s):
     return clean({**_common(s), "heading": s.get("heading", ""), "intro": s.get("intro", ""), "detailed": bool(s.get("detailed")),
                   "items": [{"loc_name": n, "loc_line1": a1, "loc_line2": a2, "loc_phone": ph, "loc_link": _lnk(h)}
@@ -114,6 +122,7 @@ def testimonials(s):
 
 
 REGISTRY = {
+    "showcase": ("vaf-showcase", showcase),
     "detail": ("vaf-detail", detail),
     "cards": ("vaf-cards", cards),
     "services": ("vaf-services", services),

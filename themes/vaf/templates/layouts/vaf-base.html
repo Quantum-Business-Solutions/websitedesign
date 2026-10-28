@@ -17,8 +17,10 @@
   {{ require_css(get_asset_url('../../css/vaf-polish.css')) }}
   {{ require_css(get_asset_url('../../css/vaf-visit.css')) }}
   {{ require_css(get_asset_url('../../css/vaf-popup.css')) }}
+  {{ require_css(get_asset_url('../../css/vaf-wow.css')) }}
   {{ require_js(get_asset_url('../../js/vaf.js'), 'footer') }}
   {{ require_js(get_asset_url('../../js/vaf-popup.js'), 'footer') }}
+  {{ require_js(get_asset_url('../../js/vaf-wow.js'), 'footer') }}
   {% if 'technology-strength-assessment' in request.path %}
   {{ require_css(get_asset_url('../../css/vaf-assess.css')) }}
   {{ require_js(get_asset_url('../../js/vaf-assess.js'), 'footer') }}
