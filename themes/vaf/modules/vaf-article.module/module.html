@@ -1,0 +1,51 @@
+<div class="vf-art__progress" aria-hidden="true"><i data-vf-prog></i></div>
+<section class="q-section vf-art vf-art--head"{% if module.anchor %} id="{{ module.anchor }}"{% endif %}>
+  <div class="q-container">
+    <nav class="pv-bc vf-art__bc" aria-label="Breadcrumb">
+      <a href="/">{{ module.home_label }}</a><span aria-hidden="true">/</span><a href="{{ module.crumb_link.url.href }}">{{ module.crumb_label }}</a><span aria-hidden="true">/</span><span aria-current="page" class="vf-art__crumbnow">{{ module.category }}</span>
+    </nav>
+    <header class="vf-art__head">
+      <div class="q-eyebrow vf-art__eyebrow">{{ module.category }}</div>
+      <h1 class="q-h1 vf-art__h1">{{ module.heading }}</h1>
+      {% if module.standfirst %}<p class="q-lead vf-art__stand">{{ module.standfirst }}</p>{% endif %}
+      <p class="vf-art__meta"><span><b>{{ module.author_name }}</b></span>{% if module.date_label %}<span>{{ module.date_label }}</span>{% endif %}{% if module.read_time %}<span>{{ module.read_time }}</span>{% endif %}</p>
+    </header>
+    {% if module.hero_image.src %}
+    <div class="vf-art__hero"><img src="{{ module.hero_image.src }}" alt="{{ module.hero_image.alt }}" width="1200" height="675" fetchpriority="high" decoding="async"></div>
+    {% endif %}
+  </div>
+</section>
+<section class="q-section vf-art vf-art--body" data-vf-art>
+  <div class="q-container vf-art__layout">
+    <nav class="vf-art__toc" aria-label="{{ module.toc_title }}">
+      <details class="vf-art__tocd" open>
+        <summary class="vf-art__toctitle">{{ module.toc_title }}</summary>
+        <ol class="vf-art__toclist">
+          {% for ch in module.chapters %}<li><a href="#{{ ch.chapter_anchor }}">{{ ch.chapter_title }}</a></li>{% endfor %}
+        </ol>
+      </details>
+    </nav>
+    <article class="vf-art__prose">
+      {% for ch in module.chapters %}
+      <section class="vf-art__chapter" aria-labelledby="{{ ch.chapter_anchor }}">
+        <h2 id="{{ ch.chapter_anchor }}">{{ ch.chapter_title }}</h2>
+        {{ ch.chapter_html }}
+      </section>
+      {% endfor %}
+      {% if module.cta_heading %}
+      <aside class="vf-art__cta">
+        <h2>{{ module.cta_heading }}</h2>
+        {% if module.cta_copy %}<p>{{ module.cta_copy }}</p>{% endif %}
+        {% if module.cta_label %}<a class="q-btn" href="{{ module.cta_link.url.href }}">{{ module.cta_label }}</a>{% endif %}
+      </aside>
+      {% endif %}
+      <footer class="vf-art__author">
+        <span class="vf-art__av" aria-hidden="true">{{ module.author_initials }}</span>
+        <p><b>{{ module.author_name }}</b>{{ module.author_role }}</p>
+      </footer>
+    </article>
+  </div>
+</section>
+{% if module.schema %}
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"{{ module.heading|striptags|escapejson }}","description":"{{ module.standfirst|striptags|escapejson }}","articleSection":"{{ module.category|striptags|escapejson }}","image":"{{ module.hero_image.src|escapejson }}","author":{"@type":"Organization","name":"{{ module.author_name|striptags|escapejson }}"},"mainEntityOfPage":"{{ content.absolute_url|escapejson }}"}</script>
+{% endif %}

@@ -1,0 +1,33 @@
+/* VAF Locations: office cards. A single office becomes a wide horizontal card. */
+.vaf-locations{--vl-surface:var(--bg-alt);--vl-gap:24px}
+.vaf-locations.q-bg-alt{--vl-surface:#fff}
+.vl__head{margin-bottom:48px}
+.vl__head .q-h2{font-size:clamp(30px,3.6vw,48px);line-height:1.1}
+.vl__head p{font-size:17px}
+.vl__grid{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--vl-gap)}
+.vl__card{display:flex;flex-direction:column;gap:20px;flex:0 0 calc((100% - (var(--cols,3) - 1) * var(--vl-gap)) / var(--cols,3) - .02px);min-width:0;box-sizing:border-box;padding:32px 30px 28px;background:var(--vl-surface);border:1px solid color-mix(in srgb,var(--accent-ink) 13%,transparent);border-radius:var(--radius);box-shadow:0 1px 2px rgba(15,30,51,.04),0 16px 36px -22px rgba(15,30,51,.28)}
+.vl__pin{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:color-mix(in srgb,var(--accent-ink) 12%,#fff);color:var(--accent-ink)}
+.vl__main{flex:1}
+.vl__name{margin:0 0 8px;font-size:22px;line-height:1.2;font-weight:700;letter-spacing:-.01em;color:var(--fg)}
+.vl__addr{margin:0;display:flex;flex-direction:column;gap:2px;font-size:16px;line-height:1.55;color:var(--fg-muted)}
+.vl__call{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;min-height:44px;padding:0 20px 0 16px;border-radius:999px;border:1px solid color-mix(in srgb,var(--accent-ink) 35%,transparent);color:var(--accent-ink);font-size:16px;font-weight:700;text-decoration:none;transition:background .2s ease,color .2s ease,border-color .2s ease}
+.vl__call:hover{background:var(--accent-ink);border-color:var(--accent-ink);color:#fff}
+.vl__call:focus-visible{outline:3px solid var(--accent-ink);outline-offset:3px}
+.vl__sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.vl__grid--detailed .vl__card{padding:38px 34px 34px}
+.vl__grid--detailed .vl__name{font-size:26px}
+.vl__grid--detailed .vl__addr{font-size:17px}
+.vl__grid--detailed .vl__call{background:var(--accent-ink);border-color:var(--accent-ink);color:#fff}
+.vl__grid--detailed .vl__call:hover{background:var(--navy,#0f1e33);border-color:var(--navy,#0f1e33)}
+.vl__grid--one .vl__card{flex:0 1 860px;flex-direction:row;align-items:center;gap:28px;padding:30px 34px}
+.vl__grid--one .vl__call{margin-left:auto;align-self:center}
+@media(max-width:1024px){
+  .vl__card{flex-basis:calc((100% - (var(--cols-t,2) - 1) * var(--vl-gap)) / var(--cols-t,2) - .02px)}
+  .vl__grid--one .vl__card{flex-basis:100%}
+}
+@media(max-width:767px){
+  .vl__head{margin-bottom:32px}
+  .vl__card{flex-basis:100%;padding:28px 22px 24px}
+  .vl__grid--one .vl__card{flex-direction:column;align-items:flex-start;gap:20px;padding:28px 22px 24px}
+  .vl__grid--one .vl__call{margin-left:0;align-self:flex-start}
+}

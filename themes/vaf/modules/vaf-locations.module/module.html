@@ -1,0 +1,27 @@
+{% set n = module.items|length %}
+{% set cols = 3 %}
+{% if n <= 3 %}{% set cols = n %}{% elif n % 3 == 0 %}{% set cols = 3 %}{% elif n % 4 == 0 %}{% set cols = 4 %}{% elif n % 3 == 2 %}{% set cols = 3 %}{% elif n % 4 == 3 or n % 4 == 2 %}{% set cols = 4 %}{% else %}{% set cols = 5 %}{% endif %}
+{% if cols < 1 %}{% set cols = 1 %}{% endif %}
+{% set tcols = 2 %}
+{% if n <= 2 %}{% set tcols = n %}{% elif n % 2 == 0 %}{% set tcols = 2 %}{% elif n % 3 == 0 or n % 3 == 2 %}{% set tcols = 3 %}{% endif %}
+{% if tcols < 1 %}{% set tcols = 1 %}{% endif %}
+<section class="q-section vaf-locations{% if module.alt_bg %} q-bg-alt{% endif %}{% if module.padding == 'none' %} q-pad-none{% elif module.padding == 'large' %} q-pad-large{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %}>
+  <div class="q-container">
+    <div class="pv-split vl__head">
+      <h2 class="q-h2">{{ module.heading }}</h2>
+      {% if module.intro %}<p>{{ module.intro }}</p>{% endif %}
+    </div>
+    <div class="vl__grid{% if n == 1 %} vl__grid--one{% endif %}{% if module.detailed %} vl__grid--detailed{% endif %}" style="--cols:{{ cols }};--cols-t:{{ tcols }}">
+      {% for it in module.items %}
+      <article class="vl__card">
+        <span class="vl__pin" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" focusable="false" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span>
+        <div class="vl__main">
+          <h3 class="vl__name">{{ it.loc_name }}</h3>
+          <p class="vl__addr">{% if it.loc_line1 %}<span>{{ it.loc_line1 }}</span>{% endif %}{% if it.loc_line2 %}<span>{{ it.loc_line2 }}</span>{% endif %}</p>
+        </div>
+        {% if it.loc_phone %}<a class="vl__call" href="{{ it.loc_link.url.href }}"{% if it.loc_link.open_in_new_tab %} target="_blank" rel="noopener"{% endif %}><svg viewBox="0 0 24 24" width="18" height="18" focusable="false" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span>{{ it.loc_phone }}</span><span class="vl__sr"> (call {{ it.loc_name }})</span></a>{% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
