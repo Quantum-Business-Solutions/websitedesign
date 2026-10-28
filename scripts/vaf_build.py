@@ -66,7 +66,9 @@ def schema_html(page):
 
 def crumbs_html(page):
     c = page.get("crumbs")
-    if not c:
+    if not c or any(x["type"] == "article" for x in page["sections"]):   # the article module draws its own breadcrumb
+        return ""
+    if False:
         return ""
     items = "".join(f'<li>{"<span aria-current=page>" + esc(l) + "</span>" if i == len(c) - 1 else f"<a href=" + chr(34) + href(h) + chr(34) + ">" + esc(l) + "</a>"}</li>'
                     for i, (l, h) in enumerate(c))
@@ -130,7 +132,7 @@ def cmd_pages(args):
             break
     for sl in slugs_from(args):
         pg = page_for(sl)
-        slug = sl or "home-preview"
+        slug = sl                       # the home page is the site root (empty slug)
         body = {"name": f"VAF | {pg['title'].split(' | ')[0]}"[:120], "slug": slug, "templatePath": f"{THEME}/{tpl_name(sl)}",
                 "htmlTitle": pg["title"], "metaDescription": pg.get("description", ""), "headHtml": NOINDEX, "language": "en"}
         cur = existing.get(slug)

@@ -1,0 +1,16 @@
+<section class="q-section vaf-3d{% if module.alt_bg %} q-bg-alt{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %} data-vaf-3d>
+  <div class="q-container vaf-3d__grid">
+    <div class="vaf-3d__text">
+      {% if module.eyebrow %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      {% if module.heading %}<h2 class="q-h2">{{ module.heading }}</h2>{% endif %}
+      {% if module.intro %}<p class="q-lead">{{ module.intro }}</p>{% endif %}
+      {% if module.cta_link.url.href and module.cta_label %}<p class="vaf-3d__cta"><a class="q-btn" href="{{ module.cta_link.url.href }}"{% if module.cta_link.open_in_new_tab %} target="_blank" rel="noopener"{% endif %}>{{ module.cta_label }}</a></p>{% endif %}
+    </div>
+    <div class="vaf-3d__stage">
+      <div class="vaf-3d__tilt">
+        {% if module.poster.src %}<img src="{{ module.poster.src }}" alt="{{ module.poster.alt|escape }}"{% if module.poster.width %} width="{{ module.poster.width }}"{% endif %}{% if module.poster.height %} height="{{ module.poster.height }}"{% endif %} loading="lazy" decoding="async" draggable="false">{% endif %}
+      </div>
+      {% if module.hint %}<div class="vaf-3d__hint" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16"><path d="M20 12a8 8 0 1 1-2.3-5.7M20 4v5h-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>{{ module.hint }}</div>{% endif %}
+    </div>
+  </div>
+</section>

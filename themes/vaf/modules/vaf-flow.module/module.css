@@ -26,6 +26,11 @@
 .vaf-flow__label{display:block;font:700 20px/1.25 var(--q-serif);color:var(--fg)}
 .vaf-flow__when{display:inline-block;margin-top:8px;padding:5px 11px;border-radius:999px;background:var(--vf-tint);color:var(--vf-deep);font-size:12px;line-height:1.2;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
 .vaf-flow__sum{display:block;margin-top:8px;font-size:15px;line-height:1.5;color:var(--fg-muted)}
+.vaf-flow__out{display:grid;gap:4px;margin-top:14px;padding-top:12px;border-top:1px dashed var(--vf-line);text-align:left}
+.vaf-flow__out-l{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--vf-deep)}
+.vaf-flow__out-v{font-size:14.5px;line-height:1.45;font-weight:600;color:var(--fg)}
+.vaf-flow__loop{display:none}
+.vaf-flow__loopnote{margin:22px 0 0 64px;padding:12px 16px;border:1px dashed var(--vf-blue);border-radius:12px;font-size:14px;font-weight:600;color:var(--vf-deep)}
 .vaf-flow__detail{position:relative;margin-top:16px;padding:24px 22px 18px;border:1px solid var(--border);border-radius:18px;background:var(--bg,#fff);box-shadow:0 14px 34px rgba(15,30,51,.08);display:grid;gap:20px}
 .vaf-flow__detail[hidden]{display:none}
 .vaf-flow.is-js .vaf-flow__detail:not([hidden]){animation:vafFlowIn .5s var(--vf-ease)}
@@ -51,7 +56,15 @@
 @media (min-width:900px){
   .vaf-flow.is-js{--w:calc((100% - (var(--n) - 1) * var(--g)) / var(--n))}
   .vaf-flow.is-js .vaf-flow__chart{margin-top:60px}
-  .vaf-flow.is-js .vaf-flow__rail{display:block;position:absolute;left:0;right:0;top:27px;height:2px;pointer-events:none;z-index:0}
+  .vaf-flow.has-loop.is-js{--pt:58px}
+  .vaf-flow.has-loop.is-js .vaf-flow__chart{padding-top:var(--pt)}
+  .vaf-flow.is-js .vaf-flow__loopnote{display:none}
+  .vaf-flow.has-loop.is-js .vaf-flow__loop{display:block;position:absolute;left:calc(var(--w) / 2);right:calc(var(--w) / 2);top:12px;height:calc(var(--pt) - 18px);border:2px dashed var(--vf-blue);border-bottom:0;border-radius:26px 26px 0 0;pointer-events:none;opacity:0;transition:opacity .8s ease 1.4s}
+  .vaf-flow.has-loop.is-in .vaf-flow__loop{opacity:1}
+  .vaf-flow__loop::after{content:"";position:absolute;left:-7px;bottom:-4px;border:6px solid transparent;border-top:9px solid var(--vf-blue);border-bottom:0}
+  .vaf-flow__loop span{position:absolute;left:50%;top:-11px;transform:translateX(-50%);padding:0 14px;background:var(--bg,#fff);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;color:var(--vf-deep)}
+  .vaf-flow.q-bg-alt .vaf-flow__loop span{background:var(--bg-alt,#eef4fa)}
+  .vaf-flow.is-js .vaf-flow__rail{display:block;position:absolute;left:0;right:0;top:calc(27px + var(--pt,0px));height:2px;pointer-events:none;z-index:0}
   .vaf-flow__line,.vaf-flow__fill{position:absolute;left:calc(var(--w) / 2);right:calc(var(--w) / 2);top:0;height:2px;border-radius:2px;transform-origin:left}
   .vaf-flow__line{background:repeating-linear-gradient(90deg,var(--vf-line) 0 8px,transparent 8px 14px);transform:scaleX(0);transition:transform 1.5s var(--vf-ease)}
   .vaf-flow.is-in .vaf-flow__line{transform:scaleX(1)}
@@ -72,6 +85,9 @@
   .vaf-flow.is-js .is-active .vaf-flow__btn{background:var(--bg,#fff);border-color:var(--vf-blue);box-shadow:0 14px 30px rgba(42,113,175,.16)}
   .vaf-flow.is-js .vaf-flow__label{font-size:19px}
   .vaf-flow.is-js .vaf-flow__sum{font-size:14.5px}
+  .vaf-flow.is-js .vaf-flow__btn{display:flex;flex-direction:column;align-items:center}
+  .vaf-flow.is-js .vaf-flow__out{margin-top:auto;width:100%;padding-top:12px}
+  .vaf-flow.is-js .vaf-flow__sum{margin-bottom:14px}
   .vaf-flow.is-js .vaf-flow__detail{grid-row:3;grid-column:1 / -1;margin-top:26px;padding:36px 40px 22px;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:24px 48px;align-items:start;border-radius:22px;box-shadow:0 24px 60px rgba(15,30,51,.1)}
   .vaf-flow.is-js .vaf-flow__detail::before{content:"";position:absolute;top:-1px;left:calc((var(--act) - 1) * (var(--w) + var(--g)) + var(--w) / 2);width:22px;height:22px;background:var(--bg,#fff);border:solid var(--border);border-width:1px 0 0 1px;transform:translate(-50%,-50%) rotate(45deg);transition:left .5s var(--vf-ease)}
     .vaf-flow.is-js .vaf-flow__main h3{font-size:26px}

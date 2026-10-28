@@ -1,0 +1,274 @@
+[
+  {
+    "id": "anchor",
+    "name": "anchor",
+    "label": "Anchor id (lets links jump here, e.g. story)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "fleet"
+  },
+  {
+    "id": "alt_bg",
+    "name": "alt_bg",
+    "label": "Alternate (tinted) background",
+    "required": false,
+    "locked": false,
+    "display": "checkbox",
+    "type": "boolean",
+    "display_width": null,
+    "default": false
+  },
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "The fleet, at a glance"
+  },
+  {
+    "id": "intro",
+    "name": "intro",
+    "label": "Intro",
+    "required": false,
+    "locked": false,
+    "allow_new_line": true,
+    "type": "text",
+    "display_width": null,
+    "default": "Every device family VAF sells and services. Generated product renders for the preview; Canon, Ricoh, Kyocera and HP models replace them."
+  },
+  {
+    "id": "prev_label",
+    "name": "prev_label",
+    "label": "Previous button text (screen readers)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Previous devices"
+  },
+  {
+    "id": "next_label",
+    "name": "next_label",
+    "label": "Next button text (screen readers)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Next devices"
+  },
+  {
+    "id": "devices",
+    "name": "devices",
+    "label": "Device families",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 2,
+      "max": 10,
+      "sorting_label_field": null,
+      "default": 4
+    },
+    "children": [
+      {
+        "id": "dev_title",
+        "name": "dev_title",
+        "label": "Device family",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "Multifunction copiers"
+      },
+      {
+        "id": "dev_band",
+        "name": "dev_band",
+        "label": "Size or use",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "Workgroup to department"
+      },
+      {
+        "id": "dev_brands",
+        "name": "dev_brands",
+        "label": "Brands (logos or names)",
+        "required": false,
+        "locked": false,
+        "type": "richtext",
+        "display_width": null,
+        "default": "<p></p>"
+      },
+      {
+        "id": "dev_image",
+        "name": "dev_image",
+        "label": "Product image",
+        "required": false,
+        "locked": false,
+        "responsive": true,
+        "resizable": true,
+        "show_loading": true,
+        "type": "image",
+        "display_width": null,
+        "default": {
+          "src": "",
+          "alt": "",
+          "loading": "lazy"
+        }
+      },
+      {
+        "id": "dev_bullets",
+        "name": "dev_bullets",
+        "label": "Bulleted list",
+        "required": false,
+        "locked": false,
+        "type": "richtext",
+        "display_width": null,
+        "default": "<ul><li></li></ul>"
+      },
+      {
+        "id": "dev_link",
+        "name": "dev_link",
+        "label": "Link",
+        "required": false,
+        "locked": false,
+        "supported_types": [
+          "EXTERNAL",
+          "CONTENT",
+          "FILE",
+          "EMAIL_ADDRESS",
+          "BLOG"
+        ],
+        "type": "link",
+        "display_width": null,
+        "default": {
+          "url": {
+            "content_id": null,
+            "href": "",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "id": "dev_link_label",
+        "name": "dev_link_label",
+        "label": "Link text",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "See the product"
+      }
+    ],
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "dev_title": "Multifunction copiers",
+        "dev_band": "Workgroup to department",
+        "dev_brands": "<p><img src=\"https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/partners/canon.png\" alt=\"Canon\" height=\"22\"> <img src=\"https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/partners/ricoh.jpg\" alt=\"Ricoh\" height=\"22\"> <img src=\"https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/partners/kyocera.png\" alt=\"Kyocera\" height=\"22\"> <img src=\"https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/partners/hp.png\" alt=\"HP\" height=\"22\"></p>",
+        "dev_image": {
+          "src": "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/assets/fleet/mfp.png",
+          "alt": "Multifunction copiers",
+          "loading": "lazy",
+          "width": 600,
+          "height": 600
+        },
+        "dev_bullets": "<ul><li>Print, scan, copy, fax</li><li>Secure release and scan to OnBase</li></ul>",
+        "dev_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/services/copiers"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "dev_link_label": "Copiers and printers"
+      },
+      {
+        "dev_title": "Desktop printers",
+        "dev_band": "Desk and small team",
+        "dev_brands": "<p><img src=\"https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/partners/hp.png\" alt=\"HP\" height=\"22\"> <img src=\"https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/partners/brother.png\" alt=\"Brother\" height=\"22\"> <img src=\"https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/partners/kyocera.png\" alt=\"Kyocera\" height=\"22\"></p>",
+        "dev_image": {
+          "src": "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/assets/fleet/printer.png",
+          "alt": "Desktop printers",
+          "loading": "lazy",
+          "width": 600,
+          "height": 600
+        },
+        "dev_bullets": "<ul><li>Color and mono</li><li>Folded into managed print</li></ul>",
+        "dev_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/services/managed-print"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "dev_link_label": "Managed print"
+      },
+      {
+        "dev_title": "Wide format",
+        "dev_band": "Plans, posters, signage",
+        "dev_brands": "<p><img src=\"https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/partners/canon.png\" alt=\"Canon\" height=\"22\"> <img src=\"https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/partners/hp.png\" alt=\"HP\" height=\"22\"></p>",
+        "dev_image": {
+          "src": "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/assets/fleet/wide-format.png",
+          "alt": "Wide format",
+          "loading": "lazy",
+          "width": 600,
+          "height": 600
+        },
+        "dev_bullets": "<ul><li>Plan sets in house</li><li>Engineering and construction</li></ul>",
+        "dev_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/industries/engineering-construction"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "dev_link_label": "Engineering and construction"
+      },
+      {
+        "dev_title": "Production print",
+        "dev_band": "High volume, inline finishing",
+        "dev_brands": "<p><span>EFI Fiery</span> <span>Skyline web-to-print</span></p>",
+        "dev_image": {
+          "src": "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/assets/fleet/production.png",
+          "alt": "Production print",
+          "loading": "lazy",
+          "width": 600,
+          "height": 600
+        },
+        "dev_bullets": "<ul><li>Variable data</li><li>Color management from profile to press</li></ul>",
+        "dev_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/services/production-print"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "dev_link_label": "Production print"
+      }
+    ]
+  }
+]

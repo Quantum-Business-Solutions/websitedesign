@@ -13,6 +13,7 @@ const { chromium } = require('playwright');
       pg.on('response', r => { if (r.status()>=400) fails.push(r.status()+' '+r.url().slice(0,100)); });
       pg.on('console', m => { if (m.type()==='error') cons.push(m.text().slice(0,120)); });
       await pg.goto(base+p, { waitUntil: 'networkidle', timeout: 60000 }).catch(()=>{});
+      await pg.evaluate(async()=>{for(let y=0;y<document.documentElement.scrollHeight;y+=600){window.scrollTo(0,y);await new Promise(r=>setTimeout(r,60))}window.scrollTo(0,0)});
       await pg.waitForTimeout(1200);
       const info = await pg.evaluate(() => {
         const imgs=[...document.images]; 

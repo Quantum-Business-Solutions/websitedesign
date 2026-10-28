@@ -55,28 +55,6 @@
     "default": ""
   },
   {
-    "id": "prev_label",
-    "name": "prev_label",
-    "label": "Earlier button text (screen readers)",
-    "required": false,
-    "locked": false,
-    "allow_new_line": false,
-    "type": "text",
-    "display_width": null,
-    "default": "Earlier"
-  },
-  {
-    "id": "next_label",
-    "name": "next_label",
-    "label": "Later button text (screen readers)",
-    "required": false,
-    "locked": false,
-    "allow_new_line": false,
-    "type": "text",
-    "display_width": null,
-    "default": "Later"
-  },
-  {
     "id": "entries",
     "name": "entries",
     "label": "Milestones",

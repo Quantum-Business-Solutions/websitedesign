@@ -24,6 +24,10 @@ def _put(out, k, v):
 def hero(s):
     layered = s["type"] == "hero-layered"
     out = {"layout": "layered" if layered else s.get("layout", "centered")}
+    if layered:   # looping background footage (generated, see brands/vanausdall.md) with its poster as first paint
+        out["bg_video"] = A("video/hero-loop")
+        out["poster"] = image("assets/hero-poster", "")
+        out["image"] = image("assets/hero-poster", "")
     _put(out, "anchor", s.get("id"))
     for k in ("eyebrow", "heading", "subhead", "note"):
         v = s.get(k)

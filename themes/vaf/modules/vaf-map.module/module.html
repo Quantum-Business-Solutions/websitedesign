@@ -1,0 +1,36 @@
+{% set offices = module.offices %}
+<section class="q-section vaf-map{% if module.alt_bg %} q-bg-alt{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %} data-vaf-map>
+  <div class="q-container">
+    <div class="vaf-map__head">
+      {% if module.heading %}<h2 class="q-h2">{{ module.heading }}</h2>{% endif %}
+      {% if module.intro %}<p class="q-lead">{{ module.intro }}</p>{% endif %}
+    </div>
+    <div class="vaf-map__wrap">
+      <div class="vaf-map__fig">
+        <svg class="vaf-map__svg" viewBox="0 0 289 438" role="img" aria-label="{{ module.map_alt|escape }}">
+          <defs><linearGradient id="vafMapLand-{{ name }}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4f8fc"/><stop offset="1" stop-color="#dce9f6"/></linearGradient></defs>
+          <path class="vaf-map__land" d="M58.4,25.0 L59.2,66.0 L58.4,147.0 L58.4,261.0 L53.0,286.0 L54.6,309.0 L60.7,322.0 L49.2,339.0 L41.5,354.0 L27.7,370.0 L20.0,416.0 L30.0,404.0 L51.5,406.0 L68.4,402.0 L89.1,418.0 L114.5,397.0 L136.0,404.0 L150.6,377.0 L170.6,400.0 L183.6,394.0 L202.9,363.0 L220.5,323.0 L237.4,327.0 L268.9,317.0 L267.4,286.0 L266.6,196.0 L268.2,96.0 L267.4,26.0 L214.4,20.0 L137.5,20.0 L58.4,25.0 Z" pathLength="1" fill="url(#vafMapLand-{{ name }})"/>
+          {% for o in offices %}
+          {% set px = ((o.office_lon + 88.1) * 76.8284 + 14.622)|round(1) %}
+          {% set py = ((41.85 - o.office_lat) * 100 + 11)|round(1) %}
+          <a class="vaf-map__pin{% if o.office_hq %} is-hq{% endif %}" data-i="{{ loop.index0 }}" href="{{ o.office_link.url.href }}" aria-label="{{ o.office_name|escape }}" style="--d:{{ loop.index0 }}">
+            <circle class="ring" cx="{{ px }}" cy="{{ py }}" r="{{ module.ring }}"/>
+            <circle class="halo" cx="{{ px }}" cy="{{ py }}" r="11"/>
+            <circle class="dot" cx="{{ px }}" cy="{{ py }}" r="6"/>
+            <text x="{{ px + o.label_dx }}" y="{{ py + o.label_dy }}">{{ o.office_name }}</text>
+          </a>
+          {% endfor %}
+        </svg>
+      </div>
+      <ul class="vaf-map__list">
+        {% for o in offices %}
+        <li class="vaf-map__row{% if o.office_hq %} is-hq{% endif %}" data-i="{{ loop.index0 }}">
+          <span class="vaf-map__mark" aria-hidden="true"></span>
+          <div class="vaf-map__txt"><b>{{ o.office_name }}</b><small>{{ o.office_sub }}</small></div>
+          {% if o.office_link.url.href %}<a class="vaf-map__go" href="{{ o.office_link.url.href }}">{{ module.link_label }}<span class="vaf-map__sr"> {{ o.office_name }}</span></a>{% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>

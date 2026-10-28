@@ -1,0 +1,47 @@
+/* VAF Indiana office map: outline drawn on scroll, pins that drop in, rows that light their pin. */
+.vaf-map{--vf-blue:var(--q-gold,#2a71af);--vf-deep:var(--q-gold-bright,#205686);--vf-navy:var(--navy,#0f1e33);--vf-tint:#e7f0f9;--vf-ease:cubic-bezier(.2,.7,.2,1)}
+.vaf-map__head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px 56px;flex-wrap:wrap}
+.vaf-map__head .q-h2{max-width:620px}
+.vaf-map__head .q-lead{font-size:17px;line-height:1.65;max-width:480px;margin:0}
+.vaf-map__wrap{margin-top:48px;display:grid;gap:32px;align-items:center}
+.vaf-map__fig{max-width:420px;width:100%;margin:0 auto}
+.vaf-map__svg{display:block;width:100%;height:auto;overflow:visible}
+.vaf-map__land{stroke:var(--vf-navy);stroke-width:1.6;stroke-linejoin:round;filter:drop-shadow(0 18px 22px rgba(15,30,51,.16))}
+.vaf-map__pin{cursor:pointer;outline:0}
+.vaf-map__pin .ring{fill:rgba(42,113,175,.1);stroke:var(--vf-blue);stroke-width:1;stroke-dasharray:4 4}
+.vaf-map__pin .halo{fill:rgba(42,113,175,.22);transform-box:fill-box;transform-origin:center;transition:transform .4s var(--vf-ease),fill .3s}
+.vaf-map__pin .dot{fill:var(--vf-blue);stroke:#fff;stroke-width:2}
+.vaf-map__pin.is-hq .dot{fill:var(--vf-navy)}
+.vaf-map__pin.is-hq .halo{fill:rgba(15,30,51,.18)}
+.vaf-map__pin text{font:700 12.5px/1 var(--q-sans);fill:var(--vf-navy);paint-order:stroke;stroke:#fff;stroke-width:4px;stroke-linejoin:round}
+.vaf-map__pin:hover .halo,.vaf-map__pin.is-hot .halo,.vaf-map__pin:focus-visible .halo{transform:scale(1.6)}
+.vaf-map__pin:focus-visible .dot{stroke:var(--vf-deep);stroke-width:3}
+.vaf-map__list{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.vaf-map__row{display:grid;grid-template-columns:auto 1fr auto;gap:6px 16px;align-items:center;padding:18px 22px;border:1px solid var(--border);border-radius:16px;background:var(--bg,#fff);box-shadow:0 8px 22px rgba(15,30,51,.05);transition:border-color .3s var(--vf-ease),box-shadow .3s var(--vf-ease),transform .3s var(--vf-ease)}
+.vaf-map__row:hover,.vaf-map__row.is-hot{border-color:var(--vf-blue);box-shadow:0 18px 38px rgba(42,113,175,.16);transform:translateY(-2px)}
+.vaf-map__mark{width:14px;height:14px;border-radius:50%;background:var(--vf-blue);box-shadow:0 0 0 5px rgba(42,113,175,.2)}
+.vaf-map__row.is-hq .vaf-map__mark{background:var(--vf-navy);box-shadow:0 0 0 5px rgba(15,30,51,.16)}
+.vaf-map__txt b{display:block;font:700 19px/1.25 var(--q-serif);color:var(--fg)}
+.vaf-map__txt small{display:block;margin-top:3px;font-size:14.5px;color:var(--fg-muted)}
+.vaf-map__go{display:inline-flex;align-items:center;min-height:44px;padding:0 4px;font-weight:700;font-size:15px;color:var(--vf-deep);text-decoration:none;white-space:nowrap}
+.vaf-map__go::after{content:"";width:18px;height:2px;background:currentColor;margin-left:10px;transition:width .3s var(--vf-ease)}
+.vaf-map__go:hover::after{width:30px}
+.vaf-map__go:focus-visible{outline:3px solid var(--vf-blue);outline-offset:2px;border-radius:6px}
+.vaf-map__sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* draw-on-scroll, only when JS has armed it */
+.vaf-map.is-js .vaf-map__land{stroke-dasharray:1;stroke-dashoffset:1;fill-opacity:0;transition:stroke-dashoffset 2s var(--vf-ease),fill-opacity 1s ease .9s}
+.vaf-map.is-js.is-in .vaf-map__land{stroke-dashoffset:0;fill-opacity:1}
+.vaf-map.is-js .vaf-map__pin{opacity:0;transform:translateY(-14px);transition:opacity .5s ease calc(1s + var(--d) * .25s),transform .7s var(--vf-ease) calc(1s + var(--d) * .25s)}
+.vaf-map.is-js.is-in .vaf-map__pin{opacity:1;transform:none}
+.vaf-map.is-js.is-in .vaf-map__pin.is-hq .halo{animation:vafMapPulse 2.8s ease-out 2s infinite}
+@keyframes vafMapPulse{0%{transform:scale(1);opacity:.9}100%{transform:scale(2.4);opacity:0}}
+
+@media (min-width:900px){
+  .vaf-map__wrap{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:56px}
+}
+@media (max-width:560px){
+  .vaf-map__row{grid-template-columns:auto 1fr;padding:16px 18px}
+  .vaf-map__go{grid-column:2}
+}
+@media (prefers-reduced-motion:reduce){.vaf-map *{transition:none!important;animation:none!important}.vaf-map.is-js .vaf-map__land{stroke-dashoffset:0;fill-opacity:1}.vaf-map.is-js .vaf-map__pin{opacity:1;transform:none}}

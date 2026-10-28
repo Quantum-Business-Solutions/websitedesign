@@ -1,0 +1,30 @@
+{% set tabs = module.tabs %}
+<section class="q-section vaf-tabs{% if module.alt_bg %} q-bg-alt{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %} data-vaf-tabs>
+  <div class="q-container">
+    <div class="vaf-tabs__head">
+      {% if module.eyebrow %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      {% if module.heading %}<h2 class="q-h2">{{ module.heading }}</h2>{% endif %}
+      {% if module.intro %}<p class="q-lead">{{ module.intro }}</p>{% endif %}
+    </div>
+    <div class="vaf-tabs__grid">
+      <div class="vaf-tabs__listwrap">
+        <div class="vaf-tabs__list" role="tablist" aria-label="{{ module.heading|striptags|escape }}">
+          {% for t in tabs %}<button type="button" class="vaf-tabs__tab" role="tab" aria-selected="{{ 'true' if loop.first else 'false' }}" tabindex="{{ 0 if loop.first else -1 }}"><span>{{ t.tab_label }}</span></button>{% endfor %}
+        </div>
+      </div>
+      <div class="vaf-tabs__panels">
+        {% for t in tabs %}
+        <div class="vaf-tabs__panel{% if loop.first %} is-on{% endif %}" role="tabpanel" tabindex="0">
+          <div class="vaf-tabs__text">
+            <h3>{{ t.tab_title }}</h3>
+            <div class="vaf-tabs__copy">{{ t.tab_copy }}</div>
+            {% if t.tab_bullets %}<div class="vaf-tabs__bullets">{{ t.tab_bullets }}</div>{% endif %}
+            {% if t.tab_link.url.href %}<a class="vaf-tabs__go" href="{{ t.tab_link.url.href }}"{% if t.tab_link.open_in_new_tab %} target="_blank" rel="noopener"{% endif %}>{{ t.tab_link_label }}</a>{% endif %}
+          </div>
+          {% if t.tab_image.src %}<div class="vaf-tabs__img"><img src="{{ t.tab_image.src }}" alt="{{ t.tab_image.alt|escape }}" width="800" height="600" loading="lazy" decoding="async"></div>{% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

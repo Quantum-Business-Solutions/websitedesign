@@ -1,56 +1,44 @@
-/* VAF Timeline. 768px and up: a horizontal, scroll-snapping rail of milestones with a progress bar.
-   Below that: a vertical timeline. Without JS it still scrolls natively. */
-.vaf-tl{--vf-blue:var(--q-gold,#2a71af);--vf-deep:var(--q-gold-bright,#205686);--vf-navy:var(--navy,#0f1e33);--vf-line:#c3d8ec;--vf-tint:#e7f0f9;--vf-ease:cubic-bezier(.2,.7,.2,1)}
+/* VAF Timeline. Every milestone is visible at once: a balanced grid of dotted rails (up to four per row) on desktop,
+   two per row on tablets, a vertical timeline on phones. No scrolling and no JS. */
+.vaf-tl{--vf-blue:var(--q-gold,#2a71af);--vf-deep:var(--q-gold-bright,#205686);--vf-navy:var(--navy,#0f1e33);--vf-line:#c3d8ec;--vf-ease:cubic-bezier(.2,.7,.2,1);--gap:28px}
 .vaf-tl__head{text-align:center;display:flex;flex-direction:column;align-items:center}
 .vaf-tl__head .q-eyebrow{text-align:center}
 .vaf-tl__head .q-h2{margin-top:22px;max-width:820px}
 .vaf-tl__head .q-lead{max-width:640px;margin:16px auto 0}
-.vaf-tl__ctrl{display:none}
-.vaf-tl__bar{display:none}
-.vaf-tl__list{list-style:none;margin:40px 0 0;padding:0}
+.vaf-tl__list{list-style:none;margin:44px 0 0;padding:0}
 
-/* vertical (default, phones) */
+/* vertical (phones) */
 .vaf-tl__item{position:relative;padding:0 0 26px 40px}
 .vaf-tl__item:last-child{padding-bottom:0}
-.vaf-tl__item::before{content:"";position:absolute;left:8px;top:26px;bottom:-4px;width:2px;background:var(--vf-line)}
+.vaf-tl__item::before{content:"";position:absolute;left:8px;top:26px;bottom:-4px;width:2px;background:var(--vf-blue)}
 .vaf-tl__item:last-child::before{display:none}
 .vaf-tl__dot{position:absolute;left:0;top:8px;width:18px;height:18px;border-radius:50%;background:var(--vf-blue);border:4px solid var(--bg,#fff);box-shadow:0 0 0 2px var(--vf-blue)}
 .vaf-tl__year{display:block;font:800 34px/1.1 var(--q-serif);letter-spacing:-.02em;color:var(--vf-deep);margin-bottom:10px}
-.vaf-tl__card{background:var(--bg,#fff);border:1px solid var(--border);border-radius:16px;padding:18px 20px;box-shadow:0 10px 26px rgba(15,30,51,.06)}
+.vaf-tl__card{background:var(--bg,#fff);border:1px solid var(--border);border-radius:16px;padding:18px 20px;box-shadow:0 10px 26px rgba(15,30,51,.06);transition:transform .4s var(--vf-ease),box-shadow .4s var(--vf-ease),border-color .4s var(--vf-ease)}
 .vaf-tl__card h3{margin:0 0 8px;font:700 18px/1.3 var(--q-serif);color:var(--fg)}
 .vaf-tl__copy,.vaf-tl__copy p{margin:0;font-size:15px;line-height:1.6;color:var(--fg-muted)}
 .vaf-tl__item--last .vaf-tl__card{background:var(--vf-navy);border-color:var(--vf-navy)}
 .vaf-tl__item--last .vaf-tl__card h3{color:#fff}
 .vaf-tl__item--last .vaf-tl__copy,.vaf-tl__item--last .vaf-tl__copy p{color:#d3e0ee}
-.vaf-tl__scroller:focus-visible{outline:3px solid var(--vf-blue);outline-offset:6px;border-radius:12px}
 
-@media (min-width:768px){
-  .vaf-tl__ctrl{display:none;justify-content:flex-end;gap:10px;margin-top:20px}
-  .vaf-tl.is-js .vaf-tl__ctrl{display:flex}
-  .vaf-tl__go{all:unset;box-sizing:border-box;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;cursor:pointer;border:1.5px solid var(--vf-line);color:var(--vf-deep);background:var(--bg,#fff);transition:background .2s,border-color .2s,color .2s,transform .2s}
-  .vaf-tl__go:hover:not(:disabled){background:var(--vf-blue);border-color:var(--vf-blue);color:#fff;transform:translateY(-1px)}
-  .vaf-tl__go:focus-visible{outline:3px solid var(--vf-blue);outline-offset:3px}
-  .vaf-tl__go:disabled{cursor:default;color:#9aa6b6;border-color:#e0e8f0}
-  .vaf-tl__scroller{overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;padding:4px 8px 22px;margin:0 -8px;scrollbar-width:thin;scrollbar-color:var(--vf-line) transparent}
-  .vaf-tl.is-js .vaf-tl__scroller{scrollbar-width:none}
-  .vaf-tl.is-js .vaf-tl__scroller::-webkit-scrollbar{display:none}
-  .vaf-tl.is-js .vaf-tl__scroller{-webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - var(--fade-r,0px)),transparent 100%);mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - var(--fade-r,0px)),transparent 100%)}
-  .vaf-tl__list{display:flex;width:max-content;margin-top:10px;padding-right:20px}
-  .vaf-tl__item{display:flex;flex-direction:column;width:330px;padding:0 28px 0 0;scroll-snap-align:start}
-  .vaf-tl__item:last-child{padding-right:0}
-  .vaf-tl__item::before{left:12px;top:75px;bottom:auto;width:auto;right:0;height:2px;background:var(--vf-line)}
-  .vaf-tl__year{font-size:52px;margin:0 0 14px;padding-left:2px}
-  .vaf-tl__dot{position:relative;left:auto;top:auto;width:24px;height:24px;flex:none;margin:0 0 22px;background:var(--bg,#fff);box-shadow:0 0 0 2px var(--vf-line);transition:background .5s var(--vf-ease),box-shadow .5s var(--vf-ease),transform .5s var(--vf-ease)}
-  .vaf-tl__item::before{transition:background .6s var(--vf-ease)}
-  .vaf-tl.is-js .vaf-tl__item.is-seen .vaf-tl__dot{background:var(--vf-blue);box-shadow:0 0 0 2px var(--vf-blue)}
-  .vaf-tl.is-js .vaf-tl__item.is-seen::before{background:var(--vf-blue)}
-  .vaf-tl:not(.is-js) .vaf-tl__dot{background:var(--vf-blue);box-shadow:0 0 0 2px var(--vf-blue)}
-  .vaf-tl__item--last .vaf-tl__dot{transform:scale(1.25)}
-  .vaf-tl__card{flex:1;padding:22px 24px 24px;border-radius:18px;transition:transform .4s var(--vf-ease),box-shadow .4s var(--vf-ease),border-color .4s var(--vf-ease)}
+/* rails: two per row on tablets */
+@media (min-width:640px){
+  .vaf-tl__list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--gap);row-gap:40px}
+  .vaf-tl__item{display:flex;flex-direction:column;padding:0}
+  .vaf-tl__item::before{display:block;left:12px;top:75px;bottom:auto;width:auto;right:calc(var(--gap) * -1);height:2px;background:var(--vf-blue)}
+  .vaf-tl__item.is-end-t::before{display:none}
+  .vaf-tl__year{font-size:48px;margin:0 0 14px;padding-left:2px}
+  .vaf-tl__dot{position:relative;left:auto;top:auto;width:24px;height:24px;flex:none;margin:0 0 22px}
+  .vaf-tl__card{flex:1;padding:22px 24px 24px;border-radius:18px}
   .vaf-tl__item:hover .vaf-tl__card{transform:translateY(-4px);box-shadow:0 22px 46px rgba(42,113,175,.16);border-color:var(--vf-blue)}
   .vaf-tl__card h3{font-size:19px}
   .vaf-tl__copy,.vaf-tl__copy p{font-size:15.5px}
-  .vaf-tl.is-js .vaf-tl__bar{display:block;height:3px;border-radius:3px;background:var(--vf-line);margin-top:4px;position:relative;overflow:hidden}
-  .vaf-tl__bar i{position:absolute;top:0;bottom:0;left:0;width:30%;background:var(--vf-blue);border-radius:3px}
+  .vaf-tl__item--last .vaf-tl__dot{transform:scale(1.25)}
+}
+/* four (or the balanced column count) per row on desktop */
+@media (min-width:1000px){
+  .vaf-tl__list{grid-template-columns:repeat(var(--cols),minmax(0,1fr))}
+  .vaf-tl__item.is-end-t::before{display:block}
+  .vaf-tl__item.is-end::before{display:none}
 }
 @media (prefers-reduced-motion:reduce){.vaf-tl *{transition:none!important}}

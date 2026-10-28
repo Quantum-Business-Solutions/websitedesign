@@ -36,7 +36,11 @@ def m_flow(s):
         "step_label": nd(st["label"]), "step_when": nd(st.get("when", "")), "step_summary": nd(st.get("summary", "")),
         "step_title": nd(st.get("title", st["label"])), "step_copy": rt(esc(nd(st.get("body", "")))),
         "step_receive": _ul(st.get("receive")),
+        "step_produces": nd((st.get("receive") or [""])[0]),
     } for st in s["steps"]]
+    # The chart draws a return arrow when the last stage is ongoing: the cycle starts again.
+    if "ongoing" in (s["steps"][-1].get("when", "").lower()):
+        out["loop_label"] = "Then the cycle begins again"
     return out
 
 
@@ -99,5 +103,63 @@ def m_hotspots(s):
     return out
 
 
+# ---------------------------------------------------------------- map
+def m_map(s):
+    out = _base(s, heading=nd(s.get("heading", "")), intro=nd(s.get("intro", "")))
+    out["map_alt"] = nd(s["alt"]) if isinstance(s.get("alt"), str) else "Map of Indiana with office locations"
+    if s.get("ring") is not None:
+        out["ring"] = s["ring"]
+    out["offices"] = [{"office_name": nd(it["name"]), "office_sub": nd(it.get("sub", "")), "office_hq": bool(it.get("hq", False)),
+                       "office_lon": it["lon"], "office_lat": it["lat"], "office_link": link(it["href"]),
+                       "label_dx": it.get("label_dx", 10), "label_dy": it.get("label_dy", 4)} for it in s["items"]]
+    return out
+
+
+# ---------------------------------------------------------------- tabs
+def m_tabs(s):
+    out = _base(s, **_head(s))
+    out["tabs"] = [{"tab_label": nd(it["label"]), "tab_title": nd(it.get("title", it["label"])), "tab_copy": rt(esc(nd(it.get("body", "")))),
+                    "tab_bullets": _ul(it.get("bullets")), "tab_image": image(it.get("image"), nd(it.get("image_alt", "")), 800, 600),
+                    "tab_link": link(it["href"]) if it.get("href") else link(""), "tab_link_label": nd(it.get("link_label", "Learn more"))}
+                   for it in s["items"]]
+    return out
+
+
+# ---------------------------------------------------------------- fleet
+def _brands(text):
+    """'Canon, Ricoh, EFI Fiery' -> logo images where VAF has a partner logo, plain names where it does not."""
+    parts = []
+    for b in [x.strip() for x in (text or "").split(",") if x.strip()]:
+        logo = partner_logo(b)
+        parts.append(f'<img src="{esc(logo)}" alt="{esc(b)}" height="22">' if logo else f"<span>{esc(nd(b))}</span>")
+    return "<p>" + " ".join(parts) + "</p>" if parts else ""
+
+
+def m_fleet(s):
+    out = _base(s, heading=nd(s.get("heading", "")), intro=nd(s.get("intro", "")))
+    out["devices"] = [{"dev_title": nd(it["title"]), "dev_band": nd(it.get("band", "")), "dev_brands": _brands(it.get("brands")),
+                       "dev_image": image(it.get("image"), nd(it.get("alt") if isinstance(it.get("alt"), str) else it["title"]), 600, 600),
+                       "dev_bullets": _ul(it.get("bullets")), "dev_link": link(it["href"]), "dev_link_label": nd(it.get("label", "See the product"))}
+                      for it in s["items"]]
+    return out
+
+
+# ---------------------------------------------------------------- model3d
+# The preview only loads a <model-viewer> when a GLB exists; none does, so this is poster plus link.
+_POSTER_ALT = "A white and charcoal multifunction copier on a cabinet"
+
+
+def m_model3d(s):
+    alt = s.get("alt") if isinstance(s.get("alt"), str) else _POSTER_ALT
+    out = _base(s, **_head(s))
+    out["poster"] = image(s["poster"], nd(alt), 1200, 1200)
+    cta = s.get("cta") or {}
+    out["cta_label"] = nd(cta.get("label", ""))
+    out["cta_link"] = link(cta.get("href", ""))
+    if s.get("hint"):
+        out["hint"] = nd(s["hint"])
+    return out
+
+
 REGISTRY = {"flow": ("vaf-flow", m_flow), "process": ("vaf-process", m_process), "timeline": ("vaf-timeline", m_timeline),
-            "beforeafter": ("vaf-beforeafter", m_beforeafter), "wheel": ("vaf-wheel", m_wheel), "hotspots": ("vaf-hotspots", m_hotspots)}
+            "beforeafter": ("vaf-beforeafter", m_beforeafter), "wheel": ("vaf-wheel", m_wheel), "hotspots": ("vaf-hotspots", m_hotspots), "map": ("vaf-map", m_map), "tabs": ("vaf-tabs", m_tabs), "fleet": ("vaf-fleet", m_fleet), "model3d": ("vaf-model3d", m_model3d)}

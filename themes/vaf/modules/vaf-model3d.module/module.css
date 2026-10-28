@@ -1,0 +1,14 @@
+/* VAF Product showcase: text beside a poster stage. The poster tilts toward the pointer; no library is loaded. */
+.vaf-3d{--vf-blue:var(--q-gold,#2a71af);--vf-deep:var(--q-gold-bright,#205686);--vf-ease:cubic-bezier(.2,.7,.2,1)}
+.vaf-3d__grid{display:grid;gap:36px;align-items:center}
+.vaf-3d__text .q-h2{margin-top:22px}
+.vaf-3d__text .q-lead{margin:18px 0 0;font-size:18px;max-width:520px}
+.vaf-3d__cta{margin:28px 0 0}
+.vaf-3d__stage{position:relative;border-radius:28px;overflow:hidden;border:1px solid var(--border);background:radial-gradient(ellipse at 50% 85%,rgba(42,113,175,.2),transparent 62%),linear-gradient(180deg,#f7fafd,#e8f1fa);box-shadow:0 28px 64px rgba(15,30,51,.12);perspective:1100px;touch-action:pan-y;user-select:none;-webkit-user-select:none}
+.vaf-3d__tilt{aspect-ratio:1;max-height:560px;margin:0 auto;display:grid;place-items:center;transform-style:preserve-3d;transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .6s var(--vf-ease)}
+.vaf-3d.is-active .vaf-3d__tilt{transition:transform .12s linear}
+.vaf-3d__tilt img{width:86%;height:86%;object-fit:contain;display:block;filter:drop-shadow(0 28px 30px rgba(15,30,51,.22))}
+.vaf-3d__hint{position:absolute;left:18px;bottom:16px;display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:#fff;color:var(--vf-deep);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;box-shadow:0 8px 20px rgba(15,30,51,.14);pointer-events:none}
+.vaf-3d.is-js .vaf-3d__stage{cursor:grab}
+@media (min-width:900px){.vaf-3d__grid{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:72px}}
+@media (prefers-reduced-motion:reduce){.vaf-3d__tilt{transition:none;transform:none}}

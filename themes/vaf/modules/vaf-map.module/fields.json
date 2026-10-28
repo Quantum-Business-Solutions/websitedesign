@@ -1,0 +1,256 @@
+[
+  {
+    "id": "anchor",
+    "name": "anchor",
+    "label": "Anchor id (lets links jump here, e.g. story)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "map"
+  },
+  {
+    "id": "alt_bg",
+    "name": "alt_bg",
+    "label": "Alternate (tinted) background",
+    "required": false,
+    "locked": false,
+    "display": "checkbox",
+    "type": "boolean",
+    "display_width": null,
+    "default": false
+  },
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Three offices, one service fleet, the whole state"
+  },
+  {
+    "id": "intro",
+    "name": "intro",
+    "label": "Intro",
+    "required": false,
+    "locked": false,
+    "allow_new_line": true,
+    "type": "text",
+    "display_width": null,
+    "default": "Headquartered in Indianapolis with offices in Fort Wayne and Evansville. A computer-dispatched, vendor-certified service fleet covers the Indianapolis metro and the entire state of Indiana."
+  },
+  {
+    "id": "map_alt",
+    "name": "map_alt",
+    "label": "Map description (screen readers)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Map of Indiana with Van Ausdall & Farrar offices"
+  },
+  {
+    "id": "ring",
+    "name": "ring",
+    "label": "Service ring radius (map units)",
+    "required": false,
+    "locked": false,
+    "display": "text",
+    "type": "number",
+    "display_width": null,
+    "default": 44
+  },
+  {
+    "id": "link_label",
+    "name": "link_label",
+    "label": "Link text on each office",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Branch page"
+  },
+  {
+    "id": "offices",
+    "name": "offices",
+    "label": "Offices",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 1,
+      "max": 10,
+      "sorting_label_field": null,
+      "default": 3
+    },
+    "children": [
+      {
+        "id": "office_name",
+        "name": "office_name",
+        "label": "Office name",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "Indianapolis"
+      },
+      {
+        "id": "office_sub",
+        "name": "office_sub",
+        "label": "Address or phone line",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "6430 E 75th Street, headquarters"
+      },
+      {
+        "id": "office_hq",
+        "name": "office_hq",
+        "label": "Headquarters (navy pin)",
+        "required": false,
+        "locked": false,
+        "display": "checkbox",
+        "type": "boolean",
+        "display_width": null,
+        "default": false
+      },
+      {
+        "id": "office_lon",
+        "name": "office_lon",
+        "label": "Longitude (negative west)",
+        "required": false,
+        "locked": false,
+        "display": "text",
+        "type": "number",
+        "display_width": null,
+        "default": -86.062,
+        "step": 0.001
+      },
+      {
+        "id": "office_lat",
+        "name": "office_lat",
+        "label": "Latitude",
+        "required": false,
+        "locked": false,
+        "display": "text",
+        "type": "number",
+        "display_width": null,
+        "default": 39.887,
+        "step": 0.001
+      },
+      {
+        "id": "office_link",
+        "name": "office_link",
+        "label": "Branch page link",
+        "required": false,
+        "locked": false,
+        "supported_types": [
+          "EXTERNAL",
+          "CONTENT",
+          "FILE",
+          "EMAIL_ADDRESS",
+          "BLOG"
+        ],
+        "type": "link",
+        "display_width": null,
+        "default": {
+          "url": {
+            "content_id": null,
+            "href": "",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "id": "label_dx",
+        "name": "label_dx",
+        "label": "Name label: shift right (map units, negative = left)",
+        "required": false,
+        "locked": false,
+        "display": "text",
+        "type": "number",
+        "display_width": null,
+        "default": 10
+      },
+      {
+        "id": "label_dy",
+        "name": "label_dy",
+        "label": "Name label: shift down (map units)",
+        "required": false,
+        "locked": false,
+        "display": "text",
+        "type": "number",
+        "display_width": null,
+        "default": 4
+      }
+    ],
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "office_name": "Indianapolis",
+        "office_lon": -86.062,
+        "office_lat": 39.887,
+        "office_sub": "6430 E 75th Street, headquarters",
+        "office_hq": true,
+        "office_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/locations/indianapolis"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "label_dx": 10,
+        "label_dy": 4
+      },
+      {
+        "office_name": "Fort Wayne",
+        "office_lon": -85.145,
+        "office_lat": 41.089,
+        "office_sub": "1241 N Wells Street",
+        "office_hq": false,
+        "office_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/locations/fort-wayne"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "label_dx": -96,
+        "label_dy": -10
+      },
+      {
+        "office_name": "Evansville",
+        "office_lon": -87.556,
+        "office_lat": 37.975,
+        "office_sub": "(812) 424-5736",
+        "office_hq": false,
+        "office_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/locations/evansville"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "label_dx": 10,
+        "label_dy": 16
+      }
+    ]
+  }
+]

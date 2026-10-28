@@ -1,29 +1,24 @@
 {% set items = module.entries %}
-<section class="q-section vaf-tl{% if module.alt_bg %} q-bg-alt{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %} data-vaf-tl>
+{% set n = items|length %}
+{% if n <= 4 %}{% set cols = n %}{% elif n == 5 or n == 6 or n == 9 %}{% set cols = 3 %}{% else %}{% set cols = 4 %}{% endif %}
+<section class="q-section vaf-tl{% if module.alt_bg %} q-bg-alt{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %} style="--cols:{{ cols }}">
   <div class="q-container">
     <div class="vaf-tl__head">
       {% if module.eyebrow %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
       {% if module.heading %}<h2 class="q-h2">{{ module.heading }}</h2>{% endif %}
       {% if module.intro %}<p class="q-lead">{{ module.intro }}</p>{% endif %}
     </div>
-    <div class="vaf-tl__ctrl">
-      <button type="button" class="vaf-tl__go" data-dir="-1" aria-label="{{ module.prev_label|escape }}"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-      <button type="button" class="vaf-tl__go" data-dir="1" aria-label="{{ module.next_label|escape }}"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-    </div>
-    <div class="vaf-tl__scroller" tabindex="0" role="region" aria-label="{{ module.heading|striptags|escape }}">
-      <ol class="vaf-tl__list" role="list">
-        {% for it in items %}
-        <li class="vaf-tl__item{% if loop.last %} vaf-tl__item--last{% endif %}" role="listitem">
-          <span class="vaf-tl__year">{{ it.item_year }}</span>
-          <span class="vaf-tl__dot" aria-hidden="true"></span>
-          <div class="vaf-tl__card">
-            <h3>{{ it.item_title }}</h3>
-            <div class="vaf-tl__copy">{{ it.item_copy }}</div>
-          </div>
-        </li>
-        {% endfor %}
-      </ol>
-    </div>
-    <div class="vaf-tl__bar" aria-hidden="true"><i></i></div>
+    <ol class="vaf-tl__list" role="list">
+      {% for it in items %}
+      <li class="vaf-tl__item{% if loop.last %} vaf-tl__item--last{% endif %}{% if loop.index % cols == 0 or loop.last %} is-end{% endif %}{% if loop.index % 2 == 0 or loop.last %} is-end-t{% endif %}" role="listitem">
+        <span class="vaf-tl__year">{{ it.item_year }}</span>
+        <span class="vaf-tl__dot" aria-hidden="true"></span>
+        <div class="vaf-tl__card">
+          <h3>{{ it.item_title }}</h3>
+          <div class="vaf-tl__copy">{{ it.item_copy }}</div>
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
   </div>
 </section>

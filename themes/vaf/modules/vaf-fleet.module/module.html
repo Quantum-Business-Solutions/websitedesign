@@ -1,0 +1,28 @@
+{% set devices = module.devices %}
+{% set n = devices|length %}
+<section class="q-section vaf-fleet{% if module.alt_bg %} q-bg-alt{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %} style="--cols:{{ 4 if n > 4 else n }}" data-vaf-fleet>
+  <div class="q-container">
+    <div class="vaf-fleet__head">
+      {% if module.heading %}<h2 class="q-h2">{{ module.heading }}</h2>{% endif %}
+      <div class="vaf-fleet__side">
+        {% if module.intro %}<p>{{ module.intro }}</p>{% endif %}
+        <div class="vaf-fleet__ctrl">
+          <button type="button" class="vaf-fleet__go" data-dir="-1" aria-label="{{ module.prev_label|escape }}"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button type="button" class="vaf-fleet__go" data-dir="1" aria-label="{{ module.next_label|escape }}"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </div>
+    </div>
+    <ul class="vaf-fleet__rail" role="list">
+      {% for d in devices %}
+      <li class="vaf-fleet__card">
+        <div class="vaf-fleet__img">{% if d.dev_image.src %}<img src="{{ d.dev_image.src }}" alt="{{ d.dev_image.alt|escape }}" width="600" height="600" loading="lazy" decoding="async">{% endif %}</div>
+        <p class="vaf-fleet__band">{{ d.dev_band }}</p>
+        <h3>{{ d.dev_title }}</h3>
+        {% if d.dev_brands %}<div class="vaf-fleet__brands">{{ d.dev_brands }}</div>{% endif %}
+        {% if d.dev_bullets %}<div class="vaf-fleet__bullets">{{ d.dev_bullets }}</div>{% endif %}
+        {% if d.dev_link.url.href %}<a class="vaf-fleet__link" href="{{ d.dev_link.url.href }}"{% if d.dev_link.open_in_new_tab %} target="_blank" rel="noopener"{% endif %}>{{ d.dev_link_label }}<span class="vaf-fleet__sr"> {{ d.dev_title }}</span></a>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

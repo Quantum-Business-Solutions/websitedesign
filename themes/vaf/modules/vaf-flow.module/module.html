@@ -1,6 +1,6 @@
 {% set steps = module.steps %}
 {% set n = steps|length %}
-<section class="q-section vaf-flow{% if module.alt_bg %} q-bg-alt{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %} style="--n:{{ n }}" data-vaf-flow>
+<section class="q-section vaf-flow{% if module.alt_bg %} q-bg-alt{% endif %}{% if module.loop_label %} has-loop{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %} style="--n:{{ n }}" data-vaf-flow>
   <div class="q-container">
     <div class="vaf-flow__head">
       {% if module.eyebrow %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
@@ -12,6 +12,7 @@
         <span class="vaf-flow__line"></span><span class="vaf-flow__fill"></span>
         {% for s in steps %}{% if not loop.last %}<i class="vaf-flow__arr" style="--k:{{ loop.index }}"></i>{% endif %}{% endfor %}
       </div>
+      {% if module.loop_label %}<div class="vaf-flow__loop"><span>{{ module.loop_label }}</span></div>{% endif %}
       <ol class="vaf-flow__steps" role="list">
         {% for s in steps %}
         <li class="vaf-flow__step{% if loop.first %} is-active{% endif %}" style="--c:{{ loop.index }}" role="listitem">
@@ -20,6 +21,7 @@
             <span class="vaf-flow__label">{{ s.step_label }}</span>
             {% if s.step_when %}<span class="vaf-flow__when">{{ s.step_when }}</span>{% endif %}
             {% if s.step_summary %}<span class="vaf-flow__sum">{{ s.step_summary }}</span>{% endif %}
+            {% if s.step_produces %}<span class="vaf-flow__out"><span class="vaf-flow__out-l">{{ module.produces_label }}<svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="vaf-flow__out-v">{{ s.step_produces }}</span></span>{% endif %}
           </button>
           <div class="vaf-flow__detail" role="region" aria-label="{{ s.step_title|escape }}">
             <div class="vaf-flow__main">
@@ -40,6 +42,7 @@
         </li>
         {% endfor %}
       </ol>
+      {% if module.loop_label %}<p class="vaf-flow__loopnote">{{ module.loop_label }}</p>{% endif %}
     </div>
   </div>
 </section>

@@ -77,6 +77,28 @@
     "default": "What you receive"
   },
   {
+    "id": "produces_label",
+    "name": "produces_label",
+    "label": "Label above each output on the chart",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Produces"
+  },
+  {
+    "id": "loop_label",
+    "name": "loop_label",
+    "label": "Return loop label (blank hides the loop arrow)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": ""
+  },
+  {
     "id": "prev_label",
     "name": "prev_label",
     "label": "Previous button text (screen readers)",
@@ -174,6 +196,17 @@
         "type": "richtext",
         "display_width": null,
         "default": "<ul><li>A deliverable</li></ul>"
+      },
+      {
+        "id": "step_produces",
+        "name": "step_produces",
+        "label": "Produces (the headline output shown on the chart; blank hides it)",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": ""
       }
     ],
     "type": "group",
@@ -185,7 +218,8 @@
         "step_summary": "Your Technology Strength Score.",
         "step_title": "Know your Technology Strength Score",
         "step_copy": "<p>Four assessments in two parts each: information, print, process and communication. Ten to fifteen minutes online, then a specialist walks the office and confirms the answers against what is actually running.</p>",
-        "step_receive": "<ul><li>A Technology Summary Scorecard</li><li>Every device, system and vendor inventoried</li><li>The gaps, in plain English</li></ul>"
+        "step_receive": "<ul><li>A Technology Summary Scorecard</li><li>Every device, system and vendor inventoried</li><li>The gaps, in plain English</li></ul>",
+        "step_produces": "A Technology Summary Scorecard"
       },
       {
         "step_label": "Roadmap",
@@ -193,7 +227,8 @@
         "step_summary": "Eliminate. Optimize. Leverage.",
         "step_title": "A roadmap that grows with you",
         "step_copy": "<p>What to eliminate because you do not need it, what to optimize because you already own it, and what to leverage to grow. Priced, sequenced, and tied to your business goals.</p>",
-        "step_receive": "<ul><li>Eliminate, optimize and leverage lists</li><li>Options priced side by side</li><li>A sequence with dates</li></ul>"
+        "step_receive": "<ul><li>Eliminate, optimize and leverage lists</li><li>Options priced side by side</li><li>A sequence with dates</li></ul>",
+        "step_produces": "Eliminate, optimize and leverage lists"
       },
       {
         "step_label": "Implement",
@@ -201,7 +236,8 @@
         "step_summary": "Handled for you.",
         "step_title": "We implement",
         "step_copy": "<p>Right-sized equipment, software, security and supplies, installed by VAF's own local people. Users trained before the technician leaves. Numbers ported. Monitoring switched on.</p>",
-        "step_receive": "<ul><li>Install and training completed on site</li><li>Monitoring live on every device</li><li>One point of contact for every line</li></ul>"
+        "step_receive": "<ul><li>Install and training completed on site</li><li>Monitoring live on every device</li><li>One point of contact for every line</li></ul>",
+        "step_produces": "Install and training completed on site"
       },
       {
         "step_label": "Monitor",
@@ -209,7 +245,8 @@
         "step_summary": "24/7, from Indianapolis.",
         "step_title": "We monitor 24/7",
         "step_copy": "<p>Proactive monitoring, predictive maintenance and fast local repair keep you running. The Customer Care Center processes requests Monday through Friday, 7:00am to 5:00pm, and responds within 24 hours.</p>",
-        "step_receive": "<ul><li>Alerts handled before they become tickets</li><li>Supplies before they run out</li><li>A 25-point inspection on every service call</li></ul>"
+        "step_receive": "<ul><li>Alerts handled before they become tickets</li><li>Supplies before they run out</li><li>A 25-point inspection on every service call</li></ul>",
+        "step_produces": "Alerts handled before they become tickets"
       }
     ]
   }

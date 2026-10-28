@@ -1,0 +1,123 @@
+[
+  {
+    "id": "anchor",
+    "name": "anchor",
+    "label": "Anchor id (lets links jump here, e.g. story)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "model"
+  },
+  {
+    "id": "alt_bg",
+    "name": "alt_bg",
+    "label": "Alternate (tinted) background",
+    "required": false,
+    "locked": false,
+    "display": "checkbox",
+    "type": "boolean",
+    "display_width": null,
+    "default": false
+  },
+  {
+    "id": "eyebrow",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Take a closer look"
+  },
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Walk around one before it arrives"
+  },
+  {
+    "id": "intro",
+    "name": "intro",
+    "label": "Intro",
+    "required": false,
+    "locked": false,
+    "allow_new_line": true,
+    "type": "text",
+    "display_width": null,
+    "default": "A generated stand-in multifunction device for the preview. Drag to rotate. Canon, Ricoh, Kyocera and HP product imagery replaces it in the build."
+  },
+  {
+    "id": "poster",
+    "name": "poster",
+    "label": "Poster image",
+    "required": false,
+    "locked": false,
+    "responsive": true,
+    "resizable": true,
+    "show_loading": true,
+    "type": "image",
+    "display_width": null,
+    "default": {
+      "src": "",
+      "alt": "A white and charcoal multifunction copier on a cabinet, rotatable",
+      "width": 1200,
+      "height": 1200,
+      "loading": "lazy"
+    }
+  },
+  {
+    "id": "hint",
+    "name": "hint",
+    "label": "Hint on the image",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Drag to rotate"
+  },
+  {
+    "id": "cta_label",
+    "name": "cta_label",
+    "label": "Button text",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "See copiers and printers"
+  },
+  {
+    "id": "cta_link",
+    "name": "cta_link",
+    "label": "Button link",
+    "required": false,
+    "locked": false,
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "EMAIL_ADDRESS",
+      "BLOG"
+    ],
+    "type": "link",
+    "display_width": null,
+    "default": {
+      "url": {
+        "content_id": null,
+        "type": "EXTERNAL",
+        "href": "/services/copiers"
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  }
+]

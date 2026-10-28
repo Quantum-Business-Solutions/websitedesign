@@ -1,0 +1,339 @@
+[
+  {
+    "id": "anchor",
+    "name": "anchor",
+    "label": "Anchor id (lets links jump here, e.g. story)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "markets"
+  },
+  {
+    "id": "alt_bg",
+    "name": "alt_bg",
+    "label": "Alternate (tinted) background",
+    "required": false,
+    "locked": false,
+    "display": "checkbox",
+    "type": "boolean",
+    "display_width": null,
+    "default": false
+  },
+  {
+    "id": "eyebrow",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Industries"
+  },
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Built around how your industry runs"
+  },
+  {
+    "id": "intro",
+    "name": "intro",
+    "label": "Intro",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": ""
+  },
+  {
+    "id": "tabs",
+    "name": "tabs",
+    "label": "Tabs",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 2,
+      "max": 12,
+      "sorting_label_field": null,
+      "default": 8
+    },
+    "children": [
+      {
+        "id": "tab_label",
+        "name": "tab_label",
+        "label": "Tab name",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "Education"
+      },
+      {
+        "id": "tab_title",
+        "name": "tab_title",
+        "label": "Panel heading",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "Education"
+      },
+      {
+        "id": "tab_copy",
+        "name": "tab_copy",
+        "label": "Panel copy",
+        "required": false,
+        "locked": false,
+        "type": "richtext",
+        "display_width": null,
+        "default": "<p></p>"
+      },
+      {
+        "id": "tab_bullets",
+        "name": "tab_bullets",
+        "label": "Bulleted list",
+        "required": false,
+        "locked": false,
+        "type": "richtext",
+        "display_width": null,
+        "default": "<ul><li></li></ul>"
+      },
+      {
+        "id": "tab_image",
+        "name": "tab_image",
+        "label": "Panel image",
+        "required": false,
+        "locked": false,
+        "responsive": true,
+        "resizable": true,
+        "show_loading": true,
+        "type": "image",
+        "display_width": null,
+        "default": {
+          "src": "",
+          "alt": "",
+          "loading": "lazy"
+        }
+      },
+      {
+        "id": "tab_link",
+        "name": "tab_link",
+        "label": "Link",
+        "required": false,
+        "locked": false,
+        "supported_types": [
+          "EXTERNAL",
+          "CONTENT",
+          "FILE",
+          "EMAIL_ADDRESS",
+          "BLOG"
+        ],
+        "type": "link",
+        "display_width": null,
+        "default": {
+          "url": {
+            "content_id": null,
+            "href": "",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "id": "tab_link_label",
+        "name": "tab_link_label",
+        "label": "Link text",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "Learn more"
+      }
+    ],
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "tab_label": "Education",
+        "tab_title": "Education",
+        "tab_copy": "<p>Districts and schools print more than almost any organization their size, across more buildings, with an IT staff stretched thin. VAF consolidates the fleet, puts every device under one agreement, and adds the mobile and cloud printing students and staff expect. Tippecanoe School Corporation cut 1,200 devices to just over 300 and saved a million dollars over the contract.</p>",
+        "tab_bullets": "<ul><li>Fleet consolidation across every building, priced as one agreement</li><li>Mobile and cloud printing for staff and students</li><li>Document conversion for student records with a retention policy</li></ul>",
+        "tab_image": {
+          "src": "",
+          "alt": "Education",
+          "loading": "lazy"
+        },
+        "tab_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/industries/education"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "tab_link_label": "Technology for education"
+      },
+      {
+        "tab_label": "Engineering and construction",
+        "tab_title": "Engineering and construction",
+        "tab_copy": "<p>Firms that run projects from trailers and site offices need phones, print and IT that travel with the work. VAF supplies short-term copier rental for job sites, wide-format print for plan sets, unified communications that follow a project manager between the office and the field, and managed IT that keeps estimating and accounting up. Shiel Sexton, Bowen Engineering and Echo Engineering are on the record.</p>",
+        "tab_bullets": "<ul><li>Short-term copier and printer rental for trailers and temporary offices</li><li>Wide-format print and scan for plan sets and submittals</li><li>Unified communications that follow the project team</li></ul>",
+        "tab_image": {
+          "src": "",
+          "alt": "Engineering and construction",
+          "loading": "lazy"
+        },
+        "tab_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/industries/engineering-construction"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "tab_link_label": "Technology for engineering and construction"
+      },
+      {
+        "tab_label": "Financial services",
+        "tab_title": "Financial services",
+        "tab_copy": "<p>When STAR Financial Bank needed a new print strategy, VAF removed expired leases, negotiated new contracts on upgraded equipment across the state, and implemented a print platform that cut waste and raised security. The result was 70% savings. The same assessment covers cybersecurity, continuity and the phone system that answers your customers.</p>",
+        "tab_bullets": "<ul><li>Print assessment across every branch, with expired leases retired</li><li>Secure print release and authenticated scanning for customer documents</li><li>Managed detection and response, MFA and security awareness training</li></ul>",
+        "tab_image": {
+          "src": "",
+          "alt": "Financial services",
+          "loading": "lazy"
+        },
+        "tab_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/industries/financial-services"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "tab_link_label": "Technology for financial services"
+      },
+      {
+        "tab_label": "Healthcare",
+        "tab_title": "Healthcare",
+        "tab_copy": "<p>Print needs that keep growing, records that must stay confidential, and communications that cannot fail when a patient needs urgent care. VAF supplies authenticated print release and scanning, tools that aid HIPAA compliance around patient records, unified communications and contact center for clinics, and a Document Conversion Center that scanned 1.5 million patient files for Johnson Memorial Health in 90 days.</p>",
+        "tab_bullets": "<ul><li>Consolidated print spend, centralized management and authenticated release</li><li>Tools to aid HIPAA compliance around patient records</li><li>Cloud, premise and hybrid unified communications, telehealth platforms and overhead paging</li></ul>",
+        "tab_image": {
+          "src": "",
+          "alt": "Healthcare",
+          "loading": "lazy"
+        },
+        "tab_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/industries/healthcare"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "tab_link_label": "Technology for healthcare"
+      },
+      {
+        "tab_label": "Insurance",
+        "tab_title": "Insurance",
+        "tab_copy": "<p>Agencies run on documents, phone calls and the systems that connect them. VAF eliminates the technology an agency no longer needs, optimizes what it has, and builds a roadmap for the rest: document management for policy files, call recording and contact center for the phones, and managed security for the client data an agency is trusted with. Ellinger Riggs Insurance used VAF communications technology to keep customers on the line and expand to new locations.</p>",
+        "tab_bullets": "<ul><li>Document management for policy and claim files with retention rules</li><li>Call recording and contact center that meet PCI DSS requirements</li><li>Managed security and MFA for client data</li></ul>",
+        "tab_image": {
+          "src": "",
+          "alt": "Insurance",
+          "loading": "lazy"
+        },
+        "tab_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/industries/insurance"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "tab_link_label": "Technology for insurance"
+      },
+      {
+        "tab_label": "Manufacturing and logistics",
+        "tab_title": "Manufacturing and logistics",
+        "tab_copy": "<p>Plants and warehouses need print where the work happens, networks that reach the floor, and documents that move without a paper chase. VAF brought in-house print and facilities management to Berry Global, planted new print solutions at Beck's Hybrids, and improved network performance and reliability for Mid-City Supply.</p>",
+        "tab_bullets": "<ul><li>In-house print and facilities management for plants and distribution centers</li><li>Networking, Wi-Fi and SD-WAN that reach the floor</li><li>Document workflow for orders, quality and compliance records</li></ul>",
+        "tab_image": {
+          "src": "",
+          "alt": "Manufacturing and logistics",
+          "loading": "lazy"
+        },
+        "tab_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/industries/manufacturing-logistics"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "tab_link_label": "Technology for manufacturing and logistics"
+      },
+      {
+        "tab_label": "Real estate",
+        "tab_title": "Real estate",
+        "tab_copy": "<p>Brokerages and property managers live on their phones and their documents. VAF supplies cloud communications with mobility for agents who work from anywhere, document management for transaction files, and managed IT and security for offices that hold client financial information.</p>",
+        "tab_bullets": "<ul><li>Cloud phone systems with mobile apps for agents in the field</li><li>Document management for transaction and lease files</li><li>Managed IT and security for client financial data</li></ul>",
+        "tab_image": {
+          "src": "",
+          "alt": "Real estate",
+          "loading": "lazy"
+        },
+        "tab_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/industries/real-estate"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "tab_link_label": "Technology for real estate"
+      },
+      {
+        "tab_label": "State and local government",
+        "tab_title": "State and local government",
+        "tab_copy": "<p>Cities, towns and utilities need billing, records and communications that constituents can trust. For the City of Anderson, VAF's on-site Facilities Management program refreshed print and billing technology, added 2D bar code document security and postal optimization, and streamlined purchasing, for over $40,000 in annual savings. Bloomington's utility department and the Town of Bargersville run on VAF content management.</p>",
+        "tab_bullets": "<ul><li>On-site facilities management with full-time VAF personnel</li><li>Print and mail security for billing and records</li><li>Enterprise content management for utilities and clerks</li></ul>",
+        "tab_image": {
+          "src": "",
+          "alt": "State and local government",
+          "loading": "lazy"
+        },
+        "tab_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/industries/government"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "tab_link_label": "Technology for state and local government"
+      }
+    ]
+  }
+]

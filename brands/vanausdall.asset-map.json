@@ -19,6 +19,7 @@
  "assets/healthcare-comms-1200.jpg": "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/assets/healthcare-comms-1200.jpg",
  "assets/healthcare-print-1200.jpg": "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/assets/healthcare-print-1200.jpg",
  "assets/healthcare-process-1200.jpg": "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/assets/healthcare-process-1200.jpg",
+ "assets/hero-poster": "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/assets/hero-poster.jpg",
  "assets/hq-1200.jpg": "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/assets/hq-1200.jpg",
  "assets/innovation-1200.jpg": "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/assets/innovation-1200.jpg",
  "assets/it-1200.jpg": "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/assets/it-1200.jpg",
@@ -63,5 +64,6 @@
  "partners/square9": "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/partners/square9.png",
  "partners/tenable": "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/partners/tenable.png",
  "partners/vmware": "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/partners/vmware.png",
- "partners/zebra": "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/partners/zebra.png"
+ "partners/zebra": "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/partners/zebra.png",
+ "video/hero-loop": "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/video/hero-loop.mp4"
 }

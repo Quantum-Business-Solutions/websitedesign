@@ -69,3 +69,9 @@
   .pv-lh.vaf-hero--layered .bg video{display:none}
   .vaf-hero__toggle{display:none}
 }
+
+/* Layered hero: the section and its container both padded, which made the first screen ~1080px tall. One screen is the goal. */
+.pv-lh.vaf-hero--layered{padding-top:0;padding-bottom:0}
+.pv-lh.vaf-hero--layered .q-container{padding-top:64px;padding-bottom:72px}
+.pv-lh.vaf-hero--layered .stack{min-height:520px}
+@media(min-width:1025px){.pv-lh.vaf-hero--layered{min-height:min(760px,calc(100vh - 130px))}}
