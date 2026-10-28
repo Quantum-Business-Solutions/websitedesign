@@ -844,3 +844,10 @@ html{scroll-padding-bottom:72px}
 .vaf-social{display:flex;gap:10px;margin-top:18px}
 .vaf-social a{width:40px;height:40px;border-radius:50%;border:1px solid var(--border);display:inline-flex;align-items:center;justify-content:center;color:var(--fg);transition:background .2s,color .2s,border-color .2s}
 .vaf-social a:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+
+/* support launcher: --chrome-bg is only defined inside dark heroes, so give the pill its own navy */
+.pv-sl > button{background:#0f1e33;color:#fff}
+.pv-sl > button i{background:#5aa2e0;box-shadow:0 0 0 4px rgba(90,162,224,.3)}
+/* footer legal row: left aligned, copyright first, no stretched separators */
+.q-footer-legal{justify-content:flex-start;gap:6px 26px}
+.pv-legal-item + .pv-legal-item::before{content:none}
