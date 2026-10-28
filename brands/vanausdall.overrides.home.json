@@ -837,74 +837,6 @@
     "cta_href": "technology-strength-assessment.html"
    },
    {
-    "type": "services",
-    "id": "services",
-    "heading": "Everything an office runs on, from one partner",
-    "intro": "Most providers sell one of these. VAF has sold and serviced all of them in Indiana for a very long time, and answers the phone for all of them at one number.",
-    "items": [
-     [
-      "Managed IT services",
-      "We become the extended arm of your business: vCIO guidance, 24/7 monitoring, security, backup, voice and cloud, delivered as one proactive partnership.",
-      "services/managed-it.html"
-     ],
-     [
-      "Managed security services",
-      "Assessments, monitoring and response from a team that has seen it all.",
-      "services/cybersecurity.html"
-     ],
-     [
-      "Cloud services",
-      "Cloud migration, infrastructure as a service, and backup and disaster recovery.",
-      "services/cloud.html"
-     ],
-     [
-      "Backup and recovery",
-      "Business continuity starts with that question.",
-      "services/business-continuity.html"
-     ],
-     [
-      "Business phone systems",
-      "VoIP, unified messaging and contact center technology for single locations and multi-office teams, designed.",
-      "services/business-phone-systems.html"
-     ],
-     [
-      "Copiers and printers",
-      "From a single multifunction printer for a startup to a fleet of production copiers across multiple locations.",
-      "services/copiers.html"
-     ],
-     [
-      "Managed print services",
-      "Print security, proactive fleet management and cost reduction: automated, cloud-based management for your entire printer and copier fleet.",
-      "services/managed-print.html"
-     ],
-     [
-      "Copier service and repair",
-      "Certified field service technicians are on the road across Indianapolis and central Indiana every day.",
-      "services/copier-service.html"
-     ],
-     [
-      "Production print",
-      "In-plant printing, variable data and color workflow for high-volume environments: presses, finishing.",
-      "services/production-print.html"
-     ],
-     [
-      "Document management",
-      "Capture, store and automate business documents to cut paper and boost productivity.",
-      "services/document-management.html"
-     ],
-     [
-      "Document conversion",
-      "Paperless digital imaging and secure electronic storage from VAF's ultra-secure Document Conversion Center inside our 57,000-square-foot Indianapolis.",
-      "services/document-conversion.html"
-     ],
-     [
-      "AI consulting",
-      "From strategy to governance: adopt AI responsibly, protect client trust and company data, and stay ahead of the competition.",
-      "services/ai-consulting.html"
-     ]
-    ]
-   },
-   {
     "type": "testimonials",
     "id": "voices",
     "alt": true,
@@ -996,16 +928,6 @@
     "image_alt": "A security analyst reviewing network alerts on a large monitor"
    },
    {
-    "type": "cta",
-    "id": "playbook",
-    "heading": "Is your business ready for AI in 2026?",
-    "subhead": "Get the 2026 CIO AI Playbook: your step-by-step guide to secure, strategic AI implementation.",
-    "primary": {
-     "label": "Download your free playbook",
-     "href": "cio-ai-playbook.html"
-    }
-   },
-   {
     "type": "related",
     "id": "articles",
     "heading": "Latest from the VAF blog",
@@ -1062,6 +984,79 @@
       "assets/security-1200.jpg"
      ]
     ]
+   },
+   {
+    "type": "related",
+    "id": "services",
+    "alt": true,
+    "heading": "Everything your office runs on, from one partner",
+    "intro": "Six services, one agreement, one Customer Care Center. Start with any of them or with the assessment.",
+    "items": [
+     [
+      "Information",
+      "Managed IT and security",
+      "Help desk, network security, cloud infrastructure and IT consulting, with a vCIO and 24/7 monitoring. Protect your data against ransomware, malware and phishing.",
+      "services/managed-it.html",
+      "assets/it-1200.jpg"
+     ],
+     [
+      "Communication",
+      "Business phone systems",
+      "VoIP phone systems and unified communications for Indianapolis businesses. One platform for voice, video, team chat and contact center, from anywhere.",
+      "services/business-phone-systems.html",
+      "assets/gen-phone-1200.jpg"
+     ],
+     [
+      "Print",
+      "Copiers and printers",
+      "Canon, Ricoh, Kyocera and HP equipment backed by local sales, service and support since 1914.",
+      "services/copiers.html",
+      "assets/copier-1200.jpg"
+     ],
+     [
+      "Print",
+      "Managed print services",
+      "Proactive fleet management, print security and automatic supply replenishment. Cut printing costs by up to 30 percent.",
+      "services/managed-print.html",
+      "assets/print-1200.jpg"
+     ],
+     [
+      "Process",
+      "Document conversion",
+      "Go paperless with secure electronic storage, searchable digital archives and a smaller on-site footprint.",
+      "services/document-conversion.html",
+      "assets/gen-conversion-1200.jpg"
+     ],
+     [
+      "Process",
+      "AI consulting",
+      "An AI acceptable use policy, high-impact automation opportunities and a responsible AI roadmap, starting with the free Technology Strength Assessment.",
+      "services/ai-consulting.html",
+      "assets/ai-1200.jpg"
+     ]
+    ]
+   },
+   {
+    "type": "detail",
+    "id": "soc",
+    "alt": true,
+    "eyebrow": "Certified",
+    "heading": "SOC 2 certified",
+    "body": "Your data security is our highest priority. Our SOC for Service Organizations certification means we meet the highest standards for protecting your data, and the report is audited by an independent third party.",
+    "bullets": [],
+    "image": "badges/aicpa-soc",
+    "image_alt": "AICPA SOC 2 Service Organization Controls badge",
+    "flip": true
+   },
+   {
+    "type": "detail",
+    "id": "playbook",
+    "eyebrow": "Free guide",
+    "heading": "Is your business ready for AI in 2026?",
+    "body": "<p>Get the 2026 CIO AI Playbook: your step-by-step guide to secure, strategic AI implementation, written for Indiana businesses.</p><p><a class=\"q-btn\" href=\"/cio-ai-playbook\">Download your free playbook</a></p>",
+    "bullets": [],
+    "image": "assets/ai-playbook-photo",
+    "image_alt": "A hand holding glowing AI letters, the cover image of the 2026 CIO AI Playbook"
    }
   ],
   "compose": {
@@ -1090,6 +1085,7 @@
     "hero",
     "partners",
     "wheel",
+    "services",
     "is-this-you",
     "proof",
     "ba",
@@ -1100,6 +1096,7 @@
     "markets",
     "map",
     "voices",
+    "soc",
     "playbook",
     "articles",
     "film",

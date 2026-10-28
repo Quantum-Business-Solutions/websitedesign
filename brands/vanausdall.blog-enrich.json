@@ -5962,5 +5962,897 @@
    }
   ],
   "skip": false
+ },
+ "how-to-make-your-ap-processing-more-efficient-in-2020": {
+  "tldr": [
+   "AP automation delivers fast, accurate invoice processing, better vendor relationships and the ability to capture early payment discounts.",
+   "Plan the workflow transition first, from data capture and GL coding to PO matching, discrepancies and remittance, and prepare personnel for the new system.",
+   "Reduce paper dependency and manage AP documents electronically to cut manual work, add visibility and capture invoices from fax, mail, email or EDI."
+  ],
+  "faq": [
+   {
+    "q": "What are the benefits of accounts payable automation?",
+    "a": "The post says AP automation maximizes the benefits of fast and accurate invoice processing, improves vendor relationships and gives the ability to capture early payment discounts. It also says electronic management reduces manual work and increases visibility and process controls and tracking."
+   },
+   {
+    "q": "What should an AP automation plan cover?",
+    "a": "The post says to plan the workflow transition from electronic data capture to GL coding and PO matching, and from AP posting and tax research to resolving discrepancies and remittance, and to prepare personnel for the effects of a new system and its organization-wide impact."
+   },
+   {
+    "q": "Why does paper slow down accounts payable?",
+    "a": "The post says paper requires a printing process and physical transportation, then piles up or is thrown away, and needs so much labor and so many steps to move a few bits of transaction data from one place to another, over and over again."
+   },
+   {
+    "q": "How can invoices be captured electronically?",
+    "a": "When AP processes are fully integrated with your enterprise information platform, the post says you can capture invoices electronically, whether by fax, mail, email or EDI, and deliver them to the appropriate people for review, approval and coding."
+   }
+  ],
+  "skip": false
+ },
+ "5-reasons-to-upgrade-your-companys-printing-performance": {
+  "tldr": [
+   "The real cost of printing includes brand representation, document security and regulatory compliance, not just hardware, paper, supplies and maintenance spend.",
+   "Evaluate five aspects before upgrading: security, quality, cost per copy, service and maintenance issues, and multi-functionality.",
+   "Review print contracts before they expire, since the post says renegotiating and upgrading now may cost less overall than waiting for the end date."
+  ],
+  "faq": [
+   {
+    "q": "What does printing really cost a company?",
+    "a": "The post says the cost of printing involves more than dollars spent on hardware, paper, supplies and maintenance. The real cost depends on how print investment affects overall success, including whether documents accurately represent your brand, fall into the wrong hands, or violate industry regulations."
+   },
+   {
+    "q": "How does print security factor into an upgrade decision?",
+    "a": "The post asks what the ramifications would be if corporate secrets were printed by unauthorized personnel, if vital documents were lost because a server died, or if regulated industries such as healthcare, legal or government services failed strict compliance requirements for documents they store, print and distribute."
+   },
+   {
+    "q": "Do new multi-function printers lower cost per copy?",
+    "a": "The post says the overall efficiency of new multi-function printers will typically provide a lower cost per copy, along with the top quality documents needed to stay competitive, and that pennies per copy add up across print jobs."
+   },
+   {
+    "q": "What can a WiFi-ready multi-function printer do?",
+    "a": "The post says a WiFi-ready, cloud-connected MFP combines the performance of different hardware into a single unit serving the network for printing, scanning and faxing. Upgrading can raise print quality and productivity, allow higher-volume projects and simultaneous access, and include access limits, security rules and tracking of printed documents."
+   },
+   {
+    "q": "Should I wait for my print contract to end before upgrading?",
+    "a": "The post says it is worth reviewing printing operations even if your contract has not expired, since new agreements can be more affordable when renegotiated, and it may be less expensive overall to renegotiate old contracts and upgrade now than to wait until the contract end date."
+   }
+  ],
+  "skip": false
+ },
+ "unified-communications-as-a-service-ucaas--the-power-flexibility-and-resiliency-of-cloud-communications": {
+  "tldr": [
+   "Many communication channels require many applications, forcing end users to learn each one and IT to work with multiple vendors to troubleshoot them.",
+   "UCaaS puts all communication in one application on any device, adds cloud survivability and disaster recovery, and avoids major upfront capital and replacement hardware.",
+   "Before migrating, consider a VoIP network readiness assessment, security assessment, project management, on-site deployment, training and managed administration, choosing only the services you need."
+  ],
+  "faq": [
+   {
+    "q": "Why do multiple communication applications cause problems?",
+    "a": "The post says end users must learn each application to communicate with team members and clients who use different channels, and IT must equip infrastructure for all of them and work with multiple vendors to troubleshoot, which wastes time, effort and money."
+   },
+   {
+    "q": "What does UCaaS offer beyond consolidating communications?",
+    "a": "The post says an enterprise-class unified communications platform consolidates all forms of communication into one application for users to learn and IT to support, and with UCaaS an organization also benefits from the survivability and disaster recovery elements that the cloud has to offer."
+   },
+   {
+    "q": "Does UCaaS require a big upfront investment?",
+    "a": "The post says you do not need a major upfront capital investment to implement and maintain UCaaS, you will not need to pay again for replacement hardware that reaches end of life, and expensive software updates and migrations are a thing of the past."
+   },
+   {
+    "q": "How does UCaaS scale compared with a premise-based platform?",
+    "a": "The post says ramping up a premise-based unified communications system to meet immediate needs can be cumbersome and costly, while the cloud consumption model makes it simple, and expanding to multiple remote locations is greatly simplified because resources can be brought online quickly."
+   },
+   {
+    "q": "What services help with a UCaaS migration?",
+    "a": "The post lists a VoIP network readiness assessment with a report and action plan, network infrastructure and security assessment and design, UCaaS project management, on-site deployment and expert instructor-led training, day-of go-live engineer support, and managed administration for the life of the solution."
+   }
+  ],
+  "skip": false
+ },
+ "solutions-to-shore-up-your-corporate-it-skills-gap": {
+  "tldr": [
+   "The IT skills gap spans three areas: access to specialty resources, scarce and costly top-tier hands-on talent, and manager-level talent for large projects.",
+   "Anticipating needs and training your team help, but a project that suddenly needs a new skill still forces a search for an outsourced solution.",
+   "Managed IT means paying only for services you need, avoiding niche hires, and keeping your team focused on revenue-generating tasks."
+  ],
+  "faq": [
+   {
+    "q": "What are the three areas of the IT skills gap?",
+    "a": "The post breaks the skills gap into specialty resources, where you lack access when you need them, top-tier hands-on talent, where skilled IT pros are scarce and costly, and manager-level talent, which must be available to handle large projects."
+   },
+   {
+    "q": "Why is it hard to staff an IT team with the right skills?",
+    "a": "The post says even if you can find highly skilled people willing to work full time, the question is whether you can afford the commitment. It describes a delicate balance between up-to-date skills and the cost and hassle of finding, training and retaining multi-talented staff."
+   },
+   {
+    "q": "Why is training the existing team not always enough?",
+    "a": "The post says you can train your team to stay ahead of the learning curve for skills you know it lacks, but when a project immediately requires a skill the team did not previously need, you are forced to search for an outsourced solution, which brings its own problems."
+   },
+   {
+    "q": "How can managed IT services help close the skills gap?",
+    "a": "The post says managed IT solutions offer increased efficiencies, decreased costs and specific on-site expertise when and where needed, so your team can stay focused on revenue-generating tasks rather than mastering limited-use skills, and you only pay for the services you need."
+   },
+   {
+    "q": "Can a provider place IT staff on-site without adding to payroll?",
+    "a": "The post says that if a project requires on-site expertise for a brief or extended period, highly skilled IT pros can be placed on-site without expanding your payroll obligations, with the provider performing due diligence to find the right person and handling the HR details."
+   }
+  ],
+  "skip": false
+ },
+ "going-remote-how-to-solve-the-it-challenges-of-a-growing-virtual-workforce": {
+  "tldr": [
+   "A growing remote workforce adds IT challenges: securing on-site and off-site devices, governing corporate data, and technically supporting every team member and device.",
+   "Improve defensive network technologies and employee security-awareness training proactively, and establish data governance protocols based on best practices to meet legal and regulatory obligations.",
+   "Technology roadmaps should cover four areas: information, communication, print and process, with print needing stronger security and tracking of what is printed and where."
+  ],
+  "faq": [
+   {
+    "q": "What IT challenges does a remote workforce add?",
+    "a": "The post says a large remote workforce adds challenges beyond keeping an IT system up to date: securing all on-site and off-site devices connected to the network, governance of corporate data, and technically supporting all of the team members and devices with access to the system."
+   },
+   {
+    "q": "Why does data governance matter for remote teams?",
+    "a": "The post says if an organization's digital information is not properly managed, it is almost impossible to meet legal and regulatory obligations, for example without accurate, accessible payroll records or with proprietary intellectual property insufficiently protected. It recommends efficient data governance protocols based on proven best practices."
+   },
+   {
+    "q": "How should a company improve security for a remote workforce?",
+    "a": "The post says ransomware hackers attack agencies and corporations with increasing frequency, so businesses should proactively improve their defensive network technologies and employee security-awareness training before discovering the consequences the hard and expensive way, citing the city of Baltimore and many towns in Texas."
+   },
+   {
+    "q": "Why does remote device support get harder?",
+    "a": "The post says when a business computer or mobile device goes down it is hard to keep working and costly to revive, and if your team must back up and resurrect off-site devices the fix is harder. More remote staff means more problems with devices that need continual maintenance and sporadic repairs."
+   },
+   {
+    "q": "What four areas should a technology roadmap for a remote workforce cover?",
+    "a": "The post names information, communication, print and process. For print, it says remote staff require stronger security and proactive document management to track what is printed and where, and process integrates content management, facilities management, print fulfillment, document conversion and voice processing."
+   }
+  ],
+  "skip": false
+ },
+ "the-growing-risk-of-poor-it-infrastructure": {
+  "skip": true,
+  "reason": "Thin (269 words) opinion piece that lists three headings (security, performance, availability) without concrete steps or specifics."
+ },
+ "3-steps-to-minimize-the-impact-of-cyber-attacks": {
+  "tldr": [
+   "Reduce cyber-attack impact with three equally weighted focus areas: prevention, detection and recovery, as the post says the Datto report suggests.",
+   "Prevention combines updated anti-virus, security software that prevents ransomware encryption, and employee education, including hosted tools that identify high-risk employees for targeted training.",
+   "Real-time detection through a monitored security fabric, plus strong backups with a recovery time objective and hardware-agnostic recovery environment, limit damage and downtime."
+  ],
+  "faq": [
+   {
+    "q": "What are the three areas of focus for reducing cyber-attack risk?",
+    "a": "The post says the Datto report suggests three areas of focus that should be given equal weight for a company to reduce its risk: prevention, detection and recovery."
+   },
+   {
+    "q": "Why aren't small businesses safe from cyber-attacks?",
+    "a": "The post says many CEOs believe they have nothing hackers want, but hackers will indiscriminately target low-hanging fruit. It says small businesses are completely vulnerable, including those poorly protected against phishing campaigns and other techniques."
+   },
+   {
+    "q": "How does prevention reduce the chance of a successful attack?",
+    "a": "The post says hope is not a strategy. Updated anti-virus is important, but cyber-security software helps prevent ransomware encryption, and since employees are usually unknowing partners of attackers, education helps, with hosted applications that identify high-risk employees and offer targeted online training."
+   },
+   {
+    "q": "Why does detection speed matter?",
+    "a": "The post says that by the time an organization determines an attack has taken place, most attackers are long gone and the payload has been deployed. Real-time detection through a monitored security fabric helps identify and mitigate threats to all aspects of computers and networks."
+   },
+   {
+    "q": "Which step matters most when recovering from an attack?",
+    "a": "The post says the most important step is a great backup process. It adds that organizations should invest in a strong virtual infrastructure to minimize downtime, with a recovery time objective that uses a hardware-agnostic recovery environment."
+   }
+  ],
+  "skip": false
+ },
+ "five-reasons-to-become-paper-less": {
+  "tldr": [
+   "Converting paper to digital frees office space, makes information accessible from anywhere, and still lets you print a hard copy on demand.",
+   "Digital data integrates with other business processes, avoiding re-entry errors and time-consuming manual data entry that paper-only information requires.",
+   "Digitizing reduces the risk of losing data to fire, storms or other disasters and increases security through encryption, passwords and firewalls."
+  ],
+  "faq": [
+   {
+    "q": "Will an office ever go completely paperless?",
+    "a": "The post says the workplace will never go completely paperless but is becoming paper-less. Paper is not going away, but there are real advantages to converting hard copies to digital data."
+   },
+   {
+    "q": "How does going paper-less free up office space?",
+    "a": "The post says office space is valuable whether you rent or own, and file cabinets and boxes occupy space that could hold workstations or special equipment. Using that space for something else could give a better return on your investment."
+   },
+   {
+    "q": "How does digital storage improve access to information?",
+    "a": "The post says in an increasingly mobile, 24/7 work environment you can make data accessible from wherever you need to be, instead of bringing paper files home or asking someone at the office to scan or fax a document, and you can still print a hard copy on demand."
+   },
+   {
+    "q": "How does digitizing reduce the risk of data loss?",
+    "a": "The post says paper that is on-site and not backed up can be lost in a fire, devastating storm or other act of nature. Converting to digital data diminishes the risk of losing valuable information, which can otherwise cause costly downtime, lost productivity and reputational damage."
+   },
+   {
+    "q": "Is digital data more secure than paper?",
+    "a": "The post says proper governance of sensitive and private information is imperative, especially in fields such as healthcare, and that with encryption, passwords and firewalls, digital data is far more secure than paper storage, supporting the privacy customers and partners expect."
+   }
+  ],
+  "skip": false
+ },
+ "a-cios-simple-it-security-checklist": {
+  "tldr": [
+   "Start with a top-down audit of IT infrastructure: servers, firewall, wireless networks, remote access for employees and vendors, and off-site backup and storage.",
+   "Cover mobility and software: PIN enforcement, mobile device management with remote wipe, secure messaging instead of SMS, access protocols and encrypted data transmission.",
+   "Add governance and physical security: continuity plans, audits, patch policies, security training, logged server-room access and device logout timeouts."
+  ],
+  "faq": [
+   {
+    "q": "What infrastructure questions should a CIO ask about security?",
+    "a": "The post suggests a top-down audit asking who has onsite and remote access to servers, whether encryption is right, whether you have a commercial-grade firewall and a way to block malicious websites, and whether you have off-site backup and storage."
+   },
+   {
+    "q": "What wireless and remote access questions should be on a security checklist?",
+    "a": "The post asks whether you know the encryption method for internal WiFi, allow guests on it, have a guest network that requires a password, and manage vendor connections to WiFi, plus how employees and vendors connect remotely."
+   },
+   {
+    "q": "What mobile security questions does the checklist include?",
+    "a": "The post asks about company-issued cell phones, PIN codes on personal phones, a mobile device management system that can remote wipe a device, VoIP and cloud-based phone systems, and requiring a secure messaging solution for work instead of SMS."
+   },
+   {
+    "q": "Why does governance matter beyond technical safeguards?",
+    "a": "The post says it is not enough to have technical security, you also need strict procedures for how data is used and accessed, because even the most sophisticated encryption is rendered ineffective without a strong system of governance. It lists continuity plans, audits, patch policies and training."
+   },
+   {
+    "q": "What physical security questions should a CIO ask?",
+    "a": "The post asks how you control and log physical access to areas such as the server room, MDF and IDF, whether public devices have logout or timeout periods, and whether devices visible to the public have privacy screens and auto logout after 5 to 10 minutes."
+   }
+  ],
+  "skip": false
+ },
+ "van-ausdall--farrar-customer-training-quick-clips-intro": {
+  "skip": true,
+  "reason": "Thin (21 words) video series announcement; no advice."
+ },
+ "mitel-connect-client---voicemail-integration": {
+  "skip": true,
+  "reason": "Thin (22 words) video clip description; no advice in the text."
+ },
+ "mitel-connect-client---complete-course": {
+  "skip": true,
+  "reason": "Thin (26 words) video clip description; no advice in the text."
+ },
+ "mitel-conferencing---create-conference-within-outlook": {
+  "skip": true,
+  "reason": "Thin (24 words) video clip description; no steps in the text."
+ },
+ "toshiba-phone-systems-now-supported-by-mitel": {
+  "skip": true,
+  "reason": "Dated 2018 vendor announcement built around Toshiba end-of-sale and end-of-support dates (2018 to 2023) and time-bound promotions; not evergreen."
+ },
+ "vaf-goes-extreme-to-meet-customer-networking-demand": {
+  "skip": true,
+  "reason": "Partner announcement (April 2018) with company and vendor figures and a named contact; announcement-style, dated."
+ },
+ "mitel-connect-client---voicemails": {
+  "skip": true,
+  "reason": "Thin (21 words) video clip description; no steps in the text."
+ },
+ "mitel-connect-client---transferring-a-call": {
+  "skip": true,
+  "reason": "Thin (24 words) video clip description; no steps in the text."
+ },
+ "mitel-connect-client---set-new-voicemail-password": {
+  "skip": true,
+  "reason": "Thin (21 words) video clip description; no steps in the text."
+ },
+ "mitel-connect-client---set-new-client-password": {
+  "skip": true,
+  "reason": "Thin (23 words) video clip description; no steps in the text."
+ },
+ "mitel-connect-client---record-custom-greetings": {
+  "skip": true,
+  "reason": "Thin (27 words) video clip description; no steps in the text."
+ },
+ "mitel-connect-client---recents-list": {
+  "skip": true,
+  "reason": "Thin (25 words) video clip description; no steps in the text."
+ },
+ "mitel-connect-client---intro--basics": {
+  "skip": true,
+  "reason": "Thin (18 words) video clip description; no steps in the text."
+ },
+ "mitel-connect-client---directory--people-list": {
+  "skip": true,
+  "reason": "Thin (19 words) video clip description; no steps in the text."
+ },
+ "mitel-connect-client---answering-a-call": {
+  "skip": true,
+  "reason": "Thin (19 words) video clip description; no steps in the text."
+ },
+ "mitel-connect-client---add-participant-conference": {
+  "skip": true,
+  "reason": "Thin (19 words) video clip description; no steps in the text."
+ },
+ "is-your-most-vital-corporate-data-paper-locked": {
+  "tldr": [
+   "Tackle digital transformation one bite at a time: pick a paper-heavy department and start a non-threatening conversation with key stakeholders about how documents flow.",
+   "Start with a quick win to build buzz, and pair digitization with an office move so reduced real estate costs help pay for it.",
+   "Use SaaS capture, storage and search to avoid upfront licensing and infrastructure costs, and identify potential ROI early to help the project take hold."
+  ],
+  "faq": [
+   {
+    "q": "Where should a digitization project start?",
+    "a": "The post says to identify a paper-heavy department, often a known hotbed of inefficiency where team members manually process documents, and start a non-threatening conversation with key stakeholders about how paper documents flow, which can reveal bottlenecks and inefficiencies."
+   },
+   {
+    "q": "Why start with a small quick win?",
+    "a": "The post says even a small, quick win that gets noticed can start a buzz and get other departments talking about digitization. Change management needs buy-in from everyone or the project is destined to fail, and nothing beats end users spreading how easy the process was."
+   },
+   {
+    "q": "How can a business leverage change to start digitizing?",
+    "a": "The post says many engagements are tied to a significant change, most often an office relocation or renovation. Using forthcoming changes, especially downsizing, can jump start digitization, and its cost can pay for itself through reduced real estate costs from a smaller footprint for file rooms and boxes."
+   },
+   {
+    "q": "Why use software as a service for document capture and storage?",
+    "a": "The post says cloud-based capture, storage, search and retrieval lets an organization use the latest technology without costly upfront and ongoing software licensing or the IT infrastructure to house data, and the SaaS model can have a virtually immediate ROI because upfront investment is often not required."
+   },
+   {
+    "q": "What kinds of ROI can paper digitization deliver?",
+    "a": "The post lists real estate and opportunity costs from converting storage space to revenue-producing space, usable data and faster customer responses, improved employee productivity from less searching, scanning and refiling, and lower long-term storage costs such as file pulls, expediting charges and destruction fees."
+   }
+  ],
+  "skip": false
+ },
+ "vaf-makes-the-right-connection-with-8x8": {
+  "skip": true,
+  "reason": "Partnership announcement (January 2018) with dated vendor claims (137 patents, Gartner Magic Quadrant six consecutive years, Privacy Shield) and contact details; announcement-style."
+ },
+ "february-8-2018---print-security-event-at-topgolf-presented-by-hp": {
+  "skip": true,
+  "reason": "Event notice (February 8, 2018, Fishers) with a dated hack anecdote; time-bound and thin."
+ },
+ "we-were-sd-wan-before-sd-wan-was-cool": {
+  "tldr": [
+   "SD-WAN broadly means intelligence in WAN routing decisions, and the post says it now bundles long-used WAN technologies into one device and fabric.",
+   "Carrier-offered SD-WAN can mean provisioning and support delays, no control of customer premise equipment, contract lock-in and decentralized management.",
+   "Combining broadband, 3/4G data and MPLS on SD-WAN devices can lower total cost of ownership, add redundancy, accelerate SaaS, improve security and centralize management."
+  ],
+  "faq": [
+   {
+    "q": "What does SD-WAN mean?",
+    "a": "The post says SD-WAN is an all-encompassing term, like cloud, that in general indicates intelligence in Wide Area Network routing decisions. It calls the term the latest network infrastructure buzzword."
+   },
+   {
+    "q": "What technologies are part of an SD-WAN design?",
+    "a": "The post lists WAN design technologies including load balancing, traffic shaping, quality of service, dial on demand routing, application control and virtual private networking, used with broadband, MPLS and cellular data carriers. In the past these functions required a combination of different hardware and services."
+   },
+   {
+    "q": "What are the drawbacks of carrier-offered SD-WAN?",
+    "a": "The post says carrier-offered SD-WAN solutions are effective but suffer the restrictions of older carrier technologies: delay in provisioning, delay in service and support, lack of control of customer premise equipment, contract lock-in and decentralized management."
+   },
+   {
+    "q": "What benefits does a customer-controlled SD-WAN offer?",
+    "a": "The post says using inexpensive broadband, 3/4G data and SLA-driven MPLS connections as needed with SD-WAN devices lowers total cost of ownership, provides redundancy, accelerates SaaS applications, improves security, and lets the whole SD-WAN be managed from a single pane of glass."
+   }
+  ],
+  "skip": false
+ },
+ "mitel-acquires-shoretel-and-toshiba": {
+  "skip": true,
+  "reason": "Dated October 2017 vendor acquisition commentary (Toshiba, ShoreTel, Mitel) with time-bound dates, partner statistics and executive quotes; not evergreen."
+ },
+ "vaf-wins-a-new-certification-from-ricoh": {
+  "skip": true,
+  "reason": "Thin (51 words) award announcement for a Ricoh certification; VAF should verify the claim before reuse."
+ },
+ "wannacry-ransomware-update-from-ricoh": {
+  "skip": true,
+  "reason": "Dated August 2017 vendor advisory about WannaCry patching for Ricoh devices (78 words); no lasting guidance."
+ },
+ "what-happens-when-ransomware-and-the-internet-of-things-collide": {
+  "tldr": [
+   "IoT devices could be held for ransom, and hijackers can make a critical device's physical functions inaccessible, greatly increasing the chance a victim pays.",
+   "IoT security is hard because devices are often uncontrolled like BYOD, have varied security baselines, resist simple patching and keep unchanged or hard-coded passwords.",
+   "Control who adds devices, disable default credentials, close unused ports, inventory approved devices, schedule update checks and use a perimeter firewall."
+  ],
+  "faq": [
+   {
+    "q": "Why could IoT devices be targeted by ransomware?",
+    "a": "The post says IoT includes powerful systems such as public school security, medical devices like pacemakers, HVAC building systems and city street lights. Hijackers can compromise data from sensors and render critical physical functions inaccessible, which greatly increases the chance a victim will pay."
+   },
+   {
+    "q": "What makes IoT security difficult?",
+    "a": "The post says IoT is like BYOD and remains uncontrolled in many companies, with many device types and vendors adding varied security baselines often considered after deployment. There is no simple way to patch all devices, and many passwords are never changed or are hard-coded."
+   },
+   {
+    "q": "What minimum security standards should IoT devices meet?",
+    "a": "The post says to disable default credentials, create a new user for the device administrator, close unused ports and disable unused services. It also advises using the security features on devices, even if logging into a camera or thermostat takes an extra couple of steps."
+   },
+   {
+    "q": "How should IoT devices be managed on a company network?",
+    "a": "The post says to assign someone capable of evaluating device security to decide who can add devices, then inventory the network, document approved devices and remove unneeded ones. Manage the rest from a single pane of glass if possible, schedule recurring update checks and keep copies of custom configurations."
+   },
+   {
+    "q": "How does a perimeter firewall help with IoT ransomware risk?",
+    "a": "The post says to secure devices with a perimeter firewall, plus network security specifically for smart devices if necessary. It adds that reliable backups are key to recovering data from a ransomware attack, and says next-generation firewalls can cover a single office or multiple branches with IoT endpoints."
+   }
+  ],
+  "skip": false
+ },
+ "van-ausdall--farrar-receives-shoretel-gold-status": {
+  "skip": true,
+  "reason": "Press release (dateline Indianapolis, May 1, 2017, executive quotes, boilerplate) announcing ShoreTel Gold partner status; dated and announcement-style."
+ },
+ "is-it-time-to-switch-to-a-cloud-phone-system": {
+  "tldr": [
+   "Before replacing a premises PBX, ask which system supports your long-term plan, which features boost productivity, and whether you have resources to support it.",
+   "The five most-cited reasons are agility, total cost of operations, resiliency and disaster recovery, lack of IT resources, and scalability.",
+   "Cloud phone users subscribe monthly to a service delivered from the vendor's secure data centers, where the vendor owns, configures and manages the system."
+  ],
+  "faq": [
+   {
+    "q": "What questions should IT ask before replacing a premises PBX?",
+    "a": "The post says IT departments weigh keeping a premises-based PBX against a cloud phone system by asking which type best supports the long-term business plan, which features help employees be more productive, and whether they have the resources to support and maintain the new system."
+   },
+   {
+    "q": "Why do companies cite agility as a reason to move to a cloud phone system?",
+    "a": "The post says businesses need to react quickly to competitive market changes or risk losing ground. Companies are more competitive when users can add new features and functions easily, gaining flexibility to respond to business needs and adapt to opportunities and challenges."
+   },
+   {
+    "q": "Is a cloud phone system cheaper over time?",
+    "a": "The post says that over time a cloud phone system creates significant cost advantages even when training, maintenance and managed service costs are included, and with lower capital and operational expenses it is often less expensive than an aging PBX."
+   },
+   {
+    "q": "How does a cloud phone system handle outages and disasters?",
+    "a": "The post says a cloud phone system built on a distributed architecture minimizes the risk of falling offline. With failover and the ability to switch calls to home-based offices, the right system can keep a business taking calls even during the storm of the century."
+   },
+   {
+    "q": "How quickly can a cloud phone system scale?",
+    "a": "The post says that with a cloud phone system, adding new licenses can take only hours, not weeks, so you can scale up or down with demand, and when expanding to new offices, employees in every location get the same features and collaboration tools."
+   }
+  ],
+  "skip": false
+ },
+ "3-practices-for-vip-customer-service-from-contact-centers": {
+  "tldr": [
+   "Give agents CRM data through screen pops, plus predictive analytics to anticipate needs and proactively deliver service that surprises and delights.",
+   "Let customers choose how to connect over integrated channels, so agents get a single view and can spot high-value moments to add value.",
+   "Improve continuously with real-time and historical reporting and follow-up surveys, which the post says pay off as customers return, spend more and refer friends."
+  ],
+  "faq": [
+   {
+    "q": "What do contact center agents need to deliver VIP service?",
+    "a": "The post says rethinking contact center interactions starts with giving agents access to tools and customer insights that elevate their level of interaction, including accurate CRM data through screen pops so they can reference purchase history, past support interactions and communications preferences."
+   },
+   {
+    "q": "How can predictive analytics improve contact center service?",
+    "a": "The post says agents will need big data and predictive analytics to uncover insights that help them anticipate customers' needs and proactively deliver service that surprises and delights. Call center statistics can also reveal buying patterns and communications preferences and guide more effective marketing strategies."
+   },
+   {
+    "q": "What are high-value moments in a customer interaction?",
+    "a": "Quoting Forrester, the post describes critical steps in journeys where customers are paying the most attention, are most anxious, or appreciate value the most. It suggests looking for situations to add value, such as offering help completing a complex form online, then personalizing at the right moment."
+   },
+   {
+    "q": "Why give customers a choice of channels?",
+    "a": "The post says when a contact center lets customers choose how to connect, it ensures communication channels are integrated. That single view of all interactions makes it easier for agents to efficiently deliver top-notch care."
+   },
+   {
+    "q": "How does a contact center keep improving?",
+    "a": "The post says real-time and historical reporting lets you analyze interactions and review and revamp processes in real time, and follow-up surveys provide continuous feedback. Over time, it says this pays off as customers return, spend more and refer their friends."
+   }
+  ],
+  "skip": false
+ },
+ "toshiba-announces-operational-changes": {
+  "skip": true,
+  "reason": "Dated April 2017 vendor announcement about Toshiba winding down phone system operations, with time-bound order and support dates and a contact line."
+ },
+ "make-case-management-work-for-you": {
+  "tldr": [
+   "Case management spans help desk, incident tracking, contract management and customer service; a complete view of each case keeps customers happy and employees productive.",
+   "Start where paper files, spreadsheets and siloed databases cause the biggest pain, cost or quality problems, then decide whether to build, buy or configure.",
+   "Configuring applications on one scalable point-and-click platform saves development time and cost, and gives IT one place to manage updates, security and maintenance."
+  ],
+  "faq": [
+   {
+    "q": "What counts as case management?",
+    "a": "The post says case management includes everything from the IT help desk to incident tracking, contract management and customer service. It is information-centric work driven by information that requires human decisions, and it directly affects customers, constituents, students and employees."
+   },
+   {
+    "q": "Where should an organization look for case management opportunities?",
+    "a": "The post says to look for areas that depend heavily on knowledge workers, such as investigations, service requests, issue resolution, spreadsheets, paper files and siloed databases, plus customer-facing processes and gaps that major applications do not support, then start where pain, cost, time or service quality is worst."
+   },
+   {
+    "q": "Should we build, buy or configure a case management solution?",
+    "a": "The post says custom-coded applications take longer to create and are harder to change, point solutions are effective for one use but cannot be easily extended or connected, and a point-and-click configuration tool saves development time and costs, letting IT respond rapidly."
+   },
+   {
+    "q": "What should I look for to future-proof a case management choice?",
+    "a": "The post says to look for a solution that scales with changing needs, extends to other processes, departments and users, has an intuitive interface with access via email inboxes and line-of-business applications, and comes from an experienced vendor with proven implementations who will become a longtime strategic partner."
+   },
+   {
+    "q": "Why configure case management on one platform?",
+    "a": "The post says configuring case management applications on one flexible, scalable platform lets a company realize a lower total cost of ownership while giving IT one place to manage updates, security and maintenance."
+   }
+  ],
+  "skip": false
+ },
+ "technology-number-three-after-process--planning": {
+  "tldr": [
+   "Settle the who, what, where, when, why and how first, because without process and planning a paper mess just becomes an electronic mess.",
+   "Define why you want to go paperless, identify which processes cost or make money, and target measurable results such as profit margins and retention.",
+   "A process consultant can find bottlenecks, plan with stakeholder input and work back from go-live; features must support your why."
+  ],
+  "faq": [
+   {
+    "q": "Why should process and planning come before technology?",
+    "a": "The post says without a good process and planning, a paper mess just becomes an electronic mess, and whether you spend $50 or $500,000 on new technology, you would be better off spending on almost anything else without a process and plan."
+   },
+   {
+    "q": "What should you ask before going paperless?",
+    "a": "The post says to ask why you want to go paperless, since tossing file cabinets or clearing a desk of paper accomplishes little on its own. It also says to identify which processes are costing you money and which are making you money, which are often one and the same."
+   },
+   {
+    "q": "How can a business process consultant help?",
+    "a": "The post says consultants analyze a current process for weaknesses, gaps and bottlenecks, brainstorm improvements tied to measurable results like bottom-line dollars, profit margins and customer retention, build a plan with stakeholder input, and roll out the improved process by working back from the go-live date."
+   },
+   {
+    "q": "Why get stakeholder buy-in for a process change?",
+    "a": "The post says consultants get input from key stakeholders and explain why the process will improve. Their buy-in makes implementation infinitely better and makes realizing the identified benefits much quicker."
+   },
+   {
+    "q": "How should technology be chosen once the process is defined?",
+    "a": "The post says technology should facilitate the process, not the other way around, and support the work already done. It advises not getting caught up in cool features: if you do not need mobile access, a mobile app does not matter, and any feature must support your why."
+   }
+  ],
+  "skip": false
+ },
+ "be-less-paper-dependent": {
+  "tldr": [
+   "Paper is hard to eliminate because it holds valuable information with problems of location, security, access, version control, backup and duplicate entry.",
+   "A less paper-dependent office means eliminating reliance on singular printed information as the only way to access data, not scanning and shredding everything.",
+   "Consider legacy, to-be-created and to-be-received documents, then determine current archiving and data-entry procedures for each type before deciding how to go paperless."
+  ],
+  "faq": [
+   {
+    "q": "Why not just throw all the paper away?",
+    "a": "The post says the paper represents extremely valuable information necessary to run the business, so the question is how to eliminate paper while keeping the essential data. It says that question often causes companies to do nothing, because paper presents many problems."
+   },
+   {
+    "q": "What problems does paper create for a business?",
+    "a": "The post lists location, where typically only one copy exists; security, since most people can access paper; access, since it is only available at the office; version control; backup, if paper is lost or destroyed; and duplicate entry, when information is retyped into several systems."
+   },
+   {
+    "q": "Should a business go completely without paper?",
+    "a": "Not necessarily. The post says a paperless office has more to do with eliminating dependence on singular printed information as the only means of accessing data than with scanning every piece of paper and shredding it."
+   },
+   {
+    "q": "What types of documents should be considered when going paperless?",
+    "a": "The post names three types: legacy documents already in file cabinets and folders, documents to be created going forward, and documents to be received from outside sources."
+   },
+   {
+    "q": "What should you do after identifying document types?",
+    "a": "The post says to determine the procedures currently used for each type, such as how each is archived and whether its information is entered into a software program. Once you answer those questions, you are ready to decide how to go paperless in your office."
+   }
+  ],
+  "skip": false
+ },
+ "information-plus-data-the-vitality-of-your-business": {
+  "skip": true,
+  "reason": "Thin, vague metaphor-driven piece (about 373 words) with no concrete steps, ending in a VoIP mobility product pitch."
+ },
+ "onbase-by-hyland-receives-department-of-defense-certification": {
+  "skip": true,
+  "reason": "Vendor certification announcement (DoD 5015.02 for OnBase, February 2017) with product claims; announcement-style and dated."
+ },
+ "protect-your-company-with-it-business-continuity-and-disaster-recovery": {
+  "tldr": [
+   "Design BCDR to survive unplanned events, assure continuity through planned operations, restore data, infrastructure and applications, and leverage virtualization to simplify recovery.",
+   "Best practices: plan and document, replicate applications, protect on-site and off-site, automate recovery, test regularly, secure the backed-up environment and select your partner wisely.",
+   "Consider DRaaS when a fully replicated secondary site is not financially viable for small to midsize businesses, and use hybrid on-site plus cloud protection."
+  ],
+  "faq": [
+   {
+    "q": "What should a disaster recovery plan protect against?",
+    "a": "The post says a plan must protect against interruption or degradation of IT service from natural disasters, terrorist acts, technology failures and malicious data breaches, and cites Forrester Research saying operational events such as loss of power or hardware, software and network failures are the leading cause of IT outages."
+   },
+   {
+    "q": "What should be written into a BCDR plan?",
+    "a": "The post says well-documented action plans include detailed recovery procedures, BCDR vendor engagement rules, and means of communication and transportation, and answer when you declare a disaster, where data, software and licenses are stored, and what data loss is acceptable and how fast you must recover."
+   },
+   {
+    "q": "What is Disaster Recovery as a Service?",
+    "a": "The post says a secondary site with all applications and data replicated may not be financially viable for small to midsize businesses, so with the cloud, disaster recovery can be offered as a service based on multi-tenant remote replication, with leading vendors able to guarantee SLA-based availability through a secure internet connection."
+   },
+   {
+    "q": "Why use both on-site and off-site protection?",
+    "a": "The post says protecting locally allows easier access and generally faster recovery, while major disasters and long-term retention call for off-site protection, preferably in a geographically distant location. Hybrid solutions give an on-site appliance for fast access plus cloud replication for ultimate protection."
+   },
+   {
+    "q": "Why automate and test recovery procedures?",
+    "a": "The post says key IT personnel may be unavailable during an event, so a push-of-a-button, process-driven approach offers higher ROI, and a disaster recovery solution is only worth the cost if it works, so test regularly because hardware, software, network and personnel changes can affect recovery."
+   }
+  ],
+  "skip": false
+ },
+ "leverage-the-power-of-unified-communications-with-ip-telephony-systems": {
+  "tldr": [
+   "A complete UC solution combines communication modes, locations and devices, with features such as telephony, unified messaging, conferencing, presence, contact center, mobile and collaboration.",
+   "Presence shows the best way to reach someone, from basic and rich to contextual and process presence for role-based availability.",
+   "Infrastructure alignment matters: UC added piecemeal to IP telephony not designed for it brings complexity, cost and reliability problems, so favor distributed, open designs."
+  ],
+  "faq": [
+   {
+    "q": "What does unified communications mean?",
+    "a": "The post quotes UC as the integration of real-time enterprise communication services that provides a consistent unified user interface and user experience across multiple devices and media types, and says it builds on IP telephony as companies pursue next-generation converged applications."
+   },
+   {
+    "q": "What are the three main components of a UC solution?",
+    "a": "The post names modes, such as real-time voice, IM, email, video and collaborative media; locations, fixed and mobile, from office or home to hotel or car; and devices, from traditional phones to PCs, laptops, smartphones and tablets."
+   },
+   {
+    "q": "What is presence in unified communications?",
+    "a": "The post calls presence a key UC enabler that lets users find the best person available for live contact and view their status so they can choose the most appropriate mode. It describes basic, rich, contextual and process presence."
+   },
+   {
+    "q": "What is the difference between rich and process presence?",
+    "a": "The post says rich presence combines pieces of information about a user's state, such as being on the phone or at the keyboard, and the capabilities of modes and devices. Process presence shows whether someone who can fulfill a business-specific role is available, or gives an estimated wait time."
+   },
+   {
+    "q": "What should the IP telephony architecture behind UC look like?",
+    "a": "The post says the ideal architecture is not limited by voice and data silos, offers high reliability and scalability at a very reasonable total cost of ownership, is fully distributed for location transparency, and allows easy integration of third-party communications applications."
+   }
+  ],
+  "skip": false
+ },
+ "cloud-data-protection-by-acronis-at-van-ausdall--farrar-inc": {
+  "skip": true,
+  "reason": "Partnership announcement (January 2017, executive quote) with unsourced statistic (60 to 70 percent of businesses not protecting data) and vendor boilerplate; announcement-style."
+ },
+ "paperless-workflow-for-mortgage-bankers-with-document-capture-technology": {
+  "skip": true,
+  "reason": "Vendor-specific product claims (95% automatic classification, 45 minutes to under 5, ROI under 5 months in one place and within six months in another) that are internally inconsistent and unsourced; VAF should verify before reuse."
+ },
+ "speech-recognition-solutions-for-health-professionals-improve-patient-care": {
+  "tldr": [
+   "Healthcare is adopting speech recognition faster because EMR record keeping makes physicians do their own data entry, taking face time from patients.",
+   "Rich narrative physician notes support better patient care, while structured templates do little to capture them without a loss of information.",
+   "Voice dictation integrated with EMRs and managed in a secure central location can speed documentation, reduce data errors and improve turnaround times."
+  ],
+  "faq": [
+   {
+    "q": "Why are healthcare professionals adopting speech recognition faster?",
+    "a": "The post points to the rise of electronic medical record keeping that requires physicians to do their own data entry, the trend toward data-driven healthcare changing clinical documentation, and increased physician dissatisfaction from workflow disruptions, documentation time and software usability."
+   },
+   {
+    "q": "Why are structured templates a problem for physician notes?",
+    "a": "The post says patient care benefits greatly from detailed notes written in a rich, narrative manner that describe patient histories, assessments, diagnoses, treatment options and overall analysis, and structured templates do little to allow that without a loss of information."
+   },
+   {
+    "q": "How does speech recognition help clinical documentation?",
+    "a": "The post says physicians use their voices to document a patient story faster and more naturally, and the data can be captured and distributed to EMRs or other healthcare information systems for reporting, which enhances clinical documentation in the medical records."
+   },
+   {
+    "q": "What capabilities does modern dictation technology offer?",
+    "a": "The post lists a user-friendly interface for dictating narratives by voice commands, integration with EMRs and health information systems that speeds documentation while reducing data errors, secure central management of documentation with automated workflows, and lower operational cost with faster turnaround times."
+   }
+  ],
+  "skip": false
+ },
+ "the-challenge-of-big-document-analytics": {
+  "tldr": [
+   "Document capture grabs images and information to advance a process, while document analytics strategically extracts value and meaning from unstructured content.",
+   "An Ephesoft executive quoted in the post says structured information becomes usable data while unstructured information is virtually useless.",
+   "Evaluate analytics solutions against the three Vs: volume that scales, variety that normalizes and classifies sources, and velocity measured in days rather than weeks."
+  ],
+  "faq": [
+   {
+    "q": "What is the difference between document capture and document analytics?",
+    "a": "The post says capture grabs images and information to find a document again and advance a process such as a sales order or service request, a practical application of classification and extraction. Analytics is the strategic application of advanced capture to extract value and meaning, from fraud detection to legal discovery."
+   },
+   {
+    "q": "Why is unstructured information harder to use?",
+    "a": "An Ephesoft executive quoted in the post says structured, normalized information becomes usable data while unstructured information is virtually useless. The post adds that hidden data in unstructured information is harder to mine but just as valuable for analytics."
+   },
+   {
+    "q": "What are the three Vs of big data analytics?",
+    "a": "The post names volume, where the solution should scale as massive document volumes overwhelm traditional platforms; variety, normalizing data structures, classifying sources and interpreting context; and velocity, where turnaround from document to information should be almost real time, days rather than weeks."
+   },
+   {
+    "q": "What can document analytics be used for?",
+    "a": "The post says document analytics offers new applications from fraud detection to legal discovery to medical research, and that data and its context are your competitive advantage."
+   }
+  ],
+  "skip": false
+ },
+ "time-is-now-for-lawyers-to-get-savvy-about-mobile-speech-productivity": {
+  "skip": true,
+  "reason": "Dated December 2016 piece dominated by ABA TECHREPORT 2016 and Statista survey figures plus a product pitch; no stable guidance."
+ },
+ "when-healthcare-professionals-go-mobile": {
+  "skip": true,
+  "reason": "Product promotion for a specific mobile app (December 2016) with unverified compliance claims (HL7, CCOW, HIPAA, 21 CFR Part 11); VAF should verify before reuse."
+ },
+ "5-requirements-of-byod-for-mobile-unified-communications": {
+  "tldr": [
+   "A BYOD-ready mobile UC solution must address five requirements: securing communications, managing multiple platforms, lowering operating costs, increasing user productivity and simplifying user experience.",
+   "Security concerns are a top reason IT managers resist BYOD, mainly unauthorized access to networks and data and lost devices exposing sensitive information.",
+   "Choose heterogeneous platform support with a single point of control, since three separate mobile UC apps at least triple deployment and support resources."
+  ],
+  "faq": [
+   {
+    "q": "What does BYOD-ready mean for mobile unified communications?",
+    "a": "The post says companies are extending UC capabilities to mobile devices, letting users reach deskphone capabilities, IM and presence on smartphones and tablets. A BYOD-ready solution maximizes the benefits of BYOD while eliminating its challenges, with security always a priority."
+   },
+   {
+    "q": "Why do IT managers worry about BYOD security?",
+    "a": "The post says security concerns are one of the top reasons IT managers shy away from letting employees use personal devices for enterprise communications, mainly unauthorized access to corporate networks and data, and loss of devices exposing sensitive information."
+   },
+   {
+    "q": "Why is managing multiple mobile platforms a challenge?",
+    "a": "The post says BYOD brings a wide variety of smartphones and tablets, and IT managers must find a solution that extends UC seamlessly and supports it on all devices. It says managing three separate apps for Android, BlackBerry and iOS at least triples deployment and support time and resources."
+   },
+   {
+    "q": "How does BYOD affect operating costs?",
+    "a": "The post says BYOD reduces capital expenditure by eliminating investment in corporate-liable devices, because users own and maintain their devices, but CIOs must ensure the cost of supporting those devices does not surpass the cost benefits of mobilizing UC."
+   },
+   {
+    "q": "What do users need from mobile UC on their own devices?",
+    "a": "The post says employees are immediately productive only if their device continues to feel and run the same and they do not have to learn a new application. Features such as simultaneous ring, extension dialing, transfer, conferencing, directory query and presence should be available consistently on any network."
+   }
+  ],
+  "skip": false
+ },
+ "case-management-solutions-for-the-healthcare-industry": {
+  "skip": true,
+  "reason": "Product promotion (December 2016) for a hosted OnBase case management application with unsupported superlative claims; no stable buyer guidance."
+ },
+ "success-threat-and-loss-the-drama-of-network-communications": {
+  "skip": true,
+  "reason": "Thin (238 words) vendor pitch for internal segmentation firewalls from a named partner; little beyond a short benefit list."
+ },
+ "driving-your-technology": {
+  "tldr": [
+   "Ask whether technology truly makes your office more productive, or whether you just have the latest and greatest shiny new toys.",
+   "Assess how a document moves through your organization, from creation, editing and distribution to retention and destruction.",
+   "Also check how mobile devices interact with the network and rate employee satisfaction with IT's response on a scale of 1 to 10."
+  ],
+  "faq": [
+   {
+    "q": "How can I tell whether my technology is making my office more productive?",
+    "a": "The post suggests three questions: how a document moves through your organization, from creation and editing to distribution, retention and destruction; how mobile devices interact with the network; and how satisfied employees are, on a scale of 1 to 10, with IT's response."
+   },
+   {
+    "q": "Why isn't having modern technology enough?",
+    "a": "The post says technology can be present in the infrastructure without making people more productive and effective, so you may just have the latest and greatest shiny new toys. It says to regularly assess whether employees, technology and goals are aligned and working together."
+   },
+   {
+    "q": "What should I do to improve how technology is used?",
+    "a": "The post says to take time to ask questions, identify bottlenecks, and help team members who are still struggling with outdated ways of working, noting that technology can make people more productive if they know how to make it work for them."
+   }
+  ],
+  "skip": false
+ },
+ "oh-my-the-phones-are-down-again": {
+  "tldr": [
+   "A crashed phone system can paralyze a business, and the post says full replacement and programming can take up to 1-2 weeks.",
+   "Phone systems may last 10 years or more, but manufacturer support typically lasts only 5-7 years, which can force reliance on used aftermarket equipment.",
+   "Get a vendor health check on lifespan, support access and growth needs, and ask providers about support, response time, technician dispatch and integration."
+  ],
+  "faq": [
+   {
+    "q": "Why should I replace a phone system that still works?",
+    "a": "The post compares it to car insurance: you protect your investment against the inevitable and an unexpected loss. It says business phones are a lifeline to your customer base and income, and that the if-it-is-not-broke mindset leaves businesses exposed when a system fails."
+   },
+   {
+    "q": "How long does manufacturer support last for a business phone system?",
+    "a": "The post says while some business phone systems last 10 years or more, actual manufacturer support is typically only 5-7 years, some longer or shorter. After that you may rely on the aftermarket and used equipment, usually with little to no warranty."
+   },
+   {
+    "q": "What should a phone system health check cover?",
+    "a": "The post says a trusted phone vendor should give an honest assessment of your phone system's lifespan and what access to support looks like, and also assess your business growth, because you need a scalable system that can grow with you and serve an increasingly mobile society."
+   },
+   {
+    "q": "What should I ask a phone system provider about support?",
+    "a": "The post says to ask how the system is supported, what the response time is, where technicians dispatch from, and how the proposed system integrates into your office initiatives and sales force needs so you can drive revenue."
+   },
+   {
+    "q": "How long can it take to recover from a fully crashed phone system?",
+    "a": "The post says crashed phone systems are not like replacing a blown fuse: fully crashed systems can easily take up to 1-2 weeks to replace, program and get running, which can paralyze a business and heavily damage customer relationships."
+   }
+  ],
+  "skip": false
+ },
+ "if-you-really-want-to-know-what-your-customers-think-of-your-company-ask-them": {
+  "tldr": [
+   "Use at least one survey method that lets customers rate their experience on a scale and also share comments and opinions.",
+   "Ask clear, concise, specific questions, plus the Net Promoter Score question of how likely customers are to recommend you to a friend or colleague.",
+   "Have a plan for responses, call dissatisfied customers promptly, review negative responses weekly with management, and forward compliments to employees."
+  ],
+  "faq": [
+   {
+    "q": "What does a post-service-call customer survey look like?",
+    "a": "The post describes the Net Promoter Score method, which the author's company uses by emailing a 6-8 question survey about 24 hours after a service call, rating Customer Care Specialists, field technicians and the work performed, with comments allowed on each rating."
+   },
+   {
+    "q": "What question measures customer loyalty?",
+    "a": "The post says one broader question is designed to measure customer loyalty and sum up the customer's overall feeling about the company: how likely is it that you would recommend this company to a friend or colleague."
+   },
+   {
+    "q": "How should I write survey questions?",
+    "a": "The post says to think about what you hope to learn and ask questions that are clear, concise and specific, and notes you do not need to recreate the wheel because templates, software and online survey services such as Survey Monkey can help you build a survey."
+   },
+   {
+    "q": "What should I do with survey responses?",
+    "a": "The post says feedback does not benefit your business unless you act on it. Decide who receives responses and how they are handled, have a plan to resolve surfaced issues, and call dissatisfied customers as soon as possible, with weekly management review of negative responses."
+   },
+   {
+    "q": "Why should positive survey comments be shared?",
+    "a": "The post says to forward compliments, especially those that praise specific employees, to those workers. Compliments and expressions of appreciation, especially when publicized, can be very motivating, a great morale booster, and may help you retain star talent."
+   }
+  ],
+  "skip": false
+ },
+ "addicted-to-the-manufacturers-toner-you-need-a-managed-print-intervention": {
+  "tldr": [
+   "Managed print charges a monthly fee based on print volume with service and supplies included, replacing piecemeal toner purchases and invoices.",
+   "Analyze print costs, because infrequent toner invoices hide true spending, and OEM cartridges bought at retail can be extremely expensive.",
+   "The post says remanufactured cartridges have typically poorer quality, while new-manufactured compatible cartridges fail only a small percentage more than OEM on average."
+  ],
+  "faq": [
+   {
+    "q": "How does a managed print agreement work?",
+    "a": "The post says you pay a monthly fee based on print volume and all service and supplies are included, which is simple and can save thousands. Ordering toner as needed means infrequent invoices that no one reviews to uncover true printing costs."
+   },
+   {
+    "q": "Why do toner costs often go unnoticed?",
+    "a": "The post says toner invoices come in infrequently, get routed to accounts payable, get paid and are filed away, so no one considers looking at them to uncover true printing costs. Analyzing the data often prompts the reaction that no one had any idea it was this much."
+   },
+   {
+    "q": "What is the difference between remanufactured and compatible cartridges?",
+    "a": "The post says remanufactured cartridges are recycled empty cartridges that have been cleaned and refilled, while compatible cartridges are the generic counterpart to OEM brands, manufactured new without the expensive label."
+   },
+   {
+    "q": "How reliable are compatible cartridges compared with OEM?",
+    "a": "The post says failure rates of compatible cartridges rival OEM rates, failing only a small percentage more on average, and that remanufactured cartridges have typically less desirable failure rates and quality, which it says is why managed print providers use only compatibles, not remanufactured."
+   },
+   {
+    "q": "What should I check with a managed print provider about cartridges?",
+    "a": "The post says to ensure your managed print provider sources only quality compatible cartridges and to give non-OEM a chance, and warns against providers that use remanufactured cartridges because soft costs from returning bad cartridges can outweigh hard-cost savings."
+   }
+  ],
+  "skip": false
+ },
+ "biotech-cluster-is-big-and-getting-bigger-in-indiana-biocrossroads": {
+  "skip": true,
+  "reason": "Sponsorship and community news about the BioCrossroads New Venture Competition (August 2016); not buyer guidance and time-bound."
+ },
+ "protecting-the-modern-data-center": {
+  "tldr": [
+   "Virtualization shrinks recovery time since identical hardware is not required, but you still need storage and processing capacity where your recovery data lives.",
+   "Know your recovery time objective, the estimated time to recover after a disaster, since backups alone do not tell you how long business stops.",
+   "DRaaS has a third party replicate and host servers for failover, with no duplicate hardware investment and typically a fixed monthly cost."
+  ],
+  "faq": [
+   {
+    "q": "What is a recovery time objective?",
+    "a": "The post defines RTO as the estimated amount of time it would take your business to fully recover its systems after a disaster, in other words how long you will not be able to conduct business."
+   },
+   {
+    "q": "How does virtualization affect disaster recovery time?",
+    "a": "The post says recovering a virtual environment does not depend on having the exact hardware you had before and takes less time because you do not reload operating systems, drivers, application software and data, though you still need available storage and processing capacity."
+   },
+   {
+    "q": "Why is cloud-stored recovery data not enough on its own?",
+    "a": "The post says if you use a service to store recovery data in the cloud, it will usually take at least 24 hours to request the data. It suggests having capacity to start servers back up in the same location where your data is replicated."
+   },
+   {
+    "q": "What is Disaster Recovery as a Service?",
+    "a": "The post defines DRaaS as the replication and hosting of physical or virtual servers by a third party to provide failover after a man-made or natural catastrophe. As a service, it needs no investment in duplicate hardware and is typically provided at a fixed monthly cost."
+   },
+   {
+    "q": "How does DRaaS replication and recovery work?",
+    "a": "The post says virtual machines are replicated at update frequencies you choose, contingent on bandwidth between data centers, and stored on fast storage in a restful state. The provider commits to capacity to host your servers on short notice, with the objective of minimal downtime by spinning up or failing over."
+   }
+  ],
+  "skip": false
+ },
+ "culture---who-cares": {
+  "skip": true,
+  "reason": "Off-topic opinion essay on workplace culture (July 2016) with no technology buying guidance."
  }
 }

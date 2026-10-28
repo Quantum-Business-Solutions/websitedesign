@@ -1,0 +1,496 @@
+{
+ "https://www.vanausdall.com/images/artificial-intelligence.jpg": [
+  "/"
+ ],
+ "https://www.vanausdall.com/images/bg-innovation.jpg": [
+  "/"
+ ],
+ "https://www.vanausdall.com/images/cloud-networking.jpg": [
+  "/",
+  "/get-started"
+ ],
+ "https://www.vanausdall.com/images/hero-information.jpg": [
+  "/",
+  "/business-continuity-compliance",
+  "/business-security-systems",
+  "/cyber-security-solutions",
+  "/information/",
+  "/information/cloud-solutions",
+  "/information/data-security",
+  "/information/managed-it-services",
+  "/information/office-security",
+  "/information/physical-security",
+  "/project-deployment"
+ ],
+ "https://www.vanausdall.com/images/compliance.jpg": [
+  "/"
+ ],
+ "https://www.vanausdall.com/images/51749580.jpg": [
+  "/",
+  "/about/",
+  "/about/customer-comments",
+  "/about/history",
+  "/about/why",
+  "/ai",
+  "/automated-forms-processing",
+  "/benefits",
+  "/best-in-class-partners",
+  "/bloomington/",
+  "/bloomington/business-phone-systems-in-bloomington-in",
+  "/bloomington/network-carrier-solutions-in-bloomington-in",
+  "/bloomington/network-infrastructure-in-bloomington-in",
+  "/business-continuity-compliance",
+  "/business-security-systems",
+  "/carmel/",
+  "/case-studies/",
+  "/case-studies/aspire",
+  "/case-studies/becks-hybrid",
+  "/case-studies/berry-global",
+  "/case-studies/bowen-engineering",
+  "/case-studies/city-of-anderson",
+  "/case-studies/city-of-bloomington",
+  "/case-studies/echo-engineering",
+  "/case-studies/ellinger-riggs",
+  "/case-studies/gailey-eye-clinic",
+  "/case-studies/johnson-memorial-hospital",
+  "/case-studies/mid-city",
+  "/case-studies/phalen-leadership-academy",
+  "/case-studies/pools-of-fun",
+  "/case-studies/shiel-sexton",
+  "/case-studies/star-financial",
+  "/case-studies/the-town-of-bargersville",
+  "/case-studies/tippecanoe-school-corporation",
+  "/case-studies/tippecanoe-school-corporation-digital-document",
+  "/cloud-based-solutions",
+  "/columbus/",
+  "/columbus/business-telephone-systems-in-columbus-in",
+  "/columbus/carrier-solutions-in-columbus-in",
+  "/columbus/network-infrastructure-in-columbus-in",
+  "/communication/",
+  "/communication/business-phone-systems",
+  "/communication/call-center-services",
+  "/communication/call-recording",
+  "/communication/carrier-services",
+  "/communication/cloud-communications",
+  "/communication/conference-and-collaboration",
+  "/communication/customer-training-videos",
+  "/communication/elevate",
+  "/communication/mobility-solutions",
+  "/communication/networking-solutions",
+  "/communication/sd-wan",
+  "/communication/unified-communications",
+  "/contact/",
+  "/contact/careers",
+  "/contact/training",
+  "/copier-service-repair",
+  "/copiers/",
+  "/copy-print-solutions/",
+  "/covid-19-information",
+  "/customer-care",
+  "/cyber-security-assessment",
+  "/cyber-security-solutions",
+  "/document-conversion/",
+  "/document-management",
+  "/document-management-workflow",
+  "/document-scanning",
+  "/downloads",
+  "/enterprise-digital-dictation-solutions",
+  "/evansville/",
+  "/evansville/business-phone-systems-in-evansville-in",
+  "/evansville/cloud-solutions-evansville-in",
+  "/evansville/document-conversion-solutions",
+  "/evansville/managed-it-solutions-evansville-in",
+  "/evansville/network-carrier-solutions-in-evansville-in",
+  "/evansville/network-infrastructure-in-evansville-in",
+  "/fishers/",
+  "/fort-wayne/",
+  "/fort-wayne/business-phone-systems-in-fort-wayne-in",
+  "/fort-wayne/cloud-solutions-fort-wayne-in",
+  "/fort-wayne/managed-it-solutions-fort-wayne-in",
+  "/fort-wayne/network-carrier-solutions-in-fort-wayne-in",
+  "/fort-wayne/network-infrastructure-in-fort-wayne-in",
+  "/free-security-awareness",
+  "/free-security-training-tools",
+  "/get-started",
+  "/greenwood/",
+  "/indianapolis/",
+  "/indianapolis/network-infrastructure-in-indianapolis-in",
+  "/industries/",
+  "/industries/education-technology-solutions",
+  "/industries/engineering-construction-technology-solutions",
+  "/industries/financial-technology-services",
+  "/industries/government-technology-solutions",
+  "/industries/healthcare-technology-solutions",
+  "/industries/insurance-technology-solutions",
+  "/industries/manufacturing-logistics-technology-solutions",
+  "/industries/real-estate-technology-solutions",
+  "/information/",
+  "/information/cloud-solutions",
+  "/information/data-security",
+  "/information/managed-it-services",
+  "/information/office-security",
+  "/information/physical-security",
+  "/iphone-scanning",
+  "/it-support",
+  "/kiosk-assembly",
+  "/kiosk-demo",
+  "/kiosk-quote",
+  "/knowbe4/can-hackers-spoof-email-address-domain",
+  "/knowbe4/free-phish-alert-button",
+  "/knowbe4/get-free-email-exposure-check",
+  "/knowbe4/get-free-ransomware-simulator-tool",
+  "/knowbe4/get-free-weak-password-test",
+  "/knowbe4/start-free-phishing-security-test",
+  "/managed-print",
+  "/muncie/",
+  "/muncie/business-phone-systems-in-muncie-in",
+  "/muncie/network-carrier-solutions-in-muncie-in",
+  "/muncie/network-infrastructure-in-muncie-in",
+  "/net-promoter-score",
+  "/network-infrastructure",
+  "/network-security",
+  "/network-security-secure-router-access",
+  "/noblesville/",
+  "/office-security-solutions",
+  "/partners",
+  "/policies/cookie",
+  "/policies/disclaimer",
+  "/policies/do-not-share",
+  "/policies/limit-the-use",
+  "/policies/privacy",
+  "/policies/terms-of-service",
+  "/print-management-software",
+  "/print/free-print-assessment",
+  "/print/managed-print-services",
+  "/print/print-application-solutions",
+  "/proactive-it-services",
+  "/process/",
+  "/process/business-process-solutions",
+  "/process/content-management",
+  "/process/document-scanning",
+  "/process/facilities-management",
+  "/process/managed-mail-centers",
+  "/process/managed-print-centers",
+  "/process/print-fulfillment",
+  "/process/receptionist-services",
+  "/process/voice-processing",
+  "/production-print",
+  "/project-deployment",
+  "/solutions",
+  "/south-bend/",
+  "/south-bend/business-phone-systems-in-south-bend-in",
+  "/south-bend/carrier-solutions-in-south-bend-in",
+  "/south-bend/network-infrastructure-in-south-bend-in",
+  "/state-of-the-art-voice-data-communication-systems",
+  "/support/",
+  "/survey",
+  "/switch-to-cloud",
+  "/technology-strength-assessment",
+  "/transcription-services",
+  "/tw-telecom",
+  "/vaf-auto-support",
+  "/vaf-coronavirus-covid-19-policy",
+  "/van-ausdall-farrar-customer-care-app-privacy-policy",
+  "/virtualsitevisit",
+  "/voice-data-circuits",
+  "/voice-processing",
+  "/voice-recognition",
+  "/wids-format"
+ ],
+ "https://www.vanausdall.com/images/hero-about.jpg": [
+  "/about/",
+  "/about/customer-comments",
+  "/about/history",
+  "/about/why",
+  "/case-studies/",
+  "/case-studies/aspire",
+  "/case-studies/becks-hybrid",
+  "/case-studies/berry-global",
+  "/case-studies/bowen-engineering",
+  "/case-studies/city-of-anderson",
+  "/case-studies/city-of-bloomington",
+  "/case-studies/echo-engineering",
+  "/case-studies/ellinger-riggs",
+  "/case-studies/gailey-eye-clinic",
+  "/case-studies/johnson-memorial-hospital",
+  "/case-studies/mid-city",
+  "/case-studies/phalen-leadership-academy",
+  "/case-studies/pools-of-fun",
+  "/case-studies/shiel-sexton",
+  "/case-studies/star-financial",
+  "/case-studies/the-town-of-bargersville",
+  "/case-studies/tippecanoe-school-corporation",
+  "/case-studies/tippecanoe-school-corporation-digital-document"
+ ],
+ "https://www.vanausdall.com/images/about.jpg": [
+  "/about/"
+ ],
+ "https://www.vanausdall.com/images/careers/01.jpg": [
+  "/benefits",
+  "/contact/careers"
+ ],
+ "https://www.vanausdall.com/images/careers/02.jpg": [
+  "/benefits",
+  "/contact/careers"
+ ],
+ "https://www.vanausdall.com/images/van-ausdall-farrar-office.jpg": [
+  "/about/why",
+  "/virtualsitevisit"
+ ],
+ "https://www.vanausdall.com/images/eric-von-grimmenstein.jpg": [
+  "/about/history"
+ ],
+ "https://www.vanausdall.com/assessment/images/headquarters.jpg": [
+  "/assessment/"
+ ],
+ "https://www.vanausdall.com/assessment/images/get-started.jpg": [
+  "/assessment/"
+ ],
+ "https://www.vanausdall.com/images/hero-communication.jpg": [
+  "/communication/",
+  "/communication/business-phone-systems",
+  "/communication/call-center-services",
+  "/communication/call-recording",
+  "/communication/carrier-services",
+  "/communication/cloud-communications",
+  "/communication/conference-and-collaboration",
+  "/communication/customer-training-videos",
+  "/communication/elevate",
+  "/communication/mobility-solutions",
+  "/communication/networking-solutions",
+  "/communication/sd-wan",
+  "/communication/unified-communications"
+ ],
+ "https://www.vanausdall.com/images/elevate/hero-elevate-1.png": [
+  "/communication/elevate"
+ ],
+ "https://www.vanausdall.com/images/elevate/ai-call-meeting-recap.png": [
+  "/communication/elevate"
+ ],
+ "https://www.vanausdall.com/images/elevate/ai-agent-assist.png": [
+  "/communication/elevate"
+ ],
+ "https://www.vanausdall.com/images/elevate/ai-supervisor-assist.png": [
+  "/communication/elevate"
+ ],
+ "https://www.vanausdall.com/images/elevate/devices-lockup.png": [
+  "/communication/elevate"
+ ],
+ "https://www.vanausdall.com/images/elevate/elevate-teams-integration.png": [
+  "/communication/elevate"
+ ],
+ "https://www.vanausdall.com/images/elevate/contact-center-benefits.png": [
+  "/communication/elevate"
+ ],
+ "https://www.vanausdall.com/images/elevate/contact-center-teams.png": [
+  "/communication/elevate"
+ ],
+ "https://www.vanausdall.com/images/elevate/archiving-hero.png": [
+  "/communication/elevate"
+ ],
+ "https://www.vanausdall.com/images/elevate/archiving-benefits.png": [
+  "/communication/elevate"
+ ],
+ "https://www.vanausdall.com/images/elevate/archiving-teams.png": [
+  "/communication/elevate"
+ ],
+ "https://www.vanausdall.com/images/hero-print.jpg": [
+  "/copiers/",
+  "/copy-print-solutions/",
+  "/industries/education-technology-solutions",
+  "/print-management-software",
+  "/print/free-print-assessment",
+  "/print/managed-print-services",
+  "/print/print-application-solutions",
+  "/production-print"
+ ],
+ "https://www.vanausdall.com/images/copier-printer.jpg": [
+  "/copiers/",
+  "/copy-print-solutions/",
+  "/industries/engineering-construction-technology-solutions",
+  "/print/free-print-assessment"
+ ],
+ "https://www.vanausdall.com/images/hero-ai.jpg": [
+  "/ai"
+ ],
+ "https://www.vanausdall.com/images/ai.jpg": [
+  "/ai"
+ ],
+ "https://www.vanausdall.com/images/129153397.jpg": [
+  "/copier-service-repair",
+  "/support/"
+ ],
+ "https://www.vanausdall.com/images/team-reviewing-finance-documents.jpg": [
+  "/copy-print-solutions/"
+ ],
+ "https://www.vanausdall.com/images/hero-contact.jpg": [
+  "/contact/",
+  "/contact/training",
+  "/policies/cookie",
+  "/policies/disclaimer",
+  "/policies/do-not-share",
+  "/policies/limit-the-use",
+  "/policies/privacy",
+  "/policies/terms-of-service",
+  "/survey"
+ ],
+ "https://www.vanausdall.com/images/120759184.jpg": [
+  "/cyber-security-assessment",
+  "/technology-strength-assessment"
+ ],
+ "https://www.vanausdall.com/images/hero-process.jpg": [
+  "/document-conversion/",
+  "/document-management",
+  "/process/",
+  "/process/business-process-solutions",
+  "/process/content-management",
+  "/process/document-scanning",
+  "/process/facilities-management",
+  "/process/managed-mail-centers",
+  "/process/managed-print-centers",
+  "/process/print-fulfillment",
+  "/process/receptionist-services",
+  "/process/voice-processing"
+ ],
+ "https://www.vanausdall.com/images/hero-industries.jpg": [
+  "/industries/",
+  "/industries/education-technology-solutions",
+  "/industries/engineering-construction-technology-solutions",
+  "/industries/financial-technology-services",
+  "/industries/government-technology-solutions",
+  "/industries/healthcare-technology-solutions",
+  "/industries/insurance-technology-solutions",
+  "/industries/manufacturing-logistics-technology-solutions",
+  "/industries/real-estate-technology-solutions"
+ ],
+ "https://www.vanausdall.com/images/education-cloud.jpg": [
+  "/industries/education-technology-solutions"
+ ],
+ "https://www.vanausdall.com/images/education-virtual-classroom.jpg": [
+  "/industries/education-technology-solutions"
+ ],
+ "https://www.vanausdall.com/images/education-process.jpg": [
+  "/industries/education-technology-solutions"
+ ],
+ "https://www.vanausdall.com/images/financial-cloud.jpg": [
+  "/industries/financial-technology-services"
+ ],
+ "https://www.vanausdall.com/images/financial-print.jpg": [
+  "/industries/financial-technology-services"
+ ],
+ "https://www.vanausdall.com/images/financial-communication.jpg": [
+  "/industries/financial-technology-services"
+ ],
+ "https://www.vanausdall.com/images/financial-process.jpg": [
+  "/industries/financial-technology-services"
+ ],
+ "https://www.vanausdall.com/images/government-print.jpg": [
+  "/industries/government-technology-solutions"
+ ],
+ "https://www.vanausdall.com/images/government-communication.jpg": [
+  "/industries/government-technology-solutions"
+ ],
+ "https://www.vanausdall.com/images/government-process.jpg": [
+  "/industries/government-technology-solutions"
+ ],
+ "https://www.vanausdall.com/images/manufacturing-logistics-cloud.jpg": [
+  "/industries/manufacturing-logistics-technology-solutions"
+ ],
+ "https://www.vanausdall.com/images/healthcare-print.jpg": [
+  "/industries/healthcare-technology-solutions",
+  "/industries/manufacturing-logistics-technology-solutions"
+ ],
+ "https://www.vanausdall.com/images/manufacturing-logistics-communication.jpg": [
+  "/industries/manufacturing-logistics-technology-solutions"
+ ],
+ "https://www.vanausdall.com/images/manufacturing-logistics-process.jpg": [
+  "/industries/manufacturing-logistics-technology-solutions"
+ ],
+ "https://www.vanausdall.com/images/insurance-cloud.jpg": [
+  "/industries/insurance-technology-solutions"
+ ],
+ "https://www.vanausdall.com/images/insurance-print.jpg": [
+  "/industries/insurance-technology-solutions"
+ ],
+ "https://www.vanausdall.com/images/insurance-communication.jpg": [
+  "/industries/insurance-technology-solutions"
+ ],
+ "https://www.vanausdall.com/images/healthcare-communication.jpg": [
+  "/industries/healthcare-technology-solutions"
+ ],
+ "https://www.vanausdall.com/images/healthcare-process.jpg": [
+  "/industries/healthcare-technology-solutions"
+ ],
+ "https://www.vanausdall.com/images/real-estate-cloud.jpg": [
+  "/industries/real-estate-technology-solutions"
+ ],
+ "https://www.vanausdall.com/images/real-estate-printing.jpg": [
+  "/industries/real-estate-technology-solutions"
+ ],
+ "https://www.vanausdall.com/images/real-estate-communication.jpg": [
+  "/industries/real-estate-technology-solutions"
+ ],
+ "https://www.vanausdall.com/images/real-estate-process.jpg": [
+  "/industries/real-estate-technology-solutions"
+ ],
+ "https://www.vanausdall.com/images/kiosk.png": [
+  "/information/physical-security"
+ ],
+ "https://www.vanausdall.com/images/kioskspecs.png": [
+  "/information/physical-security"
+ ],
+ "https://www.vanausdall.com/images/engineering-construction-cloud.jpg": [
+  "/industries/engineering-construction-technology-solutions"
+ ],
+ "https://www.vanausdall.com/images/engineering-construction-communication.jpg": [
+  "/industries/engineering-construction-technology-solutions"
+ ],
+ "https://www.vanausdall.com/images/engineering-construction-process.jpg": [
+  "/industries/engineering-construction-technology-solutions"
+ ],
+ "https://www.vanausdall.com/images/data-center-engineers.jpg": [
+  "/information/",
+  "/information/managed-it-services"
+ ],
+ "https://www.vanausdall.com/images/data-center-technician.jpg": [
+  "/information/",
+  "/information/managed-it-services"
+ ],
+ "https://www.vanausdall.com/images/hero-main.jpg": [
+  "/partners",
+  "/solutions"
+ ],
+ "https://www.vanausdall.com/images/tech-summary.png": [
+  "/technology-strength-assessment"
+ ],
+ "https://www.vanausdall.com/images/icon-information.png": [
+  "/partners"
+ ],
+ "https://www.vanausdall.com/images/icon-communication.png": [
+  "/partners"
+ ],
+ "https://www.vanausdall.com/images/icon-print.png": [
+  "/partners"
+ ],
+ "https://www.vanausdall.com/images/icon-process.png": [
+  "/partners"
+ ],
+ "https://www.vanausdall.com/images/switch-to-cloud/team-thread.png": [
+  "/switch-to-cloud"
+ ],
+ "https://www.vanausdall.com/images/switch-to-cloud/messages-list.png": [
+  "/switch-to-cloud"
+ ],
+ "https://www.vanausdall.com/images/switch-to-cloud/direct-message.png": [
+  "/switch-to-cloud"
+ ],
+ "https://www.vanausdall.com/images/switch-to-cloud/video-meeting-schedule.png": [
+  "/switch-to-cloud"
+ ],
+ "https://www.vanausdall.com/images/switch-to-cloud/meeting-schedule.png": [
+  "/switch-to-cloud"
+ ],
+ "https://www.vanausdall.com/images/switch-to-cloud/ring-central-intelligent-communications.png": [
+  "/switch-to-cloud"
+ ]
+}
