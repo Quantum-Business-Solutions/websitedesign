@@ -1,0 +1,168 @@
+{
+ "policies/privacy.html": {
+  "title": "Privacy Policy | Van Ausdall & Farrar, Indianapolis",
+  "description": "How Van Ausdall & Farrar collects, uses and protects personal information on vanausdall.com, and how to access, correct or delete yours.",
+  "sections": [
+   {
+    "type": "article",
+    "id": "policy",
+    "crumb_label": "Policies",
+    "crumb_href": "policies/privacy.html",
+    "category": "Policies",
+    "heading": "Privacy Policy",
+    "standfirst": "How Van Ausdall & Farrar collects, uses and protects your information on vanausdall.com, and the choices you have.",
+    "author": {
+     "name": "Van Ausdall & Farrar",
+     "role": "Indianapolis, Indiana"
+    },
+    "date_label": "Last updated October 28, 2026",
+    "read": "6 min read",
+    "schema": false,
+    "chapters": [
+     {
+      "id": "overview",
+      "title": "Who we are and what this covers",
+      "paras": [
+       "Van Ausdall & Farrar, Inc. (“Van Ausdall & Farrar,” “VAF,” “we,” “us” or “our”) is an Indiana corporation headquartered in Indianapolis. This Privacy Policy explains what personal information we collect through vanausdall.com (the “Site”), how we use and share it, and the choices you have. By using the Site, you agree to the practices described here.",
+       "This policy covers the Site and the forms, assessments and requests you submit through it. Our Customer Care App has its own privacy policy, which you can read on the <a href=\"/policies/van-ausdall-farrar-customer-care-app-privacy-policy\">Customer Care App Privacy Policy</a> page. If we provide managed IT, print or phone services to you under a written agreement, the data we handle in those services is governed by that agreement as well."
+      ]
+     },
+     {
+      "id": "information-we-collect",
+      "title": "Information we collect",
+      "paras": [
+       "<strong>Information you give us.</strong> When you request a consultation, take the Technology Strength Assessment, contact us, ask for service, order supplies, download a guide or apply for a job, we collect what you enter. This can include your name, work email address, phone number, organization, job title, postal address, equipment details and the content of your request.",
+       "<strong>Information collected automatically.</strong> When you visit the Site, we and our service providers collect technical information such as your IP address, device identifiers, browser and device type, the pages you view, the page that referred you, approximate location derived from your IP address, and the date and time of your visit. We collect this through cookies, tracking pixels and similar technologies.",
+       "<strong>Information from other sources.</strong> We may receive information about you from the organization you work for, from publicly available business sources, and from the social networks and advertising platforms you use when you interact with our content there."
+      ]
+     },
+     {
+      "id": "how-we-use",
+      "title": "How we use information",
+      "paras": [
+       "ul:To respond to your inquiry, schedule a consultation and deliver an assessment or quote;;To provide, support and bill for the services, equipment and supplies you ask us about;;To provide customer service and resolve disputes;;To send information about our services, events and guides. You can opt out of marketing email at any time;;To operate, secure and improve the Site and understand how visitors use it;;To comply with legal obligations and enforce our Terms of Service",
+       "Where the law requires a legal basis for processing, we rely on your consent (for example, when you submit a form or accept cookies), on our legitimate interest in running and improving our business, and on the need to perform a contract or take steps you request before entering one."
+      ]
+     },
+     {
+      "id": "cookies-and-analytics",
+      "title": "Cookies and analytics",
+      "paras": [
+       "The Site uses cookies and similar technologies, including those provided by HubSpot, the platform we use to host the Site, manage forms and keep our customer records. These help us remember your preferences, measure traffic, understand which content is useful and, where you allow it, show you relevant marketing. You can accept, reject or change non-essential cookies in the cookie banner on the Site, and you can block or delete cookies in your browser settings. Some parts of the Site may not work as intended if you block essential cookies. Our <a href=\"/policies/cookie\">Cookie Policy</a> lists the cookies we use.",
+       "Some browsers offer a “Do Not Track” setting. Because there is no common industry standard for these signals, the Site does not currently respond to them. We do respond to Global Privacy Control signals where the law requires it."
+      ]
+     },
+     {
+      "id": "how-we-share",
+      "title": "How we share information",
+      "paras": [
+       "We share personal information only as described here.",
+       "ul:<strong>Service providers</strong> that host the Site, manage our customer records and email, run analytics, or otherwise help us operate, under contracts that limit their use of the information;;<strong>Business partners</strong> such as equipment manufacturers, software vendors and leasing or finance companies, when needed to provide a product, service or quote you have asked for;;<strong>Legal and safety reasons</strong>, when required by law or to protect the rights, property or safety of VAF, our customers or others;;<strong>Business transfers</strong>, as part of a merger, acquisition or sale of assets, subject to this Privacy Policy",
+       "We do not sell your personal information for money."
+      ]
+     },
+     {
+      "id": "retention",
+      "title": "How long we keep information",
+      "paras": [
+       "We keep personal information for as long as needed to fulfill the purposes described in this policy, including to provide our services and to meet legal, accounting and reporting requirements. When we no longer need it, we delete it or make it anonymous."
+      ]
+     },
+     {
+      "id": "security",
+      "title": "How we protect information",
+      "paras": [
+       "We use administrative, technical and physical safeguards designed to protect personal information, and we hold ourselves to the controls of a SOC 2 audited service organization in how we run our own systems. No method of transmission or storage is completely secure, so we cannot guarantee absolute security. If you believe your interaction with us is no longer secure, please contact us right away."
+      ]
+     },
+     {
+      "id": "your-rights",
+      "title": "Your choices and privacy rights",
+      "paras": [
+       "You can unsubscribe from marketing email at any time using the link in the message. You can also contact us to ask what personal information we hold about you, to correct it, or to ask us to delete it.",
+       "If you live in Indiana or in another state with a consumer privacy law, you may have the right to confirm whether we process your personal information and to access it, to correct inaccuracies, to delete the personal information you gave us, to obtain a portable copy, and to opt out of targeted advertising, the sale of personal information and certain profiling. If you are a California resident, you also have the rights described in the California Consumer Privacy Act, including the right to know, correct and delete, and not to be discriminated against for using these rights.",
+       "To make a request, contact us using the details below. We will verify your identity before responding and will reply within the time the law allows, generally 45 days. If we decline a request, you can appeal by replying to our response, and we will tell you how to contact your state attorney general if you remain concerned."
+      ]
+     },
+     {
+      "id": "children",
+      "title": "Children’s privacy",
+      "paras": [
+       "The Site is intended for businesses and organizations and is not directed to children under 16. We do not knowingly collect personal information from children. If you believe a child has given us personal information, contact us and we will delete it."
+      ]
+     },
+     {
+      "id": "other-sites",
+      "title": "Links to other sites",
+      "paras": [
+       "The Site may link to websites we do not control, such as those of manufacturers, partners and industry associations. Their privacy practices are governed by their own policies, and we encourage you to read them."
+      ]
+     },
+     {
+      "id": "changes",
+      "title": "Changes to this policy",
+      "paras": [
+       "We may update this Privacy Policy from time to time. The date at the top of this page shows when it was last updated. If we make a material change, we will post a notice on the Site."
+      ]
+     },
+     {
+      "id": "contact",
+      "title": "Contact us",
+      "paras": [
+       "For questions about this Privacy Policy or to make a request about your information, contact us:",
+       "6430 E 75th Street, Indianapolis, IN 46250. Phone: (317) 634-2913. Or <a href=\"/contact\">use our contact form</a> and say it is a privacy request."
+      ]
+     }
+    ]
+   },
+   {
+    "type": "faq",
+    "id": "faq",
+    "alt": true,
+    "heading": "Privacy questions",
+    "items": [
+     [
+      "Do you sell my personal information?",
+      "No. We do not sell personal information for money. We share it only with service providers and partners as described in this policy, and where the law requires it."
+     ],
+     [
+      "How do I ask for my information to be deleted?",
+      "Contact us by phone at (317) 634-2913 or through the contact form and say it is a privacy request. We verify your identity and respond within the time the law allows, generally 45 days."
+     ],
+     [
+      "Which cookies does the Site use?",
+      "Essential cookies that make the Site work, plus analytics and marketing cookies from HubSpot and similar providers. You can accept or reject non-essential cookies in the banner and see the full list in the Cookie Policy."
+     ],
+     [
+      "Does this policy cover the Customer Care App?",
+      "No. The Customer Care App has its own privacy policy, linked from this page."
+     ]
+    ]
+   },
+   {
+    "type": "cta",
+    "id": "cta",
+    "heading": "Questions about how we handle your data?",
+    "body": "Talk to a person at VAF. We answer privacy questions the same way we answer service calls.",
+    "primary": {
+     "label": "Contact VAF",
+     "href": "contact.html"
+    }
+   }
+  ],
+  "crumbs": [
+   [
+    "Home",
+    "index.html"
+   ],
+   [
+    "Policies",
+    "policies/privacy.html"
+   ],
+   [
+    "Privacy Policy",
+    "policies/privacy.html"
+   ]
+  ]
+ }
+}

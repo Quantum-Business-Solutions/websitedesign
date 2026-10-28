@@ -150,7 +150,7 @@ def article(s):
            "hero_image": image(s["image"], s.get("image_alt", ""), 1200, 675) if s.get("image") else {"src": "", "alt": "", "loading": "lazy"},
            "toc_title": "In this guide",
            "chapters": [{"chapter_anchor": c["id"], "chapter_title": c["title"], "chapter_html": "".join(para_html(p) for p in c["paras"])} for c in s["chapters"]],
-           "schema": True}
+           "schema": s.get("schema", True)}
     if s.get("id"):
         out["anchor"] = s["id"]
     return clean(out)
