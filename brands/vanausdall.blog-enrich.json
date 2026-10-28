@@ -840,11 +840,6 @@
   "skip": false
  },
  "what-are-data-backup-and-recovery-services-and-why-does-your-business-need-them": {
-  "tldr": [
-   "Backup keeps a duplicate copy of your data, while recovery restores lost, deleted, corrupted or inaccessible data to maintain business continuity.",
-   "Automated cloud backup stores data off-site, protecting files and databases from equipment failure or natural disaster, without relying on staff to remember.",
-   "Listed benefits are security, ease of management, reliable replication, cost savings and fast access to data, including during ransomware attacks."
-  ],
   "faq": [
    {
     "q": "What is the difference between data backup and data recovery?",
@@ -864,7 +859,158 @@
    },
    {
     "q": "Which industries does Van Ausdall & Farrar serve with backup solutions?",
-    "a": "The post says the company serves businesses throughout Indiana and across the Midwest, with solutions covering healthcare, education, real estate, insurance and government industries."
+    "a": "The post says Van Ausdall & Farrar serves several businesses throughout Indiana and across the Midwest, with backup and recovery solutions covering healthcare, education, real estate, insurance and government industries."
+   }
+  ],
+  "tldr": [
+   "Backup keeps a duplicate copy of your data, while recovery restores lost, deleted, corrupted or inaccessible data to maintain business continuity.",
+   "Automated cloud backup stores data off-site, protecting files and databases from equipment failure or natural disaster, without relying on staff to remember.",
+   "Listed benefits are security, ease of management, reliable replication, cost savings and fast access to data, including during ransomware attacks."
+  ],
+  "skip": false
+ },
+ "switching-your-business-from-print-to-digital-in-2022-with-document-conversion-services": {
+  "tldr": [
+   "Paper slows access to information, cannot be searched and can be lost in a fire or disaster, while converted documents become searchable digital files.",
+   "Digitizing supports remote and hybrid workers who cannot reach paper in filing cabinets, and frees office space that would otherwise store documents.",
+   "Features listed include backfile scanning and indexing, day-forward process outsourcing, secure destruction and a dedicated conversion center handling millions of images per month."
+  ],
+  "faq": [
+   {
+    "q": "What is document conversion?",
+    "a": "The post defines it as converting paper documents into searchable digital files that live online or on a server. It is more than having backup copies online: it enables a company to streamline its organizational and storage processes."
+   },
+   {
+    "q": "Why is paper a problem for remote and hybrid work?",
+    "a": "If important files are stuck in a filing cabinet or lost in a back room, remote workers cannot access them. The post says that as the workforce moves toward remote or hybrid setups, document conversion sets a business up for the future."
+   },
+   {
+    "q": "How does document conversion free up office space?",
+    "a": "The post says dedicating square footage, or even an entire room, to paper storage no longer makes fiscal sense as office space prices go up. Digital copies let you reclaim that space for something more practical."
+   },
+   {
+    "q": "What services come with document conversion?",
+    "a": "The post lists high-tech equipment, day-forward business process outsourcing, secure document destruction, a dedicated document conversion center at the company's headquarters, and backfile scanning and indexing."
+   },
+   {
+    "q": "How many documents can a document conversion center process each month?",
+    "a": "The post says Van Ausdall & Farrar's highly trained staff and equipment have the processing power for millions of images per month, with extreme quality control in place for organizational and security needs."
+   }
+  ],
+  "skip": false
+ },
+ "what-are-business-telephone-systems-do-i-need-this-technology": {
+  "tldr": [
+   "A business phone system unifies communications on one simple interface, with options like voicemail, chat, video, VoIP, mobility, analytics, call recording and contact center.",
+   "Companies of any size, from a one-office sales team to a multi-office call center, can benefit, with either cloud or premise-based systems.",
+   "Van Ausdall & Farrar partners with RingCentral, Mitel, 8x8 and Avaya Cloud Office, and its communications technicians average over 14 years of tenure."
+  ],
+  "faq": [
+   {
+    "q": "What is a business telephone system?",
+    "a": "The post says there is no single definition, but describes it as a single-source, unified way to communicate, bringing a business's communications together on a simple-to-use, secure interface rather than separate tools."
+   },
+   {
+    "q": "What features can a business phone system include?",
+    "a": "The post lists voice mail, unified messaging, chat, video conferencing and collaboration, VoIP calling, artificial intelligence and machine learning, advanced mobility, reports and analytics, omni-channel contact center, call recording and SMS texting."
+   },
+   {
+    "q": "Does my business need a custom phone system?",
+    "a": "The post says companies of any size can seriously benefit from a custom, centralized phone system, whether a small one-office sales team or a multi-office call center, and that the right platform depends on what the company needs."
+   },
+   {
+    "q": "Can a business phone system be cloud-based or on-premises?",
+    "a": "Yes. The post says Van Ausdall & Farrar supports both cloud and premise-based phone systems and designs the right platform for each business, using best-in-class communication technologies to create a custom, simple-to-manage system."
+   },
+   {
+    "q": "Which phone system vendors does Van Ausdall & Farrar work with?",
+    "a": "The post names RingCentral, Mitel, 8x8 and Avaya Cloud Office as partners, and says the average tenure of its communications technical staff is over 14 years, with a service fleet covering the whole state of Indiana and beyond."
+   }
+  ],
+  "skip": false
+ },
+ "why-your-business-needs-physical-security-solutions": {
+  "tldr": [
+   "Any business with a physical location or staff benefits from a security and safety plan, since the post calls vandalism and crime rampant.",
+   "Start with a plan of action to protect assets and staff, then choose solutions like video surveillance or a monitored automated alert system.",
+   "Cameras from Van Ausdall & Farrar are described as offering HDTV-quality images, smart motion detection, unified management and AI-enabled detection and analysis."
+  ],
+  "faq": [
+   {
+    "q": "Does my business need physical security?",
+    "a": "The post says if your business has a physical location or employees, you would greatly benefit from physical security. Even the smallest business with a location and staff should have a security and safety plan to keep physical assets and employees safe."
+   },
+   {
+    "q": "Where do I start with a business physical security plan?",
+    "a": "The first step is to make a plan of action with the overarching goal of protecting your assets and staff. You and a qualified security company can then decide what type of security best suits your specific needs."
+   },
+   {
+    "q": "What does a physical security plan include?",
+    "a": "The post names video surveillance, which can be an upgrade of an old system or something entirely new, and traditional security, such as an outside provider setting up and monitoring an automated system that alerts you at any sign of trouble, plus code locks."
+   },
+   {
+    "q": "What features do modern video surveillance cameras offer?",
+    "a": "The post lists HDTV-quality images, smart motion detection, unified configuration and management of cameras, and artificial intelligence enabled detection and analysis, available in a variety of models to suit different needs."
+   }
+  ],
+  "skip": false
+ },
+ "what-is-multi-factor-authentication": {
+  "tldr": [
+   "Multi-factor authentication requires more than one distinct factor, from something you know, something you have and something you are, to verify identity.",
+   "Possession factors like key fobs, tokens or phone app prompts are less likely to be stolen, and you should not acknowledge unexpected authentication requests.",
+   "A second factor often stops scammers who have a stolen password, which matters as phishing attacks become more common."
+  ],
+  "faq": [
+   {
+    "q": "How does multi-factor authentication work?",
+    "a": "The post quotes a definition from the Computer Security Resource Center: an authentication system that requires more than one distinct authentication factor for success. The goal is multiple levels of defense that make it harder to reach sensitive information."
+   },
+   {
+    "q": "What are the three types of authentication factors?",
+    "a": "Know, such as a password or PIN; have, such as a key fob, security token or mobile device; and are, such as voice recognition or a fingerprint. For MFA to work, credentials must come from more than one category."
+   },
+   {
+    "q": "Why is multi-factor authentication important?",
+    "a": "The post says cyber crime is rising, with total money stolen in cyber attacks in 2020 reaching almost 1 trillion dollars. A second factor often stops many scammers who hold a stolen password from going further."
+   },
+   {
+    "q": "What should I do if I receive an unexpected authentication request?",
+    "a": "Do not acknowledge it. The post says it could mean someone has a stolen password for one of your accounts, and the second factor in the process often stops scammers from continuing further."
+   },
+   {
+    "q": "What are examples of inherence-based authentication?",
+    "a": "Facial recognition, retinal scans and voice recognition confirm identity through traits that are physically only available to you. The post says this makes it very difficult for a scammer, who would need the same physical traits as you."
+   }
+  ],
+  "skip": false
+ },
+ "what-is-a-next-gen-contact-center": {
+  "tldr": [
+   "Unlike a call center, which handles phone interactions alone, a contact center adds web chat, email and video so customers choose their preferred channel.",
+   "Voice remains essential for urgent or complex issues, while chat and email suit multitasking and are usually more cost effective than voice calls.",
+   "Mobile data helps agents tailor routing, cloud delivery offers stability and security, and social media is still early-stage because public responses need oversight."
+  ],
+  "faq": [
+   {
+    "q": "What is the difference between a contact center and a call center?",
+    "a": "A call center deals with phone interactions alone. A contact center offers customers a variety of ways to interact with a company, such as web chat, email and video, in addition to phone or voice."
+   },
+   {
+    "q": "What channels does a next-gen contact center support?",
+    "a": "The post names voice, web chat, email, video, text messages from mobile devices and, increasingly, social media. Unified communications offer a central platform with consolidated reporting rather than duplicating procedures per program."
+   },
+   {
+    "q": "Will chat and email replace phone calls in customer service?",
+    "a": "No. The post says voice is not going out of style: some customers prefer the telephone, it is the most established method, and it is essential for urgent or complex issues. Other channels supplement it rather than replace it."
+   },
+   {
+    "q": "How do mobile devices change contact center operations?",
+    "a": "Agents may send text messages instead of voice calls because it is more efficient and less obtrusive. Calls or texts from personal mobile devices give agents more accurate data for routing and prioritization, which the post says boosts customer retention."
+   },
+   {
+    "q": "Is the cloud secure enough for a contact center?",
+    "a": "The post says services delivered from the cloud are seen as secure and robust, and the cloud is a driver of contact center growth. Customer-facing centers need a stable, low-risk environment, and providers follow best practices and invest in robust security."
    }
   ],
   "skip": false
