@@ -5772,5 +5772,195 @@
    }
   ],
   "skip": false
+ },
+ "delivering-a-world-class-customer-and-employee-experience": {
+  "tldr": [
+   "Customer and employee experience both matter, and the post cites Workfront saying 49% of workers are likely to leave over frustrating workplace technology.",
+   "Multiple communication tools raise training, management and subscription costs, create overlapping features, lack integration, split contact center platforms and fragment analytics, hurting productivity.",
+   "A single next-generation communications app can cover calls, messaging, video and contact center features across devices, with one administration pane that eases support."
+  ],
+  "faq": [
+   {
+    "q": "Why does employee experience with technology matter?",
+    "a": "The post says qualified worker demand exceeds supply, so both customer and employee experience matter. It cites Workfront's State of Work 2021 reporting that 49% of workers say they are likely to leave their job if unhappy or frustrated with workplace technology."
+   },
+   {
+    "q": "What problems does fragmented business communication cause?",
+    "a": "The post lists multiple tools that increase training, management and subscription costs, overlapping applications that confuse employees, minimal integration or application islands, a contact center on a different platform, and fragmented analytics that make fact-based decisions virtually impossible."
+   },
+   {
+    "q": "What does a next-generation communications platform offer?",
+    "a": "Instead of half a dozen disparate tools, the post says one simple application can handle voice calls, outbound campaign calling, instant messaging, chat, multimedia messaging, collaboration and video conferencing across laptop, desktop and mobile devices, with contact center features as add-ons to the same application."
+   },
+   {
+    "q": "How does a single communications application help IT support staff?",
+    "a": "The post says one pane of glass for administration and management of one application serving all communications needs dramatically reduces support staff frustration, and frees time and energy for other parts of the technology stack that need attention, such as cybersecurity."
+   },
+   {
+    "q": "How common is it for companies to use many communication tools?",
+    "a": "The post cites Hanover Research saying 70% of companies use two to five communication tools, such as Salesforce, Google, Office 365, Slack, Zoom and Cisco, and 22% use six or more communication providers."
+   }
+  ],
+  "skip": false
+ },
+ "the-benefits-of-unified-communications-for-businesses": {
+  "tldr": [
+   "Unified communications consolidates voice, audio conferencing, chat, SMS, video and mobile in one easy-to-use client that works across PC, Mac, iPhone and Android devices.",
+   "Paying for one platform instead of several can save significantly on communications costs, and training staff on one application eases the burden on IT.",
+   "Integrated file sharing, multichannel sessions and better remote collaboration tools raise productivity, and UC platforms can be cloud-based or premise-based, so choose what fits."
+  ],
+  "faq": [
+   {
+    "q": "What communication channels does the latest generation of unified communications combine?",
+    "a": "The post says it consolidates voice calls, audio conferencing, chat, SMS, video and mobile in one easy-to-use client interface, integrating a variety of communication methods into a single platform or service."
+   },
+   {
+    "q": "How many communication tools do most companies use?",
+    "a": "The post cites Hanover Research saying 70% of companies use two to five communications providers, or point solutions, in their communications stack, and twenty percent use six or more."
+   },
+   {
+    "q": "Why are point solutions a problem?",
+    "a": "The post says point solutions for a single application are fine until you use half a dozen with little to no integration. The cost and time to train staff on each application is painful, and it places an oversized burden on IT staff to manage."
+   },
+   {
+    "q": "How does unified communications save money?",
+    "a": "A UC solution provides the communication platforms your business needs, so rather than paying for multiple expensive platforms you pay for a single one. The post says this offers an opportunity to save significantly on communications costs and apply the savings to other areas of the business."
+   },
+   {
+    "q": "How does unified communications help remote workers?",
+    "a": "The post says unified communication systems are built around giving employees better ways to collaborate, empowering remote workers to do their job effectively no matter where they work. Most platforms also integrate file sharing, so files can be accessed quickly instead of being emailed back and forth."
+   }
+  ],
+  "skip": false
+ },
+ "recorded-presentation---why-great-it-matters": {
+  "skip": true,
+  "reason": "Thin (79 words) notice for a recorded presentation; no advice beyond a topic list."
+ },
+ "return-to-work-health-screening-essentials": {
+  "skip": true,
+  "reason": "Dated COVID-era product pitch (August 2020) with unverified certification claims (HIPAA, SOC1, SOC2) and a contact line; not evergreen."
+ },
+ "recorded-presentation---demystifying-zero-trust": {
+  "skip": true,
+  "reason": "Thin (82 words) notice for a recorded presentation; no advice beyond a topic teaser."
+ },
+ "the-current-state-of-the-covid-19-pandemic-in-indiana": {
+  "skip": true,
+  "reason": "Dated April 2020 pandemic news commentary with time-bound case counts and policy statements; not evergreen."
+ },
+ "struggling-to-find-what-you-need-to-do-your-job-maybe-we-can-help": {
+  "skip": true,
+  "reason": "Dated April 2020 promotional letter with time-bound promotions through April 2020 and unverified setup-time claims."
+ },
+ "across-the-nation-workers-are-taking-the-tape-off-their-webcam-due-to-another-virus": {
+  "skip": true,
+  "reason": "Dated March 2020 opinion piece tied to pandemic social distancing; personal anecdote with no actionable buyer guidance."
+ },
+ "scan-documents-with-your-i-phone": {
+  "tldr": [
+   "In the iPhone Notes app, create a new note, tap the camera icon and choose Scan Documents to capture multi-page documents as one PDF.",
+   "Stack pages on a flat surface in a contrasting color so the app can detect page boundaries automatically, and pages turn yellow when detected.",
+   "Keep the app updated, then send the finished PDF to a cloud file store or email it, or try the Files app instead."
+  ],
+  "faq": [
+   {
+    "q": "Why is scanning better than photographing a document page?",
+    "a": "The post says a phone photo of a page often does not turn out great, while the Notes scanner saves all pages of a document to a single multi-page PDF in the standard aspect ratio and automatically straightens the images, which is much better than the jpeg photos the author used to take."
+   },
+   {
+    "q": "How do I start a scan in the iPhone Notes app?",
+    "a": "The post says to open Notes, create a new note with the button in the lower-right corner, touch the camera icon near the middle of the screen, then select Scan Documents and have your pages ready because scanning happens quickly."
+   },
+   {
+    "q": "How should I set up the pages for the best scan?",
+    "a": "The post says to stack your pages on a flat surface using a contrasting color, such as a wooden table for white pages, so the app software can automatically determine the page boundaries. One by one, the app snaps each page, which turns yellow when boundaries are detected."
+   },
+   {
+    "q": "How do I send the scanned document to someone?",
+    "a": "When scanning is done, the multi-page image displays on screen. The post says to use the output icon in the upper right to send it to your favorite cloud-based file store, such as the author's Dropbox for Business, or email it to someone."
+   },
+   {
+    "q": "Is there another iPhone app that can scan documents?",
+    "a": "The post says you can also use the Files app on iPhone to create a somewhat similar scanned document. It also advises installing the latest update of Notes, which is pre-installed on iPhones and available from the App Store, to get all of the features."
+   }
+  ],
+  "skip": false
+ },
+ "audio-and-video-conferencing-for-at-home-workers": {
+  "skip": true,
+  "reason": "Dated March 2020 Microsoft Teams how-to that relies on superseded Office 365 plan names, participant limits and a user-license price; VAF should refresh before any FAQ use."
+ },
+ "the-solution-to-business-continuity-during-coronavirus-covid-19-spread": {
+  "skip": true,
+  "reason": "Thin (213 words) dated March 2020 pandemic service promotion with partner claims and a phone number; not evergreen."
+ },
+ "managed-print-trends-that-you-cannot-afford-to-ignore-in-2020": {
+  "skip": true,
+  "reason": "Dated December 2019 trends opinion piece referencing that week's ransomware headlines and broad unsupported claims; no stable actionable detail."
+ },
+ "lease-or-buy-which-solution-is-the-best-fit-for-your-companys-print-needs": {
+  "tldr": [
+   "Weigh four factors when deciding to lease or buy print equipment: upfront capital, flexibility, monthly expenses, and maintenance and repair.",
+   "In most cases the initial cost of a lease is significantly less than purchase, and a lease avoids depreciation and financing interest.",
+   "Managed print keeps equipment current, handles maintenance and repair behind the scenes, and offers upgrade options when the agreement ends or sooner."
+  ],
+  "faq": [
+   {
+    "q": "Why is owning assets no longer always the best option?",
+    "a": "The post says people and businesses now acquire assets differently than a decade ago, using services for office space, transportation and communication technology. It describes a subscription-based as-a-service economy with assets linked to the cloud, including print solutions."
+   },
+   {
+    "q": "How does leasing affect upfront capital?",
+    "a": "The post says cash flow is always a prime concern and that, in most cases for a business, the initial cost to enter a lease is significantly less than the purchase price of a copy and print management solution."
+   },
+   {
+    "q": "How does a lease affect monthly expenses?",
+    "a": "The post says with a printer lease you do not absorb the impact of asset depreciation or pay interest on a purchase financing plan, so a lease allows a lower monthly payment and provides upgrade options when the agreement period expires, or sooner if needed."
+   },
+   {
+    "q": "How flexible is a managed copy and print solution?",
+    "a": "The post says a printer lease lets you adjust your system to your needs, and a managed copy and print solution keeps equipment up to date. You get the most recent business applications, help secure printers and the network from emerging data breach threats, and better meet the needs of mobile stakeholders."
+   },
+   {
+    "q": "Who handles maintenance and repair with a managed print solution?",
+    "a": "The post says any mechanical equipment needs regular maintenance and occasional repair. With a managed print solution, the vendor works behind the scenes to keep printing available without disrupting productivity, so your team stays focused on the business and brand."
+   }
+  ],
+  "skip": false
+ },
+ "van-ausdall--farrar-attends-mitel-top-40-summit": {
+  "skip": true,
+  "reason": "Event notice (November 2019 Mitel summit recap) with vendor roadmap claims, reliability figures and partner-program statements that are dated and unverified."
+ },
+ "steps-to-effective-mobile-device-security-in-2019": {
+  "tldr": [
+   "Mobile device protection needs four layers: cyber protection, access protection, theft protection and device health.",
+   "Cyber protection starts with dedicated anti-virus plus ransomware and network security, while access protection adds centralized passwords, multi-factor authentication and centralized device encryption.",
+   "Endpoint management with device location helps secure lost or stolen devices, and centralized reporting and patch management schedule health checks and deploy urgent updates."
+  ],
+  "faq": [
+   {
+    "q": "What are the four layers of mobile device protection?",
+    "a": "The post names cyber protection, access protection, theft protection and device health as the four essential layers corporate mobile devices need to stay secure wherever they are."
+   },
+   {
+    "q": "What does cyber protection include for mobile devices?",
+    "a": "The post says anti-virus software is the initial minimal level of protection and recommends considering a product focused solely on anti-virus rather than default security software. Ransomware protection and network security come next, with backups of files."
+   },
+   {
+    "q": "What are the three parts of access protection?",
+    "a": "The post lists centralized password protection with strict complexity and change requirements, multi-factor authentication that requires the assigned user's physical participation at login, and centralized device encryption that gives unified control of remote mobile devices for data security, compliance and security update deployments."
+   },
+   {
+    "q": "How can a company protect mobile devices from loss or theft?",
+    "a": "The post says leaving physical security to users is not enough. Centralized endpoint management with device location capability lets an organization manage, monitor and secure its mobile devices, even when they use a variety of operating systems."
+   },
+   {
+    "q": "Why does device health matter for security?",
+    "a": "The post says computers perform better when in optimal health. Centralized system reporting and patch management let you regularly schedule health checkups and maintenance procedures and deploy urgent security software updates as soon as they are released."
+   }
+  ],
+  "skip": false
  }
 }

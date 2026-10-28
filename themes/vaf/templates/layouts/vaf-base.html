@@ -14,13 +14,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap">
   {{ require_css(get_asset_url('../../css/vaf.css')) }}
+  {{ require_css(get_asset_url('../../css/vaf-polish.css')) }}
   {{ require_js(get_asset_url('../../js/vaf.js'), 'footer') }}
   {% block head_extra %}{% endblock %}
   {{ standard_header_includes }}
 </head>
 <body class="{{ builtin_body_classes }}" data-qdir="showcase">
   <div class="body-wrapper">
-    {% block header %}{% global_partial path='../partials/vaf-header.html' %}{% endblock %}
+    <div class="vaf-hdr">{% block header %}{% global_partial path='../partials/vaf-header.html' %}{% endblock %}</div>
     <div id="q-content" tabindex="-1">{% block body %}{% endblock %}</div>
     {% block footer %}{% global_partial path='../partials/vaf-footer.html' %}{% endblock %}
   </div>

@@ -1,0 +1,59 @@
+/* VAF polish: loaded after vaf.css */
+/* sticky header: the header partial sits inside HubSpot wrappers exactly its own height, so the sticky element is a wrapper directly under .body-wrapper */
+.vaf-hdr{position:sticky;top:0;z-index:60}
+.vaf-hdr .q-header{position:relative;top:auto}
+/* section headings stay centred over centred content, in every band */
+@media(min-width:1025px){
+.q-section.q-bg-alt > .q-container > .pv-center,.q-section.q-bg-alt .vaf-head{align-items:center;text-align:center}
+.q-section.q-bg-alt > .q-container > .pv-center .q-lead,.q-section.q-bg-alt > .q-container > .pv-center p{text-align:center;margin-left:auto;margin-right:auto}
+}
+/* polish pass: centered buttons, no orphan words, white hero card */
+.q-btn,.q-btn-ghost,.pv-btns a,.pv-lh .fcard .go,.pv-lh .fcard.b .links a{display:inline-flex;align-items:center;justify-content:center;text-align:center;line-height:1.2}
+.pv-lh .fcard.b{width:min(384px,100%)}
+.pv-lh .fcard.b .links a{white-space:nowrap;padding:0 10px}
+.pv-lh .fcard .go{justify-content:center}
+h1,h2,h3,.q-h1,.q-h2,.q-h3{text-wrap:balance}
+p,li,.q-lead,.vc__copy,.fcard p{text-wrap:pretty}
+@media(max-width:1024px){.pv-lh .fcard.b{width:100%}}
+/* audit fixes: mobile call pill, mega panel clipping, dark stat bands, seal numerals */
+@media(max-width:767px){.pv-sticky .b{background:#0f1e33;color:#fff;border-color:#0f1e33}}
+.q-header .q-nav .pv-mega a.feat,.pv-mega .feat,.pv-mega .feat *{white-space:normal}
+.q-tone-dark .pv-stat{background:#12294a;border-color:#2a4a73;color:#fff}
+.q-tone-dark .pv-stat b,.q-tone-dark .pv-stat .n{color:#fff}
+.q-tone-dark .pv-stat span,.q-tone-dark .pv-stat small{color:#c5d6e8}
+.vaf-seal .vs__n,.vaf-seal [class*="__num"],.vaf-seal [class*="__n"]{color:#7fb9ee}
+/* four-pillar wheel, dark */
+/* spice: dark section, glow, icons, chips, proof */
+body .vaf-wheel,body .vaf-wheel.q-bg-alt{background:radial-gradient(900px 520px at 82% 8%,#1b4373 0%,rgba(15,30,51,0) 60%),linear-gradient(180deg,#0f1e33 0%,#0a1626 100%);position:relative;overflow:hidden}
+body .vaf-wheel::before{content:"";position:absolute;inset:0;background-image:linear-gradient(#17304f 1px,transparent 1px),linear-gradient(90deg,#17304f 1px,transparent 1px);background-size:56px 56px;opacity:.35;-webkit-mask-image:radial-gradient(ellipse at 50% 40%,#000 20%,transparent 75%);mask-image:radial-gradient(ellipse at 50% 40%,#000 20%,transparent 75%);pointer-events:none}
+body .vaf-wheel .q-container{position:relative}
+body .vaf-wheel .q-eyebrow{color:#8fc2f2}
+body .vaf-wheel .q-h2{color:#fff}
+body .vaf-wheel .q-lead{color:#c5d6e8}
+body .vaf-wheel__card{background:#12294a;border:1px solid #2a4a73;box-shadow:0 24px 60px #060d18;position:relative}
+body .vaf-wheel__card::before{content:"";position:absolute;left:28px;top:0;width:56px;height:4px;border-radius:0 0 4px 4px;background:linear-gradient(90deg,#3b8fdc,#8fc2f2)}
+body .vaf-wheel__ic{display:grid;place-items:center;width:48px;height:48px;border-radius:14px;background:#1b3d66;margin-bottom:14px}
+body .vaf-wheel__ic svg{width:26px;height:26px;fill:none;stroke:#8fc2f2;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+body .vaf-wheel__k{color:#8fc2f2}
+body .vaf-wheel__card h3{color:#fff}
+body .vaf-wheel__copy{color:#c5d6e8}
+body .vaf-wheel__chips{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+body .vaf-wheel__chips li{padding:7px 13px;border-radius:999px;background:#1b3d66;border:1px solid #2f5a8e;color:#e6eef7;font-size:13.5px;font-weight:600;line-height:1.2}
+body .vaf-wheel__proof{margin:16px 0 0;padding-top:14px;border-top:1px solid #2a4a73;font-size:14.5px;font-weight:600;color:#8fc2f2}
+body .vaf-wheel__go{color:#fff;justify-content:flex-start}
+body .vaf-wheel__go::after{background:#3b8fdc}
+body .vaf-wheel__tab{background:#12294a;border-color:#2a4a73;color:#e6eef7}
+body .vaf-wheel__tab b{background:#1b3d66;color:#8fc2f2}
+body .vaf-wheel__tab:hover{border-color:#3b8fdc}
+body .vaf-wheel__tab[aria-selected="true"]{background:#2a71af;border-color:#3b8fdc;color:#fff}
+body .vaf-wheel__tab[aria-selected="true"] b{background:#fff;color:#205686}
+body .vaf-wheel__svg .seg path{fill:#16314f;stroke:#0f1e33;stroke-width:4}
+body .vaf-wheel__svg .seg:hover path{fill:#20456f}
+body .vaf-wheel__svg .seg.on path{fill:#2a71af;filter:drop-shadow(0 0 22px #2f7fcb)}
+body .vaf-wheel__svg .lab{fill:#fff}
+body .vaf-wheel__svg .num{fill:#8fc2f2}
+body .vaf-wheel__svg .hub{fill:#091321}
+body .vaf-wheel__svg .hub-ring{stroke:#3b8fdc}
+body .vaf-wheel__svg .ring-text{fill:#8fc2f2}
+body .vaf-wheel__svg .ring-line{stroke:#2a4a73}
+body .vaf-wheel__svg .hubs{fill:#8fc2f2}
