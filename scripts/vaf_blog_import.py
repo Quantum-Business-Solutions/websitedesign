@@ -185,7 +185,7 @@ def cmd_import(only_failed=False):
     with_template, ok, bad = True, 0, 0
     for i, p in enumerate(todo, 1):
         s, r = create(p, st, blog_id, blog_slug, by_lower, with_template)
-        if s not in (200, 201) and with_template and "templatePath" in json.dumps(r):
+        if s not in (200, 201) and with_template and ("templatePath" in json.dumps(r) or "TEMPLATE_PATH_NOT_SETTABLE" in json.dumps(r)):
             with_template = False                          # the API refuses a per-post template: the blog's own setting applies
             print("  per-post templatePath refused, relying on the blog's post template setting")
             s, r = create(p, st, blog_id, blog_slug, by_lower, False)

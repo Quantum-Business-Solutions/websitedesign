@@ -20,6 +20,13 @@ _EXTRA = os.path.join(ROOT, "brands/vanausdall.extra-pages.json")      # pages a
 if os.path.exists(_EXTRA):
     CONTENT["pages"] += [x for x in json.load(open(_EXTRA, encoding="utf-8")) if x["file"] not in {p["file"] for p in CONTENT["pages"]}]
 
+# Rewritten page copy (local uniqueness, de-duplication): brands/vanausdall.overrides.*.json = {file: {title?, description?, sections?}}
+for _o in sorted(glob.glob(os.path.join(ROOT, "brands/vanausdall.overrides.*.json"))):
+    for _file, _ov in json.load(open(_o, encoding="utf-8")).items():
+        for _pg in CONTENT["pages"]:
+            if _pg["file"] == _file:
+                _pg.update({k: v for k, v in _ov.items() if k in ("title", "description", "sections", "compose", "crumbs", "schema")})
+
 REGISTRY = {}
 for _f in sorted(glob.glob(os.path.join(ROOT, "scripts/vaf_map_*.py"))):
     _m = importlib.import_module(os.path.basename(_f)[:-3])
@@ -155,6 +162,18 @@ def slugs_from(args):
 
 
 # ------------------------------------------------------------------ HubSpot writes
+def retrying(fn, tries=5):
+    import time, reskin as _r
+    for i in range(tries):
+        try:
+            return fn()
+        except _r.HubSpotError as e:
+            m = str(e)
+            if i == tries - 1 or not any(k in m for k in ("000", "429", " 500", " 502", " 503", " 504", "Connection reset", "transport")):
+                raise
+            time.sleep(2 ** (i + 1))
+
+
 def cmd_templates(args):
     import vaf_upload as U
     import reskin
@@ -163,9 +182,26 @@ def cmd_templates(args):
         text, path = template_for(page_for(sl))
         U.validate(path, text.encode())
         bd, b = U.body(path, text.encode())
-        reskin._req("PUT", "/cms/v3/source-code/published/content/" + quote(f"{THEME}/{path}"), U.TOKEN, bd,
-                    f"multipart/form-data; boundary={b}")
+        retrying(lambda: reskin._req("PUT", "/cms/v3/source-code/published/content/" + quote(f"{THEME}/{path}"), U.TOKEN, bd,
+                                     f"multipart/form-data; boundary={b}"))
         print("  template", path)
+
+
+def page_kind(file):
+    """Page type, used as the name prefix in HubSpot's page list (sortable and searchable) and as the tag on the sign-off sheet."""
+    f = file
+    if f == "index.html": return "Home"
+    if f.startswith("solutions"): return "Pillar"
+    if f.startswith("services/"): return "Service"
+    if f.startswith("industries/"): return "Industry"
+    if f.startswith("locations/"): return "Location"
+    if f.startswith("case-studies/"): return "Case study"
+    if f.startswith("policies/"): return "Policy"
+    if f.startswith("blog"): return "Blog"
+    if f in ("industries.html", "case-studies.html", "locations.html"): return "Hub"
+    if f in ("technology-strength-assessment.html", "print-assessment.html", "cost-calculator.html", "cio-ai-playbook.html", "downloads.html", "virtualsitevisit.html"): return "Tool"
+    if f in ("support.html", "contact.html"): return "Support"
+    return "Company"
 
 
 def og_image(page):
@@ -191,20 +227,20 @@ def cmd_pages(args):
     for sl in slugs_from(args):
         pg = page_for(sl)
         slug = sl                       # the home page is the site root (empty slug)
-        body = {"name": f"VAF | {pg['title'].split(' | ')[0]}"[:120], "slug": slug, "templatePath": f"{THEME}/{tpl_name(sl)}",
+        body = {"name": f"{page_kind(pg['file'])} | {pg['title'].split(' | ')[0]}"[:120], "slug": slug, "templatePath": f"{THEME}/{tpl_name(sl)}",
                 "htmlTitle": pg["title"], "metaDescription": pg.get("description", ""), "headHtml": NOINDEX, "language": "en",
                 "featuredImage": og_image(pg), "featuredImageAltText": pg["title"].split("|")[0].strip()}
         cur = existing.get(slug)
         if cur:
-            reskin._req("PATCH", f"/cms/v3/pages/site-pages/{cur['id']}", T, json.dumps(body).encode(), "application/json")
+            retrying(lambda: reskin._req("PATCH", f"/cms/v3/pages/site-pages/{cur['id']}", T, json.dumps(body).encode(), "application/json"))
             pid = cur["id"]
         else:
-            pid = json.loads(reskin._req("POST", "/cms/v3/pages/site-pages", T, json.dumps(body).encode(), "application/json"))["id"]
+            pid = json.loads(retrying(lambda: reskin._req("POST", "/cms/v3/pages/site-pages", T, json.dumps(body).encode(), "application/json")))["id"]
         if cur and cur.get("state") != "DRAFT":
-            reskin._req("POST", f"/cms/v3/pages/site-pages/{pid}/draft/push-live", T)
+            retrying(lambda: reskin._req("POST", f"/cms/v3/pages/site-pages/{pid}/draft/push-live", T))
         else:   # first publish must be scheduled; push-live only updates a page that is already live
             when = (datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(seconds=15)).strftime("%Y-%m-%dT%H:%M:%SZ")
-            reskin._req("POST", "/cms/v3/pages/site-pages/schedule", T, json.dumps({"id": pid, "publishDate": when}).encode(), "application/json")
+            retrying(lambda: reskin._req("POST", "/cms/v3/pages/site-pages/schedule", T, json.dumps({"id": pid, "publishDate": when}).encode(), "application/json"))
         print(f"  page {pid} /{slug}")
 
 
