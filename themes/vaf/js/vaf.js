@@ -30,3 +30,13 @@ var hd=document.querySelector('.q-header');if(hd){var sc=function(){hd.classList
 var mn=document.querySelector('.q-mnav');if(mn){mn.addEventListener('toggle',function(){document.documentElement.classList.toggle('menu-open',mn.open)})}
 })();
 (function(){var l=document.querySelector('.pv-sl');if(!l)return;var b=l.querySelector('button'),d=l.querySelector('.drawer');var sc=function(){l.classList.toggle('on',scrollY>560)};addEventListener('scroll',sc,{passive:true});sc();b.addEventListener('click',function(){var o=!d.hidden;d.hidden=o;b.setAttribute('aria-expanded',o?'false':'true')});document.addEventListener('keydown',function(e){if(e.key==='Escape'){d.hidden=true;b.setAttribute('aria-expanded','false')}})})();
+
+/* scroll reveal: sections ease in once, never hide content without JS or with reduced motion */
+(function(){
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  document.documentElement.classList.add('vaf-js');
+  var els=[].slice.call(document.querySelectorAll('main .q-section:not(.pv-lh) .q-container > *'));
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.06});
+  els.forEach(function(el,i){el.classList.add('vaf-rv');el.classList.add('d'+(i%3+1));io.observe(el)});
+  setTimeout(function(){els.forEach(function(el){el.classList.add('in')})},6000);
+})();

@@ -17,6 +17,7 @@
       {% for it in module.items %}
       <div class="vc__card">
         {% if module.markers == 'numbers' %}<span class="vc__num" aria-hidden="true">{% if loop.index < 10 %}0{% endif %}{{ loop.index }}</span>{% endif %}
+        {% if it.card_logo.src %}<img class="vc__logo" src="{{ it.card_logo.src }}" alt="{{ it.card_logo.alt or it.card_title }}" loading="lazy">{% endif %}
         <h3 class="vc__title">{{ it.card_title }}</h3>
         <p class="vc__copy">{{ it.card_copy }}</p>
       </div>

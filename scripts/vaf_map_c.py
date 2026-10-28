@@ -49,9 +49,21 @@ def detail(s):
     return clean(out)
 
 
+def _card_logo(title):
+    """A card named for a partner or brand gets that partner's logo (files already in HubSpot Files)."""
+    import re as _re
+    from vaf_common import partner_logo
+    cands = [title, title.replace(" ", "")] + [x.strip() for x in _re.split(r"\s*[,/&]\s*|\s+by\s+", title)] + [_re.split(r"\s+", title)[0]]
+    for cand in cands:
+        u = partner_logo(cand)
+        if u:
+            return {"card_logo": {"src": u, "alt": title + " logo", "loading": "lazy"}}
+    return {}
+
+
 def cards(s):
     return clean({**_common(s), "eyebrow": s.get("eyebrow", ""), "heading": s.get("heading", ""), "markers": "none",
-                  "items": [{"card_title": t, "card_copy": b} for t, b in s.get("items", [])]})
+                  "items": [{"card_title": t, "card_copy": b, **_card_logo(t)} for t, b in s.get("items", [])]})
 
 
 def services(s):

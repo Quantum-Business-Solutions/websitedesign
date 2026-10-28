@@ -18,3 +18,6 @@
   .vc__card::before{left:24px}
   .vc__title{font-size:20px}
 }
+
+/* partner and brand logos above the title */
+.vc__logo{display:block;height:44px;width:auto;max-width:170px;object-fit:contain;object-position:left center;margin:0 0 16px}

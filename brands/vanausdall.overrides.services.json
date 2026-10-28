@@ -2991,7 +2991,7 @@
     "body": "Dictation sits in VAF's communication pillar and links to voice processing, speech recognition and transcription services. Records created from dictation often need storing and retrieving, which is where content management comes in.",
     "bullets": [
      "Voice recognition with Winscribe, front end and server side",
-     "Transcription outsourcing through Speech Motion",
+     "Transcription outsourcing through SpeechMotion",
      "Cloud dictation options by industry",
      "Document management for the finished reports"
     ]
@@ -3023,7 +3023,7 @@
      ],
      [
       "What about transcription?",
-      "VAF lists transcription among its Philips offerings and also offers outsourced transcription through Speech Motion."
+      "VAF lists transcription among its Philips offerings and also offers outsourced transcription through SpeechMotion."
      ]
     ]
    },
@@ -3384,7 +3384,7 @@
     "bullets": [
      "Enterprise digital dictation for Winscribe, Philips and Olympus devices",
      "Voice recognition for Winscribe front end and server side",
-     "Transcription services through Speech Motion",
+     "Transcription services through SpeechMotion",
      "Voice processing for the full workflow"
     ]
    },
@@ -4833,6 +4833,5411 @@
     "body": "Share your network layout and current protection, and a VAF specialist will highlight the gaps.",
     "submit": "Review my security",
     "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913."
+   }
+  ]
+ },
+ "benefits.html": {
+  "title": "Employee Benefits at Van Ausdall & Farrar | Indiana",
+  "description": "Health, financial, PTO, wellness, community and recognition benefits at Van Ausdall & Farrar, a privately owned Indianapolis company since 1914.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "About",
+    "heading": "Benefits That Support You",
+    "subhead": "At Van Ausdall & Farrar, our people are our number one asset. Our employees are the driving force that allows us to be successful now, and in the future. Below is an overview of our comprehensive benefits:",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-hq-1200.jpg",
+    "image_alt": "Employee Benefits",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "About",
+    "heading": "People first",
+    "body": "VAF describes its employees as the driving force that lets the company succeed now and in the future. The benefits below are the ones VAF lists for its team.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "About",
+    "heading": "Health",
+    "body": "",
+    "bullets": [
+     "Medical (PPO & HDHP offerings)",
+     "Dental",
+     "Vision",
+     "Healthcare Flexible Spending (FSA)",
+     "Health Savings Account (HSA)"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "About",
+    "heading": "Financial",
+    "body": "",
+    "bullets": [
+     "Competitive pay and annual merit increases",
+     "Company-funded life insurance",
+     "401K plan company match",
+     "Short-term disability",
+     "Long-term disability",
+     "Financial wellness programs",
+     "Tenure program bonus",
+     "Employee referral bonus program",
+     "Tip lead and business referral program",
+     "Employee discount program"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "About",
+    "heading": "PTO",
+    "body": "",
+    "bullets": [
+     "Generous PTO",
+     "7 Paid Holidays + 1 Personal Holiday",
+     "Bereavement, Jury Duty, Voting Time Off"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "About",
+    "heading": "Wellness",
+    "body": "",
+    "bullets": [
+     "Monthly Fitness Reimbursement",
+     "Annual Wellness Assessments",
+     "Employee Assistance Program (EAP)",
+     "Flu Shot Clinics",
+     "Mental, Financial, and Physical Health Resources"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "About",
+    "heading": "Family & Community Focus",
+    "body": "",
+    "bullets": [
+     "VAF Volunteers Community Outreach Program",
+     "Monthly Paid Volunteer Hours",
+     "Dependent Care Flex Spending",
+     "Flexible Hours to promote Work-Life Balance",
+     "Seasonal and Engagement Events"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "About",
+    "heading": "Recognition",
+    "body": "",
+    "bullets": [
+     "Quarterly sales incentive trips",
+     "President's Club",
+     "MVP of the Year program",
+     "Leader of the Year program",
+     "Monthly recognition for displaying core values",
+     "Employee Appreciation Day celebration",
+     "Employee of the Quarter"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Culture",
+    "heading": "Culture and employee experience",
+    "body": "Beyond the benefits plan, VAF points to the way the company works.",
+    "bullets": [
+     "Open door policy with management",
+     "Opportunities for advancement",
+     "Locally owned and operated",
+     "Collaborative team environment",
+     "A rich history dating back to Thomas Edison"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Next steps",
+    "heading": "Learn more about working here",
+    "body": "VAF is privately owned and operated in Indianapolis. Its careers page lists open roles and includes a film about what it is like to work at VAF. For questions about careers, email careers@vanausdall.com.",
+    "bullets": [
+     "See open roles on the careers page",
+     "Watch the careers film",
+     "Read how VAF started in 1914",
+     "Take the virtual site visit"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about benefits at VAF",
+    "items": [
+     [
+      "What health benefits does VAF offer?",
+      "VAF lists medical coverage with PPO and HDHP options, dental, vision, a healthcare flexible spending account and a health savings account."
+     ],
+     [
+      "Does VAF match 401K contributions?",
+      "VAF lists a 401K plan with a company match, plus company-funded life insurance and short-term and long-term disability."
+     ],
+     [
+      "How much paid time off does VAF give?",
+      "VAF lists generous PTO, seven paid holidays plus one personal holiday, and time off for bereavement, jury duty and voting."
+     ],
+     [
+      "What wellness benefits are available?",
+      "A monthly fitness reimbursement, annual wellness assessments, an Employee Assistance Program, flu shot clinics and mental, financial and physical health resources."
+     ],
+     [
+      "Does VAF support volunteering?",
+      "Yes. The VAF Volunteers community outreach program includes monthly paid volunteer hours."
+     ],
+     [
+      "What recognition programs does VAF have?",
+      "Quarterly sales incentive trips, President's Club, MVP of the Year, Leader of the Year, monthly recognition for core values and Employee of the Quarter, among others."
+     ],
+     [
+      "Does VAF offer flexible hours?",
+      "VAF lists flexible hours to promote work-life balance, along with dependent care flexible spending."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "More about VAF as an employer",
+    "intro": "Pages for people thinking about joining the team.",
+    "items": [
+     [
+      "Company",
+      "Careers at VAF",
+      "Open roles and what it is like to work at VAF.",
+      "Open the page",
+      "careers.html"
+     ],
+     [
+      "Company",
+      "About Van Ausdall & Farrar",
+      "Since 1914, privately owned in Indianapolis.",
+      "Open the page",
+      "about.html"
+     ],
+     [
+      "Company",
+      "Virtual Site Visit",
+      "A short video tour of VAF for visitors who cannot stop by.",
+      "Open the page",
+      "virtualsitevisit.html"
+     ],
+     [
+      "Company",
+      "Locations",
+      "Indianapolis, Fort Wayne and Evansville offices.",
+      "Open the page",
+      "locations.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Questions about working at VAF",
+    "body": "Tell us what you would like to know about careers or benefits. A person from VAF follows up.",
+    "submit": "Ask about careers",
+    "note": "You can also email careers@vanausdall.com. A person replies, not an autoresponder."
+   }
+  ]
+ },
+ "downloads.html": {
+  "title": "Driver and Documentation Downloads | Van Ausdall & Farrar",
+  "description": "Links to manufacturer driver pages, manuals and self-paced training for Ricoh, Canon, HP, scanners and phone systems, from Van Ausdall & Farrar.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "About",
+    "heading": "Software Drivers and Documentation Downloads",
+    "subhead": "Fast links to the manufacturers' own driver pages, manuals and training for the copiers, scanners and phone systems VAF supports.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-hq-1200.jpg",
+    "image_alt": "Software Drivers and Documentation Downloads",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "About",
+    "heading": "How this page works",
+    "body": "VAF does not host the files. Each link goes to the manufacturer's or developer's own page, so you always get the current driver or document. Choose the group that matches your equipment.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "About",
+    "heading": "Copier & Printer Services",
+    "body": "",
+    "bullets": [
+     "Ricoh drivers, specifications and “how to” self-help",
+     "Online interactive Ricoh training",
+     "Canon drivers and specifications",
+     "HP drivers and product manuals"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "About",
+    "heading": "Document Management Services",
+    "body": "",
+    "bullets": [
+     "Fujitsu Scanner Drivers",
+     "Canon Scanner Drivers",
+     "Kodak Scanner Drivers",
+     "Panasonic Scanner Drivers"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "About",
+    "heading": "Converged communications services",
+    "body": "",
+    "bullets": [
+     "ShoreTel self-paced end-user training",
+     "ShoreTel conferencing self-paced end-user training",
+     "Toshiba IP 5000 Series video training",
+     "Toshiba DP 5000 Series video training",
+     "Toshiba CIX system date and time change guide"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Before you download",
+    "heading": "Three things to have ready",
+    "body": "A little preparation saves a second trip to the manufacturer's site.",
+    "bullets": [
+     "The exact model name from the label on the device",
+     "The operating system and version of the computer that will use it",
+     "Whether you need a driver, a manual or training"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Still stuck",
+    "heading": "When a download is not enough",
+    "body": "Existing customers can use the Client Service Center to request support, order supplies or reach IT support. The Customer Care Center processes requests Monday through Friday, 7:00am to 5:00pm, and responds within 24 hours.",
+    "bullets": [
+     "Request support from the Client Service Center",
+     "Watch the Mitel Connect training clips",
+     "Call (317) 634-2913 or toll-free (800) 467-7474",
+     "Email support@vanausdall.com"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about driver and documentation downloads",
+    "items": [
+     [
+      "Where can I find Ricoh drivers?",
+      "This page links Ricoh drivers, specifications and how-to self-help, plus online interactive Ricoh training."
+     ],
+     [
+      "Where can I find Canon and HP drivers?",
+      "This page links Canon drivers and specifications and HP drivers and product manuals."
+     ],
+     [
+      "Which scanner drivers are listed?",
+      "Fujitsu, Canon, Kodak and Panasonic scanner drivers."
+     ],
+     [
+      "Is there training for my phone system?",
+      "This page lists ShoreTel and ShoreTel conferencing self-paced training and Toshiba IP 5000, DP 5000 and CIX guides. For Mitel Connect, see VAF's customer training video clips."
+     ],
+     [
+      "Does VAF host these files?",
+      "No. The links go to manufacturer and developer pages."
+     ],
+     [
+      "Who do I call if I cannot find what I need?",
+      "Call the Customer Care Center at (317) 634-2913 or toll-free at (800) 467-7474, Monday through Friday, 7:00am to 5:00pm."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Support pages for customers",
+    "intro": "Where to go when a driver or manual is not the answer.",
+    "items": [
+     [
+      "Support",
+      "Client Service Center",
+      "Support requests, supplies and the Customer Care Center number.",
+      "Open the page",
+      "support.html"
+     ],
+     [
+      "Communication",
+      "Mitel Connect Client Training Videos",
+      "Short topic-based clips for getting started on the Connect client.",
+      "Open the page",
+      "services/customer-training-videos.html"
+     ],
+     [
+      "Print",
+      "Copier Service and Repair",
+      "Service across the state with a 25 point inspection on every call.",
+      "Open the page",
+      "services/copier-service.html"
+     ],
+     [
+      "Process",
+      "Document Scanning",
+      "Workgroup, low volume and high volume scanners for any document size.",
+      "Open the page",
+      "services/document-scanning.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Cannot find the driver you need?",
+    "body": "Tell us the make and model and what you are trying to do. A VAF team member will point you to the right place.",
+    "submit": "Ask for help",
+    "note": "A person in VAF's Indianapolis office replies. Or call (317) 634-2913."
+   }
+  ]
+ },
+ "partners.html": {
+  "description": "Fortinet, Mitel, Canon, HP, OnBase, Sophos and more: the technology partners Van Ausdall & Farrar supports across its four pillars.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Partners",
+    "heading": "World-class partnerships, <em>by pillar</em>.",
+    "subhead": "We only support the industry-recognized leaders in each area of technology we serve, and we re-evaluate the partnerships regularly. By representing the very best, it is uncommon that we have to apologize for a deficiency in our partners or our technology."
+   },
+   {
+    "type": "partners",
+    "caption": "Technology partners",
+    "items": [
+     "Canon",
+     "Ricoh",
+     "Kyocera",
+     "HP",
+     "Brother",
+     "Fortinet",
+     "Sophos",
+     "Mitel",
+     "RingCentral",
+     "8x8",
+     "Elevate",
+     "Microsoft",
+     "Datto",
+     "KnowBe4",
+     "Arctic Wolf",
+     "OnBase",
+     "Square 9",
+     "Fujitsu",
+     "OPEX",
+     "Zebra",
+     "VMware",
+     "Juniper",
+     "N-able",
+     "Tenable"
+    ]
+   },
+   {
+    "type": "cards",
+    "alt": true,
+    "eyebrow": "Information",
+    "heading": "Information partners",
+    "items": [
+     [
+      "Fortinet",
+      "Engaged Advanced Partner, NSE-7 engineers, first SD-WAN Specialization in the Great Lakes region."
+     ],
+     [
+      "Sophos",
+      "Intercept X Advanced with XDR on every Vsecure base plan."
+     ],
+     [
+      "Microsoft",
+      "Licensing, administration, collaboration and backup."
+     ],
+     [
+      "Datto",
+      "Patching, monitoring, backup and continuity."
+     ],
+     [
+      "KnowBe4",
+      "Security awareness training and compliance management."
+     ],
+     [
+      "Arctic Wolf, Tenable, VMware, Juniper, N-able",
+      "Detection and response, vulnerability management, virtualization, networking and RMM."
+     ]
+    ]
+   },
+   {
+    "type": "cards",
+    "eyebrow": "Communication",
+    "heading": "Communication partners",
+    "items": [
+     [
+      "Mitel",
+      "MiExclusive Gold Partner seven consecutive years; MiVoice Connect, MiCloud Connect and Enterprise Contact Center Gold Certified."
+     ],
+     [
+      "RingCentral",
+      "Customer Delivery Partner Certified."
+     ],
+     [
+      "8x8",
+      "Sales Engineer Certified; a Gartner Magic Quadrant leader."
+     ],
+     [
+      "Elevate",
+      "AI cloud communications with 99.999% uptime reliability."
+     ]
+    ]
+   },
+   {
+    "type": "cards",
+    "alt": true,
+    "eyebrow": "Print",
+    "heading": "Print partners",
+    "items": [
+     [
+      "Canon",
+      "imageRUNNER ADVANCE copiers and multifunction printers."
+     ],
+     [
+      "Ricoh",
+      "Black-and-white and color MFPs with document management built in."
+     ],
+     [
+      "Kyocera",
+      "Low total cost of ownership and enterprise print security."
+     ],
+     [
+      "HP",
+      "LaserJet and PageWide multifunction printers."
+     ],
+     [
+      "Brother and Zebra",
+      "Desktop and label printing."
+     ],
+     [
+      "EFI Fiery and Skyline",
+      "Production color management and web-to-print."
+     ]
+    ]
+   },
+   {
+    "type": "cards",
+    "eyebrow": "Process",
+    "heading": "Process partners",
+    "items": [
+     [
+      "OnBase by Hyland",
+      "Enterprise content management and Unity Forms."
+     ],
+     [
+      "Square 9",
+      "Smart Search document management."
+     ],
+     [
+      "Kofax",
+      "Intelligent capture and exchange for automated forms processing."
+     ],
+     [
+      "OPEX, Fujitsu and Canon",
+      "Production scanners for the Document Conversion Center."
+     ]
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about our partners",
+    "items": [
+     [
+      "Which copier brands does Van Ausdall & Farrar sell and service?",
+      "Canon, Ricoh, Kyocera and HP copiers and multifunction printers, plus Brother and Zebra printers, and most other major office equipment brands for service."
+     ],
+     [
+      "Which phone systems does Van Ausdall & Farrar install?",
+      "Mitel (MiExclusive Gold Partner), RingCentral, 8x8 and Elevate cloud communications, with Fortinet networking and a vendor-neutral carrier evaluation."
+     ],
+     [
+      "Which security vendors does Van Ausdall & Farrar use?",
+      "Fortinet firewalls and Fabric, Sophos Intercept X with XDR, Datto patching and monitoring, KnowBe4 awareness training, and Arctic Wolf and Tenable for detection and vulnerability management."
+     ],
+     [
+      "Which partners does VAF use for document management?",
+      "OnBase by Hyland, Square 9 Smart Search and Kofax for capture and forms, with OPEX, Fujitsu and Canon production scanners for the Document Conversion Center."
+     ],
+     [
+      "How does VAF choose its partners?",
+      "VAF says it supports only industry-recognized leaders in each area and re-evaluates the partnerships regularly."
+     ],
+     [
+      "Which of VAF's partners are Gartner Magic Quadrant leaders?",
+      "VAF names Fortinet, Sophos, 8x8 and RingCentral as Gartner Magic Quadrant leaders among its partners."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Explore the solutions behind each partner",
+    "intro": "Pick a pillar to see how the partners show up in a real service.",
+    "items": [
+     [
+      "Information",
+      "Managed Cybersecurity",
+      "Sophos XDR, Datto patching, Fortinet Fabric services and a security operations center from the Vsecure team.",
+      "Open the page",
+      "services/cybersecurity.html"
+     ],
+     [
+      "Communication",
+      "Business Phone Systems Indianapolis",
+      "Cloud, premise and hybrid voice from Mitel, RingCentral, 8x8 and Elevate.",
+      "Open the page",
+      "services/business-phone-systems.html"
+     ],
+     [
+      "Print",
+      "Copier Sales and Lease",
+      "Canon, Ricoh, Kyocera and HP copiers and multifunction printers.",
+      "Open the page",
+      "services/copiers.html"
+     ],
+     [
+      "Process",
+      "Document Management",
+      "Forms processing, content management, scanning and finishing from one team.",
+      "Open the page",
+      "services/document-management.html"
+     ]
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "How VAF supports partners",
+    "heading": "Local support behind every vendor",
+    "body": "VAF says it fully supports every product it recommends with its own local team, and that it re-evaluates partnerships regularly so customers get best of breed in each area.",
+    "bullets": [
+     "Gartner Magic Quadrant leaders among its partners, including Fortinet, Sophos, 8x8 and RingCentral",
+     "Mitel Gold for seven consecutive years, the top 7 percent of 1,400 partners in North America",
+     "Fortinet Engaged Advanced Partner with NSE-7 certified engineers and the first SD-WAN Specialization in the Great Lakes region",
+     "In the telecom business since 1983 with more than 4,000 systems deployed"
+    ]
+   },
+   {
+    "type": "leadform",
+    "alt": true,
+    "id": "consult",
+    "heading": "Speak with a solutions expert",
+    "body": "Tell us what you run today. A technology advisor replies to set a time.",
+    "submit": "Schedule my consultation",
+    "note": "A person from the Indianapolis office replies, not an autoresponder."
+   }
+  ]
+ },
+ "cost-calculator.html": {
+  "description": "Move three sliders to estimate your office print spend: devices, mono and color pages and staff time. Then request the free VAF print assessment.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Cost calculator",
+    "heading": "What does your office <em>really</em> spend on print?",
+    "subhead": "Move three sliders. The estimate uses typical rates for toner, service and the staff time nobody counts. The free print assessment replaces every number here with yours."
+   },
+   {
+    "type": "calculator",
+    "id": "calc",
+    "alt": true,
+    "eyebrow": "Estimate",
+    "heading": "Your print spend, estimated",
+    "intro": "Devices, mono pages and color pages a month. That is all it needs.",
+    "rates": {
+     "mono_cpp": 0.018,
+     "color_cpp": 0.09,
+     "minutes_per_device_week": 25,
+     "hourly": 28,
+     "managed_saving": 0.3,
+     "saving_label": "Potential saving at up to 30% (the figure on VAF's copy print page)"
+    },
+    "note": "Estimates only, using typical industry rates for orientation. Nothing here is a quote. The free print assessment gives you the real figure from your devices and your invoices.",
+    "cta_label": "Get the real number: request the free print assessment",
+    "cta_href": "print-assessment.html"
+   },
+   {
+    "type": "comparison",
+    "heading": "Lease, rent or buy?",
+    "intro": "The assessment prices all three for your real volume. Here is how they usually compare.",
+    "columns": [
+     {
+      "label": "Lease",
+      "recommended": true
+     },
+     {
+      "label": "Rent"
+     },
+     {
+      "label": "Buy"
+     }
+    ],
+    "rows": [
+     [
+      "Best for",
+      "Steady volume, a fleet kept current",
+      "Peaks, projects, construction trailers",
+      "Stable volume, long device life"
+     ],
+     [
+      "Term",
+      "Fixed, with an upgrade at the end",
+      "Month to month",
+      "None"
+     ],
+     [
+      "Up-front cost",
+      "Low",
+      "Low",
+      "Highest"
+     ],
+     [
+      "Lifetime cost",
+      "Moderate",
+      "Highest per month",
+      "Lowest if the device runs for years"
+     ],
+     [
+      "Service and toner",
+      "Can be included in one rate",
+      "Usually included",
+      "Add a service agreement"
+     ]
+    ],
+    "note": "Terms and rates are set after the assessment."
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "About the estimate",
+    "items": [
+     [
+      "Where do the rates come from?",
+      "Typical industry per-page rates for toner and service, and a modest allowance for the staff time spent ordering supplies and chasing repairs. Orientation only."
+     ],
+     [
+      "Why does staff time count?",
+      "Because it is real money that never appears on a print invoice. Tippecanoe's IT staff were spending 20% of their time on print issues."
+     ],
+     [
+      "How do I get the real number?",
+      "Request the free print assessment. We map every device, volume and cost and show exactly where you save."
+     ],
+     [
+      "What rates does the calculator assume?",
+      "About 1.8 cents per mono page, 9 cents per color page, 25 minutes of staff time per device each week at $28 an hour. These are typical figures for orientation, not a quote."
+     ],
+     [
+      "Is the 30 percent saving a promise?",
+      "No. It is the figure VAF cites on its copy print page as the potential saving. Your own assessment replaces it with your real numbers."
+     ],
+     [
+      "Should we lease, rent or buy?",
+      "It depends on volume and how long you keep the device. The comparison table shows how the three usually differ, and the assessment prices all three for you."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Print pages to read next",
+    "intro": "What to look at once you have a rough number.",
+    "items": [
+     [
+      "Print",
+      "Managed Print Services Indianapolis",
+      "A free print assessment, then monitored devices, supplies and service.",
+      "Open the page",
+      "services/managed-print.html"
+     ],
+     [
+      "Print",
+      "Copier Sales and Lease",
+      "Canon, Ricoh, Kyocera and HP copiers and multifunction printers.",
+      "Open the page",
+      "services/copiers.html"
+     ],
+     [
+      "Print",
+      "Free Print Assessment",
+      "Every device, volume and cost mapped.",
+      "Open the page",
+      "print-assessment.html"
+     ],
+     [
+      "Print",
+      "Print Security and Accounting Software",
+      "Know what gets printed, by whom and what it costs.",
+      "Open the page",
+      "services/print-management-software.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "request",
+    "heading": "Get the real number",
+    "body": "A specialist maps your devices, volumes and costs. No obligation.",
+    "submit": "Request my assessment",
+    "note": "A person from the Indianapolis office replies, not an autoresponder."
+   }
+  ]
+ },
+ "cio-ai-playbook.html": {
+  "description": "Download the free 2026 CIO AI Playbook: nine chapters on AI readiness, policy, guardrails, use cases and a ninety-day plan, from VAF in Indianapolis.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "split",
+    "eyebrow": "Free download",
+    "heading": "Is your business ready for <em>AI in 2026</em>?",
+    "subhead": "The 2026 CIO AI Playbook is a step-by-step guide to secure, strategic AI implementation: policy, guardrails, the use cases that pay, and the order to do them in.",
+    "primary": {
+     "label": "Download the playbook",
+     "href": "#download"
+    },
+    "secondary": {
+     "label": "AI consulting",
+     "href": "services/ai-consulting.html"
+    },
+    "image": "assets/ai-hand-1200.jpg",
+    "image_alt": "A hand holding illuminated letters spelling AI",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "What is inside",
+    "heading": "Nine chapters, written for the person who has to decide",
+    "body": "The playbook walks a CIO or owner from the first question, is our data ready, to the last, how do we measure it. It covers an AI acceptable use policy, the governance guardrails that keep employees productive without exposing customer data, the use cases that pay back first in a mid-sized company, how to evaluate vendors and models, what the security team needs before anything is switched on, and a ninety-day plan with owners and checkpoints. Each chapter ends with a one-page checklist you can take into a leadership meeting.",
+    "bullets": [
+     "Readiness: data, identity and the questions to ask before any pilot",
+     "Policy: an acceptable use policy template and the guardrails that make it real",
+     "Use cases: the six that pay back first in a fifty to five-hundred person company",
+     "Security: what the SOC and the vCIO need before launch",
+     "The ninety-day plan, with owners and checkpoints",
+     "Measurement: the four numbers to report to the board"
+    ]
+   },
+   {
+    "type": "cards",
+    "alt": true,
+    "eyebrow": "Inside",
+    "heading": "What the playbook covers",
+    "items": [
+     [
+      "The risk of doing nothing",
+      "The four scenarios that expose data or create liability in ordinary offices."
+     ],
+     [
+      "The acceptable use framework",
+      "Approved tools, data boundaries, human review and incident reporting."
+     ],
+     [
+      "Readiness before use cases",
+      "Why the policy comes first, and how to find the automation that actually pays."
+     ],
+     [
+      "A roadmap",
+      "Guidance, governance and risk management, with owners and dates."
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "download",
+    "heading": "Download your free playbook",
+    "body": "Tell us where to send it. A technology advisor follows up once, to offer the Technology Strength Assessment.",
+    "submit": "Send me the playbook",
+    "note": "No spam. One follow-up from a person in Indianapolis."
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about the 2026 CIO AI Playbook",
+    "items": [
+     [
+      "Is the 2026 CIO AI Playbook really free?",
+      "Yes. It is a free download. A technology advisor follows up once to offer the Technology Strength Assessment."
+     ],
+     [
+      "Who is the playbook for?",
+      "CIOs, IT directors, owners and operations leaders at small and mid-sized businesses and non-profits, especially in companies of about fifty to five hundred people."
+     ],
+     [
+      "What does it cover?",
+      "Nine chapters: AI readiness, an acceptable use policy and guardrails, the use cases that pay back first, vendor and model evaluation, security needs before launch, a ninety-day plan and how to measure results."
+     ],
+     [
+      "Does it include an acceptable use policy?",
+      "It includes an acceptable use policy template and the guardrails that make it work in practice."
+     ],
+     [
+      "Why does the playbook put policy before use cases?",
+      "Because employees are already using AI tools. Guardrails keep them productive without exposing customer data."
+     ],
+     [
+      "What comes after the playbook?",
+      "AI readiness: a policy and guardrails, then the use cases that deliver. VAF's AI consulting starts with the free Technology Strength Assessment."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "After the playbook",
+    "intro": "Pages on turning the playbook into a plan.",
+    "items": [
+     [
+      "Information",
+      "AI Consulting for Indiana Businesses",
+      "An acceptable use policy and guardrails before any AI tool is switched on.",
+      "Open the page",
+      "services/ai-consulting.html"
+     ],
+     [
+      "Information",
+      "Technology Strength Assessment",
+      "Ten to fifteen minutes online, then a specialist walks the results with you.",
+      "Open the page",
+      "technology-strength-assessment.html"
+     ],
+     [
+      "Information",
+      "Managed Cybersecurity",
+      "Sophos XDR, Datto patching, Fortinet Fabric services and a security operations center from the Vsecure team.",
+      "Open the page",
+      "services/cybersecurity.html"
+     ],
+     [
+      "Information",
+      "Managed IT Services Indianapolis",
+      "vCIO guidance, 24/7 monitoring, help desk and security packaged under one agreement.",
+      "Open the page",
+      "services/managed-it.html"
+     ]
+    ]
+   }
+  ]
+ },
+ "virtualsitevisit.html": {
+  "title": "Virtual Site Visit | Van Ausdall & Farrar Indiana",
+  "description": "Tour Van Ausdall & Farrar online: a customer's view, VAF's technical capabilities, a technology consultant and a story about its people.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "About",
+    "heading": "Van Ausdall & Farrar Virtual Site Visit",
+    "subhead": "We know it’s difficult for you to come see our facility today, so we put this page together to make sure you’re able to visit us. Van Ausdall & Farrar is a great company with wonderful people that all work with a common daily purpose.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-hq-1200.jpg",
+    "image_alt": "Virtual Site Visit for Indiana",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "About",
+    "heading": "Welcome to Van Ausdall & Farrar for your Virtual Site Visit!",
+    "body": "We’ve put together some content below for you to look at. It’ll take just a few minutes of your day. Let’s start with one of our customers giving you a quick tour. Next up we’d like you to learn a little about our technical capabilities. Our company is full our smart people that are certified in our four major disciplines; Print, Information, Communication and Process. One of the most important investments we can make in your business is to provide great technology consultants that can help you craft solutions to help you grow and compete. They’re your partner and help you focus on your core business by looking out for you. Here’s a technology consultant to tell you how we can help assess your business needs.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "What you will see",
+    "heading": "Four short videos",
+    "body": "The visit takes only a few minutes. It is built from four videos in a sensible order.",
+    "bullets": [
+     "A customer gives a quick tour",
+     "VAF's technical capabilities across Print, Information, Communication and Process",
+     "A technology consultant explains how VAF assesses your business needs",
+     "A short story about VAF's people and why they stay"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about the virtual site visit",
+    "items": [
+     [
+      "What is the virtual site visit?",
+      "It is a short online tour of Van Ausdall & Farrar for people who cannot visit in person. It uses four videos."
+     ],
+     [
+      "How long does it take?",
+      "Just a few minutes."
+     ],
+     [
+      "What will I see?",
+      "A customer's quick tour, VAF's technical capabilities, a technology consultant discussing how VAF assesses your needs and a story about VAF's people."
+     ],
+     [
+      "What are VAF's four disciplines?",
+      "Print, Information, Communication and Process. VAF's staff are certified in each."
+     ],
+     [
+      "Where is VAF headquartered?",
+      "At 6430 E 75th Street in Indianapolis, with offices in Fort Wayne and Evansville."
+     ],
+     [
+      "How long has VAF been in business?",
+      "Since 1914. VAF says the importance of that history is that the people who care for your investments stay with the company for a long time."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Keep exploring VAF",
+    "intro": "Pages that go further than the tour.",
+    "items": [
+     [
+      "Company",
+      "About Van Ausdall & Farrar",
+      "Since 1914, privately owned in Indianapolis.",
+      "Open the page",
+      "about.html"
+     ],
+     [
+      "Company",
+      "Careers at VAF",
+      "Open roles and what it is like to work at VAF.",
+      "Open the page",
+      "careers.html"
+     ],
+     [
+      "Company",
+      "Locations",
+      "Indianapolis, Fort Wayne and Evansville offices.",
+      "Open the page",
+      "locations.html"
+     ],
+     [
+      "Company",
+      "Case Studies",
+      "Customer results with numbers, from Tippecanoe to Johnson Memorial.",
+      "Open the page",
+      "case-studies.html"
+     ]
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Visit in person",
+    "heading": "Where to find us",
+    "body": "The Indianapolis headquarters is at 6430 E 75th Street, Indianapolis, IN 46250, a 57,000 square foot building that opened in 2006 and houses the secure Document Conversion Center. VAF also has offices in Fort Wayne and Evansville.",
+    "bullets": [
+     "Call (317) 634-2913 to arrange a visit",
+     "Toll-free (800) 467-7474",
+     "Open Monday through Friday, 7:00am to 5:00pm"
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Prefer to talk it through?",
+    "body": "Ask a technology consultant about your needs, or arrange an in-person visit.",
+    "submit": "Talk to a consultant",
+    "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913."
+   }
+  ]
+ },
+ "services/print-management-software.html": {
+  "title": "Print Security and Accounting Software | VAF",
+  "description": "Print management software for Indiana offices: follow-me printing, mobile print, print accounting and cost control from Ricoh, Canon, PaperCut and more.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Print",
+    "heading": "Print Management for Security & Accounting",
+    "subhead": "Print management for security and accounting, know what gets printed, by whom, and what it costs, on every device.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/copier-1200.jpg",
+    "image_alt": "Print Security & Accounting Software",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Print",
+    "heading": "Know what is printed, by whom and at what cost",
+    "body": "Print management software puts a layer of control over your copiers and printers. It records the activity on every device, releases jobs only to the right person and gives you the numbers to manage cost.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Print",
+    "heading": "YOU HAVE DOCUMENTS, WE HAVE ANSWERS",
+    "body": "We can help them flow more smoothly in and out of your system with software applications that make your copiers and printers work double duty, and save money in the process. Because the harder your copiers and printers work, the easier it is for you to enter, send, retrieve and manage your business files.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Print",
+    "heading": "Automated data capture",
+    "body": "Capture software turns paper at the copier into data in your systems.",
+    "bullets": [
+     "OnBase AnyDoc software",
+     "Nuance AutoStore",
+     "Nuance eCopy",
+     "uniFLOW Capture"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Print",
+    "heading": "Capture, manage, store and retrieve",
+    "body": "",
+    "bullets": [
+     "OnBase by Hyland",
+     "Square 9 Smart Search",
+     "Nuance AutoStore",
+     "uniFLOW Capture"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Print",
+    "heading": "Document routing and workflow",
+    "body": "",
+    "bullets": [
+     "uniFLOW Capture",
+     "Nuance eCopy"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Print",
+    "heading": "Follow-me printing",
+    "body": "",
+    "bullets": [
+     "Ricoh FlexRelease CX Cloud Print Service",
+     "PaperCut print management software",
+     "Nuance Output Manager",
+     "uniFLOW SMB"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Print",
+    "heading": "Mobile print and tracking",
+    "body": "",
+    "bullets": [
+     "Ricoh FlexRelease CX",
+     "PaperCut NG Professional client billing",
+     "Nuance AutoStore",
+     "uniFLOW Secure Mobile",
+     "Canon Mobile Print App"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Print",
+    "heading": "Print accounting",
+    "body": "",
+    "bullets": [
+     "Ricoh Device Manager NX",
+     "PaperCut print management",
+     "Nuance Output Manager",
+     "uniFLOW Output Manager",
+     "Canon Advance Tracker"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Print",
+    "heading": "Print cost containment and security",
+    "body": "",
+    "bullets": [
+     "Ricoh Enhanced Lock Print NX",
+     "Nuance Output Manager",
+     "uniFLOW Output Manager",
+     "Canon Universal Login Manager",
+     "PaperCut print management"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "What it controls",
+    "heading": "Four problems print software solves",
+    "body": "The same software family tends to cover a handful of everyday print problems.",
+    "bullets": [
+     "Confidential pages left in the output tray: follow-me printing holds the job until the owner arrives",
+     "No idea who printed what: accounting reports show usage by user, device and department",
+     "Runaway cost: rules and tracking cut unnecessary printing",
+     "Remote and mobile staff: mobile print apps let people print from phones and laptops"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Part of managed print",
+    "heading": "How the software connects to your fleet",
+    "body": "Print management software works best alongside a managed fleet. VAF's free print assessment maps your devices, volumes and costs first, then the right software goes on top of the right devices.",
+    "bullets": [
+     "Start with the free print assessment",
+     "Match software to your Ricoh, Canon, Kyocera or HP fleet",
+     "Add capture and workflow where paper still enters your processes",
+     "Review reports regularly with your VAF team"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about print security and accounting software",
+    "items": [
+     [
+      "What is print management software?",
+      "It is software that controls and tracks printing across your copiers and printers, so you know what gets printed, by whom and what it costs."
+     ],
+     [
+      "What is follow-me printing?",
+      "Follow-me printing holds a print job until the sender authenticates at a device. VAF lists Ricoh FlexRelease CX Cloud Print Service, PaperCut, Nuance Output Manager and uniFLOW SMB among its follow-me solutions."
+     ],
+     [
+      "Can it track printing costs by user or client?",
+      "Yes. VAF lists print accounting tools such as Ricoh Device Manager NX, PaperCut, Nuance Output Manager, uniFLOW Output Manager and Canon Advance Tracker."
+     ],
+     [
+      "Does it support printing from phones?",
+      "VAF lists mobile print and tracking solutions including Ricoh FlexRelease CX, uniFLOW Secure Mobile and the Canon Mobile Print App."
+     ],
+     [
+      "Can it help secure documents on the printer?",
+      "VAF lists cost containment and security tools such as Ricoh Enhanced Lock Print NX, Canon Universal Login Manager and PaperCut."
+     ],
+     [
+      "Can print software also capture and route documents?",
+      "Yes. Capture products such as OnBase AnyDoc, Nuance AutoStore and eCopy and uniFLOW Capture turn scans into data and route them to the right place."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "More print solutions",
+    "intro": "Pages on the fleet, service and applications that surround print software.",
+    "items": [
+     [
+      "Print",
+      "Managed Print Services Indianapolis",
+      "A free print assessment, then monitored devices, supplies and service.",
+      "Open the page",
+      "services/managed-print.html"
+     ],
+     [
+      "Print",
+      "Free Print Assessment",
+      "Every device, volume and cost mapped.",
+      "Open the page",
+      "print-assessment.html"
+     ],
+     [
+      "Print",
+      "Copier Sales and Lease",
+      "Canon, Ricoh, Kyocera and HP copiers and multifunction printers.",
+      "Open the page",
+      "services/copiers.html"
+     ],
+     [
+      "Print",
+      "Print Cost Calculator",
+      "Estimate print spend from three inputs.",
+      "Open the page",
+      "cost-calculator.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Print control by industry",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "Healthcare",
+      "Secure release keeps patient pages from sitting in a shared tray.",
+      "How we set it up",
+      "industries/healthcare.html"
+     ],
+     [
+      "Industry",
+      "Financial services",
+      "Accounting by user and department supports client billing and cost review.",
+      "How we set it up",
+      "industries/financial-services.html"
+     ],
+     [
+      "Industry",
+      "Education",
+      "Rules and quotas let a district see and limit student and staff printing.",
+      "How we set it up",
+      "industries/education.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Get control of your print environment",
+    "body": "Start with the free print assessment. We map your devices, then recommend the software that fits them.",
+    "submit": "Request my print assessment",
+    "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913."
+   }
+  ]
+ },
+ "services/wids-format.html": {
+  "title": "Wide Format Printing and Scanning | VAF Indiana",
+  "description": "Large format printers with photo-like quality up to 60 inches wide for designers, architects, engineers and construction teams, from VAF in Indiana.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Print",
+    "heading": "Wide Format Printing & Scanning",
+    "subhead": "Whether you’re a photographer, designer, architect, engineer or a construction professional, you need output solutions that are as big as your ideas.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/copier-1200.jpg",
+    "image_alt": "Wide Format Printing & Scanning",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Print",
+    "heading": "Output as big as your ideas",
+    "body": "Standard office printers stop at letter and legal. Today's large format printers can produce photo-like quality in a print up to 60 inches wide. VAF helps you choose the wide format printer that fits your situation and aims to co-author a cost effective solution specific to your business.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Who uses it",
+    "heading": "Professionals who print big",
+    "body": "VAF names the people who typically need large format output.",
+    "bullets": [
+     "Photographers",
+     "Designers",
+     "Architects",
+     "Engineers",
+     "Construction professionals"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Choosing a printer",
+    "heading": "Questions that decide the right wide format machine",
+    "body": "A short conversation about your work narrows the choices quickly.",
+    "bullets": [
+     "What is the widest print you need?",
+     "Do you print drawings, posters, photos or all three?",
+     "How many prints do you make in a week?",
+     "Do you also need to scan large originals?",
+     "Who will service it, and how fast do you need a repair?"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about wide format printing and scanning",
+    "items": [
+     [
+      "How wide can VAF's wide format printers print?",
+      "VAF says the latest generation of large format printers can produce photo-like quality in a print up to 60 inches wide."
+     ],
+     [
+      "Who needs a wide format printer?",
+      "Photographers, designers, architects, engineers and construction professionals, among others, whose work does not fit on 8.5 by 11 inch paper."
+     ],
+     [
+      "Can VAF help me choose a model?",
+      "Yes. VAF helps you choose the wide format printer that works best for your situation and builds a cost effective solution around your business."
+     ],
+     [
+      "Does VAF also offer wide format scanning?",
+      "The page title covers printing and scanning. Tell VAF what you need to scan and what size, and a specialist will recommend options."
+     ],
+     [
+      "Can wide format printing be outsourced?",
+      "VAF's print fulfillment service lists posters, banners and wide-format drawings among the jobs it produces off-site."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Related print pages",
+    "intro": "Where to go for off-site wide format, production and office print.",
+    "items": [
+     [
+      "Process",
+      "Print Fulfillment and On-Demand Print",
+      "Off-site production and delivery of marketing and business print.",
+      "Open the page",
+      "services/print-fulfillment.html"
+     ],
+     [
+      "Print",
+      "Production Print",
+      "High-volume digital color and finishing.",
+      "Open the page",
+      "services/production-print.html"
+     ],
+     [
+      "Print",
+      "Copier Sales and Lease",
+      "Canon, Ricoh, Kyocera and HP copiers and multifunction printers.",
+      "Open the page",
+      "services/copiers.html"
+     ],
+     [
+      "Print",
+      "Managed Print Services Indianapolis",
+      "A free print assessment, then monitored devices, supplies and service.",
+      "Open the page",
+      "services/managed-print.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Wide format by industry",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "Engineering and construction",
+      "Drawings, plans and site signage are the everyday jobs.",
+      "How we set it up",
+      "industries/engineering-construction.html"
+     ],
+     [
+      "Industry",
+      "Real estate",
+      "Large listing graphics and floor plans print at full size.",
+      "How we set it up",
+      "industries/real-estate.html"
+     ],
+     [
+      "Industry",
+      "Education",
+      "Posters, banners and teaching displays are quick to produce.",
+      "How we set it up",
+      "industries/education.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Find the right wide format printer",
+    "body": "Tell us what you print, how wide and how often.",
+    "submit": "Find my printer",
+    "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913."
+   }
+  ]
+ },
+ "services/print-application-solutions.html": {
+  "title": "Print Application and Management Solutions | VAF",
+  "description": "Control who prints what, where and when. VAF's print application solutions cover cloud printing, accounting, job submission and color management.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Print",
+    "heading": "Print Application Solutions",
+    "subhead": "Many companies need to control the parameters around print. It’s easy for print to get out of hand, especially in an age in which there are many regulations around who should print what, where, and how.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/copier-1200.jpg",
+    "image_alt": "Printer Management Software Support",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Print",
+    "heading": "Print is easy to let get out of hand",
+    "body": "Regulations increasingly govern who should print what, where and how, and costs can spiral if nobody is watching. Many companies set policies and procedures so data stays protected and nobody prints more than necessary. With more virtual teams, mobile print solutions matter too.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Print",
+    "heading": "Print Application Solution Benefits",
+    "body": "",
+    "bullets": [
+     "Helps Drive Cost Down, People print less if they are unable to print certain items, which helps save companies money in materials and equipment repair and maintenance.",
+     "Regulate What Is Printed, Print application solutions give the company insight into who is printing and what they are printing, which cuts down on personal print jobs.",
+     "Solves Compliance and Regulation, There is visibility into what is being printed, and the ability to assign permissions around who can print which types of documents and when.",
+     "Cloud Printing",
+     "Print Accounting",
+     "Job Submission"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Print",
+    "heading": "Flexibility as print needs change",
+    "body": "Partnering with VAF on copy and print management gives you flexibility and affordability as business trends shift, and the benefit of more than 100 years of experience implementing and managing secure technology.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Services in this area",
+    "heading": "What VAF's print application services include",
+    "body": "VAF lists four service areas for print applications.",
+    "bullets": [
+     "Cloud printing",
+     "Print accounting",
+     "Job submission",
+     "Color management"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about print application solutions",
+    "items": [
+     [
+      "What are print application solutions?",
+      "They are software and services that control how printing happens in your organization: who can print, what they can print and where."
+     ],
+     [
+      "How do they reduce cost?",
+      "People print less when some items cannot be printed. That saves on materials and on equipment repair and maintenance."
+     ],
+     [
+      "How do they help with compliance?",
+      "They give you visibility into what is being printed and the ability to assign permissions about who can print which types of documents and when."
+     ],
+     [
+      "Does it help with personal print jobs?",
+      "Yes. VAF says insight into who is printing and what they are printing cuts down on personal print jobs."
+     ],
+     [
+      "What services does VAF list?",
+      "Cloud printing, print accounting, job submission and color management."
+     ],
+     [
+      "Does it work for remote or virtual teams?",
+      "VAF notes that many companies are virtual in nature, so mobile print solutions are an important part of the offer."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "More print management pages",
+    "intro": "Software, assessment and fleet pages that go with print applications.",
+    "items": [
+     [
+      "Print",
+      "Print Security and Accounting Software",
+      "Know what gets printed, by whom and what it costs.",
+      "Open the page",
+      "services/print-management-software.html"
+     ],
+     [
+      "Print",
+      "Managed Print Services Indianapolis",
+      "A free print assessment, then monitored devices, supplies and service.",
+      "Open the page",
+      "services/managed-print.html"
+     ],
+     [
+      "Print",
+      "Free Print Assessment",
+      "Every device, volume and cost mapped.",
+      "Open the page",
+      "print-assessment.html"
+     ],
+     [
+      "Process",
+      "Managed Print Center",
+      "Staffed in-house copy centers with a focus on output quality.",
+      "Open the page",
+      "services/managed-print-centers.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Print policy by industry",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "State and local government",
+      "Permissions by user and document type help departments follow records rules.",
+      "How we set it up",
+      "industries/government.html"
+     ],
+     [
+      "Industry",
+      "Healthcare",
+      "Rules on which documents may be printed protect patient information.",
+      "How we set it up",
+      "industries/healthcare.html"
+     ],
+     [
+      "Industry",
+      "Financial services",
+      "Controls and reports support compliance reviews of customer documents.",
+      "How we set it up",
+      "industries/financial-services.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Put print policies into practice",
+    "body": "Tell us what you need to control and which devices you run.",
+    "submit": "Plan my print controls",
+    "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913."
+   }
+  ]
+ },
+ "services/network-infrastructure.html": {
+  "title": "LAN and WAN Network Infrastructure | VAF Indiana",
+  "description": "ADTRAN switching, routing and wireless from VAF's Converged Communications Group: managed Layer 2/3 switches up to 10 GE and QoS for VoIP.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Information",
+    "heading": "Local & Wide Area Network Infrastructure",
+    "subhead": "Van Ausdall & Farrar’s Converged Communications Group offers innovative and reliable network infrastructure solutions. ADTRAN’s product line is comprehensive. They support wired switching and routing, and wireless networks.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-soc-1200.jpg",
+    "image_alt": "Local & Wide Area Network Infrastructure",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "Network infrastructure from the Converged Communications Group",
+    "body": "VAF's Converged Communications Group designs and supports local and wide area networks built on ADTRAN products, which cover wired switching, routing and wireless.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Information",
+    "heading": "Switching and routing",
+    "body": "",
+    "bullets": [
+     "Layer 2/3 managed switches with line speeds up to 10 GE",
+     "Virtual Chassis for large deployments",
+     "QoS for VoIP deployments",
+     "Fixed and modular routers for MPLS and point-to-point WANs",
+     "Limited lifetime warranty on switches",
+     "Industry leading 5-year warranty on ADTRAN routers",
+     "ADTRAN technical support professional on staff",
+     "ADTRAN sales professional on staff"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Why a converged network",
+    "heading": "Voice and data on one design",
+    "body": "A network that carries voice, data and wireless needs to be designed for all three together, not each one separately.",
+    "bullets": [
+     "Quality of service settings so calls are not starved by data traffic",
+     "Switching and routing sized to the number of users and sites",
+     "WAN routers matched to the circuits you buy",
+     "Warranty terms you can count on"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Beyond the switch",
+    "heading": "Where infrastructure meets security and carriers",
+    "body": "Switches and routers sit between your carriers and your security. VAF connects the three: ADTRAN infrastructure, Fortinet security and a vendor-neutral carrier review.",
+    "bullets": [
+     "Pair infrastructure with Fortinet network security",
+     "Review circuits through the carrier consultation",
+     "Add SD-WAN for multi-site connectivity",
+     "Plan deployment as a project with VAF"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about LAN and WAN network infrastructure",
+    "items": [
+     [
+      "What network equipment does VAF supply?",
+      "ADTRAN switching, routing and wireless products, supported by VAF's Converged Communications Group."
+     ],
+     [
+      "How fast are the managed switches?",
+      "VAF lists Layer 2/3 managed switches with line speeds up to 10 GE."
+     ],
+     [
+      "Can the network be tuned for voice?",
+      "Yes. VAF lists QoS for VoIP deployments."
+     ],
+     [
+      "What warranties apply?",
+      "VAF lists a limited lifetime warranty on switches and a 5-year warranty on ADTRAN routers."
+     ],
+     [
+      "Which routers support WAN connections?",
+      "Fixed and modular routers for MPLS and point-to-point WANs."
+     ],
+     [
+      "Is there ADTRAN expertise on staff?",
+      "VAF lists an ADTRAN technical support professional and an ADTRAN sales professional on staff."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Related network pages",
+    "intro": "Security, carriers and projects that go with the network.",
+    "items": [
+     [
+      "Information",
+      "Indianapolis Network Security",
+      "Firewalls, endpoint protection, email security and zero-trust access for the network.",
+      "Open the page",
+      "services/network-security.html"
+     ],
+     [
+      "Communication",
+      "SD-WAN and Fortinet Hardware",
+      "Private-network speed and security over the internet connections you already have.",
+      "Open the page",
+      "services/sd-wan.html"
+     ],
+     [
+      "Communication",
+      "Carrier and Internet Services",
+      "A vendor-neutral carrier review with one bill and one point of contact.",
+      "Open the page",
+      "services/carrier-services.html"
+     ],
+     [
+      "Communication",
+      "State-of-the-Art Voice and Data Systems",
+      "ADTRAN, Fortinet, Windstream and AT&T relationships behind one communications design.",
+      "Open the page",
+      "services/state-of-the-art-voice-data-communication-systems.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Networks by industry",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "Education",
+      "Campuses need wired and wireless networks that scale across buildings.",
+      "How we set it up",
+      "industries/education.html"
+     ],
+     [
+      "Industry",
+      "Healthcare",
+      "Clinics rely on networks that keep voice and data steady.",
+      "How we set it up",
+      "industries/healthcare.html"
+     ],
+     [
+      "Industry",
+      "Manufacturing and logistics",
+      "Plants need switching and routing that tie several sites together.",
+      "How we set it up",
+      "industries/manufacturing-logistics.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Plan your network",
+    "body": "Share your sites, user counts and current switching and routing.",
+    "submit": "Plan my network",
+    "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913."
+   }
+  ]
+ },
+ "services/network-security-secure-router-access.html": {
+  "title": "Network Security and Secure Remote Access | VAF",
+  "description": "VAF chose Fortinet after an exhaustive study of next generation firewall leaders. See what the Fortinet platform protects and how remote access works.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Information",
+    "heading": "Network Security & Secure Remote Access",
+    "subhead": "It is always Van Ausdall & Farrar’s intention to deliver the best product with the best value in every market category we serve.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-soc-1200.jpg",
+    "image_alt": "Network Security & Secure Remote Access for Indiana",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "Why VAF chose Fortinet",
+    "body": "VAF says it conducted an exhaustive study of the leading next generation firewall and unified threat management vendors, and that Fortinet stood out substantially from all others. The Fortinet platform provides end-to-end protection for users, networks, data centers and the cloud.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "What the platform covers",
+    "heading": "Security applications on one platform",
+    "body": "FortiGuard Labs, Fortinet's threat research team, supplies coordinated threat intelligence to Fortinet devices worldwide.",
+    "bullets": [
+     "Intrusion prevention",
+     "Application control",
+     "Web filtering",
+     "Antivirus",
+     "Advanced threat protection with sandboxing",
+     "IP botnet protection",
+     "Anti-spam",
+     "Vulnerability management"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Wider protection",
+    "heading": "Sharing threats across endpoints, email and the web",
+    "body": "Fortinet's framework lets threats found in one place be shared, analyzed and mitigated across endpoints, email, the network and the web. Secure wireless access can be added to the platform, and data center solutions protect applications and keep them responsive.",
+    "bullets": [
+     "Endpoints and email in the same framework",
+     "Secure wireless access as an add-on",
+     "Data center protection with acceleration",
+     "Managed co-managed options through VAF's security programs"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about network security and secure remote access",
+    "items": [
+     [
+      "Which firewall vendor does VAF use?",
+      "Fortinet. VAF says it studied the leaders in next generation firewall and unified threat management and Fortinet stood out."
+     ],
+     [
+      "What does the Fortinet platform protect?",
+      "Users, networks, data centers and the cloud, end to end."
+     ],
+     [
+      "Which security applications are supported?",
+      "Intrusion prevention, application control, web filtering, antivirus, advanced threat protection with sandboxing, IP botnet protection, anti-spam and vulnerability management."
+     ],
+     [
+      "What is FortiGuard Labs?",
+      "It is Fortinet's advanced threat research team, which delivers coordinated threat intelligence to Fortinet devices around the world."
+     ],
+     [
+      "Can wireless be secured with the same platform?",
+      "Yes. Secure wireless access can be added to the Fortinet platform."
+     ],
+     [
+      "Does VAF also manage Fortinet for customers?",
+      "VAF's security programs include co-managed Fortinet firewall and Fabric services, and VAF is a Fortinet Engaged Advanced Partner."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "More on network protection",
+    "intro": "Pages that cover the wider security picture.",
+    "items": [
+     [
+      "Information",
+      "Indianapolis Network Security",
+      "Firewalls, endpoint protection, email security and zero-trust access for the network.",
+      "Open the page",
+      "services/network-security.html"
+     ],
+     [
+      "Information",
+      "Cyber Security: EDR, XDR and Firewalls",
+      "The attack surfaces VAF secures and the EDR, XDR, MDR and IPS terms explained.",
+      "Open the page",
+      "services/cyber-security-solutions.html"
+     ],
+     [
+      "Communication",
+      "SD-WAN and Fortinet Hardware",
+      "Private-network speed and security over the internet connections you already have.",
+      "Open the page",
+      "services/sd-wan.html"
+     ],
+     [
+      "Information",
+      "Managed Cybersecurity",
+      "Sophos XDR, Datto patching, Fortinet Fabric services and a security operations center from the Vsecure team.",
+      "Open the page",
+      "services/cybersecurity.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Remote access security by industry",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "State and local government",
+      "Departments with remote and field staff can secure remote access to internal systems.",
+      "How we set it up",
+      "industries/government.html"
+     ],
+     [
+      "Industry",
+      "Manufacturing and logistics",
+      "Plants with outside vendors can control who reaches the network.",
+      "How we set it up",
+      "industries/manufacturing-logistics.html"
+     ],
+     [
+      "Industry",
+      "Insurance",
+      "Agencies with hybrid staff can protect access to client files.",
+      "How we set it up",
+      "industries/insurance.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Review your firewall and remote access",
+    "body": "Tell us what firewall and remote access you use today.",
+    "submit": "Review my firewall",
+    "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913."
+   }
+  ]
+ },
+ "services/network-security.html": {
+  "title": "Indianapolis Network Security and Wi-Fi | VAF",
+  "description": "Indianapolis network security from VAF: firewalls, endpoint and email protection, zero trust access, and secure Wi-Fi from Fortinet, Extreme and ADTRAN.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Information",
+    "heading": "Network Security in Indianapolis",
+    "subhead": "Van Ausdall & Farrar provides Indianapolis network security that protects business data end to end, from firewalls and endpoint protection to email security and zero-trust access, backed by over a century of Indiana technology service.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-soc-1200.jpg",
+    "image_alt": "Indianapolis Network Security",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "About Indianapolis Network Security",
+    "body": "Van Ausdall & Farrar provides Indianapolis network security that protects business data end to end, from firewalls and endpoint protection to email security and zero-trust access, backed by over a century of Indiana technology service.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Information",
+    "heading": "Wireless Business Network Security Solutions",
+    "body": "Multiple devices need to connect to the enterprise Wi-Fi network from any point in the building and across the campus. Wireless connectivity is now the access of choice.",
+    "bullets": [
+     "Fast, Secure Wireless Networks for All Environments",
+     "Cloud, Virtual, Integrated, or Physical Controller Wi-Fi",
+     "Multiple Access Points for Multiple Applications",
+     "Professional Services that Get the Most Out of Wi-Fi"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "Fortinet Secure Fabric Wi-Fi",
+    "body": "Large campuses, distributed enterprises, and small businesses all have diverse WLAN architecture needs but also a common requirement for security. That’s why Fortinet provides a full suite of WLAN products as part of our Secure Access solution designed to address the unique requirements of every organization. Configuration and control of your wireless environment can be done directly with a Forti Gate or via our Wireless LAN controllers. Fortinet also offers Forti Manager and Forti Cloud as management solutions for the entire Fortinet security fabric.",
+    "bullets": [
+     "Single-pane-of-glass management for wireless, wired, and security policies",
+     "Zero-touch deployment, no requirement for onsite tech support",
+     "Simplicity of the cloud with integrated UTM service in AP (FortiAP S-Series)",
+     "Industry-leading customer analytics and engagement tools for retailers"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Information",
+    "heading": "Extreme Campus and Distributed Wireless",
+    "body": "Van Ausdall’s partnership with Extreme offers many benefits to our customers. Extreme Wireless offers unparalleled, high density Wi-Fi access. That’s why Extreme Networks has been named “The Official Wi-Fi Provider for the NFL.” Extreme also has the industry’s first flow-based 802.11ac Wave 2 wireless solution.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "WiNG Wireless APs",
+    "body": "WiNG wireless APs are specifically designed for the distributed network in the retail, hospitality, and logistics industries. Take a look at our full distributed campus portfolio.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Information",
+    "heading": "Extreme Wireless Access Points",
+    "body": "Extreme Wireless Access Points deliver wired-like performance, at scale for high-density in every environment. Smart Access Points are equally adept for both distributed and centralized deployment models.",
+    "bullets": []
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about network security in Indianapolis",
+    "items": [
+     [
+      "What does network security from VAF cover?",
+      "Firewalls, endpoint protection, email security, zero-trust access and secure wireless networks, protecting business data end to end."
+     ],
+     [
+      "Which wireless vendors does VAF partner with?",
+      "Fortinet, Extreme Networks and ADTRAN Bluesocket."
+     ],
+     [
+      "What is Fortinet Secure Fabric Wi-Fi?",
+      "A suite of WLAN products with single-pane management for wireless, wired and security policy, zero-touch deployment and integrated UTM in the access point."
+     ],
+     [
+      "What is Bluesocket vWLAN?",
+      "A virtual appliance that controls Wi-Fi from small to enterprise deployments. It can run in ADTRAN's public cloud, your own data center or VAF's data center as a managed partner cloud."
+     ],
+     [
+      "Which access points suit large or rugged sites?",
+      "Extreme lists high-density access points and an outdoor family built for docks, public venues and warehouses, with seamless roaming across a multi-subnet campus."
+     ],
+     [
+      "Does VAF use zero-trust access?",
+      "Yes. VAF lists zero-trust access among its Indianapolis network security services."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "More on network protection",
+    "intro": "Other pages that cover firewalls, endpoints and monitored security.",
+    "items": [
+     [
+      "Communication",
+      "Local and Wide Area Network Infrastructure",
+      "ADTRAN switching, routing and wireless from the Converged Communications Group.",
+      "Open the page",
+      "services/network-infrastructure.html"
+     ],
+     [
+      "Information",
+      "Managed Cybersecurity",
+      "Sophos XDR, Datto patching, Fortinet Fabric services and a security operations center from the Vsecure team.",
+      "Open the page",
+      "services/cybersecurity.html"
+     ],
+     [
+      "Information",
+      "Cyber Security: EDR, XDR and Firewalls",
+      "The attack surfaces VAF secures and the EDR, XDR, MDR and IPS terms explained.",
+      "Open the page",
+      "services/cyber-security-solutions.html"
+     ],
+     [
+      "Communication",
+      "SD-WAN and Fortinet Hardware",
+      "Private-network speed and security over the internet connections you already have.",
+      "Open the page",
+      "services/sd-wan.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Wi-Fi and network security by industry",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "Education",
+      "Campuses can use the high-density access points for classrooms and gyms.",
+      "How we set it up",
+      "industries/education.html"
+     ],
+     [
+      "Industry",
+      "Manufacturing and logistics",
+      "Warehouses and docks can use rugged outdoor access points.",
+      "How we set it up",
+      "industries/manufacturing-logistics.html"
+     ],
+     [
+      "Industry",
+      "Healthcare",
+      "Facilities can manage wireless, wired and security policy from one console.",
+      "How we set it up",
+      "industries/healthcare.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Secure your Indianapolis network",
+    "body": "Share your sites, wireless needs and current firewall.",
+    "submit": "Secure my network",
+    "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913."
+   }
+  ]
+ },
+ "services/copy-print-solutions.html": {
+  "title": "Copy Print Solutions in Indianapolis | VAF",
+  "description": "Copier sales, leasing and rental plus managed print services in Indianapolis, with local service since 1914 and a free print assessment.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Print",
+    "heading": "Copy Print Solutions for Indianapolis Businesses",
+    "subhead": "Reduce costs by up to 30% with Indianapolis copy print solutions, copiers, multifunction printers, and managed print services backed by local service.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/copier-1200.jpg",
+    "image_alt": "Copy Print Solutions in Indianapolis",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Print",
+    "heading": "About Copy Print Solutions in Indianapolis",
+    "body": "Reduce costs by up to 30% with Indianapolis copy print solutions, copiers, multifunction printers, and managed print services backed by local service.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Print",
+    "heading": "Why Indianapolis Businesses Choose Our Print Solutions",
+    "body": "",
+    "bullets": [
+     "Local service since 1914, Indiana's largest full-service office technology provider",
+     "Cut printing costs by up to 30%",
+     "Certified field service technicians with 25-point inspections on every call",
+     "24/7 proactive support and monitoring from our Customer Care Center",
+     "Enterprise-grade print security and compliance monitoring"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Print",
+    "heading": "New Copy Machines",
+    "body": "",
+    "bullets": [
+     "Copier sales, leasing, and rental options",
+     "Canon, Ricoh, Kyocera, and HP multifunction printers",
+     "Service and maintenance from our local team"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Print",
+    "heading": "Managed Print Services",
+    "body": "",
+    "bullets": [
+     "Transform how you manage your print environment",
+     "Complete fleet optimization and monitoring",
+     "Automated supply replenishment",
+     "Predictive maintenance",
+     "Real-time usage analytics"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Print",
+    "heading": "Print Optimization",
+    "body": "",
+    "bullets": [
+     "Maximize your print investment",
+     "Fleet right-sizing",
+     "Cost-per-page optimization",
+     "Energy efficiency management",
+     "Regular performance reviews"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Print",
+    "heading": "1. Free Print Assessment",
+    "body": "We map your devices, volumes, and costs, then show exactly where you save.",
+    "bullets": []
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about copy print solutions in Indianapolis",
+    "items": [
+     [
+      "What do copy print solutions include?",
+      "New copy machines through sale, lease or rental, managed print services, and print optimization, backed by local service."
+     ],
+     [
+      "Which copier brands does VAF sell?",
+      "Canon, Ricoh, Kyocera and HP multifunction printers."
+     ],
+     [
+      "How much can printing cost fall?",
+      "VAF cites up to 30 percent savings and an average printing cost reduction of 30 percent. The free print assessment replaces that with your own numbers."
+     ],
+     [
+      "How does the process start?",
+      "With a free print assessment, then implementation and 24/7 monitoring."
+     ],
+     [
+      "What does managed print services include?",
+      "Fleet optimization and monitoring, automated supply replenishment, predictive maintenance and real-time usage analytics."
+     ],
+     [
+      "What does print optimization mean?",
+      "Right-sizing the fleet, cost-per-page optimization, energy efficiency management and regular performance reviews."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Where to go from here",
+    "intro": "Other print pages for sale, service, software and estimates.",
+    "items": [
+     [
+      "Print",
+      "Copier Sales and Lease",
+      "Canon, Ricoh, Kyocera and HP copiers and multifunction printers.",
+      "Open the page",
+      "services/copiers.html"
+     ],
+     [
+      "Print",
+      "Managed Print Services Indianapolis",
+      "A free print assessment, then monitored devices, supplies and service.",
+      "Open the page",
+      "services/managed-print.html"
+     ],
+     [
+      "Print",
+      "Copier Service and Repair",
+      "Service across the state with a 25 point inspection on every call.",
+      "Open the page",
+      "services/copier-service.html"
+     ],
+     [
+      "Print",
+      "Print Cost Calculator",
+      "Estimate print spend from three inputs.",
+      "Open the page",
+      "cost-calculator.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Print solutions by industry",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "Education",
+      "Districts can right-size fleets across buildings.",
+      "How we set it up",
+      "industries/education.html"
+     ],
+     [
+      "Industry",
+      "Healthcare",
+      "Clinics can combine secure printing with reliable service.",
+      "How we set it up",
+      "industries/healthcare.html"
+     ],
+     [
+      "Industry",
+      "Insurance",
+      "Agencies can see and cut cost per page across offices.",
+      "How we set it up",
+      "industries/insurance.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Start with a free print assessment",
+    "body": "We map your devices, volumes and costs, then show exactly where you save.",
+    "submit": "Request my print assessment",
+    "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913."
+   }
+  ]
+ },
+ "services/copier-service.html": {
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "split",
+    "eyebrow": "Service and repair",
+    "heading": "When the copier stops, <em>work stops</em>. We move.",
+    "subhead": "Certified field service technicians are on the road across Indianapolis and central Indiana every day. Our Customer Care Center processes requests Monday through Friday, 7:00am to 5:00pm, and responds within 24 hours. Remote diagnostics fix many problems without a visit at all.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-technician-1200.jpg",
+    "image_alt": "Copier service and repair",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "cards",
+    "alt": true,
+    "eyebrow": "What is included",
+    "heading": "What changes with VAF copier service and repair",
+    "items": [
+     [
+      "Certified field technicians",
+      "Factory-certified on Canon, Ricoh, Kyocera and HP, plus most other major brands."
+     ],
+     [
+      "Remote diagnostics",
+      "Connectivity to your equipment lets engineers diagnose, and often fix, before a truck rolls."
+     ],
+     [
+      "25-point inspection",
+      "A total call process with 25 points of inspection on every visit, so the next failure is caught early."
+     ]
+    ]
+   },
+   {
+    "type": "detail",
+    "eyebrow": "The specifics",
+    "heading": "What you get, and what it rests on",
+    "body": "What a VAF copier service plan includes.",
+    "bullets": [
+     "Service and supply requests by phone, email or website",
+     "Preventative maintenance plans with firmware and security updates",
+     "Toner and supply replenishment and remote monitoring",
+     "An honest repair-or-replace assessment when repair cost approaches the machine's value"
+    ],
+    "image": "assets/print-1200.jpg",
+    "flip": true
+   },
+   {
+    "type": "testimonials",
+    "alt": true,
+    "heading": "What customers say after a service call",
+    "items": [
+     [
+      "We always look forward to Jerome coming. He is kind and professional. We always know our problem will be resolved.",
+      "Stacy",
+      "After-service survey, May 2026"
+     ]
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions we get about copier service and repair",
+    "items": [
+     [
+      "How fast does VAF respond to a copier service request?",
+      "The Customer Care Center processes requests Monday through Friday, 7:00am to 5:00pm and responds within 24 hours, with same-day service for most metro calls."
+     ],
+     [
+      "Can a copier problem be fixed without a visit?",
+      "Often. Connectivity to your equipment lets engineers diagnose, and often fix, a problem remotely before a technician is dispatched."
+     ],
+     [
+      "What happens on a service visit?",
+      "Every visit follows a total call process with a 25 point inspection, so the next failure is caught early."
+     ],
+     [
+      "Which brands can VAF service?",
+      "Canon, Ricoh, Kyocera and HP, with factory-certified technicians, plus most other major office equipment brands."
+     ],
+     [
+      "Should I repair or replace an aging copier?",
+      "VAF offers an honest assessment when repair cost approaches the machine's value."
+     ],
+     [
+      "How do I request service or supplies?",
+      "By phone, email or the website through the Client Service Center."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Keep your print fleet running",
+    "intro": "Pages on the equipment, monitoring and supplies behind a service plan.",
+    "items": [
+     [
+      "Print",
+      "Copier Sales and Lease",
+      "Canon, Ricoh, Kyocera and HP copiers and multifunction printers.",
+      "Open the page",
+      "services/copiers.html"
+     ],
+     [
+      "Print",
+      "Managed Print Services Indianapolis",
+      "A free print assessment, then monitored devices, supplies and service.",
+      "Open the page",
+      "services/managed-print.html"
+     ],
+     [
+      "Print",
+      "Print Security and Accounting Software",
+      "Know what gets printed, by whom and what it costs.",
+      "Open the page",
+      "services/print-management-software.html"
+     ],
+     [
+      "Support",
+      "Client Service Center",
+      "Support requests, supplies and the Customer Care Center number.",
+      "Open the page",
+      "support.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Copier service by industry",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "Healthcare",
+      "A clinic needs a machine that works when a patient form must go out.",
+      "How we set it up",
+      "industries/healthcare.html"
+     ],
+     [
+      "Industry",
+      "State and local government",
+      "A busy county office cannot wait days for a fix.",
+      "How we set it up",
+      "industries/government.html"
+     ],
+     [
+      "Industry",
+      "Insurance",
+      "An agency printing policy documents depends on its copiers daily.",
+      "How we set it up",
+      "industries/insurance.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Get copier service from a local team",
+    "body": "Tell us the brand and model and what is wrong, and we will set up service.",
+    "submit": "Request service",
+    "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913.",
+    "alt": true
+   }
+  ]
+ },
+ "services/production-print.html": {
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "split",
+    "eyebrow": "Production press and color",
+    "heading": "Your print shop, <em>one stop</em>.",
+    "subhead": "In-plant printing, variable data and color workflow for high-volume environments: presses, finishing, media profiles and workflow management software from one local partner. Every printed piece must have value, and digital color is finally affordable.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/print-1200.jpg",
+    "image_alt": "Production print",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "cards",
+    "alt": true,
+    "eyebrow": "What is included",
+    "heading": "What changes with VAF production print",
+    "items": [
+     [
+      "EFI Fiery",
+      "EFI certified engineers, Impose and Compose, Job Master, Color Profiler Suite and Spot-On."
+     ],
+     [
+      "Skyline Web-to-Print",
+      "Print Station, Product Manager, Template Manager, portal design and online editing."
+     ],
+     [
+      "Finishing and media",
+      "The finishing equipment and media profiles to turn out high-quality, high-speed color that meets bottom-line demands."
+     ]
+    ]
+   },
+   {
+    "type": "detail",
+    "eyebrow": "The specifics",
+    "heading": "What you get, and what it rests on",
+    "body": "What VAF brings to an in-plant or production print environment.",
+    "bullets": [
+     "Presses for high volume, high value and high quality requirements",
+     "Variable data for pieces that earn their postage",
+     "Color management from profile to press",
+     "A customizable approach to your individual needs"
+    ],
+    "image": "assets/team-1200.jpg",
+    "flip": true
+   },
+   {
+    "type": "testimonials",
+    "alt": true,
+    "heading": "What customers say after a service call",
+    "items": [
+     [
+      "The guy is totally awesome. He has been working on our equipment for at least 12 years and I would not want anyone else.",
+      "Teresa",
+      "After-service survey, May 2026"
+     ]
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions we get about production print",
+    "items": [
+     [
+      "What is production print?",
+      "High-volume digital printing with presses, finishing, color management and workflow software, for in-plant print shops and busy print environments."
+     ],
+     [
+      "What color management tools does VAF offer?",
+      "EFI Fiery with certified engineers, including Impose and Compose, Job Master, Color Profiler Suite and Spot-On."
+     ],
+     [
+      "Can VAF set up web-to-print?",
+      "Yes. VAF offers Skyline Web-to-Print with Print Station, Product Manager, Template Manager, portal design and online editing."
+     ],
+     [
+      "What is variable data printing?",
+      "Printing where each piece carries different content, such as a name or offer. VAF says variable data is for pieces that earn their postage."
+     ],
+     [
+      "Does VAF supply finishing equipment?",
+      "VAF lists finishing equipment and media profiles to turn out high-quality, high-speed color."
+     ],
+     [
+      "Who is production print for?",
+      "High-volume environments such as in-plant print shops. VAF says its approach is customized to your individual needs."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Related print pages",
+    "intro": "From office fleets to wide format and off-site fulfillment.",
+    "items": [
+     [
+      "Process",
+      "Print Fulfillment and On-Demand Print",
+      "Off-site production and delivery of marketing and business print.",
+      "Open the page",
+      "services/print-fulfillment.html"
+     ],
+     [
+      "Print",
+      "Wide Format Printing and Scanning",
+      "Output for designers, architects and engineers.",
+      "Open the page",
+      "services/wids-format.html"
+     ],
+     [
+      "Process",
+      "Managed Print Center",
+      "Staffed in-house copy centers with a focus on output quality.",
+      "Open the page",
+      "services/managed-print-centers.html"
+     ],
+     [
+      "Print",
+      "Managed Print Services Indianapolis",
+      "A free print assessment, then monitored devices, supplies and service.",
+      "Open the page",
+      "services/managed-print.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Production print by industry",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "Education",
+      "A district print shop can bring publications in-house.",
+      "How we set it up",
+      "industries/education.html"
+     ],
+     [
+      "Industry",
+      "Financial services",
+      "A bank can personalize statements and mailers with variable data.",
+      "How we set it up",
+      "industries/financial-services.html"
+     ],
+     [
+      "Industry",
+      "State and local government",
+      "A municipal print room can produce notices, forms and signage.",
+      "How we set it up",
+      "industries/government.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Plan your production print shop",
+    "body": "Tell us your volumes, finishing needs and color work.",
+    "submit": "Plan my print shop",
+    "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913.",
+    "alt": true
+   }
+  ]
+ },
+ "services/unified-communications.html": {
+  "title": "Unified Communications and Collaboration | VAF",
+  "description": "One place for business phone, video, data and mobile apps. VAF unified communications lets you meet by chat, audio, VoIP, video or web conference.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Communication",
+    "heading": "Unified Communications",
+    "subhead": "Unified Communications is an integrated suite of tools that goes where you go.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-phone-1200.jpg",
+    "image_alt": "Unified Communications and Collaboration Platforms",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Communication",
+    "heading": "Tools that go where you go",
+    "body": "Unified communications is an integrated suite of tools. You meet with customers, partners and colleagues anytime and anywhere using the tool of your choice: instant messaging, audio, Voice over IP, video or integrated web conferencing. Phone systems, video, data and mobile applications are synced in one convenient place.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Why unify",
+    "heading": "Fewer tools, less switching",
+    "body": "When voice, chat and meetings live in separate products, people spend time hunting for the right one. A unified suite puts them together.",
+    "bullets": [
+     "One directory and one presence status across phone, chat and meetings",
+     "Choose the channel that fits the moment: message, call or video",
+     "The same experience on desk phone, computer and mobile device",
+     "Less training and fewer vendors to call"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Choosing a platform",
+    "heading": "Which VAF platform fits",
+    "body": "VAF delivers unified communications on Mitel, 8x8, RingCentral and Elevate, in cloud, premise or hybrid form. The right choice depends on locations, headcount, contact center needs and what you already own.",
+    "bullets": [
+     "Mitel for premise and cloud with Gold partner support",
+     "Elevate for AI-assisted cloud communications",
+     "Conferencing and collaboration for desktop sharing",
+     "Mobility apps for staff who are rarely at a desk"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about unified communications",
+    "items": [
+     [
+      "What is unified communications?",
+      "It is an integrated suite of tools that brings your business phone system, video, data and mobile applications together in one place."
+     ],
+     [
+      "Which ways can people meet?",
+      "Instant messaging, audio, Voice over IP, video or integrated web conferencing, using the tool of their choice."
+     ],
+     [
+      "Does it work outside the office?",
+      "Yes. The point is that the tools go where you go, from desk phone to smartphone and laptop."
+     ],
+     [
+      "Which vendors does VAF use?",
+      "Mitel, 8x8, RingCentral and Elevate, with Mitel Gold partner status for seven years running."
+     ],
+     [
+      "How is unified communications different from a phone system?",
+      "A phone system handles calls. Unified communications adds messaging, presence, conferencing and mobile access in the same suite."
+     ],
+     [
+      "Where do I start?",
+      "With the Technology Strength Assessment, which maps your communication needs and produces a written recommendation."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Related communication pages",
+    "intro": "Deeper pages on platforms, conferencing and mobile access.",
+    "items": [
+     [
+      "Communication",
+      "Elevate AI Cloud Communications",
+      "Voice, video, chat, SMS and file collaboration on one cloud platform.",
+      "Open the page",
+      "services/elevate.html"
+     ],
+     [
+      "Communication",
+      "Web and Audio Conferencing",
+      "Instant messaging, conference calling and desktop sharing over the business phone system.",
+      "Open the page",
+      "services/conference-and-collaboration.html"
+     ],
+     [
+      "Communication",
+      "Enterprise Mobile App and PBX Features",
+      "Use a personal device on the business number without exposing a personal cell number.",
+      "Open the page",
+      "services/mobility-solutions.html"
+     ],
+     [
+      "Communication",
+      "Cloud VoIP and PBX Systems",
+      "Enterprise calling features with no hardware to buy, manage or maintain.",
+      "Open the page",
+      "services/cloud-communications.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Unified communications by industry",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "Healthcare",
+      "Staff moving between rooms and sites can stay reachable on one number.",
+      "How we set it up",
+      "industries/healthcare.html"
+     ],
+     [
+      "Industry",
+      "Insurance",
+      "Agents can meet clients by video and share a screen without extra software.",
+      "How we set it up",
+      "industries/insurance.html"
+     ],
+     [
+      "Industry",
+      "State and local government",
+      "Departments can bring chat and conferencing to a single directory.",
+      "How we set it up",
+      "industries/government.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Bring your communication tools together",
+    "body": "Tell us what you use today for calls, chat and meetings.",
+    "submit": "Unify my tools",
+    "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913."
+   }
+  ]
+ },
+ "services/receptionist-services.html": {
+  "title": "Receptionist and Visitor Screening Services | VAF",
+  "description": "VAF provides trained receptionists and visitor screening technology: photo capture, license scan, background check, badge printing and a secure log.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Process",
+    "heading": "You Only Get One Chance to Make a Good First Impression",
+    "subhead": "The receptionist is the first impression for visitors and guests. We assist in providing the right individual(s) who are well trained to receive guests at our client locations.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-conversion-1200.jpg",
+    "image_alt": "Receptionist & Visitor Screening",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Process",
+    "heading": "The first impression visitors get",
+    "body": "The receptionist is the first impression for visitors and guests. VAF assists in providing well-trained people to receive guests at client locations, along with technology that helps account for and screen visitors, contractors, volunteers and employees entering the facility.",
+    "bullets": [
+     "Captures a real-time photograph",
+     "Scans driver's license",
+     "Performs a background check",
+     "Prints visitor badge with date and time stamp",
+     "Stores visitor information in a secure database"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Process",
+    "heading": "No more paper logbooks",
+    "body": "Detailed activity reporting in a secure database removes the need for paper logbooks.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Why screen visitors",
+    "heading": "Know who is in the building",
+    "body": "A visitor system answers the questions a paper sign-in sheet cannot.",
+    "bullets": [
+     "Who came in, when and to see whom",
+     "A photo and badge tied to each visit",
+     "A searchable record instead of a clipboard",
+     "Contractors and volunteers tracked like any other guest"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Part of facilities management",
+    "heading": "Front desk, print room and mail room under one partner",
+    "body": "Visitor and conference room management is one of the services in VAF's facilities management program, alongside print room management, mail and scanning.",
+    "bullets": [
+     "Pair with facilities management for a full office services program",
+     "Combine with a managed mail center",
+     "Add scanning and archiving for paper records"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about receptionist and visitor screening",
+    "items": [
+     [
+      "What do VAF's receptionist services include?",
+      "Well-trained receptionists for client locations and technology to account for and screen visitors, contractors, volunteers and employees."
+     ],
+     [
+      "What does the visitor technology do?",
+      "It captures a real-time photograph, scans a driver's license, performs a background check, prints a badge with a date and time stamp and stores the information in a secure database."
+     ],
+     [
+      "Does it replace the paper logbook?",
+      "Yes. Detailed activity reporting in a secure database eliminates the need for paper logbooks."
+     ],
+     [
+      "Who can be screened?",
+      "Visitors, contractors, volunteers and employees who enter a client facility."
+     ],
+     [
+      "Is receptionist staffing part of facilities management?",
+      "Visitor and conference room management is part of VAF's facilities management program."
+     ],
+     [
+      "How do I get started?",
+      "Contact VAF to talk through your front desk needs. A specialist will recommend staffing and technology."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Related process pages",
+    "intro": "Other office services that sit alongside the front desk.",
+    "items": [
+     [
+      "Process",
+      "Facilities Management Solutions",
+      "Print room, mail, scanning and visitor management run for you.",
+      "Open the page",
+      "services/facilities-management.html"
+     ],
+     [
+      "Process",
+      "Managed Mail Center",
+      "Mail receipt, distribution, postage control and shipping accountability.",
+      "Open the page",
+      "services/managed-mail-centers.html"
+     ],
+     [
+      "Process",
+      "Managed Print Center",
+      "Staffed in-house copy centers with a focus on output quality.",
+      "Open the page",
+      "services/managed-print-centers.html"
+     ],
+     [
+      "Process",
+      "Business Process Solutions",
+      "Best-site service for mail, print, facilities and information flow.",
+      "Open the page",
+      "services/business-process-solutions.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Visitor screening by industry",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "Education",
+      "Schools can screen volunteers and visitors before they reach students.",
+      "How we set it up",
+      "industries/education.html"
+     ],
+     [
+      "Industry",
+      "Healthcare",
+      "Facilities can log visitors and contractors with a photo and badge.",
+      "How we set it up",
+      "industries/healthcare.html"
+     ],
+     [
+      "Industry",
+      "State and local government",
+      "Public buildings can keep a record of who entered and when.",
+      "How we set it up",
+      "industries/government.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Plan your front desk",
+    "body": "Tell us your building, visitor volume and what you track today.",
+    "submit": "Plan my front desk",
+    "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913."
+   }
+  ]
+ },
+ "services/switch-to-cloud.html": {
+  "title": "Seven Reasons to Move Your PBX to the Cloud | VAF",
+  "description": "Remote and hybrid teams need more than an on-premises PBX. Seven reasons to move to a cloud PBX, from unified features to automatic updates.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Information",
+    "heading": "How can Switching to Ring Central's Cloud PBX Benefit for Your Business?",
+    "subhead": "Businesses going remote or hybrid require more than what an on-premises PBX can provide. With a cloud PBX, your teams have the tools to work together, from anywhere and on any device.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-soc-1200.jpg",
+    "image_alt": "7 Reasons to Switch Your On-Premises PBX to Cloud",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "Move to the cloud",
+    "body": "Businesses going remote or hybrid require more than what an on-premises PBX can provide. With a cloud PBX, your teams have the tools to work together, from anywhere and on any device.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Information",
+    "heading": "84.7%",
+    "body": "of enterprises currently use or plan to use a cloud PBX within the next 2 years",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "75 %",
+    "body": "of enterprise users will use softphones over desk phones by 2024",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Information",
+    "heading": "63 %",
+    "body": "of employees want to work from anywhere after the pandemic",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "1. Unify business communications",
+    "body": "A unified solution offers enterprise-grade features such as phone, faxing, SMS, IVR, call queues, team messaging, video meetings, and voicemail, all on one platform.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Information",
+    "heading": "2. Easily manage multiple locations",
+    "body": "A single solution with global availability is easier to manage and can be administered from a single portal using a desktop or mobile phone.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Before you move",
+    "heading": "Questions to settle before a cloud PBX move",
+    "body": "A cloud PBX is flexible, but a smooth move still takes planning.",
+    "bullets": [
+     "How many users, sites and numbers must move?",
+     "Which features do you use today: IVR, queues, faxing, SMS?",
+     "What is your internet connection like at each site?",
+     "When does your current PBX contract or hardware lifecycle end?"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about moving a PBX to the cloud",
+    "items": [
+     [
+      "Why switch from an on-premises PBX to a cloud PBX?",
+      "Remote and hybrid teams need tools that work from anywhere on any device. VAF's page lists seven reasons, from unified features to automatic updates."
+     ],
+     [
+      "What features come with a cloud PBX?",
+      "Enterprise-grade phone, faxing, SMS, IVR, call queues, team messaging, video meetings and voicemail on one platform."
+     ],
+     [
+      "Is it easier to manage several locations?",
+      "Yes. A single solution can be administered from one portal on a desktop or mobile phone."
+     ],
+     [
+      "What about security and compliance?",
+      "The page says security, service delivery, architecture and industry compliance such as CCPA, GDPR, HIPAA and FINRA are managed by the cloud provider."
+     ],
+     [
+      "What uptime should I expect?",
+      "The page says providers offering a 99.999 percent uptime SLA help ensure your business never halts."
+     ],
+     [
+      "Do I still pay for infrastructure?",
+      "The page says infrastructure is hosted in redundant data centers and managed and monitored 24/7/365 by the provider, so your own infrastructure costs fall."
+     ],
+     [
+      "Whose cloud PBX does this page describe?",
+      "It describes RingCentral's cloud PBX. VAF also offers cloud communications from Mitel, 8x8 and Elevate."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Compare your cloud options",
+    "intro": "VAF's other cloud and unified communications pages.",
+    "items": [
+     [
+      "Communication",
+      "Cloud VoIP and PBX Systems",
+      "Enterprise calling features with no hardware to buy, manage or maintain.",
+      "Open the page",
+      "services/cloud-communications.html"
+     ],
+     [
+      "Communication",
+      "Elevate AI Cloud Communications",
+      "Voice, video, chat, SMS and file collaboration on one cloud platform.",
+      "Open the page",
+      "services/elevate.html"
+     ],
+     [
+      "Communication",
+      "Unified Communications and Collaboration",
+      "Phone, video, data and mobile applications synced in one place.",
+      "Open the page",
+      "services/unified-communications.html"
+     ],
+     [
+      "Communication",
+      "Business Phone Systems Indianapolis",
+      "Cloud, premise and hybrid voice from Mitel, RingCentral, 8x8 and Elevate.",
+      "Open the page",
+      "services/business-phone-systems.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Cloud PBX by industry",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "Real estate",
+      "Agents on the road can use the brokerage number from their phones.",
+      "How we set it up",
+      "industries/real-estate.html"
+     ],
+     [
+      "Industry",
+      "Education",
+      "Districts with many buildings can manage everything from one portal.",
+      "How we set it up",
+      "industries/education.html"
+     ],
+     [
+      "Industry",
+      "Financial services",
+      "Teams with compliance needs can look at provider-managed compliance.",
+      "How we set it up",
+      "industries/financial-services.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Plan your move to a cloud PBX",
+    "body": "Tell us about your current phone system and how many users and sites you have.",
+    "submit": "Plan my move",
+    "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913."
+   }
+  ]
+ },
+ "services/print-fulfillment.html": {
+  "title": "Print Fulfillment and On-Demand Print | VAF Indiana",
+  "description": "Off-site print fulfillment from VAF: on-demand, branded and pre-approved print, digital printing and mailing, finishing and legal document support.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Process",
+    "heading": "Print Fulfillment Solutions",
+    "subhead": "Off-site print fulfillment that frees your team, marketing materials, mailings, and business documents produced and delivered for you.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-conversion-1200.jpg",
+    "image_alt": "Print Fulfillment & On-Demand Print",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Process",
+    "heading": "About Print Fulfillment & On-Demand Print",
+    "body": "Today’s print needs are much different than they used to be. It used to be enough to be able to print in-house, or to take a disc to your local printer to have things printed for you. Today, companies don’t have the specific equipment needed to get every print job done right and well. They often need high-end print fulfillment solutions using the latest technology to print on demand for high end marketing, training, or legal needs. VAF’s closed door facility allows for absolute confidentiality and attention to detail. VAF has tremendous digital printing capabilities at a fraction of the cost compared to retail copy shops and quick printers.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Process",
+    "heading": "Print Fulfillment Solutions Benefits",
+    "body": "",
+    "bullets": [
+     "Consistency in Print. All logos, colors, layouts, and parameters have been pre-approved so orders can be placed easily. Less room for error and more room for print efficiency.",
+     "Organized Print Process. We help you develop a print process to help keep all print on demand jobs organized and on budget through approved user accounts, which drives efficiency.",
+     "Digital printing and mailing",
+     "Posters, banners, and wide-format drawings",
+     "Laminating, binding, and finishing",
+     "Legal document expertise (Litigation Support)"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Process",
+    "heading": "Services included",
+    "body": "",
+    "bullets": [
+     "Digital printing and mailing",
+     "Posters, banners and wide-format drawings",
+     "Laminating, binding and finishing",
+     "Legal document expertise (litigation support)"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Confidentiality and cost",
+    "heading": "A closed-door facility with lower costs",
+    "body": "VAF says its closed door facility allows absolute confidentiality and attention to detail, and that its digital printing capabilities cost a fraction of retail copy shops and quick printers.",
+    "bullets": [
+     "Print only what you need, when you need it",
+     "Pre-approved logos, colors and layouts through an ordering portal",
+     "Approved user accounts keep jobs organized and on budget",
+     "Marketing, training and legal work handled with the same care"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about print fulfillment",
+    "items": [
+     [
+      "What is print fulfillment?",
+      "It is off-site printing that frees your team. VAF produces and delivers marketing materials, mailings and business documents for you."
+     ],
+     [
+      "What is print on-demand?",
+      "Printing only what you need when you need it, which eliminates obsolete print materials. VAF's print portal offers branded, pre-approved print solutions."
+     ],
+     [
+      "Why use a portal?",
+      "Logos, colors, layouts and parameters are pre-approved, so orders are easy to place and there is less room for error."
+     ],
+     [
+      "What services are included?",
+      "Digital printing and mailing, posters, banners and wide-format drawings, laminating, binding and finishing, and litigation support."
+     ],
+     [
+      "Is the work confidential?",
+      "VAF says its closed door facility allows absolute confidentiality and attention to detail."
+     ],
+     [
+      "How does cost compare with retail copy shops?",
+      "VAF says its digital printing capabilities cost a fraction of retail copy shops and quick printers."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Related print and process pages",
+    "intro": "Production, wide format and mail services that sit near print fulfillment.",
+    "items": [
+     [
+      "Print",
+      "Production Print",
+      "High-volume digital color and finishing.",
+      "Open the page",
+      "services/production-print.html"
+     ],
+     [
+      "Print",
+      "Wide Format Printing and Scanning",
+      "Output for designers, architects and engineers.",
+      "Open the page",
+      "services/wids-format.html"
+     ],
+     [
+      "Process",
+      "Managed Mail Center",
+      "Mail receipt, distribution, postage control and shipping accountability.",
+      "Open the page",
+      "services/managed-mail-centers.html"
+     ],
+     [
+      "Process",
+      "Managed Print Center",
+      "Staffed in-house copy centers with a focus on output quality.",
+      "Open the page",
+      "services/managed-print-centers.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Print fulfillment by industry",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "Financial services",
+      "Branded materials ordered through an approved portal keep every branch consistent.",
+      "How we set it up",
+      "industries/financial-services.html"
+     ],
+     [
+      "Industry",
+      "Insurance",
+      "Agencies can order marketing and policy documents on demand.",
+      "How we set it up",
+      "industries/insurance.html"
+     ],
+     [
+      "Industry",
+      "State and local government",
+      "Departments can order notices and forms in the quantities needed.",
+      "How we set it up",
+      "industries/government.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Start a print fulfillment program",
+    "body": "Tell us what you print and how often.",
+    "submit": "Start my program",
+    "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913."
+   }
+  ]
+ },
+ "services/voice-processing.html": {
+  "title": "Voice Processing: Dictation and Recognition | VAF",
+  "description": "Digital dictation, speech recognition and court recording from VAF, whose voice processing work dates back to 1914. HIPAA-conscious design.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Process",
+    "heading": "Voice Processing Solutions",
+    "subhead": "Digital dictation, speech recognition, and transcription technology solutions, HIPAA-compliant automation for healthcare, legal, and law enforcement documentation.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-conversion-1200.jpg",
+    "image_alt": "Voice Processing Solutions",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Process",
+    "heading": "About Voice Processing Solutions",
+    "body": "Van Ausdall & Farrar’s Voice Processing, Digital Dictation and Speech Recognition technology solutions date back to 1914. So it’s safe to say we have the region’s most experienced team, delivering automation with advanced technological features such as voice speech system recognition, automated distribution and report workflows that address fast ROI and drive down total cost of ownership. Our goal is to implement a front-end solution that helps you address the bottom-line benefit. For the first 70 years of our history, we serviced the healthcare and legal industries exclusively. Today, we continue to design HIPAA-compliant solutions for healthcare companies, hospitals and specialty care facilities as well as sole proprietor and enterprise law firms. In addition, professionals in law enforcement, court room recording and automatic business meeting transcription seek our complete line of enterprise class voice recognition and text technology solutions. Our long standing relationships with well-known manufacturers like M*Modal, Speech Motion, Winscribe, Dragon Speak, Olympus, Philips and VIQ Solutions help make our speech voice processing and speech recognition system solutions 102 years above the rest.",
+    "bullets": [
+     "Speech Motion",
+     "Dictation",
+     "Voice Recognition",
+     "Court Recording",
+     "Voice Capture",
+     "Voice Workflow"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Process",
+    "heading": "Services included",
+    "body": "",
+    "bullets": [
+     "SpeechMotion",
+     "Dictation",
+     "Voice recognition",
+     "Court recording",
+     "Voice capture",
+     "Voice workflow"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "History and range",
+    "heading": "Seventy years of healthcare and legal, now broader",
+    "body": "For the first 70 years of its history VAF served healthcare and legal customers exclusively. Today it continues to design HIPAA-compliant solutions for healthcare organizations and law firms, and its voice and text technology is also used in law enforcement, court recording and business meeting transcription.",
+    "bullets": [
+     "Templates customized for different industries",
+     "Automatic correction based on voice recognition",
+     "Electronic medical record and other regulated documents",
+     "Front-end solutions aimed at the bottom line"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about voice processing",
+    "items": [
+     [
+      "What is voice processing?",
+      "It is the capture, recognition and routing of spoken words into documents. VAF's offer covers digital dictation, speech recognition and transcription."
+     ],
+     [
+      "How long has VAF done this?",
+      "VAF's voice processing, digital dictation and speech recognition solutions date back to 1914."
+     ],
+     [
+      "Which industries does VAF serve with voice processing?",
+      "Healthcare and legal for its first 70 years, and now also law enforcement, court room recording and automatic business meeting transcription."
+     ],
+     [
+      "Are the solutions HIPAA-compliant?",
+      "VAF says it designs HIPAA-compliant solutions for healthcare companies, hospitals and specialty care facilities."
+     ],
+     [
+      "What services are included?",
+      "SpeechMotion, dictation, voice recognition, court recording, voice capture and voice workflow."
+     ],
+     [
+      "Can voice processing produce medical records?",
+      "VAF says its voice processing solutions work with templates customized for different industries, including electronic medical records and other highly regulated documents."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Related voice and dictation pages",
+    "intro": "Product and service pages for dictation, recognition and transcription.",
+    "items": [
+     [
+      "Communication",
+      "Enterprise Digital Dictation",
+      "Winscribe, Philips and Olympus dictation hardware and software.",
+      "Open the page",
+      "services/enterprise-digital-dictation-solutions.html"
+     ],
+     [
+      "Communication",
+      "Voice Recognition",
+      "Winscribe front-end and server-side speech recognition.",
+      "Open the page",
+      "services/voice-recognition.html"
+     ],
+     [
+      "Communication",
+      "Outsourced Dictation and Transcription",
+      "Transcription handled by Speech Motion, from overflow to a total outsource.",
+      "Open the page",
+      "services/transcription-services.html"
+     ],
+     [
+      "Information",
+      "Cloud Voice and Text by Industry",
+      "Dictation and transcription options sorted by healthcare, legal and court use.",
+      "Open the page",
+      "services/cloud-based-solutions.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Voice processing by industry",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "Healthcare",
+      "Hospitals and specialty facilities can design dictation workflows with HIPAA in mind.",
+      "How we set it up",
+      "industries/healthcare.html"
+     ],
+     [
+      "Industry",
+      "State and local government",
+      "Courts and law enforcement can look at court recording and transcription.",
+      "How we set it up",
+      "industries/government.html"
+     ],
+     [
+      "Industry",
+      "Insurance",
+      "Claims teams can dictate field notes into a report workflow.",
+      "How we set it up",
+      "industries/insurance.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Plan your voice workflow",
+    "body": "Tell us who dictates, in what setting and where reports need to go.",
+    "submit": "Plan my workflow",
+    "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913."
+   }
+  ]
+ },
+ "services/transcription-services.html": {
+  "title": "Outsourced Dictation and Transcription | VAF Indiana",
+  "description": "SpeechMotion transcription, overflow help and total outsourcing for dictation, plus Olympus and Philips devices from VAF in Indiana.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Communication",
+    "heading": "Transcription Services",
+    "subhead": "While Digital systems provide maximum productivity improvements and cost savings, adopting standalone digital dictation devices as a straightforward replacement for outdated and unreliable tapes can also deliver significant benefits.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-phone-1200.jpg",
+    "image_alt": "Outsourced Dictation & Transcription Services",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Communication",
+    "heading": "Outsourced Dictation & Transcription Services",
+    "body": "While Digital systems provide maximum productivity improvements and cost savings, adopting standalone digital dictation devices as a straightforward replacement for outdated and unreliable tapes can also deliver significant benefits.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Communication",
+    "heading": "Overview",
+    "body": "The most popular systems available are those from Olympus and Philips. Van Ausdall & Farrar holds the highest accreditation’s from both suppliers and our consultants are able to recommend the most appropriate product for each customer’s requirements. Once the most appropriate devices have been selected, Van Ausdall provides comprehensive installation, training and support services to ensure the sustainable efficiencies of the system. Where appropriate, we provide a monthly program for those firms who can benefit from a combination of standalone equipment utilizing our shared servers in our class 5 data center.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Communication",
+    "heading": "Total Outsource Solution",
+    "body": "Our team of experienced professionals will assess your voice storage and documentation process from voice input to final report delivery. Speech Motion will manage and support a fully integrated workflow process.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Communication",
+    "heading": "Personnel Integration",
+    "body": "Speech Motion recognizes the sensitive nature of an outsourced solution. Our program to employ client’s transcription staff to work for Speech Motion will provide personal and group participation to address all circumstances regarding the transition.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Communication",
+    "heading": "Overflow Solutions",
+    "body": "Speech Motion Transcription is available to provide a partnership solution to support your increased dictation volumes, vacations and unscheduled emergency situations to ensure departmental service level. Our team of experienced professionals will assess your voice storage and documentation process from voice input to final report delivery. Speech Motion will manage and support a fully integrated workflow process.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Where it fits",
+    "heading": "Transcription next to dictation and recognition",
+    "body": "Outsourced transcription works with VAF's dictation hardware and speech recognition. Authors dictate, recognition produces a first draft where it is used, and SpeechMotion transcriptionists correct and finish the report.",
+    "bullets": [
+     "Dictation devices from Olympus and Philips",
+     "Winscribe workflow for routing",
+     "Speech recognition to speed first drafts",
+     "Document management for storing finished reports"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about outsourced dictation and transcription",
+    "items": [
+     [
+      "What transcription services does VAF offer?",
+      "Outsourced transcription through SpeechMotion, ranging from overflow help to a total outsource solution."
+     ],
+     [
+      "What is the overflow solution?",
+      "SpeechMotion transcription supports increased dictation volumes, vacations and unscheduled emergencies so you keep departmental service levels."
+     ],
+     [
+      "What is a total outsource solution?",
+      "VAF assesses your voice storage and documentation process from voice input to final report delivery, and SpeechMotion manages and supports a fully integrated workflow."
+     ],
+     [
+      "What happens to our current transcription staff?",
+      "VAF's personnel integration program can employ a client's transcription staff to work for SpeechMotion, with support through the transition."
+     ],
+     [
+      "Which dictation devices does VAF recommend?",
+      "The most popular systems come from Olympus and Philips, and VAF says it holds the highest accreditation from both."
+     ],
+     [
+      "Does VAF install and train?",
+      "Yes. VAF provides installation, training and support, and a monthly program using shared servers where appropriate."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Related dictation pages",
+    "intro": "Hardware, speech recognition and workflow pages for dictation.",
+    "items": [
+     [
+      "Communication",
+      "Enterprise Digital Dictation",
+      "Winscribe, Philips and Olympus dictation hardware and software.",
+      "Open the page",
+      "services/enterprise-digital-dictation-solutions.html"
+     ],
+     [
+      "Communication",
+      "Voice Recognition",
+      "Winscribe front-end and server-side speech recognition.",
+      "Open the page",
+      "services/voice-recognition.html"
+     ],
+     [
+      "Process",
+      "Voice Processing Solutions",
+      "Digital dictation, speech recognition and transcription workflows.",
+      "Open the page",
+      "services/voice-processing.html"
+     ],
+     [
+      "Information",
+      "Cloud Voice and Text by Industry",
+      "Dictation and transcription options sorted by healthcare, legal and court use.",
+      "Open the page",
+      "services/cloud-based-solutions.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Transcription by industry",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "Healthcare",
+      "Clinics can cover vacations and spikes in dictation without hiring.",
+      "How we set it up",
+      "industries/healthcare.html"
+     ],
+     [
+      "Industry",
+      "State and local government",
+      "Offices recording meetings or statements can send the files out for transcription.",
+      "How we set it up",
+      "industries/government.html"
+     ],
+     [
+      "Industry",
+      "Insurance",
+      "Adjusters can dictate notes and have clean reports returned.",
+      "How we set it up",
+      "industries/insurance.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Get transcription help",
+    "body": "Tell us your dictation volume and where the gaps are.",
+    "submit": "Get help",
+    "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913."
+   }
+  ]
+ },
+ "services/mobility-solutions.html": {
+  "title": "Enterprise Mobile App and PBX Features | VAF",
+  "description": "Use your own phone on the business number: call handling, conferencing, presence and Wi-Fi to cellular handover from VAF mobility apps.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Communication",
+    "heading": "Stay Connected at All Times",
+    "subhead": "Bring your communications platform with you wherever you go. Our advanced mobility solutions brings together all of the call handling, conferencing and directory features of your business system so users can work from anywhere.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-phone-1200.jpg",
+    "image_alt": "Enterprise Mobile App & PBX Features",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Communication",
+    "heading": "Your business phone in your pocket",
+    "body": "VAF's mobility applications bring the call handling, conferencing and directory features of the business system to a personal device. Calls are sent and received through your business number, so you never give out your personal cell number, and you do not use your carrier minutes.",
+    "bullets": [
+     "Dashboard: see upcoming events and recent activity and join conferences in one click",
+     "PBX features: real-time presence, visual voicemail, hold, transfer and more",
+     "Wi-Fi and cellular call handover so a call is not lost to bad reception",
+     "Security: SRTP for voice and signaling, even on public hotspots"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Benefits",
+    "heading": "Lower cost, more professional, BYOD-friendly",
+    "body": "VAF says mobility apps reduce costs and support bring-your-own-device policies seamlessly and securely.",
+    "bullets": [
+     "No carrier minutes used for business calls",
+     "Personal number kept private",
+     "Join conferences with one click instead of dial-in numbers and passcodes",
+     "Access personal contacts alongside the business directory"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "With the phone system",
+    "heading": "Mobility is part of the platform, not an add-on",
+    "body": "The apps extend whichever VAF platform you use. They sit with unified communications, conferencing and the business phone systems VAF installs.",
+    "bullets": [
+     "Ask whether your current system supports the mobile app",
+     "Decide which staff need it",
+     "Set a policy for personal devices",
+     "Train users with short video clips"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about enterprise mobile apps",
+    "items": [
+     [
+      "What does the mobility app do?",
+      "It brings the call handling, conferencing and directory features of your business phone system to a smartphone or tablet."
+     ],
+     [
+      "Do I need to share my personal number?",
+      "No. Calls are received and sent through your business enterprise number."
+     ],
+     [
+      "Does it use my carrier minutes?",
+      "No. VAF says you can use a personal device without using carrier minutes."
+     ],
+     [
+      "What if Wi-Fi drops mid-call?",
+      "The Wi-Fi and cellular call handover feature keeps the call from dropping."
+     ],
+     [
+      "Is it secure?",
+      "VAF lists SRTP security for voice and unified communications signaling, even on public hotspots."
+     ],
+     [
+      "Does it support BYOD?",
+      "Yes. VAF says mobility apps reduce costs and support BYOD seamlessly and securely."
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Put your phone system on your mobile devices",
+    "body": "Tell us what phone system you use and how many staff work away from a desk.",
+    "submit": "Go mobile",
+    "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913."
+   }
+  ]
+ },
+ "services/proactive-it-services.html": {
+  "title": "Proactive IT Managed Services for Business | VAF",
+  "description": "VAF's Proactive IT Services use patch management, agent-less remote monitoring and asset tracking to prevent downtime for small and mid-sized businesses.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Information",
+    "heading": "Proactive IT Managed Services for Business",
+    "subhead": "Van Ausdall & Farrar is a single source service provider of supplemental and full outsource IT services for small to medium sized businesses and organizations. We have provided IT services for Indiana companies for over 25 years.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-soc-1200.jpg",
+    "image_alt": "Proactive IT Managed Services for Business",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "INFORMATION TECHNOLOGY SERVICES FROM A PROVIDER YOU CAN TRUST",
+    "body": "Van Ausdall & Farrar’s approach is called Proactive IT Services program serves our clients by utilizing a preventative approach to IT service and support. We utilize a methodology that includes best practices, patch management and monitoring to avoid costly downtime. All systems experience problems at one time or another, but our goal is to prevent, monitor and react, ideally before users are aware a problem existed. We call this Proactive IT Services and we use state-of-the-art monitoring software to notify us so we can watch out for problems. By monitoring your systems, maintaining an effective patch management strategy and, in general, being prepared, we can act and diagnose faster and keep your computer users happy.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Information",
+    "heading": "PROACTIVE IT SERVICES",
+    "body": "Our engineering team will address the general needs of your staff, regress through the administrative checklist, provide patch management and complete additional weekly or monthly processes as assigned.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "REMOTE MONITORING & REMEDIATION",
+    "body": "Our agent-less remote monitoring software sits on a computer within your network and notifies us the instant that a health problem is detected on one of your systems. Concerns like failing server hard drives, incomplete data backups, outdated system patches, power outages and crashed services, such as email and database services, can be instantly detected and fixed remotely where possible.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Information",
+    "heading": "IT ASSET MANAGEMENT",
+    "body": "We will provide accurate and detailed discovery and tracking of all network devices and applications with persistent state management in order to maintain device upgrade plans and locate available equipment.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "CONSULTATION / REVIEW",
+    "body": "Our consultant services are included as part of our Proactive Services program. We will provide progress reports and complete structured IT assessments, where necessary, to ensure your operation is as successful as possible.",
+    "bullets": []
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about proactive IT managed services",
+    "items": [
+     [
+      "What are proactive IT services?",
+      "A preventative approach to IT support that uses best practices, patch management and monitoring to avoid costly downtime."
+     ],
+     [
+      "Who is it for?",
+      "Small to medium sized businesses and organizations. VAF says it is a single source provider of supplemental and full outsource IT services."
+     ],
+     [
+      "What does remote monitoring catch?",
+      "VAF's agent-less monitoring software notifies it the instant a problem is detected, such as failing server hard drives, incomplete backups, outdated patches, power outages and crashed services like email and database."
+     ],
+     [
+      "What is IT asset management?",
+      "Detailed discovery and tracking of network devices and applications, so upgrade plans can be maintained and available equipment located."
+     ],
+     [
+      "Are consultations included?",
+      "Yes. Consulting services are part of the program, with progress reports and structured IT assessments where necessary."
+     ],
+     [
+      "How long has VAF provided IT services?",
+      "VAF says it has provided IT services to Indiana companies for over 25 years."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Related IT service pages",
+    "intro": "Pages on support, security and projects.",
+    "items": [
+     [
+      "Information",
+      "Managed IT Services Indianapolis",
+      "vCIO guidance, 24/7 monitoring, help desk and security packaged under one agreement.",
+      "Open the page",
+      "services/managed-it.html"
+     ],
+     [
+      "Information",
+      "Indianapolis IT Support",
+      "Help desk, remote and on-site support, with a 24 hour response from the Customer Care Center.",
+      "Open the page",
+      "services/it-support.html"
+     ],
+     [
+      "Information",
+      "Managed Cybersecurity",
+      "Sophos XDR, Datto patching, Fortinet Fabric services and a security operations center from the Vsecure team.",
+      "Open the page",
+      "services/cybersecurity.html"
+     ],
+     [
+      "Information",
+      "Backup and Recovery",
+      "Written recovery plans, off-site backup copies and restoration tests.",
+      "Open the page",
+      "services/business-continuity.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Proactive IT by industry",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "Insurance",
+      "Agencies without full-time IT staff can rely on monitoring and patching.",
+      "How we set it up",
+      "industries/insurance.html"
+     ],
+     [
+      "Industry",
+      "Real estate",
+      "Brokerages with several offices can have systems watched centrally.",
+      "How we set it up",
+      "industries/real-estate.html"
+     ],
+     [
+      "Industry",
+      "Engineering and construction",
+      "Firms can avoid downtime on file servers and design workstations.",
+      "How we set it up",
+      "industries/engineering-construction.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "See what proactive IT would cover",
+    "body": "Tell us about your systems and who looks after them today.",
+    "submit": "Plan proactive IT",
+    "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913."
+   }
+  ]
+ },
+ "services/managed-print-centers.html": {
+  "title": "Managed Print Center and Copy Center Services | VAF",
+  "description": "VAF staffs and equips in-house print centers focused on output quality, and helps manage print budgets by finding the best rates for vended work.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Process",
+    "heading": "Leave All of Your Printing Needs to Our Experts",
+    "subhead": "We staff and equip centers in a cost-effective and highly-productive manner with a heightened focus on the quality of output and customer service. Our staff strives to earn the continued trust and confidence of end users resulting in increased centralization of copies produced.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-conversion-1200.jpg",
+    "image_alt": "Managed Print Center",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Process",
+    "heading": "Copy Center Services",
+    "body": "We staff and equip centers in a cost-effective and highly-productive manner with a heightened focus on the quality of output and customer service. Our staff strives to earn the continued trust and confidence of end users resulting in increased centralization of copies produced. This, in turn, enables our clients’ employees to focus on their day-to-day job duties and support further cost savings to their organization through the utilization of copy center services.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Process",
+    "heading": "Print Management",
+    "body": "We assist organizations in better managing their print expense and assist in better budgeting for annual spending for print work. Quite often, organizations are printing work that may be produced in a more cost effective manner, or vended off-site rather than produced on-site. We assist in “shopping best rates” for vended print and typically are able to drive very significant cost savings on printed work, impacting the quality of print and more timely distribution.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Process",
+    "heading": "Move print work to the right place",
+    "body": "Quite often organizations print work on-site that would cost less produced differently or vended off-site. VAF assists in shopping for the best rates and typically drives significant savings on printed work.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Centralization",
+    "heading": "Why centralize copying",
+    "body": "VAF says staff in a managed print center earn the trust of end users, which increases the share of copies produced centrally. That lets your employees focus on their own jobs.",
+    "bullets": [
+     "Quality of output as a priority",
+     "Customer service for end users",
+     "Cost savings from centralized production",
+     "Better budgeting of annual print spend"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Part of managed services",
+    "heading": "Print center, print fulfillment and facilities together",
+    "body": "A managed print center is one of the services in VAF's business process pillar. It sits next to print fulfillment, mail center and facilities management services.",
+    "bullets": [
+     "Off-site print fulfillment for high-end marketing and legal work",
+     "Print room management inside facilities management",
+     "Managed print for office devices",
+     "Mail and scanning for the rest of the flow"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about managed print centers",
+    "items": [
+     [
+      "What is a managed print center?",
+      "An in-house print or copy center that VAF staffs and equips, with a focus on quality of output and customer service."
+     ],
+     [
+      "How does it save money?",
+      "By centralizing copying and by shopping for the best rates on work that is better vended off-site."
+     ],
+     [
+      "Can VAF help budget print spend?",
+      "Yes. VAF assists organizations in managing print expense and budgeting annual spending for print work."
+     ],
+     [
+      "What if some jobs are cheaper off-site?",
+      "VAF assists in shopping the best rates for vended print and typically drives very significant savings on printed work."
+     ],
+     [
+      "Who runs the center?",
+      "VAF staffs and equips the center, with the aim of earning the continued trust of end users."
+     ],
+     [
+      "How is this different from managed print services?",
+      "Managed print services covers the devices across your offices. A managed print center is a staffed central production point."
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Plan a managed print center",
+    "body": "Tell us your volumes and where print work happens today.",
+    "submit": "Plan my print center",
+    "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913."
+   }
+  ]
+ },
+ "services/project-deployment.html": {
+  "title": "IT Project Deployment and Migration | VAF Indiana",
+  "description": "Plan, design and deploy IT projects without disrupting business: migrations, virtual infrastructure and storage, with project management from VAF.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Information",
+    "heading": "Information Technology Project Deployments",
+    "subhead": "Plan, design, and deploy new technology without disrupting business, migrations, virtual infrastructure, and storage area networks done right.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-soc-1200.jpg",
+    "image_alt": "Information Technology Project Deployments",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "About Information Technology Project Deployments",
+    "body": "Plan, design, and deploy new technology without disrupting business, migrations, virtual infrastructure, and storage area networks done right.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Information",
+    "heading": "WE PROVIDE HARDWARE, SOFTWARE AND SERVICES",
+    "body": "We can help your organization access the age and viability of your existing systems in order to help recommend next generation solutions. We also help many companies move from one location to another and can assist in the coordination, close-out and setup at the new facility. We deploy complete hardware and software solutions for companies that can address every facet of the IT infrastructure. We provide project management, installation and additional deployment services for all the solutions we provide to you, including products from HP, Microsoft, Cisco, VMware, Barracuda, Symantec, Fujitsu, Hyland Software, Rimage and others. Our expert consultants can recommend the right solution for you based on your needs and budget. Listed below are some of the products and solutions we provide project deployment services for. Contact us today for help!",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "Switched Topologies",
+    "body": "",
+    "bullets": [
+     "Cisco Catalyst Network Switches",
+     "HP Pro Curve Core Network Switches",
+     "Business Class Internet Consulting"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Information",
+    "heading": "Wireless Networks & Mobility",
+    "body": "",
+    "bullets": [
+     "Cisco Aeronet Wireless Infrastructure"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "Security Firewalls",
+    "body": "",
+    "bullets": [
+     "Cisco PIX Firewalls",
+     "Cisco Intrusion Protection",
+     "Cisco Virtual Private Networks"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Information",
+    "heading": "Storage Solutions",
+    "body": "",
+    "bullets": [
+     "HP Modular Smart Arrays",
+     "HP Storage Works Storage Area Networks"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about IT project deployments",
+    "items": [
+     [
+      "What is IT project deployment?",
+      "Planning, designing and deploying new technology without disrupting the business, including migrations, virtual infrastructure and storage."
+     ],
+     [
+      "What does VAF provide?",
+      "Hardware, software and services, plus project management, installation and deployment for the solutions it supplies."
+     ],
+     [
+      "Can VAF help with an office move?",
+      "Yes. VAF helps companies move from one location to another and can coordinate close-out and setup at the new facility."
+     ],
+     [
+      "Does VAF assess existing systems?",
+      "Yes. VAF helps assess the age and viability of existing systems to recommend next generation solutions."
+     ],
+     [
+      "Which vendors does VAF deploy?",
+      "VAF lists HP, Microsoft, Cisco, VMware, Barracuda, Symantec, Fujitsu, Hyland Software and Rimage among the products it deploys."
+     ],
+     [
+      "What areas does a project cover?",
+      "Infrastructure and security, servers and platforms, business continuity, web filtering, virus protection, spam filtering and e-mail archiving."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Related IT pages",
+    "intro": "Pages on infrastructure, security and continuity that projects build on.",
+    "items": [
+     [
+      "Communication",
+      "Local and Wide Area Network Infrastructure",
+      "ADTRAN switching, routing and wireless from the Converged Communications Group.",
+      "Open the page",
+      "services/network-infrastructure.html"
+     ],
+     [
+      "Information",
+      "Indianapolis Network Security",
+      "Firewalls, endpoint protection, email security and zero-trust access for the network.",
+      "Open the page",
+      "services/network-security.html"
+     ],
+     [
+      "Information",
+      "Backup and Recovery",
+      "Written recovery plans, off-site backup copies and restoration tests.",
+      "Open the page",
+      "services/business-continuity.html"
+     ],
+     [
+      "Information",
+      "Managed IT Services Indianapolis",
+      "vCIO guidance, 24/7 monitoring, help desk and security packaged under one agreement.",
+      "Open the page",
+      "services/managed-it.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Projects by industry",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "Education",
+      "A district can plan a summer migration that is finished before classes start.",
+      "How we set it up",
+      "industries/education.html"
+     ],
+     [
+      "Industry",
+      "Healthcare",
+      "A practice moving locations can coordinate setup of systems at the new site.",
+      "How we set it up",
+      "industries/healthcare.html"
+     ],
+     [
+      "Industry",
+      "Manufacturing and logistics",
+      "A plant can refresh servers and storage with limited downtime.",
+      "How we set it up",
+      "industries/manufacturing-logistics.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Scope your IT project",
+    "body": "Tell us what is changing and when.",
+    "submit": "Scope my project",
+    "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913."
+   }
+  ]
+ },
+ "services/office-security.html": {
+  "title": "Office Video Surveillance Solutions | VAF Indiana",
+  "description": "IP video surveillance for offices from VAF: central camera management, multi-tier recording, scheduled user access and mobile alerts, with Fortinet.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Information",
+    "heading": "Video Surveillance Solutions",
+    "subhead": "As businesses grow the need to capture activity throughout and around the perimeter of the office becomes critical. Traditional video surveillance systems were highly specialized and difficult to deploy and manage.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-soc-1200.jpg",
+    "image_alt": "Office Security",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "IP cameras without the complexity",
+    "body": "As a business grows, capturing activity throughout and around the perimeter of the office becomes critical. Traditional systems were specialized and hard to deploy and manage. VAF uses IP-based, network-connected devices, and can bridge the gap between a traditional coaxial system and a new IP system.",
+    "bullets": [
+     "Central camera configuration and management",
+     "Multi-tier recording management that captures everything while optimizing storage",
+     "Scheduled, user-specific access to camera groups",
+     "Mobile and email notifications",
+     "Multiple location solutions with centralized administration"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Information",
+    "heading": "Partners and approach",
+    "body": "VAF partners with Fortinet and PerfectView. Surveillance systems can be complicated, expensive and unreliable on a company network, and the Fortinet camera and recorder pair is meant to simplify IP video surveillance.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "Book a surveillance appointment",
+    "body": "Ready to see how video surveillance fits your building? Schedule an appointment with a VAF information technology specialist.",
+    "bullets": []
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about office video surveillance",
+    "items": [
+     [
+      "What video surveillance does VAF offer?",
+      "IP-based, network-connected video surveillance for offices, including cameras, recording and central management."
+     ],
+     [
+      "Can I keep my existing analog cameras?",
+      "VAF says its offerings can bridge the gap between a traditional coaxial system and a new IP system."
+     ],
+     [
+      "Who can view the footage?",
+      "Access to camera groups can be scheduled and set per user, with mobile and email notifications."
+     ],
+     [
+      "Can several locations be managed together?",
+      "Yes. Multiple location solutions come with centralized administration."
+     ],
+     [
+      "Which partners does VAF use?",
+      "Fortinet and PerfectView."
+     ],
+     [
+      "Is this part of physical security?",
+      "Yes. VAF's physical security page covers the wider set of ways to protect people and property."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Related security pages",
+    "intro": "Physical and network security pages that work with cameras.",
+    "items": [
+     [
+      "Information",
+      "Physical Security",
+      "Video surveillance and access control for the places technology lives.",
+      "Open the page",
+      "services/physical-security.html"
+     ],
+     [
+      "Information",
+      "Managed Cybersecurity",
+      "Sophos XDR, Datto patching, Fortinet Fabric services and a security operations center from the Vsecure team.",
+      "Open the page",
+      "services/cybersecurity.html"
+     ],
+     [
+      "Information",
+      "Indianapolis Network Security",
+      "Firewalls, endpoint protection, email security and zero-trust access for the network.",
+      "Open the page",
+      "services/network-security.html"
+     ],
+     [
+      "Information",
+      "Managed IT Services Indianapolis",
+      "vCIO guidance, 24/7 monitoring, help desk and security packaged under one agreement.",
+      "Open the page",
+      "services/managed-it.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Surveillance by industry",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "Education",
+      "Schools can manage cameras across buildings from one place.",
+      "How we set it up",
+      "industries/education.html"
+     ],
+     [
+      "Industry",
+      "Healthcare",
+      "Clinics can control who views footage and when.",
+      "How we set it up",
+      "industries/healthcare.html"
+     ],
+     [
+      "Industry",
+      "Real estate",
+      "Brokerages can watch entrances and parking across offices.",
+      "How we set it up",
+      "industries/real-estate.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Plan your video surveillance",
+    "body": "Tell us about your building and any cameras you already own.",
+    "submit": "Plan my cameras",
+    "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913."
+   }
+  ]
+ },
+ "services/office-security-solutions.html": {
+  "title": "Video Surveillance and VSecure IT Services | VAF",
+  "description": "FortiCamera and FortiRecorder video surveillance with no license fees, plus VSecure managed security services with a CISSP on the team.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Information",
+    "heading": "Video Surveillance Solutions",
+    "subhead": "As businesses grow the need to capture activity throughout and around the perimeter of the office becomes critical. Traditional video surveillance systems were highly specialized and difficult to deploy and manage.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-soc-1200.jpg",
+    "image_alt": "Video Surveillance & Office Security",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "Cameras on the network, managed with the rest of IT",
+    "body": "VAF delivers video surveillance as part of the company network. With FortiCams you can watch doors, point of sale terminals and public areas, and FortiRecorder captures the images for monitoring, storage and retrieval.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Information",
+    "heading": "What you can see and where",
+    "body": "Access video from anywhere.",
+    "bullets": [
+     "Doors, POS terminals, public areas and more",
+     "Live and recorded video on Windows, Mac or Unix browsers and Android or iOS devices",
+     "Multiple recording options: continuous, event-based, scheduled and manual"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "FortiCamera and FortiRecorder specifications",
+    "body": "",
+    "bullets": [
+     "Recorder available as hardware or VM deployment",
+     "Large range of cameras for any environment, all powered with PoE",
+     "Free professional-grade video management system",
+     "RADIUS, LDAP, SNMP and remote data storage support"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Information",
+    "heading": "Products and services",
+    "body": "",
+    "bullets": [
+     "Video surveillance cameras and management",
+     "Sound masking",
+     "Turnkey project management, programming, installation and 24/7/365 support",
+     "Hardware as a Service program to minimize operating expenses",
+     "4K HD cameras with advanced infrared"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "VSecure IT services",
+    "body": "VAF restructured its IT managed service offerings into security-focused support plans under the VSecure name. VSecure offers co-managed and managed security services built on its partnerships with Fortinet and Sophos, and the team includes a CISSP who can assist with regulatory concerns, security planning, business continuity and incident planning. VAF also offers KnowBe4 end-user awareness training and compliance management.",
+    "bullets": [
+     "Endpoint and server protection using EDR, XDR and MTR",
+     "Proactive patching and monitoring",
+     "Co-managed Fortinet firewall and Fabric services",
+     "SOC as a service and a dedicated security analyst",
+     "Mail security and vulnerability scanning"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about video surveillance and VSecure",
+    "items": [
+     [
+      "Are there license fees for FortiCamera and FortiRecorder?",
+      "VAF says there are no license fees, and that a professional-grade video management system is included free."
+     ],
+     [
+      "How can I watch the cameras?",
+      "Live and recorded video can be viewed from anywhere in Windows, Mac or Unix browsers and on Android and iOS devices."
+     ],
+     [
+      "What recording modes are available?",
+      "Continuous, event-based, scheduled and manual."
+     ],
+     [
+      "How are cameras powered?",
+      "The camera range is powered with PoE, so one network cable can carry data and power."
+     ],
+     [
+      "What is VSecure?",
+      "VSecure is VAF's security-focused IT managed service practice, offering co-managed and managed security built with Fortinet and Sophos."
+     ],
+     [
+      "Can I get cameras on a service plan?",
+      "VAF lists a Hardware as a Service program to minimize operating expenses."
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Discuss cameras and security services",
+    "body": "Tell us your site and what you want to see, and a specialist will suggest a design.",
+    "submit": "Discuss my site",
+    "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913."
+   }
+  ]
+ },
+ "services/cloud.html": {
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "split",
+    "eyebrow": "Managed cloud",
+    "heading": "Move out of the <em>server closet</em>.",
+    "subhead": "Cloud migration, infrastructure as a service, and backup and disaster recovery. Cut hardware costs and keep your data reachable from anywhere, with hosted servers, SharePoint-type solutions and highly governed file sharing through our Egnyte partnership.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/cloud-1200.jpg",
+    "image_alt": "Cloud services",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "cards",
+    "alt": true,
+    "eyebrow": "What is included",
+    "heading": "What changes with VAF cloud services",
+    "items": [
+     [
+      "Increased storage",
+      "Unlimited storage housed away from your own servers, kept secure."
+     ],
+     [
+      "Business continuity",
+      "Employees work from anywhere with real-time information when and where they need it."
+     ],
+     [
+      "Saves time and cost",
+      "Less hardware to maintain and fewer people paid to manage it."
+     ]
+    ]
+   },
+   {
+    "type": "detail",
+    "eyebrow": "The specifics",
+    "heading": "What you get, and what it rests on",
+    "body": "The details behind VAF's cloud services and the data center that hosts them.",
+    "bullets": [
+     "Subscription services, co-location, cloud hosting and virtualization",
+     "A Class V data center that sustains 200 MPH winds, with primary and secondary UPS and a backup generator",
+     "Five internet carriers serving the data center for redundancy and bandwidth",
+     "An IT service provider in Indiana for 25 years"
+    ],
+    "image": "assets/gen-hero-1200.jpg",
+    "flip": true
+   },
+   {
+    "type": "testimonials",
+    "alt": true,
+    "heading": "What customers say after a service call",
+    "items": [
+     [
+      "You guys give us top tier support and we thank you greatly.",
+      "Megan",
+      "After-service survey, April 2026"
+     ]
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions we get about cloud services",
+    "items": [
+     [
+      "Where is our data hosted?",
+      "Our data center is rated Class V, meeting hardened data center requirements, protected by primary and secondary distributed UPS systems and a backup generator, and served by five internet carriers."
+     ],
+     [
+      "Do we have to move everything at once?",
+      "No. Most customers start with backup and file sharing, then move servers as leases and hardware age out. The assessment sets the order."
+     ],
+     [
+      "What cloud services does VAF offer?",
+      "Cloud migration, infrastructure as a service, subscription services, co-location, cloud hosting, virtualization, and backup and disaster recovery."
+     ],
+     [
+      "Can VAF host SharePoint-style file sharing?",
+      "Yes. VAF's cloud offer includes hosted servers, SharePoint-type solutions and highly governed file sharing through its Egnyte partnership."
+     ],
+     [
+      "How redundant is the data center?",
+      "It has primary and secondary UPS systems, a backup generator and five internet carriers."
+     ],
+     [
+      "How long has VAF provided IT services in Indiana?",
+      "VAF says it has been an IT service provider in Indiana for 25 years."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Related cloud and IT pages",
+    "intro": "Continuity, voice and managed IT pages that connect to the cloud.",
+    "items": [
+     [
+      "Information",
+      "Backup and Recovery",
+      "Written recovery plans, off-site backup copies and restoration tests.",
+      "Open the page",
+      "services/business-continuity.html"
+     ],
+     [
+      "Information",
+      "Managed IT Services Indianapolis",
+      "vCIO guidance, 24/7 monitoring, help desk and security packaged under one agreement.",
+      "Open the page",
+      "services/managed-it.html"
+     ],
+     [
+      "Information",
+      "Seven Reasons to Move Your PBX to the Cloud",
+      "What an on-premises PBX cannot do for remote and hybrid teams.",
+      "Open the page",
+      "services/switch-to-cloud.html"
+     ],
+     [
+      "Information",
+      "Managed Cybersecurity",
+      "Sophos XDR, Datto patching, Fortinet Fabric services and a security operations center from the Vsecure team.",
+      "Open the page",
+      "services/cybersecurity.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Cloud services by industry",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "Healthcare",
+      "Practices can move file shares off an aging server closet.",
+      "How we set it up",
+      "industries/healthcare.html"
+     ],
+     [
+      "Industry",
+      "Education",
+      "Districts can host servers and backups away from their buildings.",
+      "How we set it up",
+      "industries/education.html"
+     ],
+     [
+      "Industry",
+      "Engineering and construction",
+      "Firms can share large project files with outside partners under governance.",
+      "How we set it up",
+      "industries/engineering-construction.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Plan your move out of the server closet",
+    "body": "Tell us what servers you run and which could move first.",
+    "submit": "Plan my move",
+    "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913.",
+    "alt": true
+   }
+  ]
+ },
+ "services/business-continuity.html": {
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "split",
+    "eyebrow": "Managed continuity",
+    "heading": "How long can you go <em>without operating</em>?",
+    "subhead": "Business continuity starts with that question. Your recovery time objective drives the solution: backup, disaster recovery, and the plan that gets you working again. Many SMBs believe they have continuity when they really only have backup. We close that gap.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/it-1200.jpg",
+    "image_alt": "Backup and recovery",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "cards",
+    "alt": true,
+    "eyebrow": "What is included",
+    "heading": "What changes with VAF backup and recovery",
+    "items": [
+     [
+      "Disaster recovery planning",
+      "A written plan for IT systems, revised once or twice a year, tested with real restorations."
+     ],
+     [
+      "High availability and redundancy",
+      "The proper level of redundancy for your business, decided with you, not assumed."
+     ],
+     [
+      "Compliance kept current",
+      "Gramm-Leach-Bliley, HIPAA, Sarbanes-Oxley, PCI and the other regulations that shape IT policy and procedure."
+     ]
+    ]
+   },
+   {
+    "type": "detail",
+    "eyebrow": "The specifics",
+    "heading": "What you get, and what it rests on",
+    "body": "The practices behind VAF's backup and recovery planning.",
+    "bullets": [
+     "Backup with more than one instance stored off-site or in the cloud",
+     "Restoration tests so the backups are known to work",
+     "Battery backup that keeps routers, firewalls and servers running through an outage",
+     "Project deployment and migration for Cisco, Microsoft, HP, Barracuda and VMware"
+    ],
+    "image": "assets/security-1200.jpg",
+    "flip": true
+   },
+   {
+    "type": "testimonials",
+    "alt": true,
+    "heading": "What customers say after a service call",
+    "items": [
+     [
+      "He did a great job, and was very communicative prior to his arrival.",
+      "Rick",
+      "After-service survey, October 2025"
+     ]
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions we get about backup and recovery",
+    "items": [
+     [
+      "What is the difference between backup and continuity?",
+      "Backup is a copy of your data. Continuity is the plan and the systems that get your people working again within the downtime you can survive. Your recovery time objective is where the conversation starts."
+     ],
+     [
+      "How often should a disaster recovery plan be revised?",
+      "Once or twice a year, and after any significant change to your systems. It is one of the questions on the Technology Strength Assessment."
+     ],
+     [
+      "What is a recovery time objective?",
+      "It is how long your business can go without operating. It drives the choice of backup, disaster recovery and the plan to get working again."
+     ],
+     [
+      "Why do backups need testing?",
+      "Because an untested backup may not restore. VAF runs restoration tests so the backups are known to work."
+     ],
+     [
+      "Which regulations affect IT recovery planning?",
+      "VAF lists Gramm-Leach-Bliley, HIPAA, Sarbanes-Oxley, PCI and others that shape IT policy and procedure."
+     ],
+     [
+      "What keeps equipment running through a power outage?",
+      "Battery backup keeps routers, firewalls and servers running through an outage."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Related continuity pages",
+    "intro": "Cloud, managed IT and project pages that put a recovery plan into practice.",
+    "items": [
+     [
+      "Information",
+      "Cloud Services in Indianapolis",
+      "Cloud migration, infrastructure as a service, and backup and disaster recovery.",
+      "Open the page",
+      "services/cloud.html"
+     ],
+     [
+      "Information",
+      "Managed IT Services Indianapolis",
+      "vCIO guidance, 24/7 monitoring, help desk and security packaged under one agreement.",
+      "Open the page",
+      "services/managed-it.html"
+     ],
+     [
+      "Information",
+      "Managed Cybersecurity",
+      "Sophos XDR, Datto patching, Fortinet Fabric services and a security operations center from the Vsecure team.",
+      "Open the page",
+      "services/cybersecurity.html"
+     ],
+     [
+      "Information",
+      "Indianapolis IT Support",
+      "Help desk, remote and on-site support, with a 24 hour response from the Customer Care Center.",
+      "Open the page",
+      "services/it-support.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Continuity by industry",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "Financial services",
+      "Lenders can plan recovery around the regulations that govern their data.",
+      "How we set it up",
+      "industries/financial-services.html"
+     ],
+     [
+      "Industry",
+      "Healthcare",
+      "Practices can decide how long patient systems can be down.",
+      "How we set it up",
+      "industries/healthcare.html"
+     ],
+     [
+      "Industry",
+      "Manufacturing and logistics",
+      "Plants can plan for the machines and systems that stop production if they fail.",
+      "How we set it up",
+      "industries/manufacturing-logistics.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Find out how long you can go without operating",
+    "body": "Tell us your critical systems and the downtime you could survive.",
+    "submit": "Plan my recovery",
+    "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913.",
+    "alt": true
+   }
+  ]
+ },
+ "services/ai-consulting.html": {
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "split",
+    "eyebrow": "AI strategy and governance",
+    "heading": "AI is already in your workplace. <em>Is it governed?</em>",
+    "subhead": "From strategy to governance: adopt AI responsibly, protect client trust and company data, and stay ahead of the competition. Employees are using AI every day whether you approved it or not. The biggest risk is not AI. It is the lack of guardrails.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/ai-1200.jpg",
+    "image_alt": "AI consulting",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "cards",
+    "alt": true,
+    "eyebrow": "What is included",
+    "heading": "What changes with VAF ai consulting",
+    "items": [
+     [
+      "Approved tools",
+      "Which AI solutions are authorized for business use."
+     ],
+     [
+      "Data boundaries",
+      "What types of information should never be entered into AI systems."
+     ],
+     [
+      "Human review requirements",
+      "When AI-generated content requires sign-off before use."
+     ],
+     [
+      "Incident reporting",
+      "A simple process for flagging and resolving AI misuse quickly."
+     ]
+    ]
+   },
+   {
+    "type": "detail",
+    "eyebrow": "The specifics",
+    "heading": "What you get, and what it rests on",
+    "body": "What an AI governance engagement with VAF produces.",
+    "bullets": [
+     "An AI Acceptable Use Policy and Framework your employees can understand and follow",
+     "High-impact automation opportunities identified from the business problem, not the tool",
+     "A responsible AI roadmap, starting with the free Technology Strength Assessment",
+     "Guidance, governance and risk management from the partner that already runs your technology"
+    ],
+    "image": "assets/ai-hand-1200.jpg",
+    "flip": true
+   },
+   {
+    "type": "testimonials",
+    "alt": true,
+    "heading": "What customers say after a service call",
+    "items": [
+     [
+      "Mike is awesome, knowledgeable, and friendly.",
+      "Denise",
+      "After-service survey, February 2026"
+     ]
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions we get about AI consulting",
+    "items": [
+     [
+      "Where do we start with AI?",
+      "With the business problem: the friction, the repeatable processes, the places where AI actually pays off. Then AI readiness: a policy and guardrails that let your team adopt it safely, then the use cases that deliver."
+     ],
+     [
+      "Is the AI playbook free?",
+      "Yes. The 2026 CIO AI Playbook is a step-by-step guide to secure, strategic AI implementation, and the Technology Strength Assessment is complimentary."
+     ],
+     [
+      "What is an AI acceptable use policy?",
+      "It is a document that sets approved tools, data boundaries, human review requirements and incident reporting for AI use at work."
+     ],
+     [
+      "What data should never go into an AI tool?",
+      "That is part of the policy you set. VAF's framework defines what types of information should never be entered into AI systems."
+     ],
+     [
+      "Do we need a policy before we pick use cases?",
+      "VAF says to start with readiness, a policy and guardrails, then the use cases that deliver."
+     ],
+     [
+      "Who delivers the AI consulting?",
+      "The same VAF team that already runs your technology, starting with the free Technology Strength Assessment."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Related AI and security pages",
+    "intro": "Playbook, security and IT pages that support responsible AI use.",
+    "items": [
+     [
+      "Information",
+      "2026 CIO AI Playbook",
+      "The free guide to secure, strategic AI adoption.",
+      "Open the page",
+      "cio-ai-playbook.html"
+     ],
+     [
+      "Information",
+      "Technology Strength Assessment",
+      "Ten to fifteen minutes online, then a specialist walks the results with you.",
+      "Open the page",
+      "technology-strength-assessment.html"
+     ],
+     [
+      "Information",
+      "Managed Cybersecurity",
+      "Sophos XDR, Datto patching, Fortinet Fabric services and a security operations center from the Vsecure team.",
+      "Open the page",
+      "services/cybersecurity.html"
+     ],
+     [
+      "Information",
+      "Managed IT Services Indianapolis",
+      "vCIO guidance, 24/7 monitoring, help desk and security packaged under one agreement.",
+      "Open the page",
+      "services/managed-it.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "AI governance by industry",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "Financial services",
+      "Customer data rules shape which AI tools staff may use.",
+      "How we set it up",
+      "industries/financial-services.html"
+     ],
+     [
+      "Industry",
+      "Healthcare",
+      "Patient information must stay out of unapproved AI systems.",
+      "How we set it up",
+      "industries/healthcare.html"
+     ],
+     [
+      "Industry",
+      "Insurance",
+      "Agencies can define when AI-written content needs human sign-off.",
+      "How we set it up",
+      "industries/insurance.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Put guardrails around AI at your company",
+    "body": "Tell us how your team uses AI today.",
+    "submit": "Govern my AI use",
+    "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913.",
+    "alt": true
+   }
+  ]
+ },
+ "services/document-management.html": {
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "split",
+    "eyebrow": "Enterprise content management",
+    "heading": "Files, workflows and data <em>under one system</em>.",
+    "subhead": "Capture, store and automate business documents to cut paper and boost productivity. Custom Enterprise Content Management with OnBase and Square 9 captures, manages, stores, preserves and delivers information across your whole enterprise, keeping you connected and compliant.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/process-1200.jpg",
+    "image_alt": "Document management",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "cards",
+    "alt": true,
+    "eyebrow": "What is included",
+    "heading": "What changes with VAF document management",
+    "items": [
+     [
+      "Automated forms processing",
+      "Exchange information automatically with anyone, anywhere, in any format, with Kofax intelligent capture."
+     ],
+     [
+      "Content management and workflow",
+      "OnBase ECM and Square 9 Smart Search integrate with the productivity tools you already run."
+     ],
+     [
+      "Document scanning",
+      "Workgroup, low-volume and high-volume scanners for any size document, in color or black and white."
+     ],
+     [
+      "Document finishing",
+      "Pro-Bind thermal binding equipment and supplies for professional documents every time."
+     ]
+    ]
+   },
+   {
+    "type": "detail",
+    "eyebrow": "The specifics",
+    "heading": "What you get, and what it rests on",
+    "body": "The capabilities behind VAF's document management practice.",
+    "bullets": [
+     "Information governance: seamless workflow, streamlined sharing and reduced cost",
+     "Accounts payable, HR onboarding and contract automation",
+     "Records retention schedules that survive an audit",
+     "Scanning from your existing VAF multifunction devices"
+    ],
+    "image": "assets/healthcare-process-1200.jpg",
+    "flip": true
+   },
+   {
+    "type": "casestudy",
+    "eyebrow": "Case study",
+    "heading": "Anderson's technology refresh provides cost savings and new solutions to constituents.",
+    "quote": "The onsite updated equipment, software and process improvements that were installed, implemented and maintained by Van Ausdall & Farrar have created over $40,000 in annual savings.",
+    "attribution": "City of Anderson, IN case study, vanausdall.com",
+    "metrics": [
+     [
+      "Savings",
+      "$40,000",
+      "Every year"
+     ],
+     [
+      "Since",
+      "2003",
+      "A preferred vendor to the city"
+     ],
+     [
+      "Security",
+      "2D bar code",
+      "Document security on print and mail"
+     ],
+     [
+      "Purchasing",
+      "1 site manager",
+      "Departmental purchases streamlined through FM"
+     ]
+    ]
+   },
+   {
+    "type": "testimonials",
+    "alt": true,
+    "heading": "What customers say after a service call",
+    "items": [
+     [
+      "He went above and beyond to ask and answer questions so we both were on the same page with the problem and ultimately the solution. He explained what we at the office needed to do differently to prevent this situation in the future as well.",
+      "Elaine",
+      "After-service survey, June 2026"
+     ]
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions we get about document management",
+    "items": [
+     [
+      "Which platforms do you implement?",
+      "OnBase by Hyland and Square 9 Smart Search, with Kofax intelligent capture for forms. We recommend the platform after the assessment, not before."
+     ],
+     [
+      "Where do most organizations start?",
+      "Accounts payable or a records backlog. Both pay back fastest, and both are questions on the Technology Strength Assessment."
+     ],
+     [
+      "What does document management include?",
+      "Automated forms processing, content management and workflow, document scanning and document finishing."
+     ],
+     [
+      "Can VAF scan from our existing copiers?",
+      "Yes. VAF lists scanning from your existing VAF multifunction devices."
+     ],
+     [
+      "What did the City of Anderson gain?",
+      "VAF's case study cites over $40,000 in annual savings from equipment, software and process improvements."
+     ],
+     [
+      "Does document management cover records retention?",
+      "Yes. VAF lists records retention schedules that survive an audit."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Related document pages",
+    "intro": "Platform, scanning and conversion pages behind document management.",
+    "items": [
+     [
+      "Process",
+      "Document Management and Workflow",
+      "OnBase and Square 9 Smart Search for line-of-business integration.",
+      "Open the page",
+      "services/document-management-workflow.html"
+     ],
+     [
+      "Process",
+      "Automated Forms Processing",
+      "Kofax capture and exchange software for forms and inbound documents.",
+      "Open the page",
+      "services/automated-forms-processing.html"
+     ],
+     [
+      "Process",
+      "Document Scanning",
+      "Workgroup, low volume and high volume scanners for any document size.",
+      "Open the page",
+      "services/document-scanning.html"
+     ],
+     [
+      "Process",
+      "Document Conversion",
+      "Closed-loop scanning in the secure Document Conversion Center.",
+      "Open the page",
+      "services/document-conversion.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Document management by industry",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "State and local government",
+      "Departments can organize records and retention in one system.",
+      "How we set it up",
+      "industries/government.html"
+     ],
+     [
+      "Industry",
+      "Healthcare",
+      "Health information teams can control access to patient documents.",
+      "How we set it up",
+      "industries/healthcare.html"
+     ],
+     [
+      "Industry",
+      "Financial services",
+      "Lenders can speed loan files and accounts payable approvals.",
+      "How we set it up",
+      "industries/financial-services.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Plan your document management",
+    "body": "Tell us where paper still slows you down.",
+    "submit": "Plan my documents",
+    "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913.",
+    "alt": true
    }
   ]
  }

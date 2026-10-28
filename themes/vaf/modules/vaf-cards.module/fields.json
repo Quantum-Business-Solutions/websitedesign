@@ -55,6 +55,20 @@
         "type": "text",
         "display_width": null,
         "default": ""
+      },
+      {
+        "id": "card_logo",
+        "name": "card_logo",
+        "label": "Logo (optional, shown above the title)",
+        "required": false,
+        "locked": false,
+        "responsive": false,
+        "type": "image",
+        "default": {
+          "src": "",
+          "alt": "",
+          "loading": "lazy"
+        }
       }
     ],
     "tab": "CONTENT",

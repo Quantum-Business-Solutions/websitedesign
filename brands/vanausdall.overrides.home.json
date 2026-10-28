@@ -1025,6 +1025,35 @@
       "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/blog/data-visualization.jpg"
      ]
     ]
+   },
+   {
+    "type": "related",
+    "id": "casecards",
+    "heading": "Results on the record",
+    "intro": "Three of VAF's published case studies. Each one names the customer and the number.",
+    "items": [
+     [
+      "Education",
+      "Tippecanoe School Corporation",
+      "1,200 devices became 300, and the school corporation saved $1M over the life of the contract.",
+      "case-studies/tippecanoe-school-corporation.html",
+      "assets/team-1200.jpg"
+     ],
+     [
+      "Healthcare",
+      "Johnson Memorial Health",
+      "1.5 million patient files scanned and indexed in 90 days, under HIPAA.",
+      "case-studies/johnson-memorial-hospital.html",
+      "assets/healthcare-process-1200.jpg"
+     ],
+     [
+      "Financial services",
+      "STAR Financial Bank",
+      "Over 70% cost savings after five months with Van Ausdall & Farrar.",
+      "case-studies/star-financial.html",
+      "assets/security-1200.jpg"
+     ]
+    ]
    }
   ],
   "compose": {
@@ -1053,22 +1082,17 @@
     "hero",
     "partners",
     "wheel",
-    "services",
     "is-this-you",
-    "customers",
-    "numbers",
+    "proof",
     "ba",
     "flow",
     "office",
     "seal",
-    "story",
-    "proof",
-    "casestudy",
-    "security",
-    "playbook",
+    "casecards",
     "markets",
     "map",
     "voices",
+    "playbook",
     "articles",
     "film",
     "faq",

@@ -851,3 +851,16 @@ html{scroll-padding-bottom:72px}
 /* footer legal row: left aligned, copyright first, no stretched separators */
 .q-footer-legal{justify-content:flex-start;gap:6px 26px}
 .pv-legal-item + .pv-legal-item::before{content:none}
+
+/* ===== motion and rhythm ===== */
+.vaf-js .vaf-rv{opacity:0;transform:translateY(26px);transition:opacity .75s cubic-bezier(.2,.7,.2,1),transform .75s cubic-bezier(.2,.7,.2,1)}
+.vaf-js .vaf-rv.in{opacity:1;transform:none}
+.vaf-js .vaf-rv.d1{transition-delay:.08s}.vaf-js .vaf-rv.d2{transition-delay:.16s}.vaf-js .vaf-rv.d3{transition-delay:.24s}
+@media (prefers-reduced-motion:reduce){.vaf-js .vaf-rv{opacity:1;transform:none;transition:none}}
+/* alternate sections speak from the left: heading block offset, content full width, so the page does not read as one centred column */
+@media(min-width:1025px){
+  .q-section.q-bg-alt > .q-container > .pv-center,.q-section.q-bg-alt .vaf-head{align-items:flex-start;text-align:left;max-width:none}
+  .q-section.q-bg-alt > .q-container > .pv-center .q-lead,.q-section.q-bg-alt > .q-container > .pv-center p{text-align:left;margin-left:0}
+}
+/* soft diagonal seams where light bands meet dark ones */
+.q-section.vaf-seal,.q-section.vaf-proof,.vaf-casestudy{position:relative}
