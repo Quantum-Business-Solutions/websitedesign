@@ -1,0 +1,21 @@
+{% set n = module.items|length %}
+{% set two = false %}
+{% if n >= 6 and n % 2 == 0 %}{% set two = true %}{% endif %}
+<section class="q-section vaf-services{% if module.alt_bg %} q-bg-alt{% endif %}{% if module.padding == 'none' %} q-pad-none{% elif module.padding == 'large' %} q-pad-large{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %}>
+  <div class="q-container">
+    <div class="pv-split vs__head">
+      <h2 class="q-h2">{{ module.heading }}</h2>
+      {% if module.intro %}<p>{{ module.intro }}</p>{% endif %}
+    </div>
+    <div class="vs__list{% if two %} vs__list--two{% endif %}">
+      {% for it in module.items %}
+      <article class="vs__row">
+        {% if module.markers == 'numbers' %}<span class="vs__num" aria-hidden="true">{% if loop.index < 10 %}0{% endif %}{{ loop.index }}</span>{% endif %}
+        <h3 class="vs__title"><a class="vs__link" href="{{ it.svc_link.url.href }}"{% if it.svc_link.open_in_new_tab %} target="_blank" rel="noopener"{% endif %}>{{ it.svc_title }}</a></h3>
+        <p class="vs__copy">{{ it.svc_copy }}</p>
+        <span class="vs__go" aria-hidden="true"><span class="vs__label">{{ module.link_label }}</span><span class="vs__arrow"><svg viewBox="0 0 24 24" width="18" height="18" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

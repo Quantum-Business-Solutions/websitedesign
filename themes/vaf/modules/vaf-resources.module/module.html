@@ -1,0 +1,28 @@
+{% set n = module.items|length %}
+{% set cols = 3 %}
+{% if n <= 3 %}{% set cols = n %}{% elif n % 3 == 0 %}{% set cols = 3 %}{% elif n % 4 == 0 %}{% set cols = 4 %}{% elif n % 3 == 2 %}{% set cols = 3 %}{% elif n % 4 == 3 or n % 4 == 2 %}{% set cols = 4 %}{% else %}{% set cols = 5 %}{% endif %}
+{% if cols < 1 %}{% set cols = 1 %}{% endif %}
+{% set tcols = 2 %}
+{% if n <= 2 %}{% set tcols = n %}{% elif n % 2 == 0 %}{% set tcols = 2 %}{% elif n % 3 == 0 or n % 3 == 2 %}{% set tcols = 3 %}{% endif %}
+{% if tcols < 1 %}{% set tcols = 1 %}{% endif %}
+<section class="q-section vaf-resources{% if module.alt_bg %} q-bg-alt{% endif %}{% if module.padding == 'none' %} q-pad-none{% elif module.padding == 'large' %} q-pad-large{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %}>
+  <div class="q-container">
+    <div class="pv-split vr__head">
+      <h2 class="q-h2">{{ module.heading }}</h2>
+      {% if module.intro %}<p>{{ module.intro }}</p>{% endif %}
+    </div>
+    <div class="vr__grid" style="--cols:{{ cols }};--cols-t:{{ tcols }}">
+      {% for it in module.items %}
+      <article class="vr__card">
+        {% if it.res_image.src %}<div class="vr__img"><img src="{{ it.res_image.src }}" alt="{{ it.res_image.alt }}" loading="lazy" decoding="async"></div>{% endif %}
+        <div class="vr__body">
+          {% if it.res_kind %}<span class="vr__tag">{{ it.res_kind }}</span>{% endif %}
+          <h3 class="vr__title"><a class="vr__link" href="{{ it.res_link.url.href }}"{% if it.res_link.open_in_new_tab %} target="_blank" rel="noopener"{% endif %}>{{ it.res_title }}</a></h3>
+          {% if it.res_copy %}<p class="vr__copy">{{ it.res_copy }}</p>{% endif %}
+          <span class="vr__cta" aria-hidden="true">{{ it.res_cta }}<svg viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

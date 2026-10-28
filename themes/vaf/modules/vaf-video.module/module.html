@@ -1,0 +1,22 @@
+<section class="q-section{% if module.alt_bg %} q-bg-alt{% endif %} vf-vid"{% if module.anchor %} id="{{ module.anchor }}"{% endif %}>
+  <div class="q-container">
+    {% if module.heading %}
+    <header class="pv-center vf-vid__head">
+      {% if module.eyebrow %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      <h2 class="q-h2 vf-vid__h">{{ module.heading }}</h2>
+      {% if module.intro %}<p class="q-lead vf-vid__intro">{{ module.intro }}</p>{% endif %}
+    </header>
+    {% endif %}
+    <figure class="vf-vid__fig">
+      <div class="vf-vid__frame" data-vf-vid data-id="{{ module.youtube_id }}" data-title="{{ module.video_title|escape_attr }}">
+        <button type="button" class="vf-vid__btn" aria-label="{{ module.play_label }}: {{ module.video_title|escape_attr }}">
+          {% if module.poster.src %}<img class="vf-vid__img" src="{{ module.poster.src }}" alt="{{ module.poster.alt }}" width="1280" height="720" loading="lazy">
+          {% else %}<img class="vf-vid__img" src="https://i.ytimg.com/vi/{{ module.youtube_id }}/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">{% endif %}
+          <span class="vf-vid__play" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+        </button>
+      </div>
+      <noscript><p class="vf-vid__fallback"><a href="https://www.youtube.com/watch?v={{ module.youtube_id }}" target="_blank" rel="noopener">{{ module.play_label }}: {{ module.video_title }}</a></p></noscript>
+      {% if module.caption %}<figcaption class="vf-vid__cap">{{ module.caption }}</figcaption>{% endif %}
+    </figure>
+  </div>
+</section>

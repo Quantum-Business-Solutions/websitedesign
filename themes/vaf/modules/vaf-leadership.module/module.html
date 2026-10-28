@@ -1,0 +1,24 @@
+<section class="q-section{% if module.alt_bg %} q-bg-alt{% endif %} vf-ld"{% if module.anchor %} id="{{ module.anchor }}"{% endif %}>
+  <div class="q-container">
+    <div class="pv-split vf-ld__head">
+      <h2 class="q-h2">{{ module.heading }}</h2>
+      {% if module.intro %}<p>{{ module.intro }}</p>{% endif %}
+    </div>
+    {% set n = module.people|length %}
+    <ul class="vf-ld__grid vf-ld__grid--{% if n == 1 %}1{% elif n == 2 or n == 4 %}2{% else %}3{% endif %}">
+      {% for p in module.people %}
+      <li class="vf-ld__card">
+        {% if p.person_photo.src %}<img class="vf-ld__photo" src="{{ p.person_photo.src }}" alt="{{ p.person_photo.alt }}" width="96" height="96" loading="lazy">
+        {% else %}<span class="vf-ld__av" aria-hidden="true">{{ p.person_initials }}</span>{% endif %}
+        <div class="vf-ld__who"><h3>{{ p.person_name }}</h3><p>{{ p.person_role }}</p></div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% if module.orgs_intro or module.orgs|length > 0 %}
+    <div class="vf-ld__orgs">
+      {% if module.orgs_intro %}<p class="vf-ld__orgsintro">{{ module.orgs_intro }}</p>{% endif %}
+      {% if module.orgs|length > 0 %}<ul class="vf-ld__pills">{% for o in module.orgs %}<li>{{ o.org_name }}</li>{% endfor %}</ul>{% endif %}
+    </div>
+    {% endif %}
+  </div>
+</section>

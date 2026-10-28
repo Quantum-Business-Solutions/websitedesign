@@ -1,0 +1,87 @@
+/* VAF Flow chart. Mobile and no-JS: a vertical stepper with every step's detail visible.
+   With JS at 900px and up: a connected rail that draws on scroll, with one detail panel under it. */
+.vaf-flow{--vf-blue:var(--q-gold,#2a71af);--vf-deep:var(--q-gold-bright,#205686);--vf-navy:var(--navy,#0f1e33);--vf-line:#c3d8ec;--vf-tint:#e7f0f9;--vf-ease:cubic-bezier(.2,.7,.2,1);--g:18px}
+.vaf-flow__head{text-align:center;display:flex;flex-direction:column;align-items:center}
+.vaf-flow__head .q-h2{margin-top:22px;max-width:760px}
+.vaf-flow__head .q-lead{max-width:640px;margin:16px auto 0}
+.vaf-flow__chart{position:relative;margin-top:44px}
+.vaf-flow__rail{display:none}
+.vaf-flow__steps{list-style:none;margin:0;padding:0}
+
+/* ---------- vertical stepper (default) ---------- */
+.vaf-flow__step{position:relative;padding:0 0 30px 68px}
+.vaf-flow__step:last-child{padding-bottom:0}
+.vaf-flow__step::before,.vaf-flow__step::after{content:"";position:absolute;left:23px;top:54px;bottom:6px;width:2px;border-radius:2px;background:var(--vf-line)}
+.vaf-flow__step:last-child::before,.vaf-flow__step:last-child::after{display:none}
+.vaf-flow__step::after{background:var(--vf-blue);transform:scaleY(0);transform-origin:top;transition:transform .7s var(--vf-ease)}
+.vaf-flow.is-js.is-in .vaf-flow__step.is-done::after{transform:scaleY(1)}
+.vaf-flow:not(.is-js) .vaf-flow__step::after{display:none}
+.vaf-flow__node{position:absolute;left:0;top:0;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--bg,#fff);border:2px solid var(--vf-line);color:var(--fg-muted);font:800 18px/1 var(--q-serif);transition:background .35s var(--vf-ease),border-color .35s var(--vf-ease),color .35s var(--vf-ease),box-shadow .35s var(--vf-ease),transform .35s var(--vf-ease)}
+.vaf-flow__node b{font-weight:800}
+.vaf-flow__step.is-done .vaf-flow__node{background:var(--vf-tint);border-color:var(--vf-blue);color:var(--vf-deep)}
+.vaf-flow__step.is-active .vaf-flow__node{background:var(--vf-blue);border-color:var(--vf-blue);color:#fff;box-shadow:0 0 0 7px rgba(42,113,175,.16)}
+.vaf-flow__btn{all:unset;box-sizing:border-box;display:block;width:100%;cursor:pointer;padding:4px 0 0;border-radius:12px}
+.vaf-flow__btn:focus-visible{outline:3px solid var(--vf-blue);outline-offset:4px}
+.vaf-flow__label{display:block;font:700 20px/1.25 var(--q-serif);color:var(--fg)}
+.vaf-flow__when{display:inline-block;margin-top:8px;padding:5px 11px;border-radius:999px;background:var(--vf-tint);color:var(--vf-deep);font-size:12px;line-height:1.2;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.vaf-flow__sum{display:block;margin-top:8px;font-size:15px;line-height:1.5;color:var(--fg-muted)}
+.vaf-flow__detail{position:relative;margin-top:16px;padding:24px 22px 18px;border:1px solid var(--border);border-radius:18px;background:var(--bg,#fff);box-shadow:0 14px 34px rgba(15,30,51,.08);display:grid;gap:20px}
+.vaf-flow__detail[hidden]{display:none}
+.vaf-flow.is-js .vaf-flow__detail:not([hidden]){animation:vafFlowIn .5s var(--vf-ease)}
+@keyframes vafFlowIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.vaf-flow__k{margin:0 0 10px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--vf-deep)}
+.vaf-flow__main h3{margin:0 0 10px;font:700 22px/1.2 var(--q-serif);color:var(--fg)}
+.vaf-flow__copy,.vaf-flow__copy p{margin:0;font-size:16px;line-height:1.65;color:var(--fg-muted)}
+.vaf-flow__recv{background:var(--bg-alt,#eef4fa);border-radius:14px;padding:18px 20px}
+.vaf-flow__list ul{list-style:none;margin:0;padding:0;display:grid;gap:11px}
+.vaf-flow__list li{position:relative;padding-left:30px;font-size:15px;line-height:1.5;color:var(--fg)}
+.vaf-flow__list li::before{content:"";position:absolute;left:0;top:1px;width:20px;height:20px;border-radius:50%;background:var(--vf-blue)}
+.vaf-flow__list li::after{content:"";position:absolute;left:7px;top:5px;width:5px;height:9px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.vaf-flow__list p{margin:0}
+.vaf-flow__nav{display:none;align-items:center;gap:12px;padding-top:14px;border-top:1px solid var(--border)}
+.vaf-flow.is-js .vaf-flow__nav{display:flex}
+.vaf-flow__go{all:unset;box-sizing:border-box;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;cursor:pointer;border:1.5px solid var(--vf-line);color:var(--vf-deep);background:var(--bg,#fff);transition:background .2s,border-color .2s,color .2s}
+.vaf-flow__go:hover:not(:disabled){background:var(--vf-blue);border-color:var(--vf-blue);color:#fff}
+.vaf-flow__go:focus-visible{outline:3px solid var(--vf-blue);outline-offset:3px}
+.vaf-flow__go:disabled{cursor:default;color:#9aa6b6;border-color:#e0e8f0}
+.vaf-flow__count{font-size:13px;letter-spacing:.12em;font-weight:700;color:var(--fg-muted);font-variant-numeric:tabular-nums}
+
+/* ---------- connected chart, 900px and up, JS on ---------- */
+@media (min-width:900px){
+  .vaf-flow.is-js{--w:calc((100% - (var(--n) - 1) * var(--g)) / var(--n))}
+  .vaf-flow.is-js .vaf-flow__chart{margin-top:60px}
+  .vaf-flow.is-js .vaf-flow__rail{display:block;position:absolute;left:0;right:0;top:27px;height:2px;pointer-events:none;z-index:0}
+  .vaf-flow__line,.vaf-flow__fill{position:absolute;left:calc(var(--w) / 2);right:calc(var(--w) / 2);top:0;height:2px;border-radius:2px;transform-origin:left}
+  .vaf-flow__line{background:repeating-linear-gradient(90deg,var(--vf-line) 0 8px,transparent 8px 14px);transform:scaleX(0);transition:transform 1.5s var(--vf-ease)}
+  .vaf-flow.is-in .vaf-flow__line{transform:scaleX(1)}
+  .vaf-flow__fill{height:3px;top:-.5px;background:var(--vf-blue);transform:scaleX(0);transition:transform .8s var(--vf-ease)}
+  .vaf-flow.is-in .vaf-flow__fill{transform:scaleX(calc((var(--act) - 1) / (var(--n) - 1)))}
+  .vaf-flow__arr{position:absolute;top:-6px;left:calc(var(--k) * (var(--w) + var(--g)) - var(--g) / 2);width:14px;height:14px;margin-left:-7px;opacity:0;transition:opacity .5s ease calc(var(--k) * .22s + .3s)}
+  .vaf-flow__arr::before{content:"";position:absolute;inset:3px 4px 3px 2px;border:solid var(--vf-blue);border-width:2px 2px 0 0;transform:rotate(45deg) scale(.9)}
+  .vaf-flow.is-in .vaf-flow__arr{opacity:1}
+
+  .vaf-flow.is-js .vaf-flow__steps{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));column-gap:var(--g);position:relative;z-index:1}
+  .vaf-flow.is-js .vaf-flow__step{display:contents}
+  .vaf-flow.is-js .vaf-flow__step::before,.vaf-flow.is-js .vaf-flow__step::after{display:none}
+  .vaf-flow.is-js .vaf-flow__node{position:relative;grid-row:1;grid-column:var(--c);justify-self:center;width:56px;height:56px;font-size:20px;opacity:0;transform:scale(.55)}
+  .vaf-flow.is-js.is-in .vaf-flow__node{opacity:1;transform:none;transition:opacity .5s ease calc(var(--c) * .2s),transform .6s var(--vf-ease) calc(var(--c) * .2s),background .35s var(--vf-ease),border-color .35s var(--vf-ease),color .35s var(--vf-ease),box-shadow .35s var(--vf-ease)}
+  .vaf-flow.is-js.is-in .vaf-flow__step.is-active .vaf-flow__node{transform:scale(1.08)}
+  .vaf-flow.is-js .vaf-flow__btn{grid-row:2;grid-column:var(--c);margin-top:16px;padding:18px 12px 20px;text-align:center;border:1px solid transparent;border-radius:16px;transition:background .3s var(--vf-ease),border-color .3s var(--vf-ease),box-shadow .3s var(--vf-ease),transform .3s var(--vf-ease)}
+  .vaf-flow.is-js .vaf-flow__btn:hover{background:var(--bg,#fff);border-color:var(--border);transform:translateY(-2px)}
+  .vaf-flow.is-js .is-active .vaf-flow__btn{background:var(--bg,#fff);border-color:var(--vf-blue);box-shadow:0 14px 30px rgba(42,113,175,.16)}
+  .vaf-flow.is-js .vaf-flow__label{font-size:19px}
+  .vaf-flow.is-js .vaf-flow__sum{font-size:14.5px}
+  .vaf-flow.is-js .vaf-flow__detail{grid-row:3;grid-column:1 / -1;margin-top:26px;padding:36px 40px 22px;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:24px 48px;align-items:start;border-radius:22px;box-shadow:0 24px 60px rgba(15,30,51,.1)}
+  .vaf-flow.is-js .vaf-flow__detail::before{content:"";position:absolute;top:-1px;left:calc((var(--act) - 1) * (var(--w) + var(--g)) + var(--w) / 2);width:22px;height:22px;background:var(--bg,#fff);border:solid var(--border);border-width:1px 0 0 1px;transform:translate(-50%,-50%) rotate(45deg);transition:left .5s var(--vf-ease)}
+    .vaf-flow.is-js .vaf-flow__main h3{font-size:26px}
+  .vaf-flow.is-js .vaf-flow__nav{grid-column:1 / -1}
+  .vaf-flow.is-js .vaf-flow__recv{padding:22px 24px}
+}
+@media (max-width:899px){
+  .vaf-flow__step{padding-left:64px}
+}
+@media (prefers-reduced-motion:reduce){
+  .vaf-flow *,.vaf-flow *::before,.vaf-flow *::after{transition:none!important;animation:none!important}
+  .vaf-flow.is-js .vaf-flow__node{opacity:1;transform:none}
+  .vaf-flow__line{transform:scaleX(1)}.vaf-flow__arr{opacity:1}
+}

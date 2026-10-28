@@ -1,13 +1,13 @@
 {% set steps = module.steps %}
 {% set n = steps|length %}
-<section class="q-section vaf-flow{% if module.alt_bg %} q-bg-alt{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %} data-vaf-flow>
+<section class="q-section vaf-flow{% if module.alt_bg %} q-bg-alt{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %} style="--n:{{ n }}" data-vaf-flow>
   <div class="q-container">
     <div class="vaf-flow__head">
       {% if module.eyebrow %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
       {% if module.heading %}<h2 class="q-h2">{{ module.heading }}</h2>{% endif %}
       {% if module.intro %}<p class="q-lead">{{ module.intro }}</p>{% endif %}
     </div>
-    <div class="vaf-flow__chart" style="--n:{{ n }};--act:1">
+    <div class="vaf-flow__chart" style="--act:1">
       <div class="vaf-flow__rail" aria-hidden="true">
         <span class="vaf-flow__line"></span><span class="vaf-flow__fill"></span>
         {% for s in steps %}{% if not loop.last %}<i class="vaf-flow__arr" style="--k:{{ loop.index }}"></i>{% endif %}{% endfor %}
@@ -22,7 +22,6 @@
             {% if s.step_summary %}<span class="vaf-flow__sum">{{ s.step_summary }}</span>{% endif %}
           </button>
           <div class="vaf-flow__detail" role="region" aria-label="{{ s.step_title|escape }}">
-            <span class="vaf-flow__ghost" aria-hidden="true">{{ loop.index }}</span>
             <div class="vaf-flow__main">
               {% if module.detail_eyebrow %}<p class="vaf-flow__k">{{ module.detail_eyebrow }}</p>{% endif %}
               <h3>{{ s.step_title }}</h3>

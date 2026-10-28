@@ -1,0 +1,26 @@
+{% set n = module.items|length %}
+{% set cols = 3 %}
+{% if n <= 3 %}{% set cols = n %}{% elif n % 3 == 0 %}{% set cols = 3 %}{% elif n % 4 == 0 %}{% set cols = 4 %}{% elif n % 3 == 2 %}{% set cols = 3 %}{% elif n % 4 == 3 or n % 4 == 2 %}{% set cols = 4 %}{% else %}{% set cols = 5 %}{% endif %}
+{% if cols < 1 %}{% set cols = 1 %}{% endif %}
+{% set tcols = 2 %}
+{% if n <= 2 %}{% set tcols = n %}{% elif n % 2 == 0 %}{% set tcols = 2 %}{% elif n % 3 == 0 or n % 3 == 2 %}{% set tcols = 3 %}{% endif %}
+{% if tcols < 1 %}{% set tcols = 1 %}{% endif %}
+<section class="q-section vaf-cards{% if module.alt_bg %} q-bg-alt{% endif %}{% if module.padding == 'none' %} q-pad-none{% elif module.padding == 'large' %} q-pad-large{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %}>
+  <div class="q-container">
+    {% if module.heading or module.eyebrow %}
+    <div class="pv-center vc__head">
+      {% if module.eyebrow %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      {% if module.heading %}<h2 class="q-h2">{{ module.heading }}</h2>{% endif %}
+    </div>
+    {% endif %}
+    <div class="vc__grid" style="--cols:{{ cols }};--cols-t:{{ tcols }}">
+      {% for it in module.items %}
+      <div class="vc__card">
+        {% if module.markers == 'numbers' %}<span class="vc__num" aria-hidden="true">{% if loop.index < 10 %}0{% endif %}{{ loop.index }}</span>{% endif %}
+        <h3 class="vc__title">{{ it.card_title }}</h3>
+        <p class="vc__copy">{{ it.card_copy }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

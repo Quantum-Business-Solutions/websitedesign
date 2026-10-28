@@ -1,0 +1,31 @@
+{% set has_img = module.image.src %}
+{% set has_form = module.show_form and module.form.form_id %}
+{% set bn = module.bullets|length %}
+{% set mode = 'split' %}
+{% if has_img %}{% set mode = 'media' %}{% elif has_form %}{% set mode = 'form' %}{% elif bn > 0 %}{% set mode = 'list' %}{% endif %}
+<section class="q-section vaf-detail{% if module.alt_bg %} q-bg-alt{% endif %}{% if module.padding == 'none' %} q-pad-none{% elif module.padding == 'large' %} q-pad-large{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %}>
+  <div class="q-container vd vd--{{ mode }}{% if module.flip %} vd--flip{% endif %}">
+    <div class="vd__text">
+      {% if module.eyebrow %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      <h2 class="q-h2 vd__h">{{ module.heading }}</h2>
+      {% if mode != 'split' and module.copy %}<div class="vd__copy">{{ module.copy }}</div>{% endif %}
+      {% if (mode == 'media' or mode == 'form') and bn > 0 %}
+      <ul class="vd__list">{% for b in module.bullets %}<li>{{ b.bullet_text }}</li>{% endfor %}</ul>
+      {% endif %}
+    </div>
+    <div class="vd__side">
+      {% if mode == 'split' %}
+        {% if module.copy %}<div class="vd__copy vd__copy--lead">{{ module.copy }}</div>{% endif %}
+      {% elif mode == 'list' %}
+        <div class="vd__card"><ul class="vd__list">{% for b in module.bullets %}<li>{{ b.bullet_text }}</li>{% endfor %}</ul></div>
+      {% elif mode == 'media' %}
+        <figure class="vd__media"><img src="{{ module.image.src }}" alt="{{ module.image.alt }}"{% if module.image.width %} width="{{ module.image.width }}"{% endif %}{% if module.image.height %} height="{{ module.image.height }}"{% endif %} loading="lazy" decoding="async"></figure>
+      {% else %}
+        <div class="vd__card vd__formcard">
+          {% if module.form_heading %}<h3 class="vd__formh">{{ module.form_heading }}</h3>{% endif %}
+          <div class="q-form vd__form">{% form form_to_use="{{ module.form.form_id }}", no_title=True, response_response_type="inline", response_message="{{ module.form.message }}" %}</div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>

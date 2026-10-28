@@ -1,0 +1,618 @@
+[
+  {
+    "id": "layout",
+    "name": "layout",
+    "label": "Layout",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [
+        "layered",
+        "Layered (dark hero: image or video, floating cards)"
+      ],
+      [
+        "split",
+        "Split (copy beside image, for interior pages)"
+      ],
+      [
+        "centered",
+        "Centered (copy, optional wide image)"
+      ]
+    ],
+    "multiple": false,
+    "type": "choice",
+    "display_width": null,
+    "default": "layered"
+  },
+  {
+    "id": "anchor",
+    "name": "anchor",
+    "label": "Anchor id (optional)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "hero",
+    "help_text": "Lets links jump to this section, for example #hero"
+  },
+  {
+    "id": "eyebrow",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Business technology simplified, since 1914"
+  },
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Heading (H1)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": true,
+    "type": "text",
+    "display_width": null,
+    "default": "Everything your business runs on, <em>under one roof</em>.",
+    "help_text": "Wrap the accent words in <em></em>."
+  },
+  {
+    "id": "subhead",
+    "name": "subhead",
+    "label": "Subhead",
+    "required": false,
+    "locked": false,
+    "allow_new_line": true,
+    "type": "text",
+    "display_width": null,
+    "default": "IT support, copiers and print, phone systems, document workflow and AI guidance for Indiana businesses. One local partner, one assessment to start, one number to call."
+  },
+  {
+    "id": "primary_label",
+    "name": "primary_label",
+    "label": "Primary button text",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Take the Technology Strength Assessment"
+  },
+  {
+    "id": "primary_link",
+    "name": "primary_link",
+    "label": "Primary button link",
+    "required": false,
+    "locked": false,
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "EMAIL_ADDRESS",
+      "BLOG"
+    ],
+    "show_advanced_rel_options": false,
+    "type": "link",
+    "display_width": null,
+    "default": {
+      "url": {
+        "href": "/technology-strength-assessment",
+        "type": "EXTERNAL",
+        "content_id": null
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  },
+  {
+    "id": "secondary_label",
+    "name": "secondary_label",
+    "label": "Secondary button text",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Schedule a consultation"
+  },
+  {
+    "id": "secondary_link",
+    "name": "secondary_link",
+    "label": "Secondary button link",
+    "required": false,
+    "locked": false,
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "EMAIL_ADDRESS",
+      "BLOG"
+    ],
+    "show_advanced_rel_options": false,
+    "type": "link",
+    "display_width": null,
+    "default": {
+      "url": {
+        "href": "/contact",
+        "type": "EXTERNAL",
+        "content_id": null
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  },
+  {
+    "id": "note",
+    "name": "note",
+    "label": "Small print under the buttons",
+    "required": false,
+    "locked": false,
+    "allow_new_line": true,
+    "type": "text",
+    "display_width": null,
+    "default": ""
+  },
+  {
+    "id": "image",
+    "name": "image",
+    "label": "Image (split and centered: the picture; layered: the background photo)",
+    "required": false,
+    "locked": false,
+    "responsive": true,
+    "resizable": true,
+    "show_loading": false,
+    "type": "image",
+    "display_width": null,
+    "default": {
+      "src": "",
+      "alt": "",
+      "width": 2100,
+      "height": 891
+    }
+  },
+  {
+    "id": "bg_color",
+    "name": "bg_color",
+    "label": "Layered: background and scrim colour",
+    "required": false,
+    "locked": false,
+    "type": "color",
+    "display_width": null,
+    "default": {
+      "color": "#0f1e33",
+      "opacity": 100
+    }
+  },
+  {
+    "id": "scrim",
+    "name": "scrim",
+    "label": "Layered: scrim strength over image or video",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [
+        "light",
+        "Light"
+      ],
+      [
+        "standard",
+        "Standard"
+      ],
+      [
+        "strong",
+        "Strong (busy footage)"
+      ]
+    ],
+    "multiple": false,
+    "type": "choice",
+    "display_width": null,
+    "default": "standard"
+  },
+  {
+    "id": "bg_video",
+    "name": "bg_video",
+    "label": "Layered: background video (MP4)",
+    "required": false,
+    "locked": false,
+    "picker": "file",
+    "type": "file",
+    "display_width": null,
+    "default": "",
+    "help_text": "Optional. Loops silently behind the copy. Keep it under 6 MB, 1280 wide, no audio. It never loads on phones, with data saver on, or when the visitor prefers reduced motion; they see the poster instead."
+  },
+  {
+    "id": "poster",
+    "name": "poster",
+    "label": "Layered: poster image (shown first, and instead of the video on phones)",
+    "required": false,
+    "locked": false,
+    "responsive": true,
+    "resizable": true,
+    "show_loading": false,
+    "type": "image",
+    "display_width": null,
+    "default": {
+      "src": "",
+      "alt": ""
+    }
+  },
+  {
+    "id": "pause_label",
+    "name": "pause_label",
+    "label": "Layered: pause button label",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Pause background video"
+  },
+  {
+    "id": "play_label",
+    "name": "play_label",
+    "label": "Layered: play button label",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Play background video"
+  },
+  {
+    "id": "card_a_eyebrow",
+    "name": "card_a_eyebrow",
+    "label": "Card A: eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Start here"
+  },
+  {
+    "id": "card_a_title",
+    "name": "card_a_title",
+    "label": "Card A: title",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "The Technology Strength Assessment"
+  },
+  {
+    "id": "card_a_body",
+    "name": "card_a_body",
+    "label": "Card A: text",
+    "required": false,
+    "locked": false,
+    "allow_new_line": true,
+    "type": "text",
+    "display_width": null,
+    "default": "Ten to fifteen minutes. Information, print, process and communication, scored."
+  },
+  {
+    "id": "card_a_items",
+    "name": "card_a_items",
+    "label": "Card A: checklist",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 0,
+      "max": 6,
+      "sorting_label_field": "card_a_item_text",
+      "default": 3
+    },
+    "children": [
+      {
+        "id": "card_a_item_text",
+        "name": "card_a_item_text",
+        "label": "Item",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "card_a_item_text": "What to eliminate"
+      },
+      {
+        "card_a_item_text": "What to optimize"
+      },
+      {
+        "card_a_item_text": "What to leverage to grow"
+      }
+    ]
+  },
+  {
+    "id": "card_a_label",
+    "name": "card_a_label",
+    "label": "Card A: button text",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "How it works"
+  },
+  {
+    "id": "card_a_link",
+    "name": "card_a_link",
+    "label": "Card A: button link",
+    "required": false,
+    "locked": false,
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "EMAIL_ADDRESS",
+      "BLOG"
+    ],
+    "show_advanced_rel_options": false,
+    "type": "link",
+    "display_width": null,
+    "default": {
+      "url": {
+        "href": "/technology-strength-assessment",
+        "type": "EXTERNAL",
+        "content_id": null
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  },
+  {
+    "id": "card_b_eyebrow",
+    "name": "card_b_eyebrow",
+    "label": "Card B: eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Already a customer?"
+  },
+  {
+    "id": "card_b_title",
+    "name": "card_b_title",
+    "label": "Card B: title",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "The Client Service Center"
+  },
+  {
+    "id": "card_b_body",
+    "name": "card_b_body",
+    "label": "Card B: text",
+    "required": false,
+    "locked": false,
+    "allow_new_line": true,
+    "type": "text",
+    "display_width": null,
+    "default": "A person answers. Monday to Friday, 7 to 5."
+  },
+  {
+    "id": "card_b_links",
+    "name": "card_b_links",
+    "label": "Card B: quick links",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 0,
+      "max": 6,
+      "sorting_label_field": "card_b_link_label",
+      "default": 2
+    },
+    "children": [
+      {
+        "id": "card_b_link_label",
+        "name": "card_b_link_label",
+        "label": "Link text",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "card_b_link_url",
+        "name": "card_b_link_url",
+        "label": "Link",
+        "required": false,
+        "locked": false,
+        "supported_types": [
+          "EXTERNAL",
+          "CONTENT",
+          "FILE",
+          "EMAIL_ADDRESS",
+          "BLOG"
+        ],
+        "show_advanced_rel_options": false,
+        "type": "link",
+        "display_width": null,
+        "default": {
+          "url": {
+            "href": "",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "card_b_link_label": "Request support",
+        "card_b_link_url": {
+          "url": {
+            "href": "/support#request",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "card_b_link_label": "Order supplies",
+        "card_b_link_url": {
+          "url": {
+            "href": "/support#supplies",
+            "type": "EXTERNAL",
+            "content_id": null
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "badge_value",
+    "name": "badge_value",
+    "label": "Split: badge figure",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "93.4"
+  },
+  {
+    "id": "badge_label",
+    "name": "badge_label",
+    "label": "Split: badge caption",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Net Promoter Score, independently audited"
+  },
+  {
+    "id": "ribbon",
+    "name": "ribbon",
+    "label": "Split: proof ribbon under the hero",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 0,
+      "max": 6,
+      "sorting_label_field": "ribbon_text",
+      "default": 3
+    },
+    "children": [
+      {
+        "id": "ribbon_text",
+        "name": "ribbon_text",
+        "label": "Text",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "ribbon_text": "SOC 2 certified"
+      },
+      {
+        "ribbon_text": "NPS 93.4, audited by CEO Juice. World Class since 2019"
+      },
+      {
+        "ribbon_text": "Mitel Gold, seven consecutive years"
+      }
+    ]
+  },
+  {
+    "id": "stats",
+    "name": "stats",
+    "label": "Proof strip figures (split and layered)",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 0,
+      "max": 6,
+      "sorting_label_field": "stat_caption",
+      "default": 4
+    },
+    "children": [
+      {
+        "id": "stat_figure",
+        "name": "stat_figure",
+        "label": "Figure",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "stat_caption",
+        "name": "stat_caption",
+        "label": "Caption",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "stat_figure": "1914",
+        "stat_caption": "Serving Indiana since"
+      },
+      {
+        "stat_figure": "93.4",
+        "stat_caption": "Net Promoter Score, audited"
+      },
+      {
+        "stat_figure": "SOC 2",
+        "stat_caption": "Certified service organization"
+      },
+      {
+        "stat_figure": "4,000+",
+        "stat_caption": "Phone systems deployed since 1983"
+      }
+    ]
+  }
+]

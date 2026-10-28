@@ -1,0 +1,44 @@
+/* VAF Detail: text with an optional image, check list, or lead form. Tokens come from the theme sheet. */
+.vaf-detail{--vd-surface:var(--bg-alt);--vd-line:color-mix(in srgb,var(--accent-ink) 16%,transparent);--vd-shadow:0 1px 2px rgba(15,30,51,.05),0 18px 44px -18px rgba(15,30,51,.22)}
+.vaf-detail.q-bg-alt{--vd-surface:#fff}
+.vd{display:grid;gap:72px;align-items:center}
+.vd--split{grid-template-columns:minmax(0,5fr) minmax(0,7fr);align-items:start;gap:80px}
+.vd--list{grid-template-columns:minmax(0,6fr) minmax(0,5fr);align-items:start}
+.vd--media{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr)}
+.vd--form{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);align-items:start}
+.vd--flip.vd--media .vd__text{order:2}
+.vd .q-h2{font-size:clamp(30px,3.3vw,46px);line-height:1.1;margin-top:16px;max-width:18ch}
+.vd--split .q-h2,.vd--list .q-h2{max-width:20ch}
+.vd__copy{margin-top:22px;font-size:18px;line-height:1.7;color:var(--fg-muted);max-width:62ch}
+.vd__copy p{margin:0 0 1em}.vd__copy p:last-child{margin-bottom:0}
+.vd__copy a{color:var(--accent-ink);text-decoration:underline;text-underline-offset:3px}
+.vd__copy--lead{margin-top:0;font-size:19px;line-height:1.75;color:var(--fg);max-width:68ch}
+.vd--split .vd__side{padding-top:6px}
+.vd__list{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:16px}
+.vd__list li{position:relative;padding-left:38px;font-size:16.5px;line-height:1.6;color:var(--fg)}
+.vd__list li::before{content:"";position:absolute;left:0;top:.1em;width:24px;height:24px;border-radius:50%;background:color-mix(in srgb,var(--accent-ink) 14%,#fff)}
+.vd__list li::after{content:"";position:absolute;left:6px;top:calc(.1em + 6px);width:12px;height:12px;background:var(--accent-ink);-webkit-mask:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 6.5l2.5 2.5L10 3.5' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 6.5l2.5 2.5L10 3.5' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat}
+.vd__card{background:var(--vd-surface);border:1px solid var(--vd-line);border-radius:var(--radius);padding:36px 34px;box-shadow:var(--vd-shadow)}
+.vd__card .vd__list{margin-top:0;gap:20px}
+.vd__formh{font-size:22px;line-height:1.25;font-weight:700;margin:0 0 20px;color:var(--fg)}
+.vd__formcard .hs-form-field{margin-bottom:6px}
+.vd__formcard fieldset{max-width:none!important}
+.vd__formcard input[type=text],.vd__formcard input[type=email],.vd__formcard input[type=tel],.vd__formcard select,.vd__formcard textarea{min-height:44px}
+.vd__media{position:relative;margin:0;isolation:isolate}
+.vd__media::before{content:"";position:absolute;z-index:-1;inset:26px -22px -22px 26px;border-radius:30px;background:color-mix(in srgb,var(--accent-ink) 10%,transparent)}
+.vd--flip .vd__media::before{inset:26px 26px -22px -22px}
+.vd__media img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:24px;box-shadow:0 2px 6px rgba(15,30,51,.08),0 34px 64px -26px rgba(15,30,51,.45)}
+@media(max-width:1024px){
+  .vd,.vd--split,.vd--list,.vd--media,.vd--form{grid-template-columns:1fr;gap:40px}
+  .vd--flip.vd--media .vd__text{order:0}
+  .vd .q-h2,.vd--split .q-h2,.vd--list .q-h2{max-width:24ch}
+  .vd--split{gap:24px}
+}
+@media(max-width:767px){
+  .vd__copy,.vd__copy--lead{font-size:17px}
+  .vd__card{padding:26px 22px}
+  .vd__list li{font-size:16px}
+  .vd__media::before,.vd--flip .vd__media::before{inset:14px -10px -12px 14px}
+  .vd--flip .vd__media::before{inset:14px 14px -12px -10px}
+  .vd__media img{border-radius:18px}
+}
