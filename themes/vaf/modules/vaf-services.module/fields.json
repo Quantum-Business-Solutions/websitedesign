@@ -1,0 +1,219 @@
+[
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Everything an office runs on, from one partner"
+  },
+  {
+    "id": "intro",
+    "name": "intro",
+    "label": "Intro",
+    "required": false,
+    "locked": false,
+    "allow_new_line": true,
+    "type": "text",
+    "display_width": null,
+    "default": "Most providers sell one of these. VAF sells and services all of them, and answers the phone for all of them at one number."
+  },
+  {
+    "id": "items",
+    "name": "items",
+    "label": "Services",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 1,
+      "max": 24,
+      "sorting_label_field": "svc_title",
+      "default": 3
+    },
+    "children": [
+      {
+        "id": "svc_title",
+        "name": "svc_title",
+        "label": "Title",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "svc_copy",
+        "name": "svc_copy",
+        "label": "Description",
+        "required": false,
+        "locked": false,
+        "allow_new_line": true,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "svc_link",
+        "name": "svc_link",
+        "label": "Link",
+        "required": false,
+        "locked": false,
+        "supported_types": [
+          "EXTERNAL",
+          "CONTENT",
+          "FILE",
+          "EMAIL_ADDRESS",
+          "BLOG"
+        ],
+        "show_advanced_rel_options": false,
+        "type": "link",
+        "display_width": null,
+        "default": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": ""
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "svc_title": "Managed IT services",
+        "svc_copy": "vCIO guidance, 24/7 monitoring, security, backup and cloud, delivered as one proactive partnership.",
+        "svc_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": ""
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "svc_title": "Business phone systems",
+        "svc_copy": "Cloud, premise and hybrid voice with local engineers behind every system.",
+        "svc_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": ""
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "svc_title": "Copiers and printers",
+        "svc_copy": "Canon, Ricoh, Kyocera and HP, serviced by certified local technicians.",
+        "svc_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": ""
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "link_label",
+    "name": "link_label",
+    "label": "Link label",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Learn more"
+  },
+  {
+    "id": "markers",
+    "name": "markers",
+    "label": "Row marker",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [
+        "none",
+        "None"
+      ],
+      [
+        "numbers",
+        "Numbers (only for sequential content)"
+      ]
+    ],
+    "multiple": false,
+    "reordering_enabled": true,
+    "preset": null,
+    "type": "choice",
+    "display_width": null,
+    "default": "none"
+  },
+  {
+    "id": "anchor",
+    "name": "anchor",
+    "label": "Section anchor (optional)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "help_text": "Used as the section id so links like /page#anchor jump here. Letters, numbers and hyphens only.",
+    "type": "text",
+    "display_width": null,
+    "default": ""
+  },
+  {
+    "id": "alt_bg",
+    "name": "alt_bg",
+    "label": "Alternate (tinted) background",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": false
+  },
+  {
+    "id": "padding",
+    "name": "padding",
+    "label": "Section padding",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [
+        "normal",
+        "Normal"
+      ],
+      [
+        "none",
+        "None"
+      ],
+      [
+        "large",
+        "Large"
+      ]
+    ],
+    "multiple": false,
+    "reordering_enabled": true,
+    "preset": null,
+    "type": "choice",
+    "display_width": null,
+    "default": "normal"
+  }
+]

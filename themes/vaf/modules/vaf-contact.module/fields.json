@@ -1,0 +1,156 @@
+[
+  {
+    "id": "anchor",
+    "name": "anchor",
+    "label": "Anchor id (optional, for #links)",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": ""
+  },
+  {
+    "id": "alt_bg",
+    "name": "alt_bg",
+    "label": "Alternate background",
+    "required": false,
+    "locked": false,
+    "type": "boolean",
+    "display": "toggle",
+    "default": false
+  },
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Speak with a solutions expert"
+  },
+  {
+    "id": "copy",
+    "name": "copy",
+    "label": "Intro",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Tell us what you run and what is not working."
+  },
+  {
+    "id": "phone_label",
+    "name": "phone_label",
+    "label": "Call button label",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Call (317) 634-2913"
+  },
+  {
+    "id": "phone_link",
+    "name": "phone_link",
+    "label": "Call button link",
+    "required": false,
+    "locked": false,
+    "type": "link",
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "EMAIL_ADDRESS",
+      "BLOG"
+    ],
+    "default": {
+      "url": {
+        "content_id": null,
+        "type": "EXTERNAL",
+        "href": "tel:3176342913"
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  },
+  {
+    "id": "email",
+    "name": "email",
+    "label": "Email address",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "clientsuccess@vanausdall.com"
+  },
+  {
+    "id": "topic_label",
+    "name": "topic_label",
+    "label": "Topic selector label",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "What would you like to look at?"
+  },
+  {
+    "id": "topic_options",
+    "name": "topic_options",
+    "label": "Topics",
+    "required": false,
+    "locked": false,
+    "type": "group",
+    "occurrence": {
+      "min": 0,
+      "max": 12,
+      "default": 1
+    },
+    "children": [
+      {
+        "id": "topic_text",
+        "name": "topic_text",
+        "label": "Topic",
+        "required": false,
+        "locked": false,
+        "type": "text",
+        "default": "Managed IT and security"
+      }
+    ],
+    "default": [
+      {
+        "topic_text": "Managed IT and security"
+      }
+    ]
+  },
+  {
+    "id": "form",
+    "name": "form",
+    "label": "Form",
+    "required": false,
+    "locked": false,
+    "type": "form",
+    "embed_versions": [
+      "v2",
+      "v4"
+    ],
+    "default": {
+      "form_id": "e84ef7ce-04f2-4fef-b539-4351bde13b48",
+      "portal_id": "50498425",
+      "form_type": "HUBSPOT",
+      "response_type": "inline",
+      "message": "Thank you. A person from the Indianapolis office will reply to set a time."
+    }
+  },
+  {
+    "id": "submit_label",
+    "name": "submit_label",
+    "label": "Submit button text (overrides the form's own label when set)",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": ""
+  },
+  {
+    "id": "note",
+    "name": "note",
+    "label": "Note under the form",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Or call (317) 634-2913, Monday through Friday, 7:00am to 5:00pm."
+  }
+]

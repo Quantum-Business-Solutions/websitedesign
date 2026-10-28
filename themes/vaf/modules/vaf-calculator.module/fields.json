@@ -1,0 +1,380 @@
+[
+  {
+    "id": "anchor",
+    "name": "anchor",
+    "label": "Anchor id (optional, for #links)",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": ""
+  },
+  {
+    "id": "alt_bg",
+    "name": "alt_bg",
+    "label": "Alternate background",
+    "required": false,
+    "locked": false,
+    "type": "boolean",
+    "display": "toggle",
+    "default": false
+  },
+  {
+    "id": "eyebrow",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Estimate"
+  },
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Your print spend, estimated"
+  },
+  {
+    "id": "intro",
+    "name": "intro",
+    "label": "Intro",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Devices, mono pages and color pages a month. That is all it needs."
+  },
+  {
+    "id": "devices_label",
+    "name": "devices_label",
+    "label": "Devices slider label",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Devices (printers and copiers)"
+  },
+  {
+    "id": "devices_default",
+    "name": "devices_default",
+    "label": "Devices: starting value",
+    "required": false,
+    "locked": false,
+    "type": "number",
+    "display": "text",
+    "default": 8,
+    "min": 1,
+    "max": 500,
+    "step": 1
+  },
+  {
+    "id": "devices_max",
+    "name": "devices_max",
+    "label": "Devices: maximum",
+    "required": false,
+    "locked": false,
+    "type": "number",
+    "display": "text",
+    "default": 60,
+    "min": 1,
+    "max": 500,
+    "step": 1
+  },
+  {
+    "id": "mono_label",
+    "name": "mono_label",
+    "label": "Mono slider label",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Mono pages a month"
+  },
+  {
+    "id": "mono_default",
+    "name": "mono_default",
+    "label": "Mono pages: starting value",
+    "required": false,
+    "locked": false,
+    "type": "number",
+    "display": "text",
+    "default": 25000,
+    "min": 0,
+    "max": 5000000,
+    "step": 1
+  },
+  {
+    "id": "mono_max",
+    "name": "mono_max",
+    "label": "Mono pages: maximum",
+    "required": false,
+    "locked": false,
+    "type": "number",
+    "display": "text",
+    "default": 200000,
+    "min": 1000,
+    "max": 5000000,
+    "step": 1
+  },
+  {
+    "id": "mono_step",
+    "name": "mono_step",
+    "label": "Mono pages: step",
+    "required": false,
+    "locked": false,
+    "type": "number",
+    "display": "text",
+    "default": 500,
+    "min": 1,
+    "max": 100000,
+    "step": 1
+  },
+  {
+    "id": "color_label",
+    "name": "color_label",
+    "label": "Color slider label",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Color pages a month"
+  },
+  {
+    "id": "color_default",
+    "name": "color_default",
+    "label": "Color pages: starting value",
+    "required": false,
+    "locked": false,
+    "type": "number",
+    "display": "text",
+    "default": 6000,
+    "min": 0,
+    "max": 5000000,
+    "step": 1
+  },
+  {
+    "id": "color_max",
+    "name": "color_max",
+    "label": "Color pages: maximum",
+    "required": false,
+    "locked": false,
+    "type": "number",
+    "display": "text",
+    "default": 60000,
+    "min": 1000,
+    "max": 5000000,
+    "step": 1
+  },
+  {
+    "id": "color_step",
+    "name": "color_step",
+    "label": "Color pages: step",
+    "required": false,
+    "locked": false,
+    "type": "number",
+    "display": "text",
+    "default": 250,
+    "min": 1,
+    "max": 100000,
+    "step": 1
+  },
+  {
+    "id": "mono_cpp",
+    "name": "mono_cpp",
+    "label": "Rate: cost per mono page (USD)",
+    "required": false,
+    "locked": false,
+    "type": "number",
+    "display": "text",
+    "default": 0.018,
+    "min": 0,
+    "max": 5,
+    "step": 0.001
+  },
+  {
+    "id": "color_cpp",
+    "name": "color_cpp",
+    "label": "Rate: cost per color page (USD)",
+    "required": false,
+    "locked": false,
+    "type": "number",
+    "display": "text",
+    "default": 0.09,
+    "min": 0,
+    "max": 5,
+    "step": 0.001
+  },
+  {
+    "id": "minutes_per_device_week",
+    "name": "minutes_per_device_week",
+    "label": "Rate: staff minutes per device per week",
+    "required": false,
+    "locked": false,
+    "type": "number",
+    "display": "text",
+    "default": 25,
+    "min": 0,
+    "max": 600,
+    "step": 1
+  },
+  {
+    "id": "hourly",
+    "name": "hourly",
+    "label": "Rate: staff cost per hour (USD)",
+    "required": false,
+    "locked": false,
+    "type": "number",
+    "display": "text",
+    "default": 28,
+    "min": 0,
+    "max": 500,
+    "step": 1
+  },
+  {
+    "id": "saving_pct",
+    "name": "saving_pct",
+    "label": "Rate: managed print saving (percent)",
+    "required": false,
+    "locked": false,
+    "type": "number",
+    "display": "text",
+    "default": 30,
+    "min": 0,
+    "max": 100,
+    "step": 1
+  },
+  {
+    "id": "orders_per_device",
+    "name": "orders_per_device",
+    "label": "Rate: toner orders per device per year",
+    "required": false,
+    "locked": false,
+    "type": "number",
+    "display": "text",
+    "default": 6,
+    "min": 0,
+    "max": 60,
+    "step": 1
+  },
+  {
+    "id": "result_label",
+    "name": "result_label",
+    "label": "Main result label",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Estimated print spend today"
+  },
+  {
+    "id": "result_suffix",
+    "name": "result_suffix",
+    "label": "Main result unit",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "/ yr"
+  },
+  {
+    "id": "result_desc",
+    "name": "result_desc",
+    "label": "Main result description",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Toner and service per page, plus the staff time spent ordering supplies and chasing repairs."
+  },
+  {
+    "id": "split_pages_label",
+    "name": "split_pages_label",
+    "label": "Breakdown: page cost label",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Toner and service"
+  },
+  {
+    "id": "split_labor_label",
+    "name": "split_labor_label",
+    "label": "Breakdown: staff time label",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Staff time"
+  },
+  {
+    "id": "cpp_label",
+    "name": "cpp_label",
+    "label": "Tile: per page label",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Per page, blended"
+  },
+  {
+    "id": "hours_label",
+    "name": "hours_label",
+    "label": "Tile: hours label",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Staff hours a year on print"
+  },
+  {
+    "id": "saving_label",
+    "name": "saving_label",
+    "label": "Tile: saving label",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Potential saving at up to 30%"
+  },
+  {
+    "id": "orders_label",
+    "name": "orders_label",
+    "label": "Tile: orders label",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Toner orders a year, today"
+  },
+  {
+    "id": "note",
+    "name": "note",
+    "label": "Disclaimer",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Estimates only, using typical industry rates for orientation. Nothing here is a quote."
+  },
+  {
+    "id": "cta_label",
+    "name": "cta_label",
+    "label": "Button label",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Get the real number: request the free print assessment"
+  },
+  {
+    "id": "cta_link",
+    "name": "cta_link",
+    "label": "Button link",
+    "required": false,
+    "locked": false,
+    "type": "link",
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "EMAIL_ADDRESS",
+      "BLOG"
+    ],
+    "default": {
+      "url": {
+        "content_id": null,
+        "type": "EXTERNAL",
+        "href": "/print-assessment"
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  }
+]

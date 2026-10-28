@@ -1,0 +1,34 @@
+/* VAF FAQ: accessible details/summary accordion. Reference sheet supplies tokens, q-section, q-container, q-h2. */
+.vf-faq__wrap{max-width:860px}
+.vf-faq__heading{text-align:center;margin:0 0 36px}
+.vf-faq__list{border-bottom:1px solid var(--border)}
+.vf-faq__item{border-top:1px solid var(--border)}
+.vf-faq__sum{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:44px;padding:20px 4px;font-family:var(--q-serif);font-size:20px;line-height:1.35;font-weight:500;color:var(--fg);border-radius:6px;transition:color .2s}
+.vf-faq__sum::-webkit-details-marker{display:none}
+.vf-faq__sum:hover .vf-faq__q{color:var(--accent-ink)}
+.vf-faq__sum:focus-visible{outline:2px solid var(--q-gold);outline-offset:2px}
+.vf-faq__q{flex:1 1 auto;min-width:0}
+.vf-faq__ico{position:relative;flex:0 0 auto;width:32px;height:32px;border-radius:50%;border:1px solid var(--border);transition:background .2s,border-color .2s,transform .25s}
+.vf-faq__ico::before,.vf-faq__ico::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:2px;margin:-1px 0 0 -6px;background:var(--accent-ink);border-radius:1px;transition:transform .25s}
+.vf-faq__ico::after{transform:rotate(90deg)}
+.vf-faq__sum:hover .vf-faq__ico{border-color:var(--q-gold)}
+.vf-faq__item[open] .vf-faq__ico{background:var(--q-gold);border-color:var(--q-gold)}
+.vf-faq__item[open] .vf-faq__ico::before,.vf-faq__item[open] .vf-faq__ico::after{background:var(--cta-fg)}
+.vf-faq__item[open] .vf-faq__ico::after{transform:rotate(0deg)}
+.vf-faq__a{padding:0 56px 24px 4px;font-size:16px;line-height:1.7;color:var(--fg-muted);max-width:760px}
+.vf-faq__a>:first-child{margin-top:0}.vf-faq__a>:last-child{margin-bottom:0}
+.vf-faq__a p{margin:0 0 12px}
+.vf-faq__a a{color:var(--accent-ink);text-decoration:underline;text-underline-offset:3px}
+@media(prefers-reduced-motion:no-preference){
+  @supports (interpolate-size:allow-keywords){
+    .vf-faq__item{interpolate-size:allow-keywords}
+    .vf-faq__item::details-content{block-size:0;overflow:hidden;opacity:0;transition:block-size .3s ease,opacity .3s ease,content-visibility .3s allow-discrete}
+    .vf-faq__item[open]::details-content{block-size:auto;opacity:1}
+  }
+}
+@media(prefers-reduced-motion:reduce){.vf-faq__sum,.vf-faq__ico,.vf-faq__ico::before,.vf-faq__ico::after{transition:none}}
+@media(max-width:767px){
+  .vf-faq__heading{margin-bottom:24px}
+  .vf-faq__sum{font-size:18px;padding:16px 0}
+  .vf-faq__a{padding:0 0 20px}
+}

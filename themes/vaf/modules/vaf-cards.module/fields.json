@@ -1,0 +1,159 @@
+[
+  {
+    "id": "eyebrow",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Four pillars"
+  },
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Information, communication, print and process, from one partner"
+  },
+  {
+    "id": "items",
+    "name": "items",
+    "label": "Cards",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 1,
+      "max": 12,
+      "sorting_label_field": "card_title",
+      "default": 4
+    },
+    "children": [
+      {
+        "id": "card_title",
+        "name": "card_title",
+        "label": "Title",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "card_copy",
+        "name": "card_copy",
+        "label": "Copy",
+        "required": false,
+        "locked": false,
+        "allow_new_line": true,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "card_title": "Information",
+        "card_copy": "Managed IT, cybersecurity, cloud, backup and continuity from one team."
+      },
+      {
+        "card_title": "Communication",
+        "card_copy": "Business phone systems, unified communications and contact center."
+      },
+      {
+        "card_title": "Print",
+        "card_copy": "Copiers, printers, managed print and production print, serviced locally."
+      },
+      {
+        "card_title": "Process",
+        "card_copy": "Document management, conversion and business process consulting."
+      }
+    ]
+  },
+  {
+    "id": "markers",
+    "name": "markers",
+    "label": "Card marker",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [
+        "none",
+        "None"
+      ],
+      [
+        "numbers",
+        "Numbers (only for sequential content)"
+      ]
+    ],
+    "multiple": false,
+    "reordering_enabled": true,
+    "preset": null,
+    "type": "choice",
+    "display_width": null,
+    "default": "none"
+  },
+  {
+    "id": "anchor",
+    "name": "anchor",
+    "label": "Section anchor (optional)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "help_text": "Used as the section id so links like /page#anchor jump here. Letters, numbers and hyphens only.",
+    "type": "text",
+    "display_width": null,
+    "default": ""
+  },
+  {
+    "id": "alt_bg",
+    "name": "alt_bg",
+    "label": "Alternate (tinted) background",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": false
+  },
+  {
+    "id": "padding",
+    "name": "padding",
+    "label": "Section padding",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [
+        "normal",
+        "Normal"
+      ],
+      [
+        "none",
+        "None"
+      ],
+      [
+        "large",
+        "Large"
+      ]
+    ],
+    "multiple": false,
+    "reordering_enabled": true,
+    "preset": null,
+    "type": "choice",
+    "display_width": null,
+    "default": "normal"
+  }
+]

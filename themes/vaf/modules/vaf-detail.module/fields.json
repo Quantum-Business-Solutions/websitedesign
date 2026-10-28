@@ -1,0 +1,198 @@
+[
+  {
+    "id": "eyebrow",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "The specifics"
+  },
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "What you get, and what it rests on"
+  },
+  {
+    "id": "copy",
+    "name": "copy",
+    "label": "Copy",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "display_width": null,
+    "default": "<p>Everything below is on vanausdall.com today or in a certification we hold. Nothing on the list is an add-on.</p>"
+  },
+  {
+    "id": "bullets",
+    "name": "bullets",
+    "label": "Check list",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 0,
+      "max": 12,
+      "sorting_label_field": "bullet_text",
+      "default": 3
+    },
+    "children": [
+      {
+        "id": "bullet_text",
+        "name": "bullet_text",
+        "label": "Item",
+        "required": false,
+        "locked": false,
+        "allow_new_line": true,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "bullet_text": "One package: security, strategy and support bundled together for one predictable monthly cost"
+      },
+      {
+        "bullet_text": "Monthly managed clients come first, ahead of break-fix work"
+      },
+      {
+        "bullet_text": "24/7 security operations center with managed detection and response"
+      }
+    ]
+  },
+  {
+    "id": "image",
+    "name": "image",
+    "label": "Image (optional)",
+    "required": false,
+    "locked": false,
+    "responsive": true,
+    "resizable": true,
+    "show_loading": true,
+    "type": "image",
+    "display_width": null,
+    "default": {
+      "src": "",
+      "alt": "",
+      "loading": "lazy"
+    }
+  },
+  {
+    "id": "flip",
+    "name": "flip",
+    "label": "Image on the left (text on the right)",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": false
+  },
+  {
+    "id": "show_form",
+    "name": "show_form",
+    "label": "Show a lead form beside the text",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "help_text": "Replaces the image or check list column with the form below.",
+    "type": "boolean",
+    "display_width": null,
+    "default": false
+  },
+  {
+    "id": "form_heading",
+    "name": "form_heading",
+    "label": "Form heading",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": ""
+  },
+  {
+    "id": "form",
+    "name": "form",
+    "label": "Form",
+    "required": false,
+    "locked": false,
+    "embed_versions": [
+      "v2",
+      "v4"
+    ],
+    "type": "form",
+    "display_width": null,
+    "default": {
+      "form_id": "e84ef7ce-04f2-4fef-b539-4351bde13b48",
+      "portal_id": "50498425",
+      "form_type": "HUBSPOT",
+      "response_type": "inline",
+      "message": "Thank you. A person from the Indianapolis office will reply within one business day."
+    }
+  },
+  {
+    "id": "anchor",
+    "name": "anchor",
+    "label": "Section anchor (optional)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "help_text": "Used as the section id so links like /page#anchor jump here. Letters, numbers and hyphens only.",
+    "type": "text",
+    "display_width": null,
+    "default": ""
+  },
+  {
+    "id": "alt_bg",
+    "name": "alt_bg",
+    "label": "Alternate (tinted) background",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": false
+  },
+  {
+    "id": "padding",
+    "name": "padding",
+    "label": "Section padding",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [
+        "normal",
+        "Normal"
+      ],
+      [
+        "none",
+        "None"
+      ],
+      [
+        "large",
+        "Large"
+      ]
+    ],
+    "multiple": false,
+    "reordering_enabled": true,
+    "preset": null,
+    "type": "choice",
+    "display_width": null,
+    "default": "normal"
+  }
+]

@@ -1,0 +1,13 @@
+<section class="q-section{% if module.alt_bg %} q-bg-alt{% endif %} vf-lf"{% if module.anchor %} id="{{ module.anchor }}"{% endif %} data-vf-lf data-submit="{{ module.submit_label|escape_attr }}">
+  <div class="q-container vf-lf__grid">
+    <div class="vf-lf__copy">
+      <h2 class="q-h2">{{ module.heading }}</h2>
+      {% if module.copy %}<p class="q-lead">{{ module.copy }}</p>{% endif %}
+      {% if module.phone_text %}<p class="vf-lf__call">{{ module.phone_prefix }} <a href="{{ module.phone_link.url.href }}">{{ module.phone_text }}</a></p>{% endif %}
+    </div>
+    <div class="vf-form">
+      {% if module.form.form_id %}{% form form_to_use="{{ module.form.form_id }}", no_title=True, response_response_type="inline", response_message="{{ module.form.message }}" %}{% endif %}
+      {% if module.note %}<p class="vf-form__note">{{ module.note }}</p>{% endif %}
+    </div>
+  </div>
+</section>

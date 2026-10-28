@@ -1,0 +1,199 @@
+[
+  {
+    "id": "anchor",
+    "name": "anchor",
+    "label": "Anchor id (optional, for #links)",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": ""
+  },
+  {
+    "id": "alt_bg",
+    "name": "alt_bg",
+    "label": "Alternate background",
+    "required": false,
+    "locked": false,
+    "type": "boolean",
+    "display": "toggle",
+    "default": false
+  },
+  {
+    "id": "eyebrow",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Is this you?"
+  },
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Six questions from the Technology Strength Assessment"
+  },
+  {
+    "id": "intro",
+    "name": "intro",
+    "label": "Intro",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Check the ones you cannot answer yes to."
+  },
+  {
+    "id": "items",
+    "name": "items",
+    "label": "Questions",
+    "required": false,
+    "locked": false,
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 20,
+      "default": 1
+    },
+    "children": [
+      {
+        "id": "item_text",
+        "name": "item_text",
+        "label": "Question",
+        "required": false,
+        "locked": false,
+        "type": "text",
+        "default": "Do you have a written disaster recovery plan?"
+      }
+    ],
+    "default": [
+      {
+        "item_text": "Do you have a written disaster recovery plan?"
+      }
+    ]
+  },
+  {
+    "id": "score_noun",
+    "name": "score_noun",
+    "label": "Word after the count (3 of 10 ...)",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "checked"
+  },
+  {
+    "id": "msg_zero",
+    "name": "msg_zero",
+    "label": "Result message: nothing checked",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Check what is true today."
+  },
+  {
+    "id": "msg_low",
+    "name": "msg_low",
+    "label": "Result message: low band",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "A start."
+  },
+  {
+    "id": "msg_mid",
+    "name": "msg_mid",
+    "label": "Result message: middle band",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Most organizations land here."
+  },
+  {
+    "id": "msg_high",
+    "name": "msg_high",
+    "label": "Result message: high band",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Strong. The full assessment finds what is left."
+  },
+  {
+    "id": "band_mid",
+    "name": "band_mid",
+    "label": "Middle band starts at this many checks",
+    "required": false,
+    "locked": false,
+    "type": "number",
+    "display": "text",
+    "default": 4,
+    "min": 2,
+    "max": 20,
+    "step": 1
+  },
+  {
+    "id": "band_high",
+    "name": "band_high",
+    "label": "High band starts at this many checks",
+    "required": false,
+    "locked": false,
+    "type": "number",
+    "display": "text",
+    "default": 8,
+    "min": 2,
+    "max": 20,
+    "step": 1
+  },
+  {
+    "id": "reset_label",
+    "name": "reset_label",
+    "label": "Clear button label",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Clear answers"
+  },
+  {
+    "id": "cta_note",
+    "name": "cta_note",
+    "label": "Text above the button",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Ten to fifteen minutes. A person walks the score with you."
+  },
+  {
+    "id": "cta_label",
+    "name": "cta_label",
+    "label": "Button label",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Take the full assessment"
+  },
+  {
+    "id": "cta_link",
+    "name": "cta_link",
+    "label": "Button link",
+    "required": false,
+    "locked": false,
+    "type": "link",
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "EMAIL_ADDRESS",
+      "BLOG"
+    ],
+    "default": {
+      "url": {
+        "content_id": null,
+        "type": "EXTERNAL",
+        "href": "/contact"
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  }
+]

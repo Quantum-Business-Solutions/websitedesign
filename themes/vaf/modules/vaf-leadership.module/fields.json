@@ -1,0 +1,147 @@
+[
+  {
+    "id": "anchor",
+    "name": "anchor",
+    "label": "Anchor id (optional, for #links)",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": ""
+  },
+  {
+    "id": "alt_bg",
+    "name": "alt_bg",
+    "label": "Alternate background",
+    "required": false,
+    "locked": false,
+    "type": "boolean",
+    "display": "toggle",
+    "default": false
+  },
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Leadership"
+  },
+  {
+    "id": "intro",
+    "name": "intro",
+    "label": "Intro",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": ""
+  },
+  {
+    "id": "people",
+    "name": "people",
+    "label": "People",
+    "required": false,
+    "locked": false,
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 12,
+      "default": 1
+    },
+    "children": [
+      {
+        "id": "person_name",
+        "name": "person_name",
+        "label": "Name",
+        "required": false,
+        "locked": false,
+        "type": "text",
+        "default": "Eric von Grimmenstein"
+      },
+      {
+        "id": "person_role",
+        "name": "person_role",
+        "label": "Role",
+        "required": false,
+        "locked": false,
+        "type": "text",
+        "default": "President"
+      },
+      {
+        "id": "person_initials",
+        "name": "person_initials",
+        "label": "Initials (shown when there is no photo)",
+        "required": false,
+        "locked": false,
+        "type": "text",
+        "default": "EG"
+      },
+      {
+        "id": "person_photo",
+        "name": "person_photo",
+        "label": "Photo (optional)",
+        "required": false,
+        "locked": false,
+        "type": "image",
+        "responsive": true,
+        "resizable": true,
+        "show_loading": true,
+        "default": {
+          "src": "",
+          "alt": "",
+          "loading": "lazy"
+        }
+      }
+    ],
+    "default": [
+      {
+        "person_name": "Eric von Grimmenstein",
+        "person_role": "President",
+        "person_initials": "EG",
+        "person_photo": {
+          "src": "",
+          "alt": "",
+          "loading": "lazy"
+        }
+      }
+    ]
+  },
+  {
+    "id": "orgs_intro",
+    "name": "orgs_intro",
+    "label": "Community line",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": ""
+  },
+  {
+    "id": "orgs",
+    "name": "orgs",
+    "label": "Community and affiliations",
+    "required": false,
+    "locked": false,
+    "type": "group",
+    "occurrence": {
+      "min": 0,
+      "max": 16,
+      "default": 1
+    },
+    "children": [
+      {
+        "id": "org_name",
+        "name": "org_name",
+        "label": "Item",
+        "required": false,
+        "locked": false,
+        "type": "text",
+        "default": "Paid volunteer hours"
+      }
+    ],
+    "default": [
+      {
+        "org_name": "Paid volunteer hours"
+      }
+    ]
+  }
+]

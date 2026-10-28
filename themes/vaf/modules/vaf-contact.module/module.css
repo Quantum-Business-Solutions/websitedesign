@@ -1,0 +1,53 @@
+/* VAF contact: copy, call button and email on the left, the HubSpot form in a card on the right. */
+.vf-ct__grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}
+.vf-ct__copy{min-width:0}
+.vf-ct__copy .q-h2{margin:0}
+.vf-ct__copy .q-lead{margin:20px 0 0}
+.vf-ct__actions{margin-top:28px;display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.vf-ct__mail{display:inline-flex;align-items:center;min-height:44px;font-size:15px;color:var(--fg-muted);text-decoration:underline;text-underline-offset:3px}
+.vf-ct__mail:hover{color:var(--accent-ink)}
+.vf-ct__topic{margin:0 0 18px}
+.vf-ct__topic[hidden]{display:none}
+.vf-ct__topiclabel{display:block;font-size:13px;font-weight:500;color:var(--fg-muted);margin:0 0 6px}
+.vf-ct__topic select{display:block;width:100%;box-sizing:border-box;min-height:48px;padding:12px 14px;font-family:var(--q-sans);font-size:16px;color:var(--fg);background:var(--bg);border:1px solid var(--border);border-radius:8px}
+.vf-ct__topic select:focus{outline:none;border-color:var(--q-gold);box-shadow:0 0 0 3px color-mix(in srgb,var(--q-gold) 28%,transparent)}
+@media(max-width:1024px){.vf-ct__grid{grid-template-columns:1fr;gap:32px}}
+@media(max-width:767px){.vf-ct__actions .q-btn{width:100%;justify-content:center;box-sizing:border-box}}
+
+/* ---- HubSpot form skin (v2 .hs-form and v4 .hsfc-*), scoped to the module root ---- */
+.vf-ct .vf-form{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;min-width:0}
+.vf-ct .vf-form form,.vf-ct .vf-form .hs-form,.vf-ct .vf-form .hsfc-Form{margin:0;max-width:none;width:100%}
+.vf-ct .vf-form fieldset{max-width:none!important;border:0;margin:0;padding:0;min-width:0}
+.vf-ct .vf-form fieldset.form-columns-2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+.vf-ct .vf-form fieldset.form-columns-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0 16px}
+.vf-ct .vf-form fieldset .hs-form-field{float:none!important;width:auto!important;min-width:0}
+.vf-ct .vf-form fieldset .hs-form-field .input{margin-right:0!important}
+.vf-ct .vf-form .hs-form-field,.vf-ct .vf-form .hsfc-Row>*{margin-bottom:16px}
+.vf-ct .vf-form label,.vf-ct .vf-form .hsfc-FieldLabel{display:block;font-family:var(--q-sans);font-size:13px;font-weight:500;line-height:1.4;color:var(--fg-muted);margin:0 0 6px;float:none;width:auto}
+.vf-ct .vf-form .hs-form-required,.vf-ct .vf-form .hsfc-FieldLabel__RequiredIndicator{color:var(--accent-ink);margin-left:2px}
+.vf-ct .vf-form .hs-field-desc,.vf-ct .vf-form .hsfc-FieldDescription{font-size:13px;color:var(--fg-muted);margin:0 0 6px}
+.vf-ct .vf-form .hs-input,.vf-ct .vf-form input[type=text],.vf-ct .vf-form input[type=email],.vf-ct .vf-form input[type=tel],.vf-ct .vf-form input[type=number],.vf-ct .vf-form input[type=url],.vf-ct .vf-form select,.vf-ct .vf-form textarea,.vf-ct .vf-form .hsfc-TextInput,.vf-ct .vf-form .hsfc-DropdownInput,.vf-ct .vf-form .hsfc-TextareaInput{display:block;width:100%!important;box-sizing:border-box;min-height:48px;padding:12px 14px;font-family:var(--q-sans);font-size:16px;line-height:1.4;color:var(--fg);background:var(--bg);border:1px solid var(--border);border-radius:8px;box-shadow:none;transition:border-color .15s,box-shadow .15s}
+.vf-ct .vf-form textarea{min-height:110px;resize:vertical}
+.vf-ct .vf-form .hs-input:focus,.vf-ct .vf-form select:focus,.vf-ct .vf-form textarea:focus,.vf-ct .vf-form input:focus,.vf-ct .vf-form .hsfc-TextInput:focus,.vf-ct .vf-form .hsfc-DropdownInput:focus{outline:none;border-color:var(--q-gold);box-shadow:0 0 0 3px color-mix(in srgb,var(--q-gold) 28%,transparent)}
+.vf-ct .vf-form .hs-input.error,.vf-ct .vf-form .invalid.error,.vf-ct .vf-form [aria-invalid=true]{border-color:#b3261e}
+.vf-ct .vf-form input[type=checkbox],.vf-ct .vf-form input[type=radio]{width:20px!important;min-height:0;height:20px;margin:0 10px 0 0;accent-color:var(--q-gold);flex:0 0 auto}
+.vf-ct .vf-form .inputs-list{list-style:none;margin:0;padding:0}
+.vf-ct .vf-form .inputs-list label,.vf-ct .vf-form .hs-form-booleancheckbox-display{display:flex;align-items:flex-start;min-height:44px;font-size:15px;color:var(--fg)}
+.vf-ct .vf-form .hs-error-msgs{list-style:none;margin:6px 0 0;padding:0}
+.vf-ct .vf-form .hs-error-msg,.vf-ct .vf-form .hs-error-msgs label,.vf-ct .vf-form .hsfc-ErrorAlert{display:block;font-size:13px;line-height:1.4;font-weight:500;color:#b3261e;margin:0}
+.vf-ct .vf-form .hs-richtext,.vf-ct .vf-form .legal-consent-container,.vf-ct .vf-form .hs-richtext p{font-size:13px;line-height:1.5;color:var(--fg-muted)}
+.vf-ct .vf-form .hs-richtext a,.vf-ct .vf-form .legal-consent-container a{color:var(--accent-ink);text-decoration:underline}
+.vf-ct .vf-form .hs_submit,.vf-ct .vf-form .hsfc-NavigationRow{margin-top:8px}
+.vf-ct .vf-form .hs_submit .actions{margin:0;padding:0}
+.vf-ct .vf-form .hs-button,.vf-ct .vf-form input[type=submit],.vf-ct .vf-form .hsfc-Button{display:inline-flex;align-items:center;justify-content:center;width:100%;min-height:48px;padding:14px 28px;font-family:var(--q-sans);font-size:16px;font-weight:600;line-height:1.2;color:var(--cta-fg);background:var(--q-gold);border:0;border-radius:6px;cursor:pointer;transition:background-color .18s,transform .12s;-webkit-appearance:none;appearance:none}
+.vf-ct .vf-form .hs-button:hover,.vf-ct .vf-form input[type=submit]:hover,.vf-ct .vf-form .hsfc-Button:hover{background:var(--q-gold-bright);color:var(--cta-fg)}
+.vf-ct .vf-form .hs-button:active,.vf-ct .vf-form .hsfc-Button:active{transform:translateY(1px)}
+.vf-ct .vf-form .hs-button:focus-visible,.vf-ct .vf-form .hsfc-Button:focus-visible{outline:3px solid var(--fg);outline-offset:3px}
+.vf-ct .vf-form .submitted-message,.vf-ct .vf-form .hsfc-PostSubmit{font-size:18px;line-height:1.6;color:var(--fg);padding:8px 0}
+.vf-ct .vf-form .hs-form .hs-form-field>label.hs-form-field-label{margin-bottom:6px}
+.vf-ct .vf-form__note{font-size:13px;line-height:1.5;color:var(--fg-muted);margin:14px 0 0}
+@media(max-width:560px){
+  .vf-ct .vf-form{padding:22px 18px}
+  .vf-ct .vf-form fieldset.form-columns-2,.vf-ct .vf-form fieldset.form-columns-3{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){.vf-ct .vf-form .hs-input,.vf-ct .vf-form .hs-button{transition:none}}

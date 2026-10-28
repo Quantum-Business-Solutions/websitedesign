@@ -1,0 +1,16 @@
+<section class="q-section{% if module.alt_bg %} q-bg-alt{% endif %} vf-faq"{% if module.anchor %} id="{{ module.anchor }}"{% endif %}>
+  <div class="q-container vf-faq__wrap">
+    {% if module.heading %}<h2 class="q-h2 vf-faq__heading">{{ module.heading }}</h2>{% endif %}
+    <div class="vf-faq__list">
+      {% for it in module.items %}
+      <details class="vf-faq__item"{% if loop.first and module.open_first %} open{% endif %}>
+        <summary class="vf-faq__sum"><span class="vf-faq__q">{{ it.question }}</span><span class="vf-faq__ico" aria-hidden="true"></span></summary>
+        <div class="vf-faq__a">{{ it.answer }}</div>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+  {% if module.schema %}
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for it in module.items %}{"@type":"Question","name":"{{ it.question|striptags|escapejson }}","acceptedAnswer":{"@type":"Answer","text":"{{ it.answer|striptags|replace('&amp;','&')|replace('&nbsp;',' ')|escapejson }}"}}{% if not loop.last %},{% endif %}{% endfor %}]}</script>
+  {% endif %}
+</section>

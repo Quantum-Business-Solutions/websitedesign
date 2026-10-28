@@ -1,0 +1,89 @@
+[
+  {
+    "id": "anchor",
+    "name": "anchor",
+    "label": "Anchor id (optional, for #links)",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": ""
+  },
+  {
+    "id": "alt_bg",
+    "name": "alt_bg",
+    "label": "Alternate background",
+    "required": false,
+    "locked": false,
+    "type": "boolean",
+    "display": "toggle",
+    "default": false
+  },
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Questions we get on the first call"
+  },
+  {
+    "id": "items",
+    "name": "items",
+    "label": "Questions",
+    "required": false,
+    "locked": false,
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 20,
+      "default": 1
+    },
+    "children": [
+      {
+        "id": "question",
+        "name": "question",
+        "label": "Question",
+        "required": false,
+        "locked": false,
+        "type": "text",
+        "default": "Do you only work with large companies?"
+      },
+      {
+        "id": "answer",
+        "name": "answer",
+        "label": "Answer",
+        "required": false,
+        "locked": false,
+        "type": "richtext",
+        "default": "<p>No. From a single multifunction printer to a fleet of production copiers.</p>"
+      }
+    ],
+    "default": [
+      {
+        "question": "Do you only work with large companies?",
+        "answer": "<p>No. From a single multifunction printer to a fleet of production copiers.</p>"
+      }
+    ]
+  },
+  {
+    "id": "open_first",
+    "name": "open_first",
+    "label": "Open the first question by default",
+    "required": false,
+    "locked": false,
+    "type": "boolean",
+    "display": "toggle",
+    "default": true
+  },
+  {
+    "id": "schema",
+    "name": "schema",
+    "label": "Output FAQPage structured data (keep on; one FAQ module per page)",
+    "required": false,
+    "locked": false,
+    "type": "boolean",
+    "display": "toggle",
+    "default": true
+  }
+]

@@ -1,0 +1,244 @@
+[
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Industries we serve"
+  },
+  {
+    "id": "intro",
+    "name": "intro",
+    "label": "Intro",
+    "required": false,
+    "locked": false,
+    "allow_new_line": true,
+    "type": "text",
+    "display_width": null,
+    "default": "Each industry runs its office technology differently. These pages say what changes for each."
+  },
+  {
+    "id": "items",
+    "name": "items",
+    "label": "Cards",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 1,
+      "max": 100,
+      "sorting_label_field": "res_title",
+      "default": 3
+    },
+    "children": [
+      {
+        "id": "res_kind",
+        "name": "res_kind",
+        "label": "Category tag",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "res_title",
+        "name": "res_title",
+        "label": "Title",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "res_copy",
+        "name": "res_copy",
+        "label": "Teaser",
+        "required": false,
+        "locked": false,
+        "allow_new_line": true,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "res_cta",
+        "name": "res_cta",
+        "label": "Link label",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "Open the page"
+      },
+      {
+        "id": "res_link",
+        "name": "res_link",
+        "label": "Link",
+        "required": false,
+        "locked": false,
+        "supported_types": [
+          "EXTERNAL",
+          "CONTENT",
+          "FILE",
+          "EMAIL_ADDRESS",
+          "BLOG"
+        ],
+        "show_advanced_rel_options": false,
+        "type": "link",
+        "display_width": null,
+        "default": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": ""
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "id": "res_image",
+        "name": "res_image",
+        "label": "Image (optional)",
+        "required": false,
+        "locked": false,
+        "responsive": true,
+        "resizable": true,
+        "show_loading": true,
+        "type": "image",
+        "display_width": null,
+        "default": {
+          "src": "",
+          "alt": "",
+          "loading": "lazy"
+        }
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "res_kind": "Industry",
+        "res_title": "Education",
+        "res_copy": "Schools are tasked with developing the brightest minds, and many still run on technology from another era.",
+        "res_cta": "How we set it up",
+        "res_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/industries/education"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "res_image": {
+          "src": "",
+          "alt": "",
+          "loading": "lazy"
+        }
+      },
+      {
+        "res_kind": "Industry",
+        "res_title": "Healthcare",
+        "res_copy": "Reliable, protected systems for care teams who cannot afford downtime.",
+        "res_cta": "How we set it up",
+        "res_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/industries/healthcare"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "res_image": {
+          "src": "",
+          "alt": "",
+          "loading": "lazy"
+        }
+      },
+      {
+        "res_kind": "Case study",
+        "res_title": "Tippecanoe School Corporation",
+        "res_copy": "A fleet of 1,200 devices became 300, and the district saved $1M over the contract.",
+        "res_cta": "Read the case study",
+        "res_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/case-studies/tippecanoe-school-corporation"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "res_image": {
+          "src": "",
+          "alt": "",
+          "loading": "lazy"
+        }
+      }
+    ]
+  },
+  {
+    "id": "anchor",
+    "name": "anchor",
+    "label": "Section anchor (optional)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "help_text": "Used as the section id so links like /page#anchor jump here. Letters, numbers and hyphens only.",
+    "type": "text",
+    "display_width": null,
+    "default": ""
+  },
+  {
+    "id": "alt_bg",
+    "name": "alt_bg",
+    "label": "Alternate (tinted) background",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": false
+  },
+  {
+    "id": "padding",
+    "name": "padding",
+    "label": "Section padding",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [
+        "normal",
+        "Normal"
+      ],
+      [
+        "none",
+        "None"
+      ],
+      [
+        "large",
+        "Large"
+      ]
+    ],
+    "multiple": false,
+    "reordering_enabled": true,
+    "preset": null,
+    "type": "choice",
+    "display_width": null,
+    "default": "normal"
+  }
+]

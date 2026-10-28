@@ -1,0 +1,53 @@
+<section class="q-section{% if module.alt_bg %} q-bg-alt{% endif %} vf-calc"{% if module.anchor %} id="{{ module.anchor }}"{% endif %} data-vf-calc data-mono="{{ module.mono_cpp }}" data-color="{{ module.color_cpp }}" data-minutes="{{ module.minutes_per_device_week }}" data-hourly="{{ module.hourly }}" data-saving="{{ module.saving_pct }}" data-orders="{{ module.orders_per_device }}">
+  <div class="q-container">
+    <header class="pv-center vf-calc__head">
+      {% if module.eyebrow %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      <h2 class="q-h2 vf-calc__h">{{ module.heading }}</h2>
+      {% if module.intro %}<p class="q-lead vf-calc__intro">{{ module.intro }}</p>{% endif %}
+    </header>
+    <div class="vf-calc__grid">
+      <div class="vf-calc__in" role="group" aria-label="{{ module.heading }}">
+        <div class="vf-calc__ctl">
+          <span class="vf-calc__lab">{{ module.devices_label }}</span>
+          <div class="vf-calc__row">
+            <input class="vf-calc__rng" type="range" min="1" max="{{ module.devices_max }}" step="1" value="{{ module.devices_default }}" data-k="d" aria-label="{{ module.devices_label }}">
+            <input class="vf-calc__num" type="number" inputmode="numeric" min="1" max="{{ module.devices_max }}" step="1" value="{{ module.devices_default }}" data-k="d" aria-label="{{ module.devices_label }} (exact value)">
+          </div>
+        </div>
+        <div class="vf-calc__ctl">
+          <span class="vf-calc__lab">{{ module.mono_label }}</span>
+          <div class="vf-calc__row">
+            <input class="vf-calc__rng" type="range" min="0" max="{{ module.mono_max }}" step="{{ module.mono_step }}" value="{{ module.mono_default }}" data-k="m" aria-label="{{ module.mono_label }}">
+            <input class="vf-calc__num" type="number" inputmode="numeric" min="0" max="{{ module.mono_max }}" step="{{ module.mono_step }}" value="{{ module.mono_default }}" data-k="m" aria-label="{{ module.mono_label }} (exact value)">
+          </div>
+        </div>
+        <div class="vf-calc__ctl">
+          <span class="vf-calc__lab">{{ module.color_label }}</span>
+          <div class="vf-calc__row">
+            <input class="vf-calc__rng" type="range" min="0" max="{{ module.color_max }}" step="{{ module.color_step }}" value="{{ module.color_default }}" data-k="c" aria-label="{{ module.color_label }}">
+            <input class="vf-calc__num" type="number" inputmode="numeric" min="0" max="{{ module.color_max }}" step="{{ module.color_step }}" value="{{ module.color_default }}" data-k="c" aria-label="{{ module.color_label }} (exact value)">
+          </div>
+        </div>
+      </div>
+      <div class="vf-calc__out">
+        <div class="vf-calc__big">
+          <div class="vf-calc__k">{{ module.result_label }}</div>
+          <div class="vf-calc__v"><span data-out="total">$0</span> <small>{{ module.result_suffix }}</small></div>
+          <div class="vf-calc__split" aria-hidden="true"><i data-bar="pages"></i><i data-bar="labor"></i></div>
+          <ul class="vf-calc__legend"><li><span class="a"></span>{{ module.split_pages_label }} <b data-out="pagesyr">$0</b></li><li><span class="b"></span>{{ module.split_labor_label }} <b data-out="laboryr">$0</b></li></ul>
+          <p class="vf-calc__d">{{ module.result_desc }}</p>
+        </div>
+        <div class="vf-calc__tiles">
+          <div><div class="vf-calc__tk">{{ module.cpp_label }}</div><div class="vf-calc__tv" data-out="cpp">$0.000</div></div>
+          <div><div class="vf-calc__tk">{{ module.hours_label }}</div><div class="vf-calc__tv" data-out="hours">0</div></div>
+          <div><div class="vf-calc__tk">{{ module.saving_label }}</div><div class="vf-calc__tv" data-out="save">$0</div></div>
+          <div><div class="vf-calc__tk">{{ module.orders_label }}</div><div class="vf-calc__tv" data-out="orders">0</div></div>
+        </div>
+        <p class="vf-calc__note"><span class="vf-calc__i" aria-hidden="true">i</span><span>{{ module.note }}</span></p>
+        <a class="q-btn vf-calc__btn" href="{{ module.cta_link.url.href }}"{% if module.cta_link.open_in_new_tab %} target="_blank" rel="noopener"{% endif %}>{{ module.cta_label }}</a>
+        <p class="vf-calc__sr" role="status" aria-live="polite" data-live></p>
+        <noscript><p class="vf-calc__note">Turn on JavaScript to see a live estimate, or use the button above to request the real number.</p></noscript>
+      </div>
+    </div>
+  </div>
+</section>

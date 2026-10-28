@@ -1,0 +1,47 @@
+/* VAF lead form: copy on the left, the HubSpot form in a card on the right. */
+.vf-lf__grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.vf-lf__copy{min-width:0}
+.vf-lf__copy .q-h2{margin:0}
+.vf-lf__copy .q-lead{margin:16px 0 0}
+.vf-lf__call{margin:20px 0 0;font-size:15px;color:var(--fg-muted)}
+.vf-lf__call a{display:inline-flex;align-items:center;min-height:44px;font-weight:600;color:var(--fg);text-decoration:underline;text-decoration-color:var(--q-gold);text-underline-offset:4px}
+.vf-lf__call a:hover{color:var(--accent-ink)}
+@media(max-width:1024px){.vf-lf__grid{grid-template-columns:1fr;gap:32px}}
+
+/* ---- HubSpot form skin (v2 .hs-form and v4 .hsfc-*), scoped to the module root ---- */
+.vf-lf .vf-form{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;min-width:0}
+.vf-lf .vf-form form,.vf-lf .vf-form .hs-form,.vf-lf .vf-form .hsfc-Form{margin:0;max-width:none;width:100%}
+.vf-lf .vf-form fieldset{max-width:none!important;border:0;margin:0;padding:0;min-width:0}
+.vf-lf .vf-form fieldset.form-columns-2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+.vf-lf .vf-form fieldset.form-columns-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0 16px}
+.vf-lf .vf-form fieldset .hs-form-field{float:none!important;width:auto!important;min-width:0}
+.vf-lf .vf-form fieldset .hs-form-field .input{margin-right:0!important}
+.vf-lf .vf-form .hs-form-field,.vf-lf .vf-form .hsfc-Row>*{margin-bottom:16px}
+.vf-lf .vf-form label,.vf-lf .vf-form .hsfc-FieldLabel{display:block;font-family:var(--q-sans);font-size:13px;font-weight:500;line-height:1.4;color:var(--fg-muted);margin:0 0 6px;float:none;width:auto}
+.vf-lf .vf-form .hs-form-required,.vf-lf .vf-form .hsfc-FieldLabel__RequiredIndicator{color:var(--accent-ink);margin-left:2px}
+.vf-lf .vf-form .hs-field-desc,.vf-lf .vf-form .hsfc-FieldDescription{font-size:13px;color:var(--fg-muted);margin:0 0 6px}
+.vf-lf .vf-form .hs-input,.vf-lf .vf-form input[type=text],.vf-lf .vf-form input[type=email],.vf-lf .vf-form input[type=tel],.vf-lf .vf-form input[type=number],.vf-lf .vf-form input[type=url],.vf-lf .vf-form select,.vf-lf .vf-form textarea,.vf-lf .vf-form .hsfc-TextInput,.vf-lf .vf-form .hsfc-DropdownInput,.vf-lf .vf-form .hsfc-TextareaInput{display:block;width:100%!important;box-sizing:border-box;min-height:48px;padding:12px 14px;font-family:var(--q-sans);font-size:16px;line-height:1.4;color:var(--fg);background:var(--bg);border:1px solid var(--border);border-radius:8px;box-shadow:none;transition:border-color .15s,box-shadow .15s}
+.vf-lf .vf-form textarea{min-height:110px;resize:vertical}
+.vf-lf .vf-form .hs-input:focus,.vf-lf .vf-form select:focus,.vf-lf .vf-form textarea:focus,.vf-lf .vf-form input:focus,.vf-lf .vf-form .hsfc-TextInput:focus,.vf-lf .vf-form .hsfc-DropdownInput:focus{outline:none;border-color:var(--q-gold);box-shadow:0 0 0 3px color-mix(in srgb,var(--q-gold) 28%,transparent)}
+.vf-lf .vf-form .hs-input.error,.vf-lf .vf-form .invalid.error,.vf-lf .vf-form [aria-invalid=true]{border-color:#b3261e}
+.vf-lf .vf-form input[type=checkbox],.vf-lf .vf-form input[type=radio]{width:20px!important;min-height:0;height:20px;margin:0 10px 0 0;accent-color:var(--q-gold);flex:0 0 auto}
+.vf-lf .vf-form .inputs-list{list-style:none;margin:0;padding:0}
+.vf-lf .vf-form .inputs-list label,.vf-lf .vf-form .hs-form-booleancheckbox-display{display:flex;align-items:flex-start;min-height:44px;font-size:15px;color:var(--fg)}
+.vf-lf .vf-form .hs-error-msgs{list-style:none;margin:6px 0 0;padding:0}
+.vf-lf .vf-form .hs-error-msg,.vf-lf .vf-form .hs-error-msgs label,.vf-lf .vf-form .hsfc-ErrorAlert{display:block;font-size:13px;line-height:1.4;font-weight:500;color:#b3261e;margin:0}
+.vf-lf .vf-form .hs-richtext,.vf-lf .vf-form .legal-consent-container,.vf-lf .vf-form .hs-richtext p{font-size:13px;line-height:1.5;color:var(--fg-muted)}
+.vf-lf .vf-form .hs-richtext a,.vf-lf .vf-form .legal-consent-container a{color:var(--accent-ink);text-decoration:underline}
+.vf-lf .vf-form .hs_submit,.vf-lf .vf-form .hsfc-NavigationRow{margin-top:8px}
+.vf-lf .vf-form .hs_submit .actions{margin:0;padding:0}
+.vf-lf .vf-form .hs-button,.vf-lf .vf-form input[type=submit],.vf-lf .vf-form .hsfc-Button{display:inline-flex;align-items:center;justify-content:center;width:100%;min-height:48px;padding:14px 28px;font-family:var(--q-sans);font-size:16px;font-weight:600;line-height:1.2;color:var(--cta-fg);background:var(--q-gold);border:0;border-radius:6px;cursor:pointer;transition:background-color .18s,transform .12s;-webkit-appearance:none;appearance:none}
+.vf-lf .vf-form .hs-button:hover,.vf-lf .vf-form input[type=submit]:hover,.vf-lf .vf-form .hsfc-Button:hover{background:var(--q-gold-bright);color:var(--cta-fg)}
+.vf-lf .vf-form .hs-button:active,.vf-lf .vf-form .hsfc-Button:active{transform:translateY(1px)}
+.vf-lf .vf-form .hs-button:focus-visible,.vf-lf .vf-form .hsfc-Button:focus-visible{outline:3px solid var(--fg);outline-offset:3px}
+.vf-lf .vf-form .submitted-message,.vf-lf .vf-form .hsfc-PostSubmit{font-size:18px;line-height:1.6;color:var(--fg);padding:8px 0}
+.vf-lf .vf-form .hs-form .hs-form-field>label.hs-form-field-label{margin-bottom:6px}
+.vf-lf .vf-form__note{font-size:13px;line-height:1.5;color:var(--fg-muted);margin:14px 0 0}
+@media(max-width:560px){
+  .vf-lf .vf-form{padding:22px 18px}
+  .vf-lf .vf-form fieldset.form-columns-2,.vf-lf .vf-form fieldset.form-columns-3{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){.vf-lf .vf-form .hs-input,.vf-lf .vf-form .hs-button{transition:none}}

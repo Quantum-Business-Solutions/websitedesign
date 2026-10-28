@@ -1,0 +1,46 @@
+{% set steps = module.steps %}
+{% set n = steps|length %}
+<section class="q-section vaf-flow{% if module.alt_bg %} q-bg-alt{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %} data-vaf-flow>
+  <div class="q-container">
+    <div class="vaf-flow__head">
+      {% if module.eyebrow %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      {% if module.heading %}<h2 class="q-h2">{{ module.heading }}</h2>{% endif %}
+      {% if module.intro %}<p class="q-lead">{{ module.intro }}</p>{% endif %}
+    </div>
+    <div class="vaf-flow__chart" style="--n:{{ n }};--act:1">
+      <div class="vaf-flow__rail" aria-hidden="true">
+        <span class="vaf-flow__line"></span><span class="vaf-flow__fill"></span>
+        {% for s in steps %}{% if not loop.last %}<i class="vaf-flow__arr" style="--k:{{ loop.index }}"></i>{% endif %}{% endfor %}
+      </div>
+      <ol class="vaf-flow__steps" role="list">
+        {% for s in steps %}
+        <li class="vaf-flow__step{% if loop.first %} is-active{% endif %}" style="--c:{{ loop.index }}" role="listitem">
+          <span class="vaf-flow__node" aria-hidden="true"><b>{{ loop.index }}</b></span>
+          <button type="button" class="vaf-flow__btn" aria-expanded="{{ 'true' if loop.first else 'false' }}">
+            <span class="vaf-flow__label">{{ s.step_label }}</span>
+            {% if s.step_when %}<span class="vaf-flow__when">{{ s.step_when }}</span>{% endif %}
+            {% if s.step_summary %}<span class="vaf-flow__sum">{{ s.step_summary }}</span>{% endif %}
+          </button>
+          <div class="vaf-flow__detail" role="region" aria-label="{{ s.step_title|escape }}">
+            <span class="vaf-flow__ghost" aria-hidden="true">{{ loop.index }}</span>
+            <div class="vaf-flow__main">
+              {% if module.detail_eyebrow %}<p class="vaf-flow__k">{{ module.detail_eyebrow }}</p>{% endif %}
+              <h3>{{ s.step_title }}</h3>
+              <div class="vaf-flow__copy">{{ s.step_copy }}</div>
+            </div>
+            <div class="vaf-flow__recv">
+              {% if module.receive_label %}<p class="vaf-flow__k">{{ module.receive_label }}</p>{% endif %}
+              <div class="vaf-flow__list">{{ s.step_receive }}</div>
+            </div>
+            <div class="vaf-flow__nav">
+              <button type="button" class="vaf-flow__go" data-dir="-1" aria-label="{{ module.prev_label|escape }}"{% if loop.first %} disabled{% endif %}><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <span class="vaf-flow__count" aria-hidden="true">{{ loop.index }} / {{ n }}</span>
+              <button type="button" class="vaf-flow__go" data-dir="1" aria-label="{{ module.next_label|escape }}"{% if loop.last %} disabled{% endif %}><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            </div>
+          </div>
+        </li>
+        {% endfor %}
+      </ol>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,260 @@
+[
+  {
+    "id": "anchor",
+    "name": "anchor",
+    "label": "Anchor id (optional)",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": ""
+  },
+  {
+    "id": "home_label",
+    "name": "home_label",
+    "label": "Breadcrumb: home label",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Home"
+  },
+  {
+    "id": "crumb_label",
+    "name": "crumb_label",
+    "label": "Breadcrumb: section label",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Blog"
+  },
+  {
+    "id": "crumb_link",
+    "name": "crumb_link",
+    "label": "Breadcrumb: section link",
+    "required": false,
+    "locked": false,
+    "type": "link",
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "EMAIL_ADDRESS",
+      "BLOG"
+    ],
+    "default": {
+      "url": {
+        "content_id": null,
+        "type": "EXTERNAL",
+        "href": "/blog"
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  },
+  {
+    "id": "category",
+    "name": "category",
+    "label": "Category (eyebrow)",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Case study"
+  },
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Headline (h1)",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Article headline"
+  },
+  {
+    "id": "standfirst",
+    "name": "standfirst",
+    "label": "Standfirst",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": ""
+  },
+  {
+    "id": "author_name",
+    "name": "author_name",
+    "label": "Author",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "The VAF team"
+  },
+  {
+    "id": "author_role",
+    "name": "author_role",
+    "label": "Author role",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Indianapolis, Indiana"
+  },
+  {
+    "id": "author_initials",
+    "name": "author_initials",
+    "label": "Author initials",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "VT"
+  },
+  {
+    "id": "date_label",
+    "name": "date_label",
+    "label": "Date or type label",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Case study"
+  },
+  {
+    "id": "read_time",
+    "name": "read_time",
+    "label": "Read time",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "4 min read"
+  },
+  {
+    "id": "hero_image",
+    "name": "hero_image",
+    "label": "Hero image",
+    "required": false,
+    "locked": false,
+    "type": "image",
+    "responsive": true,
+    "resizable": true,
+    "show_loading": true,
+    "default": {
+      "src": "",
+      "alt": "",
+      "loading": "lazy"
+    }
+  },
+  {
+    "id": "toc_title",
+    "name": "toc_title",
+    "label": "Table of contents title",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "In this guide"
+  },
+  {
+    "id": "chapters",
+    "name": "chapters",
+    "label": "Chapters",
+    "required": false,
+    "locked": false,
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 20,
+      "default": 1
+    },
+    "children": [
+      {
+        "id": "chapter_anchor",
+        "name": "chapter_anchor",
+        "label": "Chapter anchor id",
+        "required": false,
+        "locked": false,
+        "type": "text",
+        "default": "chapter-1"
+      },
+      {
+        "id": "chapter_title",
+        "name": "chapter_title",
+        "label": "Chapter title",
+        "required": false,
+        "locked": false,
+        "type": "text",
+        "default": "Chapter"
+      },
+      {
+        "id": "chapter_html",
+        "name": "chapter_html",
+        "label": "Chapter text",
+        "required": false,
+        "locked": false,
+        "type": "richtext",
+        "default": "<p>Text.</p>"
+      }
+    ],
+    "default": [
+      {
+        "chapter_anchor": "chapter-1",
+        "chapter_title": "Chapter",
+        "chapter_html": "<p>Text.</p>"
+      }
+    ]
+  },
+  {
+    "id": "cta_heading",
+    "name": "cta_heading",
+    "label": "End call to action: heading (leave empty to hide)",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": ""
+  },
+  {
+    "id": "cta_copy",
+    "name": "cta_copy",
+    "label": "End call to action: text",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": ""
+  },
+  {
+    "id": "cta_label",
+    "name": "cta_label",
+    "label": "End call to action: button label",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": ""
+  },
+  {
+    "id": "cta_link",
+    "name": "cta_link",
+    "label": "End call to action: link",
+    "required": false,
+    "locked": false,
+    "type": "link",
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "EMAIL_ADDRESS",
+      "BLOG"
+    ],
+    "default": {
+      "url": {
+        "content_id": null,
+        "type": "EXTERNAL",
+        "href": "/contact"
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  },
+  {
+    "id": "schema",
+    "name": "schema",
+    "label": "Output Article structured data",
+    "required": false,
+    "locked": false,
+    "type": "boolean",
+    "display": "toggle",
+    "default": true
+  }
+]

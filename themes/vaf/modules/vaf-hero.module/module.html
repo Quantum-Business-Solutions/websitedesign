@@ -1,0 +1,96 @@
+{# VAF hero. layout: split (copy + image, interior pages), centered (copy + wide image), layered (dark hero with image or looping video, scrim, floating cards). #}
+{% macro vaf_href(l) %}{% if l and l.url and l.url.href %}href="{{ l.url.href }}"{% if l.open_in_new_tab %} target="_blank" rel="noopener{% if l.no_follow %} nofollow{% endif %}"{% elif l.no_follow %} rel="nofollow"{% endif %}{% else %}href="#"{% endif %}{% endmacro %}
+
+{% macro vaf_btns(m, center) %}{% if m.primary_label or m.secondary_label %}<div class="pv-btns{% if center %} vaf-center{% endif %}">{% if m.primary_label %}<a class="q-btn" {{ vaf_href(m.primary_link) }}>{{ m.primary_label }}</a>{% endif %}{% if m.secondary_label %}<a class="q-btn-ghost" {{ vaf_href(m.secondary_link) }}>{{ m.secondary_label }}<span class="vaf-rule" aria-hidden="true"></span></a>{% endif %}</div>{% endif %}{% endmacro %}
+
+{% macro vaf_stats(m) %}{% if m.stats and m.stats|length > 0 %}<div class="pv-hero-stats">{% for s in m.stats %}<div><b data-static>{{ s.stat_figure }}</b><span>{{ s.stat_caption }}</span></div>{% endfor %}</div>{% endif %}{% endmacro %}
+
+{% set layout = module.layout or 'centered' %}
+
+{% if layout == 'layered' %}
+  {% set has_video = false %}
+  {% if module.bg_video %}{% set has_video = true %}{% endif %}
+  {% set first_img = module.image %}
+  {% if module.poster.src %}{% set first_img = module.poster %}{% endif %}
+  <section class="q-section pv-lh vaf-hero vaf-hero--layered vaf-scrim-{{ module.scrim or 'standard' }}{% if has_video %} has-video{% endif %}{% if not module.card_a_title and not module.card_b_title %} vaf-hero--nocards{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %} style="--chrome-bg:{{ module.bg_color.color or '#0f1e33' }};--chrome-fg:#fff;--chrome-muted:rgba(255,255,255,.72);--chrome-border:rgba(255,255,255,.14)">
+    <div class="bg">
+      {% if first_img.src %}<img class="vaf-hero__poster" src="{{ first_img.src }}" alt="{{ first_img.alt|escape }}" width="{{ first_img.width or 2100 }}" height="{{ first_img.height or 900 }}" fetchpriority="high" loading="eager" decoding="async">{% endif %}
+      {% if has_video %}<video class="vaf-hero__video" muted loop playsinline preload="none" disablepictureinpicture aria-hidden="true" tabindex="-1" data-src="{{ module.bg_video }}"></video>{% endif %}
+    </div>
+    <canvas class="net" aria-hidden="true"></canvas><div class="glow" aria-hidden="true"></div>
+    <div class="q-container">
+      <div class="vaf-hero__copy">
+        {% if module.eyebrow %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+        <h1 class="q-h1">{{ module.heading }}</h1>
+        {% if module.subhead %}<div class="q-lead">{{ module.subhead }}</div>{% endif %}
+        {{ vaf_btns(module, false) }}
+        {% if module.note %}<div class="note">{{ module.note }}</div>{% endif %}
+        {{ vaf_stats(module) }}
+      </div>
+      {% if module.card_a_title or module.card_b_title %}
+      <div class="stack">
+        {% if module.card_a_title %}
+        <div class="fcard a pv-depth" data-depth="1">
+          {% if module.card_a_eyebrow %}<div class="k">{{ module.card_a_eyebrow }}</div>{% endif %}
+          <h2 class="t">{{ module.card_a_title }}</h2>
+          {% if module.card_a_body %}<p>{{ module.card_a_body }}</p>{% endif %}
+          {% if module.card_a_items and module.card_a_items|length > 0 %}<ul>{% for it in module.card_a_items %}<li>{{ it.card_a_item_text }}</li>{% endfor %}</ul>{% endif %}
+          {% if module.card_a_label %}<a class="go" {{ vaf_href(module.card_a_link) }}>{{ module.card_a_label }}</a>{% endif %}
+        </div>
+        {% endif %}
+        {% if module.card_b_title %}
+        <div class="fcard b pv-depth" data-depth="2">
+          {% if module.card_b_eyebrow %}<div class="k">{{ module.card_b_eyebrow }}</div>{% endif %}
+          <h2 class="t">{{ module.card_b_title }}</h2>
+          {% if module.card_b_body %}<p>{{ module.card_b_body }}</p>{% endif %}
+          {% if module.card_b_links and module.card_b_links|length > 0 %}<div class="links">{% for l in module.card_b_links %}<a {{ vaf_href(l.card_b_link_url) }}>{{ l.card_b_link_label }}</a>{% endfor %}</div>{% endif %}
+        </div>
+        {% endif %}
+      </div>
+      {% endif %}
+    </div>
+    {% if has_video %}
+    <button type="button" class="vaf-hero__toggle" hidden data-pause-label="{{ module.pause_label|escape }}" data-play-label="{{ module.play_label|escape }}" aria-label="{{ module.pause_label|escape }}">
+      <svg class="i-pause" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z" fill="currentColor"/></svg>
+      <svg class="i-play" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>
+    </button>
+    {% endif %}
+  </section>
+
+{% elif layout == 'split' %}
+  <section class="q-section vaf-hero vaf-hero--split"{% if module.anchor %} id="{{ module.anchor }}"{% endif %}>
+    <div class="q-container">
+      <div class="pv-hero-grid">
+        <div>
+          {% if module.eyebrow %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+          <h1 class="q-h1">{{ module.heading }}</h1>
+          {% if module.subhead %}<div class="q-lead vaf-hero__lead">{{ module.subhead }}</div>{% endif %}
+          {{ vaf_btns(module, false) }}
+          {% if module.note %}<div class="pv-hero-note">{{ module.note }}</div>{% endif %}
+        </div>
+        <div class="pv-hero-img">
+          {% if module.image.src %}<img src="{{ module.image.src }}" alt="{{ module.image.alt|escape }}" width="{{ module.image.width or 1200 }}" height="{{ module.image.height or 800 }}" fetchpriority="high" loading="eager" decoding="async">{% endif %}
+          {% if module.badge_value %}<div class="pv-badge"><b>{{ module.badge_value }}</b><span>{{ module.badge_label }}</span></div>{% endif %}
+        </div>
+      </div>
+      {{ vaf_stats(module) }}
+    </div>
+  </section>
+  {% if module.ribbon and module.ribbon|length > 0 %}
+  <div class="pv-ribbon vaf-hero-ribbon"><div class="q-container">{% for r in module.ribbon %}<span>{{ r.ribbon_text }}</span>{% endfor %}</div></div>
+  {% endif %}
+
+{% else %}
+  <section class="q-section vaf-hero vaf-hero--centered"{% if module.anchor %} id="{{ module.anchor }}"{% endif %}>
+    <div class="q-container">
+      <div class="pv-center pv-hero-c vaf-hero__center">
+        {% if module.eyebrow %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+        <h1 class="q-h1">{{ module.heading }}</h1>
+        {% if module.subhead %}<div class="q-lead vaf-hero__lead">{{ module.subhead }}</div>{% endif %}
+        {{ vaf_btns(module, true) }}
+        {% if module.note %}<div class="pv-hero-note">{{ module.note }}</div>{% endif %}
+      </div>
+      {% if module.image.src %}<div class="pv-hero-wide"><img src="{{ module.image.src }}" alt="{{ module.image.alt|escape }}" width="{{ module.image.width or 1200 }}" height="{{ module.image.height or 675 }}" fetchpriority="high" loading="eager" decoding="async"></div>{% endif %}
+    </div>
+  </section>
+{% endif %}

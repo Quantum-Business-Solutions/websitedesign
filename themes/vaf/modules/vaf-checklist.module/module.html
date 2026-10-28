@@ -1,0 +1,36 @@
+<section class="q-section{% if module.alt_bg %} q-bg-alt{% endif %} vf-chk"{% if module.anchor %} id="{{ module.anchor }}"{% endif %} data-vf-chk data-mid="{{ module.band_mid }}" data-high="{{ module.band_high }}" data-total="{{ module.items|length }}" data-m0="{{ module.msg_zero|escape_attr }}" data-m1="{{ module.msg_low|escape_attr }}" data-m2="{{ module.msg_mid|escape_attr }}" data-m3="{{ module.msg_high|escape_attr }}">
+  <div class="q-container">
+    <header class="pv-center vf-chk__head">
+      {% if module.eyebrow %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      <h2 class="q-h2 vf-chk__h">{{ module.heading }}</h2>
+      {% if module.intro %}<p class="q-lead vf-chk__intro">{{ module.intro }}</p>{% endif %}
+    </header>
+    <div class="vf-chk__grid">
+      <fieldset class="vf-chk__list">
+        <legend class="vf-chk__sr">{{ module.heading }}</legend>
+        {% for it in module.items %}
+        <label class="vf-chk__item">
+          <input class="vf-chk__in" type="checkbox">
+          <span class="vf-chk__box" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+          <span class="vf-chk__txt">{{ it.item_text }}</span>
+        </label>
+        {% endfor %}
+      </fieldset>
+      <aside class="vf-chk__card" data-band="0">
+        <div class="vf-chk__ring">
+          <svg viewBox="0 0 120 120" aria-hidden="true" focusable="false"><circle class="vf-chk__trk" cx="60" cy="60" r="52"/><circle class="vf-chk__bar" cx="60" cy="60" r="52" transform="rotate(-90 60 60)"/></svg>
+          <div class="vf-chk__num" aria-hidden="true"><b data-n>0</b><span>of {{ module.items|length }} {{ module.score_noun }}</span></div>
+        </div>
+        <ol class="vf-chk__pips" aria-hidden="true"><li></li><li></li><li></li></ol>
+        <p class="vf-chk__msg" role="status" aria-live="polite" aria-atomic="true"><span class="vf-chk__sr" data-sr></span><span data-msg>{{ module.msg_zero }}</span></p>
+        <noscript><ul class="vf-chk__all"><li>{{ module.msg_low }}</li><li>{{ module.msg_mid }}</li><li>{{ module.msg_high }}</li></ul></noscript>
+        <button type="button" class="vf-chk__reset" data-reset hidden>{{ module.reset_label }}</button>
+        <div class="vf-chk__cta">
+          {% if module.cta_note %}<p class="vf-chk__ctanote">{{ module.cta_note }}</p>{% endif %}
+          <a class="q-btn vf-chk__btn" href="{{ module.cta_link.url.href }}"{% if module.cta_link.open_in_new_tab %} target="_blank" rel="noopener"{% endif %}>{{ module.cta_label }}</a>
+        </div>
+      </aside>
+    </div>
+    <div class="vf-chk__mini" aria-hidden="true"><span class="vf-chk__minitxt" data-mini>0 of {{ module.items|length }}</span><span class="vf-chk__minibar"><i data-minibar></i></span></div>
+  </div>
+</section>

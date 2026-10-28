@@ -1,0 +1,233 @@
+[
+  {
+    "id": "eyebrow",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Case study"
+  },
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "1,200 devices became 300, and a school corporation saved a million dollars"
+  },
+  {
+    "id": "quote_text",
+    "name": "quote_text",
+    "label": "Pull quote",
+    "required": false,
+    "locked": false,
+    "allow_new_line": true,
+    "type": "text",
+    "display_width": null,
+    "default": "Tippecanoe was won over by Van Ausdall's process. By cutting overall equipment from 1,200 machines to just over 300 new machines, the school corporation has seen $1,000,000 in savings over the life of the contract."
+  },
+  {
+    "id": "attribution",
+    "name": "attribution",
+    "label": "Attribution",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Tippecanoe School Corporation case study, vanausdall.com"
+  },
+  {
+    "id": "metrics",
+    "name": "metrics",
+    "label": "Metrics",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 1,
+      "max": 6,
+      "sorting_label_field": "m_label",
+      "default": 4
+    },
+    "children": [
+      {
+        "id": "m_label",
+        "name": "m_label",
+        "label": "Label",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "m_value",
+        "name": "m_value",
+        "label": "Figure",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "m_desc",
+        "name": "m_desc",
+        "label": "Description",
+        "required": false,
+        "locked": false,
+        "allow_new_line": true,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "m_label": "Devices",
+        "m_value": "1,200 to 300",
+        "m_desc": "Fleet consolidated across every building"
+      },
+      {
+        "m_label": "Savings",
+        "m_value": "$1M",
+        "m_desc": "Over the life of the contract"
+      },
+      {
+        "m_label": "IT time",
+        "m_value": "20%",
+        "m_desc": "Of IT staff time had gone to print issues"
+      },
+      {
+        "m_label": "Vendors",
+        "m_value": "10 to 1",
+        "m_desc": "Copy and print vendors replaced by one"
+      }
+    ]
+  },
+  {
+    "id": "cta_label",
+    "name": "cta_label",
+    "label": "Link label (optional)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": ""
+  },
+  {
+    "id": "cta_link",
+    "name": "cta_link",
+    "label": "Link (optional)",
+    "required": false,
+    "locked": false,
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "EMAIL_ADDRESS",
+      "BLOG"
+    ],
+    "show_advanced_rel_options": false,
+    "type": "link",
+    "display_width": null,
+    "default": {
+      "url": {
+        "content_id": null,
+        "type": "EXTERNAL",
+        "href": ""
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  },
+  {
+    "id": "tone",
+    "name": "tone",
+    "label": "Band style",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [
+        "dark",
+        "Dark band"
+      ],
+      [
+        "light",
+        "Light"
+      ]
+    ],
+    "multiple": false,
+    "reordering_enabled": true,
+    "preset": null,
+    "type": "choice",
+    "display_width": null,
+    "default": "dark"
+  },
+  {
+    "id": "anchor",
+    "name": "anchor",
+    "label": "Section anchor (optional)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "help_text": "Used as the section id so links like /page#anchor jump here. Letters, numbers and hyphens only.",
+    "type": "text",
+    "display_width": null,
+    "default": ""
+  },
+  {
+    "id": "alt_bg",
+    "name": "alt_bg",
+    "label": "Alternate (tinted) background",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": false
+  },
+  {
+    "id": "padding",
+    "name": "padding",
+    "label": "Section padding",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [
+        "normal",
+        "Normal"
+      ],
+      [
+        "none",
+        "None"
+      ],
+      [
+        "large",
+        "Large"
+      ]
+    ],
+    "multiple": false,
+    "reordering_enabled": true,
+    "preset": null,
+    "type": "choice",
+    "display_width": null,
+    "default": "normal"
+  }
+]

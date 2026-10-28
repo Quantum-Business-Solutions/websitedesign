@@ -1,0 +1,216 @@
+[
+  {
+    "id": "anchor",
+    "name": "anchor",
+    "label": "Anchor id (lets links jump here, e.g. story)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "flow"
+  },
+  {
+    "id": "alt_bg",
+    "name": "alt_bg",
+    "label": "Alternate (tinted) background",
+    "required": false,
+    "locked": false,
+    "display": "checkbox",
+    "type": "boolean",
+    "display_width": null,
+    "default": false
+  },
+  {
+    "id": "eyebrow",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "How an engagement runs"
+  },
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Four stages, and every one of them hands you something"
+  },
+  {
+    "id": "intro",
+    "name": "intro",
+    "label": "Intro",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Click a stage. It starts with the Technology Strength Assessment and ends with a partner who is watching."
+  },
+  {
+    "id": "detail_eyebrow",
+    "name": "detail_eyebrow",
+    "label": "Detail label (left column)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "What happens"
+  },
+  {
+    "id": "receive_label",
+    "name": "receive_label",
+    "label": "Detail label (right column)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "What you receive"
+  },
+  {
+    "id": "prev_label",
+    "name": "prev_label",
+    "label": "Previous button text (screen readers)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Previous step"
+  },
+  {
+    "id": "next_label",
+    "name": "next_label",
+    "label": "Next button text (screen readers)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Next step"
+  },
+  {
+    "id": "steps",
+    "name": "steps",
+    "label": "Steps",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 2,
+      "max": 8,
+      "sorting_label_field": null,
+      "default": 4
+    },
+    "children": [
+      {
+        "id": "step_label",
+        "name": "step_label",
+        "label": "Step name (short)",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "Assess"
+      },
+      {
+        "id": "step_when",
+        "name": "step_when",
+        "label": "When / how long",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "Week 1"
+      },
+      {
+        "id": "step_summary",
+        "name": "step_summary",
+        "label": "One-line summary",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "Your Technology Strength Score."
+      },
+      {
+        "id": "step_title",
+        "name": "step_title",
+        "label": "Detail heading",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "Know your score"
+      },
+      {
+        "id": "step_copy",
+        "name": "step_copy",
+        "label": "Detail copy",
+        "required": false,
+        "locked": false,
+        "type": "richtext",
+        "display_width": null,
+        "default": "<p>What happens in this step.</p>"
+      },
+      {
+        "id": "step_receive",
+        "name": "step_receive",
+        "label": "What you receive (a bulleted list)",
+        "required": false,
+        "locked": false,
+        "type": "richtext",
+        "display_width": null,
+        "default": "<ul><li>A deliverable</li></ul>"
+      }
+    ],
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "step_label": "Assess",
+        "step_when": "10 to 15 minutes, then a visit",
+        "step_summary": "Your Technology Strength Score.",
+        "step_title": "Know your Technology Strength Score",
+        "step_copy": "<p>Four assessments in two parts each: information, print, process and communication. Ten to fifteen minutes online, then a specialist walks the office and confirms the answers against what is actually running.</p>",
+        "step_receive": "<ul><li>A Technology Summary Scorecard</li><li>Every device, system and vendor inventoried</li><li>The gaps, in plain English</li></ul>"
+      },
+      {
+        "step_label": "Roadmap",
+        "step_when": "Week 2",
+        "step_summary": "Eliminate. Optimize. Leverage.",
+        "step_title": "A roadmap that grows with you",
+        "step_copy": "<p>What to eliminate because you do not need it, what to optimize because you already own it, and what to leverage to grow. Priced, sequenced, and tied to your business goals.</p>",
+        "step_receive": "<ul><li>Eliminate, optimize and leverage lists</li><li>Options priced side by side</li><li>A sequence with dates</li></ul>"
+      },
+      {
+        "step_label": "Implement",
+        "step_when": "A date you choose",
+        "step_summary": "Handled for you.",
+        "step_title": "We implement",
+        "step_copy": "<p>Right-sized equipment, software, security and supplies, installed by VAF's own local people. Users trained before the technician leaves. Numbers ported. Monitoring switched on.</p>",
+        "step_receive": "<ul><li>Install and training completed on site</li><li>Monitoring live on every device</li><li>One point of contact for every line</li></ul>"
+      },
+      {
+        "step_label": "Monitor",
+        "step_when": "Ongoing",
+        "step_summary": "24/7, from Indianapolis.",
+        "step_title": "We monitor 24/7",
+        "step_copy": "<p>Proactive monitoring, predictive maintenance and fast local repair keep you running. The Customer Care Center processes requests Monday through Friday, 7:00am to 5:00pm, and responds within 24 hours.</p>",
+        "step_receive": "<ul><li>Alerts handled before they become tickets</li><li>Supplies before they run out</li><li>A 25-point inspection on every service call</li></ul>"
+      }
+    ]
+  }
+]

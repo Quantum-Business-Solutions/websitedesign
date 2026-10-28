@@ -1,0 +1,269 @@
+[
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Lease, rent or buy?"
+  },
+  {
+    "id": "intro",
+    "name": "intro",
+    "label": "Intro",
+    "required": false,
+    "locked": false,
+    "allow_new_line": true,
+    "type": "text",
+    "display_width": null,
+    "default": "The assessment prices all three for your real volume. Here is how they usually compare."
+  },
+  {
+    "id": "corner_label",
+    "name": "corner_label",
+    "label": "Row heading column label (read by screen readers)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "What to compare"
+  },
+  {
+    "id": "columns",
+    "name": "columns",
+    "label": "Options (columns, up to 4)",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 2,
+      "max": 4,
+      "sorting_label_field": "col_title",
+      "default": 3
+    },
+    "children": [
+      {
+        "id": "col_title",
+        "name": "col_title",
+        "label": "Option name",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "col_recommended",
+        "name": "col_recommended",
+        "label": "Recommended (highlighted)",
+        "required": false,
+        "locked": false,
+        "display": "toggle",
+        "type": "boolean",
+        "display_width": null,
+        "default": false
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "col_title": "Lease",
+        "col_recommended": true
+      },
+      {
+        "col_title": "Rent",
+        "col_recommended": false
+      },
+      {
+        "col_title": "Buy",
+        "col_recommended": false
+      }
+    ]
+  },
+  {
+    "id": "rec_tag",
+    "name": "rec_tag",
+    "label": "Recommended badge text",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Most common"
+  },
+  {
+    "id": "rows",
+    "name": "rows",
+    "label": "Rows",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 1,
+      "max": 16,
+      "sorting_label_field": "row_title",
+      "default": 4
+    },
+    "children": [
+      {
+        "id": "row_title",
+        "name": "row_title",
+        "label": "Row heading",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "cell_1",
+        "name": "cell_1",
+        "label": "Option 1",
+        "required": false,
+        "locked": false,
+        "allow_new_line": true,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "cell_2",
+        "name": "cell_2",
+        "label": "Option 2",
+        "required": false,
+        "locked": false,
+        "allow_new_line": true,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "cell_3",
+        "name": "cell_3",
+        "label": "Option 3",
+        "required": false,
+        "locked": false,
+        "allow_new_line": true,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "cell_4",
+        "name": "cell_4",
+        "label": "Option 4",
+        "required": false,
+        "locked": false,
+        "allow_new_line": true,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "row_title": "Best for",
+        "cell_1": "Steady volume, a fleet kept current",
+        "cell_2": "Peaks, projects, construction trailers",
+        "cell_3": "Stable volume, long device life",
+        "cell_4": ""
+      },
+      {
+        "row_title": "Term",
+        "cell_1": "Fixed, with an upgrade at the end",
+        "cell_2": "Month to month",
+        "cell_3": "None",
+        "cell_4": ""
+      },
+      {
+        "row_title": "Up-front cost",
+        "cell_1": "Low",
+        "cell_2": "Low",
+        "cell_3": "Highest",
+        "cell_4": ""
+      },
+      {
+        "row_title": "Lifetime cost",
+        "cell_1": "Moderate",
+        "cell_2": "Highest per month",
+        "cell_3": "Lowest if the device runs for years",
+        "cell_4": ""
+      }
+    ]
+  },
+  {
+    "id": "note",
+    "name": "note",
+    "label": "Footnote",
+    "required": false,
+    "locked": false,
+    "allow_new_line": true,
+    "type": "text",
+    "display_width": null,
+    "default": "Terms and rates are set after the assessment. Nothing here is a quote."
+  },
+  {
+    "id": "anchor",
+    "name": "anchor",
+    "label": "Section anchor (optional)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "help_text": "Used as the section id so links like /page#anchor jump here. Letters, numbers and hyphens only.",
+    "type": "text",
+    "display_width": null,
+    "default": ""
+  },
+  {
+    "id": "alt_bg",
+    "name": "alt_bg",
+    "label": "Alternate (tinted) background",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": false
+  },
+  {
+    "id": "padding",
+    "name": "padding",
+    "label": "Section padding",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [
+        "normal",
+        "Normal"
+      ],
+      [
+        "none",
+        "None"
+      ],
+      [
+        "large",
+        "Large"
+      ]
+    ],
+    "multiple": false,
+    "reordering_enabled": true,
+    "preset": null,
+    "type": "choice",
+    "display_width": null,
+    "default": "normal"
+  }
+]

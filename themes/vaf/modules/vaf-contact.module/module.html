@@ -1,0 +1,25 @@
+<section class="q-section{% if module.alt_bg %} q-bg-alt{% endif %} vf-ct"{% if module.anchor %} id="{{ module.anchor }}"{% endif %} data-vf-ct data-submit="{{ module.submit_label|escape_attr }}">
+  <div class="q-container vf-ct__grid">
+    <div class="vf-ct__copy">
+      <h2 class="q-h2">{{ module.heading }}</h2>
+      {% if module.copy %}<p class="q-lead">{{ module.copy }}</p>{% endif %}
+      <div class="vf-ct__actions">
+        {% if module.phone_label %}<a class="q-btn" href="{{ module.phone_link.url.href }}">{{ module.phone_label }}</a>{% endif %}
+        {% if module.email %}<a class="vf-ct__mail" href="mailto:{{ module.email }}">{{ module.email }}</a>{% endif %}
+      </div>
+    </div>
+    <div class="vf-form">
+      {% if module.topic_options|length > 0 %}
+      <div class="vf-ct__topic" data-topic hidden>
+        <label class="vf-ct__topiclabel">{{ module.topic_label }}
+          <select data-topic-select>
+            {% for t in module.topic_options %}<option value="{{ t.topic_text }}">{{ t.topic_text }}</option>{% endfor %}
+          </select>
+        </label>
+      </div>
+      {% endif %}
+      {% if module.form.form_id %}{% form form_to_use="{{ module.form.form_id }}", no_title=True, response_response_type="inline", response_message="{{ module.form.message }}" %}{% endif %}
+      {% if module.note %}<p class="vf-form__note">{{ module.note }}</p>{% endif %}
+    </div>
+  </div>
+</section>

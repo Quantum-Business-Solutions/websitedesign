@@ -1,0 +1,118 @@
+[
+  {
+    "id": "anchor",
+    "name": "anchor",
+    "label": "Anchor id (optional, for #links)",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": ""
+  },
+  {
+    "id": "alt_bg",
+    "name": "alt_bg",
+    "label": "Alternate background",
+    "required": false,
+    "locked": false,
+    "type": "boolean",
+    "display": "toggle",
+    "default": false
+  },
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Not sure where to start? Start with the score."
+  },
+  {
+    "id": "copy",
+    "name": "copy",
+    "label": "Intro",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Ten to fifteen minutes online, then a specialist walks it with you."
+  },
+  {
+    "id": "phone_prefix",
+    "name": "phone_prefix",
+    "label": "Text before phone number",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Or call"
+  },
+  {
+    "id": "phone_text",
+    "name": "phone_text",
+    "label": "Phone number",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "(317) 634-2913"
+  },
+  {
+    "id": "phone_link",
+    "name": "phone_link",
+    "label": "Phone link",
+    "required": false,
+    "locked": false,
+    "type": "link",
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "EMAIL_ADDRESS",
+      "BLOG"
+    ],
+    "default": {
+      "url": {
+        "content_id": null,
+        "type": "EXTERNAL",
+        "href": "tel:3176342913"
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  },
+  {
+    "id": "form",
+    "name": "form",
+    "label": "Form",
+    "required": false,
+    "locked": false,
+    "type": "form",
+    "embed_versions": [
+      "v2",
+      "v4"
+    ],
+    "default": {
+      "form_id": "e84ef7ce-04f2-4fef-b539-4351bde13b48",
+      "portal_id": "50498425",
+      "form_type": "HUBSPOT",
+      "response_type": "inline",
+      "message": "Thank you. A person from the Indianapolis office will reply to set a time."
+    }
+  },
+  {
+    "id": "submit_label",
+    "name": "submit_label",
+    "label": "Submit button text (overrides the form's own label when set)",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": ""
+  },
+  {
+    "id": "note",
+    "name": "note",
+    "label": "Note under the form",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "A person from the Indianapolis office replies, not an autoresponder."
+  }
+]

@@ -1,0 +1,223 @@
+[
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Where we are"
+  },
+  {
+    "id": "intro",
+    "name": "intro",
+    "label": "Intro",
+    "required": false,
+    "locked": false,
+    "allow_new_line": true,
+    "type": "text",
+    "display_width": null,
+    "default": "Toll-free (800) 467-7474 reaches the Customer Care Center."
+  },
+  {
+    "id": "items",
+    "name": "items",
+    "label": "Offices",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 1,
+      "max": 12,
+      "sorting_label_field": "loc_name",
+      "default": 3
+    },
+    "children": [
+      {
+        "id": "loc_name",
+        "name": "loc_name",
+        "label": "Office",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "loc_line1",
+        "name": "loc_line1",
+        "label": "Address line 1",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "loc_line2",
+        "name": "loc_line2",
+        "label": "Address line 2",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "loc_phone",
+        "name": "loc_phone",
+        "label": "Phone (as shown)",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "loc_link",
+        "name": "loc_link",
+        "label": "Link (tel: link or office page)",
+        "required": false,
+        "locked": false,
+        "supported_types": [
+          "EXTERNAL",
+          "CONTENT",
+          "FILE",
+          "EMAIL_ADDRESS",
+          "BLOG"
+        ],
+        "show_advanced_rel_options": false,
+        "type": "link",
+        "display_width": null,
+        "default": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": ""
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "loc_name": "Indianapolis",
+        "loc_line1": "6430 E 75th Street",
+        "loc_line2": "Indianapolis, IN 46250",
+        "loc_phone": "(317) 634-2913",
+        "loc_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "tel:3176342913"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "loc_name": "Fort Wayne",
+        "loc_line1": "1241 N Wells Street",
+        "loc_line2": "Fort Wayne, IN 46808",
+        "loc_phone": "(260) 432-1547",
+        "loc_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "tel:2604321547"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "loc_name": "Evansville",
+        "loc_line1": "Serving southwest Indiana and the Tri-State",
+        "loc_line2": "Evansville, IN",
+        "loc_phone": "(812) 424-5736",
+        "loc_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "tel:8124245736"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "detailed",
+    "name": "detailed",
+    "label": "Detailed cards (call button and larger type)",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": false
+  },
+  {
+    "id": "anchor",
+    "name": "anchor",
+    "label": "Section anchor (optional)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "help_text": "Used as the section id so links like /page#anchor jump here. Letters, numbers and hyphens only.",
+    "type": "text",
+    "display_width": null,
+    "default": ""
+  },
+  {
+    "id": "alt_bg",
+    "name": "alt_bg",
+    "label": "Alternate (tinted) background",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": false
+  },
+  {
+    "id": "padding",
+    "name": "padding",
+    "label": "Section padding",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [
+        "normal",
+        "Normal"
+      ],
+      [
+        "none",
+        "None"
+      ],
+      [
+        "large",
+        "Large"
+      ]
+    ],
+    "multiple": false,
+    "reordering_enabled": true,
+    "preset": null,
+    "type": "choice",
+    "display_width": null,
+    "default": "normal"
+  }
+]

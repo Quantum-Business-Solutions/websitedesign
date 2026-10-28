@@ -1,0 +1,71 @@
+/* vaf-hero: only new or overriding rules. Everything else comes from the shared showcase sheet (pv-lh, pv-hero-*, q-*). */
+.vaf-hero .q-h1{margin-top:22px}
+.vaf-hero .vaf-hero__lead{margin:24px 0 0}
+.vaf-hero--split .vaf-hero__lead{max-width:540px}
+.vaf-hero--centered .vaf-hero__lead{max-width:640px}
+.vaf-hero--centered .vaf-hero__center{max-width:860px;margin:0 auto}
+.vaf-hero .vaf-center{justify-content:center}
+.vaf-hero .vaf-rule{width:22px;height:1px;background:currentColor;display:inline-block}
+.vaf-hero--split .q-container > .pv-hero-stats{margin-top:56px}
+.vaf-hero .pv-hero-note{max-width:60ch}
+
+/* layered hero: first-paint poster, optional looping video, navy scrim */
+.vaf-hero--layered .bg{overflow:hidden}
+.vaf-hero--layered .bg img,.vaf-hero--layered .bg video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.vaf-hero--layered .bg video{opacity:0;transition:opacity .9s ease;background:transparent}
+.vaf-hero--layered.is-video-playing .bg video{opacity:.58}
+.vaf-hero--layered.has-video .bg img{animation:none;transform:none}
+.vaf-hero--layered.is-video-playing .bg img{opacity:.4}
+
+/* scrim: a navy wash that keeps white copy above 4.5:1 on any frame. Standard is the default, strong for busy footage. */
+.vaf-hero--layered{--vaf-s1:.92;--vaf-s2:.82;--vaf-s3:.52}
+.vaf-hero--layered.vaf-scrim-strong{--vaf-s1:.96;--vaf-s2:.9;--vaf-s3:.7}
+.vaf-hero--layered.vaf-scrim-light{--vaf-s1:.88;--vaf-s2:.72;--vaf-s3:.36}
+.vaf-hero--layered .bg::after{background:
+  linear-gradient(90deg,color-mix(in srgb,var(--chrome-bg) calc(var(--vaf-s1) * 100%),transparent) 0%,color-mix(in srgb,var(--chrome-bg) calc(var(--vaf-s2) * 100%),transparent) 48%,color-mix(in srgb,var(--chrome-bg) calc(var(--vaf-s3) * 100%),transparent) 100%),
+  linear-gradient(180deg,color-mix(in srgb,var(--chrome-bg) 55%,transparent) 0%,transparent 22%,transparent 62%,var(--chrome-bg) 100%)}
+/* small type on dark: lift the accent so kickers and the h1 accent word stay legible */
+.vaf-hero--layered .q-eyebrow,.vaf-hero--layered .fcard:not(.b) .k{color:color-mix(in srgb,var(--q-gold) 58%,#fff)}
+.vaf-hero--layered .q-eyebrow::before{background:color-mix(in srgb,var(--q-gold) 58%,#fff)}
+.vaf-hero--layered .q-h1 em{color:color-mix(in srgb,var(--q-gold) 66%,#fff)}
+.vaf-hero--layered .q-lead{color:rgba(255,255,255,.9)}
+.vaf-hero--layered .note{color:rgba(255,255,255,.78);max-width:60ch}
+.vaf-hero--layered .pv-hero-stats span{color:rgba(255,255,255,.82)}
+.vaf-hero--layered .fcard h2.t{font-family:inherit;font-size:21px;line-height:1.2;font-weight:700;letter-spacing:-.01em;margin:0 0 8px;color:inherit}
+.vaf-hero--layered .fcard.b h2.t{color:var(--fg,#111)}
+.vaf-hero--nocards .q-container{grid-template-columns:1fr}
+
+/* play and pause for the background video (WCAG 2.2.2) */
+.vaf-hero__toggle{position:absolute;right:max(20px,calc((100vw - var(--maxw,1320px)) / 2 + 40px));bottom:24px;z-index:3;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(8,14,26,.62);color:#fff;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.vaf-hero__toggle[hidden]{display:none}
+.vaf-hero__toggle:hover{border-color:#fff;background:rgba(8,14,26,.82)}
+.vaf-hero__toggle:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.vaf-hero__toggle .i-play{display:none}
+.vaf-hero__toggle.is-paused .i-pause{display:none}
+.vaf-hero__toggle.is-paused .i-play{display:block}
+
+@media(max-width:1024px){
+  /* stacked layout: copy runs the full width, so the scrim goes flat and heavy */
+  .vaf-hero--layered .bg::after{background:linear-gradient(180deg,color-mix(in srgb,var(--chrome-bg) 90%,transparent) 0%,color-mix(in srgb,var(--chrome-bg) 86%,transparent) 55%,var(--chrome-bg) 100%)}
+  .vaf-hero--layered.vaf-scrim-strong .bg::after{background:linear-gradient(180deg,color-mix(in srgb,var(--chrome-bg) 95%,transparent),var(--chrome-bg))}
+  .vaf-hero--layered .stack{margin-top:8px}
+}
+@media(max-width:767px){
+  .vaf-hero--layered .q-container{padding-top:56px;padding-bottom:64px;gap:32px}
+  .vaf-hero .pv-btns{flex-direction:column;align-items:stretch;gap:6px}
+  .vaf-hero .pv-btns .q-btn{justify-content:center;text-align:center;max-width:100%}
+  .vaf-hero .pv-btns .q-btn-ghost{justify-content:center}
+  .vaf-hero .pv-hero-stats{grid-template-columns:1fr 1fr;margin-top:36px}
+  .vaf-hero .pv-hero-stats > div{border-left:0;padding:18px 12px 0 0}
+  .vaf-hero .pv-hero-stats > div:nth-child(even){border-left:1px solid var(--border);padding-left:16px}
+  .vaf-hero--layered .pv-hero-stats > div:nth-child(even){border-left-color:rgba(255,255,255,.18)}
+  .vaf-hero .pv-hero-stats b{font-size:32px}
+  .vaf-hero--layered .fcard.b .links{grid-template-columns:1fr}
+  .vaf-hero__toggle{right:16px;bottom:16px}
+  .vaf-hero--split .pv-hero-grid{gap:32px}
+  .vaf-hero-ribbon .q-container{gap:8px 24px}
+}
+@media(prefers-reduced-motion:reduce){
+  .vaf-hero--layered .bg video{display:none}
+  .vaf-hero__toggle{display:none}
+}

@@ -1,0 +1,100 @@
+[
+  {
+    "id": "anchor",
+    "name": "anchor",
+    "label": "Anchor id (optional, for #links)",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": ""
+  },
+  {
+    "id": "alt_bg",
+    "name": "alt_bg",
+    "label": "Alternate background",
+    "required": false,
+    "locked": false,
+    "type": "boolean",
+    "display": "toggle",
+    "default": false
+  },
+  {
+    "id": "eyebrow",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": ""
+  },
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": ""
+  },
+  {
+    "id": "intro",
+    "name": "intro",
+    "label": "Intro",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": ""
+  },
+  {
+    "id": "youtube_id",
+    "name": "youtube_id",
+    "label": "YouTube video id (the part after v=)",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "i-q4U5SnvaM"
+  },
+  {
+    "id": "poster",
+    "name": "poster",
+    "label": "Poster image",
+    "required": false,
+    "locked": false,
+    "type": "image",
+    "responsive": true,
+    "resizable": true,
+    "show_loading": true,
+    "default": {
+      "src": "",
+      "alt": "",
+      "loading": "lazy"
+    }
+  },
+  {
+    "id": "video_title",
+    "name": "video_title",
+    "label": "Video title (accessible name)",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Video"
+  },
+  {
+    "id": "play_label",
+    "name": "play_label",
+    "label": "Play button text for screen readers",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Play video"
+  },
+  {
+    "id": "caption",
+    "name": "caption",
+    "label": "Caption",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": ""
+  }
+]

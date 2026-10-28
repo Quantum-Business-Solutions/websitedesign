@@ -1,0 +1,168 @@
+[
+  {
+    "id": "eyebrow",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "What customers say"
+  },
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "What customers say after a service call"
+  },
+  {
+    "id": "layout",
+    "name": "layout",
+    "label": "Layout",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [
+        "grid",
+        "Grid of cards"
+      ],
+      [
+        "feature",
+        "Feature (one large quote, the rest as a list)"
+      ],
+      [
+        "carousel",
+        "Carousel"
+      ]
+    ],
+    "multiple": false,
+    "reordering_enabled": true,
+    "preset": null,
+    "type": "choice",
+    "display_width": null,
+    "default": "grid"
+  },
+  {
+    "id": "items",
+    "name": "items",
+    "label": "Testimonials",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 1,
+      "max": 24,
+      "sorting_label_field": "t_name",
+      "default": 2
+    },
+    "children": [
+      {
+        "id": "t_quote",
+        "name": "t_quote",
+        "label": "Quote",
+        "required": false,
+        "locked": false,
+        "allow_new_line": true,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "t_name",
+        "name": "t_name",
+        "label": "Name",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "t_org",
+        "name": "t_org",
+        "label": "Source or company",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "t_quote": "He was incredibly efficient and personable, answering all of my questions thoroughly and thoughtfully.",
+        "t_name": "Elaine",
+        "t_org": "After-service survey, June 2026"
+      },
+      {
+        "t_quote": "Brent is amazing. Always there when we need him and he is very knowledgeable and helpful.",
+        "t_name": "Megan",
+        "t_org": "After-service survey, April 2026"
+      }
+    ]
+  },
+  {
+    "id": "anchor",
+    "name": "anchor",
+    "label": "Section anchor (optional)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "help_text": "Used as the section id so links like /page#anchor jump here. Letters, numbers and hyphens only.",
+    "type": "text",
+    "display_width": null,
+    "default": ""
+  },
+  {
+    "id": "alt_bg",
+    "name": "alt_bg",
+    "label": "Alternate (tinted) background",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": false
+  },
+  {
+    "id": "padding",
+    "name": "padding",
+    "label": "Section padding",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [
+        "normal",
+        "Normal"
+      ],
+      [
+        "none",
+        "None"
+      ],
+      [
+        "large",
+        "Large"
+      ]
+    ],
+    "multiple": false,
+    "reordering_enabled": true,
+    "preset": null,
+    "type": "choice",
+    "display_width": null,
+    "default": "normal"
+  }
+]
