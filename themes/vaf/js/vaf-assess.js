@@ -234,32 +234,60 @@
     if (window.jspdf) return cb();
     var s = document.createElement('script'); s.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js'; s.onload = cb; s.onerror = function () { window.print(); }; document.head.appendChild(s);
   }
+  var LOGO;
+  function logoData(cb) {
+    if (LOGO !== undefined) return cb(LOGO);
+    fetch('https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/assets/logo-600.png').then(function (r) { return r.blob(); }).then(function (x) {
+      var fr = new FileReader(); fr.onload = function () { LOGO = fr.result; cb(LOGO); }; fr.readAsDataURL(x);
+    }).catch(function () { LOGO = null; cb(null); });
+  }
   function makePdf(s, b, rm, btn) {
     btn.disabled = true; var old = btn.textContent; btn.textContent = 'Preparing PDF...';
     loadPdfLib(function () {
-      try {
-        var J = window.jspdf.jsPDF, doc = new J({ unit: 'pt', format: 'letter' }), W = 612, M = 48, y = 0;
-        function page() { doc.setFillColor(15, 30, 51); doc.rect(0, 0, W, 78, 'F'); doc.setTextColor(255); doc.setFont('helvetica', 'bold'); doc.setFontSize(18); doc.text('Technology Strength Assessment', M, 38); doc.setFont('helvetica', 'normal'); doc.setFontSize(10); doc.setTextColor(184, 211, 238); doc.text('Van Ausdall & Farrar  |  Business technology simplified, since 1914', M, 58); y = 112; doc.setTextColor(15, 30, 51); }
-        function need(h) { if (y + h > 740) { doc.addPage(); page(); } }
-        page();
-        var name = ST.lead ? (ST.lead.firstname + ' ' + ST.lead.lastname + ', ' + ST.lead.company) : '';
-        doc.setFont('helvetica', 'normal'); doc.setFontSize(11); doc.setTextColor(90, 100, 115); doc.text(name + (name ? '  |  ' : '') + new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }), M, y); y += 34;
-        doc.setTextColor(15, 30, 51); doc.setFont('helvetica', 'bold'); doc.setFontSize(54); doc.text(String(s.total), M, y + 30); doc.setFontSize(12); doc.setFont('helvetica', 'normal'); doc.text('out of 100', M + (s.total > 99 ? 112 : 78), y + 30);
-        doc.setFont('helvetica', 'bold'); doc.setFontSize(20); doc.text(b[1], M + 190, y + 12); doc.setFont('helvetica', 'normal'); doc.setFontSize(11); doc.setTextColor(70, 80, 95); doc.text(doc.splitTextToSize(b[2], 330), M + 190, y + 32); y += 72;
-        AREAS.forEach(function (a) { doc.setTextColor(15, 30, 51); doc.setFont('helvetica', 'bold'); doc.setFontSize(11); doc.text(a, M, y); doc.setFillColor(226, 234, 243); doc.rect(M + 120, y - 9, 330, 10, 'F'); doc.setFillColor(42, 113, 175); doc.rect(M + 120, y - 9, 330 * s.per[a] / 100, 10, 'F'); doc.text(String(s.per[a]), M + 462, y); y += 24; });
-        y += 10;
-        [['eliminate', 'Eliminate: risk and waste to remove first'], ['optimize', 'Optimize: what you have, working harder'], ['leverage', 'Leverage: where to grow next']].forEach(function (c) {
-          need(60); doc.setFont('helvetica', 'bold'); doc.setFontSize(13); doc.setTextColor(15, 30, 51); doc.text(c[1], M, y); y += 18;
-          doc.setFont('helvetica', 'normal'); doc.setFontSize(10.5); doc.setTextColor(50, 60, 75);
-          if (!rm[c[0]].length) { doc.text('Nothing here. Nice.', M, y); y += 18; }
-          rm[c[0]].forEach(function (r) { var t = doc.splitTextToSize(r.area + ': ' + r.fix, W - 2 * M - 14); need(t.length * 13 + 8); doc.setFillColor(42, 113, 175); doc.circle(M + 3, y - 3, 2, 'F'); doc.text(t, M + 14, y); y += t.length * 13 + 5; });
-          y += 10;
-        });
-        need(80); doc.setFillColor(231, 240, 249); doc.rect(M, y, W - 2 * M, 66, 'F'); doc.setFont('helvetica', 'bold'); doc.setFontSize(12); doc.setTextColor(15, 30, 51); doc.text('Next step', M + 14, y + 22);
-        doc.setFont('helvetica', 'normal'); doc.setFontSize(10.5); doc.text(doc.splitTextToSize('A VAF specialist can walk your office and confirm every answer, then build the roadmap with owners and dates. Call ' + CFG.phone + ' or visit ' + CFG.site + '/contact.', W - 2 * M - 28), M + 14, y + 40);
-        doc.save('Technology-Strength-Assessment.pdf');
-      } catch (e) { window.print(); }
-      btn.disabled = false; btn.textContent = old;
+      logoData(function (logo) {
+        try {
+          var J = window.jspdf.jsPDF, doc = new J({ unit: 'pt', format: 'letter' }), W = 612, M = 48, y = 0;
+          function head() {
+            doc.setFillColor(255, 255, 255); doc.rect(0, 0, W, 90, 'F');
+            if (logo) { try { doc.addImage(logo, 'PNG', M, 24, 190, 37.7); } catch (e) { } } else { doc.setTextColor(15, 30, 51); doc.setFont('helvetica', 'bold'); doc.setFontSize(16); doc.text('Van Ausdall & Farrar', M, 50); }
+            doc.setTextColor(106, 123, 144); doc.setFont('helvetica', 'bold'); doc.setFontSize(10); doc.text('TECHNOLOGY STRENGTH ASSESSMENT', W - M, 46, { align: 'right' });
+            doc.setFillColor(42, 113, 175); doc.rect(0, 90, W, 4, 'F'); y = 132; doc.setTextColor(15, 30, 51);
+          }
+          function need(h) { if (y + h > 730) { doc.addPage(); head(); } }
+          head();
+          var name = ST.lead ? (ST.lead.firstname + ' ' + ST.lead.lastname + ', ' + ST.lead.company) : '';
+          doc.setFont('helvetica', 'normal'); doc.setFontSize(11); doc.setTextColor(90, 100, 115); doc.text(name + (name ? '  |  ' : '') + new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }), M, y); y += 20;
+          // score panel
+          doc.setFillColor(15, 30, 51); doc.roundedRect(M, y, W - 2 * M, 112, 12, 12, 'F');
+          doc.setTextColor(143, 194, 242); doc.setFont('helvetica', 'bold'); doc.setFontSize(64); doc.text(String(s.total), M + 28, y + 76);
+          doc.setFontSize(12); doc.setFont('helvetica', 'normal'); doc.setTextColor(197, 214, 232); doc.text('out of 100', M + 28 + (s.total > 99 ? 132 : 92), y + 76);
+          doc.setTextColor(143, 194, 242); doc.setFont('helvetica', 'bold'); doc.setFontSize(10.5); doc.text('YOUR TECHNOLOGY STRENGTH SCORE', M + 250, y + 36);
+          doc.setTextColor(255); doc.setFontSize(24); doc.text(b[1], M + 250, y + 64);
+          doc.setFont('helvetica', 'normal'); doc.setFontSize(10.5); doc.setTextColor(197, 214, 232); doc.text(doc.splitTextToSize(b[2], W - 2 * M - 270), M + 250, y + 82); y += 142;
+          AREAS.forEach(function (a) { doc.setTextColor(15, 30, 51); doc.setFont('helvetica', 'bold'); doc.setFontSize(11.5); doc.text(a, M, y); doc.setFillColor(226, 234, 243); doc.roundedRect(M + 120, y - 10, 330, 12, 6, 6, 'F'); if (s.per[a] > 0) { doc.setFillColor(42, 113, 175); doc.roundedRect(M + 120, y - 10, Math.max(12, 330 * s.per[a] / 100), 12, 6, 6, 'F'); } doc.text(String(s.per[a]), M + 468, y); y += 26; });
+          y += 12;
+          [['eliminate', 'Eliminate: risk and waste to remove first', [194, 65, 12]], ['optimize', 'Optimize: what you have, working harder', [42, 113, 175]], ['leverage', 'Leverage: where to grow next', [15, 122, 77]]].forEach(function (c) {
+            need(70); doc.setFillColor(c[2][0], c[2][1], c[2][2]); doc.rect(M, y - 13, 5, 20, 'F');
+            doc.setFont('helvetica', 'bold'); doc.setFontSize(13.5); doc.setTextColor(15, 30, 51); doc.text(c[1], M + 14, y + 2); y += 26;
+            doc.setFont('helvetica', 'normal'); doc.setFontSize(10.5); doc.setTextColor(50, 60, 75);
+            if (!rm[c[0]].length) { doc.text('Nothing here. Nice.', M + 14, y); y += 18; }
+            rm[c[0]].forEach(function (r) { var t = doc.splitTextToSize(r.area + ': ' + r.fix, W - 2 * M - 30); need(t.length * 13 + 8); doc.setFillColor(c[2][0], c[2][1], c[2][2]); doc.circle(M + 17, y - 3, 2.4, 'F'); doc.text(t, M + 28, y); y += t.length * 13 + 5; });
+            y += 8;
+          });
+          need(92); doc.setFillColor(15, 30, 51); doc.roundedRect(M, y, W - 2 * M, 82, 10, 10, 'F');
+          doc.setTextColor(143, 194, 242); doc.setFont('helvetica', 'bold'); doc.setFontSize(10.5); doc.text('NEXT STEP', M + 22, y + 22);
+          doc.setTextColor(255); doc.setFontSize(13); doc.text('Let a specialist confirm every answer', M + 22, y + 40);
+          doc.setFont('helvetica', 'normal'); doc.setFontSize(10.5); doc.setTextColor(197, 214, 232);
+          doc.text(doc.splitTextToSize('A VAF specialist can walk your office, then build the roadmap with owners and dates. Call ' + CFG.phone + ' or visit ' + CFG.site + '/contact.', W - 2 * M - 44), M + 22, y + 56);
+          var N = doc.getNumberOfPages();
+          for (var i = 1; i <= N; i++) {
+            doc.setPage(i); doc.setDrawColor(219, 229, 240); doc.line(M, 752, W - M, 752); doc.setFont('helvetica', 'normal'); doc.setFontSize(8.5); doc.setTextColor(106, 123, 144);
+            doc.text('Van Ausdall & Farrar  |  6430 E 75th Street, Indianapolis, IN 46250  |  (317) 634-2913  |  vanausdall.com', M, 768); doc.text(String(i), W - M, 768, { align: 'right' });
+          }
+          doc.save('Technology-Strength-Assessment.pdf');
+        } catch (e) { window.print(); }
+        btn.disabled = false; btn.textContent = old;
+      });
     });
   }
 
@@ -268,7 +296,7 @@
     var host = document.querySelector('[data-vaf-assessment]') || document.getElementById('assess');
     if (!host) return;
     var c = host.querySelector('.q-container') || host;
-    root = el('div', 'va__root'); c.innerHTML = ''; c.appendChild(root); host.classList.add('va-host');
+    root = el('div', 'va__root'); Array.prototype.forEach.call(c.children, function (k) { k.style.display = 'none'; k.setAttribute('aria-hidden', 'true'); }); c.appendChild(root); host.classList.add('va-host');
     loadHubDb(function () {
       var m = (location.hash.match(/^#r=([01]+)$/) || [])[1], saved = null;
       try { saved = JSON.parse(localStorage.getItem('vafAssess') || 'null'); } catch (e) { }

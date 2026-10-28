@@ -1,7 +1,7 @@
 {% set items = module.entries %}
 {% set n = items|length %}
 {% if n <= 4 %}{% set cols = n %}{% elif n == 5 or n == 6 or n == 9 %}{% set cols = 3 %}{% else %}{% set cols = 4 %}{% endif %}
-<section class="q-section vaf-tl{% if module.alt_bg %} q-bg-alt{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %} style="--cols:{{ cols }}">
+<section class="q-section vaf-tl{% if n >= 5 %} vaf-tl--rail{% endif %}{% if module.alt_bg %} q-bg-alt{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %} style="--cols:{{ cols }};--n:{{ n }}">
   <div class="q-container">
     <div class="vaf-tl__head">
       {% if module.eyebrow %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
@@ -14,6 +14,7 @@
         <span class="vaf-tl__year">{{ it.item_year }}</span>
         <span class="vaf-tl__dot" aria-hidden="true"></span>
         <div class="vaf-tl__card">
+          <span class="vaf-tl__cy" aria-hidden="true">{{ it.item_year }}</span>
           <h3>{{ it.item_title }}</h3>
           <div class="vaf-tl__copy">{{ it.item_copy }}</div>
         </div>

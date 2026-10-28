@@ -16,7 +16,7 @@
             <p class="vaf-wheel__k">{{ module.pillar_label }} {{ loop.index }}</p>
             <h3>{{ p.pillar_title }}</h3>
             <p class="vaf-wheel__copy">{{ p.pillar_copy }}</p>
-            {% if p.pillar_chips %}<ul class="vaf-wheel__chips">{% for c in p.pillar_chips.split("|") %}<li>{{ c|trim }}</li>{% endfor %}</ul>{% endif %}
+            {% if p.pillar_chips %}<ul class="vaf-wheel__chips">{% for c in p.pillar_chips|split("|") %}<li>{{ c|trim }}</li>{% endfor %}</ul>{% endif %}
             {% if p.pillar_proof %}<p class="vaf-wheel__proof">{{ p.pillar_proof }}</p>{% endif %}
             {% if p.pillar_link.url.href %}<a class="vaf-wheel__go" href="{{ p.pillar_link.url.href }}"{% if p.pillar_link.open_in_new_tab %} target="_blank" rel="noopener"{% endif %}>{{ module.link_label }}<span class="vaf-wheel__sr"> {{ p.pillar_title }}</span></a>{% endif %}
           </article>
