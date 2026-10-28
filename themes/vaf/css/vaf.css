@@ -864,3 +864,12 @@ html{scroll-padding-bottom:72px}
 }
 /* soft diagonal seams where light bands meet dark ones */
 .q-section.vaf-seal,.q-section.vaf-proof,.vaf-casestudy{position:relative}
+
+/* polish pass: centered buttons, no orphan words, white hero card */
+.q-btn,.q-btn-ghost,.pv-btns a,.pv-lh .fcard .go,.pv-lh .fcard.b .links a{display:inline-flex;align-items:center;justify-content:center;text-align:center;line-height:1.2}
+.pv-lh .fcard.b{width:min(384px,100%)}
+.pv-lh .fcard.b .links a{white-space:nowrap;padding:0 10px}
+.pv-lh .fcard .go{justify-content:center}
+h1,h2,h3,.q-h1,.q-h2,.q-h3{text-wrap:balance}
+p,li,.q-lead,.vc__copy,.fcard p{text-wrap:pretty}
+@media(max-width:1024px){.pv-lh .fcard.b{width:100%}}
