@@ -1,0 +1,8 @@
+{% set b = module %}
+<nav class="pv-sticky" aria-label="Quick actions"><a class="a" href="{{ b.primary.url.href }}">{{ b.primary_label }}</a><a class="b" href="{{ b.secondary.url.href }}">{{ b.secondary_label }}</a></nav>
+{% if b.drawer_links|length %}<div class="pv-sl">
+<button type="button" aria-expanded="false" aria-controls="pv-sl-d"><i aria-hidden="true"></i>{{ b.launcher_label }}</button>
+<div class="drawer" id="pv-sl-d" hidden>
+<div class="k">{{ b.drawer_eyebrow }}</div><h3>{{ b.drawer_title }}</h3>
+<div class="grid">{% for l in b.drawer_links %}<a href="{{ l.dl_to.url.href }}">{{ l.dl_label }}</a>{% endfor %}<a class="call" href="{{ b.secondary.url.href }}">Call {{ b.drawer_phone }}</a></div>
+<p>{{ b.drawer_note }}</p></div></div>{% endif %}

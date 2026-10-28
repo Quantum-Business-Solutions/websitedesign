@@ -1,0 +1,35 @@
+{#- VAF header: utility bar, logo, two-level navigation with a mega menu, primary button, mobile drawer. All fields. -#}
+{% set b = module %}
+<header class="q-header">
+<a class="q-skip" href="#q-content">Skip to content</a>
+{% if b.util|length or b.phone %}<div class="pv-util"><div class="q-container">{% for u in b.util %}<a href="{{ u.util_to.url.href }}">{{ u.util_label }}</a>{% endfor %}{% if b.phone %}<a class="pv-phone" href="tel:{{ b.phone|regex_replace('[^0-9+]','') }}">{{ b.phone }}</a>{% endif %}</div></div>{% endif %}
+<div class="q-container q-header-in">
+<a href="/" class="q-header-logo" aria-label="{{ b.company_name }} home"><img src="{{ b.logo.src }}" alt="{{ b.logo.alt or b.company_name }}" width="202" height="40" loading="eager"></a>
+<nav class="q-nav" aria-label="Main navigation">
+{% for n in b.nav %}{% if n.children|length %}
+<div class="q-nav-item{% if n.mega %} pv-has-mega{% endif %}">
+<a href="{{ n.to.url.href }}" aria-haspopup="true">{{ n.item_label }}<span class="q-caret" aria-hidden="true"></span></a>
+{% if n.mega %}
+<div class="q-subnav pv-mega"><div class="pv-mega-in">
+{% for c in n.children %}{% if c.sub_kind == 'heading' %}{% if not loop.first %}</div>{% endif %}<div class="col"><div class="gt">{{ c.sub_label }}</div>{% else %}<a href="{{ c.sub_to.url.href }}">{{ c.sub_label }}</a>{% endif %}{% if loop.last %}</div>{% endif %}{% endfor %}
+{% if n.feat_title %}<a class="feat" href="{{ n.feat_to.url.href }}"><span class="q-eyebrow">{{ n.feat_eyebrow }}</span><b>{{ n.feat_title }}</b><p>{{ n.feat_copy }}</p><span class="more">{{ n.feat_cta }}</span></a>{% endif %}
+</div>{% if n.foot_label %}<div class="pv-mega-foot"><a href="{{ n.to.url.href }}">{{ n.foot_label }}</a></div>{% endif %}</div>
+{% else %}
+<div class="q-subnav">{% for c in n.children %}<a href="{{ c.sub_to.url.href }}">{{ c.sub_label }}</a>{% endfor %}</div>
+{% endif %}
+</div>
+{% else %}<a href="{{ n.to.url.href }}">{{ n.item_label }}</a>{% endif %}{% endfor %}
+{% if b.cta_label %}<a class="q-booknow" href="{{ b.cta.url.href }}">{{ b.cta_label }}</a>{% endif %}
+</nav>
+<details class="q-mnav">
+<summary aria-label="Open menu"><span></span><span></span><span></span></summary>
+<div class="q-mnav-panel">
+{% for n in b.nav %}{% if n.children|length %}
+<details class="q-msub"><summary>{{ n.item_label }}<span class="q-caret" aria-hidden="true"></span></summary>
+<div class="q-msub-links">{% for c in n.children %}{% if c.sub_kind == 'heading' %}<div class="pv-mgt">{{ c.sub_label }}</div>{% else %}<a href="{{ c.sub_to.url.href }}">{{ c.sub_label }}</a>{% endif %}{% endfor %}{% if n.mega and n.foot_label %}<a href="{{ n.to.url.href }}" class="pv-mall">{{ n.foot_label }}</a>{% endif %}</div></details>
+{% else %}<a href="{{ n.to.url.href }}">{{ n.item_label }}</a>{% endif %}{% endfor %}
+{% if b.cta_label %}<a class="q-mnav-cta" href="{{ b.cta.url.href }}">{{ b.cta_label }}</a>{% endif %}
+</div>
+</details>
+</div>
+</header>

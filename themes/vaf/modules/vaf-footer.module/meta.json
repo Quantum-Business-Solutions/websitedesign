@@ -1,0 +1,14 @@
+{
+  "label": "VAF footer (global)",
+  "host_template_types": [
+    "PAGE"
+  ],
+  "is_available_for_new_content": false,
+  "global": true,
+  "content_types": [
+    "SITE_PAGE",
+    "LANDING_PAGE",
+    "BLOG_LISTING",
+    "BLOG_POST"
+  ]
+}

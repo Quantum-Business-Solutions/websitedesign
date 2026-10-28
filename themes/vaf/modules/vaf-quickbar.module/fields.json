@@ -1,0 +1,184 @@
+[
+  {
+    "id": "primary_label",
+    "name": "primary_label",
+    "label": "Bar button 1",
+    "type": "text",
+    "default": "Take the assessment"
+  },
+  {
+    "id": "primary",
+    "name": "primary",
+    "label": "Bar button 1 link",
+    "type": "link",
+    "default": {
+      "url": {
+        "content_id": null,
+        "type": "EXTERNAL",
+        "href": "/technology-strength-assessment"
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    },
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "BLOG",
+      "EMAIL_ADDRESS"
+    ]
+  },
+  {
+    "id": "secondary_label",
+    "name": "secondary_label",
+    "label": "Bar button 2",
+    "type": "text",
+    "default": "Call VAF"
+  },
+  {
+    "id": "secondary",
+    "name": "secondary",
+    "label": "Bar button 2 link (phone)",
+    "type": "link",
+    "default": {
+      "url": {
+        "content_id": null,
+        "type": "EXTERNAL",
+        "href": "tel:3176342913"
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    },
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "BLOG",
+      "EMAIL_ADDRESS"
+    ]
+  },
+  {
+    "id": "launcher_label",
+    "name": "launcher_label",
+    "label": "Support launcher text",
+    "type": "text",
+    "default": "Already a customer?"
+  },
+  {
+    "id": "drawer_eyebrow",
+    "name": "drawer_eyebrow",
+    "label": "Drawer eyebrow",
+    "type": "text",
+    "default": "Client Service Center"
+  },
+  {
+    "id": "drawer_title",
+    "name": "drawer_title",
+    "label": "Drawer title",
+    "type": "text",
+    "default": "What do you need today?"
+  },
+  {
+    "id": "drawer_links",
+    "name": "drawer_links",
+    "label": "Drawer links",
+    "type": "group",
+    "default": [
+      {
+        "dl_label": "Request support",
+        "dl_to": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/support#request"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "dl_label": "Order supplies",
+        "dl_to": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/support#supplies"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "dl_label": "IT support",
+        "dl_to": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/support#it"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "dl_label": "Training videos",
+        "dl_to": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "https://www.vanausdall.com/communication/customer-training-videos"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+    ],
+    "children": [
+      {
+        "id": "dl_label",
+        "name": "dl_label",
+        "label": "Label",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "id": "dl_to",
+        "name": "dl_to",
+        "label": "Link",
+        "type": "link",
+        "default": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": ""
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "supported_types": [
+          "EXTERNAL",
+          "CONTENT",
+          "BLOG",
+          "EMAIL_ADDRESS"
+        ]
+      }
+    ],
+    "occurrence": {
+      "min": 0,
+      "max": 8,
+      "default": 4
+    }
+  },
+  {
+    "id": "drawer_phone",
+    "name": "drawer_phone",
+    "label": "Drawer phone",
+    "type": "text",
+    "default": "(317) 634-2913"
+  },
+  {
+    "id": "drawer_note",
+    "name": "drawer_note",
+    "label": "Drawer note",
+    "type": "text",
+    "default": "The Customer Care Center processes requests Monday through Friday, 7:00am to 5:00pm, and responds within 24 hours."
+  }
+]

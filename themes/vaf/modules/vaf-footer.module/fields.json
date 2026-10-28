@@ -1,0 +1,693 @@
+[
+  {
+    "id": "company_name",
+    "name": "company_name",
+    "label": "Company name",
+    "type": "text",
+    "default": "Van Ausdall & Farrar, Inc."
+  },
+  {
+    "id": "logo",
+    "name": "logo",
+    "label": "Logo",
+    "type": "image",
+    "default": {
+      "src": "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/assets/logo-600.png",
+      "alt": "Van Ausdall & Farrar, Business Technology Simplified",
+      "loading": "eager",
+      "width": 600,
+      "height": 119
+    },
+    "responsive": false
+  },
+  {
+    "id": "tagline",
+    "name": "tagline",
+    "label": "Tagline",
+    "type": "text",
+    "default": "Business technology simplified. Indiana's largest full-service office technology provider, privately owned in Indianapolis since 1914."
+  },
+  {
+    "id": "phone",
+    "name": "phone",
+    "label": "Phone",
+    "type": "text",
+    "default": "(317) 634-2913"
+  },
+  {
+    "id": "email",
+    "name": "email",
+    "label": "Email",
+    "type": "text",
+    "default": "clientsuccess@vanausdall.com"
+  },
+  {
+    "id": "social",
+    "name": "social",
+    "label": "Social links",
+    "type": "group",
+    "default": [
+      {
+        "social_label": "LinkedIn",
+        "social_to": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "https://www.linkedin.com/company/van-ausdall-&-farrar"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "social_label": "Facebook",
+        "social_to": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "https://www.facebook.com/Vanausdallinc/"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "social_label": "Instagram",
+        "social_to": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "https://www.instagram.com/vanausdallinc/"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+    ],
+    "children": [
+      {
+        "id": "social_label",
+        "name": "social_label",
+        "label": "Label",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "id": "social_to",
+        "name": "social_to",
+        "label": "Link",
+        "type": "link",
+        "default": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": ""
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "supported_types": [
+          "EXTERNAL",
+          "CONTENT",
+          "BLOG",
+          "EMAIL_ADDRESS"
+        ]
+      }
+    ],
+    "occurrence": {
+      "min": 0,
+      "max": 8,
+      "default": 3
+    }
+  },
+  {
+    "id": "columns",
+    "name": "columns",
+    "label": "Link columns",
+    "type": "group",
+    "default": [
+      {
+        "col_title": "Solutions",
+        "wide": true,
+        "links": [
+          {
+            "link_label": "Managed IT services",
+            "to": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "/services/managed-it"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Cybersecurity",
+            "to": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "/services/cybersecurity"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Cloud services",
+            "to": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "/services/cloud"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Backup and recovery",
+            "to": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "/services/business-continuity"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Business phone systems",
+            "to": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "/services/business-phone-systems"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Copiers and printers",
+            "to": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "/services/copiers"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Managed print",
+            "to": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "/services/managed-print"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Copier service and repair",
+            "to": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "/services/copier-service"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Production print",
+            "to": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "/services/production-print"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Document management",
+            "to": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "/services/document-management"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Document conversion",
+            "to": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "/services/document-conversion"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "AI consulting",
+            "to": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "/services/ai-consulting"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ]
+      },
+      {
+        "col_title": "Industries",
+        "wide": false,
+        "links": [
+          {
+            "link_label": "Education",
+            "to": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "/industries/education"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Engineering and construction",
+            "to": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "/industries/engineering-construction"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Financial services",
+            "to": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "/industries/financial-services"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Healthcare",
+            "to": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "/industries/healthcare"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Insurance",
+            "to": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "/industries/insurance"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Manufacturing and logistics",
+            "to": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "/industries/manufacturing-logistics"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Real estate",
+            "to": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "/industries/real-estate"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "State and local government",
+            "to": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "/industries/government"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ]
+      },
+      {
+        "col_title": "Support",
+        "wide": false,
+        "links": [
+          {
+            "link_label": "Client Service Center",
+            "to": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "/support"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Request support",
+            "to": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "/support#request"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Order supplies",
+            "to": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "/support#supplies"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Technology Strength Assessment",
+            "to": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "/technology-strength-assessment"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Free print assessment",
+            "to": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "/print-assessment"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Cost calculator",
+            "to": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "/cost-calculator"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ]
+      },
+      {
+        "col_title": "Company",
+        "wide": false,
+        "links": [
+          {
+            "link_label": "About VAF",
+            "to": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "/about"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Case studies",
+            "to": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "/case-studies"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Partners",
+            "to": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "/partners"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Locations",
+            "to": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "/locations"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Careers",
+            "to": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "/careers"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "News and insights",
+            "to": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "/blog"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "link_label": "Contact",
+            "to": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "/contact"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ]
+      }
+    ],
+    "children": [
+      {
+        "id": "col_title",
+        "name": "col_title",
+        "label": "Column title",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "id": "wide",
+        "name": "wide",
+        "label": "Wide column (two link columns)",
+        "type": "boolean",
+        "default": false
+      },
+      {
+        "id": "links",
+        "name": "links",
+        "label": "Links",
+        "type": "group",
+        "default": [],
+        "children": [
+          {
+            "id": "link_label",
+            "name": "link_label",
+            "label": "Label",
+            "type": "text",
+            "default": ""
+          },
+          {
+            "id": "to",
+            "name": "to",
+            "label": "Link",
+            "type": "link",
+            "default": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": ""
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            },
+            "supported_types": [
+              "EXTERNAL",
+              "CONTENT",
+              "BLOG",
+              "EMAIL_ADDRESS"
+            ]
+          }
+        ],
+        "occurrence": {
+          "min": 0,
+          "max": 24,
+          "default": 0
+        }
+      }
+    ],
+    "occurrence": {
+      "min": 1,
+      "max": 6,
+      "default": 4
+    }
+  },
+  {
+    "id": "legal",
+    "name": "legal",
+    "label": "Legal links",
+    "type": "group",
+    "default": [
+      {
+        "legal_label": "Privacy",
+        "legal_to": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/policies/privacy"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "legal_label": "Terms of service",
+        "legal_to": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/policies/terms-of-service"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "legal_label": "Cookie policy",
+        "legal_to": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/policies/cookie"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+    ],
+    "children": [
+      {
+        "id": "legal_label",
+        "name": "legal_label",
+        "label": "Label",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "id": "legal_to",
+        "name": "legal_to",
+        "label": "Link",
+        "type": "link",
+        "default": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": ""
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "supported_types": [
+          "EXTERNAL",
+          "CONTENT",
+          "BLOG",
+          "EMAIL_ADDRESS"
+        ]
+      }
+    ],
+    "occurrence": {
+      "min": 0,
+      "max": 6,
+      "default": 3
+    }
+  }
+]

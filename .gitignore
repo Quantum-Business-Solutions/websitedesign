@@ -17,3 +17,4 @@ __pycache__/
 !verify-out/
 verify-out/*
 !verify-out/scores.jsonl
+themes/vaf/.upload-cache.json

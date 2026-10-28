@@ -1,0 +1,29 @@
+<!--
+  templateType: none
+  isAvailableForNewContent: false
+-->
+<!doctype html>
+<html lang="{{ html_lang }}" {{ html_lang_dir }}>
+<head>
+  <meta charset="utf-8">
+  <title>{{ page_meta.html_title }}</title>
+  <meta name="description" content="{{ page_meta.meta_description }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if brand_settings.favicon.src %}<link rel="shortcut icon" href="{{ brand_settings.favicon.src }}">{% endif %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  {{ require_css(get_asset_url('../../css/vaf.css')) }}
+  {{ require_js(get_asset_url('../../js/vaf.js'), 'footer') }}
+  {% block head_extra %}{% endblock %}
+  {{ standard_header_includes }}
+</head>
+<body class="{{ builtin_body_classes }}" data-qdir="showcase">
+  <div class="body-wrapper">
+    {% block header %}{% global_partial path='../partials/vaf-header.html' %}{% endblock %}
+    <div id="q-content" tabindex="-1">{% block body %}{% endblock %}</div>
+    {% block footer %}{% global_partial path='../partials/vaf-footer.html' %}{% endblock %}
+  </div>
+  {{ standard_footer_includes }}
+</body>
+</html>

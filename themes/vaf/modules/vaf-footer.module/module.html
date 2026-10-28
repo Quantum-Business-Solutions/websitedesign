@@ -1,0 +1,11 @@
+{% set b = module %}
+<footer class="q-footer">
+<div class="q-container q-footer-grid pv-fcols-4">
+<div><img src="{{ b.logo.src }}" alt="{{ b.logo.alt or b.company_name }}" width="182" height="36" loading="lazy"><p class="q-footer-tag">{{ b.tagline }}</p>
+<p class="q-footer-contact">{% if b.phone %}<a class="q-footer-phone" href="tel:{{ b.phone|regex_replace('[^0-9+]','') }}">{{ b.phone }}</a>{% endif %}{% if b.email %}<br><a href="mailto:{{ b.email }}">{{ b.email }}</a>{% endif %}</p>
+<div class="q-footer-social" style="gap:8px;font-size:14px">{% for s in b.social %}<a href="{{ s.social_to.url.href }}" aria-label="{{ s.social_label }}" rel="noopener">{{ s.social_label }}</a>{% endfor %}</div></div>
+{% for col in b.columns %}<div{% if col.wide %} class="pv-fwide"{% endif %}><div class="q-footer-head">{{ col.col_title }}</div>
+<nav class="q-footer-links{% if col.wide %} pv-two{% endif %}" aria-label="{{ col.col_title }}">{% for l in col.links %}<a href="{{ l.to.url.href }}">{{ l.link_label }}</a>{% endfor %}</nav></div>{% endfor %}
+</div>
+<div class="q-container q-footer-legal"><span>Copyright &copy; {{ year }} {{ b.company_name }}</span>{% for l in b.legal %} &nbsp;|&nbsp; <a href="{{ l.legal_to.url.href }}">{{ l.legal_label }}</a>{% endfor %}</div>
+</footer>
