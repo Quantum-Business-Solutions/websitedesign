@@ -1,0 +1,2182 @@
+{
+ "solutions-information.html": {
+  "title": "Information Technology Services Indianapolis | VAF",
+  "description": "Cloud solutions, managed security, managed IT services and physical security for Indianapolis businesses, from one local partner serving Indiana since 1914.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Information",
+    "heading": "Information Technology Services for Indianapolis Businesses",
+    "subhead": "Cloud solutions, cybersecurity, IT support, and physical security. One partner, over a century of Indiana business technology expertise.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-soc-1200.jpg",
+    "image_alt": "Information Technology",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "One partner for cloud, security, IT support and physical security",
+    "body": "Most businesses buy information technology from several vendors and then manage the gaps between them. VAF delivers cloud solutions, managed security services, managed IT services and physical security from one team in Indianapolis. Start with the free Technology Strength Assessment: ten to fifteen minutes online, then a specialist walks you through a roadmap of what to eliminate, optimize and leverage.",
+    "bullets": [
+     "Four service areas, each with its own page, from one local team",
+     "A 24/7 security operations center and U.S.-based help desk",
+     "A written recommendation before a quote, with no obligation"
+    ],
+    "id": "about"
+   },
+   {
+    "type": "stats",
+    "items": [
+     [
+      "1914",
+      "Serving Indiana businesses since, privately owned in Indianapolis"
+     ],
+     [
+      "24/7",
+      "Security operations center watching your environment"
+     ],
+     [
+      "250",
+      "Years of combined IT experience on the Vsecure team"
+     ],
+     [
+      "25+",
+      "Years providing IT services to Indiana companies"
+     ]
+    ]
+   },
+   {
+    "type": "services",
+    "heading": "What is in the Information pillar",
+    "intro": "Four core solutions, each with its own page, plus the services that support them.",
+    "items": [
+     [
+      "Cloud Solutions",
+      "Cloud migration, infrastructure as a service, backup and disaster recovery, and co-location.",
+      "services/cloud.html"
+     ],
+     [
+      "Managed Security Services",
+      "A 24/7 security operations center, managed detection and response, vulnerability management and awareness training.",
+      "services/cybersecurity.html"
+     ],
+     [
+      "Managed IT Services",
+      "A full IT department at a predictable monthly cost: help desk, proactive maintenance and a CIO-level roadmap.",
+      "services/managed-it.html"
+     ],
+     [
+      "Physical Security",
+      "IP video surveillance, access control and sound masking, installed and supported by one team.",
+      "services/physical-security.html"
+     ],
+     [
+      "IT Support",
+      "Responsive help desk answers and on-site engineering for businesses of every size.",
+      "services/it-support.html"
+     ],
+     [
+      "Backup and Recovery",
+      "Disaster recovery planning, high availability and redundancy for the data your business runs on.",
+      "services/business-continuity.html"
+     ],
+     [
+      "Network Security",
+      "Firewalls, endpoint protection, email security and zero-trust access.",
+      "services/network-security.html"
+     ],
+     [
+      "Cyber Security Solutions",
+      "Endpoint detection and response, firewalls and layered protection that stop threats early.",
+      "services/cyber-security-solutions.html"
+     ],
+     [
+      "Project Deployments",
+      "Plan, design and deploy new technology without disrupting business: migrations, virtual infrastructure and storage area networks.",
+      "services/project-deployment.html"
+     ],
+     [
+      "Video Surveillance",
+      "IP-based video surveillance that protects people, property and data.",
+      "services/business-security-systems.html"
+     ]
+    ],
+    "id": "whats-included"
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "Cloud Solutions",
+    "body": "<p>Aging on-premises servers drive up capital costs, limit scalability, and leave businesses vulnerable to downtime. Moving to the cloud reduces hardware spend, strengthens disaster recovery, and lets your team scale resources on demand.</p><p><a href=\"/services/cloud\">Explore Cloud Solutions</a></p>",
+    "bullets": [
+     "Cloud Migration: lift-and-shift or re-architect legacy workloads for AWS, Azure, or private cloud",
+     "Infrastructure as a Service: virtual servers, storage, and networking without the data center overhead",
+     "Backup & Disaster Recovery: automated off-site backups with fast recovery time objectives",
+     "Co-Location: house your hardware in a Tier III facility with redundant power and cooling"
+    ],
+    "image": "assets/cloud-1200.jpg",
+    "image_alt": "Cloud solutions",
+    "id": "cloud"
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "Managed Security Services",
+    "body": "<p>Ransomware, phishing, and supply-chain attacks target businesses of every size. Without 24/7 monitoring and a trained security team, breaches go undetected for months. Our SOC protects your network, endpoints, and data around the clock.</p><p><a href=\"/services/cybersecurity\">Explore Security Services</a></p>",
+    "bullets": [
+     "24/7 Security Operations Center: live analysts monitoring your environment for threats in real time",
+     "Managed Detection & Response: isolate and remediate incidents before they spread",
+     "Vulnerability Management: continuous scanning, prioritized patching, and risk reporting",
+     "Security Awareness Training: turn your staff into your first line of defense against phishing and social engineering"
+    ],
+    "id": "security"
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "Managed IT Services",
+    "body": "<p>Internal IT teams are stretched thin, stuck resetting passwords while strategic projects stall. Managed IT services give you a full IT department at a predictable monthly cost: help desk, proactive maintenance, and a CIO-level technology roadmap.</p><p><a href=\"/services/managed-it\">Explore IT Services</a></p>",
+    "bullets": [
+     "Help Desk & End-User Support: responsive, U.S.-based support for your employees, remote or on-site",
+     "Proactive Monitoring & Alerting: we detect and resolve issues before your team notices",
+     "Patch Management: OS and application updates tested and deployed on schedule, every month",
+     "IT Consulting & Roadmap: annual technology assessment with a prioritized budget and upgrade plan"
+    ],
+    "image": "assets/it-1200.jpg",
+    "image_alt": "Managed IT services",
+    "id": "managed-it"
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "Physical Security",
+    "body": "<p>Unmonitored facilities are exposed to theft, vandalism, and liability. Modern IP-based security systems give you remote visibility, recorded evidence, and centralized access control, managed by one provider, not five.</p><p><a href=\"/services/physical-security\">Explore Physical Security</a></p>",
+    "bullets": [
+     "Video Surveillance: high-definition IP cameras with cloud-based management, motion alerts, and archived footage",
+     "Access Control: keycard, fob, and biometric entry systems with audit trails and remote lockdown capability",
+     "Sound Masking: reduce noise distractions in open offices and protect speech privacy in sensitive areas",
+     "Turnkey Installation & Support: site survey, cabling, programming, and 24/7/365 maintenance from one team"
+    ],
+    "id": "physical-security"
+   },
+   {
+    "type": "partners",
+    "caption": "Information technology partners",
+    "items": [
+     "Fortinet",
+     "Sophos",
+     "Microsoft",
+     "Datto",
+     "KnowBe4",
+     "Arctic Wolf",
+     "Tenable",
+     "VMware",
+     "Juniper",
+     "N-able"
+    ]
+   },
+   {
+    "type": "values",
+    "eyebrow": "Partners and certifications",
+    "heading": "What our information partners deliver",
+    "items": [
+     [
+      "Fortinet",
+      "Engaged Advanced Partner, NSE-7 engineers, first SD-WAN Specialization in the Great Lakes region."
+     ],
+     [
+      "Sophos",
+      "Intercept X Advanced with XDR on every Vsecure base plan."
+     ],
+     [
+      "Microsoft",
+      "Licensing, administration, collaboration and backup."
+     ],
+     [
+      "Datto",
+      "Patching, monitoring, backup and continuity."
+     ],
+     [
+      "KnowBe4",
+      "Security awareness training and compliance management."
+     ],
+     [
+      "Arctic Wolf, Tenable, VMware, Juniper, N-able",
+      "Detection and response, vulnerability management, virtualization, networking and RMM."
+     ]
+    ]
+   },
+   {
+    "type": "related",
+    "heading": "Latest Managed IT Articles",
+    "intro": "Recent guidance from the VAF team on managed IT, security and healthcare technology.",
+    "items": [
+     [
+      "Managed IT Services | November 8, 2026",
+      "IT Solutions for Healthcare: HIPAA Technical Safeguards",
+      "HIPAA technical safeguards explained for healthcare IT: access control, encryption, audit logging, and the print and scan devices that touch patient data.",
+      "blog/it-solutions-for-healthcare-hipaa-technical-safeguards.html",
+      "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/blog/gear-technology.jpg"
+     ],
+     [
+      "Managed IT Services | November 1, 2026",
+      "Business Technology Simplified: A Century of Innovation",
+      "From Edison wax cylinders in 1914 to managed IT services in 2026: a century of business technology, and why simplification still wins for Indiana companies.",
+      "blog/business-technology-simplified-a-century-of-innovation.html",
+      "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/blog/data-stream.jpg"
+     ],
+     [
+      "Managed IT Services | October 15, 2026",
+      "Digital Transformation: What It Looks Like Mid-Market",
+      "Most mid-market digital transformation is not a megaproject. It is a sequence of unglamorous fixes to paper, phones, print, and identity that nobody announces.",
+      "blog/digital-transformation-what-it-looks-like-mid-market.html",
+      "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/blog/data-visualization.jpg"
+     ],
+     [
+      "Managed IT Services | July 15, 2026",
+      "Healthcare IT Solutions: Securing Patient Data & Streamlining Operations",
+      "Healthcare organizations face unprecedented challenges in managing technology infrastructure while maintaining focus on patient care. Contact us to learn more.",
+      "blog/healthcare-it-solutions-securing-patient-data--streamlining-operations.html",
+      "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/blog/doctor-research.jpg"
+     ],
+     [
+      "Cybersecurity | May 8, 2026",
+      "Managed Security Services: Protecting Your Business Assets",
+      "Cybersecurity has evolved from a technical consideration into a business imperative. Talk to our specialists today to find the right solution for your business.",
+      "blog/managed-security-services-protecting-your-business-assets.html",
+      "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/blog/coding.jpg"
+     ],
+     [
+      "Cybersecurity | April 15, 2026",
+      "Healthcare IT Solutions: Ensuring Compliance and Security",
+      "In the healthcare industry, managing information technology isn't just about efficiency-it's a matter of legal compliance and patient trust. Get started today.",
+      "blog/healthcare-it-solutions-ensuring-compliance-and-security.html",
+      "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/blog/doctor.jpg"
+     ]
+    ]
+   },
+   {
+    "type": "testimonials",
+    "heading": "What customers say after a service call",
+    "items": [
+     [
+      "He was incredibly efficient and personable, answering all of my questions thoroughly and thoughtfully. He also laughed at my jokes, which is always appreciated.",
+      "Elaine",
+      "After-service survey, June 2026"
+     ],
+     [
+      "Brent is amazing. Always there when we need him and he is very knowledgeable and helpful. It is a pleasure to work with him.",
+      "Megan",
+      "After-service survey, April 2026"
+     ]
+    ]
+   },
+   {
+    "type": "faq",
+    "heading": "Questions about Information Technology",
+    "items": [
+     [
+      "What do VAF's information technology services include?",
+      "Four areas: cloud solutions, managed security services, managed IT services and physical security. One team in Indianapolis delivers all four, and each has its own page."
+     ],
+     [
+      "Does VAF monitor security around the clock?",
+      "Yes. Our security operations center has live analysts monitoring your environment for threats in real time, and managed detection and response isolates and remediates incidents before they spread."
+     ],
+     [
+      "What does a managed IT agreement include?",
+      "A full IT department at a predictable monthly cost: help desk and end-user support, proactive monitoring and alerting, monthly patch management, and an annual technology assessment with a prioritized budget and upgrade plan."
+     ],
+     [
+      "How much do managed IT and cloud services cost?",
+      "It depends on scope, so we do not publish a single price. The free Technology Strength Assessment produces a written recommendation and a quote with no obligation."
+     ],
+     [
+      "Can VAF move our on-premises servers to the cloud?",
+      "Yes. We lift and shift or re-architect legacy workloads for AWS, Azure or private cloud, with automated off-site backups and fast recovery time objectives."
+     ],
+     [
+      "What does VAF's physical security cover?",
+      "High-definition IP video surveillance, keycard, fob and biometric access control with audit trails, sound masking, and turnkey installation with 24/7/365 maintenance from one team."
+     ],
+     [
+      "Where is VAF's IT support available?",
+      "Indianapolis, Fort Wayne, Evansville and every town between; the service fleet covers all of Indiana and customers throughout the Midwest are served from Indianapolis. Call (317) 634-2913."
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Schedule an Appointment Today",
+    "body": "If you’re interested in learning more about how our information technology solutions can help your business grow and stay protected, don’t hesitate to reach out to the technology professionals at VAF today. Contact us to schedule an appointment.",
+    "submit": "Schedule my consultation",
+    "note": "A person from the Indianapolis office replies, not an autoresponder. Or call (317) 634-2913."
+   }
+  ]
+ },
+ "solutions-communication.html": {
+  "title": "Business Phone Systems and Unified Communications | VAF",
+  "description": "Unified communications, business phone systems and contact center from Van Ausdall & Farrar. RingCentral, Mitel and 8x8 certified, serving Indiana and beyond.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Communication",
+    "heading": "Communication",
+    "subhead": "One application for voice calls, chat, email, video conference and collaboration, from any device. VAF designs, deploys and supports business phone systems and unified communications across Indiana and beyond.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-phone-1200.jpg",
+    "image_alt": "Unified Communications and business phone systems",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Communication",
+    "heading": "The workplace changed, and communication tools multiplied",
+    "body": "<p>The workplace was historically composed of physical office space with employees working in a shared office environment. People communicated via phone, email, and in person during set office hours based on the location and time zone.</p><p>More often than not, companies have deployed “point solutions” for phone, email, chat, videoconferencing and collaboration. Meaning, disparate solutions and separate administration and management of each communications medium.</p>",
+    "bullets": [
+     "Many of us were using 3, 4, 5 and maybe even 6 different applications to communicate",
+     "The training and administration overhead alone is staggering, let alone the subscription and support costs of each “point solution”",
+     "Today’s workforce often works remotely, or even in a home office, and needs flexible and simple to use applications",
+     "Remote workers require applications that work seamlessly with both PC’s and mobile devices",
+     "Are you really maximizing the productivity of your most valuable resource, people?"
+    ],
+    "id": "about"
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Communication",
+    "heading": "Enter the Next Generation of Unified Communications",
+    "body": "<p>The overriding benefit of next generation unified communications is using one application to make voice calls, chat, email, video conference and collaboration; from any device! The end result is dramatic increases in productivity with your staff and massive decreases in total cost of ownership.</p><p>Digital workplace strategies with improved collaboration and communication across the workforce is more important than ever. This next generation of unified communication delivers on the promise of true, unified communications. Van Ausdall & Farrar understands this generational shift, and helps businesses simplify their communications platform to increase productivity and dramatically reduce operating costs.</p><p><a href=\"/services/unified-communications\">Explore Unified Communications</a></p>",
+    "bullets": [],
+    "image": "assets/meeting-1200.jpg",
+    "image_alt": "Unified communications and collaboration",
+    "id": "unified"
+   },
+   {
+    "type": "services",
+    "heading": "What is in the Communication pillar",
+    "intro": "Phone systems, cloud platforms, contact center, carrier and network services, each with its own page.",
+    "items": [
+     [
+      "Business Phone Systems",
+      "VoIP, unified messaging and contact center technology for single locations and multi-office teams.",
+      "services/business-phone-systems.html"
+     ],
+     [
+      "Unified Communications",
+      "An integrated suite of tools that goes where you go: messaging, audio, VoIP, video and web conferencing.",
+      "services/unified-communications.html"
+     ],
+     [
+      "Cloud Communications",
+      "Cloud VoIP and PBX with enterprise calling features and no hardware to buy, manage or maintain.",
+      "services/cloud-communications.html"
+     ],
+     [
+      "Elevate AI Cloud Communications",
+      "Voice, video, chat, SMS and file collaboration in one secure cloud platform with AI-powered tools.",
+      "services/elevate.html"
+     ],
+     [
+      "Mobility Solutions",
+      "Call handling, conferencing and directory features on smartphones and tablets, so staff can work from anywhere.",
+      "services/mobility-solutions.html"
+     ],
+     [
+      "Conference and Collaboration",
+      "Web, audio and instant messaging, conference calls and desktop sharing across the organization.",
+      "services/conference-and-collaboration.html"
+     ],
+     [
+      "Call Center Services",
+      "Custom call center solutions with omnichannel routing, reporting and workforce tools.",
+      "services/call-center-services.html"
+     ],
+     [
+      "Call Recording",
+      "Unified fixed line, mobile and VoIP recording that meets PCI requirements.",
+      "services/call-recording.html"
+     ],
+     [
+      "Carrier Services",
+      "One bill, one partner for internet and carrier services, SIP trunking, broadband and carrier billing analysis.",
+      "services/carrier-services.html"
+     ],
+     [
+      "SD-WAN",
+      "Connect your locations with the speed, reliability and security of a private network over the internet connections you already have.",
+      "services/sd-wan.html"
+     ],
+     [
+      "Network Solutions",
+      "Network infrastructure and VoIP: design, deployment and management of complex network and security needs.",
+      "services/networking-solutions.html"
+     ],
+     [
+      "Network Infrastructure",
+      "Local and wide area network infrastructure, with wired switching, routing and wireless from ADTRAN.",
+      "services/network-infrastructure.html"
+     ],
+     [
+      "Why Switch Your On-Premises PBX",
+      "Seven reasons to move your on-premises PBX to the cloud.",
+      "services/switch-to-cloud.html"
+     ],
+     [
+      "Customer Training Videos",
+      "Quick clips that help your team get up and running on the Mitel Connect client.",
+      "services/customer-training-videos.html"
+     ]
+    ],
+    "id": "whats-included"
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Communication",
+    "heading": "Business Telephone Solutions",
+    "body": "<p>Whether you need the basics for a single location or a multi-office contact call center solution with application integration, Van Ausdall & Farrar is your partner for single-source, unified communications. We will create a phone system experience for you that leverages best-in-class products and technology with exceptional service to “answer” all of your business telephone system challenges.</p><p><a href=\"/services/business-phone-systems\">Explore Business Phone Systems</a></p>",
+    "bullets": [],
+    "id": "telephone"
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Communication",
+    "heading": "The Van Ausdall & Farrar Difference",
+    "body": "<p>Through our partnerships with RingCentral, Mitel, and 8X8, we create truly connected and integrated business telephone solutions providing phone systems, voice mail, unified messaging, chat, video conferencing and collaboration, Voice over IP (VoIP) Calling and advanced contact center solutions into one, simple to manage platform.</p><p>Our computer dispatched, vendor certified service fleet covers the entire state of Indiana and well beyond. Ongoing training and creating the opportunity for advancement is a keystone of our service and support program.</p>",
+    "bullets": [
+     "More than 20% of our new system deployments are outside the state of Indiana",
+     "The average tenure of our unified communications technical staff is over 14 years with the company",
+     "In the telecom business since 1983, with over 4,000 phone systems deployed"
+    ],
+    "id": "difference"
+   },
+   {
+    "type": "stats",
+    "items": [
+     [
+      "4,000",
+      "Phone systems deployed since 1983"
+     ],
+     [
+      "14+",
+      "Years average tenure of our unified communications technical staff"
+     ],
+     [
+      "20%",
+      "Of new system deployments are outside Indiana"
+     ],
+     [
+      "7",
+      "Consecutive years as a Mitel MiExclusive Gold Partner"
+     ]
+    ]
+   },
+   {
+    "type": "partners",
+    "caption": "Communication partners",
+    "items": [
+     "RingCentral",
+     "Mitel",
+     "8x8",
+     "Elevate",
+     "Fortinet"
+    ]
+   },
+   {
+    "type": "values",
+    "eyebrow": "Certifications",
+    "heading": "Highlights include",
+    "items": [
+     [
+      "RingCentral",
+      "Customer Delivery Partner Certified. Sales Professionals. Ignite Certified. Administrator Certified. Contact Center Administrator Certified."
+     ],
+     [
+      "Mitel",
+      "MiVoice Connect (Premise) Gold Certified. Enterprise Contact Center Gold Certified. Connect Mobility Gold Certified."
+     ],
+     [
+      "8x8",
+      "Sales Engineer Certified. A Gartner Magic Quadrant leader."
+     ]
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Communication",
+    "heading": "Products Include",
+    "body": "",
+    "bullets": [
+     "Traditional Phone Systems",
+     "Premise and Cloud Based Unified Communications Platforms",
+     "Contact Center",
+     "Advanced Mobility Solutions",
+     "Overhead Paging Systems",
+     "Loud Ringers and Strobes",
+     "Door Phones"
+    ],
+    "id": "products"
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Communication",
+    "heading": "Services Include",
+    "body": "",
+    "bullets": [
+     "24/7/365 Support",
+     "Turnkey project management, programming, testing and training",
+     "VAF Platinum unlimited support agreements available",
+     "Moves, Adds, Changes and Deletions support",
+     "Contact Center expert consultation",
+     "Complimentary Carrier/Internet Service Provider billing audit"
+    ],
+    "id": "services"
+   },
+   {
+    "type": "related",
+    "heading": "Latest Business Phone Systems Articles",
+    "intro": "Recent guidance from the VAF team on phone systems, unified communications and VoIP.",
+    "items": [
+     [
+      "Business Phone Systems | August 22, 2026",
+      "Modern Communication Systems: Transforming Business Connectivity",
+      "Business communication has undergone a dramatic transformation over the past decade. Talk to our specialists today to find the right solution for your business.",
+      "blog/modern-communication-systems-transforming-business-connectivity.html",
+      "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/blog/multitask.jpg"
+     ],
+     [
+      "Business Phone Systems | June 15, 2026",
+      "Unified Communication Platforms for the Modern Workplace",
+      "Business communication has transformed dramatically over the past decade. Where organizations once juggled separate systems for phone calls, video. Learn more.",
+      "blog/unified-communication-platforms-for-the-modern-workplace.html",
+      "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/blog/phones.jpg"
+     ],
+     [
+      "Business Phone Systems | April 8, 2026",
+      "Unified Communication Platforms: Streamlining Modern Workplaces",
+      "As businesses continue to adapt to remote and hybrid work models, the need for efficient and integrated communication systems has never been more critical.",
+      "blog/unified-communication-platforms-streamlining-modern-workplaces.html",
+      "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/blog/globe.jpg"
+     ],
+     [
+      "Business Phone Systems | February 24, 2026",
+      "From Fragmented to Unified: How UCaaS is Reshaping Business Interaction",
+      "This includes voice and telephone services, video conferencing, instant messaging, presence information, file sharing, and more. Talk to our team to learn more.",
+      "blog/from-fragmented-to-unified-how-ucaas-is-reshaping-business-interaction.html",
+      "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/blog/technology.jpg"
+     ],
+     [
+      "Cybersecurity | February 17, 2026",
+      "The Critical Importance of Data Security in Modern Business",
+      "From customer information and financial records to proprietary research and operational details, this data is the lifeblood of modern organizations. Learn more.",
+      "blog/the-critical-importance-of-data-security-in-modern-business.html",
+      "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/blog/cyber.jpg"
+     ],
+     [
+      "Business Phone Systems | January 7, 2026",
+      "Revolutionizing Customer Connections",
+      "The way companies interact with their customers can make or break their success. Reach out to our team to learn more about the right solution for your business.",
+      "blog/revolutionizing-customer-connections.html",
+      "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/blog/help-desk-vaf.jpg"
+     ]
+    ]
+   },
+   {
+    "type": "testimonials",
+    "heading": "What customers say after a service call",
+    "items": [
+     [
+      "He went above and beyond to ask and answer questions so we both were on the same page with the problem and ultimately the solution. He explained what we at the office needed to do differently to prevent this situation in the future as well.",
+      "Elaine",
+      "After-service survey, June 2026"
+     ],
+     [
+      "Mike is awesome, knowledgeable, and friendly.",
+      "Denise",
+      "After-service survey, February 2026"
+     ]
+    ]
+   },
+   {
+    "type": "faq",
+    "heading": "Questions about Unified Communications",
+    "items": [
+     [
+      "What is unified communications?",
+      "Unified communications lets you use one application to make voice calls, chat, email, video conference and collaborate from any device, instead of juggling several separate point solutions."
+     ],
+     [
+      "Which phone system platforms does VAF sell and support?",
+      "Mitel, RingCentral and 8x8, plus Elevate cloud communications. We bring phone systems, voice mail, unified messaging, chat, video conferencing, VoIP calling and contact center together on one platform."
+     ],
+     [
+      "Can VAF support one office and a multi-office contact center?",
+      "Yes. Whether you need the basics for a single location or a multi-office contact center solution with application integration, VAF is a single-source partner."
+     ],
+     [
+      "Can remote workers use the system on their own devices?",
+      "Yes. Advanced mobility solutions bring call handling, conferencing and directory features to PCs, smartphones and tablets so staff can work from anywhere."
+     ],
+     [
+      "Who services the system after installation?",
+      "Our computer dispatched, vendor certified service fleet covers the entire state of Indiana and well beyond, with 24/7/365 support and VAF Platinum unlimited support agreements available."
+     ],
+     [
+      "How experienced is the communications team?",
+      "The average tenure of our unified communications technical staff is over 14 years with the company, and more than 20% of our new system deployments are outside Indiana."
+     ],
+     [
+      "How much does a business phone system cost?",
+      "It depends on scope, so we do not publish a single price. The free Technology Strength Assessment produces a written recommendation and a quote with no obligation. We also offer a complimentary carrier or internet service provider billing audit."
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Talk to a communications specialist",
+    "body": "Tell us whether you run one office or many, and whether your people work in the office, at home or on the road. A specialist from the Indianapolis office will recommend a platform and walk you through the roadmap.",
+    "submit": "Schedule my consultation",
+    "note": "A person from the Indianapolis office replies, not an autoresponder. Or call (317) 634-2913."
+   }
+  ]
+ },
+ "services/copy-print-solutions.html": {
+  "title": "Copy Print Solutions in Indianapolis | Van Ausdall & Farrar",
+  "description": "Copiers, multifunction printers, managed print services and print security from Van Ausdall & Farrar. Cut printing costs up to 30% with a free print assessment.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Print",
+    "heading": "Copy Print Solutions for Indianapolis Businesses",
+    "subhead": "Reduce costs by up to 30% with Indianapolis copy print solutions, copiers, multifunction printers, and managed print services backed by local service.",
+    "primary": {
+     "label": "Get Your Free Print Assessment",
+     "href": "print-assessment.html"
+    },
+    "secondary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "image": "assets/copier-1200.jpg",
+    "image_alt": "Copy Print Solutions in Indianapolis",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "stats",
+    "items": [
+     [
+      "100+",
+      "Years in Business"
+     ],
+     [
+      "30%",
+      "Average Printing Cost Reduction"
+     ],
+     [
+      "24/7",
+      "Proactive Support & Monitoring"
+     ],
+     [
+      "25",
+      "Point Inspections on Every Call"
+     ]
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Print",
+    "heading": "Why Indianapolis Businesses Choose Our Print Solutions",
+    "body": "At Van Ausdall & Farrar, we provide a full suite of digital copy and print solutions for Indianapolis businesses. We also partner with top hardware companies to provide our customers with the best in-house print solutions possible.",
+    "bullets": [
+     "Local service since 1914: Indiana’s largest full-service office technology provider",
+     "Cut printing costs by up to 30%",
+     "Certified field service technicians with 25-point inspections on every call",
+     "24/7 proactive support and monitoring from our Customer Care Center",
+     "Enterprise-grade print security and compliance monitoring"
+    ],
+    "id": "why"
+   },
+   {
+    "type": "services",
+    "heading": "Explore Print Solutions",
+    "intro": "Every print service has its own page, from copier sales to managed print and production.",
+    "items": [
+     [
+      "Copier Sales and Lease",
+      "Copier sales, leasing and rental options from Canon, Ricoh, Kyocera and HP.",
+      "services/copiers.html"
+     ],
+     [
+      "Managed Print Services",
+      "Fleet optimization and 24/7 monitoring, automated supply replenishment and predictive maintenance.",
+      "services/managed-print.html"
+     ],
+     [
+      "Copier Service and Repair",
+      "Certified field service technicians on the road every day across Indianapolis and central Indiana.",
+      "services/copier-service.html"
+     ],
+     [
+      "Production Print",
+      "In-plant printing, variable data and color workflow for high-volume environments.",
+      "services/production-print.html"
+     ],
+     [
+      "Print Security and Accounting Software",
+      "Know what gets printed, by whom, and what it costs, on every device.",
+      "services/print-management-software.html"
+     ],
+     [
+      "Print Applications",
+      "Control who prints what, where and how, with secure printing and print release.",
+      "services/print-application-solutions.html"
+     ],
+     [
+      "Wide Format Printing and Scanning",
+      "Large format printers up to 60 inches wide with photo-like quality.",
+      "services/wids-format.html"
+     ],
+     [
+      "Free Print Assessment",
+      "We map your devices, volumes and costs, then show exactly where you save.",
+      "print-assessment.html"
+     ]
+    ],
+    "id": "whats-included"
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Print",
+    "heading": "New Copy Machines",
+    "body": "<p>Find the right device for your office and keep it running with service from our local team.</p><p><a href=\"/services/copiers\">Explore copier sales and leasing</a></p>",
+    "bullets": [
+     "Copier sales, leasing, and rental options",
+     "Canon, Ricoh, Kyocera, and HP multifunction printers",
+     "Service and maintenance from our local team"
+    ],
+    "image": "assets/copier-1200.jpg",
+    "image_alt": "Copiers and multifunction printers",
+    "id": "copiers"
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Print",
+    "heading": "Managed Print Services",
+    "body": "<p>Transform how you manage your print environment.</p><p><a href=\"/services/managed-print\">Explore managed print services</a></p>",
+    "bullets": [
+     "Complete fleet optimization and monitoring",
+     "Automated supply replenishment",
+     "Predictive maintenance",
+     "Real-time usage analytics"
+    ],
+    "id": "managed-print"
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Print",
+    "heading": "Print Optimization",
+    "body": "<p>Maximize your print investment.</p><p><a href=\"/services/print-application-solutions\">Optimize your print fleet</a></p>",
+    "bullets": [
+     "Fleet right-sizing",
+     "Cost-per-page optimization",
+     "Energy efficiency management",
+     "Regular performance reviews"
+    ],
+    "image": "assets/print-1200.jpg",
+    "image_alt": "Print optimization",
+    "id": "optimize"
+   },
+   {
+    "type": "process",
+    "id": "how-it-works",
+    "eyebrow": "How It Works",
+    "heading": "Assess, implement, monitor",
+    "stages": [
+     [
+      "Free Print Assessment",
+      "We map your devices, volumes, and costs, then show exactly where you save."
+     ],
+     [
+      "We Implement",
+      "Right-sized copiers and printers, software, security, and supplies, handled for you."
+     ],
+     [
+      "We Monitor 24/7",
+      "Proactive monitoring, predictive maintenance, and fast local repair keep you running."
+     ]
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Print",
+    "heading": "Our services include",
+    "body": "",
+    "bullets": [
+     "Multi-Function Copiers",
+     "Managed Print Services (MPS)",
+     "Print Security",
+     "Print/Scan/Copy Consulting",
+     "Application Integration",
+     "Scanning",
+     "Cloud Faxing",
+     "Fax Servers",
+     "Server List Printing",
+     "Print Fulfillment",
+     "Print on Demand"
+    ],
+    "id": "services"
+   },
+   {
+    "type": "partners",
+    "caption": "Print hardware partners",
+    "items": [
+     "Canon",
+     "Ricoh",
+     "Kyocera",
+     "HP",
+     "Brother",
+     "Zebra"
+    ]
+   },
+   {
+    "type": "values",
+    "eyebrow": "Partners",
+    "heading": "What our print partners provide",
+    "items": [
+     [
+      "Canon",
+      "imageRUNNER ADVANCE copiers and multifunction printers."
+     ],
+     [
+      "Ricoh",
+      "Black-and-white and color MFPs with document management built in."
+     ],
+     [
+      "Kyocera",
+      "Low total cost of ownership and enterprise print security."
+     ],
+     [
+      "HP",
+      "LaserJet and PageWide multifunction printers."
+     ],
+     [
+      "Brother and Zebra",
+      "Desktop and label printing."
+     ],
+     [
+      "EFI Fiery and Skyline",
+      "Production color management and web-to-print."
+     ]
+    ]
+   },
+   {
+    "type": "casestudy",
+    "eyebrow": "Case study",
+    "heading": "Copy Print Solutions in Action: Tippecanoe School Corporation consolidated over 1,200 printers and copiers down to just over 300, and saved $1,000,000 over the life of the contract.",
+    "quote": "Tippecanoe was won over by Van Ausdall's process. By cutting overall equipment from 1,200 machines to just over 300 new machines, the school corporation has seen $1,000,000 in savings over the life of the contract.",
+    "attribution": "Tippecanoe School Corporation case study, vanausdall.com",
+    "metrics": [
+     [
+      "Devices",
+      "1,200 to 300",
+      "Fleet consolidated across every building"
+     ],
+     [
+      "Savings",
+      "$1M",
+      "Over the life of the contract"
+     ],
+     [
+      "IT time",
+      "20%",
+      "Of IT staff time had gone to print issues"
+     ],
+     [
+      "Vendors",
+      "10 to 1",
+      "Copy and print vendors replaced by one"
+     ]
+    ],
+    "id": "case",
+    "alt": true
+   },
+   {
+    "type": "resources",
+    "heading": "Want results like that? Start with a free print assessment.",
+    "intro": "Three ways to see what your own print environment could save.",
+    "items": [
+     [
+      "Case study",
+      "Tippecanoe School Corporation",
+      "1,200 devices became just over 300, replacing ten copy and print vendors with one.",
+      "Read the case study",
+      "case-studies/tippecanoe-school-corporation.html"
+     ],
+     [
+      "Assessment",
+      "Get Your Free Print Assessment",
+      "We map your devices, volumes and costs, then show exactly where you save.",
+      "Start the assessment",
+      "print-assessment.html"
+     ],
+     [
+      "Calculator",
+      "Print cost calculator",
+      "Estimate your print spend and the potential saving at up to 30%.",
+      "Open the calculator",
+      "cost-calculator.html"
+     ]
+    ]
+   },
+   {
+    "type": "proof",
+    "id": "nps",
+    "eyebrow": "Our Commitment to a World Class Customer Experience",
+    "value": "93.4",
+    "text": "Net Promoter Score is the worldwide standard for measuring customer satisfaction from -100 to +100. VAF’s score is audited by CEO Juice and has been World Class, above 70, every year from 2019 to 2025.",
+    "source": "Net Promoter Score audited by CEO Juice"
+   },
+   {
+    "type": "testimonials",
+    "heading": "Imported directly from our after-service surveys",
+    "items": [
+     [
+      "The guy is totally awesome. He has been working on our equipment for at least 12 years and I would not want anyone else.",
+      "Teresa",
+      "After-service survey, May 2026"
+     ],
+     [
+      "He did a great job, and was very communicative prior to his arrival.",
+      "Rick",
+      "After-service survey, October 2025"
+     ],
+     [
+      "You guys give us top tier support and we thank you greatly.",
+      "Megan",
+      "After-service survey, April 2026"
+     ]
+    ],
+    "eyebrow": "Real customer comments"
+   },
+   {
+    "type": "related",
+    "heading": "Latest Managed Print Articles",
+    "intro": "Recent guidance from the VAF team on print, copy and production print.",
+    "items": [
+     [
+      "Managed Print Services | November 15, 2026",
+      "In-House vs. Outsourced Production Print: Where the Break-Even Actually Is",
+      "Where does in-house production print actually beat outsourcing? A practical break-even model covering fixed costs, click charges, labor, and monthly volume.",
+      "blog/in-house-vs-outsourced-production-print-break-even.html",
+      "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/blog/businessman-using-copier.jpg"
+     ],
+     [
+      "Managed Print Services | October 22, 2026",
+      "Print & Copy Solutions: Where Document Workflows Start",
+      "Your multifunction printer is the fastest place to capture a document. How print and copy solutions turn each scan into a routed, searchable workflow.",
+      "blog/print--copy-solutions-where-document-workflows-start.html",
+      "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/blog/developer-team.jpg"
+     ],
+     [
+      "Managed Print Services | August 15, 2026",
+      "Print & Copy Solutions: Maximizing Efficiency and ROI",
+      "Modern managed print services have evolved far beyond simply supplying toner and fixing paper jams. Talk to our specialists about the right solution for you.",
+      "blog/print--copy-solutions-maximizing-efficiency-and-roi.html",
+      "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/blog/print-shop.jpg"
+     ],
+     [
+      "Managed Print Services | June 22, 2026",
+      "Modern Print & Copy Solutions for Business Efficiency",
+      "The modern office print environment has transformed dramatically over the past decade. Reach out to our specialists today to learn more about your options.",
+      "blog/modern-print--copy-solutions-for-business-efficiency.html",
+      "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/blog/printed-images.jpg"
+     ],
+     [
+      "Managed Print Services | April 22, 2026",
+      "Revolutionize Your Workplace: Modern Print & Copy Solutions Unleashed",
+      "Today's print and copy solutions go far beyond simply producing paper documents. Reach out to our team to learn more about the right solution for your business.",
+      "blog/revolutionize-your-workplace-modern-print--copy-solutions-unleashed.html",
+      "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/blog/printer-vaf.jpg"
+     ],
+     [
+      "Managed Print Services | March 16, 2026",
+      "Printing Outside the Box: Innovative Print Application Solutions for Modern Businesses",
+      "But here at Van Ausdall & Farrar, we're here to tell you that printing is not just alive-it's thriving and evolving in exciting ways. Contact us to learn more.",
+      "blog/printing-outside-the-box-innovative-print-application-solutions-for-modern-businesses.html",
+      "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/blog/chart-vaf.jpg"
+     ]
+    ]
+   },
+   {
+    "type": "faq",
+    "heading": "Copy Print Solutions FAQ",
+    "items": [
+     [
+      "How much do copy and print solutions cost in Indianapolis?",
+      "Costs depend on equipment, print volume, and service level. Every engagement starts with a free print assessment so you see exact pricing for your office before you commit."
+     ],
+     [
+      "Do you lease or sell copiers and printers?",
+      "Both. We offer purchase, leasing, and rental options matched to your budget and workflow."
+     ],
+     [
+      "What is managed print services?",
+      "Managed print services (MPS) monitor your entire printer and copier fleet, automate supply replenishment, and cut printing costs up to 30%."
+     ],
+     [
+      "How fast is copier repair in Indianapolis?",
+      "Our Indianapolis-based technicians provide same-day service for most metro-area calls, with remote diagnostics resolving many issues without a visit."
+     ],
+     [
+      "What copier and printer brands do you service?",
+      "We sell and service Canon, Ricoh, Kyocera, and HP equipment, plus most other major office equipment brands."
+     ],
+     [
+      "What happens in the free print assessment?",
+      "We map your devices, volumes, and costs, then show exactly where you save. It comes before any quote."
+     ],
+     [
+      "Does VAF offer print security?",
+      "Yes. Enterprise-grade print security and compliance monitoring are part of our services, alongside software that shows what gets printed, by whom, and what it costs."
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Talk to an Indianapolis Copy Print Expert",
+    "body": "Visit our Indianapolis headquarters at 6430 E 75th Street, Indianapolis, IN 46250, call (317) 634-2913, or toll-free (800) 467-7474, Monday through Friday, 7:00am to 5:00pm EST.",
+    "submit": "Get Your Free Print Assessment",
+    "note": "Partnering with us for your copy/print management solutions provides you with the flexibility and affordability to adjust to other rapidly changing business trends. It also provides you with our 100+ years of experience implementing and managing secure technology solutions."
+   }
+  ]
+ },
+ "solutions-process.html": {
+  "title": "Business Process Management Solutions, Indiana | VAF",
+  "description": "Business process solutions, document scanning, content management, facilities management, print fulfillment and voice processing from Van Ausdall & Farrar.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Process",
+    "heading": "Business Process Management Solutions",
+    "subhead": "Managing the overall process flow throughout a company can be a daunting task. VAF manages the daily flow of data through your company, on site or off site, with a proven methodology.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-conversion-1200.jpg",
+    "image_alt": "Business Process Management Solutions",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Process",
+    "heading": "About Business Process Management Solutions",
+    "body": "<p>Managing the overall process flow throughout a company can be a daunting task. Most companies try to manage and solve modern-day problems with dated technology solutions. Unfortunately, those efforts are often unsuccessful if the right partnerships are not in place to truly help businesses stay competitive through precision, speed, and technology.</p><p>Van Ausdall & Farrar collaborates with businesses and organizations to efficiently manage the daily flow of data throughout your company.</p>",
+    "bullets": [
+     "Our proven methodology enables us to understand your business profile and deliver a customized process",
+     "We customize our processes to your needs, and we work on or offsite depending on what is best for your team",
+     "We help you work through current backlogs, identify solutions, and execute strategic informational process planning"
+    ],
+    "id": "about"
+   },
+   {
+    "type": "services",
+    "heading": "What is in the Process pillar",
+    "intro": "VAF offers a full range of process solutions, including:",
+    "items": [
+     [
+      "Business Process Solutions",
+      "Tailored solutions to manage the day-to-day flow of information through your company.",
+      "services/business-process-solutions.html"
+     ],
+     [
+      "Document Management",
+      "Capture, store and automate business documents with OnBase and Square 9.",
+      "services/document-management.html"
+     ],
+     [
+      "Document Conversion",
+      "Paper to searchable digital records, with secure electronic storage, from our Document Conversion Center.",
+      "services/document-conversion.html"
+     ],
+     [
+      "Document Scanning",
+      "Scanners and scanning services, from workgroup scanners to backfile scanning and indexing.",
+      "services/document-scanning.html"
+     ],
+     [
+      "Content Management",
+      "Capture, store and retrieve content across your organization, built for compliance and productivity.",
+      "services/content-management.html"
+     ],
+     [
+      "Automated Forms Processing",
+      "Exchange information automatically with anyone, anywhere, and in any format.",
+      "services/automated-forms-processing.html"
+     ],
+     [
+      "Facilities Management",
+      "Day-to-day office services such as scanning, printing, mail processing and imaging, handled for you.",
+      "services/facilities-management.html"
+     ],
+     [
+      "Managed Mail Centers",
+      "Timely, accurate and cost-effective mail receipt and distribution, with postage spend assessed and controlled.",
+      "services/managed-mail-centers.html"
+     ],
+     [
+      "Managed Print Centers",
+      "Copy centers we staff and equip for quality of output and customer service.",
+      "services/managed-print-centers.html"
+     ],
+     [
+      "Receptionist Services",
+      "Trained receptionists who receive guests at your locations.",
+      "services/receptionist-services.html"
+     ],
+     [
+      "Print Fulfillment",
+      "Off-site digital printing and mailing, wide-format, finishing and on-demand print.",
+      "services/print-fulfillment.html"
+     ],
+     [
+      "Voice Processing",
+      "SpeechMotion, digital dictation, speech recognition and transcription solutions.",
+      "services/voice-processing.html"
+     ],
+     [
+      "Document Management and Workflow",
+      "OnBase and Square 9 Smart Search, integrated with your line-of-business applications.",
+      "services/document-management-workflow.html"
+     ],
+     [
+      "AI Consulting",
+      "From strategy to governance: adopt AI responsibly and protect company data.",
+      "services/ai-consulting.html"
+     ]
+    ],
+    "id": "whats-included"
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Process",
+    "heading": "Business Process Solutions",
+    "body": "<p>VAF can build a tailored business process solution to help your company drive technological innovation, create cost-control efficiencies, and process improvements to improve overall business performance. All of our business process improvement solutions can be outsourced onsite or offsite, whichever is best for your company. Some of our business process solutions areas of expertise include:</p><p><a href=\"/services/business-process-solutions\">Explore Business Process Solutions</a></p>",
+    "bullets": [
+     "Facilities Management",
+     "Managed Mail Centers",
+     "Managed Print Centers",
+     "Receptionist Services",
+     "Document Retrieval & Electronic Storage"
+    ],
+    "image": "assets/process-1200.jpg",
+    "image_alt": "Business process solutions",
+    "id": "business-process"
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Process",
+    "heading": "Document Scanning",
+    "body": "<p>Many benefits can be gained when companies choose to go from paper to digital, but the process of doing so can be difficult. Many companies become overwhelmed with everything that goes into document conversion. VAF has the latest technology and strategic initiatives to seamlessly convert your documents to digital formats.</p><p><a href=\"/services/document-scanning\">Explore Document Scanning</a></p>",
+    "bullets": [],
+    "id": "scanning"
+   },
+   {
+    "type": "cards",
+    "eyebrow": "Document Scanning",
+    "heading": "Some of the benefits of a digital transformation include",
+    "items": [
+     [
+      "Backfile Scanning and Indexing",
+      "VAF has the latest Opex scanning systems and industry-leading intelligence capture software to ensure your documents are handled securely."
+     ],
+     [
+      "Day-Forward Business Process Outsourcing",
+      "We can process your day-forward documents via a secure lock-box/BPO arrangement, or we can provide your company with the staffing, equipment and hardware to support your critical business areas onsite."
+     ],
+     [
+      "Secure Document Destruction",
+      "After your files are scanned and signed off by Van Ausdall & Farrar’s chain of custody, files are destroyed safely and securely at our headquarters."
+     ]
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Process",
+    "heading": "Content Management Solutions",
+    "body": "<p>When you partner with Van Ausdall & Farrar, we’ll take the time to understand your content management solution needs, challenges, and areas of opportunity. We can then build a custom business process solution to help improve processes, increase efficiency, cut costs, and improve technological innovation.</p><p><a href=\"/services/content-management\">Explore Content Management Solutions</a></p>",
+    "bullets": [
+     "We will help drive enterprise-wide success in these key business objectives:",
+     "Security",
+     "Compliance",
+     "Automation"
+    ],
+    "id": "content"
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Process",
+    "heading": "Facilities Management Solutions",
+    "body": "<p>It can be difficult for some companies to effectively manage day-to-day office functions while staying focused on the company’s key objectives and organizational priorities. If your company is struggling to keep up with critical business processes, contact VAF to handle processes such as scanning, printing, mail processing, and imaging. VAF will stay on top of the latest facilities management processes and technologies to ensure your business is covered.</p><p><a href=\"/services/facilities-management\">Explore Facilities Management Solutions</a></p>",
+    "bullets": [
+     "Scanning",
+     "Printing",
+     "Mail processing",
+     "Imaging"
+    ],
+    "id": "facilities"
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Process",
+    "heading": "Print Fulfillment Solutions",
+    "body": "<p>Most companies today don’t have all of the necessary technology and specific equipment to perform every print job efficiently. VAF offers high-end print fulfillment solutions using the latest print technology. VAF can perform your company’s printing capabilities at a fraction of the cost compared to quick printers and retail copy shops.</p><p>Our print fulfillment services include:</p><p><a href=\"/services/print-fulfillment\">Explore Print Fulfillment Solutions</a></p>",
+    "bullets": [
+     "Digital printing and mailing",
+     "Posters, banners, and wide-format drawings",
+     "Laminating, binding, and finishing",
+     "Legal document expertise"
+    ],
+    "image": "assets/print-1200.jpg",
+    "image_alt": "Print fulfillment",
+    "id": "fulfillment"
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Process",
+    "heading": "Voice Processing Solutions",
+    "body": "<p>Van Ausdall & Farrar has a history of voice processing, digital dictation, and speech recognition that dates back more than 100 years. Our voice processing solutions include:</p><p><a href=\"/services/voice-processing\">Explore Voice Processing Solutions</a></p>",
+    "bullets": [
+     "SpeechMotion",
+     "Dictation",
+     "Voice recognition",
+     "Court recording",
+     "Voice capture",
+     "Voice workflow"
+    ],
+    "id": "voice"
+   },
+   {
+    "type": "casestudy",
+    "alt": true,
+    "eyebrow": "The numbers",
+    "heading": "Scan and index 1.5 million patient files in 90 days while adhering to HIPAA? We're on it.",
+    "quote": "Van Ausdall was able to scan over 1.5 million files in just 90 days. Once the project was finished and all files were indexed, the paper files were safely destroyed and Van Ausdall issued a certificate of destruction.",
+    "attribution": "Johnson Memorial Health case study, vanausdall.com",
+    "metrics": [
+     [
+      "Files",
+      "1.5M",
+      "Patient records scanned and indexed"
+     ],
+     [
+      "Time",
+      "90 days",
+      "From inventory to certificate of destruction"
+     ],
+     [
+      "Boxes",
+      "500+",
+      "Against an initial estimate of 100"
+     ],
+     [
+      "Budget",
+      "Under",
+      "By scanning only what retention required"
+     ]
+    ],
+    "id": "proof"
+   },
+   {
+    "type": "partners",
+    "caption": "Process partners",
+    "items": [
+     "OnBase",
+     "Square 9",
+     "OPEX",
+     "Fujitsu",
+     "Canon"
+    ]
+   },
+   {
+    "type": "values",
+    "eyebrow": "Partners",
+    "heading": "What our process partners provide",
+    "items": [
+     [
+      "OnBase by Hyland",
+      "Enterprise content management and Unity Forms."
+     ],
+     [
+      "Square 9",
+      "Smart Search document management."
+     ],
+     [
+      "Kofax",
+      "Intelligent capture and exchange for automated forms processing."
+     ],
+     [
+      "OPEX, Fujitsu and Canon",
+      "Production scanners for the Document Conversion Center."
+     ]
+    ]
+   },
+   {
+    "type": "related",
+    "heading": "Latest Business Process Articles",
+    "intro": "Recent guidance from the VAF team on process automation, document workflows and digital transformation.",
+    "items": [
+     [
+      "Document Management | November 22, 2026",
+      "Why Construction Firms Still Can't Escape Paper, and What It Costs Them",
+      "Construction still runs on paper. See what plan sets, submittals, change orders, and closeout binders cost firms, and how a hybrid workflow cuts the waste.",
+      "blog/why-construction-firms-cant-escape-paper.html",
+      "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/blog/bulldozer-demolishing-house.jpg"
+     ],
+     [
+      "Managed IT Services | October 15, 2026",
+      "Digital Transformation: What It Looks Like Mid-Market",
+      "Most mid-market digital transformation is not a megaproject. It is a sequence of unglamorous fixes to paper, phones, print, and identity that nobody announces.",
+      "blog/digital-transformation-what-it-looks-like-mid-market.html",
+      "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/blog/data-visualization.jpg"
+     ],
+     [
+      "News & Press | September 17, 2026",
+      "AI Workflow Automation for Business",
+      "Van Ausdall & Farrar launches AI Workflow Automation, helping Indianapolis businesses automate repetitive back-office work without writing code. Learn more.",
+      "blog/ai-workflow-automation.html",
+      "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/blog/data-center.jpg"
+     ],
+     [
+      "Business Process Solutions | September 1, 2026",
+      "Process Automation: Streamlining Operations for Growth",
+      "Process automation has emerged as the solution that bridges this gap, transforming how organizations handle repetitive tasks and complex workflows. Learn more.",
+      "blog/process-automation-streamlining-operations-for-growth.html",
+      "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/blog/machine-learning-concept.jpg"
+     ],
+     [
+      "AI Consulting | July 22, 2026",
+      "Process Automation: Streamlining Business Operations for Maximum Efficiency",
+      "The reality is that manual processes consume valuable time and resources while introducing opportunities for human error. Talk to our specialists for guidance.",
+      "blog/process-automation-streamlining-business-operations-for-maximum-efficiency.html",
+      "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/blog/info-sharing.jpg"
+     ],
+     [
+      "Business Process Solutions | May 1, 2026",
+      "Process Automation: Streamlining Operations With Technology",
+      "Business leaders face mounting pressure to do more with less-deliver faster results, minimize errors, and control costs while maintaining high-quality output.",
+      "blog/process-automation-streamlining-operations-with-technology.html",
+      "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/blog/communications.jpg"
+     ]
+    ]
+   },
+   {
+    "type": "testimonials",
+    "heading": "What customers say after a service call",
+    "items": [
+     [
+      "We always look forward to Jerome coming. He is kind and professional. We always know our problem will be resolved.",
+      "Stacy",
+      "After-service survey, May 2026"
+     ],
+     [
+      "The guy is totally awesome. He has been working on our equipment for at least 12 years and I would not want anyone else.",
+      "Teresa",
+      "After-service survey, May 2026"
+     ]
+    ]
+   },
+   {
+    "type": "faq",
+    "heading": "Questions about Business Process Management Solutions",
+    "items": [
+     [
+      "What are business process solutions?",
+      "Tailored solutions that manage the day-to-day flow of information through your company to drive technological innovation, cost-control efficiencies and process improvements. They can be outsourced onsite or offsite, whichever is best for you."
+     ],
+     [
+      "Does VAF scan and securely destroy paper documents?",
+      "Yes. VAF uses Opex scanning systems and intelligence capture software, and after files are scanned and signed off by our chain of custody, they are destroyed safely and securely at our headquarters."
+     ],
+     [
+      "Can VAF run our mail, print and scanning functions for us?",
+      "Yes. Facilities management covers processes such as scanning, printing, mail processing and imaging, and our solutions include managed mail centers, managed print centers and receptionist services."
+     ],
+     [
+      "What is print fulfillment?",
+      "Off-site printing for jobs you lack the equipment for: digital printing and mailing, posters, banners and wide-format drawings, laminating, binding and finishing, and legal document expertise, at a fraction of the cost of quick printers and retail copy shops."
+     ],
+     [
+      "What voice processing solutions does VAF offer?",
+      "SpeechMotion, dictation, voice recognition, court recording, voice capture and voice workflow. Our history in voice processing, digital dictation and speech recognition dates back more than 100 years."
+     ],
+     [
+      "Will you work on site or off site?",
+      "Either. We customize our processes to your needs and work on or offsite depending on what is best for your team."
+     ],
+     [
+      "How much do business process solutions cost?",
+      "It depends on scope, so we do not publish a single price. The free Technology Strength Assessment produces a written recommendation and a quote with no obligation."
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Contact VAF to Improve Your Business Operations",
+    "body": "To learn more about how our business process solutions can help implement improvements and improve operational efficiency, contact Van Ausdall & Farrar today.",
+    "submit": "Schedule my consultation",
+    "note": "A person from the Indianapolis office replies, not an autoresponder. Or call (317) 634-2913."
+   }
+  ]
+ },
+ "solutions.html": {
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions",
+    "heading": "Four pillars. Twelve solutions. <em>One roof.</em>",
+    "subhead": "Every line below is designed, installed, serviced and supported by VAF's own people in Indiana. Most customers start with one pillar and add from there.",
+    "primary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "secondary": {
+     "label": "Schedule your free consultation",
+     "href": "contact.html"
+    }
+   },
+   {
+    "type": "cards",
+    "id": "pillars",
+    "eyebrow": "Four pillars",
+    "heading": "Information, communication, print and process, from one partner",
+    "items": [
+     [
+      "Information",
+      "Managed IT, cybersecurity, cloud, backup and continuity. A vCIO, 24/7 monitoring and a security operations center, from one team."
+     ],
+     [
+      "Communication",
+      "Business phone systems, unified communications and contact center, in the telecom business since 1983 with over 4,000 systems deployed."
+     ],
+     [
+      "Print",
+      "Copiers, printers, managed print and production print. Canon, Ricoh, Kyocera and HP, serviced by certified local technicians."
+     ],
+     [
+      "Process",
+      "Document management, document conversion, business process and AI consulting. The paper out, the workflow in."
+     ]
+    ],
+    "alt": true
+   },
+   {
+    "type": "band",
+    "id": "pillar-links",
+    "eyebrow": "Explore by pillar",
+    "heading": "Go straight to a pillar",
+    "subhead": "Each pillar page lists every solution in it, the partners and certifications behind it, and the latest articles.",
+    "items": [
+     [
+      "Information",
+      "Cloud, security, managed IT and physical security.",
+      "solutions-information.html"
+     ],
+     [
+      "Communication",
+      "Business phone systems, unified communications and contact center.",
+      "solutions-communication.html"
+     ],
+     [
+      "Print",
+      "Copiers, managed print, print security and production print.",
+      "services/copy-print-solutions.html"
+     ],
+     [
+      "Process",
+      "Document scanning, content management, facilities management and voice processing.",
+      "solutions-process.html"
+     ]
+    ]
+   },
+   {
+    "type": "hotspots",
+    "id": "office",
+    "eyebrow": "The whole office",
+    "heading": "Four pillars, one floor plan",
+    "intro": "Click a number. Everything an office runs on, and the VAF page for each.",
+    "image": "assets/office-iso-1600.jpg",
+    "image_w": 1600,
+    "image_h": 893,
+    "alt": "An overhead illustration of an office with a copier room, a server room, a records room, a lounge and desks",
+    "items": [
+     {
+      "x": 27,
+      "y": 46,
+      "k": "Print",
+      "title": "The copier room",
+      "body": "Canon, Ricoh, Kyocera and HP multifunction devices under one managed print agreement, with supplies that arrive before they run out.",
+      "href": "services/copiers.html",
+      "label": "Copiers and managed print"
+     },
+     {
+      "x": 82,
+      "y": 14,
+      "k": "Information",
+      "title": "The server room",
+      "body": "Managed IT, Vsecure cybersecurity, cloud and continuity. Monitored 24/7 from Indianapolis, with a vCIO planning what comes next.",
+      "href": "services/managed-it.html",
+      "label": "Managed IT services"
+     },
+     {
+      "x": 93,
+      "y": 42,
+      "k": "Communication",
+      "title": "The desk phone",
+      "body": "Mitel, RingCentral, 8x8 and Elevate unified communications that follow your people to their smartphones. In telecom since 1983.",
+      "href": "services/business-phone-systems.html",
+      "label": "Business phone systems"
+     },
+     {
+      "x": 64,
+      "y": 71,
+      "k": "Process",
+      "title": "The scan station",
+      "body": "Every multifunction device scans straight into OnBase or Square 9 workflows: accounts payable, HR, contracts, records.",
+      "href": "services/document-management.html",
+      "label": "Document management"
+     },
+     {
+      "x": 88,
+      "y": 66,
+      "k": "Process",
+      "title": "The records wall",
+      "body": "Boxes of paper become searchable records at the secure Document Conversion Center, with a certificate of destruction at the end.",
+      "href": "services/document-conversion.html",
+      "label": "Document conversion"
+     },
+     {
+      "x": 16,
+      "y": 58,
+      "k": "Print",
+      "title": "The desks",
+      "body": "Desktop printers right-sized to how many the office needs, folded into the same managed print report as the copiers.",
+      "href": "services/managed-print.html",
+      "label": "Managed print"
+     },
+     {
+      "x": 62,
+      "y": 38,
+      "k": "Process",
+      "title": "The meeting area",
+      "body": "Where AI shows up first: drafting, summarizing, automating. An acceptable use policy and a roadmap before the tools.",
+      "href": "services/ai-consulting.html",
+      "label": "AI consulting"
+     }
+    ]
+   },
+   {
+    "type": "services",
+    "id": "information",
+    "alt": false,
+    "heading": "Information",
+    "intro": "Managed IT, cybersecurity, cloud, backup and continuity. A vCIO, 24/7 monitoring and a security operations center, from one team.",
+    "items": [
+     [
+      "Managed IT services",
+      "We become the extended arm of your business: vCIO guidance, 24/7 monitoring, security, backup, voice and cloud, delivered as one proactive partnership.",
+      "services/managed-it.html"
+     ],
+     [
+      "Managed security services",
+      "Assessments, monitoring and response from a team that has seen it all.",
+      "services/cybersecurity.html"
+     ],
+     [
+      "Cloud services",
+      "Cloud migration, infrastructure as a service, and backup and disaster recovery.",
+      "services/cloud.html"
+     ],
+     [
+      "Backup and recovery",
+      "Disaster recovery planning, high availability, and redundancy for the data your business runs on. Our backup and recovery solutions keep operations running when systems fail.",
+      "services/business-continuity.html"
+     ]
+    ]
+   },
+   {
+    "type": "services",
+    "id": "communication",
+    "alt": true,
+    "heading": "Communication",
+    "intro": "Business phone systems, unified communications and contact center, in the telecom business since 1983 with over 4,000 systems deployed.",
+    "items": [
+     [
+      "Business phone systems",
+      "VoIP, unified messaging and contact center technology for single locations and multi-office teams, designed.",
+      "services/business-phone-systems.html"
+     ]
+    ]
+   },
+   {
+    "type": "services",
+    "id": "print",
+    "alt": false,
+    "heading": "Print",
+    "intro": "Copiers, printers, managed print and production print. Canon, Ricoh, Kyocera and HP, serviced by certified local technicians.",
+    "items": [
+     [
+      "Copiers and printers",
+      "From a single multifunction printer for a startup to a fleet of production copiers across multiple locations.",
+      "services/copiers.html"
+     ],
+     [
+      "Managed print services",
+      "Print security, proactive fleet management and cost reduction: automated, cloud-based management for your entire printer and copier fleet.",
+      "services/managed-print.html"
+     ],
+     [
+      "Copier service and repair",
+      "Certified field service technicians are on the road across Indianapolis and central Indiana every day.",
+      "services/copier-service.html"
+     ],
+     [
+      "Production print",
+      "In-plant printing, variable data and color workflow for high-volume environments: presses, finishing.",
+      "services/production-print.html"
+     ]
+    ]
+   },
+   {
+    "type": "services",
+    "id": "process",
+    "alt": true,
+    "heading": "Process",
+    "intro": "Document management, document conversion, business process and AI consulting. The paper out, the workflow in.",
+    "items": [
+     [
+      "Document management",
+      "Capture, store and automate business documents to cut paper and boost productivity.",
+      "services/document-management.html"
+     ],
+     [
+      "Document conversion",
+      "Paperless digital imaging and secure electronic storage from VAF's ultra-secure Document Conversion Center inside our 57,000-square-foot Indianapolis.",
+      "services/document-conversion.html"
+     ],
+     [
+      "AI consulting",
+      "From strategy to governance: adopt AI responsibly, protect client trust and company data, and stay ahead of the competition.",
+      "services/ai-consulting.html"
+     ]
+    ]
+   },
+   {
+    "type": "testimonials",
+    "heading": "What customers say",
+    "items": [
+     [
+      "He was incredibly efficient and personable, answering all of my questions thoroughly and thoughtfully. He also laughed at my jokes, which is always appreciated.",
+      "Elaine",
+      "After-service survey, June 2026"
+     ],
+     [
+      "The guy is totally awesome. He has been working on our equipment for at least 12 years and I would not want anyone else.",
+      "Teresa",
+      "After-service survey, May 2026"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Every solution page, by pillar",
+    "intro": "Each page from the current site, rebuilt in the new templates with its FAQ and schema.",
+    "items": [
+     [
+      "Communication",
+      "Call Center & Customer Support",
+      "Custom call center solutions that improve customer experience and cut costs, omnichannel routing, reporting, and workforce tools.",
+      "Open the page",
+      "services/call-center-services.html"
+     ],
+     [
+      "Communication",
+      "Call Recording Solutions, Monitor Quality & Performance",
+      "Deliver the best possible service to your customers, improve your staff’s customer service skills and meet PCI requirements with Oak Si.",
+      "Open the page",
+      "services/call-recording.html"
+     ],
+     [
+      "Communication",
+      "Carrier Services Consultation",
+      "One bill, one partner for internet and carrier services, SIP trunking, broadband, and carrier billing analysis for your locations.",
+      "Open the page",
+      "services/carrier-services.html"
+     ],
+     [
+      "Communication",
+      "Cloud VoIP & PBX Systems for Every Business",
+      "Cloud VoIP and PBX systems for every business, enterprise calling features without hardware to buy, manage, or maintain.",
+      "Open the page",
+      "services/cloud-communications.html"
+     ],
+     [
+      "Communication",
+      "Elevate AI Cloud Communications Platform",
+      "Elevate helps businesses work faster, respond better, and stay connected, anywhere work happens.",
+      "Open the page",
+      "services/elevate.html"
+     ],
+     [
+      "Communication",
+      "Enterprise Digital Dictation",
+      "Hardware partners - click on partner name to view product line.",
+      "Open the page",
+      "services/enterprise-digital-dictation-solutions.html"
+     ],
+     [
+      "Communication",
+      "Enterprise Mobile App & PBX Features",
+      "Bring your communications platform with you wherever you go.",
+      "Open the page",
+      "services/mobility-solutions.html"
+     ],
+     [
+      "Communication",
+      "Enterprise Web & Audio Conferencing",
+      "Organizations that provide their teams with advanced, easy-to-use business telephone systems find that information flows faster and more.",
+      "Open the page",
+      "services/conference-and-collaboration.html"
+     ],
+     [
+      "Communication",
+      "Integrated Speech and Voice Recognition from Winscribe",
+      "Winscribe provides flexible front end speech recognition and back end server processing.",
+      "Open the page",
+      "services/voice-recognition.html"
+     ],
+     [
+      "Communication",
+      "Mitel Connect Client Training Videos",
+      "Van Ausdall & Farrar’s Customer Training Quick Clips",
+      "Open the page",
+      "services/customer-training-videos.html"
+     ],
+     [
+      "Communication",
+      "Network Infrastructure & VoIP",
+      "Van Ausdall & Farrar’s IT Practice specializes in Network Infrastructure and VoIP.",
+      "Open the page",
+      "services/networking-solutions.html"
+     ],
+     [
+      "Communication",
+      "Outsourced Dictation & Transcription Services",
+      "While Digital systems provide maximum productivity improvements and cost savings, adopting standalone digital dictation devices as a.",
+      "Open the page",
+      "services/transcription-services.html"
+     ],
+     [
+      "Communication",
+      "SD-WAN & Fortinet Hardware",
+      "SD-WAN connects your locations with the speed, reliability, and security of a private network, over the internet connections you already.",
+      "Open the page",
+      "services/sd-wan.html"
+     ],
+     [
+      "Communication",
+      "Scan Documents with Your i Phone",
+      "As many of us are working from home these days, sooner or later you’ll find the need to scan a document and send it to someone at another.",
+      "Open the page",
+      "services/iphone-scanning.html"
+     ],
+     [
+      "Communication",
+      "Site to Site Voice & Data Telecommunication",
+      "Windstream Communication is a facilities-based CLEC (and ILEC) that delivers advanced network communications, including cloud computing and.",
+      "Open the page",
+      "services/voice-data-circuits.html"
+     ],
+     [
+      "Communication",
+      "State-of-the-Art Voice & Data Communication Systems",
+      "Van Ausdall & Farrar delivers the best voice and data communications systems with the best value for all your managed internet, private.",
+      "Open the page",
+      "services/state-of-the-art-voice-data-communication-systems.html"
+     ],
+     [
+      "Communication",
+      "Unified Communications",
+      "The workplace was historically composed of physical office space with employees working in a shared office environment.",
+      "Open the page",
+      "solutions-communication.html"
+     ],
+     [
+      "Communication",
+      "Unified Communications and Collaboration Platforms",
+      "Unified Communications is an integrated suite of tools that goes where you go.",
+      "Open the page",
+      "services/unified-communications.html"
+     ],
+     [
+      "Information",
+      "7 Reasons to Switch Your On-Premises PBX to Cloud",
+      "Businesses going remote or hybrid require more than what an on-premises PBX can provide.",
+      "Open the page",
+      "services/switch-to-cloud.html"
+     ],
+     [
+      "Information",
+      "Business Security Systems",
+      "Video surveillance and physical security for your business, IP-based systems that protect people, property, and data.",
+      "Open the page",
+      "services/business-security-systems.html"
+     ],
+     [
+      "Information",
+      "Cloud Voice & Text",
+      "Learn about dictation solutions based on industry.",
+      "Open the page",
+      "services/cloud-based-solutions.html"
+     ],
+     [
+      "Information",
+      "Cyber Security: EDR, XDR & Firewalls",
+      "Endpoint detection and response, firewalls, and layered protection, cyber security that stops threats before they reach your business.",
+      "Open the page",
+      "services/cyber-security-solutions.html"
+     ],
+     [
+      "Information",
+      "Cyber Threat Assessment",
+      "In today’s digital landscape, cyber attacks are rampant.",
+      "Open the page",
+      "services/cyber-security-assessment.html"
+     ],
+     [
+      "Information",
+      "Free Security Awareness Training",
+      "Find out what percentage of your employees are Phish-prone ™ with your free phishing security test.",
+      "Open the page",
+      "services/free-security-awareness.html"
+     ],
+     [
+      "Information",
+      "Free Security Training Tools",
+      "Phishing Security Test Find out what percentage of your employees are Phish-prone.",
+      "Open the page",
+      "services/free-security-training-tools.html"
+     ],
+     [
+      "Information",
+      "Indianapolis IT Support",
+      "Van Ausdall & Farrar provides Indianapolis IT support for businesses of every size, from help desk answers to on-site engineering, backed.",
+      "Open the page",
+      "services/it-support.html"
+     ],
+     [
+      "Information",
+      "Indianapolis Network Security",
+      "Van Ausdall & Farrar provides Indianapolis network security that protects business data end to end, from firewalls and endpoint protection.",
+      "Open the page",
+      "services/network-security.html"
+     ],
+     [
+      "Information",
+      "Information Technology",
+      "Cloud solutions, cybersecurity, IT support, and physical security, one partner, over a century of Indiana business technology expertise.",
+      "Open the page",
+      "solutions-information.html"
+     ],
+     [
+      "Information",
+      "Information Technology Project Deployments",
+      "Plan, design, and deploy new technology without disrupting business, migrations, virtual infrastructure, and storage area networks done.",
+      "Open the page",
+      "services/project-deployment.html"
+     ],
+     [
+      "Information",
+      "Know Be4, Can Hackers Spoof Your Email Domain",
+      "Are you aware that one of the first things hackers try is to see if they can spoof the email address of someone in your own domain?",
+      "Open the page",
+      "services/knowbe4-can-hackers-spoof-email-address-domain.html"
+     ],
+     [
+      "Information",
+      "Know Be4, Free Phish Alert Button",
+      "Do your users know what to do when they receive a suspicious email?",
+      "Open the page",
+      "services/knowbe4-free-phish-alert-button.html"
+     ],
+     [
+      "Information",
+      "Know Be4, Free Phishing Security Test",
+      "Find out what percentage of your employees are Phish-prone",
+      "Open the page",
+      "services/knowbe4-start-free-phishing-security-test.html"
+     ],
+     [
+      "Information",
+      "Know Be4, Get Your Free Email Exposure Check",
+      "Find out which of your users emails are exposed before the bad guys do.",
+      "Open the page",
+      "services/knowbe4-get-free-email-exposure-check.html"
+     ],
+     [
+      "Information",
+      "Know Be4, Get Your Free Ransomware Simulator Tool Servi",
+      "Bad guys are constantly coming out with new versions of ransomware strains to evade detection.",
+      "Open the page",
+      "services/knowbe4-get-free-ransomware-simulator-tool.html"
+     ],
+     [
+      "Information",
+      "Know Be4, Get Your Free Weak Password Test",
+      "Are your user’s passwords…P@ssw0rd? Verizon’s recent Data Breach Report showed that 81% of hacking-related breaches used either stolen.",
+      "Open the page",
+      "services/knowbe4-get-free-weak-password-test.html"
+     ],
+     [
+      "Information",
+      "Local & Wide Area Network Infrastructure",
+      "Van Ausdall & Farrar’s Converged Communications Group offers innovative and reliable network infrastructure solutions.",
+      "Open the page",
+      "services/network-infrastructure.html"
+     ],
+     [
+      "Information",
+      "Network Security & Secure Remote Access for Indiana",
+      "It is always Van Ausdall & Farrar’s intention to deliver the best product with the best value in every market category we serve.",
+      "Open the page",
+      "services/network-security-secure-router-access.html"
+     ],
+     [
+      "Information",
+      "Office Security",
+      "As businesses grow the need to capture activity throughout and around the perimeter of the office becomes critical.",
+      "Open the page",
+      "services/office-security.html"
+     ],
+     [
+      "Information",
+      "Physical Security",
+      "Physical security is the core of any business or organization.",
+      "Open the page",
+      "services/physical-security.html"
+     ],
+     [
+      "Information",
+      "Proactive IT Managed Services for Business",
+      "Van Ausdall & Farrar is a single source service provider of supplemental and full outsource IT services for small to medium sized.",
+      "Open the page",
+      "services/proactive-it-services.html"
+     ],
+     [
+      "Information",
+      "Video Surveillance & Office Security",
+      "As businesses grow the need to capture activity throughout and around the perimeter of the office becomes critical.",
+      "Open the page",
+      "services/office-security-solutions.html"
+     ],
+     [
+      "Print",
+      "Copy Print Solutions in Indianapolis",
+      "Reduce costs by up to 30% with Indianapolis copy print solutions, copiers, multifunction printers, and managed print services backed by.",
+      "Open the page",
+      "services/copy-print-solutions.html"
+     ],
+     [
+      "Print",
+      "Print Security & Accounting Software",
+      "Print management for security and accounting, know what gets printed, by whom, and what it costs, on every device.",
+      "Open the page",
+      "services/print-management-software.html"
+     ],
+     [
+      "Print",
+      "Printer Management Software Support",
+      "Many companies need to control the parameters around print.",
+      "Open the page",
+      "services/print-application-solutions.html"
+     ],
+     [
+      "Print",
+      "Wide Format Printing & Scanning",
+      "Whether you’re a photographer, designer, architect, engineer or a construction professional, you need output solutions that are as big as.",
+      "Open the page",
+      "services/wids-format.html"
+     ],
+     [
+      "Process",
+      "Automated Forms Processing",
+      "Enable your organization to exchange information automatically with anyone, anywhere, and in any format.",
+      "Open the page",
+      "services/automated-forms-processing.html"
+     ],
+     [
+      "Process",
+      "Business Process Management Solutions",
+      "Managing the overall process flow throughout a company can be a daunting task.",
+      "Open the page",
+      "solutions-process.html"
+     ],
+     [
+      "Process",
+      "Content Management",
+      "Capture, store, and retrieve content across your organization, content management built for compliance and productivity.",
+      "Open the page",
+      "services/content-management.html"
+     ],
+     [
+      "Process",
+      "Document Management & Workflow",
+      "Frustrated by the Lack of Integration between Your Line-of-Business Application and Personal Productivity Tools?",
+      "Open the page",
+      "services/document-management-workflow.html"
+     ],
+     [
+      "Process",
+      "Document Scanning Tools",
+      "Are compact and powerful; desktop scanners are high-efficiency business tools that let you scan virtually any type of document, from.",
+      "Open the page",
+      "services/document-scanning.html"
+     ],
+     [
+      "Process",
+      "Facilities Management",
+      "Companies of all sizes struggle to manage the day to day office services functions that enable the business to operate, all while trying to.",
+      "Open the page",
+      "services/facilities-management.html"
+     ],
+     [
+      "Process",
+      "Managed Mail Center",
+      "We work with organizations to enhance the receipt and distribution of their mail in a timely, accurate and most cost effective manner.",
+      "Open the page",
+      "services/managed-mail-centers.html"
+     ],
+     [
+      "Process",
+      "Managed Print Center",
+      "We staff and equip centers in a cost-effective and highly-productive manner with a heightened focus on the quality of output and customer.",
+      "Open the page",
+      "services/managed-print-centers.html"
+     ],
+     [
+      "Process",
+      "Print Fulfillment & On-Demand Print",
+      "Off-site print fulfillment that frees your team, marketing materials, mailings, and business documents produced and delivered for you.",
+      "Open the page",
+      "services/print-fulfillment.html"
+     ],
+     [
+      "Process",
+      "Providing Process Solutions for Indiana Businesses",
+      "Manage the day-to-day flow of information through your company, custom process solutions that drive efficiency, control cost, and reduce.",
+      "Open the page",
+      "services/business-process-solutions.html"
+     ],
+     [
+      "Process",
+      "Receptionist & Visitor Screening",
+      "The receptionist is the first impression for visitors and guests.",
+      "Open the page",
+      "services/receptionist-services.html"
+     ],
+     [
+      "Process",
+      "Voice Processing Solutions",
+      "Digital dictation, speech recognition, and transcription technology solutions, HIPAA-compliant automation for healthcare, legal, and law.",
+      "Open the page",
+      "services/voice-processing.html"
+     ]
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about our solutions",
+    "items": [
+     [
+      "What does Van Ausdall & Farrar actually sell?",
+      "Four pillars under one agreement: information (managed IT, cybersecurity, cloud, backup), communication (business phone systems and unified communications), print (copiers, managed print, production print) and process (document management, conversion and AI consulting)."
+     ],
+     [
+      "Can we buy one service, or is it all or nothing?",
+      "Either. Most customers start with one pillar, usually copiers or managed IT, and add the others as contracts expire, because one invoice and one Customer Care Center is easier."
+     ],
+     [
+      "How do we know what we need?",
+      "Most engagements start with the free Technology Strength Assessment: ten to fifteen minutes online, then a specialist walks the results with you and writes a roadmap of what to eliminate, optimize and leverage."
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "alt": true,
+    "id": "consult",
+    "heading": "Not sure where to start? Start with the score.",
+    "body": "Ten to fifteen minutes online, then a specialist walks it with you.",
+    "submit": "Take the assessment",
+    "note": "A person from the Indianapolis office replies, not an autoresponder."
+   }
+  ]
+ }
+}
