@@ -3438,5 +3438,377 @@
  "van-ausdall--farrar-inc-certified-as-a-microsoft-solutions-partner-ranking-among-the-top-5-of-providers": {
   "skip": true,
   "reason": "Press release (dateline, certification announcement, 'View Full Press Release (PDF)'); partner-status and top-5% claim left for VAF to verify and publish itself."
+ },
+ "securing-your-business-the-power-of-modern-video-surveillance": {
+  "tldr": [
+   "Reasons to install video surveillance include deterring crime and vandalism, protecting people, monitoring operations, resolving disputes, possible insurance premium reductions and regulatory compliance.",
+   "Features include HD video, night vision, motion-triggered recording, remote access and AI analytics for faces, unusual behavior and customer counts.",
+   "Systems can integrate with access control, alarms, network infrastructure and cloud storage, and getting started involves assessment, custom design, installation, training and ongoing support."
+  ],
+  "faq": [
+   {
+    "q": "Does a business in a safe area still need video surveillance?",
+    "a": "The post says to ask whether you lock your doors at night: video surveillance is like a 24/7 security guard. It lists deterring crime and vandalism, protecting employees and customers, monitoring operations, resolving disputes, lowering insurance premiums and compliance."
+   },
+   {
+    "q": "What features do modern video surveillance systems have?",
+    "a": "The post lists high-definition video, night vision for low-light conditions, motion detection, remote access from a smartphone or tablet, and AI and analytics that can recognize faces, detect unusual behavior and even count customers."
+   },
+   {
+    "q": "How does motion detection help with video storage?",
+    "a": "The post says motion detection saves storage space and time by recording only when there is activity, instead of continuously capturing empty footage that nobody will ever need to review."
+   },
+   {
+    "q": "What systems can video surveillance integrate with?",
+    "a": "The post names access control systems, alarm systems, network infrastructure and cloud storage solutions, so footage is captured and also stored and managed securely and efficiently within your existing technology."
+   },
+   {
+    "q": "What are the steps to get started with video surveillance?",
+    "a": "The post describes an assessment of your current security setup and business needs, a custom design that fits your budget, professional installation with minimal disruption, training for your team, and ongoing support."
+   }
+  ],
+  "skip": false
+ },
+ "ucaas-revolutionizing-business-communication-in-the-digital-age": {
+  "tldr": [
+   "UCaaS integrates phone, video, chat and email in one cloud platform, and consolidating services can cut costs, often for a predictable monthly fee.",
+   "It supports remote work from any device, scales with a few clicks, and improves service through call routing, IVR and CRM integration.",
+   "Compare platforms on features, scalability, integration, security and support, and watch trends in AI, 5G mobile capability and business process integration."
+  ],
+  "faq": [
+   {
+    "q": "What is UCaaS?",
+    "a": "UCaaS, or Unified Communications as a Service, is a cloud-based platform that integrates various communication tools and applications, such as phone, video, chat and email, into a single, cohesive system."
+   },
+   {
+    "q": "What are the benefits of UCaaS for a business?",
+    "a": "The post lists flexibility and mobility from any device, cost-effectiveness from consolidating services, improved collaboration with video conferencing and real-time document editing, scalability without new hardware, and a better customer experience through call routing, IVR and CRM integration."
+   },
+   {
+    "q": "How should I choose a UCaaS solution?",
+    "a": "The post lists features that cover all the communication tools you need, scalability to grow with your business, integration with existing systems and workflows, robust security since communication moves to the cloud, and reliable, responsive customer support."
+   },
+   {
+    "q": "How does UCaaS improve the customer experience?",
+    "a": "With integrated communication tools your team can give faster, more efficient service. The post says features like call routing, Interactive Voice Response and CRM integration can significantly improve your customers' experience."
+   },
+   {
+    "q": "What trends does the post expect for UCaaS?",
+    "a": "The post names AI integration such as chatbots and analytics on communication patterns, stronger mobile capabilities as 5G networks spread, and deeper integration with business systems including CRM, ERP and project management tools."
+   }
+  ],
+  "skip": false
+ },
+ "utilizing-latest-ai-knowledge-management-to-outpace-it-competitors-while-enhancing-customer-support-experience": {
+  "skip": true,
+  "reason": "Press release (dateline, 'announced today', executive quotes, 'View Full Press Release (PDF)'); includes an unverified 30% faster resolution projection."
+ },
+ "content-management-solutions-the-key-to-streamlining-your-business-operations": {
+  "tldr": [
+   "Content management solutions strengthen security and records retention beyond paper or server-based document practices, and help organizations maintain compliance with local and federal standards.",
+   "Automation targets paper-heavy accounts payable, receivable, HR and contract processes to reduce DSO, speed hiring, avoid late fees and capture early payment discounts.",
+   "OCR and data extraction reduce manual entry, while version control, audit trails, search and a single source of truth keep information accurate and findable."
+  ],
+  "faq": [
+   {
+    "q": "How do content management solutions improve security?",
+    "a": "The post says even the most secure paper or server-based document practices carry risks. A content management solution can significantly reduce vulnerability and strengthen records retention practices by safeguarding business records and securing access to sensitive data."
+   },
+   {
+    "q": "How does content management help with regulatory compliance?",
+    "a": "The post says staying compliant with local and federal standards is difficult in paper or server-based systems. It says Van Ausdall & Farrar has decades of experience and an in-house team of compliance experts to help maintain compliance with relevant regulations."
+   },
+   {
+    "q": "Which business processes can content management automate?",
+    "a": "The post names accounts payable, accounts receivable, human resources and contract management, using automated data capture, extraction and rules-based workflow to reduce days sales outstanding, accelerate time-to-hire, eliminate late fees or take advantage of early payment discounts."
+   },
+   {
+    "q": "How do OCR and data extraction help?",
+    "a": "Optical character recognition and intelligent data extraction can automatically pull relevant data from various document formats, which the post says reduces manual data entry and the risk of human error and improves workflow efficiency."
+   },
+   {
+    "q": "Can content management run in the cloud or on-premises?",
+    "a": "The post says automation can be deployed in the cloud, on-premises or as a Service, and that the solutions are designed to scale and adapt as your organization grows and its needs change."
+   }
+  ],
+  "skip": false
+ },
+ "the-power-of-cloud-communications-by-van-ausdall--farrar": {
+  "tldr": [
+   "Cloud communications unify voice, video, messaging and collaboration in one system, breaking down silos between sales, service, help desks and customers.",
+   "Benefits include productivity and customer loyalty, freed IT resources, mobile integration, data-driven insights, compliance support and cost-effective scalability.",
+   "The post says its cloud deployments come with end-user and administrator training, on-site engineering support on go-live day, and ongoing support."
+  ],
+  "faq": [
+   {
+    "q": "What are the benefits of unified cloud communications?",
+    "a": "The post lists improved productivity and customer loyalty from streamlined channels, IT resource optimization, seamless mobile device integration, data-driven decision making from analyzed communications data, compliance support, and cost-effective scalability."
+   },
+   {
+    "q": "Which platforms power Van Ausdall & Farrar's cloud communications?",
+    "a": "The post says its cloud communications solutions are powered by industry leaders Mitel and 8x8, combining voice, video, messaging and collaboration tools into a single, cohesive system."
+   },
+   {
+    "q": "How does cloud communications reduce the IT workload?",
+    "a": "The post says cloud-based solutions are maintenance-free and simple to deploy, which frees IT resources so the tech team can focus on strategic initiatives instead of day-to-day system management."
+   },
+   {
+    "q": "What compliance needs do cloud communications address?",
+    "a": "The post says its solutions address compliance needs such as HIPAA and FISMA, so communications remain secure and compliant, and it describes keeping costs low while the system scales with the business."
+   },
+   {
+    "q": "What support comes with a cloud communications deployment?",
+    "a": "The post lists hands-on end-user and administration training, on-site engineering support on the day of go-live to ensure a smooth transition, and ongoing support from a team available to answer questions and provide guidance."
+   }
+  ],
+  "skip": false
+ },
+ "comprehensive-cybersecurity-assessments---protecting-your-digital-assets-with-van-ausdall--farrar": {
+  "tldr": [
+   "The assessment evaluates network infrastructure, applications and devices to identify vulnerabilities, check how well security controls work and analyze your overall risk profile.",
+   "Penetration testing simulates real attacks, social engineering tests check employee awareness, and a policy review aligns controls with HIPAA, PCI DSS and GDPR.",
+   "Assessments are tailored to your industry and can lead into managed IT services such as network management, cloud, backup and recovery, and technical support."
+  ],
+  "faq": [
+   {
+    "q": "What does a cybersecurity assessment evaluate?",
+    "a": "The post says it is a comprehensive evaluation of your current security posture, using advanced tools to examine network infrastructure, applications and devices, identify vulnerabilities, assess how effective existing security controls are, and analyze your overall risk profile."
+   },
+   {
+    "q": "What is penetration testing in a cybersecurity assessment?",
+    "a": "In the penetration testing process, ethical hackers simulate real-world cyber attacks to uncover weaknesses in your systems, which lets the assessors provide actionable recommendations for strengthening your defenses."
+   },
+   {
+    "q": "What are social engineering tests?",
+    "a": "The post says social engineering tests evaluate how effective your employee security awareness training programs are, which helps you identify and address potential human vulnerabilities in your organization."
+   },
+   {
+    "q": "Does a cybersecurity assessment cover compliance?",
+    "a": "Yes. The post says the assessment includes a review of policies, procedures and compliance requirements to ensure security measures align with best practices and frameworks such as HIPAA, PCI DSS and GDPR, reducing the risk of non-compliance and penalties."
+   },
+   {
+    "q": "Are cybersecurity assessments tailored by industry?",
+    "a": "The post says assessments are tailored to your specific industry and business requirements, drawing on experience with clients in sectors including healthcare, finance, retail and manufacturing and the cybersecurity challenges each faces."
+   }
+  ],
+  "skip": false
+ },
+ "business-continuity-the-cloud-is-key": {
+  "tldr": [
+   "Business continuity keeps key functions running through disruptions, and the cloud stores critical data and systems in redundant data centers instead of one on-premises server.",
+   "Cloud brings unlimited storage for most companies, access from anywhere and lower hardware costs through a scalable operating expense model.",
+   "The post says its data centers are 'Class V' rated, withstand 200+ mph winds and have redundant power, internet and 24/7 monitoring."
+  ],
+  "faq": [
+   {
+    "q": "What is business continuity?",
+    "a": "At its core, business continuity is about ensuring key business functions can continue operating and delivering products or services in the face of threats or disruptions, through proactive planning, resilient systems and processes that minimize downtime and data loss."
+   },
+   {
+    "q": "How does the cloud support business continuity?",
+    "a": "The cloud provides a secure, offsite repository for critical data, applications and systems housed in redundant data centers rather than on a single on-premises server, so employees can still reach resources from anywhere with an internet-connected device."
+   },
+   {
+    "q": "What if my office is affected by a disaster?",
+    "a": "Because of the decentralized cloud architecture, the post says employees can still access the resources they need from virtually anywhere, and staff in unaffected regions can temporarily support impacted regions during a disruption."
+   },
+   {
+    "q": "How does cloud storage reduce the risk of losing backups?",
+    "a": "Companies can store as much data as they want at a location separate from their own servers, which the post says removes the risk of running out of local storage space or losing backups if on-premises drives or servers are compromised."
+   },
+   {
+    "q": "What does the post say about Van Ausdall & Farrar's data centers?",
+    "a": "The post describes Class V rated data center facilities hardened to withstand 200+ mph winds and environmental extremes, with fully redundant power and internet connectivity, advanced physical security, environmental controls and 24/7 monitoring."
+   }
+  ],
+  "skip": false
+ },
+ "multi-factor-authentication-the-essential-layered-defense": {
+  "tldr": [
+   "MFA requires two or more factors: something you know, have or are, so one compromised factor is not enough to gain entry.",
+   "The post says many breaches trace back to compromised credentials, and that regulations such as HIPAA, PCI DSS and NIST guidelines increasingly mandate MFA.",
+   "Deploy MFA across critical systems with a risk-based approach, train users, monitor and update policies continuously, and choose solutions that integrate with existing infrastructure."
+  ],
+  "faq": [
+   {
+    "q": "What is multi-factor authentication?",
+    "a": "MFA, also called two-factor authentication or two-step verification, requires two or more forms of authentication before access: something you know like a password, something you have like a token or app, and something you are like a fingerprint."
+   },
+   {
+    "q": "Why is MFA important for cybersecurity?",
+    "a": "The post says a staggering number of attacks and breaches trace back to compromised user credentials. With MFA, even if an attacker gets a password, they still lack the additional factors needed to gain entry."
+   },
+   {
+    "q": "Do regulations require multi-factor authentication?",
+    "a": "The post says MFA plays a crucial role in compliance with standards such as HIPAA, PCI DSS and NIST guidelines, which increasingly mandate multi-factor authentication for sensitive data and systems."
+   },
+   {
+    "q": "What are best practices for implementing MFA?",
+    "a": "The post lists comprehensive deployment across critical systems including remote access, privileged accounts and cloud services, a risk-based approach, user training, continuous monitoring and maintenance, and careful vendor selection for integration, scalability and usability."
+   },
+   {
+    "q": "What is a risk-based approach to MFA?",
+    "a": "The post says to tailor MFA requirements based on the sensitivity of the data or system being accessed, user roles and potential risk factors, rather than applying one rule to everything."
+   }
+  ],
+  "skip": false
+ },
+ "informing-business-owners-of-new-section-179-tax-deduction-limits-for-2024": {
+  "skip": true,
+  "reason": "Press release about 2024 Section 179 deduction limits; dated tax figures and announcement-style, and the company states it does not offer financial advice."
+ },
+ "the-urgent-need-for-security-awareness-training-fortifying-your-organizations-first-line-of-defense": {
+  "tldr": [
+   "Security awareness training makes employees active participants in security, covering phishing, sensitive data handling, passwords, multi-factor authentication and social engineering.",
+   "Regulated industries like healthcare, finance and technology face fines, litigation, reputational damage and lost customer trust after a breach, underscoring the need for training.",
+   "Effective programs are engaging, interactive and industry-tailored, using simulations, case studies and practical exercises, and are updated regularly for latest threats and best practices."
+  ],
+  "faq": [
+   {
+    "q": "Why is security awareness training important?",
+    "a": "The post says security solutions are only the foundation of a cybersecurity strategy, and employees are often the first line of defense whose actions can strengthen or compromise your security posture, so training is the key to fortifying defenses."
+   },
+   {
+    "q": "What topics should security awareness training cover?",
+    "a": "The post lists recognizing the telltale signs of phishing attempts, safely handling sensitive data, strong password hygiene, implementing multi-factor authentication, and identifying social engineering tactics, among other threats employees are likely to encounter."
+   },
+   {
+    "q": "How should security training be delivered to be effective?",
+    "a": "The post recommends engaging, interactive programs tailored to your industry and organization, with hands-on simulations, real-world case studies and practical exercises, using diverse learning methods to suit different learning styles and improve retention."
+   },
+   {
+    "q": "How often should security awareness training be updated?",
+    "a": "The post says cyber threats constantly evolve, so training programs should be regularly updated to address the latest threats, attack vectors and best practices, so employees remain vigilant and prepared."
+   },
+   {
+    "q": "Why do regulated industries especially need security awareness training?",
+    "a": "The post says healthcare, finance and technology face stringent data privacy and compliance rules, and a single breach can bring fines, litigation, reputational damage and eroded customer trust, so employee awareness helps reduce that risk."
+   }
+  ],
+  "skip": false
+ },
+ "why-businesses-need-a-trusted-managed-services-provider": {
+  "tldr": [
+   "A managed IT provider monitors systems proactively, frees in-house staff for core work and replaces internal IT overhead with a flat, predictable monthly fee.",
+   "Core services include 24/7 monitoring, patch management, vulnerability scanning, antivirus and antimalware, staff augmentation and strategic IT consulting.",
+   "Cybersecurity specialists add security controls, risk assessments and incident response plans, aiming to recreate the single-IT-vendor experience as one end-to-end partner."
+  ],
+  "faq": [
+   {
+    "q": "Why do businesses outsource IT to a managed services provider?",
+    "a": "The post says many small and medium-sized businesses lack the resources or expertise for a full in-house IT department, and even larger organizations often outsource some IT functions to experts who provide specialized support."
+   },
+   {
+    "q": "How do managed IT services affect IT costs?",
+    "a": "An internal IT department carries overhead for salaries, benefits and training. The post says outsourcing gives access to enterprise-level expertise and resources for a flat, predictable monthly fee, and lets in-house staff focus on core responsibilities."
+   },
+   {
+    "q": "What services does a managed IT provider offer?",
+    "a": "The post lists 24/7 monitoring and alerting, patch management, vulnerability scanning and management, antivirus and antimalware protection, staff augmentation, and strategic IT consulting to align technology investments with business objectives."
+   },
+   {
+    "q": "How does cybersecurity fit into managed IT services?",
+    "a": "The post says cybersecurity specialists work hand in hand with the managed IT team to implement security controls, conduct risk assessments and develop incident response plans, protecting critical data and systems against escalating threats."
+   },
+   {
+    "q": "What does on-site IT support include?",
+    "a": "The post says partnering with a provider means IT experts are on site and at the ready whenever issues arise, with comprehensive technical support from routine maintenance and patch management to advanced cybersecurity monitoring and incident response."
+   }
+  ],
+  "skip": false
+ },
+ "the-unsung-hero-of-office-productivity-managed-print-services": {
+  "tldr": [
+   "Unmanaged printing means juggled vendors, time lost to jams and toner, security risks from unsecured devices, paper waste and an overburdened IT department.",
+   "Managed Print Services monitor devices, anticipate issues, perform preemptive maintenance, apply security measures and provide analytics on print usage and costs to find savings.",
+   "Cloud-based add-ons include cloud faxing, print-on-demand and mobile printing, and the suite spans copiers, print security, application integration, scanning, fax servers and print fulfillment."
+  ],
+  "faq": [
+   {
+    "q": "What problems does unmanaged printing cause?",
+    "a": "The post names a maze of devices, suppliers and maintenance contracts, employees wasting time on jams and toner, security risks from unsecured print devices, environmental waste, and an IT department constantly fielding support requests for aging equipment."
+   },
+   {
+    "q": "How does proactive print management reduce downtime?",
+    "a": "IT professionals continuously monitor devices, anticipate issues before they occur and perform preemptive maintenance. The post says this minimizes downtime, ensures optimal performance and extends the lifespan of print equipment."
+   },
+   {
+    "q": "How do managed print services help with security?",
+    "a": "The post says they implement robust measures to safeguard sensitive data from breaches or unauthorized access, using advanced print management software and best practices so confidential information stays protected."
+   },
+   {
+    "q": "What do print usage analytics provide?",
+    "a": "Detailed analytics and reporting give insight into print usage and costs, helping identify areas for optimization, cost-saving strategies and a smaller environmental footprint by eliminating unnecessary waste."
+   },
+   {
+    "q": "What cloud-based print services are available?",
+    "a": "The post names cloud faxing, print-on-demand and mobile printing, which extend managed print beyond traditional on-premises setups so the workforce can be productive from anywhere at any time."
+   }
+  ],
+  "skip": false
+ },
+ "safeguards-customer-networks-by-exposing-and-eliminating-website-vulnerabilities": {
+  "skip": true,
+  "reason": "Press release (dateline, executive quote, 'View Full Press Release (PDF)') announcing website audits; announcement-style."
+ },
+ "-protecting-your-data-in-the-age-of-cyber-threats": {
+  "tldr": [
+   "Healthcare and technology face stringent data compliance regulations, so highly secure systems help avoid costly fines and legal repercussions after a data breach.",
+   "Multi-factor authentication combines verification such as passwords, fingerprints or one-time text codes to significantly reduce unauthorized access and data breach risk.",
+   "The post lists ten security services, including device encryption, data loss prevention, web control, VPN, MFA, backup and recovery, and intrusion detection."
+  ],
+  "faq": [
+   {
+    "q": "Which industries face strict data compliance requirements?",
+    "a": "The post names healthcare and technology, which handle sensitive information and need highly secure systems to protect private data and avoid costly fines and legal repercussions in the event of a data breach."
+   },
+   {
+    "q": "How does multi-factor authentication improve data security?",
+    "a": "It requires multiple forms of verification, such as a combination of passwords, fingerprints or one-time codes sent by text, to grant access. The post says this extra layer significantly reduces the risk of unauthorized access and data breaches."
+   },
+   {
+    "q": "What is crypto security?",
+    "a": "The post describes crypto security as implementing specialized solutions to safeguard cryptocurrency assets and digital wallets from cyber threats, listed among the data security and compliance services."
+   },
+   {
+    "q": "What does web control protect against?",
+    "a": "The post says web control protects against threats from malicious downloads and web pages that may be sent by third-party clients, as one layer among its listed data security services."
+   },
+   {
+    "q": "What are Vsecure IT services?",
+    "a": "The post says Van Ausdall & Farrar restructured its IT managed service offerings into security-focused support plans under the Vsecure brand, with endpoint and server protection using EDR, XDR and MTR, proactive patching, co-managed firewall security and SOC as a Service."
+   }
+  ],
+  "skip": false
+ },
+ "the-rise-of-ucaas-transforming-business-communications": {
+  "tldr": [
+   "UCaaS delivers voice, video, messaging, conferencing and collaboration as one cloud platform, eliminating on-premises hardware and software installations.",
+   "Benefits include collaboration, no upfront hardware costs, subscription pricing, easy scaling, mobile and softphone access for remote workers, and contact center features like IVR.",
+   "Emerging trends include AI for call routing, sentiment analysis and virtual assistants, plus convergence with cloud contact centers and business applications."
+  ],
+  "faq": [
+   {
+    "q": "What is UCaaS?",
+    "a": "UCaaS, or Unified Communications as a Service, is a comprehensive communication platform that integrates voice, video, messaging, conferencing and collaboration into one solution delivered via the cloud, eliminating on-premises hardware and software installations."
+   },
+   {
+    "q": "How does UCaaS reduce communication costs?",
+    "a": "The post says businesses avoid upfront costs of buying and maintaining on-premises hardware and software, because providers handle infrastructure, updates and maintenance, and pricing is often a predictable subscription that makes budgeting and forecasting easier."
+   },
+   {
+    "q": "How does UCaaS support remote workers?",
+    "a": "The post says employees can stay connected from anywhere on any device, with mobile apps, find-me and follow-me capabilities and softphone clients, so remote workers use the same tools as office-based colleagues."
+   },
+   {
+    "q": "What contact center features can UCaaS include?",
+    "a": "The post names call routing, interactive voice response and call analytics, which can help deliver superior customer experiences by ensuring calls are handled efficiently and inquiries are resolved promptly."
+   },
+   {
+    "q": "How does UCaaS scale as a business changes?",
+    "a": "As a business grows or downsizes, it can add or remove users and adjust capabilities easily. The post says this means companies only pay for the resources they need, with no over-provisioning of expensive on-premises systems."
+   }
+  ],
+  "skip": false
  }
 }
