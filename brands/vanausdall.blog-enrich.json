@@ -3216,5 +3216,227 @@
  "mastering-execution-van-ausdall--farrar-incs-leadership-invited-to-attend-24th-annual-tag-convention": {
   "skip": true,
   "reason": "Press release and event notice about attending the 24th Annual TAG Convention; no evergreen advice."
+ },
+ "why-multi-factor-authentication-is-your-businesss-best-friend-in-cybersecurity": {
+  "tldr": [
+   "MFA adds verification beyond a password, such as something you have, are or where you are, so a stolen password is not enough.",
+   "The post says weak or stolen passwords cause 81% of data breaches, and cites remote work and compliance requirements as reasons to adopt MFA.",
+   "Start with critical systems, train employees, choose user-friendly methods such as push notifications or authenticator apps, and review your MFA strategy regularly."
+  ],
+  "faq": [
+   {
+    "q": "What is multi-factor authentication?",
+    "a": "Instead of relying solely on a password, MFA requires additional verification such as something you have like a smartphone or security key, something you are like a fingerprint, or somewhere you are through geolocation, like multiple locks on one door."
+   },
+   {
+    "q": "Why are passwords alone no longer enough?",
+    "a": "The post says weak or stolen passwords cause 81% of data breaches, and even complex passwords can be compromised through phishing, keylogging or brute force attacks. MFA adds a layer that makes a hacker's job significantly more difficult."
+   },
+   {
+    "q": "Do compliance rules require MFA?",
+    "a": "The post says many industry regulations and compliance standards now require MFA implementation, so whether you are in healthcare, finance or another regulated industry, MFA helps you meet those requirements while protecting valuable data."
+   },
+   {
+    "q": "Where should a business start with MFA?",
+    "a": "The post recommends starting with your most sensitive applications and data, training employees on why MFA matters, choosing user-friendly methods that balance security with convenience, and regularly reviewing and updating the strategy as new technologies emerge."
+   },
+   {
+    "q": "What MFA methods are available?",
+    "a": "The post lists push notifications to smartphones, SMS codes, authenticator apps, security keys and biometric verification, noting the right partner can make the transition smooth and user-friendly."
+   }
+  ],
+  "skip": false
+ },
+ "the-digital-revolution-why-modern-businesses-are-embracing-document-conversion-services": {
+  "tldr": [
+   "Paper carries hidden costs in storage space, search time, damage risk, security gaps, limited remote access and environmental impact, which digital conversion targets.",
+   "Digital files support encryption, access controls and audit trails, can be accessed anywhere, and can be backed up in multiple locations for disaster recovery.",
+   "The Indianapolis conversion center pairs Opex scanners with Ephesoft capture software to process millions of pages monthly, with chain-of-custody protocols and certified destruction."
+  ],
+  "faq": [
+   {
+    "q": "What are the hidden costs of keeping paper documents?",
+    "a": "The post lists physical storage space rental and maintenance, time spent searching for documents, risk of damage from fire, water or natural disasters, security vulnerabilities, limited accessibility for remote workers, and environmental impact."
+   },
+   {
+    "q": "How does document conversion improve security and compliance?",
+    "a": "Digital documents can be protected with encryption, access controls and audit trails, which the post says are not possible with paper. This matters for businesses that must comply with regulations such as HIPAA, GDPR or SOX."
+   },
+   {
+    "q": "How does document conversion support business continuity?",
+    "a": "Unlike paper, digital files can be backed up in multiple locations, which the post says ensures continuity even in a disaster and is invaluable for protecting critical business information."
+   },
+   {
+    "q": "What security measures protect documents during conversion?",
+    "a": "The post lists strict chain-of-custody protocols, a secure facility with controlled access, page-by-page quality control, and certified document destruction services for the paper originals once the digital copies have been created and checked."
+   },
+   {
+    "q": "Which business processes can document conversion support?",
+    "a": "The post names accounts payable and receivable, human resources, contract management, medical records and legal documents, with both backfile conversion for existing documents and day-forward solutions for ongoing document management."
+   }
+  ],
+  "skip": false
+ },
+ "van-ausdall--farrar-achieves-elite-status-with-canon-for-2025-reinforcing-century-long-commitment-to-excellence": {
+  "skip": true,
+  "reason": "Press release (dateline, partner program award announcement for 2025); about 311 words and not evergreen advice."
+ },
+ "empowering-your-team-the-critical-role-of-security-awareness-training-in-todays-digital-landscape": {
+  "tldr": [
+   "Cybercriminals increasingly target employees with social engineering and phishing, so security awareness training teaches staff to recognize, avoid and report suspicious activity.",
+   "Use interactive modules, micro-learning, gamification and real-world examples, update often, and track phishing success, incident reports, quiz scores and policy violations.",
+   "Reinforce beyond formal sessions with regular communications, management modeling, rewards for vigilance, onboarding integration and continuous learning resources."
+  ],
+  "faq": [
+   {
+    "q": "What topics should security awareness training cover?",
+    "a": "The post lists recognizing phishing attempts, safe browsing habits, password best practices, social engineering tactics, data handling and privacy, mobile device security, and physical security measures."
+   },
+   {
+    "q": "Why is employee training part of a cybersecurity strategy?",
+    "a": "The post says the most sophisticated security systems can be rendered useless by a single click from an unsuspecting employee, and cybercriminals increasingly target employees through social engineering, phishing emails and other deceptive practices."
+   },
+   {
+    "q": "How can I make security training engaging?",
+    "a": "The post suggests interactive modules with simulations, frequent content updates, micro-learning in bite-sized modules, gamification with competition and rewards, and real-world case studies and recent news stories to show the impact of breaches."
+   },
+   {
+    "q": "Which metrics show whether security training is working?",
+    "a": "The post lists reduction in successful phishing attempts, increase in reported security incidents, improved scores on security quizzes and assessments, decrease in security policy violations, and positive employee feedback on the training program."
+   },
+   {
+    "q": "How do I build a security culture beyond formal training?",
+    "a": "The post recommends regular security tips and threat updates, management visibly following protocols, rewarding employees who report potential threats, making security awareness part of new employee onboarding, and providing resources for continuous learning."
+   }
+  ],
+  "skip": false
+ },
+ "revolutionize-your-business-with-print-application-solutions-the-key-to-streamlined-workflows": {
+  "tldr": [
+   "Print application solutions are software tools that streamline printing, automate document routing, cut costs with print quotas and rules, and strengthen security.",
+   "Security features include secure print release, user authentication, encryption and tracking, and integration with ERP, CRM and other business systems is possible.",
+   "Examples include healthcare wristbands and barcode prescription labels, secure print release and redaction for law firms, and shipping labels and work orders for manufacturing."
+  ],
+  "faq": [
+   {
+    "q": "What are print application solutions?",
+    "a": "They are software tools designed to enhance and streamline printing processes within an organization. The post says they go beyond basic print management to improve workflow efficiency, reduce costs and boost productivity."
+   },
+   {
+    "q": "How do print application solutions reduce costs?",
+    "a": "The post says detailed insights into printing habits and usage patterns help identify waste, and features like print quotas and rules-based printing curb excessive printing, reducing paper and ink costs and supporting more sustainable practices."
+   },
+   {
+    "q": "How do print application solutions improve document security?",
+    "a": "The post lists secure print release, user authentication, advanced encryption and tracking features, so confidential documents are only printed when the authorized user is present and businesses keep control over printed documents."
+   },
+   {
+    "q": "Can print application solutions integrate with ERP or CRM systems?",
+    "a": "Yes. The post says modern solutions can integrate seamlessly with existing business systems such as enterprise resource planning software and customer relationship management tools, and can be tailored to work with your current setup."
+   },
+   {
+    "q": "How are print application solutions used in healthcare?",
+    "a": "The post describes systems that automatically print patient wristbands on admission, generate prescription labels with barcode verification, and securely route test results to the right providers, which improves efficiency and reduces errors that could affect patient care."
+   }
+  ],
+  "skip": false
+ },
+ "unlocking-the-power-of-access-control-securing-your-business-in-the-digital-age": {
+  "tldr": [
+   "Access control regulates who or what can view, use or enter a resource, covering physical entry and access to data, networks and systems.",
+   "Types include physical, logical, mandatory, discretionary, role-based and rule-based access control, and benefits include security, compliance, accountability through logs, efficiency and scalability.",
+   "Best practices: assess needs, balance security with usability, train employees, audit logs and permissions regularly, stay updated and integrate with other systems."
+  ],
+  "faq": [
+   {
+    "q": "What is access control?",
+    "a": "Access control is a security technique that regulates who or what can view, use or enter a resource. It can control entry to buildings or areas, and in the digital realm it governs who can reach certain data, networks or systems."
+   },
+   {
+    "q": "What are the types of access control systems?",
+    "a": "The post lists physical access control, logical access control for networks and data, mandatory access control, a strict hierarchical model, discretionary access control set by resource owners, role-based access control, and rule-based access control using conditions."
+   },
+   {
+    "q": "Why does access control matter for a business?",
+    "a": "The post lists enhanced security by limiting access to sensitive areas and information, compliance with data protection regulations, accountability through logs of who accessed what and when, improved efficiency, and scalability as the business grows."
+   },
+   {
+    "q": "How does access control relate to printing?",
+    "a": "The post says printers and copiers can be a weak point, and secure printing features can integrate with access control so sensitive documents are only printed when the authorized user is physically present at the printer."
+   },
+   {
+    "q": "What are best practices for implementing access control?",
+    "a": "The post recommends assessing your needs, choosing a system that balances security and usability, training employees, auditing access logs and permissions periodically, keeping the system updated, and integrating it with your other security and business systems."
+   }
+  ],
+  "skip": false
+ },
+ "safeguarding-your-business-the-critical-importance-of-data-security-in-the-modern-age": {
+  "tldr": [
+   "Threats include malware, viruses, ransomware and phishing, and the post says healthcare and technology face particularly stringent data compliance requirements.",
+   "Vsecure IT support plans list device encryption, security awareness training, data loss prevention, malicious traffic detection, MFA, and backup and disaster recovery.",
+   "The post says base Vsecure programs include Sophos Intercept X Advanced with XDR plus Datto patching and monitoring, aimed at meeting cyber insurance requirements."
+  ],
+  "faq": [
+   {
+    "q": "What security features do Vsecure managed IT plans include?",
+    "a": "The post lists device encryption, security awareness training, data loss prevention, malicious traffic detection, multi-factor authentication, and backup and disaster recovery, as security-focused support plans sized to a business's needs."
+   },
+   {
+    "q": "What security do cyber insurance providers expect from a business?",
+    "a": "The post says businesses investing in cyber insurance discover the need for comprehensive security. It says Vsecure programs offer EDR and XDR protection, proactive monitoring and software patching, and that next-generation firewalls can complete the setup."
+   },
+   {
+    "q": "What managed security services go beyond basic endpoint protection?",
+    "a": "The post lists endpoint and server protection using EDR, XDR and MTR technologies, a co-managed Fortinet firewall service, Security Operations Center as a Service, mail security, and vulnerability scanning, delivered through partnerships with Fortinet and Sophos."
+   },
+   {
+    "q": "What security expertise and training does the post describe?",
+    "a": "The post says its team includes a Certified Information Systems Security Professional who can assist with regulatory concerns, security planning, business continuity and incident planning, plus end-user cyber security awareness training and a compliance management platform from KnowBe4."
+   },
+   {
+    "q": "What kinds of data threats do businesses face?",
+    "a": "The post names malware and viruses, ransomware and phishing attacks, and says the methods used by cybercriminals keep evolving as technology advances, which is why it calls for comprehensive security measures."
+   }
+  ],
+  "skip": false
+ },
+ "accelerating-customer-profitability-and-competitive-advantage-through-the-utilization-of-technology": {
+  "skip": true,
+  "reason": "Press release (dateline, executive quotes, 'View Full Press Release (PDF)') introducing a service process; announcement-style."
+ },
+ "revolutionizing-customer-experiences-the-power-of-modern-contact-centers": {
+  "tldr": [
+   "Modern contact centers are multi-channel operations spanning phone, email, chat and social media, powered by cloud systems, omnichannel communication, AI chatbots and advanced analytics.",
+   "AI chatbots can handle routine inquiries 24/7 so human agents focus on complex issues, and the post stresses balancing technology with a personal touch.",
+   "Benefits include customer satisfaction, efficiency from advanced routing and AI tools, analytics insights, cost savings versus traditional setups, and scalability with demand."
+  ],
+  "faq": [
+   {
+    "q": "What technologies power a modern contact center?",
+    "a": "The post names cloud-based systems for flexibility and scalability, omnichannel communication across phone, email, chat and social media, AI-powered chatbots for routine inquiries, and advanced analytics on customer behavior, agent performance and operational efficiency."
+   },
+   {
+    "q": "Why move a contact center to the cloud?",
+    "a": "The post says cloud technology offers flexibility, scalability and cost-effectiveness that traditional on-premises systems cannot match, so operations can scale up or down with demand without significant hardware investments."
+   },
+   {
+    "q": "How do chatbots fit with human contact center agents?",
+    "a": "AI-powered chatbots can handle routine inquiries 24/7, freeing human agents to focus on more complex issues. The post stresses that the best contact centers balance technology with a personal touch, since sometimes there is no substitute for a knowledgeable, empathetic agent."
+   },
+   {
+    "q": "What are the benefits of a well-optimized contact center?",
+    "a": "The post lists improved customer satisfaction through quick, personalized multi-channel service, increased efficiency from advanced routing and AI tools, better insights, cost savings versus traditional setups, and scalability for businesses of all sizes."
+   },
+   {
+    "q": "What does advanced analytics provide for a contact center?",
+    "a": "The post says advanced analytics tools give deep insights into customer behavior, agent performance and overall operational efficiency, which helps businesses optimize operations based on hard data and make strategic decisions."
+   }
+  ],
+  "skip": false
+ },
+ "van-ausdall--farrar-inc-certified-as-a-microsoft-solutions-partner-ranking-among-the-top-5-of-providers": {
+  "skip": true,
+  "reason": "Press release (dateline, certification announcement, 'View Full Press Release (PDF)'); partner-status and top-5% claim left for VAF to verify and publish itself."
  }
 }
