@@ -818,9 +818,12 @@ def build():
     # ---------------- home
     pages.append({"file": "index.html", "title": "Van Ausdall & Farrar | Managed IT, copiers, phone systems and office technology in Indianapolis",
                   "compose": {
-                      "clean": ["hero-light", "partners", "pillars", "seal", "customers", "story", "office", "fleet", "numbers", "ba", "flow", "model", "proof", "casestudy", "is-this-you", "markets", "map", "voices", "film", "faq", "contact"],
-                      "showcase": ["hero", "partners", "pillars", "customers", "fleet", "numbers", "ba", "flow", "office", "model", "seal", "story", "proof", "casestudy", "markets", "map", "voices", "film", "faq", "contact"],
-                      "press": ["hero-light", "story", "pillars", "customers", "seal", "office", "fleet", "numbers", "ba", "flow", "model", "proof", "casestudy", "voices", "film", "markets", "map", "faq", "contact"]},
+                      # Home is a technology-partner page, not a copier page (client, 28 Oct 2026):
+                      # the fleet grid and the rotating copier model are off Home, and the
+                      # Technology Strength Assessment questions sit directly under the four pillars.
+                      "clean": ["hero-light", "partners", "pillars", "is-this-you", "seal", "customers", "story", "office", "numbers", "ba", "flow", "proof", "casestudy", "markets", "map", "voices", "film", "faq", "contact"],
+                      "showcase": ["hero", "partners", "pillars", "is-this-you", "customers", "numbers", "ba", "flow", "office", "seal", "story", "proof", "casestudy", "markets", "map", "voices", "film", "faq", "contact"],
+                      "press": ["hero-light", "story", "pillars", "is-this-you", "customers", "seal", "office", "numbers", "ba", "flow", "proof", "casestudy", "voices", "film", "markets", "map", "faq", "contact"]},
                   "description": "Indiana's largest full-service office technology provider since 1914. Managed IT and cybersecurity, business phone systems, copiers and managed print, document management and AI consulting for Indianapolis and the Midwest.",
                   "sections": [
         {"type": "hero", "id": "hero-light", "layout": "split", "eyebrow": "Business technology simplified, since 1914",

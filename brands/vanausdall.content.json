@@ -470,18 +470,16 @@
           "hero-light",
           "partners",
           "pillars",
+          "is-this-you",
           "seal",
           "customers",
           "story",
           "office",
-          "fleet",
           "numbers",
           "ba",
           "flow",
-          "model",
           "proof",
           "casestudy",
-          "is-this-you",
           "markets",
           "map",
           "voices",
@@ -493,13 +491,12 @@
           "hero",
           "partners",
           "pillars",
+          "is-this-you",
           "customers",
-          "fleet",
           "numbers",
           "ba",
           "flow",
           "office",
-          "model",
           "seal",
           "story",
           "proof",
@@ -515,14 +512,13 @@
           "hero-light",
           "story",
           "pillars",
+          "is-this-you",
           "customers",
           "seal",
           "office",
-          "fleet",
           "numbers",
           "ba",
           "flow",
-          "model",
           "proof",
           "casestudy",
           "voices",
@@ -611,9 +607,6 @@
           "image": "assets/gen-hero-plate-2100.jpg",
           "image_w": 2100,
           "image_h": 891,
-          "model": "assets/fleet/mfp.glb",
-          "poster": "assets/fleet/mfp.png",
-          "model_alt": "A multifunction copier, rotating. Drag to turn it.",
           "stats": [
             [
               "1914",
@@ -987,8 +980,7 @@
           "cta": {
             "label": "See copiers and printers",
             "href": "services/copiers.html"
-          },
-          "model": "assets/fleet/mfp.glb"
+          }
         },
         {
           "type": "proof",
@@ -3493,8 +3485,7 @@
           "cta": {
             "label": "See copiers and printers",
             "href": "services/copiers.html"
-          },
-          "model": "assets/fleet/mfp.glb"
+          }
         },
         {
           "type": "flow",
