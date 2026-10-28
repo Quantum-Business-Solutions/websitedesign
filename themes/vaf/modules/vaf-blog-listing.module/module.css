@@ -1,0 +1,69 @@
+/* VAF blog listing: hero, category chips, balanced card grid, pagination. */
+.vb--head{padding-top:72px;padding-bottom:0}
+.vb--list{padding-top:36px}
+.vb__head{max-width:860px;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center}
+.vb__h1{font-size:clamp(34px,4.4vw,58px);margin-top:20px;max-width:none;overflow-wrap:break-word;text-wrap:balance}
+.vb__lede{margin:20px auto 0;max-width:680px}
+.vb__chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:36px auto 0;max-width:1000px}
+.vb__chip{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border:1px solid var(--border);border-radius:999px;background:var(--card);color:var(--fg);font-size:14.5px;font-weight:600;text-decoration:none;transition:background .15s,color .15s,border-color .15s}
+.vb__chip:hover{border-color:var(--accent-ink);color:var(--accent-ink)}
+.vb__chip.is-on{background:var(--navy,#0f1e33);border-color:var(--navy,#0f1e33);color:#fff}
+.vb__chip:focus-visible{outline:2px solid var(--q-gold);outline-offset:2px}
+/* six-column grid: every row fills, whatever the post count on the page (3, 2, or a lead card plus rows) */
+.vb__grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:24px}
+.vb__grid .vb-card{grid-column:span 2}
+.vb__grid--r1 .vb-card:first-child{grid-column:span 6}
+.vb__grid--r2 .vb-card:nth-child(-n+2){grid-column:span 3}
+.vb-card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:transform .2s ease,box-shadow .2s ease}
+.vb-card:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(0,5,69,.1)}
+.vb-card__media{display:block;aspect-ratio:3/2;background:var(--bg-alt);overflow:hidden}
+.vb-card__media img{width:100%;height:100%;object-fit:cover;display:block}
+.vb-card__ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#e6eef8,var(--bg-alt))}
+.vb-card__ph span{font-family:var(--q-serif);font-weight:800;font-size:44px;letter-spacing:.08em;color:rgba(15,30,51,.22)}
+.vb-card__body{display:flex;flex-direction:column;gap:10px;padding:22px 24px 24px;flex:1}
+.vb-card__meta{display:flex;flex-wrap:wrap;align-items:center;gap:4px 14px;font-size:13px;color:var(--fg-muted)}
+.vb-card__cat{font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:12px;color:var(--accent-ink)}
+.vb-card__title{font-family:var(--q-serif);font-size:22px;line-height:1.25;font-weight:600;margin:0;color:var(--fg);overflow-wrap:break-word}
+.vb-card__title a{color:inherit;text-decoration:none}
+.vb-card__title a:hover{color:var(--accent-ink)}
+.vb-card__teaser{margin:0;font-size:15px;line-height:1.65;color:var(--fg-muted)}
+.vb-card__more{margin-top:auto;display:inline-flex;align-items:center;min-height:44px;font-weight:600;font-size:15px;color:var(--accent-ink);text-decoration:none}
+.vb-card__more:hover{text-decoration:underline;text-underline-offset:3px}
+.vb-card a:focus-visible{outline:2px solid var(--q-gold);outline-offset:2px}
+/* lead card, wide layout */
+.vb__grid--r1 .vb-card:first-child{flex-direction:row}
+.vb__grid--r1 .vb-card:first-child .vb-card__media{flex:0 0 52%;aspect-ratio:auto;min-height:320px}
+.vb__grid--r1 .vb-card:first-child .vb-card__body{justify-content:center;padding:36px 40px}
+.vb__grid--r1 .vb-card:first-child .vb-card__title{font-size:30px}
+.vb__grid--r1 .vb-card:first-child .vb-card__teaser{font-size:16.5px}
+.vb__grid--r1 .vb-card:only-child .vb-card__more{margin-top:8px}
+.vb__empty{text-align:center;color:var(--fg-muted);font-size:17px;margin:40px 0}
+.vb-pager{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px 18px;margin:56px 0 0}
+.vb-pager__list{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.vb-pager__num,.vb-pager__gap{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;padding:0 8px;box-sizing:border-box;border-radius:10px;font-weight:600;font-size:15px;color:var(--fg);text-decoration:none}
+.vb-pager__num{border:1px solid var(--border);background:var(--card)}
+.vb-pager__num:hover{border-color:var(--accent-ink);color:var(--accent-ink)}
+.vb-pager__num.is-on{background:var(--navy,#0f1e33);border-color:var(--navy,#0f1e33);color:#fff}
+.vb-pager__gap{color:var(--fg-muted)}
+.vb-pager__step{display:inline-flex;align-items:center;min-height:44px;padding:0 6px;font-weight:600;color:var(--accent-ink);text-decoration:none}
+.vb-pager__step:hover{text-decoration:underline;text-underline-offset:3px}
+.vb-pager a:focus-visible{outline:2px solid var(--q-gold);outline-offset:2px}
+@media(max-width:1024px){
+  .vb__grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .vb__grid .vb-card,.vb__grid--r2 .vb-card:nth-child(-n+2),.vb__grid--r1 .vb-card:first-child{grid-column:span 1}
+  .vb__grid .vb-card:first-child:nth-last-child(odd){grid-column:span 2}
+  .vb__grid--r1 .vb-card:first-child{flex-direction:column}
+  .vb__grid--r1 .vb-card:first-child .vb-card__media{flex:none;aspect-ratio:3/2;min-height:0}
+  .vb__grid--r1 .vb-card:first-child .vb-card__body{padding:22px 24px 24px}
+  .vb__grid--r1 .vb-card:first-child .vb-card__title{font-size:24px}
+}
+@media(max-width:767px){
+  .vb--head{padding-top:40px}.vb--list{padding-top:28px}
+  .vb__chips{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;margin:28px -20px 0;padding:2px 20px 6px;max-width:none;scrollbar-width:thin}
+  .vb__chip{flex:0 0 auto}
+  .vb__grid{grid-template-columns:1fr;gap:18px}
+  .vb__grid .vb-card,.vb__grid .vb-card:first-child:nth-last-child(odd){grid-column:span 1}
+  .vb-card__title{font-size:20px}
+  .vb-pager__step{width:100%;justify-content:center}
+}
+@media(prefers-reduced-motion:reduce){.vb-card,.vb__chip{transition:none}.vb-card:hover{transform:none}}

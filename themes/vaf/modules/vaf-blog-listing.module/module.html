@@ -1,0 +1,67 @@
+{% set total = contents|length %}
+{% set rem = total % 3 %}
+<section class="q-section vb vb--head">
+  <div class="q-container">
+    <header class="vb__head">
+      {% if module.eyebrow %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      <h1 class="q-h1 vb__h1">{% if tag %}{{ tag.name }}{% else %}{{ module.heading }}{% endif %}</h1>
+      {% if module.lede and not tag %}<p class="q-lead vb__lede">{{ module.lede }}</p>{% endif %}
+    </header>
+    {% if module.chips|length > 0 %}
+    <nav class="vb__chips" aria-label="{{ module.filter_label }}">
+      <a class="vb__chip{% if not tag %} is-on{% endif %}" href="{{ group.absolute_url }}"{% if not tag %} aria-current="page"{% endif %}>{{ module.all_label }}</a>
+      {% for chip in module.chips %}
+        {% set on = tag and tag.slug == chip.chip_slug %}
+        <a class="vb__chip{% if on %} is-on{% endif %}" href="{{ blog_tag_url(group.id, chip.chip_slug) }}"{% if on %} aria-current="page"{% endif %}>{{ chip.chip_label }}</a>
+      {% endfor %}
+    </nav>
+    {% endif %}
+  </div>
+</section>
+<section class="q-section vb vb--list">
+  <div class="q-container">
+    {% if total > 0 %}
+    <ul class="vb__grid vb__grid--r{{ rem }}">
+      {% for post in contents %}
+      <li class="vb-card">
+        <a class="vb-card__media" href="{{ post.absolute_url }}" tabindex="-1" aria-hidden="true">
+          {% if post.featured_image %}
+          <img src="{{ post.featured_image }}" alt="" width="1200" height="800" loading="{% if loop.index > 3 %}lazy{% else %}eager{% endif %}" decoding="async">
+          {% else %}
+          <span class="vb-card__ph"><span>VAF</span></span>
+          {% endif %}
+        </a>
+        <div class="vb-card__body">
+          <div class="vb-card__meta">
+            {% if post.tag_list|length > 0 %}<span class="vb-card__cat">{{ post.tag_list[0].name }}</span>{% endif %}
+            <time datetime="{{ post.publish_date|format_datetime('yyyy-MM-dd') }}">{{ post.publish_date_localized }}</time>
+          </div>
+          <h2 class="vb-card__title"><a href="{{ post.absolute_url }}">{{ post.name }}</a></h2>
+          {% if post.post_summary %}<p class="vb-card__teaser">{{ post.post_summary|striptags|truncate(170) }}</p>{% endif %}
+          <a class="vb-card__more" href="{{ post.absolute_url }}" aria-label="{{ module.read_label }}: {{ post.name|striptags }}">{{ module.read_label }}<span aria-hidden="true"> &rarr;</span></a>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="vb__empty">{{ module.empty_text }}</p>
+    {% endif %}
+
+    {% if last_page_num > 1 %}
+    <nav class="vb-pager" aria-label="Pagination">
+      {% if current_page_num > 1 %}<a class="vb-pager__step" rel="prev" href="{{ blog_page_link(current_page_num - 1) }}"><span aria-hidden="true">&larr; </span>{{ module.prev_label }}</a>{% endif %}
+      <ol class="vb-pager__list">
+        {% for n in range(1, last_page_num + 1) %}
+          {% set d = n - current_page_num %}
+          {% if n == 1 or n == last_page_num or d >= -2 and d <= 2 %}
+            <li>{% if n == current_page_num %}<span class="vb-pager__num is-on" aria-current="page">{{ n }}</span>{% else %}<a class="vb-pager__num" href="{{ blog_page_link(n) }}" aria-label="Page {{ n }}">{{ n }}</a>{% endif %}</li>
+          {% elif d == -3 or d == 3 %}
+            <li aria-hidden="true"><span class="vb-pager__gap">&hellip;</span></li>
+          {% endif %}
+        {% endfor %}
+      </ol>
+      {% if current_page_num < last_page_num %}<a class="vb-pager__step" rel="next" href="{{ blog_page_link(current_page_num + 1) }}">{{ module.next_label }}<span aria-hidden="true"> &rarr;</span></a>{% endif %}
+    </nav>
+    {% endif %}
+  </div>
+</section>

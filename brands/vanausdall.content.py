@@ -822,7 +822,7 @@ def build():
                       # the fleet grid and the rotating copier model are off Home, and the
                       # Technology Strength Assessment questions sit directly under the four pillars.
                       "clean": ["hero-light", "partners", "pillars", "is-this-you", "seal", "customers", "story", "office", "numbers", "ba", "flow", "proof", "casestudy", "markets", "map", "voices", "film", "faq", "contact"],
-                      "showcase": ["hero", "partners", "pillars", "is-this-you", "customers", "numbers", "ba", "flow", "office", "seal", "story", "proof", "casestudy", "markets", "map", "voices", "film", "faq", "contact"],
+                      "showcase": ["hero", "partners", "wheel", "is-this-you", "customers", "numbers", "ba", "flow", "office", "seal", "story", "proof", "casestudy", "markets", "map", "voices", "film", "faq", "contact"],
                       "press": ["hero-light", "story", "pillars", "is-this-you", "customers", "seal", "office", "numbers", "ba", "flow", "proof", "casestudy", "voices", "film", "markets", "map", "faq", "contact"]},
                   "description": "Indiana's largest full-service office technology provider since 1914. Managed IT and cybersecurity, business phone systems, copiers and managed print, document management and AI consulting for Indianapolis and the Midwest.",
                   "sections": [

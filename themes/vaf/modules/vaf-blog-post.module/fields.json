@@ -1,0 +1,125 @@
+[
+  {
+    "id": "home_label",
+    "name": "home_label",
+    "label": "Breadcrumb: home label",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Home"
+  },
+  {
+    "id": "crumb_label",
+    "name": "crumb_label",
+    "label": "Breadcrumb: blog label",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Blog"
+  },
+  {
+    "id": "author_fallback",
+    "name": "author_fallback",
+    "label": "Author name if none is set",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Van Ausdall & Farrar"
+  },
+  {
+    "id": "author_role",
+    "name": "author_role",
+    "label": "Author role",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Indianapolis, Indiana"
+  },
+  {
+    "id": "minutes_label",
+    "name": "minutes_label",
+    "label": "Read time suffix",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "min read"
+  },
+  {
+    "id": "tags_label",
+    "name": "tags_label",
+    "label": "Topics label",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Topics"
+  },
+  {
+    "id": "related_heading",
+    "name": "related_heading",
+    "label": "Related posts heading",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Keep reading"
+  },
+  {
+    "id": "read_label",
+    "name": "read_label",
+    "label": "Card link label",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Read article"
+  },
+  {
+    "id": "cta_heading",
+    "name": "cta_heading",
+    "label": "CTA heading",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Ready to talk it through?"
+  },
+  {
+    "id": "cta_copy",
+    "name": "cta_copy",
+    "label": "CTA copy",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Tell us what you are working on and a Van Ausdall & Farrar specialist will get back to you."
+  },
+  {
+    "id": "cta_label",
+    "name": "cta_label",
+    "label": "CTA button label",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Schedule a consultation"
+  },
+  {
+    "id": "cta_link",
+    "name": "cta_link",
+    "label": "CTA button link",
+    "required": false,
+    "locked": false,
+    "type": "link",
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "EMAIL_ADDRESS",
+      "BLOG"
+    ],
+    "default": {
+      "url": {
+        "content_id": null,
+        "type": "EXTERNAL",
+        "href": "/contact"
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  }
+]

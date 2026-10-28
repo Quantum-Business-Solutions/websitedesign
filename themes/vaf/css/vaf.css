@@ -833,3 +833,9 @@ html{scroll-padding-bottom:72px}
   .pv-loc .q-card p a{padding-top:4px}
 }
 
+
+/* ===== section headings: one or two lines, never a four-line stack ===== */
+.q-section .q-h2,.q-section h2.q-h2{font-size:clamp(30px,3.1vw,44px)!important;line-height:1.1!important;text-wrap:balance}
+.q-section .pv-center .q-h2,.q-section .vaf-head .q-h2,.q-section > .q-container > .q-h2{max-width:min(1000px,100%)!important}
+.vaf-tl .q-h2,.vaf-flow .q-h2,.vaf-ba .q-h2,.vaf-tabs .q-h2,.vf-chk__h,.vaf-seal__h,.vaf-map .q-h2,.vaf-hot .q-h2,.vaf-cards .q-h2,.vf-vid__h,.vaf-wheel .q-h2{max-width:min(1000px,100%)!important}
+@media(max-width:760px){.q-section .q-h2,.q-section h2.q-h2{font-size:clamp(26px,7vw,32px)!important}}

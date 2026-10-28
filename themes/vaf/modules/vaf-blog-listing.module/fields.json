@@ -1,0 +1,162 @@
+[
+  {
+    "id": "eyebrow",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Insights"
+  },
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Heading (h1)",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Insights from Van Ausdall & Farrar"
+  },
+  {
+    "id": "lede",
+    "name": "lede",
+    "label": "Intro",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Practical guidance on managed IT, cybersecurity, cloud, business phone systems, print, and document management for Indianapolis businesses."
+  },
+  {
+    "id": "filter_label",
+    "name": "filter_label",
+    "label": "Filter label",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Browse by topic"
+  },
+  {
+    "id": "all_label",
+    "name": "all_label",
+    "label": "All posts chip label",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "All posts"
+  },
+  {
+    "id": "chips",
+    "name": "chips",
+    "label": "Category chips",
+    "required": false,
+    "locked": false,
+    "type": "group",
+    "occurrence": {
+      "min": 0,
+      "max": 20,
+      "default": 11
+    },
+    "children": [
+      {
+        "id": "chip_label",
+        "name": "chip_label",
+        "label": "Chip label",
+        "required": false,
+        "locked": false,
+        "type": "text",
+        "default": "Category"
+      },
+      {
+        "id": "chip_slug",
+        "name": "chip_slug",
+        "label": "Blog tag slug",
+        "required": false,
+        "locked": false,
+        "type": "text",
+        "default": ""
+      }
+    ],
+    "default": [
+      {
+        "chip_label": "Cybersecurity",
+        "chip_slug": "cybersecurity"
+      },
+      {
+        "chip_label": "Managed IT Services",
+        "chip_slug": "managed-it"
+      },
+      {
+        "chip_label": "Business Phone Systems",
+        "chip_slug": "business-phone-systems"
+      },
+      {
+        "chip_label": "Cloud Solutions",
+        "chip_slug": "cloud-solutions"
+      },
+      {
+        "chip_label": "Managed Print Services",
+        "chip_slug": "managed-print-services"
+      },
+      {
+        "chip_label": "Document Management",
+        "chip_slug": "document-management"
+      },
+      {
+        "chip_label": "Business Process Solutions",
+        "chip_slug": "business-process-solutions"
+      },
+      {
+        "chip_label": "Document Conversion",
+        "chip_slug": "document-conversion"
+      },
+      {
+        "chip_label": "AI Consulting",
+        "chip_slug": "ai-consulting"
+      },
+      {
+        "chip_label": "Physical Security",
+        "chip_slug": "physical-security"
+      },
+      {
+        "chip_label": "News & Press",
+        "chip_slug": "news"
+      }
+    ]
+  },
+  {
+    "id": "read_label",
+    "name": "read_label",
+    "label": "Card link label",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Read article"
+  },
+  {
+    "id": "empty_text",
+    "name": "empty_text",
+    "label": "Text when there are no posts",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "No posts to show yet. Check back soon."
+  },
+  {
+    "id": "prev_label",
+    "name": "prev_label",
+    "label": "Previous label",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Previous"
+  },
+  {
+    "id": "next_label",
+    "name": "next_label",
+    "label": "Next label",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Next"
+  }
+]

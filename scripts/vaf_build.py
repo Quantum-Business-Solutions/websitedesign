@@ -75,6 +75,39 @@ def crumbs_html(page):
     return f'<nav class="pv-crumbs" aria-label="Breadcrumb"><div class="q-container"><ol>{items}</ol></div></nav>\n'
 
 
+HERO_LAYOUT = (("solutions", "layered"), ("industries", "layered"), ("case-studies.html", "layered"), ("about.html", "layered"),
+               ("partners.html", "layered"), ("support.html", "split"), ("services/", "split"), ("locations", "split"))
+
+
+def rhythm(items, page):
+    """Variety without hand-editing 168 pages: hero treatment by kind of page, alternating section grounds,
+    alternating image sides. Everything stays an ordinary editable field."""
+    f = page["file"]
+    flips = 0
+    light = 0
+    for i, (mod, params) in enumerate(items):
+        if mod == "vaf-hero" and f != "index.html":
+            for key, lay in HERO_LAYOUT:
+                if f.startswith(key):
+                    if lay == "layered" and not params.get("image", {}).get("src"):
+                        lay = "centered"
+                    params["layout"] = lay
+                    if lay == "layered":
+                        params.pop("note", None)
+                        # the home page carries the two floating cards; elsewhere the hero is copy, stats and the picture
+                        params.update(card_a_eyebrow="", card_a_title="", card_a_body="", card_a_items=[], card_a_label="",
+                                      card_b_eyebrow="", card_b_title="", card_b_body="", card_b_links=[])
+                    break
+        if mod == "vaf-detail":
+            params["flip"] = bool(flips % 2)
+            flips += 1
+        if mod not in ("vaf-hero", "vaf-casestudy", "vaf-seal", "vaf-proof", "vaf-cta", "vaf-band", "vaf-partners", "vaf-stats"):
+            if "alt_bg" in params or mod in ("vaf-detail", "vaf-cards", "vaf-services", "vaf-resources", "vaf-related", "vaf-faq", "vaf-tabs", "vaf-timeline", "vaf-comparison", "vaf-testimonials", "vaf-locations"):
+                params["alt_bg"] = bool(light % 2)
+                light += 1
+    return items
+
+
 def template_for(page):
     slug = slug_of(page["file"])
     parts, missing = [], set()
@@ -84,8 +117,8 @@ def template_for(page):
         mod, fn = REGISTRY[s["type"]]
         out = fn(s)
         for o in (out if isinstance(out, list) else [out]):
-            m, params = o if isinstance(o, tuple) else (mod, o)
-            parts.append(dnd(m, params))
+            parts.append(o if isinstance(o, tuple) else (mod, o))
+    parts = "".join(dnd(m, p) for m, p in rhythm(parts, page))
     if missing and os.environ.get("VAF_ALLOW_MISSING"):
         print(f"  WARNING {page['file']}: skipped section types with no module yet: {sorted(missing)}", file=sys.stderr)
     elif missing:
