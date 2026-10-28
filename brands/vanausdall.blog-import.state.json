@@ -37,17 +37,71 @@
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/van-ausdall-blog/-transforming-your-business-with-document-conversion-services"
   },
+  "10-ways-your-phone-system-improves-your-customers-experience": {
+   "id": "225824872478",
+   "slug": "blog/10-ways-your-phone-system-improves-your-customers-experience",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/10-ways-your-phone-system-improves-your-customers-experience"
+  },
+  "3-best-practices-in-using-collaboration-apps": {
+   "id": "225825146476",
+   "slug": "blog/3-best-practices-in-using-collaboration-apps",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/3-best-practices-in-using-collaboration-apps"
+  },
+  "3-practices-for-vip-customer-service-from-contact-centers": {
+   "id": "225825146410",
+   "slug": "blog/3-practices-for-vip-customer-service-from-contact-centers",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/3-practices-for-vip-customer-service-from-contact-centers"
+  },
+  "3-questions-to-ask-when-choosing-a-cloud-communications-provider": {
+   "id": "225825146471",
+   "slug": "blog/3-questions-to-ask-when-choosing-a-cloud-communications-provider",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/3-questions-to-ask-when-choosing-a-cloud-communications-provider"
+  },
   "3-steps-to-minimize-the-impact-of-cyber-attacks": {
    "id": "225825146287",
    "slug": "blog/3-steps-to-minimize-the-impact-of-cyber-attacks",
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/blog/3-steps-to-minimize-the-impact-of-cyber-attacks"
   },
+  "3-ways-cloud-communications-can-improve-customer-relationships": {
+   "id": "225825146482",
+   "slug": "blog/3-ways-cloud-communications-can-improve-customer-relationships",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/3-ways-cloud-communications-can-improve-customer-relationships"
+  },
+  "3-ways-cloud-communications-can-save-your-company-money": {
+   "id": "225825146499",
+   "slug": "blog/3-ways-cloud-communications-can-save-your-company-money",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/3-ways-cloud-communications-can-save-your-company-money"
+  },
+  "3-ways-to-achieve-enterprise-grade-collaboration-at-an-smb-price-point": {
+   "id": "225824872467",
+   "slug": "blog/3-ways-to-achieve-enterprise-grade-collaboration-at-an-smb-price-point",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/3-ways-to-achieve-enterprise-grade-collaboration-at-an-smb-price-point"
+  },
+  "4-reasons-why-cloud-communications-should-be-a-part-of-your-disaster-recovery-strategy": {
+   "id": "225824872472",
+   "slug": "blog/4-reasons-why-cloud-communications-should-be-a-part-of-your-disaster-recovery-strategy",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/4-reasons-why-cloud-communications-should-be-a-part-of-your-disaster-recovery-strategy"
+  },
   "5-important-ways-to-improve-your-cybersecurity": {
    "id": "225825146207",
    "slug": "blog/5-important-ways-to-improve-your-cybersecurity",
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/blog/5-important-ways-to-improve-your-cybersecurity"
+  },
+  "5-key-steps-to-successful-lifecycle-it-asset-management": {
+   "id": "225825146467",
+   "slug": "blog/5-key-steps-to-successful-lifecycle-it-asset-management",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/5-key-steps-to-successful-lifecycle-it-asset-management"
   },
   "5-reasons-to-choose-ringcentral-with-van-ausdall-and-farrar": {
    "id": "225828713855",
@@ -61,11 +115,35 @@
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/blog/5-reasons-to-upgrade-your-companys-printing-performance"
   },
+  "5-requirements-of-byod-for-mobile-unified-communications": {
+   "id": "225824872367",
+   "slug": "blog/5-requirements-of-byod-for-mobile-unified-communications",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/5-requirements-of-byod-for-mobile-unified-communications"
+  },
+  "a-10-question-evaluation-for-your-phone-system": {
+   "id": "225824872476",
+   "slug": "blog/a-10-question-evaluation-for-your-phone-system",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/a-10-question-evaluation-for-your-phone-system"
+  },
   "a-cios-simple-it-security-checklist": {
    "id": "225825146290",
    "slug": "blog/a-cios-simple-it-security-checklist",
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/blog/a-cios-simple-it-security-checklist"
+  },
+  "a-phone-system-that-maximizes-your-control": {
+   "id": "225824872469",
+   "slug": "blog/a-phone-system-that-maximizes-your-control",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/a-phone-system-that-maximizes-your-control"
+  },
+  "a4-print-strategy-size-can-be-deceiving": {
+   "id": "225824872464",
+   "slug": "blog/a4-print-strategy-size-can-be-deceiving",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/a4-print-strategy-size-can-be-deceiving"
   },
   "accelerating-customer-profitability-and-competitive-advantage-through-the-utilization-of-technology": {
    "id": "225825145933",
@@ -78,6 +156,12 @@
    "slug": "blog/across-the-nation-workers-are-taking-the-tape-off-their-webcam-due-to-another-virus",
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/blog/across-the-nation-workers-are-taking-the-tape-off-their-webcam-due-to-another-virus"
+  },
+  "addicted-to-the-manufacturers-toner-you-need-a-managed-print-intervention": {
+   "id": "225825146448",
+   "slug": "blog/addicted-to-the-manufacturers-toner-you-need-a-managed-print-intervention",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/addicted-to-the-manufacturers-toner-you-need-a-managed-print-intervention"
   },
   "advantages-of-using-business-technology-in-higher-education": {
    "id": "225824872273",
@@ -139,11 +223,23 @@
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/blog/audio-and-video-conferencing-for-at-home-workers"
   },
+  "be-less-paper-dependent": {
+   "id": "225824872350",
+   "slug": "blog/be-less-paper-dependent",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/be-less-paper-dependent"
+  },
   "benefits-of-new-printing-technology-for-your-business": {
    "id": "225824872267",
    "slug": "blog/benefits-of-new-printing-technology-for-your-business",
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/blog/benefits-of-new-printing-technology-for-your-business"
+  },
+  "biotech-cluster-is-big-and-getting-bigger-in-indiana-biocrossroads": {
+   "id": "225825146451",
+   "slug": "blog/biotech-cluster-is-big-and-getting-bigger-in-indiana-biocrossroads",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/biotech-cluster-is-big-and-getting-bigger-in-indiana-biocrossroads"
   },
   "business-continuity-the-cloud-is-key": {
    "id": "225824872105",
@@ -163,11 +259,23 @@
    "state": "DRAFT",
    "url": "https://50498425.hs-sites.com/van-ausdall-blog/business-technology-simplified-a-century-of-innovation"
   },
+  "case-management-solutions-for-the-healthcare-industry": {
+   "id": "225825146434",
+   "slug": "blog/case-management-solutions-for-the-healthcare-industry",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/case-management-solutions-for-the-healthcare-industry"
+  },
   "celebrating-van-ausdall--farrars-110th-anniversary-a-legacy-of-innovation-and-excellence": {
    "id": "225825146006",
    "slug": "blog/celebrating-van-ausdall-farrars-110th-anniversary-a-legacy-of-innovation-and-excellence",
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/blog/celebrating-van-ausdall--farrars-110th-anniversary-a-legacy-of-innovation-and-excellence"
+  },
+  "cloud-data-protection-by-acronis-at-van-ausdall--farrar-inc": {
+   "id": "225824872357",
+   "slug": "blog/cloud-data-protection-by-acronis-at-van-ausdall-farrar-inc",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/cloud-data-protection-by-acronis-at-van-ausdall--farrar-inc"
   },
   "cloud-first-operations-a-strategic-imperative-for-midwest-businesses": {
    "id": "225803045487",
@@ -187,6 +295,18 @@
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/van-ausdall-blog/cloud-voip-vs-pbx-systems-choosing-the-right-solution"
   },
+  "communication-collaboration-control-the-keys-to-an-effective-business-phone-system": {
+   "id": "225824872449",
+   "slug": "blog/communication-collaboration-control-the-keys-to-an-effective-business-phone-system",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/communication-collaboration-control-the-keys-to-an-effective-business-phone-system"
+  },
+  "communications-as-a-service-cloudifying-the-pbx": {
+   "id": "225824872488",
+   "slug": "blog/communications-as-a-service-cloudifying-the-pbx",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/communications-as-a-service-cloudifying-the-pbx"
+  },
   "comprehensive-cybersecurity-assessments---protecting-your-digital-assets-with-van-ausdall--farrar": {
    "id": "225824872103",
    "slug": "blog/comprehensive-cybersecurity-assessments-protecting-your-digital-assets-with-van-ausdall-farrar",
@@ -199,11 +319,29 @@
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/blog/content-management-solutions-the-key-to-streamlining-your-business-operations"
   },
+  "copier-service--supply-portal-now-available-for-customers": {
+   "id": "225825146513",
+   "slug": "blog/copier-service-supply-portal-now-available-for-customers",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/copier-service--supply-portal-now-available-for-customers"
+  },
+  "creating-better-customer-experiences-one-call-at-a-time": {
+   "id": "225828713986",
+   "slug": "blog/creating-better-customer-experiences-one-call-at-a-time",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/creating-better-customer-experiences-one-call-at-a-time"
+  },
   "crowdstrike-causes-windows-outage-what-you-need-to-know": {
    "id": "225825145993",
    "slug": "blog/crowdstrike-causes-windows-outage-what-you-need-to-know",
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/blog/crowdstrike-causes-windows-outage-what-you-need-to-know"
+  },
+  "culture---who-cares": {
+   "id": "225825146456",
+   "slug": "blog/culture-who-cares",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/culture---who-cares"
   },
   "cyber-security-the-indispensable-pillar-of-managed-it-services": {
    "id": "225824872206",
@@ -234,6 +372,12 @@
    "slug": "van-ausdall-blog/data-quality-vs-data-quantity-why-more-isnt-always-better",
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/van-ausdall-blog/data-quality-vs-data-quantity-why-more-isnt-always-better"
+  },
+  "data-security---on-a-small-scale": {
+   "id": "225824872376",
+   "slug": "blog/data-security-on-a-small-scale",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/data-security---on-a-small-scale"
   },
   "defending-against-the-rising-tide-of-cyber-threats-with-cyber-security-assessment": {
    "id": "225824872194",
@@ -282,6 +426,12 @@
    "slug": "blog/driving-small-to-mid-sized-businesses-profitability-and-performance-with-the-latest-in-integrated-contact-center-technology",
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/blog/driving-small-to-mid-sized-businesses-profitability-and-performance-with-the-latest-in-integrated-contact-center-technology"
+  },
+  "driving-your-technology": {
+   "id": "225824872373",
+   "slug": "blog/driving-your-technology",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/driving-your-technology"
   },
   "eliminating-the-top-it-concerns-for-small-to-mid-sized-business-owners": {
    "id": "225803045545",
@@ -349,6 +499,12 @@
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/blog/everything-you-should-know-about-business-process-automation"
   },
+  "february-8-2018---print-security-event-at-topgolf-presented-by-hp": {
+   "id": "225828713900",
+   "slug": "blog/february-8-2018-print-security-event-at-topgolf-presented-by-hp",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/february-8-2018---print-security-event-at-topgolf-presented-by-hp"
+  },
   "finding-network-vulnerabilities-with-a-cyber-security-assessment": {
    "id": "225825146128",
    "slug": "blog/finding-network-vulnerabilities-with-a-cyber-security-assessment",
@@ -361,11 +517,23 @@
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/blog/five-reasons-to-become-paper-less"
   },
+  "fly-over-county": {
+   "id": "225824872474",
+   "slug": "blog/fly-over-county",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/fly-over-county"
+  },
   "from-fragmented-to-unified-how-ucaas-is-reshaping-business-interaction": {
    "id": "225824871999",
    "slug": "van-ausdall-blog/from-fragmented-to-unified-how-ucaas-is-reshaping-business-interaction",
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/van-ausdall-blog/from-fragmented-to-unified-how-ucaas-is-reshaping-business-interaction"
+  },
+  "get-the-most-from-your-communications-in-the-cloud": {
+   "id": "225824872484",
+   "slug": "blog/get-the-most-from-your-communications-in-the-cloud",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/get-the-most-from-your-communications-in-the-cloud"
   },
   "going-remote-how-to-solve-the-it-challenges-of-a-growing-virtual-workforce": {
    "id": "225824872311",
@@ -445,6 +613,12 @@
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/blog/how-real-estate-technology-solutions-can-improve-your-businesss-performance"
   },
+  "how-smbs-can-benefit-from-cloud-communications": {
+   "id": "225824872460",
+   "slug": "blog/how-smbs-can-benefit-from-cloud-communications",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/how-smbs-can-benefit-from-cloud-communications"
+  },
   "how-to-find-the-right-business-technology-company": {
    "id": "225828713867",
    "slug": "blog/how-to-find-the-right-business-technology-company",
@@ -487,6 +661,24 @@
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/blog/how-your-business-can-benefit-from-security-awareness-training"
   },
+  "i-got-a-guy": {
+   "id": "225825146464",
+   "slug": "blog/i-got-a-guy",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/i-got-a-guy"
+  },
+  "i-still-havent-found-what-im-looking-for": {
+   "id": "225825146501",
+   "slug": "blog/i-still-havent-found-what-im-looking-for",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/i-still-havent-found-what-im-looking-for"
+  },
+  "if-you-really-want-to-know-what-your-customers-think-of-your-company-ask-them": {
+   "id": "225825146445",
+   "slug": "blog/if-you-really-want-to-know-what-your-customers-think-of-your-company-ask-them",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/if-you-really-want-to-know-what-your-customers-think-of-your-company-ask-them"
+  },
   "implementing-new-ai-security-technology-to-help-customers-stop-invisible-cyberattacks": {
    "id": "225824871976",
    "slug": "van-ausdall-blog/implementing-new-ai-security-technology-to-help-customers-stop-invisible-cyberattacks",
@@ -517,17 +709,53 @@
    "state": "DRAFT",
    "url": "https://50498425.hs-sites.com/van-ausdall-blog/in-house-vs-outsourced-production-print-break-even"
   },
+  "information-governance-panel-discussion": {
+   "id": "225825146473",
+   "slug": "blog/information-governance-panel-discussion",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/information-governance-panel-discussion"
+  },
+  "information-plus-data-the-vitality-of-your-business": {
+   "id": "225824872352",
+   "slug": "blog/information-plus-data-the-vitality-of-your-business",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/information-plus-data-the-vitality-of-your-business"
+  },
   "informing-business-owners-of-new-section-179-tax-deduction-limits-for-2024": {
    "id": "225825145959",
    "slug": "blog/informing-business-owners-of-new-section-179-tax-deduction-limits-for-2024",
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/blog/informing-business-owners-of-new-section-179-tax-deduction-limits-for-2024"
   },
+  "innovative-solutions-2016": {
+   "id": "225825146479",
+   "slug": "blog/innovative-solutions-2016",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/innovative-solutions-2016"
+  },
+  "is-it-time-to-switch-to-a-cloud-phone-system": {
+   "id": "225825146408",
+   "slug": "blog/is-it-time-to-switch-to-a-cloud-phone-system",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/is-it-time-to-switch-to-a-cloud-phone-system"
+  },
   "is-your-data-an-asset-or-a-liability": {
    "id": "225825146285",
    "slug": "blog/is-your-data-an-asset-or-a-liability",
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/blog/is-your-data-an-asset-or-a-liability"
+  },
+  "is-your-most-vital-corporate-data-paper-locked": {
+   "id": "225825146391",
+   "slug": "blog/is-your-most-vital-corporate-data-paper-locked",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/is-your-most-vital-corporate-data-paper-locked"
+  },
+  "is-your-old-pbx-system-hindering-your-employees-productivity": {
+   "id": "225824872481",
+   "slug": "blog/is-your-old-pbx-system-hindering-your-employees-productivity",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/is-your-old-pbx-system-hindering-your-employees-productivity"
   },
   "is-your-printer-the-new-silent-security-threat-to-your-network": {
    "id": "225825146370",
@@ -559,11 +787,23 @@
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/blog/lease-or-buy-which-solution-is-the-best-fit-for-your-companys-print-needs"
   },
+  "leverage-the-power-of-unified-communications-with-ip-telephony-systems": {
+   "id": "225828713906",
+   "slug": "blog/leverage-the-power-of-unified-communications-with-ip-telephony-systems",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/leverage-the-power-of-unified-communications-with-ip-telephony-systems"
+  },
   "leveraging-microsoft-azure-to-take-customers-into-the-cloud-cost-effectively": {
    "id": "225824871988",
    "slug": "van-ausdall-blog/leveraging-microsoft-azure-to-take-customers-into-the-cloud-cost-effectively",
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/van-ausdall-blog/leveraging-microsoft-azure-to-take-customers-into-the-cloud-cost-effectively"
+  },
+  "leveraging-new-technology-for-robust-contact-center-operations": {
+   "id": "225824872370",
+   "slug": "blog/leveraging-new-technology-for-robust-contact-center-operations",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/leveraging-new-technology-for-robust-contact-center-operations"
   },
   "leveraging-new-vulnerability-management-technology-to-secure-customer-networks": {
    "id": "225828713835",
@@ -576,6 +816,12 @@
    "slug": "blog/leveraging-powerful-artificial-intelligence-anti-phishing-technology-to-keep-email-inboxes-safe",
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/blog/leveraging-powerful-artificial-intelligence-anti-phishing-technology-to-keep-email-inboxes-safe"
+  },
+  "make-case-management-work-for-you": {
+   "id": "225824872345",
+   "slug": "blog/make-case-management-work-for-you",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/make-case-management-work-for-you"
   },
   "managed-print-services-revolutionize-your-office-efficiency": {
    "id": "225824872038",
@@ -619,11 +865,23 @@
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/van-ausdall-blog/mfa-your-digital-superhero-in-the-battle-against-cybercrime"
   },
+  "mitel-acquires-shoretel-and-toshiba": {
+   "id": "225825146398",
+   "slug": "blog/mitel-acquires-shoretel-and-toshiba",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/mitel-acquires-shoretel-and-toshiba"
+  },
   "mitel-conferencing---create-conference-within-outlook": {
    "id": "225825146368",
    "slug": "blog/mitel-conferencing-create-conference-within-outlook",
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/blog/mitel-conferencing---create-conference-within-outlook"
+  },
+  "mitel-connect-client---add-participant-conference": {
+   "id": "225825146389",
+   "slug": "blog/mitel-connect-client-add-participant-conference",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/mitel-connect-client---add-participant-conference"
   },
   "mitel-connect-client---answering-a-call": {
    "id": "225825146387",
@@ -739,6 +997,18 @@
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/blog/offering-business-critical-voip-integrations-to-maximize-customer-profitability-and-productivity"
   },
+  "oh-my-the-phones-are-down-again": {
+   "id": "225825146443",
+   "slug": "blog/oh-my-the-phones-are-down-again",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/oh-my-the-phones-are-down-again"
+  },
+  "onbase-by-hyland-receives-department-of-defense-certification": {
+   "id": "225825146423",
+   "slug": "blog/onbase-by-hyland-receives-department-of-defense-certification",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/onbase-by-hyland-receives-department-of-defense-certification"
+  },
   "optimizing-office-printing-for-maximum-efficiency": {
    "id": "225825145981",
    "slug": "blog/optimizing-office-printing-for-maximum-efficiency",
@@ -751,11 +1021,23 @@
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/blog/outsourced-vs-in-house-printing"
   },
+  "paperless-workflow-for-mortgage-bankers-with-document-capture-technology": {
+   "id": "225825146427",
+   "slug": "blog/paperless-workflow-for-mortgage-bankers-with-document-capture-technology",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/paperless-workflow-for-mortgage-bankers-with-document-capture-technology"
+  },
   "physical-security-how-access-control-protects-your-business": {
    "id": "225828713795",
    "slug": "blog/van-ausdall-blog/physical-security-how-access-control-protects-your-business",
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/blog/van-ausdall-blog/physical-security-how-access-control-protects-your-business"
+  },
+  "planning-for-adversity-ensuring-business-communication-continuity-with-the-cloud": {
+   "id": "225824872453",
+   "slug": "blog/planning-for-adversity-ensuring-business-communication-continuity-with-the-cloud",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/planning-for-adversity-ensuring-business-communication-continuity-with-the-cloud"
   },
   "print--copy-solutions-maximizing-efficiency-and-roi": {
    "id": "225824872069",
@@ -811,6 +1093,12 @@
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/blog/protect-your-business-with-vsecure-it-services"
   },
+  "protect-your-company-with-it-business-continuity-and-disaster-recovery": {
+   "id": "225824872354",
+   "slug": "blog/protect-your-company-with-it-business-continuity-and-disaster-recovery",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/protect-your-company-with-it-business-continuity-and-disaster-recovery"
+  },
   "protect-your-data-with-it-security-solutions": {
    "id": "225825146153",
    "slug": "blog/protect-your-data-with-it-security-solutions",
@@ -822,6 +1110,12 @@
    "slug": "van-ausdall-blog/protecting-customers-from-data-breaches-and-cyberthreats-with-password-management",
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/van-ausdall-blog/protecting-customers-from-data-breaches-and-cyberthreats-with-password-management"
+  },
+  "protecting-the-modern-data-center": {
+   "id": "225825146454",
+   "slug": "blog/protecting-the-modern-data-center",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/protecting-the-modern-data-center"
   },
   "providing-small-to-mid-sized-businesses-and-non-profits-with-artificial-intelligence-acceptable-use-policies": {
    "id": "225824872004",
@@ -840,6 +1134,12 @@
    "slug": "blog/recorded-presentation-why-great-it-matters",
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/blog/recorded-presentation---why-great-it-matters"
+  },
+  "records-management-vs-information-governance---whats-the-difference": {
+   "id": "225824872456",
+   "slug": "blog/records-management-vs-information-governance-whats-the-difference",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/records-management-vs-information-governance---whats-the-difference"
   },
   "reduce-costs-with-managed-it-services": {
    "id": "225828713844",
@@ -864,6 +1164,12 @@
    "slug": "blog/reduce-printing-costs-with-managed-print-services",
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/blog/reduce-printing-costs-with-managed-print-services"
+  },
+  "residents-in-317-area-code-urged-to-start-dialing-10-digits": {
+   "id": "225825146509",
+   "slug": "blog/residents-in-317-area-code-urged-to-start-dialing-10-digits",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/residents-in-317-area-code-urged-to-start-dialing-10-digits"
   },
   "return-to-work-health-screening-essentials": {
    "id": "225824872292",
@@ -955,6 +1261,12 @@
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/van-ausdall-blog/seeing-is-believing-the-power-of-modern-video-surveillance-in-business"
   },
+  "shoretel-connect-cloud-is-more-than-just-a-phone-system": {
+   "id": "225825146460",
+   "slug": "blog/shoretel-connect-cloud-is-more-than-just-a-phone-system",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/shoretel-connect-cloud-is-more-than-just-a-phone-system"
+  },
   "smart-print-application-solutions": {
    "id": "225803045553",
    "slug": "van-ausdall-blog/smart-print-application-solutions",
@@ -966,6 +1278,12 @@
    "slug": "blog/solutions-to-shore-up-your-corporate-it-skills-gap",
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/blog/solutions-to-shore-up-your-corporate-it-skills-gap"
+  },
+  "speech-recognition-solutions-for-health-professionals-improve-patient-care": {
+   "id": "225824872360",
+   "slug": "blog/speech-recognition-solutions-for-health-professionals-improve-patient-care",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/speech-recognition-solutions-for-health-professionals-improve-patient-care"
   },
   "steps-to-effective-mobile-device-security-in-2019": {
    "id": "225825146271",
@@ -985,6 +1303,12 @@
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/blog/struggling-to-find-what-you-need-to-do-your-job-maybe-we-can-help"
   },
+  "success-threat-and-loss-the-drama-of-network-communications": {
+   "id": "225825146439",
+   "slug": "blog/success-threat-and-loss-the-drama-of-network-communications",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/success-threat-and-loss-the-drama-of-network-communications"
+  },
   "switching-your-business-from-print-to-digital-in-2022-with-document-conversion-services": {
    "id": "225828713877",
    "slug": "blog/switching-your-business-from-print-to-digital-in-2022-with-document-conversion-services",
@@ -996,6 +1320,18 @@
    "slug": "van-ausdall-blog/taming-the-information-beast-the-power-of-content-management-for-modern-businesses",
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/van-ausdall-blog/taming-the-information-beast-the-power-of-content-management-for-modern-businesses"
+  },
+  "techday-2016-was-a-success": {
+   "id": "225825146484",
+   "slug": "blog/techday-2016-was-a-success",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/techday-2016-was-a-success"
+  },
+  "technology-number-three-after-process--planning": {
+   "id": "225825146417",
+   "slug": "blog/technology-number-three-after-process-planning",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/technology-number-three-after-process--planning"
   },
   "the-benefits-of-a-technology-strength-assessment": {
    "id": "225824872285",
@@ -1020,6 +1356,12 @@
    "slug": "blog/the-benefits-of-unified-communications-for-businesses",
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/blog/the-benefits-of-unified-communications-for-businesses"
+  },
+  "the-challenge-of-big-document-analytics": {
+   "id": "225824872363",
+   "slug": "blog/the-challenge-of-big-document-analytics",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/the-challenge-of-big-document-analytics"
   },
   "the-critical-importance-of-data-security-in-modern-business": {
    "id": "225824872001",
@@ -1093,6 +1435,24 @@
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/blog/the-urgent-need-for-security-awareness-training-fortifying-your-organizations-first-line-of-defense"
   },
+  "time-is-now-for-lawyers-to-get-savvy-about-mobile-speech-productivity": {
+   "id": "225825146431",
+   "slug": "blog/time-is-now-for-lawyers-to-get-savvy-about-mobile-speech-productivity",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/time-is-now-for-lawyers-to-get-savvy-about-mobile-speech-productivity"
+  },
+  "tips-for-navigating-your-email-safely": {
+   "id": "225828713913",
+   "slug": "blog/tips-for-navigating-your-email-safely",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/tips-for-navigating-your-email-safely"
+  },
+  "toshiba-announces-operational-changes": {
+   "id": "225825146415",
+   "slug": "blog/toshiba-announces-operational-changes",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/toshiba-announces-operational-changes"
+  },
   "toshiba-phone-systems-now-supported-by-mitel": {
    "id": "225825146372",
    "slug": "blog/toshiba-phone-systems-now-supported-by-mitel",
@@ -1116,6 +1476,12 @@
    "slug": "blog/ucaas-revolutionizing-business-communication-in-the-digital-age",
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/blog/ucaas-revolutionizing-business-communication-in-the-digital-age"
+  },
+  "understanding-the-meltdown-and-spectre-vulnerabilities": {
+   "id": "225828713902",
+   "slug": "blog/understanding-the-meltdown-and-spectre-vulnerabilities",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/understanding-the-meltdown-and-spectre-vulnerabilities"
   },
   "unified-communication-platforms-for-the-modern-workplace": {
    "id": "225803045502",
@@ -1201,6 +1567,18 @@
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/blog/vaf-goes-extreme-to-meet-customer-networking-demand"
   },
+  "vaf-makes-the-right-connection-with-8x8": {
+   "id": "225825146393",
+   "slug": "blog/vaf-makes-the-right-connection-with-8x8",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/vaf-makes-the-right-connection-with-8x8"
+  },
+  "vaf-wins-a-new-certification-from-ricoh": {
+   "id": "225825146400",
+   "slug": "blog/vaf-wins-a-new-certification-from-ricoh",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/vaf-wins-a-new-certification-from-ricoh"
+  },
   "van-ausdall--farrar-achieves-elite-status-with-canon-for-2025-reinforcing-century-long-commitment-to-excellence": {
    "id": "225828713821",
    "slug": "blog/van-ausdall-farrar-achieves-elite-status-with-canon-for-2025-reinforcing-century-long-commitment-to-excellence",
@@ -1224,6 +1602,12 @@
    "slug": "blog/van-ausdall-farrar-customer-training-quick-clips-intro-1",
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/blog/van-ausdall--farrar-customer-training-quick-clips-intro"
+  },
+  "van-ausdall--farrar-hosts-super-event": {
+   "id": "225825146506",
+   "slug": "blog/van-ausdall-farrar-hosts-super-event",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/van-ausdall--farrar-hosts-super-event"
   },
   "van-ausdall--farrar-inc-achieves-iso-27001-compliance-positioning-itself-as-elite-in-cybersecurity": {
    "id": "225825145913",
@@ -1267,17 +1651,41 @@
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/blog/van-ausdall--farrar-places-in-the-top-30-of-ring-central-partners"
   },
+  "van-ausdall--farrar-receives-shoretel-gold-status": {
+   "id": "225824872342",
+   "slug": "blog/van-ausdall-farrar-receives-shoretel-gold-status",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/van-ausdall--farrar-receives-shoretel-gold-status"
+  },
   "van-ausdall-and-farrar-inc-is-now-a-qualified-ricoh-provision-dealer-partner": {
    "id": "225828713851",
    "slug": "blog/van-ausdall-and-farrar-inc-is-now-a-qualified-ricoh-provision-dealer-partner",
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/blog/van-ausdall-and-farrar-inc-is-now-a-qualified-ricoh-provision-dealer-partner"
   },
+  "van-ausdall-to-introduce-phone-app-this-summer": {
+   "id": "225828713991",
+   "slug": "blog/van-ausdall-to-introduce-phone-app-this-summer",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/van-ausdall-to-introduce-phone-app-this-summer"
+  },
+  "wannacry-ransomware-update-from-ricoh": {
+   "id": "225825146403",
+   "slug": "blog/wannacry-ransomware-update-from-ricoh",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/wannacry-ransomware-update-from-ricoh"
+  },
   "we-are-invited-to-technology-assurance-groups-25th-annual-convention": {
    "id": "225803045513",
    "slug": "van-ausdall-blog/we-are-invited-to-technology-assurance-groups-25th-annual-convention",
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/van-ausdall-blog/we-are-invited-to-technology-assurance-groups-25th-annual-convention"
+  },
+  "we-were-sd-wan-before-sd-wan-was-cool": {
+   "id": "225825146396",
+   "slug": "blog/we-were-sd-wan-before-sd-wan-was-cool",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/we-were-sd-wan-before-sd-wan-was-cool"
   },
   "weathering-the-storm-how-business-continuity-planning-keeps-your-company-afloat": {
    "id": "225825145924",
@@ -1351,6 +1759,12 @@
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/blog/what-business-leaders-should-know-about-ransomware"
   },
+  "what-happens-when-ransomware-and-the-internet-of-things-collide": {
+   "id": "225825146406",
+   "slug": "blog/what-happens-when-ransomware-and-the-internet-of-things-collide",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/what-happens-when-ransomware-and-the-internet-of-things-collide"
+  },
   "what-is-a-next-gen-contact-center": {
    "id": "225825146210",
    "slug": "blog/what-is-a-next-gen-contact-center",
@@ -1380,6 +1794,18 @@
    "slug": "blog/what-is-the-best-approach-to-an-enterprise-content-management-system",
    "state": "PUBLISHED",
    "url": "https://50498425.hs-sites.com/blog/what-is-the-best-approach-to-an-enterprise-content-management-system"
+  },
+  "whats-new-in-vmware-vsphere-60": {
+   "id": "225825146504",
+   "slug": "blog/whats-new-in-vmware-vsphere-60",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/whats-new-in-vmware-vsphere-60"
+  },
+  "when-healthcare-professionals-go-mobile": {
+   "id": "225828713908",
+   "slug": "blog/when-healthcare-professionals-go-mobile",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/when-healthcare-professionals-go-mobile"
   },
   "why-are-surveillance-cameras-essential": {
    "id": "225824872236",
