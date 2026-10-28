@@ -1,0 +1,165 @@
+[
+  {
+    "id": "anchor",
+    "name": "anchor",
+    "label": "Anchor id (lets links jump here, e.g. story)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "story"
+  },
+  {
+    "id": "alt_bg",
+    "name": "alt_bg",
+    "label": "Alternate (tinted) background",
+    "required": false,
+    "locked": false,
+    "display": "checkbox",
+    "type": "boolean",
+    "display_width": null,
+    "default": false
+  },
+  {
+    "id": "eyebrow",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "The story"
+  },
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "From an Edison dealership to Indiana's largest office technology provider"
+  },
+  {
+    "id": "intro",
+    "name": "intro",
+    "label": "Intro",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": ""
+  },
+  {
+    "id": "prev_label",
+    "name": "prev_label",
+    "label": "Earlier button text (screen readers)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Earlier"
+  },
+  {
+    "id": "next_label",
+    "name": "next_label",
+    "label": "Later button text (screen readers)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Later"
+  },
+  {
+    "id": "entries",
+    "name": "entries",
+    "label": "Milestones",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 2,
+      "max": 14,
+      "sorting_label_field": null,
+      "default": 7
+    },
+    "children": [
+      {
+        "id": "item_year",
+        "name": "item_year",
+        "label": "Year or label",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "1914"
+      },
+      {
+        "id": "item_title",
+        "name": "item_title",
+        "label": "Title",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "Title"
+      },
+      {
+        "id": "item_copy",
+        "name": "item_copy",
+        "label": "Description",
+        "required": false,
+        "locked": false,
+        "type": "richtext",
+        "display_width": null,
+        "default": "<p>What happened.</p>"
+      }
+    ],
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "item_year": "1914",
+        "item_title": "Oscar K. Van Ausdall",
+        "item_copy": "<p>Chosen as an Edison Business Phonograph dealer for the state of Indiana. The Thomas Edison Company invented the wax cylinder dictating machine.</p>"
+      },
+      {
+        "item_year": "1940",
+        "item_title": "Carl F. Farrar",
+        "item_copy": "<p>Joins as general manager and partner, later buying the business. Mr. Van Ausdall stays on until retiring in 1957 at 73.</p>"
+      },
+      {
+        "item_year": "1960",
+        "item_title": "Clyde von Grimmenstein",
+        "item_copy": "<p>Becomes president after joining in sales in 1950, and stays active until retiring at 84.</p>"
+      },
+      {
+        "item_year": "1983",
+        "item_title": "Telecom",
+        "item_copy": "<p>VAF enters the telephone business. More than 4,000 systems deployed since.</p>"
+      },
+      {
+        "item_year": "1994",
+        "item_title": "Eric von Grimmenstein",
+        "item_copy": "<p>Grew up in the business, joined in 1977 after Purdue, and becomes president.</p>"
+      },
+      {
+        "item_year": "2006",
+        "item_title": "6430 E 75th Street",
+        "item_copy": "<p>The 57,000-square-foot corporate headquarters opens in Indianapolis.</p>"
+      },
+      {
+        "item_year": "Today",
+        "item_title": "Four pillars, one roof",
+        "item_copy": "<p>Information, communication, print and process for Indiana and the Midwest. Privately owned, still in Indianapolis.</p>"
+      }
+    ]
+  }
+]

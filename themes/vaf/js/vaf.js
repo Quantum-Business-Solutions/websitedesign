@@ -28,10 +28,5 @@ if(stk&&hb&&'IntersectionObserver' in window){new IntersectionObserver(function(
 var hd=document.querySelector('.q-header');if(hd){var sc=function(){hd.classList.toggle('is-scrolled',scrollY>80)};addEventListener('scroll',sc,{passive:true});sc()}
 /* mobile menu open: hide the bottom bars so the panel is not covered */
 var mn=document.querySelector('.q-mnav');if(mn){mn.addEventListener('toggle',function(){document.documentElement.classList.toggle('menu-open',mn.open)})}
-/* video facade: poster + play, iframe only on click */
-document.querySelectorAll('.pv-video[data-embed]').forEach(function(v){
-  var b=v.querySelector('button');if(!b)return;
-  b.addEventListener('click',function(){var f=document.createElement('iframe');f.src=v.getAttribute('data-embed');f.title=b.getAttribute('aria-label')||'Video';f.allow='autoplay; fullscreen; picture-in-picture';f.allowFullscreen=true;v.innerHTML='';v.appendChild(f)});
-});
 })();
 (function(){var l=document.querySelector('.pv-sl');if(!l)return;var b=l.querySelector('button'),d=l.querySelector('.drawer');var sc=function(){l.classList.toggle('on',scrollY>560)};addEventListener('scroll',sc,{passive:true});sc();b.addEventListener('click',function(){var o=!d.hidden;d.hidden=o;b.setAttribute('aria-expanded',o?'false':'true')});document.addEventListener('keydown',function(e){if(e.key==='Escape'){d.hidden=true;b.setAttribute('aria-expanded','false')}})})();

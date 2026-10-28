@@ -1,0 +1,165 @@
+[
+  {
+    "id": "anchor",
+    "name": "anchor",
+    "label": "Anchor id (optional)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": ""
+  },
+  {
+    "id": "alt_bg",
+    "name": "alt_bg",
+    "label": "Alternate background",
+    "required": false,
+    "locked": false,
+    "display": "checkbox",
+    "type": "boolean",
+    "display_width": null,
+    "default": false
+  },
+  {
+    "id": "tone",
+    "name": "tone",
+    "label": "Tone",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [
+        "default",
+        "Default"
+      ],
+      [
+        "dark",
+        "Dark navy"
+      ]
+    ],
+    "multiple": false,
+    "type": "choice",
+    "display_width": null,
+    "default": "default"
+  },
+  {
+    "id": "eyebrow",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "What every VAF customer gets"
+  },
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Not a slogan. A list you can check."
+  },
+  {
+    "id": "intro",
+    "name": "intro",
+    "label": "Intro",
+    "required": false,
+    "locked": false,
+    "allow_new_line": true,
+    "type": "text",
+    "display_width": null,
+    "default": ""
+  },
+  {
+    "id": "items",
+    "name": "items",
+    "label": "Commitments",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 1,
+      "max": 12,
+      "sorting_label_field": "seal_title",
+      "default": 4
+    },
+    "children": [
+      {
+        "id": "seal_mark",
+        "name": "seal_mark",
+        "label": "Mark (short figure)",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "seal_title",
+        "name": "seal_title",
+        "label": "Title",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "seal_text",
+        "name": "seal_text",
+        "label": "Text",
+        "required": false,
+        "locked": false,
+        "allow_new_line": true,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "seal_mark": "1914",
+        "seal_title": "Serving Indiana since 1914",
+        "seal_text": "Privately owned in Indianapolis ever since."
+      },
+      {
+        "seal_mark": "93.4",
+        "seal_title": "A service score audited by someone else",
+        "seal_text": "Net Promoter Score collected and audited by CEO Juice."
+      },
+      {
+        "seal_mark": "SOC 2",
+        "seal_title": "SOC 2 certified",
+        "seal_text": "We meet the highest standards for protecting your data."
+      },
+      {
+        "seal_mark": "25",
+        "seal_title": "Points of inspection, every call",
+        "seal_text": "So the next failure is caught early."
+      }
+    ]
+  },
+  {
+    "id": "source",
+    "name": "source",
+    "label": "Source line",
+    "required": false,
+    "locked": false,
+    "allow_new_line": true,
+    "type": "text",
+    "display_width": null,
+    "default": ""
+  }
+]

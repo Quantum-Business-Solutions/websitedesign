@@ -1,0 +1,179 @@
+[
+  {
+    "id": "anchor",
+    "name": "anchor",
+    "label": "Anchor id (lets links jump here, e.g. story)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "ba"
+  },
+  {
+    "id": "alt_bg",
+    "name": "alt_bg",
+    "label": "Alternate (tinted) background",
+    "required": false,
+    "locked": false,
+    "display": "checkbox",
+    "type": "boolean",
+    "display_width": null,
+    "default": false
+  },
+  {
+    "id": "eyebrow",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "One roof"
+  },
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Drag to see what changes when the office has one number to call"
+  },
+  {
+    "id": "after_bg",
+    "name": "after_bg",
+    "label": "Background of the 'after' side",
+    "required": false,
+    "locked": false,
+    "show_opacity": false,
+    "type": "color",
+    "display_width": null,
+    "default": {
+      "color": "#0f1e33",
+      "opacity": 100
+    }
+  },
+  {
+    "id": "before_eyebrow",
+    "name": "before_eyebrow",
+    "label": "Before: label",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Today, in most offices"
+  },
+  {
+    "id": "before_title",
+    "name": "before_title",
+    "label": "Before: heading",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Five vendors, five invoices"
+  },
+  {
+    "id": "before_copy",
+    "name": "before_copy",
+    "label": "Before: intro line",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Nobody owns the whole picture, so nobody sees the cost."
+  },
+  {
+    "id": "before_items",
+    "name": "before_items",
+    "label": "Before: bulleted list",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "display_width": null,
+    "default": "<ul><li>A copier dealer, an IT firm and a phone company who blame each other</li><li>Toner bought at retail when a device runs dry</li><li>Backups nobody has tested and a firewall nobody patches</li><li>Records in a storage room scheduled for demolition</li><li>Employees using AI tools nobody approved</li></ul>"
+  },
+  {
+    "id": "after_eyebrow",
+    "name": "after_eyebrow",
+    "label": "After: label",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "With VAF"
+  },
+  {
+    "id": "after_title",
+    "name": "after_title",
+    "label": "After: heading",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Everything under one roof"
+  },
+  {
+    "id": "after_copy",
+    "name": "after_copy",
+    "label": "After: intro line",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Information, communication, print and process from one Indiana partner since 1914."
+  },
+  {
+    "id": "after_items",
+    "name": "after_items",
+    "label": "After: bulleted list",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "display_width": null,
+    "default": "<ul><li>Copiers, print, IT and phones under one agreement and one Customer Care Center</li><li>Supplies shipped on usage, 24/7 monitoring, 25-point inspections</li><li>vCIO, security operations center and managed continuity</li><li>Records scanned, indexed and searchable, paper destroyed with a certificate</li><li>An AI acceptable use policy and a roadmap</li></ul>"
+  },
+  {
+    "id": "hint",
+    "name": "hint",
+    "label": "Hint on the slider",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Drag to compare"
+  },
+  {
+    "id": "range_label",
+    "name": "range_label",
+    "label": "Slider label (screen readers)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Compare before and after"
+  },
+  {
+    "id": "switch_label",
+    "name": "switch_label",
+    "label": "Phone switch label (screen readers)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Choose a view"
+  }
+]

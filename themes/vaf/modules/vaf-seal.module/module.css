@@ -1,0 +1,10 @@
+/* vaf-seal */
+.vaf-seal .vaf-seal__h{margin-top:22px;max-width:760px}
+.vaf-seal .vaf-seal__intro{max-width:640px;margin:16px auto 0}
+.vaf-seal .vaf-seal__grid{display:flex;flex-wrap:wrap;justify-content:center;gap:20px}
+.vaf-seal .vaf-seal__grid .item{flex:0 0 calc((100% - 20px * (var(--vaf-cols, 4) - 1)) / var(--vaf-cols, 4));min-width:0;box-sizing:border-box}
+.vaf-seal .vaf-c1{--vaf-cols:1}.vaf-seal .vaf-c2{--vaf-cols:2}.vaf-seal .vaf-c3{--vaf-cols:3}.vaf-seal .vaf-c4{--vaf-cols:4}
+.vaf-seal .vaf-seal__grid .src{flex:0 0 100%;margin:4px 0 0}
+.vaf-seal .badge b{overflow-wrap:anywhere}
+@media(max-width:1024px){.vaf-seal .vaf-c4,.vaf-seal .vaf-c3{--vaf-cols:2}.vaf-seal .vaf-c3 .item:last-of-type:nth-of-type(odd){flex-basis:calc(50% - 10px)}}
+@media(max-width:560px){.vaf-seal .vaf-seal__grid{--vaf-cols:1!important}.vaf-seal .vaf-seal__grid .item{flex-basis:100%;min-height:0}}

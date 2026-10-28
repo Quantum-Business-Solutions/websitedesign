@@ -1,0 +1,134 @@
+[
+  {
+    "id": "anchor",
+    "name": "anchor",
+    "label": "Anchor id (lets links jump here, e.g. story)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": ""
+  },
+  {
+    "id": "alt_bg",
+    "name": "alt_bg",
+    "label": "Alternate (tinted) background",
+    "required": false,
+    "locked": false,
+    "display": "checkbox",
+    "type": "boolean",
+    "display_width": null,
+    "default": false
+  },
+  {
+    "id": "eyebrow",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "How it works"
+  },
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Three steps"
+  },
+  {
+    "id": "intro",
+    "name": "intro",
+    "label": "Intro",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": ""
+  },
+  {
+    "id": "produces_label",
+    "name": "produces_label",
+    "label": "Label above each deliverable",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Produces"
+  },
+  {
+    "id": "steps",
+    "name": "steps",
+    "label": "Steps",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 2,
+      "max": 6,
+      "sorting_label_field": null,
+      "default": 3
+    },
+    "children": [
+      {
+        "id": "step_title",
+        "name": "step_title",
+        "label": "Step title",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "Step"
+      },
+      {
+        "id": "step_copy",
+        "name": "step_copy",
+        "label": "Description",
+        "required": false,
+        "locked": false,
+        "type": "richtext",
+        "display_width": null,
+        "default": "<p>What happens.</p>"
+      },
+      {
+        "id": "step_produces",
+        "name": "step_produces",
+        "label": "Produces (what this step delivers; leave blank to hide)",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      }
+    ],
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "step_title": "Free print assessment",
+        "step_copy": "<p>We map your devices, volumes and costs, then show exactly where you save.</p>",
+        "step_produces": "Your devices, volumes and costs mapped, and exactly where you save."
+      },
+      {
+        "step_title": "We implement",
+        "step_copy": "<p>Right-sized copiers and printers, software, security and supplies, handled for you.</p>",
+        "step_produces": "Right-sized copiers and printers, software, security and supplies, handled for you."
+      },
+      {
+        "step_title": "We monitor 24/7",
+        "step_copy": "<p>Proactive monitoring, predictive maintenance and fast local repair keep you running.</p>",
+        "step_produces": "Proactive monitoring, predictive maintenance and fast local repair."
+      }
+    ]
+  }
+]

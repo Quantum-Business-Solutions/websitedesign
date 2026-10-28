@@ -1,0 +1,28 @@
+/* vaf-stats: column count from the item count (no inline grid styles, so the base mobile rules cannot fight it) */
+.vaf-stats .vaf-stats__grid{grid-template-columns:repeat(4,1fr);gap:12px}
+.vaf-stats .vaf-n1{grid-template-columns:1fr;max-width:520px}
+.vaf-stats .vaf-n2{grid-template-columns:repeat(2,1fr)}
+.vaf-stats .vaf-n3{grid-template-columns:repeat(3,1fr)}
+.vaf-stats .vaf-n5{grid-template-columns:repeat(6,1fr)}
+.vaf-stats .vaf-n5 .pv-stat{grid-column:span 2}
+.vaf-stats .vaf-n5 .pv-stat:nth-child(4){grid-column:2 / span 2}
+.vaf-stats .vaf-n5 .pv-stat:nth-child(5){grid-column:4 / span 2}
+.vaf-stats .vaf-n6{grid-template-columns:repeat(3,1fr)}
+.vaf-stats .pv-stat{container-type:inline-size;min-width:0}
+/* figure size follows its own length so a seven-digit number stays on one line */
+.vaf-stats .pv-stat b{font-size:var(--vaf-fs,clamp(26px,calc(100cqw / (var(--len, 4) * .66)),76px));white-space:nowrap}
+@media(max-width:1024px){
+  .vaf-stats .vaf-n4,.vaf-stats .vaf-n6{grid-template-columns:repeat(2,1fr);gap:12px}
+  .vaf-stats .vaf-n5{grid-template-columns:repeat(2,1fr)}
+  .vaf-stats .vaf-n5 .pv-stat,.vaf-stats .vaf-n5 .pv-stat:nth-child(4),.vaf-stats .vaf-n5 .pv-stat:nth-child(5){grid-column:auto}
+}
+@media(max-width:767px){
+  /* odd counts stack to one column rather than leave an orphan */
+  .vaf-stats .vaf-n3,.vaf-stats .vaf-n5,.vaf-stats .vaf-n1{grid-template-columns:1fr}
+  .vaf-stats .vaf-n2,.vaf-stats .vaf-n4,.vaf-stats .vaf-n6{grid-template-columns:1fr 1fr}
+  .vaf-stats .pv-stat{padding:22px 12px}
+  .vaf-stats .pv-stat + .pv-stat{border-left:0}
+}
+
+.vaf-stats .pv-stat b{white-space:nowrap!important;word-break:keep-all!important;overflow-wrap:normal!important;font-size:clamp(26px,3.5vw,56px)!important}
+@media(max-width:640px){.vaf-stats .pv-stat b{font-size:clamp(26px,9vw,44px)!important}}

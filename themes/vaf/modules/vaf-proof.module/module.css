@@ -1,0 +1,5 @@
+/* vaf-proof */
+.vaf-proof .vaf-proof__eyebrow{justify-content:center}
+.vaf-proof .pv-proof .src{max-width:640px;margin-left:auto;margin-right:auto}
+@media(max-width:767px){.vaf-proof .pv-proof b{font-size:clamp(84px,28vw,128px)}}
+.q-tone-dark.vaf-proof .pv-proof .src{color:rgba(255,255,255,.8)}

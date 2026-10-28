@@ -1,0 +1,58 @@
+/* VAF Hotspots. Without JS: the illustration with every pin's card listed under it.
+   With JS: numbered pins with popovers on desktop, one detail card under the image on phones. */
+.vaf-hot{--vf-blue:var(--q-gold,#2a71af);--vf-deep:var(--q-gold-bright,#205686);--vf-navy:var(--navy,#0f1e33);--vf-tint:#e7f0f9;--vf-ease:cubic-bezier(.2,.7,.2,1)}
+.vaf-hot__head{text-align:center;display:flex;flex-direction:column;align-items:center}
+.vaf-hot__head .q-eyebrow{text-align:center}
+.vaf-hot__head .q-h2{margin-top:22px;max-width:760px}
+.vaf-hot__head .q-lead{max-width:640px;margin:16px auto 0}
+.vaf-hot__stage{position:relative;margin-top:44px;border-radius:24px;overflow:hidden;border:1px solid var(--border);background:var(--bg-alt,#eef4fa);box-shadow:0 24px 60px rgba(15,30,51,.1)}
+.vaf-hot__stage img{display:block;width:100%;height:auto}
+.vaf-hot__pin{display:none}
+.vaf-hot__pops{display:grid;gap:14px;margin-top:22px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.vaf-hot__pop{position:relative;background:var(--bg,#fff);border:1px solid var(--border);border-radius:16px;padding:20px 22px 18px;box-shadow:0 10px 26px rgba(15,30,51,.06)}
+.vaf-hot__pop[hidden]{display:none}
+.vaf-hot__num{display:none}
+.vaf-hot__k{margin:0 0 6px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--vf-deep)}
+.vaf-hot__pop h3{margin:0 0 8px;font:700 19px/1.25 var(--q-serif);color:var(--fg)}
+.vaf-hot__copy{margin:0;font-size:15px;line-height:1.55;color:var(--fg-muted)}
+.vaf-hot__go{display:inline-flex;align-items:center;min-height:44px;margin-top:8px;font-weight:700;font-size:15px;color:var(--vf-deep);text-decoration:none}
+.vaf-hot__go::after{content:"";width:22px;height:2px;background:currentColor;margin-left:10px;transition:width .3s var(--vf-ease)}
+.vaf-hot__go:hover::after{width:34px}
+.vaf-hot__go:focus-visible,.vaf-hot__list a:focus-visible,.vaf-hot__close:focus-visible,.vaf-hot__pin:focus-visible{outline:3px solid var(--vf-blue);outline-offset:3px}
+.vaf-hot__list{display:none}
+
+/* JS on */
+.vaf-hot.is-js .vaf-hot__pin{display:grid;position:absolute;transform:translate(-50%,-50%);width:38px;height:38px;padding:0;border:0;border-radius:50%;place-items:center;background:var(--vf-blue);color:#fff;font:800 15px/1 var(--q-sans);cursor:pointer;box-shadow:0 0 0 5px rgba(42,113,175,.28),0 10px 22px rgba(15,30,51,.3);transition:transform .3s var(--vf-ease),background .3s var(--vf-ease),box-shadow .3s var(--vf-ease);z-index:2}
+.vaf-hot__pin::before{content:"";position:absolute;inset:-4px}
+.vaf-hot__pin::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:2px solid var(--vf-blue);opacity:0;animation:vafHotPulse 2.6s ease-out infinite}
+@keyframes vafHotPulse{0%{transform:scale(.85);opacity:.7}100%{transform:scale(1.7);opacity:0}}
+.vaf-hot.is-js .vaf-hot__pin:hover{transform:translate(-50%,-50%) scale(1.12)}
+.vaf-hot.is-js .vaf-hot__pin[aria-expanded="true"]{background:var(--vf-navy);transform:translate(-50%,-50%) scale(1.14);box-shadow:0 0 0 6px rgba(255,255,255,.85),0 10px 26px rgba(15,30,51,.4);z-index:4}
+.vaf-hot.is-js .vaf-hot__pin[aria-expanded="true"]::after{animation:none}
+.vaf-hot.is-js .vaf-hot__pops{display:block;margin-top:18px}
+.vaf-hot.is-js .vaf-hot__pop{display:none}
+.vaf-hot.is-js .vaf-hot__pop.is-on{display:block;animation:vafHotIn .4s var(--vf-ease)}
+.vaf-hot.is-js .vaf-hot__num{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--vf-blue);color:#fff;font-size:14px;font-weight:800;margin-bottom:10px}
+@keyframes vafHotIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.vaf-hot__close{all:unset;box-sizing:border-box;position:absolute;top:6px;right:6px;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;cursor:pointer;color:var(--fg-muted)}
+.vaf-hot__close:hover{background:var(--vf-tint);color:var(--vf-deep)}
+.vaf-hot.is-js .vaf-hot__list{display:grid;grid-template-columns:repeat(2,1fr);gap:4px 24px;margin:22px 0 0;padding:0;list-style:none}
+.vaf-hot__list a{display:flex;align-items:center;gap:12px;min-height:48px;text-decoration:none;color:var(--fg);font-size:15px;font-weight:600;border-bottom:1px solid var(--border);transition:color .2s}
+.vaf-hot__list a:hover,.vaf-hot__list a.is-hot{color:var(--vf-deep)}
+.vaf-hot__list b{width:28px;height:28px;border-radius:50%;background:var(--vf-blue);color:#fff;display:grid;place-items:center;font-size:13px;flex:none}
+
+/* desktop popover, placed inside the stage */
+@media (min-width:768px){
+  .vaf-hot__stage .vaf-hot__pop{position:absolute;z-index:5;width:min(320px,calc(100% - 24px));box-shadow:0 26px 60px rgba(15,30,51,.3);padding:20px 22px 14px}
+  .vaf-hot__stage .vaf-hot__pop::before{content:"";position:absolute;left:var(--ax,50%);width:16px;height:16px;background:var(--bg,#fff);border:solid var(--border);margin-left:-8px;transform:rotate(45deg)}
+  .vaf-hot__stage .vaf-hot__pop.is-below::before{top:-8px;border-width:1px 0 0 1px}
+  .vaf-hot__stage .vaf-hot__pop.is-above::before{bottom:-8px;border-width:0 1px 1px 0}
+  .vaf-hot.is-js .vaf-hot__stage .vaf-hot__num{display:none}
+  .vaf-hot__stage .vaf-hot__pop h3{padding-right:34px}
+}
+@media (max-width:767px){
+  .vaf-hot.is-js .vaf-hot__pin{width:34px;height:34px;font-size:14px}
+  .vaf-hot.is-js .vaf-hot__list{grid-template-columns:1fr}
+  .vaf-hot__close{display:none}
+}
+@media (prefers-reduced-motion:reduce){.vaf-hot *{animation:none!important;transition:none!important}}

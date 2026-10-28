@@ -1,0 +1,35 @@
+/* VAF Comparison: table on desktop, stacked option cards on mobile. Both are in the DOM; CSS shows one. */
+.vaf-comparison{--vcmp-rec:color-mix(in srgb,var(--accent-ink) 9%,#fff);--vcmp-line:color-mix(in srgb,var(--accent-ink) 14%,transparent)}
+.vcmp__head{margin-bottom:44px}
+.vcmp__head .q-h2{font-size:clamp(30px,3.6vw,48px);line-height:1.1}
+.vcmp__head p{font-size:17px}
+.vcmp__sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.vcmp__table{background:#fff;border:1px solid var(--vcmp-line);border-radius:20px;overflow:hidden;box-shadow:0 1px 2px rgba(15,30,51,.04),0 24px 50px -26px rgba(15,30,51,.3)}
+.vcmp__table:focus-visible{outline:3px solid var(--accent-ink);outline-offset:3px}
+.vcmp__table table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:16px}
+.vcmp__table thead th{padding:26px 22px 20px;text-align:left;vertical-align:bottom;border-bottom:1px solid var(--vcmp-line);background:#fff}
+.vcmp__corner{width:20%}
+.vcmp__opt{display:block;font-size:22px;font-weight:800;letter-spacing:-.02em;color:var(--fg)}
+.vcmp__badge{display:inline-block;margin-bottom:10px;padding:5px 12px;border-radius:999px;background:var(--accent-ink);color:#fff;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;line-height:1.2}
+.vcmp__table tbody th{padding:20px 22px;text-align:left;font-weight:700;color:var(--fg);vertical-align:top;border-bottom:1px solid var(--vcmp-line)}
+.vcmp__table td{padding:20px 22px;vertical-align:top;line-height:1.55;color:var(--fg-muted);border-bottom:1px solid var(--vcmp-line)}
+.vcmp__table tbody tr:last-child th,.vcmp__table tbody tr:last-child td{border-bottom:0}
+.vcmp__table .is-rec{background:var(--vcmp-rec);border-left:1px solid color-mix(in srgb,var(--accent-ink) 30%,transparent);border-right:1px solid color-mix(in srgb,var(--accent-ink) 30%,transparent)}
+.vcmp__table thead .is-rec{border-top:4px solid var(--accent-ink)}
+.vcmp__table td.is-rec{color:var(--fg);font-weight:500}
+.vcmp__note{margin:20px 0 0;font-size:14.5px;line-height:1.6;color:var(--fg-muted)}
+.vcmp__stack{display:none}
+@media(max-width:767px){
+  .vcmp__head{margin-bottom:28px}
+  .vcmp__table{display:none}
+  .vcmp__stack{display:flex;flex-direction:column;gap:16px}
+  .vcmp__card{background:#fff;border:1px solid var(--vcmp-line);border-radius:var(--radius);padding:24px 22px;box-shadow:0 1px 2px rgba(15,30,51,.04),0 14px 30px -22px rgba(15,30,51,.3)}
+  .vcmp__card.is-rec{order:-1;background:var(--vcmp-rec);border:2px solid var(--accent-ink)}
+  .vcmp__cardhead{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+  .vcmp__cardhead h3{margin:0;font-size:22px;font-weight:800;letter-spacing:-.02em;color:var(--fg)}
+  .vcmp__cardhead .vcmp__badge{margin:0}
+  .vcmp__card dl{margin:0}
+  .vcmp__card dl>div{padding:14px 0;border-top:1px solid var(--vcmp-line)}
+  .vcmp__card dt{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-ink)}
+  .vcmp__card dd{margin:4px 0 0;font-size:16px;line-height:1.5;color:var(--fg)}
+}

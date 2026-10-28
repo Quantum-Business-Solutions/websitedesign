@@ -1,0 +1,9 @@
+{# VAF proof: one big figure, one sentence, one source. #}
+<section class="q-section vaf-proof{% if module.alt_bg %} q-bg-alt{% endif %}{% if module.tone == 'dark' %} q-tone-dark{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %}>
+  <div class="q-container pv-proof">
+    {% if module.eyebrow %}<div class="q-eyebrow vaf-proof__eyebrow">{{ module.eyebrow }}</div>{% endif %}
+    <b data-static>{{ module.figure }}</b>
+    <p class="q-lead">{{ module.copy }}</p>
+    {% if module.source %}<p class="src">{{ module.source }}</p>{% endif %}
+  </div>
+</section>

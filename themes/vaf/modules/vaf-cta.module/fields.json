@@ -1,0 +1,105 @@
+[
+  {
+    "id": "anchor",
+    "name": "anchor",
+    "label": "Anchor id (optional)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": ""
+  },
+  {
+    "id": "alt_bg",
+    "name": "alt_bg",
+    "label": "Alternate background",
+    "required": false,
+    "locked": false,
+    "display": "checkbox",
+    "type": "boolean",
+    "display_width": null,
+    "default": false
+  },
+  {
+    "id": "tone",
+    "name": "tone",
+    "label": "Tone",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [
+        "default",
+        "Default"
+      ],
+      [
+        "dark",
+        "Dark navy"
+      ]
+    ],
+    "multiple": false,
+    "type": "choice",
+    "display_width": null,
+    "default": "default"
+  },
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Think you would shine here?"
+  },
+  {
+    "id": "subhead",
+    "name": "subhead",
+    "label": "Subhead",
+    "required": false,
+    "locked": false,
+    "allow_new_line": true,
+    "type": "text",
+    "display_width": null,
+    "default": ""
+  },
+  {
+    "id": "primary_label",
+    "name": "primary_label",
+    "label": "Button text",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "See careers"
+  },
+  {
+    "id": "primary_link",
+    "name": "primary_link",
+    "label": "Button link",
+    "required": false,
+    "locked": false,
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "EMAIL_ADDRESS",
+      "BLOG"
+    ],
+    "show_advanced_rel_options": false,
+    "type": "link",
+    "display_width": null,
+    "default": {
+      "url": {
+        "href": "/careers",
+        "type": "EXTERNAL",
+        "content_id": null
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  }
+]

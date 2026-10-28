@@ -1,0 +1,8 @@
+/* vaf-band */
+.vaf-band .vaf-band__h{margin-top:22px}
+.vaf-band .vaf-band__lead{margin-top:20px;max-width:480px}
+.vaf-band .vaf-band__grid.vaf-c2{grid-template-columns:repeat(2,1fr)}
+.vaf-band .vaf-band__grid.vaf-c1{grid-template-columns:1fr}
+.vaf-band .q-card{min-height:44px}
+.vaf-band .q-card:focus-visible{outline:2px solid var(--chrome-accent);outline-offset:3px}
+@media(max-width:560px){.vaf-band .vaf-band__grid.vaf-c2{grid-template-columns:1fr}}

@@ -1,0 +1,60 @@
+/* VAF Process flow chart. 900px and up: a rail with numbered nodes and cards zig-zagging above and below.
+   Below that: a vertical stepper. Each card names what the step produces. */
+.vaf-proc{--vf-blue:var(--q-gold,#2a71af);--vf-deep:var(--q-gold-bright,#205686);--vf-line:#c3d8ec;--vf-tint:#e7f0f9;--vf-ease:cubic-bezier(.2,.7,.2,1);--g:22px}
+.vaf-proc__head{text-align:center;display:flex;flex-direction:column;align-items:center}
+.vaf-proc__head .q-eyebrow{text-align:center}
+.vaf-proc__head .q-h2{margin-top:22px;max-width:760px}
+.vaf-proc__head .q-lead{max-width:640px;margin:16px auto 0}
+.vaf-proc__chart{position:relative;margin-top:48px}
+.vaf-proc__steps{list-style:none;margin:0;padding:0}
+
+/* vertical stepper (default) */
+.vaf-proc__step{position:relative;padding:0 0 26px 64px;outline:0}
+.vaf-proc__step:last-child{padding-bottom:0}
+.vaf-proc__step::before{content:"";position:absolute;left:23px;top:50px;bottom:0;width:2px;border-radius:2px;background:var(--vf-line)}
+.vaf-proc__step:last-child::before{display:none}
+.vaf-proc__stem{display:none}
+.vaf-proc__node{position:absolute;left:0;top:0;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--vf-blue);border:2px solid var(--vf-blue);color:#fff;font:800 18px/1 var(--q-serif);transition:background .35s var(--vf-ease),color .35s var(--vf-ease),box-shadow .35s var(--vf-ease),transform .35s var(--vf-ease)}
+.vaf-proc__card{background:var(--bg,#fff);border:1px solid var(--border);border-radius:18px;padding:20px 22px 20px;box-shadow:0 10px 26px rgba(15,30,51,.06);transition:border-color .3s var(--vf-ease),box-shadow .3s var(--vf-ease),transform .3s var(--vf-ease)}
+.vaf-proc__title{margin:0 0 8px;font:700 20px/1.25 var(--q-serif);color:var(--fg)}
+.vaf-proc__copy,.vaf-proc__copy p{margin:0;font-size:15.5px;line-height:1.6;color:var(--fg-muted)}
+.vaf-proc__out{margin-top:16px;padding-top:14px;border-top:1px dashed var(--vf-line);display:grid;gap:5px}
+.vaf-proc__out-l{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--vf-deep)}
+.vaf-proc__out-v{font-size:15px;line-height:1.5;font-weight:600;color:var(--fg)}
+.vaf-proc__step:focus-visible .vaf-proc__card{outline:3px solid var(--vf-blue);outline-offset:3px}
+
+@media (min-width:900px){
+  .vaf-proc{--w:calc((100% - (var(--n) - 1) * var(--g)) / var(--n))}
+  .vaf-proc__chart{margin-top:56px}
+  .vaf-proc__steps{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));grid-template-rows:auto 56px auto;column-gap:var(--g);position:relative;z-index:1}
+  .vaf-proc__steps::before,.vaf-proc__steps::after{content:"";grid-row:2;grid-column:1 / -1;align-self:center;height:3px;margin:0 calc(var(--w) / 2);border-radius:3px;transform-origin:left;pointer-events:none}
+  .vaf-proc__steps::before{background:var(--vf-line);transition:transform 1.4s var(--vf-ease)}
+  .vaf-proc.is-js:not(.is-in) .vaf-proc__steps::before{transform:scaleX(0)}
+  .vaf-proc__steps::after{background:var(--vf-blue);transform:scaleX(calc(var(--act) / (var(--n) - 1)));transition:transform .7s var(--vf-ease)}
+  .vaf-proc__step{display:contents}
+  .vaf-proc__step::before{display:none}
+  .vaf-proc__node{position:relative;z-index:2;grid-row:2;grid-column:var(--c);justify-self:center;width:56px;height:56px;font-size:20px;background:var(--bg,#fff);color:var(--fg-muted);border-color:var(--vf-line)}
+  .vaf-proc.is-js:not(.is-in) .vaf-proc__node{opacity:0;transform:scale(.55)}
+  .vaf-proc.is-js .vaf-proc__node{transition:opacity .5s ease calc(var(--c) * .25s),transform .6s var(--vf-ease) calc(var(--c) * .25s),background .35s var(--vf-ease),color .35s var(--vf-ease),border-color .35s var(--vf-ease),box-shadow .35s var(--vf-ease)}
+  .vaf-proc .vaf-proc__step.is-reached .vaf-proc__node{background:var(--vf-tint);border-color:var(--vf-blue);color:var(--vf-deep)}
+  .vaf-proc .vaf-proc__step.is-on .vaf-proc__node{background:var(--vf-blue);border-color:var(--vf-blue);color:#fff;box-shadow:0 0 0 7px rgba(42,113,175,.16);transform:scale(1.08)}
+  .vaf-proc__stem{display:block;grid-column:var(--c);justify-self:center;width:2px;background:var(--vf-line);transition:background .35s var(--vf-ease)}
+  .vaf-proc__step--up .vaf-proc__stem{grid-row:1;align-self:end;height:26px;margin-bottom:-1px}
+  .vaf-proc__step--down .vaf-proc__stem{grid-row:3;align-self:start;height:26px;margin-top:-1px}
+  .vaf-proc .is-reached .vaf-proc__stem,.vaf-proc .is-on .vaf-proc__stem{background:var(--vf-blue)}
+  .vaf-proc__card{grid-column:var(--c);position:relative;display:flex;flex-direction:column}
+  .vaf-proc__step--up .vaf-proc__card{grid-row:1;margin-bottom:26px;align-self:end}
+  .vaf-proc__step--down .vaf-proc__card{grid-row:3;margin-top:26px;align-self:start}
+  /* the stem is its own grid item; keep card spacing above the node and below it */
+  .vaf-proc__step--up .vaf-proc__stem{align-self:end;height:26px}
+  .vaf-proc__step--up .vaf-proc__card{margin-bottom:26px}
+  .vaf-proc .is-on .vaf-proc__card{border-color:var(--vf-blue);box-shadow:0 22px 46px rgba(42,113,175,.18);transform:translateY(-3px)}
+  .vaf-proc__step--down.is-on .vaf-proc__card{transform:translateY(3px)}
+  .vaf-proc__out{margin-top:auto;padding-top:14px}
+  .vaf-proc__copy{margin-bottom:16px}
+}
+@media (prefers-reduced-motion:reduce){
+  .vaf-proc *{transition:none!important;animation:none!important}
+  .vaf-proc.is-js:not(.is-in) .vaf-proc__node{opacity:1;transform:none}
+  .vaf-proc.is-js:not(.is-in) .vaf-proc__steps::before{transform:none}
+}

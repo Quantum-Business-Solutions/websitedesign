@@ -1,0 +1,17 @@
+{# VAF band: heading on the left, a grid of link cards on the right. One column for odd counts so nothing is orphaned. #}
+{% macro vaf_href(l) %}{% if l and l.url and l.url.href %}href="{{ l.url.href }}"{% if l.open_in_new_tab %} target="_blank" rel="noopener{% if l.no_follow %} nofollow{% endif %}"{% elif l.no_follow %} rel="nofollow"{% endif %}{% else %}href="#"{% endif %}{% endmacro %}
+{% set n = module.items|length %}
+{% set cols = 1 %}
+{% if n % 2 == 0 %}{% set cols = 2 %}{% endif %}
+<section class="q-section pv-band vaf-band"{% if module.anchor %} id="{{ module.anchor }}"{% endif %}>
+  <div class="q-container pv-cs">
+    <div>
+      {% if module.eyebrow %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      <h2 class="q-h2 vaf-band__h">{{ module.heading }}</h2>
+      {% if module.subhead %}<div class="q-lead vaf-band__lead">{{ module.subhead }}</div>{% endif %}
+    </div>
+    <div class="pv-grid vaf-band__grid vaf-c{{ cols }}">
+      {% for it in module.items %}<a class="q-card" {{ vaf_href(it.card_link) }}><div class="t">{{ it.card_title }}</div><div class="d">{{ it.card_text }}</div></a>{% endfor %}
+    </div>
+  </div>
+</section>

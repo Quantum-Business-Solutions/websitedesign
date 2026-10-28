@@ -1,0 +1,333 @@
+[
+  {
+    "id": "anchor",
+    "name": "anchor",
+    "label": "Anchor id (lets links jump here, e.g. story)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "office"
+  },
+  {
+    "id": "alt_bg",
+    "name": "alt_bg",
+    "label": "Alternate (tinted) background",
+    "required": false,
+    "locked": false,
+    "display": "checkbox",
+    "type": "boolean",
+    "display_width": null,
+    "default": false
+  },
+  {
+    "id": "eyebrow",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "The whole office"
+  },
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Four pillars, one floor plan"
+  },
+  {
+    "id": "intro",
+    "name": "intro",
+    "label": "Intro",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Click a number. Everything an office runs on, and the VAF page for each."
+  },
+  {
+    "id": "image",
+    "name": "image",
+    "label": "Illustration",
+    "required": false,
+    "locked": false,
+    "responsive": true,
+    "resizable": true,
+    "show_loading": true,
+    "type": "image",
+    "display_width": null,
+    "default": {
+      "src": "",
+      "alt": "An overhead illustration of an office with a copier room, a server room, a records room, a lounge and desks",
+      "width": 1600,
+      "height": 893,
+      "loading": "lazy"
+    }
+  },
+  {
+    "id": "close_label",
+    "name": "close_label",
+    "label": "Close button text (screen readers)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Close"
+  },
+  {
+    "id": "list_label",
+    "name": "list_label",
+    "label": "List label (screen readers)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "All the places on the floor plan"
+  },
+  {
+    "id": "pins",
+    "name": "pins",
+    "label": "Pins",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 1,
+      "max": 12,
+      "sorting_label_field": null,
+      "default": 7
+    },
+    "children": [
+      {
+        "id": "pin_x",
+        "name": "pin_x",
+        "label": "Pin position, % from the left",
+        "required": false,
+        "locked": false,
+        "display": "text",
+        "type": "number",
+        "display_width": null,
+        "default": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1
+      },
+      {
+        "id": "pin_y",
+        "name": "pin_y",
+        "label": "Pin position, % from the top",
+        "required": false,
+        "locked": false,
+        "display": "text",
+        "type": "number",
+        "display_width": null,
+        "default": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1
+      },
+      {
+        "id": "pin_kicker",
+        "name": "pin_kicker",
+        "label": "Small label (pillar)",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "Print"
+      },
+      {
+        "id": "pin_title",
+        "name": "pin_title",
+        "label": "Title",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "The copier room"
+      },
+      {
+        "id": "pin_copy",
+        "name": "pin_copy",
+        "label": "Description",
+        "required": false,
+        "locked": false,
+        "allow_new_line": true,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "pin_link",
+        "name": "pin_link",
+        "label": "Link",
+        "required": false,
+        "locked": false,
+        "supported_types": [
+          "EXTERNAL",
+          "CONTENT",
+          "FILE",
+          "EMAIL_ADDRESS",
+          "BLOG"
+        ],
+        "type": "link",
+        "display_width": null,
+        "default": {
+          "url": {
+            "content_id": null,
+            "href": "",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "id": "pin_link_label",
+        "name": "pin_link_label",
+        "label": "Link text",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "See it"
+      }
+    ],
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "pin_x": 27,
+        "pin_y": 46,
+        "pin_kicker": "Print",
+        "pin_title": "The copier room",
+        "pin_copy": "Canon, Ricoh, Kyocera and HP multifunction devices under one managed print agreement, with supplies that arrive before they run out.",
+        "pin_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/services/copiers"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "pin_link_label": "Copiers and managed print"
+      },
+      {
+        "pin_x": 82,
+        "pin_y": 14,
+        "pin_kicker": "Information",
+        "pin_title": "The server room",
+        "pin_copy": "Managed IT, Vsecure cybersecurity, cloud and continuity. Monitored 24/7 from Indianapolis, with a vCIO planning what comes next.",
+        "pin_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/services/managed-it"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "pin_link_label": "Managed IT services"
+      },
+      {
+        "pin_x": 93,
+        "pin_y": 42,
+        "pin_kicker": "Communication",
+        "pin_title": "The desk phone",
+        "pin_copy": "Mitel, RingCentral, 8x8 and Elevate unified communications that follow your people to their smartphones. In telecom since 1983.",
+        "pin_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/services/business-phone-systems"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "pin_link_label": "Business phone systems"
+      },
+      {
+        "pin_x": 64,
+        "pin_y": 71,
+        "pin_kicker": "Process",
+        "pin_title": "The scan station",
+        "pin_copy": "Every multifunction device scans straight into OnBase or Square 9 workflows: accounts payable, HR, contracts, records.",
+        "pin_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/services/document-management"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "pin_link_label": "Document management"
+      },
+      {
+        "pin_x": 88,
+        "pin_y": 66,
+        "pin_kicker": "Process",
+        "pin_title": "The records wall",
+        "pin_copy": "Boxes of paper become searchable records at the secure Document Conversion Center, with a certificate of destruction at the end.",
+        "pin_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/services/document-conversion"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "pin_link_label": "Document conversion"
+      },
+      {
+        "pin_x": 16,
+        "pin_y": 58,
+        "pin_kicker": "Print",
+        "pin_title": "The desks",
+        "pin_copy": "Desktop printers right-sized to how many the office needs, folded into the same managed print report as the copiers.",
+        "pin_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/services/managed-print"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "pin_link_label": "Managed print"
+      },
+      {
+        "pin_x": 62,
+        "pin_y": 38,
+        "pin_kicker": "Process",
+        "pin_title": "The meeting area",
+        "pin_copy": "Where AI shows up first: drafting, summarizing, automating. An acceptable use policy and a roadmap before the tools.",
+        "pin_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/services/ai-consulting"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "pin_link_label": "AI consulting"
+      }
+    ]
+  }
+]

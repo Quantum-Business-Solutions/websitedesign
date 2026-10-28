@@ -1,0 +1,31 @@
+{% set steps = module.steps %}
+{% set n = steps|length %}
+<section class="q-section vaf-proc{% if module.alt_bg %} q-bg-alt{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %} style="--n:{{ n }}" data-vaf-proc>
+  <div class="q-container">
+    <div class="vaf-proc__head">
+      {% if module.eyebrow %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      {% if module.heading %}<h2 class="q-h2">{{ module.heading }}</h2>{% endif %}
+      {% if module.intro %}<p class="q-lead">{{ module.intro }}</p>{% endif %}
+    </div>
+    <div class="vaf-proc__chart" style="--act:0">
+      <ol class="vaf-proc__steps" role="list">
+        {% for s in steps %}
+        <li class="vaf-proc__step vaf-proc__step--{{ 'up' if loop.index % 2 == 1 else 'down' }}" style="--c:{{ loop.index }}" role="listitem" tabindex="0">
+          <span class="vaf-proc__node" aria-hidden="true"><b>{{ loop.index }}</b></span>
+          <span class="vaf-proc__stem" aria-hidden="true"></span>
+          <div class="vaf-proc__card">
+            <h3 class="vaf-proc__title">{{ s.step_title }}</h3>
+            {% if s.step_copy %}<div class="vaf-proc__copy">{{ s.step_copy }}</div>{% endif %}
+            {% if s.step_produces %}
+            <div class="vaf-proc__out">
+              <span class="vaf-proc__out-l">{{ module.produces_label }}<svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span class="vaf-proc__out-v">{{ s.step_produces }}</span>
+            </div>
+            {% endif %}
+          </div>
+        </li>
+        {% endfor %}
+      </ol>
+    </div>
+  </div>
+</section>

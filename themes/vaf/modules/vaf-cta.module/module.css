@@ -1,0 +1,5 @@
+/* vaf-cta */
+.vaf-cta .vaf-cta__h{font-size:clamp(30px,4vw,52px)}
+.vaf-cta .vaf-cta__lead{max-width:540px;margin:22px auto 0}
+.vaf-cta .vaf-cta__btn{margin-top:34px}
+@media(max-width:767px){.vaf-cta .vaf-cta__btn .q-btn{justify-content:center;text-align:center;max-width:100%}}

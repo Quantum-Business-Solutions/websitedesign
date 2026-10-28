@@ -1,0 +1,15 @@
+{# VAF values: cards of title and text. Each row fills evenly; a short last row is centred. #}
+{% set n = module.items|length %}
+{% set cols = 3 %}
+{% if n == 1 %}{% set cols = 1 %}{% elif n == 2 or n == 4 %}{% set cols = 2 %}{% elif n % 3 == 0 %}{% set cols = 3 %}{% elif n % 2 == 0 %}{% set cols = 2 %}{% else %}{% set cols = 3 %}{% endif %}
+<section class="q-section vaf-values{% if module.alt_bg %} q-bg-alt{% endif %}{% if module.tone == 'dark' %} q-tone-dark{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %}>
+  <div class="q-container">
+    <div class="pv-center vaf-values__head">
+      {% if module.eyebrow %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      <h2 class="q-h2 vaf-values__h">{{ module.heading }}</h2>
+    </div>
+    <div class="pv-values vaf-values__grid vaf-c{{ cols }}">
+      {% for it in module.items %}<div class="q-card"><h3>{{ it.value_title }}</h3><p>{{ it.value_text }}</p></div>{% endfor %}
+    </div>
+  </div>
+</section>

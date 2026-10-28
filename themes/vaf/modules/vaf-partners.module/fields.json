@@ -1,0 +1,184 @@
+[
+  {
+    "id": "display",
+    "name": "display",
+    "label": "Display",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [
+        "logos",
+        "Logo marquee (partners with logo files)"
+      ],
+      [
+        "names",
+        "Text wall (customer names, no logos)"
+      ]
+    ],
+    "multiple": false,
+    "type": "choice",
+    "display_width": null,
+    "default": "logos"
+  },
+  {
+    "id": "anchor",
+    "name": "anchor",
+    "label": "Anchor id (optional)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": ""
+  },
+  {
+    "id": "alt_bg",
+    "name": "alt_bg",
+    "label": "Alternate background",
+    "required": false,
+    "locked": false,
+    "display": "checkbox",
+    "type": "boolean",
+    "display_width": null,
+    "default": false
+  },
+  {
+    "id": "caption",
+    "name": "caption",
+    "label": "Caption",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Technology partners"
+  },
+  {
+    "id": "pause_label",
+    "name": "pause_label",
+    "label": "Pause button text",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Pause scrolling"
+  },
+  {
+    "id": "play_label",
+    "name": "play_label",
+    "label": "Play button text",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Play scrolling"
+  },
+  {
+    "id": "items",
+    "name": "items",
+    "label": "Partners",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 1,
+      "max": 60,
+      "sorting_label_field": "partner_name",
+      "default": 8
+    },
+    "children": [
+      {
+        "id": "partner_name",
+        "name": "partner_name",
+        "label": "Name",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "partner_logo",
+        "name": "partner_logo",
+        "label": "Logo (leave empty to show the name as text)",
+        "required": false,
+        "locked": false,
+        "responsive": true,
+        "resizable": true,
+        "show_loading": false,
+        "type": "image",
+        "display_width": null,
+        "default": {
+          "src": "",
+          "alt": ""
+        }
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "partner_name": "Canon",
+        "partner_logo": {
+          "src": "",
+          "alt": "Canon"
+        }
+      },
+      {
+        "partner_name": "Ricoh",
+        "partner_logo": {
+          "src": "",
+          "alt": "Ricoh"
+        }
+      },
+      {
+        "partner_name": "Kyocera",
+        "partner_logo": {
+          "src": "",
+          "alt": "Kyocera"
+        }
+      },
+      {
+        "partner_name": "HP",
+        "partner_logo": {
+          "src": "",
+          "alt": "HP"
+        }
+      },
+      {
+        "partner_name": "Brother",
+        "partner_logo": {
+          "src": "",
+          "alt": "Brother"
+        }
+      },
+      {
+        "partner_name": "Fortinet",
+        "partner_logo": {
+          "src": "",
+          "alt": "Fortinet"
+        }
+      },
+      {
+        "partner_name": "Sophos",
+        "partner_logo": {
+          "src": "",
+          "alt": "Sophos"
+        }
+      },
+      {
+        "partner_name": "Mitel",
+        "partner_logo": {
+          "src": "",
+          "alt": "Mitel"
+        }
+      }
+    ]
+  }
+]

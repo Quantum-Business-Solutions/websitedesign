@@ -77,14 +77,16 @@ def template_for(page):
     slug = slug_of(page["file"])
     parts, missing = [], set()
     for s in order(page):
-        if s["type"] not in REGISTRY:
+        if s["type"] not in REGISTRY or not os.path.isfile(os.path.join(ROOT, "themes/vaf/modules", REGISTRY[s["type"]][0] + ".module", "module.html")):
             missing.add(s["type"]); continue
         mod, fn = REGISTRY[s["type"]]
         out = fn(s)
         for o in (out if isinstance(out, list) else [out]):
             m, params = o if isinstance(o, tuple) else (mod, o)
             parts.append(dnd(m, params))
-    if missing:
+    if missing and os.environ.get("VAF_ALLOW_MISSING"):
+        print(f"  WARNING {page['file']}: skipped section types with no module yet: {sorted(missing)}", file=sys.stderr)
+    elif missing:
         raise SystemExit(f"{page['file']}: no module registered for section types {sorted(missing)}")
     label = re.sub(r"[^A-Za-z0-9 |&,'-]", "", page["title"])[:60]
     text = (f"<!--\n  templateType: page\n  label: VAF - {label}\n  isAvailableForNewContent: false\n-->\n"

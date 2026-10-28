@@ -1,0 +1,7 @@
+{# VAF stats: a row of large figures. Column count follows the item count so no card is orphaned. #}
+{% set n = module.items|length %}
+<section class="q-section vaf-stats{% if module.alt_bg %} q-bg-alt{% endif %}{% if module.tone == 'dark' %} q-tone-dark{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %}>
+  <div class="q-container pv-stats vaf-stats__grid vaf-n{{ n }}">
+    {% for s in module.items %}<div class="pv-stat"><b data-static style="--len:{{ s.stat_figure|length }}">{{ s.stat_figure }}</b><span>{{ s.stat_caption }}</span></div>{% endfor %}
+  </div>
+</section>

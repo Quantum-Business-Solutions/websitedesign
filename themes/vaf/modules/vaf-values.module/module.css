@@ -1,0 +1,8 @@
+/* vaf-values */
+.vaf-values .vaf-values__head{margin-bottom:40px}
+.vaf-values .vaf-values__h{margin-top:22px;max-width:760px}
+.vaf-values .vaf-values__grid{display:flex;flex-wrap:wrap;justify-content:center;gap:20px}
+.vaf-values .vaf-values__grid .q-card{flex:0 0 calc((100% - 20px * (var(--vaf-cols, 3) - 1)) / var(--vaf-cols, 3));min-width:0;box-sizing:border-box}
+.vaf-values .vaf-c1{--vaf-cols:1}.vaf-values .vaf-c2{--vaf-cols:2}.vaf-values .vaf-c3{--vaf-cols:3}
+@media(max-width:1024px){.vaf-values .vaf-c3{--vaf-cols:2}}
+@media(max-width:767px){.vaf-values .vaf-values__grid{--vaf-cols:1!important}.vaf-values .vaf-values__grid .q-card{flex-basis:100%}}

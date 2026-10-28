@@ -1,0 +1,9 @@
+{# VAF call to action band: heading, one line, one button. #}
+{% macro vaf_href(l) %}{% if l and l.url and l.url.href %}href="{{ l.url.href }}"{% if l.open_in_new_tab %} target="_blank" rel="noopener{% if l.no_follow %} nofollow{% endif %}"{% elif l.no_follow %} rel="nofollow"{% endif %}{% else %}href="#"{% endif %}{% endmacro %}
+<section class="q-section pv-cta vaf-cta{% if module.alt_bg %} q-bg-alt{% endif %}{% if module.tone == 'dark' %} q-tone-dark{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %}>
+  <div class="q-container">
+    <h2 class="q-h2 vaf-cta__h">{{ module.heading }}</h2>
+    {% if module.subhead %}<div class="q-lead vaf-cta__lead">{{ module.subhead }}</div>{% endif %}
+    {% if module.primary_label %}<div class="vaf-cta__btn"><a class="q-btn" {{ vaf_href(module.primary_link) }}>{{ module.primary_label }}</a></div>{% endif %}
+  </div>
+</section>

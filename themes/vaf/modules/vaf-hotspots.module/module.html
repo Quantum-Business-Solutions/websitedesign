@@ -1,0 +1,28 @@
+{% set pins = module.pins %}
+<section class="q-section vaf-hot{% if module.alt_bg %} q-bg-alt{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %} data-vaf-hot data-close="{{ module.close_label|escape }}">
+  <div class="q-container">
+    <div class="vaf-hot__head">
+      {% if module.eyebrow %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      {% if module.heading %}<h2 class="q-h2">{{ module.heading }}</h2>{% endif %}
+      {% if module.intro %}<p class="q-lead">{{ module.intro }}</p>{% endif %}
+    </div>
+    <div class="vaf-hot__stage">
+      {% if module.image.src %}<img src="{{ module.image.src }}" alt="{{ module.image.alt|escape }}"{% if module.image.width %} width="{{ module.image.width }}"{% endif %}{% if module.image.height %} height="{{ module.image.height }}"{% endif %} loading="lazy" decoding="async">{% endif %}
+      {% for p in pins %}<button type="button" class="vaf-hot__pin" style="left:{{ p.pin_x }}%;top:{{ p.pin_y }}%" aria-expanded="false" aria-label="{{ p.pin_title|escape }}"><span aria-hidden="true">{{ loop.index }}</span></button>{% endfor %}
+    </div>
+    <div class="vaf-hot__pops">
+      {% for p in pins %}
+      <div class="vaf-hot__pop" role="group" aria-label="{{ p.pin_title|escape }}" style="--px:{{ p.pin_x }};--py:{{ p.pin_y }}">
+        <span class="vaf-hot__num" aria-hidden="true">{{ loop.index }}</span>
+        <p class="vaf-hot__k">{{ p.pin_kicker }}</p>
+        <h3>{{ p.pin_title }}</h3>
+        <p class="vaf-hot__copy">{{ p.pin_copy }}</p>
+        {% if p.pin_link.url.href %}<a class="vaf-hot__go" href="{{ p.pin_link.url.href }}"{% if p.pin_link.open_in_new_tab %} target="_blank" rel="noopener"{% endif %}>{{ p.pin_link_label }}</a>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+    <ol class="vaf-hot__list" aria-label="{{ module.list_label|escape }}">
+      {% for p in pins %}<li><a href="{{ p.pin_link.url.href }}"><b>{{ loop.index }}</b>{{ p.pin_title }}</a></li>{% endfor %}
+    </ol>
+  </div>
+</section>

@@ -1,0 +1,28 @@
+{% set pillars = module.pillars %}
+<section class="q-section vaf-wheel{% if module.alt_bg %} q-bg-alt{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %} data-vaf-wheel data-hub="{{ module.hub|escape }}" data-hub-sub="{{ module.hub_sub|escape }}" data-ring="{{ module.ring|escape }}">
+  <div class="q-container">
+    <div class="vaf-wheel__head">
+      {% if module.eyebrow %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      {% if module.heading %}<h2 class="q-h2">{{ module.heading }}</h2>{% endif %}
+      {% if module.intro %}<p class="q-lead">{{ module.intro }}</p>{% endif %}
+    </div>
+    <div class="vaf-wheel__grid">
+      <div class="vaf-wheel__fig" aria-hidden="true"></div>
+      <div class="vaf-wheel__panel">
+        <div class="vaf-wheel__cards">
+          {% for p in pillars %}
+          <article class="vaf-wheel__card{% if loop.first %} is-on{% endif %}" data-short="{{ p.pillar_short|escape }}">
+            <p class="vaf-wheel__k">{{ module.pillar_label }} {{ loop.index }}</p>
+            <h3>{{ p.pillar_title }}</h3>
+            <p class="vaf-wheel__copy">{{ p.pillar_copy }}</p>
+            {% if p.pillar_link.url.href %}<a class="vaf-wheel__go" href="{{ p.pillar_link.url.href }}"{% if p.pillar_link.open_in_new_tab %} target="_blank" rel="noopener"{% endif %}>{{ module.link_label }}<span class="vaf-wheel__sr"> {{ p.pillar_title }}</span></a>{% endif %}
+          </article>
+          {% endfor %}
+        </div>
+        <div class="vaf-wheel__nav" role="tablist" aria-label="{{ module.nav_label|escape }}">
+          {% for p in pillars %}<button type="button" class="vaf-wheel__tab" role="tab" aria-selected="{{ 'true' if loop.first else 'false' }}" tabindex="{{ 0 if loop.first else -1 }}"><b>{{ loop.index }}</b>{{ p.pillar_title }}</button>{% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

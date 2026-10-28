@@ -1,0 +1,106 @@
+[
+  {
+    "id": "anchor",
+    "name": "anchor",
+    "label": "Anchor id (optional)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": ""
+  },
+  {
+    "id": "alt_bg",
+    "name": "alt_bg",
+    "label": "Alternate background",
+    "required": false,
+    "locked": false,
+    "display": "checkbox",
+    "type": "boolean",
+    "display_width": null,
+    "default": false
+  },
+  {
+    "id": "tone",
+    "name": "tone",
+    "label": "Tone",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [
+        "default",
+        "Default"
+      ],
+      [
+        "dark",
+        "Dark navy"
+      ]
+    ],
+    "multiple": false,
+    "type": "choice",
+    "display_width": null,
+    "default": "default"
+  },
+  {
+    "id": "items",
+    "name": "items",
+    "label": "Figures",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 1,
+      "max": 6,
+      "sorting_label_field": "stat_caption",
+      "default": 4
+    },
+    "children": [
+      {
+        "id": "stat_figure",
+        "name": "stat_figure",
+        "label": "Figure",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "stat_caption",
+        "name": "stat_caption",
+        "label": "Caption",
+        "required": false,
+        "locked": false,
+        "allow_new_line": true,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "stat_figure": "1914",
+        "stat_caption": "Chosen as a Thomas Edison Company distributor"
+      },
+      {
+        "stat_figure": "93.4",
+        "stat_caption": "Net Promoter Score, audited by CEO Juice"
+      },
+      {
+        "stat_figure": "SOC 2",
+        "stat_caption": "Certified service organization"
+      },
+      {
+        "stat_figure": "57,000",
+        "stat_caption": "Square feet of headquarters, built 2006"
+      }
+    ]
+  }
+]

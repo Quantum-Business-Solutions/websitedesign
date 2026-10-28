@@ -1,0 +1,43 @@
+{% set ncols = module.columns|length %}
+<section class="q-section vaf-comparison{% if module.alt_bg %} q-bg-alt{% endif %}{% if module.padding == 'none' %} q-pad-none{% elif module.padding == 'large' %} q-pad-large{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %}>
+  <div class="q-container">
+    <div class="pv-split vcmp__head">
+      <h2 class="q-h2">{{ module.heading }}</h2>
+      {% if module.intro %}<p>{{ module.intro }}</p>{% endif %}
+    </div>
+    <div class="vcmp__table" role="region" aria-label="{{ module.heading }}" tabindex="0">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col" class="vcmp__corner"><span class="vcmp__sr">{{ module.corner_label }}</span></th>
+            {% for c in module.columns %}<th scope="col" class="{% if c.col_recommended %}is-rec{% endif %}">{% if c.col_recommended and module.rec_tag %}<span class="vcmp__badge">{{ module.rec_tag }}</span>{% endif %}<span class="vcmp__opt">{{ c.col_title }}</span></th>{% endfor %}
+          </tr>
+        </thead>
+        <tbody>
+          {% for r in module.rows %}
+          {% set cells = [r.cell_1, r.cell_2, r.cell_3, r.cell_4] %}
+          <tr>
+            <th scope="row">{{ r.row_title }}</th>
+            {% for c in module.columns %}<td class="{% if c.col_recommended %}is-rec{% endif %}">{{ cells[loop.index0] }}</td>{% endfor %}
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <div class="vcmp__stack">
+      {% for c in module.columns %}
+      {% set ci = loop.index0 %}
+      <div class="vcmp__card{% if c.col_recommended %} is-rec{% endif %}">
+        <div class="vcmp__cardhead"><h3>{{ c.col_title }}</h3>{% if c.col_recommended and module.rec_tag %}<span class="vcmp__badge">{{ module.rec_tag }}</span>{% endif %}</div>
+        <dl>
+          {% for r in module.rows %}
+          {% set cells = [r.cell_1, r.cell_2, r.cell_3, r.cell_4] %}
+          <div><dt>{{ r.row_title }}</dt><dd>{{ cells[ci] }}</dd></div>
+          {% endfor %}
+        </dl>
+      </div>
+      {% endfor %}
+    </div>
+    {% if module.note %}<p class="vcmp__note">{{ module.note }}</p>{% endif %}
+  </div>
+</section>

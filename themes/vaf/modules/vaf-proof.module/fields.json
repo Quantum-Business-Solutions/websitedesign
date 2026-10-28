@@ -1,0 +1,90 @@
+[
+  {
+    "id": "anchor",
+    "name": "anchor",
+    "label": "Anchor id (optional)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": ""
+  },
+  {
+    "id": "alt_bg",
+    "name": "alt_bg",
+    "label": "Alternate background",
+    "required": false,
+    "locked": false,
+    "display": "checkbox",
+    "type": "boolean",
+    "display_width": null,
+    "default": false
+  },
+  {
+    "id": "tone",
+    "name": "tone",
+    "label": "Tone",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [
+        "default",
+        "Default"
+      ],
+      [
+        "dark",
+        "Dark navy"
+      ]
+    ],
+    "multiple": false,
+    "type": "choice",
+    "display_width": null,
+    "default": "default"
+  },
+  {
+    "id": "eyebrow",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Measured, not claimed"
+  },
+  {
+    "id": "figure",
+    "name": "figure",
+    "label": "Big figure",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "93.4"
+  },
+  {
+    "id": "copy",
+    "name": "copy",
+    "label": "Sentence",
+    "required": false,
+    "locked": false,
+    "allow_new_line": true,
+    "type": "text",
+    "display_width": null,
+    "default": "Net Promoter Score, collected and audited by CEO Juice from VAF customers after every service call."
+  },
+  {
+    "id": "source",
+    "name": "source",
+    "label": "Source line",
+    "required": false,
+    "locked": false,
+    "allow_new_line": true,
+    "type": "text",
+    "display_width": null,
+    "default": ""
+  }
+]

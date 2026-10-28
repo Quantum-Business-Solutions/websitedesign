@@ -1,0 +1,256 @@
+[
+  {
+    "id": "anchor",
+    "name": "anchor",
+    "label": "Anchor id (lets links jump here, e.g. story)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "wheel"
+  },
+  {
+    "id": "alt_bg",
+    "name": "alt_bg",
+    "label": "Alternate (tinted) background",
+    "required": false,
+    "locked": false,
+    "display": "checkbox",
+    "type": "boolean",
+    "display_width": null,
+    "default": false
+  },
+  {
+    "id": "eyebrow",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Four pillars"
+  },
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Information, communication, print and process, from one partner"
+  },
+  {
+    "id": "intro",
+    "name": "intro",
+    "label": "Intro",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Hover a segment. Four pillars, one agreement, one Customer Care Center."
+  },
+  {
+    "id": "hub",
+    "name": "hub",
+    "label": "Hub: big word",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "VAF"
+  },
+  {
+    "id": "hub_sub",
+    "name": "hub_sub",
+    "label": "Hub: small line",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "one roof"
+  },
+  {
+    "id": "ring",
+    "name": "ring",
+    "label": "Text around the wheel",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "BUSINESS TECHNOLOGY SIMPLIFIED"
+  },
+  {
+    "id": "pillar_label",
+    "name": "pillar_label",
+    "label": "Label above each description",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Pillar"
+  },
+  {
+    "id": "link_label",
+    "name": "link_label",
+    "label": "Link text",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "See the service"
+  },
+  {
+    "id": "nav_label",
+    "name": "nav_label",
+    "label": "Pillar list label (screen readers)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Choose a pillar"
+  },
+  {
+    "id": "pillars",
+    "name": "pillars",
+    "label": "Pillars",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 3,
+      "max": 6,
+      "sorting_label_field": null,
+      "default": 4
+    },
+    "children": [
+      {
+        "id": "pillar_title",
+        "name": "pillar_title",
+        "label": "Pillar name",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "Information"
+      },
+      {
+        "id": "pillar_short",
+        "name": "pillar_short",
+        "label": "Short label on the wheel",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "Information"
+      },
+      {
+        "id": "pillar_copy",
+        "name": "pillar_copy",
+        "label": "Description",
+        "required": false,
+        "locked": false,
+        "allow_new_line": true,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "pillar_link",
+        "name": "pillar_link",
+        "label": "Link to the service page",
+        "required": false,
+        "locked": false,
+        "supported_types": [
+          "EXTERNAL",
+          "CONTENT",
+          "FILE",
+          "EMAIL_ADDRESS",
+          "BLOG"
+        ],
+        "type": "link",
+        "display_width": null,
+        "default": {
+          "url": {
+            "content_id": null,
+            "href": "",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+    ],
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "pillar_title": "Information",
+        "pillar_copy": "Managed IT, cybersecurity, cloud, backup and continuity. A vCIO, 24/7 monitoring and a security operations center, from one team.",
+        "pillar_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/services/managed-it"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "pillar_short": "Information"
+      },
+      {
+        "pillar_title": "Communication",
+        "pillar_copy": "Business phone systems, unified communications and contact center, in the telecom business since 1983 with over 4,000 systems deployed.",
+        "pillar_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/services/business-phone-systems"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "pillar_short": "Communication"
+      },
+      {
+        "pillar_title": "Print",
+        "pillar_copy": "Copiers, printers, managed print and production print. Canon, Ricoh, Kyocera and HP, serviced by certified local technicians.",
+        "pillar_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/services/copiers"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "pillar_short": "Print"
+      },
+      {
+        "pillar_title": "Process",
+        "pillar_copy": "Document management, document conversion, business process and AI consulting. The paper out, the workflow in.",
+        "pillar_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/services/document-management"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "pillar_short": "Process"
+      }
+    ]
+  }
+]

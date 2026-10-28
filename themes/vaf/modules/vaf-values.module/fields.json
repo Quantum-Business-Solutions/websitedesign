@@ -1,0 +1,124 @@
+[
+  {
+    "id": "anchor",
+    "name": "anchor",
+    "label": "Anchor id (optional)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": ""
+  },
+  {
+    "id": "alt_bg",
+    "name": "alt_bg",
+    "label": "Alternate background",
+    "required": false,
+    "locked": false,
+    "display": "checkbox",
+    "type": "boolean",
+    "display_width": null,
+    "default": false
+  },
+  {
+    "id": "tone",
+    "name": "tone",
+    "label": "Tone",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [
+        "default",
+        "Default"
+      ],
+      [
+        "dark",
+        "Dark navy"
+      ]
+    ],
+    "multiple": false,
+    "type": "choice",
+    "display_width": null,
+    "default": "default"
+  },
+  {
+    "id": "eyebrow",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Mission and vision"
+  },
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "What the company is for"
+  },
+  {
+    "id": "items",
+    "name": "items",
+    "label": "Values",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 1,
+      "max": 9,
+      "sorting_label_field": "value_title",
+      "default": 3
+    },
+    "children": [
+      {
+        "id": "value_title",
+        "name": "value_title",
+        "label": "Title",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "value_text",
+        "name": "value_text",
+        "label": "Text",
+        "required": false,
+        "locked": false,
+        "allow_new_line": true,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "value_title": "Mission",
+        "value_text": "Provide value-driven technology solutions."
+      },
+      {
+        "value_title": "Vision",
+        "value_text": "To implement technology to improve the human experience."
+      },
+      {
+        "value_title": "Measured, not claimed",
+        "value_text": "Our Net Promoter Score is collected and audited by CEO Juice."
+      }
+    ]
+  }
+]

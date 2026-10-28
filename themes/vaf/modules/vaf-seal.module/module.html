@@ -1,0 +1,17 @@
+{# VAF seal: a strip of sourced commitments. Cards fill each row evenly and centre a short last row. #}
+{% set n = module.items|length %}
+{% set cols = 4 %}
+{% if n % 4 == 0 %}{% set cols = 4 %}{% elif n % 3 == 0 %}{% set cols = 3 %}{% elif n % 2 == 0 %}{% set cols = 2 %}{% elif n > 4 %}{% set cols = 3 %}{% else %}{% set cols = n %}{% endif %}
+<section class="q-section vaf-seal{% if module.alt_bg %} q-bg-alt{% endif %}{% if module.tone == 'dark' %} q-tone-dark{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %}>
+  <div class="q-container">
+    <div class="pv-center">
+      {% if module.eyebrow %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      <h2 class="q-h2 vaf-seal__h">{{ module.heading }}</h2>
+      {% if module.intro %}<p class="q-lead vaf-seal__intro">{{ module.intro }}</p>{% endif %}
+    </div>
+    <div class="pv-seal vaf-seal__grid vaf-c{{ cols }}">
+      {% for it in module.items %}<div class="item"><div class="badge" aria-hidden="true"><b>{{ it.seal_mark }}</b></div><div><h3>{{ it.seal_title }}</h3><p>{{ it.seal_text }}</p></div></div>{% endfor %}
+      {% if module.source %}<p class="src">{{ module.source }}</p>{% endif %}
+    </div>
+  </div>
+</section>

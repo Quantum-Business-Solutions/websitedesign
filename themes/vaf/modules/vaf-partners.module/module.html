@@ -1,0 +1,26 @@
+{# VAF partners. display: logos (auto-scrolling marquee of real logos) or names (typographic wall, for customer-name strips). #}
+{% macro vaf_item(p, hidden) %}{% if p.partner_logo and p.partner_logo.src %}<img src="{{ p.partner_logo.src }}" alt="{% if hidden %}{% else %}{{ (p.partner_logo.alt or p.partner_name)|escape }}{% endif %}" width="{{ p.partner_logo.width or 150 }}" height="{{ p.partner_logo.height or 52 }}" loading="lazy" decoding="async">{% else %}<span class="vaf-partners__name">{{ p.partner_name }}</span>{% endif %}{% endmacro %}
+
+{% set n = module.items|length %}
+{% set mode = module.display or 'logos' %}
+<section class="pv-partners vaf-partners vaf-partners--{{ mode }}{% if module.alt_bg %} q-bg-alt{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %}>
+  <div class="q-container">
+    {% if module.caption %}<p class="pv-cap">{{ module.caption }}</p>{% endif %}
+    {% if mode == 'names' %}
+    <ul class="vaf-partners__wall">{% for p in module.items %}<li>{{ p.partner_name }}</li>{% endfor %}</ul>
+    {% endif %}
+  </div>
+  {% if mode != 'names' %}
+  {% if n >= 8 %}
+  <div class="vaf-partners__stage" style="--vaf-dur:{{ n * 3 }}s">
+    <div class="vaf-partners__marquee" role="region" aria-label="{{ (module.caption or 'Technology partners')|escape }}">
+      <ul class="vaf-partners__track">{% for p in module.items %}<li>{{ vaf_item(p, false) }}</li>{% endfor %}</ul>
+      <ul class="vaf-partners__track" aria-hidden="true">{% for p in module.items %}<li>{{ vaf_item(p, true) }}</li>{% endfor %}</ul>
+    </div>
+    <button type="button" class="vaf-partners__pause" hidden data-pause-label="{{ module.pause_label|escape }}" data-play-label="{{ module.play_label|escape }}">{{ module.pause_label }}</button>
+  </div>
+  {% else %}
+  <div class="q-container"><ul class="vaf-partners__track vaf-partners__static" aria-label="{{ (module.caption or 'Technology partners')|escape }}">{% for p in module.items %}<li>{{ vaf_item(p, false) }}</li>{% endfor %}</ul></div>
+  {% endif %}
+  {% endif %}
+</section>

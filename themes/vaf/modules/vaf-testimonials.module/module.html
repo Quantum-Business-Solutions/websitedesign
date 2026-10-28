@@ -1,0 +1,47 @@
+{% set n = module.items|length %}
+{% set cols = 3 %}
+{% if n == 1 %}{% set cols = 1 %}{% elif n % 2 == 0 %}{% set cols = 2 %}{% endif %}
+{% set layout = module.layout|default('grid') %}
+<section class="q-section vaf-testimonials{% if module.alt_bg %} q-bg-alt{% endif %}{% if module.padding == 'none' %} q-pad-none{% elif module.padding == 'large' %} q-pad-large{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %}>
+  <div class="q-container">
+    <div class="pv-center vt__head">
+      {% if module.eyebrow %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      <h2 class="q-h2">{{ module.heading }}</h2>
+    </div>
+    {% if layout == 'feature' and n > 0 %}
+    <div class="vt__feature">
+      {% for it in module.items %}{% if loop.first %}
+      <figure class="vt__lead"><blockquote><p>{{ it.t_quote }}</p></blockquote><figcaption><b>{{ it.t_name }}</b><span>{{ it.t_org }}</span></figcaption></figure>
+      {% endif %}{% endfor %}
+      {% if n > 1 %}
+      <ol class="vt__letters">
+        {% for it in module.items %}{% if not loop.first %}
+        <li><figure><blockquote><p>{{ it.t_quote }}</p></blockquote><figcaption><b>{{ it.t_name }}</b><span>{{ it.t_org }}</span></figcaption></figure></li>
+        {% endif %}{% endfor %}
+      </ol>
+      {% endif %}
+    </div>
+    {% elif layout == 'carousel' %}
+    <div class="vt__car" data-vt-car role="region" aria-roledescription="carousel" aria-label="{{ module.heading }}">
+      <div class="vt__track" data-vt-track tabindex="0" aria-label="Testimonials, scroll sideways to read more">
+        {% for it in module.items %}
+        <div class="vt__slide" role="group" aria-roledescription="slide" aria-label="{{ loop.index }} of {{ n }}">
+          <figure class="vt__card"><blockquote><p>{{ it.t_quote }}</p></blockquote><figcaption><b>{{ it.t_name }}</b><span>{{ it.t_org }}</span></figcaption></figure>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="vt__ctrl" data-vt-ctrl hidden>
+        <button type="button" class="vt__btn" data-vt-prev aria-label="Previous testimonials"><svg viewBox="0 0 24 24" width="20" height="20" focusable="false" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <span class="vt__count" data-vt-count aria-live="polite">1 of {{ n }}</span>
+        <button type="button" class="vt__btn" data-vt-next aria-label="Next testimonials"><svg viewBox="0 0 24 24" width="20" height="20" focusable="false" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+    </div>
+    {% else %}
+    <div class="vt__grid" style="--cols:{{ cols }}">
+      {% for it in module.items %}
+      <figure class="vt__card"><blockquote><p>{{ it.t_quote }}</p></blockquote><figcaption><b>{{ it.t_name }}</b><span>{{ it.t_org }}</span></figcaption></figure>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</section>

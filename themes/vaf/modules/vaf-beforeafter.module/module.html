@@ -1,0 +1,34 @@
+<section class="q-section vaf-ba{% if module.alt_bg %} q-bg-alt{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %} data-vaf-ba>
+  <div class="q-container">
+    <div class="vaf-ba__head">
+      {% if module.eyebrow %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      {% if module.heading %}<h2 class="q-h2">{{ module.heading }}</h2>{% endif %}
+    </div>
+    <div class="vaf-ba__switch" role="group" aria-label="{{ module.switch_label|escape }}">
+      <button type="button" class="vaf-ba__sw is-on" data-side="before" aria-pressed="true">{{ module.before_eyebrow }}</button>
+      <button type="button" class="vaf-ba__sw" data-side="after" aria-pressed="false">{{ module.after_eyebrow }}</button>
+    </div>
+    <div class="vaf-ba__stage" style="--ba-bg:{{ module.after_bg.color|default('#0f1e33') }};--pos:50%">
+      <div class="vaf-ba__pane vaf-ba__before">
+        <div class="vaf-ba__in">
+          <p class="vaf-ba__k">{{ module.before_eyebrow }}</p>
+          <h3>{{ module.before_title }}</h3>
+          {% if module.before_copy %}<p class="vaf-ba__lede">{{ module.before_copy }}</p>{% endif %}
+          <div class="vaf-ba__list">{{ module.before_items }}</div>
+        </div>
+      </div>
+      <div class="vaf-ba__pane vaf-ba__after">
+        <div class="vaf-ba__in">
+          <p class="vaf-ba__k">{{ module.after_eyebrow }}</p>
+          <h3>{{ module.after_title }}</h3>
+          {% if module.after_copy %}<p class="vaf-ba__lede">{{ module.after_copy }}</p>{% endif %}
+          <div class="vaf-ba__list">{{ module.after_items }}</div>
+        </div>
+      </div>
+      <div class="vaf-ba__handle" role="slider" tabindex="0" aria-orientation="horizontal" aria-valuemin="8" aria-valuemax="92" aria-valuenow="50" aria-valuetext="50 percent" aria-label="{{ module.range_label|escape }}">
+        <span class="vaf-ba__grip" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
+      {% if module.hint %}<div class="vaf-ba__hint" aria-hidden="true">{{ module.hint }}</div>{% endif %}
+    </div>
+  </div>
+</section>

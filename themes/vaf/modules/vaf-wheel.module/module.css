@@ -1,0 +1,61 @@
+/* VAF Pillars wheel. JS draws the SVG wheel; without JS the pillars show as a plain card grid. */
+.vaf-wheel{--vf-blue:var(--q-gold,#2a71af);--vf-deep:var(--q-gold-bright,#205686);--vf-navy:var(--navy,#0f1e33);--vf-tint:#e7f0f9;--vf-ease:cubic-bezier(.2,.7,.2,1)}
+.vaf-wheel__head{text-align:center;display:flex;flex-direction:column;align-items:center}
+.vaf-wheel__head .q-eyebrow{text-align:center}
+.vaf-wheel__head .q-h2{margin-top:22px;max-width:760px}
+.vaf-wheel__head .q-lead{max-width:640px;margin:16px auto 0}
+.vaf-wheel__grid{margin-top:48px;display:grid;gap:36px;align-items:center}
+.vaf-wheel__fig{display:none}
+.vaf-wheel__cards{display:grid;gap:16px}
+.vaf-wheel__card{background:var(--bg,#fff);border:1px solid var(--border);border-radius:20px;padding:26px 28px 24px;box-shadow:0 14px 34px rgba(15,30,51,.07)}
+.vaf-wheel__k{margin:0 0 10px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--vf-deep)}
+.vaf-wheel__card h3{margin:0 0 10px;font:700 clamp(24px,2.4vw,30px)/1.15 var(--q-serif);letter-spacing:-.02em;color:var(--fg)}
+.vaf-wheel__copy{margin:0;font-size:16px;line-height:1.65;color:var(--fg-muted)}
+.vaf-wheel__go{display:inline-flex;align-items:center;min-height:44px;margin-top:14px;font-weight:700;color:var(--vf-deep);text-decoration:none}
+.vaf-wheel__go::after{content:"";width:24px;height:2px;background:currentColor;margin-left:12px;transition:width .3s var(--vf-ease)}
+.vaf-wheel__go:hover::after{width:38px}
+.vaf-wheel__go:focus-visible,.vaf-wheel__tab:focus-visible{outline:3px solid var(--vf-blue);outline-offset:3px;border-radius:8px}
+.vaf-wheel__sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.vaf-wheel__nav{display:none}
+
+.vaf-wheel.is-js .vaf-wheel__fig{display:block;width:100%;max-width:560px;margin:0 auto}
+.vaf-wheel.is-js .vaf-wheel__card{display:none}
+.vaf-wheel.is-js .vaf-wheel__card.is-on{display:block;animation:vafWheelIn .5s var(--vf-ease)}
+@keyframes vafWheelIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.vaf-wheel.is-js .vaf-wheel__nav{display:grid;grid-template-columns:1fr 1fr;gap:8px 16px;margin-top:20px}
+.vaf-wheel__tab{all:unset;box-sizing:border-box;display:flex;align-items:center;gap:12px;min-height:48px;padding:6px 14px 6px 8px;border-radius:12px;border:1px solid var(--border);background:var(--bg,#fff);cursor:pointer;font-size:15px;font-weight:600;color:var(--fg);transition:background .25s var(--vf-ease),border-color .25s var(--vf-ease),color .25s var(--vf-ease)}
+.vaf-wheel__tab b{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;flex:none;background:var(--vf-tint);color:var(--vf-deep);font-size:13px;transition:background .25s var(--vf-ease),color .25s var(--vf-ease)}
+.vaf-wheel__tab:hover{border-color:var(--vf-blue)}
+.vaf-wheel__tab[aria-selected="true"]{background:var(--vf-blue);border-color:var(--vf-blue);color:#fff}
+.vaf-wheel__tab[aria-selected="true"] b{background:#fff;color:var(--vf-deep)}
+.vaf-wheel__tab:focus-visible{outline-offset:3px}
+
+/* the drawn wheel */
+.vaf-wheel__svg{display:block;width:100%;height:auto;overflow:visible}
+.vaf-wheel__svg .seg{cursor:pointer;transition:transform .45s var(--vf-ease)}
+.vaf-wheel__svg .seg path{fill:#e8f1fa;stroke:#fff;stroke-width:3;transition:fill .3s var(--vf-ease),filter .3s var(--vf-ease)}
+.vaf-wheel__svg .seg:hover path{fill:#cfe2f5}
+.vaf-wheel__svg .seg.on{transform:translate(var(--dx),var(--dy))}
+.vaf-wheel__svg .seg.on path{fill:var(--vf-blue);filter:drop-shadow(0 14px 18px rgba(15,30,51,.28))}
+.vaf-wheel__svg .seg text{pointer-events:none;text-anchor:middle;font-family:var(--q-sans);transition:fill .3s}
+.vaf-wheel__svg .lab{font-size:16px;font-weight:700;fill:var(--vf-navy)}
+.vaf-wheel__svg .num{font-size:12px;font-weight:700;letter-spacing:.14em;fill:var(--vf-deep)}
+.vaf-wheel__svg .seg.on .lab,.vaf-wheel__svg .seg.on .num{fill:#fff}
+.vaf-wheel__svg .hub{fill:var(--vf-navy)}
+.vaf-wheel__svg .hub-ring{fill:none;stroke:var(--vf-blue);stroke-width:2;stroke-dasharray:2 7;stroke-linecap:round}
+.vaf-wheel__svg .hubt{font:800 40px/1 var(--q-serif);fill:#fff;text-anchor:middle;letter-spacing:-.02em}
+.vaf-wheel__svg .hubs{font:700 12px/1 var(--q-sans);fill:#b8d3ee;text-anchor:middle;letter-spacing:.16em;text-transform:uppercase}
+.vaf-wheel__svg .ring-text{font:700 12px/1 var(--q-sans);fill:var(--vf-deep);letter-spacing:.3em}
+.vaf-wheel__svg .ring-line{fill:none;stroke:#cfe0f0;stroke-width:1}
+.vaf-wheel.is-js:not(.is-in) .vaf-wheel__svg .seg,.vaf-wheel.is-js:not(.is-in) .vaf-wheel__svg .hubg{opacity:0}
+.vaf-wheel.is-js .vaf-wheel__svg .seg,.vaf-wheel.is-js .vaf-wheel__svg .hubg{transition:transform .45s var(--vf-ease),opacity .7s ease calc(var(--i,0) * .12s)}
+
+@media (min-width:900px){
+  .vaf-wheel__grid{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:64px}
+  .vaf-wheel:not(.is-js) .vaf-wheel__cards{grid-template-columns:1fr 1fr;grid-column:1 / -1}
+}
+@media (max-width:560px){
+  .vaf-wheel.is-js .vaf-wheel__nav{grid-template-columns:1fr}
+  .vaf-wheel__card{padding:22px 22px 20px}
+}
+@media (prefers-reduced-motion:reduce){.vaf-wheel *{transition:none!important;animation:none!important}.vaf-wheel.is-js:not(.is-in) .vaf-wheel__svg .seg,.vaf-wheel.is-js:not(.is-in) .vaf-wheel__svg .hubg{opacity:1}}

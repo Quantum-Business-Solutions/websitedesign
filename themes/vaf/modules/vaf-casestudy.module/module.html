@@ -1,0 +1,26 @@
+{% set mn = module.metrics|length %}
+{% set mcols = mn %}
+{% if mn > 4 %}{% set mcols = 3 %}{% endif %}
+{% if mcols < 1 %}{% set mcols = 1 %}{% endif %}
+<section class="q-section vaf-casestudy vcs--{{ module.tone|default('dark') }}{% if module.padding == 'none' %} q-pad-none{% elif module.padding == 'large' %} q-pad-large{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %}>
+  <div class="q-container vcs">
+    <div class="vcs__top">
+      <div class="vcs__intro">
+        {% if module.eyebrow %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+        <h2 class="vcs__h">{{ module.heading }}</h2>
+      </div>
+      <figure class="vcs__quote">
+        <blockquote><p>{{ module.quote_text }}</p></blockquote>
+        {% if module.attribution %}<figcaption>{{ module.attribution }}</figcaption>{% endif %}
+        {% if module.cta_label and module.cta_link.url.href %}<a class="vcs__cta" href="{{ module.cta_link.url.href }}"{% if module.cta_link.open_in_new_tab %} target="_blank" rel="noopener"{% endif %}>{{ module.cta_label }}<svg viewBox="0 0 24 24" width="18" height="18" focusable="false" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>{% endif %}
+      </figure>
+    </div>
+    {% if mn > 0 %}
+    <dl class="vcs__metrics" style="--mcols:{{ mcols }}">
+      {% for m in module.metrics %}
+      <div class="vcs__m"><dt>{{ m.m_label }}</dt><dd class="vcs__v">{{ m.m_value }}</dd><dd class="vcs__d">{{ m.m_desc }}</dd></div>
+      {% endfor %}
+    </dl>
+    {% endif %}
+  </div>
+</section>
