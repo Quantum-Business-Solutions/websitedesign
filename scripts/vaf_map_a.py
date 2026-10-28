@@ -26,6 +26,7 @@ def hero(s):
     out = {"layout": "layered" if layered else s.get("layout", "centered")}
     if layered:   # looping background footage (generated, see brands/vanausdall.md) with its poster as first paint
         out["bg_video"] = A("video/hero-loop")
+        out["bg_video_webm"] = A("video/hero-loop-webm")
         out["poster"] = image("assets/hero-poster", "")
         out["image"] = image("assets/hero-poster", "")
     _put(out, "anchor", s.get("id"))

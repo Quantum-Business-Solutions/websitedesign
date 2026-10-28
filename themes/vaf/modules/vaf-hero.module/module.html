@@ -1,3 +1,4 @@
+{# rev 2: webm source #}
 {# VAF hero. layout: split (copy + image, interior pages), centered (copy + wide image), layered (dark hero with image or looping video, scrim, floating cards). #}
 {% macro vaf_href(l) %}{% if l and l.url and l.url.href %}href="{{ l.url.href }}"{% if l.open_in_new_tab %} target="_blank" rel="noopener{% if l.no_follow %} nofollow{% endif %}"{% elif l.no_follow %} rel="nofollow"{% endif %}{% else %}href="#"{% endif %}{% endmacro %}
 
@@ -15,7 +16,7 @@
   <section class="q-section pv-lh vaf-hero vaf-hero--layered vaf-scrim-{{ module.scrim or 'standard' }}{% if has_video %} has-video{% endif %}{% if not module.card_a_title and not module.card_b_title %} vaf-hero--nocards{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %} style="--chrome-bg:{{ module.bg_color.color or '#0f1e33' }};--chrome-fg:#fff;--chrome-muted:rgba(255,255,255,.72);--chrome-border:rgba(255,255,255,.14)">
     <div class="bg">
       {% if first_img.src %}<img class="vaf-hero__poster" src="{{ first_img.src }}" alt="{{ first_img.alt|escape }}" width="{{ first_img.width or 2100 }}" height="{{ first_img.height or 900 }}" fetchpriority="high" loading="eager" decoding="async">{% endif %}
-      {% if has_video %}<video class="vaf-hero__video" muted loop playsinline preload="none" disablepictureinpicture aria-hidden="true" tabindex="-1" data-src="{{ module.bg_video }}"></video>{% endif %}
+      {% if has_video %}<video class="vaf-hero__video" muted loop playsinline preload="none" disablepictureinpicture aria-hidden="true" tabindex="-1" data-src="{{ module.bg_video }}"{% if module.bg_video_webm %} data-src-webm="{{ module.bg_video_webm }}"{% endif %}></video>{% endif %}
     </div>
     <canvas class="net" aria-hidden="true"></canvas><div class="glow" aria-hidden="true"></div>
     <div class="q-container">

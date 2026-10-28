@@ -204,6 +204,17 @@ def page_kind(file):
     return "Company"
 
 
+def meta_desc(page):
+    """120 to 158 characters: a short description is topped up with the brand line, never padded with filler."""
+    d = (page.get("description") or "").strip()
+    if len(d) < 115:
+        for tail in (" Van Ausdall & Farrar, Indianapolis office technology since 1914.", " Van Ausdall & Farrar, since 1914."):
+            if 115 <= len(d + tail) <= 158:
+                return d + tail
+        d = d + " Van Ausdall & Farrar, Indianapolis office technology since 1914."
+    return d[:158].rsplit(" ", 1)[0] if len(d) > 160 else d
+
+
 def og_image(page):
     """Share image: the page's own first image, else the home hero poster (never the stock file the old site used)."""
     from vaf_common import A
@@ -228,7 +239,7 @@ def cmd_pages(args):
         pg = page_for(sl)
         slug = sl                       # the home page is the site root (empty slug)
         body = {"name": f"{page_kind(pg['file'])} | {pg['title'].split(' | ')[0]}"[:120], "slug": slug, "templatePath": f"{THEME}/{tpl_name(sl)}",
-                "htmlTitle": pg["title"], "metaDescription": pg.get("description", ""), "headHtml": NOINDEX, "language": "en",
+                "htmlTitle": pg["title"], "metaDescription": meta_desc(pg), "headHtml": NOINDEX, "language": "en",
                 "featuredImage": og_image(pg), "featuredImageAltText": pg["title"].split("|")[0].strip()}
         cur = existing.get(slug)
         if cur:

@@ -226,6 +226,17 @@
     "help_text": "Optional. Loops silently behind the copy. Keep it under 6 MB, 1280 wide, no audio. It never loads on phones, with data saver on, or when the visitor prefers reduced motion; they see the poster instead."
   },
   {
+    "id": "bg_video_webm",
+    "name": "bg_video_webm",
+    "label": "Layered: background video WebM URL (optional)",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "display_width": null,
+    "default": "",
+    "help_text": "Optional smaller VP9 version of the same loop. Browsers that cannot play it use the MP4."
+  },
+  {
     "id": "poster",
     "name": "poster",
     "label": "Layered: poster image (shown first, and instead of the video on phones)",

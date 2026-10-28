@@ -133,7 +133,7 @@
     }
     function play() {
       if (!allowed() || userPaused || !inView) return;
-      if (!loaded) { loaded = true; v.src = v.getAttribute('data-src'); v.load(); }
+      if (!loaded) { loaded = true; var wm = v.getAttribute('data-src-webm'); v.src = (wm && v.canPlayType('video/webm; codecs="vp9"')) ? wm : v.getAttribute('data-src'); v.load(); }
       var p = v.play();
       if (p && p.catch) p.catch(function () { paint(); });
     }

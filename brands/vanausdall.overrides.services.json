@@ -1,0 +1,4839 @@
+{
+ "services/free-security-training-tools.html": {
+  "title": "Free KnowBe4 Security Tools | Van Ausdall & Farrar",
+  "description": "Six free KnowBe4 security tools for Indiana organizations: phishing test, weak password test, email exposure, domain spoof, alert button, RanSim.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Information",
+    "heading": "Free Security Training Tools",
+    "subhead": "Six free KnowBe4 tools that show where your people, passwords, email and workstations stand today, available through Van Ausdall & Farrar.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-soc-1200.jpg",
+    "image_alt": "Free Security Training Tools",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "Six tools, six questions",
+    "body": "Each tool answers one question about your exposure. Choose the one that matches your worry, or run several in a row.",
+    "bullets": [
+     "Phishing Security Test: what share of your employees are Phish-prone?",
+     "Weak Password Test: how many weak passwords sit in your network?",
+     "Email Exposure Check: which of your users' email addresses are exposed?",
+     "Domain Spoof Test: can a spoofed message from your own domain reach your inbox?",
+     "Phish Alert Button: a one-click way for users to report suspicious email",
+     "Ransomware Simulator: is a workstation vulnerable to 13 infection scenarios?"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Where to begin",
+    "heading": "Which free tool to run first",
+    "body": "There is no single right order. Start from the problem you can already feel and let the result point to the next tool.",
+    "bullets": [
+     "Unsure whether staff would click a bad link: start with the Phishing Security Test",
+     "Worried about password habits: run the Weak Password Test on Active Directory",
+     "Suspect your addresses are public: request the Email Exposure Check",
+     "Concerned about executive impersonation: try the Domain Spoof Test",
+     "Want faster reporting of bad email: install the Phish Alert Button",
+     "Want to see how a workstation reacts to ransomware: run RanSim"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "After the results",
+    "heading": "What the free tools do not do",
+    "body": "The tools measure. They do not fix anything, and a clean result today is not a guarantee for next quarter. Closing gaps takes protection, patching and repeated training. VAF's Vsecure programs combine Sophos Intercept X with XDR, Datto patching and monitoring, Fortinet firewall services and KnowBe4 awareness training and compliance management, with a CISSP on staff.",
+    "bullets": [
+     "Free tools give you a snapshot at one moment",
+     "Awareness training repeats the lesson so the numbers can move",
+     "Protection layers catch what people and policy miss",
+     "A VAF specialist can talk through which gaps matter first"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about the free KnowBe4 tools",
+    "items": [
+     [
+      "What free security tools does Van Ausdall & Farrar offer?",
+      "VAF's pages present six free KnowBe4 tools: the Phishing Security Test, Weak Password Test, Email Exposure Check, Domain Spoof Test, Phish Alert Button and Ransomware Simulator."
+     ],
+     [
+      "Who makes these tools?",
+      "KnowBe4 does. KnowBe4 describes itself as the world's most popular integrated platform for security awareness training combined with simulated phishing attacks, and VAF lists KnowBe4 among its security partners."
+     ],
+     [
+      "Which tool should I try first?",
+      "If you are unsure how staff behave, begin with the Phishing Security Test. If your worry is technical, the Weak Password Test and the Ransomware Simulator each take only minutes on a Windows machine."
+     ],
+     [
+      "Which tools need me to install something?",
+      "The Weak Password Test and the Ransomware Simulator are described as download, install and run. The Phish Alert Button is an add-in for Outlook or Gmail in Chrome, and the phishing, email exposure and spoof tests run without installing software."
+     ],
+     [
+      "Do any of the tests need a company email address?",
+      "Yes. The Email Exposure Check and the Domain Spoof Test both need an address on your own organization's domain, not Gmail, Yahoo, AOL or another consumer provider."
+     ],
+     [
+      "Do the free tools replace security awareness training?",
+      "No. They show you where you stand. Awareness training, protection and monitoring are what change the result, and VAF offers those through its managed IT and Vsecure programs."
+     ],
+     [
+      "How do I ask for one of the tools?",
+      "Use the form on this page or call (317) 634-2913, and tell us which tool you want. A person from the Indianapolis office replies."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Beyond the free tools",
+    "intro": "Security pages that pick up where a free test leaves off.",
+    "items": [
+     [
+      "Information",
+      "Managed Cybersecurity",
+      "Sophos XDR, Datto patching, Fortinet Fabric services and a security operations center from the Vsecure team.",
+      "Open the page",
+      "services/cybersecurity.html"
+     ],
+     [
+      "Information",
+      "Cyber Threat Assessment",
+      "An external, internal and regulatory review led by a CISSP-certified expert.",
+      "Open the page",
+      "services/cyber-security-assessment.html"
+     ],
+     [
+      "Information",
+      "Managed IT Services Indianapolis",
+      "vCIO guidance, 24/7 monitoring, help desk and security packaged under one agreement.",
+      "Open the page",
+      "services/managed-it.html"
+     ],
+     [
+      "Information",
+      "Indianapolis IT Support",
+      "Help desk, remote and on-site support, with a 24 hour response from the Customer Care Center.",
+      "Open the page",
+      "services/it-support.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Where these tests are a useful first step",
+    "intro": "Pick the industry closest to yours to see how VAF approaches it.",
+    "items": [
+     [
+      "Industry",
+      "Education",
+      "A school district can run the Phishing Security Test before planning staff training.",
+      "How we set it up",
+      "industries/education.html"
+     ],
+     [
+      "Industry",
+      "Healthcare",
+      "A clinic with shared workstations can try RanSim on a Windows machine to see how it holds up.",
+      "How we set it up",
+      "industries/healthcare.html"
+     ],
+     [
+      "Industry",
+      "State and local government",
+      "A municipal IT lead can use the Email Exposure Check to see which staff addresses are public.",
+      "How we set it up",
+      "industries/government.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Pick a tool and talk it through",
+    "body": "Tell us which free tool you want and who handles email security at your organization. We will take it from there.",
+    "submit": "Request a free tool",
+    "note": "A person from the Indianapolis office answers, not an autoresponder. Phone (317) 634-2913."
+   }
+  ]
+ },
+ "services/free-security-awareness.html": {
+  "title": "Free Security Awareness Training | Van Ausdall & Farrar",
+  "description": "Security awareness starts with a baseline. Find your Phish-prone percentage free, then see how VAF and KnowBe4 turn it into ongoing training.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Information",
+    "heading": "Free Security Awareness Training Starts with a Baseline",
+    "subhead": "Training only proves its worth if you know where you started. A free phishing test for up to 100 users gives you that number.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-soc-1200.jpg",
+    "image_alt": "Free Security Awareness Training",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "What security awareness training is for",
+    "body": "Antivirus and firewalls cannot stop a convincing email that a person chooses to act on. Security awareness training teaches employees to recognize phishing and social engineering, and simulated phishing lets you check that the lesson stuck. KnowBe4 describes its platform as combining the two, and this page is where that starts for you.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Information",
+    "heading": "What the starting number tells you",
+    "body": "",
+    "bullets": [
+     "The Phish-prone percentage is the share of tested users likely to fall for a phishing email",
+     "The page says the figure is usually higher than people expect",
+     "That makes it a useful way to make the case for training budget",
+     "You can test up to 100 users and start immediately",
+     "A PDF with charts arrives within 24 hours for sharing with management"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "From a test to a program",
+    "heading": "One test is a snapshot, training is the program",
+    "body": "A single result shows today's weakness. A program repeats simulated phishing alongside training so the percentage can be measured again. VAF includes security awareness training with simulated phishing in its managed IT package, and KnowBe4 awareness training and compliance management are part of its Vsecure programs.",
+    "bullets": [
+     "A CISSP is on staff for planning, regulatory and incident work",
+     "Awareness training sits beside patching, monitoring and endpoint protection",
+     "Pricing follows the Technology Strength Assessment, so you see the recommendation first"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "People layer",
+    "heading": "Awareness is one layer of five",
+    "body": "Awareness training is the people layer of VAF's security approach. The technology layers around it include Sophos Intercept X with XDR on every Vsecure base plan, Datto patching and monitoring, Fortinet firewall and Fabric services, and a security operations center option.",
+    "bullets": [
+     "Run the free phishing test to set a baseline",
+     "Add the Phish Alert Button so staff can report what they see",
+     "Use the other free KnowBe4 tools to check passwords and email exposure",
+     "Ask for a managed program when you want it kept up all year"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about free security awareness training",
+    "items": [
+     [
+      "What does free security awareness training include here?",
+      "The free offer on this page is a phishing security test for up to 100 users, with a PDF of your Phish-prone percentage emailed within 24 hours. Ongoing training is part of VAF's managed IT and security programs."
+     ],
+     [
+      "Why should I phish my own employees?",
+      "Because a simulated attack shows how people behave before a real attacker does. The page cites a Trend Micro figure that 91 percent of successful data breaches started with a spear-phishing attack."
+     ],
+     [
+      "What is a Phish-prone percentage?",
+      "It is the share of the employees tested who are likely to fall for a simulated phishing email. KnowBe4 uses it as the baseline measure for awareness training."
+     ],
+     [
+      "How many users can I include in the free test?",
+      "Up to 100 users. The page says you can start immediately without talking to anyone."
+     ],
+     [
+      "Is the free test the same as the phishing security test page?",
+      "It is the same free KnowBe4 test. This page explains why awareness training matters, and the phishing security test page walks through the steps."
+     ],
+     [
+      "Who should request the test?",
+      "Whoever owns IT or email security at your organization, or a manager who needs evidence to ask for training budget. The test is built for the organization, not for individuals."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Keep building your security basics",
+    "intro": "Pages that cover the other layers around awareness training.",
+    "items": [
+     [
+      "Information",
+      "KnowBe4 Free Phishing Security Test",
+      "Find your Phish-prone percentage for up to 100 users.",
+      "Open the page",
+      "services/knowbe4-start-free-phishing-security-test.html"
+     ],
+     [
+      "Information",
+      "KnowBe4 Free Phish Alert Button",
+      "A one-click way for users to report suspicious email.",
+      "Open the page",
+      "services/knowbe4-free-phish-alert-button.html"
+     ],
+     [
+      "Information",
+      "Managed Cybersecurity",
+      "Sophos XDR, Datto patching, Fortinet Fabric services and a security operations center from the Vsecure team.",
+      "Open the page",
+      "services/cybersecurity.html"
+     ],
+     [
+      "Information",
+      "Managed IT Services Indianapolis",
+      "vCIO guidance, 24/7 monitoring, help desk and security packaged under one agreement.",
+      "Open the page",
+      "services/managed-it.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Awareness training by industry",
+    "intro": "Where VAF applies this, and where to read more.",
+    "items": [
+     [
+      "Industry",
+      "Financial services",
+      "Banks and credit unions can use the baseline to support a training plan for tellers and back-office staff.",
+      "How we set it up",
+      "industries/financial-services.html"
+     ],
+     [
+      "Industry",
+      "Insurance",
+      "An agency can use the Phish-prone percentage to answer security questions on a carrier or client questionnaire.",
+      "How we set it up",
+      "industries/insurance.html"
+     ],
+     [
+      "Industry",
+      "Education",
+      "A school can test its staff first, then decide how to train them across the year.",
+      "How we set it up",
+      "industries/education.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Turn the baseline into a plan",
+    "body": "Share your Phish-prone percentage with a VAF specialist and decide what ongoing awareness training should look like.",
+    "submit": "Plan my training",
+    "note": "Replies come from a person in Indianapolis. Call (317) 634-2913 if you prefer."
+   }
+  ]
+ },
+ "services/knowbe4-start-free-phishing-security-test.html": {
+  "title": "KnowBe4 Free Phishing Security Test | VAF Indiana",
+  "description": "Start KnowBe4's free Phishing Security Test for up to 100 users. Pick the template and landing page, then get a PDF of your results in 24 hours.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Information",
+    "heading": "KnowBe4: Start Your Free Phishing Security Test",
+    "subhead": "Send a simulated phishing email to up to 100 of your own users and receive a PDF of the results within 24 hours.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-soc-1200.jpg",
+    "image_alt": "Know Be4, Free Phishing Security Test",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "How the Phishing Security Test works",
+    "body": "KnowBe4's Phishing Security Test sends a simulated phishing message to your own users and reports the Phish-prone percentage, the share who fell for it. The test is free, takes no sales call to start and covers up to 100 users.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Information",
+    "heading": "Here's How It Works",
+    "body": "",
+    "bullets": [
+     "Immediately start your test for up to 100 users (no need to talk to anyone)",
+     "Customize the phishing test template based on your environment",
+     "Choose the landing page your users see after they click",
+     "Show users which red flags they missed, or a 404 page",
+     "Get a PDF emailed to you in 24 hours with your Phish-prone % and charts to share with management"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Before you launch",
+    "heading": "Three choices to make before the test starts",
+    "body": "The test is quick to start, so a little planning improves what you learn from it.",
+    "bullets": [
+     "Which users to include, up to the 100-user limit",
+     "Which template fits your environment, so the message looks like what your staff really receive",
+     "Which landing page follows a click: a list of the red flags they missed, or a plain 404 page",
+     "Who on your team should know the test is running, so reported messages are not mistaken for a real attack"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "After the PDF",
+    "heading": "What to do with the number",
+    "body": "The PDF gives you the Phish-prone percentage and charts for management. Treat it as the first reading, not the last. Training followed by another test shows whether the percentage is falling.",
+    "bullets": [
+     "Share the PDF with whoever approves security budget",
+     "Pair the test with the Phish Alert Button so users can report what they spot",
+     "Ask VAF about KnowBe4 awareness training, which is part of its security programs"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about the free phishing security test",
+    "items": [
+     [
+      "What is the KnowBe4 Phishing Security Test?",
+      "It is a free simulated phishing test that shows what percentage of your employees are Phish-prone. KnowBe4 supplies it and VAF offers it through this page."
+     ],
+     [
+      "How many users can I test for free?",
+      "Up to 100 users. You can start immediately without talking to anyone."
+     ],
+     [
+      "Can I customize what the test email looks like?",
+      "Yes. The page says you can customize the phishing test template based on your own environment."
+     ],
+     [
+      "What do employees see when they click?",
+      "You choose the landing page. It can show users which red flags they missed, or simply show a 404 page."
+     ],
+     [
+      "How quickly do I get the results?",
+      "A PDF with your Phish-prone percentage and charts is emailed to you within 24 hours."
+     ],
+     [
+      "What does Phish-prone percentage mean?",
+      "It is the share of tested employees who are likely to fall for a phishing attack. The page says it is usually higher than expected."
+     ],
+     [
+      "Why test employees as well as protect the network?",
+      "Because staff are the last line of defense after antivirus and the firewall. The page cites a Trend Micro figure that 91 percent of successful data breaches began with spear phishing."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Next steps after the test",
+    "intro": "Free tools and security services that follow a phishing test naturally.",
+    "items": [
+     [
+      "Information",
+      "KnowBe4 Free Phish Alert Button",
+      "A one-click way for users to report suspicious email.",
+      "Open the page",
+      "services/knowbe4-free-phish-alert-button.html"
+     ],
+     [
+      "Information",
+      "Free Security Awareness Training",
+      "Why phishing your own users belongs next to antivirus and a firewall.",
+      "Open the page",
+      "services/free-security-awareness.html"
+     ],
+     [
+      "Information",
+      "Free Security Training Tools",
+      "All six free KnowBe4 tools on one page.",
+      "Open the page",
+      "services/free-security-training-tools.html"
+     ],
+     [
+      "Information",
+      "Managed Cybersecurity",
+      "Sophos XDR, Datto patching, Fortinet Fabric services and a security operations center from the Vsecure team.",
+      "Open the page",
+      "services/cybersecurity.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Who runs this test",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "Healthcare",
+      "A practice manager can test front-desk and clinical staff before a compliance review.",
+      "How we set it up",
+      "industries/healthcare.html"
+     ],
+     [
+      "Industry",
+      "Manufacturing and logistics",
+      "A plant IT lead can include office staff who handle invoices and supplier email.",
+      "How we set it up",
+      "industries/manufacturing-logistics.html"
+     ],
+     [
+      "Industry",
+      "Real estate",
+      "A brokerage can test agents, who answer email from strangers all day.",
+      "How we set it up",
+      "industries/real-estate.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Start your free phishing test",
+    "body": "Tell us who will run it and how many users to include. We will point you to the next step.",
+    "submit": "Start my test",
+    "note": "Questions before you start? A person in the Indianapolis office replies, or call (317) 634-2913."
+   }
+  ]
+ },
+ "services/knowbe4-get-free-weak-password-test.html": {
+  "title": "KnowBe4 Free Weak Password Test | Van Ausdall & Farrar",
+  "description": "KnowBe4's free Weak Password Test checks Active Directory for 10 types of weak password threats in minutes, without reporting actual passwords.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Information",
+    "heading": "Know Be4, Get Your Free Weak Password Test",
+    "subhead": "Are your user’s passwords…P@ssw0rd? Verizon’s recent Data Breach Report showed that 81% of hacking-related breaches used either stolen and/or weak passwords.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-soc-1200.jpg",
+    "image_alt": "Know Be4, Get Your Free Weak Password Test",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "GET YOUR FREE WEAK PASSWORD TEST",
+    "body": "Know Be4’s complimentary Weak Password Test (WPT) checks your Active Directory for several different types of weak password related threats. WPT gives you a quick look at the effectiveness of your password policies and any fails so that you can take action. This tests against 10 types of weak password related threats for example; Weak, Duplicate, Empty, Never Expires, plus 6 more.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Information",
+    "heading": "Here’s How Weak Password Test Works",
+    "body": "This will take you 5 minutes and may give you some insights you never expected! Requirements: Active Directory, Windows 7 or higher (32 or 64bit)",
+    "bullets": [
+     "Reports on the accounts that are affected",
+     "Tests against 10 types of weak password related threats",
+     "Does not show/report on the actual passwords of accounts",
+     "Just download the install and run it",
+     "Results in a few minutes!"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "Before you run it",
+    "body": "Plan about five minutes. The page lists two requirements: Active Directory, and a Windows 7 or higher machine, 32 or 64 bit. There is nothing to configure beyond the download and install.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "After the test",
+    "heading": "Turning the report into a policy",
+    "body": "The report lists the affected accounts so you can act on them. Fixing accounts one by one helps, but lasting change comes from enforcing a policy, adding multi-factor authentication and training users, all of which VAF can plan with you.",
+    "bullets": [
+     "Fix or disable the accounts that failed",
+     "Review password policy settings in Active Directory",
+     "Add multi-factor authentication, part of VAF's managed IT security",
+     "Run the Phishing Security Test to check the human side as well"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Why passwords get their own test",
+    "heading": "Weak and reused passwords are a common way in",
+    "body": "The page cites Verizon's Data Breach Report: 81 percent of hacking-related breaches used stolen or weak passwords. A password policy on paper is not the same as a policy that works, and this test checks which one you have.",
+    "bullets": [
+     "Weak: accounts using easy-to-guess passwords",
+     "Duplicate: the same password on more than one account",
+     "Empty: accounts with no password at all",
+     "Never Expires: passwords that are never forced to change",
+     "Plus six more threat types, ten in all"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about the free weak password test",
+    "items": [
+     [
+      "What does KnowBe4's Weak Password Test do?",
+      "It checks your Active Directory for several types of weak password related threats and gives you a quick view of how effective your password policies are."
+     ],
+     [
+      "How many kinds of threat does it test for?",
+      "Ten. The page names Weak, Duplicate, Empty and Never Expires, plus six more."
+     ],
+     [
+      "Does the test reveal my users' actual passwords?",
+      "No. The page states it reports on the affected accounts but does not show or report the actual passwords."
+     ],
+     [
+      "How long does it take?",
+      "About five minutes. You download the install, run it and get results in a few minutes."
+     ],
+     [
+      "What do I need to run it?",
+      "Active Directory and a Windows 7 or higher machine, 32 or 64 bit."
+     ],
+     [
+      "Is the test really free?",
+      "The page calls it KnowBe4's complimentary Weak Password Test. Confirm the current terms with KnowBe4 or ask VAF before you begin."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "More security checks",
+    "intro": "Other free tools and security services to pair with a password review.",
+    "items": [
+     [
+      "Information",
+      "KnowBe4 Free Email Exposure Check",
+      "A report of exposed addresses at your domain and where they were found.",
+      "Open the page",
+      "services/knowbe4-get-free-email-exposure-check.html"
+     ],
+     [
+      "Information",
+      "KnowBe4 Domain Spoof Test",
+      "A pass or fail test of whether a spoofed email from your domain gets through.",
+      "Open the page",
+      "services/knowbe4-can-hackers-spoof-email-address-domain.html"
+     ],
+     [
+      "Information",
+      "KnowBe4 Free Phishing Security Test",
+      "Find your Phish-prone percentage for up to 100 users.",
+      "Open the page",
+      "services/knowbe4-start-free-phishing-security-test.html"
+     ],
+     [
+      "Information",
+      "Cyber Threat Assessment",
+      "An external, internal and regulatory review led by a CISSP-certified expert.",
+      "Open the page",
+      "services/cyber-security-assessment.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Who runs a weak password test",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "Financial services",
+      "A credit union IT manager can check shared and service accounts before an examiner asks about them.",
+      "How we set it up",
+      "industries/financial-services.html"
+     ],
+     [
+      "Industry",
+      "State and local government",
+      "A city IT office with long-lived accounts can look for passwords that never expire.",
+      "How we set it up",
+      "industries/government.html"
+     ],
+     [
+      "Industry",
+      "Insurance",
+      "An agency can check password hygiene before answering a cyber insurance questionnaire.",
+      "How we set it up",
+      "industries/insurance.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Get help with your password results",
+    "body": "Ran the test and want to talk through the report? A VAF specialist can help you plan what to fix first.",
+    "submit": "Talk through my results",
+    "note": "You will hear from a person in the Indianapolis office. Or call (317) 634-2913."
+   }
+  ]
+ },
+ "services/knowbe4-get-free-ransomware-simulator-tool.html": {
+  "title": "KnowBe4 Free Ransomware Simulator (RanSim) | VAF",
+  "description": "KnowBe4's free RanSim runs a harmless simulation of 13 ransomware infection scenarios on a Windows workstation and shows if it is vulnerable.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Information",
+    "heading": "Know Be4, Get Your Free Ransomware Simulator Tool",
+    "subhead": "Bad guys are constantly coming out with new versions of ransomware strains to evade detection. Is your network effective in blocking ransomware when employees fall for social engineering attacks?",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-soc-1200.jpg",
+    "image_alt": "Know Be4, Get Your Free Ransomware Simulator Tool Servi",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "How Vulnerable Is Your Network against Ransomware Attacks?",
+    "body": "Know Be4’s Ransomware Simulator “Ran Sim” gives you a quick look at the effectiveness of your existing network protection. Ran Sim will simulate 13 ransomware infection scenarios and show you if a workstation is vulnerable to infection.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Information",
+    "heading": "Here’s How Ran Sim Works:",
+    "body": "NOTE: Ran Sim was created for Windows-based workstations running Windows 7+. Ran Sim does not alter any existing files on disk. As part of the simulation Ran Sim does enumerate all files on the local disk(s). For the purposes of encryption, simulated data files are downloaded from the Internet.",
+    "bullets": [
+     "100% harmless simulation of a real ransomware",
+     "Does not use any of your own files",
+     "Tests 13 types of infection scenarios",
+     "Just download the install and run it",
+     "Results in a few minutes!"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "About Know Be4",
+    "body": "Know Be4 is the world’s most popular integrated platform for security awareness training combined with simulated phishing attacks. We help thousands of organizations to manage the continuing problem of social engineering. Our mission: Train your employees to make smarter security decisions.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "What RanSim is",
+    "heading": "A harmless rehearsal of an attack",
+    "body": "RanSim imitates ransomware behavior so you can see how a workstation reacts, without risking your own files. It is a quick check of existing protection, not a replacement for it.",
+    "bullets": [
+     "It simulates 13 ransomware infection scenarios",
+     "It does not use any of your own files",
+     "Simulated data files are downloaded from the internet for the encryption step",
+     "It does not alter existing files on disk, though it does list the files on local disks"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "If the workstation fails",
+    "heading": "Where protection and recovery come in",
+    "body": "A workstation that shows as vulnerable needs layered protection, current patches and a recovery plan. VAF's Vsecure programs include Sophos Intercept X with XDR, Datto patching and monitoring, and backup and continuity planning around your recovery time objective.",
+    "bullets": [
+     "Review endpoint protection on the machine that failed",
+     "Check patch levels and monitoring",
+     "Confirm backups restore, because tested backups are the real answer to ransomware",
+     "Train users, since the page notes ransomware often arrives through social engineering"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about the free ransomware simulator",
+    "items": [
+     [
+      "What is KnowBe4 RanSim?",
+      "RanSim is KnowBe4's free Ransomware Simulator. It simulates 13 ransomware infection scenarios and shows whether a workstation is vulnerable to infection."
+     ],
+     [
+      "Is it safe to run?",
+      "The page describes it as a 100 percent harmless simulation of real ransomware. It does not use your own files, and simulated data files are downloaded from the internet for the encryption test."
+     ],
+     [
+      "Does RanSim change files on my computer?",
+      "The page says it does not alter existing files on disk. It does enumerate the files on local disks as part of the simulation."
+     ],
+     [
+      "What do I need to run it?",
+      "A Windows-based workstation running Windows 7 or higher. You download the install and run it."
+     ],
+     [
+      "How long does it take?",
+      "Results come back in a few minutes."
+     ],
+     [
+      "What does a failed test mean?",
+      "It means the simulated infection scenarios got through on that workstation. Review endpoint protection, patching and backup, and talk to a security specialist about what to add."
+     ],
+     [
+      "Does passing mean I am safe from ransomware?",
+      "No. It means that machine handled the 13 simulated scenarios. Real attacks change, so keep protection, patching, backups and staff training current."
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Talk through your RanSim result",
+    "body": "Tell us what the simulator found on your workstation and we will discuss protection and recovery options.",
+    "submit": "Discuss my result",
+    "note": "A person from VAF in Indianapolis replies. Phone (317) 634-2913."
+   }
+  ]
+ },
+ "services/knowbe4-get-free-email-exposure-check.html": {
+  "title": "KnowBe4 Free Email Exposure Check | VAF Indiana",
+  "description": "KnowBe4's one-time free Email Exposure Check lists which of your organization's email addresses are exposed online and where they were found.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Information",
+    "heading": "Know Be4, Get Your Free Email Exposure Check",
+    "subhead": "Find out which of your users emails are exposed before the bad guys do.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-soc-1200.jpg",
+    "image_alt": "Know Be4, Get Your Free Email Exposure Check",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "What the Email Exposure Check looks at",
+    "body": "The check examines your email attack surface: which addresses at your organization can be found on the internet, and where they were found. It is a one-time free service from KnowBe4.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Information",
+    "heading": "Which Email Addresses Are Exposed on the Internet and Are a Target for Phishing Attacks?",
+    "body": "Security Awareness Training Today, your employees are frequently exposed to advanced phishing attacks. Trend Micro reported that 91% of successful data breaches started with a spear phishing attack. Are you aware that many of the email addresses of your organization are exposed on the Internet and easy to find for cybercriminals? With these addresses they can launch social engineering, spear phishing and ransomware attacks on your organization. To help prevent these attacks you should investigate your email attack surface and find out which employee’s email address are exposed.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "Know Be4 Can Help! Our Email Exposure Check Is a One-Time Free Service.",
+    "body": "We will email you a report containing the list of exposed addresses and where we were found within 2 business days, or less! NOTE: We need your organization’s email address (your own domain name) to run the EEC, not an email from an ISP like Hotmail or gmail.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Before you request it",
+    "heading": "What you need to provide and what you get",
+    "body": "The check runs against your own domain, so the request has to come from a business address.",
+    "bullets": [
+     "Use an email address on your organization's domain, not Hotmail, Gmail or another ISP",
+     "The service is one-time and free",
+     "KnowBe4 emails the report within 2 business days or less",
+     "The report lists the exposed addresses and where they were found"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "After the report",
+    "heading": "What to do about exposed addresses",
+    "body": "You cannot remove an address from the internet, but you can make it less useful to an attacker. Staff whose addresses are widely exposed are good candidates for earlier training and closer filtering. VAF's security programs include mail security with anti-spam and anti-malware, plus awareness training.",
+    "bullets": [
+     "Share the list with the people whose addresses appear",
+     "Prioritize those staff for awareness training",
+     "Review email filtering and anti-spam settings",
+     "Run the Domain Spoof Test to check impersonation of your own domain"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about the free email exposure check",
+    "items": [
+     [
+      "What is the KnowBe4 Email Exposure Check?",
+      "It is a one-time free service that finds which of your organization's email addresses are exposed on the internet, so you can see your email attack surface."
+     ],
+     [
+      "Why does exposure matter?",
+      "Exposed addresses are easy for criminals to find and use for social engineering, spear phishing and ransomware attacks. The page cites Trend Micro's figure that 91 percent of successful data breaches began with spear phishing."
+     ],
+     [
+      "How long does the check take?",
+      "KnowBe4 emails you a report within 2 business days, or less."
+     ],
+     [
+      "What does the report contain?",
+      "The list of exposed addresses and where they were found."
+     ],
+     [
+      "Can I use a Gmail or Hotmail address to request it?",
+      "No. The page says an address on your own domain is required, not one from an ISP such as Hotmail or Gmail."
+     ],
+     [
+      "Can I run it more than once?",
+      "The page describes it as a one-time free service. Ask KnowBe4 or VAF if you need a second check."
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Request your email exposure check",
+    "body": "Share the business domain you want checked and who should receive the report.",
+    "submit": "Request the check",
+    "note": "A person at the Indianapolis office replies. Or call (317) 634-2913."
+   }
+  ]
+ },
+ "services/knowbe4-can-hackers-spoof-email-address-domain.html": {
+  "title": "KnowBe4 Domain Spoof Test | Van Ausdall & Farrar",
+  "description": "KnowBe4's free Domain Spoof Test sends a spoofed email from you to you. If it lands in your inbox, your domain can be impersonated. Results in 48 hours.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Information",
+    "heading": "Know Be4, Can Hackers Spoof an Email Address from Your Own Domain?",
+    "subhead": "Are you aware that one of the first things hackers try is to see if they can spoof the email address of someone in your own domain?",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-soc-1200.jpg",
+    "image_alt": "Know Be4, Can Hackers Spoof Your Email Domain",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "Why spoofing your own domain is a problem",
+    "body": "A criminal who can send mail that looks like it came from someone at your domain can attempt CEO fraud: a spear phishing message that appears to come from a colleague or executive. The page notes this is very hard to defend against unless users are highly security-awareness trained.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Information",
+    "heading": "Find Out Now If Your Email Server Is Configured Correctly, Many Are Not!",
+    "body": "NOTE: Not everyone is qualified for the DST. It is not for individuals, but only for the person in the organization responsible for email security. We need a valid email address from the domain of your own organization, so Gmail, AOL, Yahoo or any other ISP are not accepted.",
+    "bullets": [
+     "This is a simple, non-intrusive “pass/fail” test.",
+     "We will send a spoofed email “from you to you”.",
+     "If it makes it through into your inbox, you know you have a problem.",
+     "You’ll know within 48 hours!"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Who can request it",
+    "heading": "Built for the person who owns email security",
+    "body": "The Domain Spoof Test is not for individuals. It is for the person in the organization responsible for email security.",
+    "bullets": [
+     "You need a valid email address on your own organization's domain",
+     "Gmail, AOL, Yahoo and other ISP addresses are not accepted",
+     "It is a simple, non-intrusive pass or fail test",
+     "KnowBe4 sends a spoofed email from you to you and you know within 48 hours"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Reading the result",
+    "heading": "What a pass or a fail means",
+    "body": "If the spoofed message reaches your inbox, the test has failed and your domain can be impersonated. That is a configuration and filtering problem to fix, usually through your domain's email authentication records and your mail security settings. Awareness training then covers what slips through.",
+    "bullets": [
+     "Pass: the spoofed message did not arrive",
+     "Fail: the message reached your inbox, so review your email setup",
+     "Mail security is one of the attack surfaces VAF secures, with anti-spam, anti-malware and encryption",
+     "Pair the result with the Email Exposure Check and the Phishing Security Test"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about the domain spoof test",
+    "items": [
+     [
+      "What is the KnowBe4 Domain Spoof Test?",
+      "It is a free test that checks whether hackers can spoof an email address from your own domain. KnowBe4 sends a spoofed email from you to you."
+     ],
+     [
+      "What does it mean if the spoofed email arrives?",
+      "It means you have a problem. If the message makes it into your inbox, an attacker could do the same to your staff or customers."
+     ],
+     [
+      "How long do results take?",
+      "You will know within 48 hours."
+     ],
+     [
+      "Is the test intrusive?",
+      "No. The page calls it a simple, non-intrusive pass or fail test."
+     ],
+     [
+      "Who is eligible to request it?",
+      "Not everyone. It is intended for the person responsible for email security, and it needs a valid address on your organization's own domain."
+     ],
+     [
+      "What is CEO fraud?",
+      "CEO fraud is a spear phishing attack where a message appears to come from an executive or colleague at your own domain. The page says it is very hard to defend against unless users are well trained."
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Check your domain before someone else does",
+    "body": "Tell us who handles email security and which domain to test. We will point you to the next step.",
+    "submit": "Request the spoof test",
+    "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913."
+   }
+  ]
+ },
+ "services/knowbe4-free-phish-alert-button.html": {
+  "title": "KnowBe4 Free Phish Alert Button | Van Ausdall & Farrar",
+  "description": "KnowBe4's free Phish Alert Button lets users report suspicious email in one click and removes it from the inbox. Works with Outlook and Gmail in Chrome.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Information",
+    "heading": "Know Be4, Free Phish Alert Button",
+    "subhead": "Do your users know what to do when they receive a suspicious email?",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-soc-1200.jpg",
+    "image_alt": "Know Be4, Free Phish Alert Button",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "GIVE YOUR EMPLOYEES A SAFE WAY TO REPORT PHISHING ATTACKS WITH ONE CLICK!",
+    "body": "Should they call the help desk, or forward it? Should they forward to IT including all headers? Delete and not report it, forfeiting a possible early warning? Know Be4’s Phish Alert add-in button gives your users a safe way to forward email threats to the security team for analysis and deletes the email from the user’s inbox to prevent future exposure. All with just one click!",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Information",
+    "heading": "Phish Alert Benefits",
+    "body": "",
+    "bullets": [
+     "Reinforces your organization’s security culture",
+     "Users can report suspicious emails with just one click",
+     "Incident Response gets early phishing alerts from users, creating a network of “sensors”",
+     "Email is deleted from the user’s inbox to prevent future exposure",
+     "Easy deployment via MSI file for Outlook, G Suite deployment for Gmail (Chrome)",
+     "Supports: Outlook 2007, 2010, 2013, 2016 & Outlook for Office 365, Exchange 2013 & 2016, Chrome 54 and later (Linux, OS X and Windows)"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "After the click",
+    "heading": "What happens when a user presses the button",
+    "body": "The button replaces guesswork. Instead of choosing between calling the help desk, forwarding with headers or deleting silently, the user does one thing.",
+    "bullets": [
+     "The suspicious email is forwarded to the security team for analysis",
+     "The email is deleted from the user's inbox to prevent further exposure",
+     "Incident response receives an early warning from the user",
+     "Many reporting users together become a network of sensors"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Putting it to work",
+    "heading": "Pair the button with testing and training",
+    "body": "A reporting button is most useful when staff have a reason to use it. Run the free Phishing Security Test to see how people react, train them on what to report, then deploy the button so the habit has somewhere to go.",
+    "bullets": [
+     "Check your email platform against the supported list on this page",
+     "Decide who on your security or IT team receives the reports",
+     "Tell staff what happens after they press it",
+     "Use KnowBe4 awareness training, available through VAF, to reinforce the habit"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about the free phish alert button",
+    "items": [
+     [
+      "What is the KnowBe4 Phish Alert Button?",
+      "It is a free add-in button that gives users a safe way to forward email threats to the security team for analysis with one click."
+     ],
+     [
+      "What happens to the reported email?",
+      "It is forwarded to the security team for analysis and deleted from the user's inbox to prevent future exposure."
+     ],
+     [
+      "Which email systems does it work with?",
+      "The page lists Outlook 2007, 2010, 2013, 2016 and Outlook for Office 365, Exchange 2013 and 2016, and Chrome 54 and later on Linux, OS X and Windows."
+     ],
+     [
+      "How is it deployed?",
+      "The page describes deployment through an MSI file for Outlook and a G Suite deployment for Gmail in Chrome."
+     ],
+     [
+      "Why not just have users forward suspicious email to IT?",
+      "Forwarding with all headers is awkward and many users give up. A single button makes reporting easy and gives incident response an early warning."
+     ],
+     [
+      "Does the button stop phishing by itself?",
+      "No. It speeds up detection and reporting. Pair it with protection, awareness training and testing."
+     ],
+     [
+      "Is the button free?",
+      "The page presents it as a free KnowBe4 tool. Confirm current terms with KnowBe4 or ask VAF before deploying."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Pair the button with these",
+    "intro": "Tools and services that make reporting more effective.",
+    "items": [
+     [
+      "Information",
+      "KnowBe4 Free Phishing Security Test",
+      "Find your Phish-prone percentage for up to 100 users.",
+      "Open the page",
+      "services/knowbe4-start-free-phishing-security-test.html"
+     ],
+     [
+      "Information",
+      "Free Security Awareness Training",
+      "Why phishing your own users belongs next to antivirus and a firewall.",
+      "Open the page",
+      "services/free-security-awareness.html"
+     ],
+     [
+      "Information",
+      "Free Security Training Tools",
+      "All six free KnowBe4 tools on one page.",
+      "Open the page",
+      "services/free-security-training-tools.html"
+     ],
+     [
+      "Information",
+      "Managed IT Services Indianapolis",
+      "vCIO guidance, 24/7 monitoring, help desk and security packaged under one agreement.",
+      "Open the page",
+      "services/managed-it.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Where a reporting button helps most",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "Healthcare",
+      "Front-desk and clinical staff who receive many outside messages get a simple way to flag one.",
+      "How we set it up",
+      "industries/healthcare.html"
+     ],
+     [
+      "Industry",
+      "Education",
+      "Teachers and administrators who work across many accounts can report in one click.",
+      "How we set it up",
+      "industries/education.html"
+     ],
+     [
+      "Industry",
+      "Engineering and construction",
+      "Project teams that trade files with outside parties can flag the odd request.",
+      "How we set it up",
+      "industries/engineering-construction.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Roll out the Phish Alert Button",
+    "body": "Tell us which email platform you run and how many users need the button.",
+    "submit": "Ask about the button",
+    "note": "A person from VAF's Indianapolis office replies. Call (317) 634-2913."
+   }
+  ]
+ },
+ "services/it-support.html": {
+  "title": "Indianapolis IT Support | Van Ausdall & Farrar",
+  "description": "Indianapolis IT support from Van Ausdall & Farrar: help desk, remote and on-site support, and proactive monitoring since 1914. Call (317) 634-2913.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Information",
+    "heading": "Indianapolis IT Support",
+    "subhead": "Van Ausdall & Farrar provides Indianapolis IT support for businesses of every size, from help desk answers to on-site engineering, backed by over a century of Indiana technology service since 1914.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-soc-1200.jpg",
+    "image_alt": "Indianapolis IT Support",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "About Indianapolis IT Support",
+    "body": "Van Ausdall & Farrar provides Indianapolis IT support for businesses of every size, from help desk answers to on-site engineering, backed by over a century of Indiana technology service since 1914.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Information",
+    "heading": "IT Support Services",
+    "body": "",
+    "bullets": [
+     "Help Desk & End-User Support, U.S.-based technicians answer your team's questions by phone, email, or website",
+     "Remote Support, our engineers connect to your equipment remotely and resolve many issues without a visit",
+     "On-Site Support, certified field technicians dispatched across Indianapolis and central Indiana",
+     "Proactive Monitoring & Alerting, we detect and fix problems before your team notices",
+     "Patch Management, OS and application updates tested and deployed on schedule"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "Support Hours",
+    "body": "Our Customer Care Center processes requests Monday through Friday, 7:00am to 5:00pm EST, and responds within 24 hours. Call (317) 634-2913, toll-free (800) 467-7474, or email itsupport@vanausdall.com.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Information",
+    "heading": "More Than Break-Fix",
+    "body": "When your IT needs outgrow day-to-day support, our managed IT services team adds a CIO-level technology roadmap, and our network security specialists protect your data end to end.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "What backs the help desk",
+    "heading": "Measured service, not just promised service",
+    "body": "Support is only as good as the people and process behind it. VAF's Customer Care Center processes requests, and customer scores are collected after service calls by an independent company.",
+    "bullets": [
+     "Net Promoter Score of 93.4, audited by CEO Juice, against a US average of 10",
+     "A 25 point inspection on every service call",
+     "SOC 2 certification for how customer data is protected",
+     "Technology advisors with an average tenure of fifteen years"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Beyond support",
+    "heading": "When day-to-day support becomes managed IT",
+    "body": "Some organizations outgrow ticket-by-ticket help. Managed IT adds a vCIO for budgets and roadmaps, 24/7 monitoring and alerting, patch management and security in one package.",
+    "bullets": [
+     "Reactive support: you call when something breaks",
+     "Managed IT: monitoring, patching and planning happen before it breaks",
+     "Cybersecurity can also be added alone if you keep IT in-house",
+     "Start with the Technology Strength Assessment to see which fits"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about IT support in Indianapolis",
+    "items": [
+     [
+      "What IT support does Van Ausdall & Farrar provide in Indianapolis?",
+      "Help desk and end-user support, remote support, on-site support, proactive monitoring and alerting, and patch management, delivered by U.S.-based technicians and certified field staff."
+     ],
+     [
+      "What are the support hours?",
+      "The Customer Care Center processes requests Monday through Friday, 7:00am to 5:00pm EST and responds within 24 hours."
+     ],
+     [
+      "How do I contact IT support?",
+      "Call (317) 634-2913 or toll-free (800) 467-7474, or email itsupport@vanausdall.com."
+     ],
+     [
+      "Can problems be fixed without a site visit?",
+      "Many can. VAF's engineers connect to your equipment remotely and resolve many issues without a visit, and certified field technicians are dispatched when on-site help is needed."
+     ],
+     [
+      "Where does on-site support reach?",
+      "VAF dispatches field technicians across Indianapolis and central Indiana, and its service fleet covers the state."
+     ],
+     [
+      "What is the difference between IT support and managed IT?",
+      "IT support responds when you call. Managed IT adds a CIO-level roadmap, round-the-clock monitoring, patching and security under one agreement."
+     ],
+     [
+      "Does VAF patch computers as part of support?",
+      "Yes. Patch management means operating system and application updates are tested and deployed on schedule."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "From support to a fuller IT partnership",
+    "intro": "Pages for when day-to-day help is no longer enough.",
+    "items": [
+     [
+      "Information",
+      "Managed IT Services Indianapolis",
+      "vCIO guidance, 24/7 monitoring, help desk and security packaged under one agreement.",
+      "Open the page",
+      "services/managed-it.html"
+     ],
+     [
+      "Information",
+      "Managed Cybersecurity",
+      "Sophos XDR, Datto patching, Fortinet Fabric services and a security operations center from the Vsecure team.",
+      "Open the page",
+      "services/cybersecurity.html"
+     ],
+     [
+      "Information",
+      "Indianapolis Network Security",
+      "Firewalls, endpoint protection, email security and zero-trust access for the network.",
+      "Open the page",
+      "services/network-security.html"
+     ],
+     [
+      "Support",
+      "Client Service Center",
+      "Support requests, supplies and the Customer Care Center number.",
+      "Open the page",
+      "support.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Support for the organizations we serve",
+    "intro": "IT support looks different in each industry.",
+    "items": [
+     [
+      "Industry",
+      "Healthcare",
+      "Clinics need reliable workstations and quick answers when a record system stalls.",
+      "How we set it up",
+      "industries/healthcare.html"
+     ],
+     [
+      "Industry",
+      "Education",
+      "Schools need support that works around class schedules and a wide range of devices.",
+      "How we set it up",
+      "industries/education.html"
+     ],
+     [
+      "Industry",
+      "State and local government",
+      "Municipal offices need documented support they can show a council or an auditor.",
+      "How we set it up",
+      "industries/government.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Talk to an IT support specialist",
+    "body": "Describe what is slowing your team down and who supports it today. We will suggest next steps.",
+    "submit": "Talk to a specialist",
+    "note": "A person from the Indianapolis office replies. Or call (317) 634-2913."
+   }
+  ]
+ },
+ "services/call-recording.html": {
+  "title": "Call Recording Systems for Indiana | VAF",
+  "description": "OakSi RecordX records fixed line, mobile and VoIP calls in one solution to monitor quality, improve performance and meet PCI requirements.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Communication",
+    "heading": "Custom Call Recording Systems",
+    "subhead": "Record fixed line, mobile and VoIP calls in one system, review them for quality and coach your staff, with OakSi RecordX.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-phone-1200.jpg",
+    "image_alt": "Call Recording Solutions, Monitor Quality & Performance",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Communication",
+    "heading": "One recorder for every kind of call",
+    "body": "OakSi RecordX is a unified call recording solution. It records fixed line, mobile and VoIP calls in a single solution, so you do not run a separate recorder for each kind of line.",
+    "bullets": [
+     "Monitor Quality",
+     "Improve Performance",
+     "Share Conference Calls"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "What the recordings are for",
+    "heading": "Quality, coaching and conference calls",
+    "body": "The three benefits VAF lists for RecordX each answer a different question a manager asks.",
+    "bullets": [
+     "Monitor quality: listen back to see how customers are really being handled",
+     "Improve performance: use real calls to build your staff's customer service skills",
+     "Share conference calls: make a recorded conference available to the people who need it",
+     "Meet PCI requirements: the page positions RecordX for organizations that take card payments by phone"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Alongside your phones",
+    "heading": "Recording as part of the phone system design",
+    "body": "Call recording is listed among the capabilities of VAF's business phone systems, next to cloud communications, contact center, conferencing and mobility. VAF has been in the telecom business since 1983, so recording is designed with the phone system rather than added later. Contact center platforms add their own on-demand or random recording with search and replay.",
+    "bullets": [
+     "Decide which lines and users need recording",
+     "Match the recorder to fixed line, mobile and VoIP paths",
+     "Plan storage and who is allowed to listen",
+     "Train supervisors to use recordings for coaching"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about call recording",
+    "items": [
+     [
+      "What is OakSi RecordX?",
+      "OakSi RecordX is a unified call recording solution that VAF offers. It records fixed line, mobile and VoIP calls in a single solution."
+     ],
+     [
+      "Which kinds of calls can it record?",
+      "Fixed line, mobile and VoIP calls. The point of the product is that one solution covers all three."
+     ],
+     [
+      "Can call recording help with PCI requirements?",
+      "VAF's page says RecordX helps organizations meet PCI requirements, and its phone systems page describes unified recording that meets PCI DSS. Your own compliance team should confirm how it applies to your setup."
+     ],
+     [
+      "What are the key benefits VAF lists?",
+      "Monitor Quality, Improve Performance and Share Conference Calls."
+     ],
+     [
+      "How is this different from the recording inside a contact center?",
+      "Contact center platforms include their own recording, on demand or at random, with search and replay. RecordX is the stand-alone option for recording across fixed line, mobile and VoIP."
+     ],
+     [
+      "Do I have to tell callers I am recording?",
+      "Notice and consent rules depend on the states and parties involved, so check with your legal counsel before you turn recording on."
+     ],
+     [
+      "How much does call recording cost?",
+      "VAF does not publish a price because it depends on the number of lines and users. The free Technology Strength Assessment produces a written recommendation and a quote."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Related communication services",
+    "intro": "Phone and contact center pages that work with call recording.",
+    "items": [
+     [
+      "Communication",
+      "Business Phone Systems Indianapolis",
+      "Cloud, premise and hybrid voice from Mitel, RingCentral, 8x8 and Elevate.",
+      "Open the page",
+      "services/business-phone-systems.html"
+     ],
+     [
+      "Communication",
+      "Custom Call Center Solutions",
+      "Skills-based routing, IVR, quality management and CRM integrations, premise or cloud.",
+      "Open the page",
+      "services/call-center-services.html"
+     ],
+     [
+      "Communication",
+      "Web and Audio Conferencing",
+      "Instant messaging, conference calling and desktop sharing over the business phone system.",
+      "Open the page",
+      "services/conference-and-collaboration.html"
+     ],
+     [
+      "Communication",
+      "Cloud VoIP and PBX Systems",
+      "Enterprise calling features with no hardware to buy, manage or maintain.",
+      "Open the page",
+      "services/cloud-communications.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Who records calls",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "Financial services",
+      "Teams that take card payments by phone are the natural fit for PCI-minded recording.",
+      "How we set it up",
+      "industries/financial-services.html"
+     ],
+     [
+      "Industry",
+      "Insurance",
+      "Claims and service lines can review calls to coach staff and settle disputes.",
+      "How we set it up",
+      "industries/insurance.html"
+     ],
+     [
+      "Industry",
+      "State and local government",
+      "Public offices that take requests by phone can review calls for quality and follow-up.",
+      "How we set it up",
+      "industries/government.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Plan call recording for your phones",
+    "body": "Tell us what phone systems and lines you run, and which calls you want to record.",
+    "submit": "Plan my recording",
+    "note": "A person in VAF's Indianapolis office replies. Or call (317) 634-2913."
+   }
+  ]
+ },
+ "services/carrier-services.html": {
+  "title": "Carrier and Internet Services Consulting | VAF",
+  "description": "VAF reviews every carrier for each of your locations, vendor neutral, and gives you one bill and one contact for SIP, broadband, MPLS and SD-WAN.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Communication",
+    "heading": "Carrier/Internet Services",
+    "subhead": "One bill, one partner for internet and carrier services, SIP trunking, broadband, and carrier billing analysis for your locations.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-phone-1200.jpg",
+    "image_alt": "Carrier Services Consultation",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Communication",
+    "heading": "A carrier consultation that starts with 1983",
+    "body": "VAF can trace its carrier expertise to 1983, when the federal government broke up the AT&T monopoly and formed the Regional Bell Operating Companies. VAF was the first Indiana Bell Authorized Distributor in the state. Today it takes a vendor neutral approach and analyzes all options for each client through a complimentary carrier service consultation program.",
+    "bullets": [
+     "Software Defined Wide Area Networking (SD-WAN)",
+     "Multi-Packet Label Switching (MPLS)",
+     "Metro Ethernet",
+     "Broadband Internet Connectivity",
+     "Fixed Wireless Internet",
+     "Satellite Wireless Internet",
+     "4G Wireless",
+     "SIP Trunking",
+     "Plain Old Telephone Service (POTS) Lines",
+     "Integrated Services Digital Network Primary Rate Interface (ISDN PRI)"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "What you get",
+    "heading": "One bill and one point of contact",
+    "body": "By evaluating all the carriers for each company location, VAF aims to maximize your carrier service dollar while reducing the complexity and cost of managing the services.",
+    "bullets": [
+     "Every carrier compared location by location",
+     "A single bill for the services you choose",
+     "One VAF contact instead of one per carrier",
+     "No obligation: the consultation is complimentary"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about carrier and internet services",
+    "items": [
+     [
+      "What does VAF's carrier service consultation do?",
+      "It analyzes all carrier and internet service provider options for each of your locations, so you get the best fit rather than whatever one carrier sells. VAF offers it as a complimentary program."
+     ],
+     [
+      "Does VAF favor one carrier?",
+      "No. VAF describes its approach as vendor neutral. It evaluates the carriers available at each location and recommends the best fit."
+     ],
+     [
+      "Which services does the consultation cover?",
+      "SD-WAN, MPLS, Metro Ethernet, broadband, fixed wireless, satellite wireless, 4G wireless, SIP trunking, POTS lines and ISDN PRI."
+     ],
+     [
+      "How long has VAF worked with carriers?",
+      "Since 1983, when the AT&T breakup created the Regional Bell Operating Companies. VAF was the first Indiana Bell Authorized Distributor in Indiana."
+     ],
+     [
+      "Will I get one bill?",
+      "That is the goal of the program: one bill and one point of contact to reduce the complexity and cost of managing carrier services."
+     ],
+     [
+      "Does the consultation cost anything?",
+      "VAF calls the carrier service consultation program complimentary and no-obligation."
+     ],
+     [
+      "Can VAF review carriers for several locations at once?",
+      "Yes. Evaluating each location separately is the core of the program, and the results come back as one recommendation."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Connectivity pages worth reading next",
+    "intro": "Pages that go deeper on circuits, SD-WAN and the phone systems that ride on them.",
+    "items": [
+     [
+      "Communication",
+      "Voice and Data Circuits",
+      "Site to site voice and data circuits through Windstream and AT&T.",
+      "Open the page",
+      "services/voice-data-circuits.html"
+     ],
+     [
+      "Communication",
+      "SD-WAN and Fortinet Hardware",
+      "Private-network speed and security over the internet connections you already have.",
+      "Open the page",
+      "services/sd-wan.html"
+     ],
+     [
+      "Communication",
+      "State-of-the-Art Voice and Data Systems",
+      "ADTRAN, Fortinet, Windstream and AT&T relationships behind one communications design.",
+      "Open the page",
+      "services/state-of-the-art-voice-data-communication-systems.html"
+     ],
+     [
+      "Communication",
+      "Business Phone Systems Indianapolis",
+      "Cloud, premise and hybrid voice from Mitel, RingCentral, 8x8 and Elevate.",
+      "Open the page",
+      "services/business-phone-systems.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Carrier reviews by industry",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "Manufacturing and logistics",
+      "Plants, warehouses and offices on different circuits can be compared in one pass.",
+      "How we set it up",
+      "industries/manufacturing-logistics.html"
+     ],
+     [
+      "Industry",
+      "Real estate",
+      "A brokerage with several branch offices can see whether each is paying for the right line.",
+      "How we set it up",
+      "industries/real-estate.html"
+     ],
+     [
+      "Industry",
+      "State and local government",
+      "Agencies with many small sites can look at broadband and fixed wireless alongside traditional circuits.",
+      "How we set it up",
+      "industries/government.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Request your complimentary carrier consultation",
+    "body": "List your locations and the services you pay for today. We will compare the carriers that serve each one.",
+    "submit": "Request the consultation",
+    "note": "A person in VAF's Indianapolis office replies. Or call (317) 634-2913."
+   }
+  ]
+ },
+ "services/cloud-communications.html": {
+  "title": "Cloud VoIP and PBX Systems in Indiana | VAF",
+  "description": "Cloud VoIP and PBX from VAF, powered by Mitel and 8x8, with no hardware to maintain, hands-on training and on-site engineers on go-live day.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Communication",
+    "heading": "Cloud VoIP & PBX Systems for Every Business",
+    "subhead": "Cloud VoIP and PBX systems for every business, enterprise calling features without hardware to buy, manage, or maintain.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-phone-1200.jpg",
+    "image_alt": "Cloud VoIP & PBX Systems for Every Business",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Communication",
+    "heading": "One platform for customers and employees",
+    "body": "VAF provides unified cloud communications platforms, powered by Mitel and 8x8. The aim is to break down the silos between sales, service, help desks and customers, so employee communication and customer interaction are not kept apart.",
+    "bullets": [
+     "Improve employee productivity and increase customer loyalty",
+     "Free up IT resources with maintenance-free communications and simple deployment",
+     "Unify communications and collaboration throughout the business",
+     "Bring smartphones and laptops into your communication strategy",
+     "Capture and use communications data for faster, better decisions",
+     "Address compliance and privacy requirements such as HIPAA, FISMA and Privacy Shield",
+     "Keep costs low with one simple-to-use, fast-to-deploy system"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Go-live support",
+    "heading": "Training and engineers on the day it goes live",
+    "body": "VAF provides support for every cloud deployment: hands-on end-user and administrator training, plus on-site engineering support on the day of go-live. VAF has been in the telecom business since 1983, with more than 4,000 systems deployed, and has held Mitel Gold status seven years running.",
+    "bullets": [
+     "End-user training before and after cutover",
+     "Administrator training for whoever manages the system",
+     "VAF engineers on site on go-live day",
+     "Ongoing support from VAF's own local team"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about cloud VoIP and PBX systems",
+    "items": [
+     [
+      "What is a cloud VoIP and PBX system?",
+      "It is a business phone system delivered from the cloud, with enterprise calling features and no hardware for you to buy, manage or maintain."
+     ],
+     [
+      "Whose platforms does VAF use for cloud communications?",
+      "VAF's cloud communications solutions are powered by Mitel and 8x8. VAF also offers RingCentral and Elevate cloud communications."
+     ],
+     [
+      "Does cloud communications support compliance requirements?",
+      "VAF says the solution helps organizations address compliance and privacy needs such as HIPAA, FISMA and Privacy Shield. Confirm specifics for your organization during design."
+     ],
+     [
+      "What happens on go-live day?",
+      "VAF provides on-site engineering support on the day of go-live, along with hands-on end-user and administrator training."
+     ],
+     [
+      "Can smartphones and laptops use the system?",
+      "Yes. VAF's solution integrates mobile devices such as smartphones and laptops into your communication strategy."
+     ],
+     [
+      "How does cloud communications reduce IT workload?",
+      "With maintenance-free communications and simple deployment, there is less equipment for your IT team to look after."
+     ],
+     [
+      "Is cloud always better than a premise phone system?",
+      "Not always. VAF designs cloud, premise or hybrid depending on how your teams work, and begins with the Technology Strength Assessment."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Compare your cloud calling options",
+    "intro": "Pages on the platforms and the reasons to move.",
+    "items": [
+     [
+      "Communication",
+      "Elevate AI Cloud Communications",
+      "Voice, video, chat, SMS and file collaboration on one cloud platform.",
+      "Open the page",
+      "services/elevate.html"
+     ],
+     [
+      "Information",
+      "Seven Reasons to Move Your PBX to the Cloud",
+      "What an on-premises PBX cannot do for remote and hybrid teams.",
+      "Open the page",
+      "services/switch-to-cloud.html"
+     ],
+     [
+      "Communication",
+      "Business Phone Systems Indianapolis",
+      "Cloud, premise and hybrid voice from Mitel, RingCentral, 8x8 and Elevate.",
+      "Open the page",
+      "services/business-phone-systems.html"
+     ],
+     [
+      "Communication",
+      "Enterprise Mobile App and PBX Features",
+      "Use a personal device on the business number without exposing a personal cell number.",
+      "Open the page",
+      "services/mobility-solutions.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Cloud voice by industry",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "Healthcare",
+      "Practices that need HIPAA-aware communications can plan for it in the design.",
+      "How we set it up",
+      "industries/healthcare.html"
+     ],
+     [
+      "Industry",
+      "Education",
+      "Districts with several buildings can run one platform instead of one system per site.",
+      "How we set it up",
+      "industries/education.html"
+     ],
+     [
+      "Industry",
+      "Insurance",
+      "Agencies with remote and hybrid staff can keep everyone on one number and directory.",
+      "How we set it up",
+      "industries/insurance.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Plan your move to cloud communications",
+    "body": "Tell us how many users and locations you have and what you run today.",
+    "submit": "Plan my move",
+    "note": "A person in the Indianapolis office replies. Phone (317) 634-2913."
+   }
+  ]
+ },
+ "services/call-center-services.html": {
+  "title": "Custom Call Center Solutions in Indiana | VAF",
+  "description": "VAF builds premise-based and cloud contact centers with skills-based routing, IVR, CRM integration, recording and workforce tools for customer support.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Communication",
+    "heading": "Custom Call Center Solutions",
+    "subhead": "Premise-based or cloud contact center platforms with omnichannel routing, supervisor tools and CRM integration, built around how your agents work.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-phone-1200.jpg",
+    "image_alt": "Call Center & Customer Support",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Communication",
+    "heading": "A contact center built around your customers",
+    "body": "VAF supports both premise-based and cloud contact center solutions. They manage contacts on voice, email and chat channels, capture every interaction, and are built on a platform designed for reliability and security. VAF positions them for organizations that must satisfy PCI, FISMA, Privacy Shield or HIPAA, with tailored BAAs available.",
+    "bullets": [
+     "Any Media. Voice, Web Chat, Email",
+     "Skills-Based Routing. Match the caller with the right agent",
+     "Agent Console. Web-based desktop requires no software plug-ins or downloads",
+     "IVR. Enable customers to help themselves",
+     "CRM Integrations with Salesforce, NetSuite, Zendesk, Microsoft Dynamics and many others",
+     "Dashboards and Reports. Real-time monitoring and historical reporting, including smartphone apps"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Communication",
+    "heading": "Tools for supervisors and agents",
+    "body": "A web-based interface lets agents work from anywhere while management and reporting stay centralized. Before an agent answers, the system assembles a snapshot of customer information, such as name, address and the product purchased, and shows it on the agent's screen.",
+    "bullets": [
+     "Call Recording, on demand or random, with easy search and replay",
+     "Internal chat for agents and supervisors",
+     "Quality Management and Workforce Management for scheduling and shifts",
+     "Email Interaction, managed alongside calls",
+     "Co-Browse, so agents see what the customer sees and can guide them",
+     "Screen Capture, so supervisors can see an agent's screen on a call, a good training tool",
+     "Dialer for sales and marketing campaigns",
+     "Analytics that go beyond traditional call center reporting"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about call center solutions",
+    "items": [
+     [
+      "What is a contact center solution from VAF?",
+      "It is a platform for managing customer contact on voice, email and web chat, with routing, self-service, recording, reporting and workforce tools. VAF supports both premise-based and cloud versions."
+     ],
+     [
+      "Which communication channels does it handle?",
+      "Voice, web chat and email, captured in one place so every interaction can be reviewed."
+     ],
+     [
+      "Does it integrate with my CRM?",
+      "VAF lists integrations with Salesforce, NetSuite, Zendesk and Microsoft Dynamics, and says all major CRM solutions are supported."
+     ],
+     [
+      "What is skills-based routing?",
+      "It matches each caller with the agent best suited to help, rather than the next one free."
+     ],
+     [
+      "Can supervisors coach agents in real time?",
+      "VAF lists call recording, internal chat, screen capture and quality management among the supervisor tools, so coaching can happen during and after calls."
+     ],
+     [
+      "What compliance needs can it meet?",
+      "VAF positions its contact center for organizations that must satisfy PCI, FISMA, Privacy Shield or HIPAA, with tailored business associate agreements available."
+     ],
+     [
+      "Do agents need to install software?",
+      "No. The agent console is a web-based desktop that needs no software plug-ins or downloads."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Related communication pages",
+    "intro": "Phone platforms and tools that connect to a contact center.",
+    "items": [
+     [
+      "Communication",
+      "Custom Call Recording Systems",
+      "OakSi RecordX recording for fixed line, mobile and VoIP in one solution.",
+      "Open the page",
+      "services/call-recording.html"
+     ],
+     [
+      "Communication",
+      "Cloud VoIP and PBX Systems",
+      "Enterprise calling features with no hardware to buy, manage or maintain.",
+      "Open the page",
+      "services/cloud-communications.html"
+     ],
+     [
+      "Communication",
+      "Elevate AI Cloud Communications",
+      "Voice, video, chat, SMS and file collaboration on one cloud platform.",
+      "Open the page",
+      "services/elevate.html"
+     ],
+     [
+      "Communication",
+      "Business Phone Systems Indianapolis",
+      "Cloud, premise and hybrid voice from Mitel, RingCentral, 8x8 and Elevate.",
+      "Open the page",
+      "services/business-phone-systems.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Contact centers by industry",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "Financial services",
+      "A member service line can route calls by skill and attach the member record as the call arrives.",
+      "How we set it up",
+      "industries/financial-services.html"
+     ],
+     [
+      "Industry",
+      "Healthcare",
+      "A patient access line can combine routing, IVR and recording with HIPAA planning.",
+      "How we set it up",
+      "industries/healthcare.html"
+     ],
+     [
+      "Industry",
+      "State and local government",
+      "A citizen service line can use web chat and email next to voice and report on all three.",
+      "How we set it up",
+      "industries/government.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Design your contact center",
+    "body": "Share your agent count, channels and CRM, and we will outline a premise or cloud design.",
+    "submit": "Design my contact center",
+    "note": "A person from the Indianapolis office replies. Phone (317) 634-2913."
+   }
+  ]
+ },
+ "services/conference-and-collaboration.html": {
+  "title": "Web and Audio Conferencing for Business | VAF",
+  "description": "Instant messaging, audio conferencing and desktop sharing over your business phone system, plug-and-play from Van Ausdall & Farrar in Indiana.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Communication",
+    "heading": "Web & Audio Conference Call Solutions for Business",
+    "subhead": "Organizations that provide their teams with advanced, easy-to-use business telephone systems find that information flows faster and more smoothly, with less miscommunication and few errors.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-phone-1200.jpg",
+    "image_alt": "Enterprise Web & Audio Conferencing",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Communication",
+    "heading": "Web, Audio and Instant Messaging",
+    "body": "With Van Ausdall & Farrar’s collaboration solutions, we combine voice and data over the enterprise phone system to make instant messaging, conference call solutions, and desktop sharing accessible across the entire organization. VAF’s collaboration solutions are “plug-and-play,” making the features simple to install and simple to use. In summary, VAF’s web, audio and instant messaging solutions provide:",
+    "bullets": [
+     "Ease of implementation",
+     "Easy to use",
+     "Instant messaging",
+     "Audio conferencing",
+     "Instant recording",
+     "Desktop sharing"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "What changes",
+    "heading": "Meetings that start faster and run better",
+    "body": "VAF describes the payoff of strong collaboration tools in plain terms. The benefits show up in how quickly people can reach each other and how well they work together once they have.",
+    "bullets": [
+     "Information flows faster and more smoothly, with less miscommunication",
+     "Distances disappear, so the area you can market to and support grows",
+     "Meetings become more effective and response times get faster",
+     "Instant messaging, conference calls and web desktop sharing sit in one place",
+     "Team dynamics grow stronger as people connect more easily"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "On the phone system",
+    "heading": "Voice and data over the same system",
+    "body": "VAF combines voice and data over the enterprise phone system, which is how instant messaging, conferencing and desktop sharing reach the whole organization. The features are plug-and-play, simple to install and simple to use.",
+    "bullets": [
+     "Ask whether your current phone system already includes conferencing",
+     "Decide who needs to host meetings and who only needs to join",
+     "Add recording when you want meetings kept",
+     "Extend the same tools to mobile devices if your staff travel"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about web and audio conferencing",
+    "items": [
+     [
+      "What does VAF's conferencing solution include?",
+      "Instant messaging, audio conferencing, instant recording and desktop sharing, delivered over the enterprise phone system."
+     ],
+     [
+      "Is it hard to install?",
+      "VAF describes its collaboration solutions as plug-and-play, simple to install and simple to use."
+     ],
+     [
+      "Do I need a separate conferencing service?",
+      "Not necessarily. VAF's approach combines voice and data on your phone system so conferencing and messaging come with it."
+     ],
+     [
+      "Can meetings be recorded?",
+      "Instant recording is one of the features VAF lists for its web, audio and instant messaging solutions."
+     ],
+     [
+      "Does this work for remote and hybrid teams?",
+      "That is a core use. VAF says distances disappear and teams can connect with messaging, conference calls and desktop sharing from different places."
+     ],
+     [
+      "How is this different from a video meeting platform?",
+      "VAF's offer here is built around voice, instant messaging and desktop sharing on the phone system. For video, chat and files together, see VAF's Elevate platform."
+     ],
+     [
+      "How much does conferencing cost?",
+      "It depends on your phone system and users, so VAF quotes after the free Technology Strength Assessment."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Related collaboration pages",
+    "intro": "Platforms that go further than audio and desktop sharing.",
+    "items": [
+     [
+      "Communication",
+      "Unified Communications and Collaboration",
+      "Phone, video, data and mobile applications synced in one place.",
+      "Open the page",
+      "services/unified-communications.html"
+     ],
+     [
+      "Communication",
+      "Elevate AI Cloud Communications",
+      "Voice, video, chat, SMS and file collaboration on one cloud platform.",
+      "Open the page",
+      "services/elevate.html"
+     ],
+     [
+      "Communication",
+      "Enterprise Mobile App and PBX Features",
+      "Use a personal device on the business number without exposing a personal cell number.",
+      "Open the page",
+      "services/mobility-solutions.html"
+     ],
+     [
+      "Communication",
+      "Custom Call Recording Systems",
+      "OakSi RecordX recording for fixed line, mobile and VoIP in one solution.",
+      "Open the page",
+      "services/call-recording.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Conferencing by industry",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "Engineering and construction",
+      "Project teams in the office and the field can review drawings by desktop sharing.",
+      "How we set it up",
+      "industries/engineering-construction.html"
+     ],
+     [
+      "Industry",
+      "Education",
+      "Administrators across several buildings can meet without driving between them.",
+      "How we set it up",
+      "industries/education.html"
+     ],
+     [
+      "Industry",
+      "Insurance",
+      "Agents and carrier contacts can walk through a file together on a shared screen.",
+      "How we set it up",
+      "industries/insurance.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Add conferencing to your phone system",
+    "body": "Tell us what phone system you run and how many people need to meet together.",
+    "submit": "Add conferencing",
+    "note": "A person from the Indianapolis office replies. Or call (317) 634-2913."
+   }
+  ]
+ },
+ "services/elevate.html": {
+  "title": "Elevate AI Cloud Communications | Van Ausdall & Farrar",
+  "description": "Elevate brings voice, video, chat, SMS and files into one cloud platform with AI call recaps, Microsoft Teams calling and 99.999% uptime. Via VAF.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Communication",
+    "heading": "Bring the Power of AI to Your Business Communications",
+    "subhead": "Elevate helps businesses work faster, respond better, and stay connected, anywhere work happens.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-phone-1200.jpg",
+    "image_alt": "Elevate AI Cloud Communications Platform",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Communication",
+    "heading": "About Elevate AI Cloud Communications Platform",
+    "body": "Elevate delivers an AI-powered communications experience that brings voice, video, chat, SMS, and file collaboration into one secure, cloud-based platform. Instead of juggling disconnected tools, your teams get a consistent communication experience that supports productivity, responsiveness, and growth.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Communication",
+    "heading": "Reliable Business Voice That Keeps Work Moving",
+    "body": "Give employees and customers clear, dependable conversations with a cloud-based phone system built for day-to-day business demands.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Communication",
+    "heading": "Face-to-Face Collaboration from Anywhere",
+    "body": "Built-in video conferencing makes it easy to connect visually, speed decision-making, and strengthen relationships.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Communication",
+    "heading": "Faster Team Communication",
+    "body": "Enable real-time collaboration with team chat that keeps conversations flowing across devices.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Communication",
+    "heading": "Secure File Collaboration",
+    "body": "Share and collaborate on files securely from any location with built-in file management and real-time backup and restore.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Communication",
+    "heading": "The Benefits of Elevate Business Communications",
+    "body": "Employees collaborate seamlessly from home, the office, or the field, on the devices they already use. With 99.999% uptime, Elevate helps ensure your business stays reachable and operational. Eliminate the expense and complexity of on-premises hardware. No equipment to buy, maintain, upgrade, or replace. Easily add users, features, or locations as your business grows, without disruption.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Communication",
+    "heading": "AI assistants for the team",
+    "body": "VAF's Elevate page describes the AI as personal productivity tools that handle time-consuming tasks, not a replacement for people.",
+    "bullets": [
+     "AI Call Recap and AI Meeting Recap turn calls and meetings into notes, action items and follow-ups",
+     "Elevate AI Assistant answers quick questions, creates content and translates text",
+     "AI-powered analysis searches recordings by sentiment and keywords in the contact center option"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Communication",
+    "heading": "Calling inside Microsoft Teams",
+    "body": "Elevate's cloud phone and SMS functions work directly inside Microsoft Teams, with no additional phone system license required, according to the page.",
+    "bullets": [
+     "Enterprise voice and SMS or MMS in one familiar Teams interface",
+     "Call queues, SMS, monitor, whisper and barge for busy teams",
+     "Desktop app for Mac or PC, mobile app for Apple or Android, and preconfigured desk phones"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Communication",
+    "heading": "Elevate with a contact center",
+    "body": "A unified cloud solution can put employee collaboration and customer engagement in one interface. The contact center software as a service option covers the customer side.",
+    "bullets": [
+     "Customer-centric engagement over voice, email or chat",
+     "Smarter call routing to reduce transfers",
+     "IVR and integrations for self-service",
+     "Real-time and historical reporting for managers",
+     "Intelligent archiving of calls, meetings, chats and SMS for compliance and dispute resolution"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about Elevate",
+    "items": [
+     [
+      "What is Elevate?",
+      "Elevate is an AI-powered cloud communications platform that brings voice, video, chat, SMS and file collaboration into one secure platform. VAF offers it as one of its cloud communications options."
+     ],
+     [
+      "What uptime does Elevate promise?",
+      "The page cites 99.999 percent uptime, which it says helps keep your business reachable and operational."
+     ],
+     [
+      "What does the AI actually do?",
+      "AI Call Recap and AI Meeting Recap create notes, action items and follow-ups. The Elevate AI Assistant answers questions, creates content and translates text."
+     ],
+     [
+      "Does Elevate work with Microsoft Teams?",
+      "Yes. The page says Elevate's cloud phone and SMS work directly inside Teams, with no additional phone system license required."
+     ],
+     [
+      "Do I need to buy phone hardware?",
+      "Not for the platform itself. The page says there is no on-premises equipment to buy, maintain, upgrade or replace, though preconfigured desk phones are available."
+     ],
+     [
+      "Which devices can use it?",
+      "A desktop app for Mac or PC, a mobile app for Apple or Android devices and preconfigured desk phones."
+     ],
+     [
+      "Can Elevate be used for a contact center?",
+      "Yes. Elevate can be paired with contact center software as a service for routing, IVR, reporting and outbound communication."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Compare with VAF's other platforms",
+    "intro": "Other ways VAF delivers cloud voice and collaboration.",
+    "items": [
+     [
+      "Communication",
+      "Cloud VoIP and PBX Systems",
+      "Enterprise calling features with no hardware to buy, manage or maintain.",
+      "Open the page",
+      "services/cloud-communications.html"
+     ],
+     [
+      "Communication",
+      "Unified Communications and Collaboration",
+      "Phone, video, data and mobile applications synced in one place.",
+      "Open the page",
+      "services/unified-communications.html"
+     ],
+     [
+      "Communication",
+      "Web and Audio Conferencing",
+      "Instant messaging, conference calling and desktop sharing over the business phone system.",
+      "Open the page",
+      "services/conference-and-collaboration.html"
+     ],
+     [
+      "Communication",
+      "Enterprise Mobile App and PBX Features",
+      "Use a personal device on the business number without exposing a personal cell number.",
+      "Open the page",
+      "services/mobility-solutions.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Elevate by industry",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "Healthcare",
+      "Care teams moving between sites can take their number with them on the mobile app.",
+      "How we set it up",
+      "industries/healthcare.html"
+     ],
+     [
+      "Industry",
+      "Manufacturing and logistics",
+      "Office and field staff can share one directory and presence on the same platform.",
+      "How we set it up",
+      "industries/manufacturing-logistics.html"
+     ],
+     [
+      "Industry",
+      "Real estate",
+      "Agents out of the office can answer the brokerage number from a phone or app.",
+      "How we set it up",
+      "industries/real-estate.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "See whether Elevate fits",
+    "body": "Share your headcount and current phone setup, and a VAF specialist will outline what Elevate would replace.",
+    "submit": "See if Elevate fits",
+    "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913."
+   }
+  ]
+ },
+ "services/voice-recognition.html": {
+  "title": "Winscribe Speech and Voice Recognition | VAF",
+  "description": "Winscribe front-end and server-side speech recognition from VAF: 300,000 active words, many vocabularies, and workflow for authors and transcriptionists.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Communication",
+    "heading": "Voice Recognition",
+    "subhead": "Winscribe provides flexible front end speech recognition and back end server processing. Server-based recognition is carried out after the author has completed the dictation, while front-end recognition is processed on each individual PC, so the author can view and edit the.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-phone-1200.jpg",
+    "image_alt": "Integrated Speech and Voice Recognition from Winscribe",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Communication",
+    "heading": "Integrated Speech Recognition",
+    "body": "Both front-end (client) and back-end (server) speech recognition can be combined and deployed in many different scenarios to suit individual requirements. Both combinations also retain all the workflow management features that make Winscribe so powerful. Authors can review their own reports before and/or after they are transcribed, or have them reviewed by others.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Communication",
+    "heading": "Client-side Speech Recognition",
+    "body": "Using Winscribe to process speech recognition locally allows authors to:",
+    "bullets": [
+     "Access and correct text immediately for on-the-spot sign-off and printing or emailing of reports",
+     "Review and complete reports online, even when transcriptionists are not available",
+     "Watch the recognition happen, or hide it until they wish to review it",
+     "Choose not to use recognition, so the dictation goes to manual typing",
+     "Format text as they dictate or use voice commands to edit",
+     "Make spoken changes and additions anywhere in the document",
+     "Use recognition offline and synchronize with the server later",
+     "Mark each report as corrected, partially corrected or uncorrected"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Communication",
+    "heading": "Server-side Speech Recognition",
+    "body": "The server-side solution is highly scalable. It runs on any size site, from one dictation server to several, and recognition is processed centrally before reports go to transcriptionists or back to the author.",
+    "bullets": [
+     "Authors require no extra training",
+     "Recognition integrates into your Winscribe solution",
+     "Transcription is handled in one place by professional transcriptionists",
+     "Large reports can be batch worked on a server and corrected internally or externally",
+     "Minimal impact on client PC performance, so no expensive upgrades to client hardware",
+     "Authors can use the wide range of input devices that work with Winscribe"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Communication",
+    "heading": "Features that raise recognition rates",
+    "body": "",
+    "bullets": [
+     "Over 300,000 active words in the dictionary",
+     "Vocabularies in US, UK, Australian, Indian and SE Asian English, German, Spanish, French, Italian, Dutch and more",
+     "Text to audio synchronization, with words in the text linked to words in the audio",
+     "Acoustic models refined for each individual author",
+     "Personal dictionaries authors can add to, train and manage",
+     "Macros that insert a commonly repeated block of text from one word or sentence",
+     "Microsoft Word templates that format corrected text and link to the job type",
+     "160 words per minute recognition rate",
+     "Scalable to over 120 million lines of recognized text per author"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about Winscribe speech recognition",
+    "items": [
+     [
+      "What is Winscribe speech recognition?",
+      "It is speech recognition built into the Winscribe dictation system. It can run on the author's PC, on a server after dictation, or both together."
+     ],
+     [
+      "What is the difference between front-end and server-side recognition?",
+      "Front-end recognition runs on each author's PC, so the author can view and edit the text as they dictate. Server-side recognition runs after the dictation is finished and sends reports to a transcriptionist or back to the author."
+     ],
+     [
+      "Do authors need training for server-side recognition?",
+      "No extra training is required for server-side recognition. Authors dictate as before."
+     ],
+     [
+      "Can authors use recognition offline?",
+      "Yes. With client-side recognition they can work offline and synchronize with the server later."
+     ],
+     [
+      "How large is the vocabulary?",
+      "More than 300,000 active words, with vocabularies in US, UK, Australian and Indian English, German, Spanish, French, Italian, Dutch and more."
+     ],
+     [
+      "What if there is no transcriptionist available?",
+      "Authors can review and complete reports online themselves, and can mark them corrected, partially corrected or uncorrected."
+     ],
+     [
+      "Who has VAF served with dictation?",
+      "VAF says its dictation, voice processing and speech recognition work goes back to 1914. For its first 70 years it served healthcare and legal exclusively."
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Talk to VAF about speech recognition",
+    "body": "Tell us how many authors you have and whether your reports are medical, legal or general business.",
+    "submit": "Talk about speech recognition",
+    "note": "A person in the Indianapolis office replies. Phone (317) 634-2913."
+   }
+  ]
+ },
+ "services/state-of-the-art-voice-data-communication-systems.html": {
+  "title": "Voice and Data Communication Systems | VAF Indiana",
+  "description": "VAF designs voice and data networks from your current network and billing history, with ADTRAN, Fortinet, Windstream and AT&T relationships.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Communication",
+    "heading": "State-of-the-Art Voice & Data Communication Systems",
+    "subhead": "Van Ausdall & Farrar delivers the best voice and data communications systems with the best value for all your managed internet, private data system and voice transport needs.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-phone-1200.jpg",
+    "image_alt": "State-of-the-Art Voice & Data Communication Systems",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Communication",
+    "heading": "About State-of-the-Art Voice & Data Communication Systems",
+    "body": "Van Ausdall & Farrar delivers the best voice and data communications systems with the best value for all your managed internet, private data system and voice transport needs. We will analyze your current computer network and billing history to customize the most cost effective, innovative and reliable networking infrastructure solution that will keep your communications system user-friendly and secure.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Communication",
+    "heading": "Relationships behind the design",
+    "body": "VAF puts its relationships with communications and data providers to work for customers. It describes itself as one of only a few Elite ADTRAN Triple Crown Dealers in the nation, uses Fortinet after studying next generation firewall and unified threat management leaders, and works with Windstream and AT&T for carrier services.",
+    "bullets": [
+     "ADTRAN for wired switching, routing and wireless networks",
+     "Fortinet for intrusion prevention, antivirus, anti-spam and botnet protection",
+     "Windstream, a facilities-based CLEC and ILEC, for advanced network communications",
+     "AT&T for IP-based communications and mobile services"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Communication",
+    "heading": "Today’s Business Communication Is Mobile",
+    "body": "Since wireless connectivity is now the access of choice, we harness the power of ADTRAN’s virtualized wireless LAN solutions and Wi-Fi services, providing large enterprise, small and medium business in education, healthcare, hospitality, government, retail and others with:",
+    "bullets": [
+     "Seamless cost effective scaling",
+     "Optimized performance",
+     "Virtualized, cloud-based and enabled management and control",
+     "Edge enforced network security",
+     "Lower total cost of ownership (TCO)",
+     "Pro-Cloud ADTRAN Managed Service (available)"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Communication",
+    "heading": "Voice and data areas of expertise",
+    "body": "",
+    "bullets": [
+     "Network Infrastructure: ADTRAN's product line supports wired switching, routing and wireless data networks",
+     "Network Security and Secure Remote Access: Fortinet's platform protects users, networks, data centers and the cloud",
+     "Voice and Data Circuits: Windstream and AT&T, including Level 3 Voice Complete",
+     "Wireless Networking: Bluesocket vWLAN, a cloud based virtualized wireless LAN, and ADTRAN ProCloud Wi-Fi services with monitoring, moves, adds and changes, and monthly reports"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about voice and data communication systems",
+    "items": [
+     [
+      "What does VAF start with when designing a voice and data system?",
+      "It analyzes your current computer network and billing history, then customizes a cost-effective, reliable network infrastructure that keeps communications user-friendly and secure."
+     ],
+     [
+      "Which manufacturers and carriers does VAF work with here?",
+      "ADTRAN for switching, routing and wireless, Fortinet for security, and Windstream and AT&T for carrier services."
+     ],
+     [
+      "What is the ADTRAN Triple Crown relationship?",
+      "VAF describes itself as one of only a few Elite ADTRAN Triple Crown Dealers in the nation."
+     ],
+     [
+      "Does VAF provide managed Wi-Fi?",
+      "VAF lists ADTRAN ProCloud Wi-Fi services, which include proactive network monitoring, moves, adds and changes, and monthly management reports, and says a Pro-Cloud ADTRAN managed service is available."
+     ],
+     [
+      "Which industries does the wireless offer serve?",
+      "Education, healthcare, hospitality, government and retail, among others, for enterprises of any size."
+     ],
+     [
+      "Does the design include security?",
+      "Yes. Fortinet's platform covers network security and secure remote access for users, networks, data centers and the cloud."
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Review your voice and data design",
+    "body": "Send us your network summary and recent carrier bills, and we will review them together.",
+    "submit": "Review my design",
+    "note": "A person in the Indianapolis office replies. Or call (317) 634-2913."
+   }
+  ]
+ },
+ "services/iphone-scanning.html": {
+  "title": "Scan Multi-Page PDFs with Your iPhone | VAF",
+  "description": "How to scan a multi-page document to PDF with the iPhone Notes app in under a minute, plus when to use a real office scanner. From VAF.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Communication",
+    "heading": "Scan Documents with Your iPhone",
+    "subhead": "Working away from the office and need to send a signed page? The Notes app on your iPhone can scan a multi-page PDF in under a minute.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-phone-1200.jpg",
+    "image_alt": "Scan Documents with Your i Phone",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Communication",
+    "heading": "Why this matters for remote work",
+    "body": "A photo of a page is hard to read and awkward to send. The built-in Notes app does better: it scans several pages into one PDF in a standard document shape and straightens the edges for you. The page's author, a thirty-year IT veteran, learned it from his teenage daughter and shared the steps.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Communication",
+    "heading": "How to scan with Apple's Notes app",
+    "body": "Make sure the app is up to date, then follow these steps. A three page PDF reached the author's Dropbox in 28 seconds.",
+    "bullets": [
+     "Open Notes, create a new note and touch the camera icon",
+     "Choose Scan Documents",
+     "Stack your pages on a flat surface in a contrasting color, such as white paper on a wooden table, so the app can find the page edges",
+     "The app scans each page as you line it up, and a page turns yellow when its boundaries are detected",
+     "When you finish, the multi-page document appears on screen",
+     "Use the share icon to send the PDF to a cloud file store or email it"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about scanning with an iPhone",
+    "items": [
+     [
+      "How do I scan a multi-page document with an iPhone?",
+      "Open the Notes app, start a new note, touch the camera icon and choose Scan Documents. The app captures each page and saves them as one multi-page PDF."
+     ],
+     [
+      "Do I need to download a special app?",
+      "No. Notes is a standard pre-installed iPhone app. If it is missing, you can install it from the App Store."
+     ],
+     [
+      "How do I get cleaner scans?",
+      "Put the pages on a flat surface in a contrasting color so the app can detect the edges. The app straightens each page automatically."
+     ],
+     [
+      "Where can I send the scanned PDF?",
+      "To a cloud file store such as Dropbox, or by email. Use the output icon in the upper right."
+     ],
+     [
+      "Can I scan another way on an iPhone?",
+      "Yes. The Files app can create a similar scanned document."
+     ],
+     [
+      "When should I use an office scanner instead?",
+      "For regular or large volumes, exception documents like receipts or patient records, or anything needing indexing, a desktop or production scanner is faster and more reliable. VAF sells workgroup, low volume and high volume scanners."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "When a phone is not enough",
+    "intro": "VAF pages for scanning and document workflow at office scale.",
+    "items": [
+     [
+      "Process",
+      "Document Scanning",
+      "Workgroup, low volume and high volume scanners for any document size.",
+      "Open the page",
+      "services/document-scanning.html"
+     ],
+     [
+      "Process",
+      "Document Management and Workflow",
+      "OnBase and Square 9 Smart Search for line-of-business integration.",
+      "Open the page",
+      "services/document-management-workflow.html"
+     ],
+     [
+      "Process",
+      "Document Conversion",
+      "Closed-loop scanning in the secure Document Conversion Center.",
+      "Open the page",
+      "services/document-conversion.html"
+     ],
+     [
+      "Process",
+      "Document Management",
+      "Forms processing, content management, scanning and finishing from one team.",
+      "Open the page",
+      "services/document-management.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Where quick phone scans help",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "Real estate",
+      "An agent can scan a signed page at a showing and send it back to the office.",
+      "How we set it up",
+      "industries/real-estate.html"
+     ],
+     [
+      "Industry",
+      "Engineering and construction",
+      "A field supervisor can scan a signed ticket from the job site.",
+      "How we set it up",
+      "industries/engineering-construction.html"
+     ],
+     [
+      "Industry",
+      "Education",
+      "A teacher or parent can scan homework or a permission slip in one step.",
+      "How we set it up",
+      "industries/education.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Need a real scanning solution?",
+    "body": "If phone scans are not keeping up with your paperwork, tell us your volumes and we will suggest a scanner or workflow.",
+    "submit": "Ask about scanners",
+    "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913."
+   }
+  ]
+ },
+ "services/enterprise-digital-dictation-solutions.html": {
+  "title": "Enterprise Digital Dictation Solutions | VAF",
+  "description": "Winscribe, Philips and Olympus digital dictation from VAF, an authorized partner and in-warranty repair center, in business since 1914 in Indiana.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Communication",
+    "heading": "Enterprise Digital Dictation Solutions",
+    "subhead": "Authorized partner for Winscribe, Philips and Olympus dictation, and an in-warranty repair center for Olympus and Grundig.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-phone-1200.jpg",
+    "image_alt": "Enterprise Digital Dictation",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Communication",
+    "heading": "Dictation is where VAF began",
+    "body": "In 1914 Oscar K. Van Ausdall was chosen as an Edison Business Phonograph dealer for Indiana, and the Thomas Edison Company invented the wax cylinder dictating machine. More than a century later, dictation is still part of the company, now as digital systems, mobile apps and speech recognition.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Communication",
+    "heading": "Authorized solutions partner",
+    "body": "VAF sells and supports dictation hardware and software from these brands.",
+    "bullets": [
+     "Winscribe",
+     "Philips",
+     "Olympus",
+     "VIQ"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Communication",
+    "heading": "Philips dictation and recording",
+    "body": "",
+    "bullets": [
+     "Mobile dictation with Speech Pad",
+     "Desktop dictation",
+     "Meeting recording with Voice Tracers",
+     "Transcription"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Communication",
+    "heading": "Olympus professional dictation",
+    "body": "Olympus offers dictation overviews for professional, healthcare and legal users.",
+    "bullets": [
+     "Professional dictation overview",
+     "Health care dictation",
+     "Legal dictation"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Communication",
+    "heading": "Grundig Business Systems",
+    "body": "VAF is an authorized in-warranty repair center for Olympus and Grundig dictation equipment.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Choosing a system",
+    "heading": "Hardware, software or both",
+    "body": "Dictation projects usually involve more than the recorder. Decide where authors will dictate, where files will go and who types the reports.",
+    "bullets": [
+     "Standalone devices replace unreliable tapes",
+     "A server and workflow system route jobs to authors and transcriptionists",
+     "Speech recognition can reduce typing for authors who review their own text",
+     "Outsourced transcription covers overflow, vacations and peaks"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Related VAF services",
+    "heading": "Where dictation connects to the rest of VAF",
+    "body": "Dictation sits in VAF's communication pillar and links to voice processing, speech recognition and transcription services. Records created from dictation often need storing and retrieving, which is where content management comes in.",
+    "bullets": [
+     "Voice recognition with Winscribe, front end and server side",
+     "Transcription outsourcing through Speech Motion",
+     "Cloud dictation options by industry",
+     "Document management for the finished reports"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about enterprise digital dictation",
+    "items": [
+     [
+      "Which dictation brands does VAF sell?",
+      "VAF is an authorized solutions partner for Winscribe, Philips, Olympus and VIQ."
+     ],
+     [
+      "Does VAF repair dictation equipment?",
+      "VAF is an authorized in-warranty repair center for Olympus and Grundig dictation equipment."
+     ],
+     [
+      "Why does VAF know dictation so well?",
+      "VAF began in 1914 as an Edison Business Phonograph dealer, and the Thomas Edison Company invented the wax cylinder dictating machine."
+     ],
+     [
+      "What kinds of dictation are available?",
+      "Mobile dictation, desktop dictation, meeting recording and transcription, plus professional dictation systems for healthcare and legal use."
+     ],
+     [
+      "Can dictation be turned into text automatically?",
+      "Yes. See VAF's voice recognition page for Winscribe speech recognition, which can run on the author's PC or on a server."
+     ],
+     [
+      "What about transcription?",
+      "VAF lists transcription among its Philips offerings and also offers outsourced transcription through Speech Motion."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "More dictation and voice pages",
+    "intro": "Related pages for speech, transcription and industry dictation.",
+    "items": [
+     [
+      "Communication",
+      "Voice Recognition",
+      "Winscribe front-end and server-side speech recognition.",
+      "Open the page",
+      "services/voice-recognition.html"
+     ],
+     [
+      "Communication",
+      "Outsourced Dictation and Transcription",
+      "Transcription handled by Speech Motion, from overflow to a total outsource.",
+      "Open the page",
+      "services/transcription-services.html"
+     ],
+     [
+      "Process",
+      "Voice Processing Solutions",
+      "Digital dictation, speech recognition and transcription workflows.",
+      "Open the page",
+      "services/voice-processing.html"
+     ],
+     [
+      "Information",
+      "Cloud Voice and Text by Industry",
+      "Dictation and transcription options sorted by healthcare, legal and court use.",
+      "Open the page",
+      "services/cloud-based-solutions.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Dictation by industry",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "Healthcare",
+      "Clinicians can dictate notes on a mobile device or desktop and have them routed for typing.",
+      "How we set it up",
+      "industries/healthcare.html"
+     ],
+     [
+      "Industry",
+      "State and local government",
+      "Legal and public safety offices can record statements and have them transcribed.",
+      "How we set it up",
+      "industries/government.html"
+     ],
+     [
+      "Industry",
+      "Insurance",
+      "Adjusters can dictate field notes and have reports prepared back at the office.",
+      "How we set it up",
+      "industries/insurance.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Plan your dictation system",
+    "body": "Tell us how many authors you have and whether you need hardware, software or transcription.",
+    "submit": "Plan dictation",
+    "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913."
+   }
+  ]
+ },
+ "services/customer-training-videos.html": {
+  "title": "Mitel Connect Client Training Videos | VAF",
+  "description": "Short Quick Clips from Van Ausdall & Farrar that teach the Mitel Connect client: transferring calls, voicemail, conferencing and more.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Communication",
+    "heading": "Customer Training Videos",
+    "subhead": "Van Ausdall & Farrar’s Customer Training Quick Clips",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-phone-1200.jpg",
+    "image_alt": "Mitel Connect Client Training Videos",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Communication",
+    "heading": "Quick Clips: learn only what you need",
+    "body": "These clips help new Mitel Connect Client users get up and running quickly. Each is a short, topic-based lesson, so you watch the one or two you need instead of a long course. VAF says features such as call history, dialing, presence, IM and audio or web collaboration have been proven to save colleagues 30 to 45 minutes a day.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Communication",
+    "heading": "What is in the series",
+    "body": "Start with the complete course or pick a single topic. VAF welcomes suggestions for new videos through your VAF project manager.",
+    "bullets": [
+     "Complete course",
+     "Intro and basics",
+     "Answering a call",
+     "Transferring a call",
+     "Recents list",
+     "Directory and people list",
+     "Create a conference within Outlook",
+     "Add a participant to a conference",
+     "Voicemails",
+     "Set a voicemail password and greeting",
+     "Recording custom greetings",
+     "Set a new client password"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Getting the most from the clips",
+    "heading": "A short way to onboard new users",
+    "body": "Clips work best when they replace guesswork on day one. Share a few with each new hire and keep the rest for when a question comes up.",
+    "bullets": [
+     "New hires start with the intro and basics",
+     "Receptionists and assistants watch call transfer and directory lessons",
+     "Managers watch the conference lessons",
+     "Everyone sets a client password and voicemail greeting"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "After the clips",
+    "heading": "Where to turn when a clip does not answer it",
+    "body": "If a clip does not cover your question, existing customers can use the Client Service Center, where the Customer Care Center responds within 24 hours, Monday through Friday, 7:00am to 5:00pm. Your VAF project manager can also pass on a suggestion for a new video.",
+    "bullets": [
+     "Request support through the Client Service Center",
+     "Ask your VAF project manager for a new clip",
+     "Review the downloads page for drivers and manuals",
+     "Explore the Mitel phone systems VAF installs"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about the Mitel Connect training clips",
+    "items": [
+     [
+      "What are the Customer Training Quick Clips?",
+      "They are short topic-based videos from VAF that teach the Mitel Connect Client, so new users can get started quickly."
+     ],
+     [
+      "Who are the clips for?",
+      "Anyone using the Mitel Connect desktop client, from new hires to long-time staff who need a refresher on one feature."
+     ],
+     [
+      "What topics do the clips cover?",
+      "The series includes intro and basics, answering and transferring calls, recents, directory, voicemail, greetings, passwords and conferencing within Outlook."
+     ],
+     [
+      "Why use short clips instead of a full course?",
+      "You learn only what you need, at your own pace and on your own schedule. A complete course is also available."
+     ],
+     [
+      "What productivity gain does VAF claim for unified communications?",
+      "VAF says call history, dialing, presence, IM and audio or web collaboration have been proven to save colleagues 30 to 45 minutes a day."
+     ],
+     [
+      "Can I suggest a new training video?",
+      "Yes. Contact your VAF project manager with your suggestion."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "More for Mitel and phone users",
+    "intro": "Support and system pages that sit next to the training clips.",
+    "items": [
+     [
+      "Communication",
+      "Business Phone Systems Indianapolis",
+      "Cloud, premise and hybrid voice from Mitel, RingCentral, 8x8 and Elevate.",
+      "Open the page",
+      "services/business-phone-systems.html"
+     ],
+     [
+      "Communication",
+      "Unified Communications and Collaboration",
+      "Phone, video, data and mobile applications synced in one place.",
+      "Open the page",
+      "services/unified-communications.html"
+     ],
+     [
+      "Communication",
+      "Enterprise Mobile App and PBX Features",
+      "Use a personal device on the business number without exposing a personal cell number.",
+      "Open the page",
+      "services/mobility-solutions.html"
+     ],
+     [
+      "Support",
+      "Client Service Center",
+      "Support requests, supplies and the Customer Care Center number.",
+      "Open the page",
+      "support.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Training for every kind of team",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "Education",
+      "Front-office staff can learn transfers and voicemail before a new school year.",
+      "How we set it up",
+      "industries/education.html"
+     ],
+     [
+      "Industry",
+      "Healthcare",
+      "New clinic hires can learn call handling without pulling a colleague away from the desk.",
+      "How we set it up",
+      "industries/healthcare.html"
+     ],
+     [
+      "Industry",
+      "State and local government",
+      "Departments with turnover can point new staff to short lessons.",
+      "How we set it up",
+      "industries/government.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Need training beyond the clips?",
+    "body": "Tell us which phone system you use and what your team is stuck on.",
+    "submit": "Ask about training",
+    "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913."
+   }
+  ]
+ },
+ "services/cloud-based-solutions.html": {
+  "title": "Cloud Dictation and Transcription by Industry | VAF",
+  "description": "Cloud dictation, speech recognition and transcription options for healthcare, legal and court users, from Van Ausdall & Farrar in Indiana.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Information",
+    "heading": "Cloud Based Voice & Text Solutions by Industry",
+    "subhead": "Dictation, speech recognition and transcription options sorted by industry: healthcare, legal, business and courts.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-soc-1200.jpg",
+    "image_alt": "Cloud Voice & Text",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "Cloud voice and text, sorted by who uses it",
+    "body": "VAF's Cloud Voice and Text page groups dictation solutions by industry. Healthcare, legal, and business and court users each have their own mix of software, services and case studies.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Information",
+    "heading": "Healthcare",
+    "body": "Dictation systems for clinicians, with the recognition and transcription services behind them.",
+    "bullets": [
+     "Dictation solutions and systems",
+     "Front end and back end recognition with M*Modal and SpeechMotion",
+     "Transcription outsourcing",
+     "Medical coding",
+     "Case study: Riverside Regional Medical Center",
+     "Specification sheets: M*Modal Dictation, Medical Coding and Transcription Service, and SpeechMotion Medical Dictation"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "Legal",
+    "body": "Dictation for law firms, as a cloud based solution or with complete hardware and software.",
+    "bullets": [
+     "Dictation solutions and systems",
+     "Cloud based solution",
+     "Complete hardware and software",
+     "Software: Dragon NaturallySpeaking transcription, Winscribe digital, mobile and speech recognition, and VIQ Capture Management",
+     "Law firm case studies: Butler Snow, Isaac Jaroslawicz, Krieg DeVault and Locke Reynolds"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Information",
+    "heading": "Business and court solutions",
+    "body": "Dictation and recording options that go beyond a single office.",
+    "bullets": [
+     "Dictation solutions and systems",
+     "Law firm workflows",
+     "Courtroom recording and smart backup",
+     "Public address",
+     "Transcription service",
+     "Software: Winscribe digital dictation and speech recognition, VIQ Capture Management, VIQ Courts and VIQ Police",
+     "Case studies: Ice Miller, LV Lomas and Toll Brothers"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Choosing an option",
+    "heading": "Cloud, front end or back end",
+    "body": "Healthcare and legal buyers usually weigh the same three questions before they choose.",
+    "bullets": [
+     "Front-end recognition runs on the author's PC and shows text as they speak",
+     "Back-end recognition runs on a server after dictation, with a transcriptionist reviewing",
+     "Cloud delivery removes the dictation server from your own closet",
+     "Outsourced transcription can sit behind any of the three"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Related VAF dictation pages",
+    "heading": "Where to go for hardware, recognition and transcription",
+    "body": "This page sorts by industry. The pages below go deeper on products. VAF's dictation history goes back to 1914, when it began as an Edison Business Phonograph dealer.",
+    "bullets": [
+     "Enterprise digital dictation for Winscribe, Philips and Olympus devices",
+     "Voice recognition for Winscribe front end and server side",
+     "Transcription services through Speech Motion",
+     "Voice processing for the full workflow"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about cloud dictation and transcription",
+    "items": [
+     [
+      "What is Cloud Voice and Text at VAF?",
+      "It is VAF's page of dictation, recognition and transcription solutions grouped by industry, including cloud based options."
+     ],
+     [
+      "Which industries are covered?",
+      "Healthcare, legal, and business and courts."
+     ],
+     [
+      "Which healthcare products does VAF list?",
+      "M*Modal dictation, medical coding and transcription service, and SpeechMotion medical dictation, along with front end and back end recognition."
+     ],
+     [
+      "What does VAF offer legal customers?",
+      "Dictation as a cloud based solution or complete hardware and software, with software such as Dragon NaturallySpeaking, Winscribe and VIQ."
+     ],
+     [
+      "Does VAF support courtroom recording?",
+      "VAF lists courtroom recording and smart backup, plus VIQ Courts and VIQ Police software, under business and court solutions."
+     ],
+     [
+      "Are there customer case studies?",
+      "The page links case studies for a healthcare customer, several law firms and business users such as Ice Miller, LV Lomas and Toll Brothers."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Related dictation and voice pages",
+    "intro": "Product pages that go deeper than the industry view.",
+    "items": [
+     [
+      "Communication",
+      "Enterprise Digital Dictation",
+      "Winscribe, Philips and Olympus dictation hardware and software.",
+      "Open the page",
+      "services/enterprise-digital-dictation-solutions.html"
+     ],
+     [
+      "Communication",
+      "Voice Recognition",
+      "Winscribe front-end and server-side speech recognition.",
+      "Open the page",
+      "services/voice-recognition.html"
+     ],
+     [
+      "Communication",
+      "Outsourced Dictation and Transcription",
+      "Transcription handled by Speech Motion, from overflow to a total outsource.",
+      "Open the page",
+      "services/transcription-services.html"
+     ],
+     [
+      "Process",
+      "Voice Processing Solutions",
+      "Digital dictation, speech recognition and transcription workflows.",
+      "Open the page",
+      "services/voice-processing.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Dictation by industry",
+    "intro": "Industry pages that show how VAF approaches each.",
+    "items": [
+     [
+      "Industry",
+      "Healthcare",
+      "Clinical documentation is the most common reason healthcare buyers look at cloud dictation.",
+      "How we set it up",
+      "industries/healthcare.html"
+     ],
+     [
+      "Industry",
+      "State and local government",
+      "Courts and public safety agencies can look at recording and transcription options.",
+      "How we set it up",
+      "industries/government.html"
+     ],
+     [
+      "Industry",
+      "Insurance",
+      "Claims and underwriting teams can dictate notes and route them for transcription.",
+      "How we set it up",
+      "industries/insurance.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Find the right dictation setup",
+    "body": "Tell us your industry, number of authors and whether you want cloud, premise or outsourced transcription.",
+    "submit": "Find my setup",
+    "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913."
+   }
+  ]
+ },
+ "services/managed-mail-centers.html": {
+  "title": "Managed Mail Center Services in Indiana | VAF",
+  "description": "VAF helps Indiana organizations receive and distribute mail on time, control postage spend and track parcels in and out, with the right technology.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Process",
+    "heading": "We Ensure That Your Mail Reaches Its Destination",
+    "subhead": "Timely, accurate and cost effective mail receipt and distribution, with postage spend assessed and controlled and parcels accounted for.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-conversion-1200.jpg",
+    "image_alt": "Managed Mail Center",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Process",
+    "heading": "What a managed mail center does",
+    "body": "VAF works with organizations to improve how mail is received and distributed, assesses and controls postage spend, and recommends the right technology. Sharing best practices often improves productivity and efficiency in the mail center operations VAF serves.",
+    "bullets": [
+     "Receipt and distribution of incoming mail",
+     "Postage assessment and control",
+     "Technology recommendations for the mail room",
+     "Best practices shared from other mail center operations"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Process",
+    "heading": "Parcels and packages in and out",
+    "body": "VAF helps organizations receive, distribute and account for parcels and packages entering and leaving their premises, track the costs of those shipments, and choose technology that makes shipping and receiving more efficient.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Process",
+    "heading": "What to bring to a first conversation",
+    "body": "A short list of facts makes the first mail center review much more useful.",
+    "bullets": [
+     "Your current monthly postage spend",
+     "Roughly how much mail and how many parcels arrive and leave each day",
+     "Who handles distribution today",
+     "The carriers and equipment you use now"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Where savings come from",
+    "heading": "Postage and shipping costs are rarely tracked closely",
+    "body": "VAF's approach is to track postage and shipping costs in detail, assess how mail is delivered and distributed, and recommend the technology that reduces loss and claims and increases savings.",
+    "bullets": [
+     "Know what you spend on postage before you try to cut it",
+     "Look at the delivery and distribution path, not only the postage meter",
+     "Reduce lost items and claims with better tracking",
+     "Choose equipment that matches your real volume"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Part of managed services",
+    "heading": "Mail as one piece of office services",
+    "body": "Mail, shipping and receiving is one of the office services in VAF's facilities management program, next to print room management, scanning and archiving, and visitor and conference room management. VAF's business process pages treat them as parts of the same flow of information.",
+    "bullets": [
+     "Pair mail service with a managed print center",
+     "Scan incoming paper so it can be routed electronically",
+     "Add visitor screening for the front desk",
+     "Review the whole flow through a business process review"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about managed mail center services",
+    "items": [
+     [
+      "What does a managed mail center do?",
+      "It improves how an organization receives and distributes mail, controls postage spend and makes sure parcels and packages are accounted for."
+     ],
+     [
+      "Does VAF help control postage costs?",
+      "Yes. VAF assesses and controls postage spend and tracks the costs associated with shipments."
+     ],
+     [
+      "Can VAF help with parcels and packages?",
+      "VAF assists with the receipt, distribution and accountability of parcels and packages entering and leaving your premises."
+     ],
+     [
+      "What technology does a mail center use?",
+      "VAF recommends technology suited to your volume, aiming for equipment that minimizes loss and claims and maximizes savings."
+     ],
+     [
+      "Is mail service part of facilities management?",
+      "Yes. Mail, shipping and receiving is one of the office services VAF manages under its facilities management program."
+     ],
+     [
+      "How do I find out what a mail center would save?",
+      "Contact VAF for a review. VAF can assess your current mail and postage costs and recommend changes."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Other office services from VAF",
+    "intro": "Process pages that connect with mail and shipping.",
+    "items": [
+     [
+      "Process",
+      "Facilities Management Solutions",
+      "Print room, mail, scanning and visitor management run for you.",
+      "Open the page",
+      "services/facilities-management.html"
+     ],
+     [
+      "Process",
+      "Managed Print Center",
+      "Staffed in-house copy centers with a focus on output quality.",
+      "Open the page",
+      "services/managed-print-centers.html"
+     ],
+     [
+      "Process",
+      "Document Scanning",
+      "Workgroup, low volume and high volume scanners for any document size.",
+      "Open the page",
+      "services/document-scanning.html"
+     ],
+     [
+      "Process",
+      "Business Process Solutions",
+      "Best-site service for mail, print, facilities and information flow.",
+      "Open the page",
+      "services/business-process-solutions.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Mail center needs by industry",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "State and local government",
+      "Offices with high volumes of notices and forms can look closely at postage.",
+      "How we set it up",
+      "industries/government.html"
+     ],
+     [
+      "Industry",
+      "Financial services",
+      "Banks and credit unions that send regular member mail can review how it is processed.",
+      "How we set it up",
+      "industries/financial-services.html"
+     ],
+     [
+      "Industry",
+      "Education",
+      "Districts and colleges that handle large mailings can track what each department spends.",
+      "How we set it up",
+      "industries/education.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Review your mail center",
+    "body": "Share your mail and parcel volumes and the equipment you use today.",
+    "submit": "Review my mail center",
+    "note": "A person from VAF's Indianapolis office replies. Phone (317) 634-2913."
+   }
+  ]
+ },
+ "services/facilities-management.html": {
+  "title": "Facilities Management Solutions in Indiana | VAF",
+  "description": "VAF manages the print room, mail, scanning and archiving, and visitor and conference room services so your team can stay focused on its core work.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Process",
+    "heading": "Facilities Management Solutions",
+    "subhead": "Outsource the day-to-day office services, print, mail, scanning and visitor management, to a team that does them for a living.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-conversion-1200.jpg",
+    "image_alt": "Facilities Management",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Process",
+    "heading": "Office services that run the business",
+    "body": "Companies of all sizes struggle with the daily office services that keep the business operating. Some manage them in-house and some outsource them to VAF. Printing, scanning, mail processing and imaging are core to VAF's managed services program.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Process",
+    "heading": "What outsourcing office services gets you",
+    "body": "",
+    "bullets": [
+     "Leave it to the experts: staying on top of technologies and processes is a full-time job, so your people can focus on the core business",
+     "Streamlined processes: access to the best technology and processes, from a team with decades of experience and continuous improvement",
+     "Reduce turnover and increase efficiency: dedicated managed services keep your resources on core business needs"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Process",
+    "heading": "Services included",
+    "body": "",
+    "bullets": [
+     "Print room management",
+     "Mail, shipping and receiving",
+     "Scanning and archiving",
+     "Visitor and conference room management"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Process",
+    "heading": "Start with a no-obligation estimate",
+    "body": "Speak with a VAF expert about the services you want to hand off. The project estimate carries no obligation.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Why outsource",
+    "heading": "Your best people should not be running the copy room",
+    "body": "Office services take real time and attention. When they are handed to a dedicated team, staff stop splitting their day between their own jobs and the mail, scanning and printing that surround them.",
+    "bullets": [
+     "Fewer interruptions for the people doing core work",
+     "Consistent service even when someone is out",
+     "Technology kept current without your IT team's time",
+     "One partner accountable for the whole set of services"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "How it connects",
+    "heading": "Facilities management and the rest of VAF's process services",
+    "body": "Facilities management brings together services VAF also offers on their own: managed print centers, managed mail centers and document scanning. Business process solutions then connect them so information moves from paper to people without gaps.",
+    "bullets": [
+     "Managed print center for centralized copying",
+     "Managed mail center for mail and parcels",
+     "Scanning and archiving for paper records",
+     "Receptionist and visitor screening for the front desk"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about facilities management",
+    "items": [
+     [
+      "What is facilities management at VAF?",
+      "It is VAF's program for running the day-to-day office services of a business, such as printing, scanning, mail processing and imaging."
+     ],
+     [
+      "Which services are included?",
+      "Print room management, mail, shipping and receiving, scanning and archiving, and visitor and conference room management."
+     ],
+     [
+      "Why outsource office services?",
+      "VAF says dedicated managed services lower turnover and raise efficiency because your own resources stay focused on core business needs."
+     ],
+     [
+      "Can we keep some services in-house?",
+      "Yes. VAF notes that some companies manage office services themselves and some outsource their critical business processes to VAF."
+     ],
+     [
+      "How do I get an estimate?",
+      "Speak with a VAF expert. The project estimate carries no obligation."
+     ],
+     [
+      "Is this connected to managed print?",
+      "Yes. Print room management is one of the services, and VAF's managed print, copier and scanning offers feed into it."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Services that make up facilities management",
+    "intro": "The individual process pages behind the program.",
+    "items": [
+     [
+      "Process",
+      "Managed Mail Center",
+      "Mail receipt, distribution, postage control and shipping accountability.",
+      "Open the page",
+      "services/managed-mail-centers.html"
+     ],
+     [
+      "Process",
+      "Managed Print Center",
+      "Staffed in-house copy centers with a focus on output quality.",
+      "Open the page",
+      "services/managed-print-centers.html"
+     ],
+     [
+      "Process",
+      "Document Scanning",
+      "Workgroup, low volume and high volume scanners for any document size.",
+      "Open the page",
+      "services/document-scanning.html"
+     ],
+     [
+      "Process",
+      "Receptionist and Visitor Screening",
+      "Visitor photo, license scan, badge printing and a secure visitor log.",
+      "Open the page",
+      "services/receptionist-services.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Facilities management by industry",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "Education",
+      "A district can hand off print rooms and mail across several buildings.",
+      "How we set it up",
+      "industries/education.html"
+     ],
+     [
+      "Industry",
+      "State and local government",
+      "A municipality can centralize print and mail for several departments.",
+      "How we set it up",
+      "industries/government.html"
+     ],
+     [
+      "Industry",
+      "Insurance",
+      "An agency can keep staff on clients while someone else runs the print room.",
+      "How we set it up",
+      "industries/insurance.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Get a facilities management estimate",
+    "body": "List the office services you would like to hand off and roughly how many people you support.",
+    "submit": "Get my estimate",
+    "note": "A person in VAF's Indianapolis office replies. Or call (317) 634-2913."
+   }
+  ]
+ },
+ "services/content-management.html": {
+  "title": "Content Management Solutions in Indiana | VAF",
+  "description": "Capture, store and retrieve business content with security, compliance and automation, using VAF's industry-leading software partners.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Process",
+    "heading": "Content Management Solutions",
+    "subhead": "Capture, store, and retrieve content across your organization, content management built for compliance and productivity.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-conversion-1200.jpg",
+    "image_alt": "Content Management",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Process",
+    "heading": "Managing the flow of information",
+    "body": "VAF helps manage the day-to-day flow of information through a company. The team learns your needs, challenges and opportunities, then builds a custom business process solution aimed at efficiency, process improvement, cost control and technological innovation. Content management is judged against three objectives: security, compliance and automation.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Process",
+    "heading": "Security",
+    "body": "An information governance plan for your organization should ensure secure access to business records and a sound records management practice. Even the most secure paper or network/server-based document management practices are riddled with potential security risks and manual retention schedule management headaches and vulnerabilities. Deploying a content management solution from Van Ausdall & Farrar and its industry-leading software partners will lessen your organization’s vulnerability and improve your records retention practices.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Process",
+    "heading": "Compliance",
+    "body": "Organizations of all sizes from all industries must deal with the day to day struggles to be compliant with local and federal compliance standards. Staying compliant in a paper or server-based document management system is a daunting, if not virtually impossible, task. VAF has decades of experience and in-house compliance experts to assist your organization in staying compliant.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Process",
+    "heading": "Automation",
+    "body": "Paper-based business processes in the areas of AP, AR, HR, and contracts are terribly inefficient and riddled with manual data entry issues and bottlenecks. Whether you are trying to reduce your DSO, time-to-hire, eliminate late fees, or take advantage of early payment discounts, VAF can assist your organization by automating many of these often labor-intensive processes. VAF can deploy the very latest automated data capture, extraction, and rules-based workflow in the cloud, on-premise, or even as a Service (aaS).",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Process",
+    "heading": "Where most organizations start",
+    "body": "The automation page names the processes that are most often stuck on paper. They are a good first place to look.",
+    "bullets": [
+     "Accounts payable: reduce DSO, avoid late fees and take early payment discounts",
+     "Accounts receivable",
+     "Human resources: shorten time to hire",
+     "Contracts"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about content management",
+    "items": [
+     [
+      "What is content management?",
+      "It is the capture, storage and retrieval of business records and documents so the right people can find them and the organization can show it kept them properly."
+     ],
+     [
+      "How does content management help security?",
+      "A governance plan gives secure access to business records and a sound records management practice. VAF says its solutions reduce vulnerability and improve records retention practices."
+     ],
+     [
+      "How does it help with compliance?",
+      "VAF says staying compliant in a paper or server-based system is daunting, and that it has decades of experience and in-house compliance experts to assist."
+     ],
+     [
+      "Which processes can be automated?",
+      "Accounts payable, accounts receivable, HR and contracts are the examples VAF gives, using automated data capture, extraction and rules-based workflow."
+     ],
+     [
+      "Where can the software run?",
+      "In the cloud, on premises or as a service, according to VAF."
+     ],
+     [
+      "Which software does VAF use?",
+      "VAF's page refers to its industry-leading software partners. See its document management pages for OnBase, Square 9 Smart Search and Kofax."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Related process solutions",
+    "intro": "Pages on the platforms and services content management builds on.",
+    "items": [
+     [
+      "Process",
+      "Document Management and Workflow",
+      "OnBase and Square 9 Smart Search for line-of-business integration.",
+      "Open the page",
+      "services/document-management-workflow.html"
+     ],
+     [
+      "Process",
+      "Automated Forms Processing",
+      "Kofax capture and exchange software for forms and inbound documents.",
+      "Open the page",
+      "services/automated-forms-processing.html"
+     ],
+     [
+      "Process",
+      "Document Conversion",
+      "Closed-loop scanning in the secure Document Conversion Center.",
+      "Open the page",
+      "services/document-conversion.html"
+     ],
+     [
+      "Process",
+      "Business Process Solutions",
+      "Best-site service for mail, print, facilities and information flow.",
+      "Open the page",
+      "services/business-process-solutions.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Content management by industry",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "Healthcare",
+      "Health information teams can look at retention schedules and access to records.",
+      "How we set it up",
+      "industries/healthcare.html"
+     ],
+     [
+      "Industry",
+      "Financial services",
+      "Lenders can see where loan files and approvals get stuck on paper.",
+      "How we set it up",
+      "industries/financial-services.html"
+     ],
+     [
+      "Industry",
+      "State and local government",
+      "Clerks and departments can plan retention and public records requests.",
+      "How we set it up",
+      "industries/government.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Plan your content management",
+    "body": "Tell us which records or processes cause the most trouble and we will outline where to start.",
+    "submit": "Plan my content management",
+    "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913."
+   }
+  ]
+ },
+ "services/document-scanning.html": {
+  "title": "Document Scanning Equipment in Indiana | VAF",
+  "description": "Workgroup, low volume and high volume scanners for documents from business cards to legal size, from Van Ausdall & Farrar.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Process",
+    "heading": "Document Scanning",
+    "subhead": "Scanners sized to the job, from desktop workgroup models to high volume machines, for any document from business card to legal size.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-conversion-1200.jpg",
+    "image_alt": "Document Scanning Tools",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Process",
+    "heading": "Workgroup scanners",
+    "body": "Compact desktop scanners for everyday filing. They handle virtually any document, from business card dimensions to legal size, in full color or black and white.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Process",
+    "heading": "Low volume scanners",
+    "body": "A fit for irregular-sized documents and exception scanning such as receipts, patient records and forms. They are easy to maintain and offer color automatic cropping and reliable throughput.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Process",
+    "heading": "High volume scanners",
+    "body": "Built for large quantities of paper such as insurance claims, loan applications and invoices. VAF points to Panasonic high volume scanners as a way to cut a pile of work down to size.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Choosing a scanner",
+    "heading": "Start from the paper, not the machine",
+    "body": "The right scanner depends on what you scan, how much and how often.",
+    "bullets": [
+     "Occasional or mixed documents: a workgroup scanner at the desk",
+     "Receipts, forms and odd sizes: a low volume scanner built for exceptions",
+     "Claims, applications and invoices by the box: a high volume scanner",
+     "Backfiles of paper records: consider conversion instead of scanning in-house"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "After the scan",
+    "heading": "Where the images go next",
+    "body": "A scanner only makes images. Value comes from naming, filing and finding them. VAF connects scanning to content management and workflow software, and for large backfiles its secure Document Conversion Center handles scanning for you. One example: 1.5 million Johnson Memorial Health files scanned and indexed in 90 days.",
+    "bullets": [
+     "Capture into a content management system",
+     "Route documents with workflow",
+     "Use document conversion for big backfiles",
+     "Scan from your VAF multifunction devices"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about document scanning",
+    "items": [
+     [
+      "What kinds of scanners does VAF offer?",
+      "Workgroup scanners, low volume scanners and high volume scanners."
+     ],
+     [
+      "What sizes of document can be scanned?",
+      "Virtually any, from business card dimensions to legal size, in full color or black and white."
+     ],
+     [
+      "Which scanner is best for receipts and forms?",
+      "A low volume scanner. VAF describes it as perfect for irregular-sized documents and exception scanning such as receipts, patient records and forms."
+     ],
+     [
+      "Which scanner handles claims and invoices?",
+      "A high volume scanner, designed for large quantities such as insurance claims, loan applications and invoices."
+     ],
+     [
+      "Does VAF only sell scanners?",
+      "No. VAF also provides document conversion, content management and workflow software, so scanned images can be indexed and used."
+     ],
+     [
+      "Where can I download scanner drivers?",
+      "VAF's downloads page links Fujitsu, Canon, Kodak and Panasonic scanner drivers."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Related document pages",
+    "intro": "Other ways VAF handles paper.",
+    "items": [
+     [
+      "Process",
+      "Document Conversion",
+      "Closed-loop scanning in the secure Document Conversion Center.",
+      "Open the page",
+      "services/document-conversion.html"
+     ],
+     [
+      "Process",
+      "Document Management and Workflow",
+      "OnBase and Square 9 Smart Search for line-of-business integration.",
+      "Open the page",
+      "services/document-management-workflow.html"
+     ],
+     [
+      "Process",
+      "Automated Forms Processing",
+      "Kofax capture and exchange software for forms and inbound documents.",
+      "Open the page",
+      "services/automated-forms-processing.html"
+     ],
+     [
+      "Support",
+      "Software Drivers and Documentation Downloads",
+      "Driver and training links for copiers, scanners and phone systems.",
+      "Open the page",
+      "downloads.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Scanning by industry",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "Insurance",
+      "Claims and policy files are good candidates for high volume scanning.",
+      "How we set it up",
+      "industries/insurance.html"
+     ],
+     [
+      "Industry",
+      "Financial services",
+      "Loan applications and account forms can be scanned at intake.",
+      "How we set it up",
+      "industries/financial-services.html"
+     ],
+     [
+      "Industry",
+      "Healthcare",
+      "Patient records and forms are a typical low volume exception workflow.",
+      "How we set it up",
+      "industries/healthcare.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Choose the right scanner",
+    "body": "Tell us what you scan and how many pages a day, and we will point you to a model.",
+    "submit": "Choose a scanner",
+    "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913."
+   }
+  ]
+ },
+ "services/document-management-workflow.html": {
+  "title": "Document Management and Workflow | VAF Indiana",
+  "description": "OnBase and Square 9 Smart Search document management and workflow from Van Ausdall & Farrar, an authorized OnBase Solutions Partner in Indianapolis.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Process",
+    "heading": "Document Management & Workflow",
+    "subhead": "Frustrated by the Lack of Integration between Your Line-of-Business Application and Personal Productivity Tools?",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-conversion-1200.jpg",
+    "image_alt": "Document Management & Workflow",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Process",
+    "heading": "Two document management platforms",
+    "body": "VAF is a value added reseller of OnBase and Square 9 Smart Search. VAF positions OnBase as enterprise content management and Square 9 as a platform that scales from small business applications to enterprise. VAF helps you decide which fits.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Process",
+    "heading": "Enterprise Content Management with On Base",
+    "body": "Trusted by more than 9,200 organizations, On Base eliminates bottlenecks and automates low-value, time-intensive tasks. This gives you time to focus on things that really matter.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Process",
+    "heading": "On Base Helps Organizations",
+    "body": "Van Ausdall & Farrar, Inc is a trusted and authorized On Base Solutions Partner based in Indianapolis Indiana. Partners like us offer a wealth of expertise not just about the product, but about your problems and your industry. Further, Hyland Software, the developer of On Base, stands behind its partners with extensive technical training and customer support.",
+    "bullets": [
+     "Reduce cycle times and increase bottom lines by eliminating delays and inefficiencies of manual processes",
+     "Ensure compliance with internal and external standards",
+     "Get more information out of existing business applications with quick and easy integration"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Process",
+    "heading": "OnBase industries and uses",
+    "body": "",
+    "bullets": [
+     "Accounts payable",
+     "Banking and credit unions",
+     "EMR integrations",
+     "Health information management",
+     "Higher education financial aid",
+     "Human resources",
+     "Patient financial services",
+     "Patient registration",
+     "State and local government"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Process",
+    "heading": "OnBase core features",
+    "body": "",
+    "bullets": [
+     "DIP and ERM processing",
+     "Image management",
+     "Document content capture and management",
+     "Electronic forms management",
+     "E-mail integration",
+     "Full text indexing",
+     "Workflow",
+     "Data mining",
+     "Storage platform integration",
+     "Non-intrusive integration with third-party applications",
+     "Rapid deployment cycles",
+     "Distributed processing",
+     "Point-and-click configuration"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Process",
+    "heading": "Square 9 Smart Search",
+    "body": "Organizations with intense document processes rely on Square 9 to streamline their workflows. It is easy to implement, easy to use and scalable.",
+    "bullets": [
+     "A cost-effective way to eliminate paper-based filing systems",
+     "Out-of-the-box solutions for accounts payable, employee onboarding, contract management and case management",
+     "Typical users include law offices, physician practices, accounting firms, trucking companies, and mortgage and title companies"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Choosing a platform",
+    "heading": "OnBase or Square 9",
+    "body": "VAF recommends the platform after the Technology Strength Assessment, not before. Both connect to the applications you already use. As a rule, start from the business process that hurts most, then match the platform to it.",
+    "bullets": [
+     "Look at your volume and the number of departments involved",
+     "List the line-of-business applications that must connect",
+     "Check compliance and retention needs",
+     "Compare cost, including implementation and training"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about document management and workflow",
+    "items": [
+     [
+      "Which document management platforms does VAF sell?",
+      "OnBase by Hyland and Square 9 Smart Search. VAF is an authorized OnBase Solutions Partner based in Indianapolis."
+     ],
+     [
+      "What does OnBase do?",
+      "OnBase is an enterprise content management platform that eliminates bottlenecks and automates low-value, time-intensive tasks. VAF says it is trusted by more than 9,200 organizations."
+     ],
+     [
+      "What is Square 9 Smart Search?",
+      "It is a document management solution that gives small businesses and enterprises a cost-effective alternative to paper filing, with ready-made solutions for accounts payable, onboarding, contracts and case management."
+     ],
+     [
+      "Can it connect to the applications we already use?",
+      "Yes. OnBase offers non-intrusive integration with third-party applications and VAF says it can pull more information out of existing business applications."
+     ],
+     [
+      "Which processes do organizations start with?",
+      "Accounts payable and records backlogs are the usual starting points, and both are covered by the Technology Strength Assessment."
+     ],
+     [
+      "Who stands behind the software?",
+      "Hyland Software, the developer of OnBase, supports its partners with technical training and customer support, and VAF adds expertise about your industry."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Related document pages",
+    "intro": "Where paper capture, forms and conversion fit around these platforms.",
+    "items": [
+     [
+      "Process",
+      "Automated Forms Processing",
+      "Kofax capture and exchange software for forms and inbound documents.",
+      "Open the page",
+      "services/automated-forms-processing.html"
+     ],
+     [
+      "Process",
+      "Content Management",
+      "Security, compliance and automation for records and business content.",
+      "Open the page",
+      "services/content-management.html"
+     ],
+     [
+      "Process",
+      "Document Conversion",
+      "Closed-loop scanning in the secure Document Conversion Center.",
+      "Open the page",
+      "services/document-conversion.html"
+     ],
+     [
+      "Process",
+      "Document Scanning",
+      "Workgroup, low volume and high volume scanners for any document size.",
+      "Open the page",
+      "services/document-scanning.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Document workflow by industry",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "Healthcare",
+      "OnBase lists EMR integrations, health information management and patient registration among its uses.",
+      "How we set it up",
+      "industries/healthcare.html"
+     ],
+     [
+      "Industry",
+      "Financial services",
+      "OnBase lists banking and credit unions, and Square 9 lists mortgage and title companies.",
+      "How we set it up",
+      "industries/financial-services.html"
+     ],
+     [
+      "Industry",
+      "State and local government",
+      "OnBase lists state and local government among its industries.",
+      "How we set it up",
+      "industries/government.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Plan your document workflow",
+    "body": "Tell us the process you want to digitize and the applications it must connect to.",
+    "submit": "Plan my workflow",
+    "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913."
+   }
+  ]
+ },
+ "services/automated-forms-processing.html": {
+  "title": "Automated Forms Processing with Kofax | VAF Indiana",
+  "description": "Kofax intelligent capture and exchange from VAF: capture, classify, extract and route forms and documents into your existing business applications.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Process",
+    "heading": "Automated Forms Processing",
+    "subhead": "Enable your organization to exchange information automatically with anyone, anywhere, and in any format.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-conversion-1200.jpg",
+    "image_alt": "Automated Forms Processing",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Process",
+    "heading": "From paper and email to your applications",
+    "body": "Forms processing means taking documents in any format, reading them and sending the data into the systems that run the business. VAF provides Kofax software for capture and exchange, working directly with existing applications and IT platforms.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Process",
+    "heading": "Intelligent Capture & Exchange",
+    "body": "Van Ausdall & Farrar is proud to provide Indiana with Kofax’s Intelligent Capture & Exchange products. These products allow you to work directly with your existing business applications and IT platforms to automate the capture and exchange of documents and information. Kofax solutions, products and technologies improve the speed, cost, accuracy and efficiency of your business processes and transactions by enabling your organization to exchange information automatically with anyone, anywhere, in any format.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Process",
+    "heading": "Kofax Capture",
+    "body": "Kofax Capture, formerly Ascent Capture, accelerates business processes by collecting documents and forms, transforming them into accurate, retrievable information, and delivering it all into your business applications and databases.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Process",
+    "heading": "Ascent Xtrata Pro",
+    "body": "Ascent Xtrata Pro adds comprehensive document classification and data extraction to Kofax Capture. It automates document processing work that was done manually, cutting costs while speeding the flow and improving accuracy.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Process",
+    "heading": "INDICIUS",
+    "body": "INDICIUS is a suite of customizable software modules that intelligently automates the classification, sorting and separation of paper and electronic documents, and the extraction and validation of information they contain. It can extend the capabilities of Kofax Capture or function as a stand-alone application.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Process",
+    "heading": "Kofax Communication Server",
+    "body": "The Kofax Communication Server, formerly TOPCALL Communication Server, coordinates and performs the automated exchange of information by integrating inbound and outbound communication channels. It links virtually any device such as MFPs and phone systems, media types like email, fax, SMS, MMS, voicemail and telex, and applications such as SAP, IBM Web Sphere MQ and Kofax Capture products. Organizations can exchange information in the formats most appropriate for their customers and partners, enable intelligent routing and trace information for compliance purposes.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Process",
+    "heading": "Front-end and image tools",
+    "body": "Kofax also supplies software that sits at the point of entry into a workflow.",
+    "bullets": [
+     "Document Exchange Server: document-driven process automation that captures documents in any format and routes them to the systems that drive key processes",
+     "Document Scan Server: scans documents at the point of entry, with secure scanner connectivity and centralized management",
+     "VirtualReScan (VRS): reduces manual document preparation and improves scanned image quality, which in turn improves data extraction, recognition and retrieval"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about automated forms processing",
+    "items": [
+     [
+      "What is automated forms processing?",
+      "It is software that captures forms and documents, classifies them, extracts the data and delivers it into your business applications and databases."
+     ],
+     [
+      "Which software does VAF use?",
+      "Kofax Intelligent Capture and Exchange products, including Kofax Capture, Ascent Xtrata Pro, INDICIUS and the Kofax Communication Server."
+     ],
+     [
+      "What does Kofax Capture do?",
+      "It collects documents and forms, turns them into accurate, retrievable information and delivers the data into your business applications and databases."
+     ],
+     [
+      "What does INDICIUS add?",
+      "It is a suite of modules that automates classification, sorting and separation of paper and electronic documents, and extraction and validation of the information in them. It can extend Kofax Capture or run on its own."
+     ],
+     [
+      "Can it handle fax, email and text messages?",
+      "The Kofax Communication Server links MFPs and phone systems with media types such as email, fax, SMS, MMS, voicemail and telex, and applications such as SAP and IBM WebSphere MQ."
+     ],
+     [
+      "Why does image quality matter?",
+      "Image quality affects data extraction, recognition and retrieval. VirtualReScan is the tool VAF lists for preparing and improving scanned images."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Related process pages",
+    "intro": "Platforms and services that pair with forms processing.",
+    "items": [
+     [
+      "Process",
+      "Document Management and Workflow",
+      "OnBase and Square 9 Smart Search for line-of-business integration.",
+      "Open the page",
+      "services/document-management-workflow.html"
+     ],
+     [
+      "Process",
+      "Document Management",
+      "Forms processing, content management, scanning and finishing from one team.",
+      "Open the page",
+      "services/document-management.html"
+     ],
+     [
+      "Process",
+      "Content Management",
+      "Security, compliance and automation for records and business content.",
+      "Open the page",
+      "services/content-management.html"
+     ],
+     [
+      "Process",
+      "Document Scanning",
+      "Workgroup, low volume and high volume scanners for any document size.",
+      "Open the page",
+      "services/document-scanning.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Forms processing by industry",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "Financial services",
+      "Loan and account forms are classic candidates for capture and data extraction.",
+      "How we set it up",
+      "industries/financial-services.html"
+     ],
+     [
+      "Industry",
+      "Insurance",
+      "Claims forms and supporting documents can be classified and routed on arrival.",
+      "How we set it up",
+      "industries/insurance.html"
+     ],
+     [
+      "Industry",
+      "Healthcare",
+      "Intake and registration forms can be captured into the systems that use them.",
+      "How we set it up",
+      "industries/healthcare.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Plan your forms automation",
+    "body": "Tell us which forms or documents arrive and where the data needs to end up.",
+    "submit": "Plan my automation",
+    "note": "A person in VAF's Indianapolis office replies. Or call (317) 634-2913."
+   }
+  ]
+ },
+ "services/cyber-security-solutions.html": {
+  "title": "Cyber Security: EDR, XDR and Firewalls | VAF",
+  "description": "VAF secures wired, wireless, WAN, cloud, mail and endpoint attack surfaces with EDR, XDR, MDR, firewalls and ZTNA, by subscription or purchase.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Solutions: Information",
+    "heading": "Cyber Security",
+    "subhead": "Endpoint detection and response, firewalls, and layered protection, cyber security that stops threats before they reach your business.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-soc-1200.jpg",
+    "image_alt": "Cyber Security: EDR, XDR & Firewalls",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "About Cyber Security: EDR, XDR & Firewalls",
+    "body": "All organizations are faced with the specter of bad actors in cyber-space actively trying to gain unauthorized access and control over their IT enterprises. VAF utilizes a fabric approach to secure various attack surfaces from bad actors. Our solutions fit into premise and cloud- based networks and drastically decrease the odds of being compromised. Protection is offered via subscription plans, as well as project-based solutions.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Information",
+    "heading": "Certified, Experienced Security Team including CISSP Resource",
+    "body": "",
+    "bullets": [
+     "Average Tenure of IT Security Team is 15 Years",
+     "Fortinet NSE 1,2,3,4,5,7 Certified Staff",
+     "Sophos Central Advanced Tenate",
+     "CISSP (Certified Information Systems Security Professional)",
+     "Micro Soft Certified"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "Attack surfaces secured",
+    "body": "",
+    "bullets": [
+     "Wired LAN: network access control, segmentation, segmentation firewall, encryption",
+     "Wireless LAN: NAC, segmentation, authentication",
+     "WAN: secure SD-WAN, next generation firewall, ZTNA, encryption, VPN",
+     "Private and public cloud: virtual NGFW, CASB, ZTNA and SASE, MFA",
+     "Mail: anti-spam, anti-malware, encryption, premise and cloud",
+     "Remote user endpoint: ZTNA, SSL-VPN, SASE, MDM, EPP, XDR, MDR",
+     "Endpoint: EPP, ZTNA, EDR, XDR, MDR, sandboxing, encryption, NAC, user awareness training, vulnerability scanning and patching, compliance monitoring",
+     "IoT endpoint: NAC, SIEM, orchestration"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "Information",
+    "heading": "Next generation tech, defined",
+    "body": "",
+    "bullets": [
+     "EDR: endpoint detection and response, continuous monitoring and collection of endpoint data with automated response and analysis",
+     "XDR: extended detection and response, greater visibility and automation to detect, analyze, hunt and remediate threats",
+     "MDR: managed detection and response, which adds Security Operations Center services to EDR or XDR",
+     "IPS: intrusion prevention, working with next generation appliances to keep malware out",
+     "SIEM and orchestration: machine learning that sorts, triages and responds to analytics from many sources",
+     "NAC: network access control, limiting unauthorized physical access to privileged networks",
+     "Secure SD-WAN: SD-WAN performance and security in the same appliance",
+     "Application control, content filtering and sandboxing for apps, web access and zero-day files"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Information",
+    "heading": "Subscription-Based & Purchase-Based Protection",
+    "body": "Van Ausdall & Farrar offers monthly, annual, multiyear managed and customer-managed protection plans available for multiple attack surfaces. We also offer traditional purchase and leasing options to best fit your needs for your timing. Van Ausdall & Farrar offers HaaS (Hardware as a Service) plans to give you comprehensive service.",
+    "bullets": []
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about cyber security solutions",
+    "items": [
+     [
+      "What attack surfaces does VAF secure?",
+      "Wired and wireless LAN, WAN, private and public cloud, mail, remote user endpoints, endpoints and IoT devices, using a fabric approach."
+     ],
+     [
+      "What are EDR, XDR and MDR?",
+      "EDR monitors endpoints continuously and responds automatically. XDR adds visibility and automation across more sources. MDR adds a Security Operations Center to EDR or XDR."
+     ],
+     [
+      "Can protection be bought by subscription?",
+      "Yes. VAF offers monthly, annual and multiyear managed and customer-managed protection plans, plus traditional purchase and leasing."
+     ],
+     [
+      "What is Hardware as a Service?",
+      "VAF's HaaS plans let you have security hardware as part of a service instead of buying it outright."
+     ],
+     [
+      "What certifications does the security team hold?",
+      "VAF lists Fortinet NSE 1, 2, 3, 4, 5 and 7 certified staff, a Sophos Central Advanced credential, a CISSP and Microsoft certifications. The IT security team's average tenure is 15 years."
+     ],
+     [
+      "Can these solutions fit our existing network?",
+      "VAF says its solutions fit into premise and cloud-based networks and can be delivered as subscriptions or one-off projects."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Related security pages",
+    "intro": "Where to go for assessments, managed security and network protection.",
+    "items": [
+     [
+      "Information",
+      "Cyber Threat Assessment",
+      "An external, internal and regulatory review led by a CISSP-certified expert.",
+      "Open the page",
+      "services/cyber-security-assessment.html"
+     ],
+     [
+      "Information",
+      "Managed Cybersecurity",
+      "Sophos XDR, Datto patching, Fortinet Fabric services and a security operations center from the Vsecure team.",
+      "Open the page",
+      "services/cybersecurity.html"
+     ],
+     [
+      "Information",
+      "Indianapolis Network Security",
+      "Firewalls, endpoint protection, email security and zero-trust access for the network.",
+      "Open the page",
+      "services/network-security.html"
+     ],
+     [
+      "Information",
+      "Free Security Training Tools",
+      "All six free KnowBe4 tools on one page.",
+      "Open the page",
+      "services/free-security-training-tools.html"
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": false,
+    "heading": "Cyber security by industry",
+    "intro": "Examples from the industries VAF serves.",
+    "items": [
+     [
+      "Industry",
+      "Healthcare",
+      "Clinics can plan endpoint, mail and remote access protection together.",
+      "How we set it up",
+      "industries/healthcare.html"
+     ],
+     [
+      "Industry",
+      "Manufacturing and logistics",
+      "Plants can look at IoT endpoint security alongside the office network.",
+      "How we set it up",
+      "industries/manufacturing-logistics.html"
+     ],
+     [
+      "Industry",
+      "Financial services",
+      "Banks and credit unions can compare subscription protection with purchase options.",
+      "How we set it up",
+      "industries/financial-services.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Review your security layers",
+    "body": "Share your network layout and current protection, and a VAF specialist will highlight the gaps.",
+    "submit": "Review my security",
+    "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913."
+   }
+  ]
+ }
+}
