@@ -1,0 +1,15 @@
+<!--
+  templateType: blog_listing
+  isAvailableForNewContent: true
+  label: VAF Blog Listing
+-->
+{% extends "./layouts/vaf-base.html" %}
+{% block head_extra %}
+  {% if last_page_num > 1 and current_page_num > 1 %}<link rel="prev" href="{{ blog_page_link(current_page_num - 1) }}">{% endif %}
+  {% if last_page_num > 1 and current_page_num < last_page_num %}<link rel="next" href="{{ blog_page_link(current_page_num + 1) }}">{% endif %}
+{% endblock head_extra %}
+{% block body %}
+<main id="main">
+  {% module "vaf_blog_listing" path="../modules/vaf-blog-listing", label="VAF blog listing" %}
+</main>
+{% endblock body %}

@@ -42,3 +42,11 @@
   .vd--flip .vd__media::before{inset:14px 14px -12px -10px}
   .vd__media img{border-radius:18px}
 }
+
+/* flip works in every layout, so stacked text-and-card sections alternate sides */
+.vd--flip.vd--list{grid-template-columns:minmax(0,5fr) minmax(0,6fr)}
+.vd--flip.vd--list .vd__text{order:2}
+.vd--flip.vd--split{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+.vd--flip.vd--split .vd__text{order:2}
+.vd--flip.vd--form .vd__text{order:2}
+@media(max-width:900px){.vd--flip.vd--list .vd__text,.vd--flip.vd--split .vd__text,.vd--flip.vd--form .vd__text{order:0}}

@@ -12,7 +12,7 @@
       <a class="vb__chip{% if not tag %} is-on{% endif %}" href="{{ group.absolute_url }}"{% if not tag %} aria-current="page"{% endif %}>{{ module.all_label }}</a>
       {% for chip in module.chips %}
         {% set on = tag and tag.slug == chip.chip_slug %}
-        <a class="vb__chip{% if on %} is-on{% endif %}" href="{{ blog_tag_url(group.id, chip.chip_slug) }}"{% if on %} aria-current="page"{% endif %}>{{ chip.chip_label }}</a>
+        <a class="vb__chip{% if on %} is-on{% endif %}" href="{{ group.absolute_url }}/tag/{{ chip.chip_slug }}"{% if on %} aria-current="page"{% endif %}>{{ chip.chip_label }}</a>
       {% endfor %}
     </nav>
     {% endif %}

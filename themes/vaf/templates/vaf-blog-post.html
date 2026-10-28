@@ -1,0 +1,14 @@
+<!--
+  templateType: blog_post
+  isAvailableForNewContent: true
+  label: VAF Blog Post
+-->
+{% extends "./layouts/vaf-base.html" %}
+{% block head_extra %}
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"{{ content.name|striptags|escapejson }}","description":"{{ content.post_summary|striptags|escapejson }}","datePublished":"{% if content.publish_date %}{{ content.publish_date|format_datetime('yyyy-MM-dd') }}{% endif %}","image":"{{ content.featured_image|escapejson }}","author":{"@type":"Organization","name":"{{ content.blog_post_author.display_name|default('Van Ausdall & Farrar', true)|escapejson }}"},"publisher":{"@type":"Organization","name":"Van Ausdall & Farrar"},"mainEntityOfPage":"{{ content.absolute_url|escapejson }}"}</script>
+{% endblock head_extra %}
+{% block body %}
+<main id="main">
+  {% module "vaf_blog_post" path="../modules/vaf-blog-post", label="VAF blog post" %}
+</main>
+{% endblock body %}
