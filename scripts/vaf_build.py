@@ -16,6 +16,10 @@ THEME = "Van Ausdall and Farrar - Showcase"
 NOINDEX = '<meta name="robots" content="noindex, nofollow">'
 CONTENT = json.load(open(os.path.join(ROOT, "brands/vanausdall.content.json"), encoding="utf-8"))
 
+_EXTRA = os.path.join(ROOT, "brands/vanausdall.extra-pages.json")      # pages added after the preview (entity facts, etc.)
+if os.path.exists(_EXTRA):
+    CONTENT["pages"] += [x for x in json.load(open(_EXTRA, encoding="utf-8")) if x["file"] not in {p["file"] for p in CONTENT["pages"]}]
+
 REGISTRY = {}
 for _f in sorted(glob.glob(os.path.join(ROOT, "scripts/vaf_map_*.py"))):
     _m = importlib.import_module(os.path.basename(_f)[:-3])

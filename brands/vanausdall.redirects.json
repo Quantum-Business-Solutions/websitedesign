@@ -1,0 +1,658 @@
+[
+ {
+  "from": "/",
+  "to": "/"
+ },
+ {
+  "from": "/about/",
+  "to": "/about"
+ },
+ {
+  "from": "/about/customer-comments",
+  "to": "/about"
+ },
+ {
+  "from": "/about/history",
+  "to": "/about"
+ },
+ {
+  "from": "/about/why",
+  "to": "/about"
+ },
+ {
+  "from": "/ai",
+  "to": "/services/ai-consulting"
+ },
+ {
+  "from": "/assessment/",
+  "to": "/technology-strength-assessment"
+ },
+ {
+  "from": "/automated-forms-processing",
+  "to": "/services/automated-forms-processing"
+ },
+ {
+  "from": "/benefits",
+  "to": "/benefits"
+ },
+ {
+  "from": "/best-in-class-partners",
+  "to": "/partners"
+ },
+ {
+  "from": "/bloomington/",
+  "to": "/locations/bloomington"
+ },
+ {
+  "from": "/bloomington/business-phone-systems-in-bloomington-in",
+  "to": "/locations/bloomington-business-phone-systems"
+ },
+ {
+  "from": "/bloomington/network-carrier-solutions-in-bloomington-in",
+  "to": "/locations/bloomington-network-carrier-solutions"
+ },
+ {
+  "from": "/bloomington/network-infrastructure-in-bloomington-in",
+  "to": "/locations/bloomington-network-infrastructure"
+ },
+ {
+  "from": "/business-continuity-compliance",
+  "to": "/services/business-continuity"
+ },
+ {
+  "from": "/business-security-systems",
+  "to": "/services/business-security-systems"
+ },
+ {
+  "from": "/carmel/",
+  "to": "/locations/carmel"
+ },
+ {
+  "from": "/case-studies/",
+  "to": "/case-studies"
+ },
+ {
+  "from": "/case-studies/aspire",
+  "to": "/case-studies/aspire"
+ },
+ {
+  "from": "/case-studies/becks-hybrid",
+  "to": "/case-studies/becks-hybrid"
+ },
+ {
+  "from": "/case-studies/berry-global",
+  "to": "/case-studies/berry-global"
+ },
+ {
+  "from": "/case-studies/bowen-engineering",
+  "to": "/case-studies/bowen-engineering"
+ },
+ {
+  "from": "/case-studies/city-of-anderson",
+  "to": "/case-studies/city-of-anderson"
+ },
+ {
+  "from": "/case-studies/city-of-bloomington",
+  "to": "/case-studies/city-of-bloomington"
+ },
+ {
+  "from": "/case-studies/echo-engineering",
+  "to": "/case-studies/echo-engineering"
+ },
+ {
+  "from": "/case-studies/ellinger-riggs",
+  "to": "/case-studies/ellinger-riggs"
+ },
+ {
+  "from": "/case-studies/gailey-eye-clinic",
+  "to": "/case-studies/gailey-eye-clinic"
+ },
+ {
+  "from": "/case-studies/johnson-memorial-hospital",
+  "to": "/case-studies/johnson-memorial-hospital"
+ },
+ {
+  "from": "/case-studies/mid-city",
+  "to": "/case-studies/mid-city"
+ },
+ {
+  "from": "/case-studies/phalen-leadership-academy",
+  "to": "/case-studies/phalen-leadership-academy"
+ },
+ {
+  "from": "/case-studies/pools-of-fun",
+  "to": "/case-studies/pools-of-fun"
+ },
+ {
+  "from": "/case-studies/shiel-sexton",
+  "to": "/case-studies/shiel-sexton"
+ },
+ {
+  "from": "/case-studies/star-financial",
+  "to": "/case-studies/star-financial"
+ },
+ {
+  "from": "/case-studies/the-town-of-bargersville",
+  "to": "/case-studies/the-town-of-bargersville"
+ },
+ {
+  "from": "/case-studies/tippecanoe-school-corporation",
+  "to": "/case-studies/tippecanoe-school-corporation"
+ },
+ {
+  "from": "/case-studies/tippecanoe-school-corporation-digital-document",
+  "to": "/case-studies/tippecanoe-school-corporation-digital-document"
+ },
+ {
+  "from": "/cloud-based-solutions",
+  "to": "/services/cloud-based-solutions"
+ },
+ {
+  "from": "/columbus/",
+  "to": "/locations/columbus"
+ },
+ {
+  "from": "/columbus/business-telephone-systems-in-columbus-in",
+  "to": "/locations/columbus-business-telephone-systems"
+ },
+ {
+  "from": "/columbus/carrier-solutions-in-columbus-in",
+  "to": "/locations/columbus-carrier-solutions"
+ },
+ {
+  "from": "/columbus/network-infrastructure-in-columbus-in",
+  "to": "/locations/columbus-network-infrastructure"
+ },
+ {
+  "from": "/communication/",
+  "to": "/solutions-communication"
+ },
+ {
+  "from": "/communication/business-phone-systems",
+  "to": "/services/business-phone-systems"
+ },
+ {
+  "from": "/communication/call-center-services",
+  "to": "/services/call-center-services"
+ },
+ {
+  "from": "/communication/call-recording",
+  "to": "/services/call-recording"
+ },
+ {
+  "from": "/communication/carrier-services",
+  "to": "/services/carrier-services"
+ },
+ {
+  "from": "/communication/cloud-communications",
+  "to": "/services/cloud-communications"
+ },
+ {
+  "from": "/communication/conference-and-collaboration",
+  "to": "/services/conference-and-collaboration"
+ },
+ {
+  "from": "/communication/customer-training-videos",
+  "to": "/services/customer-training-videos"
+ },
+ {
+  "from": "/communication/elevate",
+  "to": "/services/elevate"
+ },
+ {
+  "from": "/communication/mobility-solutions",
+  "to": "/services/mobility-solutions"
+ },
+ {
+  "from": "/communication/networking-solutions",
+  "to": "/services/networking-solutions"
+ },
+ {
+  "from": "/communication/sd-wan",
+  "to": "/services/sd-wan"
+ },
+ {
+  "from": "/communication/unified-communications",
+  "to": "/services/unified-communications"
+ },
+ {
+  "from": "/contact/",
+  "to": "/contact"
+ },
+ {
+  "from": "/contact/careers",
+  "to": "/careers"
+ },
+ {
+  "from": "/contact/training",
+  "to": "/training"
+ },
+ {
+  "from": "/copier-service-repair",
+  "to": "/services/copier-service"
+ },
+ {
+  "from": "/copiers/",
+  "to": "/services/copiers"
+ },
+ {
+  "from": "/copy-print-solutions/",
+  "to": "/services/copy-print-solutions"
+ },
+ {
+  "from": "/customer-care",
+  "to": "/support"
+ },
+ {
+  "from": "/cyber-security-assessment",
+  "to": "/services/cyber-security-assessment"
+ },
+ {
+  "from": "/cyber-security-solutions",
+  "to": "/services/cyber-security-solutions"
+ },
+ {
+  "from": "/document-conversion/",
+  "to": "/services/document-conversion"
+ },
+ {
+  "from": "/document-management",
+  "to": "/services/document-management"
+ },
+ {
+  "from": "/document-management-workflow",
+  "to": "/services/document-management-workflow"
+ },
+ {
+  "from": "/document-scanning",
+  "to": "/services/document-scanning"
+ },
+ {
+  "from": "/downloads",
+  "to": "/downloads"
+ },
+ {
+  "from": "/enterprise-digital-dictation-solutions",
+  "to": "/services/enterprise-digital-dictation-solutions"
+ },
+ {
+  "from": "/evansville/",
+  "to": "/locations/evansville"
+ },
+ {
+  "from": "/evansville/business-phone-systems-in-evansville-in",
+  "to": "/locations/evansville-business-phone-systems"
+ },
+ {
+  "from": "/evansville/cloud-solutions-evansville-in",
+  "to": "/locations/evansville-cloud-solutions"
+ },
+ {
+  "from": "/evansville/document-conversion-solutions",
+  "to": "/locations/evansville-document-conversion-solutions"
+ },
+ {
+  "from": "/evansville/managed-it-solutions-evansville-in",
+  "to": "/locations/evansville-managed-it-solutions"
+ },
+ {
+  "from": "/evansville/network-carrier-solutions-in-evansville-in",
+  "to": "/locations/evansville-network-carrier-solutions"
+ },
+ {
+  "from": "/evansville/network-infrastructure-in-evansville-in",
+  "to": "/locations/evansville-network-infrastructure"
+ },
+ {
+  "from": "/fishers/",
+  "to": "/locations/fishers"
+ },
+ {
+  "from": "/fort-wayne/",
+  "to": "/locations/fort-wayne"
+ },
+ {
+  "from": "/fort-wayne/business-phone-systems-in-fort-wayne-in",
+  "to": "/locations/fort-wayne-business-phone-systems"
+ },
+ {
+  "from": "/fort-wayne/cloud-solutions-fort-wayne-in",
+  "to": "/locations/fort-wayne-cloud-solutions"
+ },
+ {
+  "from": "/fort-wayne/managed-it-solutions-fort-wayne-in",
+  "to": "/locations/fort-wayne-managed-it-solutions"
+ },
+ {
+  "from": "/fort-wayne/network-carrier-solutions-in-fort-wayne-in",
+  "to": "/locations/fort-wayne-network-carrier-solutions"
+ },
+ {
+  "from": "/fort-wayne/network-infrastructure-in-fort-wayne-in",
+  "to": "/locations/fort-wayne-network-infrastructure"
+ },
+ {
+  "from": "/free-security-awareness",
+  "to": "/services/free-security-awareness"
+ },
+ {
+  "from": "/free-security-training-tools",
+  "to": "/services/free-security-training-tools"
+ },
+ {
+  "from": "/get-started",
+  "to": "/contact"
+ },
+ {
+  "from": "/greenwood/",
+  "to": "/locations/greenwood"
+ },
+ {
+  "from": "/indianapolis/",
+  "to": "/locations/indianapolis"
+ },
+ {
+  "from": "/indianapolis/network-infrastructure-in-indianapolis-in",
+  "to": "/locations/indianapolis-network-infrastructure"
+ },
+ {
+  "from": "/industries/",
+  "to": "/industries"
+ },
+ {
+  "from": "/industries/education-technology-solutions",
+  "to": "/industries/education"
+ },
+ {
+  "from": "/industries/engineering-construction-technology-solutions",
+  "to": "/industries/engineering-construction"
+ },
+ {
+  "from": "/industries/financial-technology-services",
+  "to": "/industries/financial-services"
+ },
+ {
+  "from": "/industries/government-technology-solutions",
+  "to": "/industries/government"
+ },
+ {
+  "from": "/industries/healthcare-technology-solutions",
+  "to": "/industries/healthcare"
+ },
+ {
+  "from": "/industries/insurance-technology-solutions",
+  "to": "/industries/insurance"
+ },
+ {
+  "from": "/industries/manufacturing-logistics-technology-solutions",
+  "to": "/industries/manufacturing-logistics"
+ },
+ {
+  "from": "/industries/real-estate-technology-solutions",
+  "to": "/industries/real-estate"
+ },
+ {
+  "from": "/information/",
+  "to": "/solutions-information"
+ },
+ {
+  "from": "/information/cloud-solutions",
+  "to": "/services/cloud"
+ },
+ {
+  "from": "/information/data-security",
+  "to": "/services/cybersecurity"
+ },
+ {
+  "from": "/information/managed-it-services",
+  "to": "/services/managed-it"
+ },
+ {
+  "from": "/information/office-security",
+  "to": "/services/office-security"
+ },
+ {
+  "from": "/information/physical-security",
+  "to": "/services/physical-security"
+ },
+ {
+  "from": "/iphone-scanning",
+  "to": "/services/iphone-scanning"
+ },
+ {
+  "from": "/it-support",
+  "to": "/services/it-support"
+ },
+ {
+  "from": "/knowbe4/can-hackers-spoof-email-address-domain",
+  "to": "/services/knowbe4-can-hackers-spoof-email-address-domain"
+ },
+ {
+  "from": "/knowbe4/free-phish-alert-button",
+  "to": "/services/knowbe4-free-phish-alert-button"
+ },
+ {
+  "from": "/knowbe4/get-free-email-exposure-check",
+  "to": "/services/knowbe4-get-free-email-exposure-check"
+ },
+ {
+  "from": "/knowbe4/get-free-ransomware-simulator-tool",
+  "to": "/services/knowbe4-get-free-ransomware-simulator-tool"
+ },
+ {
+  "from": "/knowbe4/get-free-weak-password-test",
+  "to": "/services/knowbe4-get-free-weak-password-test"
+ },
+ {
+  "from": "/knowbe4/start-free-phishing-security-test",
+  "to": "/services/knowbe4-start-free-phishing-security-test"
+ },
+ {
+  "from": "/managed-print",
+  "to": "/services/managed-print"
+ },
+ {
+  "from": "/muncie/",
+  "to": "/locations/muncie"
+ },
+ {
+  "from": "/muncie/business-phone-systems-in-muncie-in",
+  "to": "/locations/muncie-business-phone-systems"
+ },
+ {
+  "from": "/muncie/network-carrier-solutions-in-muncie-in",
+  "to": "/locations/muncie-network-carrier-solutions"
+ },
+ {
+  "from": "/muncie/network-infrastructure-in-muncie-in",
+  "to": "/locations/muncie-network-infrastructure"
+ },
+ {
+  "from": "/net-promoter-score",
+  "to": "/about"
+ },
+ {
+  "from": "/network-infrastructure",
+  "to": "/services/network-infrastructure"
+ },
+ {
+  "from": "/network-security",
+  "to": "/services/network-security"
+ },
+ {
+  "from": "/network-security-secure-router-access",
+  "to": "/services/network-security-secure-router-access"
+ },
+ {
+  "from": "/noblesville/",
+  "to": "/locations/noblesville"
+ },
+ {
+  "from": "/office-security-solutions",
+  "to": "/services/office-security-solutions"
+ },
+ {
+  "from": "/partners",
+  "to": "/partners"
+ },
+ {
+  "from": "/policies/cookie",
+  "to": "/policies/cookie"
+ },
+ {
+  "from": "/policies/disclaimer",
+  "to": "/policies/disclaimer"
+ },
+ {
+  "from": "/policies/do-not-share",
+  "to": "/policies/do-not-share"
+ },
+ {
+  "from": "/policies/limit-the-use",
+  "to": "/policies/limit-the-use"
+ },
+ {
+  "from": "/policies/privacy",
+  "to": "/policies/privacy"
+ },
+ {
+  "from": "/policies/terms-of-service",
+  "to": "/policies/terms-of-service"
+ },
+ {
+  "from": "/print-management-software",
+  "to": "/services/print-management-software"
+ },
+ {
+  "from": "/print/free-print-assessment",
+  "to": "/print-assessment"
+ },
+ {
+  "from": "/print/managed-print-services",
+  "to": "/services/managed-print"
+ },
+ {
+  "from": "/print/print-application-solutions",
+  "to": "/services/print-application-solutions"
+ },
+ {
+  "from": "/proactive-it-services",
+  "to": "/services/proactive-it-services"
+ },
+ {
+  "from": "/process/",
+  "to": "/solutions-process"
+ },
+ {
+  "from": "/process/business-process-solutions",
+  "to": "/services/business-process-solutions"
+ },
+ {
+  "from": "/process/content-management",
+  "to": "/services/content-management"
+ },
+ {
+  "from": "/process/document-scanning",
+  "to": "/services/document-scanning"
+ },
+ {
+  "from": "/process/facilities-management",
+  "to": "/services/facilities-management"
+ },
+ {
+  "from": "/process/managed-mail-centers",
+  "to": "/services/managed-mail-centers"
+ },
+ {
+  "from": "/process/managed-print-centers",
+  "to": "/services/managed-print-centers"
+ },
+ {
+  "from": "/process/print-fulfillment",
+  "to": "/services/print-fulfillment"
+ },
+ {
+  "from": "/process/receptionist-services",
+  "to": "/services/receptionist-services"
+ },
+ {
+  "from": "/process/voice-processing",
+  "to": "/services/voice-processing"
+ },
+ {
+  "from": "/production-print",
+  "to": "/services/production-print"
+ },
+ {
+  "from": "/project-deployment",
+  "to": "/services/project-deployment"
+ },
+ {
+  "from": "/solutions",
+  "to": "/solutions"
+ },
+ {
+  "from": "/south-bend/",
+  "to": "/locations/south-bend"
+ },
+ {
+  "from": "/south-bend/business-phone-systems-in-south-bend-in",
+  "to": "/locations/south-bend-business-phone-systems"
+ },
+ {
+  "from": "/south-bend/carrier-solutions-in-south-bend-in",
+  "to": "/locations/south-bend-carrier-solutions"
+ },
+ {
+  "from": "/south-bend/network-infrastructure-in-south-bend-in",
+  "to": "/locations/south-bend-network-infrastructure"
+ },
+ {
+  "from": "/state-of-the-art-voice-data-communication-systems",
+  "to": "/services/state-of-the-art-voice-data-communication-systems"
+ },
+ {
+  "from": "/support/",
+  "to": "/support"
+ },
+ {
+  "from": "/switch-to-cloud",
+  "to": "/services/switch-to-cloud"
+ },
+ {
+  "from": "/technology-strength-assessment",
+  "to": "/technology-strength-assessment"
+ },
+ {
+  "from": "/transcription-services",
+  "to": "/services/transcription-services"
+ },
+ {
+  "from": "/vaf-auto-support",
+  "to": "/support"
+ },
+ {
+  "from": "/van-ausdall-farrar-customer-care-app-privacy-policy",
+  "to": "/policies/van-ausdall-farrar-customer-care-app-privacy-policy"
+ },
+ {
+  "from": "/virtualsitevisit",
+  "to": "/virtualsitevisit"
+ },
+ {
+  "from": "/voice-data-circuits",
+  "to": "/services/voice-data-circuits"
+ },
+ {
+  "from": "/voice-processing",
+  "to": "/services/voice-processing"
+ },
+ {
+  "from": "/voice-recognition",
+  "to": "/services/voice-recognition"
+ },
+ {
+  "from": "/wids-format",
+  "to": "/services/wids-format"
+ }
+]

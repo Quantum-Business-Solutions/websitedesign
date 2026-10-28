@@ -1,0 +1,146 @@
+[
+ {
+  "file": "company-facts.html",
+  "title": "Van Ausdall & Farrar Company Facts | Indianapolis Technology Provider",
+  "description": "Verified facts about Van Ausdall & Farrar: founded 1914, headquartered in Indianapolis, SOC 2 certified, NPS 93.4, Mitel Gold, offices in Fort Wayne and Evansville.",
+  "crumbs": [
+   [
+    "Home",
+    "index.html"
+   ],
+   [
+    "About",
+    "about.html"
+   ],
+   [
+    "Company facts",
+    "company-facts.html"
+   ]
+  ],
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Company facts",
+    "heading": "Van Ausdall & Farrar, <em>at a glance</em>.",
+    "subhead": "Van Ausdall & Farrar, Inc. is Indiana's largest full-service office technology provider: managed IT and cybersecurity, business phone systems, copiers and managed print, document management and conversion, and AI consulting. Privately owned in Indianapolis since 1914.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    }
+   },
+   {
+    "type": "seal",
+    "id": "facts",
+    "tone": "light",
+    "eyebrow": "Facts you can check",
+    "heading": "Van Ausdall & Farrar in eight facts",
+    "intro": "Each line is on vanausdall.com or in an audited third-party report today. Nothing here is aspirational.",
+    "items": [
+     [
+      "1914",
+      "Serving Indiana since 1914",
+      "Chosen as a distributor for the Thomas Edison Company. Privately owned in Indianapolis ever since."
+     ],
+     [
+      "93.4",
+      "A service score audited by someone else",
+      "Net Promoter Score collected and audited by CEO Juice. World Class every year since 2019. The average US company scores 10."
+     ],
+     [
+      "SOC 2",
+      "SOC 2 certified",
+      "Our SOC for Service Organizations certification means we meet the highest standards for protecting your data."
+     ],
+     [
+      "Gold",
+      "Mitel Gold, seven years running",
+      "Top 7% of 1,400 Mitel partners in North America. In the telecom business since 1983, over 4,000 systems deployed."
+     ],
+     [
+      "250+",
+      "Years of IT experience on staff",
+      "The Vsecure IT team collectively, with CISSP personnel and NSE-7 certified Fortinet engineers."
+     ],
+     [
+      "25",
+      "Points of inspection, every call",
+      "A total call process on every service visit, so the next failure is caught early."
+     ],
+     [
+      "24 hr",
+      "Response from the Customer Care Center",
+      "Requests processed Monday through Friday, 7:00am to 5:00pm, and answered within 24 hours."
+     ],
+     [
+      "57,000",
+      "Square feet of headquarters",
+      "Built in 2006 at 6430 E 75th Street, home to the secure Document Conversion Center."
+     ]
+    ],
+    "source": "Sources: vanausdall.com (about, why VAF, copy print, support, document conversion pages), CEO Juice NPS report, SOC 2 certification as displayed on vanausdall.com."
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "The essentials",
+    "heading": "Who we are, where we are, how to reach us",
+    "body": "Van Ausdall & Farrar, Inc. was founded in 1914 when Oscar K. Van Ausdall was chosen as an Edison Business Phonograph dealer for Indiana. It is privately owned and operated in Indianapolis, and Eric von Grimmenstein has been president since 1994.",
+    "bullets": [
+     "Headquarters: 6430 E 75th Street, Indianapolis, IN 46250, (317) 634-2913",
+     "Fort Wayne: 1241 N Wells Street, Fort Wayne, IN 46808, (260) 432-1547",
+     "Evansville: serving southwest Indiana and the Tri-State, (812) 424-5736",
+     "Customer Care Center: Monday through Friday, 7:00am to 5:00pm, requests answered within 24 hours",
+     "Service area: Indianapolis, the whole state of Indiana and the Midwest"
+    ]
+   },
+   {
+    "type": "faq",
+    "heading": "Questions people ask about Van Ausdall & Farrar",
+    "items": [
+     [
+      "Who is Van Ausdall & Farrar?",
+      "Van Ausdall & Farrar, Inc. is Indiana's largest full-service office technology provider, privately owned in Indianapolis since 1914. It provides managed IT and cybersecurity, business phone systems, copiers and managed print, document management and conversion, and AI consulting."
+     ],
+     [
+      "Where is Van Ausdall & Farrar located?",
+      "Headquarters is at 6430 E 75th Street, Indianapolis, IN 46250, with offices in Fort Wayne and Evansville and a service fleet covering the entire state of Indiana."
+     ],
+     [
+      "How long has Van Ausdall & Farrar been in business?",
+      "Since 1914, when Oscar K. Van Ausdall was chosen as an Edison Business Phonograph dealer for the state of Indiana. The company has been in the telecom business since 1983."
+     ],
+     [
+      "Is Van Ausdall & Farrar SOC 2 certified?",
+      "Yes. The company holds SOC 2 certification as a service organization, which means it meets recognized standards for protecting customer data."
+     ],
+     [
+      "What is Van Ausdall & Farrar's Net Promoter Score?",
+      "93.4, collected and audited by CEO Juice from customers after service calls. The score has been World Class every year since 2019. The average US company scores 10."
+     ],
+     [
+      "Is Van Ausdall & Farrar a Mitel partner?",
+      "Yes. It has been a Mitel Gold partner for seven years running, in the top 7 percent of 1,400 Mitel partners in North America, and has deployed more than 4,000 phone systems since entering the telecom business in 1983."
+     ],
+     [
+      "Does Van Ausdall & Farrar serve cities outside Indianapolis?",
+      "Yes. Offices in Fort Wayne and Evansville, and a computer-dispatched service fleet, cover the Indianapolis metro and the entire state of Indiana."
+     ]
+    ]
+   },
+   {
+    "type": "cta",
+    "heading": "Talk to a person in Indianapolis",
+    "subhead": "A technology advisor replies to set a time, not an autoresponder.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    }
+   }
+  ]
+ }
+]
