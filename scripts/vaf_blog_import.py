@@ -27,26 +27,34 @@ CAT_SLUGS = {"ai-consulting", "business-phone-systems", "business-process-soluti
 
 
 def call(method, path, body=None, retries=6):
-    data = json.dumps(body).encode() if body is not None else None
+    """Transport is curl: this environment's proxy defeats urllib (RemoteDisconnected), see scripts/reskin.py."""
+    import subprocess
     for attempt in range(retries):
-        req = urllib.request.Request(API + path, data=data, method=method,
-                                     headers={"Authorization": f"Bearer {TOKEN}", "Content-Type": "application/json"})
+        cmd = ["curl", "-s", "-X", method, "-H", "@-", "-H", "Content-Type: application/json", "--max-time", "90",
+               "-w", "\n__HTTP__%{http_code}", API + path]
+        if body is not None:
+            cmd[-1:-1] = ["--data-binary", "@-"]
+        # header file goes on stdin first, body second would collide, so pass the body from a temp file
+        import tempfile
+        tmp = None
+        if body is not None:
+            tmp = tempfile.NamedTemporaryFile(delete=False); tmp.write(json.dumps(body).encode()); tmp.close()
+            cmd[cmd.index("--data-binary") + 1] = "@" + tmp.name
         try:
-            with urllib.request.urlopen(req, timeout=60) as r:
-                t = r.read()
-                return r.status, (json.loads(t) if t else {})
-        except urllib.error.HTTPError as e:
-            t = e.read()
-            try:
-                j = json.loads(t)
-            except ValueError:
-                j = {"raw": t[:300].decode("utf-8", "replace")}
-            if e.code in (429, 500, 502, 503, 504) and attempt < retries - 1:
-                time.sleep(min(30, 2 ** attempt * (3 if e.code == 429 else 1)))
-                continue
-            return e.code, j
-        except (urllib.error.URLError, TimeoutError):
-            time.sleep(2 ** attempt)
+            r = subprocess.run(cmd, input=f"Authorization: Bearer {TOKEN}\n".encode(), capture_output=True, timeout=120)
+        except subprocess.TimeoutExpired:
+            time.sleep(2 ** attempt); continue
+        finally:
+            if tmp: os.unlink(tmp.name)
+        out, _, code = r.stdout.rpartition(b"\n__HTTP__")
+        code = int(code or 0)
+        try:
+            j = json.loads(out) if out.strip() else {}
+        except ValueError:
+            j = {"raw": out[:300].decode("utf-8", "replace")}
+        if code in (0, 429, 500, 502, 503, 504) and attempt < retries - 1:
+            time.sleep(min(30, 2 ** attempt * (3 if code == 429 else 1))); continue
+        return code, j
     return 0, {"message": "network failure"}
 
 

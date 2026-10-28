@@ -1,6 +1,847 @@
 {
  "author": "225803043373",
- "created": {},
+ "created": {
+  "-intrusion-detection-protecting-your-digital-fortress": {
+   "id": "225824872101",
+   "slug": "blog/-intrusion-detection-protecting-your-digital-fortress",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/-intrusion-detection-protecting-your-digital-fortress"
+  },
+  "-protecting-your-data-in-the-age-of-cyber-threats": {
+   "id": "225824872117",
+   "slug": "blog/-protecting-your-data-in-the-age-of-cyber-threats",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/-protecting-your-data-in-the-age-of-cyber-threats"
+  },
+  "-secure-your-business-with-advanced-video-surveillance-solutions": {
+   "id": "225824872120",
+   "slug": "blog/-secure-your-business-with-advanced-video-surveillance-solutions",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/-secure-your-business-with-advanced-video-surveillance-solutions"
+  },
+  "-transforming-your-business-with-document-conversion-services": {
+   "id": "225824872032",
+   "slug": "van-ausdall-blog/-transforming-your-business-with-document-conversion-services",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/-transforming-your-business-with-document-conversion-services"
+  },
+  "accelerating-customer-profitability-and-competitive-advantage-through-the-utilization-of-technology": {
+   "id": "225825145933",
+   "slug": "blog/accelerating-customer-profitability-and-competitive-advantage-through-the-utilization-of-technology",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/accelerating-customer-profitability-and-competitive-advantage-through-the-utilization-of-technology"
+  },
+  "ai-integration-for-business-a-strategic-guide": {
+   "id": "225803045498",
+   "slug": "van-ausdall-blog/ai-integration-for-business-a-strategic-guide",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/ai-integration-for-business-a-strategic-guide"
+  },
+  "ai-integration-transforming-business-operations": {
+   "id": "225828713751",
+   "slug": "van-ausdall-blog/ai-integration-transforming-business-operations",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/ai-integration-transforming-business-operations"
+  },
+  "ai-integrations-transforming-business-operations-in-2026": {
+   "id": "225803045476",
+   "slug": "van-ausdall-blog/ai-integrations-transforming-business-operations-in-2026",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/ai-integrations-transforming-business-operations-in-2026"
+  },
+  "ai-readiness-governance-before-the-tools": {
+   "id": "225828713740",
+   "slug": "van-ausdall-blog/ai-readiness-governance-before-the-tools",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/ai-readiness-governance-before-the-tools"
+  },
+  "ai-receptionist-for-business-phone-systems": {
+   "id": "225803045481",
+   "slug": "van-ausdall-blog/ai-receptionist-for-business-phone-systems",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/ai-receptionist-for-business-phone-systems"
+  },
+  "ai-voice-clones-and-deepfake-fraud-defense": {
+   "id": "225824871961",
+   "slug": "van-ausdall-blog/ai-voice-clones-and-deepfake-fraud-defense",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/ai-voice-clones-and-deepfake-fraud-defense"
+  },
+  "ai-workflow-automation": {
+   "id": "225803045473",
+   "slug": "van-ausdall-blog/ai-workflow-automation",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/ai-workflow-automation"
+  },
+  "business-continuity-the-cloud-is-key": {
+   "id": "225824872105",
+   "slug": "blog/business-continuity-the-cloud-is-key",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/business-continuity-the-cloud-is-key"
+  },
+  "business-technology-evolution-a-century-of-innovation-simplified": {
+   "id": "225803045517",
+   "slug": "van-ausdall-blog/business-technology-evolution-a-century-of-innovation-simplified",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/business-technology-evolution-a-century-of-innovation-simplified"
+  },
+  "business-technology-simplified-a-century-of-innovation": {
+   "id": "225824871952",
+   "slug": "van-ausdall-blog/business-technology-simplified-a-century-of-innovation",
+   "state": "DRAFT",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/business-technology-simplified-a-century-of-innovation"
+  },
+  "celebrating-van-ausdall--farrars-110th-anniversary-a-legacy-of-innovation-and-excellence": {
+   "id": "225825146006",
+   "slug": "blog/celebrating-van-ausdall-farrars-110th-anniversary-a-legacy-of-innovation-and-excellence",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/celebrating-van-ausdall--farrars-110th-anniversary-a-legacy-of-innovation-and-excellence"
+  },
+  "cloud-first-operations-a-strategic-imperative-for-midwest-businesses": {
+   "id": "225803045487",
+   "slug": "van-ausdall-blog/cloud-first-operations-a-strategic-imperative-for-midwest-businesses",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/cloud-first-operations-a-strategic-imperative-for-midwest-businesses"
+  },
+  "cloud-voip-and-pbx-systems-modern-communication-infrastructure": {
+   "id": "225824871986",
+   "slug": "van-ausdall-blog/cloud-voip-and-pbx-systems-modern-communication-infrastructure",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/cloud-voip-and-pbx-systems-modern-communication-infrastructure"
+  },
+  "cloud-voip-vs-pbx-systems-choosing-the-right-solution": {
+   "id": "225824871978",
+   "slug": "van-ausdall-blog/cloud-voip-vs-pbx-systems-choosing-the-right-solution",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/cloud-voip-vs-pbx-systems-choosing-the-right-solution"
+  },
+  "comprehensive-cybersecurity-assessments---protecting-your-digital-assets-with-van-ausdall--farrar": {
+   "id": "225824872103",
+   "slug": "blog/comprehensive-cybersecurity-assessments-protecting-your-digital-assets-with-van-ausdall-farrar",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/comprehensive-cybersecurity-assessments---protecting-your-digital-assets-with-van-ausdall--farrar"
+  },
+  "content-management-solutions-the-key-to-streamlining-your-business-operations": {
+   "id": "225825145949",
+   "slug": "blog/content-management-solutions-the-key-to-streamlining-your-business-operations",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/content-management-solutions-the-key-to-streamlining-your-business-operations"
+  },
+  "crowdstrike-causes-windows-outage-what-you-need-to-know": {
+   "id": "225825145993",
+   "slug": "blog/crowdstrike-causes-windows-outage-what-you-need-to-know",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/crowdstrike-causes-windows-outage-what-you-need-to-know"
+  },
+  "cyber-security-the-indispensable-pillar-of-managed-it-services": {
+   "id": "225824872206",
+   "slug": "blog/cyber-security-the-indispensable-pillar-of-managed-it-services",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/cyber-security-the-indispensable-pillar-of-managed-it-services"
+  },
+  "cybersecurity-awareness-month-30-day-plan": {
+   "id": "225824871964",
+   "slug": "van-ausdall-blog/cybersecurity-awareness-month-30-day-plan",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/cybersecurity-awareness-month-30-day-plan"
+  },
+  "data-discovery-and-classification": {
+   "id": "225824871958",
+   "slug": "van-ausdall-blog/data-discovery-and-classification",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/data-discovery-and-classification"
+  },
+  "data-management-organization-security-and-accessibility": {
+   "id": "225824871984",
+   "slug": "van-ausdall-blog/data-management-organization-security-and-accessibility",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/data-management-organization-security-and-accessibility"
+  },
+  "data-quality-vs-data-quantity-why-more-isnt-always-better": {
+   "id": "225824871967",
+   "slug": "van-ausdall-blog/data-quality-vs-data-quantity-why-more-isnt-always-better",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/data-quality-vs-data-quantity-why-more-isnt-always-better"
+  },
+  "defending-against-the-rising-tide-of-cyber-threats-with-cyber-security-assessment": {
+   "id": "225824872194",
+   "slug": "blog/defending-against-the-rising-tide-of-cyber-threats-with-cyber-security-assessment",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/defending-against-the-rising-tide-of-cyber-threats-with-cyber-security-assessment"
+  },
+  "delivering-world-class-customer-service-in-todays-digital-age": {
+   "id": "225825145970",
+   "slug": "blog/delivering-world-class-customer-service-in-todays-digital-age",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/delivering-world-class-customer-service-in-todays-digital-age"
+  },
+  "dialing-into-the-future-how-voip-is-transforming-business-communication": {
+   "id": "225828713787",
+   "slug": "van-ausdall-blog/dialing-into-the-future-how-voip-is-transforming-business-communication",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/dialing-into-the-future-how-voip-is-transforming-business-communication"
+  },
+  "digital-transformation-from-legacy-systems-to-cloud-first": {
+   "id": "225803045504",
+   "slug": "van-ausdall-blog/digital-transformation-from-legacy-systems-to-cloud-first",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/digital-transformation-from-legacy-systems-to-cloud-first"
+  },
+  "digital-transformation-what-it-looks-like-mid-market": {
+   "id": "225803045467",
+   "slug": "van-ausdall-blog/digital-transformation-what-it-looks-like-mid-market",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/digital-transformation-what-it-looks-like-mid-market"
+  },
+  "document-conversion-the-key-to-unlocking-efficiency-and-accessibility": {
+   "id": "225824872111",
+   "slug": "blog/document-conversion-the-key-to-unlocking-efficiency-and-accessibility",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/document-conversion-the-key-to-unlocking-efficiency-and-accessibility"
+  },
+  "driving-small-to-mid-sized-businesses-profitability-and-performance-with-the-latest-in-integrated-contact-center-technology": {
+   "id": "225825146022",
+   "slug": "blog/driving-small-to-mid-sized-businesses-profitability-and-performance-with-the-latest-in-integrated-contact-center-technology",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/driving-small-to-mid-sized-businesses-profitability-and-performance-with-the-latest-in-integrated-contact-center-technology"
+  },
+  "eliminating-the-top-it-concerns-for-small-to-mid-sized-business-owners": {
+   "id": "225803045545",
+   "slug": "van-ausdall-blog/eliminating-the-top-it-concerns-for-small-to-mid-sized-business-owners",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/eliminating-the-top-it-concerns-for-small-to-mid-sized-business-owners"
+  },
+  "empowering-your-team-the-critical-role-of-security-awareness-training-in-todays-digital-landscape": {
+   "id": "225824872083",
+   "slug": "blog/empowering-your-team-the-critical-role-of-security-awareness-training-in-todays-digital-landscape",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/empowering-your-team-the-critical-role-of-security-awareness-training-in-todays-digital-landscape"
+  },
+  "empowering-your-workforce---the-importance-of-security-awareness-training": {
+   "id": "225825145998",
+   "slug": "blog/empowering-your-workforce-the-importance-of-security-awareness-training",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/empowering-your-workforce---the-importance-of-security-awareness-training"
+  },
+  "empowering-your-workforce-the-crucial-role-of-security-awareness-training": {
+   "id": "225803045558",
+   "slug": "van-ausdall-blog/empowering-your-workforce-the-crucial-role-of-security-awareness-training",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/empowering-your-workforce-the-crucial-role-of-security-awareness-training"
+  },
+  "enhancing-customer-experience-by-investing-in-ai-automation": {
+   "id": "225824872029",
+   "slug": "van-ausdall-blog/enhancing-customer-experience-by-investing-in-ai-automation",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/enhancing-customer-experience-by-investing-in-ai-automation"
+  },
+  "enhancing-productivity-with-document-conversion-solutions": {
+   "id": "225824872200",
+   "slug": "blog/enhancing-productivity-with-document-conversion-solutions",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/enhancing-productivity-with-document-conversion-solutions"
+  },
+  "ensuring-business-resilience-with-cloud-business-continuity": {
+   "id": "225828713840",
+   "slug": "blog/ensuring-business-resilience-with-cloud-business-continuity",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/ensuring-business-resilience-with-cloud-business-continuity"
+  },
+  "enter-document-conversion-services": {
+   "id": "225803045530",
+   "slug": "van-ausdall-blog/enter-document-conversion-services",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/enter-document-conversion-services"
+  },
+  "from-fragmented-to-unified-how-ucaas-is-reshaping-business-interaction": {
+   "id": "225824871999",
+   "slug": "van-ausdall-blog/from-fragmented-to-unified-how-ucaas-is-reshaping-business-interaction",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/from-fragmented-to-unified-how-ucaas-is-reshaping-business-interaction"
+  },
+  "guarding-the-gates-the-importance-of-intrusion-detection-for-your-business": {
+   "id": "225828713785",
+   "slug": "van-ausdall-blog/guarding-the-gates-the-importance-of-intrusion-detection-for-your-business",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/guarding-the-gates-the-importance-of-intrusion-detection-for-your-business"
+  },
+  "healthcare-it-solutions-ensuring-compliance-and-security": {
+   "id": "225824871993",
+   "slug": "van-ausdall-blog/healthcare-it-solutions-ensuring-compliance-and-security",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/healthcare-it-solutions-ensuring-compliance-and-security"
+  },
+  "healthcare-it-solutions-securing-patient-data--streamlining-operations": {
+   "id": "225824872072",
+   "slug": "blog/healthcare-it-solutions-securing-patient-data-streamlining-operations-2",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/healthcare-it-solutions-securing-patient-data--streamlining-operations"
+  },
+  "helping-businesses-harness-ai-without-exposing-sensitive-data": {
+   "id": "225803045489",
+   "slug": "van-ausdall-blog/helping-businesses-harness-ai-without-exposing-sensitive-data",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/helping-businesses-harness-ai-without-exposing-sensitive-data"
+  },
+  "how-cloud-solutions-ensure-business-continuity": {
+   "id": "225824872025",
+   "slug": "van-ausdall-blog/how-cloud-solutions-ensure-business-continuity",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/how-cloud-solutions-ensure-business-continuity"
+  },
+  "how-do-contact-centers-improve-customer-service": {
+   "id": "225825146008",
+   "slug": "blog/how-do-contact-centers-improve-customer-service",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/how-do-contact-centers-improve-customer-service"
+  },
+  "how-does-content-management-make-office-procedures-more-productive": {
+   "id": "225825146019",
+   "slug": "blog/how-does-content-management-make-office-procedures-more-productive",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/how-does-content-management-make-office-procedures-more-productive"
+  },
+  "how-does-ucaas-improves-employee-mobility": {
+   "id": "225824872221",
+   "slug": "blog/how-does-ucaas-improves-employee-mobility",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/how-does-ucaas-improves-employee-mobility"
+  },
+  "implementing-new-ai-security-technology-to-help-customers-stop-invisible-cyberattacks": {
+   "id": "225824871976",
+   "slug": "van-ausdall-blog/implementing-new-ai-security-technology-to-help-customers-stop-invisible-cyberattacks",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/implementing-new-ai-security-technology-to-help-customers-stop-invisible-cyberattacks"
+  },
+  "in-house-vs-outsourced-production-print-break-even": {
+   "id": "225803045454",
+   "slug": "van-ausdall-blog/in-house-vs-outsourced-production-print-break-even",
+   "state": "DRAFT",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/in-house-vs-outsourced-production-print-break-even"
+  },
+  "informing-business-owners-of-new-section-179-tax-deduction-limits-for-2024": {
+   "id": "225825145959",
+   "slug": "blog/informing-business-owners-of-new-section-179-tax-deduction-limits-for-2024",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/informing-business-owners-of-new-section-179-tax-deduction-limits-for-2024"
+  },
+  "it-solutions-for-healthcare-hipaa-technical-safeguards": {
+   "id": "225803045458",
+   "slug": "van-ausdall-blog/it-solutions-for-healthcare-hipaa-technical-safeguards",
+   "state": "DRAFT",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/it-solutions-for-healthcare-hipaa-technical-safeguards"
+  },
+  "launching-managed-detection-and-response-to-thwart-cyberattacks": {
+   "id": "225825146119",
+   "slug": "blog/launching-managed-detection-and-response-to-thwart-cyberattacks",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/launching-managed-detection-and-response-to-thwart-cyberattacks"
+  },
+  "launching-program-to-backup-microsoft-365-for-local-businesses": {
+   "id": "225825146011",
+   "slug": "blog/launching-program-to-backup-microsoft-365-for-local-businesses",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/launching-program-to-backup-microsoft-365-for-local-businesses"
+  },
+  "leveraging-microsoft-azure-to-take-customers-into-the-cloud-cost-effectively": {
+   "id": "225824871988",
+   "slug": "van-ausdall-blog/leveraging-microsoft-azure-to-take-customers-into-the-cloud-cost-effectively",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/leveraging-microsoft-azure-to-take-customers-into-the-cloud-cost-effectively"
+  },
+  "leveraging-new-vulnerability-management-technology-to-secure-customer-networks": {
+   "id": "225828713835",
+   "slug": "blog/leveraging-new-vulnerability-management-technology-to-secure-customer-networks",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/leveraging-new-vulnerability-management-technology-to-secure-customer-networks"
+  },
+  "managed-print-services-revolutionize-your-office-efficiency": {
+   "id": "225824872038",
+   "slug": "blog/van-ausdall-blog/managed-print-services-revolutionize-your-office-efficiency",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/van-ausdall-blog/managed-print-services-revolutionize-your-office-efficiency"
+  },
+  "managed-security-services-protecting-your-business-247": {
+   "id": "225828713745",
+   "slug": "van-ausdall-blog/managed-security-services-protecting-your-business-247",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/managed-security-services-protecting-your-business-247"
+  },
+  "managed-security-services-protecting-your-business-assets": {
+   "id": "225828713753",
+   "slug": "van-ausdall-blog/managed-security-services-protecting-your-business-assets",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/managed-security-services-protecting-your-business-assets"
+  },
+  "mastering-execution-van-ausdall--farrar-incs-leadership-invited-to-attend-24th-annual-tag-convention": {
+   "id": "225824872076",
+   "slug": "blog/mastering-execution-van-ausdall-farrar-incs-leadership-invited-to-attend-24th-annual-tag-convention",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/mastering-execution-van-ausdall--farrar-incs-leadership-invited-to-attend-24th-annual-tag-convention"
+  },
+  "mfa-your-digital-guardian-angel-in-the-cyber-world": {
+   "id": "225803045525",
+   "slug": "van-ausdall-blog/mfa-your-digital-guardian-angel-in-the-cyber-world",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/mfa-your-digital-guardian-angel-in-the-cyber-world"
+  },
+  "mfa-your-digital-superhero-in-the-battle-against-cybercrime": {
+   "id": "225828713791",
+   "slug": "van-ausdall-blog/mfa-your-digital-superhero-in-the-battle-against-cybercrime",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/mfa-your-digital-superhero-in-the-battle-against-cybercrime"
+  },
+  "modern-communication-systems-transforming-business-connectivity": {
+   "id": "225828713742",
+   "slug": "van-ausdall-blog/modern-communication-systems-transforming-business-connectivity",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/modern-communication-systems-transforming-business-connectivity"
+  },
+  "modern-print--copy-solutions-for-business-efficiency": {
+   "id": "225824872074",
+   "slug": "blog/modern-print-copy-solutions-for-business-efficiency-2",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/modern-print--copy-solutions-for-business-efficiency"
+  },
+  "multi-cloud-vs-hybrid-cloud-choosing-the-right-strategy": {
+   "id": "225803045470",
+   "slug": "van-ausdall-blog/multi-cloud-vs-hybrid-cloud-choosing-the-right-strategy",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/multi-cloud-vs-hybrid-cloud-choosing-the-right-strategy"
+  },
+  "multi-factor-authentication-the-essential-layered-defense": {
+   "id": "225825145956",
+   "slug": "blog/multi-factor-authentication-the-essential-layered-defense",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/multi-factor-authentication-the-essential-layered-defense"
+  },
+  "multi-factor-authentication-the-key-to-ironclad-security-in-the-digital-age": {
+   "id": "225825145991",
+   "slug": "blog/multi-factor-authentication-the-key-to-ironclad-security-in-the-digital-age",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/multi-factor-authentication-the-key-to-ironclad-security-in-the-digital-age"
+  },
+  "navigating-the-digital-landscape-why-managed-it-solutions-are-your-businesss-best-friend": {
+   "id": "225824872040",
+   "slug": "blog/van-ausdall-blog/navigating-the-digital-landscape-why-managed-it-solutions-are-your-businesss-best-friend",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/van-ausdall-blog/navigating-the-digital-landscape-why-managed-it-solutions-are-your-businesss-best-friend"
+  },
+  "offering-business-critical-voip-integrations-to-maximize-customer-profitability-and-productivity": {
+   "id": "225825145984",
+   "slug": "blog/offering-business-critical-voip-integrations-to-maximize-customer-profitability-and-productivity",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/offering-business-critical-voip-integrations-to-maximize-customer-profitability-and-productivity"
+  },
+  "optimizing-office-printing-for-maximum-efficiency": {
+   "id": "225825145981",
+   "slug": "blog/optimizing-office-printing-for-maximum-efficiency",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/optimizing-office-printing-for-maximum-efficiency"
+  },
+  "physical-security-how-access-control-protects-your-business": {
+   "id": "225828713795",
+   "slug": "blog/van-ausdall-blog/physical-security-how-access-control-protects-your-business",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/van-ausdall-blog/physical-security-how-access-control-protects-your-business"
+  },
+  "print--copy-solutions-maximizing-efficiency-and-roi": {
+   "id": "225824872069",
+   "slug": "blog/print-copy-solutions-maximizing-efficiency-and-roi-2",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/print--copy-solutions-maximizing-efficiency-and-roi"
+  },
+  "print--copy-solutions-where-document-workflows-start": {
+   "id": "225825145902",
+   "slug": "blog/print-copy-solutions-where-document-workflows-start-2",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/print--copy-solutions-where-document-workflows-start"
+  },
+  "printing-outside-the-box-innovative-print-application-solutions-for-modern-businesses": {
+   "id": "225803045522",
+   "slug": "van-ausdall-blog/printing-outside-the-box-innovative-print-application-solutions-for-modern-businesses",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/printing-outside-the-box-innovative-print-application-solutions-for-modern-businesses"
+  },
+  "process-automation-streamlining-business-operations-for-maximum-efficiency": {
+   "id": "225803045492",
+   "slug": "van-ausdall-blog/process-automation-streamlining-business-operations-for-maximum-efficiency",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/process-automation-streamlining-business-operations-for-maximum-efficiency"
+  },
+  "process-automation-streamlining-operations-for-growth": {
+   "id": "225803045478",
+   "slug": "van-ausdall-blog/process-automation-streamlining-operations-for-growth",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/process-automation-streamlining-operations-for-growth"
+  },
+  "process-automation-streamlining-operations-with-technology": {
+   "id": "225824871991",
+   "slug": "van-ausdall-blog/process-automation-streamlining-operations-with-technology",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/process-automation-streamlining-operations-with-technology"
+  },
+  "protect-your-business-with-data-security-solutions": {
+   "id": "225825146113",
+   "slug": "blog/protect-your-business-with-data-security-solutions",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/protect-your-business-with-data-security-solutions"
+  },
+  "protecting-customers-from-data-breaches-and-cyberthreats-with-password-management": {
+   "id": "225803045520",
+   "slug": "van-ausdall-blog/protecting-customers-from-data-breaches-and-cyberthreats-with-password-management",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/protecting-customers-from-data-breaches-and-cyberthreats-with-password-management"
+  },
+  "providing-small-to-mid-sized-businesses-and-non-profits-with-artificial-intelligence-acceptable-use-policies": {
+   "id": "225824872004",
+   "slug": "van-ausdall-blog/providing-small-to-mid-sized-businesses-and-non-profits-with-artificial-intelligence-acceptable-use-policies",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/providing-small-to-mid-sized-businesses-and-non-profits-with-artificial-intelligence-acceptable-use-policies"
+  },
+  "reduce-costs-with-managed-it-services": {
+   "id": "225828713844",
+   "slug": "blog/reduce-costs-with-managed-it-services",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/reduce-costs-with-managed-it-services"
+  },
+  "reduce-costs-with-managed-print-services": {
+   "id": "225824872218",
+   "slug": "blog/reduce-costs-with-managed-print-services",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/reduce-costs-with-managed-print-services"
+  },
+  "revolutionize-your-business-with-print-application-solutions-the-key-to-streamlined-workflows": {
+   "id": "225825145927",
+   "slug": "blog/revolutionize-your-business-with-print-application-solutions-the-key-to-streamlined-workflows",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/revolutionize-your-business-with-print-application-solutions-the-key-to-streamlined-workflows"
+  },
+  "revolutionize-your-workplace-modern-print--copy-solutions-unleashed": {
+   "id": "225825145909",
+   "slug": "blog/revolutionize-your-workplace-modern-print-copy-solutions-unleashed-2",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/revolutionize-your-workplace-modern-print--copy-solutions-unleashed"
+  },
+  "revolutionizing-customer-connections": {
+   "id": "225828713781",
+   "slug": "van-ausdall-blog/revolutionizing-customer-connections",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/revolutionizing-customer-connections"
+  },
+  "revolutionizing-customer-experiences-the-power-of-modern-contact-centers": {
+   "id": "225825145941",
+   "slug": "blog/revolutionizing-customer-experiences-the-power-of-modern-contact-centers",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/revolutionizing-customer-experiences-the-power-of-modern-contact-centers"
+  },
+  "safeguarding-corporate-data-the-pivotal-role-of-backup-disaster-recovery-and-data-loss-prevention": {
+   "id": "225824872202",
+   "slug": "blog/safeguarding-corporate-data-the-pivotal-role-of-backup-disaster-recovery-and-data-loss-prevention",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/safeguarding-corporate-data-the-pivotal-role-of-backup-disaster-recovery-and-data-loss-prevention"
+  },
+  "safeguarding-your-business-the-critical-importance-of-data-security-in-the-modern-age": {
+   "id": "225825145931",
+   "slug": "blog/safeguarding-your-business-the-critical-importance-of-data-security-in-the-modern-age",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/safeguarding-your-business-the-critical-importance-of-data-security-in-the-modern-age"
+  },
+  "safeguarding-your-digital-fortress-the-necessity-of-intrusion-detection-systems": {
+   "id": "225825145979",
+   "slug": "blog/safeguarding-your-digital-fortress-the-necessity-of-intrusion-detection-systems",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/safeguarding-your-digital-fortress-the-necessity-of-intrusion-detection-systems"
+  },
+  "safeguards-customer-networks-by-exposing-and-eliminating-website-vulnerabilities": {
+   "id": "225824872115",
+   "slug": "blog/safeguards-customer-networks-by-exposing-and-eliminating-website-vulnerabilities",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/safeguards-customer-networks-by-exposing-and-eliminating-website-vulnerabilities"
+  },
+  "securing-your-business-the-dynamic-duo-of-access-control-and-intrusion-detection": {
+   "id": "225824872079",
+   "slug": "blog/securing-your-business-the-dynamic-duo-of-access-control-and-intrusion-detection",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/securing-your-business-the-dynamic-duo-of-access-control-and-intrusion-detection"
+  },
+  "securing-your-business-the-power-of-modern-video-surveillance": {
+   "id": "225828713825",
+   "slug": "blog/securing-your-business-the-power-of-modern-video-surveillance",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/securing-your-business-the-power-of-modern-video-surveillance"
+  },
+  "security-awareness-training-your-human-firewall-against-cyber-threats": {
+   "id": "225828713759",
+   "slug": "van-ausdall-blog/security-awareness-training-your-human-firewall-against-cyber-threats",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/security-awareness-training-your-human-firewall-against-cyber-threats"
+  },
+  "seeing-is-believing-the-power-of-modern-video-surveillance-in-business": {
+   "id": "225824872020",
+   "slug": "van-ausdall-blog/seeing-is-believing-the-power-of-modern-video-surveillance-in-business",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/seeing-is-believing-the-power-of-modern-video-surveillance-in-business"
+  },
+  "smart-print-application-solutions": {
+   "id": "225803045553",
+   "slug": "van-ausdall-blog/smart-print-application-solutions",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/smart-print-application-solutions"
+  },
+  "streamline-your-business-with-custom-content-management-solutions": {
+   "id": "225825145973",
+   "slug": "blog/streamline-your-business-with-custom-content-management-solutions",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/streamline-your-business-with-custom-content-management-solutions"
+  },
+  "taming-the-information-beast-the-power-of-content-management-for-modern-businesses": {
+   "id": "225828713783",
+   "slug": "van-ausdall-blog/taming-the-information-beast-the-power-of-content-management-for-modern-businesses",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/taming-the-information-beast-the-power-of-content-management-for-modern-businesses"
+  },
+  "the-critical-importance-of-data-security-in-modern-business": {
+   "id": "225824872001",
+   "slug": "van-ausdall-blog/the-critical-importance-of-data-security-in-modern-business",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/the-critical-importance-of-data-security-in-modern-business"
+  },
+  "the-critical-importance-of-data-security-in-todays-business-landscape": {
+   "id": "225824872034",
+   "slug": "blog/van-ausdall-blog/the-critical-importance-of-data-security-in-todays-business-landscape",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/van-ausdall-blog/the-critical-importance-of-data-security-in-todays-business-landscape"
+  },
+  "the-digital-revolution-why-modern-businesses-are-embracing-document-conversion-services": {
+   "id": "225825145922",
+   "slug": "blog/the-digital-revolution-why-modern-businesses-are-embracing-document-conversion-services",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/the-digital-revolution-why-modern-businesses-are-embracing-document-conversion-services"
+  },
+  "the-future-of-video-surveillance": {
+   "id": "225824872209",
+   "slug": "blog/the-future-of-video-surveillance",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/the-future-of-video-surveillance"
+  },
+  "the-power-of-cloud-communications-by-van-ausdall--farrar": {
+   "id": "225825145951",
+   "slug": "blog/the-power-of-cloud-communications-by-van-ausdall-farrar",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/the-power-of-cloud-communications-by-van-ausdall--farrar"
+  },
+  "the-rise-of-ucaas-transforming-business-communications": {
+   "id": "225828713831",
+   "slug": "blog/the-rise-of-ucaas-transforming-business-communications",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/the-rise-of-ucaas-transforming-business-communications"
+  },
+  "the-unsung-hero-of-office-productivity-managed-print-services": {
+   "id": "225825145967",
+   "slug": "blog/the-unsung-hero-of-office-productivity-managed-print-services",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/the-unsung-hero-of-office-productivity-managed-print-services"
+  },
+  "the-urgent-need-for-security-awareness-training-fortifying-your-organizations-first-line-of-defense": {
+   "id": "225825145961",
+   "slug": "blog/the-urgent-need-for-security-awareness-training-fortifying-your-organizations-first-line-of-defense",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/the-urgent-need-for-security-awareness-training-fortifying-your-organizations-first-line-of-defense"
+  },
+  "ucaas-revolutionizing-business-communication-in-the-cloud-era": {
+   "id": "225824872036",
+   "slug": "blog/van-ausdall-blog/ucaas-revolutionizing-business-communication-in-the-cloud-era",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/van-ausdall-blog/ucaas-revolutionizing-business-communication-in-the-cloud-era"
+  },
+  "ucaas-revolutionizing-business-communication-in-the-digital-age": {
+   "id": "225824872097",
+   "slug": "blog/ucaas-revolutionizing-business-communication-in-the-digital-age",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/ucaas-revolutionizing-business-communication-in-the-digital-age"
+  },
+  "unified-communication-platforms-for-the-modern-workplace": {
+   "id": "225803045502",
+   "slug": "van-ausdall-blog/unified-communication-platforms-for-the-modern-workplace",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/unified-communication-platforms-for-the-modern-workplace"
+  },
+  "unified-communication-platforms-streamlining-modern-workplaces": {
+   "id": "225828713757",
+   "slug": "van-ausdall-blog/unified-communication-platforms-streamlining-modern-workplaces",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/unified-communication-platforms-streamlining-modern-workplaces"
+  },
+  "unleashing-the-power-of-unified-cloud-communications": {
+   "id": "225825145987",
+   "slug": "blog/unleashing-the-power-of-unified-cloud-communications",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/unleashing-the-power-of-unified-cloud-communications"
+  },
+  "unlock-efficiency-and-savings-with-managed-print-services": {
+   "id": "225824872008",
+   "slug": "van-ausdall-blog/unlock-efficiency-and-savings-with-managed-print-services",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/unlock-efficiency-and-savings-with-managed-print-services"
+  },
+  "unlock-efficiency-and-savings-with-managed-print-services-your-offices-hidden-productivity-booster": {
+   "id": "225825145937",
+   "slug": "blog/unlock-efficiency-and-savings-with-managed-print-services-your-offices-hidden-productivity-booster",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/unlock-efficiency-and-savings-with-managed-print-services-your-offices-hidden-productivity-booster"
+  },
+  "unlock-your-business-potential-with-managed-it-services-a-game-changer-for-modern-enterprises": {
+   "id": "225824872090",
+   "slug": "blog/unlock-your-business-potential-with-managed-it-services-a-game-changer-for-modern-enterprises",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/unlock-your-business-potential-with-managed-it-services-a-game-changer-for-modern-enterprises"
+  },
+  "unlocking-peace-of-mind-the-power-of-cyber-security-assessments": {
+   "id": "225803045527",
+   "slug": "van-ausdall-blog/unlocking-peace-of-mind-the-power-of-cyber-security-assessments",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/unlocking-peace-of-mind-the-power-of-cyber-security-assessments"
+  },
+  "unlocking-peace-of-mind-the-power-of-cyber-security-assessments-2025": {
+   "id": "225825145916",
+   "slug": "blog/unlocking-peace-of-mind-the-power-of-cyber-security-assessments-2025",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/unlocking-peace-of-mind-the-power-of-cyber-security-assessments-2025"
+  },
+  "unlocking-the-future-how-modern-access-control-systems-secure-your-business": {
+   "id": "225828713778",
+   "slug": "van-ausdall-blog/unlocking-the-future-how-modern-access-control-systems-secure-your-business",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/unlocking-the-future-how-modern-access-control-systems-secure-your-business"
+  },
+  "unlocking-the-power-of-access-control-securing-your-business-in-the-digital-age": {
+   "id": "225828713823",
+   "slug": "blog/unlocking-the-power-of-access-control-securing-your-business-in-the-digital-age",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/unlocking-the-power-of-access-control-securing-your-business-in-the-digital-age"
+  },
+  "unlocking-the-secrets-of-access-control": {
+   "id": "225825145976",
+   "slug": "blog/unlocking-the-secrets-of-access-control",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/unlocking-the-secrets-of-access-control"
+  },
+  "utilizing-latest-ai-knowledge-management-to-outpace-it-competitors-while-enhancing-customer-support-experience": {
+   "id": "225828713827",
+   "slug": "blog/utilizing-latest-ai-knowledge-management-to-outpace-it-competitors-while-enhancing-customer-support-experience",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/utilizing-latest-ai-knowledge-management-to-outpace-it-competitors-while-enhancing-customer-support-experience"
+  },
+  "van-ausdall--farrar-achieves-elite-status-with-canon-for-2025-reinforcing-century-long-commitment-to-excellence": {
+   "id": "225828713821",
+   "slug": "blog/van-ausdall-farrar-achieves-elite-status-with-canon-for-2025-reinforcing-century-long-commitment-to-excellence",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/van-ausdall--farrar-achieves-elite-status-with-canon-for-2025-reinforcing-century-long-commitment-to-excellence"
+  },
+  "van-ausdall--farrar-celebrates-110-years-of-innovation": {
+   "id": "225824872212",
+   "slug": "blog/van-ausdall-farrar-celebrates-110-years-of-innovation",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/van-ausdall--farrar-celebrates-110-years-of-innovation"
+  },
+  "van-ausdall--farrar-inc-achieves-iso-27001-compliance-positioning-itself-as-elite-in-cybersecurity": {
+   "id": "225825145913",
+   "slug": "blog/van-ausdall-farrar-inc-achieves-iso-27001-compliance-positioning-itself-as-elite-in-cybersecurity",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/van-ausdall--farrar-inc-achieves-iso-27001-compliance-positioning-itself-as-elite-in-cybersecurity"
+  },
+  "van-ausdall--farrar-inc-certified-as-a-microsoft-solutions-partner-ranking-among-the-top-5-of-providers": {
+   "id": "225824872094",
+   "slug": "blog/van-ausdall-farrar-inc-certified-as-a-microsoft-solutions-partner-ranking-among-the-top-5-of-providers",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/van-ausdall--farrar-inc-certified-as-a-microsoft-solutions-partner-ranking-among-the-top-5-of-providers"
+  },
+  "van-ausdall--farrar-inc-invited-to-attend-top-technology-event-of-the-year": {
+   "id": "225825146039",
+   "slug": "blog/van-ausdall-farrar-inc-invited-to-attend-top-technology-event-of-the-year",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/van-ausdall--farrar-inc-invited-to-attend-top-technology-event-of-the-year"
+  },
+  "van-ausdall--farrar-inc-launches-revolutionary-network-data-discovery-and-cyber-risk-management-solution-for-businesses": {
+   "id": "225824872196",
+   "slug": "blog/van-ausdall-farrar-inc-launches-revolutionary-network-data-discovery-and-cyber-risk-management-solution-for-businesses",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/van-ausdall--farrar-inc-launches-revolutionary-network-data-discovery-and-cyber-risk-management-solution-for-businesses"
+  },
+  "we-are-invited-to-technology-assurance-groups-25th-annual-convention": {
+   "id": "225803045513",
+   "slug": "van-ausdall-blog/we-are-invited-to-technology-assurance-groups-25th-annual-convention",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/we-are-invited-to-technology-assurance-groups-25th-annual-convention"
+  },
+  "weathering-the-storm-how-business-continuity-planning-keeps-your-company-afloat": {
+   "id": "225825145924",
+   "slug": "blog/weathering-the-storm-how-business-continuity-planning-keeps-your-company-afloat",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/weathering-the-storm-how-business-continuity-planning-keeps-your-company-afloat"
+  },
+  "what-are-the-advantages-of-access-control-solutions-for-businesses": {
+   "id": "225825146117",
+   "slug": "blog/what-are-the-advantages-of-access-control-solutions-for-businesses",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/what-are-the-advantages-of-access-control-solutions-for-businesses"
+  },
+  "what-are-the-advantages-of-ucaas-for-businesses": {
+   "id": "225825146015",
+   "slug": "blog/what-are-the-advantages-of-ucaas-for-businesses",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/what-are-the-advantages-of-ucaas-for-businesses"
+  },
+  "what-are-the-benefits-of-a-physical-intrusion-detection-system": {
+   "id": "225825146025",
+   "slug": "blog/what-are-the-benefits-of-a-physical-intrusion-detection-system",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/what-are-the-benefits-of-a-physical-intrusion-detection-system"
+  },
+  "why-businesses-need-a-trusted-managed-services-provider": {
+   "id": "225824872113",
+   "slug": "blog/why-businesses-need-a-trusted-managed-services-provider",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/why-businesses-need-a-trusted-managed-services-provider"
+  },
+  "why-construction-firms-cant-escape-paper": {
+   "id": "225828713732",
+   "slug": "van-ausdall-blog/why-construction-firms-cant-escape-paper",
+   "state": "DRAFT",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/why-construction-firms-cant-escape-paper"
+  },
+  "why-is-multi-factor-authentication-important": {
+   "id": "225824872215",
+   "slug": "blog/why-is-multi-factor-authentication-important",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/why-is-multi-factor-authentication-important"
+  },
+  "why-managed-it-services-are-your-businesss-best-friend": {
+   "id": "225824872023",
+   "slug": "van-ausdall-blog/why-managed-it-services-are-your-businesss-best-friend",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/why-managed-it-services-are-your-businesss-best-friend"
+  },
+  "why-multi-factor-authentication-is-your-businesss-best-friend-in-cybersecurity": {
+   "id": "225825145918",
+   "slug": "blog/why-multi-factor-authentication-is-your-businesss-best-friend-in-cybersecurity",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/why-multi-factor-authentication-is-your-businesss-best-friend-in-cybersecurity"
+  },
+  "why-should-your-business-use-multi-factor-authentication": {
+   "id": "225828713842",
+   "slug": "blog/why-should-your-business-use-multi-factor-authentication",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/blog/why-should-your-business-use-multi-factor-authentication"
+  },
+  "why-your-business-needs-a-cyber-security-assessment-before-its-too-late": {
+   "id": "225828713789",
+   "slug": "van-ausdall-blog/why-your-business-needs-a-cyber-security-assessment-before-its-too-late",
+   "state": "PUBLISHED",
+   "url": "https://50498425.hs-sites.com/van-ausdall-blog/why-your-business-needs-a-cyber-security-assessment-before-its-too-late"
+  }
+ },
  "tags": {
   "8x8": "225807572524",
   "AI": "225807357786",
