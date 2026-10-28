@@ -25,7 +25,7 @@ const fs = require('fs');
         const heads = [...document.querySelectorAll('h1,h2,h3')].filter(e => e.offsetParent);
         const secs = [...document.querySelectorAll('main section, section')].filter(e => e.offsetHeight > 80);
         const sig = secs.map(s => (s.className.match(/vaf-[a-z0-9]+/) || [''])[0] + '|' + (s.className.match(/flip|alt|q-bg-alt/g) || []).join(''));
-        let adj = 0; for (let i = 1; i < sig.length; i++) if (sig[i] && sig[i] === sig[i - 1]) adj++;
+        let adj = 0; for (let i = 1; i < sig.length; i++) if (sig[i].split('|')[0] && sig[i] === sig[i - 1]) adj++;
         const imgs = [...document.images].filter(i => i.offsetParent);
         const tiny = [...document.querySelectorAll('p,li,a,span')].filter(e => e.offsetParent && e.children.length === 0 && e.textContent.trim().length > 20 && parseFloat(getComputedStyle(e).fontSize) < 13).length;
         return {
