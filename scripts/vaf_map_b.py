@@ -89,7 +89,8 @@ def m_wheel(s):
     out = _base(s, **_head(s))
     out.update({"hub": nd(s.get("hub", "")), "hub_sub": nd(s.get("hub_sub", "")), "ring": nd(s.get("ring", ""))})
     out["pillars"] = [{"pillar_title": nd(it[0]), "pillar_copy": nd(it[1]), "pillar_link": link(it[2]),
-                       "pillar_short": nd(it[3] if len(it) > 3 else it[0])} for it in s["items"]]
+                       "pillar_short": nd(it[3] if len(it) > 3 else it[0]),
+                       "pillar_chips": nd(it[4]) if len(it) > 4 else "", "pillar_proof": nd(it[5]) if len(it) > 5 else ""} for it in s["items"]]
     return out
 
 

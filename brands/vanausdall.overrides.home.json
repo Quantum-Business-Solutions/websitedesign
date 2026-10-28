@@ -137,31 +137,39 @@
     "id": "wheel",
     "eyebrow": "Four pillars",
     "heading": "Information, communication, print and process, from one partner",
-    "intro": "Hover a segment. Four pillars, one agreement, one Customer Care Center.",
+    "intro": "Pick a pillar. Four pillars, one agreement, one Customer Care Center.",
     "items": [
      [
       "Information",
       "Managed IT, cybersecurity, cloud, backup and continuity. A vCIO, 24/7 monitoring and a security operations center, from one team.",
       "services/managed-it.html",
-      "Information"
+      "Information",
+      "Managed IT|Cybersecurity|Cloud and backup|vCIO",
+      "SOC 2 certified, 24/7 monitoring"
      ],
      [
       "Communication",
       "Business phone systems, unified communications and contact center, in the telecom business since 1983 with over 4,000 systems deployed.",
       "services/business-phone-systems.html",
-      "Communication"
+      "Communication",
+      "Business phones|Unified communications|Contact center|Mitel, RingCentral, 8x8",
+      "Mitel Gold, seven consecutive years"
      ],
      [
       "Print",
       "Copiers, printers, managed print and production print. Canon, Ricoh, Kyocera and HP, serviced by certified local technicians.",
       "services/copiers.html",
-      "Print"
+      "Print",
+      "Copiers and MFPs|Managed print|Production print|Canon, Ricoh, Kyocera, HP",
+      "Certified local technicians"
      ],
      [
       "Process",
       "Document management, document conversion, business process and AI consulting. The paper out, the workflow in.",
       "services/document-management.html",
-      "Process"
+      "Process",
+      "Document management|Document conversion|Business process|AI consulting",
+      "Paper out, workflow in"
      ]
     ],
     "hub": "VAF",

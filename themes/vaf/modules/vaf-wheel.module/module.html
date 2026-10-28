@@ -12,9 +12,12 @@
         <div class="vaf-wheel__cards">
           {% for p in pillars %}
           <article class="vaf-wheel__card{% if loop.first %} is-on{% endif %}" data-short="{{ p.pillar_short|escape }}">
+            <span class="vaf-wheel__ic" aria-hidden="true">{% if loop.index == 1 %}<svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>{% elif loop.index == 2 %}<svg viewBox="0 0 24 24"><path d="M4 13v-1a8 8 0 0116 0v1"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/><path d="M19 19c0 1.5-2 2.5-5 2.5"/></svg>{% elif loop.index == 3 %}<svg viewBox="0 0 24 24"><path d="M7 9V3h10v6"/><rect x="3" y="9" width="18" height="9" rx="2"/><path d="M7 14h10v7H7z"/></svg>{% else %}<svg viewBox="0 0 24 24"><rect x="3" y="4" width="7" height="7" rx="1.5"/><rect x="14" y="13" width="7" height="7" rx="1.5"/><path d="M10 7.5h4a3 3 0 013 3V13M14 16.5h-4a3 3 0 01-3-3V11"/></svg>{% endif %}</span>
             <p class="vaf-wheel__k">{{ module.pillar_label }} {{ loop.index }}</p>
             <h3>{{ p.pillar_title }}</h3>
             <p class="vaf-wheel__copy">{{ p.pillar_copy }}</p>
+            {% if p.pillar_chips %}<ul class="vaf-wheel__chips">{% for c in p.pillar_chips.split("|") %}<li>{{ c|trim }}</li>{% endfor %}</ul>{% endif %}
+            {% if p.pillar_proof %}<p class="vaf-wheel__proof">{{ p.pillar_proof }}</p>{% endif %}
             {% if p.pillar_link.url.href %}<a class="vaf-wheel__go" href="{{ p.pillar_link.url.href }}"{% if p.pillar_link.open_in_new_tab %} target="_blank" rel="noopener"{% endif %}>{{ module.link_label }}<span class="vaf-wheel__sr"> {{ p.pillar_title }}</span></a>{% endif %}
           </article>
           {% endfor %}

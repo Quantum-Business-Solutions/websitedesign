@@ -873,3 +873,11 @@ html{scroll-padding-bottom:72px}
 h1,h2,h3,.q-h1,.q-h2,.q-h3{text-wrap:balance}
 p,li,.q-lead,.vc__copy,.fcard p{text-wrap:pretty}
 @media(max-width:1024px){.pv-lh .fcard.b{width:100%}}
+
+/* audit fixes: mobile call pill, mega panel clipping, dark stat bands, seal numerals */
+@media(max-width:767px){.pv-sticky .b{background:#0f1e33;color:#fff;border-color:#0f1e33}}
+.q-header .q-nav .pv-mega a.feat,.pv-mega .feat,.pv-mega .feat *{white-space:normal}
+.q-tone-dark .pv-stat{background:#12294a;border-color:#2a4a73;color:#fff}
+.q-tone-dark .pv-stat b,.q-tone-dark .pv-stat .n{color:#fff}
+.q-tone-dark .pv-stat span,.q-tone-dark .pv-stat small{color:#c5d6e8}
+.vaf-seal .vs__n,.vaf-seal [class*="__num"],.vaf-seal [class*="__n"]{color:#7fb9ee}
