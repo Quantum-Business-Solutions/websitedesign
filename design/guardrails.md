@@ -208,3 +208,18 @@ What is never acceptable: leaving one card alone on a row beneath three or more.
 
 `scripts/verify.mjs` measures actual rendered rows at 390 / 768 / 1440 and fails on an orphan, so
 this rule does not depend on anyone remembering it.
+
+## From the VAF build (Oct 2026): rules that came from client feedback
+
+Each of these cost a review round on `vanausdall`; the build now enforces them in `scripts/vaf_build.py` `rhythm()` and `themes/vaf/css/vaf.css`.
+
+- **Alternate, don't repeat.** Two adjacent sections must never share a layout. Flip split and detail sections left/right on a fixed rhythm and alternate the background. "Too much of everything looking identical" was the single most repeated complaint.
+- **Offset beats centered for headings in alternate sections.** Left-align the heading of every second section (desktop only). Centered everywhere reads as a template.
+- **Headings never wrap to three or four lines.** Cap the display scale at `clamp(30px,3.1vw,44px)` and give headings a `max-width` in `ch`. If a heading wraps to two lines with one orphan word, rewrite it or widen the measure; do not shrink the font.
+- **Last row of a card grid is centered, not left-stranded.** `.vc__grid` is flex-wrap with `justify-content:center`; the column count comes from the item count (see the table above), so 5 reads 3+2 centered, not 3+2 left.
+- **Real logos, never names set as text.** Partner and customer logos are files in HubSpot Files, wired through the asset map, with a text fallback only for a logo that could not be sourced. Logos in cards come from a `card_logo` image field, not from the card title.
+- **Hero video must be visible.** Lighten the scrim when a video is present (about 72/30/0 percent across the stops), keep video opacity 1, pick a bright poster frame, and ship a WebM beside the MP4 because headless Chromium has no H.264. Verify by playing it in Playwright, not by eyeballing a poster.
+- **Fonts: no whimsical display faces.** The client hated Bricolage. For a dealer or professional-services brand use one humanist sans (Open Sans) with one neutral UI face. Show the font choice in the preview before it ships.
+- **Everything editable.** Every visible string, image and link is a module field or a drag-and-drop area. If a layout cannot be edited in the page editor, it is not done.
+- **A flow or process section is a diagram, not a list.** Use the numbered flow/timeline modules with connectors, never bullets in cards.
+- **Interactive proof beats claims.** Where a service has a physical product, give it a viewer (360 model, hotspots) or a live gauge, as Kelly's orbit/float product features did. Avoid decoration that answers no question.

@@ -214,7 +214,7 @@
     "body": "",
     "bullets": [
      "The Phish-prone percentage is the share of tested users likely to fall for a phishing email",
-     "The page says the figure is usually higher than people expect",
+     "VAF's page says the figure is usually higher than people expect",
      "That makes it a useful way to make the case for training budget",
      "You can test up to 100 users and start immediately",
      "A PDF with charts arrives within 24 hours for sharing with management"
@@ -256,7 +256,7 @@
      ],
      [
       "Why should I phish my own employees?",
-      "Because a simulated attack shows how people behave before a real attacker does. The page cites a Trend Micro figure that 91 percent of successful data breaches started with a spear-phishing attack."
+      "Because a simulated attack shows how people behave before a real attacker does. VAF's page cites a Trend Micro figure that 91 percent of successful data breaches started with a spear-phishing attack."
      ],
      [
       "What is a Phish-prone percentage?",
@@ -264,7 +264,7 @@
      ],
      [
       "How many users can I include in the free test?",
-      "Up to 100 users. The page says you can start immediately without talking to anyone."
+      "Up to 100 users. VAF's page says you can start immediately without talking to anyone."
      ],
      [
       "Is the free test the same as the phishing security test page?",
@@ -370,7 +370,7 @@
      "href": "technology-strength-assessment.html"
     },
     "image": "assets/gen-soc-1200.jpg",
-    "image_alt": "Know Be4, Free Phishing Security Test",
+    "image_alt": "KnowBe4, Free Phishing Security Test",
     "image_w": 1200,
     "image_h": 800
    },
@@ -436,7 +436,7 @@
      ],
      [
       "Can I customize what the test email looks like?",
-      "Yes. The page says you can customize the phishing test template based on your own environment."
+      "Yes. VAF's page says you can customize the phishing test template based on your own environment."
      ],
      [
       "What do employees see when they click?",
@@ -448,11 +448,11 @@
      ],
      [
       "What does Phish-prone percentage mean?",
-      "It is the share of tested employees who are likely to fall for a phishing attack. The page says it is usually higher than expected."
+      "It is the share of tested employees who are likely to fall for a phishing attack. VAF's page says it is usually higher than expected."
      ],
      [
       "Why test employees as well as protect the network?",
-      "Because staff are the last line of defense after antivirus and the firewall. The page cites a Trend Micro figure that 91 percent of successful data breaches began with spear phishing."
+      "Because staff are the last line of defense after antivirus and the firewall. VAF's page cites a Trend Micro figure that 91 percent of successful data breaches began with spear phishing."
      ]
     ]
    },
@@ -539,7 +539,7 @@
     "type": "hero",
     "layout": "centered",
     "eyebrow": "Solutions: Information",
-    "heading": "Know Be4, Get Your Free Weak Password Test",
+    "heading": "KnowBe4, Get Your Free Weak Password Test",
     "subhead": "Are your user’s passwords…P@ssw0rd? Verizon’s recent Data Breach Report showed that 81% of hacking-related breaches used either stolen and/or weak passwords.",
     "primary": {
      "label": "Schedule a consultation",
@@ -550,7 +550,7 @@
      "href": "technology-strength-assessment.html"
     },
     "image": "assets/gen-soc-1200.jpg",
-    "image_alt": "Know Be4, Get Your Free Weak Password Test",
+    "image_alt": "KnowBe4, Get Your Free Weak Password Test",
     "image_w": 1200,
     "image_h": 800
    },
@@ -559,7 +559,7 @@
     "alt": false,
     "eyebrow": "Information",
     "heading": "GET YOUR FREE WEAK PASSWORD TEST",
-    "body": "Know Be4’s complimentary Weak Password Test (WPT) checks your Active Directory for several different types of weak password related threats. WPT gives you a quick look at the effectiveness of your password policies and any fails so that you can take action. This tests against 10 types of weak password related threats for example; Weak, Duplicate, Empty, Never Expires, plus 6 more.",
+    "body": "KnowBe4’s complimentary Weak Password Test (WPT) checks your Active Directory for several different types of weak password related threats. WPT gives you a quick look at the effectiveness of your password policies and any fails so that you can take action. This tests against 10 types of weak password related threats for example; Weak, Duplicate, Empty, Never Expires, plus 6 more.",
     "bullets": []
    },
    {
@@ -581,7 +581,7 @@
     "alt": false,
     "eyebrow": "Information",
     "heading": "Before you run it",
-    "body": "Plan about five minutes. The page lists two requirements: Active Directory, and a Windows 7 or higher machine, 32 or 64 bit. There is nothing to configure beyond the download and install.",
+    "body": "Plan about five minutes. VAF's page lists two requirements: Active Directory, and a Windows 7 or higher machine, 32 or 64 bit. As VAF's page puts it, just download the install and run it.",
     "bullets": []
    },
    {
@@ -602,7 +602,7 @@
     "alt": false,
     "eyebrow": "Why passwords get their own test",
     "heading": "Weak and reused passwords are a common way in",
-    "body": "The page cites Verizon's Data Breach Report: 81 percent of hacking-related breaches used stolen or weak passwords. A password policy on paper is not the same as a policy that works, and this test checks which one you have.",
+    "body": "VAF's page cites Verizon's Data Breach Report: 81 percent of hacking-related breaches used stolen or weak passwords. A password policy on paper is not the same as a policy that works, and this test checks which one you have.",
     "bullets": [
      "Weak: accounts using easy-to-guess passwords",
      "Duplicate: the same password on more than one account",
@@ -622,11 +622,11 @@
      ],
      [
       "How many kinds of threat does it test for?",
-      "Ten. The page names Weak, Duplicate, Empty and Never Expires, plus six more."
+      "Ten. VAF's page names Weak, Duplicate, Empty and Never Expires, plus six more."
      ],
      [
       "Does the test reveal my users' actual passwords?",
-      "No. The page states it reports on the affected accounts but does not show or report the actual passwords."
+      "No. VAF's page states it reports on the affected accounts but does not show or report the actual passwords."
      ],
      [
       "How long does it take?",
@@ -638,7 +638,7 @@
      ],
      [
       "Is the test really free?",
-      "The page calls it KnowBe4's complimentary Weak Password Test. Confirm the current terms with KnowBe4 or ask VAF before you begin."
+      "VAF's page calls it KnowBe4's complimentary Weak Password Test. Confirm the current terms with KnowBe4 or ask VAF before you begin."
      ]
     ]
    },
@@ -725,7 +725,7 @@
     "type": "hero",
     "layout": "centered",
     "eyebrow": "Solutions: Information",
-    "heading": "Know Be4, Get Your Free Ransomware Simulator Tool",
+    "heading": "KnowBe4, Get Your Free Ransomware Simulator Tool",
     "subhead": "Bad guys are constantly coming out with new versions of ransomware strains to evade detection. Is your network effective in blocking ransomware when employees fall for social engineering attacks?",
     "primary": {
      "label": "Schedule a consultation",
@@ -736,7 +736,7 @@
      "href": "technology-strength-assessment.html"
     },
     "image": "assets/gen-soc-1200.jpg",
-    "image_alt": "Know Be4, Get Your Free Ransomware Simulator Tool Servi",
+    "image_alt": "KnowBe4, Get Your Free Ransomware Simulator Tool Servi",
     "image_w": 1200,
     "image_h": 800
    },
@@ -745,15 +745,15 @@
     "alt": false,
     "eyebrow": "Information",
     "heading": "How Vulnerable Is Your Network against Ransomware Attacks?",
-    "body": "Know Be4’s Ransomware Simulator “Ran Sim” gives you a quick look at the effectiveness of your existing network protection. Ran Sim will simulate 13 ransomware infection scenarios and show you if a workstation is vulnerable to infection.",
+    "body": "KnowBe4’s Ransomware Simulator “RanSim” gives you a quick look at the effectiveness of your existing network protection. RanSim will simulate 13 ransomware infection scenarios and show you if a workstation is vulnerable to infection.",
     "bullets": []
    },
    {
     "type": "detail",
     "alt": true,
     "eyebrow": "Information",
-    "heading": "Here’s How Ran Sim Works:",
-    "body": "NOTE: Ran Sim was created for Windows-based workstations running Windows 7+. Ran Sim does not alter any existing files on disk. As part of the simulation Ran Sim does enumerate all files on the local disk(s). For the purposes of encryption, simulated data files are downloaded from the Internet.",
+    "heading": "Here’s How RanSim Works:",
+    "body": "NOTE: RanSim was created for Windows-based workstations running Windows 7+. RanSim does not alter any existing files on disk. As part of the simulation RanSim does enumerate all files on the local disk(s). For the purposes of encryption, simulated data files are downloaded from the Internet.",
     "bullets": [
      "100% harmless simulation of a real ransomware",
      "Does not use any of your own files",
@@ -766,8 +766,8 @@
     "type": "detail",
     "alt": false,
     "eyebrow": "Information",
-    "heading": "About Know Be4",
-    "body": "Know Be4 is the world’s most popular integrated platform for security awareness training combined with simulated phishing attacks. We help thousands of organizations to manage the continuing problem of social engineering. Our mission: Train your employees to make smarter security decisions.",
+    "heading": "About KnowBe4",
+    "body": "KnowBe4 is the world’s most popular integrated platform for security awareness training combined with simulated phishing attacks. We help thousands of organizations to manage the continuing problem of social engineering. Our mission: Train your employees to make smarter security decisions.",
     "bullets": []
    },
    {
@@ -793,7 +793,7 @@
      "Review endpoint protection on the machine that failed",
      "Check patch levels and monitoring",
      "Confirm backups restore, because tested backups are the real answer to ransomware",
-     "Train users, since the page notes ransomware often arrives through social engineering"
+     "Train users, since VAF's page notes ransomware often arrives through social engineering"
     ]
    },
    {
@@ -807,11 +807,11 @@
      ],
      [
       "Is it safe to run?",
-      "The page describes it as a 100 percent harmless simulation of real ransomware. It does not use your own files, and simulated data files are downloaded from the internet for the encryption test."
+      "VAF's page describes it as a 100 percent harmless simulation of real ransomware. It does not use your own files, and simulated data files are downloaded from the internet for the encryption test."
      ],
      [
       "Does RanSim change files on my computer?",
-      "The page says it does not alter existing files on disk. It does enumerate the files on local disks as part of the simulation."
+      "VAF's page says it does not alter existing files on disk. It does enumerate the files on local disks as part of the simulation."
      ],
      [
       "What do I need to run it?",
@@ -849,7 +849,7 @@
     "type": "hero",
     "layout": "centered",
     "eyebrow": "Solutions: Information",
-    "heading": "Know Be4, Get Your Free Email Exposure Check",
+    "heading": "KnowBe4, Get Your Free Email Exposure Check",
     "subhead": "Find out which of your users emails are exposed before the bad guys do.",
     "primary": {
      "label": "Schedule a consultation",
@@ -860,7 +860,7 @@
      "href": "technology-strength-assessment.html"
     },
     "image": "assets/gen-soc-1200.jpg",
-    "image_alt": "Know Be4, Get Your Free Email Exposure Check",
+    "image_alt": "KnowBe4, Get Your Free Email Exposure Check",
     "image_w": 1200,
     "image_h": 800
    },
@@ -884,7 +884,7 @@
     "type": "detail",
     "alt": false,
     "eyebrow": "Information",
-    "heading": "Know Be4 Can Help! Our Email Exposure Check Is a One-Time Free Service.",
+    "heading": "KnowBe4 Can Help! Our Email Exposure Check Is a One-Time Free Service.",
     "body": "We will email you a report containing the list of exposed addresses and where we were found within 2 business days, or less! NOTE: We need your organization’s email address (your own domain name) to run the EEC, not an email from an ISP like Hotmail or gmail.",
     "bullets": []
    },
@@ -925,7 +925,7 @@
      ],
      [
       "Why does exposure matter?",
-      "Exposed addresses are easy for criminals to find and use for social engineering, spear phishing and ransomware attacks. The page cites Trend Micro's figure that 91 percent of successful data breaches began with spear phishing."
+      "Exposed addresses are easy for criminals to find and use for social engineering, spear phishing and ransomware attacks. VAF's page cites Trend Micro's figure that 91 percent of successful data breaches began with spear phishing."
      ],
      [
       "How long does the check take?",
@@ -937,11 +937,11 @@
      ],
      [
       "Can I use a Gmail or Hotmail address to request it?",
-      "No. The page says an address on your own domain is required, not one from an ISP such as Hotmail or Gmail."
+      "No. VAF's page says an address on your own domain is required, not one from an ISP such as Hotmail or Gmail."
      ],
      [
       "Can I run it more than once?",
-      "The page describes it as a one-time free service. Ask KnowBe4 or VAF if you need a second check."
+      "VAF's page describes it as a one-time free service. Ask KnowBe4 or VAF if you need a second check."
      ]
     ]
    },
@@ -963,7 +963,7 @@
     "type": "hero",
     "layout": "centered",
     "eyebrow": "Solutions: Information",
-    "heading": "Know Be4, Can Hackers Spoof an Email Address from Your Own Domain?",
+    "heading": "KnowBe4, Can Hackers Spoof an Email Address from Your Own Domain?",
     "subhead": "Are you aware that one of the first things hackers try is to see if they can spoof the email address of someone in your own domain?",
     "primary": {
      "label": "Schedule a consultation",
@@ -974,7 +974,7 @@
      "href": "technology-strength-assessment.html"
     },
     "image": "assets/gen-soc-1200.jpg",
-    "image_alt": "Know Be4, Can Hackers Spoof Your Email Domain",
+    "image_alt": "KnowBe4, Can Hackers Spoof Your Email Domain",
     "image_w": 1200,
     "image_h": 800
    },
@@ -983,7 +983,7 @@
     "alt": false,
     "eyebrow": "Information",
     "heading": "Why spoofing your own domain is a problem",
-    "body": "A criminal who can send mail that looks like it came from someone at your domain can attempt CEO fraud: a spear phishing message that appears to come from a colleague or executive. The page notes this is very hard to defend against unless users are highly security-awareness trained.",
+    "body": "A criminal who can send mail that looks like it came from someone at your domain can attempt CEO fraud: a spear phishing message that appears to come from a colleague or executive. VAF's page notes this is very hard to defend against unless users are highly security-awareness trained.",
     "bullets": []
    },
    {
@@ -1044,7 +1044,7 @@
      ],
      [
       "Is the test intrusive?",
-      "No. The page calls it a simple, non-intrusive pass or fail test."
+      "No. VAF's page calls it a simple, non-intrusive pass or fail test."
      ],
      [
       "Who is eligible to request it?",
@@ -1052,7 +1052,7 @@
      ],
      [
       "What is CEO fraud?",
-      "CEO fraud is a spear phishing attack where a message appears to come from an executive or colleague at your own domain. The page says it is very hard to defend against unless users are well trained."
+      "CEO fraud is a spear phishing attack where a message appears to come from an executive or colleague at your own domain. VAF's page says it is very hard to defend against unless users are well trained."
      ]
     ]
    },
@@ -1074,7 +1074,7 @@
     "type": "hero",
     "layout": "centered",
     "eyebrow": "Solutions: Information",
-    "heading": "Know Be4, Free Phish Alert Button",
+    "heading": "KnowBe4, Free Phish Alert Button",
     "subhead": "Do your users know what to do when they receive a suspicious email?",
     "primary": {
      "label": "Schedule a consultation",
@@ -1085,7 +1085,7 @@
      "href": "technology-strength-assessment.html"
     },
     "image": "assets/gen-soc-1200.jpg",
-    "image_alt": "Know Be4, Free Phish Alert Button",
+    "image_alt": "KnowBe4, Free Phish Alert Button",
     "image_w": 1200,
     "image_h": 800
    },
@@ -1094,7 +1094,7 @@
     "alt": false,
     "eyebrow": "Information",
     "heading": "GIVE YOUR EMPLOYEES A SAFE WAY TO REPORT PHISHING ATTACKS WITH ONE CLICK!",
-    "body": "Should they call the help desk, or forward it? Should they forward to IT including all headers? Delete and not report it, forfeiting a possible early warning? Know Be4’s Phish Alert add-in button gives your users a safe way to forward email threats to the security team for analysis and deletes the email from the user’s inbox to prevent future exposure. All with just one click!",
+    "body": "Should they call the help desk, or forward it? Should they forward to IT including all headers? Delete and not report it, forfeiting a possible early warning? KnowBe4’s Phish Alert add-in button gives your users a safe way to forward email threats to the security team for analysis and deletes the email from the user’s inbox to prevent future exposure. All with just one click!",
     "bullets": []
    },
    {
@@ -1153,11 +1153,11 @@
      ],
      [
       "Which email systems does it work with?",
-      "The page lists Outlook 2007, 2010, 2013, 2016 and Outlook for Office 365, Exchange 2013 and 2016, and Chrome 54 and later on Linux, OS X and Windows."
+      "VAF's page lists Outlook 2007, 2010, 2013, 2016 and Outlook for Office 365, Exchange 2013 and 2016, and Chrome 54 and later on Linux, OS X and Windows."
      ],
      [
       "How is it deployed?",
-      "The page describes deployment through an MSI file for Outlook and a G Suite deployment for Gmail in Chrome."
+      "VAF's page describes deployment through an MSI file for Outlook and a G Suite deployment for Gmail in Chrome."
      ],
      [
       "Why not just have users forward suspicious email to IT?",
@@ -1169,7 +1169,7 @@
      ],
      [
       "Is the button free?",
-      "The page presents it as a free KnowBe4 tool. Confirm current terms with KnowBe4 or ask VAF before deploying."
+      "VAF's page presents it as a free KnowBe4 tool. Confirm current terms with KnowBe4 or ask VAF before deploying."
      ]
     ]
    },
@@ -1490,7 +1490,7 @@
      "Monitor quality: listen back to see how customers are really being handled",
      "Improve performance: use real calls to build your staff's customer service skills",
      "Share conference calls: make a recorded conference available to the people who need it",
-     "Meet PCI requirements: the page positions RecordX for organizations that take card payments by phone"
+     "Meet PCI requirements: VAF's page positions RecordX for organizations that take card payments by phone"
     ]
    },
    {
@@ -2371,7 +2371,7 @@
     "alt": false,
     "eyebrow": "Communication",
     "heading": "Calling inside Microsoft Teams",
-    "body": "Elevate's cloud phone and SMS functions work directly inside Microsoft Teams, with no additional phone system license required, according to the page.",
+    "body": "Elevate's cloud phone and SMS functions work directly inside Microsoft Teams, with no additional phone system license required, according to VAF's page.",
     "bullets": [
      "Enterprise voice and SMS or MMS in one familiar Teams interface",
      "Call queues, SMS, monitor, whisper and barge for busy teams",
@@ -2403,7 +2403,7 @@
      ],
      [
       "What uptime does Elevate promise?",
-      "The page cites 99.999 percent uptime, which it says helps keep your business reachable and operational."
+      "VAF's page cites 99.999 percent uptime, which it says helps keep your business reachable and operational."
      ],
      [
       "What does the AI actually do?",
@@ -2411,11 +2411,11 @@
      ],
      [
       "Does Elevate work with Microsoft Teams?",
-      "Yes. The page says Elevate's cloud phone and SMS work directly inside Teams, with no additional phone system license required."
+      "Yes. VAF's page says Elevate's cloud phone and SMS work directly inside Teams, with no additional phone system license required."
      ],
      [
       "Do I need to buy phone hardware?",
-      "Not for the platform itself. The page says there is no on-premises equipment to buy, maintain, upgrade or replace, though preconfigured desk phones are available."
+      "Not for the platform itself. VAF's page says there is no on-premises equipment to buy, maintain, upgrade or replace, though preconfigured desk phones are available."
      ],
      [
       "Which devices can use it?",
@@ -2760,7 +2760,7 @@
      "href": "technology-strength-assessment.html"
     },
     "image": "assets/gen-phone-1200.jpg",
-    "image_alt": "Scan Documents with Your i Phone",
+    "image_alt": "Scan Documents with Your iPhone",
     "image_w": 1200,
     "image_h": 800
    },
@@ -3043,7 +3043,7 @@
      [
       "Communication",
       "Outsourced Dictation and Transcription",
-      "Transcription handled by Speech Motion, from overflow to a total outsource.",
+      "Transcription handled by SpeechMotion, from overflow to a total outsource.",
       "Open the page",
       "services/transcription-services.html"
      ],
@@ -3367,7 +3367,7 @@
     "alt": false,
     "eyebrow": "Choosing an option",
     "heading": "Cloud, front end or back end",
-    "body": "Healthcare and legal buyers usually weigh the same three questions before they choose.",
+    "body": "Three questions help narrow the choice for most dictation projects.",
     "bullets": [
      "Front-end recognition runs on the author's PC and shows text as they speak",
      "Back-end recognition runs on a server after dictation, with a transcriptionist reviewing",
@@ -3415,7 +3415,7 @@
      ],
      [
       "Are there customer case studies?",
-      "The page links case studies for a healthcare customer, several law firms and business users such as Ice Miller, LV Lomas and Toll Brothers."
+      "VAF's page links case studies for a healthcare customer, several law firms and business users such as Ice Miller, LV Lomas and Toll Brothers."
      ]
     ]
    },
@@ -3442,7 +3442,7 @@
      [
       "Communication",
       "Outsourced Dictation and Transcription",
-      "Transcription handled by Speech Motion, from overflow to a total outsource.",
+      "Transcription handled by SpeechMotion, from overflow to a total outsource.",
       "Open the page",
       "services/transcription-services.html"
      ],
@@ -3464,7 +3464,7 @@
      [
       "Industry",
       "Healthcare",
-      "Clinical documentation is the most common reason healthcare buyers look at cloud dictation.",
+      "Clinicians who dictate notes and reports can compare front end, back end and cloud options.",
       "How we set it up",
       "industries/healthcare.html"
      ],
@@ -3939,7 +3939,7 @@
     "alt": true,
     "eyebrow": "Process",
     "heading": "Where most organizations start",
-    "body": "The automation page names the processes that are most often stuck on paper. They are a good first place to look.",
+    "body": "VAF's automation text points to these paper-based processes first. They are a good place to look.",
     "bullets": [
      "Accounts payable: reduce DSO, avoid late fees and take early payment discounts",
      "Accounts receivable",
@@ -4267,16 +4267,16 @@
     "type": "detail",
     "alt": true,
     "eyebrow": "Process",
-    "heading": "Enterprise Content Management with On Base",
-    "body": "Trusted by more than 9,200 organizations, On Base eliminates bottlenecks and automates low-value, time-intensive tasks. This gives you time to focus on things that really matter.",
+    "heading": "Enterprise Content Management with OnBase",
+    "body": "Trusted by more than 9,200 organizations, OnBase eliminates bottlenecks and automates low-value, time-intensive tasks. This gives you time to focus on things that really matter.",
     "bullets": []
    },
    {
     "type": "detail",
     "alt": false,
     "eyebrow": "Process",
-    "heading": "On Base Helps Organizations",
-    "body": "Van Ausdall & Farrar, Inc is a trusted and authorized On Base Solutions Partner based in Indianapolis Indiana. Partners like us offer a wealth of expertise not just about the product, but about your problems and your industry. Further, Hyland Software, the developer of On Base, stands behind its partners with extensive technical training and customer support.",
+    "heading": "OnBase Helps Organizations",
+    "body": "Van Ausdall & Farrar, Inc is a trusted and authorized OnBase Solutions Partner based in Indianapolis Indiana. Partners like us offer a wealth of expertise not just about the product, but about your problems and your industry. Further, Hyland Software, the developer of OnBase, stands behind its partners with extensive technical training and customer support.",
     "bullets": [
      "Reduce cycle times and increase bottom lines by eliminating delays and inefficiencies of manual processes",
      "Ensure compliance with internal and external standards",
@@ -4685,7 +4685,7 @@
      "Fortinet NSE 1,2,3,4,5,7 Certified Staff",
      "Sophos Central Advanced Tenate",
      "CISSP (Certified Information Systems Security Professional)",
-     "Micro Soft Certified"
+     "Microsoft Certified"
     ]
    },
    {
@@ -5092,7 +5092,7 @@
     "alt": false,
     "eyebrow": "About",
     "heading": "How this page works",
-    "body": "VAF does not host the files. Each link goes to the manufacturer's or developer's own page, so you always get the current driver or document. Choose the group that matches your equipment.",
+    "body": "Most links go to the manufacturer's or developer's own page, so you get the current driver or document straight from the source. Choose the group that matches your equipment.",
     "bullets": []
    },
    {
@@ -5183,7 +5183,7 @@
      ],
      [
       "Does VAF host these files?",
-      "No. The links go to manufacturer and developer pages."
+      "Mostly no. The links go to manufacturer and developer pages, so you get the current version from the source."
      ],
      [
       "Who do I call if I cannot find what I need?",
@@ -6246,7 +6246,7 @@
      ],
      [
       "Does VAF also offer wide format scanning?",
-      "The page title covers printing and scanning. Tell VAF what you need to scan and what size, and a specialist will recommend options."
+      "VAF's page is titled for printing and scanning, but it describes the printers. Tell VAF what you need to scan and at what size, and a specialist will recommend options."
      ],
      [
       "Can wide format printing be outsourced?",
@@ -8025,15 +8025,15 @@
      ],
      [
       "What about security and compliance?",
-      "The page says security, service delivery, architecture and industry compliance such as CCPA, GDPR, HIPAA and FINRA are managed by the cloud provider."
+      "VAF's page says security, service delivery, architecture and industry compliance such as CCPA, GDPR, HIPAA and FINRA are managed by the cloud provider."
      ],
      [
       "What uptime should I expect?",
-      "The page says providers offering a 99.999 percent uptime SLA help ensure your business never halts."
+      "VAF's page says providers offering a 99.999 percent uptime SLA help ensure your business never halts."
      ],
      [
       "Do I still pay for infrastructure?",
-      "The page says infrastructure is hosted in redundant data centers and managed and monitored 24/7/365 by the provider, so your own infrastructure costs fall."
+      "VAF's page says infrastructure is hosted in redundant data centers and managed and monitored 24/7/365 by the provider, so your own infrastructure costs fall."
      ],
      [
       "Whose cloud PBX does this page describe?",
@@ -8414,7 +8414,7 @@
      [
       "Communication",
       "Outsourced Dictation and Transcription",
-      "Transcription handled by Speech Motion, from overflow to a total outsource.",
+      "Transcription handled by SpeechMotion, from overflow to a total outsource.",
       "Open the page",
       "services/transcription-services.html"
      ],
@@ -10238,6 +10238,814 @@
     "submit": "Plan my documents",
     "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913.",
     "alt": true
+   }
+  ]
+ },
+ "training.html": {
+  "title": "Training Classes and Resources | Van Ausdall & Farrar",
+  "description": "VAF offers classes customized to your business so employees can learn its systems or refresh their skills, plus security awareness training resources.",
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "About",
+    "heading": "Training",
+    "subhead": "Van Ausdall & Farrar believes in our customers, and we do everything we can to make sure you manage your business well using all of our Information, Print, Process, and Communication Solution programs.",
+    "primary": {
+     "label": "Schedule a consultation",
+     "href": "contact.html"
+    },
+    "secondary": {
+     "label": "Take the assessment",
+     "href": "technology-strength-assessment.html"
+    },
+    "image": "assets/gen-hq-1200.jpg",
+    "image_alt": "About",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "About",
+    "heading": "Classes built around your business",
+    "body": "VAF wants customers to manage their business well using its Information, Print, Process and Communication programs. It offers classes customized to your business, whether employees are learning a system for the first time or refreshing what they know.",
+    "bullets": []
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "About",
+    "heading": "Want to See Which Classes Are Best Suited for Your Organization? See Below for More Information",
+    "body": "",
+    "bullets": [
+     "Empowering Your Team: The Crucial Role of Security Awareness Training in Modern Business",
+     "Safeguarding Your Business: Why Security Awareness Training is Your Best Defense in 2025",
+     "Empowering Your Workforce - The Importance of Security Awareness Training",
+     "Ensure Your Employees Are Aware of the Latest Threats with Security Awareness Training",
+     "How Your Business Can Benefit from Security Awareness Training",
+     "Email Phishing and Spoofing Are Serious Threats to Your Business"
+    ]
+   },
+   {
+    "type": "detail",
+    "alt": false,
+    "eyebrow": "Self-serve learning",
+    "heading": "Where to learn at your own pace",
+    "body": "Not every question needs a class. VAF also publishes short video lessons and security awareness material you can use any time.",
+    "bullets": [
+     "Mitel Connect Quick Clips for the phone client",
+     "Free KnowBe4 security tools and awareness resources",
+     "Driver and manual links on the downloads page",
+     "The Client Service Center for support questions"
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about training at VAF",
+    "items": [
+     [
+      "What training does Van Ausdall & Farrar offer?",
+      "Classes customized to your business that help employees learn VAF systems for the first time or refresh their knowledge, across the Information, Print, Process and Communication programs."
+     ],
+     [
+      "Can classes be tailored to my organization?",
+      "Yes. VAF says its classes are customized to meet your business needs."
+     ],
+     [
+      "Does VAF offer security awareness training?",
+      "Yes. VAF lists security awareness training with KnowBe4 among its security programs, and publishes articles on why it matters."
+     ],
+     [
+      "Is there video training for the phone system?",
+      "Yes. VAF's customer training Quick Clips teach the Mitel Connect Client in short topic-based videos."
+     ],
+     [
+      "How do I find out which class suits my team?",
+      "Contact VAF and describe the systems your team uses. A specialist will recommend classes."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Training and learning resources",
+    "intro": "Pages for video lessons, free tools and downloads.",
+    "items": [
+     [
+      "Communication",
+      "Mitel Connect Client Training Videos",
+      "Short topic-based clips for getting started on the Connect client.",
+      "Open the page",
+      "services/customer-training-videos.html"
+     ],
+     [
+      "Information",
+      "Free Security Training Tools",
+      "All six free KnowBe4 tools on one page.",
+      "Open the page",
+      "services/free-security-training-tools.html"
+     ],
+     [
+      "Support",
+      "Software Drivers and Documentation Downloads",
+      "Driver and training links for copiers, scanners and phone systems.",
+      "Open the page",
+      "downloads.html"
+     ],
+     [
+      "Support",
+      "Client Service Center",
+      "Support requests, supplies and the Customer Care Center number.",
+      "Open the page",
+      "support.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "consult",
+    "heading": "Ask about classes for your team",
+    "body": "Tell us which systems your employees use and what they need to learn.",
+    "submit": "Ask about training",
+    "note": "A person in VAF's Indianapolis office replies. Phone (317) 634-2913."
+   }
+  ]
+ },
+ "careers.html": {
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "split",
+    "eyebrow": "Find your place at VAF",
+    "heading": "Your next bright idea? <em>Working here.</em>",
+    "subhead": "We have been part of the Indianapolis business community since 1914, back when our story began as a distributor for the Thomas Edison Company. A lot has changed. One thing has not: great people are what keep us going.",
+    "primary": {
+     "label": "View open positions",
+     "href": "https://workforcenow.cloud.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=76f18e20-dbb1-475b-98ad-e470199a4f66&ccId=19000101_000001&lang=en_US"
+    },
+    "secondary": {
+     "label": "Explore benefits",
+     "href": "#benefits"
+    },
+    "image": "assets/careers-1200.jpg",
+    "image_alt": "VAF team members at work",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "video",
+    "id": "film",
+    "alt": true,
+    "eyebrow": "See what life at VAF looks like",
+    "heading": "What it is like to work at Van Ausdall & Farrar",
+    "youtube": "i-q4U5SnvaM",
+    "poster": "assets/careers-1200.jpg",
+    "title": "What it's like to work at Van Ausdall & Farrar",
+    "caption": "VAF's own film"
+   },
+   {
+    "type": "values",
+    "eyebrow": "Who shines at VAF",
+    "heading": "A, C, T",
+    "items": [
+     [
+      "Accountability. Do it right.",
+      "Own your work. Follow through. Do what you say you are going to do."
+     ],
+     [
+      "Customer experience. Do it better.",
+      "Stay curious. Look for opportunities to improve. Do not settle for that is how we have always done it."
+     ],
+     [
+      "Together. Do it together.",
+      "Help your teammates. Share the wins. Step in when someone needs you. And yes, have some fun while you are at it."
+     ]
+    ]
+   },
+   {
+    "type": "cards",
+    "alt": true,
+    "id": "benefits",
+    "eyebrow": "A few bright spots",
+    "heading": "What comes with the job",
+    "items": [
+     [
+      "Competitive benefits",
+      "Medical, dental, vision, 401(k) match and more."
+     ],
+     [
+      "Time to recharge",
+      "Generous PTO, paid holidays and a personal holiday."
+     ],
+     [
+      "Grow with us",
+      "Opportunities to learn, advance and grow your career."
+     ],
+     [
+      "Give back",
+      "Paid volunteer hours and opportunities to support our community."
+     ],
+     [
+      "Hard work gets noticed",
+      "Recognition programs, employee celebrations and incentives."
+     ],
+     [
+      "We're local",
+      "Privately owned and operated right here in Indianapolis."
+     ]
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about working at Van Ausdall & Farrar",
+    "items": [
+     [
+      "Where are the jobs?",
+      "Indianapolis headquarters at 6430 E 75th Street, the Fort Wayne and Evansville offices, and field service roles across Indiana."
+     ],
+     [
+      "What are the benefits?",
+      "Medical, dental and vision, a 401(k) with match, generous paid time off and paid volunteer hours, in a privately owned company where the average technology advisor has been here fifteen years."
+     ],
+     [
+      "How do I apply?",
+      "Send a resume to clientsuccess@vanausdall.com or apply through the listing. A person replies, not an autoresponder."
+     ],
+     [
+      "What values does VAF look for in employees?",
+      "VAF describes three: Accountability (do it right), Customer experience (do it better) and Together (do it together)."
+     ],
+     [
+      "Does VAF support volunteering and community work?",
+      "Yes. VAF offers paid volunteer hours and opportunities to support the community."
+     ],
+     [
+      "Is VAF an equal opportunity employer?",
+      "Yes. VAF states that it is an Equal Opportunity Employer."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Learn more about life at VAF",
+    "intro": "Benefits, history and offices for people considering a move.",
+    "items": [
+     [
+      "Company",
+      "Employee Benefits",
+      "The health, financial, PTO and wellness benefits VAF lists for employees.",
+      "Open the page",
+      "benefits.html"
+     ],
+     [
+      "Company",
+      "About Van Ausdall & Farrar",
+      "Since 1914, privately owned in Indianapolis.",
+      "Open the page",
+      "about.html"
+     ],
+     [
+      "Company",
+      "Virtual Site Visit",
+      "A short video tour of VAF for visitors who cannot stop by.",
+      "Open the page",
+      "virtualsitevisit.html"
+     ],
+     [
+      "Company",
+      "Locations",
+      "Indianapolis, Fort Wayne and Evansville offices.",
+      "Open the page",
+      "locations.html"
+     ]
+    ]
+   },
+   {
+    "type": "cta",
+    "heading": "Think you would shine here?",
+    "subhead": "Bring your ideas, your drive and your willingness to learn. We will bring the opportunities, the support and a team that wants to see you succeed. Van Ausdall & Farrar is an Equal Opportunity Employer.",
+    "primary": {
+     "label": "Explore careers at VAF",
+     "href": "https://workforcenow.cloud.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=76f18e20-dbb1-475b-98ad-e470199a4f66&ccId=19000101_000001&lang=en_US"
+    }
+   }
+  ]
+ },
+ "contact.html": {
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Connect with us",
+    "heading": "Speak with a solutions expert, or <em>just call</em>.",
+    "subhead": "Our innovation experts improve your business efficiency by eliminating technology you do not need, optimizing what you have, and creating a technology improvement roadmap that grows with you. It all starts with the Technology Strength Assessment."
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "What happens next",
+    "heading": "Send the form, and here is what happens",
+    "body": "A person from the Indianapolis office reads it the same business day and calls to set a time; there is no autoresponder and no sales sequence. If the question is about an existing device or agreement, it is routed to the Client Service Center, which answers within 24 hours and dispatches a certified technician locally. If it is a new need, a technology advisor, whose average tenure with the company is fifteen years, walks the Technology Strength Assessment with you: ten to fifteen minutes on your devices, contracts, phones and workflows, then a written roadmap of what to eliminate, optimize and leverage. You keep the roadmap either way.",
+    "bullets": [
+     "Same-day reply from a named person in Indianapolis",
+     "Service requests answered within 24 hours",
+     "Assessment first, quote second",
+     "Offices in Indianapolis, Fort Wayne and Evansville; the fleet covers the state"
+    ]
+   },
+   {
+    "type": "contact",
+    "id": "form",
+    "heading": "Let's talk",
+    "body": "Tell us a little about your organization and a person from the Indianapolis office will call to set a time.",
+    "options": [
+     "Managed IT and security",
+     "Business phone systems",
+     "Copiers and managed print",
+     "Document management or conversion",
+     "AI consulting",
+     "Something else"
+    ],
+    "submit": "Schedule my consultation",
+    "note": "Or call (317) 634-2913, Monday through Friday, 7:00am to 5:00pm. Existing customers: the Client Service Center is faster."
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions before you call",
+    "items": [
+     [
+      "What are your hours?",
+      "Monday through Friday, 7:00am to 5:00pm at (317) 634-2913. Existing customers reach the Client Service Center the same way, or through the Customer Care app."
+     ],
+     [
+      "Where are the offices?",
+      "Headquarters at 6430 E 75th Street, Indianapolis, IN 46250, with offices in Fort Wayne and Evansville. The service fleet covers the entire state."
+     ],
+     [
+      "How fast do you respond?",
+      "Requests are processed and answered within 24 hours. Most metro-area copier calls are same day."
+     ],
+     [
+      "I am not sure what I need. Where do I start?",
+      "Start with the free Technology Strength Assessment, about ten to fifteen minutes online. A specialist then walks the results with you and writes a roadmap of what to eliminate, optimize and leverage."
+     ],
+     [
+      "Can I just call?",
+      "Yes. Call (317) 634-2913, or toll-free (800) 467-7474, Monday through Friday, 7:00am to 5:00pm."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Before or after you reach out",
+    "intro": "Pages that help you choose what to ask for.",
+    "items": [
+     [
+      "Information",
+      "Technology Strength Assessment",
+      "Ten to fifteen minutes online, then a specialist walks the results with you.",
+      "Open the page",
+      "technology-strength-assessment.html"
+     ],
+     [
+      "Support",
+      "Client Service Center",
+      "Support requests, supplies and the Customer Care Center number.",
+      "Open the page",
+      "support.html"
+     ],
+     [
+      "Company",
+      "Technology Partners",
+      "The vendors VAF supports in each of the four pillars.",
+      "Open the page",
+      "partners.html"
+     ],
+     [
+      "Company",
+      "Locations",
+      "Indianapolis, Fort Wayne and Evansville offices.",
+      "Open the page",
+      "locations.html"
+     ]
+    ]
+   },
+   {
+    "type": "locations",
+    "alt": true,
+    "heading": "Our offices",
+    "intro": "Toll-free (800) 467-7474. Client success: clientsuccess@vanausdall.com.",
+    "items": [
+     [
+      "Indianapolis",
+      "6430 E 75th Street",
+      "Indianapolis, IN 46250",
+      "(317) 634-2913",
+      "tel:3176342913"
+     ],
+     [
+      "Fort Wayne",
+      "1241 N Wells Street",
+      "Fort Wayne, IN 46808",
+      "(260) 432-1547",
+      "tel:2604321547"
+     ],
+     [
+      "Evansville",
+      "Serving southwest Indiana and the Tri-State",
+      "Evansville, IN",
+      "(812) 424-5736",
+      "tel:8124245736"
+     ]
+    ]
+   }
+  ]
+ },
+ "support.html": {
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "centered",
+    "eyebrow": "Client Service Center",
+    "heading": "Already a customer? <em>This is the fast lane.</em>",
+    "subhead": "Have a problem or concern? Our Customer Care Center serves our entire customer base, processes requests Monday through Friday, 7:00am to 5:00pm, and responds within 24 hours.",
+    "primary": {
+     "label": "Request support",
+     "href": "#request"
+    },
+    "secondary": {
+     "label": "Call (317) 634-2913",
+     "href": "tel:3176342913"
+    }
+   },
+   {
+    "type": "band",
+    "eyebrow": "Fast lane",
+    "heading": "Four things, under a minute each",
+    "subhead": "Or call. A person answers.",
+    "items": [
+     [
+      "Request support",
+      "Copier, printer, phone or dictation",
+      "#request"
+     ],
+     [
+      "Order supplies",
+      "Toner and parts for your devices",
+      "#supplies"
+     ],
+     [
+      "IT support",
+      "Managed IT and Vsecure customers",
+      "#it"
+     ],
+     [
+      "Training videos",
+      "Phone system how-to videos",
+      "https://www.vanausdall.com/communication/customer-training-videos"
+     ]
+    ]
+   },
+   {
+    "type": "detail",
+    "id": "request",
+    "eyebrow": "Support",
+    "heading": "Request support",
+    "body": "Tell us the equipment and what it is doing. Certified technicians service Canon, Ricoh, Kyocera and HP across Indianapolis and the state, and remote diagnostics resolve many issues without a visit.",
+    "bullets": [
+     "Same-day service for most Indianapolis metro calls",
+     "25 points of inspection on every visit",
+     "Email support@vanausdall.com or call (317) 634-2913, toll-free (800) 467-7474, fax (317) 638-1843"
+    ],
+    "form": {
+     "fields": [
+      "Company",
+      "Type of equipment (phone, dictation, hardware or software, copier, printer, fax)",
+      "What is it doing?"
+     ],
+     "submit": "Request support"
+    }
+   },
+   {
+    "type": "detail",
+    "id": "supplies",
+    "alt": true,
+    "eyebrow": "Supplies",
+    "heading": "Order supplies",
+    "body": "Toner and parts for the devices we support, shipped from Indianapolis. Under a managed print agreement, supplies replenish automatically before you run out.",
+    "bullets": [
+     "Email supplies@vanausdall.com",
+     "Automatic replenishment on managed fleets",
+     "One invoice with your service agreement"
+    ],
+    "form": {
+     "fields": [
+      "Company",
+      "Device model or serial",
+      "Item and quantity"
+     ],
+     "submit": "Order supplies"
+    }
+   },
+   {
+    "type": "detail",
+    "id": "it",
+    "eyebrow": "IT support",
+    "heading": "IT support",
+    "body": "For managed IT and Vsecure customers. Monitored 24/7; the help desk handles the day to day and dispatches on-site technicians when needed.",
+    "bullets": [
+     "Email itsupport@vanausdall.com",
+     "Managed clients come first, ahead of break-fix work",
+     "Security incidents go to the security operations center"
+    ],
+    "form": {
+     "fields": [
+      "Company",
+      "User and device",
+      "What is happening?"
+     ],
+     "submit": "Open a ticket"
+    }
+   },
+   {
+    "type": "locations",
+    "alt": true,
+    "heading": "Or call the office",
+    "intro": "Toll-free (800) 467-7474 reaches the Customer Care Center.",
+    "items": [
+     [
+      "Indianapolis",
+      "6430 E 75th Street",
+      "Indianapolis, IN 46250",
+      "(317) 634-2913",
+      "tel:3176342913"
+     ],
+     [
+      "Fort Wayne",
+      "1241 N Wells Street",
+      "Fort Wayne, IN 46808",
+      "(260) 432-1547",
+      "tel:2604321547"
+     ],
+     [
+      "Evansville",
+      "Serving southwest Indiana and the Tri-State",
+      "Evansville, IN",
+      "(812) 424-5736",
+      "tel:8124245736"
+     ]
+    ]
+   },
+   {
+    "type": "testimonials",
+    "heading": "What customers say after a service call",
+    "items": [
+     [
+      "The guy is totally awesome. He has been working on our equipment for at least 12 years and I would not want anyone else.",
+      "Teresa",
+      "After-service survey, May 2026"
+     ]
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Service questions",
+    "items": [
+     [
+      "What response time can we expect?",
+      "The Customer Care Center responds within 24 hours of receipt, with same-day service for most metro-area copier calls. Ask for the terms of your agreement in writing."
+     ],
+     [
+      "Do you service equipment you did not sell?",
+      "Yes, most major office equipment brands. If you bought your equipment from another dealer, we can still help."
+     ],
+     [
+      "Should I repair or replace?",
+      "Our technicians assess honestly. If the repair cost approaches the value of the machine, we will say so and offer new, leased or pre-owned options."
+     ],
+     [
+      "How do I request service or order supplies?",
+      "Use the request and supplies sections on this page, or call the Customer Care Center at (317) 634-2913. Requests are processed Monday through Friday, 7:00am to 5:00pm."
+     ],
+     [
+      "Where do I find drivers and manuals?",
+      "VAF's downloads page links manufacturer driver and documentation pages for Ricoh, Canon, HP, scanners and phone systems."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "More for customers",
+    "intro": "Pages for downloads, training and IT help.",
+    "items": [
+     [
+      "Support",
+      "Software Drivers and Documentation Downloads",
+      "Driver and training links for copiers, scanners and phone systems.",
+      "Open the page",
+      "downloads.html"
+     ],
+     [
+      "Communication",
+      "Mitel Connect Client Training Videos",
+      "Short topic-based clips for getting started on the Connect client.",
+      "Open the page",
+      "services/customer-training-videos.html"
+     ],
+     [
+      "Information",
+      "Indianapolis IT Support",
+      "Help desk, remote and on-site support, with a 24 hour response from the Customer Care Center.",
+      "Open the page",
+      "services/it-support.html"
+     ],
+     [
+      "Print",
+      "Copier Service and Repair",
+      "Service across the state with a 25 point inspection on every call.",
+      "Open the page",
+      "services/copier-service.html"
+     ]
+    ]
+   }
+  ]
+ },
+ "print-assessment.html": {
+  "sections": [
+   {
+    "type": "hero",
+    "layout": "split",
+    "eyebrow": "Free print assessment",
+    "heading": "Ready to optimize your <em>print environment</em>?",
+    "subhead": "Uncover hidden costs, identify inefficiencies and optimize your printing processes. Every print engagement starts here, so you see exact pricing for your office before you commit.",
+    "primary": {
+     "label": "Request the assessment",
+     "href": "#request"
+    },
+    "secondary": {
+     "label": "Estimate first",
+     "href": "cost-calculator.html"
+    },
+    "image": "assets/copier-1200.jpg",
+    "image_alt": "An office copier",
+    "image_w": 1200,
+    "image_h": 800
+   },
+   {
+    "type": "cards",
+    "alt": true,
+    "eyebrow": "What is included",
+    "heading": "Four things, in writing",
+    "items": [
+     [
+      "Comprehensive analysis",
+      "Your current print environment evaluated: hardware, usage patterns and expenses."
+     ],
+     [
+      "Cost reduction strategies",
+      "Where to lower printing costs through optimized configurations and resource allocation."
+     ],
+     [
+      "Efficiency improvements",
+      "Ways to streamline print workflows and reduce waste."
+     ],
+     [
+      "Tailored recommendations",
+      "Personalized to your business needs, with purchase, lease and rental priced side by side."
+     ]
+    ]
+   },
+   {
+    "type": "process",
+    "eyebrow": "How it works",
+    "heading": "Three steps",
+    "stages": [
+     [
+      "Free print assessment",
+      "We map your devices, volumes and costs, then show exactly where you save."
+     ],
+     [
+      "We implement",
+      "Right-sized copiers and printers, software, security and supplies, handled for you."
+     ],
+     [
+      "We monitor 24/7",
+      "Proactive monitoring, predictive maintenance and fast local repair keep you running."
+     ]
+    ]
+   },
+   {
+    "type": "casestudy",
+    "alt": true,
+    "eyebrow": "In action",
+    "heading": "New print and copier fleet reduced overall equipment count and provided $1M in savings.",
+    "quote": "Tippecanoe was won over by Van Ausdall's process. By cutting overall equipment from 1,200 machines to just over 300 new machines, the school corporation has seen $1,000,000 in savings over the life of the contract.",
+    "attribution": "Tippecanoe School Corporation case study, vanausdall.com",
+    "metrics": [
+     [
+      "Devices",
+      "1,200 to 300",
+      "Fleet consolidated across every building"
+     ],
+     [
+      "Savings",
+      "$1M",
+      "Over the life of the contract"
+     ],
+     [
+      "IT time",
+      "20%",
+      "Of IT staff time had gone to print issues"
+     ],
+     [
+      "Vendors",
+      "10 to 1",
+      "Copy and print vendors replaced by one"
+     ]
+    ]
+   },
+   {
+    "type": "faq",
+    "alt": true,
+    "heading": "Questions about the print assessment",
+    "items": [
+     [
+      "What does the print assessment cost?",
+      "Nothing. It is complimentary and there is no obligation."
+     ],
+     [
+      "What does it include?",
+      "A device-by-device map of your fleet, volumes and costs per page, supply spend, service history and staff time, with a written recommendation of what to consolidate, replace or manage."
+     ],
+     [
+      "How long does it take?",
+      "Two to three weeks, most of it monitoring software collecting real volumes. A specialist then walks the findings with you in one meeting."
+     ],
+     [
+      "What happens after?",
+      "You keep the report. If you want VAF to act on it, managed print starts with a fleet plan and supplies shipped on usage."
+     ],
+     [
+      "Does the assessment compare buying, leasing and renting?",
+      "Yes. The recommendation prices purchase, lease and rental side by side."
+     ],
+     [
+      "What are the steps after the assessment?",
+      "VAF describes three: the free print assessment, implementation of right-sized copiers, printers, software and supplies, and 24/7 monitoring with predictive maintenance and local repair."
+     ]
+    ]
+   },
+   {
+    "type": "resources",
+    "alt": true,
+    "heading": "Print pages to read while you wait",
+    "intro": "Fleet, software and cost pages that connect to the assessment.",
+    "items": [
+     [
+      "Print",
+      "Managed Print Services Indianapolis",
+      "A free print assessment, then monitored devices, supplies and service.",
+      "Open the page",
+      "services/managed-print.html"
+     ],
+     [
+      "Print",
+      "Print Cost Calculator",
+      "Estimate print spend from three inputs.",
+      "Open the page",
+      "cost-calculator.html"
+     ],
+     [
+      "Print",
+      "Print Security and Accounting Software",
+      "Know what gets printed, by whom and what it costs.",
+      "Open the page",
+      "services/print-management-software.html"
+     ],
+     [
+      "Print",
+      "Copier Sales and Lease",
+      "Canon, Ricoh, Kyocera and HP copiers and multifunction printers.",
+      "Open the page",
+      "services/copiers.html"
+     ]
+    ]
+   },
+   {
+    "type": "leadform",
+    "id": "request",
+    "heading": "Request your free print assessment",
+    "body": "Let us help you unlock the full potential of your printing infrastructure.",
+    "submit": "Request my assessment",
+    "note": "Or call (317) 634-2913 or toll-free (800) 467-7474, Monday through Friday, 7:00am to 5:00pm."
    }
   ]
  }
