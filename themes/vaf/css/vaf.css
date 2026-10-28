@@ -859,8 +859,6 @@ html{scroll-padding-bottom:72px}
 @media (prefers-reduced-motion:reduce){.vaf-js .vaf-rv{opacity:1;transform:none;transition:none}}
 /* alternate sections speak from the left: heading block offset, content full width, so the page does not read as one centred column */
 @media(min-width:1025px){
-  .q-section.q-bg-alt > .q-container > .pv-center,.q-section.q-bg-alt .vaf-head{align-items:flex-start;text-align:left;max-width:none}
-  .q-section.q-bg-alt > .q-container > .pv-center .q-lead,.q-section.q-bg-alt > .q-container > .pv-center p{text-align:left;margin-left:0}
 }
 /* soft diagonal seams where light bands meet dark ones */
 .q-section.vaf-seal,.q-section.vaf-proof,.vaf-casestudy{position:relative}

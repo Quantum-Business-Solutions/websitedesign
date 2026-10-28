@@ -5592,5 +5592,185 @@
    }
   ],
   "skip": false
+ },
+ "how-to-implement-a-document-conversion-solution": {
+  "tldr": [
+   "Start by picking a team with high-level permissions to oversee implementation, then examine how documents are collected, managed, transmitted, secured and deleted across departments.",
+   "Inventory every document type, set a strategy that includes IT-developed backup and security plans, and purge redundant files per retention policies and regulations.",
+   "Pilot in one or two departments with training, fix hiccups before company-wide rollout, and audit regularly so departments do not revert to old ways."
+  ],
+  "faq": [
+   {
+    "q": "Who should be on a document conversion implementation team?",
+    "a": "The post suggests designating a team to oversee the whole process, possibly with a representative from each department so every department has an equal voice. It says the team needs high-level permissions and the ability to create new users throughout the process."
+   },
+   {
+    "q": "What should you examine in your current document process?",
+    "a": "The post says to study how documents are collected and received, managed (approved, rejected or pending), transmitted, secured, and deleted or disposed of, because understanding each movement helps find room for improvement in the process."
+   },
+   {
+    "q": "Why take inventory of documents before converting them?",
+    "a": "The post says every document should be examined, not just the most commonly used ones, covering anything from employee forms and records to client information and reference materials. The process helps find which documents are important and which take up unnecessary space."
+   },
+   {
+    "q": "Why purge documents before conversion?",
+    "a": "The post says to cut documents the team decides are redundant or unnecessary, and to commit dated documents to an archive or remove them. Old files take up space and, if not properly secured, can present legal liabilities, so follow retention and destruction policies and industry regulations."
+   },
+   {
+    "q": "How should a document conversion rollout be tested and maintained?",
+    "a": "The post says to start with one or two departments as a test, provide training and expect hiccups that need reworking before rolling out organization-wide. Afterward, regular audits by the document team keep processes running as intended and departments on the same page."
+   }
+  ],
+  "skip": false
+ },
+ "what-are-the-advantages-of-facility-management-software-solutions": {
+  "tldr": [
+   "Outsourced facility management offloads daily processes like print room management, scanning, mail, shipping and receiving from busy facility managers.",
+   "Freeing employees from fixing printers, preparing packages and scanning documents improves efficiency, and a one-time investment in third-party management can bring significant cost savings.",
+   "Look for proactive back-up staffing for illness, vacations and peak demand, plus software that automates and integrates business processes in one place."
+  ],
+  "faq": [
+   {
+    "q": "What day-to-day tasks can outsourced facility management take over?",
+    "a": "The post says an outsourced facility management program can offload daily processes such as print room management, scanning and mail, shipping and receiving, helping alleviate the day-to-day responsibilities of busy facility managers."
+   },
+   {
+    "q": "How does facility management improve business efficiency?",
+    "a": "When employees are freed from fixing a broken-down printer, preparing packages for the mail or scanning documents, the post says overall efficiency improves drastically, because staff can focus on core business needs such as client and employee needs and the business's overall goals."
+   },
+   {
+    "q": "Where do the cost savings come from?",
+    "a": "The post says managing day-to-day services such as imaging, mail processing, printing and scanning is expensive, and a one-time investment to have a third party manage these ongoing tasks produces significant cost savings. Freed employees can also work on other functions."
+   },
+   {
+    "q": "How does back-up staffing help office services?",
+    "a": "The post says employees will inevitably be sick or take vacations, but office services cannot suffer. A facility management program with proactive back-up staffing means you need not worry about lower service levels from staffing issues or being overwhelmed by volume during peak demand."
+   },
+   {
+    "q": "What does business-process software add?",
+    "a": "The post says software purpose-built to automate business processes lets a company's many business assets and processes be managed simultaneously and integrated in one place, which supports streamlining."
+   }
+  ],
+  "skip": false
+ },
+ "outsourced-vs-in-house-printing": {
+  "tldr": [
+   "Managed print services are not outsourced printing: printing stays in-house while a provider provides supplies, monitors equipment and fixes issues, and you keep control.",
+   "Managed print can cut printing expenditures by as much as 10% to 30%, the post says, and lets you upgrade equipment as needed.",
+   "Print experts manage proactively and catch issues before they occur, instead of an in-house IT team reacting afterward, which also saves staff time."
+  ],
+  "faq": [
+   {
+    "q": "How do managed print services work?",
+    "a": "The post says managed print services involve a third party managing your company's printing and printed materials and monitoring equipment. It stresses this is not outsourced printing: all printing stays in-house, the provider supplies items when needed, and you keep complete control of your printing process."
+   },
+   {
+    "q": "What happens when printing equipment needs repair?",
+    "a": "The post says that if issues need to be repaired or replaced, the managed service provider comes to your business to make the appropriate fixes and provides the needed parts, supplies or equipment."
+   },
+   {
+    "q": "How much can managed print services reduce printing costs?",
+    "a": "The post says hiring a managed print service provider can reduce printing expenditures by as much as 10% to 30%, and that moving to a provider and enabling a print on-demand strategy can save big."
+   },
+   {
+    "q": "Why does proactive print management matter?",
+    "a": "The post says an in-house IT team typically only reacts to issues after they occur, while print management experts can proactively monitor for needed upgrades or issues before problems arise. It also says a managed agreement lets you upgrade equipment as needed."
+   },
+   {
+    "q": "Why track printing costs at all?",
+    "a": "The post says most companies do not track printing costs, so they do not know how much they spend on equipment, toner, ink and paper. Managed print services can determine that spending to help make appropriate adjustments for cost-saving measures."
+   }
+  ],
+  "skip": false
+ },
+ "the-benefits-of-a-technology-strength-assessment": {
+  "tldr": [
+   "A Technology Strength Assessment of 80 yes-or-no questions takes about 10 to 15 minutes and scores 0 to 100 across Information, Print, Process and Communication.",
+   "Outdated technology risks poor business continuity, slow problem notification and weak security, which can mean costly downtime, customer-reported issues, cyber-attacks and data breaches.",
+   "Remedies include cloud solutions for faster recovery and access, proactive managed services that monitor the technology stack, and data security planning to thwart attacks."
+  ],
+  "faq": [
+   {
+    "q": "How does the Technology Strength Assessment work?",
+    "a": "The post says the assessment consists of 80 yes-or-no questions and takes about 10 to 15 minutes. Afterward the company provides an individualized Technology Strength Score from 0 to 100 in the categories of Information, Print, Process and Communication, and discusses what is working and what needs improvement."
+   },
+   {
+    "q": "What kinds of questions does the assessment ask?",
+    "a": "The post gives samples: whether password and password change policies are managed centrally and are strong enough to protect data, whether device monitoring software detects and remediates system issues quickly, and whether server data is backed up nightly with more than one instance off-site or in the cloud."
+   },
+   {
+    "q": "What problems can outdated technology cause?",
+    "a": "The post names lack of business continuity, where recovering from a disaster, accident or cyber-attack costs money; lack of notification, where downtime goes unnoticed or customers find the problem first; and lack of security, where old, unmaintained systems expose a business to cyber-attacks and data breaches."
+   },
+   {
+    "q": "How do cloud solutions and managed services address those problems?",
+    "a": "The post says cloud solutions address lack of continuity by improving recovery time and access, and recommends setting a recovery-time goal. Proactive managed services track and monitor the technology stack so you can jump on a problem as soon as you know what is wrong."
+   },
+   {
+    "q": "Why might a technology solution from two or three years ago need review?",
+    "a": "The post says technology evolves quickly, so a solution brought in two or three years ago may not be the right answer today. Even if outdated technology still gets the job done, it may not delight customers or optimize competitiveness."
+   }
+  ],
+  "skip": false
+ },
+ "how-to-print-for-less-without-losing-quality": {
+  "tldr": [
+   "A managed print provider can reduce printing and stationery costs while improving print options and output, and tracks internal documents for security and compliance.",
+   "Cut consumable spending by weighing toner sources, cartridge types and suppliers, and setting default printer settings, staff-wide print permissions and equipment choices and locations.",
+   "Optimized in-house equipment can handle needed paper sizes, weights and finishing, so more jobs can stay in-house and cut costs without diminishing print quality."
+  ],
+  "faq": [
+   {
+    "q": "What toner choices affect printing costs?",
+    "a": "The post says to account for brand versus off-brand manufacturers, refilled versus remanufactured cartridges, purchase, delivery and storage options, and legitimate suppliers versus scammers, noting that annual spending on paper and toner can be reduced significantly."
+   },
+   {
+    "q": "How can paper waste be reduced?",
+    "a": "The post lists default printer settings at all stations, staff-wide permissions to prevent unnecessary or forgotten print requests, and equipment choice and locations. An MPS provider helps ensure internally printed documents are tracked and controlled for efficiency at minimal cost."
+   },
+   {
+    "q": "Why does print equipment maintenance and support matter?",
+    "a": "The post says choosing and maintaining the right print equipment is key to productivity. As tools grow more complex, so does the need to maintain and update hardware and software, and to support staff whose jobs depend on sophisticated printing processes."
+   },
+   {
+    "q": "Can I bring more print jobs in-house?",
+    "a": "The post says the added sophistication of today's print equipment increases the types of jobs you can produce in-house. With MPS, hardware and software can be optimized to match your printing needs, so you can decide which jobs to keep in-house to reduce costs without diminishing print quality."
+   },
+   {
+    "q": "What does managed print service do for print security and compliance?",
+    "a": "The post says an MPS provider helps ensure internally printed documents are tracked and controlled while maintaining an appropriate level of security and regulatory compliance, using only the paper, toner and printer ink needed to eliminate wasted consumables."
+   }
+  ],
+  "skip": false
+ },
+ "how-to-keep-your-business-data-safe-and-secure": {
+  "tldr": [
+   "Make passwords hard to guess, never share them, avoid using part of your name or ID, and mix uppercase, lowercase, numbers and symbols.",
+   "Spot phishing by checking sender addresses and spelling, delete suspicious emails, and defend against ransomware with updated security software, a firewall and regular backups.",
+   "Install antivirus for real-time protection and hold periodic employee meetings on strong passwords, suspicious links, public-space data protection and locking computers."
+  ],
+  "faq": [
+   {
+    "q": "What are the sources of data breaches besides outside attackers?",
+    "a": "The post says although some of the biggest data breaches come from outside entities, many are caused by internal sources, such as employees accidentally downloading malicious software or losing company computers or mobile devices that fall into the wrong hands."
+   },
+   {
+    "q": "How can I recognize a phishing email?",
+    "a": "The post says phishing emails often come from a source pretending to be someone or a company you trust, with links or attachments to click. You may recognize the name but the email address isn't right, and there may be misspellings or off wording, so delete suspicious emails immediately."
+   },
+   {
+    "q": "How do I protect against ransomware?",
+    "a": "The post defines ransomware as malicious software injected into a network or device that blocks or restricts access to a computer until a ransom is paid. It says the best way to avoid it is installing and updating security software, using a firewall and backing up all data regularly."
+   },
+   {
+    "q": "What should employees be taught about cybersecurity?",
+    "a": "The post suggests periodic meetings on protecting sensitive data, creating and updating strong passwords, avoiding suspicious links or emails, and protecting data when traveling or working in public. It also encourages employees to lock their computers when they leave their work area."
+   },
+   {
+    "q": "What does antivirus software do?",
+    "a": "The post says antivirus software helps prevent, detect and remove malware and provides real-time protection against cyberattacks. It advises making sure your company has top-of-the-line antivirus installed to avoid the attacks it describes."
+   }
+  ],
+  "skip": false
  }
 }
