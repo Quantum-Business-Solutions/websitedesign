@@ -75,3 +75,12 @@
 .pv-lh.vaf-hero--layered .q-container{padding-top:64px;padding-bottom:72px}
 .pv-lh.vaf-hero--layered .stack{min-height:520px}
 @media(min-width:1025px){.pv-lh.vaf-hero--layered{min-height:min(760px,calc(100vh - 130px))}}
+
+/* Footage should be seen: the scrim only protects the copy column (left), the right two thirds show the video at full strength. */
+@media(min-width:900px){
+  .pv-lh.vaf-hero--layered.has-video{--vaf-c1:color-mix(in srgb,var(--chrome-bg) 72%,transparent);--vaf-c2:color-mix(in srgb,var(--chrome-bg) 30%,transparent);--vaf-c3:color-mix(in srgb,var(--chrome-bg) 0%,transparent)}
+  .pv-lh.vaf-hero--layered.has-video .bg img{opacity:.95}
+  .pv-lh.vaf-hero--layered.is-video-playing .bg video{opacity:1}
+  .pv-lh.vaf-hero--layered.is-video-playing .bg img{opacity:0}
+  .pv-lh.vaf-hero--layered.has-video .net{opacity:.35}
+}
