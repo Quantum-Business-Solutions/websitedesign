@@ -60,3 +60,7 @@ body .vaf-wheel__svg .hubs{fill:#8fc2f2}
 /* SOC badge: show the whole badge, not a 4:3 crop */
 #soc .vd__media img{aspect-ratio:auto;object-fit:contain;max-width:340px;margin-inline:auto;box-shadow:none;border-radius:0;background:transparent}
 #soc .vd__media{display:flex;align-items:center;justify-content:center}
+/* QA: long headings no longer run to four or five lines */
+.vaf-hero--split .q-h1,.vaf-hero--layered.vaf-hero--nocards .q-h1{font-size:clamp(36px,3.9vw,54px);line-height:1.08}
+.vcs__h{font-size:clamp(26px,2.5vw,34px);line-height:1.18}
+.q-h2{text-wrap:balance}
