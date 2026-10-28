@@ -112,3 +112,6 @@ it more credible. See `process/outbound-mockups.md`.
 A hard offer for the ready buyer, a soft offer for the 95% who aren't. Why it works: without the
 soft one, everybody not buying today leaves unidentifiable — and that's most visitors.
 `process/launch-standards.md`.
+
+## Interactive estimator walkthrough (Kelly "Full Office Overview", `kelly-office-explorer.module`)
+A dark hero, then a stepper rail (Start, one step per service line, Result) beside a panel per step with sliders and toggles. A running estimate updates in the rail as the visitor moves, and the last step shows a range, not a promise, with the offer of a specialist check. Eight steps, about three minutes. Worth porting per client: replace the service lines with the client's own (VAF: print, documents, IT, phones, mailing), keep the "estimates, not quotes" framing, and write the result into a HubSpot form so the range reaches the rep.
