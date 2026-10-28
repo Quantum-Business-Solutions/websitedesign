@@ -61,6 +61,13 @@ def schema_html(page):
     import preview
     blocks = preview.schema_blocks(CONTENT, page, "https://www.vanausdall.com", "showcase")
     own = "".join(f'<script type="application/ld+json">{json.dumps(b, ensure_ascii=False)}</script>' for b in page.get("schema", []))
+    if page["file"].startswith("services/") and '"Service"' not in own:
+        name = page["title"].split("|")[0].strip()
+        svc = {"@context": "https://schema.org", "@type": "Service", "name": name, "serviceType": name,
+               "description": page.get("description", ""), "url": f"https://www.vanausdall.com/{slug_of(page['file'])}",
+               "provider": {"@id": "https://www.vanausdall.com/#organization"},
+               "areaServed": [{"@type": "City", "name": "Indianapolis"}, {"@type": "State", "name": "Indiana"}]}
+        own += f'<script type="application/ld+json">{json.dumps(svc, ensure_ascii=False)}</script>'
     return "{% raw %}" + blocks + own + "{% endraw %}"
 
 
@@ -98,6 +105,10 @@ def rhythm(items, page):
                         params.update(card_a_eyebrow="", card_a_title="", card_a_body="", card_a_items=[], card_a_label="",
                                       card_b_eyebrow="", card_b_title="", card_b_body="", card_b_links=[])
                     break
+        im = params.get("image")
+        if isinstance(im, dict) and im.get("src") and not (im.get("alt") or "").strip():
+            h = re.sub(r"<[^>]+>", "", params.get("heading") or page["title"].split("|")[0]).strip()
+            im["alt"] = h[:120]          # descriptive alt for search and screen readers
         if mod == "vaf-detail":
             params["flip"] = bool(flips % 2)
             flips += 1
@@ -133,8 +144,9 @@ def template_for(page):
 
 
 def slugs_from(args):
+    # /blog and everything under it belongs to the HubSpot blog, not to site pages
     if args == ["all"]:
-        return [slug_of(p["file"]) for p in CONTENT["pages"]]
+        return [slug_of(p["file"]) for p in CONTENT["pages"] if slug_of(p["file"]) != "blog" and not slug_of(p["file"]).startswith("blog/")]
     return ["" if a == "home" else a for a in args]
 
 
@@ -152,6 +164,15 @@ def cmd_templates(args):
         print("  template", path)
 
 
+def og_image(page):
+    """Share image: the page's own first image, else the home hero poster (never the stock file the old site used)."""
+    from vaf_common import A
+    for s in page["sections"]:
+        if s.get("image"):
+            return A(s["image"])
+    return A("assets/hero-poster")
+
+
 def cmd_pages(args):
     import datetime, vaf_upload as U, reskin
     T = U.TOKEN
@@ -167,7 +188,8 @@ def cmd_pages(args):
         pg = page_for(sl)
         slug = sl                       # the home page is the site root (empty slug)
         body = {"name": f"VAF | {pg['title'].split(' | ')[0]}"[:120], "slug": slug, "templatePath": f"{THEME}/{tpl_name(sl)}",
-                "htmlTitle": pg["title"], "metaDescription": pg.get("description", ""), "headHtml": NOINDEX, "language": "en"}
+                "htmlTitle": pg["title"], "metaDescription": pg.get("description", ""), "headHtml": NOINDEX, "language": "en",
+                "featuredImage": og_image(pg), "featuredImageAltText": pg["title"].split("|")[0].strip()}
         cur = existing.get(slug)
         if cur:
             reskin._req("PATCH", f"/cms/v3/pages/site-pages/{cur['id']}", T, json.dumps(body).encode(), "application/json")
