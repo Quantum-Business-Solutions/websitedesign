@@ -91,3 +91,4 @@ body .q-section .q-h2.vd__h.vd__h--l,body .q-section h2.q-h2.vd__h.vd__h--l{font
 @media(max-width:1024px){body .q-section .q-h2.vd__h{max-width:none!important}}
 @media(max-width:520px){body .q-section .q-h2{font-size:clamp(22px,6.1vw,26px)!important;line-height:1.18!important}body .vaf-hero .q-h1,body .pv-hero .q-h1{font-size:clamp(31px,9.2vw,38px)!important;line-height:1.08!important}}
 @media(max-width:1024px){body .vaf-detail .q-container.vd,body .vaf-detail .q-container.vd--flip{grid-template-columns:minmax(0,1fr)!important;gap:28px!important}body .vaf-detail .vd--flip .vd__text,body .vaf-detail .vd--flip .vd__side{order:0!important}}
+@media(max-width:520px){body .vaf-hero--split .q-h1{font-size:clamp(26px,7.5vw,31px)!important;line-height:1.1!important}}
