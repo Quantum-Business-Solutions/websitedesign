@@ -69,3 +69,7 @@ body .vcs__h{font-size:clamp(22px,2vw,27px);line-height:1.22}
 body .vaf-detail .vd__h,body .vaf-detail .q-h2.vd__h{font-size:clamp(28px,2.8vw,38px);line-height:1.12}
 body .vaf-hero--split .q-h1{max-width:none}
 body .q-section .q-h2.vd__h,body .q-section h2.q-h2.vd__h{font-size:clamp(28px,2.8vw,38px)!important;line-height:1.12!important}
+body .vaf-hero .pv-hero-grid .q-h1{max-width:none}
+body .q-section .q-h2.vd__h,body .q-section h2.q-h2.vd__h{font-size:clamp(24px,2.3vw,32px)!important;line-height:1.15!important}
+body .vcs__h{font-size:clamp(20px,1.8vw,24px);line-height:1.25}
+body .vaf-hero--nocards .vaf-hero__copy .q-h1{max-width:24ch}
