@@ -1,0 +1,15 @@
+/* VAF link directory: grouped pill links, for browsing and for internal linking */
+.vaf-lc__head{text-align:center;display:flex;flex-direction:column;align-items:center;margin-bottom:40px}
+.vaf-lc__head .q-h2{margin-top:18px;max-width:820px}
+.vaf-lc__head .q-lead{max-width:640px;margin:14px auto 0}
+.vaf-lc__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.vaf-lc__group{background:#fff;border:1px solid #dbe5f0;border-radius:22px;padding:26px 28px;box-shadow:0 14px 34px color-mix(in srgb,#0f1e33 6%,transparent)}
+.vaf-lc__group h3{margin:0 0 6px;font-size:22px;color:#0f1e33;display:flex;align-items:center;gap:10px}
+.vaf-lc__group h3::before{content:"";width:8px;height:22px;border-radius:4px;background:linear-gradient(180deg,#2a71af,#8fc2f2)}
+.vaf-lc__group p{margin:0 0 16px;font-size:15px;color:#52647c}
+.vaf-lc__group ul{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:9px}
+.vaf-lc__group a{display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:999px;background:#f3f7fb;border:1px solid #dbe5f0;color:#0f1e33;font-size:14.5px;font-weight:600;text-decoration:none;transition:background .2s,border-color .2s,color .2s,transform .2s}
+.vaf-lc__group a svg{color:#2a71af;transition:transform .2s}
+.vaf-lc__group a:hover{background:#2a71af;border-color:#2a71af;color:#fff;transform:translateY(-1px)}
+.vaf-lc__group a:hover svg{color:#fff;transform:translate(2px,-2px)}
+@media(max-width:900px){.vaf-lc__grid{grid-template-columns:1fr}}

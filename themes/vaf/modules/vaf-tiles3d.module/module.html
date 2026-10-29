@@ -6,7 +6,7 @@
       <h2 class="q-h2">{{ module.heading }}</h2>
       {% if module.intro %}<p class="q-lead">{{ module.intro }}</p>{% endif %}
     </div>
-    <div class="vaf-t3__grid" style="--cols:{% if n % 3 == 0 %}3{% elif n % 2 == 0 %}2{% else %}3{% endif %}">
+    <div class="vaf-t3__grid" style="--cols:{% if n == 4 or n == 8 %}4{% elif n % 3 == 0 %}3{% elif n % 2 == 0 %}2{% else %}3{% endif %}">
       {% for it in module.items %}
       <a class="vaf-t3__card" href="{{ it.t_link.url.href }}"{% if it.t_link.open_in_new_tab %} target="_blank" rel="noopener"{% endif %}>
         <div class="vaf-t3__stage">

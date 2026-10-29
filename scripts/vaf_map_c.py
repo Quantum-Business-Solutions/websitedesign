@@ -98,6 +98,12 @@ def tiles3d(s):
                              "t_image": image(i.get("image", ""), i.get("alt", ""), 1168, 880), "t_link": _lnk(i.get("href", ""))} for i in s.get("items", [])]})
 
 
+def linkcloud(s):
+    """Grouped pill links. groups: [{title, intro?, links: [[label, href], ...]}]"""
+    return clean({**_common(s), "eyebrow": s.get("eyebrow", ""), "heading": s.get("heading", ""), "intro": s.get("intro", ""),
+                  "groups": [{"grp_title": g["title"], "grp_intro": g.get("intro", ""), "links": [{"lk_label": l, "lk_link": _lnk(h)} for l, h in g.get("links", [])]} for g in s.get("groups", [])]})
+
+
 def picker(s):
     """Problem router. Items: dicts with problem, service, copy, bullets (list), href."""
     return clean({**_common(s), "eyebrow": s.get("eyebrow", ""), "heading": s.get("heading", ""), "intro": s.get("intro", ""), "link_label": s.get("link_label", "See how we fix it"),
@@ -136,6 +142,7 @@ def testimonials(s):
 
 
 REGISTRY = {
+    "linkcloud": ("vaf-linkcloud", linkcloud),
     "tiles3d": ("vaf-tiles3d", tiles3d),
     "picker": ("vaf-picker", picker),
     "showcase": ("vaf-showcase", showcase),

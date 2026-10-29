@@ -1,0 +1,18 @@
+<section class="q-section vaf-lc{% if module.alt_bg %} q-bg-alt{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %}>
+  <div class="q-container">
+    <div class="vaf-lc__head">
+      {% if module.eyebrow %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      <h2 class="q-h2">{{ module.heading }}</h2>
+      {% if module.intro %}<p class="q-lead">{{ module.intro }}</p>{% endif %}
+    </div>
+    <div class="vaf-lc__grid">
+      {% for g in module.groups %}
+      <div class="vaf-lc__group">
+        <h3>{{ g.grp_title }}</h3>
+        {% if g.grp_intro %}<p>{{ g.grp_intro }}</p>{% endif %}
+        <ul>{% for l in g.links %}<li><a href="{{ l.lk_link.url.href }}"{% if l.lk_link.open_in_new_tab %} target="_blank" rel="noopener"{% endif %}>{{ l.lk_label }}<svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>{% endfor %}</ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

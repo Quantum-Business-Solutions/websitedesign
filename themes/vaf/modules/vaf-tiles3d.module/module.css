@@ -12,12 +12,13 @@
 .vaf-t3__num{position:absolute;top:18px;left:20px;font-size:13px;font-weight:800;letter-spacing:.08em;color:var(--t3-blue);background:#fff;border-radius:999px;padding:5px 11px;box-shadow:0 6px 16px rgba(15,30,51,.12);transform:translateZ(80px)}
 .vaf-t3__body{display:flex;flex-direction:column;flex:1;padding:24px 26px 28px;transform:translateZ(20px)}
 .vaf-t3__tag{align-self:flex-start;padding:5px 12px;border-radius:999px;background:#eaf2fa;color:var(--t3-blue);font-size:12.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-bottom:12px}
-.vaf-t3__body h3{margin:0 0 10px;font-size:clamp(22px,2vw,27px);line-height:1.15;color:var(--t3-navy)}
+.vaf-t3__body h3{margin:0 0 10px;font-size:clamp(20px,1.7vw,26px);line-height:1.15;color:var(--t3-navy)}
 .vaf-t3__body p{margin:0 0 16px;font-size:16px;line-height:1.55;color:#42546b}
 .vaf-t3__chips{list-style:none;margin:0 0 20px;padding:0;display:flex;flex-wrap:wrap;gap:8px}
 .vaf-t3__chips li{padding:6px 12px;border-radius:999px;background:#f3f7fb;border:1px solid #dbe5f0;font-size:13px;font-weight:600;color:#31445c}
 .vaf-t3__go{margin-top:auto;display:inline-flex;align-items:center;gap:10px;font-weight:700;color:var(--t3-blue);transition:gap .2s,color .2s}
 .vaf-t3__card:hover .vaf-t3__go{gap:16px;color:#205686}
+@media(max-width:1180px){.vaf-t3__grid[style*='--cols:4']{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:1000px){.vaf-t3__grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:640px){.vaf-t3__grid{grid-template-columns:1fr;gap:20px}}
 @media(prefers-reduced-motion:reduce){.vaf-t3__card,.vaf-t3__img{transition:none;transform:none!important}}

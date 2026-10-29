@@ -1,0 +1,247 @@
+{
+  "industries.html": {
+    "sections": [
+      {
+        "type": "hero",
+        "layout": "centered",
+        "eyebrow": "Industries",
+        "heading": "Built around <em>how your industry runs</em>.",
+        "subhead": "Eight markets where VAF has done the work many times, with the case studies to show for it. If yours is not here, the assessment still starts the same way.",
+        "primary": {
+          "label": "Schedule a consultation",
+          "href": "contact.html"
+        }
+      },
+      {
+        "type": "tiles3d",
+        "id": "industries",
+        "alt": true,
+        "eyebrow": "Eight industries",
+        "heading": "Technology, set up around how your industry runs",
+        "intro": "Each industry has its own page with the services, the proof and the questions we hear most.",
+        "link_label": "See the industry page",
+        "items": [
+          {
+            "tag": "Industry",
+            "title": "Education",
+            "copy": "Schools are tasked with developing the brightest minds, and many still run on technology from another era.",
+            "image": "assets/ind-3d-education.webp",
+            "alt": "Education, 3D illustration",
+            "href": "industries/education.html",
+            "bullets": []
+          },
+          {
+            "tag": "Industry",
+            "title": "Engineering and construction",
+            "copy": "Field operations need technology that is flexible, efficient and cost-effective, and most of it was never designed for a job site.",
+            "image": "assets/ind-3d-engineering.webp",
+            "alt": "Engineering and construction, 3D illustration",
+            "href": "industries/engineering-construction.html",
+            "bullets": []
+          },
+          {
+            "tag": "Industry",
+            "title": "Financial services",
+            "copy": "Banks and credit unions inherit expired leases, scattered vendors and print they cannot see. The fix starts with the assessment.",
+            "image": "assets/ind-3d-financial.webp",
+            "alt": "Financial services, 3D illustration",
+            "href": "industries/financial-services.html",
+            "bullets": []
+          },
+          {
+            "tag": "Industry",
+            "title": "Healthcare",
+            "copy": "Reliable, protected information is patient safety. VAF has worked in and around healthcare since 1914.",
+            "image": "assets/ind-3d-healthcare.webp",
+            "alt": "Healthcare, 3D illustration",
+            "href": "industries/healthcare.html",
+            "bullets": []
+          },
+          {
+            "tag": "Industry",
+            "title": "Insurance",
+            "copy": "In an industry this competitive, solid business technology is the edge, and eliminating the unnecessary technology is half of it.",
+            "image": "assets/ind-3d-insurance.webp",
+            "alt": "Insurance, 3D illustration",
+            "href": "industries/insurance.html",
+            "bullets": []
+          },
+          {
+            "tag": "Industry",
+            "title": "Manufacturing and logistics",
+            "copy": "Manufacturing has advanced light years in how it communicates, stores information and manages processes. The technology has to keep up.",
+            "image": "assets/ind-3d-manufacturing.webp",
+            "alt": "Manufacturing and logistics, 3D illustration",
+            "href": "industries/manufacturing-logistics.html",
+            "bullets": []
+          },
+          {
+            "tag": "Industry",
+            "title": "Real estate",
+            "copy": "The industry moved online, and the technology behind a brokerage has to keep up with the buyers who did.",
+            "image": "assets/ind-3d-realestate.webp",
+            "alt": "Real estate, 3D illustration",
+            "href": "industries/real-estate.html",
+            "bullets": []
+          },
+          {
+            "tag": "Industry",
+            "title": "State and local government",
+            "copy": "Out-of-date technology that is impossible to manage is a service problem for constituents. VAF has been a preferred vendor for Indiana municipalities since 2003.",
+            "image": "assets/ind-3d-government.webp",
+            "alt": "State and local government, 3D illustration",
+            "href": "industries/government.html",
+            "bullets": []
+          }
+        ]
+      },
+      {
+        "type": "tabs",
+        "id": "markets",
+        "eyebrow": "Industries",
+        "heading": "Built around how your industry runs",
+        "items": [
+          {
+            "label": "Education",
+            "title": "Education",
+            "body": "Districts and schools print more than almost any organization their size, across more buildings, with an IT staff stretched thin. VAF consolidates the fleet, puts every device under one agreement, and adds the mobile and cloud printing students and staff expect. Tippecanoe School Corporation cut 1,200 devices to just over 300 and saved a million dollars over the contract.",
+            "bullets": [
+              "Fleet consolidation across every building, priced as one agreement",
+              "Mobile and cloud printing for staff and students",
+              "Document conversion for student records with a retention policy"
+            ],
+            "image": "assets/team-1200.jpg",
+            "image_alt": "Education",
+            "href": "industries/education.html",
+            "link_label": "Technology for education"
+          },
+          {
+            "label": "Engineering and construction",
+            "title": "Engineering and construction",
+            "body": "Firms that run projects from trailers and site offices need phones, print and IT that travel with the work. VAF supplies short-term copier rental for job sites, wide-format print for plan sets, unified communications that follow a project manager between the office and the field, and managed IT that keeps estimating and accounting up. Shiel Sexton, Bowen Engineering and Echo Engineering are on the record.",
+            "bullets": [
+              "Short-term copier and printer rental for trailers and temporary offices",
+              "Wide-format print and scan for plan sets and submittals",
+              "Unified communications that follow the project team"
+            ],
+            "image": "assets/process-1200.jpg",
+            "image_alt": "Engineering and construction",
+            "href": "industries/engineering-construction.html",
+            "link_label": "Technology for engineering and construction"
+          },
+          {
+            "label": "Financial services",
+            "title": "Financial services",
+            "body": "When STAR Financial Bank needed a new print strategy, VAF removed expired leases, negotiated new contracts on upgraded equipment across the state, and implemented a print platform that cut waste and raised security. The result was 70% savings. The same assessment covers cybersecurity, continuity and the phone system that answers your customers.",
+            "bullets": [
+              "Print assessment across every branch, with expired leases retired",
+              "Secure print release and authenticated scanning for customer documents",
+              "Managed detection and response, MFA and security awareness training"
+            ],
+            "image": "assets/security-1200.jpg",
+            "image_alt": "Financial services",
+            "href": "industries/financial-services.html",
+            "link_label": "Technology for financial services"
+          },
+          {
+            "label": "Healthcare",
+            "title": "Healthcare",
+            "body": "Print needs that keep growing, records that must stay confidential, and communications that cannot fail when a patient needs urgent care. VAF supplies authenticated print release and scanning, tools that aid HIPAA compliance around patient records, unified communications and contact center for clinics, and a Document Conversion Center that scanned 1.5 million patient files for Johnson Memorial Health in 90 days.",
+            "bullets": [
+              "Consolidated print spend, centralized management and authenticated release",
+              "Tools to aid HIPAA compliance around patient records",
+              "Cloud, premise and hybrid unified communications, telehealth platforms and overhead paging"
+            ],
+            "image": "assets/healthcare-print-1200.jpg",
+            "image_alt": "Healthcare",
+            "href": "industries/healthcare.html",
+            "link_label": "Technology for healthcare"
+          },
+          {
+            "label": "Insurance",
+            "title": "Insurance",
+            "body": "Agencies run on documents, phone calls and the systems that connect them. VAF eliminates the technology an agency no longer needs, optimizes what it has, and builds a roadmap for the rest: document management for policy files, call recording and contact center for the phones, and managed security for the client data an agency is trusted with. Ellinger Riggs Insurance used VAF communications technology to keep customers on the line and expand to new locations.",
+            "bullets": [
+              "Document management for policy and claim files with retention rules",
+              "Call recording and contact center that meet PCI DSS requirements",
+              "Managed security and MFA for client data"
+            ],
+            "image": "assets/meeting-1200.jpg",
+            "image_alt": "Insurance",
+            "href": "industries/insurance.html",
+            "link_label": "Technology for insurance"
+          },
+          {
+            "label": "Manufacturing and logistics",
+            "title": "Manufacturing and logistics",
+            "body": "Plants and warehouses need print where the work happens, networks that reach the floor, and documents that move without a paper chase. VAF brought in-house print and facilities management to Berry Global, planted new print solutions at Beck's Hybrids, and improved network performance and reliability for Mid-City Supply.",
+            "bullets": [
+              "In-house print and facilities management for plants and distribution centers",
+              "Networking, Wi-Fi and SD-WAN that reach the floor",
+              "Document workflow for orders, quality and compliance records"
+            ],
+            "image": "assets/engineers-1200.jpg",
+            "image_alt": "Manufacturing and logistics",
+            "href": "industries/manufacturing-logistics.html",
+            "link_label": "Technology for manufacturing and logistics"
+          },
+          {
+            "label": "Real estate",
+            "title": "Real estate",
+            "body": "Brokerages and property managers live on their phones and their documents. VAF supplies cloud communications with mobility for agents who work from anywhere, document management for transaction files, and managed IT and security for offices that hold client financial information.",
+            "bullets": [
+              "Cloud phone systems with mobile apps for agents in the field",
+              "Document management for transaction and lease files",
+              "Managed IT and security for client financial data"
+            ],
+            "image": "assets/innovation-1200.jpg",
+            "image_alt": "Real estate",
+            "href": "industries/real-estate.html",
+            "link_label": "Technology for real estate"
+          },
+          {
+            "label": "State and local government",
+            "title": "State and local government",
+            "body": "Cities, towns and utilities need billing, records and communications that constituents can trust. For the City of Anderson, VAF's on-site Facilities Management program refreshed print and billing technology, added 2D bar code document security and postal optimization, and streamlined purchasing, for over $40,000 in annual savings. Bloomington's utility department and the Town of Bargersville run on VAF content management.",
+            "bullets": [
+              "On-site facilities management with full-time VAF personnel",
+              "Print and mail security for billing and records",
+              "Enterprise content management for utilities and clerks"
+            ],
+            "image": "assets/hq-1200.jpg",
+            "image_alt": "State and local government",
+            "href": "industries/government.html",
+            "link_label": "Technology for state and local government"
+          }
+        ]
+      },
+      {
+        "type": "faq",
+        "alt": true,
+        "heading": "Questions about industry solutions",
+        "items": [
+          [
+            "Which industries does Van Ausdall & Farrar serve?",
+            "Education, engineering and construction, financial services, healthcare, insurance, manufacturing and logistics, real estate, and state and local government, across Indiana and the Midwest."
+          ],
+          [
+            "Why does the industry matter for office technology?",
+            "Because a hospital's records retention, a school's print volume and a job site's phones each fail in their own way. The industry pages describe what VAF sets up for each and who is on the record."
+          ],
+          [
+            "Do you have references in my industry?",
+            "Eighteen published case studies, from Tippecanoe School Corporation to STAR Financial Bank and Johnson Memorial Health. Each industry page lists its own."
+          ]
+        ]
+      },
+      {
+        "type": "leadform",
+        "id": "consult",
+        "heading": "Start with the Technology Strength Assessment",
+        "body": "Ten to fifteen minutes, then a specialist who knows your industry walks it with you.",
+        "submit": "Schedule my consultation",
+        "note": "A person from the Indianapolis office replies, not an autoresponder."
+      }
+    ]
+  }
+}
