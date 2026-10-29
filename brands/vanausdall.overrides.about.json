@@ -246,84 +246,49 @@
       {
         "type": "resources",
         "alt": true,
-        "heading": "More from Van Ausdall & Farrar",
-        "intro": "More from VAF.",
+        "heading": "Keep exploring VAF",
+        "intro": "The people, the proof and the places behind the company.",
         "items": [
           [
-            "About",
-            "About",
-            "Van Ausdall & Farrar believes in our customers, and we do everything we can to make sure you manage your business well using all of our.",
-            "Open the page",
-            "training.html"
+            "Company",
+            "Case studies",
+            "Eighteen Indiana organizations, each with the number they measured.",
+            "Read the results",
+            "case-studies.html"
           ],
           [
-            "About",
-            "Cookie Policy",
-            "We value your privacy very highly. Please read this Cookie Policy carefully before using the https://www.vanausdall.com/ Website (the.",
-            "Open the page",
-            "policies/cookie.html"
+            "Company",
+            "Partners",
+            "The manufacturers and technology partners VAF works with.",
+            "See the partners",
+            "partners.html"
           ],
           [
-            "About",
-            "Disclaimer Policy",
-            "Please read this Disclaimer carefully before using the https://www.vanausdall.com/ website (the \"Website\") operated by Van Ausdall &.",
-            "Open the page",
-            "policies/disclaimer.html"
+            "Company",
+            "Careers",
+            "Privately owned and operated in Indianapolis, and looking for people who take ownership and keep learning.",
+            "See open roles",
+            "careers.html"
           ],
           [
-            "About",
-            "Do Not Share My Personal Information",
-            "The California Privacy Rights Act (CPRA) allows residents of California to opt out of the sharing of their personal information with third.",
-            "Open the page",
-            "policies/do-not-share.html"
-          ],
-          [
-            "About",
-            "Employee Benefits",
+            "Company",
+            "Employee benefits",
             "At Van Ausdall & Farrar, our people are our number one asset.",
-            "Open the page",
+            "See benefits",
             "benefits.html"
           ],
           [
-            "About",
-            "Limit the Use of My Sensitive Personal Information",
-            "The California Privacy Rights Act (CPRA) allows residents of California to exercise their right to limit the use and disclosure of their.",
-            "Open the page",
-            "policies/limit-the-use.html"
+            "Customers",
+            "Training",
+            "Classes customized to your business so employees get the most from their technology.",
+            "See training",
+            "training.html"
           ],
           [
-            "About",
-            "Privacy Policy",
-            "We value your privacy very highly. Please read this Privacy Policy carefully before using the https://www.vanausdall.com/ website (the.",
-            "Open the page",
-            "policies/privacy.html"
-          ],
-          [
-            "About",
-            "Software Drivers and Documentation Downloads",
-            "Visit any of the links below for fast access to manufacturer and developer driver pages, as well as various software downloads.",
-            "Open the page",
-            "downloads.html"
-          ],
-          [
-            "About",
-            "Terms of Service",
-            "Please read this Terms of Service (“Terms”, “Terms of Service”) carefully before using the https://www.vanausdall.com/ website (the.",
-            "Open the page",
-            "policies/terms-of-service.html"
-          ],
-          [
-            "About",
-            "Van Ausdall & Farrar Customer Care App Privacy Policy",
-            "This Policy contains sections with terms used by the European legislature for the adoption of the General Data Protection Regulation.",
-            "Open the page",
-            "policies/van-ausdall-farrar-customer-care-app-privacy-policy.html"
-          ],
-          [
-            "About",
-            "Virtual Site Visit for Indiana",
-            "We know it’s difficult for you to come see our facility today, so we put this page together to make sure you’re able to visit us.",
-            "Open the page",
+            "Customers",
+            "Virtual site visit",
+            "We know it is difficult to come see our facility, so we put this page together to let you visit.",
+            "Visit virtually",
             "virtualsitevisit.html"
           ]
         ]

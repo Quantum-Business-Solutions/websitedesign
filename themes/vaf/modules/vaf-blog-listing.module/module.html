@@ -34,7 +34,7 @@
         <div class="vb-card__body">
           <div class="vb-card__meta">
             {% if post.tag_list|length > 0 %}<span class="vb-card__cat">{{ post.tag_list[0].name }}</span>{% endif %}
-            <time datetime="{{ post.publish_date|format_datetime('yyyy-MM-dd') }}">{{ post.publish_date_localized }}</time>
+            <time datetime="{{ post.publish_date|format_datetime('yyyy-MM-dd') }}">{{ post.publish_date|format_datetime("MMM d, yyyy") }}</time>
           </div>
           <h2 class="vb-card__title"><a href="{{ post.absolute_url }}">{{ post.name }}</a></h2>
           {% if post.post_summary %}<p class="vb-card__teaser">{{ post.post_summary|striptags|truncate(170) }}</p>{% endif %}

@@ -14,7 +14,7 @@
       {% if cat %}<div class="q-eyebrow vb-art__eyebrow">{{ cat.name }}</div>{% endif %}
       <h1 class="q-h1 vb-art__h1">{{ content.name }}</h1>
       {% if content.post_summary %}<p class="q-lead vb-art__stand">{{ content.post_summary|striptags }}</p>{% endif %}
-      <p class="vb-art__meta"><span><b>{{ author }}</b></span><span><time{% if content.publish_date %} datetime="{{ content.publish_date|format_datetime('yyyy-MM-dd') }}"{% endif %}>{{ content.publish_date_localized }}</time></span><span>{{ mins }} {{ module.minutes_label }}</span></p>
+      <p class="vb-art__meta"><span><b>{{ author }}</b></span><span><time{% if content.publish_date %} datetime="{{ content.publish_date|format_datetime('yyyy-MM-dd') }}"{% endif %}>{{ content.publish_date|format_datetime("MMM d, yyyy") }}</time></span><span>{{ mins }} {{ module.minutes_label }}</span></p>
     </header>
     {% if content.featured_image %}
     <div class="vb-art__hero"><img src="{{ content.featured_image }}" alt="{{ content.featured_image_alt_text }}" width="1200" height="800" fetchpriority="high" decoding="async"></div>
