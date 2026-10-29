@@ -1,0 +1,252 @@
+{
+ "customers": [
+  {
+   "id": "tippecanoe",
+   "full": [
+    "Tippecanoe School Corporation"
+   ],
+   "short": [
+    "Tippecanoe",
+    "TSC"
+   ],
+   "indef": "an Indiana school corporation",
+   "definite": "the school corporation",
+   "label": "School Corporation"
+  },
+  {
+   "id": "star",
+   "full": [
+    "STAR Financial Bank",
+    "STAR Financial",
+    "STAR Bank"
+   ],
+   "short": [
+    "STAR"
+   ],
+   "indef": "a community bank",
+   "definite": "the bank",
+   "label": "Community Bank"
+  },
+  {
+   "id": "johnson",
+   "full": [
+    "Johnson Memorial Hospital",
+    "Johnson Memorial Health",
+    "Johnson Memorial"
+   ],
+   "short": [
+    "JMH"
+   ],
+   "indef": "a community hospital",
+   "definite": "the hospital",
+   "label": "Community Hospital"
+  },
+  {
+   "id": "anderson",
+   "full": [
+    "City of Anderson, IN",
+    "City of Anderson"
+   ],
+   "short": [
+    "Anderson"
+   ],
+   "indef": "an Indiana city",
+   "definite": "the city",
+   "label": "Indiana City: Facilities"
+  },
+  {
+   "id": "bloomington",
+   "full": [
+    "City of Bloomington"
+   ],
+   "short": [],
+   "indef": "an Indiana city",
+   "definite": "the city",
+   "label": "Indiana City: Utility Data"
+  },
+  {
+   "id": "aspire",
+   "full": [
+    "Aspire Indiana Health",
+    "Aspire Indiana"
+   ],
+   "short": [
+    "Aspire"
+   ],
+   "indef": "a healthcare provider",
+   "definite": "the provider",
+   "label": "Healthcare Provider"
+  },
+  {
+   "id": "becks",
+   "full": [
+    "Beck's Hybrids",
+    "Beck's Hybrid",
+    "Becks Hybrids",
+    "Becks Hybrid"
+   ],
+   "short": [
+    "Beck's",
+    "Becks"
+   ],
+   "indef": "a seed company",
+   "definite": "the company",
+   "label": "Seed Company"
+  },
+  {
+   "id": "berry",
+   "full": [
+    "Berry Global"
+   ],
+   "short": [
+    "Berry"
+   ],
+   "indef": "a global manufacturer",
+   "definite": "the company",
+   "label": "Global Manufacturer"
+  },
+  {
+   "id": "bowen",
+   "full": [
+    "Bowen Engineering"
+   ],
+   "short": [
+    "Bowen"
+   ],
+   "indef": "an Indiana general contractor",
+   "definite": "the contractor",
+   "label": "General Contractor"
+  },
+  {
+   "id": "echo",
+   "full": [
+    "Echo Engineering"
+   ],
+   "short": [
+    "Echo"
+   ],
+   "indef": "an engineering firm",
+   "definite": "the firm",
+   "label": "Engineering Firm"
+  },
+  {
+   "id": "ellinger",
+   "full": [
+    "Ellinger Riggs Insurance",
+    "Ellinger & Riggs",
+    "Ellinger Riggs"
+   ],
+   "short": [
+    "Ellinger"
+   ],
+   "indef": "an insurance agency",
+   "definite": "the agency",
+   "label": "Insurance Agency"
+  },
+  {
+   "id": "gailey",
+   "full": [
+    "Gailey Eye Clinic"
+   ],
+   "short": [
+    "Gailey"
+   ],
+   "indef": "an eye care practice",
+   "definite": "the practice",
+   "label": "Eye Care Practice"
+  },
+  {
+   "id": "midcity",
+   "full": [
+    "Mid-City Supply",
+    "Mid City Supply",
+    "Mid-City",
+    "Mid City"
+   ],
+   "short": [],
+   "indef": "a supply company",
+   "definite": "the company",
+   "label": "Supply Company"
+  },
+  {
+   "id": "phalen",
+   "full": [
+    "Phalen Leadership Academy",
+    "Phalen Leadership Academies"
+   ],
+   "short": [
+    "Phalen",
+    "PLA"
+   ],
+   "indef": "a school network",
+   "definite": "the network",
+   "label": "School Network"
+  },
+  {
+   "id": "pools",
+   "full": [
+    "Pools of Fun"
+   ],
+   "short": [],
+   "indef": "a multi-location retailer",
+   "definite": "the retailer",
+   "label": "Multi-Location Retailer"
+  },
+  {
+   "id": "shiel",
+   "full": [
+    "Shiel Sexton"
+   ],
+   "short": [
+    "Shiel"
+   ],
+   "indef": "a construction firm",
+   "definite": "the firm",
+   "label": "Construction Firm"
+  },
+  {
+   "id": "bargersville",
+   "full": [
+    "Town of Bargersville"
+   ],
+   "short": [
+    "Bargersville"
+   ],
+   "indef": "an Indiana town",
+   "definite": "the town",
+   "label": "Indiana Town"
+  }
+ ],
+ "labels": {
+  "Tippecanoe School Corporation: HR records": "School Corporation: HR Records"
+ },
+ "strip": [
+  " (PLA)"
+ ],
+ "slugs": {
+  "tippecanoe-school-corporation-digital-document": "school-corporation-hr-records",
+  "tippecanoe-school-corporation": "school-corporation-fleet-consolidation",
+  "star-financial": "community-bank-cost-savings",
+  "johnson-memorial-hospital": "community-hospital-patient-records",
+  "city-of-anderson": "city-facilities-management",
+  "city-of-bloomington": "city-utility-data",
+  "aspire": "healthcare-provider-secure-cloud",
+  "becks-hybrid": "seed-company-print-upgrade",
+  "berry-global": "global-manufacturer-print-fleet",
+  "bowen-engineering": "general-contractor-technology",
+  "echo-engineering": "engineering-firm-infrastructure",
+  "ellinger-riggs": "insurance-agency-communications",
+  "gailey-eye-clinic": "eye-care-practice-cloud",
+  "mid-city": "supply-company-private-line",
+  "phalen-leadership-academy": "school-network-remote-learning-print",
+  "pools-of-fun": "retailer-managed-it",
+  "shiel-sexton": "construction-firm-print",
+  "the-town-of-bargersville": "town-data-collection"
+ },
+ "titles": {
+  "school-corporation-fleet-consolidation": "School Corporation Fleet",
+  "school-corporation-hr-records": "School HR Records",
+  "city-facilities-management": "City Facilities",
+  "city-utility-data": "City Utility Data"
+ }
+}

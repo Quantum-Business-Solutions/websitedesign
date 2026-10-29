@@ -27,6 +27,11 @@ for _o in sorted(glob.glob(os.path.join(ROOT, "brands/vanausdall.overrides.*.jso
             if _pg["file"] == _file:
                 _pg.update({k: v for k, v in _ov.items() if k in ("title", "description", "sections", "compose", "crumbs", "schema")})
 
+if not os.environ.get("VAF_NAMED_CUSTOMERS"):      # case study customers are described, never named (brands/vanausdall.customers.json)
+    import vaf_anonymize
+    vaf_anonymize.apply(CONTENT)
+
+
 def seo_titles():
     """Titles of 30 to 60 characters that carry the brand and the place; four meta descriptions that came through the migration as one word are rewritten."""
     BR = " | Van Ausdall & Farrar"
@@ -34,7 +39,7 @@ def seo_titles():
     META = {
         "index.html": "Managed IT, cybersecurity, business phones, copiers and print, and document services for Indiana businesses, locally owned in Indianapolis since 1914.",
         "about.html": "Privately owned in Indianapolis since 1914, Van Ausdall & Farrar delivers managed IT, phones, print and document services across Indiana.",
-        "case-studies/city-of-anderson.html": "How VAF's on-site facilities management program saved the City of Anderson over $40,000 a year on print, billing and purchasing.",
+        "case-studies/city-facilities-management.html": "How VAF's on-site facilities management program saved an Indiana city over $40,000 a year on print, billing and purchasing.",
         "services/document-conversion.html": "Document scanning and conversion in Indianapolis: paperless digital imaging, searchable archives and secure electronic storage from VAF's Document Conversion Center.",
     }
     PLACES = ("indianapolis", "indiana", "fort wayne", "evansville", "bloomington", "carmel", "fishers", "noblesville", "greenwood", "muncie", "columbus", "south bend")
