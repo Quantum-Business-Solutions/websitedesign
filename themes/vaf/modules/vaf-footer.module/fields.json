@@ -25,7 +25,7 @@
     "name": "tagline",
     "label": "Tagline",
     "type": "text",
-    "default": "Business technology simplified. Indiana's largest full-service office technology provider, privately owned in Indianapolis since 1914."
+    "default": "Business technology simplified. One of Indiana's largest independently owned office technology providers, privately owned in Indianapolis since 1914."
   },
   {
     "id": "phone",

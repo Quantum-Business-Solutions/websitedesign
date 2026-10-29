@@ -1,8 +1,8 @@
 [
  {
-  "claim": "93.4 Net Promoter Score, audited",
+  "claim": "92.8 Net Promoter Score, audited",
   "numbers": [
-   "93.4"
+   "92.8"
   ],
   "pages": [
    "/",
@@ -126,13 +126,13 @@
   ],
   "status": "new",
   "unmatched": [
-   "93.4"
+   "92.8"
   ]
  },
  {
-  "claim": "SOC 2 certified NPS 93.4, audited by CEO Juice.",
+  "claim": "SOC 2 certified NPS 92.8, audited by CEO Juice.",
   "numbers": [
-   "93.4"
+   "92.8"
   ],
   "pages": [
    "/careers",
@@ -243,13 +243,13 @@
   ],
   "status": "new",
   "unmatched": [
-   "93.4"
+   "92.8"
   ]
  },
  {
-  "claim": "93.4 Net Promoter Score, independently audited",
+  "claim": "92.8 Net Promoter Score, independently audited",
   "numbers": [
-   "93.4"
+   "92.8"
   ],
   "pages": [
    "/careers",
@@ -357,13 +357,13 @@
   ],
   "status": "new",
   "unmatched": [
-   "93.4"
+   "92.8"
   ]
  },
  {
-  "claim": "NPS 93.4, audited by CEO Juice",
+  "claim": "NPS 92.8, audited by CEO Juice",
   "numbers": [
-   "93.4"
+   "92.8"
   ],
   "pages": [
    "/case-studies/aspire",
@@ -381,23 +381,17 @@
    "/locations/evansville-network-infrastructure",
    "/locations/fishers",
    "/locations/fort-wayne-network-carrier-solutions",
-   "/locations/greenwood",
-   "/locations/muncie",
-   "/locations/muncie-network-carrier-solutions",
-   "/locations/noblesville",
-   "/locations/south-bend",
-   "/locations/south-bend-network-infrastructure",
    "/services/business-security-systems"
   ],
   "status": "new",
   "unmatched": [
-   "93.4"
+   "92.8"
   ]
  },
  {
-  "claim": "A Net Promoter Score of 93.4, collected and audited by CEO Juice, an independent company, against a US average of 10.",
+  "claim": "A Net Promoter Score of 92.8, collected and audited by CEO Juice, an independent company, against a US average of 10.",
   "numbers": [
-   "93.4"
+   "92.8"
   ],
   "pages": [
    "/case-studies/aspire",
@@ -411,7 +405,37 @@
    "/locations/bloomington",
    "/locations/carmel",
    "/locations/columbus",
-   "/locations/fishers",
+   "/locations/fishers"
+  ],
+  "status": "new",
+  "unmatched": [
+   "92.8"
+  ]
+ },
+ {
+  "claim": "NPS 93.4, audited by CEO Juice",
+  "numbers": [
+   "93.4"
+  ],
+  "pages": [
+   "/locations/greenwood",
+   "/locations/muncie",
+   "/locations/muncie-network-carrier-solutions",
+   "/locations/noblesville",
+   "/locations/south-bend",
+   "/locations/south-bend-network-infrastructure"
+  ],
+  "status": "new",
+  "unmatched": [
+   "93.4"
+  ]
+ },
+ {
+  "claim": "A Net Promoter Score of 93.4, collected and audited by CEO Juice, an independent company, against a US average of 10.",
+  "numbers": [
+   "93.4"
+  ],
+  "pages": [
    "/locations/greenwood",
    "/locations/muncie",
    "/locations/noblesville",
@@ -423,16 +447,16 @@
   ]
  },
  {
-  "claim": "93.4 Net Promoter Score, audited by CEO Juice",
+  "claim": "92.8 Net Promoter Score, audited by CEO Juice",
   "numbers": [
-   "93.4"
+   "92.8"
   ],
   "pages": [
    "/about"
   ],
   "status": "new",
   "unmatched": [
-   "93.4"
+   "92.8"
   ]
  },
  {
@@ -556,6 +580,31 @@
   "unmatched": []
  },
  {
+  "claim": "Celebrating Van Ausdall & Farrar's 110th Anniversary: A Legacy of Innovation and Excellence",
+  "numbers": [
+   "110"
+  ],
+  "pages": [
+   "/blog/celebrating-van-ausdall-farrars-110th-anniversary-a-legacy-of-innovation-and-excellence",
+   "/blog/mitel-conferencing-create-conference-within-outlook",
+   "/blog/mitel-connect-client-add-participant-conference",
+   "/blog/mitel-connect-client-answering-a-call",
+   "/blog/mitel-connect-client-complete-course",
+   "/blog/mitel-connect-client-directory-people-list",
+   "/blog/mitel-connect-client-intro-basics",
+   "/blog/mitel-connect-client-recents-list",
+   "/blog/mitel-connect-client-record-custom-greetings",
+   "/blog/mitel-connect-client-set-new-client-password",
+   "/blog/mitel-connect-client-set-new-voicemail-password",
+   "/blog/mitel-connect-client-transferring-a-call",
+   "/blog/mitel-connect-client-voicemail-integration",
+   "/blog/mitel-connect-client-voicemails",
+   "/blog/van-ausdall-farrar-customer-training-quick-clips-intro"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
   "claim": "New print and copier fleet reduced overall equipment count and provided $1M in savings.",
   "numbers": [
    "$1M"
@@ -574,6 +623,28 @@
    "/industries/education",
    "/print-assessment",
    "/services/managed-print"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "He has been working on our equipment for at least 12 years and I would not want anyone else.",
+  "numbers": [
+   "12 years"
+  ],
+  "pages": [
+   "/",
+   "/about",
+   "/industries/engineering-construction",
+   "/industries/manufacturing-logistics",
+   "/locations/indianapolis",
+   "/services/copy-print-solutions",
+   "/services/cybersecurity",
+   "/services/managed-print",
+   "/services/production-print",
+   "/solutions",
+   "/solutions-process",
+   "/support"
   ],
   "status": "supported",
   "unmatched": []
@@ -620,27 +691,6 @@
    "/services/voice-processing",
    "/services/voice-recognition",
    "/solutions-communication"
-  ],
-  "status": "supported",
-  "unmatched": []
- },
- {
-  "claim": "He has been working on our equipment for at least 12 years and I would not want anyone else.",
-  "numbers": [
-   "12 years"
-  ],
-  "pages": [
-   "/",
-   "/industries/engineering-construction",
-   "/industries/manufacturing-logistics",
-   "/locations/indianapolis",
-   "/services/copy-print-solutions",
-   "/services/cybersecurity",
-   "/services/managed-print",
-   "/services/production-print",
-   "/solutions",
-   "/solutions-process",
-   "/support"
   ],
   "status": "supported",
   "unmatched": []
@@ -1227,6 +1277,665 @@
   ],
   "pages": [
    "/benefits"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Van Ausdall & Farrar, an Indianapolis-based office equipment reseller, stands tall as one such remarkable entity, proudly celebrating its 110th anniversary this year.",
+  "numbers": [
+   "110"
+  ],
+  "pages": [
+   "/blog/celebrating-van-ausdall-farrars-110th-anniversary-a-legacy-of-innovation-and-excellence"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Their upcoming 110th anniversary celebration is a testament to their enduring legacy and their ability to navigate through the ever-changing business landscape.",
+  "numbers": [
+   "110"
+  ],
+  "pages": [
+   "/blog/celebrating-van-ausdall-farrars-110th-anniversary-a-legacy-of-innovation-and-excellence"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Van Ausdall & Farrar's 110th anniversary is a remarkable achievement that serves as an inspiration to businesses across industries.",
+  "numbers": [
+   "110"
+  ],
+  "pages": [
+   "/blog/celebrating-van-ausdall-farrars-110th-anniversary-a-legacy-of-innovation-and-excellence"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "With more than 100 patents, Acronis products have been named best product of the year, and cover a range of features, including migration, cloning and replication.",
+  "numbers": [
+   "100"
+  ],
+  "pages": [
+   "/blog/cloud-data-protection-by-acronis-at-van-ausdall-farrar-inc"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "In my 16 years of experience being embedded in corporate America in one function or another, the overwhelming answer to the above question is YES!",
+  "numbers": [
+   "16 years"
+  ],
+  "pages": [
+   "/blog/data-security-on-a-small-scale"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "According to recent industry data, 93% of healthcare organizations have experienced a data breach in the past three years, with the average cost of a healthcare data breach reaching $10.93 million, the highest of any industry.",
+  "numbers": [
+   "93%",
+   "$10.93 million"
+  ],
+  "pages": [
+   "/blog/healthcare-it-solutions-securing-patient-data-streamlining-operations"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "representing over $1 billion in",
+  "numbers": [
+   "$1 billion"
+  ],
+  "pages": [
+   "/blog/mastering-execution-van-ausdall-farrar-incs-leadership-invited-to-attend-24th-annual-tag-convention"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "RingCentral MVP is widely acknowledged as the market-leading UCaaS solution, offering a single-app experience, unmatched reliability, seamless integration with existing business apps, and a global footprint in 110+ countries.",
+  "numbers": [
+   "110+"
+  ],
+  "pages": [
+   "/blog/mitel-customers-migrating-to-ucaas-are-embracing-ringcentral-mvp-so-can-you"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "MORE THAN 50% OF MITEL'S PARTNERS IN THE US HAVE JOINED RINGCENTRAL'S PARTNER PROGRAM, AND MORE GLOBAL EXPANSION IS PLANNED",
+  "numbers": [
+   "50%"
+  ],
+  "pages": [
+   "/blog/mitel-customers-migrating-to-ucaas-are-embracing-ringcentral-mvp-so-can-you"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Trent Smith, Vice President & GM, IT, of Van Ausdall & Farrar, Inc.: \"We're a 100+ year-old company that brings innovative communication solutions to our business customers.",
+  "numbers": [
+   "100+"
+  ],
+  "pages": [
+   "/blog/mitel-customers-migrating-to-ucaas-are-embracing-ringcentral-mvp-so-can-you"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Based on the partnership's migrations thus far, Mitel and RingCentral's exclusive tools and migration path cut migration time by up to 75% compared to industry standards.",
+  "numbers": [
+   "75%"
+  ],
+  "pages": [
+   "/blog/mitel-customers-migrating-to-ucaas-are-embracing-ringcentral-mvp-so-can-you"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Perhaps nothing illustrates how well the collaboration between Mitel and RingCentral is going better than the faster-than-expected certification of Mitel 6900 , 6800, and very soon, IP400 series phones, effectively enabling organizations to continue to use (and maximize their investments in) Mitel phone systems.",
+  "numbers": [
+   "6900",
+   "6800,",
+   "400"
+  ],
+  "pages": [
+   "/blog/mitel-customers-migrating-to-ucaas-are-embracing-ringcentral-mvp-so-can-you"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Managed print services cover fleet assessment, proactive maintenance, analytics, security and help desk, with typical print cost reductions of 20-30% according to the post.",
+  "numbers": [
+   "30%"
+  ],
+  "pages": [
+   "/blog/modern-print-copy-solutions-for-business-efficiency"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Organizations that strategically approach their print infrastructure, combining cutting-edge equipment with professional management, typically see cost reductions of 20-30% while improving document security and workflow efficiency.",
+  "numbers": [
+   "30%"
+  ],
+  "pages": [
+   "/blog/modern-print-copy-solutions-for-business-efficiency"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "20-30% reduction in overall print-related costs",
+  "numbers": [
+   "30%"
+  ],
+  "pages": [
+   "/blog/modern-print-copy-solutions-for-business-efficiency"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "After more than 100 years serving Midwest businesses, we understand that technology should simplify operations rather than complicate them.",
+  "numbers": [
+   "100 years"
+  ],
+  "pages": [
+   "/blog/modern-print-copy-solutions-for-business-efficiency"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "The post says most organizations implementing comprehensive print solutions achieve full return on investment within 18-24 months, with ongoing annual savings after that, and typically see 20-30% reductions in print-related costs.",
+  "numbers": [
+   "30%"
+  ],
+  "pages": [
+   "/blog/modern-print-copy-solutions-for-business-efficiency"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "TL;DR Organizations spend 1-3% of annual revenue on printing, the post says, so assess total cost of ownership, utilization, volume patterns and security gaps first.",
+  "numbers": [
+   "3%"
+  ],
+  "pages": [
+   "/blog/print-copy-solutions-maximizing-efficiency-and-roi"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "The post says comprehensive print solutions typically cut costs 20-30% in their first year through print rules, vendor consolidation, proactive maintenance and duplex defaults.",
+  "numbers": [
+   "30%"
+  ],
+  "pages": [
+   "/blog/print-copy-solutions-maximizing-efficiency-and-roi"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Organizations across industries spend between 1-3% of their annual revenue on printing-related expenses, yet most lack visibility into these costs or how to optimize them effectively.",
+  "numbers": [
+   "3%"
+  ],
+  "pages": [
+   "/blog/print-copy-solutions-maximizing-efficiency-and-roi"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Organizations spend 1-3% of annual revenue on printing, the post says, so assess total cost of ownership, utilization, volume patterns and security gaps first.",
+  "numbers": [
+   "3%"
+  ],
+  "pages": [
+   "/blog/print-copy-solutions-maximizing-efficiency-and-roi"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Organizations implementing comprehensive print solutions typically see cost reductions of 20-30% in their first year.",
+  "numbers": [
+   "30%"
+  ],
+  "pages": [
+   "/blog/print-copy-solutions-maximizing-efficiency-and-roi"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "The post says organizations across industries spend between 1-3% of their annual revenue on printing-related expenses, yet most lack visibility into these costs or how to optimize them.",
+  "numbers": [
+   "3%"
+  ],
+  "pages": [
+   "/blog/print-copy-solutions-maximizing-efficiency-and-roi"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "The post says organizations implementing comprehensive print solutions typically see cost reductions of 20-30% in their first year, from rule-based controls, consolidating vendors, proactive maintenance, better device placement and duplex printing as the default.",
+  "numbers": [
+   "30%"
+  ],
+  "pages": [
+   "/blog/print-copy-solutions-maximizing-efficiency-and-roi"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Most of it arrives on paper, gets scanned at that device, and lands in a folder somewhere with a filename like scan0012.pdf.",
+  "numbers": [
+   "0012"
+  ],
+  "pages": [
+   "/blog/print-copy-solutions-where-document-workflows-start"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Information Governance has 100% responsibility of the information managed by an organization where Records Management comprises less than 20% of that total.",
+  "numbers": [
+   "100%",
+   "20%"
+  ],
+  "pages": [
+   "/blog/records-management-vs-information-governance-whats-the-difference"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Managed Print Services can reduce printing costs by up to 30% through usage analysis, while proactive maintenance and automatic supplies free staff.",
+  "numbers": [
+   "30%"
+  ],
+  "pages": [
+   "/blog/revolutionize-your-workplace-modern-print-copy-solutions-unleashed"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Cost Reduction: By analyzing your print usage and implementing strategic changes, we can help reduce your overall printing costs by up to 30%.",
+  "numbers": [
+   "30%"
+  ],
+  "pages": [
+   "/blog/revolutionize-your-workplace-modern-print-copy-solutions-unleashed"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "The post says that by analyzing print usage and implementing strategic changes, managed print services can help reduce overall printing costs by up to 30%.",
+  "numbers": [
+   "30%"
+  ],
+  "pages": [
+   "/blog/revolutionize-your-workplace-modern-print-copy-solutions-unleashed"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Whether you spend $50 or $500,000 on new technology, without a process and plan to facilitate that process, you would be better off spending on just about anything else.",
+  "numbers": [
+   "$50",
+   "$500,000"
+  ],
+  "pages": [
+   "/blog/technology-number-three-after-process-planning"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "The post says without a good process and planning, a paper mess just becomes an electronic mess, and whether you spend $50 or $500,000 on new technology, you would be better off spending on almost anything else without a process and plan.",
+  "numbers": [
+   "$50",
+   "$500,000"
+  ],
+  "pages": [
+   "/blog/technology-number-three-after-process-planning"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Our cloud communications solutions, powered by industry leaders Mitel and 8x8, are specifically designed to break down these communication barriers and get your entire organization working together seamlessly.",
+  "numbers": [
+   "8,"
+  ],
+  "pages": [
+   "/blog/the-power-of-cloud-communications-by-van-ausdall-farrar"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "The post says its cloud communications solutions are powered by industry leaders Mitel and 8x8, combining voice, video, messaging and collaboration tools into a single, cohesive system.",
+  "numbers": [
+   "8,"
+  ],
+  "pages": [
+   "/blog/the-power-of-cloud-communications-by-van-ausdall-farrar"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Google is the only cloud platform that is hailing the much sought after 99.9999% reliability.",
+  "numbers": [
+   "99.9999%"
+  ],
+  "pages": [
+   "/blog/van-ausdall-farrar-attends-mitel-top-40-summit"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "On November 21, VA&F successfully deployed the first SmartStart customer in the United States.",
+  "numbers": [
+   "21,"
+  ],
+  "pages": [
+   "/blog/van-ausdall-farrar-attends-mitel-top-40-summit"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Van Ausdall & Farrar Celebrates 110 Years of Innovation",
+  "numbers": [
+   "110 Years"
+  ],
+  "pages": [
+   "/blog/van-ausdall-farrar-celebrates-110-years-of-innovation"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "technology services provider (MTSP), proudly announced its 110th company anniversary,",
+  "numbers": [
+   "110"
+  ],
+  "pages": [
+   "/blog/van-ausdall-farrar-celebrates-110-years-of-innovation"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "\" Celebrating 110 years is a testament to our dedication to solving customer problems",
+  "numbers": [
+   "110 years"
+  ],
+  "pages": [
+   "/blog/van-ausdall-farrar-celebrates-110-years-of-innovation"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "To commemorate its 110th anniversary, Van Ausdall & Farrar will be hosting a grand",
+  "numbers": [
+   "110"
+  ],
+  "pages": [
+   "/blog/van-ausdall-farrar-celebrates-110-years-of-innovation"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "For more information about Van Ausdall & Farrar and its 110th anniversary",
+  "numbers": [
+   "110"
+  ],
+  "pages": [
+   "/blog/van-ausdall-farrar-celebrates-110-years-of-innovation"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "over 100 years.",
+  "numbers": [
+   "100 years"
+  ],
+  "pages": [
+   "/blog/van-ausdall-farrar-celebrates-110-years-of-innovation"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "providers with over a $1 billion in",
+  "numbers": [
+   "$1 billion"
+  ],
+  "pages": [
+   "/blog/van-ausdall-farrar-inc-achieves-iso-27001-compliance-positioning-itself-as-elite-in-cybersecurity"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Certified as a Microsoft Solutions Partner, Ranking Among the Top 5% of Providers",
+  "numbers": [
+   "5%"
+  ],
+  "pages": [
+   "/blog/van-ausdall-farrar-inc-certified-as-a-microsoft-solutions-partner-ranking-among-the-top-5-of-providers"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "company in the top 5% of all",
+  "numbers": [
+   "5%"
+  ],
+  "pages": [
+   "/blog/van-ausdall-farrar-inc-certified-as-a-microsoft-solutions-partner-ranking-among-the-top-5-of-providers"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "efficient systems with Office 365, we",
+  "numbers": [
+   "365,"
+  ],
+  "pages": [
+   "/blog/van-ausdall-farrar-inc-certified-as-a-microsoft-solutions-partner-ranking-among-the-top-5-of-providers"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "in Top 7% of All Mitel Dealers for 6th Year in a Row",
+  "numbers": [
+   "7%"
+  ],
+  "pages": [
+   "/blog/van-ausdall-farrar-inc-in-top-7-of-all-mitel-dealers-for-6th-year-in-a-row"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Mitel is the leader in providing custom communications network solutions and while there are roughly 1200 Mitel dealers in North America, only 80 dealers qualify for Gold status within the Mitel Channel community.",
+  "numbers": [
+   "1200"
+  ],
+  "pages": [
+   "/blog/van-ausdall-farrar-inc-in-top-7-of-all-mitel-dealers-for-6th-year-in-a-row"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Thus, this honor places Van Ausdall & Farrar in the top 7% of all Mitel dealers in the country.",
+  "numbers": [
+   "7%"
+  ],
+  "pages": [
+   "/blog/van-ausdall-farrar-inc-in-top-7-of-all-mitel-dealers-for-6th-year-in-a-row"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "With thousands of other dealers vying for this highly prestigious accolade, the team at Van Ausdall & Farrar has had to come up with innovative solutions for its customers on a consistent basis to beat out the excess of 1100+ other competitors who also want this recognition.",
+  "numbers": [
+   "1100+"
+  ],
+  "pages": [
+   "/blog/van-ausdall-farrar-inc-in-top-7-of-all-mitel-dealers-for-6th-year-in-a-row"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Over the next 10 years, the role of business technology solutions will only increase in terms of importance for both enterprises and entrepreneurs alike, and the team at Van Ausdall & Farrar is clearly dedicated and capable enough to handle even the most complex technology deployments.",
+  "numbers": [
+   "10 years"
+  ],
+  "pages": [
+   "/blog/van-ausdall-farrar-inc-in-top-7-of-all-mitel-dealers-for-6th-year-in-a-row"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Vegas from April 29 to May 1,",
+  "numbers": [
+   "1,"
+  ],
+  "pages": [
+   "/blog/van-ausdall-farrar-inc-invited-to-attend-top-technology-event-of-the-year"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "This tool not only scans all devices, servers, and cloud integrations immediately, but it integrates seamlessly with Microsoft 365, enabling businesses to protect critical data stored in Exchange, OneDrive, SharePoint, and Teams.",
+  "numbers": [
+   "365,"
+  ],
+  "pages": [
+   "/blog/van-ausdall-farrar-inc-launches-revolutionary-network-data-discovery-and-cyber-risk-management-solution-for-businesses"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "\"Imagine discovering that a document with credit card information is accessible by 100% of your employees, even though it's just stored on a single laptop,\" said Les Royce, IT Director at Van Ausdall & Farrar, Inc.",
+  "numbers": [
+   "100%"
+  ],
+  "pages": [
+   "/blog/van-ausdall-farrar-inc-launches-revolutionary-network-data-discovery-and-cyber-risk-management-solution-for-businesses"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "For example, it can reveal a $100k risk associated with certain credit card numbers or social security numbers, on a single laptop and will give that lone, unsecured laptop a 9.7 risk score (on a 10-point scale) that helps Van Ausdall & Farrar, Inc.",
+  "numbers": [
+   "$100k",
+   "9.7",
+   "10-point"
+  ],
+  "pages": [
+   "/blog/van-ausdall-farrar-inc-launches-revolutionary-network-data-discovery-and-cyber-risk-management-solution-for-businesses"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Recognized as Top 1% Gold Partner out of 15,000+ Other Companies",
+  "numbers": [
+   "1%",
+   "15,000+"
+  ],
+  "pages": [
+   "/blog/van-ausdall-farrar-inc-recognized-as-top-1-gold-partner-out-of-15000-other-companies"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "This particular status is reserved exclusively for the Top 1% of all channel partners that collaborate with RingCentral and out of 15,000+ channel partners, Van Ausdall & Farrar Inc.",
+  "numbers": [
+   "1%",
+   "15,000+"
+  ],
+  "pages": [
+   "/blog/van-ausdall-farrar-inc-recognized-as-top-1-gold-partner-out-of-15000-other-companies"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Not only was this out of 14,000 partners (ranging from small to larger businesses and corporations), but it was also our first year with RingCentral!",
+  "numbers": [
+   "14,000"
+  ],
+  "pages": [
+   "/blog/van-ausdall-farrar-places-in-the-top-30-of-ring-central-partners"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "\"ShoreTel has been a tremendous partner to Van Ausdall & Farrar for over 11 years now.",
+  "numbers": [
+   "11 years"
+  ],
+  "pages": [
+   "/blog/van-ausdall-farrar-receives-shoretel-gold-status"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Van Ausdall & Farrar is a privately held, 103 year old office technology company headquartered in Indianapolis, Indiana, with offices in Fort Wayne and Evansville.",
+  "numbers": [
+   "103 year"
+  ],
+  "pages": [
+   "/blog/van-ausdall-farrar-receives-shoretel-gold-status"
   ],
   "status": "supported",
   "unmatched": []

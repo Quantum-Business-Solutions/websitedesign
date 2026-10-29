@@ -2,7 +2,7 @@
 
 Goal: the Van Ausdall & Farrar "Showcase" preview (https://van-ausdall.vercel.app/showcase/index.html, built by
 `scripts/preview*.py` from `brands/vanausdall.content.json`) rebuilt as HubSpot modules, with **visual and copy parity
-with the preview, then better**. World class: this is the site of Indiana's largest office technology provider.
+with the preview, then better**. World class: this is the site of one of Indiana's largest office technology providers.
 
 ## What exists
 - Reference renderers (Python f-strings, one per section `type`): `scripts/preview.py` (core: hero, detail, cards, faq,

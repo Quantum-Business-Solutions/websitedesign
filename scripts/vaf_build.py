@@ -51,7 +51,8 @@ def seo_titles():
             cands = [base + ", Indiana" + BR, base + ", Indiana | VAF", base + BR, base + " | VAF"]
         else:
             local = any(c in base.lower() for c in PLACES)
-            cands = ([] if local or f.startswith(("policies/", "blog")) or f in ("index.html", "contact.html") else [base + " in Indianapolis" + BR, base + " in Indianapolis | VAF", base + " in Indiana | VAF"]) + [base + BR, base + " | VAF", base]
+            if "van ausdall" in base.lower(): cands = [base]
+            else: cands = ([] if local or f.startswith(("policies/", "blog")) or f in ("index.html", "contact.html") else [base + " in Indianapolis" + BR, base + " in Indianapolis | VAF", base + " in Indiana | VAF"]) + [base + BR, base + " | VAF", base]
         pg["title"] = next((c for c in cands if fit(c)), min(cands, key=lambda c: abs(len(c) - 55)))
 
 

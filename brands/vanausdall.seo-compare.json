@@ -49,24 +49,24 @@
  },
  "new_summary": {
   "pages": 152,
-  "avg_score": 93,
+  "avg_score": 95,
   "faq": 152,
   "service": 113,
   "local": 152,
-  "review": 0,
+  "review": 31,
   "article": 18,
   "breadcrumb": 151,
-  "city_in_title": 139,
+  "city_in_title": 133,
   "thin": 0,
   "no_h1": 0,
-  "question_headings": 146,
+  "question_headings": 147,
   "images_no_alt": 0,
   "no_canonical": 0,
   "stock_og": 0,
   "has_form": 0,
   "grades": {
-   "A": 146,
-   "B": 6,
+   "A": 149,
+   "B": 3,
    "C": 0,
    "D": 0,
    "F": 0
@@ -74,15 +74,15 @@
   "by_type": {
    "case study": {
     "pages": 18,
-    "avg": 98
+    "avg": 100
    },
    "city": {
     "pages": 35,
-    "avg": 94
+    "avg": 95
    },
    "company": {
     "pages": 17,
-    "avg": 91
+    "avg": 95
    },
    "policy": {
     "pages": 7,
@@ -90,7 +90,7 @@
    },
    "service": {
     "pages": 75,
-    "avg": 92
+    "avg": 94
    }
   }
  },
@@ -99,7 +99,7 @@
    "old_url": "/",
    "new_url": "/",
    "before": 63,
-   "after": 89,
+   "after": 100,
    "old": {
     "url": "/",
     "type": "company",
@@ -149,14 +149,14 @@
     "title": "Van Ausdall & Farrar | Indianapolis Office Technology",
     "title_len": 53,
     "city": true,
-    "meta": "Indiana",
-    "meta_len": 7,
+    "meta": "Indiana's largest full-service office technology provider since 1914. Managed IT and cybersecurity, business phone systems, copiers and managed print.",
+    "meta_len": 150,
     "h1": "Everything your business runs on, under one roof.",
     "h1_count": 1,
     "h2_count": 23,
     "h3_count": 58,
     "question_headings": 4,
-    "words": 3736,
+    "words": 3738,
     "images": 75,
     "images_no_alt": 0,
     "internal_links": 177,
@@ -167,19 +167,16 @@
     "faq": true,
     "service": false,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": false,
-    "schema": "Answer, ContactPoint, FAQPage, GeoCoordinates, ImageObject, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, State, WebSite",
+    "schema": "Answer, ContactPoint, FAQPage, GeoCoordinates, ImageObject, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, State, WebSite",
     "has_form": false,
     "tel_link": true,
-    "score": 89,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Add Review or AggregateRating schema from real Google reviews",
-     "Write a 70 to 160 character meta description that answers the query"
-    ],
-    "issues": 2
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
@@ -272,7 +269,7 @@
    "old_url": "/about",
    "new_url": "/about",
    "before": 48,
-   "after": 89,
+   "after": 100,
    "old": {
     "url": "/about/",
     "type": "company",
@@ -322,14 +319,14 @@
     "title": "About Van Ausdall & Farrar | Indianapolis Since 1914",
     "title_len": 52,
     "city": true,
-    "meta": "From a Thomas Edison Company distributorship in 1914 to Indiana",
-    "meta_len": 63,
+    "meta": "From a Thomas Edison Company distributorship in 1914 to Indiana's largest full-service business technology provider.",
+    "meta_len": 116,
     "h1": "Helping customers succeed since 1914.",
     "h1_count": 1,
     "h2_count": 10,
     "h3_count": 24,
     "question_headings": 1,
-    "words": 1244,
+    "words": 1380,
     "images": 6,
     "images_no_alt": 0,
     "internal_links": 132,
@@ -340,19 +337,16 @@
     "faq": true,
     "service": false,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": true,
-    "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, State",
+    "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, State",
     "has_form": false,
     "tel_link": true,
-    "score": 89,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Add Review or AggregateRating schema from real Google reviews",
-     "Write a 70 to 160 character meta description that answers the query"
-    ],
-    "issues": 2
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
@@ -416,7 +410,7 @@
     "h2_count": 11,
     "h3_count": 9,
     "question_headings": 1,
-    "words": 933,
+    "words": 936,
     "images": 3,
     "images_no_alt": 0,
     "internal_links": 138,
@@ -531,7 +525,7 @@
    "old_url": "/business-continuity-compliance",
    "new_url": "/services/business-continuity",
    "before": 58,
-   "after": 94,
+   "after": 100,
    "old": {
     "url": "/business-continuity-compliance",
     "type": "company",
@@ -581,8 +575,8 @@
     "title": "Backup and Recovery, Indianapolis | Van Ausdall & Farrar",
     "title_len": 56,
     "city": true,
-    "meta": "Business continuity starts with that question. From Van Ausdall & Farrar, Indiana",
-    "meta_len": 81,
+    "meta": "Business continuity starts with that question. From Van Ausdall & Farrar, Indiana's largest office technology provider since 1914.",
+    "meta_len": 130,
     "h1": "How long can you go without operating?",
     "h1_count": 1,
     "h2_count": 10,
@@ -599,25 +593,23 @@
     "faq": true,
     "service": true,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": true,
-    "schema": "Answer, BreadcrumbList, City, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
+    "schema": "Answer, BreadcrumbList, City, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Add Review or AggregateRating schema from real Google reviews"
-    ],
-    "issues": 1
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
    "old_url": "/about/why",
    "new_url": "/about",
    "before": 53,
-   "after": 89,
+   "after": 100,
    "old": {
     "url": "/about/why",
     "type": "company",
@@ -667,14 +659,14 @@
     "title": "About Van Ausdall & Farrar | Indianapolis Since 1914",
     "title_len": 52,
     "city": true,
-    "meta": "From a Thomas Edison Company distributorship in 1914 to Indiana",
-    "meta_len": 63,
+    "meta": "From a Thomas Edison Company distributorship in 1914 to Indiana's largest full-service business technology provider.",
+    "meta_len": 116,
     "h1": "Helping customers succeed since 1914.",
     "h1_count": 1,
     "h2_count": 10,
     "h3_count": 24,
     "question_headings": 1,
-    "words": 1244,
+    "words": 1380,
     "images": 6,
     "images_no_alt": 0,
     "internal_links": 132,
@@ -685,19 +677,16 @@
     "faq": true,
     "service": false,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": true,
-    "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, State",
+    "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, State",
     "has_form": false,
     "tel_link": true,
-    "score": 89,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Add Review or AggregateRating schema from real Google reviews",
-     "Write a 70 to 160 character meta description that answers the query"
-    ],
-    "issues": 2
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
@@ -847,7 +836,7 @@
     "h2_count": 9,
     "h3_count": 3,
     "question_headings": 1,
-    "words": 649,
+    "words": 630,
     "images": 3,
     "images_no_alt": 0,
     "internal_links": 128,
@@ -1103,7 +1092,7 @@
     "h2_count": 11,
     "h3_count": 10,
     "question_headings": 1,
-    "words": 1052,
+    "words": 1055,
     "images": 3,
     "images_no_alt": 0,
     "internal_links": 139,
@@ -1132,7 +1121,7 @@
    "old_url": "/about/history",
    "new_url": "/about",
    "before": 43,
-   "after": 89,
+   "after": 100,
    "old": {
     "url": "/about/history",
     "type": "company",
@@ -1182,14 +1171,14 @@
     "title": "About Van Ausdall & Farrar | Indianapolis Since 1914",
     "title_len": 52,
     "city": true,
-    "meta": "From a Thomas Edison Company distributorship in 1914 to Indiana",
-    "meta_len": 63,
+    "meta": "From a Thomas Edison Company distributorship in 1914 to Indiana's largest full-service business technology provider.",
+    "meta_len": 116,
     "h1": "Helping customers succeed since 1914.",
     "h1_count": 1,
     "h2_count": 10,
     "h3_count": 24,
     "question_headings": 1,
-    "words": 1244,
+    "words": 1380,
     "images": 6,
     "images_no_alt": 0,
     "internal_links": 132,
@@ -1200,19 +1189,16 @@
     "faq": true,
     "service": false,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": true,
-    "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, State",
+    "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, State",
     "has_form": false,
     "tel_link": true,
-    "score": 89,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Add Review or AggregateRating schema from real Google reviews",
-     "Write a 70 to 160 character meta description that answers the query"
-    ],
-    "issues": 2
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
@@ -1362,7 +1348,7 @@
     "h2_count": 11,
     "h3_count": 9,
     "question_headings": 1,
-    "words": 855,
+    "words": 839,
     "images": 3,
     "images_no_alt": 0,
     "internal_links": 134,
@@ -1389,7 +1375,7 @@
    "old_url": "/case-studies/city-of-anderson",
    "new_url": "/case-studies/city-of-anderson",
    "before": 58,
-   "after": 95,
+   "after": 100,
    "old": {
     "url": "/case-studies/city-of-anderson",
     "type": "case study",
@@ -1439,8 +1425,8 @@
     "title": "City of Anderson, IN case study, Indiana | VAF",
     "title_len": 46,
     "city": true,
-    "meta": "Anderson",
-    "meta_len": 8,
+    "meta": "Anderson's technology refresh provides cost savings and new solutions to constituents. Van Ausdall & Farrar, Indianapolis office technology since 1914.",
+    "meta_len": 151,
     "h1": "City of Anderson, IN",
     "h1_count": 1,
     "h2_count": 10,
@@ -1463,12 +1449,10 @@
     "schema": "Answer, Article, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, State",
     "has_form": false,
     "tel_link": true,
-    "score": 95,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Write a 70 to 160 character meta description that answers the query"
-    ],
-    "issues": 1
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
@@ -1532,7 +1516,7 @@
     "h2_count": 12,
     "h3_count": 17,
     "question_headings": 1,
-    "words": 1039,
+    "words": 1024,
     "images": 3,
     "images_no_alt": 0,
     "internal_links": 142,
@@ -1645,7 +1629,7 @@
    "old_url": "/assessment",
    "new_url": "/technology-strength-assessment",
    "before": 55,
-   "after": 86,
+   "after": 94,
    "old": {
     "url": "/assessment/",
     "type": "company",
@@ -1701,8 +1685,8 @@
     "h1_count": 1,
     "h2_count": 8,
     "h3_count": 11,
-    "question_headings": 0,
-    "words": 994,
+    "question_headings": 1,
+    "words": 995,
     "images": 3,
     "images_no_alt": 0,
     "internal_links": 117,
@@ -1719,20 +1703,19 @@
     "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, State",
     "has_form": false,
     "tel_link": true,
-    "score": 86,
+    "score": 94,
     "grade": "A",
     "recommendations": [
-     "Add question-form H2s that an assistant can quote (what, how much, is it)",
      "Add Review or AggregateRating schema from real Google reviews"
     ],
-    "issues": 2
+    "issues": 1
    }
   },
   {
    "old_url": "/case-studies/city-of-bloomington",
    "new_url": "/case-studies/city-of-bloomington",
    "before": 64,
-   "after": 94,
+   "after": 100,
    "old": {
     "url": "/case-studies/city-of-bloomington",
     "type": "case study",
@@ -1779,8 +1762,8 @@
    "new": {
     "url": "/case-studies/city-of-bloomington",
     "type": "case study",
-    "title": "City of Bloomington Case Study, Indiana | Van Ausdall & Farrar",
-    "title_len": 62,
+    "title": "City of Bloomington Case Study, Indiana | VAF",
+    "title_len": 45,
     "city": true,
     "meta": "Document Management System, Van Ausdall & Farrar technology case study. Read the full case study. Van Ausdall & Farrar, since 1914.",
     "meta_len": 131,
@@ -1789,7 +1772,7 @@
     "h2_count": 12,
     "h3_count": 17,
     "question_headings": 1,
-    "words": 1038,
+    "words": 1024,
     "images": 3,
     "images_no_alt": 0,
     "internal_links": 142,
@@ -1806,12 +1789,10 @@
     "schema": "Answer, Article, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Retitle to 30 to 60 characters"
-    ],
-    "issues": 1
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
@@ -1875,7 +1856,7 @@
     "h2_count": 11,
     "h3_count": 9,
     "question_headings": 1,
-    "words": 837,
+    "words": 821,
     "images": 3,
     "images_no_alt": 0,
     "internal_links": 134,
@@ -1952,8 +1933,8 @@
     "title": "Johnson Memorial Health case study, Indiana | VAF",
     "title_len": 49,
     "city": true,
-    "meta": "Scan and index 1.5 million patient files in 90 days while adhering to HIPAA? We",
-    "meta_len": 79,
+    "meta": "Scan and index 1.5 million patient files in 90 days while adhering to HIPAA? We're on it. Van Ausdall & Farrar, Indianapolis office technology since 1914.",
+    "meta_len": 154,
     "h1": "Johnson Memorial Health",
     "h1_count": 1,
     "h2_count": 10,
@@ -1986,7 +1967,7 @@
    "old_url": "/case-studies/tippecanoe-school-corporation-digital-document",
    "new_url": "/case-studies/tippecanoe-school-corporation-digital-document",
    "before": 58,
-   "after": 94,
+   "after": 100,
    "old": {
     "url": "/case-studies/tippecanoe-school-corporation-digital-document",
     "type": "case study",
@@ -2033,8 +2014,8 @@
    "new": {
     "url": "/case-studies/tippecanoe-school-corporation-digital-document",
     "type": "case study",
-    "title": "Tippecanoe School Corporation, Indiana | VAF | Van Ausdall & Farrar",
-    "title_len": 67,
+    "title": "Tippecanoe School Corporation Case Study, Indiana | VAF",
+    "title_len": 55,
     "city": true,
     "meta": "Employee Records Digitization, Van Ausdall & Farrar technology case study. Read the full case study. Van Ausdall & Farrar, since 1914.",
     "meta_len": 134,
@@ -2043,7 +2024,7 @@
     "h2_count": 9,
     "h3_count": 3,
     "question_headings": 1,
-    "words": 656,
+    "words": 636,
     "images": 3,
     "images_no_alt": 0,
     "internal_links": 128,
@@ -2060,12 +2041,10 @@
     "schema": "Answer, Article, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Retitle to 30 to 60 characters"
-    ],
-    "issues": 1
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
@@ -2129,7 +2108,7 @@
     "h2_count": 9,
     "h3_count": 3,
     "question_headings": 1,
-    "words": 724,
+    "words": 705,
     "images": 3,
     "images_no_alt": 0,
     "internal_links": 128,
@@ -2299,7 +2278,7 @@
     "h2_count": 11,
     "h3_count": 9,
     "question_headings": 1,
-    "words": 866,
+    "words": 850,
     "images": 3,
     "images_no_alt": 0,
     "internal_links": 134,
@@ -2326,7 +2305,7 @@
    "old_url": "/about/customer-comments",
    "new_url": "/about",
    "before": 43,
-   "after": 89,
+   "after": 100,
    "old": {
     "url": "/about/customer-comments",
     "type": "company",
@@ -2376,14 +2355,14 @@
     "title": "About Van Ausdall & Farrar | Indianapolis Since 1914",
     "title_len": 52,
     "city": true,
-    "meta": "From a Thomas Edison Company distributorship in 1914 to Indiana",
-    "meta_len": 63,
+    "meta": "From a Thomas Edison Company distributorship in 1914 to Indiana's largest full-service business technology provider.",
+    "meta_len": 116,
     "h1": "Helping customers succeed since 1914.",
     "h1_count": 1,
     "h2_count": 10,
     "h3_count": 24,
     "question_headings": 1,
-    "words": 1244,
+    "words": 1380,
     "images": 6,
     "images_no_alt": 0,
     "internal_links": 132,
@@ -2394,19 +2373,16 @@
     "faq": true,
     "service": false,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": true,
-    "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, State",
+    "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, State",
     "has_form": false,
     "tel_link": true,
-    "score": 89,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Add Review or AggregateRating schema from real Google reviews",
-     "Write a 70 to 160 character meta description that answers the query"
-    ],
-    "issues": 2
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
@@ -2470,7 +2446,7 @@
     "h2_count": 9,
     "h3_count": 3,
     "question_headings": 1,
-    "words": 792,
+    "words": 772,
     "images": 3,
     "images_no_alt": 0,
     "internal_links": 128,
@@ -2581,7 +2557,7 @@
    "old_url": "/case-studies/the-town-of-bargersville",
    "new_url": "/case-studies/the-town-of-bargersville",
    "before": 58,
-   "after": 94,
+   "after": 100,
    "old": {
     "url": "/case-studies/the-town-of-bargersville",
     "type": "case study",
@@ -2628,8 +2604,8 @@
    "new": {
     "url": "/case-studies/the-town-of-bargersville",
     "type": "case study",
-    "title": "The Town of Bargersville Case Study, Indiana | Van Ausdall & Farrar",
-    "title_len": 67,
+    "title": "The Town of Bargersville Case Study, Indiana | VAF",
+    "title_len": 50,
     "city": true,
     "meta": "Hyland On Base & Unity Forms, Van Ausdall & Farrar technology case study. Read the full case study. Van Ausdall & Farrar, since 1914.",
     "meta_len": 133,
@@ -2638,7 +2614,7 @@
     "h2_count": 9,
     "h3_count": 3,
     "question_headings": 1,
-    "words": 647,
+    "words": 626,
     "images": 3,
     "images_no_alt": 0,
     "internal_links": 128,
@@ -2655,12 +2631,10 @@
     "schema": "Answer, Article, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Retitle to 30 to 60 characters"
-    ],
-    "issues": 1
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
@@ -2724,7 +2698,7 @@
     "h2_count": 11,
     "h3_count": 10,
     "question_headings": 1,
-    "words": 990,
+    "words": 993,
     "images": 3,
     "images_no_alt": 0,
     "internal_links": 139,
@@ -2810,7 +2784,7 @@
     "h2_count": 13,
     "h3_count": 18,
     "question_headings": 2,
-    "words": 1002,
+    "words": 1005,
     "images": 4,
     "images_no_alt": 0,
     "internal_links": 139,
@@ -2837,7 +2811,7 @@
    "old_url": "/communication",
    "new_url": "/solutions-communication",
    "before": 48,
-   "after": 88,
+   "after": 94,
    "old": {
     "url": "/communication/",
     "type": "service",
@@ -2905,19 +2879,18 @@
     "faq": true,
     "service": true,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": true,
-    "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
+    "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 88,
+    "score": 94,
     "grade": "A",
     "recommendations": [
-     "Add Indianapolis or the service city to the title",
-     "Add Review or AggregateRating schema from real Google reviews"
+     "Add Indianapolis or the service city to the title"
     ],
-    "issues": 2
+    "issues": 1
    }
   },
   {
@@ -3183,7 +3156,7 @@
    "old_url": "/communication/elevate",
    "new_url": "/services/elevate",
    "before": 60,
-   "after": 88,
+   "after": 94,
    "old": {
     "url": "/communication/elevate",
     "type": "service",
@@ -3230,9 +3203,9 @@
    "new": {
     "url": "/services/elevate",
     "type": "service",
-    "title": "Elevate AI Cloud Communications | Van Ausdall & Farrar",
-    "title_len": 54,
-    "city": false,
+    "title": "Elevate AI Cloud Communications in Indianapolis | VAF",
+    "title_len": 53,
+    "city": true,
     "meta": "Elevate brings voice, video, chat, SMS and files into one cloud platform with AI call recaps, Microsoft Teams calling and 99.999% uptime. Via VAF.",
     "meta_len": 146,
     "h1": "Bring the Power of AI to Your Business Communications",
@@ -3257,20 +3230,19 @@
     "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 88,
+    "score": 94,
     "grade": "A",
     "recommendations": [
-     "Add Indianapolis or the service city to the title",
      "Add Review or AggregateRating schema from real Google reviews"
     ],
-    "issues": 2
+    "issues": 1
    }
   },
   {
    "old_url": "/communication/mobility-solutions",
    "new_url": "/services/mobility-solutions",
    "before": 38,
-   "after": 78,
+   "after": 90,
    "old": {
     "url": "/communication/mobility-solutions",
     "type": "service",
@@ -3317,9 +3289,9 @@
    "new": {
     "url": "/services/mobility-solutions",
     "type": "service",
-    "title": "Enterprise Mobile App and PBX Features | VAF | Van Ausdall & Farrar",
-    "title_len": 67,
-    "city": false,
+    "title": "Enterprise Mobile App and PBX Features in Indianapolis | VAF",
+    "title_len": 60,
+    "city": true,
     "meta": "Use your own phone on the business number: call handling, conferencing, presence and Wi-Fi to cellular handover from VAF mobility apps.",
     "meta_len": 135,
     "h1": "Stay Connected at All Times",
@@ -3344,22 +3316,20 @@
     "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 78,
-    "grade": "B",
+    "score": 90,
+    "grade": "A",
     "recommendations": [
-     "Retitle to 30 to 60 characters",
-     "Add Indianapolis or the service city to the title",
      "Add Review or AggregateRating schema from real Google reviews",
      "Deepen to 600 words or more"
     ],
-    "issues": 4
+    "issues": 2
    }
   },
   {
    "old_url": "/communication/business-phone-systems",
    "new_url": "/services/business-phone-systems",
    "before": 54,
-   "after": 94,
+   "after": 100,
    "old": {
     "url": "/communication/business-phone-systems",
     "type": "service",
@@ -3427,25 +3397,23 @@
     "faq": true,
     "service": true,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": true,
-    "schema": "Answer, BreadcrumbList, City, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
+    "schema": "Answer, BreadcrumbList, City, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Add Review or AggregateRating schema from real Google reviews"
-    ],
-    "issues": 1
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
    "old_url": "/communication/customer-training-videos",
    "new_url": "/services/customer-training-videos",
    "before": 38,
-   "after": 82,
+   "after": 94,
    "old": {
     "url": "/communication/customer-training-videos",
     "type": "service",
@@ -3492,9 +3460,9 @@
    "new": {
     "url": "/services/customer-training-videos",
     "type": "service",
-    "title": "Mitel Connect Client Training Videos | VAF | Van Ausdall & Farrar",
-    "title_len": 65,
-    "city": false,
+    "title": "Mitel Connect Client Training Videos in Indianapolis | VAF",
+    "title_len": 58,
+    "city": true,
     "meta": "Short Quick Clips from Van Ausdall & Farrar that teach the Mitel Connect client: transferring calls, voicemail, conferencing and more.",
     "meta_len": 134,
     "h1": "Customer Training Videos",
@@ -3519,14 +3487,12 @@
     "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 82,
-    "grade": "B",
+    "score": 94,
+    "grade": "A",
     "recommendations": [
-     "Retitle to 30 to 60 characters",
-     "Add Indianapolis or the service city to the title",
      "Add Review or AggregateRating schema from real Google reviews"
     ],
-    "issues": 3
+    "issues": 1
    }
   },
   {
@@ -3590,7 +3556,7 @@
     "h2_count": 9,
     "h3_count": 3,
     "question_headings": 2,
-    "words": 1022,
+    "words": 1003,
     "images": 3,
     "images_no_alt": 0,
     "internal_links": 128,
@@ -3674,7 +3640,7 @@
     "h2_count": 9,
     "h3_count": 3,
     "question_headings": 1,
-    "words": 730,
+    "words": 711,
     "images": 3,
     "images_no_alt": 0,
     "internal_links": 128,
@@ -3701,7 +3667,7 @@
    "old_url": "/communication/networking-solutions",
    "new_url": "/services/networking-solutions",
    "before": 48,
-   "after": 88,
+   "after": 94,
    "old": {
     "url": "/communication/networking-solutions",
     "type": "service",
@@ -3748,8 +3714,8 @@
    "new": {
     "url": "/services/networking-solutions",
     "type": "service",
-    "title": "Network Infrastructure & VoIP, Indiana | VAF | Van Ausdall & Farrar",
-    "title_len": 67,
+    "title": "Network Infrastructure & VoIP, Indiana | VAF",
+    "title_len": 44,
     "city": true,
     "meta": "Van Ausdall & Farrar\u2019s IT Practice specializes in Network Infrastructure and VoIP. Van Ausdall & Farrar, Indianapolis office technology since 1914.",
     "meta_len": 147,
@@ -3775,20 +3741,19 @@
     "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 88,
+    "score": 94,
     "grade": "A",
     "recommendations": [
-     "Retitle to 30 to 60 characters",
      "Add Review or AggregateRating schema from real Google reviews"
     ],
-    "issues": 2
+    "issues": 1
    }
   },
   {
    "old_url": "/communication/conference-and-collaboration",
    "new_url": "/services/conference-and-collaboration",
    "before": 38,
-   "after": 88,
+   "after": 94,
    "old": {
     "url": "/communication/conference-and-collaboration",
     "type": "service",
@@ -3835,9 +3800,9 @@
    "new": {
     "url": "/services/conference-and-collaboration",
     "type": "service",
-    "title": "Web and Audio Conferencing for Business | VAF",
-    "title_len": 45,
-    "city": false,
+    "title": "Web and Audio Conferencing for Business in Indiana | VAF",
+    "title_len": 56,
+    "city": true,
     "meta": "Instant messaging, audio conferencing and desktop sharing over your business phone system, plug-and-play from Van Ausdall & Farrar in Indiana.",
     "meta_len": 142,
     "h1": "Web & Audio Conference Call Solutions for Business",
@@ -3862,13 +3827,12 @@
     "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 88,
+    "score": 94,
     "grade": "A",
     "recommendations": [
-     "Add Indianapolis or the service city to the title",
      "Add Review or AggregateRating schema from real Google reviews"
     ],
-    "issues": 2
+    "issues": 1
    }
   },
   {
@@ -4047,7 +4011,7 @@
    "old_url": "/communication/unified-communications",
    "new_url": "/services/unified-communications",
    "before": 33,
-   "after": 88,
+   "after": 94,
    "old": {
     "url": "/communication/unified-communications",
     "type": "service",
@@ -4094,9 +4058,9 @@
    "new": {
     "url": "/services/unified-communications",
     "type": "service",
-    "title": "Unified Communications and Collaboration | VAF",
-    "title_len": 46,
-    "city": false,
+    "title": "Unified Communications and Collaboration in Indiana | VAF",
+    "title_len": 57,
+    "city": true,
     "meta": "One place for business phone, video, data and mobile apps. VAF unified communications lets you meet by chat, audio, VoIP, video or web conference.",
     "meta_len": 146,
     "h1": "Unified Communications",
@@ -4121,20 +4085,19 @@
     "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 88,
+    "score": 94,
     "grade": "A",
     "recommendations": [
-     "Add Indianapolis or the service city to the title",
      "Add Review or AggregateRating schema from real Google reviews"
     ],
-    "issues": 2
+    "issues": 1
    }
   },
   {
    "old_url": "/case-studies/phalen-leadership-academy",
    "new_url": "/case-studies/phalen-leadership-academy",
    "before": 58,
-   "after": 94,
+   "after": 100,
    "old": {
     "url": "/case-studies/phalen-leadership-academy",
     "type": "case study",
@@ -4181,8 +4144,8 @@
    "new": {
     "url": "/case-studies/phalen-leadership-academy",
     "type": "case study",
-    "title": "Phalen Leadership Academy Case Study, Indiana | Van Ausdall & Farrar",
-    "title_len": 68,
+    "title": "Phalen Leadership Academy Case Study, Indiana | VAF",
+    "title_len": 51,
     "city": true,
     "meta": "COVID-19 Business Continuity, Van Ausdall & Farrar technology case study. Read the full case study. Van Ausdall & Farrar, since 1914.",
     "meta_len": 133,
@@ -4191,7 +4154,7 @@
     "h2_count": 11,
     "h3_count": 9,
     "question_headings": 1,
-    "words": 828,
+    "words": 811,
     "images": 3,
     "images_no_alt": 0,
     "internal_links": 134,
@@ -4208,12 +4171,10 @@
     "schema": "Answer, Article, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Retitle to 30 to 60 characters"
-    ],
-    "issues": 1
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
@@ -4277,7 +4238,7 @@
     "h2_count": 9,
     "h3_count": 3,
     "question_headings": 1,
-    "words": 666,
+    "words": 646,
     "images": 3,
     "images_no_alt": 0,
     "internal_links": 128,
@@ -4304,7 +4265,7 @@
    "old_url": "/copiers",
    "new_url": "/services/copiers",
    "before": 86,
-   "after": 94,
+   "after": 100,
    "old": {
     "url": "/copiers/",
     "type": "service",
@@ -4360,7 +4321,7 @@
     "h2_count": 12,
     "h3_count": 18,
     "question_headings": 1,
-    "words": 1127,
+    "words": 1129,
     "images": 25,
     "images_no_alt": 0,
     "internal_links": 143,
@@ -4371,25 +4332,23 @@
     "faq": true,
     "service": true,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": true,
-    "schema": "Answer, BreadcrumbList, City, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
+    "schema": "Answer, BreadcrumbList, City, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Add Review or AggregateRating schema from real Google reviews"
-    ],
-    "issues": 1
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
    "old_url": "/ai",
    "new_url": "/services/ai-consulting",
    "before": 48,
-   "after": 94,
+   "after": 100,
    "old": {
     "url": "/ai",
     "type": "service",
@@ -4457,25 +4416,23 @@
     "faq": true,
     "service": true,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": true,
-    "schema": "Answer, BreadcrumbList, City, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
+    "schema": "Answer, BreadcrumbList, City, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Add Review or AggregateRating schema from real Google reviews"
-    ],
-    "issues": 1
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
    "old_url": "/copier-service-repair",
    "new_url": "/services/copier-service",
    "before": 81,
-   "after": 94,
+   "after": 100,
    "old": {
     "url": "/copier-service-repair",
     "type": "service",
@@ -4532,7 +4489,7 @@
     "h2_count": 10,
     "h3_count": 16,
     "question_headings": 1,
-    "words": 766,
+    "words": 768,
     "images": 7,
     "images_no_alt": 0,
     "internal_links": 145,
@@ -4543,25 +4500,23 @@
     "faq": true,
     "service": true,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": true,
-    "schema": "Answer, BreadcrumbList, City, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
+    "schema": "Answer, BreadcrumbList, City, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Add Review or AggregateRating schema from real Google reviews"
-    ],
-    "issues": 1
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
    "old_url": "/copy-print-solutions",
    "new_url": "/services/copy-print-solutions",
    "before": 90,
-   "after": 94,
+   "after": 100,
    "old": {
     "url": "/copy-print-solutions/",
     "type": "company",
@@ -4616,7 +4571,7 @@
     "h2_count": 17,
     "h3_count": 29,
     "question_headings": 1,
-    "words": 1491,
+    "words": 1496,
     "images": 17,
     "images_no_alt": 0,
     "internal_links": 155,
@@ -4627,18 +4582,16 @@
     "faq": true,
     "service": true,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": true,
-    "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
+    "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Add Review or AggregateRating schema from real Google reviews"
-    ],
-    "issues": 1
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
@@ -4818,7 +4771,7 @@
    "old_url": "/communication/carrier-services",
    "new_url": "/services/carrier-services",
    "before": 38,
-   "after": 88,
+   "after": 94,
    "old": {
     "url": "/communication/carrier-services",
     "type": "service",
@@ -4865,9 +4818,9 @@
    "new": {
     "url": "/services/carrier-services",
     "type": "service",
-    "title": "Carrier and Internet Services Consulting | VAF",
-    "title_len": 46,
-    "city": false,
+    "title": "Carrier and Internet Services Consulting in Indiana | VAF",
+    "title_len": 57,
+    "city": true,
     "meta": "VAF reviews every carrier for each of your locations, vendor neutral, and gives you one bill and one contact for SIP, broadband, MPLS and SD-WAN.",
     "meta_len": 145,
     "h1": "Carrier/Internet Services",
@@ -4892,20 +4845,19 @@
     "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 88,
+    "score": 94,
     "grade": "A",
     "recommendations": [
-     "Add Indianapolis or the service city to the title",
      "Add Review or AggregateRating schema from real Google reviews"
     ],
-    "issues": 2
+    "issues": 1
    }
   },
   {
    "old_url": "/covid-19-information",
-   "new_url": "/covid-19-information",
+   "new_url": "/services/business-continuity",
    "before": 62,
-   "after": null,
+   "after": 100,
    "old": {
     "url": "/covid-19-information",
     "type": "company",
@@ -4949,7 +4901,41 @@
     ],
     "issues": 5
    },
-   "new": null
+   "new": {
+    "url": "/services/business-continuity",
+    "type": "service",
+    "title": "Backup and Recovery, Indianapolis | Van Ausdall & Farrar",
+    "title_len": 56,
+    "city": true,
+    "meta": "Business continuity starts with that question. From Van Ausdall & Farrar, Indiana's largest office technology provider since 1914.",
+    "meta_len": 130,
+    "h1": "How long can you go without operating?",
+    "h1_count": 1,
+    "h2_count": 10,
+    "h3_count": 16,
+    "question_headings": 1,
+    "words": 793,
+    "images": 7,
+    "images_no_alt": 0,
+    "internal_links": 147,
+    "external_links": 6,
+    "canonical": true,
+    "og_image": true,
+    "stock_og": false,
+    "faq": true,
+    "service": true,
+    "local": true,
+    "review": true,
+    "article": false,
+    "breadcrumb": true,
+    "schema": "Answer, BreadcrumbList, City, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, Service, State",
+    "has_form": false,
+    "tel_link": true,
+    "score": 100,
+    "grade": "A",
+    "recommendations": [],
+    "issues": 0
+   }
   },
   {
    "old_url": "/cyber-security-assessment",
@@ -5128,7 +5114,7 @@
    "old_url": "/cyber-security-solutions",
    "new_url": "/services/cyber-security-solutions",
    "before": 62,
-   "after": 82,
+   "after": 94,
    "old": {
     "url": "/cyber-security-solutions",
     "type": "company",
@@ -5175,9 +5161,9 @@
    "new": {
     "url": "/services/cyber-security-solutions",
     "type": "service",
-    "title": "Cyber Security: EDR, XDR and Firewalls | VAF | Van Ausdall & Farrar",
-    "title_len": 67,
-    "city": false,
+    "title": "Cyber Security: EDR, XDR and Firewalls in Indianapolis | VAF",
+    "title_len": 60,
+    "city": true,
     "meta": "VAF secures wired, wireless, WAN, cloud, mail and endpoint attack surfaces with EDR, XDR, MDR, firewalls and ZTNA, by subscription or purchase.",
     "meta_len": 143,
     "h1": "Cyber Security",
@@ -5202,21 +5188,19 @@
     "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 82,
-    "grade": "B",
+    "score": 94,
+    "grade": "A",
     "recommendations": [
-     "Retitle to 30 to 60 characters",
-     "Add Indianapolis or the service city to the title",
      "Add Review or AggregateRating schema from real Google reviews"
     ],
-    "issues": 3
+    "issues": 1
    }
   },
   {
    "old_url": "/document-conversion",
    "new_url": "/services/document-conversion",
    "before": 53,
-   "after": 89,
+   "after": 100,
    "old": {
     "url": "/document-conversion/",
     "type": "service",
@@ -5266,8 +5250,8 @@
     "title": "Document Conversion, Indianapolis | Van Ausdall & Farrar",
     "title_len": 56,
     "city": true,
-    "meta": "Paperless digital imaging and secure electronic storage from VAF",
-    "meta_len": 64,
+    "meta": "Paperless digital imaging and secure electronic storage from VAF's ultra-secure Document Conversion Center inside our 57,000-square-foot Indianapolis.",
+    "meta_len": 150,
     "h1": "Paper out. Searchable records in.",
     "h1_count": 1,
     "h2_count": 10,
@@ -5284,26 +5268,23 @@
     "faq": true,
     "service": true,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": true,
-    "schema": "Answer, BreadcrumbList, City, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
+    "schema": "Answer, BreadcrumbList, City, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 89,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Add Review or AggregateRating schema from real Google reviews",
-     "Write a 70 to 160 character meta description that answers the query"
-    ],
-    "issues": 2
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
    "old_url": "/contact/training",
    "new_url": "/training",
    "before": 48,
-   "after": 84,
+   "after": 90,
    "old": {
     "url": "/contact/training",
     "type": "company",
@@ -5350,9 +5331,9 @@
    "new": {
     "url": "/training",
     "type": "company",
-    "title": "Training Classes and Resources | Van Ausdall & Farrar",
-    "title_len": 53,
-    "city": false,
+    "title": "Training Classes and Resources in Indianapolis | VAF",
+    "title_len": 52,
+    "city": true,
     "meta": "VAF offers classes customized to your business so employees can learn its systems or refresh their skills, plus security awareness training resources.",
     "meta_len": 150,
     "h1": "Training",
@@ -5377,21 +5358,20 @@
     "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, State",
     "has_form": false,
     "tel_link": true,
-    "score": 84,
-    "grade": "B",
+    "score": 90,
+    "grade": "A",
     "recommendations": [
-     "Add Indianapolis or the service city to the title",
      "Add Review or AggregateRating schema from real Google reviews",
      "Deepen to 600 words or more"
     ],
-    "issues": 3
+    "issues": 2
    }
   },
   {
    "old_url": "/customer-care",
    "new_url": "/support",
    "before": 48,
-   "after": 94,
+   "after": 100,
    "old": {
     "url": "/customer-care",
     "type": "company",
@@ -5459,25 +5439,23 @@
     "faq": true,
     "service": false,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": true,
-    "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, State",
+    "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Add Review or AggregateRating schema from real Google reviews"
-    ],
-    "issues": 1
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
    "old_url": "/communication/call-recording",
    "new_url": "/services/call-recording",
    "before": 33,
-   "after": 88,
+   "after": 94,
    "old": {
     "url": "/communication/call-recording",
     "type": "service",
@@ -5524,8 +5502,8 @@
    "new": {
     "url": "/services/call-recording",
     "type": "service",
-    "title": "Call Recording Systems for Indiana | VAF | Van Ausdall & Farrar",
-    "title_len": 63,
+    "title": "Call Recording Systems for Indiana | Van Ausdall & Farrar",
+    "title_len": 57,
     "city": true,
     "meta": "OakSi RecordX records fixed line, mobile and VoIP calls in one solution to monitor quality, improve performance and meet PCI requirements.",
     "meta_len": 138,
@@ -5551,20 +5529,19 @@
     "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 88,
+    "score": 94,
     "grade": "A",
     "recommendations": [
-     "Retitle to 30 to 60 characters",
      "Add Review or AggregateRating schema from real Google reviews"
     ],
-    "issues": 2
+    "issues": 1
    }
   },
   {
    "old_url": "/document-management",
    "new_url": "/services/document-management",
    "before": 54,
-   "after": 94,
+   "after": 100,
    "old": {
     "url": "/document-management",
     "type": "service",
@@ -5632,25 +5609,23 @@
     "faq": true,
     "service": true,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": true,
-    "schema": "Answer, BreadcrumbList, City, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
+    "schema": "Answer, BreadcrumbList, City, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Add Review or AggregateRating schema from real Google reviews"
-    ],
-    "issues": 1
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
    "old_url": "/communication/cloud-communications",
    "new_url": "/services/cloud-communications",
    "before": 48,
-   "after": 88,
+   "after": 94,
    "old": {
     "url": "/communication/cloud-communications",
     "type": "service",
@@ -5697,8 +5672,8 @@
    "new": {
     "url": "/services/cloud-communications",
     "type": "service",
-    "title": "Cloud VoIP and PBX Systems in Indiana | VAF | Van Ausdall & Farrar",
-    "title_len": 66,
+    "title": "Cloud VoIP and PBX Systems in Indiana | Van Ausdall & Farrar",
+    "title_len": 60,
     "city": true,
     "meta": "Cloud VoIP and PBX from VAF, powered by Mitel and 8x8, with no hardware to maintain, hands-on training and on-site engineers on go-live day.",
     "meta_len": 140,
@@ -5724,20 +5699,19 @@
     "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 88,
+    "score": 94,
     "grade": "A",
     "recommendations": [
-     "Retitle to 30 to 60 characters",
      "Add Review or AggregateRating schema from real Google reviews"
     ],
-    "issues": 2
+    "issues": 1
    }
   },
   {
    "old_url": "/enterprise-digital-dictation-solutions",
    "new_url": "/services/enterprise-digital-dictation-solutions",
    "before": 48,
-   "after": 82,
+   "after": 94,
    "old": {
     "url": "/enterprise-digital-dictation-solutions",
     "type": "company",
@@ -5784,9 +5758,9 @@
    "new": {
     "url": "/services/enterprise-digital-dictation-solutions",
     "type": "service",
-    "title": "Enterprise Digital Dictation Solutions | VAF | Van Ausdall & Farrar",
-    "title_len": 67,
-    "city": false,
+    "title": "Enterprise Digital Dictation Solutions in Indianapolis | VAF",
+    "title_len": 60,
+    "city": true,
     "meta": "Winscribe, Philips and Olympus digital dictation from VAF, an authorized partner and in-warranty repair center, in business since 1914 in Indiana.",
     "meta_len": 146,
     "h1": "Enterprise Digital Dictation Solutions",
@@ -5811,14 +5785,12 @@
     "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 82,
-    "grade": "B",
+    "score": 94,
+    "grade": "A",
     "recommendations": [
-     "Retitle to 30 to 60 characters",
-     "Add Indianapolis or the service city to the title",
      "Add Review or AggregateRating schema from real Google reviews"
     ],
-    "issues": 3
+    "issues": 1
    }
   },
   {
@@ -5911,7 +5883,7 @@
    "old_url": "/document-scanning",
    "new_url": "/services/document-scanning",
    "before": 38,
-   "after": 88,
+   "after": 94,
    "old": {
     "url": "/document-scanning",
     "type": "service",
@@ -5958,8 +5930,8 @@
    "new": {
     "url": "/services/document-scanning",
     "type": "service",
-    "title": "Document Scanning Equipment in Indiana | VAF | Van Ausdall & Farrar",
-    "title_len": 67,
+    "title": "Document Scanning Equipment in Indiana | VAF",
+    "title_len": 44,
     "city": true,
     "meta": "Workgroup, low volume and high volume scanners for documents from business cards to legal size, from Van Ausdall & Farrar.",
     "meta_len": 122,
@@ -5985,13 +5957,12 @@
     "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 88,
+    "score": 94,
     "grade": "A",
     "recommendations": [
-     "Retitle to 30 to 60 characters",
      "Add Review or AggregateRating schema from real Google reviews"
     ],
-    "issues": 2
+    "issues": 1
    }
   },
   {
@@ -6256,7 +6227,7 @@
    "old_url": "/evansville",
    "new_url": "/locations/evansville",
    "before": 58,
-   "after": 94,
+   "after": 100,
    "old": {
     "url": "/evansville/",
     "type": "city",
@@ -6324,25 +6295,23 @@
     "faq": true,
     "service": true,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": true,
-    "schema": "Answer, BreadcrumbList, City, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, Organization, PostalAddress, Question, Service, State",
+    "schema": "Answer, BreadcrumbList, City, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, Organization, Person, PostalAddress, Question, Review, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Add Review or AggregateRating schema from real Google reviews"
-    ],
-    "issues": 1
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
    "old_url": "/fort-wayne",
    "new_url": "/locations/fort-wayne",
    "before": 66,
-   "after": 94,
+   "after": 100,
    "old": {
     "url": "/fort-wayne/",
     "type": "city",
@@ -6410,18 +6379,16 @@
     "faq": true,
     "service": true,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": true,
-    "schema": "Answer, BreadcrumbList, City, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, Organization, PostalAddress, Question, Service, State",
+    "schema": "Answer, BreadcrumbList, City, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, Organization, Person, PostalAddress, Question, Review, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Add Review or AggregateRating schema from real Google reviews"
-    ],
-    "issues": 1
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
@@ -6992,8 +6959,8 @@
    "new": {
     "url": "/locations/fort-wayne-network-infrastructure",
     "type": "city",
-    "title": "Network Infrastructure in Fort Wayne",
-    "title_len": 36,
+    "title": "Network Infrastructure in Fort Wayne | Van Ausdall & Farrar",
+    "title_len": 59,
     "city": true,
     "meta": "Network Infrastructure in Fort Wayne, IN Solutions in Indiana. IT support, managed services, and business technology solutions. Learn more. Learn more.",
     "meta_len": 151,
@@ -7164,8 +7131,8 @@
    "new": {
     "url": "/locations/indianapolis-network-infrastructure",
     "type": "city",
-    "title": "Network Infrastructure, Indianapolis",
-    "title_len": 36,
+    "title": "Network Infrastructure, Indianapolis | Van Ausdall & Farrar",
+    "title_len": 59,
     "city": true,
     "meta": "Network Infrastructure in Indianapolis, IN Solutions in Indiana. IT support, managed services, and business technology solutions. Learn more. Learn more.",
     "meta_len": 153,
@@ -7203,7 +7170,7 @@
    "old_url": "/industries/education-technology-solutions",
    "new_url": "/industries/education",
    "before": 60,
-   "after": 94,
+   "after": 100,
    "old": {
     "url": "/industries/education-technology-solutions",
     "type": "service",
@@ -7260,7 +7227,7 @@
     "h2_count": 9,
     "h3_count": 7,
     "question_headings": 1,
-    "words": 878,
+    "words": 883,
     "images": 3,
     "images_no_alt": 0,
     "internal_links": 139,
@@ -7271,25 +7238,23 @@
     "faq": true,
     "service": true,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": true,
-    "schema": "Answer, Audience, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
+    "schema": "Answer, Audience, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Add Review or AggregateRating schema from real Google reviews"
-    ],
-    "issues": 1
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
    "old_url": "/indianapolis",
    "new_url": "/locations/indianapolis",
    "before": 58,
-   "after": 94,
+   "after": 100,
    "old": {
     "url": "/indianapolis/",
     "type": "city",
@@ -7346,7 +7311,7 @@
     "h2_count": 8,
     "h3_count": 16,
     "question_headings": 1,
-    "words": 736,
+    "words": 739,
     "images": 3,
     "images_no_alt": 0,
     "internal_links": 137,
@@ -7357,18 +7322,16 @@
     "faq": true,
     "service": true,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": true,
-    "schema": "Answer, BreadcrumbList, City, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
+    "schema": "Answer, BreadcrumbList, City, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Add Review or AggregateRating schema from real Google reviews"
-    ],
-    "issues": 1
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
@@ -7508,8 +7471,8 @@
    "new": {
     "url": "/services/document-management-workflow",
     "type": "service",
-    "title": "Document Management and Workflow | VAF Indiana",
-    "title_len": 46,
+    "title": "Document Management and Workflow | VAF Indiana | VAF",
+    "title_len": 52,
     "city": true,
     "meta": "OnBase and Square 9 Smart Search document management and workflow from Van Ausdall & Farrar, an authorized OnBase Solutions Partner in Indianapolis.",
     "meta_len": 148,
@@ -7547,7 +7510,7 @@
    "old_url": "/downloads",
    "new_url": "/downloads",
    "before": 48,
-   "after": 84,
+   "after": 90,
    "old": {
     "url": "/downloads",
     "type": "company",
@@ -7594,9 +7557,9 @@
    "new": {
     "url": "/downloads",
     "type": "company",
-    "title": "Driver and Documentation Downloads | Van Ausdall & Farrar",
-    "title_len": 57,
-    "city": false,
+    "title": "Driver and Documentation Downloads in Indianapolis | VAF",
+    "title_len": 56,
+    "city": true,
     "meta": "Links to manufacturer driver pages, manuals and self-paced training for Ricoh, Canon, HP, scanners and phone systems, from Van Ausdall & Farrar.",
     "meta_len": 144,
     "h1": "Software Drivers and Documentation Downloads",
@@ -7621,21 +7584,20 @@
     "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, State",
     "has_form": false,
     "tel_link": true,
-    "score": 84,
-    "grade": "B",
+    "score": 90,
+    "grade": "A",
     "recommendations": [
-     "Add Indianapolis or the service city to the title",
      "Add Review or AggregateRating schema from real Google reviews",
      "Deepen to 600 words or more"
     ],
-    "issues": 3
+    "issues": 2
    }
   },
   {
    "old_url": "/industries/financial-technology-services",
    "new_url": "/industries/financial-services",
    "before": 52,
-   "after": 94,
+   "after": 100,
    "old": {
     "url": "/industries/financial-technology-services",
     "type": "service",
@@ -7692,7 +7654,7 @@
     "h2_count": 9,
     "h3_count": 5,
     "question_headings": 1,
-    "words": 798,
+    "words": 803,
     "images": 3,
     "images_no_alt": 0,
     "internal_links": 137,
@@ -7703,25 +7665,23 @@
     "faq": true,
     "service": true,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": true,
-    "schema": "Answer, Audience, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
+    "schema": "Answer, Audience, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Add Review or AggregateRating schema from real Google reviews"
-    ],
-    "issues": 1
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
    "old_url": "/industries/government-technology-solutions",
    "new_url": "/industries/government",
    "before": 52,
-   "after": 94,
+   "after": 100,
    "old": {
     "url": "/industries/government-technology-solutions",
     "type": "service",
@@ -7778,7 +7738,7 @@
     "h2_count": 9,
     "h3_count": 7,
     "question_headings": 1,
-    "words": 853,
+    "words": 860,
     "images": 3,
     "images_no_alt": 0,
     "internal_links": 139,
@@ -7789,25 +7749,23 @@
     "faq": true,
     "service": true,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": true,
-    "schema": "Answer, Audience, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
+    "schema": "Answer, Audience, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Add Review or AggregateRating schema from real Google reviews"
-    ],
-    "issues": 1
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
    "old_url": "/free-security-training-tools",
    "new_url": "/services/free-security-training-tools",
    "before": 48,
-   "after": 94,
+   "after": 88,
    "old": {
     "url": "/free-security-training-tools",
     "type": "company",
@@ -7854,11 +7812,11 @@
    "new": {
     "url": "/services/free-security-training-tools",
     "type": "service",
-    "title": "Free Security Training Tools, Indiana | Van Ausdall & Farrar",
-    "title_len": 60,
-    "city": true,
-    "meta": "Free Security Training Tools Services from Van Ausdall & Farrar. Call (317) 634-2913 for more information. Learn more. Call (317) 634-2913 for consultation.",
-    "meta_len": 156,
+    "title": "Free KnowBe4 Security Tools | Van Ausdall & Farrar",
+    "title_len": 50,
+    "city": false,
+    "meta": "Six free KnowBe4 security tools for Indiana organizations: phishing test, weak password test, email exposure, domain spoof, alert button, RanSim.",
+    "meta_len": 145,
     "h1": "Free Security Training Tools",
     "h1_count": 1,
     "h2_count": 10,
@@ -7881,19 +7839,20 @@
     "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 88,
     "grade": "A",
     "recommendations": [
+     "Add Indianapolis or the service city to the title",
      "Add Review or AggregateRating schema from real Google reviews"
     ],
-    "issues": 1
+    "issues": 2
    }
   },
   {
    "old_url": "/industries/manufacturing-logistics-technology-solutions",
    "new_url": "/industries/manufacturing-logistics",
    "before": 52,
-   "after": 94,
+   "after": 100,
    "old": {
     "url": "/industries/manufacturing-logistics-technology-solutions",
     "type": "service",
@@ -7961,25 +7920,23 @@
     "faq": true,
     "service": true,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": true,
-    "schema": "Answer, Audience, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
+    "schema": "Answer, Audience, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Add Review or AggregateRating schema from real Google reviews"
-    ],
-    "issues": 1
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
    "old_url": "/industries/insurance-technology-solutions",
    "new_url": "/industries/insurance",
    "before": 48,
-   "after": 94,
+   "after": 100,
    "old": {
     "url": "/industries/insurance-technology-solutions",
     "type": "service",
@@ -8047,18 +8004,16 @@
     "faq": true,
     "service": true,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": true,
-    "schema": "Answer, Audience, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
+    "schema": "Answer, Audience, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Add Review or AggregateRating schema from real Google reviews"
-    ],
-    "issues": 1
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
@@ -8122,7 +8077,7 @@
     "h2_count": 11,
     "h3_count": 9,
     "question_headings": 1,
-    "words": 1014,
+    "words": 1017,
     "images": 3,
     "images_no_alt": 0,
     "internal_links": 138,
@@ -8151,7 +8106,7 @@
    "old_url": "/industries/healthcare-technology-solutions",
    "new_url": "/industries/healthcare",
    "before": 60,
-   "after": 94,
+   "after": 100,
    "old": {
     "url": "/industries/healthcare-technology-solutions",
     "type": "service",
@@ -8208,7 +8163,7 @@
     "h2_count": 9,
     "h3_count": 7,
     "question_headings": 1,
-    "words": 833,
+    "words": 838,
     "images": 3,
     "images_no_alt": 0,
     "internal_links": 139,
@@ -8219,18 +8174,16 @@
     "faq": true,
     "service": true,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": true,
-    "schema": "Answer, Audience, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
+    "schema": "Answer, Audience, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Add Review or AggregateRating schema from real Google reviews"
-    ],
-    "issues": 1
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
@@ -8323,7 +8276,7 @@
    "old_url": "/industries/real-estate-technology-solutions",
    "new_url": "/industries/real-estate",
    "before": 60,
-   "after": 94,
+   "after": 100,
    "old": {
     "url": "/industries/real-estate-technology-solutions",
     "type": "service",
@@ -8380,7 +8333,7 @@
     "h2_count": 9,
     "h3_count": 9,
     "question_headings": 1,
-    "words": 900,
+    "words": 903,
     "images": 3,
     "images_no_alt": 0,
     "internal_links": 141,
@@ -8391,18 +8344,16 @@
     "faq": true,
     "service": true,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": true,
-    "schema": "Answer, Audience, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
+    "schema": "Answer, Audience, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Add Review or AggregateRating schema from real Google reviews"
-    ],
-    "issues": 1
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
@@ -8495,7 +8446,7 @@
    "old_url": "/information/cloud-solutions",
    "new_url": "/services/cloud",
    "before": 62,
-   "after": 94,
+   "after": 100,
    "old": {
     "url": "/information/cloud-solutions",
     "type": "service",
@@ -8563,18 +8514,16 @@
     "faq": true,
     "service": true,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": true,
-    "schema": "Answer, BreadcrumbList, City, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
+    "schema": "Answer, BreadcrumbList, City, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Add Review or AggregateRating schema from real Google reviews"
-    ],
-    "issues": 1
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
@@ -8665,9 +8614,9 @@
   },
   {
    "old_url": "/kiosk-assembly",
-   "new_url": "/kiosk-assembly",
+   "new_url": "/solutions",
    "before": 48,
-   "after": null,
+   "after": 100,
    "old": {
     "url": "/kiosk-assembly",
     "type": "company",
@@ -8711,13 +8660,47 @@
     ],
     "issues": 7
    },
-   "new": null
+   "new": {
+    "url": "/solutions",
+    "type": "company",
+    "title": "Technology Solutions Indianapolis | Van Ausdall & Farrar",
+    "title_len": 56,
+    "city": true,
+    "meta": "Four pillars, twelve solutions, one partner: managed IT, cybersecurity, cloud, backup and recovery, business phone systems, copiers, managed print, copier.",
+    "meta_len": 155,
+    "h1": "Four pillars. Twelve solutions. One roof.",
+    "h1_count": 1,
+    "h2_count": 11,
+    "h3_count": 28,
+    "question_headings": 1,
+    "words": 1217,
+    "images": 7,
+    "images_no_alt": 0,
+    "internal_links": 208,
+    "external_links": 6,
+    "canonical": true,
+    "og_image": true,
+    "stock_og": false,
+    "faq": true,
+    "service": false,
+    "local": true,
+    "review": true,
+    "article": false,
+    "breadcrumb": true,
+    "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, State",
+    "has_form": false,
+    "tel_link": true,
+    "score": 100,
+    "grade": "A",
+    "recommendations": [],
+    "issues": 0
+   }
   },
   {
    "old_url": "/industries/engineering-construction-technology-solutions",
    "new_url": "/industries/engineering-construction",
    "before": 60,
-   "after": 94,
+   "after": 100,
    "old": {
     "url": "/industries/engineering-construction-technology-solutions",
     "type": "service",
@@ -8785,25 +8768,23 @@
     "faq": true,
     "service": true,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": true,
-    "schema": "Answer, Audience, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
+    "schema": "Answer, Audience, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Add Review or AggregateRating schema from real Google reviews"
-    ],
-    "issues": 1
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
    "old_url": "/kiosk-demo",
-   "new_url": "/kiosk-demo",
+   "new_url": "/solutions",
    "before": 48,
-   "after": null,
+   "after": 100,
    "old": {
     "url": "/kiosk-demo",
     "type": "company",
@@ -8847,13 +8828,47 @@
     ],
     "issues": 7
    },
-   "new": null
+   "new": {
+    "url": "/solutions",
+    "type": "company",
+    "title": "Technology Solutions Indianapolis | Van Ausdall & Farrar",
+    "title_len": 56,
+    "city": true,
+    "meta": "Four pillars, twelve solutions, one partner: managed IT, cybersecurity, cloud, backup and recovery, business phone systems, copiers, managed print, copier.",
+    "meta_len": 155,
+    "h1": "Four pillars. Twelve solutions. One roof.",
+    "h1_count": 1,
+    "h2_count": 11,
+    "h3_count": 28,
+    "question_headings": 1,
+    "words": 1217,
+    "images": 7,
+    "images_no_alt": 0,
+    "internal_links": 208,
+    "external_links": 6,
+    "canonical": true,
+    "og_image": true,
+    "stock_og": false,
+    "faq": true,
+    "service": false,
+    "local": true,
+    "review": true,
+    "article": false,
+    "breadcrumb": true,
+    "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, State",
+    "has_form": false,
+    "tel_link": true,
+    "score": 100,
+    "grade": "A",
+    "recommendations": [],
+    "issues": 0
+   }
   },
   {
    "old_url": "/iphone-scanning",
    "new_url": "/services/iphone-scanning",
    "before": 58,
-   "after": 94,
+   "after": 82,
    "old": {
     "url": "/iphone-scanning",
     "type": "company",
@@ -8900,11 +8915,11 @@
    "new": {
     "url": "/services/iphone-scanning",
     "type": "service",
-    "title": "Scan Documents with Your i Phone, Indiana | VAF",
-    "title_len": 47,
-    "city": true,
-    "meta": "As many of us are working from home these days, sooner or later you\u2019ll find the need to scan a document and send it to someone at another location (I\u2019m.",
-    "meta_len": 152,
+    "title": "Scan Multi-Page PDFs with Your iPhone | VAF | Van Ausdall & Farrar",
+    "title_len": 66,
+    "city": false,
+    "meta": "How to scan a multi-page document to PDF with the iPhone Notes app in under a minute, plus when to use a real office scanner. From VAF.",
+    "meta_len": 135,
     "h1": "Scan Documents with Your iPhone",
     "h1_count": 1,
     "h2_count": 9,
@@ -8927,19 +8942,21 @@
     "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
-    "grade": "A",
+    "score": 82,
+    "grade": "B",
     "recommendations": [
+     "Retitle to 30 to 60 characters",
+     "Add Indianapolis or the service city to the title",
      "Add Review or AggregateRating schema from real Google reviews"
     ],
-    "issues": 1
+    "issues": 3
    }
   },
   {
    "old_url": "/information/managed-it-services",
    "new_url": "/services/managed-it",
    "before": 75,
-   "after": 94,
+   "after": 100,
    "old": {
     "url": "/information/managed-it-services",
     "type": "service",
@@ -9007,25 +9024,23 @@
     "faq": true,
     "service": true,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": true,
-    "schema": "Answer, BreadcrumbList, City, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
+    "schema": "Answer, BreadcrumbList, City, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Add Review or AggregateRating schema from real Google reviews"
-    ],
-    "issues": 1
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
    "old_url": "/knowbe4/can-hackers-spoof-email-address-domain",
    "new_url": "/services/knowbe4-can-hackers-spoof-email-address-domain",
    "before": 38,
-   "after": 94,
+   "after": 88,
    "old": {
     "url": "/knowbe4/can-hackers-spoof-email-address-domain",
     "type": "service",
@@ -9072,11 +9087,11 @@
    "new": {
     "url": "/services/knowbe4-can-hackers-spoof-email-address-domain",
     "type": "service",
-    "title": "Know Be4, Can Hackers Spoof Your Email Domain, Indiana | VAF",
-    "title_len": 60,
-    "city": true,
-    "meta": "Are you aware that one of the first things hackers try is to see if they can spoof the email address of someone in your own domain?",
-    "meta_len": 131,
+    "title": "KnowBe4 Domain Spoof Test | Van Ausdall & Farrar",
+    "title_len": 48,
+    "city": false,
+    "meta": "KnowBe4's free Domain Spoof Test sends a spoofed email from you to you. If it lands in your inbox, your domain can be impersonated. Results in 48 hours.",
+    "meta_len": 152,
     "h1": "KnowBe4, Can Hackers Spoof an Email Address from Your Own Domain?",
     "h1_count": 1,
     "h2_count": 9,
@@ -9099,19 +9114,20 @@
     "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 88,
     "grade": "A",
     "recommendations": [
+     "Add Indianapolis or the service city to the title",
      "Add Review or AggregateRating schema from real Google reviews"
     ],
-    "issues": 1
+    "issues": 2
    }
   },
   {
    "old_url": "/kiosk-quote",
-   "new_url": "/kiosk-quote",
+   "new_url": "/solutions",
    "before": 49,
-   "after": null,
+   "after": 100,
    "old": {
     "url": "/kiosk-quote",
     "type": "company",
@@ -9155,7 +9171,41 @@
     ],
     "issues": 7
    },
-   "new": null
+   "new": {
+    "url": "/solutions",
+    "type": "company",
+    "title": "Technology Solutions Indianapolis | Van Ausdall & Farrar",
+    "title_len": 56,
+    "city": true,
+    "meta": "Four pillars, twelve solutions, one partner: managed IT, cybersecurity, cloud, backup and recovery, business phone systems, copiers, managed print, copier.",
+    "meta_len": 155,
+    "h1": "Four pillars. Twelve solutions. One roof.",
+    "h1_count": 1,
+    "h2_count": 11,
+    "h3_count": 28,
+    "question_headings": 1,
+    "words": 1217,
+    "images": 7,
+    "images_no_alt": 0,
+    "internal_links": 208,
+    "external_links": 6,
+    "canonical": true,
+    "og_image": true,
+    "stock_og": false,
+    "faq": true,
+    "service": false,
+    "local": true,
+    "review": true,
+    "article": false,
+    "breadcrumb": true,
+    "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, State",
+    "has_form": false,
+    "tel_link": true,
+    "score": 100,
+    "grade": "A",
+    "recommendations": [],
+    "issues": 0
+   }
   },
   {
    "old_url": "/free-security-awareness",
@@ -9334,7 +9384,7 @@
    "old_url": "/knowbe4/get-free-ransomware-simulator-tool",
    "new_url": "/services/knowbe4-get-free-ransomware-simulator-tool",
    "before": 46,
-   "after": 94,
+   "after": 88,
    "old": {
     "url": "/knowbe4/get-free-ransomware-simulator-tool",
     "type": "service",
@@ -9381,11 +9431,11 @@
    "new": {
     "url": "/services/knowbe4-get-free-ransomware-simulator-tool",
     "type": "service",
-    "title": "Know Be4, Get Your Free Ransomware Simulator, Indiana | VAF",
-    "title_len": 59,
-    "city": true,
-    "meta": "Bad guys are constantly coming out with new versions of ransomware strains to evade detection. Van Ausdall & Farrar, since 1914.",
-    "meta_len": 128,
+    "title": "KnowBe4 Free Ransomware Simulator (RanSim) | VAF",
+    "title_len": 48,
+    "city": false,
+    "meta": "KnowBe4's free RanSim runs a harmless simulation of 13 ransomware infection scenarios on a Windows workstation and shows if it is vulnerable.",
+    "meta_len": 141,
     "h1": "KnowBe4, Get Your Free Ransomware Simulator Tool",
     "h1_count": 1,
     "h2_count": 10,
@@ -9408,19 +9458,20 @@
     "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 88,
     "grade": "A",
     "recommendations": [
+     "Add Indianapolis or the service city to the title",
      "Add Review or AggregateRating schema from real Google reviews"
     ],
-    "issues": 1
+    "issues": 2
    }
   },
   {
    "old_url": "/knowbe4/get-free-weak-password-test",
    "new_url": "/services/knowbe4-get-free-weak-password-test",
    "before": 38,
-   "after": 94,
+   "after": 88,
    "old": {
     "url": "/knowbe4/get-free-weak-password-test",
     "type": "service",
@@ -9467,11 +9518,11 @@
    "new": {
     "url": "/services/knowbe4-get-free-weak-password-test",
     "type": "service",
-    "title": "Know Be4, Get Your Free Weak Password Test, Indiana | VAF",
-    "title_len": 57,
-    "city": true,
-    "meta": "Are your user\u2019s passwords\u2026P@ssw0rd? Verizon\u2019s recent Data Breach Report showed that 81% of hacking-related breaches used either stolen and/or weak passwords.",
-    "meta_len": 157,
+    "title": "KnowBe4 Free Weak Password Test | Van Ausdall & Farrar",
+    "title_len": 54,
+    "city": false,
+    "meta": "KnowBe4's free Weak Password Test checks Active Directory for 10 types of weak password threats in minutes, without reporting actual passwords.",
+    "meta_len": 143,
     "h1": "KnowBe4, Get Your Free Weak Password Test",
     "h1_count": 1,
     "h2_count": 12,
@@ -9494,19 +9545,20 @@
     "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 88,
     "grade": "A",
     "recommendations": [
+     "Add Indianapolis or the service city to the title",
      "Add Review or AggregateRating schema from real Google reviews"
     ],
-    "issues": 1
+    "issues": 2
    }
   },
   {
    "old_url": "/information",
    "new_url": "/solutions-information",
    "before": 47,
-   "after": 94,
+   "after": 100,
    "old": {
     "url": "/information/",
     "type": "service",
@@ -9553,11 +9605,11 @@
    "new": {
     "url": "/solutions-information",
     "type": "company",
-    "title": "Information Technology, Indiana | Van Ausdall & Farrar",
-    "title_len": 54,
+    "title": "Information Technology Services Indianapolis | VAF",
+    "title_len": 50,
     "city": true,
-    "meta": "Indianapolis managed IT services, cloud solutions, managed security, IT support, and physical security from Van Ausdall & Farrar.",
-    "meta_len": 129,
+    "meta": "Cloud solutions, managed security, managed IT services and physical security for Indianapolis businesses, from one local partner serving Indiana since 1914.",
+    "meta_len": 156,
     "h1": "Information Technology Services for Indianapolis Businesses",
     "h1_count": 1,
     "h2_count": 13,
@@ -9574,25 +9626,23 @@
     "faq": true,
     "service": true,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": true,
-    "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
+    "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Add Review or AggregateRating schema from real Google reviews"
-    ],
-    "issues": 1
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
    "old_url": "/net-promoter-score",
    "new_url": "/about",
    "before": 38,
-   "after": 89,
+   "after": 100,
    "old": {
     "url": "/net-promoter-score",
     "type": "company",
@@ -9642,14 +9692,14 @@
     "title": "About Van Ausdall & Farrar | Indianapolis Since 1914",
     "title_len": 52,
     "city": true,
-    "meta": "From a Thomas Edison Company distributorship in 1914 to Indiana",
-    "meta_len": 63,
+    "meta": "From a Thomas Edison Company distributorship in 1914 to Indiana's largest full-service business technology provider.",
+    "meta_len": 116,
     "h1": "Helping customers succeed since 1914.",
     "h1_count": 1,
     "h2_count": 10,
     "h3_count": 24,
     "question_headings": 1,
-    "words": 1244,
+    "words": 1380,
     "images": 6,
     "images_no_alt": 0,
     "internal_links": 132,
@@ -9660,19 +9710,16 @@
     "faq": true,
     "service": false,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": true,
-    "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, State",
+    "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, State",
     "has_form": false,
     "tel_link": true,
-    "score": 89,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Add Review or AggregateRating schema from real Google reviews",
-     "Write a 70 to 160 character meta description that answers the query"
-    ],
-    "issues": 2
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
@@ -9726,11 +9773,11 @@
    "new": {
     "url": "/services/knowbe4-get-free-email-exposure-check",
     "type": "service",
-    "title": "Know Be4, Get Your Free Email Exposure Check, Indiana | VAF",
-    "title_len": 59,
+    "title": "KnowBe4 Free Email Exposure Check | VAF Indiana",
+    "title_len": 47,
     "city": true,
-    "meta": "Find out which of your users emails are exposed before the bad guys do. Van Ausdall & Farrar, Indianapolis office technology since 1914.",
-    "meta_len": 136,
+    "meta": "KnowBe4's one-time free Email Exposure Check lists which of your organization's email addresses are exposed online and where they were found.",
+    "meta_len": 141,
     "h1": "KnowBe4, Get Your Free Email Exposure Check",
     "h1_count": 1,
     "h2_count": 10,
@@ -9812,8 +9859,8 @@
    "new": {
     "url": "/locations/muncie-network-infrastructure",
     "type": "city",
-    "title": "Network Infrastructure in Muncie, IN",
-    "title_len": 36,
+    "title": "Network Infrastructure in Muncie, IN | Van Ausdall & Farrar",
+    "title_len": 59,
     "city": true,
     "meta": "Network Infrastructure in Muncie, IN Services in Indiana. IT support, managed services, and business technology solutions. Learn more. Learn more.",
     "meta_len": 146,
@@ -9898,8 +9945,8 @@
    "new": {
     "url": "/locations/muncie-network-carrier-solutions",
     "type": "city",
-    "title": "Carrier Solutions in Muncie, IN",
-    "title_len": 31,
+    "title": "Carrier Solutions in Muncie, IN | Van Ausdall & Farrar",
+    "title_len": 54,
     "city": true,
     "meta": "Network Carrier Solutions in Muncie, IN for Indiana in Indiana. IT support, managed services, and business technology solutions. Learn more. Learn more.",
     "meta_len": 152,
@@ -9937,7 +9984,7 @@
    "old_url": "/managed-print",
    "new_url": "/services/managed-print",
    "before": 46,
-   "after": 94,
+   "after": 100,
    "old": {
     "url": "/managed-print",
     "type": "service",
@@ -9994,7 +10041,7 @@
     "h2_count": 12,
     "h3_count": 20,
     "question_headings": 2,
-    "words": 1172,
+    "words": 1174,
     "images": 7,
     "images_no_alt": 0,
     "internal_links": 138,
@@ -10005,18 +10052,16 @@
     "faq": true,
     "service": true,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": true,
-    "schema": "Answer, BreadcrumbList, City, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
+    "schema": "Answer, BreadcrumbList, City, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Add Review or AggregateRating schema from real Google reviews"
-    ],
-    "issues": 1
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
@@ -10070,11 +10115,11 @@
    "new": {
     "url": "/services/network-security",
     "type": "service",
-    "title": "Indianapolis Network Security | Van Ausdall & Farrar",
-    "title_len": 52,
+    "title": "Indianapolis Network Security and Wi-Fi | VAF",
+    "title_len": 45,
     "city": true,
-    "meta": "Indianapolis network security from Van Ausdall & Farrar: firewalls, endpoint protection, email security, and secure Wi-Fi for Indiana businesses.",
-    "meta_len": 145,
+    "meta": "Indianapolis network security from VAF: firewalls, endpoint and email protection, zero trust access, and secure Wi-Fi from Fortinet, Extreme and ADTRAN.",
+    "meta_len": 152,
     "h1": "Network Security in Indianapolis",
     "h1_count": 1,
     "h2_count": 13,
@@ -10109,7 +10154,7 @@
    "old_url": "/information/data-security",
    "new_url": "/services/cybersecurity",
    "before": 52,
-   "after": 94,
+   "after": 100,
    "old": {
     "url": "/information/data-security",
     "type": "service",
@@ -10177,25 +10222,23 @@
     "faq": true,
     "service": true,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": true,
-    "schema": "Answer, BreadcrumbList, City, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
+    "schema": "Answer, BreadcrumbList, City, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Add Review or AggregateRating schema from real Google reviews"
-    ],
-    "issues": 1
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
    "old_url": "/office-security-solutions",
    "new_url": "/services/office-security-solutions",
    "before": 62,
-   "after": 94,
+   "after": 88,
    "old": {
     "url": "/office-security-solutions",
     "type": "company",
@@ -10242,11 +10285,11 @@
    "new": {
     "url": "/services/office-security-solutions",
     "type": "service",
-    "title": "Video Surveillance & Office Security, Indiana | VAF",
-    "title_len": 51,
-    "city": true,
-    "meta": "Video Surveillance Solutions Services from Van Ausdall & Farrar. Call (317) 634-2913 for more information. Learn more. Call (317) 634-2913 for consultation.",
-    "meta_len": 156,
+    "title": "Video Surveillance and VSecure IT Services | VAF",
+    "title_len": 48,
+    "city": false,
+    "meta": "FortiCamera and FortiRecorder video surveillance with no license fees, plus VSecure managed security services with a CISSP on the team.",
+    "meta_len": 135,
     "h1": "Video Surveillance Solutions",
     "h1_count": 1,
     "h2_count": 10,
@@ -10269,12 +10312,13 @@
     "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 88,
     "grade": "A",
     "recommendations": [
+     "Add Indianapolis or the service city to the title",
      "Add Review or AggregateRating schema from real Google reviews"
     ],
-    "issues": 1
+    "issues": 2
    }
   },
   {
@@ -10584,8 +10628,8 @@
    "new": {
     "url": "/locations/muncie-business-phone-systems",
     "type": "city",
-    "title": "Business Phone Systems in Muncie, IN",
-    "title_len": 36,
+    "title": "Business Phone Systems in Muncie, IN | Van Ausdall & Farrar",
+    "title_len": 59,
     "city": true,
     "meta": "Business Phone Systems in Muncie, IN Services in Indiana. IT support, managed services, and business technology solutions. Learn more. Learn more.",
     "meta_len": 146,
@@ -10623,7 +10667,7 @@
    "old_url": "/network-security-secure-router-access",
    "new_url": "/services/network-security-secure-router-access",
    "before": 54,
-   "after": 94,
+   "after": 88,
    "old": {
     "url": "/network-security-secure-router-access",
     "type": "company",
@@ -10670,11 +10714,11 @@
    "new": {
     "url": "/services/network-security-secure-router-access",
     "type": "service",
-    "title": "Network Security & Secure Remote Access for Indiana",
-    "title_len": 51,
-    "city": true,
-    "meta": "Network Security & Secure Remote Access for Indiana from Van Ausdall & Farrar. Call (317) 634-2913 for more information. Learn more. Learn more information now.",
-    "meta_len": 160,
+    "title": "Network Security and Secure Remote Access | VAF",
+    "title_len": 47,
+    "city": false,
+    "meta": "VAF chose Fortinet after an exhaustive study of next generation firewall leaders. See what the Fortinet platform protects and how remote access works.",
+    "meta_len": 150,
     "h1": "Network Security & Secure Remote Access",
     "h1_count": 1,
     "h2_count": 10,
@@ -10697,12 +10741,13 @@
     "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 88,
     "grade": "A",
     "recommendations": [
+     "Add Indianapolis or the service city to the title",
      "Add Review or AggregateRating schema from real Google reviews"
     ],
-    "issues": 1
+    "issues": 2
    }
   },
   {
@@ -10795,7 +10840,7 @@
    "old_url": "/print-management-software",
    "new_url": "/services/print-management-software",
    "before": 38,
-   "after": 94,
+   "after": 82,
    "old": {
     "url": "/print-management-software",
     "type": "service",
@@ -10842,11 +10887,11 @@
    "new": {
     "url": "/services/print-management-software",
     "type": "service",
-    "title": "Print Security & Accounting Software, Indiana | VAF",
-    "title_len": 51,
-    "city": true,
-    "meta": "Print security and accounting software for Indiana offices: user authentication, secure print release, and print cost tracking.",
-    "meta_len": 127,
+    "title": "Print Security and Accounting Software | VAF | Van Ausdall & Farrar",
+    "title_len": 67,
+    "city": false,
+    "meta": "Print management software for Indiana offices: follow-me printing, mobile print, print accounting and cost control from Ricoh, Canon, PaperCut and more.",
+    "meta_len": 152,
     "h1": "Print Management for Security & Accounting",
     "h1_count": 1,
     "h2_count": 18,
@@ -10869,12 +10914,14 @@
     "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
-    "grade": "A",
+    "score": 82,
+    "grade": "B",
     "recommendations": [
+     "Retitle to 30 to 60 characters",
+     "Add Indianapolis or the service city to the title",
      "Add Review or AggregateRating schema from real Google reviews"
     ],
-    "issues": 1
+    "issues": 3
    }
   },
   {
@@ -10928,11 +10975,11 @@
    "new": {
     "url": "/policies/privacy",
     "type": "policy",
-    "title": "Privacy Policy, Indiana | Van Ausdall & Farrar",
-    "title_len": 46,
+    "title": "Privacy Policy | Van Ausdall & Farrar, Indianapolis",
+    "title_len": 51,
     "city": true,
-    "meta": "We value your privacy very highly. Please read this Privacy Policy carefully before using the https://www.vanausdall.com/ website (the \u201cWebsite\u201d) operated.",
-    "meta_len": 155,
+    "meta": "How Van Ausdall & Farrar collects, uses and protects personal information on vanausdall.com, and how to access, correct or delete yours.",
+    "meta_len": 136,
     "h1": "Privacy Policy",
     "h1_count": 1,
     "h2_count": 15,
@@ -11012,11 +11059,11 @@
    "new": {
     "url": "/services/knowbe4-start-free-phishing-security-test",
     "type": "service",
-    "title": "Know Be4, Free Phishing Security Test, Indiana | VAF",
-    "title_len": 52,
+    "title": "KnowBe4 Free Phishing Security Test | VAF Indiana",
+    "title_len": 49,
     "city": true,
-    "meta": "Know Be4, Start Your Free Phishing Security Test Servic from Van Ausdall & Farrar. Call (317) 634-2913 for more information. Learn more. Learn more.",
-    "meta_len": 148,
+    "meta": "Start KnowBe4's free Phishing Security Test for up to 100 users. Pick the template and landing page, then get a PDF of your results in 24 hours.",
+    "meta_len": 144,
     "h1": "KnowBe4: Start Your Free Phishing Security Test",
     "h1_count": 1,
     "h2_count": 11,
@@ -11051,7 +11098,7 @@
    "old_url": "/print/managed-print-services",
    "new_url": "/services/managed-print",
    "before": 64,
-   "after": 94,
+   "after": 100,
    "old": {
     "url": "/print/managed-print-services",
     "type": "service",
@@ -11108,7 +11155,7 @@
     "h2_count": 12,
     "h3_count": 20,
     "question_headings": 2,
-    "words": 1172,
+    "words": 1174,
     "images": 7,
     "images_no_alt": 0,
     "internal_links": 138,
@@ -11119,18 +11166,16 @@
     "faq": true,
     "service": true,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": true,
-    "schema": "Answer, BreadcrumbList, City, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
+    "schema": "Answer, BreadcrumbList, City, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Add Review or AggregateRating schema from real Google reviews"
-    ],
-    "issues": 1
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
@@ -11443,11 +11488,11 @@
    "new": {
     "url": "/services/network-infrastructure",
     "type": "service",
-    "title": "Local & Wide Area Network Infrastructure, Indiana | VAF",
-    "title_len": 55,
+    "title": "LAN and WAN Network Infrastructure | VAF Indiana",
+    "title_len": 48,
     "city": true,
-    "meta": "Van Ausdall & Farrar\u2019s Converged Communications Group offers innovative and reliable network infrastructure solutions. ADTRAN\u2019s product line is comprehensive.",
-    "meta_len": 158,
+    "meta": "ADTRAN switching, routing and wireless from VAF's Converged Communications Group: managed Layer 2/3 switches up to 10 GE and QoS for VoIP.",
+    "meta_len": 138,
     "h1": "Local & Wide Area Network Infrastructure",
     "h1_count": 1,
     "h2_count": 11,
@@ -11482,7 +11527,7 @@
    "old_url": "/knowbe4/free-phish-alert-button",
    "new_url": "/services/knowbe4-free-phish-alert-button",
    "before": 38,
-   "after": 94,
+   "after": 88,
    "old": {
     "url": "/knowbe4/free-phish-alert-button",
     "type": "service",
@@ -11529,11 +11574,11 @@
    "new": {
     "url": "/services/knowbe4-free-phish-alert-button",
     "type": "service",
-    "title": "Know Be4, Free Phish Alert Button, Indiana | VAF",
-    "title_len": 48,
-    "city": true,
-    "meta": "Do your users know what to do when they receive a suspicious email? From Van Ausdall & Farrar, Indiana",
-    "meta_len": 102,
+    "title": "KnowBe4 Free Phish Alert Button | Van Ausdall & Farrar",
+    "title_len": 54,
+    "city": false,
+    "meta": "KnowBe4's free Phish Alert Button lets users report suspicious email in one click and removes it from the inbox. Works with Outlook and Gmail in Chrome.",
+    "meta_len": 152,
     "h1": "KnowBe4, Free Phish Alert Button",
     "h1_count": 1,
     "h2_count": 11,
@@ -11556,12 +11601,13 @@
     "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 88,
     "grade": "A",
     "recommendations": [
+     "Add Indianapolis or the service city to the title",
      "Add Review or AggregateRating schema from real Google reviews"
     ],
-    "issues": 1
+    "issues": 2
    }
   },
   {
@@ -11615,11 +11661,11 @@
    "new": {
     "url": "/services/managed-mail-centers",
     "type": "service",
-    "title": "Managed Mail Center, Indiana | Van Ausdall & Farrar",
-    "title_len": 51,
+    "title": "Managed Mail Center Services in Indiana | VAF",
+    "title_len": 45,
     "city": true,
-    "meta": "We work with organizations to enhance the receipt and distribution of their mail in a timely, accurate and most cost effective manner.",
-    "meta_len": 134,
+    "meta": "VAF helps Indiana organizations receive and distribute mail on time, control postage spend and track parcels in and out, with the right technology.",
+    "meta_len": 147,
     "h1": "We Ensure That Your Mail Reaches Its Destination",
     "h1_count": 1,
     "h2_count": 11,
@@ -11787,11 +11833,11 @@
    "new": {
     "url": "/services/facilities-management",
     "type": "service",
-    "title": "Facilities Management, Indiana | Van Ausdall & Farrar",
-    "title_len": 53,
+    "title": "Facilities Management Solutions in Indiana | VAF",
+    "title_len": 48,
     "city": true,
-    "meta": "Companies of all sizes struggle to manage the day to day office services functions that enable the business to operate, all while trying to stay focused on.",
-    "meta_len": 156,
+    "meta": "VAF manages the print room, mail, scanning and archiving, and visitor and conference room services so your team can stay focused on its core work.",
+    "meta_len": 146,
     "h1": "Facilities Management Solutions",
     "h1_count": 1,
     "h2_count": 12,
@@ -11826,7 +11872,7 @@
    "old_url": "/process",
    "new_url": "/solutions-process",
    "before": 52,
-   "after": 94,
+   "after": 100,
    "old": {
     "url": "/process/",
     "type": "service",
@@ -11876,8 +11922,8 @@
     "title": "Business Process Management Solutions, Indiana | VAF",
     "title_len": 52,
     "city": true,
-    "meta": "Managing the overall process flow throughout a company can be a daunting task. Van Ausdall & Farrar, Indianapolis office technology since 1914.",
-    "meta_len": 143,
+    "meta": "Business process solutions, document scanning, content management, facilities management, print fulfillment and voice processing from Van Ausdall & Farrar.",
+    "meta_len": 155,
     "h1": "Business Process Management Solutions",
     "h1_count": 1,
     "h2_count": 17,
@@ -11894,25 +11940,23 @@
     "faq": true,
     "service": true,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": true,
-    "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
+    "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Add Review or AggregateRating schema from real Google reviews"
-    ],
-    "issues": 1
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
    "old_url": "/proactive-it-services",
    "new_url": "/services/proactive-it-services",
    "before": 58,
-   "after": 94,
+   "after": 88,
    "old": {
     "url": "/proactive-it-services",
     "type": "company",
@@ -11959,11 +12003,11 @@
    "new": {
     "url": "/services/proactive-it-services",
     "type": "service",
-    "title": "Proactive IT Managed Services for Business, Indiana | VAF",
-    "title_len": 57,
-    "city": true,
-    "meta": "Van Ausdall & Farrar is a single source service provider of supplemental and full outsource IT services for small to medium sized businesses and.",
-    "meta_len": 145,
+    "title": "Proactive IT Managed Services for Business | VAF",
+    "title_len": 48,
+    "city": false,
+    "meta": "VAF's Proactive IT Services use patch management, agent-less remote monitoring and asset tracking to prevent downtime for small and mid-sized businesses.",
+    "meta_len": 153,
     "h1": "Proactive IT Managed Services for Business",
     "h1_count": 1,
     "h2_count": 12,
@@ -11986,12 +12030,13 @@
     "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 88,
     "grade": "A",
     "recommendations": [
+     "Add Indianapolis or the service city to the title",
      "Add Review or AggregateRating schema from real Google reviews"
     ],
-    "issues": 1
+    "issues": 2
    }
   },
   {
@@ -12045,17 +12090,17 @@
    "new": {
     "url": "/services/print-fulfillment",
     "type": "service",
-    "title": "Print Fulfillment & On-Demand Print, Indiana | VAF",
-    "title_len": 50,
+    "title": "Print Fulfillment and On-Demand Print | VAF Indiana",
+    "title_len": 51,
     "city": true,
-    "meta": "Off-site print fulfillment that frees your team, marketing materials, mailings, and business documents produced and delivered for you.",
-    "meta_len": 134,
+    "meta": "Off-site print fulfillment from VAF: on-demand, branded and pre-approved print, digital printing and mailing, finishing and legal document support.",
+    "meta_len": 147,
     "h1": "Print Fulfillment Solutions",
     "h1_count": 1,
     "h2_count": 11,
     "h3_count": 13,
     "question_headings": 1,
-    "words": 835,
+    "words": 837,
     "images": 6,
     "images_no_alt": 0,
     "internal_links": 147,
@@ -12084,7 +12129,7 @@
    "old_url": "/process/voice-processing",
    "new_url": "/services/voice-processing",
    "before": 48,
-   "after": 94,
+   "after": 88,
    "old": {
     "url": "/process/voice-processing",
     "type": "service",
@@ -12131,11 +12176,11 @@
    "new": {
     "url": "/services/voice-processing",
     "type": "service",
-    "title": "Voice Processing Solutions, Indiana | Van Ausdall & Farrar",
-    "title_len": 58,
-    "city": true,
-    "meta": "Digital dictation, speech recognition, and transcription technology solutions, HIPAA-compliant automation for healthcare, legal, and law enforcement.",
-    "meta_len": 149,
+    "title": "Voice Processing: Dictation and Recognition | VAF",
+    "title_len": 49,
+    "city": false,
+    "meta": "Digital dictation, speech recognition and court recording from VAF, whose voice processing work dates back to 1914. HIPAA-conscious design.",
+    "meta_len": 139,
     "h1": "Voice Processing Solutions",
     "h1_count": 1,
     "h2_count": 10,
@@ -12158,19 +12203,20 @@
     "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 88,
     "grade": "A",
     "recommendations": [
+     "Add Indianapolis or the service city to the title",
      "Add Review or AggregateRating schema from real Google reviews"
     ],
-    "issues": 1
+    "issues": 2
    }
   },
   {
    "old_url": "/production-print",
    "new_url": "/services/production-print",
    "before": 48,
-   "after": 94,
+   "after": 100,
    "old": {
     "url": "/production-print",
     "type": "company",
@@ -12227,7 +12273,7 @@
     "h2_count": 10,
     "h3_count": 16,
     "question_headings": 1,
-    "words": 724,
+    "words": 726,
     "images": 7,
     "images_no_alt": 0,
     "internal_links": 145,
@@ -12238,18 +12284,16 @@
     "faq": true,
     "service": true,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": true,
-    "schema": "Answer, BreadcrumbList, City, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
+    "schema": "Answer, BreadcrumbList, City, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Add Review or AggregateRating schema from real Google reviews"
-    ],
-    "issues": 1
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
@@ -12342,7 +12386,7 @@
    "old_url": "/solutions",
    "new_url": "/solutions",
    "before": 64,
-   "after": 94,
+   "after": 100,
    "old": {
     "url": "/solutions",
     "type": "company",
@@ -12410,25 +12454,23 @@
     "faq": true,
     "service": false,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": true,
-    "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, State",
+    "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Add Review or AggregateRating schema from real Google reviews"
-    ],
-    "issues": 1
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
    "old_url": "/process/receptionist-services",
    "new_url": "/services/receptionist-services",
    "before": 38,
-   "after": 94,
+   "after": 88,
    "old": {
     "url": "/process/receptionist-services",
     "type": "service",
@@ -12475,11 +12517,11 @@
    "new": {
     "url": "/services/receptionist-services",
     "type": "service",
-    "title": "Receptionist & Visitor Screening, Indiana | VAF",
-    "title_len": 47,
-    "city": true,
-    "meta": "The receptionist is the first impression for visitors and guests. We assist in providing the right individual(s) who are well trained to receive guests at.",
-    "meta_len": 155,
+    "title": "Receptionist and Visitor Screening Services | VAF",
+    "title_len": 49,
+    "city": false,
+    "meta": "VAF provides trained receptionists and visitor screening technology: photo capture, license scan, background check, badge printing and a secure log.",
+    "meta_len": 148,
     "h1": "You Only Get One Chance to Make a Good First Impression",
     "h1_count": 1,
     "h2_count": 10,
@@ -12502,12 +12544,13 @@
     "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 88,
     "grade": "A",
     "recommendations": [
+     "Add Indianapolis or the service city to the title",
      "Add Review or AggregateRating schema from real Google reviews"
     ],
-    "issues": 1
+    "issues": 2
    }
   },
   {
@@ -12600,7 +12643,7 @@
    "old_url": "/process/managed-print-centers",
    "new_url": "/services/managed-print-centers",
    "before": 38,
-   "after": 94,
+   "after": 88,
    "old": {
     "url": "/process/managed-print-centers",
     "type": "service",
@@ -12647,17 +12690,17 @@
    "new": {
     "url": "/services/managed-print-centers",
     "type": "service",
-    "title": "Managed Print Center, Indiana | Van Ausdall & Farrar",
-    "title_len": 52,
-    "city": true,
-    "meta": "We staff and equip centers in a cost-effective and highly-productive manner with a heightened focus on the quality of output and customer service.",
-    "meta_len": 146,
+    "title": "Managed Print Center and Copy Center Services | VAF",
+    "title_len": 51,
+    "city": false,
+    "meta": "VAF staffs and equips in-house print centers focused on output quality, and helps manage print budgets by finding the best rates for vended work.",
+    "meta_len": 145,
     "h1": "Leave All of Your Printing Needs to Our Experts",
     "h1_count": 1,
     "h2_count": 10,
     "h3_count": 6,
     "question_headings": 1,
-    "words": 762,
+    "words": 764,
     "images": 6,
     "images_no_alt": 0,
     "internal_links": 140,
@@ -12674,12 +12717,13 @@
     "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 88,
     "grade": "A",
     "recommendations": [
+     "Add Indianapolis or the service city to the title",
      "Add Review or AggregateRating schema from real Google reviews"
     ],
-    "issues": 1
+    "issues": 2
    }
   },
   {
@@ -12733,11 +12777,11 @@
    "new": {
     "url": "/services/project-deployment",
     "type": "service",
-    "title": "Information Technology Project Deployments, Indiana | VAF",
-    "title_len": 57,
+    "title": "IT Project Deployment and Migration | VAF Indiana",
+    "title_len": 49,
     "city": true,
-    "meta": "Plan, design, and deploy new technology without disrupting business, migrations, virtual infrastructure, and storage area networks done right.",
-    "meta_len": 142,
+    "meta": "Plan, design and deploy IT projects without disrupting business: migrations, virtual infrastructure and storage, with project management from VAF.",
+    "meta_len": 146,
     "h1": "Information Technology Project Deployments",
     "h1_count": 1,
     "h2_count": 12,
@@ -12772,7 +12816,7 @@
    "old_url": "/print/print-application-solutions",
    "new_url": "/services/print-application-solutions",
    "before": 38,
-   "after": 94,
+   "after": 88,
    "old": {
     "url": "/print/print-application-solutions",
     "type": "service",
@@ -12819,17 +12863,17 @@
    "new": {
     "url": "/services/print-application-solutions",
     "type": "service",
-    "title": "Printer Management Software Support, Indiana | VAF",
-    "title_len": 50,
-    "city": true,
-    "meta": "Printer management software support: secure printing, user authentication, print release, and accounting integration for Indiana businesses.",
-    "meta_len": 140,
+    "title": "Print Application and Management Solutions | VAF",
+    "title_len": 48,
+    "city": false,
+    "meta": "Control who prints what, where and when. VAF's print application solutions cover cloud printing, accounting, job submission and color management.",
+    "meta_len": 145,
     "h1": "Print Application Solutions",
     "h1_count": 1,
     "h2_count": 11,
     "h3_count": 13,
     "question_headings": 1,
-    "words": 801,
+    "words": 803,
     "images": 6,
     "images_no_alt": 0,
     "internal_links": 145,
@@ -12846,12 +12890,13 @@
     "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 88,
     "grade": "A",
     "recommendations": [
+     "Add Indianapolis or the service city to the title",
      "Add Review or AggregateRating schema from real Google reviews"
     ],
-    "issues": 1
+    "issues": 2
    }
   },
   {
@@ -12905,11 +12950,11 @@
    "new": {
     "url": "/services/state-of-the-art-voice-data-communication-systems",
     "type": "service",
-    "title": "State-of-the-Art Voice & Data Communication, Indiana | VAF",
-    "title_len": 58,
+    "title": "Voice and Data Communication Systems | VAF Indiana",
+    "title_len": 50,
     "city": true,
-    "meta": "Van Ausdall & Farrar delivers the best voice and data communications systems with the best value for all your managed internet, private data system and.",
-    "meta_len": 152,
+    "meta": "VAF designs voice and data networks from your current network and billing history, with ADTRAN, Fortinet, Windstream and AT&T relationships.",
+    "meta_len": 140,
     "h1": "State-of-the-Art Voice & Data Communication Systems",
     "h1_count": 1,
     "h2_count": 9,
@@ -12991,8 +13036,8 @@
    "new": {
     "url": "/locations/south-bend-carrier-solutions",
     "type": "city",
-    "title": "Carrier Solutions in South Bend, IN",
-    "title_len": 35,
+    "title": "Carrier Solutions in South Bend, IN | Van Ausdall & Farrar",
+    "title_len": 58,
     "city": true,
     "meta": "Carrier Solutions in South Bend, IN Services in Indiana. IT support, managed services, and business technology solutions. Learn more. Learn more.",
     "meta_len": 145,
@@ -13030,7 +13075,7 @@
    "old_url": "/technology-strength-assessment",
    "new_url": "/technology-strength-assessment",
    "before": 62,
-   "after": 86,
+   "after": 94,
    "old": {
     "url": "/technology-strength-assessment",
     "type": "company",
@@ -13086,8 +13131,8 @@
     "h1_count": 1,
     "h2_count": 8,
     "h3_count": 11,
-    "question_headings": 0,
-    "words": 994,
+    "question_headings": 1,
+    "words": 995,
     "images": 3,
     "images_no_alt": 0,
     "internal_links": 117,
@@ -13104,13 +13149,12 @@
     "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, State",
     "has_form": false,
     "tel_link": true,
-    "score": 86,
+    "score": 94,
     "grade": "A",
     "recommendations": [
-     "Add question-form H2s that an assistant can quote (what, how much, is it)",
      "Add Review or AggregateRating schema from real Google reviews"
     ],
-    "issues": 2
+    "issues": 1
    }
   },
   {
@@ -13203,7 +13247,7 @@
    "old_url": "/support",
    "new_url": "/support",
    "before": 48,
-   "after": 94,
+   "after": 100,
    "old": {
     "url": "/support/",
     "type": "company",
@@ -13271,18 +13315,16 @@
     "faq": true,
     "service": false,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": true,
-    "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, State",
+    "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Add Review or AggregateRating schema from real Google reviews"
-    ],
-    "issues": 1
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
@@ -13336,11 +13378,11 @@
    "new": {
     "url": "/services/content-management",
     "type": "service",
-    "title": "Content Management, Indiana | Van Ausdall & Farrar",
-    "title_len": 50,
+    "title": "Content Management Solutions in Indiana | VAF",
+    "title_len": 45,
     "city": true,
-    "meta": "Capture, store, and retrieve content across your organization, content management built for compliance and productivity.",
-    "meta_len": 120,
+    "meta": "Capture, store and retrieve business content with security, compliance and automation, using VAF's industry-leading software partners.",
+    "meta_len": 134,
     "h1": "Content Management Solutions",
     "h1_count": 1,
     "h2_count": 12,
@@ -13375,7 +13417,7 @@
    "old_url": "/process/document-scanning",
    "new_url": "/services/document-scanning",
    "before": 66,
-   "after": 88,
+   "after": 94,
    "old": {
     "url": "/process/document-scanning",
     "type": "service",
@@ -13422,8 +13464,8 @@
    "new": {
     "url": "/services/document-scanning",
     "type": "service",
-    "title": "Document Scanning Equipment in Indiana | VAF | Van Ausdall & Farrar",
-    "title_len": 67,
+    "title": "Document Scanning Equipment in Indiana | VAF",
+    "title_len": 44,
     "city": true,
     "meta": "Workgroup, low volume and high volume scanners for documents from business cards to legal size, from Van Ausdall & Farrar.",
     "meta_len": 122,
@@ -13449,13 +13491,12 @@
     "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 88,
+    "score": 94,
     "grade": "A",
     "recommendations": [
-     "Retitle to 30 to 60 characters",
      "Add Review or AggregateRating schema from real Google reviews"
     ],
-    "issues": 2
+    "issues": 1
    }
   },
   {
@@ -13509,8 +13550,8 @@
    "new": {
     "url": "/locations/south-bend-network-infrastructure",
     "type": "city",
-    "title": "Network Infrastructure in South Bend",
-    "title_len": 36,
+    "title": "Network Infrastructure in South Bend | Van Ausdall & Farrar",
+    "title_len": 59,
     "city": true,
     "meta": "Network Infrastructure in South Bend, IN Solutions in Indiana. IT support, managed services, and business technology solutions. Learn more. Learn more.",
     "meta_len": 151,
@@ -13548,7 +13589,7 @@
    "old_url": "/vaf-auto-support",
    "new_url": "/support",
    "before": 43,
-   "after": 94,
+   "after": 100,
    "old": {
     "url": "/vaf-auto-support",
     "type": "company",
@@ -13616,25 +13657,23 @@
     "faq": true,
     "service": false,
     "local": true,
-    "review": false,
+    "review": true,
     "article": false,
     "breadcrumb": true,
-    "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, State",
+    "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 100,
     "grade": "A",
-    "recommendations": [
-     "Add Review or AggregateRating schema from real Google reviews"
-    ],
-    "issues": 1
+    "recommendations": [],
+    "issues": 0
    }
   },
   {
    "old_url": "/survey",
-   "new_url": "/survey",
+   "new_url": "/contact",
    "before": 49,
-   "after": null,
+   "after": 90,
    "old": {
     "url": "/survey",
     "type": "company",
@@ -13678,7 +13717,44 @@
     ],
     "issues": 7
    },
-   "new": null
+   "new": {
+    "url": "/contact",
+    "type": "company",
+    "title": "Contact Van Ausdall & Farrar, Indianapolis",
+    "title_len": 42,
+    "city": true,
+    "meta": "Speak with a solutions expert. Indianapolis headquarters at 6430 E 75th Street, (317) 634-2913. Offices in Fort Wayne and Evansville.",
+    "meta_len": 133,
+    "h1": "Speak with a solutions expert, or just call.",
+    "h1_count": 1,
+    "h2_count": 6,
+    "h3_count": 8,
+    "question_headings": 1,
+    "words": 542,
+    "images": 2,
+    "images_no_alt": 0,
+    "internal_links": 125,
+    "external_links": 6,
+    "canonical": true,
+    "og_image": true,
+    "stock_og": false,
+    "faq": true,
+    "service": false,
+    "local": true,
+    "review": false,
+    "article": false,
+    "breadcrumb": true,
+    "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, State",
+    "has_form": false,
+    "tel_link": true,
+    "score": 90,
+    "grade": "A",
+    "recommendations": [
+     "Add Review or AggregateRating schema from real Google reviews",
+     "Deepen to 600 words or more"
+    ],
+    "issues": 2
+   }
   },
   {
    "old_url": "/voice-data-circuits",
@@ -13770,7 +13846,7 @@
    "old_url": "/voice-processing",
    "new_url": "/services/voice-processing",
    "before": 58,
-   "after": 94,
+   "after": 88,
    "old": {
     "url": "/voice-processing",
     "type": "company",
@@ -13817,11 +13893,11 @@
    "new": {
     "url": "/services/voice-processing",
     "type": "service",
-    "title": "Voice Processing Solutions, Indiana | Van Ausdall & Farrar",
-    "title_len": 58,
-    "city": true,
-    "meta": "Digital dictation, speech recognition, and transcription technology solutions, HIPAA-compliant automation for healthcare, legal, and law enforcement.",
-    "meta_len": 149,
+    "title": "Voice Processing: Dictation and Recognition | VAF",
+    "title_len": 49,
+    "city": false,
+    "meta": "Digital dictation, speech recognition and court recording from VAF, whose voice processing work dates back to 1914. HIPAA-conscious design.",
+    "meta_len": 139,
     "h1": "Voice Processing Solutions",
     "h1_count": 1,
     "h2_count": 10,
@@ -13844,19 +13920,20 @@
     "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 88,
     "grade": "A",
     "recommendations": [
+     "Add Indianapolis or the service city to the title",
      "Add Review or AggregateRating schema from real Google reviews"
     ],
-    "issues": 1
+    "issues": 2
    }
   },
   {
    "old_url": "/switch-to-cloud",
    "new_url": "/services/switch-to-cloud",
    "before": 58,
-   "after": 94,
+   "after": 88,
    "old": {
     "url": "/switch-to-cloud",
     "type": "company",
@@ -13903,11 +13980,11 @@
    "new": {
     "url": "/services/switch-to-cloud",
     "type": "service",
-    "title": "7 Reasons to Switch Your On-Premises PBX, Indiana | VAF",
-    "title_len": 55,
-    "city": true,
-    "meta": "7 Reasons to Switch Your On-Premises PBX to the Cloud from Van Ausdall & Farrar. Call (317) 634-2913 for more information. Learn more. Learn more.",
-    "meta_len": 146,
+    "title": "Seven Reasons to Move Your PBX to the Cloud | VAF",
+    "title_len": 49,
+    "city": false,
+    "meta": "Remote and hybrid teams need more than an on-premises PBX. Seven reasons to move to a cloud PBX, from unified features to automatic updates.",
+    "meta_len": 140,
     "h1": "How can Switching to Ring Central's Cloud PBX Benefit for Your Business?",
     "h1_count": 1,
     "h2_count": 14,
@@ -13930,19 +14007,20 @@
     "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
+    "score": 88,
     "grade": "A",
     "recommendations": [
+     "Add Indianapolis or the service city to the title",
      "Add Review or AggregateRating schema from real Google reviews"
     ],
-    "issues": 1
+    "issues": 2
    }
   },
   {
    "old_url": "/voice-recognition",
    "new_url": "/services/voice-recognition",
    "before": 58,
-   "after": 94,
+   "after": 82,
    "old": {
     "url": "/voice-recognition",
     "type": "company",
@@ -13989,10 +14067,10 @@
    "new": {
     "url": "/services/voice-recognition",
     "type": "service",
-    "title": "Integrated Speech and Voice Recognition from, Indiana | VAF",
-    "title_len": 59,
-    "city": true,
-    "meta": "Winscribe provides flexible front end speech recognition and back end server processing. Van Ausdall & Farrar, Indianapolis office technology since 1914.",
+    "title": "Winscribe Speech and Voice Recognition | VAF | Van Ausdall & Farrar",
+    "title_len": 67,
+    "city": false,
+    "meta": "Winscribe front-end and server-side speech recognition from VAF: 300,000 active words, many vocabularies, and workflow for authors and transcriptionists.",
     "meta_len": 153,
     "h1": "Voice Recognition",
     "h1_count": 1,
@@ -14016,12 +14094,14 @@
     "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
     "has_form": false,
     "tel_link": true,
-    "score": 94,
-    "grade": "A",
+    "score": 82,
+    "grade": "B",
     "recommendations": [
+     "Retitle to 30 to 60 characters",
+     "Add Indianapolis or the service city to the title",
      "Add Review or AggregateRating schema from real Google reviews"
     ],
-    "issues": 1
+    "issues": 3
    }
   },
   {
@@ -14075,11 +14155,11 @@
    "new": {
     "url": "/services/transcription-services",
     "type": "service",
-    "title": "Outsourced Dictation & Transcription Services, Indiana | VAF",
-    "title_len": 60,
+    "title": "Outsourced Dictation and Transcription | VAF Indiana",
+    "title_len": 52,
     "city": true,
-    "meta": "While Digital systems provide maximum productivity improvements and cost savings, adopting standalone digital dictation devices as a straightforward.",
-    "meta_len": 149,
+    "meta": "SpeechMotion transcription, overflow help and total outsourcing for dictation, plus Olympus and Philips devices from VAF in Indiana.",
+    "meta_len": 132,
     "h1": "Transcription Services",
     "h1_count": 1,
     "h2_count": 12,
@@ -14112,9 +14192,9 @@
   },
   {
    "old_url": "/vaf-coronavirus-covid-19-policy",
-   "new_url": "/vaf-coronavirus-covid-19-policy",
+   "new_url": "/services/business-continuity",
    "before": 48,
-   "after": null,
+   "after": 100,
    "old": {
     "url": "/vaf-coronavirus-covid-19-policy",
     "type": "company",
@@ -14158,7 +14238,41 @@
     ],
     "issues": 7
    },
-   "new": null
+   "new": {
+    "url": "/services/business-continuity",
+    "type": "service",
+    "title": "Backup and Recovery, Indianapolis | Van Ausdall & Farrar",
+    "title_len": 56,
+    "city": true,
+    "meta": "Business continuity starts with that question. From Van Ausdall & Farrar, Indiana's largest office technology provider since 1914.",
+    "meta_len": 130,
+    "h1": "How long can you go without operating?",
+    "h1_count": 1,
+    "h2_count": 10,
+    "h3_count": 16,
+    "question_headings": 1,
+    "words": 793,
+    "images": 7,
+    "images_no_alt": 0,
+    "internal_links": 147,
+    "external_links": 6,
+    "canonical": true,
+    "og_image": true,
+    "stock_og": false,
+    "faq": true,
+    "service": true,
+    "local": true,
+    "review": true,
+    "article": false,
+    "breadcrumb": true,
+    "schema": "Answer, BreadcrumbList, City, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, Person, PostalAddress, Question, Review, Service, State",
+    "has_form": false,
+    "tel_link": true,
+    "score": 100,
+    "grade": "A",
+    "recommendations": [],
+    "issues": 0
+   }
   },
   {
    "old_url": "/south-bend/business-phone-systems-in-south-bend-in",
@@ -14211,8 +14325,8 @@
    "new": {
     "url": "/locations/south-bend-business-phone-systems",
     "type": "city",
-    "title": "Business Phone Systems in South Bend",
-    "title_len": 36,
+    "title": "Business Phone Systems in South Bend | Van Ausdall & Farrar",
+    "title_len": 59,
     "city": true,
     "meta": "Business Phone Systems in South Bend, IN Solutions in Indiana. IT support, managed services, and business technology solutions. Learn more. Learn more.",
     "meta_len": 151,
@@ -14297,11 +14411,11 @@
    "new": {
     "url": "/virtualsitevisit",
     "type": "company",
-    "title": "Virtual Site Visit for Indiana",
-    "title_len": 30,
+    "title": "Virtual Site Visit | Van Ausdall & Farrar Indiana",
+    "title_len": 49,
     "city": true,
-    "meta": "We know it\u2019s difficult for you to come see our facility today, so we put this page together to make sure you\u2019re able to visit us.",
-    "meta_len": 129,
+    "meta": "Tour Van Ausdall & Farrar online: a customer's view, VAF's technical capabilities, a technology consultant and a story about its people.",
+    "meta_len": 136,
     "h1": "Van Ausdall & Farrar Virtual Site Visit",
     "h1_count": 1,
     "h2_count": 7,
@@ -14384,11 +14498,11 @@
    "new": {
     "url": "/services/wids-format",
     "type": "service",
-    "title": "Wide Format Printing & Scanning, Indiana | VAF",
-    "title_len": 46,
+    "title": "Wide Format Printing and Scanning | VAF Indiana",
+    "title_len": 47,
     "city": true,
-    "meta": "Whether you\u2019re a photographer, designer, architect, engineer or a construction professional, you need output solutions that are as big as your ideas.",
-    "meta_len": 149,
+    "meta": "Large format printers with photo-like quality up to 60 inches wide for designers, architects, engineers and construction teams, from VAF in Indiana.",
+    "meta_len": 148,
     "h1": "Wide Format Printing & Scanning",
     "h1_count": 1,
     "h2_count": 9,
@@ -14422,9 +14536,9 @@
   },
   {
    "old_url": "/tw-telecom",
-   "new_url": "/tw-telecom",
+   "new_url": "/services/carrier-services",
    "before": 58,
-   "after": null,
+   "after": 94,
    "old": {
     "url": "/tw-telecom",
     "type": "company",
@@ -14468,7 +14582,43 @@
     ],
     "issues": 6
    },
-   "new": null
+   "new": {
+    "url": "/services/carrier-services",
+    "type": "service",
+    "title": "Carrier and Internet Services Consulting in Indiana | VAF",
+    "title_len": 57,
+    "city": true,
+    "meta": "VAF reviews every carrier for each of your locations, vendor neutral, and gives you one bill and one contact for SIP, broadband, MPLS and SD-WAN.",
+    "meta_len": 145,
+    "h1": "Carrier/Internet Services",
+    "h1_count": 1,
+    "h2_count": 9,
+    "h3_count": 13,
+    "question_headings": 1,
+    "words": 826,
+    "images": 6,
+    "images_no_alt": 0,
+    "internal_links": 147,
+    "external_links": 6,
+    "canonical": true,
+    "og_image": true,
+    "stock_og": false,
+    "faq": true,
+    "service": true,
+    "local": true,
+    "review": false,
+    "article": false,
+    "breadcrumb": true,
+    "schema": "Answer, BreadcrumbList, ContactPoint, FAQPage, GeoCoordinates, ImageObject, ListItem, LocalBusiness, OpeningHoursSpecification, Organization, PostalAddress, Question, Service, State",
+    "has_form": false,
+    "tel_link": true,
+    "score": 94,
+    "grade": "A",
+    "recommendations": [
+     "Add Review or AggregateRating schema from real Google reviews"
+    ],
+    "issues": 1
+   }
   },
   {
    "old_url": "/van-ausdall-farrar-customer-care-app-privacy-policy",
@@ -14557,13 +14707,5 @@
    }
   }
  ],
- "missing": [
-  "/covid-19-information",
-  "/kiosk-assembly",
-  "/kiosk-demo",
-  "/kiosk-quote",
-  "/survey",
-  "/vaf-coronavirus-covid-19-policy",
-  "/tw-telecom"
- ]
+ "missing": []
 }

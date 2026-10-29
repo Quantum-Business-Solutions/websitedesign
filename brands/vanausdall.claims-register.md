@@ -1,17 +1,19 @@
 # Van Ausdall & Farrar: claims register
 
-281 sentences with figures on 152 pages. 271 use only numbers the old site already stated; 10 contain a number the old site did not, so VAF confirms them before launch.
+343 sentences with figures on 199 pages. 331 use only numbers the old site already stated; 12 contain a number the old site did not, so VAF confirms them before launch.
 
 ## Needs confirmation
 
 | Claim | Numbers not on the old site | Pages |
 |---|---|---|
-| 93.4 Net Promoter Score, audited | 93.4 | /, /about, /careers +115 |
-| SOC 2 certified NPS 93.4, audited by CEO Juice. | 93.4 | /careers, /locations/bloomington, /locations/bloomington-business-phone-systems +102 |
-| 93.4 Net Promoter Score, independently audited | 93.4 | /careers, /locations/bloomington, /locations/bloomington-business-phone-systems +99 |
-| NPS 93.4, audited by CEO Juice | 93.4 | /case-studies/aspire, /case-studies/berry-global, /case-studies/bowen-engineering +19 |
-| A Net Promoter Score of 93.4, collected and audited by CEO Juice, an independent company, against a US average of 10. | 93.4 | /case-studies/aspire, /case-studies/berry-global, /case-studies/bowen-engineering +13 |
-| 93.4 Net Promoter Score, audited by CEO Juice | 93.4 | /about |
+| 92.8 Net Promoter Score, audited | 92.8 | /, /about, /careers +115 |
+| SOC 2 certified NPS 92.8, audited by CEO Juice. | 92.8 | /careers, /locations/bloomington, /locations/bloomington-business-phone-systems +102 |
+| 92.8 Net Promoter Score, independently audited | 92.8 | /careers, /locations/bloomington, /locations/bloomington-business-phone-systems +99 |
+| NPS 92.8, audited by CEO Juice | 92.8 | /case-studies/aspire, /case-studies/berry-global, /case-studies/bowen-engineering +13 |
+| A Net Promoter Score of 92.8, collected and audited by CEO Juice, an independent company, against a US average of 10. | 92.8 | /case-studies/aspire, /case-studies/berry-global, /case-studies/bowen-engineering +9 |
+| NPS 93.4, audited by CEO Juice | 93.4 | /locations/greenwood, /locations/muncie, /locations/muncie-network-carrier-solutions +3 |
+| A Net Promoter Score of 93.4, collected and audited by CEO Juice, an independent company, against a US average of 10. | 93.4 | /locations/greenwood, /locations/muncie, /locations/noblesville +1 |
+| 92.8 Net Promoter Score, audited by CEO Juice | 92.8 | /about |
 | Indiana University Bloomington, established in 1820, enrolls over 45,000 students, and the regional economy spans education, life sciences, advanced manufacturing, technology and health care. | 1820,, 45,000 | /locations/bloomington |
 | Muncie's glass-making and manufacturing past began with the gas boom of the 1880s, and the Ball family legacy still shows in Ball State University and Ball Memorial Hospital, now part of IU Health. | 1880 | /locations/muncie |
 | Net Promoter Score of 93.4, audited by CEO Juice, against a US average of 10 | 93.4 | /services/it-support |
@@ -23,10 +25,11 @@
 |---|---|
 | One Customer Care Center, answered within 24 hours, with certified technicians dispatched locally. | 24 |
 | One Customer Care Center, answered within 24 hours | 22 |
+| Celebrating Van Ausdall & Farrar's 110th Anniversary: A Legacy of Innovation and Excellence | 15 |
 | New print and copier fleet reduced overall equipment count and provided $1M in savings. | 13 |
+| He has been working on our equipment for at least 12 years and I would not want anyone else. | 12 |
 | Scan and index 1.5 million patient files in 90 days while adhering to HIPAA? | 12 |
 | TL;DR The post cites industry research of an average 20% productivity increase and communication costs reduced by up to 30% from ... | 12 |
-| He has been working on our equipment for at least 12 years and I would not want anyone else. | 11 |
 | STAR achieved over 70% cost savings after five months with Van Ausdall & Farrar. | 11 |
 | Third, the roadmap becomes one agreement: copiers, print, IT, phones and document services under one Customer Care Center, answered within 24 hours, with a 25-point inspection on every service call. | 8 |
 | 250+ years of IT experience on staff | 8 |
@@ -73,6 +76,65 @@
 | 401K plan company match | 1 |
 | Does VAF match 401K contributions? | 1 |
 | VAF lists a 401K plan with a company match, plus company-funded life insurance and short-term and long-term disability. | 1 |
+| Van Ausdall & Farrar, an Indianapolis-based office equipment reseller, stands tall as one such remarkable entity, proudly celebrating its 110th anniversary this year. | 1 |
+| Their upcoming 110th anniversary celebration is a testament to their enduring legacy and their ability to navigate through the ever-changing business landscape. | 1 |
+| Van Ausdall & Farrar's 110th anniversary is a remarkable achievement that serves as an inspiration to businesses across industries. | 1 |
+| With more than 100 patents, Acronis products have been named best product of the year, and cover a range of features, including migration, cloning and replication. | 1 |
+| In my 16 years of experience being embedded in corporate America in one function or another, the overwhelming answer to the above question is YES! | 1 |
+| According to recent industry data, 93% of healthcare organizations have experienced a data breach in the past three years, with the average cost of a healthcare data breach reaching $10.93 million, the highest of any industry. | 1 |
+| representing over $1 billion in | 1 |
+| RingCentral MVP is widely acknowledged as the market-leading UCaaS solution, offering a single-app experience, unmatched reliability, seamless integration with existing business apps, and a global footprint in 110+ countries. | 1 |
+| MORE THAN 50% OF MITEL'S PARTNERS IN THE US HAVE JOINED RINGCENTRAL'S PARTNER PROGRAM, AND MORE GLOBAL EXPANSION IS PLANNED | 1 |
+| Trent Smith, Vice President & GM, IT, of Van Ausdall & Farrar, Inc.: "We're a 100+ year-old company that brings innovative communication solutions to our business customers. | 1 |
+| Based on the partnership's migrations thus far, Mitel and RingCentral's exclusive tools and migration path cut migration time by up to 75% compared to industry standards. | 1 |
+| Perhaps nothing illustrates how well the collaboration between Mitel and RingCentral is going better than the faster-than-expected certification of Mitel 6900 , 6800, and very soon, IP400 series phones, effectively enabling organizations to continue to use (and maximize their investments in) Mitel phone systems. | 1 |
+| Managed print services cover fleet assessment, proactive maintenance, analytics, security and help desk, with typical print cost reductions of 20-30% according to the post. | 1 |
+| Organizations that strategically approach their print infrastructure, combining cutting-edge equipment with professional management, typically see cost reductions of 20-30% while improving document security and workflow efficiency. | 1 |
+| 20-30% reduction in overall print-related costs | 1 |
+| After more than 100 years serving Midwest businesses, we understand that technology should simplify operations rather than complicate them. | 1 |
+| The post says most organizations implementing comprehensive print solutions achieve full return on investment within 18-24 months, with ongoing annual savings after that, and typically see 20-30% reductions in print-related costs. | 1 |
+| TL;DR Organizations spend 1-3% of annual revenue on printing, the post says, so assess total cost of ownership, utilization, volume patterns and security gaps first. | 1 |
+| The post says comprehensive print solutions typically cut costs 20-30% in their first year through print rules, vendor consolidation, proactive maintenance and duplex defaults. | 1 |
+| Organizations across industries spend between 1-3% of their annual revenue on printing-related expenses, yet most lack visibility into these costs or how to optimize them effectively. | 1 |
+| Organizations spend 1-3% of annual revenue on printing, the post says, so assess total cost of ownership, utilization, volume patterns and security gaps first. | 1 |
+| Organizations implementing comprehensive print solutions typically see cost reductions of 20-30% in their first year. | 1 |
+| The post says organizations across industries spend between 1-3% of their annual revenue on printing-related expenses, yet most lack visibility into these costs or how to optimize them. | 1 |
+| The post says organizations implementing comprehensive print solutions typically see cost reductions of 20-30% in their first year, from rule-based controls, consolidating vendors, proactive maintenance, better device placement and duplex printing as the default. | 1 |
+| Most of it arrives on paper, gets scanned at that device, and lands in a folder somewhere with a filename like scan0012.pdf. | 1 |
+| Information Governance has 100% responsibility of the information managed by an organization where Records Management comprises less than 20% of that total. | 1 |
+| Managed Print Services can reduce printing costs by up to 30% through usage analysis, while proactive maintenance and automatic supplies free staff. | 1 |
+| Cost Reduction: By analyzing your print usage and implementing strategic changes, we can help reduce your overall printing costs by up to 30%. | 1 |
+| The post says that by analyzing print usage and implementing strategic changes, managed print services can help reduce overall printing costs by up to 30%. | 1 |
+| Whether you spend $50 or $500,000 on new technology, without a process and plan to facilitate that process, you would be better off spending on just about anything else. | 1 |
+| The post says without a good process and planning, a paper mess just becomes an electronic mess, and whether you spend $50 or $500,000 on new technology, you would be better off spending on almost anything else without a process and plan. | 1 |
+| Our cloud communications solutions, powered by industry leaders Mitel and 8x8, are specifically designed to break down these communication barriers and get your entire organization working together seamlessly. | 1 |
+| The post says its cloud communications solutions are powered by industry leaders Mitel and 8x8, combining voice, video, messaging and collaboration tools into a single, cohesive system. | 1 |
+| Google is the only cloud platform that is hailing the much sought after 99.9999% reliability. | 1 |
+| On November 21, VA&F successfully deployed the first SmartStart customer in the United States. | 1 |
+| Van Ausdall & Farrar Celebrates 110 Years of Innovation | 1 |
+| technology services provider (MTSP), proudly announced its 110th company anniversary, | 1 |
+| " Celebrating 110 years is a testament to our dedication to solving customer problems | 1 |
+| To commemorate its 110th anniversary, Van Ausdall & Farrar will be hosting a grand | 1 |
+| For more information about Van Ausdall & Farrar and its 110th anniversary | 1 |
+| over 100 years. | 1 |
+| providers with over a $1 billion in | 1 |
+| Certified as a Microsoft Solutions Partner, Ranking Among the Top 5% of Providers | 1 |
+| company in the top 5% of all | 1 |
+| efficient systems with Office 365, we | 1 |
+| in Top 7% of All Mitel Dealers for 6th Year in a Row | 1 |
+| Mitel is the leader in providing custom communications network solutions and while there are roughly 1200 Mitel dealers in North America, only 80 dealers qualify for Gold status within the Mitel Channel community. | 1 |
+| Thus, this honor places Van Ausdall & Farrar in the top 7% of all Mitel dealers in the country. | 1 |
+| With thousands of other dealers vying for this highly prestigious accolade, the team at Van Ausdall & Farrar has had to come up with innovative solutions for its customers on a consistent basis to beat out the excess of 1100+ other competitors who also want this recognition. | 1 |
+| Over the next 10 years, the role of business technology solutions will only increase in terms of importance for both enterprises and entrepreneurs alike, and the team at Van Ausdall & Farrar is clearly dedicated and capable enough to handle even the most complex technology deployments. | 1 |
+| Vegas from April 29 to May 1, | 1 |
+| This tool not only scans all devices, servers, and cloud integrations immediately, but it integrates seamlessly with Microsoft 365, enabling businesses to protect critical data stored in Exchange, OneDrive, SharePoint, and Teams. | 1 |
+| "Imagine discovering that a document with credit card information is accessible by 100% of your employees, even though it's just stored on a single laptop," said Les Royce, IT Director at Van Ausdall & Farrar, Inc. | 1 |
+| For example, it can reveal a $100k risk associated with certain credit card numbers or social security numbers, on a single laptop and will give that lone, unsecured laptop a 9.7 risk score (on a 10-point scale) that helps Van Ausdall & Farrar, Inc. | 1 |
+| Recognized as Top 1% Gold Partner out of 15,000+ Other Companies | 1 |
+| This particular status is reserved exclusively for the Top 1% of all channel partners that collaborate with RingCentral and out of 15,000+ channel partners, Van Ausdall & Farrar Inc. | 1 |
+| Not only was this out of 14,000 partners (ranging from small to larger businesses and corporations), but it was also our first year with RingCentral! | 1 |
+| "ShoreTel has been a tremendous partner to Van Ausdall & Farrar for over 11 years now. | 1 |
+| Van Ausdall & Farrar is a privately held, 103 year old office technology company headquartered in Indianapolis, Indiana, with offices in Fort Wayne and Evansville. | 1 |
 | Medical, dental, vision, 401(k) match and more. | 1 |
 | Indianapolis headquarters at 6430 E 75th Street, the Fort Wayne and Evansville offices, and field service roles across Indiana. | 1 |
 | Medical, dental and vision, a 401(k) with match, generous paid time off and paid volunteer hours, in a privately owned company where the average technology advisor has been here fifteen years. | 1 |
