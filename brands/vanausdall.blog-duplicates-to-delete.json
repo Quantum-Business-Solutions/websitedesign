@@ -1,5 +1,5 @@
 {
- "note": "Posts created by a re-run of vaf_blog_import.py import on 2026-10-29: slugs ending in a number whose original slug already exists. Review, then delete in HubSpot or approve deletion.",
+ "note": "DELETED 2026-10-29 with the owner's approval: 58 accidental copies (47 listed here plus 11 more with slugs ending -1 or -2) made by re-running vaf_blog_import.py. Each had the same title and date as an original already on the old site and a slug that was not on the old site. All 335 original posts remain, once each.",
  "duplicates": [
   {
    "id": "225833477634",

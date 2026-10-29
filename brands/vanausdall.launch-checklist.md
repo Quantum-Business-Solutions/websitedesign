@@ -13,8 +13,8 @@ Owner key: **VAF** = Brian Courtney and the VAF team, **QBS** = Quantum Business
 - [ ] Logos: Berry Global, Echo Engineering and Mid-City logos supplied or the cards stay name-only.
 - [ ] Real photography supplied (building, technicians, devices, Customer Care Center). Until then the 3D illustrations and generated images stay.
 - [ ] Testimonials: VAF supplies quotes with permission to publish (deferred, not a launch blocker).
-- [ ] Four scheduled guides (Nov 1, 8, 15, 22): VAF reviews copy. Pillar pages link to them, so either publish them early or hide those links until their dates.
-- [ ] 47 duplicate blog posts created by a re-import: decision needed from QBS lead (delete or unpublish). List: `brands/vanausdall.blog-duplicates-to-delete.json`.
+- [ ] Four posts dated Nov 1, 8, 15 and 22 are on the old site too and are scheduled here. Pillar pages link to them, so either publish them early or hide those links until their dates.
+- [x] 58 accidental duplicate blog posts deleted 29 Oct (all 335 originals kept). One blank placeholder draft ("Your Blog Post Title Here") remains for QBS to remove.
 
 ## 2. Forms, popup and tools (QBS, then VAF test)
 
