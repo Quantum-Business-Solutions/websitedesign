@@ -49,13 +49,20 @@ def text(s, case_page=False, label=False):
     for k, v in TABLE["labels"].items():
         if t == k:
             return s.replace(t, v)
+    for c in TABLE["customers"]:     # "<name> case study" is a title: use the short label, not a sentence form
+        cs = re.compile(c["full_rx"].pattern + r"(?=\s+case study)")
+        s = cs.sub(c["label"], s)
+        if case_page and c.get("short"):
+            s = re.compile(c["short_rx"].pattern + r"(?=\s+case study)").sub(c["label"], s)
+        c_q = re.compile(r"(?<=Questions about )" + c["full_rx"].pattern + r"(?=\s+results)")
+        s = c_q.sub("these", s)
     for c in TABLE["customers"]:
         s = _sub(s, c, c["full_rx"], label)
         if case_page and c.get("short"):
             s = _sub(s, c, c["short_rx"], label)
     for old, new in TABLE["slugs"].items():
         s = s.replace("case-studies/" + old, "case-studies/" + new)
-    return re.sub(r"^(?:An?|The) [^.]*? case study, vanausdall\.com$", "VAF customer case study, vanausdall.com", s)
+    return re.sub(r"^[^.]*? case study, vanausdall\.com$", "VAF customer case study, vanausdall.com", s)
 
 
 def walk(x, case_page=False, key="", label=False):

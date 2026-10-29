@@ -22,3 +22,5 @@
 @media(max-width:1000px){.vaf-t3__grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:640px){.vaf-t3__grid{grid-template-columns:1fr;gap:20px}}
 @media(prefers-reduced-motion:reduce){.vaf-t3__card,.vaf-t3__img{transition:none;transform:none!important}}
+/* one shared perspective on a tall one or two column grid pushes the first cards' badges and renders out of place: flatten the depth below desktop width */
+@media(max-width:1000px){.vaf-t3__grid{perspective:none}.vaf-t3__card,.vaf-t3__card:hover{transform:none}.vaf-t3__img,.vaf-t3__card:hover .vaf-t3__img{transform:none}.vaf-t3__num{transform:none}}
