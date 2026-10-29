@@ -36,7 +36,7 @@ def classify(path):
 def parse(h, url, path, city_words=CITY_WORDS):
     g = lambda rx: (re.search(rx, h, re.I | re.S).group(1) if re.search(rx, h, re.I | re.S) else "")
     title = txt(g(r"<title[^>]*>(.*?)</title>"))
-    meta = html.unescape(g(r'<meta[^>]+name=["\']description["\'][^>]+content=["\']([^"\']*)'))
+    meta = html.unescape((re.search(r'<meta[^>]+name=["\']description["\'][^>]+content=(["\'])(.*?)\1', h, re.I | re.S) or [None, None, ""])[2])
     h1s = [txt(x) for x in re.findall(r"<h1[^>]*>(.*?)</h1>", h, re.S | re.I)]
     h2s = [txt(x) for x in re.findall(r"<h2[^>]*>(.*?)</h2>", h, re.S | re.I)]
     h3s = [txt(x) for x in re.findall(r"<h3[^>]*>(.*?)</h3>", h, re.S | re.I)]

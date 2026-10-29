@@ -511,7 +511,7 @@ MAP = {"type": "map", "id": "map", "outline": "IN", "alt": "Map of Indiana with 
                  {"name": "Fort Wayne", "lon": -85.145, "lat": 41.089, "href": "locations/fort-wayne.html", "sub": "1241 N Wells Street", "label_dx": -96, "label_dy": -10},
                  {"name": "Evansville", "lon": -87.556, "lat": 37.975, "href": "locations/evansville.html", "sub": "(812) 424-5736", "label_dx": 10, "label_dy": 16}]}
 
-TIMELINE = {"type": "timeline", "id": "story", "eyebrow": "The story", "heading": "From an Edison dealership to Indiana's largest office technology provider",
+TIMELINE = {"type": "timeline", "id": "story", "eyebrow": "The story", "heading": "From an Edison dealership to one of Indiana's largest office technology providers",
     "items": [["1914", "Oscar K. Van Ausdall", "Chosen as an Edison Business Phonograph dealer for the state of Indiana. The Thomas Edison Company invented the wax cylinder dictating machine."],
               ["1940", "Carl F. Farrar", "Joins as general manager and partner, later buying the business. Mr. Van Ausdall stays on until retiring in 1957 at 73."],
               ["1960", "Clyde von Grimmenstein", "Becomes president after joining in sales in 1950, and stays active until retiring at 84."],
@@ -731,7 +731,7 @@ def location_page(slug, city, a1, a2, phone, phone_href, region, lat, lon, hq):
               "sameAs": ["https://www.linkedin.com/company/van-ausdall-&-farrar"]}
     if hq:
         schema["openingHoursSpecification"] = {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "07:00", "closes": "17:00"}
-    local = {"indianapolis": "As Indiana's capital and largest office market, Indianapolis is home to VAF's corporate headquarters at 6430 E 75th Street, and to the state's largest team of copier, print, IT and communications specialists.",
+    local = {"indianapolis": "As Indiana's capital and largest office market, Indianapolis is home to VAF's corporate headquarters at 6430 E 75th Street, and to one of the state's larger teams of copier, print, IT and communications specialists.",
              "fort-wayne": "Fort Wayne's manufacturing and defense employers run on dependable office technology, and VAF has kept northeast Indiana running since 1914. STAR Financial Bank, based in Fort Wayne, is on the record with 70% print savings.",
              "evansville": "Evansville is the commercial center of southwest Indiana, home to logistics, healthcare and manufacturing employers that depend on reliable office technology. VAF has served Evansville and the Tri-State area since 1914, with a local office for copier sales, service and repair."}[slug]
     return {"crumbs": [["Home", "index.html"], ["Locations", "locations.html"], [city, f"locations/{slug}.html"]], "file": f"locations/{slug}.html", "title": f"Office Technology, Copiers and Managed IT in {city}, IN | Van Ausdall & Farrar",
@@ -787,7 +787,7 @@ def build():
         "sticky": {"primary": "Take the assessment", "primary_href": "technology-strength-assessment.html", "secondary": "Call VAF", "secondary_href": PHONE_HREF},
         "launcher": {"label": "Already a customer?", "eyebrow": "Client Service Center", "title": "What do you need today?", "links": [["Request support", "support.html#request"], ["Order supplies", "support.html#supplies"], ["IT support", "support.html#it"], ["Training videos", "https://www.vanausdall.com/communication/customer-training-videos"]], "note": "The Customer Care Center processes requests Monday through Friday, 7:00am to 5:00pm, and responds within 24 hours."},
         "social": {"linkedin": "https://www.linkedin.com/company/van-ausdall-&-farrar", "facebook": "https://www.facebook.com/Vanausdallinc/", "instagram": "https://www.instagram.com/vanausdallinc/"},
-        "tagline": "Business technology simplified. Indiana's largest full-service office technology provider, privately owned in Indianapolis since 1914.",
+        "tagline": "Business technology simplified. One of Indiana's largest independently owned office technology providers, privately owned in Indianapolis since 1914.",
         "footer_columns": [
             {"title": "Solutions", "links": [[s[2], f"services/{s[0]}.html"] for s in SERVICES]},
             {"title": "Industries", "links": [[i[1], f"industries/{i[0]}.html"] for i in INDUSTRIES]},
@@ -798,7 +798,7 @@ def build():
     }
     schema = {"org_name": "Van Ausdall & Farrar, Inc.", "org_url": SITE,
               "org_logo": f"{SITE}/images/logo.png",
-              "org_description": "Indiana's largest full-service office technology provider, privately owned in Indianapolis since 1914: managed IT and cybersecurity, business phone systems, copiers and managed print, document management and conversion, and AI consulting.",
+              "org_description": "One of Indiana's largest independently owned office technology providers, privately owned in Indianapolis since 1914: managed IT and cybersecurity, business phone systems, copiers and managed print, document management and conversion, and AI consulting.",
               "sameAs": ["https://www.linkedin.com/company/van-ausdall-&-farrar", "https://www.facebook.com/Vanausdallinc/", "https://www.instagram.com/vanausdallinc/", "https://goo.gl/maps/ekbY63gHTu56ifBd8"],
               "telephone": "+1-317-634-2913", "foundingDate": "1914", "slogan": "Business technology simplified", "areaServed": {"@type": "State", "name": "Indiana"},
               "hq": {"name": "Van Ausdall & Farrar Indianapolis", "streetAddress": "6430 E 75th Street", "addressLocality": "Indianapolis", "addressRegion": "IN", "postalCode": "46250", "lat": 39.887, "lon": -86.062, "hours": ["07:00", "17:00"]}}
@@ -824,7 +824,7 @@ def build():
                       "clean": ["hero-light", "partners", "pillars", "is-this-you", "seal", "customers", "story", "office", "numbers", "ba", "flow", "proof", "casestudy", "markets", "map", "voices", "film", "faq", "contact"],
                       "showcase": ["hero", "partners", "wheel", "is-this-you", "customers", "numbers", "ba", "flow", "office", "seal", "story", "proof", "casestudy", "markets", "map", "voices", "film", "faq", "contact"],
                       "press": ["hero-light", "story", "pillars", "is-this-you", "customers", "seal", "office", "numbers", "ba", "flow", "proof", "casestudy", "voices", "film", "markets", "map", "faq", "contact"]},
-                  "description": "Indiana's largest full-service office technology provider since 1914. Managed IT and cybersecurity, business phone systems, copiers and managed print, document management and AI consulting for Indianapolis and the Midwest.",
+                  "description": "One of Indiana's largest independently owned office technology providers since 1914. Managed IT and cybersecurity, business phone systems, copiers and managed print, document management and AI consulting for Indianapolis and the Midwest.",
                   "sections": [
         {"type": "hero", "id": "hero-light", "layout": "split", "eyebrow": "Business technology simplified, since 1914",
          "stats": [["1914", "Serving Indiana since"], ["92.8", "Net Promoter Score, audited"], ["SOC 2", "Certified service organization"], ["4,000+", "Phone systems deployed since 1983"]],
@@ -944,7 +944,7 @@ def build():
         {"type": "faq", "alt": True, "heading": "Questions", "items": [["Is it really free?", "Yes."], ["Who is it for?", "CIOs, IT directors, owners and operations leaders at small and mid-sized businesses and non-profits."], ["What comes after the playbook?", "AI readiness: a policy and guardrails, then the use cases that deliver. VAF's AI consulting starts with the free Technology Strength Assessment."]]},
     ]})
     # ---------------- about, partners, careers
-    pages.append({"file": "about.html", "title": "About Van Ausdall & Farrar | Indiana's office technology provider since 1914", "description": "From a Thomas Edison Company distributorship in 1914 to Indiana's largest full-service business technology provider. Privately owned in Indianapolis, an audited NPS of 92.8, SOC 2 certified, Mitel Gold seven years running.",
+    pages.append({"file": "about.html", "title": "About Van Ausdall & Farrar | Indiana's office technology provider since 1914", "description": "From a Thomas Edison Company distributorship in 1914 to one of Indiana's largest independently owned office technology providers. Privately owned in Indianapolis, an audited NPS of 92.8, SOC 2 certified, Mitel Gold seven years running.",
                   "crumbs": [["Home", "index.html"], ["About", "about.html"]],
                   "sections": [
         {"type": "hero", "layout": "split", "eyebrow": "About VAF", "heading": "Helping customers succeed <em>since 1914</em>.", "subhead": "In 1914, Van Ausdall & Farrar was chosen as a distributor for the Thomas Edison Company. Today it is one of the largest privately owned office solutions companies in Indiana, with a 57,000-square-foot headquarters in Indianapolis and a long-standing tradition of partnering with the most respected manufacturers in the industry.", "primary": {"label": "Why VAF", "href": "#why"}, "secondary": {"label": "Careers", "href": "careers.html"}, "image": "assets/gen-hq-1200.jpg", "image_alt": "A modern two-story headquarters building with a service van outside", "image_w": 1200, "image_h": 800},
@@ -1031,7 +1031,7 @@ def build():
     _sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "scripts"))
     from migrate_pages import fix_title, fix_desc, build_migrated, link_sections, configure
     configure(brand={"name": CLIENT, "legal": "Van Ausdall & Farrar, Inc.", "short": SHORT, "state": "Indiana", "hq_city": "Indianapolis", "site": SITE,
-                     "tail": "From Van Ausdall & Farrar, Indiana's largest office technology provider since 1914.", "hq_address": "6430 E 75th Street, Indianapolis, IN 46250",
+                     "tail": "From Van Ausdall & Farrar, one of Indiana's largest independently owned office technology providers since 1914.", "hq_address": "6430 E 75th Street, Indianapolis, IN 46250",
                      "service_line": "One Customer Care Center, answered within 24 hours", "assessment": "Technology Strength Assessment", "assessment_href": "technology-strength-assessment.html",
                      "audience": "Businesses, schools, hospitals and municipalities across Indiana and the Midwest", "coverage": "Indianapolis, Fort Wayne, Evansville and every town between; the service fleet covers all of Indiana and customers throughout the Midwest are served from Indianapolis."},
               city_words=("indianapolis", "indiana", "fort wayne", "evansville", "bloomington", "carmel", "fishers", "noblesville", "greenwood", "muncie", "columbus", "south bend"),
@@ -1279,7 +1279,7 @@ def build():
             else:
                 if _words(pg["sections"]) < 700:
                     _insert(pg, {"type": "resources", "heading": "Industries we serve", "intro": "Each industry runs its office technology differently. These pages say what changes for each and who is on the record.", "items": [["Industry", i[1], fix_desc(i[3], tail="", lo=0, hi=150), "How we set it up", f"industries/{i[0]}.html"] for i in INDUSTRIES]})
-                _insert(pg, {"type": "detail", "alt": True, "eyebrow": "Why VAF", "heading": "What every Van Ausdall & Farrar customer gets", "body": "Indiana's largest full-service office technology provider, privately owned in Indianapolis since 1914. A Net Promoter Score of 92.8, collected and audited by CEO Juice, an independent company, against a US average of 10. SOC 2 certification for the way we protect customer data. Mitel Gold partner seven years running, in the telecom business since 1983 with more than 4,000 systems deployed. Technology advisors whose average tenure with the company is fifteen years, so the person who sold the system is still here when it needs attention.", "bullets": ["Serving Indiana since 1914", "NPS 92.8, audited by CEO Juice", "SOC 2 certified", "One Customer Care Center, answered within 24 hours"]})
+                _insert(pg, {"type": "detail", "alt": True, "eyebrow": "Why VAF", "heading": "What every Van Ausdall & Farrar customer gets", "body": "One of Indiana's largest independently owned office technology providers, privately owned in Indianapolis since 1914. A Net Promoter Score of 92.8, collected and audited by CEO Juice, an independent company, against a US average of 10. SOC 2 certification for the way we protect customer data. Mitel Gold partner seven years running, in the telecom business since 1983 with more than 4,000 systems deployed. Technology advisors whose average tenure with the company is fifteen years, so the person who sold the system is still here when it needs attention.", "bullets": ["Serving Indiana since 1914", "NPS 92.8, audited by CEO Juice", "SOC 2 certified", "One Customer Care Center, answered within 24 hours"]})
     MIGRATION["deepened"] = DEEPEN
     pitch["migration"] = MIGRATION
     if pitch["search"].get("site_audit"):

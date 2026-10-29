@@ -44,10 +44,12 @@ def main():
             for tt in ts:
                 if not tt: continue
                 types[tt] += 1
+                if tt == "Organization" and "@id" not in nd: continue   # a nested publisher or customer stub, not the site's own organisation
                 for need in REQ.get(tt, []):
                     if not nd.get(need): problems[f"{tt} missing {need}"].append(p)
-        for tt in ("Organization", "LocalBusiness", "WebSite", "FAQPage", "BreadcrumbList"):
-            if types[tt] > 1 and not (tt == "Organization" and types[tt] == 2 and types["LocalBusiness"]): problems[f"{tt} declared {types[tt]} times"].append(p)
+        tops = Counter(nd.get("@type") for nd in allnodes if "@context" in nd)   # top-level blocks only
+        for tt in ("Organization", "LocalBusiness", "WebSite", "FAQPage", "BreadcrumbList", "BlogPosting", "Article"):
+            if tops[tt] > 1: problems[f"{tt} block repeated {tops[tt]} times"].append(p)
         for i, ts in ids.items():
             if len(ts) > 1: problems[f"@id declared twice: {i}"].append(p)
         for r in refs:

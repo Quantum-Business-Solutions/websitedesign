@@ -7,6 +7,7 @@ Owner key: **VAF** = Brian Courtney and the VAF team, **QBS** = Quantum Business
 ## 1. Content sign-off (VAF, before anything else)
 
 - [ ] Brian reviews every page on the sign-off sheet (`vaf-website-signoff` in ClientCommand) and marks each Approved or Changes needed.
+- [ ] See `vanausdall.claims-verified.md`: what was checked against outside sources and what Brian still confirms (SOC 2 report and wording, ISO 27001 status, Evansville address and phone, partner authorizations, case study permissions).
 - [ ] **Claims verification.** One consolidated list goes to Brian. Each line is approved or corrected: client names and case study results, dollar figures and percentages, counts of systems, devices or people, certifications (ISO 27001, SOC), awards, years in business, service-response times, hours.
 - [ ] Leadership bios and titles confirmed. Steven Sigmon headshot supplied.
 - [ ] Logos: Berry Global, Echo Engineering and Mid-City logos supplied or the cards stay name-only.
@@ -35,6 +36,9 @@ Owner key: **VAF** = Brian Courtney and the VAF team, **QBS** = Quantum Business
 - [ ] Internal link check: no broken links, every page has related-page links.
 - [ ] llms.txt in place and sitemap.xml lists only indexable pages.
 - [ ] Blog posts keep their original publish dates.
+- [ ] Re-run `scripts/vaf_seo_compare.py`, `scripts/vaf_schema_check.py` and `scripts/vaf_claims_audit.py` on the production domain after cutover; every page A, no schema problems.
+- [ ] HubSpot's own blog JSON-LD and AMP output are off (done 29 Oct) so the theme's BlogPosting block is the only one.
+- [ ] Refresh the NPS figure from the CEO Juice widget every quarter (92.8 on 29 Oct 2026).
 
 ## 4. Quality assurance (QBS)
 
@@ -51,7 +55,7 @@ Owner key: **VAF** = Brian Courtney and the VAF team, **QBS** = Quantum Business
 
 - [ ] Identify DNS owner and registrar. Lower TTL to 300 seconds one day ahead.
 - [ ] Connect the production domain in HubSpot, set primary, confirm SSL.
-- [ ] 301 redirect list loaded and verified (fix any self-redirect rows; include blog slug changes). Custom 404 page checked.
+- [ ] 301 redirect list (`vanausdall.redirects.csv`, 218 rows: every old page, seven retired pages, 47 blog slugs that lost a double hyphen) loaded in HubSpot and spot-checked. Remove self-redirect rows. Custom 404 page checked.
 - [ ] Remove noindex from every page and post. Confirm robots.txt allows crawling.
 - [ ] Submit sitemap to Google Search Console and Bing Webmaster Tools.
 - [ ] Analytics and conversion events on: forms, calls, directions clicks, guide downloads.
@@ -61,6 +65,7 @@ Owner key: **VAF** = Brian Courtney and the VAF team, **QBS** = Quantum Business
 
 ## 6. After launch
 
+- [ ] Claim and complete the Google Business Profile for each office; start asking 9 and 10 survey scorers for a Google review.
 - [ ] Day 1, day 7, day 30: Search Console coverage, crawl errors, 404s, form submissions.
 - [ ] **Rotate the HubSpot API token used for the build.** Confirm user access and two-factor sign-in.
 - [ ] Editing training for VAF: pages, blog, HubDB tables for popup and assessment copy.
