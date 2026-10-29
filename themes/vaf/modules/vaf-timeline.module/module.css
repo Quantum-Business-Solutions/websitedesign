@@ -53,10 +53,10 @@
   .vaf-tl--rail .vaf-tl__year{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
   .vaf-tl--rail .vaf-tl__cy{display:block;font:800 30px/1 var(--q-serif);letter-spacing:-.02em;color:var(--vf-deep);margin:0 0 8px}
   .vaf-tl--rail .vaf-tl__item--last .vaf-tl__cy{color:#8fc2f2}
-  .vaf-tl--rail .vaf-tl__item:nth-child(odd) .vaf-tl__card{grid-row:1;align-self:end;margin-bottom:14px}
-  .vaf-tl--rail .vaf-tl__item:nth-child(even) .vaf-tl__card{grid-row:3;align-self:start;margin-top:14px}
-  .vaf-tl--rail .vaf-tl__card{position:relative;flex:none;width:calc(200% - 24px);margin-left:calc(-50% + 12px);padding:16px 18px 18px;border-radius:16px}
-  .vaf-tl--rail .vaf-tl__item:first-child .vaf-tl__card{width:calc(150% - 12px);margin-left:0}
+  .vaf-tl--rail .vaf-tl__item:nth-child(odd) .vaf-tl__card{grid-row:1;align-self:stretch;margin-bottom:14px}
+  .vaf-tl--rail .vaf-tl__item:nth-child(even) .vaf-tl__card{grid-row:3;align-self:stretch;margin-top:14px}
+  .vaf-tl--rail .vaf-tl__card{position:relative;flex:none;width:calc(150% - 12px);margin-left:calc(-25% + 6px);padding:16px 18px 18px;border-radius:16px;box-sizing:border-box}
+  .vaf-tl--rail .vaf-tl__item:first-child .vaf-tl__card{margin-left:0}
   .vaf-tl--rail .vaf-tl__item:last-child .vaf-tl__card{width:calc(150% - 12px);margin-left:calc(-50% + 12px)}
   .vaf-tl--rail .vaf-tl__card::after{content:"";position:absolute;left:calc(50% - 1px);width:2px;height:14px;background:var(--vf-blue)}
   .vaf-tl--rail .vaf-tl__item:first-child .vaf-tl__card::after{left:calc(33.4% - 1px)}

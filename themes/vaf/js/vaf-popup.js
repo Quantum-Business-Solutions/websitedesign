@@ -3,13 +3,16 @@
    Open it from anywhere with a link to #tips or an element with data-vaf-tips. */
 (function () {
   'use strict';
+  var d = document;
   var C = { portal: '50498425', form: 'd7e2045f-49b0-43d8-8e5b-f712393c82b5', tips: '451425916', settings: '450036143', phone: '(317) 634-2913', site: 'vanausdall.com' };
   var S = {
     enabled: 'yes', eyebrow: 'Free guide', headline: '27 Technology Tips for 2027',
     sub: "A plain-English checklist from Indiana's office technology team. Security, phones, print and paperwork, in about ten minutes.",
     button: 'Send me the tips', privacy: 'We use your details to send this guide and follow up about technology. You can opt out at any time.',
     success_title: 'Your tips are ready', success_text: 'Download the PDF now. A specialist from the Indianapolis office may follow up to see which tips fit your office.',
-    download_button: 'Download the PDF', delay_seconds: '20', cooldown_days: '14', exclude_paths: '/policies/,/technology-strength-assessment,/contact,/support'
+    download_button: 'Download the PDF',
+    bullets: 'Close the security gaps attackers try first|Cut print and paper waste|Keep phones and internet working when it counts',
+    pill: 'Free guide: 27 Tips', delay_seconds: '20', cooldown_days: '14', exclude_paths: '/policies/,/technology-strength-assessment,/contact,/support'
   };
   var AREAS = ['Information', 'Communication', 'Print', 'Process'];
   var TIPS = null, el, opened = false, last;
@@ -42,7 +45,7 @@
     el = mk('div', 'vp'); el.setAttribute('role', 'dialog'); el.setAttribute('aria-modal', 'true'); el.setAttribute('aria-labelledby', 'vp-h');
     var card = mk('div', 'vp__card');
     card.innerHTML = '<button type="button" class="vp__x" aria-label="Close">&times;</button>' +
-      '<div class="vp__art" aria-hidden="true"><div class="vp__num">27</div><div><b>Security, phones, print and paperwork</b></div><ul><li>Information</li><li>Communication</li><li>Print</li><li>Process</li></ul></div>' +
+      '<div class="vp__art" aria-hidden="true"><div class="vp__stage"><div class="vp__book"><div class="vp__face vp__front"><span class="vp__plate"><img src="https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/assets/logo-600.png" alt="" width="150" height="30"></span><b class="vp__bn">27</b><b class="vp__bt">Technology<br>Tips</b><b class="vp__by">for 2027</b><i class="vp__rule"></i><span class="vp__bs">A practical guide for Indiana offices</span><span class="vp__bf">VAN AUSDALL &amp; FARRAR&nbsp;&nbsp;|&nbsp;&nbsp;SINCE 1914</span></div><div class="vp__face vp__spine"></div><div class="vp__face vp__pages"></div><div class="vp__face vp__back"></div></div><div class="vp__shadow"></div></div></div>' +
       '<div class="vp__body"></div>';
     el.appendChild(card); document.body.appendChild(el);
     form();
@@ -60,9 +63,13 @@
     var a = f[0], b = f[f.length - 1];
     if (e.shiftKey && document.activeElement === a) { e.preventDefault(); b.focus(); } else if (!e.shiftKey && document.activeElement === b) { e.preventDefault(); a.focus(); }
   }
+  function bullets() {
+    var b = (S.bullets || '').split('|').map(function (x) { return x.trim(); }).filter(Boolean);
+    return b.length ? '<ul class="vp__ul">' + b.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>' : '';
+  }
   function form() {
     var b = el.querySelector('.vp__body');
-    b.innerHTML = '<p class="vp__eyebrow">' + esc(S.eyebrow) + '</p><h2 class="vp__h" id="vp-h">' + esc(S.headline) + '</h2><p class="vp__sub">' + esc(S.sub) + '</p>' +
+    b.innerHTML = '<p class="vp__eyebrow">' + esc(S.eyebrow) + '</p><h2 class="vp__h" id="vp-h">' + esc(S.headline) + '</h2><p class="vp__sub">' + esc(S.sub) + '</p>' + bullets() +
       '<form class="vp__form" novalidate><div class="vp__row"><label>First name<input name="firstname" autocomplete="given-name" required></label><label>Last name<input name="lastname" autocomplete="family-name" required></label></div><label>Work email<input name="email" type="email" autocomplete="email" required></label><label>Company website or domain<input name="website" autocomplete="organization-url" placeholder="yourcompany.com" required></label>' +
       '<p class="vp__err" role="alert" hidden></p><button class="vp__btn" type="submit">' + esc(S.button) + '</button><button class="vp__skip" type="button">No thanks</button></form><p class="vp__fine">' + esc(S.privacy) + '</p>';
     var f = b.querySelector('form');
@@ -168,6 +175,11 @@
     });
   }
 
+  function pill() {
+    if (d.querySelector('.vp-pill') || (parseInt(ls('vafTipsSeen') || '0', 10) > Date.now() + 864e5)) return;
+    var b = mk('button', 'vp-pill', '<span class="vp-pill__bk" aria-hidden="true"></span>' + esc(S.pill)); b.type = 'button'; b.setAttribute('aria-label', S.headline);
+    b.onclick = function () { open(true); }; d.body.appendChild(b); requestAnimationFrame(function () { b.classList.add('is-on'); });
+  }
   function init() {
     window.VAF_TIPS_OPEN = function () { loadSettings(function () { open(true); }); };
     document.addEventListener('click', function (e) {
@@ -175,7 +187,9 @@
       if (a) { e.preventDefault(); window.VAF_TIPS_OPEN(); }
     });
     loadSettings(function () {
-      if (S.enabled.toLowerCase() !== 'yes' || excluded() || cooled()) return;
+      if (S.enabled.toLowerCase() !== 'yes' || excluded()) return;
+      setTimeout(pill, 6000);
+      if (cooled()) return;
       var ready = false, scrolled = false, fired = false;
       function go() { if (!fired && ready && scrolled && !document.querySelector('.vp')) { fired = true; open(false); } }
       setTimeout(function () { ready = true; go(); }, parseFloat(S.delay_seconds) * 1000);
