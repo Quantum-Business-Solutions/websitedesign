@@ -1,0 +1,25 @@
+<section class="q-section vaf-cg{% if module.alt_bg %} q-bg-alt{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %} data-vaf-cg>
+  <div class="q-container">
+    <div class="vaf-cg__head">
+      {% if module.eyebrow %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      <h2 class="q-h2">{{ module.heading }}</h2>
+      {% if module.intro %}<p class="q-lead">{{ module.intro }}</p>{% endif %}
+    </div>
+    <div class="vaf-cg__filters" role="group" aria-label="Filter by industry" hidden></div>
+    <div class="vaf-cg__grid">
+      {% for it in module.items %}
+      <a class="vaf-cg__card" href="{{ it.cg_link.url.href }}" data-ind="{{ it.cg_industry }}">
+        <div class="vaf-cg__logo">{% if it.cg_logo.src %}<img src="{{ it.cg_logo.src }}" alt="{{ it.cg_logo.alt or it.cg_customer }} logo" loading="lazy" decoding="async" width="440" height="130">{% else %}<span>{{ it.cg_customer }}</span>{% endif %}</div>
+        <div class="vaf-cg__body">
+          <span class="vaf-cg__tag">{{ it.cg_industry }}</span>
+          {% if it.cg_metric %}<div class="vaf-cg__metric"><b>{{ it.cg_metric }}</b><span>{{ it.cg_metric_label }}</span></div>{% endif %}
+          <h3>{{ it.cg_customer }}</h3>
+          <p>{{ it.cg_blurb }}</p>
+          <span class="vaf-cg__go">{{ module.link_label }}<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+  <span hidden data-all-label="{{ module.all_label }}"></span>
+</section>

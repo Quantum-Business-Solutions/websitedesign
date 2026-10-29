@@ -73,3 +73,11 @@ body .vaf-hero .pv-hero-grid .q-h1{max-width:none}
 body .q-section .q-h2.vd__h,body .q-section h2.q-h2.vd__h{font-size:clamp(24px,2.3vw,32px)!important;line-height:1.15!important}
 body .vcs__h{font-size:clamp(20px,1.8vw,24px);line-height:1.25}
 body .vaf-hero--nocards .vaf-hero__copy .q-h1{max-width:24ch}
+
+/* link-directory pills, also used on blog posts */
+.vaf-lc__group{background:#fff;border:1px solid #dbe5f0;border-radius:22px;padding:26px 28px;box-shadow:0 14px 34px color-mix(in srgb,#0f1e33 6%,transparent)}
+.vaf-lc__group h3{margin:0 0 6px;font-size:22px;color:#0f1e33}
+.vaf-lc__group p{margin:0 0 6px;font-size:15px;color:#52647c}
+.vaf-lc__group ul{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:9px}
+.vaf-lc__group a{display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:999px;background:#f3f7fb;border:1px solid #dbe5f0;color:#0f1e33;font-size:14.5px;font-weight:600;text-decoration:none}
+.vaf-lc__group a:hover{background:#2a71af;border-color:#2a71af;color:#fff}

@@ -5,6 +5,11 @@
 -->
 {% extends "./layouts/vaf-base.html" %}
 {% block head_extra %}
+  <link rel="canonical" href="{{ blog_page_link(current_page_num) }}">
+  <meta property="og:type" content="website"><meta property="og:site_name" content="Van Ausdall &amp; Farrar"><meta property="og:title" content="{{ page_meta.html_title }}"><meta property="og:description" content="{{ page_meta.meta_description }}"><meta property="og:url" content="{{ blog_page_link(current_page_num) }}">
+  <meta property="og:image" content="https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/assets/hero-poster.jpg"><meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","@id":"https://www.vanausdall.com/blog#blog","name":"Van Ausdall & Farrar Blog","url":"https://www.vanausdall.com/blog","description":"Plain-English guides on managed IT, cybersecurity, business phones, print and documents from Indiana's office technology team.","inLanguage":"en-US","publisher":{"@type":"Organization","name":"Van Ausdall & Farrar","url":"https://www.vanausdall.com","logo":{"@type":"ImageObject","url":"https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/assets/logo-600.png"}},"blogPost":[{% for c in contents %}{"@type":"BlogPosting","headline":"{{ c.name|striptags|escapejson }}","url":"{{ c.absolute_url|escapejson }}","datePublished":"{{ c.publish_date|format_datetime('yyyy-MM-dd') }}"}{% if not loop.last %},{% endif %}{% endfor %}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.vanausdall.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.vanausdall.com/blog"}]}</script>
   {% if last_page_num > 1 and current_page_num > 1 %}<link rel="prev" href="{{ blog_page_link(current_page_num - 1) }}">{% endif %}
   {% if last_page_num > 1 and current_page_num < last_page_num %}<link rel="next" href="{{ blog_page_link(current_page_num + 1) }}">{% endif %}
 {% endblock head_extra %}

@@ -27,6 +27,21 @@ for _o in sorted(glob.glob(os.path.join(ROOT, "brands/vanausdall.overrides.*.jso
             if _pg["file"] == _file:
                 _pg.update({k: v for k, v in _ov.items() if k in ("title", "description", "sections", "compose", "crumbs", "schema")})
 
+def seo_titles():
+    """Titles of 50 to 60 characters with the brand: short location and case study titles get the name added, two odd ones are rewritten."""
+    BR = " | Van Ausdall & Farrar"
+    FIX = {"about.html": "About Van Ausdall & Farrar | Indianapolis Since 1914", "company-facts.html": "Van Ausdall & Farrar Company Facts | Indianapolis Since 1914"}
+    for pg in CONTENT["pages"]:
+        t = pg["title"]; f = pg["file"]
+        if f in FIX: pg["title"] = FIX[f]; continue
+        if f.startswith("case-studies/") and "case study" not in t.lower() and t.endswith("| Van Ausdall & Farrar"):
+            pg["title"] = t.split(",")[0].split(" |")[0] + " Case Study, Indiana" + BR; continue
+        if "Van Ausdall" not in t and len(t) + len(BR) <= 62: pg["title"] = t + BR
+        elif len(t) < 45 and "Van Ausdall" not in t: pg["title"] = t + BR
+
+
+seo_titles()
+
 REGISTRY = {}
 for _f in sorted(glob.glob(os.path.join(ROOT, "scripts/vaf_map_*.py"))):
     _m = importlib.import_module(os.path.basename(_f)[:-3])
@@ -61,6 +76,20 @@ def policy_sections(secs):
     return out
 
 
+def _with_links(page, secs):
+    """Insert the related-pages and related-blog sections before the FAQ (or the lead form)."""
+    try:
+        import vaf_links
+        extra = vaf_links.extra_sections(page, CONTENT["pages"])
+    except Exception as e:           # linking must never break a build
+        print("  links skipped", page["file"], e, file=sys.stderr); return secs
+    have = {s.get("id") for s in secs}
+    extra = [x for x in extra if x.get("id") not in have]
+    if not extra: return secs
+    idx = next((i for i, s in enumerate(secs) if s["type"] == "faq"), next((i for i, s in enumerate(secs) if s["type"] == "leadform"), len(secs)))
+    return secs[:idx] + extra + secs[idx:]
+
+
 def order(page):
     comp = page.get("compose")
     comp = comp.get("showcase") if isinstance(comp, dict) else None
@@ -68,6 +97,7 @@ def order(page):
     if page["file"].startswith("policies/"):
         secs = policy_sections(secs)
         page = dict(page, sections=secs)
+    secs = _with_links(page, secs)
     if not comp:
         return secs
     by = {s.get("id"): s for s in secs if s.get("id")}

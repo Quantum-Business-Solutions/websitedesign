@@ -1474,35 +1474,6 @@
         ]
       },
       {
-        "type": "band",
-        "id": "pillar-links",
-        "eyebrow": "Explore by pillar",
-        "heading": "Go straight to a pillar",
-        "subhead": "Each pillar page lists every solution in it, the partners and certifications behind it, and the latest articles.",
-        "items": [
-          [
-            "Information",
-            "Cloud, security, managed IT and physical security.",
-            "solutions-information.html"
-          ],
-          [
-            "Communication",
-            "Business phone systems, unified communications and contact center.",
-            "solutions-communication.html"
-          ],
-          [
-            "Print",
-            "Copiers, managed print, print security and production print.",
-            "services/copy-print-solutions.html"
-          ],
-          [
-            "Process",
-            "Document scanning, content management, facilities management and voice processing.",
-            "solutions-process.html"
-          ]
-        ]
-      },
-      {
         "type": "hotspots",
         "id": "office",
         "eyebrow": "The whole office",

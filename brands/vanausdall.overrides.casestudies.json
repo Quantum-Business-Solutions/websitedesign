@@ -1,0 +1,237 @@
+{
+  "case-studies.html": {
+    "sections": [
+      {
+        "type": "hero",
+        "layout": "centered",
+        "eyebrow": "Case studies",
+        "heading": "Cost savings and outcomes, <em>on the record</em>.",
+        "subhead": "Eighteen Indiana organizations, by industry, each with the number they measured."
+      },
+      {
+        "type": "stats",
+        "tone": "dark",
+        "items": [
+          [
+            "$1M",
+            "Saved by Tippecanoe School Corporation"
+          ],
+          [
+            "70%",
+            "Print cost savings at STAR Financial Bank"
+          ],
+          [
+            "1.5M",
+            "Patient files scanned in 90 days for Johnson Memorial"
+          ],
+          [
+            "$40,000",
+            "Annual savings for the City of Anderson"
+          ]
+        ]
+      },
+      {
+        "type": "casegrid",
+        "id": "results",
+        "alt": false,
+        "eyebrow": "Results on the record",
+        "heading": "Eighteen Indiana organizations, by industry",
+        "intro": "Each one names the customer and the number. Filter by industry or open any story.",
+        "items": [
+          {
+            "industry": "Education",
+            "customer": "Tippecanoe School Corporation",
+            "metric": "1,200 to 300",
+            "metric_label": "Fleet consolidated across every building",
+            "blurb": "New print and copier fleet reduced overall equipment count and provided $1M in savings.",
+            "logo": "case/logo-tippecanoe-school-corporation.png",
+            "href": "case-studies/tippecanoe-school-corporation.html"
+          },
+          {
+            "industry": "Financial services",
+            "customer": "STAR Financial Bank",
+            "metric": "70%",
+            "metric_label": "Over the original arrangement",
+            "blurb": "STAR achieved over 70% cost savings after five months with Van Ausdall & Farrar.",
+            "logo": "case/logo-star-financial.png",
+            "href": "case-studies/star-financial.html"
+          },
+          {
+            "industry": "Healthcare",
+            "customer": "Johnson Memorial Health",
+            "metric": "1.5M",
+            "metric_label": "Patient records scanned and indexed",
+            "blurb": "Scan and index 1.5 million patient files in 90 days while adhering to HIPAA? We're on it.",
+            "logo": "case/logo-johnson-memorial-hospital.png",
+            "href": "case-studies/johnson-memorial-hospital.html"
+          },
+          {
+            "industry": "State and local government",
+            "customer": "City of Anderson, IN",
+            "metric": "$40,000",
+            "metric_label": "Every year",
+            "blurb": "Anderson's technology refresh provides cost savings and new solutions to constituents.",
+            "logo": "case/logo-city-of-anderson.png",
+            "href": "case-studies/city-of-anderson.html"
+          },
+          {
+            "industry": "Healthcare",
+            "customer": "Aspire",
+            "metric": "$300,000",
+            "metric_label": "Saved while closing security gaps",
+            "blurb": "Aspire needed a new secure cloud solution for their patient records, and they needed it fast.",
+            "logo": "case/logo-aspire.png",
+            "href": "case-studies/aspire.html"
+          },
+          {
+            "industry": "Manufacturing and logistics",
+            "customer": "Becks Hybrid",
+            "metric": "",
+            "metric_label": "",
+            "blurb": "When Beck’s Hybrid faced the need to upgrade their print solutions for their seed tags, they knew they wanted a local company with more.",
+            "logo": "case/logo-becks-hybrid.png",
+            "href": "case-studies/becks-hybrid.html"
+          },
+          {
+            "industry": "Manufacturing and logistics",
+            "customer": "Berry Global",
+            "metric": "1,500",
+            "metric_label": "Printers supported worldwide",
+            "blurb": "The challenges of a growing international Fortune 500 company were exponential for an in-house marketing group that needed to control.",
+            "logo": "",
+            "href": "case-studies/berry-global.html"
+          },
+          {
+            "industry": "Engineering and construction",
+            "customer": "Bowen Engineering",
+            "metric": "",
+            "metric_label": "",
+            "blurb": "When Indianapolis-based general contractor, Bowen Engineering found themselves in a technology challenge, they called on Van Ausdall &.",
+            "logo": "case/logo-bowen-engineering.png",
+            "href": "case-studies/bowen-engineering.html"
+          },
+          {
+            "industry": "State and local government",
+            "customer": "City of Bloomington",
+            "metric": "",
+            "metric_label": "",
+            "blurb": "The City of Bloomington needed to address a data problem within their utility division.",
+            "logo": "case/logo-city-of-bloomington.png",
+            "href": "case-studies/city-of-bloomington.html"
+          },
+          {
+            "industry": "Engineering and construction",
+            "customer": "Echo Engineering",
+            "metric": "",
+            "metric_label": "",
+            "blurb": "When Echo Engineering's rapid growth was suddenly slowed by an outdated legacy infrastructure that was causing lost productivity and.",
+            "logo": "",
+            "href": "case-studies/echo-engineering.html"
+          },
+          {
+            "industry": "Insurance",
+            "customer": "Ellinger Riggs",
+            "metric": "",
+            "metric_label": "",
+            "blurb": "Ellinger Riggs Insurance needed dependable, scalable communications technology to keep their customers on the line and seamlessly expand to.",
+            "logo": "case/logo-ellinger-riggs.png",
+            "href": "case-studies/ellinger-riggs.html"
+          },
+          {
+            "industry": "Healthcare",
+            "customer": "Gailey Eye Clinic",
+            "metric": "",
+            "metric_label": "",
+            "blurb": "Gailey Eye Clinic needed a partner who could help them find a co-host solution and complete various software and hardware initiatives that.",
+            "logo": "case/logo-gailey-eye-clinic.png",
+            "href": "case-studies/gailey-eye-clinic.html"
+          },
+          {
+            "industry": "Manufacturing and logistics",
+            "customer": "Mid-City Supply",
+            "metric": "",
+            "metric_label": "",
+            "blurb": "Mid-City Supply was spending a tremendous amount of money on their carrier-managed private line services.",
+            "logo": "",
+            "href": "case-studies/mid-city.html"
+          },
+          {
+            "industry": "Education",
+            "customer": "Phalen Leadership Academy",
+            "metric": "~500,000",
+            "metric_label": "Pages printed in one weekend",
+            "blurb": "Phalen Leadership Academy (PLA) turned to Van Ausdall and Farrar (VAF) to support their scholars ongoing learning experience during the.",
+            "logo": "case/logo-phalen-leadership-academy.png",
+            "href": "case-studies/phalen-leadership-academy.html"
+          },
+          {
+            "industry": "Retail",
+            "customer": "Pools of Fun",
+            "metric": "5",
+            "metric_label": "Locations kept connected and secure",
+            "blurb": "Pools of Fun had outgrown their existing information technology company.",
+            "logo": "case/logo-pools-of-fun.png",
+            "href": "case-studies/pools-of-fun.html"
+          },
+          {
+            "industry": "Engineering and construction",
+            "customer": "Shiel Sexton",
+            "metric": "",
+            "metric_label": "",
+            "blurb": "Shiel Sexton’s business model requires paper, and lots of it.",
+            "logo": "case/logo-shiel-sexton.png",
+            "href": "case-studies/shiel-sexton.html"
+          },
+          {
+            "industry": "State and local government",
+            "customer": "The Town of Bargersville",
+            "metric": "",
+            "metric_label": "",
+            "blurb": "The Town of Bargersville needed an upgrade to its data collection and documentation processes.",
+            "logo": "case/logo-the-town-of-bargersville.png",
+            "href": "case-studies/the-town-of-bargersville.html"
+          },
+          {
+            "industry": "Education",
+            "customer": "Tippecanoe School Corporation: HR records",
+            "metric": "500,000+",
+            "metric_label": "HR file pages digitized",
+            "blurb": "Tippecanoe School Corporation was looking to free up valuable real estate for additional growth in their HR department.",
+            "logo": "case/logo-tippecanoe-school-corporation-digital-document.png",
+            "href": "case-studies/tippecanoe-school-corporation-digital-document.html"
+          }
+        ]
+      },
+      {
+        "type": "faq",
+        "heading": "Questions about the results",
+        "items": [
+          [
+            "How much did Tippecanoe School Corporation save with Van Ausdall & Farrar?",
+            "$1,000,000 over the life of the contract, by consolidating 1,200 printers and copiers to just over 300 and replacing more than 10 vendors with one."
+          ],
+          [
+            "How much did STAR Financial Bank save on print?",
+            "70% over the original arrangement after phase one, once expired leases were removed and contracts renegotiated statewide."
+          ],
+          [
+            "How fast can Van Ausdall & Farrar scan patient records?",
+            "1.5 million files in 90 days for Johnson Memorial Health, inside budget, with a certificate of destruction for the paper."
+          ],
+          [
+            "How much does it cost?",
+            "Most engagements start with the free Technology Strength Assessment: ten to fifteen minutes online, then a specialist walks the results with you and writes a roadmap of what to eliminate, optimize and leverage. The quote follows the assessment, so you see the recommendation before the price."
+          ]
+        ]
+      },
+      {
+        "type": "leadform",
+        "id": "consult",
+        "heading": "Want results like these?",
+        "body": "Every one of these engagements started with the Technology Strength Assessment.",
+        "submit": "Schedule my consultation",
+        "note": "A person from the Indianapolis office replies, not an autoresponder."
+      }
+    ]
+  }
+}

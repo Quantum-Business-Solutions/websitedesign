@@ -101,7 +101,7 @@ def leadership(s):
     out = common(s)
     out.update({"heading": s.get("heading", ""), "intro": s.get("intro", ""),
                 "people": [{"person_name": n, "person_role": r, "person_initials": _initials(n),
-                            "person_photo": {"src": "", "alt": "", "loading": "lazy"}} for n, r in s["people"]],
+                            "person_photo": image(s["photos"][n], n + ", " + r, 640, 640) if n in s.get("photos", {}) else {"src": "", "alt": "", "loading": "lazy"}} for n, r in s["people"]],
                 "orgs_intro": s.get("orgs_intro", ""), "orgs": [{"org_name": o} for o in s.get("orgs", [])]})
     return clean(out)
 

@@ -1,0 +1,16 @@
+/* VAF related blog posts: newest posts for a tag, linked from service, pillar and industry pages */
+.vaf-br__head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:32px}
+.vaf-br__head .q-h2{margin-top:14px;max-width:720px}
+.vaf-br__all{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:#2a71af;text-decoration:none}
+.vaf-br__all:hover{color:#205686;gap:12px}
+.vaf-br__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.vaf-br__card{display:flex;flex-direction:column;background:#fff;border:1px solid #dbe5f0;border-radius:20px;overflow:hidden;text-decoration:none;color:inherit;transition:transform .25s,box-shadow .25s,border-color .25s}
+.vaf-br__card:hover{transform:translateY(-4px);box-shadow:0 24px 50px color-mix(in srgb,#0f1e33 14%,transparent);border-color:#9fc2e6}
+.vaf-br__img{aspect-ratio:16/9;background:#eaf2fa;overflow:hidden}
+.vaf-br__img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.vaf-br__card:hover .vaf-br__img img{transform:scale(1.05)}
+.vaf-br__body{padding:18px 20px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.vaf-br__body time{font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#2a71af}
+.vaf-br__body h3{margin:0;font-size:19px;line-height:1.25;color:#0f1e33}
+.vaf-br__body p{margin:0;font-size:15px;line-height:1.5;color:#52647c}
+@media(max-width:900px){.vaf-br__grid{grid-template-columns:1fr}}

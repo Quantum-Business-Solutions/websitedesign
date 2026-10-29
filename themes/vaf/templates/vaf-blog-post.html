@@ -5,10 +5,33 @@
 -->
 {% extends "./layouts/vaf-base.html" %}
 {% block head_extra %}
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"{{ content.name|striptags|escapejson }}","description":"{{ content.post_summary|striptags|escapejson }}","datePublished":"{% if content.publish_date %}{{ content.publish_date|format_datetime('yyyy-MM-dd') }}{% endif %}","image":"{{ content.featured_image|escapejson }}","author":{"@type":"Organization","name":"{{ content.blog_post_author.display_name|default('Van Ausdall & Farrar', true)|escapejson }}"},"publisher":{"@type":"Organization","name":"Van Ausdall & Farrar"},"mainEntityOfPage":"{{ content.absolute_url|escapejson }}"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"{{ content.name|striptags|escapejson }}","description":"{{ content.post_summary|striptags|escapejson }}","datePublished":"{% if content.publish_date %}{{ content.publish_date|format_datetime('yyyy-MM-dd') }}{% endif %}","dateModified":"{% if content.updated %}{{ content.updated|format_datetime('yyyy-MM-dd') }}{% elif content.publish_date %}{{ content.publish_date|format_datetime('yyyy-MM-dd') }}{% endif %}","image":"{{ content.featured_image|escapejson }}","keywords":"{% for tg in content.tag_list %}{{ tg.name|escapejson }}{% if not loop.last %}, {% endif %}{% endfor %}","inLanguage":"en-US","author":{"@type":"Organization","name":"{{ content.blog_post_author.display_name|default('Van Ausdall & Farrar', true)|escapejson }}"},"publisher":{"@type":"Organization","name":"Van Ausdall & Farrar","logo":{"@type":"ImageObject","url":"https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/assets/logo-600.png"}},"mainEntityOfPage":"{{ content.absolute_url|escapejson }}"}</script>
 {% endblock head_extra %}
 {% block body %}
 <main id="main">
   {% module "vaf_blog_post" path="../modules/vaf-blog-post", label="VAF blog post" %}
+  {% set svc = [
+    {'l':'Cybersecurity','h':'/services/cybersecurity','t':['cybersecurity','security','data-security','phishing','ransomware','passwords','multifactor-authentication-mfa','firewalls','network-security','antivirus','security-awareness-training','least-privilege','compliance','hipaa']},
+    {'l':'Managed IT services','h':'/services/managed-it','t':['managed-it','help-desk','networks','productivity','business-technology','byod','mobile-devices','remote-workforce']},
+    {'l':'Cloud and backup','h':'/services/cloud','t':['cloud','cloud-computing','cloud-solutions','data-backup-and-recovery','amazon-web-services-aws','microsoft','google']},
+    {'l':'Business phone systems','h':'/services/business-phone-systems','t':['business-phone-systems','communication','mitel','shoretel','8x8','ringcentral','voip','unified-communications','ucaas','collaboration','contact-centers','avaya']},
+    {'l':'Managed print services','h':'/services/managed-print','t':['managed-print-services','print-services','print-costs','multi-function-printer-mfp','print-and-copy-solutions','in-house-printing','production-print','ricoh','sustainability']},
+    {'l':'Document management','h':'/services/document-management','t':['document-management','content-management','document-workflows','onbase','business-process','business-process-solutions','data-governance','data-discovery','data-classification']},
+    {'l':'Document conversion','h':'/services/document-conversion','t':['document-conversion','scanning','paper-costs','jobsite-workflows']},
+    {'l':'AI consulting','h':'/services/ai-consulting','t':['ai','ai-consulting','automation','digital-transformation']},
+    {'l':'Physical security','h':'/services/physical-security','t':['physical-security','video-surveillance']}
+  ] %}
+  {% set hits = [] %}
+  {% for s in svc %}{% set got = [] %}{% for tg in content.tag_list %}{% if tg.slug in s.t %}{% do got.append(1) %}{% endif %}{% endfor %}{% if got|length %}{% do hits.append(s) %}{% endif %}{% endfor %}
+  <section class="q-section vaf-post-related q-bg-alt"><div class="q-container"><div class="vaf-lc__group" style="max-width:980px;margin:0 auto">
+    <h3>Related services</h3><p>The people behind this guide install and support these every day.</p>
+    <ul>
+      {% for s in hits[:4] %}<li><a href="{{ s.h }}">{{ s.l }}</a></li>{% endfor %}
+      <li><a href="/technology-strength-assessment">Technology Strength Assessment</a></li>
+      <li><a href="/contact">Talk to a solutions expert</a></li>
+    </ul>
+  </div></div></section>
+  {% set tg0 = content.tag_list[0] %}
+  {% if tg0 %}{% module "vaf_more_guides" path="../modules/vaf-blogrel", tag=tg0.slug, count="3", heading="More guides on this topic", eyebrow="Keep reading", alt_bg=false %}{% endif %}
 </main>
 {% endblock body %}

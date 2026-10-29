@@ -1,0 +1,26 @@
+{% set posts = blog_recent_tag_posts(225796510726, module.tag, (module.count or 3)|int) %}
+{% if posts|length %}
+<section class="q-section vaf-br{% if module.alt_bg %} q-bg-alt{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %}>
+  <div class="q-container">
+    <div class="vaf-br__head">
+      <div>
+        {% if module.eyebrow %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+        <h2 class="q-h2">{{ module.heading }}</h2>
+      </div>
+      <a class="vaf-br__all" href="/blog">{{ module.link_label }}<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+    <div class="vaf-br__grid">
+      {% for post in posts %}
+      <a class="vaf-br__card" href="{{ post.absolute_url }}">
+        <div class="vaf-br__img">{% if post.featured_image %}<img src="{{ post.featured_image }}" alt="{{ post.featured_image_alt_text or post.name }}" loading="lazy" decoding="async">{% endif %}</div>
+        <div class="vaf-br__body">
+          <time datetime="{{ post.publish_date|format_datetime('yyyy-MM-dd') }}">{{ post.publish_date|format_datetime('MMM d, yyyy') }}</time>
+          <h3>{{ post.name }}</h3>
+          {% if post.post_summary %}<p>{{ post.post_summary|striptags|truncate(130) }}</p>{% endif %}
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}

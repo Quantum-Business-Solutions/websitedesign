@@ -1,0 +1,317 @@
+{
+  "about.html": {
+    "sections": [
+      {
+        "type": "hero",
+        "layout": "split",
+        "eyebrow": "About VAF",
+        "heading": "Helping customers succeed <em>since 1914</em>.",
+        "subhead": "In 1914, Van Ausdall & Farrar was chosen as a distributor for the Thomas Edison Company. Today it is one of the largest privately owned office solutions companies in Indiana, with a 57,000-square-foot headquarters in Indianapolis and a long-standing tradition of partnering with the most respected manufacturers in the industry.",
+        "primary": {
+          "label": "Why VAF",
+          "href": "#why"
+        },
+        "secondary": {
+          "label": "Careers",
+          "href": "careers.html"
+        },
+        "image": "assets/gen-hq-1200.jpg",
+        "image_alt": "A modern two-story headquarters building with a service van outside",
+        "image_w": 1200,
+        "image_h": 800
+      },
+      {
+        "type": "stats",
+        "tone": "dark",
+        "items": [
+          [
+            "1914",
+            "Chosen as a Thomas Edison Company distributor"
+          ],
+          [
+            "93.4",
+            "Net Promoter Score, audited by CEO Juice"
+          ],
+          [
+            "SOC 2",
+            "Certified service organization"
+          ],
+          [
+            "57,000",
+            "Square feet of headquarters, built 2006"
+          ]
+        ]
+      },
+      {
+        "type": "timeline",
+        "id": "story",
+        "eyebrow": "The story",
+        "heading": "From an Edison dealership to Indiana's largest office technology provider",
+        "items": [
+          [
+            "1914",
+            "Oscar K. Van Ausdall",
+            "Chosen as an Edison Business Phonograph dealer for the state of Indiana. The Thomas Edison Company invented the wax cylinder dictating machine."
+          ],
+          [
+            "1940",
+            "Carl F. Farrar",
+            "Joins as general manager and partner, later buying the business. Mr. Van Ausdall stays on until retiring in 1957 at 73."
+          ],
+          [
+            "1960",
+            "Clyde von Grimmenstein",
+            "Becomes president after joining in sales in 1950, and stays active until retiring at 84."
+          ],
+          [
+            "1983",
+            "Telecom",
+            "VAF enters the telephone business. More than 4,000 systems deployed since."
+          ],
+          [
+            "1994",
+            "Eric von Grimmenstein",
+            "Grew up in the business, joined in 1977 after Purdue, and becomes president."
+          ],
+          [
+            "2006",
+            "6430 E 75th Street",
+            "The 57,000-square-foot corporate headquarters opens in Indianapolis."
+          ],
+          [
+            "Today",
+            "Four pillars, one roof",
+            "Information, communication, print and process for Indiana and the Midwest. Privately owned, still in Indianapolis."
+          ]
+        ]
+      },
+      {
+        "type": "values",
+        "id": "values",
+        "alt": true,
+        "eyebrow": "Mission and vision",
+        "heading": "What the company is for",
+        "items": [
+          [
+            "Mission",
+            "Provide value-driven technology solutions while delivering a world class customer experience and have a positive impact on our community."
+          ],
+          [
+            "Vision",
+            "To implement technology to improve the human experience."
+          ],
+          [
+            "Measured, not claimed",
+            "Our Net Promoter Score is collected and audited by CEO Juice, an independent company whose process we do not control. It is 93.4. The average US company scores 10, and anything above 70 is World Class."
+          ]
+        ]
+      },
+      {
+        "type": "detail",
+        "id": "why",
+        "eyebrow": "Why VAF",
+        "heading": "Experience you will profit from",
+        "body": "More than a century in business, through two world wars, two pandemics and a few bad Colts teams. We know how to evolve and adapt to disruptive technology when we recognize it. We only support the industry-recognized leaders in each area we serve, including Gartner Magic Quadrant leaders like Fortinet, Sophos, 8x8 and RingCentral, and we fully support every product we recommend with our own local team.",
+        "bullets": [
+          "Vsecure IT staff with over 250 years of combined IT experience and CISSP personnel on staff",
+          "In the telecom business since 1983 with over 4,000 systems deployed and a dedicated engineering staff",
+          "Mitel Gold for seven consecutive years, the top 7% of 1,400 partners in North America",
+          "Fortinet Engaged Advanced Partner with NSE-7 certified engineers and the first SD-WAN Specialization in the Great Lakes region",
+          "Average tenure of IT and UC sales staff of 15 years, with over 150 years of industry experience"
+        ],
+        "image": "assets/engineers-1200.jpg",
+        "image_alt": "Two engineers at work in a data center",
+        "flip": true
+      },
+      {
+        "type": "proof",
+        "id": "nps",
+        "alt": true,
+        "eyebrow": "Measured, not claimed",
+        "value": "93.4",
+        "text": "Net Promoter Score, collected and audited by CEO Juice from VAF customers after every service call. World Class, above 70, every year since 2019. Costco scores 79. The average US company scores 10.",
+        "source": "CEO Juice is an independent company with an audited process; the numbers cannot be changed even if a customer scored us low in error."
+      },
+      {
+        "type": "leadership",
+        "id": "leadership",
+        "heading": "Leadership",
+        "intro": "Eric von Grimmenstein grew up in the business. After graduating from Purdue University he began as a sales representative in 1977 and became president in 1994.",
+        "people": [
+          [
+            "Eric von Grimmenstein",
+            "President"
+          ],
+          [
+            "Steven Sigmon",
+            "Director of IT"
+          ]
+        ],
+        "orgs_intro": "VAF's mission includes a positive impact on the community: paid volunteer hours for employees, and charity initiatives coordinated with customers like the City of Anderson.",
+        "orgs": [
+          "Women's shelter fundraising",
+          "Shop with a cop programs",
+          "Paid volunteer hours",
+          "Sourcewell cooperative purchasing for public and non-profit customers"
+        ],
+        "photos": {
+          "Eric von Grimmenstein": "team/eric-von-grimmenstein.jpg"
+        }
+      },
+      {
+        "type": "video",
+        "id": "film",
+        "eyebrow": "Life at VAF",
+        "heading": "What it is like to work here",
+        "intro": "Filmed with VAF people in Indianapolis.",
+        "youtube": "i-q4U5SnvaM",
+        "poster": "assets/careers-1200.jpg",
+        "title": "What it's like to work at Van Ausdall & Farrar",
+        "caption": "VAF's own film, from the careers page"
+      },
+      {
+        "type": "testimonials",
+        "alt": true,
+        "heading": "Real customer comments",
+        "items": [
+          [
+            "He went above and beyond to ask and answer questions so we both were on the same page with the problem and ultimately the solution. He explained what we at the office needed to do differently to prevent this situation in the future as well.",
+            "Elaine",
+            "After-service survey, June 2026"
+          ],
+          [
+            "You guys give us top tier support and we thank you greatly.",
+            "Megan",
+            "After-service survey, April 2026"
+          ],
+          [
+            "He did a great job, and was very communicative prior to his arrival.",
+            "Rick",
+            "After-service survey, October 2025"
+          ],
+          [
+            "Mike is awesome, knowledgeable, and friendly.",
+            "Denise",
+            "After-service survey, February 2026"
+          ]
+        ]
+      },
+      {
+        "type": "faq",
+        "heading": "Questions people ask about Van Ausdall & Farrar",
+        "items": [
+          [
+            "Who owns Van Ausdall & Farrar?",
+            "Van Ausdall & Farrar, Inc. is privately owned and operated in Indianapolis. Eric von Grimmenstein, who joined in 1977, has been president since 1994."
+          ],
+          [
+            "How long has Van Ausdall & Farrar been in business?",
+            "Since 1914, when Oscar K. Van Ausdall was chosen as an Edison Business Phonograph dealer for Indiana. The company has been in the telecom business since 1983."
+          ],
+          [
+            "Where is Van Ausdall & Farrar located?",
+            "Headquarters at 6430 E 75th Street, Indianapolis, IN 46250, with offices in Fort Wayne and Evansville and a service fleet covering the entire state."
+          ],
+          [
+            "What does Van Ausdall & Farrar do?",
+            "Managed IT and cybersecurity, business phone systems, copiers and managed print, document management and conversion, and AI consulting, for businesses, schools, hospitals and municipalities across Indiana and the Midwest."
+          ]
+        ]
+      },
+      {
+        "type": "resources",
+        "alt": true,
+        "heading": "More from Van Ausdall & Farrar",
+        "intro": "More from VAF.",
+        "items": [
+          [
+            "About",
+            "About",
+            "Van Ausdall & Farrar believes in our customers, and we do everything we can to make sure you manage your business well using all of our.",
+            "Open the page",
+            "training.html"
+          ],
+          [
+            "About",
+            "Cookie Policy",
+            "We value your privacy very highly. Please read this Cookie Policy carefully before using the https://www.vanausdall.com/ Website (the.",
+            "Open the page",
+            "policies/cookie.html"
+          ],
+          [
+            "About",
+            "Disclaimer Policy",
+            "Please read this Disclaimer carefully before using the https://www.vanausdall.com/ website (the \"Website\") operated by Van Ausdall &.",
+            "Open the page",
+            "policies/disclaimer.html"
+          ],
+          [
+            "About",
+            "Do Not Share My Personal Information",
+            "The California Privacy Rights Act (CPRA) allows residents of California to opt out of the sharing of their personal information with third.",
+            "Open the page",
+            "policies/do-not-share.html"
+          ],
+          [
+            "About",
+            "Employee Benefits",
+            "At Van Ausdall & Farrar, our people are our number one asset.",
+            "Open the page",
+            "benefits.html"
+          ],
+          [
+            "About",
+            "Limit the Use of My Sensitive Personal Information",
+            "The California Privacy Rights Act (CPRA) allows residents of California to exercise their right to limit the use and disclosure of their.",
+            "Open the page",
+            "policies/limit-the-use.html"
+          ],
+          [
+            "About",
+            "Privacy Policy",
+            "We value your privacy very highly. Please read this Privacy Policy carefully before using the https://www.vanausdall.com/ website (the.",
+            "Open the page",
+            "policies/privacy.html"
+          ],
+          [
+            "About",
+            "Software Drivers and Documentation Downloads",
+            "Visit any of the links below for fast access to manufacturer and developer driver pages, as well as various software downloads.",
+            "Open the page",
+            "downloads.html"
+          ],
+          [
+            "About",
+            "Terms of Service",
+            "Please read this Terms of Service (“Terms”, “Terms of Service”) carefully before using the https://www.vanausdall.com/ website (the.",
+            "Open the page",
+            "policies/terms-of-service.html"
+          ],
+          [
+            "About",
+            "Van Ausdall & Farrar Customer Care App Privacy Policy",
+            "This Policy contains sections with terms used by the European legislature for the adoption of the General Data Protection Regulation.",
+            "Open the page",
+            "policies/van-ausdall-farrar-customer-care-app-privacy-policy.html"
+          ],
+          [
+            "About",
+            "Virtual Site Visit for Indiana",
+            "We know it’s difficult for you to come see our facility today, so we put this page together to make sure you’re able to visit us.",
+            "Open the page",
+            "virtualsitevisit.html"
+          ]
+        ]
+      },
+      {
+        "type": "cta",
+        "heading": "Work here",
+        "subhead": "Privately owned and operated in Indianapolis, and looking for people who take ownership, keep learning and have some fun while they are at it.",
+        "primary": {
+          "label": "See careers",
+          "href": "careers.html"
+        }
+      }
+    ]
+  }
+}

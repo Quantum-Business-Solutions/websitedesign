@@ -104,6 +104,16 @@ def linkcloud(s):
                   "groups": [{"grp_title": g["title"], "grp_intro": g.get("intro", ""), "links": [{"lk_label": l, "lk_link": _lnk(h)} for l, h in g.get("links", [])]} for g in s.get("groups", [])]})
 
 
+def blogrel(s):
+    return clean({**_common(s), "eyebrow": s.get("eyebrow", "From the blog"), "heading": s.get("heading", ""), "tag": s.get("tag", ""), "count": str(s.get("count", "3")), "link_label": s.get("link_label", "Read all VAF guides")})
+
+
+def casegrid(s):
+    return clean({**_common(s), "eyebrow": s.get("eyebrow", ""), "heading": s.get("heading", ""), "intro": s.get("intro", ""), "all_label": "All industries", "link_label": "Read the case study",
+                  "items": [{"cg_industry": i.get("industry", ""), "cg_customer": i["customer"], "cg_metric": i.get("metric", ""), "cg_metric_label": i.get("metric_label", ""), "cg_blurb": i.get("blurb", ""),
+                             "cg_logo": image(i.get("logo", ""), i["customer"], 440, 130), "cg_link": _lnk(i.get("href", ""))} for i in s.get("items", [])]})
+
+
 def picker(s):
     """Problem router. Items: dicts with problem, service, copy, bullets (list), href."""
     return clean({**_common(s), "eyebrow": s.get("eyebrow", ""), "heading": s.get("heading", ""), "intro": s.get("intro", ""), "link_label": s.get("link_label", "See how we fix it"),
@@ -142,6 +152,8 @@ def testimonials(s):
 
 
 REGISTRY = {
+    "casegrid": ("vaf-casegrid", casegrid),
+    "blogrel": ("vaf-blogrel", blogrel),
     "linkcloud": ("vaf-linkcloud", linkcloud),
     "tiles3d": ("vaf-tiles3d", tiles3d),
     "picker": ("vaf-picker", picker),

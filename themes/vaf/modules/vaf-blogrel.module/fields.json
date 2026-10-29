@@ -1,0 +1,108 @@
+[
+  {
+    "id": "eyebrow",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "From the blog"
+  },
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Guides from the people who do the work"
+  },
+  {
+    "id": "tag",
+    "name": "tag",
+    "label": "Blog tag slug (shows the newest posts with this tag)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "managed-it"
+  },
+  {
+    "id": "count",
+    "name": "count",
+    "label": "How many posts (3 or 4)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "3"
+  },
+  {
+    "id": "link_label",
+    "name": "link_label",
+    "label": "Link to all posts label",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Read all VAF guides"
+  },
+  {
+    "id": "anchor",
+    "name": "anchor",
+    "label": "Section anchor (optional)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "help_text": "Used as the section id so links like /page#anchor jump here. Letters, numbers and hyphens only.",
+    "type": "text",
+    "display_width": null,
+    "default": ""
+  },
+  {
+    "id": "alt_bg",
+    "name": "alt_bg",
+    "label": "Alternate (tinted) background",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": false
+  },
+  {
+    "id": "padding",
+    "name": "padding",
+    "label": "Section padding",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [
+        "normal",
+        "Normal"
+      ],
+      [
+        "none",
+        "None"
+      ],
+      [
+        "large",
+        "Large"
+      ]
+    ],
+    "multiple": false,
+    "reordering_enabled": true,
+    "preset": null,
+    "type": "choice",
+    "display_width": null,
+    "default": "normal"
+  }
+]

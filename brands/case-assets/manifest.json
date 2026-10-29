@@ -1,0 +1,128 @@
+{
+  "logos": {
+    "tippecanoe-school-corporation": {
+      "customer": "Tippecanoe School Corporation",
+      "file": "logos/tippecanoe-school-corporation.png",
+      "source_url": "https://resources.finalsite.net/images/v1775856579/tsck12inus/bhyegcpwqmkbujstohau/TSC-Yellow-Blue-transparent.png",
+      "note": "tsc.k12.in.us header logo; trimmed, downscaled to 600px."
+    },
+    "tippecanoe-school-corporation-digital-document": {
+      "customer": "Tippecanoe School Corporation",
+      "file": "logos/tippecanoe-school-corporation-digital-document.png",
+      "source_url": "https://resources.finalsite.net/images/v1775856579/tsck12inus/bhyegcpwqmkbujstohau/TSC-Yellow-Blue-transparent.png",
+      "note": "Same customer as tippecanoe-school-corporation; file is a copy."
+    },
+    "star-financial": {
+      "customer": "STAR Financial Bank",
+      "file": "logos/star-financial.png",
+      "source_url": "https://www.starfinancial.com/assets/img/logo.svg",
+      "note": "starfinancial.com header SVG rendered to PNG at 600px, transparent."
+    },
+    "johnson-memorial-hospital": {
+      "customer": "Johnson Memorial Health",
+      "file": "logos/johnson-memorial-hospital.png",
+      "source_url": "https://johnsonmemorial.org/hubfs/Website-JMH-Mayo-Logo-1.png",
+      "note": "johnsonmemorial.org color logo. Source lockup also had a Mayo Clinic Care Network member badge; cropped to the JMH mark only."
+    },
+    "city-of-anderson": {
+      "customer": "City of Anderson, IN",
+      "file": "logos/city-of-anderson.png",
+      "source_url": "https://www.cityofanderson.com/00000000-0000-0000-0000-000000000000%5C95/seal_201308121019157627.png",
+      "note": "Official city seal from cityofanderson.com. Source is only 110px (kept at native size, not upscaled). The site header wordmark is white-on-blue and was not usable."
+    },
+    "aspire": {
+      "customer": "Aspire Indiana Health",
+      "file": "logos/aspire.png",
+      "source_url": "https://inter-cdn.com/images/600/16248581/Logo-Primary-Color-rgb-ggP4WsedllkIC2JLonpyzw.png",
+      "note": "aspireindiana.org header logo (customer is Aspire Indiana Health; case study is a patient-records cloud project). Stacked, not wide."
+    },
+    "becks-hybrid": {
+      "customer": "Beck's Hybrids",
+      "file": "logos/becks-hybrid.png",
+      "source_url": "inline SVG in header of https://www.beckshybrids.com/",
+      "note": "Header logo is an inline SVG; extracted and rendered to PNG at 600px, transparent."
+    },
+    "berry-global": {
+      "customer": "Berry Global",
+      "file": null,
+      "source_url": null,
+      "note": "SKIPPED. berryglobal.com now redirects to amcor.com (Berry was acquired by Amcor); the only official logo available is Amcor's, which would be wrong for this case study. Needs a manual decision."
+    },
+    "bowen-engineering": {
+      "customer": "Bowen Engineering",
+      "file": "logos/bowen-engineering.png",
+      "source_url": "http://static1.squarespace.com/static/5c6eb9bae8ba44d919cff497/t/691259f17aa3715742f49221/1762810353137/Red+Wordmark+Logo.png",
+      "note": "bowenengineering.com og:image (red wordmark, transparent). Header uses a white version. Site title now reads simply 'Bowen'."
+    },
+    "city-of-bloomington": {
+      "customer": "City of Bloomington",
+      "file": "logos/city-of-bloomington.png",
+      "source_url": "https://bloomington.in.gov/themes/custom/cob/css/images/cob-logo-horizontal.svg",
+      "note": "bloomington.in.gov header SVG rendered to PNG at 600px."
+    },
+    "echo-engineering": {
+      "customer": "Echo Engineering & Production Supplies",
+      "file": "logos/echo-engineering.png",
+      "source_url": "https://www.echosupply.com/media/logo/websites/1/echo-innovation_by_design-154x60.webp",
+      "note": "LOW CONFIDENCE. echosupply.com (Echo Engineering & Production Supplies, Indianapolis) is the match by name and location; echoeng.com is a parked domain. The header logo is a small 154x60 mark with 'innovation by design' tagline and no company name; larger sizes were not available."
+    },
+    "ellinger-riggs": {
+      "customer": "Ellinger Riggs Insurance",
+      "file": "logos/ellinger-riggs.png",
+      "source_url": "https://www.ellingerriggs.com/wp-content/uploads/sites/104/2018/06/eri-new-logo.png",
+      "note": "ellingerriggs.com header logo, 350px native."
+    },
+    "gailey-eye-clinic": {
+      "customer": "Gailey Eye Clinic",
+      "file": "logos/gailey-eye-clinic.png",
+      "source_url": "https://gaileyeyeclinic.com/wp-content/themes/2015gec/images/gailey-logo.png",
+      "note": "gaileyeyeclinic.com header logo (gaileyeye.com is a parked domain). Downscaled from 3033px."
+    },
+    "mid-city": {
+      "customer": "Mid-City Supply Co., Inc.",
+      "file": "logos/mid-city.png",
+      "source_url": "https://webmedia.mid-city.com/assets/_600x600_fit_center-center_82_none/2514777/Mid-City-Logo.png?mtime=1698681976",
+      "note": "LOW-MEDIUM CONFIDENCE. mid-city.com schema.org logo. Company is Mid-City Supply Co. (Elkhart, IN, Michiana); matched on name and Indiana location, not independently confirmed as the VAF customer."
+    },
+    "phalen-leadership-academy": {
+      "customer": "Phalen Leadership Academies",
+      "file": "logos/phalen-leadership-academy.png",
+      "source_url": "https://phalenacademies.org/wp-content/uploads/2025/10/cropped-plalogo.png",
+      "note": "phalenacademies.org header logo (PLA shield). Source had an opaque white background; edge-connected near-white was made transparent, so check edges on dark backgrounds."
+    },
+    "pools-of-fun": {
+      "customer": "Pools of Fun",
+      "file": "logos/pools-of-fun.png",
+      "source_url": "https://poolsoffun.com/wp-content/uploads/2026/04/Pools-of-fun-logo.webp",
+      "note": "poolsoffun.com header logo (color), converted from webp."
+    },
+    "shiel-sexton": {
+      "customer": "Shiel Sexton",
+      "file": "logos/shiel-sexton.png",
+      "source_url": "https://www.shielsexton.com/wp-content/themes/shielsexton/assets/images/shiel-sexton-logo.png",
+      "note": "shielsexton.com header logo. Only 163x100 available; kept at native size."
+    },
+    "the-town-of-bargersville": {
+      "customer": "Town of Bargersville",
+      "file": "logos/the-town-of-bargersville.png",
+      "source_url": "https://bargersville.in.gov/_assets_/images/logo.png",
+      "note": "bargersville.in.gov header logo, downscaled to 600px."
+    }
+  },
+  "headshots": {
+    "eric-von-grimmenstein": {
+      "name": "Eric von Grimmenstein",
+      "role": "President",
+      "file": "headshots/eric-von-grimmenstein.jpg",
+      "source_url": "https://www.vanausdall.com/images/eric-von-grimmenstein.jpg",
+      "note": "From VAF's own /about/history page. Original is a 1200x800 environmental portrait; file is a 640x640 square crop around the face. Uncropped original saved as headshots/eric-von-grimmenstein-full.jpg."
+    },
+    "steven-sigmon": {
+      "name": "Steven Sigmon",
+      "role": "Director of IT",
+      "file": null,
+      "source_url": "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/blog/steve-sigmon.jpg",
+      "note": "SKIPPED. The only image tied to him is a wide panel-event photo (3 people seated, blog post featured image); he cannot be identified from it and it is not a headshot. Needs a supplied photo."
+    }
+  }
+}
