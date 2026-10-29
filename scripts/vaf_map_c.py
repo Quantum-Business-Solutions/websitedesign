@@ -145,10 +145,16 @@ def casestudy(s):
                   "cta_label": "", "cta_link": link(""), "tone": "dark"})
 
 
+# exact dates of the after-service survey comments, as shown on vanausdall.com/about/customer-comments (CEO Juice widget)
+SURVEY_DATES = {("Elaine", "After-service survey, June 2026"): "2026-06-29", ("Teresa", "After-service survey, May 2026"): "2026-05-21", ("Amy", "After-service survey, May 2026"): "2026-05-21",
+                ("Stacy", "After-service survey, May 2026"): "2026-05-13", ("Megan", "After-service survey, April 2026"): "2026-04-29", ("Denise", "After-service survey, February 2026"): "2026-02-02",
+                ("Rick", "After-service survey, October 2025"): "2025-10-22"}
+
+
 def testimonials(s):
     return clean({**_common(s), "eyebrow": s.get("eyebrow", "What customers say"), "heading": s.get("heading", ""),
                   "layout": "feature" if s.get("layout") == "feature" else "grid",
-                  "items": [{"t_quote": q.strip().strip('"'), "t_name": who, "t_org": org} for q, who, org in s.get("items", [])]})
+                  "items": [{"t_quote": q.strip().strip('"'), "t_name": who, "t_org": org, "t_date": SURVEY_DATES.get((who, org), "")} for q, who, org in s.get("items", [])]})
 
 
 REGISTRY = {

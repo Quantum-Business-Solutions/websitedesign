@@ -45,3 +45,5 @@
     {% endif %}
   </div>
 </section>
+{% set vt_rv = [] %}{% for it in module.items %}{% if it.t_quote and it.t_name %}{% set vt_r = {"@type": "Review", "reviewBody": it.t_quote, "author": {"@type": "Person", "name": it.t_name}, "itemReviewed": {"@type": "Organization", "@id": "https://www.vanausdall.com/#organization", "name": "Van Ausdall & Farrar"}} %}{% if it.t_date %}{% do vt_r.update({"datePublished": it.t_date}) %}{% endif %}{% do vt_rv.append(vt_r) %}{% endif %}{% endfor %}
+{% if vt_rv|length %}<script type="application/ld+json">{{ {"@context": "https://schema.org", "@graph": vt_rv}|tojson }}</script>{% endif %}

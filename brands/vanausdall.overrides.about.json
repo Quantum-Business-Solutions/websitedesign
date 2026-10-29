@@ -29,7 +29,7 @@
             "Chosen as a Thomas Edison Company distributor"
           ],
           [
-            "93.4",
+            "92.8",
             "Net Promoter Score, audited by CEO Juice"
           ],
           [
@@ -102,7 +102,7 @@
           ],
           [
             "Measured, not claimed",
-            "Our Net Promoter Score is collected and audited by CEO Juice, an independent company whose process we do not control. It is 93.4. The average US company scores 10, and anything above 70 is World Class."
+            "Our Net Promoter Score is collected and audited by CEO Juice, an independent company whose process we do not control. It is 92.8. The average US company scores 10, and anything above 70 is World Class."
           ]
         ]
       },
@@ -128,7 +128,7 @@
         "id": "nps",
         "alt": true,
         "eyebrow": "Measured, not claimed",
-        "value": "93.4",
+        "value": "92.8",
         "text": "Net Promoter Score, collected and audited by CEO Juice from VAF customers after every service call. World Class, above 70, every year since 2019. Costco scores 79. The average US company scores 10.",
         "source": "CEO Juice is an independent company with an audited process; the numbers cannot be changed even if a customer scored us low in error."
       },
@@ -175,9 +175,34 @@
         "heading": "Real customer comments",
         "items": [
           [
+            "He was incredibly efficient and personable, answering all of my questions thoroughly and thoughtfully. He also laughed at my jokes, which is always appreciated.",
+            "Elaine",
+            "After-service survey, June 2026"
+          ],
+          [
             "He went above and beyond to ask and answer questions so we both were on the same page with the problem and ultimately the solution. He explained what we at the office needed to do differently to prevent this situation in the future as well.",
             "Elaine",
             "After-service survey, June 2026"
+          ],
+          [
+            "The guy is totally awesome. He has been working on our equipment for at least 12 years and I would not want anyone else.",
+            "Teresa",
+            "After-service survey, May 2026"
+          ],
+          [
+            "He took the time to explain to me what he fixed. He answered all of my questions.",
+            "Amy",
+            "After-service survey, May 2026"
+          ],
+          [
+            "We always look forward to Jerome coming. He is kind and professional. We always know our problem will be resolved.",
+            "Stacy",
+            "After-service survey, May 2026"
+          ],
+          [
+            "Brent is amazing. Always there when we need him and he is very knowledgeable and helpful. It is a pleasure to work with him.",
+            "Megan",
+            "After-service survey, April 2026"
           ],
           [
             "You guys give us top tier support and we thank you greatly.",
@@ -185,14 +210,14 @@
             "After-service survey, April 2026"
           ],
           [
-            "He did a great job, and was very communicative prior to his arrival.",
-            "Rick",
-            "After-service survey, October 2025"
-          ],
-          [
             "Mike is awesome, knowledgeable, and friendly.",
             "Denise",
             "After-service survey, February 2026"
+          ],
+          [
+            "He did a great job, and was very communicative prior to his arrival.",
+            "Rick",
+            "After-service survey, October 2025"
           ]
         ]
       },

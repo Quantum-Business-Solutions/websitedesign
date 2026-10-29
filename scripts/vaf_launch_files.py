@@ -25,7 +25,7 @@ groups = [("Start here", ["index.html", "company-facts.html", "technology-streng
           ("Locations", ["locations.html", "locations/indianapolis.html", "locations/fort-wayne.html", "locations/evansville.html"])]
 txt = ["# Van Ausdall & Farrar, Inc.", "",
        "> " + C["schema"]["org_description"], "",
-       "Facts: founded 1914 (Thomas Edison Company distributor); privately owned and operated in Indianapolis; headquarters 6430 E 75th Street, Indianapolis, IN 46250; offices in Fort Wayne and Evansville; SOC 2 certified; Net Promoter Score 93.4 audited by CEO Juice; Mitel Gold partner; Customer Care Center Monday to Friday 7:00am to 5:00pm, (317) 634-2913.", ""]
+       "Facts: founded 1914 (Thomas Edison Company distributor); privately owned and operated in Indianapolis; headquarters 6430 E 75th Street, Indianapolis, IN 46250; offices in Fort Wayne and Evansville; SOC 2 certified; Net Promoter Score 92.8 audited by CEO Juice; Mitel Gold partner; Customer Care Center Monday to Friday 7:00am to 5:00pm, (317) 634-2913.", ""]
 for h, fs in groups:
     ls = [line(f) for f in fs if line(f)]
     if ls:

@@ -1,0 +1,3673 @@
+[
+ {
+  "claim": "93.4 Net Promoter Score, audited",
+  "numbers": [
+   "93.4"
+  ],
+  "pages": [
+   "/",
+   "/about",
+   "/careers",
+   "/industries/education",
+   "/industries/engineering-construction",
+   "/industries/financial-services",
+   "/industries/government",
+   "/industries/healthcare",
+   "/industries/insurance",
+   "/industries/manufacturing-logistics",
+   "/industries/real-estate",
+   "/locations/bloomington",
+   "/locations/bloomington-business-phone-systems",
+   "/locations/bloomington-network-carrier-solutions",
+   "/locations/bloomington-network-infrastructure",
+   "/locations/carmel",
+   "/locations/columbus",
+   "/locations/columbus-business-telephone-systems",
+   "/locations/columbus-carrier-solutions",
+   "/locations/columbus-network-infrastructure",
+   "/locations/evansville",
+   "/locations/evansville-business-phone-systems",
+   "/locations/evansville-cloud-solutions",
+   "/locations/evansville-document-conversion-solutions",
+   "/locations/evansville-managed-it-solutions",
+   "/locations/evansville-network-carrier-solutions",
+   "/locations/evansville-network-infrastructure",
+   "/locations/fishers",
+   "/locations/fort-wayne",
+   "/locations/fort-wayne-business-phone-systems",
+   "/locations/fort-wayne-cloud-solutions",
+   "/locations/fort-wayne-managed-it-solutions",
+   "/locations/fort-wayne-network-carrier-solutions",
+   "/locations/fort-wayne-network-infrastructure",
+   "/locations/greenwood",
+   "/locations/indianapolis",
+   "/locations/indianapolis-network-infrastructure",
+   "/locations/muncie",
+   "/locations/muncie-business-phone-systems",
+   "/locations/muncie-network-carrier-solutions",
+   "/locations/muncie-network-infrastructure",
+   "/locations/noblesville",
+   "/locations/south-bend",
+   "/locations/south-bend-business-phone-systems",
+   "/locations/south-bend-carrier-solutions",
+   "/locations/south-bend-network-infrastructure",
+   "/print-assessment",
+   "/services/ai-consulting",
+   "/services/automated-forms-processing",
+   "/services/business-continuity",
+   "/services/business-phone-systems",
+   "/services/business-process-solutions",
+   "/services/business-security-systems",
+   "/services/call-center-services",
+   "/services/call-recording",
+   "/services/carrier-services",
+   "/services/cloud",
+   "/services/cloud-based-solutions",
+   "/services/cloud-communications",
+   "/services/conference-and-collaboration",
+   "/services/content-management",
+   "/services/copier-service",
+   "/services/copiers",
+   "/services/copy-print-solutions",
+   "/services/customer-training-videos",
+   "/services/cyber-security-assessment",
+   "/services/cyber-security-solutions",
+   "/services/cybersecurity",
+   "/services/document-conversion",
+   "/services/document-management",
+   "/services/document-management-workflow",
+   "/services/document-scanning",
+   "/services/elevate",
+   "/services/enterprise-digital-dictation-solutions",
+   "/services/facilities-management",
+   "/services/free-security-awareness",
+   "/services/free-security-training-tools",
+   "/services/iphone-scanning",
+   "/services/it-support",
+   "/services/knowbe4-can-hackers-spoof-email-address-domain",
+   "/services/knowbe4-free-phish-alert-button",
+   "/services/knowbe4-get-free-email-exposure-check",
+   "/services/knowbe4-get-free-ransomware-simulator-tool",
+   "/services/knowbe4-get-free-weak-password-test",
+   "/services/knowbe4-start-free-phishing-security-test",
+   "/services/managed-it",
+   "/services/managed-mail-centers",
+   "/services/managed-print",
+   "/services/managed-print-centers",
+   "/services/mobility-solutions",
+   "/services/network-infrastructure",
+   "/services/network-security",
+   "/services/network-security-secure-router-access",
+   "/services/networking-solutions",
+   "/services/office-security",
+   "/services/office-security-solutions",
+   "/services/physical-security",
+   "/services/print-application-solutions",
+   "/services/print-fulfillment",
+   "/services/print-management-software",
+   "/services/proactive-it-services",
+   "/services/production-print",
+   "/services/project-deployment",
+   "/services/receptionist-services",
+   "/services/sd-wan",
+   "/services/state-of-the-art-voice-data-communication-systems",
+   "/services/switch-to-cloud",
+   "/services/transcription-services",
+   "/services/unified-communications",
+   "/services/voice-data-circuits",
+   "/services/voice-processing",
+   "/services/voice-recognition",
+   "/services/wids-format",
+   "/solutions-communication",
+   "/solutions-information",
+   "/solutions-process",
+   "/support",
+   "/technology-strength-assessment"
+  ],
+  "status": "new",
+  "unmatched": [
+   "93.4"
+  ]
+ },
+ {
+  "claim": "SOC 2 certified NPS 93.4, audited by CEO Juice.",
+  "numbers": [
+   "93.4"
+  ],
+  "pages": [
+   "/careers",
+   "/locations/bloomington",
+   "/locations/bloomington-business-phone-systems",
+   "/locations/bloomington-network-carrier-solutions",
+   "/locations/bloomington-network-infrastructure",
+   "/locations/carmel",
+   "/locations/columbus",
+   "/locations/columbus-business-telephone-systems",
+   "/locations/columbus-carrier-solutions",
+   "/locations/columbus-network-infrastructure",
+   "/locations/evansville",
+   "/locations/evansville-business-phone-systems",
+   "/locations/evansville-cloud-solutions",
+   "/locations/evansville-document-conversion-solutions",
+   "/locations/evansville-managed-it-solutions",
+   "/locations/evansville-network-carrier-solutions",
+   "/locations/evansville-network-infrastructure",
+   "/locations/fishers",
+   "/locations/fort-wayne",
+   "/locations/fort-wayne-business-phone-systems",
+   "/locations/fort-wayne-cloud-solutions",
+   "/locations/fort-wayne-managed-it-solutions",
+   "/locations/fort-wayne-network-carrier-solutions",
+   "/locations/fort-wayne-network-infrastructure",
+   "/locations/greenwood",
+   "/locations/indianapolis",
+   "/locations/indianapolis-network-infrastructure",
+   "/locations/muncie",
+   "/locations/muncie-business-phone-systems",
+   "/locations/muncie-network-carrier-solutions",
+   "/locations/muncie-network-infrastructure",
+   "/locations/noblesville",
+   "/locations/south-bend",
+   "/locations/south-bend-business-phone-systems",
+   "/locations/south-bend-carrier-solutions",
+   "/locations/south-bend-network-infrastructure",
+   "/print-assessment",
+   "/services/ai-consulting",
+   "/services/automated-forms-processing",
+   "/services/business-continuity",
+   "/services/business-phone-systems",
+   "/services/business-process-solutions",
+   "/services/business-security-systems",
+   "/services/call-center-services",
+   "/services/call-recording",
+   "/services/carrier-services",
+   "/services/cloud",
+   "/services/cloud-based-solutions",
+   "/services/cloud-communications",
+   "/services/conference-and-collaboration",
+   "/services/content-management",
+   "/services/copier-service",
+   "/services/copiers",
+   "/services/copy-print-solutions",
+   "/services/customer-training-videos",
+   "/services/cyber-security-assessment",
+   "/services/cyber-security-solutions",
+   "/services/cybersecurity",
+   "/services/document-conversion",
+   "/services/document-management",
+   "/services/document-management-workflow",
+   "/services/document-scanning",
+   "/services/elevate",
+   "/services/enterprise-digital-dictation-solutions",
+   "/services/facilities-management",
+   "/services/free-security-awareness",
+   "/services/free-security-training-tools",
+   "/services/iphone-scanning",
+   "/services/it-support",
+   "/services/knowbe4-can-hackers-spoof-email-address-domain",
+   "/services/knowbe4-free-phish-alert-button",
+   "/services/knowbe4-get-free-email-exposure-check",
+   "/services/knowbe4-get-free-ransomware-simulator-tool",
+   "/services/knowbe4-get-free-weak-password-test",
+   "/services/knowbe4-start-free-phishing-security-test",
+   "/services/managed-it",
+   "/services/managed-mail-centers",
+   "/services/managed-print",
+   "/services/managed-print-centers",
+   "/services/mobility-solutions",
+   "/services/network-infrastructure",
+   "/services/network-security",
+   "/services/network-security-secure-router-access",
+   "/services/networking-solutions",
+   "/services/office-security",
+   "/services/office-security-solutions",
+   "/services/physical-security",
+   "/services/print-application-solutions",
+   "/services/print-fulfillment",
+   "/services/print-management-software",
+   "/services/proactive-it-services",
+   "/services/production-print",
+   "/services/project-deployment",
+   "/services/receptionist-services",
+   "/services/sd-wan",
+   "/services/state-of-the-art-voice-data-communication-systems",
+   "/services/switch-to-cloud",
+   "/services/transcription-services",
+   "/services/unified-communications",
+   "/services/voice-data-circuits",
+   "/services/voice-processing",
+   "/services/voice-recognition",
+   "/services/wids-format",
+   "/support",
+   "/technology-strength-assessment"
+  ],
+  "status": "new",
+  "unmatched": [
+   "93.4"
+  ]
+ },
+ {
+  "claim": "93.4 Net Promoter Score, independently audited",
+  "numbers": [
+   "93.4"
+  ],
+  "pages": [
+   "/careers",
+   "/locations/bloomington",
+   "/locations/bloomington-business-phone-systems",
+   "/locations/bloomington-network-carrier-solutions",
+   "/locations/bloomington-network-infrastructure",
+   "/locations/carmel",
+   "/locations/columbus",
+   "/locations/columbus-business-telephone-systems",
+   "/locations/columbus-carrier-solutions",
+   "/locations/columbus-network-infrastructure",
+   "/locations/evansville-business-phone-systems",
+   "/locations/evansville-cloud-solutions",
+   "/locations/evansville-document-conversion-solutions",
+   "/locations/evansville-managed-it-solutions",
+   "/locations/evansville-network-carrier-solutions",
+   "/locations/evansville-network-infrastructure",
+   "/locations/fishers",
+   "/locations/fort-wayne-business-phone-systems",
+   "/locations/fort-wayne-cloud-solutions",
+   "/locations/fort-wayne-managed-it-solutions",
+   "/locations/fort-wayne-network-carrier-solutions",
+   "/locations/fort-wayne-network-infrastructure",
+   "/locations/greenwood",
+   "/locations/indianapolis-network-infrastructure",
+   "/locations/muncie",
+   "/locations/muncie-business-phone-systems",
+   "/locations/muncie-network-carrier-solutions",
+   "/locations/muncie-network-infrastructure",
+   "/locations/noblesville",
+   "/locations/south-bend",
+   "/locations/south-bend-business-phone-systems",
+   "/locations/south-bend-carrier-solutions",
+   "/locations/south-bend-network-infrastructure",
+   "/print-assessment",
+   "/services/ai-consulting",
+   "/services/automated-forms-processing",
+   "/services/business-continuity",
+   "/services/business-phone-systems",
+   "/services/business-process-solutions",
+   "/services/business-security-systems",
+   "/services/call-center-services",
+   "/services/call-recording",
+   "/services/carrier-services",
+   "/services/cloud",
+   "/services/cloud-based-solutions",
+   "/services/cloud-communications",
+   "/services/conference-and-collaboration",
+   "/services/content-management",
+   "/services/copier-service",
+   "/services/copiers",
+   "/services/copy-print-solutions",
+   "/services/customer-training-videos",
+   "/services/cyber-security-assessment",
+   "/services/cyber-security-solutions",
+   "/services/cybersecurity",
+   "/services/document-conversion",
+   "/services/document-management",
+   "/services/document-management-workflow",
+   "/services/document-scanning",
+   "/services/elevate",
+   "/services/enterprise-digital-dictation-solutions",
+   "/services/facilities-management",
+   "/services/free-security-awareness",
+   "/services/free-security-training-tools",
+   "/services/iphone-scanning",
+   "/services/it-support",
+   "/services/knowbe4-can-hackers-spoof-email-address-domain",
+   "/services/knowbe4-free-phish-alert-button",
+   "/services/knowbe4-get-free-email-exposure-check",
+   "/services/knowbe4-get-free-ransomware-simulator-tool",
+   "/services/knowbe4-get-free-weak-password-test",
+   "/services/knowbe4-start-free-phishing-security-test",
+   "/services/managed-it",
+   "/services/managed-mail-centers",
+   "/services/managed-print",
+   "/services/managed-print-centers",
+   "/services/mobility-solutions",
+   "/services/network-infrastructure",
+   "/services/network-security",
+   "/services/network-security-secure-router-access",
+   "/services/networking-solutions",
+   "/services/office-security",
+   "/services/office-security-solutions",
+   "/services/physical-security",
+   "/services/print-application-solutions",
+   "/services/print-fulfillment",
+   "/services/print-management-software",
+   "/services/proactive-it-services",
+   "/services/production-print",
+   "/services/project-deployment",
+   "/services/receptionist-services",
+   "/services/sd-wan",
+   "/services/state-of-the-art-voice-data-communication-systems",
+   "/services/switch-to-cloud",
+   "/services/transcription-services",
+   "/services/unified-communications",
+   "/services/voice-data-circuits",
+   "/services/voice-processing",
+   "/services/voice-recognition",
+   "/services/wids-format",
+   "/support",
+   "/technology-strength-assessment"
+  ],
+  "status": "new",
+  "unmatched": [
+   "93.4"
+  ]
+ },
+ {
+  "claim": "NPS 93.4, audited by CEO Juice",
+  "numbers": [
+   "93.4"
+  ],
+  "pages": [
+   "/case-studies/aspire",
+   "/case-studies/berry-global",
+   "/case-studies/bowen-engineering",
+   "/case-studies/city-of-bloomington",
+   "/case-studies/phalen-leadership-academy",
+   "/case-studies/shiel-sexton",
+   "/case-studies/star-financial",
+   "/industries/real-estate",
+   "/locations/bloomington",
+   "/locations/carmel",
+   "/locations/columbus",
+   "/locations/columbus-network-infrastructure",
+   "/locations/evansville-network-infrastructure",
+   "/locations/fishers",
+   "/locations/fort-wayne-network-carrier-solutions",
+   "/locations/greenwood",
+   "/locations/muncie",
+   "/locations/muncie-network-carrier-solutions",
+   "/locations/noblesville",
+   "/locations/south-bend",
+   "/locations/south-bend-network-infrastructure",
+   "/services/business-security-systems"
+  ],
+  "status": "new",
+  "unmatched": [
+   "93.4"
+  ]
+ },
+ {
+  "claim": "A Net Promoter Score of 93.4, collected and audited by CEO Juice, an independent company, against a US average of 10.",
+  "numbers": [
+   "93.4"
+  ],
+  "pages": [
+   "/case-studies/aspire",
+   "/case-studies/berry-global",
+   "/case-studies/bowen-engineering",
+   "/case-studies/city-of-bloomington",
+   "/case-studies/phalen-leadership-academy",
+   "/case-studies/shiel-sexton",
+   "/case-studies/star-financial",
+   "/industries/real-estate",
+   "/locations/bloomington",
+   "/locations/carmel",
+   "/locations/columbus",
+   "/locations/fishers",
+   "/locations/greenwood",
+   "/locations/muncie",
+   "/locations/noblesville",
+   "/locations/south-bend"
+  ],
+  "status": "new",
+  "unmatched": [
+   "93.4"
+  ]
+ },
+ {
+  "claim": "93.4 Net Promoter Score, audited by CEO Juice",
+  "numbers": [
+   "93.4"
+  ],
+  "pages": [
+   "/about"
+  ],
+  "status": "new",
+  "unmatched": [
+   "93.4"
+  ]
+ },
+ {
+  "claim": "Indiana University Bloomington, established in 1820, enrolls over 45,000 students, and the regional economy spans education, life sciences, advanced manufacturing, technology and health care.",
+  "numbers": [
+   "1820,",
+   "45,000"
+  ],
+  "pages": [
+   "/locations/bloomington"
+  ],
+  "status": "new",
+  "unmatched": [
+   "1820,",
+   "45,000"
+  ]
+ },
+ {
+  "claim": "Muncie's glass-making and manufacturing past began with the gas boom of the 1880s, and the Ball family legacy still shows in Ball State University and Ball Memorial Hospital, now part of IU Health.",
+  "numbers": [
+   "1880"
+  ],
+  "pages": [
+   "/locations/muncie"
+  ],
+  "status": "new",
+  "unmatched": [
+   "1880"
+  ]
+ },
+ {
+  "claim": "Net Promoter Score of 93.4, audited by CEO Juice, against a US average of 10",
+  "numbers": [
+   "93.4"
+  ],
+  "pages": [
+   "/services/it-support"
+  ],
+  "status": "new",
+  "unmatched": [
+   "93.4"
+  ]
+ },
+ {
+  "claim": "Photographers, designers, architects, engineers and construction professionals, among others, whose work does not fit on 8.5 by 11 inch paper.",
+  "numbers": [
+   "8.5"
+  ],
+  "pages": [
+   "/services/wids-format"
+  ],
+  "status": "new",
+  "unmatched": [
+   "8.5"
+  ]
+ },
+ {
+  "claim": "One Customer Care Center, answered within 24 hours, with certified technicians dispatched locally.",
+  "numbers": [
+   "24 hours"
+  ],
+  "pages": [
+   "/locations/bloomington-business-phone-systems",
+   "/locations/bloomington-network-carrier-solutions",
+   "/locations/bloomington-network-infrastructure",
+   "/locations/columbus-business-telephone-systems",
+   "/locations/columbus-carrier-solutions",
+   "/locations/columbus-network-infrastructure",
+   "/locations/evansville-business-phone-systems",
+   "/locations/evansville-cloud-solutions",
+   "/locations/evansville-document-conversion-solutions",
+   "/locations/evansville-managed-it-solutions",
+   "/locations/evansville-network-carrier-solutions",
+   "/locations/evansville-network-infrastructure",
+   "/locations/fort-wayne-business-phone-systems",
+   "/locations/fort-wayne-cloud-solutions",
+   "/locations/fort-wayne-managed-it-solutions",
+   "/locations/fort-wayne-network-carrier-solutions",
+   "/locations/fort-wayne-network-infrastructure",
+   "/locations/indianapolis-network-infrastructure",
+   "/locations/muncie-business-phone-systems",
+   "/locations/muncie-network-carrier-solutions",
+   "/locations/muncie-network-infrastructure",
+   "/locations/south-bend-business-phone-systems",
+   "/locations/south-bend-carrier-solutions",
+   "/locations/south-bend-network-infrastructure"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "One Customer Care Center, answered within 24 hours",
+  "numbers": [
+   "24 hours"
+  ],
+  "pages": [
+   "/case-studies/aspire",
+   "/case-studies/berry-global",
+   "/case-studies/bowen-engineering",
+   "/case-studies/city-of-bloomington",
+   "/case-studies/phalen-leadership-academy",
+   "/case-studies/shiel-sexton",
+   "/case-studies/star-financial",
+   "/industries/real-estate",
+   "/locations/bloomington",
+   "/locations/carmel",
+   "/locations/columbus",
+   "/locations/columbus-network-infrastructure",
+   "/locations/evansville-network-infrastructure",
+   "/locations/fishers",
+   "/locations/fort-wayne-network-carrier-solutions",
+   "/locations/greenwood",
+   "/locations/muncie",
+   "/locations/muncie-network-carrier-solutions",
+   "/locations/noblesville",
+   "/locations/south-bend",
+   "/locations/south-bend-network-infrastructure",
+   "/services/business-security-systems"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "New print and copier fleet reduced overall equipment count and provided $1M in savings.",
+  "numbers": [
+   "$1M"
+  ],
+  "pages": [
+   "/case-studies",
+   "/case-studies/aspire",
+   "/case-studies/berry-global",
+   "/case-studies/bowen-engineering",
+   "/case-studies/city-of-anderson",
+   "/case-studies/city-of-bloomington",
+   "/case-studies/phalen-leadership-academy",
+   "/case-studies/shiel-sexton",
+   "/case-studies/star-financial",
+   "/case-studies/tippecanoe-school-corporation",
+   "/industries/education",
+   "/print-assessment",
+   "/services/managed-print"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Scan and index 1.5 million patient files in 90 days while adhering to HIPAA?",
+  "numbers": [
+   "1.5 million",
+   "90 days"
+  ],
+  "pages": [
+   "/case-studies",
+   "/case-studies/aspire",
+   "/case-studies/berry-global",
+   "/case-studies/bowen-engineering",
+   "/case-studies/city-of-bloomington",
+   "/case-studies/johnson-memorial-hospital",
+   "/case-studies/phalen-leadership-academy",
+   "/case-studies/shiel-sexton",
+   "/case-studies/star-financial",
+   "/industries/healthcare",
+   "/services/document-conversion",
+   "/solutions-process"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "TL;DR The post cites industry research of an average 20% productivity increase and communication costs reduced by up to 30% from ...",
+  "numbers": [
+   "20%",
+   "30%"
+  ],
+  "pages": [
+   "/services/business-phone-systems",
+   "/services/call-center-services",
+   "/services/call-recording",
+   "/services/carrier-services",
+   "/services/conference-and-collaboration",
+   "/services/iphone-scanning",
+   "/services/state-of-the-art-voice-data-communication-systems",
+   "/services/unified-communications",
+   "/services/voice-data-circuits",
+   "/services/voice-processing",
+   "/services/voice-recognition",
+   "/solutions-communication"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "He has been working on our equipment for at least 12 years and I would not want anyone else.",
+  "numbers": [
+   "12 years"
+  ],
+  "pages": [
+   "/",
+   "/industries/engineering-construction",
+   "/industries/manufacturing-logistics",
+   "/locations/indianapolis",
+   "/services/copy-print-solutions",
+   "/services/cybersecurity",
+   "/services/managed-print",
+   "/services/production-print",
+   "/solutions",
+   "/solutions-process",
+   "/support"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "STAR achieved over 70% cost savings after five months with Van Ausdall & Farrar.",
+  "numbers": [
+   "70%"
+  ],
+  "pages": [
+   "/case-studies",
+   "/case-studies/aspire",
+   "/case-studies/berry-global",
+   "/case-studies/bowen-engineering",
+   "/case-studies/city-of-bloomington",
+   "/case-studies/phalen-leadership-academy",
+   "/case-studies/shiel-sexton",
+   "/case-studies/star-financial",
+   "/case-studies/tippecanoe-school-corporation",
+   "/industries/financial-services",
+   "/services/copiers"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Third, the roadmap becomes one agreement: copiers, print, IT, phones and document services under one Customer Care Center, answered within 24 hours, with a 25-point inspection on every service call.",
+  "numbers": [
+   "24 hours",
+   "25-point"
+  ],
+  "pages": [
+   "/industries/education",
+   "/industries/engineering-construction",
+   "/industries/financial-services",
+   "/industries/government",
+   "/industries/healthcare",
+   "/industries/insurance",
+   "/industries/manufacturing-logistics",
+   "/industries/real-estate"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "250+ years of IT experience on staff",
+  "numbers": [
+   "250+"
+  ],
+  "pages": [
+   "/locations/bloomington",
+   "/locations/carmel",
+   "/locations/columbus",
+   "/locations/fishers",
+   "/locations/greenwood",
+   "/locations/muncie",
+   "/locations/noblesville",
+   "/locations/south-bend"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "By cutting overall equipment from 1,200 machines to just over 300 new machines, the school corporation has seen $1,000,000 in savings over the life of the contract.",
+  "numbers": [
+   "1,200",
+   "300",
+   "$1,000,000"
+  ],
+  "pages": [
+   "/case-studies/tippecanoe-school-corporation",
+   "/industries/education",
+   "/print-assessment",
+   "/services/copy-print-solutions",
+   "/services/managed-print"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "1,200 to 300",
+  "numbers": [
+   "1,200",
+   "300"
+  ],
+  "pages": [
+   "/case-studies/tippecanoe-school-corporation",
+   "/industries/education",
+   "/print-assessment",
+   "/services/copy-print-solutions",
+   "/services/managed-print"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Van Ausdall was able to scan over 1.5 million files in just 90 days.",
+  "numbers": [
+   "1.5 million",
+   "90 days"
+  ],
+  "pages": [
+   "/case-studies/johnson-memorial-hospital",
+   "/industries/healthcare",
+   "/services/document-conversion",
+   "/solutions-process"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Against an initial estimate of 100",
+  "numbers": [
+   "100"
+  ],
+  "pages": [
+   "/case-studies/johnson-memorial-hospital",
+   "/industries/healthcare",
+   "/services/document-conversion",
+   "/solutions-process"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Help desk, remote and on-site support, with a 24 hour response from the Customer Care Center.",
+  "numbers": [
+   "24 hour"
+  ],
+  "pages": [
+   "/services/business-continuity",
+   "/services/free-security-training-tools",
+   "/services/proactive-it-services",
+   "/support"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "The Customer Care Center processes requests Monday through Friday, 7:00am to 5:00pm, and responds within 24 hours.",
+  "numbers": [
+   "24 hours"
+  ],
+  "pages": [
+   "/",
+   "/downloads",
+   "/technology-strength-assessment"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Tippecanoe School Corporation cut 1,200 devices to just over 300 and saved a million dollars over the contract.",
+  "numbers": [
+   "1,200",
+   "300"
+  ],
+  "pages": [
+   "/",
+   "/industries",
+   "/industries/education"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "The result was 70% savings.",
+  "numbers": [
+   "70%"
+  ],
+  "pages": [
+   "/",
+   "/industries",
+   "/industries/financial-services"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "VAF supplies authenticated print release and scanning, tools that aid HIPAA compliance around patient records, unified communications and contact center for clinics, and a Document Conversion Center that scanned 1.5 million patient files for Johnson Memorial Health in 90 days.",
+  "numbers": [
+   "1.5 million",
+   "90 days"
+  ],
+  "pages": [
+   "/",
+   "/industries",
+   "/industries/healthcare"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "For the City of Anderson, VAF's on-site Facilities Management program refreshed print and billing technology, added 2D bar code document security and postal optimization, and streamlined purchasing, for over $40,000 in annual savings.",
+  "numbers": [
+   "$40,000"
+  ],
+  "pages": [
+   "/",
+   "/industries",
+   "/industries/government"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "The onsite updated equipment, software and process improvements that were installed, implemented and maintained by Van Ausdall & Farrar have created over $40,000 in annual savings.",
+  "numbers": [
+   "$40,000"
+  ],
+  "pages": [
+   "/case-studies/city-of-anderson",
+   "/industries/government",
+   "/services/document-management"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "STAR Financial Bank experienced a 70% cost savings over their original arrangement.",
+  "numbers": [
+   "70%"
+  ],
+  "pages": [
+   "/case-studies/star-financial",
+   "/industries/financial-services",
+   "/services/copiers"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Find your Phish-prone percentage for up to 100 users.",
+  "numbers": [
+   "100"
+  ],
+  "pages": [
+   "/services/free-security-awareness",
+   "/services/knowbe4-free-phish-alert-button",
+   "/services/knowbe4-get-free-weak-password-test"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "10 to 15 minutes, then a visit",
+  "numbers": [
+   "15 minutes"
+  ],
+  "pages": [
+   "/",
+   "/technology-strength-assessment"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "24/7, from Indianapolis.",
+  "numbers": [
+   "7,"
+  ],
+  "pages": [
+   "/",
+   "/technology-strength-assessment"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "A 25-point inspection on every service call",
+  "numbers": [
+   "25-point"
+  ],
+  "pages": [
+   "/",
+   "/technology-strength-assessment"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "More than 4,000 systems deployed since.",
+  "numbers": [
+   "4,000"
+  ],
+  "pages": [
+   "/",
+   "/about"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "6430 E 75th Street",
+  "numbers": [
+   "6430"
+  ],
+  "pages": [
+   "/",
+   "/about"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "The 57,000-square-foot corporate headquarters opens in Indianapolis.",
+  "numbers": [
+   "57,000"
+  ],
+  "pages": [
+   "/",
+   "/about"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Certified field technicians, remote diagnostics and a 25-point inspection on every visit.",
+  "numbers": [
+   "25-point"
+  ],
+  "pages": [
+   "/locations/evansville",
+   "/locations/fort-wayne"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "100+ Years in Business",
+  "numbers": [
+   "100+"
+  ],
+  "pages": [
+   "/services/copy-print-solutions",
+   "/services/managed-print"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "30% Average Printing Cost Reduction",
+  "numbers": [
+   "30%"
+  ],
+  "pages": [
+   "/services/copy-print-solutions",
+   "/services/managed-print"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Up to 100 users.",
+  "numbers": [
+   "100"
+  ],
+  "pages": [
+   "/services/free-security-awareness",
+   "/services/knowbe4-start-free-phishing-security-test"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Supplies shipped on usage, 24/7 monitoring, 25-point inspections",
+  "numbers": [
+   "25-point"
+  ],
+  "pages": [
+   "/"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Toner and service $0",
+  "numbers": [
+   "$0"
+  ],
+  "pages": [
+   "/"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Staff time $0",
+  "numbers": [
+   "$0"
+  ],
+  "pages": [
+   "/"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Potential saving at up to 30%",
+  "numbers": [
+   "30%"
+  ],
+  "pages": [
+   "/"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Top 7% of 1,400 Mitel partners in North America.",
+  "numbers": [
+   "7%",
+   "1,400"
+  ],
+  "pages": [
+   "/"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Requests processed Monday through Friday, 7:00am to 5:00pm, and answered within 24 hours.",
+  "numbers": [
+   "24 hours"
+  ],
+  "pages": [
+   "/"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "1,200 devices became 300, and the school corporation saved $1M over the life of the contract.",
+  "numbers": [
+   "1,200",
+   "300,",
+   "$1M"
+  ],
+  "pages": [
+   "/"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "1.5 million patient files scanned and indexed in 90 days, under HIPAA.",
+  "numbers": [
+   "1.5 million",
+   "90 days"
+  ],
+  "pages": [
+   "/"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Over 70% cost savings after five months with Van Ausdall & Farrar.",
+  "numbers": [
+   "70%"
+  ],
+  "pages": [
+   "/"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Indianapolis 6430 E 75th Street, headquarters",
+  "numbers": [
+   "6430"
+  ],
+  "pages": [
+   "/"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Fort Wayne 1241 N Wells Street",
+  "numbers": [
+   "1241"
+  ],
+  "pages": [
+   "/"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "From a single multifunction printer for a startup to a fleet of production copiers across multiple locations, and from a ten-person office on managed IT to a school corporation with 13,000 students.",
+  "numbers": [
+   "13,000"
+  ],
+  "pages": [
+   "/"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Today it is one of the largest privately owned office solutions companies in Indiana, with a 57,000-square-foot headquarters in Indianapolis and a long-standing tradition of partnering with the most respected manufacturers in the industry.",
+  "numbers": [
+   "57,000"
+  ],
+  "pages": [
+   "/about"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "The average US company scores 10, and anything above 70 is World Class.",
+  "numbers": [
+   "10,"
+  ],
+  "pages": [
+   "/about"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Vsecure IT staff with over 250 years of combined IT experience and CISSP personnel on staff",
+  "numbers": [
+   "250 years"
+  ],
+  "pages": [
+   "/about"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Mitel Gold for seven consecutive years, the top 7% of 1,400 partners in North America",
+  "numbers": [
+   "7%",
+   "1,400"
+  ],
+  "pages": [
+   "/about"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Average tenure of IT and UC sales staff of 15 years, with over 150 years of industry experience",
+  "numbers": [
+   "15 years",
+   "150 years"
+  ],
+  "pages": [
+   "/about"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "401K plan company match",
+  "numbers": [
+   "401K"
+  ],
+  "pages": [
+   "/benefits"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Does VAF match 401K contributions?",
+  "numbers": [
+   "401K"
+  ],
+  "pages": [
+   "/benefits"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "VAF lists a 401K plan with a company match, plus company-funded life insurance and short-term and long-term disability.",
+  "numbers": [
+   "401K"
+  ],
+  "pages": [
+   "/benefits"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Medical, dental, vision, 401(k) match and more.",
+  "numbers": [
+   "401"
+  ],
+  "pages": [
+   "/careers"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Indianapolis headquarters at 6430 E 75th Street, the Fort Wayne and Evansville offices, and field service roles across Indiana.",
+  "numbers": [
+   "6430"
+  ],
+  "pages": [
+   "/careers"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Medical, dental and vision, a 401(k) with match, generous paid time off and paid volunteer hours, in a privately owned company where the average technology advisor has been here fifteen years.",
+  "numbers": [
+   "401"
+  ],
+  "pages": [
+   "/careers"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "$1M Saved by Tippecanoe School Corporation",
+  "numbers": [
+   "$1M"
+  ],
+  "pages": [
+   "/case-studies"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "70% Print cost savings at STAR Financial Bank",
+  "numbers": [
+   "70%"
+  ],
+  "pages": [
+   "/case-studies"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "1.5M Patient files scanned in 90 days for Johnson Memorial",
+  "numbers": [
+   "1.5M",
+   "90 days"
+  ],
+  "pages": [
+   "/case-studies"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "$40,000 Annual savings for the City of Anderson",
+  "numbers": [
+   "$40,000"
+  ],
+  "pages": [
+   "/case-studies"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "1,200 to 300 Fleet consolidated across every building",
+  "numbers": [
+   "1,200",
+   "300"
+  ],
+  "pages": [
+   "/case-studies"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "70% Over the original arrangement",
+  "numbers": [
+   "70%"
+  ],
+  "pages": [
+   "/case-studies"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "1.5M Patient records scanned and indexed",
+  "numbers": [
+   "1.5M"
+  ],
+  "pages": [
+   "/case-studies"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "$40,000 Every year",
+  "numbers": [
+   "$40,000"
+  ],
+  "pages": [
+   "/case-studies"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "$300,000 Saved while closing security gaps",
+  "numbers": [
+   "$300,000"
+  ],
+  "pages": [
+   "/case-studies"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "1,500 Printers supported worldwide",
+  "numbers": [
+   "1,500"
+  ],
+  "pages": [
+   "/case-studies"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "The challenges of a growing international Fortune 500 company were exponential for an in-house marketing group that needed to control.",
+  "numbers": [
+   "500"
+  ],
+  "pages": [
+   "/case-studies"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "~500,000 Pages printed in one weekend",
+  "numbers": [
+   "500,000"
+  ],
+  "pages": [
+   "/case-studies"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "500,000+ HR file pages digitized",
+  "numbers": [
+   "500,000+"
+  ],
+  "pages": [
+   "/case-studies"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "$1,000,000 over the life of the contract, by consolidating 1,200 printers and copiers to just over 300 and replacing more than 10 vendors with one.",
+  "numbers": [
+   "$1,000,000",
+   "1,200",
+   "300"
+  ],
+  "pages": [
+   "/case-studies"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "70% over the original arrangement after phase one, once expired leases were removed and contracts renegotiated statewide.",
+  "numbers": [
+   "70%"
+  ],
+  "pages": [
+   "/case-studies"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "1.5 million files in 90 days for Johnson Memorial Health, inside budget, with a certificate of destruction for the paper.",
+  "numbers": [
+   "1.5 million",
+   "90 days"
+  ],
+  "pages": [
+   "/case-studies"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Van Ausdall & Farrar was able to quickly address their current security vulnerabilities, renegotiate their hardware contracts, and save them over $300,000 in the process.",
+  "numbers": [
+   "$300,000"
+  ],
+  "pages": [
+   "/case-studies/aspire"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Beck\u2019s Hybrid is an Indiana-based, family owned seed business that is growing at a rate of 15-25% year over year.",
+  "numbers": [
+   "25%"
+  ],
+  "pages": [
+   "/case-studies/becks-hybrid"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "The challenges of a growing international Fortune 500 company were exponential for an in-house marketing group that needed to control consistency and cost.",
+  "numbers": [
+   "500"
+  ],
+  "pages": [
+   "/case-studies/berry-global"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "is a Fortune 500 international manufacturer and marketer of plastic packaging products.",
+  "numbers": [
+   "500"
+  ],
+  "pages": [
+   "/case-studies/berry-global"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Headquartered in Evansville, Indiana, it has over 130 facilities and more than 23,000 employees around the world.",
+  "numbers": [
+   "130",
+   "23,000"
+  ],
+  "pages": [
+   "/case-studies/berry-global"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Berry needed an innovative solution to not only control cost across their 100+ locations, but also streamline the process among multiple vendors while reducing supply costs and IT challenges.",
+  "numbers": [
+   "100+"
+  ],
+  "pages": [
+   "/case-studies/berry-global"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Van Ausdall & Farrar was a logical decision, because they were already managing and maintaining over 250 copiers in the organization.",
+  "numbers": [
+   "250"
+  ],
+  "pages": [
+   "/case-studies/berry-global"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "The goal for Van Ausdall expanded to provide Berry that same level of service and support for their over 1,500 printers.",
+  "numbers": [
+   "1,500"
+  ],
+  "pages": [
+   "/case-studies/berry-global"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "The City of Anderson was founded in 1844 and has grown to over 56,000 residents.",
+  "numbers": [
+   "1844",
+   "56,000"
+  ],
+  "pages": [
+   "/case-studies/city-of-anderson"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "The on-site updated equipment, software and process improvements installed, implemented and maintained by Van Ausdall & Farrar have created over $40,000 in annual savings.",
+  "numbers": [
+   "$40,000"
+  ],
+  "pages": [
+   "/case-studies/city-of-anderson"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Over $40,000 in annual savings, and fewer vendors for the city to manage.",
+  "numbers": [
+   "$40,000"
+  ],
+  "pages": [
+   "/case-studies/city-of-anderson"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "$40,000 in annual savings, as published in the case study on vanausdall.com.",
+  "numbers": [
+   "$40,000"
+  ],
+  "pages": [
+   "/case-studies/city-of-anderson"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Mi Voice Connect integrated with their AMS 360 management system without difficulty, making installation and setup simple.",
+  "numbers": [
+   "360"
+  ],
+  "pages": [
+   "/case-studies/ellinger-riggs"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "The solution had to maintain patient confidentiality under HIPAA and adhere to the record retention policy, and the whole project had to finish in 90 days.",
+  "numbers": [
+   "90 days"
+  ],
+  "pages": [
+   "/case-studies/johnson-memorial-hospital"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "The initial estimate was 100 banker-size boxes.",
+  "numbers": [
+   "100"
+  ],
+  "pages": [
+   "/case-studies/johnson-memorial-hospital"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "After careful inventory, there were over 500.",
+  "numbers": [
+   "500"
+  ],
+  "pages": [
+   "/case-studies/johnson-memorial-hospital"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Over 1.5 million files were scanned in 90 days.",
+  "numbers": [
+   "1.5 million",
+   "90 days"
+  ],
+  "pages": [
+   "/case-studies/johnson-memorial-hospital"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "All files were inventoried, scanned and indexed within 90 days and inside the allotted budget.",
+  "numbers": [
+   "90 days"
+  ],
+  "pages": [
+   "/case-studies/johnson-memorial-hospital"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "1.5 million files.",
+  "numbers": [
+   "1.5 million"
+  ],
+  "pages": [
+   "/case-studies/johnson-memorial-hospital"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "1.5M patient files scanned in 90 days, as published in the case study on vanausdall.com.",
+  "numbers": [
+   "1.5M",
+   "90 days"
+  ],
+  "pages": [
+   "/case-studies/johnson-memorial-hospital"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "PLA currently serves 10,000 scholars in 20 schools across the country.",
+  "numbers": [
+   "10,000"
+  ],
+  "pages": [
+   "/case-studies/phalen-leadership-academy"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Phalen Leadership Academy needed to print nearly 500,000 pages of course materials over the weekend in order to get materials in the scholars\u2019 hands before the school shut down on Monday morning.",
+  "numbers": [
+   "500,000"
+  ],
+  "pages": [
+   "/case-studies/phalen-leadership-academy"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "With experience as an Information Technology Provider dating back 25 years, Van Ausdall is a partner of choice that businesses can trust in the midwest.",
+  "numbers": [
+   "25 years"
+  ],
+  "pages": [
+   "/case-studies/pools-of-fun"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Much of their success has been due to the skill and longevity of the employees, many of whom have been there for over 20 years.",
+  "numbers": [
+   "20 years"
+  ],
+  "pages": [
+   "/case-studies/shiel-sexton"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Once phase one of the print strategy was complete, STAR Financial Bank experienced a 70% cost savings over the original arrangement.",
+  "numbers": [
+   "70%"
+  ],
+  "pages": [
+   "/case-studies/star-financial"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "70% savings, one vendor, one location for every contract.",
+  "numbers": [
+   "70%"
+  ],
+  "pages": [
+   "/case-studies/star-financial"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "70% cost savings on print, as published in the case study on vanausdall.com.",
+  "numbers": [
+   "70%"
+  ],
+  "pages": [
+   "/case-studies/star-financial"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "The town manages municipally owned utilities that serve over 13,000 nearby residents.",
+  "numbers": [
+   "13,000"
+  ],
+  "pages": [
+   "/case-studies/the-town-of-bargersville"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Tippecanoe School Corporation serves more than 13,000 students.",
+  "numbers": [
+   "13,000"
+  ],
+  "pages": [
+   "/case-studies/tippecanoe-school-corporation"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "IT staff was spending 20% of their time servicing print issues.",
+  "numbers": [
+   "20%"
+  ],
+  "pages": [
+   "/case-studies/tippecanoe-school-corporation"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "The fleet held over 600 single-function printers and over 200 copiers.",
+  "numbers": [
+   "600",
+   "200"
+  ],
+  "pages": [
+   "/case-studies/tippecanoe-school-corporation"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "After the review, Van Ausdall recommended copy and print management solutions and print application solutions that streamlined print and copy functions, provided mobile printing, integrated cloud printing, and eliminated over 900 outdated machines that were too costly to maintain and service.",
+  "numbers": [
+   "900"
+  ],
+  "pages": [
+   "/case-studies/tippecanoe-school-corporation"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "1,200 machines became just over 300.",
+  "numbers": [
+   "1,200",
+   "300"
+  ],
+  "pages": [
+   "/case-studies/tippecanoe-school-corporation"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "$1M saved over the life of the contract, as published in the case study on vanausdall.com.",
+  "numbers": [
+   "$1M"
+  ],
+  "pages": [
+   "/case-studies/tippecanoe-school-corporation"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "TSC digitally archived all of the school corporation\u2019s employee files and imported them into their HR Information System, totaling over 500,000 pages.",
+  "numbers": [
+   "500,000"
+  ],
+  "pages": [
+   "/case-studies/tippecanoe-school-corporation-digital-document"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "TSC manages two high schools (grades 9-12), six middle schools (grades 6-8), and 11 elementary schools (K-5) with 13,500 students.",
+  "numbers": [
+   "13,500"
+  ],
+  "pages": [
+   "/case-studies/tippecanoe-school-corporation-digital-document"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "When completed, Van Ausdall accurately digitized and indexed over 500,000 employee documents.",
+  "numbers": [
+   "500,000"
+  ],
+  "pages": [
+   "/case-studies/tippecanoe-school-corporation-digital-document"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "If the question is about an existing device or agreement, it is routed to the Client Service Center, which answers within 24 hours and dispatches a certified technician locally.",
+  "numbers": [
+   "24 hours"
+  ],
+  "pages": [
+   "/contact"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Service requests answered within 24 hours",
+  "numbers": [
+   "24 hours"
+  ],
+  "pages": [
+   "/contact"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Requests are processed and answered within 24 hours.",
+  "numbers": [
+   "24 hours"
+  ],
+  "pages": [
+   "/contact"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Toshiba IP 5000 Series video training",
+  "numbers": [
+   "5000"
+  ],
+  "pages": [
+   "/downloads"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Toshiba DP 5000 Series video training",
+  "numbers": [
+   "5000"
+  ],
+  "pages": [
+   "/downloads"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "This page lists ShoreTel and ShoreTel conferencing self-paced training and Toshiba IP 5000, DP 5000 and CIX guides.",
+  "numbers": [
+   "5000,",
+   "5000"
+  ],
+  "pages": [
+   "/downloads"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Can VAF manage Microsoft 365 and Google accounts for our staff?",
+  "numbers": [
+   "365"
+  ],
+  "pages": [
+   "/locations/bloomington"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "As the first Indiana Bell Authorized Distributor, Van Ausdall & Farrar has 34 years of experience managing our client\u2019s dial tone, Internet and WAN requirements.",
+  "numbers": [
+   "34 years"
+  ],
+  "pages": [
+   "/locations/bloomington-network-carrier-solutions"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "In an industry not known for excellent customer service, please consider leveraging VA&F\u2019s 100+ years of experience delivering what others lack; a strong desire to deliver on our promises, with the right people and expertise to make those promises a reality.",
+  "numbers": [
+   "100+"
+  ],
+  "pages": [
+   "/locations/bloomington-network-carrier-solutions"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Carmel is served from our headquarters at 6430 E 75th Street in Indianapolis by a computer-dispatched, vendor-certified service fleet.",
+  "numbers": [
+   "6430"
+  ],
+  "pages": [
+   "/locations/carmel"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "VAF publishes same-day service for most metro-area calls, and its Customer Care Center responds within 24 hours, Monday through Friday, 7:00am to 5:00pm.",
+  "numbers": [
+   "24 hours"
+  ],
+  "pages": [
+   "/locations/carmel"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Certified technicians, remote diagnostics and a 25-point inspection on every visit.",
+  "numbers": [
+   "25-point"
+  ],
+  "pages": [
+   "/locations/columbus"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Van Ausdall & Farrar has been setting up and managing our customer\u2019s carrier services for over 35 years.",
+  "numbers": [
+   "35 years"
+  ],
+  "pages": [
+   "/locations/columbus-carrier-solutions"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Our deep bench of engineers has over 100 years of combined network experience.",
+  "numbers": [
+   "100 years"
+  ],
+  "pages": [
+   "/locations/columbus-network-infrastructure"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Fleet monitoring, automatic supplies and cost reduction up to 30% across clinics, branches and warehouses.",
+  "numbers": [
+   "30%"
+  ],
+  "pages": [
+   "/locations/evansville"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "As the first Indiana Bell Authorized Distributor, Van Ausdall & Farrar has 34 years of experience managing our client\u2019s dial tone, high speed internet and WAN requirements.",
+  "numbers": [
+   "34 years"
+  ],
+  "pages": [
+   "/locations/evansville-network-carrier-solutions"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "VAF's Document Conversion Center, inside the 57,000-square-foot Indianapolis headquarters, scans, indexes and returns searchable records under signed chain of custody, then returns or certifies destruction of the paper.",
+  "numbers": [
+   "57,000"
+  ],
+  "pages": [
+   "/locations/fishers"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Its manufacturing, defense, health care and insurance employers run on dependable office technology, and VAF's Fort Wayne office at 1241 N Wells Street supports them.",
+  "numbers": [
+   "1241"
+  ],
+  "pages": [
+   "/locations/fort-wayne"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Fleet monitoring, automatic supplies and cost reduction up to 30%, for production offices and front offices alike.",
+  "numbers": [
+   "30%"
+  ],
+  "pages": [
+   "/locations/fort-wayne"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "For over 100 years, our primary goal has been to provide the best technology products and services to our clients at the greatest value.",
+  "numbers": [
+   "100 years"
+  ],
+  "pages": [
+   "/locations/fort-wayne-business-phone-systems"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Cloud solutions are 100% protected to be the most secure and reliable area to store all of your documents, software, and data.",
+  "numbers": [
+   "100%"
+  ],
+  "pages": [
+   "/locations/fort-wayne-cloud-solutions"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Van Ausdall & Farrar has been meeting the needs of our customers for over 100 years and are headquartered in Indiana.",
+  "numbers": [
+   "100 years"
+  ],
+  "pages": [
+   "/locations/fort-wayne-managed-it-solutions"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "When you rely on Van Ausdall & Farrar to managed your carrier service needs, you obtain our experience and 34 years of expertise in the carrier service industry, all at no additional charge.",
+  "numbers": [
+   "34 years"
+  ],
+  "pages": [
+   "/locations/fort-wayne-network-carrier-solutions"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "It responds within 24 hours, Monday through Friday, 7:00am to 5:00pm, and remote diagnostics fix many issues without a visit.",
+  "numbers": [
+   "24 hours"
+  ],
+  "pages": [
+   "/locations/greenwood"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Indianapolis is Indiana's capital and largest city, and 6430 E 75th Street is where VAF's headquarters, Customer Care Center and secure Document Conversion Center sit under one roof.",
+  "numbers": [
+   "6430"
+  ],
+  "pages": [
+   "/locations/indianapolis"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Service and supply requests by phone, email or website, with a response within 24 hours, Monday through Friday, 7:00am to 5:00pm.",
+  "numbers": [
+   "24 hours"
+  ],
+  "pages": [
+   "/locations/indianapolis"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "A single-tenant, keycard-access facility inside the 57,000-square-foot building, on a scanning network that is not internet accessible.",
+  "numbers": [
+   "57,000"
+  ],
+  "pages": [
+   "/locations/indianapolis"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "VAF publishes same-day service for most metro-area calls, and the Customer Care Center responds within 24 hours.",
+  "numbers": [
+   "24 hours"
+  ],
+  "pages": [
+   "/locations/indianapolis"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "In fact, our Converged Communications Group network engineering staff has over 50 years of combined experience delivering quality network solutions.",
+  "numbers": [
+   "50 years"
+  ],
+  "pages": [
+   "/locations/indianapolis-network-infrastructure"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "When a technician does come, every visit includes a 25-point inspection.",
+  "numbers": [
+   "25-point"
+  ],
+  "pages": [
+   "/locations/muncie"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "For service, remote diagnostics resolve many issues without a visit, and the Customer Care Center responds within 24 hours.",
+  "numbers": [
+   "24 hours"
+  ],
+  "pages": [
+   "/locations/noblesville"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Call or email the Customer Care Center, which responds within 24 hours, Monday through Friday, 7:00am to 5:00pm.",
+  "numbers": [
+   "24 hours"
+  ],
+  "pages": [
+   "/locations/noblesville"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Remote diagnostics fix many problems without a visit, and every visit includes a 25-point inspection.",
+  "numbers": [
+   "25-point"
+  ],
+  "pages": [
+   "/locations/noblesville"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Service requests go through the Customer Care Center, which responds within 24 hours.",
+  "numbers": [
+   "24 hours"
+  ],
+  "pages": [
+   "/locations/south-bend"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "AI cloud communications with 99.999% uptime reliability.",
+  "numbers": [
+   "99.999%"
+  ],
+  "pages": [
+   "/partners"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Mitel Gold for seven consecutive years, the top 7 percent of 1,400 partners in North America",
+  "numbers": [
+   "1,400"
+  ],
+  "pages": [
+   "/partners"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "We will verify your identity before responding and will reply within the time the law allows, generally 45 days.",
+  "numbers": [
+   "45 days"
+  ],
+  "pages": [
+   "/policies/privacy"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "We verify your identity and respond within the time the law allows, generally 45 days.",
+  "numbers": [
+   "45 days"
+  ],
+  "pages": [
+   "/policies/privacy"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "We do not dabble in phone systems: a dedicated engineering staff, more than 4,000 systems deployed, and Mitel Gold status seven years running.",
+  "numbers": [
+   "4,000"
+  ],
+  "pages": [
+   "/services/business-phone-systems"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Enterprise PBX and VoIP capability with no hardware to buy, managed and monitored 24/7, with mobility, web conferencing and secure messaging.",
+  "numbers": [
+   "7,"
+  ],
+  "pages": [
+   "/services/business-phone-systems"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Sourcewell cooperative pricing, a 40% discount on Mitel products, free to eligible organizations",
+  "numbers": [
+   "40%"
+  ],
+  "pages": [
+   "/services/business-phone-systems"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Through Mitel, 8x8, RingCentral and Elevate we design for how your teams actually work: single location, multi-office, or a contact center with application integration.",
+  "numbers": [
+   "8,"
+  ],
+  "pages": [
+   "/services/business-phone-systems"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Video surveillance cameras are watching 24/7/365; just their presence can be a powerful deterrent to illegal or fraudulent activity and theft.",
+  "numbers": [
+   "365"
+  ],
+  "pages": [
+   "/services/business-security-systems"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "In an IP video surveillance system, a special camera records HD (High Definition 720p/1080p) video footage.",
+  "numbers": [
+   "720",
+   "1080"
+  ],
+  "pages": [
+   "/services/business-security-systems"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "A Class V data center that sustains 200 MPH winds, with primary and secondary UPS and a backup generator",
+  "numbers": [
+   "200"
+  ],
+  "pages": [
+   "/services/cloud"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "An IT service provider in Indiana for 25 years",
+  "numbers": [
+   "25 years"
+  ],
+  "pages": [
+   "/services/cloud"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "VAF says it has been an IT service provider in Indiana for 25 years.",
+  "numbers": [
+   "25 years"
+  ],
+  "pages": [
+   "/services/cloud"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Our Customer Care Center processes requests Monday through Friday, 7:00am to 5:00pm, and responds within 24 hours.",
+  "numbers": [
+   "24 hours"
+  ],
+  "pages": [
+   "/services/copier-service"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "25-point inspection",
+  "numbers": [
+   "25-point"
+  ],
+  "pages": [
+   "/services/copier-service"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "The Customer Care Center processes requests Monday through Friday, 7:00am to 5:00pm and responds within 24 hours, with same-day service for most metro calls.",
+  "numbers": [
+   "24 hours"
+  ],
+  "pages": [
+   "/services/copier-service"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "The Customer Care Center responds within 24 hours, and technicians perform a 25-point inspection on every visit.",
+  "numbers": [
+   "24 hours",
+   "25-point"
+  ],
+  "pages": [
+   "/services/copiers"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Reduce costs by up to 30% with Indianapolis copy print solutions, copiers, multifunction printers, and managed print services backed by local service.",
+  "numbers": [
+   "30%"
+  ],
+  "pages": [
+   "/services/copy-print-solutions"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Cut printing costs by up to 30%",
+  "numbers": [
+   "30%"
+  ],
+  "pages": [
+   "/services/copy-print-solutions"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Certified field service technicians with 25-point inspections on every call",
+  "numbers": [
+   "25-point"
+  ],
+  "pages": [
+   "/services/copy-print-solutions"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Copy Print Solutions in Action: Tippecanoe School Corporation consolidated over 1,200 printers and copiers down to just over 300, and saved $1,000,000 over the life of the contract.",
+  "numbers": [
+   "1,200",
+   "300,",
+   "$1,000,000"
+  ],
+  "pages": [
+   "/services/copy-print-solutions"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "1,200 devices became just over 300, replacing ten copy and print vendors with one.",
+  "numbers": [
+   "1,200",
+   "300,"
+  ],
+  "pages": [
+   "/services/copy-print-solutions"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Estimate your print spend and the potential saving at up to 30%.",
+  "numbers": [
+   "30%"
+  ],
+  "pages": [
+   "/services/copy-print-solutions"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Net Promoter Score is the worldwide standard for measuring customer satisfaction from -100 to +100.",
+  "numbers": [
+   "100",
+   "100"
+  ],
+  "pages": [
+   "/services/copy-print-solutions"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Managed print services (MPS) monitor your entire printer and copier fleet, automate supply replenishment, and cut printing costs up to 30%.",
+  "numbers": [
+   "30%"
+  ],
+  "pages": [
+   "/services/copy-print-solutions"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "It also provides you with our 100+ years of experience implementing and managing secure technology solutions.",
+  "numbers": [
+   "100+"
+  ],
+  "pages": [
+   "/services/copy-print-solutions"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "VAF says features such as call history, dialing, presence, IM and audio or web collaboration have been proven to save colleagues 30 to 45 minutes a day.",
+  "numbers": [
+   "45 minutes"
+  ],
+  "pages": [
+   "/services/customer-training-videos"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "If a clip does not cover your question, existing customers can use the Client Service Center, where the Customer Care Center responds within 24 hours, Monday through Friday, 7:00am to 5:00pm.",
+  "numbers": [
+   "24 hours"
+  ],
+  "pages": [
+   "/services/customer-training-videos"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "VAF says call history, dialing, presence, IM and audio or web collaboration have been proven to save colleagues 30 to 45 minutes a day.",
+  "numbers": [
+   "45 minutes"
+  ],
+  "pages": [
+   "/services/customer-training-videos"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "According to recent surveys, businesses targeted by cyber criminals increased from 38% to 43% over the past year, with many of those surveyed reporting five attacks or more.",
+  "numbers": [
+   "38%",
+   "43%"
+  ],
+  "pages": [
+   "/services/cyber-security-assessment"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Average Tenure of IT Security Team is 15 Years",
+  "numbers": [
+   "15 Years"
+  ],
+  "pages": [
+   "/services/cyber-security-solutions"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Fortinet NSE 1,2,3,4,5,7 Certified Staff",
+  "numbers": [
+   "1,2,3,4,5,7"
+  ],
+  "pages": [
+   "/services/cyber-security-solutions"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "VAF lists Fortinet NSE 1, 2, 3, 4, 5 and 7 certified staff, a Sophos Central Advanced credential, a CISSP and Microsoft certifications.",
+  "numbers": [
+   "1,",
+   "2,",
+   "3,",
+   "4,"
+  ],
+  "pages": [
+   "/services/cyber-security-solutions"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "The IT security team's average tenure is 15 years.",
+  "numbers": [
+   "15 years"
+  ],
+  "pages": [
+   "/services/cyber-security-solutions"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "End-user cyber security awareness training and compliance management from KnowBe4, with a CISSP on staff for regulatory, planning and incident work.",
+  "numbers": [
+   "4,"
+  ],
+  "pages": [
+   "/services/cybersecurity"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Paperless digital imaging and secure electronic storage from VAF's ultra-secure Document Conversion Center inside our 57,000-square-foot Indianapolis headquarters.",
+  "numbers": [
+   "57,000"
+  ],
+  "pages": [
+   "/services/document-conversion"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "For Johnson Memorial Health we inventoried, scanned and indexed 1.5 million patient files in 90 days, inside budget, with a certificate of destruction for the paper.",
+  "numbers": [
+   "1.5 million",
+   "90 days"
+  ],
+  "pages": [
+   "/services/document-conversion"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "VAF's case study cites over $40,000 in annual savings from equipment, software and process improvements.",
+  "numbers": [
+   "$40,000"
+  ],
+  "pages": [
+   "/services/document-management"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Trusted by more than 9,200 organizations, OnBase eliminates bottlenecks and automates low-value, time-intensive tasks.",
+  "numbers": [
+   "9,200"
+  ],
+  "pages": [
+   "/services/document-management-workflow"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "VAF says it is trusted by more than 9,200 organizations.",
+  "numbers": [
+   "9,200"
+  ],
+  "pages": [
+   "/services/document-management-workflow"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "One example: 1.5 million Johnson Memorial Health files scanned and indexed in 90 days.",
+  "numbers": [
+   "1.5 million",
+   "90 days"
+  ],
+  "pages": [
+   "/services/document-scanning"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "With 99.999% uptime, Elevate helps ensure your business stays reachable and operational.",
+  "numbers": [
+   "99.999%"
+  ],
+  "pages": [
+   "/services/elevate"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "VAF's page cites 99.999 percent uptime, which it says helps keep your business reachable and operational.",
+  "numbers": [
+   "99.999"
+  ],
+  "pages": [
+   "/services/elevate"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "A free phishing test for up to 100 users gives you that number.",
+  "numbers": [
+   "100"
+  ],
+  "pages": [
+   "/services/free-security-awareness"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "You can test up to 100 users and start immediately",
+  "numbers": [
+   "100"
+  ],
+  "pages": [
+   "/services/free-security-awareness"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "A PDF with charts arrives within 24 hours for sharing with management",
+  "numbers": [
+   "24 hours"
+  ],
+  "pages": [
+   "/services/free-security-awareness"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "The free offer on this page is a phishing security test for up to 100 users, with a PDF of your Phish-prone percentage emailed within 24 hours.",
+  "numbers": [
+   "100",
+   "24 hours"
+  ],
+  "pages": [
+   "/services/free-security-awareness"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Our Customer Care Center processes requests Monday through Friday, 7:00am to 5:00pm EST, and responds within 24 hours.",
+  "numbers": [
+   "24 hours"
+  ],
+  "pages": [
+   "/services/it-support"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "The Customer Care Center processes requests Monday through Friday, 7:00am to 5:00pm EST and responds within 24 hours.",
+  "numbers": [
+   "24 hours"
+  ],
+  "pages": [
+   "/services/it-support"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "KnowBe4, Can Hackers Spoof an Email Address from Your Own Domain?",
+  "numbers": [
+   "4,"
+  ],
+  "pages": [
+   "/services/knowbe4-can-hackers-spoof-email-address-domain"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "You\u2019ll know within 48 hours!",
+  "numbers": [
+   "48 hours"
+  ],
+  "pages": [
+   "/services/knowbe4-can-hackers-spoof-email-address-domain"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "KnowBe4 sends a spoofed email from you to you and you know within 48 hours",
+  "numbers": [
+   "48 hours"
+  ],
+  "pages": [
+   "/services/knowbe4-can-hackers-spoof-email-address-domain"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "You will know within 48 hours.",
+  "numbers": [
+   "48 hours"
+  ],
+  "pages": [
+   "/services/knowbe4-can-hackers-spoof-email-address-domain"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "KnowBe4, Free Phish Alert Button",
+  "numbers": [
+   "4,"
+  ],
+  "pages": [
+   "/services/knowbe4-free-phish-alert-button"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "KnowBe4, Get Your Free Email Exposure Check",
+  "numbers": [
+   "4,"
+  ],
+  "pages": [
+   "/services/knowbe4-get-free-email-exposure-check"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Trend Micro reported that 91% of successful data breaches started with a spear phishing attack.",
+  "numbers": [
+   "91%"
+  ],
+  "pages": [
+   "/services/knowbe4-get-free-email-exposure-check"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "KnowBe4, Get Your Free Ransomware Simulator Tool",
+  "numbers": [
+   "4,"
+  ],
+  "pages": [
+   "/services/knowbe4-get-free-ransomware-simulator-tool"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "NOTE: RanSim was created for Windows-based workstations running Windows 7+.",
+  "numbers": [
+   "7+"
+  ],
+  "pages": [
+   "/services/knowbe4-get-free-ransomware-simulator-tool"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "100% harmless simulation of a real ransomware",
+  "numbers": [
+   "100%"
+  ],
+  "pages": [
+   "/services/knowbe4-get-free-ransomware-simulator-tool"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "VAF's page describes it as a 100 percent harmless simulation of real ransomware.",
+  "numbers": [
+   "100"
+  ],
+  "pages": [
+   "/services/knowbe4-get-free-ransomware-simulator-tool"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "KnowBe4, Get Your Free Weak Password Test",
+  "numbers": [
+   "4,"
+  ],
+  "pages": [
+   "/services/knowbe4-get-free-weak-password-test"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Verizon\u2019s recent Data Breach Report showed that 81% of hacking-related breaches used either stolen and/or weak passwords.",
+  "numbers": [
+   "81%"
+  ],
+  "pages": [
+   "/services/knowbe4-get-free-weak-password-test"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "This will take you 5 minutes and may give you some insights you never expected!",
+  "numbers": [
+   "5 minutes"
+  ],
+  "pages": [
+   "/services/knowbe4-get-free-weak-password-test"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Send a simulated phishing email to up to 100 of your own users and receive a PDF of the results within 24 hours.",
+  "numbers": [
+   "100",
+   "24 hours"
+  ],
+  "pages": [
+   "/services/knowbe4-start-free-phishing-security-test"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "The test is free, takes no sales call to start and covers up to 100 users.",
+  "numbers": [
+   "100"
+  ],
+  "pages": [
+   "/services/knowbe4-start-free-phishing-security-test"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Immediately start your test for up to 100 users (no need to talk to anyone)",
+  "numbers": [
+   "100"
+  ],
+  "pages": [
+   "/services/knowbe4-start-free-phishing-security-test"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Show users which red flags they missed, or a 404 page",
+  "numbers": [
+   "404"
+  ],
+  "pages": [
+   "/services/knowbe4-start-free-phishing-security-test"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Get a PDF emailed to you in 24 hours with your Phish-prone % and charts to share with management",
+  "numbers": [
+   "24 hours"
+  ],
+  "pages": [
+   "/services/knowbe4-start-free-phishing-security-test"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Which users to include, up to the 100-user limit",
+  "numbers": [
+   "100"
+  ],
+  "pages": [
+   "/services/knowbe4-start-free-phishing-security-test"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Which landing page follows a click: a list of the red flags they missed, or a plain 404 page",
+  "numbers": [
+   "404"
+  ],
+  "pages": [
+   "/services/knowbe4-start-free-phishing-security-test"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "It can show users which red flags they missed, or simply show a 404 page.",
+  "numbers": [
+   "404"
+  ],
+  "pages": [
+   "/services/knowbe4-start-free-phishing-security-test"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "A PDF with your Phish-prone percentage and charts is emailed to you within 24 hours.",
+  "numbers": [
+   "24 hours"
+  ],
+  "pages": [
+   "/services/knowbe4-start-free-phishing-security-test"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Cut printing costs up to 30% , and see where.",
+  "numbers": [
+   "30%"
+  ],
+  "pages": [
+   "/services/managed-print"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Monitored, supplied and reported on, with a 25-point inspection on every call.",
+  "numbers": [
+   "25-point"
+  ],
+  "pages": [
+   "/services/managed-print"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Managed print monitors your entire printer and copier fleet, automates supply replenishment, and cuts printing costs up to 30%.",
+  "numbers": [
+   "30%"
+  ],
+  "pages": [
+   "/services/managed-print"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "That\u2019s why Extreme Networks has been named \u201cThe Official Wi-Fi Provider for the NFL.\u201d Extreme also has the industry\u2019s first flow-based 802.11ac Wave 2 wireless solution.",
+  "numbers": [
+   "802.11"
+  ],
+  "pages": [
+   "/services/network-security"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Microsoft 365 Integration",
+  "numbers": [
+   "365"
+  ],
+  "pages": [
+   "/services/networking-solutions"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Turnkey project management, programming, installation and 24/7/365 support",
+  "numbers": [
+   "365"
+  ],
+  "pages": [
+   "/services/office-security-solutions"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "4K HD cameras with advanced infrared",
+  "numbers": [
+   "4K"
+  ],
+  "pages": [
+   "/services/office-security-solutions"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Partnering with VAF on copy and print management gives you flexibility and affordability as business trends shift, and the benefit of more than 100 years of experience implementing and managing secure technology.",
+  "numbers": [
+   "100 years"
+  ],
+  "pages": [
+   "/services/print-application-solutions"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "We have provided IT services for Indiana companies for over 25 years.",
+  "numbers": [
+   "25 years"
+  ],
+  "pages": [
+   "/services/proactive-it-services"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "VAF says it has provided IT services to Indiana companies for over 25 years.",
+  "numbers": [
+   "25 years"
+  ],
+  "pages": [
+   "/services/proactive-it-services"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "of enterprises currently use or plan to use a cloud PBX within the next 2 years",
+  "numbers": [
+   "2 years"
+  ],
+  "pages": [
+   "/services/switch-to-cloud"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "VAF's page says providers offering a 99.999 percent uptime SLA help ensure your business never halts.",
+  "numbers": [
+   "99.999"
+  ],
+  "pages": [
+   "/services/switch-to-cloud"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "VAF's page says infrastructure is hosted in redundant data centers and managed and monitored 24/7/365 by the provider, so your own infrastructure costs fall.",
+  "numbers": [
+   "365"
+  ],
+  "pages": [
+   "/services/switch-to-cloud"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "VAF delivers unified communications on Mitel, 8x8, RingCentral and Elevate, in cloud, premise or hybrid form.",
+  "numbers": [
+   "8,"
+  ],
+  "pages": [
+   "/services/unified-communications"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Mitel, 8x8, RingCentral and Elevate, with Mitel Gold partner status for seven years running.",
+  "numbers": [
+   "8,"
+  ],
+  "pages": [
+   "/services/unified-communications"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Windstream has more than $6 billion in annual revenues and is listed on the S&P 500 index.",
+  "numbers": [
+   "$6 billion",
+   "500"
+  ],
+  "pages": [
+   "/services/voice-data-circuits"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "AT&T operates the nation\u2019s largest Wi-Fi network** including more than 32,000 AT&T Wi-Fi Hot Spots at popular restaurants, hotels and bookstores.",
+  "numbers": [
+   "32,000"
+  ],
+  "pages": [
+   "/services/voice-data-circuits"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Fiber Ready-We offer more than 115,000 miles of fiber",
+  "numbers": [
+   "115,000"
+  ],
+  "pages": [
+   "/services/voice-data-circuits"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "More than 1,350 certified connected devices, including power meters, vehicles, shipping containers, pipelines and vending machines.",
+  "numbers": [
+   "1,350"
+  ],
+  "pages": [
+   "/services/voice-data-circuits"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "More than 500 approved mobile applications with unmatched vertical industry focus.",
+  "numbers": [
+   "500"
+  ],
+  "pages": [
+   "/services/voice-data-circuits"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Access to more than 220,000 Wi-Fi Hot Spots globally through roaming agreements and more than 30,000 Wi-Fi Hot Spots in the U.S.",
+  "numbers": [
+   "220,000",
+   "30,000"
+  ],
+  "pages": [
+   "/services/voice-data-circuits"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Emergency Services (E-911)",
+  "numbers": [
+   "911"
+  ],
+  "pages": [
+   "/services/voice-data-circuits"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "For the first 70 years of our history, we serviced the healthcare and legal industries exclusively.",
+  "numbers": [
+   "70 years"
+  ],
+  "pages": [
+   "/services/voice-processing"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Our long standing relationships with well-known manufacturers like M*Modal, Speech Motion, Winscribe, Dragon Speak, Olympus, Philips and VIQ Solutions help make our speech voice processing and speech recognition system solutions 102 years above the rest.",
+  "numbers": [
+   "102 years"
+  ],
+  "pages": [
+   "/services/voice-processing"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "For the first 70 years of its history VAF served healthcare and legal customers exclusively.",
+  "numbers": [
+   "70 years"
+  ],
+  "pages": [
+   "/services/voice-processing"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Healthcare and legal for its first 70 years, and now also law enforcement, court room recording and automatic business meeting transcription.",
+  "numbers": [
+   "70 years"
+  ],
+  "pages": [
+   "/services/voice-processing"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Over 300,000 active words in the dictionary",
+  "numbers": [
+   "300,000"
+  ],
+  "pages": [
+   "/services/voice-recognition"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "160 words per minute recognition rate",
+  "numbers": [
+   "160"
+  ],
+  "pages": [
+   "/services/voice-recognition"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Scalable to over 120 million lines of recognized text per author",
+  "numbers": [
+   "120 million"
+  ],
+  "pages": [
+   "/services/voice-recognition"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "More than 300,000 active words, with vocabularies in US, UK, Australian and Indian English, German, Spanish, French, Italian, Dutch and more.",
+  "numbers": [
+   "300,000"
+  ],
+  "pages": [
+   "/services/voice-recognition"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "For its first 70 years it served healthcare and legal exclusively.",
+  "numbers": [
+   "70 years"
+  ],
+  "pages": [
+   "/services/voice-recognition"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Paperless digital imaging and secure electronic storage from VAF's ultra-secure Document Conversion Center inside our 57,000-square-foot Indianapolis.",
+  "numbers": [
+   "57,000"
+  ],
+  "pages": [
+   "/solutions"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Know Be4, Can Hackers Spoof Your Email Domain",
+  "numbers": [
+   "4,"
+  ],
+  "pages": [
+   "/solutions"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Know Be4, Free Phish Alert Button",
+  "numbers": [
+   "4,"
+  ],
+  "pages": [
+   "/solutions"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Know Be4, Free Phishing Security Test",
+  "numbers": [
+   "4,"
+  ],
+  "pages": [
+   "/solutions"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Know Be4, Get Your Free Email Exposure Check",
+  "numbers": [
+   "4,"
+  ],
+  "pages": [
+   "/solutions"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Know Be4, Get Your Free Ransomware Simulator Tool Servi",
+  "numbers": [
+   "4,"
+  ],
+  "pages": [
+   "/solutions"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Know Be4, Get Your Free Weak Password Test",
+  "numbers": [
+   "4,"
+  ],
+  "pages": [
+   "/solutions"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Many of us were using 3, 4, 5 and maybe even 6 different applications to communicate",
+  "numbers": [
+   "3,",
+   "4,"
+  ],
+  "pages": [
+   "/solutions-communication"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Through our partnerships with RingCentral, Mitel, and 8X8, we create truly connected and integrated business telephone solutions providing phone systems, voice mail, unified messaging, chat, video conferencing and collaboration, Voice over IP (VoIP) Calling and advanced contact center solutions into one, simple to manage platform.",
+  "numbers": [
+   "8,"
+  ],
+  "pages": [
+   "/solutions-communication"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "More than 20% of our new system deployments are outside the state of Indiana",
+  "numbers": [
+   "20%"
+  ],
+  "pages": [
+   "/solutions-communication"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "The average tenure of our unified communications technical staff is over 14 years with the company",
+  "numbers": [
+   "14 years"
+  ],
+  "pages": [
+   "/solutions-communication"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "14+ Years average tenure of our unified communications technical staff",
+  "numbers": [
+   "14+"
+  ],
+  "pages": [
+   "/solutions-communication"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "20% Of new system deployments are outside Indiana",
+  "numbers": [
+   "20%"
+  ],
+  "pages": [
+   "/solutions-communication"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "24/7/365 Support",
+  "numbers": [
+   "365"
+  ],
+  "pages": [
+   "/solutions-communication"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Mitel, RingCentral and 8x8, plus Elevate cloud communications, with phone systems, voice mail, messaging, video conferencing, VoIP and contact center on one platform.",
+  "numbers": [
+   "8,"
+  ],
+  "pages": [
+   "/solutions-communication"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Our computer dispatched, vendor certified service fleet covers the entire state of Indiana and well beyond, with 24/7/365 support and VAF Platinum unlimited support agreements available.",
+  "numbers": [
+   "365"
+  ],
+  "pages": [
+   "/solutions-communication"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "The average tenure of our unified communications technical staff is over 14 years with the company, and more than 20% of our new system deployments are outside Indiana.",
+  "numbers": [
+   "14 years",
+   "20%"
+  ],
+  "pages": [
+   "/solutions-communication"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "250 Years of combined IT experience on the Vsecure team",
+  "numbers": [
+   "250 Years"
+  ],
+  "pages": [
+   "/solutions-information"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "25+ Years providing IT services to Indiana companies",
+  "numbers": [
+   "25+"
+  ],
+  "pages": [
+   "/solutions-information"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Turnkey Installation & Support: site survey, cabling, programming, and 24/7/365 maintenance from one team",
+  "numbers": [
+   "365"
+  ],
+  "pages": [
+   "/solutions-information"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Van Ausdall & Farrar has a history of voice processing, digital dictation, and speech recognition that dates back more than 100 years.",
+  "numbers": [
+   "100 years"
+  ],
+  "pages": [
+   "/solutions-process"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Process partners: OnBase by Hyland, Square 9, Kofax, OPEX, Fujitsu and Canon",
+  "numbers": [
+   "9,"
+  ],
+  "pages": [
+   "/solutions-process"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Our history in voice processing, digital dictation and speech recognition dates back more than 100 years.",
+  "numbers": [
+   "100 years"
+  ],
+  "pages": [
+   "/solutions-process"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "Our Customer Care Center serves our entire customer base, processes requests Monday through Friday, 7:00am to 5:00pm, and responds within 24 hours.",
+  "numbers": [
+   "24 hours"
+  ],
+  "pages": [
+   "/support"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "The Customer Care Center responds within 24 hours of receipt, with same-day service for most metro-area copier calls.",
+  "numbers": [
+   "24 hours"
+  ],
+  "pages": [
+   "/support"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "At 6430 E 75th Street in Indianapolis, with offices in Fort Wayne and Evansville.",
+  "numbers": [
+   "6430"
+  ],
+  "pages": [
+   "/virtualsitevisit"
+  ],
+  "status": "supported",
+  "unmatched": []
+ }
+]

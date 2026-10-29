@@ -511,7 +511,7 @@
     "allow_new_line": false,
     "type": "text",
     "display_width": null,
-    "default": "93.4"
+    "default": "92.8"
   },
   {
     "id": "badge_label",
@@ -559,7 +559,7 @@
         "ribbon_text": "SOC 2 certified"
       },
       {
-        "ribbon_text": "NPS 93.4, audited by CEO Juice. World Class since 2019"
+        "ribbon_text": "NPS 92.8, audited by CEO Juice. World Class since 2019"
       },
       {
         "ribbon_text": "Mitel Gold, seven consecutive years"
@@ -613,7 +613,7 @@
         "stat_caption": "Serving Indiana since"
       },
       {
-        "stat_figure": "93.4",
+        "stat_figure": "92.8",
         "stat_caption": "Net Promoter Score, audited"
       },
       {

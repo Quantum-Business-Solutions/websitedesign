@@ -173,3 +173,10 @@ Old URL,New URL,Type,Reason
 https://vanausdall.com/*,https://www.vanausdall.com/$1,301,Bare domain to www (domain setting)
 /blog?p=<slug>-<YYMMDD>,/blog/<slug>,301,"Legacy query-string blog links, one rule per post, from the sitemap"
 "/images/..., /pdf/...",unchanged or re-hosted,none,Press release PDFs and images need the files hosted at the same path or a rule each
+/covid-19-information,/services/business-continuity,301,Retired page; sent to the closest live page
+/vaf-coronavirus-covid-19-policy,/services/business-continuity,301,Retired page; sent to the closest live page
+/kiosk-assembly,/solutions,301,Retired page; sent to the closest live page
+/kiosk-demo,/solutions,301,Retired page; sent to the closest live page
+/kiosk-quote,/solutions,301,Retired page; sent to the closest live page
+/survey,/contact,301,Retired page; sent to the closest live page
+/tw-telecom,/services/carrier-services,301,Retired page; sent to the closest live page

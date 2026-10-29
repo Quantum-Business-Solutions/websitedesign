@@ -28,19 +28,44 @@ for _o in sorted(glob.glob(os.path.join(ROOT, "brands/vanausdall.overrides.*.jso
                 _pg.update({k: v for k, v in _ov.items() if k in ("title", "description", "sections", "compose", "crumbs", "schema")})
 
 def seo_titles():
-    """Titles of 50 to 60 characters with the brand: short location and case study titles get the name added, two odd ones are rewritten."""
+    """Titles of 30 to 60 characters that carry the brand and the place; four meta descriptions that came through the migration as one word are rewritten."""
     BR = " | Van Ausdall & Farrar"
     FIX = {"about.html": "About Van Ausdall & Farrar | Indianapolis Since 1914", "company-facts.html": "Van Ausdall & Farrar Company Facts | Indianapolis Since 1914"}
+    META = {
+        "index.html": "Managed IT, cybersecurity, business phones, copiers and print, and document services for Indiana businesses, locally owned in Indianapolis since 1914.",
+        "about.html": "Privately owned in Indianapolis since 1914, Van Ausdall & Farrar delivers managed IT, phones, print and document services across Indiana.",
+        "case-studies/city-of-anderson.html": "How VAF's on-site facilities management program saved the City of Anderson over $40,000 a year on print, billing and purchasing.",
+        "services/document-conversion.html": "Document scanning and conversion in Indianapolis: paperless digital imaging, searchable archives and secure electronic storage from VAF's Document Conversion Center.",
+    }
+    PLACES = ("indianapolis", "indiana", "fort wayne", "evansville", "bloomington", "carmel", "fishers", "noblesville", "greenwood", "muncie", "columbus", "south bend")
+    fit = lambda c: 30 <= len(c) <= 60
     for pg in CONTENT["pages"]:
-        t = pg["title"]; f = pg["file"]
+        f = pg["file"]
+        if f in META: pg["description"] = META[f]
         if f in FIX: pg["title"] = FIX[f]; continue
-        if f.startswith("case-studies/") and "case study" not in t.lower() and t.endswith("| Van Ausdall & Farrar"):
-            pg["title"] = t.split(",")[0].split(" |")[0] + " Case Study, Indiana" + BR; continue
-        if "Van Ausdall" not in t and len(t) + len(BR) <= 62: pg["title"] = t + BR
-        elif len(t) < 45 and "Van Ausdall" not in t: pg["title"] = t + BR
+        base = pg["title"]
+        while re.search(r"\|\s*(VAF|Van Ausdall & Farrar)\s*$", base): base = re.sub(r"\s*\|\s*(VAF|Van Ausdall & Farrar)\s*$", "", base)
+        base = base.strip()
+        if f.startswith("case-studies/") and f != "case-studies.html":
+            base = re.sub(r"\s*case study\s*$", "", base.split(",")[0].split(" |")[0].strip(), flags=re.I) + " Case Study"
+            cands = [base + ", Indiana" + BR, base + ", Indiana | VAF", base + BR, base + " | VAF"]
+        else:
+            local = any(c in base.lower() for c in PLACES)
+            cands = ([] if local or f.startswith(("policies/", "blog")) or f in ("index.html", "contact.html") else [base + " in Indianapolis" + BR, base + " in Indianapolis | VAF", base + " in Indiana | VAF"]) + [base + BR, base + " | VAF", base]
+        pg["title"] = next((c for c in cands if fit(c)), min(cands, key=lambda c: abs(len(c) - 55)))
 
 
 seo_titles()
+
+
+def tidy_faqs():
+    """Drop the placeholder answer the migration wrote on case studies; a question with no specific answer is worse than no question."""
+    for pg in CONTENT["pages"]:
+        for s in pg["sections"]:
+            if s.get("type") == "faq": s["items"] = [i for i in s.get("items", []) if not str(i[1]).startswith("Services from across")]
+
+
+tidy_faqs()
 
 REGISTRY = {}
 for _f in sorted(glob.glob(os.path.join(ROOT, "scripts/vaf_map_*.py"))):
@@ -121,7 +146,8 @@ def schema_html(page):
     sys.path.insert(0, os.path.join(ROOT, "scripts"))
     import preview
     blocks = preview.schema_blocks(CONTENT, page, "https://www.vanausdall.com", "showcase")
-    own = "".join(f'<script type="application/ld+json">{json.dumps(b, ensure_ascii=False)}</script>' for b in page.get("schema", []))
+    drawn = any(x["type"] == "article" for x in page["sections"])   # the article module writes its own Article block
+    own = "".join(f'<script type="application/ld+json">{json.dumps(b, ensure_ascii=False)}</script>' for b in page.get("schema", []) if not (drawn and b.get("@type") == "Article"))
     if page["file"].startswith("services/") and '"Service"' not in own:
         name = page["title"].split("|")[0].strip()
         svc = {"@context": "https://schema.org", "@type": "Service", "name": name, "serviceType": name,
@@ -129,7 +155,7 @@ def schema_html(page):
                "provider": {"@id": "https://www.vanausdall.com/#organization"},
                "areaServed": [{"@type": "City", "name": "Indianapolis"}, {"@type": "State", "name": "Indiana"}]}
         own += f'<script type="application/ld+json">{json.dumps(svc, ensure_ascii=False)}</script>'
-    return "{% raw %}" + blocks + own + "{% endraw %}"
+    return "{% raw %}" + (blocks + own).replace("&amp;", "&") + "{% endraw %}"   # JSON-LD is read as text, so an HTML entity would show up as the literal characters
 
 
 def crumbs_html(page):

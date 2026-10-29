@@ -94,6 +94,17 @@
         "type": "text",
         "display_width": null,
         "default": ""
+      },
+      {
+        "id": "t_date",
+        "name": "t_date",
+        "label": "Date given (YYYY-MM-DD, for search engines)",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": ""
       }
     ],
     "tab": "CONTENT",

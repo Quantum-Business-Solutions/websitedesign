@@ -12,7 +12,7 @@
             "Serving Indiana since"
           ],
           [
-            "93.4",
+            "92.8",
             "Net Promoter Score, audited"
           ],
           [
@@ -26,7 +26,7 @@
         ],
         "ribbon": [
           "SOC 2 certified",
-          "NPS 93.4, audited by CEO Juice. World Class since 2019",
+          "NPS 92.8, audited by CEO Juice. World Class since 2019",
           "Mitel Gold, seven consecutive years"
         ],
         "variants": {
@@ -35,7 +35,7 @@
             "ribbon": [
               "Indianapolis, Indiana. Since 1914.",
               "SOC 2 certified",
-              "NPS 93.4, audited by CEO Juice"
+              "NPS 92.8, audited by CEO Juice"
             ]
           }
         },
@@ -55,7 +55,7 @@
         "image_w": 1200,
         "image_h": 800,
         "badge": {
-          "value": "93.4",
+          "value": "92.8",
           "label": "Net Promoter Score, independently audited"
         }
       },
@@ -83,7 +83,7 @@
             "Serving Indiana since"
           ],
           [
-            "93.4",
+            "92.8",
             "Net Promoter Score, audited"
           ],
           [
@@ -235,7 +235,7 @@
             "Chosen as a distributor for the Thomas Edison Company. Privately owned in Indianapolis ever since."
           ],
           [
-            "93.4",
+            "92.8",
             "A service score audited by someone else",
             "Net Promoter Score collected and audited by CEO Juice. World Class every year since 2019. The average US company scores 10."
           ],
@@ -453,7 +453,7 @@
         "id": "proof",
         "tone": "dark",
         "eyebrow": "Measured, not claimed",
-        "value": "93.4",
+        "value": "92.8",
         "text": "Net Promoter Score, collected and audited by CEO Juice from VAF customers after every service call. World Class, above 70, every year since 2019. The average US company scores 10.",
         "source": "CEO Juice is an independent company with an audited process. The numbers cannot be changed, even when a customer scores us low in error."
       },
@@ -1040,7 +1040,7 @@
               "Automatic supplies",
               "Usage reporting"
             ],
-            "stat": "93.4",
+            "stat": "92.8",
             "stat_label": "Net Promoter Score, independently audited",
             "href": "services/managed-print.html",
             "image": "assets/svc-3d-print.webp",

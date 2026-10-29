@@ -47,5 +47,5 @@
   </div>
 </section>
 {% if module.schema %}
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"{{ module.heading|striptags|escapejson }}","description":"{{ module.standfirst|striptags|escapejson }}","articleSection":"{{ module.category|striptags|escapejson }}","image":"{{ module.hero_image.src|escapejson }}","author":{"@type":"Organization","name":"{{ module.author_name|striptags|escapejson }}"},"mainEntityOfPage":"{{ content.absolute_url|escapejson }}"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"{{ module.heading|striptags|replace("&amp;", "&")|escapejson }}","description":"{{ module.standfirst|striptags|replace("&amp;", "&")|escapejson }}","articleSection":"{{ module.category|striptags|replace("&amp;", "&")|escapejson }}","image":"{{ module.hero_image.src|escapejson }}","author":{"@type":"Organization","name":"{{ module.author_name|striptags|replace("&amp;", "&")|escapejson }}"},"publisher":{"@id":"https://www.vanausdall.com/#organization"},"mainEntityOfPage":"{{ content.absolute_url|escapejson }}"}</script>
 {% endif %}

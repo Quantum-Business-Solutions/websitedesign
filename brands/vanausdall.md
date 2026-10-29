@@ -130,7 +130,7 @@ Every page earning traffic today gets a **301**. Fill the right-hand columns at 
 All on the record:
 
 - **Since 1914**, chosen as a Thomas Edison Company distributor (say "since 1914", not a year count)
-- **NPS 93.4**, audited by CEO Juice, World Class (above 70) every year 2019 to 2025; average US company 10
+- **NPS 92.8**, audited by CEO Juice, World Class (above 70) every year 2019 to 2025; average US company 10
 - **SOC 2** certified (home page badge)
 - **Mitel Gold** seven consecutive years, top 7% of 1,400 partners; **in telecom since 1983, 4,000+ systems**
 - **Fortinet** Engaged Advanced Partner, NSE-7 engineers, first SD-WAN Specialization in the Great Lakes region

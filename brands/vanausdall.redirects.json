@@ -240,6 +240,10 @@
   "to": "/services/copy-print-solutions"
  },
  {
+  "from": "/covid-19-information",
+  "to": "/services/business-continuity"
+ },
+ {
   "from": "/customer-care",
   "to": "/support"
  },
@@ -422,6 +426,18 @@
  {
   "from": "/it-support",
   "to": "/services/it-support"
+ },
+ {
+  "from": "/kiosk-assembly",
+  "to": "/solutions"
+ },
+ {
+  "from": "/kiosk-demo",
+  "to": "/solutions"
+ },
+ {
+  "from": "/kiosk-quote",
+  "to": "/solutions"
  },
  {
   "from": "/knowbe4/can-hackers-spoof-email-address-domain",
@@ -616,6 +632,10 @@
   "to": "/support"
  },
  {
+  "from": "/survey",
+  "to": "/contact"
+ },
+ {
   "from": "/switch-to-cloud",
   "to": "/services/switch-to-cloud"
  },
@@ -628,8 +648,16 @@
   "to": "/services/transcription-services"
  },
  {
+  "from": "/tw-telecom",
+  "to": "/services/carrier-services"
+ },
+ {
   "from": "/vaf-auto-support",
   "to": "/support"
+ },
+ {
+  "from": "/vaf-coronavirus-covid-19-policy",
+  "to": "/services/business-continuity"
  },
  {
   "from": "/van-ausdall-farrar-customer-care-app-privacy-policy",
