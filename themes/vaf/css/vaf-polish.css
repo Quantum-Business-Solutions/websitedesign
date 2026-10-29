@@ -86,3 +86,8 @@ body .vaf-hero--nocards .vaf-hero__copy .q-h1{max-width:24ch}
 @media(min-width:1025px){body .q-section .q-h2.vd__h.vd__h--m,body .q-section h2.q-h2.vd__h.vd__h--m{font-size:clamp(21px,1.7vw,25px)!important;line-height:1.2!important;max-width:none!important}
 body .q-section .q-h2.vd__h.vd__h--l,body .q-section h2.q-h2.vd__h.vd__h--l{font-size:clamp(19px,1.5vw,22px)!important;line-height:1.25!important;max-width:none!important}}
 @media(max-width:1024px){body .q-section .q-h2.vd__h.vd__h--m,body .q-section .q-h2.vd__h.vd__h--l{font-size:clamp(21px,5.2vw,26px)!important;line-height:1.2!important}}
+
+/* phones: detail headings take the full column, and section headings step down so none runs to four lines */
+@media(max-width:1024px){body .q-section .q-h2.vd__h{max-width:none!important}}
+@media(max-width:520px){body .q-section .q-h2{font-size:clamp(22px,6.1vw,26px)!important;line-height:1.18!important}body .vaf-hero .q-h1,body .pv-hero .q-h1{font-size:clamp(31px,9.2vw,38px)!important;line-height:1.08!important}}
+@media(max-width:1024px){body .vaf-detail .q-container.vd,body .vaf-detail .q-container.vd--flip{grid-template-columns:minmax(0,1fr)!important;gap:28px!important}body .vaf-detail .vd--flip .vd__text,body .vaf-detail .vd--flip .vd__side{order:0!important}}
