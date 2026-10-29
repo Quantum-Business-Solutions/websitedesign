@@ -1,0 +1,68 @@
+# Van Ausdall & Farrar: launch checklist
+
+Portal 50498425, theme "Van Ausdall and Farrar - Showcase". Staging: https://50498425.hs-sites.com/ (all pages and posts are noindex until launch day).
+
+Owner key: **VAF** = Brian Courtney and the VAF team, **QBS** = Quantum Business Solutions.
+
+## 1. Content sign-off (VAF, before anything else)
+
+- [ ] Brian reviews every page on the sign-off sheet (`vaf-website-signoff` in ClientCommand) and marks each Approved or Changes needed.
+- [ ] **Claims verification.** One consolidated list goes to Brian. Each line is approved or corrected: client names and case study results, dollar figures and percentages, counts of systems, devices or people, certifications (ISO 27001, SOC), awards, years in business, service-response times, hours.
+- [ ] Leadership bios and titles confirmed. Steven Sigmon headshot supplied.
+- [ ] Logos: Berry Global, Echo Engineering and Mid-City logos supplied or the cards stay name-only.
+- [ ] Real photography supplied (building, technicians, devices, Customer Care Center). Until then the 3D illustrations and generated images stay.
+- [ ] Testimonials: VAF supplies quotes with permission to publish (deferred, not a launch blocker).
+- [ ] Four scheduled guides (Nov 1, 8, 15, 22): VAF reviews copy. Pillar pages link to them, so either publish them early or hide those links until their dates.
+- [ ] 47 duplicate blog posts created by a re-import: decision needed from QBS lead (delete or unpublish). List: `brands/vanausdall.blog-duplicates-to-delete.json`.
+
+## 2. Forms, popup and tools (QBS, then VAF test)
+
+- [ ] Contact form, support request, assessment, popup lead form: submit a test on each and confirm the contact lands in HubSpot with the right source.
+- [ ] Notification emails go to the right VAF inboxes.
+- [ ] Popup: shows after the configured delay, respects exclusions (policies, assessment), floating Free guide button works, PDF downloads with logo and all 27 tips.
+- [ ] Technology Strength Assessment: complete a run, check score, roadmap and PDF.
+- [ ] Follow-up workflow: who contacts a lead after the guide or assessment, and how fast.
+- [ ] Consent banner and privacy policy link on every page.
+
+## 3. SEO and AEO (QBS)
+
+- [ ] One H1 per page, headings in order, no heading over two lines on desktop.
+- [ ] Title (under 60 characters) and meta description (under 160) unique on every page and post.
+- [ ] Canonical URLs point at the production domain, not hs-sites.com.
+- [ ] Schema validates in Google Rich Results test: Organization, LocalBusiness, WebSite, BreadcrumbList, FAQPage, Service, Blog, BlogPosting.
+- [ ] Open Graph and Twitter images present.
+- [ ] Image alt text on every content image.
+- [ ] Internal link check: no broken links, every page has related-page links.
+- [ ] llms.txt in place and sitemap.xml lists only indexable pages.
+- [ ] Blog posts keep their original publish dates.
+
+## 4. Quality assurance (QBS)
+
+- [ ] Visible-text sweep for build language: "preview", "stand-in", "migrated", "current site", "new site", "imported", "rebuilt". None may remain.
+- [ ] Mobile (375 px), tablet (768 px), desktop (1440 px) screenshots of every main page.
+- [ ] Chrome, Safari, Firefox, Edge. iOS Safari and Android Chrome.
+- [ ] Sticky header stays on every page and scroll position.
+- [ ] Footer map, directions link, click-to-call, mailto all work.
+- [ ] Keyboard navigation and focus states. Colour contrast. Reduced-motion setting respected.
+- [ ] Lighthouse: performance 85 or higher on mobile for home and one service page, accessibility 95 or higher.
+- [ ] Print preview of a service page.
+
+## 5. Go-live (QBS with VAF IT)
+
+- [ ] Identify DNS owner and registrar. Lower TTL to 300 seconds one day ahead.
+- [ ] Connect the production domain in HubSpot, set primary, confirm SSL.
+- [ ] 301 redirect list loaded and verified (fix any self-redirect rows; include blog slug changes). Custom 404 page checked.
+- [ ] Remove noindex from every page and post. Confirm robots.txt allows crawling.
+- [ ] Submit sitemap to Google Search Console and Bing Webmaster Tools.
+- [ ] Analytics and conversion events on: forms, calls, directions clicks, guide downloads.
+- [ ] Email deliverability: SPF, DKIM, DMARC for the sending domain.
+- [ ] Day-of sequence: freeze edits, final export of the old site, switch DNS, verify home, three service pages, a blog post, forms, popup.
+- [ ] Rollback plan: old DNS records saved. Revert if forms or SSL fail and cannot be fixed within the hour.
+
+## 6. After launch
+
+- [ ] Day 1, day 7, day 30: Search Console coverage, crawl errors, 404s, form submissions.
+- [ ] **Rotate the HubSpot API token used for the build.** Confirm user access and two-factor sign-in.
+- [ ] Editing training for VAF: pages, blog, HubDB tables for popup and assessment copy.
+- [ ] Backup of the old site archived.
+- [ ] 30-day review: rankings, leads from the guide and assessment, pages to expand.
