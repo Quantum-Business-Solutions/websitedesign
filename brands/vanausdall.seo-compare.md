@@ -4,19 +4,19 @@ Before: the old site crawled 8 September 2026 (171 pages). After: the rebuild at
 
 | Measure | Before | After |
 |---|---|---|
-| Average page score | 53 | 95 |
+| Average page score | 53 | 96 |
 | Pages with FAQPage schema | 4 | 152 |
 | Pages with Service schema | 3 | 113 |
 | Pages with LocalBusiness schema | 170 | 152 |
 | Pages with Review or AggregateRating schema | 0 | 31 |
 | Pages with Article or BlogPosting schema | 0 | 18 |
 | Pages with BreadcrumbList | 0 | 151 |
-| Titles naming the city | 58 | 133 |
+| Titles naming the city | 58 | 149 |
 | Pages under 300 words | 68 | 0 |
 | Pages with a question heading | 26 | 147 |
 | Images missing alt text | 170 | 0 |
 | Pages with a stock or missing share image | 1 | 0 |
-| Grades A / B / C / D / F | 2 / 5 / 64 / 81 / 19 | 149 / 3 / 0 / 0 / 0 |
+| Grades A / B / C / D / F | 2 / 5 / 64 / 81 / 19 | 152 / 0 / 0 / 0 / 0 |
 
 ## By page type
 
@@ -26,40 +26,23 @@ Before: the old site crawled 8 September 2026 (171 pages). After: the rebuild at
 | city | 35, 52 | 35, 95 |
 | company | 56, 54 | 17, 95 |
 | policy | 6, 69 | 7, 94 |
-| service | 56, 49 | 75, 94 |
+| service | 56, 49 | 75, 95 |
 
 ## What still costs points on the rebuild
 
 | Pages | Fix |
 |---|---|
 | 96 | Add Review or AggregateRating schema from real Google reviews |
-| 19 | Add Indianapolis or the service city to the title |
 | 8 | Deepen to 600 words or more |
 | 5 | Add question-form H2s that an assistant can quote (what, how much, is it) |
-| 3 | Retitle to 30 to 60 characters |
+| 3 | Add Indianapolis or the service city to the title |
 
 ## Lowest scoring pages after
 
 | Score | Page | Fixes |
 |---|---|---|
-| 82 | /services/iphone-scanning | Retitle to 30 to 60 characters; Add Indianapolis or the service city to the title; Add Review or AggregateRating schema from real Google reviews |
-| 82 | /services/print-management-software | Retitle to 30 to 60 characters; Add Indianapolis or the service city to the title; Add Review or AggregateRating schema from real Google reviews |
-| 82 | /services/voice-recognition | Retitle to 30 to 60 characters; Add Indianapolis or the service city to the title; Add Review or AggregateRating schema from real Google reviews |
 | 88 | /services/cloud-based-solutions | Add Indianapolis or the service city to the title; Add Review or AggregateRating schema from real Google reviews |
-| 88 | /services/free-security-training-tools | Add Indianapolis or the service city to the title; Add Review or AggregateRating schema from real Google reviews |
-| 88 | /services/knowbe4-can-hackers-spoof-email-address-domain | Add Indianapolis or the service city to the title; Add Review or AggregateRating schema from real Google reviews |
-| 88 | /services/free-security-awareness | Add Indianapolis or the service city to the title; Add Review or AggregateRating schema from real Google reviews |
-| 88 | /services/knowbe4-get-free-ransomware-simulator-tool | Add Indianapolis or the service city to the title; Add Review or AggregateRating schema from real Google reviews |
-| 88 | /services/knowbe4-get-free-weak-password-test | Add Indianapolis or the service city to the title; Add Review or AggregateRating schema from real Google reviews |
-| 88 | /services/office-security-solutions | Add Indianapolis or the service city to the title; Add Review or AggregateRating schema from real Google reviews |
-| 88 | /services/network-security-secure-router-access | Add Indianapolis or the service city to the title; Add Review or AggregateRating schema from real Google reviews |
-| 88 | /services/knowbe4-free-phish-alert-button | Add Indianapolis or the service city to the title; Add Review or AggregateRating schema from real Google reviews |
-| 88 | /services/proactive-it-services | Add Indianapolis or the service city to the title; Add Review or AggregateRating schema from real Google reviews |
-| 88 | /services/voice-processing | Add Indianapolis or the service city to the title; Add Review or AggregateRating schema from real Google reviews |
-| 88 | /services/receptionist-services | Add Indianapolis or the service city to the title; Add Review or AggregateRating schema from real Google reviews |
 | 88 | /services/managed-print-centers | Add Indianapolis or the service city to the title; Add Review or AggregateRating schema from real Google reviews |
-| 88 | /services/print-application-solutions | Add Indianapolis or the service city to the title; Add Review or AggregateRating schema from real Google reviews |
-| 88 | /services/switch-to-cloud | Add Indianapolis or the service city to the title; Add Review or AggregateRating schema from real Google reviews |
 | 90 | /services/mobility-solutions | Add Review or AggregateRating schema from real Google reviews; Deepen to 600 words or more |
 | 90 | /contact | Add Review or AggregateRating schema from real Google reviews; Deepen to 600 words or more |
 | 90 | /careers | Add Review or AggregateRating schema from real Google reviews; Deepen to 600 words or more |
@@ -67,6 +50,22 @@ Before: the old site crawled 8 September 2026 (171 pages). After: the rebuild at
 | 90 | /downloads | Add Review or AggregateRating schema from real Google reviews; Deepen to 600 words or more |
 | 90 | /print-assessment | Add Review or AggregateRating schema from real Google reviews; Deepen to 600 words or more |
 | 90 | /virtualsitevisit | Add Review or AggregateRating schema from real Google reviews; Deepen to 600 words or more |
+| 90 | /services/wids-format | Add Review or AggregateRating schema from real Google reviews; Deepen to 600 words or more |
+| 92 | /policies/do-not-share | Add question-form H2s that an assistant can quote (what, how much, is it) |
+| 92 | /policies/limit-the-use | Add question-form H2s that an assistant can quote (what, how much, is it) |
+| 92 | /policies/disclaimer | Add question-form H2s that an assistant can quote (what, how much, is it) |
+| 92 | /policies/terms-of-service | Add question-form H2s that an assistant can quote (what, how much, is it) |
+| 92 | /policies/van-ausdall-farrar-customer-care-app-privacy-policy | Add question-form H2s that an assistant can quote (what, how much, is it) |
+| 94 | /services/business-security-systems | Add Review or AggregateRating schema from real Google reviews |
+| 94 | /locations/bloomington | Add Review or AggregateRating schema from real Google reviews |
+| 94 | /benefits | Add Review or AggregateRating schema from real Google reviews |
+| 94 | /case-studies | Add Review or AggregateRating schema from real Google reviews |
+| 94 | /services/automated-forms-processing | Add Review or AggregateRating schema from real Google reviews |
+| 94 | /locations/bloomington-business-phone-systems | Add Review or AggregateRating schema from real Google reviews |
+| 94 | /locations/carmel | Add Review or AggregateRating schema from real Google reviews |
+| 94 | /partners | Add Review or AggregateRating schema from real Google reviews |
+| 94 | /locations/bloomington-network-carrier-solutions | Add Review or AggregateRating schema from real Google reviews |
+| 94 | /technology-strength-assessment | Add Review or AggregateRating schema from real Google reviews |
 
 ## Every page
 
@@ -156,8 +155,8 @@ Before: the old site crawled 8 September 2026 (171 pages). After: the rebuild at
 | /fort-wayne/managed-it-solutions-fort-wayne-in | /locations/fort-wayne-managed-it-solutions | 66 | 94 |
 | /fort-wayne/network-carrier-solutions-in-fort-wayne-in | /locations/fort-wayne-network-carrier-solutions | 44 | 94 |
 | /fort-wayne/network-infrastructure-in-fort-wayne-in | /locations/fort-wayne-network-infrastructure | 54 | 94 |
-| /free-security-awareness | /services/free-security-awareness | 48 | 88 |
-| /free-security-training-tools | /services/free-security-training-tools | 48 | 88 |
+| /free-security-awareness | /services/free-security-awareness | 48 | 94 |
+| /free-security-training-tools | /services/free-security-training-tools | 48 | 94 |
 | /get-started | /contact | 66 | 90 |
 | /greenwood | /locations/greenwood | 44 | 94 |
 | /indianapolis | /locations/indianapolis | 58 | 100 |
@@ -177,16 +176,16 @@ Before: the old site crawled 8 September 2026 (171 pages). After: the rebuild at
 | /information/managed-it-services | /services/managed-it | 75 | 100 |
 | /information/office-security | /services/office-security | 48 | 94 |
 | /information/physical-security | /services/physical-security | 52 | 94 |
-| /iphone-scanning | /services/iphone-scanning | 58 | 82 |
+| /iphone-scanning | /services/iphone-scanning | 58 | 94 |
 | /it-support | /services/it-support | 54 | 94 |
 | /kiosk-assembly | /solutions | 48 | 100 |
 | /kiosk-demo | /solutions | 48 | 100 |
 | /kiosk-quote | /solutions | 49 | 100 |
-| /knowbe4/can-hackers-spoof-email-address-domain | /services/knowbe4-can-hackers-spoof-email-address-domain | 38 | 88 |
-| /knowbe4/free-phish-alert-button | /services/knowbe4-free-phish-alert-button | 38 | 88 |
+| /knowbe4/can-hackers-spoof-email-address-domain | /services/knowbe4-can-hackers-spoof-email-address-domain | 38 | 94 |
+| /knowbe4/free-phish-alert-button | /services/knowbe4-free-phish-alert-button | 38 | 94 |
 | /knowbe4/get-free-email-exposure-check | /services/knowbe4-get-free-email-exposure-check | 46 | 94 |
-| /knowbe4/get-free-ransomware-simulator-tool | /services/knowbe4-get-free-ransomware-simulator-tool | 46 | 88 |
-| /knowbe4/get-free-weak-password-test | /services/knowbe4-get-free-weak-password-test | 38 | 88 |
+| /knowbe4/get-free-ransomware-simulator-tool | /services/knowbe4-get-free-ransomware-simulator-tool | 46 | 94 |
+| /knowbe4/get-free-weak-password-test | /services/knowbe4-get-free-weak-password-test | 38 | 94 |
 | /knowbe4/start-free-phishing-security-test | /services/knowbe4-start-free-phishing-security-test | 38 | 94 |
 | /managed-print | /services/managed-print | 46 | 100 |
 | /muncie | /locations/muncie | 44 | 94 |
@@ -196,9 +195,9 @@ Before: the old site crawled 8 September 2026 (171 pages). After: the rebuild at
 | /net-promoter-score | /about | 38 | 100 |
 | /network-infrastructure | /services/network-infrastructure | 48 | 94 |
 | /network-security | /services/network-security | 68 | 94 |
-| /network-security-secure-router-access | /services/network-security-secure-router-access | 54 | 88 |
+| /network-security-secure-router-access | /services/network-security-secure-router-access | 54 | 94 |
 | /noblesville | /locations/noblesville | 44 | 94 |
-| /office-security-solutions | /services/office-security-solutions | 62 | 88 |
+| /office-security-solutions | /services/office-security-solutions | 62 | 94 |
 | /partners | /partners | 43 | 94 |
 | /policies/cookie | /policies/cookie | 73 | 100 |
 | /policies/disclaimer | /policies/disclaimer | 67 | 92 |
@@ -206,11 +205,11 @@ Before: the old site crawled 8 September 2026 (171 pages). After: the rebuild at
 | /policies/limit-the-use | /policies/limit-the-use | 67 | 92 |
 | /policies/privacy | /policies/privacy | 73 | 100 |
 | /policies/terms-of-service | /policies/terms-of-service | 67 | 92 |
-| /print-management-software | /services/print-management-software | 38 | 82 |
+| /print-management-software | /services/print-management-software | 38 | 94 |
 | /print/free-print-assessment | /print-assessment | 46 | 90 |
 | /print/managed-print-services | /services/managed-print | 64 | 100 |
-| /print/print-application-solutions | /services/print-application-solutions | 38 | 88 |
-| /proactive-it-services | /services/proactive-it-services | 58 | 88 |
+| /print/print-application-solutions | /services/print-application-solutions | 38 | 94 |
+| /proactive-it-services | /services/proactive-it-services | 58 | 94 |
 | /process | /solutions-process | 52 | 100 |
 | /process/business-process-solutions | /services/business-process-solutions | 58 | 94 |
 | /process/content-management | /services/content-management | 48 | 94 |
@@ -219,8 +218,8 @@ Before: the old site crawled 8 September 2026 (171 pages). After: the rebuild at
 | /process/managed-mail-centers | /services/managed-mail-centers | 38 | 94 |
 | /process/managed-print-centers | /services/managed-print-centers | 38 | 88 |
 | /process/print-fulfillment | /services/print-fulfillment | 48 | 94 |
-| /process/receptionist-services | /services/receptionist-services | 38 | 88 |
-| /process/voice-processing | /services/voice-processing | 48 | 88 |
+| /process/receptionist-services | /services/receptionist-services | 38 | 94 |
+| /process/voice-processing | /services/voice-processing | 48 | 94 |
 | /production-print | /services/production-print | 48 | 100 |
 | /project-deployment | /services/project-deployment | 58 | 94 |
 | /solutions | /solutions | 64 | 100 |
@@ -231,7 +230,7 @@ Before: the old site crawled 8 September 2026 (171 pages). After: the rebuild at
 | /state-of-the-art-voice-data-communication-systems | /services/state-of-the-art-voice-data-communication-systems | 58 | 94 |
 | /support | /support | 48 | 100 |
 | /survey | /contact | 49 | 90 |
-| /switch-to-cloud | /services/switch-to-cloud | 58 | 88 |
+| /switch-to-cloud | /services/switch-to-cloud | 58 | 94 |
 | /technology-strength-assessment | /technology-strength-assessment | 62 | 94 |
 | /transcription-services | /services/transcription-services | 48 | 94 |
 | /tw-telecom | /services/carrier-services | 58 | 94 |
@@ -240,6 +239,6 @@ Before: the old site crawled 8 September 2026 (171 pages). After: the rebuild at
 | /van-ausdall-farrar-customer-care-app-privacy-policy | /policies/van-ausdall-farrar-customer-care-app-privacy-policy | 62 | 92 |
 | /virtualsitevisit | /virtualsitevisit | 54 | 90 |
 | /voice-data-circuits | /services/voice-data-circuits | 66 | 94 |
-| /voice-processing | /services/voice-processing | 58 | 88 |
-| /voice-recognition | /services/voice-recognition | 58 | 82 |
+| /voice-processing | /services/voice-processing | 58 | 94 |
+| /voice-recognition | /services/voice-recognition | 58 | 94 |
 | /wids-format | /services/wids-format | 48 | 90 |

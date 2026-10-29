@@ -1,6 +1,6 @@
 # Van Ausdall & Farrar: claims register
 
-343 sentences with figures on 199 pages. 331 use only numbers the old site already stated; 12 contain a number the old site did not, so VAF confirms them before launch.
+342 sentences with figures on 199 pages. 332 use only numbers the old site already stated; 10 contain a number the old site did not, so VAF confirms them before launch.
 
 ## Needs confirmation
 
@@ -9,14 +9,12 @@
 | 92.8 Net Promoter Score, audited | 92.8 | /, /about, /careers +115 |
 | SOC 2 certified NPS 92.8, audited by CEO Juice. | 92.8 | /careers, /locations/bloomington, /locations/bloomington-business-phone-systems +102 |
 | 92.8 Net Promoter Score, independently audited | 92.8 | /careers, /locations/bloomington, /locations/bloomington-business-phone-systems +99 |
-| NPS 92.8, audited by CEO Juice | 92.8 | /case-studies/aspire, /case-studies/berry-global, /case-studies/bowen-engineering +13 |
-| A Net Promoter Score of 92.8, collected and audited by CEO Juice, an independent company, against a US average of 10. | 92.8 | /case-studies/aspire, /case-studies/berry-global, /case-studies/bowen-engineering +9 |
-| NPS 93.4, audited by CEO Juice | 93.4 | /locations/greenwood, /locations/muncie, /locations/muncie-network-carrier-solutions +3 |
-| A Net Promoter Score of 93.4, collected and audited by CEO Juice, an independent company, against a US average of 10. | 93.4 | /locations/greenwood, /locations/muncie, /locations/noblesville +1 |
+| NPS 92.8, audited by CEO Juice | 92.8 | /case-studies/aspire, /case-studies/berry-global, /case-studies/bowen-engineering +19 |
+| A Net Promoter Score of 92.8, collected and audited by CEO Juice, an independent company, against a US average of 10. | 92.8 | /case-studies/aspire, /case-studies/berry-global, /case-studies/bowen-engineering +13 |
 | 92.8 Net Promoter Score, audited by CEO Juice | 92.8 | /about |
 | Indiana University Bloomington, established in 1820, enrolls over 45,000 students, and the regional economy spans education, life sciences, advanced manufacturing, technology and health care. | 1820,, 45,000 | /locations/bloomington |
 | Muncie's glass-making and manufacturing past began with the gas boom of the 1880s, and the Ball family legacy still shows in Ball State University and Ball Memorial Hospital, now part of IU Health. | 1880 | /locations/muncie |
-| Net Promoter Score of 93.4, audited by CEO Juice, against a US average of 10 | 93.4 | /services/it-support |
+| Net Promoter Score of 92.8, audited by CEO Juice, against a US average of 10 | 92.8 | /services/it-support |
 | Photographers, designers, architects, engineers and construction professionals, among others, whose work does not fit on 8.5 by 11 inch paper. | 8.5 | /services/wids-format |
 
 ## Supported by the old site
@@ -31,6 +29,7 @@
 | Scan and index 1.5 million patient files in 90 days while adhering to HIPAA? | 12 |
 | TL;DR The post cites industry research of an average 20% productivity increase and communication costs reduced by up to 30% from ... | 12 |
 | STAR achieved over 70% cost savings after five months with Van Ausdall & Farrar. | 11 |
+| TL;DR Organizations spend 1-3% of annual revenue on printing, the post says, so assess total cost of ownership, utilization, ... | 9 |
 | Third, the roadmap becomes one agreement: copiers, print, IT, phones and document services under one Customer Care Center, answered within 24 hours, with a 25-point inspection on every service call. | 8 |
 | 250+ years of IT experience on staff | 8 |
 | By cutting overall equipment from 1,200 machines to just over 300 new machines, the school corporation has seen $1,000,000 in savings over the life of the contract. | 5 |

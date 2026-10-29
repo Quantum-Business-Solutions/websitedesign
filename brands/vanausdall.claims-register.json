@@ -381,6 +381,12 @@
    "/locations/evansville-network-infrastructure",
    "/locations/fishers",
    "/locations/fort-wayne-network-carrier-solutions",
+   "/locations/greenwood",
+   "/locations/muncie",
+   "/locations/muncie-network-carrier-solutions",
+   "/locations/noblesville",
+   "/locations/south-bend",
+   "/locations/south-bend-network-infrastructure",
    "/services/business-security-systems"
   ],
   "status": "new",
@@ -405,37 +411,7 @@
    "/locations/bloomington",
    "/locations/carmel",
    "/locations/columbus",
-   "/locations/fishers"
-  ],
-  "status": "new",
-  "unmatched": [
-   "92.8"
-  ]
- },
- {
-  "claim": "NPS 93.4, audited by CEO Juice",
-  "numbers": [
-   "93.4"
-  ],
-  "pages": [
-   "/locations/greenwood",
-   "/locations/muncie",
-   "/locations/muncie-network-carrier-solutions",
-   "/locations/noblesville",
-   "/locations/south-bend",
-   "/locations/south-bend-network-infrastructure"
-  ],
-  "status": "new",
-  "unmatched": [
-   "93.4"
-  ]
- },
- {
-  "claim": "A Net Promoter Score of 93.4, collected and audited by CEO Juice, an independent company, against a US average of 10.",
-  "numbers": [
-   "93.4"
-  ],
-  "pages": [
+   "/locations/fishers",
    "/locations/greenwood",
    "/locations/muncie",
    "/locations/noblesville",
@@ -443,7 +419,7 @@
   ],
   "status": "new",
   "unmatched": [
-   "93.4"
+   "92.8"
   ]
  },
  {
@@ -488,16 +464,16 @@
   ]
  },
  {
-  "claim": "Net Promoter Score of 93.4, audited by CEO Juice, against a US average of 10",
+  "claim": "Net Promoter Score of 92.8, audited by CEO Juice, against a US average of 10",
   "numbers": [
-   "93.4"
+   "92.8"
   ],
   "pages": [
    "/services/it-support"
   ],
   "status": "new",
   "unmatched": [
-   "93.4"
+   "92.8"
   ]
  },
  {
@@ -712,6 +688,25 @@
    "/case-studies/tippecanoe-school-corporation",
    "/industries/financial-services",
    "/services/copiers"
+  ],
+  "status": "supported",
+  "unmatched": []
+ },
+ {
+  "claim": "TL;DR Organizations spend 1-3% of annual revenue on printing, the post says, so assess total cost of ownership, utilization, ...",
+  "numbers": [
+   "3%"
+  ],
+  "pages": [
+   "/services/copier-service",
+   "/services/copiers",
+   "/services/copy-print-solutions",
+   "/services/managed-print",
+   "/services/managed-print-centers",
+   "/services/print-application-solutions",
+   "/services/print-fulfillment",
+   "/services/print-management-software",
+   "/services/production-print"
   ],
   "status": "supported",
   "unmatched": []
