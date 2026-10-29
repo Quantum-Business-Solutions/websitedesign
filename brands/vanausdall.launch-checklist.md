@@ -77,4 +77,4 @@ Owner key: **VAF** = Brian Courtney and the VAF team, **QBS** = Quantum Business
 - [ ] Customers are described, not named, on every page, in schema and in llms.txt (`brands/vanausdall.customers.json`). Re-run the name check after any content change.
 - [ ] The 18 old customer URLs redirect to the new descriptive URLs (in `vanausdall.redirects.csv`).
 - [ ] Customer logo files still sit in HubSpot Files under `/vaf/case/` and are no longer used on any page; VAF decides whether to delete them.
-- [ ] Six old design-manager templates under the customers' old names are unused; delete them after launch.
+- [ ] Eighteen old design-manager templates under the customers' old names are unused; delete them after launch.
