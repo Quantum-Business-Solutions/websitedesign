@@ -1,0 +1,27 @@
+{% set n = module.items|length %}
+<section class="q-section vaf-t3{% if module.alt_bg %} q-bg-alt{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %} data-vaf-t3>
+  <div class="q-container">
+    <div class="vaf-t3__head">
+      {% if module.eyebrow %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      <h2 class="q-h2">{{ module.heading }}</h2>
+      {% if module.intro %}<p class="q-lead">{{ module.intro }}</p>{% endif %}
+    </div>
+    <div class="vaf-t3__grid" style="--cols:{% if n % 3 == 0 %}3{% elif n % 2 == 0 %}2{% else %}3{% endif %}">
+      {% for it in module.items %}
+      <a class="vaf-t3__card" href="{{ it.t_link.url.href }}"{% if it.t_link.open_in_new_tab %} target="_blank" rel="noopener"{% endif %}>
+        <div class="vaf-t3__stage">
+          {% if it.t_image.src %}<img class="vaf-t3__img" src="{{ it.t_image.src }}" alt="{{ it.t_image.alt or it.t_title }}" loading="lazy" decoding="async" width="1168" height="880">{% endif %}
+          <span class="vaf-t3__num">{{ '%02d'|format(loop.index) }}</span>
+        </div>
+        <div class="vaf-t3__body">
+          {% if it.t_tag %}<span class="vaf-t3__tag">{{ it.t_tag }}</span>{% endif %}
+          <h3>{{ it.t_title }}</h3>
+          {% if it.t_copy %}<p>{{ it.t_copy }}</p>{% endif %}
+          {% if it.t_bullets %}<ul class="vaf-t3__chips">{% for b in it.t_bullets|split("|") %}{% if b|trim %}<li>{{ b|trim }}</li>{% endif %}{% endfor %}</ul>{% endif %}
+          <span class="vaf-t3__go">{{ module.link_label }}<svg viewBox="0 0 24 24" width="18" height="18" focusable="false" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

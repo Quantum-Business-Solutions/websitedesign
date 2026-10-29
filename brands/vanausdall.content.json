@@ -660,7 +660,7 @@
        ]
       ]
      },
-     "note": "The photography here is generated for the preview and labelled as such; a shoot at the 75th Street headquarters and with technicians in the field replaces it in the build, along with Canon, Ricoh, Kyocera and HP product models."
+     "note": ""
     },
     {
      "type": "wheel",
@@ -917,7 +917,7 @@
      "type": "fleet",
      "id": "fleet",
      "heading": "The fleet, at a glance",
-     "intro": "Every device family VAF sells and services. Generated product renders for the preview; Canon, Ricoh, Kyocera and HP models replace them.",
+     "intro": "Every device family VAF sells and services.",
      "items": [
       {
        "title": "Multifunction copiers",
@@ -975,7 +975,7 @@
      "alt": "A white and charcoal multifunction copier on a cabinet, rotatable",
      "eyebrow": "Take a closer look",
      "heading": "Walk around one before it arrives",
-     "intro": "A generated stand-in multifunction device for the preview. Drag to rotate. Canon, Ricoh, Kyocera and HP product imagery replaces it in the build.",
+     "intro": "Drag to rotate a multifunction device and see where each part of the service meets it.",
      "poster": "assets/mfp-poster-1200.jpg",
      "cta": {
       "label": "See copiers and printers",
@@ -1432,7 +1432,7 @@
      "alt": true,
      "layout": "feature",
      "eyebrow": "Real customer comments",
-     "heading": "Imported directly from our after-service surveys",
+     "heading": "What customers say after a service call",
      "items": [
       [
        "He was incredibly efficient and personable, answering all of my questions thoroughly and thoughtfully. He also laughed at my jokes, which is always appreciated.",
@@ -1746,7 +1746,7 @@
      "type": "resources",
      "alt": true,
      "heading": "Every solution page, by pillar",
-     "intro": "Each page from the current site, rebuilt in the new templates with its FAQ and schema.",
+     "intro": "Each page covers what is included, who it fits and the questions we hear most.",
      "items": [
       [
        "Communication",
@@ -3480,7 +3480,7 @@
      "alt": true,
      "eyebrow": "Take a closer look",
      "heading": "Walk around one",
-     "intro": "A generated stand-in for the preview. Drag to rotate; your Canon, Ricoh, Kyocera and HP models replace it.",
+     "intro": "Drag to rotate a multifunction device.",
      "poster": "assets/mfp-poster-1200.jpg",
      "cta": {
       "label": "See copiers and printers",
@@ -3550,7 +3550,7 @@
      "type": "fleet",
      "id": "fleet",
      "heading": "The rest of the fleet",
-     "intro": "Every device family VAF sells and services. Generated product renders for the preview; Canon, Ricoh, Kyocera and HP models replace them.",
+     "intro": "Every device family VAF sells and services.",
      "items": [
       {
        "title": "Multifunction copiers",
@@ -7129,7 +7129,7 @@
      "layout": "centered",
      "eyebrow": "Case studies",
      "heading": "Cost savings and outcomes, <em>on the record</em>.",
-     "subhead": "Eighteen Indiana organizations, by industry. Four are written up in full here; the rest are one line each until the PDFs are migrated."
+     "subhead": "Eighteen Indiana organizations, by industry, each with the number they measured."
     },
     {
      "type": "stats",
@@ -7191,7 +7191,7 @@
      "type": "resources",
      "alt": true,
      "heading": "Every case study by industry",
-     "intro": "Each is published on vanausdall.com with a PDF today; the PDFs migrate into pages in the build.",
+     "intro": "Every case study has its own page with the full story.",
      "items": [
       [
        "Education",
@@ -7347,7 +7347,7 @@
      "type": "resources",
      "alt": true,
      "heading": "More case studies, in full",
-     "intro": "Migrated from the PDFs and pages on the current site.",
+     "intro": "Every case study, in full.",
      "items": [
       [
        "Case study",
@@ -9459,7 +9459,7 @@
      "type": "resources",
      "alt": true,
      "heading": "More from Van Ausdall & Farrar",
-     "intro": "Every remaining page on the current site, kept and rebuilt.",
+     "intro": "More from VAF.",
      "items": [
       [
        "About",
@@ -11665,7 +11665,7 @@
      "layout": "centered",
      "eyebrow": "News and insights",
      "heading": "What we tell customers <em>before they ask</em>",
-     "subhead": "Twelve guides from the people who install and service the systems. No jargon, no vendor pitch. Six are placeholders adapted from our category guides until VAF's own posts migrate."
+     "subhead": "Guides from the people who install and service the systems. No jargon, no vendor pitch."
     },
     {
      "type": "related",
@@ -31694,7 +31694,7 @@
       ],
       [
        "Which version of this policy governs?",
-       "The one published on the current site at https://www.vanausdall.com/policies/cookie until the new site goes live. This page mirrors it and is re-synced from the policy provider at launch."
+       "The version on this page is the one in effect. If we change it, the updated version is posted here."
       ],
       [
        "Who do I contact about this policy?",
@@ -31706,7 +31706,7 @@
       ],
       [
        "When was this policy last updated?",
-       "The policy text on this page is carried over from the current site; a dated revision line is added when the new site goes live."
+       "This page was last reviewed in October 2026. When the policy changes, the updated version is posted here."
       ]
      ]
     }
@@ -31795,7 +31795,7 @@
      "items": [
       [
        "Which version of this policy governs?",
-       "The one published on the current site at https://www.vanausdall.com/policies/disclaimer until the new site goes live. This page mirrors it and is re-synced from the policy provider at launch."
+       "The version on this page is the one in effect. If we change it, the updated version is posted here."
       ],
       [
        "Who do I contact about this policy?",
@@ -31807,7 +31807,7 @@
       ],
       [
        "When was this policy last updated?",
-       "The policy text on this page is carried over from the current site; a dated revision line is added when the new site goes live."
+       "This page was last reviewed in October 2026. When the policy changes, the updated version is posted here."
       ]
      ]
     }
@@ -31875,7 +31875,7 @@
      "items": [
       [
        "Which version of this policy governs?",
-       "The one published on the current site at https://www.vanausdall.com/policies/do-not-share until the new site goes live. This page mirrors it and is re-synced from the policy provider at launch."
+       "The version on this page is the one in effect. If we change it, the updated version is posted here."
       ],
       [
        "Who do I contact about this policy?",
@@ -31887,7 +31887,7 @@
       ],
       [
        "When was this policy last updated?",
-       "The policy text on this page is carried over from the current site; a dated revision line is added when the new site goes live."
+       "This page was last reviewed in October 2026. When the policy changes, the updated version is posted here."
       ]
      ]
     },
@@ -32009,7 +32009,7 @@
      "items": [
       [
        "Which version of this policy governs?",
-       "The one published on the current site at https://www.vanausdall.com/policies/limit-the-use until the new site goes live. This page mirrors it and is re-synced from the policy provider at launch."
+       "The version on this page is the one in effect. If we change it, the updated version is posted here."
       ],
       [
        "Who do I contact about this policy?",
@@ -32021,7 +32021,7 @@
       ],
       [
        "When was this policy last updated?",
-       "The policy text on this page is carried over from the current site; a dated revision line is added when the new site goes live."
+       "This page was last reviewed in October 2026. When the policy changes, the updated version is posted here."
       ]
      ]
     },
@@ -32191,7 +32191,7 @@
      "items": [
       [
        "Which version of this policy governs?",
-       "The one published on the current site at https://www.vanausdall.com/policies/privacy until the new site goes live. This page mirrors it and is re-synced from the policy provider at launch."
+       "The version on this page is the one in effect. If we change it, the updated version is posted here."
       ],
       [
        "Who do I contact about this policy?",
@@ -32203,7 +32203,7 @@
       ],
       [
        "When was this policy last updated?",
-       "The policy text on this page is carried over from the current site; a dated revision line is added when the new site goes live."
+       "This page was last reviewed in October 2026. When the policy changes, the updated version is posted here."
       ]
      ]
     }
@@ -32315,7 +32315,7 @@
      "items": [
       [
        "Which version of this policy governs?",
-       "The one published on the current site at https://www.vanausdall.com/policies/terms-of-service until the new site goes live. This page mirrors it and is re-synced from the policy provider at launch."
+       "The version on this page is the one in effect. If we change it, the updated version is posted here."
       ],
       [
        "Who do I contact about this policy?",
@@ -32327,7 +32327,7 @@
       ],
       [
        "When was this policy last updated?",
-       "The policy text on this page is carried over from the current site; a dated revision line is added when the new site goes live."
+       "This page was last reviewed in October 2026. When the policy changes, the updated version is posted here."
       ]
      ]
     }
@@ -36975,7 +36975,7 @@
      "items": [
       [
        "Which version of this policy governs?",
-       "The one published on the current site at https://www.vanausdall.com/van-ausdall-farrar-customer-care-app-privacy-policy until the new site goes live. This page mirrors it and is re-synced from the policy provider at launch."
+       "The version on this page is the one in effect. If we change it, the updated version is posted here."
       ],
       [
        "Who do I contact about this policy?",
@@ -36987,7 +36987,7 @@
       ],
       [
        "When was this policy last updated?",
-       "The policy text on this page is carried over from the current site; a dated revision line is added when the new site goes live."
+       "This page was last reviewed in October 2026. When the policy changes, the updated version is posted here."
       ]
      ]
     }

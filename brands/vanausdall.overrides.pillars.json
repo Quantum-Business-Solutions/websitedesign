@@ -967,7 +967,7 @@
    },
    {
     "type": "testimonials",
-    "heading": "Imported directly from our after-service surveys",
+    "heading": "What customers say after a service call",
     "items": [
      [
       "The guy is totally awesome. He has been working on our equipment for at least 12 years and I would not want anyone else.",
@@ -1672,7 +1672,7 @@
     "type": "resources",
     "alt": true,
     "heading": "Every solution page, by pillar",
-    "intro": "Each page from the current site, rebuilt in the new templates with its FAQ and schema.",
+    "intro": "Each page covers what is included, who it fits and the questions we hear most.",
     "items": [
      [
       "Communication",

@@ -91,6 +91,13 @@ def showcase(s):
                             for i in s.get("items", [])]})
 
 
+def tiles3d(s):
+    """3D service cards. Items: dicts with tag, title, copy, bullets (list), image, href."""
+    return clean({**_common(s), "eyebrow": s.get("eyebrow", ""), "heading": s.get("heading", ""), "intro": s.get("intro", ""), "link_label": s.get("link_label", "Explore the service"),
+                  "items": [{"t_tag": i.get("tag", ""), "t_title": i["title"], "t_copy": i.get("copy", ""), "t_bullets": " | ".join(i.get("bullets", [])),
+                             "t_image": image(i.get("image", ""), i.get("alt", ""), 1168, 880), "t_link": _lnk(i.get("href", ""))} for i in s.get("items", [])]})
+
+
 def picker(s):
     """Problem router. Items: dicts with problem, service, copy, bullets (list), href."""
     return clean({**_common(s), "eyebrow": s.get("eyebrow", ""), "heading": s.get("heading", ""), "intro": s.get("intro", ""), "link_label": s.get("link_label", "See how we fix it"),
@@ -129,6 +136,7 @@ def testimonials(s):
 
 
 REGISTRY = {
+    "tiles3d": ("vaf-tiles3d", tiles3d),
     "picker": ("vaf-picker", picker),
     "showcase": ("vaf-showcase", showcase),
     "detail": ("vaf-detail", detail),

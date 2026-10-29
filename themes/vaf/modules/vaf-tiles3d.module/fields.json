@@ -1,0 +1,263 @@
+[
+  {
+    "id": "eyebrow",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "What we do"
+  },
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Everything your office runs on, from one partner"
+  },
+  {
+    "id": "intro",
+    "name": "intro",
+    "label": "Intro",
+    "required": false,
+    "locked": false,
+    "allow_new_line": true,
+    "type": "text",
+    "display_width": null,
+    "default": ""
+  },
+  {
+    "id": "items",
+    "name": "items",
+    "label": "Service cards",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 1,
+      "max": 12,
+      "sorting_label_field": "t_title",
+      "default": 3
+    },
+    "children": [
+      {
+        "id": "t_tag",
+        "name": "t_tag",
+        "label": "Small label (e.g. Information)",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "t_title",
+        "name": "t_title",
+        "label": "Service name",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "t_copy",
+        "name": "t_copy",
+        "label": "Description",
+        "required": false,
+        "locked": false,
+        "allow_new_line": true,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "t_bullets",
+        "name": "t_bullets",
+        "label": "Highlights (separate with | )",
+        "required": false,
+        "locked": false,
+        "allow_new_line": true,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "t_image",
+        "name": "t_image",
+        "label": "3D image",
+        "required": false,
+        "locked": false,
+        "responsive": true,
+        "resizable": true,
+        "show_loading": true,
+        "type": "image",
+        "display_width": null,
+        "default": {
+          "src": "",
+          "alt": "",
+          "loading": "lazy"
+        }
+      },
+      {
+        "id": "t_link",
+        "name": "t_link",
+        "label": "Link",
+        "required": false,
+        "locked": false,
+        "supported_types": [
+          "EXTERNAL",
+          "CONTENT",
+          "FILE",
+          "EMAIL_ADDRESS",
+          "BLOG"
+        ],
+        "show_advanced_rel_options": false,
+        "type": "link",
+        "display_width": null,
+        "default": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": ""
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "rel_tag": "Managed IT",
+        "rel_title": "What a vCIO does, and when a 50 person company needs one",
+        "rel_copy": "A virtual chief information officer is a fractional executive, not a help desk.",
+        "rel_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/blog/what-is-a-vcio"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "rel_image": {
+          "src": "",
+          "alt": "",
+          "loading": "lazy"
+        }
+      },
+      {
+        "rel_tag": "Communication",
+        "rel_title": "Business phone systems in 2026",
+        "rel_copy": "Cloud, premise or hybrid, and the questions to ask before you sign.",
+        "rel_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/blog/business-phone-systems-buyers-guide"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "rel_image": {
+          "src": "",
+          "alt": "",
+          "loading": "lazy"
+        }
+      },
+      {
+        "rel_tag": "Process",
+        "rel_title": "Document conversion: what happens to your boxes",
+        "rel_copy": "Chain of custody, indexing and quality control make the files usable.",
+        "rel_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/blog/document-conversion-services-what-to-expect"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "rel_image": {
+          "src": "",
+          "alt": "",
+          "loading": "lazy"
+        }
+      }
+    ]
+  },
+  {
+    "id": "link_label",
+    "name": "link_label",
+    "label": "Card link label",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Explore the service"
+  },
+  {
+    "id": "anchor",
+    "name": "anchor",
+    "label": "Section anchor (optional)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "help_text": "Used as the section id so links like /page#anchor jump here. Letters, numbers and hyphens only.",
+    "type": "text",
+    "display_width": null,
+    "default": ""
+  },
+  {
+    "id": "alt_bg",
+    "name": "alt_bg",
+    "label": "Alternate (tinted) background",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": false
+  },
+  {
+    "id": "padding",
+    "name": "padding",
+    "label": "Section padding",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [
+        "normal",
+        "Normal"
+      ],
+      [
+        "none",
+        "None"
+      ],
+      [
+        "large",
+        "Large"
+      ]
+    ],
+    "multiple": false,
+    "reordering_enabled": true,
+    "preset": null,
+    "type": "choice",
+    "display_width": null,
+    "default": "normal"
+  }
+]

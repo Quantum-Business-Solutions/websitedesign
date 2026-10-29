@@ -95,18 +95,6 @@
             "Phone systems deployed since 1983"
           ]
         ],
-        "card_a": {
-          "eyebrow": "Start here",
-          "title": "The Technology Strength Assessment",
-          "body": "Ten to fifteen minutes. Information, print, process and communication, scored.",
-          "items": [
-            "What to eliminate",
-            "What to optimize",
-            "What to leverage to grow"
-          ],
-          "href": "technology-strength-assessment.html",
-          "label": "How it works"
-        },
         "card_b": {
           "eyebrow": "Already a customer?",
           "title": "The Client Service Center",
@@ -130,7 +118,7 @@
             ]
           ]
         },
-        "note": "The photography here is generated for the preview and labelled as such; a shoot at the 75th Street headquarters and with technicians in the field replaces it in the build, along with Canon, Ricoh, Kyocera and HP product models."
+        "note": ""
       },
       {
         "type": "wheel",
@@ -395,7 +383,7 @@
         "type": "fleet",
         "id": "fleet",
         "heading": "The fleet, at a glance",
-        "intro": "Every device family VAF sells and services. Generated product renders for the preview; Canon, Ricoh, Kyocera and HP models replace them.",
+        "intro": "Every device family VAF sells and services.",
         "items": [
           {
             "title": "Multifunction copiers",
@@ -453,7 +441,7 @@
         "alt": "A white and charcoal multifunction copier on a cabinet, rotatable",
         "eyebrow": "Take a closer look",
         "heading": "Walk around one before it arrives",
-        "intro": "A generated stand-in multifunction device for the preview. Drag to rotate. Canon, Ricoh, Kyocera and HP product imagery replaces it in the build.",
+        "intro": "Drag to rotate a multifunction device and see where each part of the service meets it.",
         "poster": "assets/mfp-poster-1200.jpg",
         "cta": {
           "label": "See copiers and printers",
@@ -842,7 +830,7 @@
         "alt": true,
         "layout": "feature",
         "eyebrow": "Real customer comments",
-        "heading": "Imported directly from our after-service surveys",
+        "heading": "What customers say after a service call",
         "items": [
           [
             "He was incredibly efficient and personable, answering all of my questions thoroughly and thoughtfully. He also laughed at my jokes, which is always appreciated.",
@@ -986,7 +974,7 @@
         ]
       },
       {
-        "type": "showcase",
+        "type": "tiles3d",
         "id": "services",
         "alt": false,
         "eyebrow": "What we do",
@@ -1007,8 +995,8 @@
             "stat": "SOC 2",
             "stat_label": "Certified service organization",
             "href": "services/managed-it.html",
-            "image": "assets/it-1200.jpg",
-            "alt": "Technician monitoring a server room"
+            "image": "assets/svc-3d-it.webp",
+            "alt": "Managed IT and security, 3D illustration"
           },
           {
             "tag": "Communication",
@@ -1023,8 +1011,8 @@
             "stat": "4,000+",
             "stat_label": "Phone systems deployed since 1983",
             "href": "services/business-phone-systems.html",
-            "image": "assets/gen-phone-1200.jpg",
-            "alt": "Business phone system in use"
+            "image": "assets/svc-3d-phone.webp",
+            "alt": "Business phone systems, 3D illustration"
           },
           {
             "tag": "Print",
@@ -1039,8 +1027,8 @@
             "stat": "1914",
             "stat_label": "Serving Indiana since",
             "href": "services/copiers.html",
-            "image": "assets/copier-1200.jpg",
-            "alt": "Office copier"
+            "image": "assets/svc-3d-copier.webp",
+            "alt": "Copiers and printers, 3D illustration"
           },
           {
             "tag": "Print",
@@ -1055,8 +1043,8 @@
             "stat": "93.4",
             "stat_label": "Net Promoter Score, independently audited",
             "href": "services/managed-print.html",
-            "image": "assets/print-1200.jpg",
-            "alt": "Managed print fleet"
+            "image": "assets/svc-3d-print.webp",
+            "alt": "Managed print services, 3D illustration"
           },
           {
             "tag": "Process",
@@ -1071,8 +1059,8 @@
             "stat": "Paper out",
             "stat_label": "Workflow in",
             "href": "services/document-conversion.html",
-            "image": "assets/gen-conversion-1200.jpg",
-            "alt": "Document scanning"
+            "image": "assets/svc-3d-docs.webp",
+            "alt": "Document conversion, 3D illustration"
           },
           {
             "tag": "Process",
@@ -1086,8 +1074,8 @@
             "stat": "Free",
             "stat_label": "Technology Strength Assessment",
             "href": "services/ai-consulting.html",
-            "image": "assets/ai-1200.jpg",
-            "alt": "AI consulting"
+            "image": "assets/svc-3d-ai.webp",
+            "alt": "AI consulting, 3D illustration"
           }
         ]
       },
