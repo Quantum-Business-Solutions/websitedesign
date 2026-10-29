@@ -1112,6 +1112,93 @@
         "bullets": [],
         "image": "assets/ai-playbook-photo",
         "image_alt": "A hand holding glowing AI letters, the cover image of the 2026 CIO AI Playbook"
+      },
+      {
+        "type": "picker",
+        "id": "picker",
+        "alt": true,
+        "eyebrow": "Start here",
+        "heading": "What is slowing your office down?",
+        "intro": "Pick the one that sounds most like Monday morning.",
+        "link_label": "See how we fix it",
+        "foot_label": "Not sure? Take the five-minute assessment",
+        "foot_href": "technology-strength-assessment.html",
+        "items": [
+          {
+            "problem": "Our IT keeps breaking and nobody owns it",
+            "service": "Managed IT and security",
+            "copy": "One team, one agreement and a named vCIO, so problems get fixed before they become your problem.",
+            "bullets": [
+              "Help desk with a team that knows your office",
+              "24/7 monitoring and a SOC 2 certified process",
+              "A technology roadmap you can budget against"
+            ],
+            "href": "services/managed-it.html"
+          },
+          {
+            "problem": "Our phones are old and remote work is messy",
+            "service": "Business phone systems",
+            "copy": "Voice, video and chat on one platform, so your office number works from the desk, the car or home.",
+            "bullets": [
+              "One app on mobile, laptop and desk phone",
+              "Calls, meetings and messages in one place",
+              "A plan for the day the internet goes down"
+            ],
+            "href": "services/business-phone-systems.html"
+          },
+          {
+            "problem": "Printing costs more than we can explain",
+            "service": "Managed print services",
+            "copy": "Supplies, service and devices on one report, with the fleet managed for you.",
+            "bullets": [
+              "Secure release so pages never sit in a tray",
+              "Automatic supply replenishment",
+              "One dashboard and one number to call"
+            ],
+            "href": "services/managed-print.html"
+          },
+          {
+            "problem": "Paper and approvals slow everything down",
+            "service": "Document conversion and workflow",
+            "copy": "Get paper out of the way, then route the approvals that wait longest.",
+            "bullets": [
+              "Scan and index into one searchable home",
+              "A retention schedule you can defend",
+              "Invoices and forms that route themselves"
+            ],
+            "href": "services/document-conversion.html"
+          },
+          {
+            "problem": "We are not sure where we stand",
+            "service": "The Technology Strength Assessment",
+            "copy": "Twenty yes or no questions give you a score and a roadmap in about five minutes.",
+            "bullets": [
+              "Score for information, print, process and communication",
+              "Eliminate, optimize and leverage roadmap",
+              "A PDF you can share with your team"
+            ],
+            "href": "technology-strength-assessment.html"
+          }
+        ]
+      },
+      {
+        "type": "calculator",
+        "id": "calc",
+        "alt": false,
+        "eyebrow": "Estimate",
+        "heading": "What does your print really cost?",
+        "intro": "Devices, mono pages and color pages a month. That is all it needs.",
+        "rates": {
+          "mono_cpp": 0.018,
+          "color_cpp": 0.09,
+          "minutes_per_device_week": 25,
+          "hourly": 28,
+          "managed_saving": 0.3,
+          "saving_label": "Potential saving at up to 30%"
+        },
+        "note": "Estimates only, using typical industry rates for orientation. Nothing here is a quote. The free print assessment gives you the real figure from your devices and your invoices.",
+        "cta_label": "Get the real number: request the free print assessment",
+        "cta_href": "print-assessment.html"
       }
     ],
     "compose": {
@@ -1141,10 +1228,12 @@
         "partners",
         "wheel",
         "services",
+        "picker",
         "is-this-you",
         "proof",
         "ba",
         "flow",
+        "calc",
         "office",
         "seal",
         "story",

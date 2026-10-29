@@ -91,6 +91,13 @@ def showcase(s):
                             for i in s.get("items", [])]})
 
 
+def picker(s):
+    """Problem router. Items: dicts with problem, service, copy, bullets (list), href."""
+    return clean({**_common(s), "eyebrow": s.get("eyebrow", ""), "heading": s.get("heading", ""), "intro": s.get("intro", ""), "link_label": s.get("link_label", "See how we fix it"),
+                  "foot_label": s.get("foot_label", ""), "foot_link": _lnk(s.get("foot_href", "")),
+                  "items": [{"pk_problem": i["problem"], "pk_service": i["service"], "pk_copy": i.get("copy", ""), "pk_bullets": " | ".join(i.get("bullets", [])), "pk_link": _lnk(i.get("href", ""))} for i in s.get("items", [])]})
+
+
 def locations(s):
     return clean({**_common(s), "heading": s.get("heading", ""), "intro": s.get("intro", ""), "detailed": bool(s.get("detailed")),
                   "items": [{"loc_name": n, "loc_line1": a1, "loc_line2": a2, "loc_phone": ph, "loc_link": _lnk(h)}
@@ -122,6 +129,7 @@ def testimonials(s):
 
 
 REGISTRY = {
+    "picker": ("vaf-picker", picker),
     "showcase": ("vaf-showcase", showcase),
     "detail": ("vaf-detail", detail),
     "cards": ("vaf-cards", cards),

@@ -1,0 +1,335 @@
+{
+ "note": "Posts created by a re-run of vaf_blog_import.py import on 2026-10-29: slugs ending in a number whose original slug already exists. Review, then delete in HubSpot or approve deletion.",
+ "duplicates": [
+  {
+   "id": "225833477634",
+   "slug": "blog/healthcare-it-solutions-securing-patient-data-streamlining-operations-3",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:09:55.704Z",
+   "duplicate_of": "blog/healthcare-it-solutions-securing-patient-data-streamlining-operations"
+  },
+  {
+   "id": "225833477636",
+   "slug": "blog/revolutionize-your-workplace-modern-print-copy-solutions-unleashed-3",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:09:57.893Z",
+   "duplicate_of": "blog/revolutionize-your-workplace-modern-print-copy-solutions-unleashed"
+  },
+  {
+   "id": "225833477638",
+   "slug": "blog/van-ausdall-farrar-achieves-elite-status-with-canon-for-2025-reinforcing-century-long-commitment-to-excellence-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:01.245Z",
+   "duplicate_of": "blog/van-ausdall-farrar-achieves-elite-status-with-canon-for-2025-reinforcing-century-long-commitment-to-excellence"
+  },
+  {
+   "id": "225833477640",
+   "slug": "blog/van-ausdall-farrar-inc-certified-as-a-microsoft-solutions-partner-ranking-among-the-top-5-of-providers-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:02.150Z",
+   "duplicate_of": "blog/van-ausdall-farrar-inc-certified-as-a-microsoft-solutions-partner-ranking-among-the-top-5-of-providers"
+  },
+  {
+   "id": "225833477642",
+   "slug": "blog/the-power-of-cloud-communications-by-van-ausdall-farrar-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:03.120Z",
+   "duplicate_of": "blog/the-power-of-cloud-communications-by-van-ausdall-farrar"
+  },
+  {
+   "id": "225833477645",
+   "slug": "blog/van-ausdall-farrar-inc-launches-revolutionary-network-data-discovery-and-cyber-risk-management-solution-for-businesses-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:05.028Z",
+   "duplicate_of": "blog/van-ausdall-farrar-inc-launches-revolutionary-network-data-discovery-and-cyber-risk-management-solution-for-businesses"
+  },
+  {
+   "id": "225833477647",
+   "slug": "blog/empowering-your-workforce-the-importance-of-security-awareness-training-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:05.967Z",
+   "duplicate_of": "blog/empowering-your-workforce-the-importance-of-security-awareness-training"
+  },
+  {
+   "id": "225833477650",
+   "slug": "blog/celebrating-van-ausdall-farrars-110th-anniversary-a-legacy-of-innovation-and-excellence-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:06.917Z",
+   "duplicate_of": "blog/celebrating-van-ausdall-farrars-110th-anniversary-a-legacy-of-innovation-and-excellence"
+  },
+  {
+   "id": "225833477652",
+   "slug": "blog/van-ausdall-farrar-celebrates-110-years-of-innovation-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:07.894Z",
+   "duplicate_of": "blog/van-ausdall-farrar-celebrates-110-years-of-innovation"
+  },
+  {
+   "id": "225833477654",
+   "slug": "blog/van-ausdall-farrar-inc-in-top-7-of-all-mitel-dealers-for-6th-year-in-a-row-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:09.961Z",
+   "duplicate_of": "blog/van-ausdall-farrar-inc-in-top-7-of-all-mitel-dealers-for-6th-year-in-a-row"
+  },
+  {
+   "id": "225833477657",
+   "slug": "blog/van-ausdall-farrar-inc-recognized-as-top-1-gold-partner-out-of-15000-other-companies-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:10.917Z",
+   "duplicate_of": "blog/van-ausdall-farrar-inc-recognized-as-top-1-gold-partner-out-of-15000-other-companies"
+  },
+  {
+   "id": "225833477659",
+   "slug": "blog/recorded-presentation-why-great-it-matters-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:13.754Z",
+   "duplicate_of": "blog/recorded-presentation-why-great-it-matters"
+  },
+  {
+   "id": "225833477661",
+   "slug": "blog/recorded-presentation-demystifying-zero-trust-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:14.641Z",
+   "duplicate_of": "blog/recorded-presentation-demystifying-zero-trust"
+  },
+  {
+   "id": "225833477663",
+   "slug": "blog/van-ausdall-farrar-attends-mitel-top-40-summit-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:15.527Z",
+   "duplicate_of": "blog/van-ausdall-farrar-attends-mitel-top-40-summit"
+  },
+  {
+   "id": "225833477668",
+   "slug": "blog/mitel-connect-client-transferring-a-call-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:22.508Z",
+   "duplicate_of": "blog/mitel-connect-client-transferring-a-call"
+  },
+  {
+   "id": "225833477670",
+   "slug": "blog/mitel-connect-client-record-custom-greetings-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:25.469Z",
+   "duplicate_of": "blog/mitel-connect-client-record-custom-greetings"
+  },
+  {
+   "id": "225833477673",
+   "slug": "blog/mitel-connect-client-recents-list-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:26.332Z",
+   "duplicate_of": "blog/mitel-connect-client-recents-list"
+  },
+  {
+   "id": "225833477675",
+   "slug": "blog/mitel-connect-client-directory-people-list-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:28.165Z",
+   "duplicate_of": "blog/mitel-connect-client-directory-people-list"
+  },
+  {
+   "id": "225833477677",
+   "slug": "blog/mitel-connect-client-answering-a-call-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:29.067Z",
+   "duplicate_of": "blog/mitel-connect-client-answering-a-call"
+  },
+  {
+   "id": "225833477679",
+   "slug": "blog/mitel-connect-client-add-participant-conference-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:29.986Z",
+   "duplicate_of": "blog/mitel-connect-client-add-participant-conference"
+  },
+  {
+   "id": "225833477682",
+   "slug": "blog/van-ausdall-farrar-receives-shoretel-gold-status-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:31.876Z",
+   "duplicate_of": "blog/van-ausdall-farrar-receives-shoretel-gold-status"
+  },
+  {
+   "id": "225833477685",
+   "slug": "blog/technology-number-three-after-process-planning-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:32.835Z",
+   "duplicate_of": "blog/technology-number-three-after-process-planning"
+  },
+  {
+   "id": "225833477688",
+   "slug": "blog/cloud-data-protection-by-acronis-at-van-ausdall-farrar-inc-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:33.786Z",
+   "duplicate_of": "blog/cloud-data-protection-by-acronis-at-van-ausdall-farrar-inc"
+  },
+  {
+   "id": "225833477690",
+   "slug": "blog/culture-who-cares-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:34.733Z",
+   "duplicate_of": "blog/culture-who-cares"
+  },
+  {
+   "id": "225833477692",
+   "slug": "blog/data-security-on-a-small-scale-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:35.691Z",
+   "duplicate_of": "blog/data-security-on-a-small-scale"
+  },
+  {
+   "id": "225833477695",
+   "slug": "blog/van-ausdall-farrar-hosts-super-event-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:37.584Z",
+   "duplicate_of": "blog/van-ausdall-farrar-hosts-super-event"
+  },
+  {
+   "id": "225834763090",
+   "slug": "blog/print-copy-solutions-maximizing-efficiency-and-roi-3",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:09:54.548Z",
+   "duplicate_of": "blog/print-copy-solutions-maximizing-efficiency-and-roi"
+  },
+  {
+   "id": "225834763092",
+   "slug": "blog/van-ausdall-farrar-inc-achieves-iso-27001-compliance-positioning-itself-as-elite-in-cybersecurity-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:09:59.030Z",
+   "duplicate_of": "blog/van-ausdall-farrar-inc-achieves-iso-27001-compliance-positioning-itself-as-elite-in-cybersecurity"
+  },
+  {
+   "id": "225834763095",
+   "slug": "blog/comprehensive-cybersecurity-assessments-protecting-your-digital-assets-with-van-ausdall-farrar-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:04.059Z",
+   "duplicate_of": "blog/comprehensive-cybersecurity-assessments-protecting-your-digital-assets-with-van-ausdall-farrar"
+  },
+  {
+   "id": "225834763099",
+   "slug": "blog/van-ausdall-farrar-customer-training-quick-clips-intro-2",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:17.490Z",
+   "duplicate_of": "blog/van-ausdall-farrar-customer-training-quick-clips-intro"
+  },
+  {
+   "id": "225834763101",
+   "slug": "blog/mitel-connect-client-voicemail-integration-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:18.705Z",
+   "duplicate_of": "blog/mitel-connect-client-voicemail-integration"
+  },
+  {
+   "id": "225834763103",
+   "slug": "blog/mitel-connect-client-complete-course-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:19.643Z",
+   "duplicate_of": "blog/mitel-connect-client-complete-course"
+  },
+  {
+   "id": "225834763105",
+   "slug": "blog/mitel-conferencing-create-conference-within-outlook-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:20.561Z",
+   "duplicate_of": "blog/mitel-conferencing-create-conference-within-outlook"
+  },
+  {
+   "id": "225834763107",
+   "slug": "blog/mitel-connect-client-set-new-voicemail-password-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:23.435Z",
+   "duplicate_of": "blog/mitel-connect-client-set-new-voicemail-password"
+  },
+  {
+   "id": "225834763110",
+   "slug": "blog/mitel-connect-client-set-new-client-password-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:24.561Z",
+   "duplicate_of": "blog/mitel-connect-client-set-new-client-password"
+  },
+  {
+   "id": "225834763113",
+   "slug": "blog/records-management-vs-information-governance-whats-the-difference-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:36.622Z",
+   "duplicate_of": "blog/records-management-vs-information-governance-whats-the-difference"
+  },
+  {
+   "id": "225835667775",
+   "slug": "blog/print-copy-solutions-where-document-workflows-start-3",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:09:53.495Z",
+   "duplicate_of": "blog/print-copy-solutions-where-document-workflows-start"
+  },
+  {
+   "id": "225835667777",
+   "slug": "blog/modern-print-copy-solutions-for-business-efficiency-3",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:09:56.810Z",
+   "duplicate_of": "blog/modern-print-copy-solutions-for-business-efficiency"
+  },
+  {
+   "id": "225835667779",
+   "slug": "blog/mastering-execution-van-ausdall-farrar-incs-leadership-invited-to-attend-24th-annual-tag-convention-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:00.249Z",
+   "duplicate_of": "blog/mastering-execution-van-ausdall-farrar-incs-leadership-invited-to-attend-24th-annual-tag-convention"
+  },
+  {
+   "id": "225835667783",
+   "slug": "blog/van-ausdall-farrar-inc-invited-to-attend-top-technology-event-of-the-year-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:08.787Z",
+   "duplicate_of": "blog/van-ausdall-farrar-inc-invited-to-attend-top-technology-event-of-the-year"
+  },
+  {
+   "id": "225835667785",
+   "slug": "blog/van-ausdall-farrar-places-in-the-top-30-of-ring-central-partners-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:11.848Z",
+   "duplicate_of": "blog/van-ausdall-farrar-places-in-the-top-30-of-ring-central-partners"
+  },
+  {
+   "id": "225835667788",
+   "slug": "blog/mitel-customers-migrating-to-ucaas-are-embracing-ringcentral-mvp-so-can-you-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:12.806Z",
+   "duplicate_of": "blog/mitel-customers-migrating-to-ucaas-are-embracing-ringcentral-mvp-so-can-you"
+  },
+  {
+   "id": "225835667791",
+   "slug": "blog/unified-communications-as-a-service-ucaas-the-power-flexibility-and-resiliency-of-cloud-communications-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:16.480Z",
+   "duplicate_of": "blog/unified-communications-as-a-service-ucaas-the-power-flexibility-and-resiliency-of-cloud-communications"
+  },
+  {
+   "id": "225835667793",
+   "slug": "blog/mitel-connect-client-voicemails-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:21.566Z",
+   "duplicate_of": "blog/mitel-connect-client-voicemails"
+  },
+  {
+   "id": "225835667795",
+   "slug": "blog/mitel-connect-client-intro-basics-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:27.257Z",
+   "duplicate_of": "blog/mitel-connect-client-intro-basics"
+  },
+  {
+   "id": "225835667798",
+   "slug": "blog/february-8-2018-print-security-event-at-topgolf-presented-by-hp-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:30.971Z",
+   "duplicate_of": "blog/february-8-2018-print-security-event-at-topgolf-presented-by-hp"
+  },
+  {
+   "id": "225835667802",
+   "slug": "blog/copier-service-supply-portal-now-available-for-customers-1",
+   "state": "PUBLISHED",
+   "created": "2026-10-29T00:10:38.519Z",
+   "duplicate_of": "blog/copier-service-supply-portal-now-available-for-customers"
+  }
+ ],
+ "genuinely_new": []
+}

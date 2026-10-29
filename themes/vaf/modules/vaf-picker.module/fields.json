@@ -1,0 +1,283 @@
+[
+  {
+    "id": "eyebrow",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Start here"
+  },
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "What is slowing your office down?"
+  },
+  {
+    "id": "intro",
+    "name": "intro",
+    "label": "Intro",
+    "required": false,
+    "locked": false,
+    "allow_new_line": true,
+    "type": "text",
+    "display_width": null,
+    "default": "Pick the one that sounds most like Monday morning."
+  },
+  {
+    "id": "items",
+    "name": "items",
+    "label": "Problems",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 1,
+      "max": 8,
+      "sorting_label_field": "pk_problem",
+      "default": 4
+    },
+    "children": [
+      {
+        "id": "pk_problem",
+        "name": "pk_problem",
+        "label": "What the visitor says (button text)",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "pk_service",
+        "name": "pk_service",
+        "label": "Recommended service",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "pk_copy",
+        "name": "pk_copy",
+        "label": "Why it fits",
+        "required": false,
+        "locked": false,
+        "allow_new_line": true,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "pk_bullets",
+        "name": "pk_bullets",
+        "label": "Three quick wins (separate with | )",
+        "required": false,
+        "locked": false,
+        "allow_new_line": true,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "pk_link",
+        "name": "pk_link",
+        "label": "Link",
+        "required": false,
+        "locked": false,
+        "supported_types": [
+          "EXTERNAL",
+          "CONTENT",
+          "FILE",
+          "EMAIL_ADDRESS",
+          "BLOG"
+        ],
+        "show_advanced_rel_options": false,
+        "type": "link",
+        "display_width": null,
+        "default": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": ""
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "rel_tag": "Managed IT",
+        "rel_title": "What a vCIO does, and when a 50 person company needs one",
+        "rel_copy": "A virtual chief information officer is a fractional executive, not a help desk.",
+        "rel_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/blog/what-is-a-vcio"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "rel_image": {
+          "src": "",
+          "alt": "",
+          "loading": "lazy"
+        }
+      },
+      {
+        "rel_tag": "Communication",
+        "rel_title": "Business phone systems in 2026",
+        "rel_copy": "Cloud, premise or hybrid, and the questions to ask before you sign.",
+        "rel_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/blog/business-phone-systems-buyers-guide"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "rel_image": {
+          "src": "",
+          "alt": "",
+          "loading": "lazy"
+        }
+      },
+      {
+        "rel_tag": "Process",
+        "rel_title": "Document conversion: what happens to your boxes",
+        "rel_copy": "Chain of custody, indexing and quality control make the files usable.",
+        "rel_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "/blog/document-conversion-services-what-to-expect"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "rel_image": {
+          "src": "",
+          "alt": "",
+          "loading": "lazy"
+        }
+      }
+    ]
+  },
+  {
+    "id": "link_label",
+    "name": "link_label",
+    "label": "Button label",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "See how we fix it"
+  },
+  {
+    "id": "foot_label",
+    "name": "foot_label",
+    "label": "Footer link label",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Not sure? Take the five-minute assessment"
+  },
+  {
+    "id": "foot_link",
+    "name": "foot_link",
+    "label": "Footer link",
+    "required": false,
+    "locked": false,
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "EMAIL_ADDRESS",
+      "BLOG"
+    ],
+    "show_advanced_rel_options": false,
+    "type": "link",
+    "display_width": null,
+    "default": {
+      "url": {
+        "content_id": null,
+        "type": "EXTERNAL",
+        "href": ""
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  },
+  {
+    "id": "anchor",
+    "name": "anchor",
+    "label": "Section anchor (optional)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "help_text": "Used as the section id so links like /page#anchor jump here. Letters, numbers and hyphens only.",
+    "type": "text",
+    "display_width": null,
+    "default": ""
+  },
+  {
+    "id": "alt_bg",
+    "name": "alt_bg",
+    "label": "Alternate (tinted) background",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": false
+  },
+  {
+    "id": "padding",
+    "name": "padding",
+    "label": "Section padding",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [
+        "normal",
+        "Normal"
+      ],
+      [
+        "none",
+        "None"
+      ],
+      [
+        "large",
+        "Large"
+      ]
+    ],
+    "multiple": false,
+    "reordering_enabled": true,
+    "preset": null,
+    "type": "choice",
+    "display_width": null,
+    "default": "normal"
+  }
+]

@@ -34,6 +34,11 @@
 .wow-top.is-on{opacity:1;pointer-events:auto;transform:none}
 .wow-top:hover{background:#2a71af}
 .wow-toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);z-index:600;background:#0f1e33;color:#fff;padding:12px 20px;border-radius:999px;font-weight:600;font-size:14.5px;box-shadow:0 14px 34px rgba(6,13,24,.35)}
+/* returning-visitor greeting */
+.wow-greet{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);z-index:250;display:flex;gap:14px;align-items:center;max-width:min(560px,calc(100% - 32px));background:#0f1e33;color:#fff;padding:14px 16px 14px 22px;border-radius:999px;box-shadow:0 18px 44px rgba(6,13,24,.4);font-size:15px;line-height:1.35;animation:wowin .4s both}
+.wow-greet a{color:#8fc2f2;font-weight:700}
+.wow-greet button{flex:none;width:30px;height:30px;border-radius:50%;border:0;background:rgba(255,255,255,.14);color:#fff;font-size:18px;line-height:1;cursor:pointer}
+@keyframes wowin{from{opacity:0;transform:translate(-50%,12px)}to{opacity:1;transform:translateX(-50%)}}
 @media(max-width:700px){.wow-k kbd{display:none}.wow-top{bottom:96px}}
 @media print{
   .wow-prog,.wow-top,.wow-k,.pv-sticky,.vp,.vaf-hdr .pv-util,.vv__map,.vaf-visit .vv__btns,.q-footer-social,.q-btn,.q-btn-ghost,video,iframe{display:none!important}

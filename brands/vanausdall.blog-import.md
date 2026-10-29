@@ -1,6 +1,6 @@
 # VAF blog import report
 
-Generated 2026-10-28 20:47 UTC. Portal 50498425.
+Generated 2026-10-29 00:10 UTC. Portal 50498425.
 
 - Posts found on vanausdall.com/blog: 335 (the live listing; the plan estimated 324)
 - Posts retrieved and normalised: 335 (0 unretrievable)

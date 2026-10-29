@@ -1,0 +1,25 @@
+{% set n = module.items|length %}
+<section class="q-section vaf-pk{% if module.alt_bg %} q-bg-alt{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %} data-vaf-pk>
+  <div class="q-container">
+    <div class="vaf-pk__head">
+      {% if module.eyebrow %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      <h2 class="q-h2">{{ module.heading }}</h2>
+      {% if module.intro %}<p class="q-lead">{{ module.intro }}</p>{% endif %}
+    </div>
+    <div class="vaf-pk__choices" role="group" aria-label="{{ module.heading }}">
+      {% for it in module.items %}<button type="button" class="vaf-pk__chip" data-i="{{ loop.index0 }}" aria-pressed="false"><b>{{ '%02d'|format(loop.index) }}</b><span>{{ it.pk_problem }}</span></button>{% endfor %}
+    </div>
+    <div class="vaf-pk__stage" aria-live="polite">
+      {% for it in module.items %}
+      <article class="vaf-pk__card" data-i="{{ loop.index0 }}">
+        <div class="vaf-pk__lead">Our answer</div>
+        <h3>{{ it.pk_service }}</h3>
+        {% if it.pk_copy %}<p>{{ it.pk_copy }}</p>{% endif %}
+        {% if it.pk_bullets %}<ul>{% for b in it.pk_bullets|split("|") %}{% if b|trim %}<li>{{ b|trim }}</li>{% endif %}{% endfor %}</ul>{% endif %}
+        <a class="q-btn" href="{{ it.pk_link.url.href }}">{{ module.link_label }}</a>
+      </article>
+      {% endfor %}
+    </div>
+    {% if module.foot_label %}<p class="vaf-pk__foot"><a href="{{ module.foot_link.url.href }}">{{ module.foot_label }}<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>{% endif %}
+  </div>
+</section>

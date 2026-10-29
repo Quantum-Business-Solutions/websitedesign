@@ -105,6 +105,41 @@
     });
   }
 
+
+  /* case-study metrics count up as they scroll into view */
+  if (w.IntersectionObserver && !(w.matchMedia && w.matchMedia('(prefers-reduced-motion:reduce)').matches)) {
+    var cio = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return; cio.unobserve(e.target);
+        var el = e.target, txt = el.textContent.trim(), m = txt.match(/^([^0-9]*)([0-9][0-9,]*)(\.[0-9]+)?(.*)$/);
+        if (!m) return;
+        var pre = m[1], num = parseFloat(m[2].replace(/,/g, '') + (m[3] || '')), places = m[3] ? m[3].length - 1 : 0, comma = m[2].indexOf(',') > -1, suf = m[4], t0 = null;
+        if (num >= 1900 && num <= 2100 && !comma && !places) return;
+        function fmt(v) { var f = v.toFixed(places); if (comma) { var a = f.split('.'); a[0] = a[0].replace(/\B(?=(\d{3})+(?!\d))/g, ','); f = a.join('.'); } return pre + f + suf; }
+        function step(ts) { if (t0 === null) t0 = ts; var k = Math.min(1, (ts - t0) / 1300); k = 1 - Math.pow(1 - k, 3); el.textContent = fmt(num * k); if (k < 1) requestAnimationFrame(step); else el.textContent = txt; }
+        el.textContent = fmt(0); requestAnimationFrame(step);
+      });
+    }, { threshold: 0.5 });
+    $$('.vcs__v').forEach(function (el) { cio.observe(el); });
+  }
+
+  /* returning visitors: remember the last service they read and offer to pick it up */
+  try {
+    var path = w.location.pathname;
+    if (/^\/(services|solutions|industries)/.test(path)) {
+      var h1 = $('h1'); if (h1) localStorage.setItem('vafLast', JSON.stringify({ p: path, t: h1.textContent.replace(/\s+/g, ' ').trim().slice(0, 70), ts: Date.now() }));
+    } else if (path === '/' && !sessionStorage.getItem('vafGreeted')) {
+      var last = JSON.parse(localStorage.getItem('vafLast') || 'null');
+      if (last && Date.now() - last.ts > 3600e3 && Date.now() - last.ts < 30 * 864e5) {
+        sessionStorage.setItem('vafGreeted', '1');
+        setTimeout(function () {
+          var g = mk('div', 'wow-greet', '<span>Welcome back. Pick up where you left off: <a href="' + esc(last.p) + '">' + esc(last.t) + '</a></span><button type="button" aria-label="Dismiss">&times;</button>');
+          g.querySelector('button').onclick = function () { g.remove(); }; d.body.appendChild(g); setTimeout(function () { if (g.parentNode) g.remove(); }, 14000);
+        }, 2500);
+      }
+    }
+  } catch (e) { }
+
   /* a hello for the curious */
   try { console.log('%cVan Ausdall & Farrar', 'font:800 18px system-ui;color:#2a71af', '\nBuilt on HubSpot, edited in HubSpot. Press Ctrl+K to search. We are hiring: /careers'); } catch (e) { }
 })();
