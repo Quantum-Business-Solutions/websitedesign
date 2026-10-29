@@ -18,7 +18,7 @@ Checked 29 October 2026. "Verified" means we found the figure in an independent 
 
 Carried over unchanged from vanausdall.com. Each is VAF's own statement.
 
-- Case study results: Tippecanoe School Corporation (1,200 devices cut to just over 300, $1,000,000 saved over the contract), STAR Financial Bank (70% cost savings), Johnson Memorial (1.5 million files scanned in 90 days), City of Anderson (over $40,000 a year), Aspire (over $300,000 saved). VAF should also confirm each customer allows its name and result to be published.
+- Case study results: Tippecanoe School Corporation (1,200 devices cut to just over 300, $1,000,000 saved over the contract), STAR Financial Bank (70% cost savings), Johnson Memorial (1.5 million files scanned in 90 days), City of Anderson (over $40,000 a year), Aspire (over $300,000 saved). Customers are not named on the new site (decision 29 Oct): each case study describes the customer, for example "an Indiana school corporation", and the old customer URLs redirect to new descriptive ones. VAF confirms each result is accurate and may be published without the name.
 - Customer Care Center answers within 24 hours, Monday to Friday 7:00 am to 5:00 pm.
 - 25-point inspection on every service call.
 - 250+ years of combined IT experience on the Vsecure team, CISSP on staff.

@@ -7,7 +7,7 @@ Owner key: **VAF** = Brian Courtney and the VAF team, **QBS** = Quantum Business
 ## 1. Content sign-off (VAF, before anything else)
 
 - [ ] Brian reviews every page on the sign-off sheet (`vaf-website-signoff` in ClientCommand) and marks each Approved or Changes needed.
-- [ ] See `vanausdall.claims-verified.md`: what was checked against outside sources and what Brian still confirms (SOC 2 report and wording, ISO 27001 status, Evansville address and phone, partner authorizations, case study permissions).
+- [ ] See `vanausdall.claims-verified.md`: what was checked against outside sources and what Brian still confirms (SOC 2 report and wording, ISO 27001 status, Evansville address and phone, partner authorizations, case study results).
 - [ ] **Claims verification.** One consolidated list goes to Brian. Each line is approved or corrected: client names and case study results, dollar figures and percentages, counts of systems, devices or people, certifications (ISO 27001, SOC), awards, years in business, service-response times, hours.
 - [ ] Leadership bios and titles confirmed. Steven Sigmon headshot supplied.
 - [ ] Logos: Berry Global, Echo Engineering and Mid-City logos supplied or the cards stay name-only.
@@ -71,3 +71,10 @@ Owner key: **VAF** = Brian Courtney and the VAF team, **QBS** = Quantum Business
 - [ ] Editing training for VAF: pages, blog, HubDB tables for popup and assessment copy.
 - [ ] Backup of the old site archived.
 - [ ] 30-day review: rankings, leads from the guide and assessment, pages to expand.
+
+## Case study customers
+
+- [ ] Customers are described, not named, on every page, in schema and in llms.txt (`brands/vanausdall.customers.json`). Re-run the name check after any content change.
+- [ ] The 18 old customer URLs redirect to the new descriptive URLs (in `vanausdall.redirects.csv`).
+- [ ] Customer logo files still sit in HubSpot Files under `/vaf/case/` and are no longer used on any page; VAF decides whether to delete them.
+- [ ] Six old design-manager templates under the customers' old names are unused; delete them after launch.
