@@ -9,7 +9,7 @@
     <div class="vaf-cg__grid">
       {% for it in module.items %}
       <a class="vaf-cg__card" href="{{ it.cg_link.url.href }}" data-ind="{{ it.cg_industry }}">
-        <div class="vaf-cg__logo">{% if it.cg_logo.src %}<img src="{{ it.cg_logo.src }}" alt="{{ it.cg_logo.alt or it.cg_customer }} logo" loading="lazy" decoding="async" width="440" height="130">{% else %}<span>{{ it.cg_customer }}</span>{% endif %}</div>
+        {% if it.cg_logo.src %}<div class="vaf-cg__logo">{% if it.cg_logo.src %}<img src="{{ it.cg_logo.src }}" alt="{{ it.cg_logo.alt or it.cg_customer }} logo" loading="lazy" decoding="async" width="440" height="130">{% else %}<span>{{ it.cg_customer }}</span>{% endif %}</div>{% endif %}
         <div class="vaf-cg__body">
           <span class="vaf-cg__tag">{{ it.cg_industry }}</span>
           {% if it.cg_metric %}<div class="vaf-cg__metric"><b>{{ it.cg_metric }}</b><span>{{ it.cg_metric_label }}</span></div>{% endif %}
