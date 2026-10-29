@@ -7,7 +7,7 @@
   <div class="q-container vd vd--{{ mode }}{% if module.flip %} vd--flip{% endif %}">
     <div class="vd__text">
       {% if module.eyebrow %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
-      <h2 class="q-h2 vd__h">{{ module.heading }}</h2>
+      <h2 class="q-h2 vd__h{% if module.heading|length > 80 %} vd__h--l{% elif module.heading|length > 56 %} vd__h--m{% endif %}">{{ module.heading }}</h2>
       {% if mode != 'split' and module.copy %}<div class="vd__copy">{{ module.copy }}</div>{% endif %}
       {% if (mode == 'media' or mode == 'form') and bn > 0 %}
       <ul class="vd__list">{% for b in module.bullets %}<li>{{ b.bullet_text }}</li>{% endfor %}</ul>

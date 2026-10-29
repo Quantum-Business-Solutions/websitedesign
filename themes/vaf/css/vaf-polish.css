@@ -81,3 +81,8 @@ body .vaf-hero--nocards .vaf-hero__copy .q-h1{max-width:24ch}
 .vaf-lc__group ul{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:9px}
 .vaf-lc__group a{display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:999px;background:#f3f7fb;border:1px solid #dbe5f0;color:#0f1e33;font-size:14.5px;font-weight:600;text-decoration:none}
 .vaf-lc__group a:hover{background:#2a71af;border-color:#2a71af;color:#fff}
+
+/* long detail headings sit in a narrow column when the copy is beside them: step the size down so none runs past three lines */
+@media(min-width:1025px){body .q-section .q-h2.vd__h.vd__h--m,body .q-section h2.q-h2.vd__h.vd__h--m{font-size:clamp(21px,1.7vw,25px)!important;line-height:1.2!important;max-width:none!important}
+body .q-section .q-h2.vd__h.vd__h--l,body .q-section h2.q-h2.vd__h.vd__h--l{font-size:clamp(19px,1.5vw,22px)!important;line-height:1.25!important;max-width:none!important}}
+@media(max-width:1024px){body .q-section .q-h2.vd__h.vd__h--m,body .q-section .q-h2.vd__h.vd__h--l{font-size:clamp(21px,5.2vw,26px)!important;line-height:1.2!important}}
