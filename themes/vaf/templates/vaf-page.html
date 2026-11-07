@@ -1,0 +1,24 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: VAF Page (drag and drop)
+-->
+{% extends "./layouts/vaf-base.html" %}
+{% block body %}
+<main id="main">
+  {% dnd_area "main" label="Main content" %}
+    {% dnd_section %}
+      {% dnd_module path="../modules/vaf-hero", width=12 %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module path="../modules/vaf-detail", width=12 %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+    {% dnd_section %}
+      {% dnd_module path="../modules/vaf-leadform", width=12 %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+</main>
+{% endblock body %}
