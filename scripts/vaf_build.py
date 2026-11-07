@@ -158,7 +158,7 @@ def schema_html(page):
         name = page["title"].split("|")[0].strip()
         svc = {"@context": "https://schema.org", "@type": "Service", "name": name, "serviceType": name,
                "description": page.get("description", ""), "url": f"https://www.vanausdall.com/{slug_of(page['file'])}",
-               "provider": {"@id": "https://www.vanausdall.com/#organization"},
+               "provider": {"@type": "Organization", "@id": "https://www.vanausdall.com/#organization", "name": "Van Ausdall & Farrar", "url": "https://www.vanausdall.com"},
                "areaServed": [{"@type": "City", "name": "Indianapolis"}, {"@type": "State", "name": "Indiana"}]}
         own += f'<script type="application/ld+json">{json.dumps(svc, ensure_ascii=False)}</script>'
     return "{% raw %}" + (blocks + own).replace("&amp;", "&") + "{% endraw %}"   # JSON-LD is read as text, so an HTML entity would show up as the literal characters
@@ -212,6 +212,26 @@ def rhythm(items, page):
     return items
 
 
+# One HubSpot form per intent, so every lead records which form it came from (the form name is the contact's conversion).
+FORMS = {
+    "consultation": ("e84ef7ce-04f2-4fef-b539-4351bde13b48", "Thank you. A person from the Indianapolis office will reply to set a time."),
+    "assessment": ("bdc12e88-9b20-4f31-8169-9bdbe8aee811", "Thank you. We will email your assessment link and set a time to walk through the results."),
+    "support": ("e9205ae0-7caf-4a59-a530-40c125a75017", "Thank you. Your request is with the Customer Care Center. We answer within 24 hours, Monday to Friday, 7:00 am to 5:00 pm."),
+    "supplies": ("147679d4-9cb8-4801-b78b-97aea60a6c90", "Thank you. We have your supplies request and will confirm the order and delivery time."),
+    "playbook": ("6ccef9e4-2792-4924-bb54-bd68d24f460d", "Thanks. Your CIO AI Playbook is on its way to your inbox."),
+}
+
+
+def form_for(page, section):
+    f, sid = page["file"], section.get("id", "")
+    if f in ("technology-strength-assessment.html", "print-assessment.html"): kind = "assessment"
+    elif f == "cio-ai-playbook.html": kind = "playbook"
+    elif f == "support.html": kind = {"supplies": "supplies"}.get(sid, "support")
+    else: kind = "consultation"
+    fid, msg = FORMS[kind]
+    return {"form_id": fid, "portal_id": "50498425", "form_type": "HUBSPOT", "response_type": "inline", "message": msg}
+
+
 def template_for(page):
     slug = slug_of(page["file"])
     parts, missing = [], set()
@@ -221,6 +241,8 @@ def template_for(page):
         mod, fn = REGISTRY[s["type"]]
         out = fn(s)
         for o in (out if isinstance(out, list) else [out]):
+            if isinstance(o, dict) and mod in ("vaf-leadform", "vaf-contact") or (isinstance(o, dict) and mod == "vaf-detail" and o.get("show_form")):
+                o["form"] = form_for(page, s)
             parts.append(o if isinstance(o, tuple) else (mod, o))
     parts = "".join(dnd(m, p) for m, p in rhythm(parts, page))
     if missing and os.environ.get("VAF_ALLOW_MISSING"):

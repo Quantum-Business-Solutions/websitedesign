@@ -810,8 +810,8 @@ def switcher(themes, this_theme, page_file, recommend):
 
 
 def schema_blocks(content, page, base, dslug):
-    """Organization and the headquarters LocalBusiness on every page, WebSite on the home page,
-    BreadcrumbList elsewhere. Pages that carry their own LocalBusiness (location pages) skip the HQ block."""
+    """Organization on home and about only, the headquarters LocalBusiness on home, about, contact and office pages,
+    WebSite on the home page, BreadcrumbList on every other page. Pages that carry their own LocalBusiness (location pages) skip the HQ block."""
     sch = content.get("schema") or {}
     if not sch.get("org_name"):
         return ""
@@ -826,9 +826,12 @@ def schema_blocks(content, page, base, dslug):
     if sch.get("telephone"):
         org["telephone"] = sch["telephone"]
         org["contactPoint"] = {"@type": "ContactPoint", "contactType": "Sales", "telephone": sch["telephone"], "areaServed": "US", "availableLanguage": "English"}
-    blocks = [org]
+    f = page["file"]
+    full = f in ("index.html", "about.html")                    # the business is described once: home and about
+    local_page = full or f in ("contact.html",) or f.startswith("locations")
+    blocks = [org] if full else []
     own = json.dumps(page.get("schema") or [])
-    if hq.get("streetAddress") and '"LocalBusiness"' not in own:
+    if local_page and hq.get("streetAddress") and '"LocalBusiness"' not in own:
         lb = {"@context": "https://schema.org", "@type": "LocalBusiness", "@id": f"{site}/#headquarters", "name": hq.get("name") or sch["org_name"], "url": site, "parentOrganization": {"@id": f"{site}/#organization"},
               "address": org.get("address"), "telephone": sch.get("telephone"), "priceRange": hq.get("priceRange", "$$")}
         if hq.get("lat") and hq.get("lon"):
