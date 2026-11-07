@@ -1226,8 +1226,34 @@
   "skip": false
  },
  "understanding-the-meltdown-and-spectre-vulnerabilities": {
-  "skip": true,
-  "reason": "Dated January 2018 vulnerability advisory with time-bound patch instructions (Windows 7 SP1, macOS 10.13.2) and a note that patch status was still changing; not suitable as an evergreen FAQ."
+  "tldr": [
+   "The post explains that Meltdown and Spectre are hardware flaws in modern processors that can let programs read memory they should not access.",
+   "It says Intel chips are the most widely affected, AMD and ARM are exploitable too, and every operating system is impacted.",
+   "The post advises layered protection: update the operating system, then update the BIOS or uEFI firmware, since no single step fully protects."
+  ],
+  "faq": [
+   {
+    "q": "What are the Meltdown and Spectre vulnerabilities?",
+    "a": "The post describes them as flaws in modern processors that let a malicious program read data held in the memory of other running programs, such as passwords, emails, photos and business documents. They sit at the hardware level, not in one application."
+   },
+   {
+    "q": "Which computers are affected by Meltdown and Spectre?",
+    "a": "According to the post, the flaws are hardware-level. Intel chips are the most widely vulnerable, while AMD, ARM and Apple A-series chips are also exploitable. The post adds that every operating system is affected, including Windows, macOS and Linux."
+   },
+   {
+    "q": "Is there one fix that fully protects against Meltdown and Spectre?",
+    "a": "No. The post says the two vulnerabilities affect both hardware and software, so no single step guarantees complete protection. It recommends following a combined approach: update the operating system, then apply the processor microcode fix through a BIOS or uEFI update."
+   },
+   {
+    "q": "Why do I need a BIOS or uEFI update on Windows computers?",
+    "a": "The post explains that because the flaw is in the processor, fixes must be applied to its microcode through a patch to the device's BIOS or uEFI chip. It says to contact your motherboard manufacturer's website to obtain the patches for each device."
+   },
+   {
+    "q": "What does the post say about updating Windows and macOS?",
+    "a": "The post says Microsoft was releasing patches in its January cumulative update for supported systems, and that Apple's fix came in macOS 10.13.2, which needs a reboot to apply. It notes older devices may have no solution from Apple."
+   }
+  ],
+  "skip": false
  },
  "leveraging-new-technology-for-robust-contact-center-operations": {
   "tldr": [
@@ -1470,8 +1496,34 @@
   "skip": false
  },
  "data-discovery-and-classification": {
-  "skip": true,
-  "reason": "Press release format (dateline, executive quote, 'View Full Press Release (PDF)'); substantive content but announcement-style, so left for VAF to decide."
+  "tldr": [
+   "The announcement says Van Ausdall & Farrar expanded its data discovery and classification solutions to help customers find sensitive data and reduce compliance risk.",
+   "It says classification starts with discovery, then sorts data by sensitivity and narrows access using the Principle of Least Privilege.",
+   "The announcement warns that AI tools inherit existing permissions, so cleaning up access first makes AI adoption safer for businesses."
+  ],
+  "faq": [
+   {
+    "q": "What is data discovery and classification?",
+    "a": "The announcement describes it as first identifying what information exists across an organization's IT environment, then categorizing it by sensitivity level, such as public, internal, confidential, regulated or highly restricted. You cannot protect data you have never inventoried."
+   },
+   {
+    "q": "Why does data discovery matter for AI tools?",
+    "a": "The announcement says AI tools work with existing permissions, so if an employee can reach sensitive information, AI can surface it instantly in plain language. It says discovery sets the permission boundaries AI tools inherit, making adoption safer."
+   },
+   {
+    "q": "What is the Principle of Least Privilege?",
+    "a": "The announcement defines it as granting access only to the people who genuinely need it. It says applying it consistently reduces exposure while employees keep working, and gives you specific permissions you can justify to an auditor."
+   },
+   {
+    "q": "What happens in a discovery and classification engagement?",
+    "a": "The announcement lists five steps: scan email, file shares, cloud storage, CRM platforms and devices for sensitive data; classify what is found; map who can access it; narrow excessive permissions; and set a regular review cadence so access does not drift."
+   },
+   {
+    "q": "Which industries benefit most from data classification?",
+    "a": "The announcement says it matters most where regulatory oversight is strict and penalties are severe, naming healthcare, financial services, government, public safety and criminal justice. It mentions HIPAA as an example of rules that carry heavy penalties."
+   }
+  ],
+  "skip": false
  },
  "digital-transformation-what-it-looks-like-mid-market": {
   "tldr": [
@@ -1564,8 +1616,34 @@
   "skip": false
  },
  "ai-workflow-automation": {
-  "skip": true,
-  "reason": "Press release (dateline, quoted executive, 'View Full Press Release (PDF)') with broken line-wrapped text; announcement rather than an advice article."
+  "tldr": [
+   "The announcement says Van Ausdall & Farrar launched an AI automation solution helping small and midsized businesses finish repetitive back-office work faster and more accurately.",
+   "Unlike chatbots that only explain a task, the announcement says it carries out a series of approved steps and delivers a finished result.",
+   "The announcement says employees and managers keep oversight by reviewing completed work, and the service starts from a specific business problem."
+  ],
+  "faq": [
+   {
+    "q": "What is AI workflow automation?",
+    "a": "The announcement describes it as AI technology that carries out a series of approved steps and delivers a finished result, rather than just explaining how to do a task like a chatbot. An employee designs a repeatable process and the AI executes it."
+   },
+   {
+    "q": "What kinds of tasks can AI workflow automation handle?",
+    "a": "The announcement gives examples of routine work: comparing service records, customer invoices and accounting data, assembling reports from several systems, copying data between spreadsheets, preparing recurring documents, and following up on incomplete forms. The idea is to hand off the repetitive portion."
+   },
+   {
+    "q": "Do my employees need technical skills to use it?",
+    "a": "No, according to the announcement. It says the solution is meant to work without employees becoming software developers, and that Van Ausdall & Farrar can help identify a process, define the desired outcome and design the automation around how the company already works."
+   },
+   {
+    "q": "Does a person still review the work?",
+    "a": "Yes. The announcement says human oversight remains an important part of the process, with employees and managers reviewing completed work, confirming accuracy, and keeping control over decisions affecting customers, finances, employees or business operations."
+   },
+   {
+    "q": "Where should a business start with AI automation?",
+    "a": "The announcement advises starting with a specific problem, not buying random AI technology. Identify work that repeatedly consumes valuable employee time, then ask whether technology can handle the routine portion more efficiently, freeing people for judgment-based work."
+   }
+  ],
+  "skip": false
  },
  "ai-integrations-transforming-business-operations-in-2026": {
   "tldr": [
@@ -1718,8 +1796,30 @@
   "skip": false
  },
  "ai-receptionist-for-business-phone-systems": {
-  "skip": true,
-  "reason": "Press release (dateline, executive quote, 'View Full Press Release (PDF)') of about 235 words; too thin and announcement-style."
+  "tldr": [
+   "The announcement says Van Ausdall & Farrar offers an AI-powered receptionist designed to answer calls, improve service and reduce missed calls for businesses.",
+   "It says the virtual front desk answers calls 24 hours a day, 7 days a week, 365 days a year.",
+   "The announcement says it talks with callers naturally and routes them to the right department or employee, unlike button-press auto-attendants."
+  ],
+  "faq": [
+   {
+    "q": "What is an AI receptionist for a business phone system?",
+    "a": "The announcement describes it as an artificial intelligence receptionist that acts as a virtual front desk. It answers calls, understands common questions and helps route callers to the appropriate department or employee, going beyond the typical auto-attendant experience."
+   },
+   {
+    "q": "How is an AI receptionist different from an auto-attendant?",
+    "a": "The announcement says traditional automated phone systems force callers through button prompts, which often means repetition and frustrating loops. The AI receptionist instead interacts naturally with callers so they can be served correctly the first time."
+   },
+   {
+    "q": "When does the AI receptionist answer calls?",
+    "a": "The announcement says it answers calls 24 hours a day, 7 days a week, 365 days a year. That covers after-hours calls from prospective customers, clients needing help, or vendors seeking information."
+   },
+   {
+    "q": "Why does answering every call matter to a business?",
+    "a": "The announcement says every missed call can be a missed opportunity, whether from a prospect calling after hours or a client needing assistance. Unanswered calls can lead to lost revenue and frustrated customers, and callers dislike hold time and voicemail."
+   }
+  ],
+  "skip": false
  },
  "print--copy-solutions-maximizing-efficiency-and-roi": {
   "tldr": [
@@ -1812,8 +1912,30 @@
   "skip": false
  },
  "helping-businesses-harness-ai-without-exposing-sensitive-data": {
-  "skip": true,
-  "reason": "Press release (dateline, 'announced today', 'View Full Press Release (PDF)') of about 256 words; thin and announcement-style."
+  "tldr": [
+   "The announcement says Van Ausdall & Farrar now offers small and mid-sized businesses and non-profits AI tools designed to avoid common public AI security risks.",
+   "It says employees using public AI tools can unknowingly expose sensitive information, bypassing firewalls, MFA, email security and other protections already in place.",
+   "The announcement cites a January 2026 BlackFog finding that 86% of workers use AI weekly and 49% admit using it without approval."
+  ],
+  "faq": [
+   {
+    "q": "Why is using public AI tools a security risk for businesses?",
+    "a": "The announcement says employees may enter sensitive organization information into tools like ChatGPT, Claude, Grok or Copilot, and that this bypasses protections such as firewalls and MFA. It likens it to fortifying the front door, then handing over the keys."
+   },
+   {
+    "q": "How common is unapproved AI use at work?",
+    "a": "The announcement cites a January 2026 BlackFog finding that 86% of workers use AI at least weekly for work tasks and 49% admit using AI tools at work without employer approval. These figures come from the announcement, not independent verification."
+   },
+   {
+    "q": "What does Van Ausdall & Farrar offer for secure AI?",
+    "a": "The announcement says the company provides an all-encompassing AI solution that combines the popular AI tools with a high level of security, aimed at small to mid-sized businesses and non-profits that want AI without the risks of public platforms."
+   },
+   {
+    "q": "Do firewalls and MFA protect against AI data exposure?",
+    "a": "According to the announcement, no. It says organizations that invested in firewalls, endpoint protection, MFA, email security, backups and monitoring can still be exposed once workers interact with an unsecured public AI tool and share sensitive information."
+   }
+  ],
+  "skip": false
  },
  "process-automation-streamlining-business-operations-for-maximum-efficiency": {
   "tldr": [
@@ -1876,8 +1998,30 @@
   "skip": false
  },
  "implementing-new-ai-security-technology-to-help-customers-stop-invisible-cyberattacks": {
-  "skip": true,
-  "reason": "Press release (dateline, 'announced today', executive quote, 'View Full Press Release (PDF)'); announcement-style."
+  "tldr": [
+   "The announcement says Van Ausdall & Farrar is deploying AI behavior-based cybersecurity to catch attacks that are harder to spot, especially in Microsoft 365.",
+   "It explains that attackers can rent local internet addresses, so location-based alerts are becoming unreliable for spotting suspicious logins.",
+   "The announcement says the technology checks whether behavior matches how a user normally operates, and can show what the attacker did and remove it."
+  ],
+  "faq": [
+   {
+    "q": "What is AI behavior-based cybersecurity?",
+    "a": "The announcement describes it as security that asks whether behavior matches how a user normally operates, instead of only asking where a login came from. It analyzes patterns such as login timing, access behavior and system changes to spot a compromised account."
+   },
+   {
+    "q": "Why are location-based login alerts no longer enough?",
+    "a": "The announcement says attackers can rent local internet addresses or use residential proxy networks, so they appear to log in from the same city as their target. A login from across the world used to be a red flag, but now it can look normal."
+   },
+   {
+    "q": "What can attackers do once inside a Microsoft 365 account?",
+    "a": "According to the announcement, they can move quietly, reading emails, setting up forwarding rules, or impersonating employees without triggering traditional alerts. This leaves organizations with too many false alarms while real threats go unnoticed until it is too late."
+   },
+   {
+    "q": "What does the new AI security technology do after detecting an attack?",
+    "a": "The announcement says it can automatically identify how the attack started, show exactly what the attacker did and remove anything malicious they left behind. It also says this approach has helped detect and stop attacks in minutes."
+   }
+  ],
+  "skip": false
  },
  "ai-integration-for-business-a-strategic-guide": {
   "tldr": [
@@ -2030,8 +2174,30 @@
   "skip": false
  },
  "leveraging-microsoft-azure-to-take-customers-into-the-cloud-cost-effectively": {
-  "skip": true,
-  "reason": "Press release (dateline, executive quote, 'View Full Press Release (PDF)'); announcement-style."
+  "tldr": [
+   "The announcement says Van Ausdall & Farrar is using Microsoft Azure to help small and mid-sized businesses move off outdated on-premise servers and hardware.",
+   "It says on-premise servers become outdated over time, creating security concerns and slower speeds, and large hardware spending makes less financial sense.",
+   "The announcement says the company has been proactively moving customers with end-of-life Microsoft products, such as Windows 10, into Azure."
+  ],
+  "faq": [
+   {
+    "q": "Why are businesses moving from on-premise servers to the cloud?",
+    "a": "The announcement says on-premise servers age into obsolescence, which creates security concerns and slower performance. It argues that large capital outlays on deteriorating hardware do not make fiscal sense, while cloud servers scale and support a mobile workforce."
+   },
+   {
+    "q": "What is Microsoft Azure used for in this announcement?",
+    "a": "The announcement says Van Ausdall & Farrar uses Microsoft Azure to help small to mid-sized businesses eliminate outdated IT hardware and make a seamless transition to the cloud, keeping them current with the modern business world."
+   },
+   {
+    "q": "How do end-of-life Microsoft products affect my business?",
+    "a": "The announcement says Microsoft's common products, such as Windows 10, have reached expiration, along with the servers they run on. It says the company has been transitioning customers with end-of-life Microsoft products into Azure to keep them up to date."
+   },
+   {
+    "q": "Who is the Azure transition aimed at?",
+    "a": "The announcement describes it as aimed at local small to mid-sized businesses running on-premise servers. Its stated goal is to help them stay ahead of the curve and remain profitable without paying for hardware that falls behind."
+   }
+  ],
+  "skip": false
  },
  "ai-integration-transforming-business-operations": {
   "tldr": [
@@ -2154,8 +2320,30 @@
   "skip": false
  },
  "we-are-invited-to-technology-assurance-groups-25th-annual-convention": {
-  "skip": true,
-  "reason": "Press release and event notice about attending an April 2026 industry convention; no evergreen advice."
+  "tldr": [
+   "The announcement says Van Ausdall & Farrar was invited to the 25th Annual Technology Assurance Group convention in Las Vegas, April 26 to 28.",
+   "It says the convention theme centers on AI, and the company aims to bring back practical strategies that improve customer efficiency, security and experience.",
+   "The announcement says the company will share insight in sessions on applying AI to service operations, cybersecurity and internal workflows."
+  ],
+  "faq": [
+   {
+    "q": "What is the Technology Assurance Group convention?",
+    "a": "The announcement describes the 25th Annual Technology Assurance Group (TAG) Convention as one of the technology industry's premier events on innovation, collaboration and business technology, held April 26 to 28 in Las Vegas, with an AI-focused theme."
+   },
+   {
+    "q": "Why is Van Ausdall & Farrar attending the TAG convention?",
+    "a": "The announcement says the goal is to bring back real-world strategies and technologies that directly improve outcomes for customers. It also says the company will share what it knows with others in the industry while gaining insights from technology leaders."
+   },
+   {
+    "q": "How does the announcement say AI helps businesses?",
+    "a": "The announcement quotes the company's VCIO saying AI is about helping businesses make better decisions, respond faster and deliver higher service without increasing overhead, rather than automation or replacing people. It stresses turning AI into practical business outcomes."
+   },
+   {
+    "q": "What topics will Van Ausdall & Farrar cover at the convention?",
+    "a": "The announcement says the company will participate and provide insight in sessions on how AI can be applied across service operations, cybersecurity and internal workflows. It also mentions a keynote on using AI as a strategic thought partner."
+   }
+  ],
+  "skip": false
  },
  "healthcare-it-solutions-ensuring-compliance-and-security": {
   "tldr": [
@@ -2248,8 +2436,30 @@
   "skip": false
  },
  "protecting-customers-from-data-breaches-and-cyberthreats-with-password-management": {
-  "skip": true,
-  "reason": "Press release (dateline, executive quote, 'View Full Press Release (PDF)') of about 233 words; thin and announcement-style."
+  "tldr": [
+   "The announcement says Van Ausdall & Farrar is providing password management technology to regional small and mid-sized businesses to counter weak and reused passwords.",
+   "It cites a Verizon Data Breach report claim that 80% of data breaches result from poor or reused passwords.",
+   "The announcement says the average employee tracks 191 passwords, and 66% of people mostly reuse the same passwords across multiple websites."
+  ],
+  "faq": [
+   {
+    "q": "Why are weak and reused passwords a security problem?",
+    "a": "The announcement cites a Verizon Data Breach report saying 80% of data breaches result from poor or reused passwords. It adds that employees juggle many passwords and most people reuse them across sites, which creates network vulnerabilities."
+   },
+   {
+    "q": "How many passwords does the average employee manage?",
+    "a": "The announcement says the average employee now needs to keep track of 191 passwords across their digital life, and that 66% of people mostly use the same passwords on multiple websites. These figures are the announcement's own claims."
+   },
+   {
+    "q": "What does password management software do for a business?",
+    "a": "The announcement says it is a simple, scalable technology that Van Ausdall & Farrar advises every customer to use. It claims companies can quickly eliminate 80% of the cyberthreats facing their organization, which is the company's own claim."
+   },
+   {
+    "q": "Who is the password management offering for?",
+    "a": "According to the announcement, Van Ausdall & Farrar is providing the latest password management technology to the region's small to mid-sized businesses, to help narrow the gap between cybercriminals' resources and the protection most unprotected organizations have."
+   }
+  ],
+  "skip": false
  },
  "unlocking-peace-of-mind-the-power-of-cyber-security-assessments": {
   "tldr": [
@@ -2312,8 +2522,30 @@
   "skip": false
  },
  "providing-small-to-mid-sized-businesses-and-non-profits-with-artificial-intelligence-acceptable-use-policies": {
-  "skip": true,
-  "reason": "Press release (dateline, 'announced today', 'View Full Press Release (PDF)') of about 226 words; thin and announcement-style."
+  "tldr": [
+   "The announcement says Van Ausdall & Farrar rolled out AI Acceptable Use Policies and a framework to help small businesses and non-profits adopt AI safely.",
+   "It says employees often use AI without clear guidelines, which can unintentionally put sensitive company or client information at risk.",
+   "The announcement says the framework gives clear, practical rules for AI use, aiming to enable adoption while protecting client trust and company data."
+  ],
+  "faq": [
+   {
+    "q": "What is an AI acceptable use policy?",
+    "a": "The announcement describes it as a set of clear, practical rules about how AI can and should be used inside an organization. The goal is to enable AI adoption while protecting client trust, company data and operational integrity, rather than restricting innovation."
+   },
+   {
+    "q": "Why do small businesses and non-profits need AI usage rules?",
+    "a": "The announcement says AI is already in the workplace whether or not it has been formally approved, and without clear boundaries even well-intentioned employees can accidentally expose data, violate compliance requirements or create legal issues for the organization."
+   },
+   {
+    "q": "How are employees using AI at work according to the announcement?",
+    "a": "The announcement says employees use AI tools to draft emails, summarize meetings, analyze data and automate routine tasks. It says many organizations are unaware that this happens without clear guidelines, which can unintentionally put sensitive company or client information at risk."
+   },
+   {
+    "q": "Who is the AI Acceptable Use Framework designed for?",
+    "a": "The announcement says Van Ausdall & Farrar designed its AI Acceptable Use Policies and Framework for small and mid-sized businesses as well as non-profit organizations that want to adopt AI safely without exposing themselves to unnecessary risk."
+   }
+  ],
+  "skip": false
  },
  "unlocking-the-future-how-modern-access-control-systems-secure-your-business": {
   "tldr": [
@@ -2376,8 +2608,30 @@
   "skip": false
  },
  "eliminating-the-top-it-concerns-for-small-to-mid-sized-business-owners": {
-  "skip": true,
-  "reason": "Press release (dateline, executive quote, 'View Full Press Release (PDF)') of about 170 words; too thin."
+  "tldr": [
+   "The announcement says Van Ausdall & Farrar introduced new initiatives aimed at eliminating the top IT concerns facing small to mid-sized business owners.",
+   "It names five pain points: cybersecurity threats, budget constraints, lack of IT expertise, technology integration and scalability, and data management and recovery.",
+   "The announcement quotes the company's VCIO saying IT should not be one of the many hats owners wear, so they can focus on growth."
+  ],
+  "faq": [
+   {
+    "q": "What are the top IT concerns for small and mid-sized businesses?",
+    "a": "The announcement lists five: cybersecurity threats, budget constraints, lack of IT expertise, technology integration and scalability, and data management and recovery. It says Van Ausdall & Farrar has made it a mission to address these pain points directly."
+   },
+   {
+    "q": "What is Van Ausdall & Farrar doing about these IT concerns?",
+    "a": "The announcement says the company announced new initiatives built on reinvestment and client-first solutions. It says the solutions are designed to take the worry out of technology so owners can focus on growth, not system downtime or security risks."
+   },
+   {
+    "q": "Why should small business owners outsource their IT?",
+    "a": "The announcement quotes the company's VCIO saying small business owners wear many hats, but IT should not be one of them. The idea is that a provider handles technology so owners can concentrate on growing the business."
+   },
+   {
+    "q": "Who are these IT initiatives meant to help?",
+    "a": "The announcement says the initiatives are aimed at small to mid-sized businesses. It says owners are deeply aware of the obstacles standing between them and scalable, efficient growth, and that the company's aim is to deliver value, security and long-term growth."
+   }
+  ],
+  "skip": false
  },
  "revolutionizing-customer-connections": {
   "tldr": [
@@ -2500,8 +2754,30 @@
   "skip": false
  },
  "enhancing-customer-experience-by-investing-in-ai-automation": {
-  "skip": true,
-  "reason": "Press release (dateline, 'announced today', 'View Full Press Release (PDF)') of about 223 words; thin and announcement-style."
+  "tldr": [
+   "The announcement says Van Ausdall & Farrar invested in AI automation to improve the quality and speed of the support it delivers to clients.",
+   "It says the company has integrated agentic AI solutions into the back end of service delivery across multiple industries.",
+   "The announcement lists benefits such as flagging issues early, speeding up ticket workflows, auto-resolving common problems and generating smarter insights for future support."
+  ],
+  "faq": [
+   {
+    "q": "How is AI automation used in IT support?",
+    "a": "The announcement says AI automations can preemptively flag issues before problems arise, streamline ticket workflows so resolutions happen faster, auto-resolve common issues to free technicians from repetitive troubleshooting, and generate smarter data and insights that improve future support."
+   },
+   {
+    "q": "Why did Van Ausdall & Farrar invest in AI automation?",
+    "a": "The announcement says the company wants to improve its capacity to serve clients at a higher level, and that AI automation is a means to dramatically improve the quality and speed of the support it delivers, driving a higher quality user experience."
+   },
+   {
+    "q": "What does agentic AI mean in this announcement?",
+    "a": "The announcement uses it to describe modern AI tools that do far more than chatbot scripts or reactive alerts. It says the company has integrated agentic solutions into the back end of service delivery rather than limiting AI to a customer-facing chat."
+   },
+   {
+    "q": "Are business owners using AI to its full potential?",
+    "a": "The announcement says many owners know large language models like ChatGPT but most are still underestimating the technology's potential to improve efficiency and employee performance. It frames AI as capable of much more than answering questions."
+   }
+  ],
+  "skip": false
  },
  "why-your-business-needs-a-cyber-security-assessment-before-its-too-late": {
   "tldr": [
@@ -2714,12 +2990,60 @@
   "skip": false
  },
  "nt-ware-completes-soc-2-type-2-audit-for-uniflow-online": {
-  "skip": true,
-  "reason": "Vendor announcement (NT-ware SOC 2 Type 2 audit for uniFLOW Online) of about 291 words; certification news, thin and not evergreen advice."
+  "tldr": [
+   "The post says NT-ware, a Canon Group company, completed a SOC 2 Type 2 audit for its uniFLOW Online print and scan management solution.",
+   "It explains that SOC 2 is an AICPA auditing standard, and the Type 2 audit assesses how effective security controls are over about 12 months.",
+   "The post says Van Ausdall & Farrar partners with Canon and NT-ware, and invites readers to contact its team about uniFLOW Online."
+  ],
+  "faq": [
+   {
+    "q": "What is uniFLOW Online?",
+    "a": "The post describes uniFLOW Online as a cloud-based solution from NT-ware that streamlines print and scan management across an organization. It says customers can feel confident their sensitive data is secured through NT-ware's information security controls."
+   },
+   {
+    "q": "What is a SOC 2 Type 2 audit?",
+    "a": "The post explains that SOC 2 is an auditing standard developed by the American Institute of Certified Public Accountants. It evaluates a service organization's security practices, policies and operations, and the Type 2 version assesses how effectively controls operate over an extended period, typically 12 months."
+   },
+   {
+    "q": "Who completed the SOC 2 Type 2 audit?",
+    "a": "The post says NT-ware, a Canon Group company, completed the audit for its uniFLOW Online solution. It presents this as the vendor's achievement, and says Van Ausdall & Farrar partners with Canon and NT-ware to deliver solutions."
+   },
+   {
+    "q": "Why does vendor security auditing matter to print customers?",
+    "a": "The post says data security is paramount across industries, from healthcare records to financial information. It argues an independent audit of a cloud print solution's controls helps customers feel confident that sensitive information handled through print and scan workflows is protected."
+   }
+  ],
+  "skip": false
  },
  "van-ausdall--farrar-inc-achieves-iso-27001-compliance-positioning-itself-as-elite-in-cybersecurity": {
-  "skip": true,
-  "reason": "Press release (dateline, executive quotes, 'View Full Press Release (PDF)') about the company's own ISO 27001 compliance program; certification claim left for VAF to verify and publish itself."
+  "tldr": [
+   "The announcement says Van Ausdall & Farrar is following the ISO 27001 Compliance Program, an information security standard, through a program from Technology Assurance Group.",
+   "It says ISO 27001 brings structure and third-party validation to a provider's security practices in an industry where qualifications are hard for owners to judge.",
+   "The announcement lists other signs of a qualified provider, including multi-factor authentication, rigorous patch management, 24/7 monitoring and more than a set-and-forget antivirus."
+  ],
+  "faq": [
+   {
+    "q": "What is ISO 27001?",
+    "a": "The announcement describes ISO 27001 as a globally recognized international standard for how organizations manage information security. It says the standard brings structure, discipline and proof that a provider is proactively managing risk, backed by documented, repeatable processes validated by third-party auditors."
+   },
+   {
+    "q": "Why does ISO 27001 matter when choosing an IT provider?",
+    "a": "The announcement says anyone can become a managed IT provider, so without standards a client's cybersecurity depends on a technician's judgment, which owners find hard to assess. It says ISO 27001 offers proof of a provider's practices."
+   },
+   {
+    "q": "How is Van Ausdall & Farrar pursuing ISO 27001?",
+    "a": "The announcement says the company is following the ISO 27001 Compliance Program offered by Technology Assurance Group, which it describes as an organization of top managed technology providers. Readers should confirm the company's current status directly before relying on it."
+   },
+   {
+    "q": "What are signs of a qualified cybersecurity provider?",
+    "a": "The announcement warns that a one-time, set-it-and-forget-it antivirus program is a red flag. It says a provider should also use multi-factor authentication, rigorous patch management and 24/7 monitoring, alongside any recognized standard."
+   },
+   {
+    "q": "Who benefits most from ISO 27001-aligned providers?",
+    "a": "The announcement says it is especially relevant to clients in regulated industries like finance, healthcare or manufacturing, where compliance requirements are becoming stricter. It also claims some cyber insurers and regulators increasingly expect adherence to standards like ISO 27001."
+   }
+  ],
+  "skip": false
  },
  "keeping-an-eye-on-success-the-power-of-modern-video-surveillance-for-businesses": {
   "tldr": [
@@ -2872,8 +3196,34 @@
   "skip": false
  },
  "successfully-implementing-data-retention-policies-for-local-businesses": {
-  "skip": true,
-  "reason": "Press release (dateline, executive quote, 'View Full Press Release (PDF)') on data retention; announcement-style."
+  "tldr": [
+   "The announcement says Van Ausdall & Farrar is helping small and mid-sized businesses avoid penalties tied to poor data management by building data retention policies.",
+   "It says data now has a shelf life, and rules differ by industry on how long certain data may be stored.",
+   "The announcement lists benefits including lower storage costs, quicker recovery from outages and cleaner management of mixed paper and digital records."
+  ],
+  "faq": [
+   {
+    "q": "What is a data retention policy?",
+    "a": "The announcement describes it as a way to organize your data and give it structure, covering how long different data may be kept. It says data now has a shelf life, and regulators are less tolerant of data stored improperly or negligently."
+   },
+   {
+    "q": "Why are data retention policies getting more attention?",
+    "a": "The announcement says cyberattacks, frequent breaches and misuse of personal data have raised public concern, so governments are increasing scrutiny and enforcing stricter laws on small and mid-sized businesses. A retention policy helps show the organization has addressed these concerns."
+   },
+   {
+    "q": "How can a data retention policy reduce costs?",
+    "a": "The announcement says employees tend to store every piece of data they create, which bloats networks and raises storage costs. A policy should prioritize datasets, keep the right data accessible and discard obsolete data, reducing liability if a breach occurs."
+   },
+   {
+    "q": "How do retention policies help after an outage?",
+    "a": "The announcement says a policy makes key data easier to access, so employees can recover faster and resume operations. It argues outages cause downtime mainly when the organization is underprepared, and a robust policy can shorten recovery time."
+   },
+   {
+    "q": "Does a business outside California need to follow the CCPA?",
+    "a": "The announcement says the California Consumer Privacy Act can cost businesses up to $7,500 for deliberate violations of a California consumer's rights, regardless of where the company is located. It says even a couple of California customers could create exposure, so readers should verify their own obligations."
+   }
+  ],
+  "skip": false
  },
  "the-power-of-going-paperless-how-document-conversion-services-transform-your-business": {
   "tldr": [
@@ -2906,8 +3256,34 @@
   "skip": false
  },
  "delivering-strategic-business-reviews-to-help-organizations-capitalize-on-todays-technology": {
-  "skip": true,
-  "reason": "Press release (dateline, executive quotes, 'View Full Press Release (PDF)') announcing expanded Strategic Business Reviews; includes unverified insurance and Lloyd's of London claims best left to VAF."
+  "tldr": [
+   "The announcement says Van Ausdall & Farrar expanded its Strategic Business Reviews, which work like a fractional CTO to help clients plan and use technology.",
+   "It says the reviews focus on client growth and obstacles, not just counts of service tickets completed or threats prevented.",
+   "The announcement says reviews cover performance and network, a cybersecurity overview, and growth and innovation, as a two-way educational process."
+  ],
+  "faq": [
+   {
+    "q": "What is a Strategic Business Review?",
+    "a": "The announcement describes it as a systematic review that works like a fractional CTO, helping owners apply technology to drive innovation, productivity and profitability. It aims to understand how clients are growing and which obstacles block them, beyond routine check-ins."
+   },
+   {
+    "q": "What does a Strategic Business Review cover?",
+    "a": "The announcement lists three areas: a performance and network review for uptime and efficiency, a cybersecurity overview that assesses avoided threats and prioritizes severity so clients right-size their defenses, and growth and innovation, which identifies where new technology can enhance operations."
+   },
+   {
+    "q": "What is a fractional CTO?",
+    "a": "In the announcement, the term describes a stand-in or sounding board for an organization's chief technology officer. It says business owners get access to a panel of IT experts who help ensure their long-term vision can be achieved from an IT standpoint."
+   },
+   {
+    "q": "How are these reviews different from regular IT reporting?",
+    "a": "The announcement says the reviews do not focus on lower-level numbers like service tickets completed or threats prevented. Instead they foster open, candid conversations about the client's business goals and the technology roadmap needed to reach them."
+   },
+   {
+    "q": "Who are Strategic Business Reviews meant for?",
+    "a": "The announcement says many small to mid-sized business owners are under-resourced or undereducated on the latest IT and cybersecurity innovations. It says these reviews bring sophisticated IT roadmapping to those organizations that most need that level of expertise."
+   }
+  ],
+  "skip": false
  },
  "empowering-your-team-the-crucial-role-of-security-awareness-training-in-modern-business": {
   "tldr": [
@@ -3060,8 +3436,30 @@
   "skip": false
  },
  "protecting-customers-with-the-best-first-line-of-defense-against-cyber-attacks": {
-  "skip": true,
-  "reason": "Press release (dateline, executive quotes, 'View Full Press Release (PDF)') on MFA; announcement-style with unverified statistics."
+  "tldr": [
+   "The announcement says Van Ausdall & Farrar is reinforcing multi-factor authentication as a low-cost way to protect organizations from cyberthreats and employee error.",
+   "It cites a 2023 Microsoft study claiming 99.9% of compromised Office 365 accounts lacked MFA, and says 72% of organizations lack it.",
+   "The announcement explains MFA requires a second factor such as a phone code or fingerprint, and expects future versions to become simpler."
+  ],
+  "faq": [
+   {
+    "q": "What is multi-factor authentication?",
+    "a": "The announcement says MFA requires users to verify their identity with a second factor, like a code sent to their phone, a fingerprint scan or a face ID, before logging in. This makes it much harder for hackers to break in even with a stolen password."
+   },
+   {
+    "q": "Why does the announcement call MFA so cost-effective?",
+    "a": "It calls MFA the single most cost-effective way to reduce network risk, citing a 2023 Microsoft study that reportedly found 99.9% of compromised Office 365 accounts lacked MFA. The figure comes from the announcement and should be verified against the original study."
+   },
+   {
+    "q": "Why don't more organizations use MFA?",
+    "a": "The announcement gives three reasons: resistance to change from fears of employee complaints about an extra login step, misplaced confidence that existing passwords are strong enough, and IT providers that hesitate to enforce it."
+   },
+   {
+    "q": "Will MFA become easier to use?",
+    "a": "Yes, according to the announcement. It expects the experience to improve over the next several years with biometric authentication replacing text message codes, tap-to-approve prompts instead of typing codes, and passwordless logins, while urging businesses to act now."
+   }
+  ],
+  "skip": false
  },
  "bringing-it-all-together-the-power-of-unified-communications-for-modern-businesses": {
   "tldr": [
@@ -3214,8 +3612,30 @@
   "skip": false
  },
  "mastering-execution-van-ausdall--farrar-incs-leadership-invited-to-attend-24th-annual-tag-convention": {
-  "skip": true,
-  "reason": "Press release and event notice about attending the 24th Annual TAG Convention; no evergreen advice."
+  "tldr": [
+   "The announcement says Van Ausdall & Farrar was invited to the 24th Annual Technology Assurance Group convention in Louisville, Kentucky, from May 14 to 16.",
+   "It describes TAG as a group of managed technology services providers that gathers to discuss cloud IT, cybersecurity and business innovation.",
+   "The announcement says the convention theme is Execution: Action, Results, Reward, and the company aims to bring back practical insights for customers."
+  ],
+  "faq": [
+   {
+    "q": "What is the TAG Convention?",
+    "a": "The announcement describes the 24th Annual Technology Assurance Group Convention as an event in Louisville, Kentucky, from May 14 to 16, bringing managed technology services providers together to collaborate on the future of IT, cloud solutions, cybersecurity and business innovation."
+   },
+   {
+    "q": "Why is Van Ausdall & Farrar attending the convention?",
+    "a": "The announcement quotes the company's IT Director saying it gains insights into best practices and discovers emerging technologies to bring to customers. The stated aim is to make technology more profitable, efficient and secure for the clients it serves."
+   },
+   {
+    "q": "What is the theme of the 24th TAG Convention?",
+    "a": "The announcement says the theme is Execution: Action, Results, Reward. It highlights the role of effective execution as organizations face technical, informational and transformational change, and says customers need assurance their provider executes at an elite level."
+   },
+   {
+    "q": "How does attending an industry convention help customers?",
+    "a": "The announcement says the convention's primary objective is to use collective mindshare to improve client experiences and technology evolution. Van Ausdall & Farrar says it expects to return with new strategies to execute with more precision and deliver better results for clients."
+   }
+  ],
+  "skip": false
  },
  "why-multi-factor-authentication-is-your-businesss-best-friend-in-cybersecurity": {
   "tldr": [
@@ -3278,8 +3698,30 @@
   "skip": false
  },
  "van-ausdall--farrar-achieves-elite-status-with-canon-for-2025-reinforcing-century-long-commitment-to-excellence": {
-  "skip": true,
-  "reason": "Press release (dateline, partner program award announcement for 2025); about 311 words and not evergreen advice."
+  "tldr": [
+   "The announcement says Van Ausdall & Farrar was awarded Elite Member status in Canon's Advanced Partner Program for 2025, based on its 2024 performance.",
+   "It says the status gives enhanced access to Canon resources, including advanced sales support tools, specialized service training and exclusive program benefits.",
+   "The announcement says the company will use the partnership to serve clients across Indiana and the Midwest in several industries."
+  ],
+  "faq": [
+   {
+    "q": "What is Canon's Advanced Partner Program?",
+    "a": "The announcement describes it as Canon's exclusive membership initiative that recognizes the most distinguished performers within its dealer network. It says Elite Member status acknowledges high-quality products and superior service standards, and the announcement credits Van Ausdall & Farrar with the 2025 status."
+   },
+   {
+    "q": "What does Elite status mean for customers?",
+    "a": "The announcement says Elite status gives the company enhanced access to Canon's resources, including advanced sales support tools, specialized service training and exclusive program benefits. It says these will strengthen its ability to serve its diverse client base."
+   },
+   {
+    "q": "Which industries does Van Ausdall & Farrar serve?",
+    "a": "The announcement lists healthcare, insurance, engineering and construction, government, manufacturing and logistics, and real estate. It says the company delivers managed IT services, communication systems, copy and print technology, and process management solutions across Indiana and the Midwest."
+   },
+   {
+    "q": "Why does a dealer partner program matter to a buyer?",
+    "a": "The announcement presents the Canon recognition as evidence of the company's commitment to partnering with industry leaders to deliver innovative solutions. Buyers should treat it as the company's own claim and confirm current partner status when evaluating a provider."
+   }
+  ],
+  "skip": false
  },
  "empowering-your-team-the-critical-role-of-security-awareness-training-in-todays-digital-landscape": {
   "tldr": [
@@ -3402,8 +3844,30 @@
   "skip": false
  },
  "accelerating-customer-profitability-and-competitive-advantage-through-the-utilization-of-technology": {
-  "skip": true,
-  "reason": "Press release (dateline, executive quotes, 'View Full Press Release (PDF)') introducing a service process; announcement-style."
+  "tldr": [
+   "The announcement says Van Ausdall & Farrar introduced a strategic technology budget and roadmap process to help small and mid-sized businesses use technology more profitably.",
+   "It says regular Strategic Business Reviews cover service performance and risk, technology alignment, and cost and budget analysis for each client.",
+   "The announcement says each client gets a technology roadmap covering future upgrades and cost savings, including technology the company does not provide."
+  ],
+  "faq": [
+   {
+    "q": "What is a technology budget and roadmap?",
+    "a": "The announcement describes it as a plan created for each client that shows a clear path for future upgrades, highlights cost-saving opportunities and ensures every piece of technology, not only what Van Ausdall & Farrar provides, aligns with the company's overall strategy."
+   },
+   {
+    "q": "What do Strategic Business Reviews include?",
+    "a": "The announcement says the reviews give regular updates on three areas: service performance and risk assessments, technology alignment to meet minimum standards and avoid inefficient infrastructure, and cost and budget analysis to find savings that can be reinvested in the business."
+   },
+   {
+    "q": "How can a technology review save money?",
+    "a": "The announcement says the company analyzes the full technology budget, including infrastructure, internet service providers, VoIP systems and cybersecurity insurance. It gives examples such as eliminating outdated systems and cutting redundant tools like standalone conferencing apps when Microsoft 365 is already paid for."
+   },
+   {
+    "q": "How is this different from typical managed IT service?",
+    "a": "The announcement quotes the company's IT Director saying most managed IT companies focus on servicing whatever breaks and overlook long-term infrastructure. Its approach aims to give clients a partner with strategic insight and transparency so they can plan ahead instead of reacting."
+   }
+  ],
+  "skip": false
  },
  "revolutionizing-customer-experiences-the-power-of-modern-contact-centers": {
   "tldr": [
@@ -3436,8 +3900,30 @@
   "skip": false
  },
  "van-ausdall--farrar-inc-certified-as-a-microsoft-solutions-partner-ranking-among-the-top-5-of-providers": {
-  "skip": true,
-  "reason": "Press release (dateline, certification announcement, 'View Full Press Release (PDF)'); partner-status and top-5% claim left for VAF to verify and publish itself."
+  "tldr": [
+   "The announcement says Van Ausdall & Farrar earned the Microsoft Solutions Partner designation, which it says places the company in the top 5%.",
+   "It says the designation weighs performance, customer success, certified staff and above all a record of high customer satisfaction, and requires staying current.",
+   "The announcement says the company brings Azure architecture expertise to help customers adopt cloud technologies and make better use of Microsoft tools."
+  ],
+  "faq": [
+   {
+    "q": "What is the Microsoft Solutions Partner designation?",
+    "a": "The announcement describes it as a Microsoft designation awarded to providers who show expertise in cloud services, data management and infrastructure. It says criteria include performance, customer success, skilled certifications and customer satisfaction, and that Microsoft monitors partners to ensure they keep up to date."
+   },
+   {
+    "q": "What does the announcement claim about the company's ranking?",
+    "a": "The announcement claims the designation places Van Ausdall & Farrar in the top 5% of all Microsoft providers worldwide. This is the company's own statement in a press release, so buyers should confirm current partner status with Microsoft or the provider."
+   },
+   {
+    "q": "How can a Microsoft partner help with moving to the cloud?",
+    "a": "The announcement says the company brings Azure architecture expertise so customers can adopt cloud technologies with confidence, using Azure's scalability, reliability and security to modernize IT infrastructure, reduce costs and prepare for growth. It also mentions efficient systems built on Office 365."
+   },
+   {
+    "q": "Who should consider using a Microsoft Solutions Partner?",
+    "a": "The announcement says businesses considering a move to the cloud, or wanting to improve how they use Microsoft tools, can rely on the company for guidance. It says the designation signals expertise and an ability to deliver results aligned with a customer's strategic goals."
+   }
+  ],
+  "skip": false
  },
  "securing-your-business-the-power-of-modern-video-surveillance": {
   "tldr": [
@@ -3500,8 +3986,30 @@
   "skip": false
  },
  "utilizing-latest-ai-knowledge-management-to-outpace-it-competitors-while-enhancing-customer-support-experience": {
-  "skip": true,
-  "reason": "Press release (dateline, 'announced today', executive quotes, 'View Full Press Release (PDF)'); includes an unverified 30% faster resolution projection."
+  "tldr": [
+   "The announcement says Van Ausdall & Farrar is using AI Knowledge Management to unify technician expertise in a central database and speed up customer support.",
+   "It says the system turns scattered customer data into searchable smart data and gives every technician an AI assistant to predict solutions early.",
+   "The announcement quotes the company's IT Director as conservatively expecting about 30% faster ticket resolution, which is an expectation, not a measured result."
+  ],
+  "faq": [
+   {
+    "q": "What is AI Knowledge Management in IT support?",
+    "a": "The announcement describes it as a tool that unifies technician expertise into a central database and turns random chunks of customer data into smart data that can be indexed, searched, organized and contextualized, giving technicians more actionable insights when solving customer issues."
+   },
+   {
+    "q": "How does AI help technicians solve problems faster?",
+    "a": "The announcement says AI can help technicians predict solutions very early in a conversation by drawing on how similar issues were resolved before. It compares this to an all-hands meeting of every technician that happens in seconds for each issue."
+   },
+   {
+    "q": "What improvement does the company expect from AI Knowledge Management?",
+    "a": "The announcement quotes the IT Director conservatively expecting about 30% faster customer ticket resolution regardless of industry. It also expects much faster response times, dramatically less downtime and more precise support. These are stated expectations from the announcement."
+   },
+   {
+    "q": "What does an AI assistant for technicians mean for customers?",
+    "a": "The announcement says giving every technician an AI assistant should deliver faster, more efficient and more secure solutions, and set clients up for long-term network scalability, flexibility and security, by leveraging the collective expertise of all technicians instantly."
+   }
+  ],
+  "skip": false
  },
  "content-management-solutions-the-key-to-streamlining-your-business-operations": {
   "tldr": [
@@ -3654,8 +4162,30 @@
   "skip": false
  },
  "informing-business-owners-of-new-section-179-tax-deduction-limits-for-2024": {
-  "skip": true,
-  "reason": "Press release about 2024 Section 179 deduction limits; dated tax figures and announcement-style, and the company states it does not offer financial advice."
+  "tldr": [
+   "The announcement says Van Ausdall & Farrar is encouraging business owners to use the IRS Section 179 deduction on qualifying equipment purchases for 2024.",
+   "It says eligible items include copiers, printers, IT infrastructure, cybersecurity solutions, phone systems and surveillance systems, if put into service by the deadline.",
+   "The announcement states the company does not give financial advice and urges owners to consult their CPA before acting."
+  ],
+  "faq": [
+   {
+    "q": "What is the Section 179 tax deduction?",
+    "a": "The announcement describes it as an IRS deduction that lets businesses deduct the cost of eligible equipment that is bought or financed and put into service within the tax year. It said the 2024 limit was up to $1,220,000. Check current limits with a CPA."
+   },
+   {
+    "q": "What kinds of purchases qualify under Section 179?",
+    "a": "The announcement lists copiers, printers, IT infrastructure, managed software, cybersecurity solutions, phone systems, surveillance systems and other essential business tools as examples of qualifying equipment. Owners should confirm what qualifies with their tax professional."
+   },
+   {
+    "q": "Does Van Ausdall & Farrar give tax advice?",
+    "a": "No. The announcement says the company does not offer financial advice and wants owners to consult their CPA to avoid missing the opportunity. It says it shares the information whether or not a company buys office technology from it."
+   },
+   {
+    "q": "Why does the announcement encourage planning ahead for Section 179?",
+    "a": "It says many businesses delay capital investments until year end, while Section 179 rewards those who plan ahead. The company says the deduction can boost profitability by reducing tax liability, and that equipment had to be in service before the year-end deadline."
+   }
+  ],
+  "skip": false
  },
  "the-urgent-need-for-security-awareness-training-fortifying-your-organizations-first-line-of-defense": {
   "tldr": [
@@ -3748,8 +4278,34 @@
   "skip": false
  },
  "safeguards-customer-networks-by-exposing-and-eliminating-website-vulnerabilities": {
-  "skip": true,
-  "reason": "Press release (dateline, executive quote, 'View Full Press Release (PDF)') announcing website audits; announcement-style."
+  "tldr": [
+   "The announcement says Van Ausdall & Farrar offers website audits that identify security, performance and legal compliance risks that managed IT providers often overlook.",
+   "It says audits flag outdated content management systems such as WordPress, insecure third-party plugins, slow design and missing privacy policy or ADA compliance.",
+   "The announcement says many website vulnerabilities are simple to fix with a qualified IT administrator or developer, once clients understand the risks."
+  ],
+  "faq": [
+   {
+    "q": "What is a website audit?",
+    "a": "The announcement describes it as a review that highlights vulnerabilities that could expose a business to cyber threats, along with performance and legal compliance issues. It aims to educate clients and help them prioritize website improvements that protect profitability."
+   },
+   {
+    "q": "Why do websites get hacked even when IT is managed?",
+    "a": "The announcement says most businesses launch their website long before hiring a managed IT provider, so the site stays isolated from regular IT management. Old content management system versions or unverified plugins can then lead to hacking incidents or data breaches."
+   },
+   {
+    "q": "What website problems can an audit uncover?",
+    "a": "The announcement lists outdated versions of platforms like WordPress, Joomla, Wix, Shopify and Squarespace, insecure plugins, excess JavaScript and CSS that slow loading, a missing privacy policy and failure to meet ADA accessibility requirements."
+   },
+   {
+    "q": "Why do privacy policy and ADA compliance matter for a website?",
+    "a": "The announcement says websites lacking a clear privacy policy or meeting ADA compliance can open businesses up to lawsuits, particularly in states like California, Florida and New York, and that regulators have grown tougher on organizations that lack these requirements."
+   },
+   {
+    "q": "Are website vulnerabilities hard to fix?",
+    "a": "According to the announcement, the vulnerabilities are often very simple to fix, and the majority can be resolved fairly quickly with the help of a qualified IT administrator or developer, though some issues are more complicated to resolve."
+   }
+  ],
+  "skip": false
  },
  "-protecting-your-data-in-the-age-of-cyber-threats": {
   "tldr": [
@@ -3872,8 +4428,30 @@
   "skip": false
  },
  "leveraging-new-vulnerability-management-technology-to-secure-customer-networks": {
-  "skip": true,
-  "reason": "Press release (dateline, 'announced', executive quote, 'View Full Press Release (PDF)') announcing vulnerability management technology; announcement-style."
+  "tldr": [
+   "The announcement says Van Ausdall & Farrar deployed vulnerability management technology that continuously scans client networks to find and fix weaknesses before hackers do.",
+   "It says new network assets trigger an immediate scan, and scans then repeat on a customizable schedule covering ports, services and known vulnerabilities.",
+   "The announcement says custom vulnerability reports combine business and technical insight, so executives can prioritize which risks to address first."
+  ],
+  "faq": [
+   {
+    "q": "What is vulnerability management?",
+    "a": "The announcement describes it as continuous scanning and monitoring of a network to identify and mitigate potential weaknesses proactively, essentially thwarting hackers before they spot an opportunity. It covers open ports, running applications, operating system detection, SSL checks and authentication checks."
+   },
+   {
+    "q": "How does the scanning work when something new joins the network?",
+    "a": "The announcement says that as soon as a new asset is added to a customer's network, the technology starts a thorough scan using multiple techniques. Newly identified applications are then added to the customer footprint for oversight, and scans continue on a set schedule."
+   },
+   {
+    "q": "What are custom vulnerability reports?",
+    "a": "The announcement says these reports group applications by their purpose in the organization and combine technical and business insight, shaped by the customer's Business Impact Analysis. They help owners see which applications pose bigger threats so they can prioritize IT strategy."
+   },
+   {
+    "q": "Can businesses customize how often scans run?",
+    "a": "Yes, according to the announcement. Scanning jobs run automatically on a predefined schedule, and organizations can customize scans, such as which ports to check and how often to scan. Reports update automatically when changes appear in the network footprint or the threat feed."
+   }
+  ],
+  "skip": false
  },
  "streamline-your-business-with-custom-content-management-solutions": {
   "tldr": [
@@ -6956,8 +7534,34 @@
   "skip": false
  },
  "toshiba-announces-operational-changes": {
-  "skip": true,
-  "reason": "Dated April 2017 vendor announcement about Toshiba winding down phone system operations, with time-bound order and support dates and a contact line."
+  "tldr": [
+   "The announcement says Toshiba is winding down phone system marketing, sales and manufacturing, and new equipment orders end on May 22, 2017.",
+   "Existing Toshiba customers keep support: the post says warranties, software support and upgrade services will be honored and technical support continues for seven years.",
+   "VAF says it keeps Toshiba parts and technicians, and invites both current Toshiba customers and others to evaluate premise, cloud or hybrid phone options."
+  ],
+  "faq": [
+   {
+    "q": "What did Toshiba announce about its phone systems?",
+    "a": "The announcement says Toshiba America Information Systems told its dealers it is winding down marketing, sales and manufacturing operations. Effective May 22, 2017, VAF could no longer place new equipment orders with Toshiba."
+   },
+   {
+    "q": "Will Toshiba warranties and support still be honored?",
+    "a": "The post says Toshiba committed to honoring all existing warranties, including extended warranty agreements, and software support and upgrade services through the existing commitment. Current production systems will also have technical support for the next seven years, according to the announcement."
+   },
+   {
+    "q": "Can Toshiba customers still expand their systems?",
+    "a": "According to the post, VAF can still order Toshiba licensing after May 22 for customers who need to expand an existing IPEdge or CIX system. Hardware orders for new equipment stopped on that date, so planning ahead matters."
+   },
+   {
+    "q": "Should Toshiba phone system owners look at other options?",
+    "a": "The post says it may be the right time to evaluate options. VAF says it will keep supporting Toshiba systems, but no longer markets them to new clients, and suggests comparing premise, cloud or combined phone systems."
+   },
+   {
+    "q": "Who can a Toshiba customer contact at VAF for support?",
+    "a": "The post says customers, whether current or new to VAF, can reach Van Ausdall & Farrar at 317-634-2913 or support@vanausdall.com. It also says VAF keeps a stock of Toshiba parts and experienced Toshiba technicians."
+   }
+  ],
+  "skip": false
  },
  "make-case-management-work-for-you": {
   "tldr": [
@@ -7050,12 +7654,64 @@
   "skip": false
  },
  "information-plus-data-the-vitality-of-your-business": {
-  "skip": true,
-  "reason": "Thin, vague metaphor-driven piece (about 373 words) with no concrete steps, ending in a VoIP mobility product pitch."
+  "tldr": [
+   "The post argues good decisions need good information, and an information health check can show where data is duplicated, delayed or missing.",
+   "It says delays between field work and office data entry, and mixed paper and electronic files, can hurt data integrity.",
+   "The post presents VoIP mobility from VAF as a way to extend unified communications to smartphones and tablets and reduce duplicate data entry."
+  ],
+  "faq": [
+   {
+    "q": "What is an information health check?",
+    "a": "The post describes it as a review of how your organization gathers, processes and stores information. It can reveal that useful data exists in duplicate across several places, or that one key piece is missing, which affects decisions."
+   },
+   {
+    "q": "Why can how, where and when data is collected cause problems?",
+    "a": "The post says paper and electronic files that must be copied, scanned or faxed, collected in the field and entered at the office, can arrive late. Delays in updating data can affect its integrity and the decisions based on it."
+   },
+   {
+    "q": "How can mobile technology improve data collection?",
+    "a": "According to the post, using mobile technology for human input addresses the how, where and when of the process. It says enterprise VoIP mobility connects information in real time with less duplicate data entry."
+   },
+   {
+    "q": "What is VoIP mobility?",
+    "a": "The post describes VoIP mobility from VAF as extending unified communication applications to smartphones and tablets. It says features include voice, video, conferencing, instant messaging and email, with centralized control and support for bring your own device."
+   },
+   {
+    "q": "Who benefits from an information health check?",
+    "a": "The post says any organization seeking to improve field-level logistics in areas such as operations, support and sales may benefit. It suits teams that mix paper and electronic processes and suspect their stored data is duplicated or incomplete."
+   }
+  ],
+  "skip": false
  },
  "onbase-by-hyland-receives-department-of-defense-certification": {
-  "skip": true,
-  "reason": "Vendor certification announcement (DoD 5015.02 for OnBase, February 2017) with product claims; announcement-style and dated."
+  "tldr": [
+   "The announcement says Hyland's OnBase received Department of Defense 5015.02 certification for records management, supporting government and other organizations that need validated solutions.",
+   "The post says OnBase offers 256-bit encryption in flight and at rest, encrypted disk groups and audit trails to track data access.",
+   "VAF customers choosing OnBase get content management, case management, business process management and records management on a single platform, according to the post."
+  ],
+  "faq": [
+   {
+    "q": "What certification did OnBase by Hyland receive?",
+    "a": "The announcement says Hyland, creator of the OnBase information platform, received the Department of Defense 5015.02 Certification for Records Management. It is meant to support federal, state and local governments that need verified records management solutions."
+   },
+   {
+    "q": "What does DoD 5015.02 certification mean for customers?",
+    "a": "The post says customers can use OnBase as a validated solution to manage and automate records and meet strict regulatory mandates. It describes the certification as an accepted industry standard for judging secure records management products."
+   },
+   {
+    "q": "What security features does OnBase offer, according to the post?",
+    "a": "The post lists 256-bit encryption of data in flight and at rest, encrypted disk groups that guard against internal breaches, and audit trails that track data access. A single platform also keeps one copy of each record updated."
+   },
+   {
+    "q": "What can customers do with OnBase through VAF?",
+    "a": "The post says VAF customers who select OnBase invest in enterprise content management, case management, business process management and records management together on one platform, rather than managing separate systems for each need."
+   },
+   {
+    "q": "Who uses records management solutions like OnBase?",
+    "a": "The post says hundreds of organizations, including federal government and healthcare agencies, use OnBase to streamline information from document intake through final disposition. It describes the certification as relevant to government, healthcare and commercial organizations."
+   }
+  ],
+  "skip": false
  },
  "protect-your-company-with-it-business-continuity-and-disaster-recovery": {
   "tldr": [
@@ -7118,12 +7774,64 @@
   "skip": false
  },
  "cloud-data-protection-by-acronis-at-van-ausdall--farrar-inc": {
-  "skip": true,
-  "reason": "Partnership announcement (January 2017, executive quote) with unsourced statistic (60 to 70 percent of businesses not protecting data) and vendor boilerplate; announcement-style."
+  "tldr": [
+   "The announcement says VAF began a partnership with Acronis, a provider of backup, cloud storage, disaster recovery and secure file sync and share.",
+   "The post says Acronis protects files, applications and operating systems across virtual, physical, cloud and mobile environments.",
+   "VAF leadership says cloud backup helps clients securely migrate, protect and recover critical data and supports business continuity."
+  ],
+  "faq": [
+   {
+    "q": "What did VAF announce about Acronis?",
+    "a": "The announcement says VAF formed a new partnership with Acronis, which it describes as a global leader in hybrid cloud data protection, to offer clients cloud backup and disaster recovery as an add-on to its technology solutions."
+   },
+   {
+    "q": "What does Acronis data protection cover?",
+    "a": "The post says Acronis offers backup, cloud storage, disaster recovery and secure file sync and share. It describes protection of all files, applications and operating systems across virtual, physical, cloud and mobile environments."
+   },
+   {
+    "q": "Why does cloud backup matter as data grows?",
+    "a": "The post says virtualization and the growth of data creation mean cloud services now address more backup and disaster recovery needs. A cloud backup solution lets clients securely migrate, protect and recover critical data in the cloud."
+   },
+   {
+    "q": "Who is the Acronis backup solution designed for?",
+    "a": "According to VAF's vice president quoted in the post, the solution is designed especially for end users and managed service providers. He says it fits VAF's business-to-business solutions that improve business continuity and process control."
+   },
+   {
+    "q": "What does the post say about Acronis as a company?",
+    "a": "The post says Acronis was founded in 2003 and protects data for over five million consumers and 500,000 businesses in over 145 countries, with more than 100 patents. These are company claims from the 2017 announcement."
+   }
+  ],
+  "skip": false
  },
  "paperless-workflow-for-mortgage-bankers-with-document-capture-technology": {
-  "skip": true,
-  "reason": "Vendor-specific product claims (95% automatic classification, 45 minutes to under 5, ROI under 5 months in one place and within six months in another) that are internally inconsistent and unsourced; VAF should verify before reuse."
+  "tldr": [
+   "The post says mortgage loan packages can run to 700 or more pages, and document capture technology can classify pages automatically.",
+   "VAF describes combining Ephesoft Smart Capture and Kodak Capture Pro so barcodes and remaining content are identified and categorized automatically.",
+   "The post claims the hybrid approach could cut classification from 45 minutes per loan to under 5 minutes, with payback expected within months."
+  ],
+  "faq": [
+   {
+    "q": "What problem does document capture solve for mortgage bankers?",
+    "a": "The post says loan paperwork has grown to around 700 pages, sometimes over 1,000, and staff may handle more than 225 document types. Document capture technology identifies and indexes pages automatically, reducing manual sorting, cost and time."
+   },
+   {
+    "q": "How does the Ephesoft and Kodak Capture Pro combination work?",
+    "a": "According to the post, Kodak Capture Pro reads bar-coded documents while Ephesoft Smart Capture handles the rest. Ephesoft uses optical character recognition to compare each image against defined document types and assigns a confidence level to each page."
+   },
+   {
+    "q": "What results does the post claim for this approach?",
+    "a": "The post claims a loan processing department could classify and separate 95 percent of documents automatically and cut classification from 45 minutes per loan to under five minutes. These are the post's own claims, not independent figures."
+   },
+   {
+    "q": "Can the system handle new document types?",
+    "a": "Yes, the post says Ephesoft lets users create new document types. It calls this vital because regulations and forms change constantly, so a mortgage operation can keep classification current without rebuilding the whole workflow."
+   },
+   {
+    "q": "How quickly does the post say the investment pays back?",
+    "a": "The post says mortgage bankers could expect a full return on investment within six months, and may then expand the solution to retail branches and brokers. It also mentions under five months in one list, so confirm expectations."
+   }
+  ],
+  "skip": false
  },
  "speech-recognition-solutions-for-health-professionals-improve-patient-care": {
   "tldr": [
@@ -7178,12 +7886,64 @@
   "skip": false
  },
  "time-is-now-for-lawyers-to-get-savvy-about-mobile-speech-productivity": {
-  "skip": true,
-  "reason": "Dated December 2016 piece dominated by ABA TECHREPORT 2016 and Statista survey figures plus a product pitch; no stable guidance."
+  "tldr": [
+   "The post, citing the American Bar Association's 2016 TECHREPORT, says lawyers increasingly work remotely on smartphones, tablets and laptops, many using personal devices.",
+   "It highlights security gaps, saying the ABA report found only 43 percent of lawyers reported having a mobile technology policy for their firm.",
+   "VAF presents Winscribe mobile dictation as a way to record notes anywhere and send them to support staff for faster document turnaround."
+  ],
+  "faq": [
+   {
+    "q": "Why does the post say lawyers need mobile productivity tools?",
+    "a": "Citing the ABA's 2016 TECHREPORT, the post says lawyers practice from private offices, home and shared space, and 99 percent of respondents check email while out of the office. Mobile tools help them work effectively wherever they are."
+   },
+   {
+    "q": "What mobile security concerns does the post raise?",
+    "a": "The post cites the ABA report as indicating client data on laptops and phones may not be properly protected. It notes only 43 percent of lawyers reported a firm mobile technology policy, and urges smarter security measures."
+   },
+   {
+    "q": "What is mobile dictation and how does it help lawyers?",
+    "a": "The post says lawyers can dictate case notes, tasks, directions or billing time on a mobile device, then send recordings instantly to staff for transcription or follow-up without docking or connecting to a computer."
+   },
+   {
+    "q": "What advantages of mobile dictation does the post list?",
+    "a": "The post lists improved productivity, improved document turnaround time, better client responsiveness and reduced hardware costs and maintenance. It says voice-to-text can also speed document editing."
+   },
+   {
+    "q": "What does Winscribe offer according to the post?",
+    "a": "The post says Winscribe mobile dictation apps from VAF link images, location, identification and audio recording. A lawyer can capture accident photos with a location tag or dictate case data, and assistants process the linked information centrally."
+   }
+  ],
+  "skip": false
  },
  "when-healthcare-professionals-go-mobile": {
-  "skip": true,
-  "reason": "Product promotion for a specific mobile app (December 2016) with unverified compliance claims (HL7, CCOW, HIPAA, 21 CFR Part 11); VAF should verify before reuse."
+  "tldr": [
+   "The post describes OnBase Mobile Solutions, which extends OnBase to smartphones and tablets so clinicians can view patient documents from their devices.",
+   "Clinicians can capture images, videos, signatures and forms at the point of care, and the post says the data goes directly into OnBase.",
+   "The post says no information or images are saved on the device, and lists native apps for Windows, iOS and Android."
+  ],
+  "faq": [
+   {
+    "q": "What is OnBase Mobile Solutions for healthcare?",
+    "a": "The post describes it as a program that extends OnBase to smartphones and tablets. Clinicians and physicians can view materials tied to a patient, such as consent forms, lab results and pathology images, through an app that works with the EMR."
+   },
+   {
+    "q": "What can clinicians capture with the OnBase mobile app?",
+    "a": "According to the post, clinicians can capture images, videos, signatures and other information at the point of care and fill out electronic forms. Photos and data attach directly to the correct patient record."
+   },
+   {
+    "q": "How does the post address mobile device security?",
+    "a": "The post says that because no information or images are saved to the device, the OnBase mobile app eases security concerns with personal mobile devices. It also says the app complies with HIPAA and 21 CFR Part 11."
+   },
+   {
+    "q": "Which platforms and standards does the app support?",
+    "a": "The post says the app is available as native apps for Microsoft Windows, Apple iOS and Android. It states the app meets HL7, CCOW and CCD standards and integrates with all major EHR systems."
+   },
+   {
+    "q": "How can mobile access to patient records help care decisions?",
+    "a": "The post says viewing all OnBase content supporting the patient record from a mobile device gives clinicians current, relevant information. It says this supports more accurate diagnoses, even when on call or on the road."
+   }
+  ],
+  "skip": false
  },
  "5-requirements-of-byod-for-mobile-unified-communications": {
   "tldr": [
@@ -7216,12 +7976,64 @@
   "skip": false
  },
  "case-management-solutions-for-the-healthcare-industry": {
-  "skip": true,
-  "reason": "Product promotion (December 2016) for a hosted OnBase case management application with unsupported superlative claims; no stable buyer guidance."
+  "tldr": [
+   "The post says a hosted OnBase case management application can help companies serving healthcare organizations track client relationships in one central interface.",
+   "It describes tracking correspondence, activities, stakeholders, events and action items, with automatic task notifications and built-in reporting for managers and executives.",
+   "A color-coded rating system lets staff flag at-risk client relationships so issues can be addressed early to improve retention."
+  ],
+  "faq": [
+   {
+    "q": "What is case management software for healthcare support companies?",
+    "a": "The post describes a hosted OnBase case management application that helps companies serving nursing homes, retirement communities and long-term care facilities track client relationships. It replaces static, non-automated tracking that gives limited visibility into relationship health."
+   },
+   {
+    "q": "What can the OnBase case management application track?",
+    "a": "According to the post, VAF works with a company to build an application that tracks all client correspondence, key activities, stakeholders, events and action items for every facility in one central interface, with internal audits and supporting documents attached."
+   },
+   {
+    "q": "How does it help identify at-risk client relationships?",
+    "a": "The post says staff use a color-coded rating system to show relationship stability and record issues such as contractual problems, performance issues or a change in key stakeholders. This gives leaders transparency to act before a client is lost."
+   },
+   {
+    "q": "What reporting and automation features does the post describe?",
+    "a": "The post says the application uses automatic notifications of required tasks, built-in dashboards and reporting. Managers, vice presidents and executives get a 360-degree view of client relationships to support better decisions and retention."
+   },
+   {
+    "q": "Is the solution hosted in the cloud?",
+    "a": "Yes, the post lists secure hosting in the cloud as a benefit. It says a cloud-based deployment provides flexibility and reliability while minimizing expensive infrastructure requirements for the organization using the case management application."
+   }
+  ],
+  "skip": false
  },
  "success-threat-and-loss-the-drama-of-network-communications": {
-  "skip": true,
-  "reason": "Thin (238 words) vendor pitch for internal segmentation firewalls from a named partner; little beyond a short benefit list."
+  "tldr": [
+   "The post argues threats that get past the firewall can spread quickly across a flat, unsecured internal network and compromise the whole enterprise.",
+   "It describes internal segmentation firewalls as a way to split the internal network into trust zones with policy-based access controls.",
+   "VAF says it partners with Fortinet for this architecture and encourages network managers to plan for when, not if, a threat arrives."
+  ],
+  "faq": [
+   {
+    "q": "What is an internal segmentation firewall?",
+    "a": "The post describes an internal segmentation firewall, or ISFW, as a line of policy-based threat management appliances that divide the internal network into trust zones. This protects the inside of the network with the same strength usually applied at the perimeter."
+   },
+   {
+    "q": "Why is a flat internal network risky?",
+    "a": "The post says internal network architecture is generally flat and unsecured, so a threat that gets past firewalls, appliances and anti-virus software can spread rapidly and compromise the entire enterprise. Segmentation limits that spread."
+   },
+   {
+    "q": "What benefits does internal segmentation provide?",
+    "a": "The post lists controlling access to critical resources close to the user, creating barriers that limit the spread of threats, limiting damage inside the perimeter, increasing threat visibility and breach discovery, and strengthening overall security posture."
+   },
+   {
+    "q": "Who does VAF partner with for this approach?",
+    "a": "The post says Van Ausdall & Farrar partners with Fortinet for the internal segmentation firewall architecture. It also points readers to a white paper for more information on the approach."
+   },
+   {
+    "q": "What mindset does the post recommend for network managers?",
+    "a": "The post says network managers should shift from asking if a threat will reach the internal network to asking when. It says internal segmentation quickly contains threats and minimizes the potential cost of their spread."
+   }
+  ],
+  "skip": false
  },
  "driving-your-technology": {
   "tldr": [
@@ -7336,8 +8148,34 @@
   "skip": false
  },
  "biotech-cluster-is-big-and-getting-bigger-in-indiana-biocrossroads": {
-  "skip": true,
-  "reason": "Sponsorship and community news about the BioCrossroads New Venture Competition (August 2016); not buyer guidance and time-bound."
+  "tldr": [
+   "The post introduces BioCrossroads, described as Indiana's public-private initiative to grow, advance and invest in the state's life sciences industry.",
+   "It says the BioCrossroads New Venture Competition was accepting applications from early-stage Indiana life sciences and health information technology companies.",
+   "The post says the winner receives a $25,000 prize and access to Indiana Seed Fund II staff and its network of resources."
+  ],
+  "faq": [
+   {
+    "q": "What is BioCrossroads?",
+    "a": "The post describes BioCrossroads as Indiana's initiative to grow, advance and invest in life sciences. It is a public-private collaboration that provides money and support to businesses, launches new life sciences enterprises and promotes science education and the state's industry."
+   },
+   {
+    "q": "What is the BioCrossroads New Venture Competition?",
+    "a": "According to the post, it is an early stage business competition that encourages entrepreneurial activity among Indiana life sciences and health information technology companies. The post says applications were being accepted through the BioCrossroads website."
+   },
+   {
+    "q": "Who was eligible to apply for the competition?",
+    "a": "The post says early-stage biotechnology, pharmaceutical, medical device, diagnostic, ag-biotech and health information technology companies developing innovative products and platforms based in Indiana were eligible to apply."
+   },
+   {
+    "q": "What does the winner receive?",
+    "a": "The post says the winner receives a $25,000 cash prize and access to the Indiana Seed Fund II staff and its network of resources for business planning and early-stage support, plus a chance to present to the fund's investment committee."
+   },
+   {
+    "q": "What results does the post cite for past competitions?",
+    "a": "The post says that since 2012 the competition awarded more than $240,000 to 16 start-up companies, which secured $21 million in follow-on funding. These figures come from the 2016 post and may be out of date."
+   }
+  ],
+  "skip": false
  },
  "protecting-the-modern-data-center": {
   "tldr": [
@@ -7370,8 +8208,34 @@
   "skip": false
  },
  "culture---who-cares": {
-  "skip": true,
-  "reason": "Off-topic opinion essay on workplace culture (July 2016) with no technology buying guidance."
+  "tldr": [
+   "The post argues that a positive workplace culture affects productivity, attitude and how well employees communicate with clients and colleagues.",
+   "It says people want a culture of worth, honest communication and ethical decisions, not just high pay, a famous name or a title.",
+   "The author concludes that happier employees tend to produce happier customers, so culture is a key component of business success."
+  ],
+  "faq": [
+   {
+    "q": "Why does business culture matter?",
+    "a": "The post says culture, a way of thinking, behaving or working in an organization, affects how productive you are and your attitude. It also shapes how effectively you communicate with clients, management and colleagues, so everyone should care about it."
+   },
+   {
+    "q": "What do employees really want from a workplace?",
+    "a": "According to the post, people want a professional culture that gives a feeling of worth, supports open and honest communication, and lets them thrive for years. It says pay, famous products, household names and titles are not the real goal."
+   },
+   {
+    "q": "How does culture affect customers?",
+    "a": "The post says clients notice what kind of culture an employee is part of and may choose to do business accordingly. It repeats the saying that happy employees result in happy customers and links positive culture to business success."
+   },
+   {
+    "q": "What behaviors does the post link to a healthy culture?",
+    "a": "The post says a workplace that models honest and ethical decisions, empowers employees and focuses on doing the right thing internally and externally helps people thrive. It describes this as a work ethic worth living by."
+   },
+   {
+    "q": "Who should care about company culture?",
+    "a": "The post says everyone should, because people have choices about where they work and whom they buy from. It says the more positive the culture, the more positive the employees and customers, and the greater the business success."
+   }
+  ],
+  "skip": false
  },
  "data-security---on-a-small-scale": {
   "tldr": [
@@ -7460,8 +8324,34 @@
   "skip": false
  },
  "i-got-a-guy": {
-  "skip": true,
-  "reason": "Thin (300 words) opinion piece that promotes a proprietary benchmarking process without concrete steps."
+  "tldr": [
+   "The post says many clients rely on 'a guy' or a long-standing managed service provider for IT but may be receiving sub-standard service and consultation.",
+   "It recommends benchmarking to focus limited resources on the vital few opportunities, comparing against peers and also against success stories outside your industry.",
+   "VAF offers its VAF Circle process for technology benchmarking, which the post says gives insight into how a company manages information, data and communications."
+  ],
+  "faq": [
+   {
+    "q": "What does 'we have a guy' mean for IT management?",
+    "a": "The post uses the phrase for companies that rely on one person or a managed service provider for their IT infrastructure. The author says that when VAF looks closer, clients are often receiving sub-standard service and strategic consultation."
+   },
+   {
+    "q": "What is technology benchmarking?",
+    "a": "According to the post, benchmarking measures your company's performance against peers, and success stories outside your trade, to identify the vital few opportunities for improvement. It is described as one of the first steps toward operational excellence."
+   },
+   {
+    "q": "Why is it hard for leaders to plan their technology roadmap?",
+    "a": "The post says many operational leaders lack the time, luxury or resources to look far ahead while running daily operations. That often leads to uniform improvement goals that ignore current performance levels and the biggest opportunities."
+   },
+   {
+    "q": "What is the VAF Circle process?",
+    "a": "The post describes the VAF Circle process as a lean approach to technology benchmarking for the present and future. It says the process gives specific insight into how a company manages its information, data and communications."
+   },
+   {
+    "q": "How can a company get a benchmark assessment?",
+    "a": "The post invites companies that need a benchmark assessment to define what great looks like to contact Van Ausdall & Farrar. It says VAF can help on the journey to operational excellence."
+   }
+  ],
+  "skip": false
  },
  "5-key-steps-to-successful-lifecycle-it-asset-management": {
   "tldr": [
@@ -7494,8 +8384,34 @@
   "skip": false
  },
  "information-governance-panel-discussion": {
-  "skip": true,
-  "reason": "Event notice (panel discussion on August 4, 2016) with speaker biographies and logistics; time-bound."
+  "tldr": [
+   "The announcement says VAF and three partner firms hosted an Information Governance lunch and learn panel on August 4, 2016 in Indianapolis.",
+   "The event ran from 11:30 AM to 1:00 PM at VAF's Indianapolis corporate headquarters and included expert presentations and a question and answer session.",
+   "Panelists covered privacy and governance, cloud and colocation, records management and content management, according to the speaker biographies in the post."
+  ],
+  "faq": [
+   {
+    "q": "What was the Information Governance panel discussion?",
+    "a": "The announcement says Van Ausdall & Farrar, in partnership with IDT911 Consulting, Expedient Data Centers and Access Information Management, held a lunch and learn panel with subject matter expert presentations and a question and answer session."
+   },
+   {
+    "q": "When and where was the panel held?",
+    "a": "The announcement says the event took place on August 4, 2016, from 11:30 AM to 1:00 PM Eastern, at the Van Ausdall & Farrar corporate headquarters at 6430 E. 75th St. in Indianapolis."
+   },
+   {
+    "q": "Who were the panelists?",
+    "a": "The post lists a senior privacy and information governance advisor, a director of market strategy from Expedient, a regional general manager from Access Information Management, and VAF's professional services manager, each with a short biography."
+   },
+   {
+    "q": "What topics did the panel cover?",
+    "a": "Based on the speaker biographies, the panel drew on privacy, information governance, security and e-discovery, cloud computing and colocation, records management, and managing content from email to databases, accounts payable processes and HR onboarding."
+   },
+   {
+    "q": "Why does information governance matter to a business?",
+    "a": "The post frames information governance around the idea that access to information is power. The panel brought together privacy, data center, records and content management experts to discuss how organizations manage and protect that information."
+   }
+  ],
+  "skip": false
  },
  "3-best-practices-in-using-collaboration-apps": {
   "tldr": [
@@ -7554,8 +8470,34 @@
   "skip": false
  },
  "innovative-solutions-2016": {
-  "skip": true,
-  "reason": "Event notice (3rd Annual Innovative Solutions Expo on September 15, 2016) with logistics and attendance claims; time-bound."
+  "tldr": [
+   "The announcement says VAF's 3rd Annual Innovative Solutions Expo was set for September 15, 2016 at its Indianapolis corporate headquarters.",
+   "The event featured vendor partners demonstrating new technologies, a keynote demonstration, breakout sessions, food, live music, giveaways and an evening reception.",
+   "The post says last year's expo drew more than 200 attendees, and guests could visit the Voice Museum to learn company history."
+  ],
+  "faq": [
+   {
+    "q": "What was the Innovative Solutions Expo 2016?",
+    "a": "The announcement says it was VAF's 3rd annual expo at its Indianapolis headquarters, where many vendor partners set up to display, demo and discuss new technologies, with a keynote demonstration and breakout sessions on current office technology."
+   },
+   {
+    "q": "When and where was the 2016 expo held?",
+    "a": "The announcement says the expo took place on Thursday, September 15, 2016, from 10:30 AM to 7:00 PM Eastern, at the Van Ausdall & Farrar corporate headquarters at 6430 E. 75th St. in Indianapolis."
+   },
+   {
+    "q": "What activities were planned at the expo?",
+    "a": "The post lists a keynote demonstration, breakout sessions, food, live music, giveaways, casino-style games and an evening cocktail reception. It says guests could stay for an hour or the whole event."
+   },
+   {
+    "q": "What was the Voice Museum?",
+    "a": "The post invited guests to visit its one-of-a-kind Voice Museum to learn about the history of the company, as part of the activities at the Indianapolis facility during the expo."
+   },
+   {
+    "q": "Who attended the expo?",
+    "a": "The post says the previous year's event drew more than 200 attendees representing diverse institution types and stakeholder groups. Many vendor partners were also expected to attend and present their solutions on location."
+   }
+  ],
+  "skip": false
  },
  "how-smbs-can-benefit-from-cloud-communications": {
   "tldr": [
@@ -7614,8 +8556,34 @@
   "skip": false
  },
  "techday-2016-was-a-success": {
-  "skip": true,
-  "reason": "Thin (120 words) internal event recap about a June 2016 team-building event for print technicians; no buyer guidance."
+  "tldr": [
+   "The post recaps TechDay 2016, a June 10 and 11 event for VAF's Print Service Technicians combining team building with educational seminars.",
+   "Sales specialists joined to educate the print services team about other VAF solutions, and an outside trainer led a session on world class customer service.",
+   "The event wrapped up with bowling, and the post says VAF received great feedback and plans another TechDay next year."
+  ],
+  "faq": [
+   {
+    "q": "What was TechDay 2016?",
+    "a": "The post says TechDay was an event held June 10 and 11, 2016 for VAF's Print Service Technicians. It combined team building activities with educational seminars in a compact 24 hour period."
+   },
+   {
+    "q": "Who took part in TechDay?",
+    "a": "According to the post, VAF's Print Service Technicians attended, and a team of sales specialists also participated. The sales specialists helped educate the print services team about the other solutions Van Ausdall & Farrar offers."
+   },
+   {
+    "q": "What training topics were covered?",
+    "a": "The post says sales specialists covered other VAF solutions, and Sandler Trustpoint presented a session titled Providing World Class Customer Service, which the post says was well received by the technicians who attended."
+   },
+   {
+    "q": "Why does an event like TechDay matter to customers?",
+    "a": "The post does not spell this out, but it shows VAF invests in customer service training and in teaching service technicians about its wider solutions, which can help technicians point customers toward the right resources."
+   },
+   {
+    "q": "How did TechDay end and will it happen again?",
+    "a": "The post says the event concluded Saturday afternoon with high-stakes bowling, that overall feedback was great, and that VAF looks forward to holding the event again the following year."
+   }
+  ],
+  "skip": false
  },
  "a4-print-strategy-size-can-be-deceiving": {
   "tldr": [
@@ -7644,8 +8612,34 @@
   "skip": false
  },
  "3-ways-to-achieve-enterprise-grade-collaboration-at-an-smb-price-point": {
-  "skip": true,
-  "reason": "Thin (273 words) vendor product promotion for a named platform's deployment options; no standalone buyer guidance."
+  "tldr": [
+   "The post argues small businesses can have enterprise-grade communications and collaboration at an SMB price instead of settling for a basic, unreliable phone system.",
+   "It presents the ShoreTel Connect platform as an integrated set of voice, video, instant messaging, web sharing and audio conferencing tools.",
+   "The post says Connect is available as an onsite, cloud or hybrid deployment, with the onsite option suited to companies with in-house IT teams."
+  ],
+  "faq": [
+   {
+    "q": "Why does a communications system matter for a small business?",
+    "a": "The post says every business relies on its communications system, and without a reliable phone system the key interaction between employees and customers cannot happen. A basic system can also give customers the wrong impression of your company."
+   },
+   {
+    "q": "What capabilities does the post say employees should have?",
+    "a": "The post suggests advanced call features such as follow-me so employees receive calls away from their desk, one-touch collaboration with colleagues and customers, and access to customer information during calls to improve sales and service."
+   },
+   {
+    "q": "What does ShoreTel Connect include?",
+    "a": "The post lists voice over IP, video, instant messaging, web sharing and audio conferencing. It describes the platform as fully integrated and streamlined, rather than separate apps and windows with separate logins."
+   },
+   {
+    "q": "What deployment options does the post describe?",
+    "a": "The post says ShoreTel Connect is available as an onsite, cloud or hybrid deployment to meet company needs. It describes Connect ONSITE as a fit for companies with in-house IT departments that want control and application integration."
+   },
+   {
+    "q": "Who is the onsite option best for?",
+    "a": "According to the post, Connect ONSITE suits companies whose in-house IT staff can manage the system and want to integrate applications such as customer relationship management or business intelligence, and can perform upgrades when convenient for them."
+   }
+  ],
+  "skip": false
  },
  "a-phone-system-that-maximizes-your-control": {
   "tldr": [
@@ -7704,8 +8698,34 @@
   "skip": false
  },
  "fly-over-county": {
-  "skip": true,
-  "reason": "Off-topic regional commentary on Indiana life sciences and business rankings (June 2016) with time-bound statistics; no technology buying guidance."
+  "tldr": [
+   "The post introduces a blog series about Indiana's growing life sciences and biotechnology industry, hidden among the state's farmland when viewed from the air.",
+   "It cites figures including 1,695 life sciences companies, 83 FDA-approved new products, 1,200 patents and 56,000 employees, without naming a source.",
+   "The post also says Chief Executive magazine ranked Indiana among the top five states for doing business, according to annual rankings."
+  ],
+  "faq": [
+   {
+    "q": "What is the Fly Over County series about?",
+    "a": "The post says the series will share insights and statistics about Indiana's biotechnology and life sciences growth and the locations those companies serve. It contrasts the farmland seen from the air with the healthcare technology tucked inside the state."
+   },
+   {
+    "q": "What statistics does the post cite about Indiana life sciences?",
+    "a": "The post lists 1,695 companies, 83 new products approved by the FDA, 1,200 patents granted, 56,000 people employed and a number two national ranking for life sciences exports. It gives no source, and the figures are from 2016."
+   },
+   {
+    "q": "How does the post say Indiana ranks for doing business?",
+    "a": "The post says Chief Executive magazine's annual rankings placed Indiana fifth in the nation, up one spot from the prior year and top in the Midwest, including third for work force quality. These are 2016 rankings."
+   },
+   {
+    "q": "Why would a technology company write about Indiana biotechnology?",
+    "a": "The post presents it as background on a major regional industry and the convergence of technology there. It promises future entries on biotechnology companies and cluster areas in Indiana, which may interest healthcare and life sciences customers."
+   },
+   {
+    "q": "What factors does the business ranking measure?",
+    "a": "According to the post, the ranking measures factors including tax and regulations, work force quality and living environment. It says Indiana ranked third for work force quality, tenth for tax and regulatory policy and seventeenth for living environment."
+   }
+  ],
+  "skip": false
  },
  "a-10-question-evaluation-for-your-phone-system": {
   "tldr": [
@@ -7798,8 +8818,34 @@
   "skip": false
  },
  "get-the-most-from-your-communications-in-the-cloud": {
-  "skip": true,
-  "reason": "Vendor product promotion (a named cloud platform, its CRM integrations and security claims) from May 2016 with contact line; no standalone buyer guidance."
+  "tldr": [
+   "The post says cloud communications can help mobile employees stay productive from anywhere at a price that will not break the budget.",
+   "It describes ShoreTel Connect CLOUD as a hosted service with VoIP call control, messaging, conferencing and video, controlled from a desk phone or mobile app.",
+   "The post says the subscription model turns communications costs into operating expenses and the service integrates with Salesforce, ACT! and Microsoft Dynamics."
+  ],
+  "faq": [
+   {
+    "q": "What are the benefits of cloud communications?",
+    "a": "The post says cloud communications help employees be productive wherever and whenever they work, with voice, video, unified communications and collaboration delivered as a service at a lower cost than a traditional onsite phone system."
+   },
+   {
+    "q": "What features does ShoreTel Connect CLOUD include?",
+    "a": "According to the post, features include VoIP call control, instant messaging, audio and web conferencing, video calling and online meetings, all controlled through a desk phone or mobile app, so users get the full experience at home, in a hotel or at the airport."
+   },
+   {
+    "q": "How does a cloud phone system change communications costs?",
+    "a": "The post says that because the service is hosted and sold by subscription, communications costs become operational expenses rather than capital expenses. It also says the cost is much less than a traditional onsite PBX system."
+   },
+   {
+    "q": "Does the cloud service work with customer relationship management tools?",
+    "a": "The post says Connect CLOUD integrates with leading customer relationship and business process management systems, including Salesforce, ACT! and Microsoft Dynamics. Customer history is available through the interface or app to help employees make faster decisions."
+   },
+   {
+    "q": "How can a company discuss cloud communications with VAF?",
+    "a": "The post invites readers to email VAF at the address given in the post to discuss their environment and what would make the most sense. The offer is a conversation about the company's environment, not a fixed package."
+   }
+  ],
+  "skip": false
  },
  "3-ways-cloud-communications-can-save-your-company-money": {
   "tldr": [
@@ -7884,12 +8930,64 @@
   "skip": false
  },
  "whats-new-in-vmware-vsphere-60": {
-  "skip": true,
-  "reason": "Vendor release-note content for VMware vSphere 6.0 (April 2016) with superseded product features and capacity figures; not evergreen."
+  "tldr": [
+   "The post summarizes new features in VMware vSphere 6.0, a virtualization platform, across compute, storage, network, availability and management.",
+   "It says virtual machines can support up to 128 virtual CPUs and 4TB of virtual RAM, with hosts supporting up to 1,024 virtual machines.",
+   "The post highlights Instant Clone, Virtual Volumes, expanded vMotion live migration and an improved web client, using VMware's own performance claims."
+  ],
+  "faq": [
+   {
+    "q": "What is VMware vSphere 6.0?",
+    "a": "The post describes vSphere 6.0 as VMware's virtualization platform that lets users virtualize applications, improve availability and simplify the virtual data center, forming a foundation for cloud environments. It lists the release's new features by category."
+   },
+   {
+    "q": "What scalability improvements does the post list?",
+    "a": "The post says virtual machines support up to 128 virtual CPUs and 4TB of virtual RAM, while hosts support up to 480 CPUs, 12TB of RAM, 1,024 virtual machines per host and 64 nodes per cluster. These are VMware's stated maximums."
+   },
+   {
+    "q": "What are Instant Clone and Virtual Volumes?",
+    "a": "The post says Instant Clone is technology that rapidly clones and deploys virtual machines, claimed as much as 10 times faster. Virtual Volumes makes external storage arrays VM-aware, with policy-based management across storage tiers."
+   },
+   {
+    "q": "What vMotion enhancements does vSphere 6.0 add?",
+    "a": "The post says vMotion enhancements allow non-disruptive live migration across virtual switches and vCenter Servers and over distances of up to 100 milliseconds round trip time. It describes this as a tenfold increase over the earlier long-distance limit."
+   },
+   {
+    "q": "What management and availability features are included?",
+    "a": "The post lists a Content Library for central management of templates and ISO images, cross-vCenter clone and migration, an improved web client, and fault tolerance for workloads with up to four virtual CPUs."
+   }
+  ],
+  "skip": false
  },
  "van-ausdall--farrar-hosts-super-event": {
-  "skip": true,
-  "reason": "Thin (131 words) event recap of a joint customer event with a security vendor and a movie screening (April 2016); no buyer guidance."
+  "tldr": [
+   "The post recaps a joint customer event VAF held with Barracuda Networks in Carmel, Indiana to educate guests about Internet threats.",
+   "Guests learned how Barracuda security products form a layer of protection and how to build a strategy that mitigates risks and improves availability.",
+   "After the presentation, guests enjoyed lunch while watching a newly released movie at Flix Brewhouse in Carmel."
+  ],
+  "faq": [
+   {
+    "q": "What was the VAF and Barracuda customer event?",
+    "a": "The post says Van Ausdall & Farrar and Barracuda Networks held a joint customer event in Carmel to educate guests about the pitfalls of Internet threats, followed by lunch and a movie screening."
+   },
+   {
+    "q": "What did guests learn at the event?",
+    "a": "According to the post, guests learned about the broad threats that plague business users and put important data at risk. They also learned how Barracuda's security products form an important layer of protection."
+   },
+   {
+    "q": "How can this knowledge help a business?",
+    "a": "The post says the information helps customers create a comprehensive strategy to mitigate Internet threat risks, with the goal of higher availability of system resources and greater productivity for their organization."
+   },
+   {
+    "q": "Where was the event held?",
+    "a": "The post says the event took place at Flix Brewhouse in Carmel, Indiana, where guests were treated to lunch while watching a newly released movie after the security presentation."
+   },
+   {
+    "q": "Who hosted the event?",
+    "a": "The post says Van Ausdall & Farrar and Barracuda Networks co-hosted the customer event. Barracuda's line of security products was the focus of the educational presentation on Internet threats."
+   }
+  ],
+  "skip": false
  },
  "tips-for-navigating-your-email-safely": {
   "tldr": [
@@ -7948,15 +9046,93 @@
   "skip": false
  },
  "residents-in-317-area-code-urged-to-start-dialing-10-digits": {
-  "skip": true,
-  "reason": "Dated 2016 regional notice about 10-digit dialing in the 317 area code with a September 17, 2016 effective date; time-bound and thin."
+  "tldr": [
+   "The post says starting September 17, 2016, all local calls in the 317 area code require 10-digit dialing, in the format 317-XXX-XXXX.",
+   "A six-month grace period began March 19, 2016, during which local calls could be completed with either 7 or 10 digits.",
+   "The post says new numbers would be assigned from October 17, 2016 using either the 317 area code or the new 463 area code."
+  ],
+  "faq": [
+   {
+    "q": "What is changing for 317 area code residents?",
+    "a": "The post says that starting September 17, 2016, all local calls in the 317 area code require 10-digit dialing. Callers must dial 317-XXX-XXXX to complete a local call in the Indianapolis metropolitan area."
+   },
+   {
+    "q": "Was there a grace period for the new dialing rule?",
+    "a": "Yes, the post says a six-month grace period began March 19, 2016. During that time, local calls could be completed using either seven or ten digits before 10-digit dialing became mandatory."
+   },
+   {
+    "q": "Why is 10-digit dialing needed?",
+    "a": "The post says the new dialing pattern is necessary so that new telephone numbers can be added when needed in the area. Without it, the area could not assign additional numbers as demand grows."
+   },
+   {
+    "q": "What is the new 463 area code?",
+    "a": "According to the post, starting October 17, 2016, new numbers would be assigned using either the 317 area code or the new 463 area code."
+   },
+   {
+    "q": "Why should a business care about this change?",
+    "a": "The post tells Indianapolis residents to prepare for the new dialing pattern. Businesses with phone systems may need to check programmed speed dials, auto-dialers and stored numbers so local calls still connect once 10-digit dialing is required."
+   }
+  ],
+  "skip": false
  },
  "copier-service--supply-portal-now-available-for-customers": {
-  "skip": true,
-  "reason": "Thin (74 words) July 2015 product announcement for a customer portal with a contact line; no buyer guidance."
+  "tldr": [
+   "The post announces a new Copier Service & Supply Portal that lets VAF customers track service issues, request support and order supplies online.",
+   "Listed features include placing service calls, viewing equipment details, sending meter readings, creating supply orders and accessing billing information.",
+   "Customers interested in the portal can contact VAF's Customer Care Center at the phone number given in the post."
+  ],
+  "faq": [
+   {
+    "q": "What is the Copier Service & Supply Portal?",
+    "a": "The post describes it as a new online feature from Van Ausdall & Farrar that lets customers track service issues, request support and order supplies from their computer, introduced for customers in July 2015."
+   },
+   {
+    "q": "What can customers do in the portal?",
+    "a": "The post lists the ability to place service calls, access equipment details, send meter readings, create supply orders and access billing information, all from one online location."
+   },
+   {
+    "q": "How do customers request support or order supplies?",
+    "a": "According to the post, customers use the portal from their computer to request support and create supply orders. They can also track service issues they have already reported, all from the same online location."
+   },
+   {
+    "q": "How do I sign up for the portal?",
+    "a": "The post says customers interested in using the new portal should contact the VAF Customer Care Center at (317) 634-2967. It does not describe a self-service sign-up process."
+   },
+   {
+    "q": "Who is the portal for?",
+    "a": "The post says it is for Van Ausdall & Farrar customers who use VAF-serviced copiers and printers and want to manage service calls, meter readings, supplies and billing online instead of by phone."
+   }
+  ],
+  "skip": false
  },
  "van-ausdall-to-introduce-phone-app-this-summer": {
-  "skip": true,
-  "reason": "Thin (91 words) June 2015 announcement of an upcoming app with a third-quarter 2015 launch; time-bound."
+  "tldr": [
+   "The post announces VAF's first phone app for Apple iOS and Android, letting customers request support, view device details and order supplies.",
+   "Customers would use the app by scanning a QR code placed on the front of their copier or printer.",
+   "The post says the app was being tested and would be available in the third quarter of 2015, when field engineers begin applying labels."
+  ],
+  "faq": [
+   {
+    "q": "What is VAF's phone app?",
+    "a": "The post says it is the company's first phone app, developed for Apple iOS and Android smartphones. It lets customers request support, view device details and order supplies for their copier or printer."
+   },
+   {
+    "q": "How do customers use the app with their copier or printer?",
+    "a": "According to the post, customers scan a QR code on the front of their copier or printer. That connects them to support requests, device details and supply ordering for that specific machine."
+   },
+   {
+    "q": "When was the app expected to be available?",
+    "a": "The post says the app was being tested and would be available in the third quarter of 2015. Field engineers were also to begin applying new machine labels during that quarter."
+   },
+   {
+    "q": "Which phones does the app support?",
+    "a": "The post says the app was developed for Apple iOS and Android smartphones, covering the two major smartphone platforms customers would likely use to request support or order supplies."
+   },
+   {
+    "q": "What are the QR code labels for?",
+    "a": "The post says field engineers would apply new machine labels in the third quarter. These labels carry the QR code customers scan with the app to identify their copier or printer."
+   }
+  ],
+  "skip": false
  }
 }
