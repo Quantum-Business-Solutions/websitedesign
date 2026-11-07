@@ -5896,8 +5896,34 @@
   "reason": "Thin (213 words) dated March 2020 pandemic service promotion with partner claims and a phone number; not evergreen."
  },
  "managed-print-trends-that-you-cannot-afford-to-ignore-in-2020": {
-  "skip": true,
-  "reason": "Dated December 2019 trends opinion piece referencing that week's ransomware headlines and broad unsupported claims; no stable actionable detail."
+  "tldr": [
+   "The post argues Managed Print Services (MPS) will be a core business trend for the 2020s because it supports security, digital operations, and sustainability.",
+   "MPS lets organizations update and upgrade print equipment on-site and in the cloud instead of buying hardware that eventually becomes outdated.",
+   "The post says partnering with Van Ausdall & Farrar for MPS brings flexibility, affordability, and its stated 100+ years of experience with secure technology."
+  ],
+  "faq": [
+   {
+    "q": "What are Managed Print Services (MPS)?",
+    "a": "Per the post, MPS is a transformative service that connects stakeholders to the assets and data they need, supports digital operations, and makes economic sense. Instead of owning printing equipment outright, an MPS agreement lets you manage and update it as needed."
+   },
+   {
+    "q": "Why does the post say MPS matters for security?",
+    "a": "The post says cybersecurity is probably the top concern for IT professionals entering the 2020s, and risk management is central in every area of business. It presents MPS as one way to help protect your network and stakeholders from growing online threats."
+   },
+   {
+    "q": "How does MPS help a business stay current on technology?",
+    "a": "The post says that rather than buying printing equipment that becomes antiquated, an MPS agreement lets you continually update and upgrade equipment as needed, both on-site and in the cloud, so people keep access to the tools and information they need."
+   },
+   {
+    "q": "Is Managed Print Services environmentally friendly?",
+    "a": "The post says MPS is environmentally friendly because it features the latest energy-conserving equipment along with print material delivery options and protocols. It adds that eco-friendly practices will play a growing role in a brand's marketing message and long-term survival."
+   },
+   {
+    "q": "Why choose Van Ausdall & Farrar for Managed Print Services?",
+    "a": "The post says working with Van Ausdall & Farrar for MPS provides the flexibility and affordability to adjust to fast-changing business trends, along with its stated 100+ years of experience implementing and managing secure technology solutions."
+   }
+  ],
+  "skip": false
  },
  "lease-or-buy-which-solution-is-the-best-fit-for-your-companys-print-needs": {
   "tldr": [
@@ -5930,8 +5956,34 @@
   "skip": false
  },
  "van-ausdall--farrar-attends-mitel-top-40-summit": {
-  "skip": true,
-  "reason": "Event notice (November 2019 Mitel summit recap) with vendor roadmap claims, reliability figures and partner-program statements that are dated and unverified."
+  "tldr": [
+   "Van Ausdall & Farrar attended Mitel's Top 40 Summit in Mesa, Arizona, where Mitel leadership outlined its road map and strategy heading into 2020.",
+   "The post says Mitel is shifting from acquisitions to improving delivery, reliability, and functionality of its cloud and premise-based platforms, offering flexible deployment choices.",
+   "The post says VAF was among 12 US partners awarded the general release of Mitel's Partner SmartStart program for MiCloud Connect deployments."
+  ],
+  "faq": [
+   {
+    "q": "What did Mitel announce at its Top 40 Summit?",
+    "a": "The post says Mitel's focus going into 2020 moves from acquisitions and consolidation to better delivery, reliability and functionality of its cloud and premise-based platforms, plus partnerships with Google for artificial intelligence and Amazon AWS for enhanced applications such as mobility."
+   },
+   {
+    "q": "Why does Mitel offer public, private, and hybrid cloud options?",
+    "a": "The post says Mitel emphasized that no two customers are exactly the same, so clients should have choices. Those include public cloud, private cloud, hybrid, or some combination of the three, as customers move away from premise-based communications platforms."
+   },
+   {
+    "q": "Where are new Mitel MiCloud Connect customers hosted?",
+    "a": "According to the post, Mitel is deploying all new MiCloud Connect UCaaS customers in Google Cloud, which the post describes as the only platform hailing 99.9999 percent reliability. Existing customers were to be transitioned to Google Cloud by the second quarter of 2020."
+   },
+   {
+    "q": "What is the Mitel Partner SmartStart program?",
+    "a": "The post says the SmartStart program gives Van Ausdall & Farrar control of cloud discovery, programming, implementation, training and support for MiCloud Connect. The post says VAF was one of only 12 US partners to receive its general release."
+   },
+   {
+    "q": "What does Mitel's strategy mean for customers moving to the cloud?",
+    "a": "The post says Mitel is cutting average deployment times in half and aiming to make customer experience superior. For customers, that points to faster cloud activations, reliability improvements and AI-driven contact center features such as chat bots and agent assistance."
+   }
+  ],
+  "skip": false
  },
  "steps-to-effective-mobile-device-security-in-2019": {
   "tldr": [
@@ -6110,8 +6162,34 @@
   "skip": false
  },
  "the-growing-risk-of-poor-it-infrastructure": {
-  "skip": true,
-  "reason": "Thin (269 words) opinion piece that lists three headings (security, performance, availability) without concrete steps or specifics."
+  "tldr": [
+   "The post challenges the 'if it ain't broke, don't fix it' attitude toward IT infrastructure, saying aging systems quietly drain employee time and resources.",
+   "It highlights three risk areas to consider: security, performance, and availability as a company grows and depends more on cloud applications.",
+   "The post says there is no silver bullet fix, but the steps needed to keep infrastructure up to date are clear."
+  ],
+  "faq": [
+   {
+    "q": "Why is 'if it ain't broke, don't fix it' risky for IT infrastructure?",
+    "a": "The post says that over time infrastructure can steal time and resources from employees little by little, making the company less efficient, even when it is not causing an immediate problem. Waiting for a visible failure means paying hidden costs along the way."
+   },
+   {
+    "q": "What security risks come from outdated IT infrastructure?",
+    "a": "According to the post, lacking the right patches and upgrades can expose you to cyber-crime, lost data, compliance breaches, and even ransom attacks. Keeping systems patched and upgraded is presented as a core reason to revisit infrastructure."
+   },
+   {
+    "q": "How does infrastructure affect performance as a company grows?",
+    "a": "The post says that as a company grows and more employees come online, latency and network speed become bigger issues, and the age and reliability of servers and endpoints matter more. Infrastructure that was fine for a small team can become a bottleneck."
+   },
+   {
+    "q": "Why does availability matter more as more applications move to the cloud?",
+    "a": "The post says redundancy, power, failover and internet speed all become more critical as employees are added and the company depends more on cloud applications. Weak availability planning can leave a growing team unable to work."
+   },
+   {
+    "q": "Is there a single fix for poor IT infrastructure?",
+    "a": "No. The post says there is no silver bullet because every company's variables differ and multiple issues become intertwined, making the core problem hard to unravel. It adds that the steps to keep infrastructure up to date are still clear."
+   }
+  ],
+  "skip": false
  },
  "3-steps-to-minimize-the-impact-of-cyber-attacks": {
   "tldr": [
@@ -6204,68 +6282,372 @@
   "skip": false
  },
  "van-ausdall--farrar-customer-training-quick-clips-intro": {
-  "skip": true,
-  "reason": "Thin (21 words) video series announcement; no advice."
+  "tldr": [
+   "This short post introduces the Van Ausdall & Farrar quick clips video series, a collection of customer training videos.",
+   "The videos teach VAF customers how to use the Mitel Connect Client, step by step, in short clips.",
+   "It is useful for anyone on a Mitel phone system who wants simple self-paced training on the client."
+  ],
+  "faq": [
+   {
+    "q": "What are the VAF quick clips?",
+    "a": "The post describes the quick clips video series as a collection of videos made by VAF for its customers. Each short video is meant to help customers learn how to use a specific part of the Mitel Connect Client."
+   },
+   {
+    "q": "Who are the VAF quick clips for?",
+    "a": "According to the post, the series is for VAF customers who need to learn how to use the Mitel Connect Client. It is aimed at end users who want short, practical training instead of a long manual or class."
+   },
+   {
+    "q": "What do the quick clips teach?",
+    "a": "The post says the quick clips teach customers how to use the Mitel Connect Client. This post is only the series introduction, and the individual clips on this blog cover specific tasks such as calls, voicemail and passwords."
+   }
+  ],
+  "skip": false
  },
  "mitel-connect-client---voicemail-integration": {
-  "skip": true,
-  "reason": "Thin (22 words) video clip description; no advice in the text."
+  "tldr": [
+   "This quick clip from the Van Ausdall & Farrar team shows how to use the Mitel Connect Client to integrate your voicemail.",
+   "It is part of VAF's customer training series for people who use the Mitel Connect Client on their business phone system.",
+   "Watching it helps end users get voicemail working inside the client without needing to call for help."
+  ],
+  "faq": [
+   {
+    "q": "What does the Mitel Connect Client voicemail integration clip show?",
+    "a": "The post says the VAF team shows you how to use your Mitel Connect Client to integrate your voicemail. It is a short, practical walkthrough aimed at users who want voicemail available inside the client."
+   },
+   {
+    "q": "Who made this Mitel Connect Client training video?",
+    "a": "The post says the team at VAF, Van Ausdall & Farrar, produced this client quick clip. It belongs to the company's quick clips series that trains customers on using the Mitel Connect Client."
+   },
+   {
+    "q": "Who should watch the voicemail integration quick clip?",
+    "a": "Anyone using the Mitel Connect Client who wants to integrate their voicemail. The post presents it as an instructional clip for customers, so it suits end users learning the client rather than administrators."
+   }
+  ],
+  "skip": false
  },
  "mitel-connect-client---complete-course": {
-  "skip": true,
-  "reason": "Thin (26 words) video clip description; no advice in the text."
+  "tldr": [
+   "Van Ausdall & Farrar shares a video guide on how to use the Mitel Connect Client from start to finish.",
+   "The video shows users how to navigate through the new system, working as a full course rather than a single task clip.",
+   "It helps new Mitel Connect Client users get oriented in one sitting, alongside VAF's shorter quick clips."
+  ],
+  "faq": [
+   {
+    "q": "What is the Mitel Connect Client complete course?",
+    "a": "According to the post, it is a video guide shared by Van Ausdall & Farrar on how to use the Mitel Connect Client. It walks users through the system so they can learn how to navigate it."
+   },
+   {
+    "q": "What does the Mitel Connect Client course video cover?",
+    "a": "The post says the video shows you how to navigate through this new system. It is described as a complete course, so it is meant to cover the client as a whole instead of one narrow feature."
+   },
+   {
+    "q": "Who should watch the Mitel Connect Client complete course?",
+    "a": "The post presents it as training for people using the Mitel Connect Client, especially those new to the system. It gives end users a single guide to follow while they learn how to move around in the client."
+   }
+  ],
+  "skip": false
  },
  "mitel-conferencing---create-conference-within-outlook": {
-  "skip": true,
-  "reason": "Thin (24 words) video clip description; no steps in the text."
+  "tldr": [
+   "This VAF video explains how to create a video conference within Outlook using Mitel conferencing.",
+   "The post says you can set up your meeting and your conference bridge at the same time, in one step.",
+   "It helps Outlook users who schedule meetings and want a Mitel conference bridge without switching between tools."
+  ],
+  "faq": [
+   {
+    "q": "Can I create a Mitel conference from inside Outlook?",
+    "a": "Yes. According to the post, VAF explains in a video how you can create a video conference within Outlook. This means you can build the meeting invitation and the conference bridge together in a single workflow."
+   },
+   {
+    "q": "What is the advantage of creating a conference within Outlook?",
+    "a": "The post says you can create your meeting and your bridge at the same time. That saves you from scheduling the meeting in one place and then separately setting up the conference bridge elsewhere."
+   },
+   {
+    "q": "Who made the Mitel conferencing Outlook video?",
+    "a": "The post says VAF, Van Ausdall & Farrar, produced the video explaining how to create a video conference within Outlook. It is aimed at customers who use Mitel conferencing and schedule meetings in Outlook."
+   }
+  ],
+  "skip": false
  },
  "toshiba-phone-systems-now-supported-by-mitel": {
-  "skip": true,
-  "reason": "Dated 2018 vendor announcement built around Toshiba end-of-sale and end-of-support dates (2018 to 2023) and time-bound promotions; not evergreen."
+  "tldr": [
+   "The post says Mitel acquired the assets of Toshiba's phone system division, letting Van Ausdall & Farrar keep supporting Toshiba customers longer than first expected.",
+   "The post lists Mitel's published dates: new system sales ending October 2018, add-on sales 2019, technical support 2021, and warranty support 2023.",
+   "The post says Mitel's Pathway Program would offer incentives for Toshiba customers to migrate to Mitel cloud and onsite products."
+  ],
+  "faq": [
+   {
+    "q": "Who supports Toshiba phone systems after Toshiba wound down its phone division?",
+    "a": "The post says Mitel acquired the assets of Toshiba's telecommunications systems division, which lets Van Ausdall & Farrar continue supporting its Toshiba customers for a much longer period than expected when the wind down was first announced."
+   },
+   {
+    "q": "What end dates did Mitel set for Toshiba phone systems?",
+    "a": "The post lists Mitel's commitments: end of new system sales October 31, 2018, add-on sales October 31, 2019, technical support October 31, 2021, and warranty support October 31, 2023. These dates are from the 2018 announcement and should be confirmed today."
+   },
+   {
+    "q": "Which Toshiba products does the Mitel announcement affect?",
+    "a": "The post names Toshiba CIX40/100/200/670/1200, IPedge and App Server ES/EP/EC/EM, ACD, PC Attendant, UCedge and Call Manager, plus the Lync and Salesforce plugins. It says Taske Technologies can supply licenses and support for Taske Contact and Essential products."
+   },
+   {
+    "q": "What is the Mitel Pathway Program for Toshiba customers?",
+    "a": "The post says Mitel planned to introduce its Pathway Program in August 2018 for all Toshiba customers. It was described as offering incentives to migrate to Mitel cloud and onsite products, with details to be announced before the end of that month."
+   },
+   {
+    "q": "Do I need a Toshiba system supported by VAF to use the Mitel incentives?",
+    "a": "No. The post says it makes no difference whether Van Ausdall & Farrar supports your current Toshiba system when it comes to leveraging the incentives. It invites customers to contact VAF to start assessing a Mitel solution."
+   }
+  ],
+  "skip": false
  },
  "vaf-goes-extreme-to-meet-customer-networking-demand": {
-  "skip": true,
-  "reason": "Partner announcement (April 2018) with company and vendor figures and a named contact; announcement-style, dated."
+  "tldr": [
+   "The announcement says the Converged Communications Group of Van Ausdall & Farrar became an authorized channel partner for Extreme Networks to meet customer networking demand.",
+   "Extreme's fabric solution is described as delivering integrated wired switching and wi-fi managed from a single pane of glass, with added security and analytics.",
+   "The announcement says VAF will keep growing its Fortinet business, and Extreme can work with just about any enterprise next-generation firewall."
+  ],
+  "faq": [
+   {
+    "q": "What did VAF announce about Extreme Networks?",
+    "a": "The announcement says the Converged Communications Group of Van Ausdall & Farrar is officially an authorized channel partner for Extreme Networks. It was presented as a response to customer networking demand after evaluating multiple networking platforms."
+   },
+   {
+    "q": "What networking products does Extreme Networks provide?",
+    "a": "The post says Extreme delivers edge-to-core network infrastructure that can be managed on-premises, from the cloud or in a hybrid setup, including a wide array of network switching and wireless products to meet different customer needs."
+   },
+   {
+    "q": "What is Extreme's fabric solution?",
+    "a": "According to the announcement, Extreme's fabric lets VAF provide fully integrated switching and wi-fi managed from a single pane of glass. The post also says it offers enhanced security, ease of deployment and advanced analytics."
+   },
+   {
+    "q": "Does the Extreme partnership replace VAF's Fortinet business?",
+    "a": "No. The announcement says the Converged Communications Group intends to keep growing and supporting its Fortinet business. It adds that, unlike Fortinet solutions, Extreme can be positioned and integrated with just about any enterprise next-generation firewall."
+   },
+   {
+    "q": "Why did VAF choose Extreme Networks?",
+    "a": "The announcement quotes VAF leadership saying it seeks innovative leadership from strong companies, and that after evaluating multiple networking platforms and talking with customers, Extreme Networks was an obvious choice. Contact details for learning more are in the original post."
+   }
+  ],
+  "skip": false
  },
  "mitel-connect-client---voicemails": {
-  "skip": true,
-  "reason": "Thin (21 words) video clip description; no steps in the text."
+  "tldr": [
+   "This VA&F quick clip explains how you can check your voicemails using the Mitel Connect Client.",
+   "It is part of the VAF customer training series for people who use the Mitel Connect Client with their office phone system.",
+   "The post invites readers to talk to VA&F about office phone solutions if they want more help."
+  ],
+  "faq": [
+   {
+    "q": "How do I check voicemails in the Mitel Connect Client?",
+    "a": "The post says VA&F explains how you can check your voicemails using the Mitel Connect Client. The quick clip video walks through it, so watch it for the steps instead of relying on this short description."
+   },
+   {
+    "q": "Who is the voicemails quick clip for?",
+    "a": "It is for people who use the Mitel Connect Client and want to learn to check voicemail with it. The post presents it as customer training from VA&F, so it suits everyday end users."
+   },
+   {
+    "q": "Where can I get more help with office phone solutions?",
+    "a": "The post invites readers to talk to VA&F about office phone solutions. If the quick clip does not answer your question, contacting Van Ausdall & Farrar is the next step it suggests."
+   }
+  ],
+  "skip": false
  },
  "mitel-connect-client---transferring-a-call": {
-  "skip": true,
-  "reason": "Thin (24 words) video clip description; no steps in the text."
+  "tldr": [
+   "This Mitel Connect Client quick clip from VAF shows how to transfer a call using the Mitel Connect Client.",
+   "It is a short training video from the VAF team, part of its customer quick clips series.",
+   "It helps front desk staff and other phone users learn call transfer in the Mitel Connect Client."
+  ],
+  "faq": [
+   {
+    "q": "How do I transfer a call with the Mitel Connect Client?",
+    "a": "The post says the VAF team shows you how to transfer a call with the Mitel Connect Client in a quick clip video. Watch the clip for the exact steps, since the post only describes what the video covers."
+   },
+   {
+    "q": "Who made the call transfer video?",
+    "a": "The post says the team at VAF, Van Ausdall & Farrar, made this Mitel Connect Client quick clip. It belongs to the company's series of customer training videos for the Mitel Connect Client."
+   },
+   {
+    "q": "Who should watch the call transfer quick clip?",
+    "a": "Anyone who uses the Mitel Connect Client and needs to move a call to someone else. The post presents it as practical training for customers, so end users who handle calls are the natural audience."
+   }
+  ],
+  "skip": false
  },
  "mitel-connect-client---set-new-voicemail-password": {
-  "skip": true,
-  "reason": "Thin (21 words) video clip description; no steps in the text."
+  "tldr": [
+   "This Mitel Connect Client quick clip from VAF shows how to set a new voicemail password for your phone.",
+   "It is a short customer training video from the VAF team in the quick clips series.",
+   "It helps users who need to create or change their voicemail password by following a simple on-screen walkthrough."
+  ],
+  "faq": [
+   {
+    "q": "How do I set a new voicemail password in the Mitel Connect Client?",
+    "a": "The post says VAF shows you how to set a new voicemail password for your phone in a Mitel Connect Client quick clip. Watch the video for the steps, as the post itself only describes what the clip covers."
+   },
+   {
+    "q": "Is the voicemail password the same as the client password?",
+    "a": "The post treats them as separate topics. This clip covers setting a new voicemail password for your phone, while another VAF quick clip covers setting, resetting or changing your client password in the Mitel Connect Client."
+   },
+   {
+    "q": "Who should watch the voicemail password quick clip?",
+    "a": "Users of the Mitel Connect Client who need to set a new voicemail password. The post presents it as customer training from VAF, so it is aimed at everyday phone users rather than IT administrators."
+   }
+  ],
+  "skip": false
  },
  "mitel-connect-client---set-new-client-password": {
-  "skip": true,
-  "reason": "Thin (23 words) video clip description; no steps in the text."
+  "tldr": [
+   "This Mitel Connect Client quick clip training from VAF shows how to set, reset, or change your new client password.",
+   "It is a short customer training video from the VAF team in the quick clips series.",
+   "It helps users who are new to the Mitel Connect Client or have forgotten their login password."
+  ],
+  "faq": [
+   {
+    "q": "How do I set or change my Mitel Connect Client password?",
+    "a": "The post says the VAF quick clip training shows you how to set, reset, or change your new client password. Watch the video for the steps, since the post only summarizes what the clip covers."
+   },
+   {
+    "q": "Can the quick clip help if I need to reset my client password?",
+    "a": "Yes. According to the post, the clip covers setting, resetting, or changing your client password in the Mitel Connect Client, so it addresses both first-time setup and later changes."
+   },
+   {
+    "q": "Who made the client password training clip?",
+    "a": "The post says VAF produced this Mitel Connect Client quick clip training. It is one of a series of short customer videos from Van Ausdall & Farrar for users of the Mitel Connect Client."
+   }
+  ],
+  "skip": false
  },
  "mitel-connect-client---record-custom-greetings": {
-  "skip": true,
-  "reason": "Thin (27 words) video clip description; no steps in the text."
+  "tldr": [
+   "VAF's quick clips show how to use the Mitel Connect Client custom greeting for vacations and for the different states of your phone.",
+   "It is a short customer training video in the VAF quick clips series for Mitel Connect Client users.",
+   "It helps people set an appropriate voicemail message when they are away or unavailable."
+  ],
+  "faq": [
+   {
+    "q": "How do I record a custom greeting in the Mitel Connect Client?",
+    "a": "The post says VAF's quick clips show you how to use the Mitel Connect Client custom greeting. Watch the video for the exact steps, because the post only describes what the clip covers."
+   },
+   {
+    "q": "When would I use a custom greeting?",
+    "a": "The post gives two examples: when you go on vacation and for the states of your phone. A custom greeting lets callers hear a message that fits your situation instead of a generic one."
+   },
+   {
+    "q": "Who should watch the custom greetings quick clip?",
+    "a": "People who use the Mitel Connect Client and want to personalize what callers hear, for example before time away. The post presents it as practical customer training from VAF, suitable for everyday phone users."
+   }
+  ],
+  "skip": false
  },
  "mitel-connect-client---recents-list": {
-  "skip": true,
-  "reason": "Thin (25 words) video clip description; no steps in the text."
+  "tldr": [
+   "VAF's quick clips show how to use the Recents tab in your Mitel Connect Client to review recent call activity.",
+   "The post says this tool can show you whether you have missed calls.",
+   "It is a short customer training video that helps Mitel Connect Client users keep track of calls they may have missed."
+  ],
+  "faq": [
+   {
+    "q": "What is the Recents tab in the Mitel Connect Client?",
+    "a": "The post says the Recents tab is a tool in the Mitel Connect Client that VAF's quick clips show you how to use. It lets you review recent call activity, including whether you have missed calls."
+   },
+   {
+    "q": "How can I see if I missed a call in the Mitel Connect Client?",
+    "a": "According to the post, the Recents tab can show you if you have missed calls. The VAF quick clip walks through using it, so watch the video for the exact steps."
+   },
+   {
+    "q": "Who should watch the Recents list quick clip?",
+    "a": "Anyone using the Mitel Connect Client who wants to check missed calls and recent activity. The post presents it as short customer training from VAF, aimed at everyday users of the client."
+   }
+  ],
+  "skip": false
  },
  "mitel-connect-client---intro--basics": {
-  "skip": true,
-  "reason": "Thin (18 words) video clip description; no steps in the text."
+  "tldr": [
+   "VAF introduces the basic functions of the Mitel Connect Client in this short customer training video.",
+   "It is an introductory clip that gives new users a starting point before they learn individual features.",
+   "The post invites readers to talk to VAF about business phone solutions if they want to learn more."
+  ],
+  "faq": [
+   {
+    "q": "What does the Mitel Connect Client intro video cover?",
+    "a": "The post says VAF introduces the basic functions of the Mitel Connect Client. It is a starting point for new users, and other quick clips on the blog cover specific tasks in more detail."
+   },
+   {
+    "q": "Who should watch the Mitel Connect Client basics clip?",
+    "a": "New users of the Mitel Connect Client who want an overview of how it works. The post presents it as an introduction from VAF, so it fits people who are just getting started."
+   },
+   {
+    "q": "Who can I talk to about business phone solutions?",
+    "a": "The post invites readers to talk to VAF, Van Ausdall & Farrar, about business phone solutions. It is a general invitation at the end of the video description, aimed at anyone interested in the Mitel Connect Client."
+   }
+  ],
+  "skip": false
  },
  "mitel-connect-client---directory--people-list": {
-  "skip": true,
-  "reason": "Thin (19 words) video clip description; no steps in the text."
+  "tldr": [
+   "This quick clip from VAF shows how to use your Mitel Connect Client directory and populate your people list.",
+   "It is a short customer training video that helps users find coworkers and organize the contacts they call most.",
+   "It suits Mitel Connect Client users who want faster access to people inside the client."
+  ],
+  "faq": [
+   {
+    "q": "How do I use the directory in the Mitel Connect Client?",
+    "a": "The post says this VAF quick clip shows how to use your Mitel Connect Client directory. Watch the video for the specific steps, since the post only describes what the clip covers."
+   },
+   {
+    "q": "How do I build a people list in the Mitel Connect Client?",
+    "a": "According to the post, the quick clip shows how to populate your people list in the Mitel Connect Client. The video demonstrates the process, so follow along with it to set up your own list."
+   },
+   {
+    "q": "Who is the directory and people list clip for?",
+    "a": "Users of the Mitel Connect Client who want to look people up and keep a list of contacts. The post presents it as practical customer training from VAF, suitable for everyday phone users."
+   }
+  ],
+  "skip": false
  },
  "mitel-connect-client---answering-a-call": {
-  "skip": true,
-  "reason": "Thin (19 words) video clip description; no steps in the text."
+  "tldr": [
+   "VAF explains in a short customer training video how to answer a call with the Mitel Connect Client.",
+   "It covers one of the most basic tasks for new users of the client.",
+   "The post invites readers to talk to VAF about business phone solutions for more help."
+  ],
+  "faq": [
+   {
+    "q": "How do I answer a call with the Mitel Connect Client?",
+    "a": "The post says VAF explains how to answer a call with the Mitel Connect Client in a quick clip video. Watch the video for the exact steps, since the post only summarizes what it covers."
+   },
+   {
+    "q": "Who should watch the answering a call clip?",
+    "a": "New and everyday users of the Mitel Connect Client who want to learn the basic way to pick up calls. The post presents it as straightforward customer training from VAF."
+   },
+   {
+    "q": "Where can I find help with business phone solutions?",
+    "a": "The post invites readers to talk to VAF, Van Ausdall & Farrar, about business phone solutions. If the quick clip does not cover your question, contacting VAF is the next step the post suggests."
+   }
+  ],
+  "skip": false
  },
  "mitel-connect-client---add-participant-conference": {
-  "skip": true,
-  "reason": "Thin (19 words) video clip description; no steps in the text."
+  "tldr": [
+   "VA&F has a video that explains how to add participants to a conference call using the Mitel Connect Client.",
+   "It is a short customer training clip in the VAF quick clips series for Mitel Connect Client users.",
+   "It helps people who host calls bring additional participants into a conference without needing outside help."
+  ],
+  "faq": [
+   {
+    "q": "How do I add a participant to a conference call in the Mitel Connect Client?",
+    "a": "The post says VA&F has a video that explains how to add participants to a conference call using the Mitel Connect Client. Watch the clip for the steps, since the post only describes what it covers."
+   },
+   {
+    "q": "Who made the add participant conference video?",
+    "a": "The post says VA&F, Van Ausdall & Farrar, produced the video. It is part of the company's quick clips for customers learning to use the Mitel Connect Client."
+   },
+   {
+    "q": "Who should watch the add participant clip?",
+    "a": "Mitel Connect Client users who run or join conference calls and need to bring more people in. The post presents it as customer training from VA&F, so it is aimed at everyday users."
+   }
+  ],
+  "skip": false
  },
  "is-your-most-vital-corporate-data-paper-locked": {
   "tldr": [
@@ -6298,12 +6680,60 @@
   "skip": false
  },
  "vaf-makes-the-right-connection-with-8x8": {
-  "skip": true,
-  "reason": "Partnership announcement (January 2018) with dated vendor claims (137 patents, Gartner Magic Quadrant six consecutive years, Privacy Shield) and contact details; announcement-style."
+  "tldr": [
+   "The announcement says Van Ausdall & Farrar's Converged Communications Group partnered with 8x8 to bring a cloud-based unified communications solution to market.",
+   "The post says VAF chose 8x8 for its unified communications, collaboration, and contact center platform, and added Infrastructure as a Service and White Glove services.",
+   "The announcement says the partnership targets challenges such as productivity, IT resources, mobile integration, global connectivity, compliance needs, and cost control."
+  ],
+  "faq": [
+   {
+    "q": "What did VAF announce about 8x8?",
+    "a": "The announcement says the Converged Communications Group at Van Ausdall & Farrar is partnering with 8x8 to bring a cloud-based unified communications solution to market after what it calls a thorough evaluation process."
+   },
+   {
+    "q": "Why did VAF choose 8x8 as a cloud communications partner?",
+    "a": "The post says VAF chose 8x8 for its ability to deliver a completely unified communications, collaboration and contact center platform. It adds that 8x8 controls product delivery, functionality and stability, and cites 137 patents and 16 data centers worldwide."
+   },
+   {
+    "q": "What is the White Glove service offered with the 8x8 rollout?",
+    "a": "The announcement says VAF rolled out an Infrastructure as a Service offering along with White Glove professional services. These provide hands-on end user and administration training and support through the rollout and the overall life cycle."
+   },
+   {
+    "q": "What business problems does the 8x8 solution address?",
+    "a": "According to the announcement, it aims to improve productivity and customer satisfaction, free up IT resources, unify communications and collaboration, integrate mobile devices, capture communications data, connect global offices, address compliance needs, and keep costs low."
+   },
+   {
+    "q": "How can I learn more about VAF and 8x8?",
+    "a": "The announcement invites readers to contact Van Ausdall & Farrar by phone or email, using the contact details printed at the end of the original post, to learn how 8x8 could affect their business."
+   }
+  ],
+  "skip": false
  },
  "february-8-2018---print-security-event-at-topgolf-presented-by-hp": {
-  "skip": true,
-  "reason": "Event notice (February 8, 2018, Fishers) with a dated hack anecdote; time-bound and thin."
+  "tldr": [
+   "The event notice invited customers to a free afternoon of golf, networking, cocktails, and an HP presentation on printer security at Top Golf in Fishers.",
+   "It was set for February 8, 2018, with limited space, so it is a past event with historical interest only.",
+   "The post says unsecured printers are a major security risk and that sitting behind a firewall does not make a printer safe."
+  ],
+  "faq": [
+   {
+    "q": "What was the February 8, 2018 print security event?",
+    "a": "The notice says it was a free afternoon at Top Golf in Fishers with golf, networking, cocktails and a presentation from HP about printer security. Space was limited, and the date has passed, so it is a past event."
+   },
+   {
+    "q": "Why are unsecured printers a security risk?",
+    "a": "The post says unsecured printers are a huge security risk. It says that in February 2017 a hacker known as Stackoverflowin hacked over 150,000 printers to prove a point, and that dozens of malicious hacks on unsecured devices have since hit company networks."
+   },
+   {
+    "q": "Is a printer safe if it sits behind a firewall?",
+    "a": "The post asks this directly and says a firewall alone does not make a printer secure, stating it is still at risk. It frames the HP presentation as a way to learn more about protecting printers on the network."
+   },
+   {
+    "q": "Who presented at the Top Golf print security event?",
+    "a": "The notice says HP presented on printer security. Van Ausdall & Farrar invited customers to join for the afternoon, which also included golf, networking and cocktails, at no charge."
+   }
+  ],
+  "skip": false
  },
  "we-were-sd-wan-before-sd-wan-was-cool": {
   "tldr": [
@@ -6332,16 +6762,78 @@
   "skip": false
  },
  "mitel-acquires-shoretel-and-toshiba": {
-  "skip": true,
-  "reason": "Dated October 2017 vendor acquisition commentary (Toshiba, ShoreTel, Mitel) with time-bound dates, partner statistics and executive quotes; not evergreen."
+  "tldr": [
+   "The 2017 post by a VAF executive explains Mitel's moves to acquire Toshiba's phone assets and ShoreTel, and what they meant for VAF customers.",
+   "The post says Mitel committed to business as usual for Toshiba customers, honored warranties, and planned continued investment in the ShoreTel cloud solution.",
+   "The post says VAF became a Mitel Authorized Dealer and expected consolidated certifications and processes to improve efficiency and customer service."
+  ],
+  "faq": [
+   {
+    "q": "What happened when Toshiba wound down its phone business?",
+    "a": "The post says Toshiba told customers and dealers on March 21, 2017 it would wind down its unified communications business. Then on May 11, 2017, Mitel and Toshiba signed a memorandum of understanding for Mitel to acquire certain Toshiba assets, inventory and support obligations."
+   },
+   {
+    "q": "What did Mitel promise Toshiba customers?",
+    "a": "According to the post, Mitel said it is business as usual, with the same service, support and fulfillment processes, any changes communicated well in advance, existing warranties honored, key Toshiba staff joining Mitel, and continued manufacturing of new Toshiba systems and hardware."
+   },
+   {
+    "q": "What did Mitel's acquisition of ShoreTel mean for customers?",
+    "a": "The post says Mitel announced its intent to acquire ShoreTel in July 2017 and completed it on September 25, 2017. It quotes Mitel's CEO as committing to keep investing in and supporting the ShoreTel cloud UC solution."
+   },
+   {
+    "q": "Why did VAF become a Mitel Authorized Dealer?",
+    "a": "The post says VAF became a Mitel Authorized Dealer to ensure full access to the products and support Toshiba customers will need. It also notes VAF was a Mitel partner in the 1980s and 1990s."
+   },
+   {
+    "q": "How did VAF say the consolidation would help customers?",
+    "a": "The post says having one large partner would simplify VAF's operations, with one training academy, combined marketing funds and one business plan. It argues those efficiencies would improve the final product and customer service."
+   }
+  ],
+  "skip": false
  },
  "vaf-wins-a-new-certification-from-ricoh": {
-  "skip": true,
-  "reason": "Thin (51 words) award announcement for a Ricoh certification; VAF should verify the claim before reuse."
+  "tldr": [
+   "The announcement says Van Ausdall & Farrar was awarded the RFG Circle of Excellence Certification from Ricoh.",
+   "The post calls the certification an important milestone in its commitment to excellent customer service.",
+   "The announcement credits VAF's service and support employees for making the achievement possible."
+  ],
+  "faq": [
+   {
+    "q": "What certification did VAF announce from Ricoh?",
+    "a": "The announcement says Van Ausdall & Farrar was awarded the RFG Circle of Excellence Certification from Ricoh. The post gives no other details about the certification, so check with VAF for its current status and requirements."
+   },
+   {
+    "q": "Why does the Ricoh certification matter to customers?",
+    "a": "The post describes the certification as a very important milestone in VAF's continued commitment to excellent customer service. For customers, it is presented as a signal of service quality, though the details are not spelled out."
+   },
+   {
+    "q": "Who earned the Ricoh certification for VAF?",
+    "a": "The announcement says the achievement was made possible by VAF's service and support employees. It credits those teams for the work behind the certification instead of attributing it to management or sales."
+   }
+  ],
+  "skip": false
  },
  "wannacry-ransomware-update-from-ricoh": {
-  "skip": true,
-  "reason": "Dated August 2017 vendor advisory about WannaCry patching for Ricoh devices (78 words); no lasting guidance."
+  "tldr": [
+   "The post says some Ricoh multifunction printers, laser printers, production printers, and controllers running Microsoft Windows need the appropriate Windows security patch for safe operation.",
+   "Ricoh says it is committed to keeping products and services as secure as possible and is actively monitoring the WannaCry situation.",
+   "The post links to a Ricoh document on WannaCry with suggested countermeasures that customers should review."
+  ],
+  "faq": [
+   {
+    "q": "Which Ricoh devices need a Windows security patch for WannaCry?",
+    "a": "The post says some Ricoh multifunction printers, laser printers, production printers and printer controller products that use the Microsoft Windows operating system need the appropriate Windows security patch to continue safe operation."
+   },
+   {
+    "q": "What is Ricoh doing about the WannaCry ransomware?",
+    "a": "The post says Ricoh is committed to keeping its products and services as secure as possible. It states the company is actively monitoring the situation and working to ensure appropriate measures are taken."
+   },
+   {
+    "q": "Where can I find Ricoh's WannaCry countermeasures?",
+    "a": "The post asks readers to review an attached document on WannaCry and suggested countermeasures, and it links to a Ricoh page on ricoh.com. Because this is a 2017 advisory, confirm current guidance with Ricoh or VAF."
+   }
+  ],
+  "skip": false
  },
  "what-happens-when-ransomware-and-the-internet-of-things-collide": {
   "tldr": [
@@ -6374,8 +6866,34 @@
   "skip": false
  },
  "van-ausdall--farrar-receives-shoretel-gold-status": {
-  "skip": true,
-  "reason": "Press release (dateline Indianapolis, May 1, 2017, executive quotes, boilerplate) announcing ShoreTel Gold partner status; dated and announcement-style."
+  "tldr": [
+   "The press release says Van Ausdall & Farrar advanced to the Gold level in the ShoreTel Champion Partner Program on May 1, 2017.",
+   "It says VAF completed all the criteria to reach the level and sells and delivers ShoreTel unified communications solutions.",
+   "The release quotes ShoreTel and VAF leaders, and says the partnership had lasted over 11 years at the time."
+  ],
+  "faq": [
+   {
+    "q": "What did Van Ausdall & Farrar announce about ShoreTel in May 2017?",
+    "a": "The press release says VAF advanced to the Gold level in the ShoreTel Champion Partner Program after completing all the criteria for the new level. It sells and delivers ShoreTel unified communications solutions."
+   },
+   {
+    "q": "What was the ShoreTel Champion Partner Program?",
+    "a": "The release says ShoreTel designed the program to strengthen its relationship with partners. Its goal was to grow both companies' share of the unified communications market while making sure every customer continues to be delighted with their ShoreTel experience."
+   },
+   {
+    "q": "What did ShoreTel say about Van Ausdall & Farrar?",
+    "a": "The release quotes a ShoreTel senior vice president of worldwide sales congratulating VAF as a hardworking member of the program. He says the combination of ShoreTel technology and VAF expertise means customers enjoy greater flexibility, productivity and cost savings."
+   },
+   {
+    "q": "How long had VAF worked with ShoreTel?",
+    "a": "The release quotes VAF's converged communications general manager saying ShoreTel had been a tremendous partner for over 11 years. He says both companies see complete customer satisfaction as the ultimate goal."
+   },
+   {
+    "q": "Is the ShoreTel Gold status still current?",
+    "a": "The release is dated May 2017 and describes the status as of that announcement. Treat the Gold level as historical, and confirm Van Ausdall & Farrar's current partner status with VAF directly before relying on it."
+   }
+  ],
+  "skip": false
  },
  "is-it-time-to-switch-to-a-cloud-phone-system": {
   "tldr": [
