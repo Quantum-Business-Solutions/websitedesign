@@ -4574,8 +4574,34 @@
   "skip": false
  },
  "offering-business-critical-voip-integrations-to-maximize-customer-profitability-and-productivity": {
-  "skip": true,
-  "reason": "Press release (dateline, 'has announced', executive quote, 'View Full Press Release (PDF)') announcing VoIP integrations; announcement-style."
+  "skip": false,
+  "tldr": [
+   "The announcement says VAF offers VoIP integrations that connect phone systems to tools like Outlook, Exchange, Teams, HubSpot and Salesforce.",
+   "Integrations include call control from Outlook, voicemail and fax delivery to email, calling inside Teams, and Salesforce screen pops for inbound calls.",
+   "The stated goal is less time switching between apps, faster communication and better customer service for businesses, non-profits and institutions of any size."
+  ],
+  "faq": [
+   {
+    "q": "What are VoIP integrations?",
+    "a": "VoIP integrations connect a business phone system to other software people already use, such as email, chat and CRM tools. The announcement says this lets employees handle calls from inside those applications instead of switching between separate platforms."
+   },
+   {
+    "q": "Which applications does VAF say it integrates with?",
+    "a": "The announcement names Microsoft Outlook, Microsoft Exchange, Microsoft Teams, HubSpot and Salesforce, and says there are more. It describes these as widely used organizational communication and productivity systems that VAF connects to its unified communications offering."
+   },
+   {
+    "q": "What can employees do from Outlook with this integration?",
+    "a": "The announcement says users get full call control from Outlook. They can dial contacts, sync presence with their Outlook calendar and change presence status directly in Outlook. Voicemails and faxes can also arrive in the email client and stay synchronized."
+   },
+   {
+    "q": "How does the Salesforce integration help customer service?",
+    "a": "The announcement says users can manage calls directly from Salesforce records. Screen pops for inbound calls display all known account information, so employees can respond to callers with context and handle service requests more efficiently."
+   },
+   {
+    "q": "What does the Microsoft Teams integration add?",
+    "a": "According to the announcement, users can make and receive customer calls inside Teams. It also lists complex routing plans, auto attendant, call handling rules and call recording, and says recording supports quality assurance, training, compliance and dispute resolution."
+   }
+  ]
  },
  "unleashing-the-power-of-unified-cloud-communications": {
   "tldr": [
@@ -4668,8 +4694,34 @@
   "skip": false
  },
  "crowdstrike-causes-windows-outage-what-you-need-to-know": {
-  "skip": true,
-  "reason": "Time-bound customer notice about the July 2024 CrowdStrike outage with a helpdesk phone number; event notice, not evergreen."
+  "skip": false,
+  "tldr": [
+   "The post says a CrowdStrike update caused Blue Screen of Death errors on many Windows systems worldwide and took key systems offline.",
+   "It says CrowdStrike fixed the problem on its side, but machines that already crashed and cannot boot need a manual workaround.",
+   "The post says VAF tested CrowdStrike's official manual fix and confirmed it works, and invites affected customers to call the VAF helpdesk."
+  ],
+  "faq": [
+   {
+    "q": "What happened in the CrowdStrike Windows outage?",
+    "a": "The post says an overnight update to the CrowdStrike security software caused a Blue Screen of Death error on the majority of Windows operating systems worldwide. As a result, key systems went down and operations were affected in many places."
+   },
+   {
+    "q": "Why did the fix not repair machines that were already affected?",
+    "a": "The post says CrowdStrike fixed the issue on its side, but a machine that already crashed and will not boot cannot receive that fix automatically. Those machines may need a manual workaround to start working again."
+   },
+   {
+    "q": "Is there a manual fix for computers that will not boot?",
+    "a": "Yes. The post says CrowdStrike published an official manual fix and that VAF tested it and can verify it worked as a workaround. It points customers to CrowdStrike's public statement on the Windows sensor update for details."
+   },
+   {
+    "q": "Where can customers find the latest information on the outage?",
+    "a": "The post tells clients to read CrowdStrike's public blog statement on the Windows sensor update. It also says CrowdStrike asks affected customers to use its support portal, and a Tech Alert article exists that requires a CrowdStrike login."
+   },
+   {
+    "q": "Who should affected customers contact for help?",
+    "a": "The post says customers who are experiencing this issue and need immediate assistance can contact the Van Ausdall helpdesk. It says the team was working with CrowdStrike to restore systems as quickly as possible and thanks customers for their patience."
+   }
+  ]
  },
  "ensuring-business-resilience-with-cloud-business-continuity": {
   "tldr": [
@@ -4702,8 +4754,34 @@
   "skip": false
  },
  "van-ausdall--farrar-inc-launches-revolutionary-network-data-discovery-and-cyber-risk-management-solution-for-businesses": {
-  "skip": true,
-  "reason": "Press release (dateline, executive quotes, 'View Full Press Release (PDF)') announcing a data discovery solution; announcement-style."
+  "skip": false,
+  "tldr": [
+   "The announcement says VAF launched a tool that scans an organization's network for sensitive data, classifies the risk and prioritizes which security fixes come first.",
+   "It says the tool covers devices, servers and cloud integrations, including Microsoft 365 data in Exchange, OneDrive, SharePoint and Teams.",
+   "The announcement says it supports the least privilege principle and keeps company data in place, producing reports rather than sending data elsewhere."
+  ],
+  "faq": [
+   {
+    "q": "What is network data discovery and cyber risk management?",
+    "a": "The announcement describes it as a solution that scans devices, servers and cloud integrations, finds sensitive data, classifies it by sensitivity and ranks risks. The result is a prioritized list of what to secure first."
+   },
+   {
+    "q": "How does the tool prioritize security work?",
+    "a": "The announcement says it classifies data by sensitivity, shows how widely it can be accessed and quantifies potential financial exposure. Its example is a laptop holding credit card data that receives a 9.7 risk score on a 10-point scale."
+   },
+   {
+    "q": "Why does data access matter when companies adopt AI tools?",
+    "a": "The announcement says AI-powered tools like Microsoft's Copilot can read and contextualize all company data. If sensitive files are left too open, employees could see information they should not, such as salary details or social security numbers."
+   },
+   {
+    "q": "What is the least privilege principle?",
+    "a": "The announcement describes least privilege as the IT principle that limits data access to the minimum needed for each person's job functions. It says the tool helps organizations see where access is broader than necessary."
+   },
+   {
+    "q": "Does the solution move company data to an outside system?",
+    "a": "The announcement says it does not transfer company data anywhere. It reads data patterns and generates reports, keeping the data inside the company's own secure environment instead of exposing it to external systems."
+   }
+  ]
  },
  "empowering-your-workforce---the-importance-of-security-awareness-training": {
   "tldr": [
@@ -4796,8 +4874,34 @@
   "skip": false
  },
  "celebrating-van-ausdall--farrars-110th-anniversary-a-legacy-of-innovation-and-excellence": {
-  "skip": true,
-  "reason": "Company anniversary and podcast recap (history, Canon partnership); event and brand story with no buyer advice."
+  "skip": false,
+  "tldr": [
+   "The post recaps a podcast conversation marking Van Ausdall & Farrar's 110th anniversary, featuring a VAF representative and a Canon USA representative.",
+   "It says the company began as an Original Thomas Edison dealer selling phonographs and wax cylinders, and keeps a museum of historical pieces.",
+   "The post describes four offering areas, print, process, IT and communication, and a long-running Canon partnership built on dealer events and training."
+  ],
+  "faq": [
+   {
+    "q": "How did Van Ausdall & Farrar get started?",
+    "a": "The post says the company began at the dawn of the 20th century as an Original Thomas Edison dealer, selling phonographs and wax cylinders. It describes the company's growth from there into a provider of print, process, IT and communication solutions."
+   },
+   {
+    "q": "What does VAF offer today?",
+    "a": "The post names four pillars: print, process, IT and communication solutions. It also highlights a self-developed software-as-a-service application called SpeechMotion and a document conversion center as examples of its approach to customer needs."
+   },
+   {
+    "q": "What is the relationship between VAF and Canon?",
+    "a": "The post says a Canon USA representative described a strong, long-term partnership with VAF. She said Canon supports its dealers with customized events, training sessions and joint customer visits, and called the relationship one built on trust and shared values."
+   },
+   {
+    "q": "Does VAF have a museum?",
+    "a": "Yes. The post describes a unique company museum that houses historical pieces tracing technological progress. It calls the museum a tangible reminder of the company's heritage and its commitment to preserving the past while moving forward."
+   },
+   {
+    "q": "Where was this 110th anniversary story discussed?",
+    "a": "The post says it was discussed on an episode of the What's Happenin' Podcast, hosted by Andy Slawetsky. Guests were a VAF representative and a Canon USA representative, who covered company history, products, partnership and recent events."
+   }
+  ]
  },
  "cyber-security-the-indispensable-pillar-of-managed-it-services": {
   "tldr": [
@@ -4860,8 +4964,34 @@
   "skip": false
  },
  "launching-program-to-backup-microsoft-365-for-local-businesses": {
-  "skip": true,
-  "reason": "Press release (dateline, 'announced the launch', executive quote, 'View Full Press Release (PDF)'); announcement-style with a time-bound breach reference."
+  "skip": false,
+  "tldr": [
+   "The announcement says VAF launched a program to back up Microsoft 365 data for small to mid-sized businesses, independent of Microsoft's own backup services.",
+   "It says the program allows granular restores of emails, files and SharePoint sites, with unlimited storage for seven years at a flat rate.",
+   "The announcement argues businesses should take responsibility for their own backups, since relying only on Microsoft can mean long recovery waits and costly downtime."
+  ],
+  "faq": [
+   {
+    "q": "Why back up Microsoft 365 if Microsoft already stores the data?",
+    "a": "The announcement says relying only on Microsoft leaves businesses with limited access to recover data quickly after a loss. An independent backup reduces dependence on Microsoft's infrastructure and can shorten recovery time and downtime after an outage or breach."
+   },
+   {
+    "q": "What can be restored with VAF's Microsoft 365 backup?",
+    "a": "The announcement says the program lets companies restore emails, files and SharePoint sites granularly. That means recovering specific items rather than everything at once, which it describes as added flexibility and control over company data."
+   },
+   {
+    "q": "How long does the program keep data and how is it priced?",
+    "a": "The announcement says VAF provides unlimited storage for seven years, which it ties to archiving, compliance and insurance needs. It describes flat-rate pricing rather than charges based on data usage, with data retention guaranteed."
+   },
+   {
+    "q": "Who is the Microsoft 365 backup program for?",
+    "a": "The announcement says it is designed for small to mid-sized businesses that rely on cloud services like Microsoft 365 for critical business data. It is aimed at companies that want an extra layer of protection beyond default backups."
+   },
+   {
+    "q": "What risk does the announcement point to for cloud data?",
+    "a": "The announcement says hackers target Microsoft users and that attack volume has led to numerous breaches. It cites a Microsoft disclosure from November 2023 about state-backed hackers reaching leadership emails, as an example that no system is immune."
+   }
+  ]
  },
  "the-future-of-video-surveillance": {
   "tldr": [
@@ -4924,8 +5054,34 @@
   "skip": false
  },
  "van-ausdall--farrar-celebrates-110-years-of-innovation": {
-  "skip": true,
-  "reason": "Press release (dateline, 110th anniversary announcement, CEO quote); company news with no buyer advice."
+  "skip": false,
+  "tldr": [
+   "The announcement says Van Ausdall & Farrar marked its 110th anniversary, tracing its start to 1914 and a distributor relationship with Thomas Edison.",
+   "It says the company now offers IT managed services, cybersecurity, cloud phone systems, video surveillance, print management, copiers and content management.",
+   "The announcement says VAF will host a celebration for partners, clients and friends, and that its work starts with a Business Technology Strength Assessment."
+  ],
+  "faq": [
+   {
+    "q": "When was Van Ausdall & Farrar founded?",
+    "a": "The announcement says the company began in 1914 and that it started as a distributor for the Thomas Edison Company. It describes a handshake agreement with Edison and an original business dictation device called the Ediphone."
+   },
+   {
+    "q": "What services does VAF offer today?",
+    "a": "The announcement lists IT managed services, WiFi, cybersecurity, cloud transformation, video surveillance, print management, copiers, facilities management, content management, cloud phone systems, carrier services and internet, among others."
+   },
+   {
+    "q": "How does VAF say it improves business efficiency?",
+    "a": "According to the CEO quoted in the announcement, VAF eliminates technology a customer does not need, optimizes the technology they have, and creates a technology improvement roadmap that grows with them."
+   },
+   {
+    "q": "What is the Business Technology Strength Assessment?",
+    "a": "The announcement calls it VAF's signature assessment and says everything the company does starts there. It does not detail the steps, but positions it as the first stage before eliminating, optimizing and planning technology improvements."
+   },
+   {
+    "q": "How is VAF celebrating its 110th anniversary?",
+    "a": "The announcement says VAF will host a grand celebration inviting partners, clients and friends. The event is meant to honor the company's history, celebrate its achievements and reaffirm its commitment to serving the community. It invites readers to contact VAF for details."
+   }
+  ]
  },
  "how-does-content-management-make-office-procedures-more-productive": {
   "tldr": [
@@ -4958,8 +5114,34 @@
   "skip": false
  },
  "driving-small-to-mid-sized-businesses-profitability-and-performance-with-the-latest-in-integrated-contact-center-technology": {
-  "skip": true,
-  "reason": "Press release (dateline, 'announced today', executive quote, 'View Full Press Release (PDF)'); announcement-style."
+  "skip": false,
+  "tldr": [
+   "The announcement says VAF is bringing Integrated Contact Center technology to small and mid-sized businesses that handle high volumes of customer service calls.",
+   "It cites a HubSpot survey finding 69 percent of people prefer phone support over chat or other support channels.",
+   "VAF offers a four-point checklist for a modern contact center: collaboration, productivity, flexibility and customizable reporting."
+  ],
+  "faq": [
+   {
+    "q": "What is an integrated contact center?",
+    "a": "The announcement describes it as contact center and customer service technology that helps teams manage corporate communications from a single interface. It combines calls, instant messages, group chats and audio or video conferences with tools to improve customer experience and employee productivity."
+   },
+   {
+    "q": "Why do phone calls still matter for customer service?",
+    "a": "The announcement cites a HubSpot survey saying 69 percent of people prefer phone support over chat or other channels. It uses that finding to argue that small and mid-sized businesses need to get phone-based customer experience right."
+   },
+   {
+    "q": "What are the four functions a modern contact center should deliver?",
+    "a": "The announcement lists improved collaboration, increased productivity, flexibility and customizable reporting. Together they mean one intuitive interface, features that help staff handle more calls efficiently, the ability to scale up or down, and data for management decisions."
+   },
+   {
+    "q": "What is presence management?",
+    "a": "The announcement says presence management lets employees quickly judge a coworker's availability from their presence state. People can then reach out when their message is more likely to be received, which supports better collaboration in a contact center."
+   },
+   {
+    "q": "Why is contact center reporting important?",
+    "a": "The announcement says without robust reporting, management cannot make strategic decisions. It compares this to a CFO giving one number at year end, and says access to historical data helps analyze productivity and improve operations."
+   }
+  ]
  },
  "why-is-multi-factor-authentication-important": {
   "tldr": [
@@ -5082,8 +5264,34 @@
   "skip": false
  },
  "van-ausdall--farrar-inc-invited-to-attend-top-technology-event-of-the-year": {
-  "skip": true,
-  "reason": "Press release and event notice about attending the 23rd Annual TAG Convention in April 2024; no evergreen advice."
+  "skip": false,
+  "tldr": [
+   "The announcement says VAF was invited to share insight at the 23rd Annual Technology Assurance Group convention in Las Vegas, April 29 to May 1.",
+   "The event gathers experts in cloud, cybersecurity, voice, IT, and video surveillance and access control, under the theme Maximizing Personal Performance to Achieve Excellence.",
+   "The announcement says the convention focuses on excellent service for small to mid-sized organizations and non-profits, which it ties to VAF's own customer experience focus."
+  ],
+  "faq": [
+   {
+    "q": "What is the Technology Assurance Group convention?",
+    "a": "The announcement describes it as the 23rd Annual Technology Assurance Group convention, held in Las Vegas from April 29 to May 1, 2024. It gathers industry experts in cloud technologies, cybersecurity, voice, IT, and video surveillance and access control."
+   },
+   {
+    "q": "Why was VAF invited to the convention?",
+    "a": "The announcement says VAF received an exclusive invitation because of its reputation as an industry thought leader and its focus on exceeding customer expectations. The TAG president is quoted praising its track record and willingness to share knowledge with counterparts in the U.S. and Canada."
+   },
+   {
+    "q": "What was the theme of the convention?",
+    "a": "The theme was Maximizing Personal Performance to Achieve Excellence. The announcement says it aims to help attendees reflect, reenergize, and define the results and actions needed for personal and professional success."
+   },
+   {
+    "q": "What does this mean for VAF customers?",
+    "a": "The announcement says the convention centers on delivering exceptional service to small to mid-sized organizations and non-profits. VAF's IT director says the company works to stay current on business technology and keep finding ways to improve customer satisfaction."
+   },
+   {
+    "q": "Who attends the TAG convention?",
+    "a": "The announcement says it brings together top industry experts specializing in cloud-based technologies, cybersecurity, voice, IT, and video surveillance and access control. It also mentions counterparts across the U.S. and Canada who can learn from shared experience."
+   }
+  ]
  },
  "protect-your-business-with-data-security-solutions": {
   "tldr": [
@@ -5146,8 +5354,34 @@
   "skip": false
  },
  "launching-managed-detection-and-response-to-thwart-cyberattacks": {
-  "skip": true,
-  "reason": "Press release (dateline, executive quotes, 'View Full Press Release (PDF)') announcing an MDR program; announcement-style."
+  "skip": false,
+  "tldr": [
+   "The announcement says VAF launched a managed detection and response service that puts a team of 24/7/365 IT experts on monitoring, detecting and stopping cyberattacks.",
+   "It argues many security tools only generate alerts that small businesses lack staff to investigate, so many alerts stay unresolved.",
+   "The announcement says MDR pairs AI-based technology with dedicated security analysts who investigate threats to their source and respond on the client's behalf."
+  ],
+  "faq": [
+   {
+    "q": "What is managed detection and response?",
+    "a": "The announcement describes managed detection and response, or MDR, as a service where a team of IT experts monitors a business around the clock, detects and prioritizes threats, and investigates them. Analysts work to eliminate threats instead of only sending alerts."
+   },
+   {
+    "q": "Why are security alerts alone not enough?",
+    "a": "The announcement says many security tools provide alerts and analytics, but small businesses often lack the IT staff to sort through them. A large number of notifications stay under investigated, and attackers can exploit distracted defenses."
+   },
+   {
+    "q": "How does MDR differ from a firewall or multi-factor authentication?",
+    "a": "The announcement says basic protections like a firewall, MFA and an in-house IT employee are useful, but they mostly alert or block. MDR adds a human element that prioritizes, investigates and targets the root causes of potential threats."
+   },
+   {
+    "q": "What does VAF say its MDR team actually does?",
+    "a": "According to the announcement, VAF proactively monitors client endpoints, receives the same alerts the client does, and responds on the client's behalf. This keeps the business owner from having to react quickly while handling other priorities."
+   },
+   {
+    "q": "Who is the MDR service designed for?",
+    "a": "The announcement says it is aimed at small to mid-sized businesses that face growing attack volume but lack the personnel to handle it. It frames MDR as removing the burden of cybersecurity expertise from the business."
+   }
+  ]
  },
  "why-should-your-business-use-multi-factor-authentication": {
   "tldr": [
@@ -5360,8 +5594,34 @@
   "skip": false
  },
  "leveraging-powerful-artificial-intelligence-anti-phishing-technology-to-keep-email-inboxes-safe": {
-  "skip": true,
-  "reason": "Press release (dateline, executive quotes, 'View Full Press Release (PDF)') announcing AI anti-phishing technology; includes unverified statistics (Accenture 43%, Inc.com 60%)."
+  "skip": false,
+  "tldr": [
+   "The announcement says VAF is protecting small to mid-sized businesses with AI anti-phishing technology designed to stop the most common attack tactic, email phishing.",
+   "It argues that automatically filtering suspicious emails before employees see them removes the chance of human error and works alongside awareness training.",
+   "The announcement cites an Accenture figure that 43 percent of attacks target small businesses while only 14 percent are prepared, and urges layered security."
+  ],
+  "faq": [
+   {
+    "q": "What is phishing?",
+    "a": "The announcement defines phishing as the fraudulent practice of sending emails that pretend to come from reputable companies, in order to trick people into revealing information such as company data, passwords or credit card numbers."
+   },
+   {
+    "q": "How does AI anti-phishing technology help a business?",
+    "a": "The announcement says it automatically filters suspicious-looking emails so they never reach employees, which removes the possibility of human error. It also says an AI-powered tool keeps learning from aggregate data, so it gets smarter the longer it runs."
+   },
+   {
+    "q": "Why are small businesses targeted by cybercriminals?",
+    "a": "The announcement says larger organizations have invested heavily and become harder targets, so criminals have shifted to smaller businesses with weak infrastructure. It cites Accenture as saying 43 percent of attacks aim at small businesses but only 14 percent are prepared."
+   },
+   {
+    "q": "Is employee training still useful?",
+    "a": "Yes. The announcement says employee education and awareness training is always beneficial, but adds that limiting access to phishing emails in the first place is one of the fastest, most effective and easy-to-implement ways to reduce organizational risk."
+   },
+   {
+    "q": "Should a business rely on anti-phishing alone?",
+    "a": "No. The announcement says to also protect against malware, data loss, anomalies and other attack methods, and to add as many security layers as possible. It says each organization's risk, budget and exposure should shape the tailored solution."
+   }
+  ]
  },
  "ucaas-communication-solutions-for-the-modern-business": {
   "tldr": [
@@ -5394,8 +5654,34 @@
   "skip": false
  },
  "van-ausdall-and-farrar-inc-is-now-a-qualified-ricoh-provision-dealer-partner": {
-  "skip": true,
-  "reason": "Short company announcement (about 120 words) of a Ricoh ProVision dealer qualification; brand news with no buyer advice. VAF should verify the claim before any reuse."
+  "skip": false,
+  "tldr": [
+   "The announcement says VAF is now a qualified ProVision Dealer for Ricoh and describes itself as honored by the recognition.",
+   "It says ProVision Dealers must excel in several areas, including technical expertise, training, efficiency and response time.",
+   "The announcement says the status lets VAF keep improving the quality of the solutions and services it offers its clients."
+  ],
+  "faq": [
+   {
+    "q": "What is a Ricoh ProVision Dealer?",
+    "a": "The announcement says it is a Ricoh partner designation for dealers that excel in multiple areas, such as technical expertise, training, efficiency and response time. It describes the designation as one only the best dealers earn."
+   },
+   {
+    "q": "What did VAF announce about Ricoh?",
+    "a": "The announcement says VAF is now a qualified ProVision Dealer for Ricoh. VAF says it is honored to be recognized by Ricoh and to partner with the company, which it calls prestigious."
+   },
+   {
+    "q": "What does the ProVision status mean for customers?",
+    "a": "The announcement says being a qualified ProVision Dealer allows VAF to provide clients with the best solutions and services and to continue improving the quality of what it offers. It does not list specific new services."
+   },
+   {
+    "q": "What criteria does Ricoh use for ProVision Dealers?",
+    "a": "According to the announcement, companies must excel in multiple areas, with technical expertise, training, efficiency and response time named as examples. It does not publish a full list of requirements."
+   },
+   {
+    "q": "Why does a dealer partner status matter to a buyer?",
+    "a": "The announcement suggests it signals that the manufacturer has recognized the dealer's skills, training and responsiveness. A buyer should still confirm current partner status with VAF or Ricoh, since the announcement is dated January 2024."
+   }
+  ]
  },
  "improve-employee-productivity-with-cloud-voip-solutions": {
   "tldr": [
@@ -5638,8 +5924,34 @@
   "skip": false
  },
  "5-reasons-to-choose-ringcentral-with-van-ausdall-and-farrar": {
-  "skip": true,
-  "reason": "Short vendor and partner promotion made of dated, unverified claims (Gartner Magic Quadrant leader for 8 years, top 25 partner roundtable, CDP certification, 99.999% uptime SLA); VAF should verify before any reuse."
+  "skip": false,
+  "tldr": [
+   "The post lists five reasons to choose RingCentral through VAF: market position, Microsoft Teams integration, remote user features, local support and reliability.",
+   "It says RingCentral offers embedded and direct routing options for Teams, plus mobile apps that mirror the desktop app for voice, video, fax and messaging.",
+   "The post says VAF technicians completed a 40-hour RingCentral certification course and can supplement implementation locally, and cites a 99.999 percent uptime SLA."
+  ],
+  "faq": [
+   {
+    "q": "Why does the post recommend RingCentral?",
+    "a": "The post gives five reasons: its position in the marketplace, Microsoft Teams integration, remote user functionality, support through VAF's certified technicians, and reliability. It says these make RingCentral a strong fit for cloud communications."
+   },
+   {
+    "q": "How does RingCentral work with Microsoft Teams?",
+    "a": "The post says RingCentral offers both an embedded application and direct routing to Teams, depending on each customer's needs and Microsoft licensing type. It describes this as the tightest Teams integration available."
+   },
+   {
+    "q": "Can remote and mobile workers use the same features?",
+    "a": "Yes, according to the post. RingCentral extends desktop application functionality to its mobile app, so voice, video, eFax, instant messaging and text work the same way on both. Users can move between the two applications with one click."
+   },
+   {
+    "q": "What support does VAF provide for RingCentral?",
+    "a": "The post says VAF's unified communications technicians completed a 40-hour certification course covering programming, administration and troubleshooting. VAF can be local and on site, and offers two implementation approaches so it can handle much of the heavy lifting."
+   },
+   {
+    "q": "How reliable is RingCentral according to the post?",
+    "a": "The post says RingCentral uses seven layers of security, redundant data centers and 24/7 monitoring, with an available 99.999 percent uptime SLA. It describes this as less than six minutes of downtime per year and calls it the best in the industry."
+   }
+  ]
  },
  "-improve-communication-with-cloud-services": {
   "tldr": [
@@ -5702,8 +6014,34 @@
   "skip": false
  },
  "ricoh-usa-recognizes-van-ausdall-and-farrar-to-the-eco-excellence-program": {
-  "skip": true,
-  "reason": "Short press release (about 124 words, dateline) announcing membership in the Ricoh Eco Excellence Program; award news with no buyer advice. VAF should verify the claim before reuse."
+  "skip": false,
+  "tldr": [
+   "The announcement says Van Ausdall and Farrar was awarded membership in the Ricoh Eco Excellence Program on August 9, 2023.",
+   "It says members share Ricoh's sustainability values and commit to reducing their own environmental impact and helping customers do the same.",
+   "The announcement says membership goes only to dealers meeting key criteria, including sustainability track record and ability to educate and guide customers on environmental benefits."
+  ],
+  "faq": [
+   {
+    "q": "What is the Ricoh Eco Excellence Program?",
+    "a": "The announcement describes it as a Ricoh program for dealers who share its sustainability values. Members commit to reducing their own environmental impact and helping customers reduce theirs through education, awareness and program support."
+   },
+   {
+    "q": "What does Eco Excellence membership mean for customers?",
+    "a": "The announcement says customers can be confident the dealer's team is prepared to talk about sustainability, educate them about best practices and guide them through products, services and solutions that have environmental benefits."
+   },
+   {
+    "q": "What are the criteria for joining the program?",
+    "a": "According to the announcement, membership is awarded only to dealers that meet key criteria. These include a track record of environmental sustainability commitment and the ability to provide customers with education, awareness, program support and guidance."
+   },
+   {
+    "q": "When did VAF join the Eco Excellence Program?",
+    "a": "The announcement says Van Ausdall and Farrar was awarded membership on August 9, 2023. Since the announcement is dated, buyers should confirm current membership status with VAF or Ricoh."
+   },
+   {
+    "q": "Why would sustainability matter when choosing an office technology dealer?",
+    "a": "The announcement suggests a dealer with sustainability knowledge can recommend products and services with environmental benefits. It says an Eco Excellence member should be ready to explain best practices and lead customers through those options."
+   }
+  ]
  },
  "protect-your-business-with-vsecure-it-services": {
   "tldr": [
@@ -5766,12 +6104,64 @@
   "skip": false
  },
  "van-ausdall--farrar-inc-in-top-7-of-all-mitel-dealers-for-6th-year-in-a-row": {
-  "skip": true,
-  "reason": "Press release (dateline, executive quote, 'View Press Release (PDF)') announcing Mitel Gold dealer status; dated award claims (top 7%, about 1200 dealers) that VAF should verify before reuse."
+  "skip": false,
+  "tldr": [
+   "The announcement says VAF earned Mitel Gold dealer status for the sixth straight year in 2023, placing it in the top 7 percent of dealers.",
+   "It says there were roughly 1,200 Mitel dealers in North America and only about 80 qualified for Gold status.",
+   "The announcement credits technical capacity and customer experience, and says VAF also offers cloud services, copiers, printers, business phones, managed IT, document conversion and backup."
+  ],
+  "faq": [
+   {
+    "q": "What is Mitel Gold dealer status?",
+    "a": "The announcement describes it as a top tier within the Mitel channel community. It says roughly 1,200 Mitel dealers exist in North America and only about 80 qualify for Gold status, which it says equals the top 7 percent."
+   },
+   {
+    "q": "How long has VAF held Mitel Gold status?",
+    "a": "The announcement, dated July 2023, says VAF earned Gold dealer status for its sixth consecutive year. Because the claim is dated, buyers should confirm the current status with VAF or Mitel."
+   },
+   {
+    "q": "What does the announcement say the recognition reflects?",
+    "a": "It says the recognition reflects VAF's technical capacity, knowledge of the Mitel Connect portfolio, dedication to customer experience and the volume of business earned. It credits technical, operations, administration and sales staff working together."
+   },
+   {
+    "q": "What does VAF offer beyond phone systems?",
+    "a": "The announcement lists cloud services, copiers, printers, business telephones, managed IT services, document conversion, data backup and disaster recovery, and more. It says VAF provides essentially every business technology tool needed to keep work teams productive."
+   },
+   {
+    "q": "Who is Mitel?",
+    "a": "The announcement describes Mitel as a leader in providing custom communications network solutions. VAF is one of the dealers that sells and supports Mitel communications systems for small to mid-sized businesses."
+   }
+  ]
  },
  "van-ausdall--farrar-inc-recognized-as-top-1-gold-partner-out-of-15000-other-companies": {
-  "skip": true,
-  "reason": "Press release (dateline, executive quotes, 'View Press Release (PDF)') announcing RingCentral Gold Partner status; dated award claims (top 1% of 15,000+ partners) that VAF should verify before reuse."
+  "skip": false,
+  "tldr": [
+   "The announcement says VAF achieved RingCentral Gold Partner status in 2023, which it describes as reserved for the top 1 percent of 15,000+ channel partners.",
+   "It says RingCentral helps businesses adapt to cloud or hybrid work, and that VAF positions itself as a strategic IT advisor and implementer.",
+   "The announcement includes a RingCentral executive thanking VAF for its contribution to RingCentral's success and invites organizations to reach out about IT decisions."
+  ],
+  "faq": [
+   {
+    "q": "What is RingCentral Gold Partner status?",
+    "a": "The announcement describes it as a recognition reserved exclusively for the top 1 percent of RingCentral's channel partners. It says VAF reached that level out of more than 15,000 channel partners by focusing on customer experience."
+   },
+   {
+    "q": "Why does VAF work with RingCentral?",
+    "a": "The announcement says RingCentral is one of the key cloud systems VAF relies on, because its business cloud phone system helps businesses adapt to cloud or hybrid work environments. It positions VAF as a trusted IT partner helping businesses adapt and scale."
+   },
+   {
+    "q": "What does VAF say its role is for clients?",
+    "a": "According to the announcement, VAF steps in as a strategic advisor so clients can scale, adapt and thrive in a fast-changing technology landscape. It invites organizations to delegate IT decisions to an advisor and implementer."
+   },
+   {
+    "q": "Is this partner status still current?",
+    "a": "The announcement is dated July 2023 and reports the status as achieved at that time. Partner tiers can change, so buyers should confirm VAF's current RingCentral partner level with VAF or RingCentral directly."
+   },
+   {
+    "q": "Who commented on the achievement?",
+    "a": "The announcement quotes VAF's vice president and general manager of IT, who said the status shows VAF focused on the right things. It also quotes a RingCentral global partner sales executive who thanked VAF and recognized the significance of its contribution."
+   }
+  ]
  },
  "how-do-unified-communications-benefit-your-business": {
   "tldr": [
@@ -5834,8 +6224,34 @@
   "skip": false
  },
  "van-ausdall--farrar-places-in-the-top-30-of-ring-central-partners": {
-  "skip": true,
-  "reason": "Company news post (about 293 words) on a 2022 RingCentral partner ranking (#28 of 14,000) with dated partner claims and a call for reader opinions; no buyer advice."
+  "skip": false,
+  "tldr": [
+   "The post says RingCentral ranked VAF number 28 in contract value and net new monthly revenue among its roughly 14,000 global partners for 2022.",
+   "It says this came in VAF's first year with RingCentral, after a first quarter spent training sales and service teams on the new offerings.",
+   "The post says VAF expects a full year of RingCentral sales in 2023 and points to cloud communications and Vsecure IT services as its focus."
+  ],
+  "faq": [
+   {
+    "q": "What ranking did VAF receive from RingCentral?",
+    "a": "The post says RingCentral ranked VAF number 28 in contract value and net new monthly revenue for 2022, placing it in the top 30 out of roughly 14,000 global partners. The ranking is VAF's own account of RingCentral's results."
+   },
+   {
+    "q": "Why does VAF say the ranking is notable?",
+    "a": "The post says 2022 was VAF's first year as a RingCentral partner. It spent the first quarter training sales and service teams on new products, and its Mitel Cloud to RingCentral migrations were halted on December 4, so the post calls the result spectacular."
+   },
+   {
+    "q": "How does RingCentral fit with VAF's other services?",
+    "a": "The post describes RingCentral as a cloud communications partner and says VAF expects cloud communications and Vsecure IT services to be its winning combination in 2023. It invites readers to ask about both services."
+   },
+   {
+    "q": "Is this ranking still current?",
+    "a": "The post is dated June 2023 and covers 2022 results. Partner rankings change every year, so buyers should ask VAF or RingCentral for the current partner standing before relying on this figure."
+   },
+   {
+    "q": "What does VAF say it plans next with RingCentral?",
+    "a": "The post says VAF has more experience with RingCentral and its offerings and is scaling its cloud communications business. It says it has high hopes for 2023 with a full year of sales activity, and jokes about aiming for number one."
+   }
+  ]
  },
  "everything-you-should-know-about-business-process-automation": {
   "tldr": [
@@ -5958,8 +6374,34 @@
   "skip": false
  },
  "mitel-customers-migrating-to-ucaas-are-embracing-ringcentral-mvp---so-can-you": {
-  "skip": true,
-  "reason": "Vendor-authored promotional piece by Mitel and RingCentral executives about their partnership anniversary, with unsourced time-bound claims (up to 75% faster migration, more than 50% of US partners, 110+ countries, thousands of migrations); includes a VAF quote. Not suitable for grounded evergreen FAQ."
+  "skip": false,
+  "tldr": [
+   "The post, written by Mitel and RingCentral executives, marks the partnership's first year offering Mitel customers a migration path to RingCentral MVP cloud communications.",
+   "It says certified Mitel 6900, 6800 and upcoming IP400 series phones can keep working with RingCentral MVP, helping customers protect existing equipment investments.",
+   "The authors claim joint migration tools cut migration time by up to 75 percent and say incentives were available for partners and customers."
+  ],
+  "faq": [
+   {
+    "q": "What is the Mitel and RingCentral partnership?",
+    "a": "The post says Mitel and RingCentral announced an exclusive partnership in November 2021 that gives Mitel customers a fast, economical migration path to RingCentral MVP, a UCaaS cloud communications service. The post marks the partnership's first anniversary."
+   },
+   {
+    "q": "Can Mitel customers keep their existing phones?",
+    "a": "The post says Mitel 6900 and 6800 series phones were certified on RingCentral MVP ahead of schedule, with IP400 series phones coming soon. It says this lets organizations keep using and get more value from existing Mitel equipment."
+   },
+   {
+    "q": "How much faster is the migration, according to the post?",
+    "a": "The post's authors claim exclusive migration tools and the joint migration path cut migration time by up to 75 percent compared to industry standards, based on migrations so far. It is a vendor claim from the post, not an independent measurement."
+   },
+   {
+    "q": "What is UCaaS?",
+    "a": "In the post, UCaaS means unified communications as a service, a cloud approach that brings voice, messaging, video and related tools onto one platform. The post presents RingCentral MVP as its single-app UCaaS offering for businesses leaving on-premise phone systems."
+   },
+   {
+    "q": "Why did one Mitel dealer move to RingCentral?",
+    "a": "The post includes a quote from a VAF executive saying VAF upgraded its own Mitel premise system to cloud communications. He says it was easy and consolidated voice, messaging, SMS, video and fax on one platform, helping the team work more efficiently."
+   }
+  ]
  },
  "what-is-the-best-approach-to-an-enterprise-content-management-system": {
   "tldr": [
@@ -6412,28 +6854,184 @@
   "skip": false
  },
  "recorded-presentation---why-great-it-matters": {
-  "skip": true,
-  "reason": "Thin (79 words) notice for a recorded presentation; no advice beyond a topic list."
+  "skip": false,
+  "tldr": [
+   "This 2020 post shares a recorded presentation from two VAF presenters on the case for what they call Great IT.",
+   "It says business leaders focus on continuity, performance, reputation and compliance, and that detection, prevention, recovery and productivity are key to IT success.",
+   "The post invites readers to listen and then take Van Ausdall's Technology Strength Assessment to set a course toward Great IT."
+  ],
+  "faq": [
+   {
+    "q": "What is the Why Great IT Matters presentation about?",
+    "a": "The post says it outlines the case for the elements critical to Great IT. Two VAF presenters explain why leaders focus on continuity, performance, reputation and compliance, and why detection, prevention, recovery and productivity matter."
+   },
+   {
+    "q": "Which categories do business leaders focus on, according to the post?",
+    "a": "The post names continuity, performance, reputation and compliance as the categories leaders focus on to stay on course. It frames them as the lens for judging whether a company's IT is doing its job."
+   },
+   {
+    "q": "What does the post say is important to ensuring success?",
+    "a": "The post says detection, prevention, recovery and productivity are important to ensuring success. It presents these as the capabilities that support the four leadership focus areas of continuity, performance, reputation and compliance."
+   },
+   {
+    "q": "Who is the recorded presentation for?",
+    "a": "The post is aimed at business leaders who want to set a course toward better IT. It says the presentation will help them understand what makes IT great and invites them to give it a listen."
+   },
+   {
+    "q": "What is the Technology Strength Assessment?",
+    "a": "The post closes by inviting readers to take Van Ausdall's Technology Strength Assessment. It gives no detail on the questions or scoring, but presents the assessment as the next step after listening to the presentation."
+   }
+  ]
  },
  "return-to-work-health-screening-essentials": {
-  "skip": true,
-  "reason": "Dated COVID-era product pitch (August 2020) with unverified certification claims (HIPAA, SOC1, SOC2) and a contact line; not evergreen."
+  "skip": false,
+  "tldr": [
+   "This 2020 post describes VAF's Return to Work Essentials, a cloud-hosted, touchless health screening solution for staff, visitors and clients reopening after COVID-19 closures.",
+   "Visitors scan a QR code with their own phone, answer health questions, and get a pass or fail screen, the post says.",
+   "It says the paper-free solution supports HIPAA-conscious record handling, uses an annual subscription with no capital investment, and can pair with a touchless temperature kiosk."
+  ],
+  "faq": [
+   {
+    "q": "What is a touchless health screening solution?",
+    "a": "The post describes it as a cloud-hosted way to screen staff, clients and visitors without paper or shared pens. People complete a health questionnaire on their own smartphone, and the system shows whether entry is approved or denied."
+   },
+   {
+    "q": "How does the screening work for visitors?",
+    "a": "The post says arriving visitors see a digital or printed QR code, scan it with their own device, and fill out a form with name, company and health questions about quarantine. A pass or fail screen then approves or denies entry."
+   },
+   {
+    "q": "What does the solution include?",
+    "a": "According to the post, it includes a paper-free daily screening webform, touchless visitor management, notification and tracking workflow, an annual subscription model, and a three-user digital archiving solution. It can also work with a touchless temperature kiosk and an optional liability waiver."
+   },
+   {
+    "q": "Why does the post stress protecting screening records?",
+    "a": "The post says business leaders must keep screening information, including temperature readings, confidential while following HIPAA guidelines. It argues against piles of paper files holding sensitive information and says a digital process frees office space and improves reporting."
+   },
+   {
+    "q": "Is this post current guidance?",
+    "a": "No. It was written in August 2020 for the COVID-19 reopening period. Treat the details as a snapshot of what VAF offered then, and contact VAF to ask whether a similar screening or visitor management solution is available now."
+   }
+  ]
  },
  "recorded-presentation---demystifying-zero-trust": {
-  "skip": true,
-  "reason": "Thin (82 words) notice for a recorded presentation; no advice beyond a topic teaser."
+  "skip": false,
+  "tldr": [
+   "This 2020 post shares a recorded web presentation in which two VAF presenters explain the Zero Trust security strategy many organizations are exploring.",
+   "It says the talk will make you rethink your network strategy as remote workers extend the traditional security perimeter.",
+   "The post invites readers to give the recording a listen and then take Van Ausdall's Technology Strength Assessment."
+  ],
+  "faq": [
+   {
+    "q": "What is Zero Trust?",
+    "a": "The post describes Zero Trust as a security strategy many organizations are now exploring. It does not define the model in detail, but presents the recorded presentation as a way to demystify it and rethink current network strategy."
+   },
+   {
+    "q": "Why does Zero Trust matter for remote workers?",
+    "a": "The post says the traditional network perimeter is extended more and more by remote workers. That makes organizations look for new ways to stay ahead of cyber crime, which is why the presentation covers Zero Trust."
+   },
+   {
+    "q": "What will the presentation cover?",
+    "a": "The post says it is a thought-provoking web presentation about the Zero Trust strategy. It is meant to get listeners thinking about their current network strategy and new ways to stay ahead of cyber crime."
+   },
+   {
+    "q": "Who is this recorded presentation for?",
+    "a": "It suits business and IT leaders weighing how to protect networks as more people work remotely. The post says the presenters are returning for another compelling web presentation, and invites anyone interested in Zero Trust to give it a listen."
+   },
+   {
+    "q": "What is the next step after watching?",
+    "a": "The post invites readers to take Van Ausdall's Technology Strength Assessment. It does not describe the assessment in detail, but offers it as a way to apply what they heard to their own technology."
+   }
+  ]
  },
  "the-current-state-of-the-covid-19-pandemic-in-indiana": {
-  "skip": true,
-  "reason": "Dated April 2020 pandemic news commentary with time-bound case counts and policy statements; not evergreen."
+  "skip": false,
+  "tldr": [
+   "This April 2020 commentary reviews the COVID-19 situation in Indiana at that time and argues the pandemic will permanently change how Hoosier businesses operate.",
+   "The author says technology adopted during stay-at-home orders, such as telemedicine, video collaboration and secure remote access, will remain in use afterward.",
+   "The post says VAF uses video and desktop sharing to consult with more clients per day, and offers remote security and remote office communications expertise."
+  ],
+  "faq": [
+   {
+    "q": "What is the main argument of this post?",
+    "a": "The post argues that technology adopted during the 2020 pandemic, from telemedicine to video collaboration and secure remote access, will become permanent. It says many Indiana businesses were already moving toward remote work, and the pandemic changed the speed of that move."
+   },
+   {
+    "q": "What does the author expect the pandemic to look like going forward?",
+    "a": "Quoting a science writer, the author expects a long game of whack-a-mole, with outbreaks controlled in different places at different times and surging back. He suggests businesses may open and close in part, and that strategies could become county by county."
+   },
+   {
+    "q": "How did remote tools change the author's own work?",
+    "a": "The author, a 28-year veteran of the company, says video collaboration and desktop sharing let him consult with 4 to 5 clients a day instead of 3 to 4. He cites saved travel time, especially for clients in northern or southern Indiana."
+   },
+   {
+    "q": "What remote services does VAF say it offers?",
+    "a": "The post says VAF is an essential business that provides critical services and is expert in remote security and remote office communications. It says customers are using secure remote access, videoconferencing and collaboration tools they previously left unused."
+   },
+   {
+    "q": "Are the case numbers in this post current?",
+    "a": "No. The post reports state and national COVID-19 figures and government decisions as of late April 2020. Those details are dated, so use the post for its perspective on remote work technology rather than as a source of current health data."
+   }
+  ]
  },
  "struggling-to-find-what-you-need-to-do-your-job-maybe-we-can-help": {
-  "skip": true,
-  "reason": "Dated April 2020 promotional letter with time-bound promotions through April 2020 and unverified setup-time claims."
+  "skip": false,
+  "tldr": [
+   "This April 2020 post argues cloud content management gives remote staff browser access to records anywhere, without the cost and risks of traditional VPN access.",
+   "The post says VPN access can be a security risk, requires large hardware investments and takes IT resources to maintain.",
+   "It says a cloud repository can be set up in 24 hours, and VAF's Document Conversion Center can scan paper files in days."
+  ],
+  "faq": [
+   {
+    "q": "What is cloud-based content management?",
+    "a": "The post describes it as a subscription service that makes day-to-day business records accessible from any modern browser, anywhere, in real time. It mentions use cases such as AP and AR processing, HR onboarding and contract management."
+   },
+   {
+    "q": "Why does the post say VPN access is not always the answer?",
+    "a": "The post says traditional VPN access to network locations and business software makes data reachable, but can be a security risk, usually needs large capital investment in hardware, and takes valuable IT resources to maintain. Cloud content management is presented as an alternative."
+   },
+   {
+    "q": "How quickly can a cloud repository be set up?",
+    "a": "The post says a cost-effective online repository can be set up in 24 hours, making it easier to move to a remote work program. It says employees can stay just as productive and collaborative with the solution."
+   },
+   {
+    "q": "What can be done with paper files locked in a file room?",
+    "a": "The post says VAF's Document Conversion Center can scan and upload records from a box, filing cabinet or room full of files in days rather than weeks. This puts legacy paper records into the same accessible system."
+   },
+   {
+    "q": "Are the promotions in this post still available?",
+    "a": "The post mentions promotions running through the end of April 2020, so those offers are expired. Contact VAF to ask about current pricing and options for cloud content management and document conversion."
+   }
+  ]
  },
  "across-the-nation-workers-are-taking-the-tape-off-their-webcam-due-to-another-virus": {
-  "skip": true,
-  "reason": "Dated March 2020 opinion piece tied to pandemic social distancing; personal anecdote with no actionable buyer guidance."
+  "skip": false,
+  "tldr": [
+   "This March 2020 opinion post encourages remote professionals to take the tape off their webcams and use video for work conversations during social distancing.",
+   "The author says phone calls lose smiles, frowns and signs of whether people are paying attention, which video helps restore.",
+   "He says Microsoft Teams Meet Now makes ad hoc video calls as easy as using a desk phone or smartphone."
+  ],
+  "faq": [
+   {
+    "q": "Why does the post suggest turning on your webcam?",
+    "a": "The post says phone and conference calls lose emotions like smiles and frowns, and make it hard to tell whether the audience is attentive or even present. Video restores that extra element of social interaction, which it calls especially needed during social distancing."
+   },
+   {
+    "q": "How can professionals use video more in daily work?",
+    "a": "The post suggests using video in remote sales conversations, interviews and everyday interactions with remote colleagues. It notes that younger people already use front-facing cameras and video apps to express emotions more richly than voice alone."
+   },
+   {
+    "q": "What is the Microsoft Teams Meet Now feature?",
+    "a": "The post says the author uses the Teams Meet Now feature for ad hoc video calls to co-workers. He calls it easier to use than his desk phone and as easy as using his iPhone."
+   },
+   {
+    "q": "Why do people cover their webcams?",
+    "a": "The post says many people add tape or a sliding lens cover to their laptop because of stories about hackers watching families through computers, doorbells or security cameras. It calls the cover a functional, inexpensive solution."
+   },
+   {
+    "q": "Is the advice in this post still relevant?",
+    "a": "The core idea, using video to communicate more richly with remote colleagues, still applies. The post is a personal opinion piece from March 2020, so treat its pandemic references as dated and its tool mentions as examples."
+   }
+  ]
  },
  "scan-documents-with-your-i-phone": {
   "tldr": [
@@ -6466,12 +7064,64 @@
   "skip": false
  },
  "audio-and-video-conferencing-for-at-home-workers": {
-  "skip": true,
-  "reason": "Dated March 2020 Microsoft Teams how-to that relies on superseded Office 365 plan names, participant limits and a user-license price; VAF should refresh before any FAQ use."
+  "skip": false,
+  "tldr": [
+   "This March 2020 how-to post explains that many Office 365 subscriptions include Microsoft Teams, a platform combining chat, video meetings, file storage and application integration.",
+   "It walks through signing in at teams.microsoft.com, opening Calendar, choosing New Meeting or Meet Now, and sending a meeting request.",
+   "Participants join with the meeting link, and the post says only the planner needs the Audio Conferencing add-on for a dial-in phone number."
+  ],
+  "faq": [
+   {
+    "q": "How do I schedule a Microsoft Teams meeting?",
+    "a": "The post says to sign in at teams.microsoft.com with your Office 365 account, choose Calendar from the right-side menu, then pick New Meeting to schedule or Meet Now to start immediately. Fill out the meeting form and click Send."
+   },
+   {
+    "q": "How do participants join a Teams meeting?",
+    "a": "The post says participants click the Join Microsoft Teams Meeting link in the meeting request. The meeting also appears in the planner's Outlook calendar, and recipients who accept see it in their calendars too."
+   },
+   {
+    "q": "Do I need to install an app to use Teams?",
+    "a": "No. The post says you can install the Teams app or simply use the browser, and that the differences are minimal. You need an Office 365 ID and password, a computer with internet, and a working microphone and speakers."
+   },
+   {
+    "q": "How can phone-only participants join?",
+    "a": "The post says the meeting planner needs the Audio Conferencing add-on to display a phone number, so landline or cell phone participants can dial in. Participants themselves do not need that subscription. Without it, meetings host computer audio and video only."
+   },
+   {
+    "q": "Are the license details in this post still accurate?",
+    "a": "Not necessarily. The post was written in March 2020 and describes plan names, participant limits and a user license price as they stood then. Check Microsoft's current plans before relying on those details."
+   }
+  ]
  },
  "the-solution-to-business-continuity-during-coronavirus-covid-19-spread": {
-  "skip": true,
-  "reason": "Thin (213 words) dated March 2020 pandemic service promotion with partner claims and a phone number; not evergreen."
+  "skip": false,
+  "tldr": [
+   "This March 2020 post says secure remote access technology lets organizations protect employee health and maintain operations at the same time during COVID-19.",
+   "VAF says its engineers can design custom solutions combining secure remote access, cloud and premise communications, cloud services, and disaster recovery and continuity planning.",
+   "The post says VAF works with partners including Fortinet, Microsoft, Mitel and 8x8, and invites readers to call and see its COVID-19 solutions page."
+  ],
+  "faq": [
+   {
+    "q": "How can a business keep operating while limiting COVID-19 spread?",
+    "a": "The post says secure remote access technology gives organizations a third option beyond choosing between employee health and ongoing operations. Staff can work remotely while critical business applications stay available, so both goals can be met together."
+   },
+   {
+    "q": "What does a remote business continuity solution include?",
+    "a": "The post lists secure remote access such as VPN and multi-factor authentication, cloud-based and premise-based communication platforms supporting remote users, cloud services such as Office 365 and Teams, and disaster recovery and business continuity planning."
+   },
+   {
+    "q": "Which technology partners does the post mention?",
+    "a": "The post says VAF works with partners including Fortinet, Microsoft, Mitel and 8x8, among others. It says these partners allow VAF's engineers to build custom continuity solutions from technology, internet services, planning and experience."
+   },
+   {
+    "q": "Why is multi-factor authentication part of remote access?",
+    "a": "The post lists multi-factor authentication alongside VPN as part of secure remote access. The idea is that people working outside the office still need protected access to business applications, with extra verification beyond a password."
+   },
+   {
+    "q": "Is this post still current?",
+    "a": "It reflects the early COVID-19 period in March 2020. The general idea of planning secure remote access and continuity still applies, but contact VAF directly for current solutions, partners and contact details."
+   }
+  ]
  },
  "managed-print-trends-that-you-cannot-afford-to-ignore-in-2020": {
   "tldr": [
