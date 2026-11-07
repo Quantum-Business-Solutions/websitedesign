@@ -161,7 +161,12 @@ def schema_html(page):
                "provider": {"@type": "Organization", "@id": "https://www.vanausdall.com/#organization", "name": "Van Ausdall & Farrar", "url": "https://www.vanausdall.com"},
                "areaServed": [{"@type": "City", "name": "Indianapolis"}, {"@type": "State", "name": "Indiana"}]}
         own += f'<script type="application/ld+json">{json.dumps(svc, ensure_ascii=False)}</script>'
-    return "{% raw %}" + (blocks + own).replace("&amp;", "&") + "{% endraw %}"   # JSON-LD is read as text, so an HTML entity would show up as the literal characters
+    text = (blocks + own).replace("&amp;", "&")
+    if page["file"] not in ("index.html", "about.html"):
+        # the Organization block lives on home and about only; elsewhere a reference to it must carry the name, because Google does not follow an @id to another page
+        stub = '{"@type": "Organization", "name": "Van Ausdall & Farrar", "url": "https://www.vanausdall.com"}'
+        text = text.replace('{"@id": "https://www.vanausdall.com/#organization"}', stub).replace('{"@id":"https://www.vanausdall.com/#organization"}', stub)
+    return "{% raw %}" + text + "{% endraw %}"   # JSON-LD is read as text, so an HTML entity would show up as the literal characters
 
 
 def crumbs_html(page):
