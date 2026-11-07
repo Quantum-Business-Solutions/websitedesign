@@ -58,7 +58,7 @@ def main():
     done = skipped = missing = fail = 0
     seen = set()
     for p in all_posts():
-        slug = re.sub(r"-+", "-", p["slug"].split("/", 1)[-1])
+        slug = re.sub(r"-+", "-", p["slug"].rsplit("/", 1)[-1])
         e = ENRICH.get(slug)
         if not e or e.get("skip") or (only and slug != only):
             continue
