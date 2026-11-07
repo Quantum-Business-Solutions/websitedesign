@@ -44,7 +44,7 @@ const fs = require('fs');
       if (info.overflowX) hit(2, label + ': horizontal overflow');
       if (info.brokenImgs) hit(1, label + ': ' + info.brokenImgs + ' broken images');
       if (info.h1 !== 1) hit(1, label + ': ' + info.h1 + ' h1');
-      if (info.wraps) hit(1, label === 'd' ? 'desktop: ' + info.wraps + ' headings wrap to 4+ lines' : null);
+      if (label === 'd' && info.wraps) hit(1, 'desktop: ' + info.wraps + ' headings wrap to 4+ lines');   // phones wrap long headings; that is not a defect
       if (label === 'd' && info.adjSame > 1) hit(1, info.adjSame + ' adjacent sections share a layout');
       if (label === 'd' && info.orphanCards) hit(1, 'card grid leaves a single orphan');
       if (info.emptyForm) hit(1, label + ': form did not render');

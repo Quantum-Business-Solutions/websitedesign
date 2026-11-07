@@ -11,6 +11,6 @@
 .vaf-br__card:hover .vaf-br__img img{transform:scale(1.05)}
 .vaf-br__body{padding:18px 20px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
 .vaf-br__body time{font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#2a71af}
-.vaf-br__body h3{margin:0;font-size:19px;line-height:1.25;color:#0f1e33}
+.vaf-br__body h3{margin:0;font-size:19px;line-height:1.25;color:#0f1e33;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .vaf-br__body p{margin:0;font-size:15px;line-height:1.5;color:#52647c}
 @media(max-width:900px){.vaf-br__grid{grid-template-columns:1fr}}

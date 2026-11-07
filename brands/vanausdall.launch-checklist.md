@@ -55,7 +55,7 @@ Owner key: **VAF** = Brian Courtney and the VAF team, **QBS** = Quantum Business
 
 - [ ] Identify DNS owner and registrar. Lower TTL to 300 seconds one day ahead.
 - [ ] Connect the production domain in HubSpot, set primary, confirm SSL.
-- [ ] 301 redirect list (`vanausdall.redirects.csv`, 218 rows: every old page, seven retired pages, 47 blog slugs that lost a double hyphen) loaded in HubSpot and spot-checked. Remove self-redirect rows. Custom 404 page checked.
+- [ ] 301 redirect list (`vanausdall.redirects.csv`, 203 rules: every old page, seven retired pages, 47 blog slugs that lost a double hyphen; self-redirects already removed) loaded in HubSpot and spot-checked. Custom 404 page checked.
 - [ ] Remove noindex from every page and post. Confirm robots.txt allows crawling.
 - [ ] Submit sitemap to Google Search Console and Bing Webmaster Tools.
 - [ ] Analytics and conversion events on: forms, calls, directions clicks, guide downloads.
