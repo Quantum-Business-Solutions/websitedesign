@@ -88,6 +88,7 @@ Re-skinning rewrites twelve CSS custom properties in one block — see `process/
 | `themes/architecture.md` | **What the nine should become** — proven on the live Revolution build. |
 | `verticals/office-technology.md` | **Layer 2** — copier dealers and managed print. Six of ten clients. |
 | `process/OPERATOR.md` | **Hand this to whoever is building.** Self-contained checklist + the five traps. |
+| `process/build-lessons.md` | What the VAF build taught us: what to settle in week 1, build rules, editing and handover, client process. |
 | `process/outbound-mockups.md` | **Speculative mockups as outbound.** Free to render changes the funnel. |
 | `process/agents.md` | **The agent roster** — 30 agents in 8 squads: role, expertise, which step, what gates it. |
 | `process/clientcommand.md` | **The delivery chain** — catalogue → proposal → plan → page → asset → ticket. |
