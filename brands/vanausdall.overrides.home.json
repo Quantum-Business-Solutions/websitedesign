@@ -948,7 +948,7 @@
         "type": "related",
         "id": "casecards",
         "heading": "Results on the record",
-        "intro": "Three of VAF's published case studies. Each one names the customer and the number.",
+        "intro": "Three of VAF's published case studies. Each one describes the customer and the number.",
         "items": [
           [
             "Education",
