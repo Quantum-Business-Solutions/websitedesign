@@ -10,5 +10,8 @@
     "PAGE"
   ],
   "label": "VAF Product showcase (poster and link)",
-  "is_available_for_new_content": true
+  "is_available_for_new_content": true,
+  "categories": [
+    "media"
+  ]
 }

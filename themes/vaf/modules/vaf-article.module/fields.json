@@ -2,11 +2,12 @@
   {
     "id": "anchor",
     "name": "anchor",
-    "label": "Anchor id (optional)",
+    "label": "Jump-link name (optional)",
     "required": false,
     "locked": false,
     "type": "text",
-    "default": ""
+    "default": "",
+    "help_text": "Optional. A short word with no spaces, such as pricing. Other links can then jump straight to this section by pointing at #pricing."
   },
   {
     "id": "home_label",
@@ -48,7 +49,8 @@
       },
       "open_in_new_tab": false,
       "no_follow": false
-    }
+    },
+    "help_text": "Pick a page on this site, or paste a web address."
   },
   {
     "id": "category",
@@ -136,7 +138,8 @@
       "src": "",
       "alt": "",
       "loading": "lazy"
-    }
+    },
+    "help_text": "Landscape images work best, at least 1200 pixels wide. After you choose one, fill in the alt text: a short description that is read aloud to people who cannot see the image and helps search."
   },
   {
     "id": "toc_title",
@@ -163,11 +166,12 @@
       {
         "id": "chapter_anchor",
         "name": "chapter_anchor",
-        "label": "Chapter anchor id",
+        "label": "Jump-link name (optional)",
         "required": false,
         "locked": false,
         "type": "text",
-        "default": "chapter-1"
+        "default": "chapter-1",
+        "help_text": "Optional. A short word with no spaces, such as pricing. Other links can then jump straight to this section by pointing at #pricing."
       },
       {
         "id": "chapter_title",
@@ -245,7 +249,8 @@
       },
       "open_in_new_tab": false,
       "no_follow": false
-    }
+    },
+    "help_text": "Pick a page on this site, or paste a web address."
   },
   {
     "id": "schema",

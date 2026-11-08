@@ -218,7 +218,7 @@
   {
     "id": "anchor",
     "name": "anchor",
-    "label": "Section anchor (optional)",
+    "label": "Jump-link name (optional)",
     "required": false,
     "locked": false,
     "allow_new_line": false,
@@ -236,7 +236,8 @@
     "display": "toggle",
     "type": "boolean",
     "display_width": null,
-    "default": false
+    "default": false,
+    "help_text": "Turn on to give this section a tinted background so neighbouring sections alternate between light and white."
   },
   {
     "id": "padding",

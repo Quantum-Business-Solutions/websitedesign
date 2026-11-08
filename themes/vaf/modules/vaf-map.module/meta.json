@@ -10,5 +10,8 @@
     "PAGE"
   ],
   "label": "VAF Indiana office map",
-  "is_available_for_new_content": true
+  "is_available_for_new_content": true,
+  "categories": [
+    "body_content"
+  ]
 }

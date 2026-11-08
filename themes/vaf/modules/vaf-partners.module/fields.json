@@ -24,13 +24,14 @@
   {
     "id": "anchor",
     "name": "anchor",
-    "label": "Anchor id (optional)",
+    "label": "Jump-link name (optional)",
     "required": false,
     "locked": false,
     "allow_new_line": false,
     "type": "text",
     "display_width": null,
-    "default": ""
+    "default": "",
+    "help_text": "Optional. A short word with no spaces, such as pricing. Other links can then jump straight to this section by pointing at #pricing."
   },
   {
     "id": "alt_bg",
@@ -41,7 +42,8 @@
     "display": "checkbox",
     "type": "boolean",
     "display_width": null,
-    "default": false
+    "default": false,
+    "help_text": "Turn on to give this section a tinted background so neighbouring sections alternate between light and white."
   },
   {
     "id": "caption",
@@ -114,7 +116,8 @@
         "default": {
           "src": "",
           "alt": ""
-        }
+        },
+        "help_text": "Landscape images work best, at least 1200 pixels wide. After you choose one, fill in the alt text: a short description that is read aloud to people who cannot see the image and helps search."
       }
     ],
     "tab": "CONTENT",

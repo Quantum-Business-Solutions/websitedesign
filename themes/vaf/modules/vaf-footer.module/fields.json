@@ -18,7 +18,8 @@
       "width": 600,
       "height": 119
     },
-    "responsive": false
+    "responsive": false,
+    "help_text": "Landscape images work best, at least 1200 pixels wide. After you choose one, fill in the alt text: a short description that is read aloud to people who cannot see the image and helps search."
   },
   {
     "id": "tagline",
@@ -111,7 +112,8 @@
           "CONTENT",
           "BLOG",
           "EMAIL_ADDRESS"
-        ]
+        ],
+        "help_text": "Pick a page on this site, or paste a web address."
       }
     ],
     "occurrence": {
@@ -595,7 +597,8 @@
               "CONTENT",
               "BLOG",
               "EMAIL_ADDRESS"
-            ]
+            ],
+            "help_text": "Pick a page on this site, or paste a web address."
           }
         ],
         "occurrence": {
@@ -681,7 +684,8 @@
           "CONTENT",
           "BLOG",
           "EMAIL_ADDRESS"
-        ]
+        ],
+        "help_text": "Pick a page on this site, or paste a web address."
       }
     ],
     "occurrence": {

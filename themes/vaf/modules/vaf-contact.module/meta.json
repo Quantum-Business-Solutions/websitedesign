@@ -10,5 +10,8 @@
     "PAGE"
   ],
   "label": "VAF Contact",
-  "is_available_for_new_content": true
+  "is_available_for_new_content": true,
+  "categories": [
+    "forms_and_buttons"
+  ]
 }

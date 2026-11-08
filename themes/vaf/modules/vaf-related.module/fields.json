@@ -91,7 +91,8 @@
           },
           "open_in_new_tab": false,
           "no_follow": false
-        }
+        },
+        "help_text": "Pick a page on this site, or paste a web address."
       },
       {
         "id": "rel_image",
@@ -108,7 +109,8 @@
           "src": "",
           "alt": "",
           "loading": "lazy"
-        }
+        },
+        "help_text": "Landscape images work best, at least 1200 pixels wide. After you choose one, fill in the alt text: a short description that is read aloud to people who cannot see the image and helps search."
       }
     ],
     "tab": "CONTENT",
@@ -190,7 +192,7 @@
   {
     "id": "anchor",
     "name": "anchor",
-    "label": "Section anchor (optional)",
+    "label": "Jump-link name (optional)",
     "required": false,
     "locked": false,
     "allow_new_line": false,
@@ -208,7 +210,8 @@
     "display": "toggle",
     "type": "boolean",
     "display_width": null,
-    "default": false
+    "default": false,
+    "help_text": "Turn on to give this section a tinted background so neighbouring sections alternate between light and white."
   },
   {
     "id": "padding",

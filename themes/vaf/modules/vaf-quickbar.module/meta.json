@@ -10,5 +10,8 @@
     "LANDING_PAGE",
     "BLOG_LISTING",
     "BLOG_POST"
+  ],
+  "categories": [
+    "body_content"
   ]
 }

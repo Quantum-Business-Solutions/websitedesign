@@ -25,7 +25,8 @@
       "CONTENT",
       "BLOG",
       "EMAIL_ADDRESS"
-    ]
+    ],
+    "help_text": "Pick a page on this site, or paste a web address."
   },
   {
     "id": "secondary_label",
@@ -53,7 +54,8 @@
       "CONTENT",
       "BLOG",
       "EMAIL_ADDRESS"
-    ]
+    ],
+    "help_text": "Pick a page on this site, or paste a web address."
   },
   {
     "id": "launcher_label",
@@ -158,7 +160,8 @@
           "CONTENT",
           "BLOG",
           "EMAIL_ADDRESS"
-        ]
+        ],
+        "help_text": "Pick a page on this site, or paste a web address."
       }
     ],
     "occurrence": {

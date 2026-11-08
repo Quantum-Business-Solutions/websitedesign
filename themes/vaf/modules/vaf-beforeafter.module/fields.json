@@ -2,13 +2,14 @@
   {
     "id": "anchor",
     "name": "anchor",
-    "label": "Anchor id (lets links jump here, e.g. story)",
+    "label": "Jump-link name (optional)",
     "required": false,
     "locked": false,
     "allow_new_line": false,
     "type": "text",
     "display_width": null,
-    "default": "ba"
+    "default": "ba",
+    "help_text": "Optional. A short word with no spaces, such as pricing. Other links can then jump straight to this section by pointing at #pricing."
   },
   {
     "id": "alt_bg",
@@ -19,7 +20,8 @@
     "display": "checkbox",
     "type": "boolean",
     "display_width": null,
-    "default": false
+    "default": false,
+    "help_text": "Turn on to give this section a tinted background so neighbouring sections alternate between light and white."
   },
   {
     "id": "eyebrow",

@@ -120,6 +120,7 @@
       },
       "open_in_new_tab": false,
       "no_follow": false
-    }
+    },
+    "help_text": "Pick a page on this site, or paste a web address."
   }
 ]

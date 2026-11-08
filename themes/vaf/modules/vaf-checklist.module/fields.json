@@ -2,11 +2,12 @@
   {
     "id": "anchor",
     "name": "anchor",
-    "label": "Anchor id (optional, for #links)",
+    "label": "Jump-link name (optional)",
     "required": false,
     "locked": false,
     "type": "text",
-    "default": ""
+    "default": "",
+    "help_text": "Optional. A short word with no spaces, such as pricing. Other links can then jump straight to this section by pointing at #pricing."
   },
   {
     "id": "alt_bg",
@@ -16,7 +17,8 @@
     "locked": false,
     "type": "boolean",
     "display": "toggle",
-    "default": false
+    "default": false,
+    "help_text": "Turn on to give this section a tinted background so neighbouring sections alternate between light and white."
   },
   {
     "id": "eyebrow",
@@ -194,6 +196,7 @@
       },
       "open_in_new_tab": false,
       "no_follow": false
-    }
+    },
+    "help_text": "Pick a page on this site, or paste a web address."
   }
 ]

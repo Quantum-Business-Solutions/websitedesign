@@ -10,5 +10,8 @@
     "PAGE"
   ],
   "label": "VAF Print Cost Calculator",
-  "is_available_for_new_content": true
+  "is_available_for_new_content": true,
+  "categories": [
+    "functionality"
+  ]
 }

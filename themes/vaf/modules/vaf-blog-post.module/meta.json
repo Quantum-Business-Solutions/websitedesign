@@ -10,5 +10,8 @@
     "BLOG_POST"
   ],
   "label": "VAF Blog Post",
-  "is_available_for_new_content": true
+  "is_available_for_new_content": true,
+  "categories": [
+    "blog"
+  ]
 }

@@ -2,13 +2,14 @@
   {
     "id": "anchor",
     "name": "anchor",
-    "label": "Anchor id (optional)",
+    "label": "Jump-link name (optional)",
     "required": false,
     "locked": false,
     "allow_new_line": false,
     "type": "text",
     "display_width": null,
-    "default": ""
+    "default": "",
+    "help_text": "Optional. A short word with no spaces, such as pricing. Other links can then jump straight to this section by pointing at #pricing."
   },
   {
     "id": "eyebrow",
@@ -102,7 +103,8 @@
           },
           "open_in_new_tab": false,
           "no_follow": false
-        }
+        },
+        "help_text": "Pick a page on this site, or paste a web address."
       }
     ],
     "tab": "CONTENT",

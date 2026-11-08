@@ -10,5 +10,8 @@
     "PAGE"
   ],
   "label": "VAF Case Study Grid (logos, metrics, filter)",
-  "is_available_for_new_content": true
+  "is_available_for_new_content": true,
+  "categories": [
+    "body_content"
+  ]
 }
