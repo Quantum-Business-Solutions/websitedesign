@@ -69,7 +69,7 @@ def main():
             break
         try:
             body = tldr_html(e["tldr"]) + p["postBody"] + faq_html(e["faq"])
-            api("PATCH", f"/cms/v3/blogs/posts/{p['id']}/draft", {"postBody": body})
+            api("PATCH", f"/cms/v3/blogs/posts/{p['id']}/draft", {"postBody": body, "postSummary": p.get("metaDescription") or p.get("postSummary") or ""})   # keep the summary clean: HubSpot would build it from the body, TL;DR box included
             api("POST", f"/cms/v3/blogs/posts/{p['id']}/draft/push-live")
             done += 1; print("  enriched", slug, flush=True)
         except Exception as ex:

@@ -11,7 +11,7 @@
 .vd--split .q-h2,.vd--list .q-h2{max-width:20ch}
 .vd__copy{margin-top:22px;font-size:18px;line-height:1.7;color:var(--fg-muted);max-width:62ch}
 .vd__copy p{margin:0 0 1em}.vd__copy p:last-child{margin-bottom:0}
-.vd__copy a{color:var(--accent-ink);text-decoration:underline;text-underline-offset:3px}
+.vd__copy a:not(.q-btn){color:var(--accent-ink);text-decoration:underline;text-underline-offset:3px}
 .vd__copy--lead{margin-top:0;font-size:19px;line-height:1.75;color:var(--fg);max-width:68ch}
 .vd--split .vd__side{padding-top:6px}
 .vd__list{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:16px}
