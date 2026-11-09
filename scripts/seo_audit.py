@@ -36,7 +36,7 @@ from lxml import html as LH
 CHECKS = [
     # key, label, weight
     ("title_len", "Title length", 5),
-    ("city", "City in title", 8),
+    ("topic", "Title names the product or category", 8),
     ("meta_len", "Meta length", 5),
     ("h1", "One H1", 5),
     ("h2", "Two or more H2s", 5),
@@ -46,7 +46,7 @@ CHECKS = [
     ("links", "10+ internal links", 5),
     ("faq", "FAQ schema", 12),
     ("service", "Service or Article schema", 10),
-    ("local", "LocalBusiness schema", 8),
+    ("org", "Organization has address, ContactPoint and sameAs", 8),
     ("review", "Review schema", 4),
     ("canonical", "Canonical", 4),
     ("og", "Branded share image", 2),
@@ -56,7 +56,7 @@ assert sum(w for _, _, w in CHECKS) == 100
 
 FIXES = {
     "title_len": "Rewrite the title to 30 to 60 characters",
-    "city": "Add the city or service area to the title",
+    "topic": "Name the product or category in the title",
     "meta_len": "Write a meta description of 70 to 160 characters",
     "h1": "Give the page exactly one H1",
     "h2": "Break the copy into two or more H2 sections",
@@ -66,7 +66,7 @@ FIXES = {
     "links": "Link to ten or more pages on the site",
     "faq": "Add a five-question FAQ marked up as FAQPage",
     "service": "Add Service schema (or Article schema on a post)",
-    "local": "Add LocalBusiness schema with the office address",
+    "org": "Give the Organization an address, a ContactPoint and sameAs profiles",
     "review": "Add Review or AggregateRating schema from real Google reviews",
     "canonical": "Set a self-referencing canonical",
     "og": "Set a branded share image (og:image)",
@@ -182,9 +182,22 @@ def audit_html(raw, url, domain, cities, is_build=False, site_root=None, page_ty
     has_video = bool(doc.xpath("//video|//iframe[contains(@src,'youtube') or contains(@src,'vimeo') or contains(@src,'wistia')]"))
     lang = (doc.get("lang") or "").strip()
 
-    def city_in(t):
-        tl = t.lower()
-        return any(re.search(r"(?<![a-z])" + re.escape(c.lower()) + r"(?![a-z])", tl) for c in cities)
+    def topic_in(t):
+        """A title segment shares a significant word with the H1 or the URL path (the page's product or category)."""
+        def sig(x):
+            return {w[:5] for w in re.findall(r"[a-z0-9]{4,}", x.lower())}
+        slug = urlparse(url).path if url else ""
+        ref = sig(h1s[0] if h1s else "") | sig(slug.replace("-", " ").replace("/", " "))
+        segs = [x.strip() for x in re.split(r"\s[|\u2013\u2014-]\s", t) if x.strip()]
+        if any(sig(x) & ref for x in segs[:1] or segs):
+            return True
+        return is_home and bool(segs) and len(segs[0].split()) >= 3
+
+    def org_full(nodes):
+        for n in nodes:
+            if _tset(n) & ORG_T and n.get("address") and n.get("contactPoint") and n.get("sameAs"):
+                return True
+        return False
 
     if is_build:
         canonical_self = bool(can)
@@ -203,7 +216,7 @@ def audit_html(raw, url, domain, cities, is_build=False, site_root=None, page_ty
     breadcrumb = "BreadcrumbList" in types
     checks = {
         "title_len": 30 <= len(title) <= 60,
-        "city": city_in(title),
+        "topic": topic_in(title),
         "meta_len": 70 <= len(meta) <= 160,
         "h1": len(h1s) == 1,
         "h2": len(h2s) >= 2,
@@ -213,7 +226,7 @@ def audit_html(raw, url, domain, cities, is_build=False, site_root=None, page_ty
         "links": internal >= 10,
         "faq": faq,
         "service": service or article,
-        "local": local,
+        "org": org_full(_schema_nodes(doc)),
         "review": review,
         "canonical": canonical_self,
         "og": bool(og) and not stock_og,
@@ -222,10 +235,10 @@ def audit_html(raw, url, domain, cities, is_build=False, site_root=None, page_ty
     score = sum(w for k, _, w in CHECKS if checks[k])
     grade = "A" if score >= 85 else "B" if score >= 70 else "C" if score >= 55 else "D" if score >= 40 else "F"
     values = {
-        "title_len": f"{len(title)} chars", "city": "yes" if checks["city"] else "no", "meta_len": f"{len(meta)} chars" if meta else "none",
+        "title_len": f"{len(title)} chars", "topic": "yes" if checks["topic"] else "no", "meta_len": f"{len(meta)} chars" if meta else "none",
         "h1": str(len(h1s)), "h2": str(len(h2s)), "question": str(questions), "words": f"{words:,}", "alt": f"{no_alt} missing",
         "links": str(internal), "faq": "yes" if faq else ("shown, no schema" if faq_visible else "no"), "service": ("Article" if article else "yes") if checks["service"] else "no",
-        "local": "yes" if local else "no", "review": "yes" if review else "no", "canonical": "yes" if canonical_self else ("other" if can else "no"),
+        "org": "yes" if checks["org"] else "no", "review": "yes" if review else "no", "canonical": "yes" if canonical_self else ("other" if can else "no"),
         "og": ("stock" if stock_og else "yes") if og else "no", "form": "yes" if checks["form"] else "no",
     }
     failed = [k for k, _, _ in CHECKS if not checks[k]]
@@ -573,6 +586,39 @@ def build(a):
     print(json.dumps(out["summary"], indent=1))
 
 
+def rescore_legacy(audit):
+    """Audits saved before the rubric went national carry 'city' and 'local' checks. Re-derive the two
+    replacements ('topic', 'org') from the stored fields so the old audit is scored on the same rubric."""
+    changed = False
+    for p in audit.get("pages", []):
+        ck = p.get("checks", {})
+        if "topic" in ck:
+            continue
+        changed = True
+        def sig(x):
+            return {w[:5] for w in re.findall(r"[a-z0-9]{4,}", x.lower())}
+        path = urlparse(p.get("url", "")).path
+        ref = sig(p.get("h1", "")) | sig(path.replace("-", " ").replace("/", " "))
+        segs = [x.strip() for x in re.split(r"\s[|\u2013\u2014-]\s", p.get("title", "")) if x.strip()]
+        ck["topic"] = any(sig(x) & ref for x in segs[:1] or segs) or (path in ("", "/") and bool(segs) and len(segs[0].split()) >= 3)
+        ec = (p.get("entity") or {}).get("checks", {})
+        ck["org"] = bool(ec.get("sameas") and ec.get("contact") and ec.get("area"))
+        ck.pop("city", None); ck.pop("local", None)
+        p["checks"] = {k: ck[k] for k, _, _ in CHECKS}
+        p["values"] = {k: v for k, v in p.get("values", {}).items() if k not in ("city", "local")}
+        p["values"]["topic"] = "yes" if ck["topic"] else "no"
+        p["values"]["org"] = "yes" if ck["org"] else "no"
+        p["score"] = sum(w for k, _, w in CHECKS if ck[k])
+        sc = p["score"]
+        p["grade"] = "A" if sc >= 85 else "B" if sc >= 70 else "C" if sc >= 55 else "D" if sc >= 40 else "F"
+        p["failed"] = [k for k, _, _ in CHECKS if not ck[k]]
+        p["recommendations"] = [FIXES[k] for k in p["failed"]]
+        p["issues"] = len(p["failed"])
+    if changed:
+        audit["summary"] = summarize(audit["pages"])
+    return audit
+
+
 def summarize(pages):
     n = len(pages) or 1
     s = {
@@ -584,10 +630,11 @@ def summarize(pages):
         "faq": sum(1 for p in pages if p["faq"]),
         "service_or_article": sum(1 for p in pages if p["service"] or p["article"]),
         "local": sum(1 for p in pages if p["local"]),
+        "org_full": sum(1 for p in pages if p["checks"]["org"]),
         "review": sum(1 for p in pages if p["review"]),
         "question": sum(1 for p in pages if p["question_headings"] > 0),
         "under_300": sum(1 for p in pages if p["words"] < 300),
-        "city_title": sum(1 for p in pages if p["checks"]["city"]),
+        "topic_title": sum(1 for p in pages if p["checks"]["topic"]),
         "breadcrumb": sum(1 for p in pages if p["breadcrumb"]),
         "no_alt_pages": sum(1 for p in pages if p["images_no_alt"] > 0),
         "avg_words": round(sum(p["words"] for p in pages) / n),
@@ -612,7 +659,7 @@ def summarize(pages):
 
 
 def to_csv(audit, path):
-    cols = ["url", "type", "title", "title_len", "city", "meta", "meta_len", "h1", "h1_count", "h2_count", "h3_count", "question_headings", "words", "images", "images_no_alt",
+    cols = ["url", "type", "title", "title_len", "topic", "meta", "meta_len", "h1", "h1_count", "h2_count", "h3_count", "question_headings", "words", "images", "images_no_alt",
             "internal_links", "external_links", "canonical", "canonical_self", "og_image", "stock_og", "faq", "faq_visible", "entity_score", "entity_grade", "entity_missing", "schema_nodes", "service", "local", "review", "article", "breadcrumb", "schema",
             "noindex", "has_form", "has_video", "tel_link", "score", "grade", "recommendations", "issues"]
     buf = io.StringIO()
@@ -621,8 +668,8 @@ def to_csv(audit, path):
     for p in audit["pages"]:
         row = []
         for c in cols:
-            if c == "city":
-                row.append(p["checks"]["city"])
+            if c == "topic":
+                row.append(p["checks"]["topic"])
             elif c == "schema":
                 row.append(", ".join(p["schema"]))
             elif c == "recommendations":

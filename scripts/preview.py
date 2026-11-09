@@ -37,7 +37,14 @@ import themefix  # noqa: E402
 from preview_hub import hub  # noqa: E402
 import preview_sections  # noqa: E402
 import preview_modules  # noqa: E402
-import preview_motion  # noqa: E402
+import preview_motion
+import preview_notice  # noqa: E402
+import preview_lift  # noqa: E402
+import preview_cd  # noqa: E402
+import preview_pop2  # noqa: E402
+import preview_pop1  # noqa: E402
+import preview_polish  # noqa: E402
+import preview_pop3  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DASH_HITS: list[str] = []
@@ -518,7 +525,7 @@ MOBILE_LAST_CSS = r"""
 # ----------------------------------------------------------------------------- sections
 
 def sec_open(s: dict, extra_cls: str = "") -> str:
-    cls = "q-section" + (" q-bg-alt" if s.get("alt") else "") + (" " + extra_cls if extra_cls else "")
+    cls = "q-section" + (" q-bg-alt" if s.get("alt") else "") + (" lf-dark" if s.get("dark") else "") + (" pv-dark" if s.get("stage") else "") + (" " + s["cls"] if s.get("cls") else "") + (" " + extra_cls if extra_cls else "")
     idattr = f' id="{E(s["id"])}"' if s.get("id") else ""
     return f'<section class="{cls}"{idattr}>'
 
@@ -640,9 +647,9 @@ def r_detail(s, ctx):
         fields = "".join(f'<label for="{E(s["id"])}-{i}">{E(f)}</label><input id="{E(s["id"])}-{i}" type="text">' for i, f in enumerate(s["form"]["fields"]))
         right = f'<form class="q-form" onsubmit="return false">{fields}<input type="submit" class="hs-button" value="{E(s["form"]["submit"])}"></form>'
     else:
-        right = f'<ul>{bullets}</ul>'
+        right = f'<ul>{bullets}</ul>' if bullets else ""   # no empty <ul></ul> beside a text-only block
         bullets = ""
-    return f'''{sec_open(s)} <div class="q-container pv-detail{" pv-flip" if s.get("flip") else ""}"><div><div class="q-eyebrow">{E(s.get("eyebrow"))}</div><h2 class="q-h2">{E(s["heading"])}</h2><div class="q-lead">{E(s.get("body"))}</div>{f"<ul>{bullets}</ul>" if bullets else ""}</div><div>{right}</div></div></section>'''
+    return f'''{sec_open(s)} <div class="q-container pv-detail{" pv-flip" if s.get("flip") else ""}"><div><div class="q-eyebrow">{E(s.get("eyebrow"))}</div><h2 class="q-h2">{E(s["heading"])}</h2><div class="q-lead">{E(s.get("body"))}</div>{f"<ul>{bullets}</ul>" if bullets else ""}{(f'<p style="margin-top:26px"><a class="q-btn" href="{E(ctx["L"](s["cta"]["href"]))}">{E(s["cta"]["label"])}</a></p>') if s.get("cta") else ""}</div><div>{right}</div></div></section>'''
 
 
 def r_listing(s, ctx):
@@ -680,6 +687,11 @@ RENDER = {"hero": r_hero, "partners": r_partners, "stats": r_stats, "services": 
 RENDER.update(preview_sections.RENDER_EXTRA)
 RENDER.update(preview_modules.RENDER_EXTRA2)
 RENDER.update(preview_motion.RENDER_EXTRA3)
+RENDER.update(preview_lift.RENDER_EXTRA4)
+RENDER.update(preview_cd.RENDER_CD)
+RENDER.update(preview_pop2.RENDER_POP2)
+RENDER.update(preview_pop1.RENDER_POP1)
+RENDER.update(preview_pop3.RENDER_POP3)
 
 
 # ------------------------------------------------------------------------------ chrome
@@ -752,12 +764,13 @@ def header(content, ctx):
 <div class="q-container q-header-in">
   <a href="{E(L("index.html"))}" class="q-header-logo" aria-label="{E(content["client"])} home">{logo}</a>
   <nav class="q-nav" aria-label="Main navigation">{"".join(nav)}{cta}</nav>
-  <details class="q-mnav"><summary aria-label="Open menu"><span></span><span></span><span></span></summary><div class="q-mnav-panel">{mnav_s}{mcta}</div></details>
+  {preview_polish.search_button()}
+  <details class="q-mnav"><summary aria-label="Open menu"><span></span><span></span><span></span></summary><div class="q-mnav-panel">{preview_polish.search_button(True)}{mnav_s}{mcta}</div></details>
 </div></header>
 <div id="q-content" tabindex="-1">'''
 
 
-def crumbs(page, ctx):
+def crumbs(page, ctx, site=""):
     c = page.get("crumbs")
     if not c:
         return ""
@@ -765,7 +778,10 @@ def crumbs(page, ctx):
     for i, (l, h) in enumerate(c):
         last = i == len(c) - 1
         items.append(f'<li>{"<span aria-current=page>" + E(l) + "</span>" if last else f"<a href={chr(34)}{E(ctx[chr(76)](h))}{chr(34)}>{E(l)}</a>"}</li>')
-    ld = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": l} for i, (l, h) in enumerate(c)]}
+    def _u(h):
+        h = h.replace(".html", "")
+        return f"{site}/" if h == "index" else f"{site}/{h}"
+    ld = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": l, "item": _u(h)} for i, (l, h) in enumerate(c)]}
     return f'<nav class="pv-crumbs" aria-label="Breadcrumb"><div class="q-container"><ol>{"".join(items)}</ol></div></nav><script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'
 
 
@@ -798,8 +814,9 @@ def switcher(themes, this_theme, page_file, recommend):
         return f'<a href="{up}{slug_of(t)}/{page_file}"{cur}>{E(label)}</a>'
     links = "".join(link(t) for t in themes)
     cur_name = this_theme.replace("Quantum ", "")
-    return (f'<nav class="pv-switch" aria-label="Preview directions"><span class="lbl">Direction</span>{links}<a href="{up}index.html">All three</a></nav>'
-            f'<details class="pv-switch-m"><summary aria-label="Change direction">Direction: {E(cur_name)} &#9662;</summary><nav class="menu" aria-label="Preview directions">{links}<a href="{up}index.html">All three</a></nav></details>'
+    _ic = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>'
+    return (f'<nav class="pv-switch" aria-label="Preview directions"><button type="button" class="pv-sw-tab" aria-expanded="false" aria-label="Directions, now {E(cur_name)}">{_ic}<span>Directions</span></button><div class="pv-sw-list">{links}<a href="{up}index.html">All three</a></div></nav>'
+            f'<details class="pv-switch-m"><summary aria-label="Change direction, now {E(cur_name)}">{_ic}Directions</summary><nav class="menu" aria-label="Preview directions">{links}<a href="{up}index.html">All three</a></nav></details>'
             '<script>if(top!==self){document.documentElement.classList.add("embedded")}</script>')
 
 
@@ -839,6 +856,8 @@ def normalize_meta(page, content):
             if city_only:
                 return opts
             return opts + [f"{h} | {client}", f"{h} | {short}"]
+        if sch.get("title_short_brand"):
+            return [f"{h} | {short}"]
         return [f"{h} | {client}", f"{h} | {short}"]
 
     def fit(h, city_only=False):
@@ -868,6 +887,9 @@ def normalize_meta(page, content):
 
     # the service area in the title outranks the full brand name: try city-bearing forms first
     out = shorten(head, city_only=True) if city_tag else None
+    if not out and sch.get("title_no_cut"):
+        # never cut a title mid-phrase: use the full head with the short brand, and let the content carry a shorter page title
+        out = fit(head) or f"{head} | {short}"
     if not out:
         out = shorten(head, city_only=False)
     if not out:
@@ -892,6 +914,15 @@ def normalize_meta(page, content):
         cand = f"{desc} {tail}" if desc else tail
         desc, notes = cand[:160].rstrip(), notes + ["meta"]
     return out, desc, notes
+
+
+def page_image(page):
+    """The first section image on the page (its hero image), as a relative asset path, or ''."""
+    for sec in page.get("sections", []):
+        im = sec.get("image")
+        if isinstance(im, str) and im.startswith("assets/"):
+            return im
+    return ""
 
 
 def schema_blocks(content, page, base, dslug, title=None, description=None):
@@ -924,16 +955,21 @@ def schema_blocks(content, page, base, dslug, title=None, description=None):
     if sch.get("telephone"):
         org["telephone"] = sch["telephone"]
         org["contactPoint"] = {"@type": "ContactPoint", "contactType": "Sales", "telephone": sch["telephone"], "areaServed": "US", "availableLanguage": "English"}
+    if sch.get("contact_points"):
+        # [[contactType, telephone], ...]: one ContactPoint per published line
+        org["contactPoint"] = [{"@type": "ContactPoint", "contactType": ct, "telephone": tel, "areaServed": "US", "availableLanguage": "English"} for ct, tel in sch["contact_points"]]
     local = sch.get("local") or []
     if local:
         hq = local[0]
         org["address"] = {"@type": "PostalAddress", "streetAddress": hq.get("street"), "addressLocality": hq.get("city"), "addressRegion": hq.get("region"), "postalCode": hq.get("postal"), "addressCountry": hq.get("country", "US")}
+        if sch.get("founding_location"):
+            org["foundingLocation"] = {"@type": "Place", "name": sch["founding_location"], "address": dict(org["address"])}
         if len(local) > 1:
             org["subOrganization"] = [{"@id": f"{site}/#local-{l['slug']}"} for l in local[1:]]
     blocks.append(org)
     if page["file"] == "index.html":
         blocks.append({"@context": "https://schema.org", "@type": "WebSite", "@id": f"{site}/#website", "url": site, "name": sch["org_name"], "publisher": {"@id": f"{site}/#organization"}, "inLanguage": "en-US"})
-    if local and "LocalBusiness" not in own:
+    if local and "LocalBusiness" not in own and sch.get("local_business", True):
         hq = local[0]
         lb = {"@context": "https://schema.org", "@type": sch.get("local_type", "LocalBusiness"), "@id": f"{site}/#local-{hq['slug']}", "name": hq.get("name") or sch["org_name"], "url": site,
               "parentOrganization": {"@id": f"{site}/#organization"},
@@ -950,12 +986,14 @@ def schema_blocks(content, page, base, dslug, title=None, description=None):
         blocks.append(lb)
     if page["file"] != "index.html":
         name = title.split("|")[0].strip()
-        items = [{"@type": "ListItem", "position": 1, "name": "Home", "item": f"{site}/"}]
-        parts = page["file"].split("/")
-        if len(parts) > 1:
-            items.append({"@type": "ListItem", "position": 2, "name": parts[0].replace("-", " ").title(), "item": f"{site}/{parts[0]}"})
-        items.append({"@type": "ListItem", "position": len(items) + 1, "name": name, "item": f"{site}/{page['file'].replace('.html', '')}"})
-        blocks.append({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": items})
+        if not page.get("crumbs"):   # pages with crumbs get their BreadcrumbList from crumbs(): one list per page
+            items = [{"@type": "ListItem", "position": 1, "name": "Home", "item": f"{site}/"}]
+            parts = page["file"].split("/")
+            if len(parts) > 1:
+                parent = (sch.get("crumb_parent_urls") or {}).get(parts[0], parts[0])
+                items.append({"@type": "ListItem", "position": 2, "name": parts[0].replace("-", " ").title(), "item": f"{site}/{parent}"})
+            items.append({"@type": "ListItem", "position": len(items) + 1, "name": name, "item": f"{site}/{page['file'].replace('.html', '')}"})
+            blocks.append({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": items})
         page_url = f"{site}/{page['file'].replace('.html', '')}"
         svc_globs = sch.get("service_globs", ["services/*", "industries/*", "products/*", "brands/*"])
         post_globs = sch.get("post_globs", ["blog/*", "guides/*", "resources/*"])
@@ -966,9 +1004,13 @@ def schema_blocks(content, page, base, dslug, title=None, description=None):
                 svc["areaServed"] = sch["area_served"]
             blocks.append(svc)
         elif any(fnmatch.fnmatch(page["file"], g) for g in post_globs) and not (own & {"BlogPosting", "Article", "NewsArticle"}):
-            post = {"@context": "https://schema.org", "@type": "BlogPosting", "@id": f"{page_url}#article", "headline": name, "description": description, "url": page_url,
-                    "mainEntityOfPage": page_url, "author": {"@id": f"{site}/#person-{(sch.get('people') or [{}])[0].get('slug')}"} if sch.get("people") else {"@id": f"{site}/#organization"},
-                    "publisher": {"@id": f"{site}/#organization"}, "inLanguage": "en-US"}
+            is_news = any(fnmatch.fnmatch(page["file"], g) for g in sch.get("news_globs", []))
+            post = {"@context": "https://schema.org", "@type": "NewsArticle" if is_news else "BlogPosting", "@id": f"{page_url}#article", "headline": name, "description": description, "url": page_url,
+                    "mainEntityOfPage": {"@type": "WebPage", "@id": page_url}, "author": {"@id": f"{site}/#person-{(sch.get('people') or [{}])[0].get('slug')}"} if sch.get("people") else {"@id": f"{site}/#organization"},
+                    "publisher": {"@type": "Organization", "@id": f"{site}/#organization", "name": sch["org_name"], **({"logo": {"@type": "ImageObject", "url": sch["org_logo"]}} if sch.get("org_logo") else {})}, "inLanguage": "en-US"}
+            _img = page_image(page)
+            if _img:
+                post["image"] = f"{site}/{_img}"
             for k, v in (("datePublished", page.get("date")), ("dateModified", page.get("modified") or page.get("date")), ("articleSection", page.get("section"))):
                 if v:
                     post[k] = v
@@ -1064,8 +1106,12 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
         body = re.sub(r'<a href="mailto:"[^>]*></a>', "", body)
     canonical = f"{base}/{dslug}/" if page["file"] == "index.html" else f"{base}/{dslug}/{page['file']}"
     og_img = f"{base}/assets/hero-og.jpg"
+    _pi = page_image(page) if (content.get("schema") or {}).get("og_per_page") else ""
+    if _pi and os.path.exists(os.path.join(out_dir, _pi)):
+        og_img = f"{base}/{_pi}"
     p_title, p_desc, _notes = normalize_meta(page, content)
     tokcss = "\n  ".join(f"{k}:{v};" for k, v in tok.items())
+    preview_polish.collect(dslug, page, p_title, p_desc, body)
     return f'''<!doctype html>
 <html lang="en" data-dir="{E(dslug)}">
 <head>
@@ -1100,28 +1146,41 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
 {preview_sections.EXTRA_CSS}
 {preview_modules.EXTRA_CSS2}
 {preview_motion.EXTRA_CSS3}
+{preview_notice.NOTICE_CSS}
+{preview_lift.EXTRA_CSS4}
+{preview_cd.CD_CSS}
+{preview_pop2.POP2_CSS}
+{preview_pop1.POP1_CSS}
 /* ===== direction system: {E(dslug)} ===== */
 {DIRECTION_CSS.get(dslug, "")}
 /* ===== client heading setting (brand.heading): one headline weight and tracking across the directions ===== */
 {(lambda h: f".q-h1,.q-h2{{font-weight:{h.get('weight', 800)};letter-spacing:{h.get('tracking', '-.03em')};font-style:normal}}" if h else "")(b.get("heading"))}
 /* ===== mobile, after the direction system so it wins ===== */
 {MOBILE_LAST_CSS}
+{preview_polish.POLISH_CSS}
+{preview_pop3.POP3_CSS}
 </style>
 {schema_blocks(content, page, base, dslug, p_title, p_desc)}
 {"".join(f'<script type="application/ld+json">{json.dumps(blk, ensure_ascii=False)}</script>' for blk in page.get("schema", []))}
 </head>
 <body>
 {header(content, ctx)}
-{crumbs(page, ctx)}<main id="main">
+{crumbs(page, ctx, (content.get("schema") or {}).get("org_url") or base)}<main id="main">
 {body}
 </main>
 {footer(content, ctx)}
 {preview_sections.RENDER_EXTRA["sticky"](b.get("sticky", {}), ctx) if b.get("sticky") else ""}
 {preview_modules._launcher(b["launcher"], ctx) if b.get("launcher") else ""}
 {switcher(themes, theme, page["file"], recommend)}
+{preview_polish.search_html(ctx)}
 <script>{PREVIEW_JS}</script>
 <script>{preview_modules.DEPTH_JS}</script>
 <script>{preview_motion.MOTION_JS}</script>
+<script>{preview_pop1.POP1_JS}</script>
+<script>{preview_notice.NOTICE_JS}</script>
+<script>{preview_polish.POLISH_JS}</script>
+<script>{preview_pop3.POP3_JS}</script>
+<script>{preview_pop2.POP2_JS}</script>
 </body>
 </html>
 '''
@@ -1139,6 +1198,7 @@ def main(argv=None):
     a = p.parse_args(argv)
 
     content = json.load(open(a.content, encoding="utf-8"))
+    preview_pop2.augment(content)
     # optional sidecar brands/<slug>.video.json: {"src","webm","poster"} plus {"pages": {"index.html": {...}}}
     _slug = os.path.basename(a.content).split(".content.")[0]
     _vp = os.path.join(os.path.dirname(os.path.abspath(a.content)), f"{_slug}.video.json")
@@ -1160,6 +1220,7 @@ def main(argv=None):
             doc = render_page(content, page, t, css, tok, themes, a.recommend, base, a.out, slug_of(t))
             dest = os.path.join(d, page["file"]); os.makedirs(os.path.dirname(dest), exist_ok=True)
             open(dest, "w", encoding="utf-8").write(doc); written += 1
+        preview_polish.write_index(a.out, slug_of(t))
         print(f"  {t:20} {len(content['pages'])} pages  accent {tok['--q-gold']} ink {tok['--accent-ink']} cta-fg {tok['--cta-fg']} chrome {tok['--chrome-bg']}")
     import preview_design  # noqa: E402
     import preview_seo  # noqa: E402

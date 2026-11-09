@@ -125,6 +125,12 @@ def hub(content, themes, recommend, base, roles, standard, client_tokens, out_di
         std += (f'<a class="alt" href="{_e(h_)}" target="_blank" rel="noopener"><h3 class="h4">{_e(t_)}</h3><p>{_e(d_)}</p><span>Open</span></a>')
     phone_href = re.sub(r"[^0-9+]", "", qc.get("phone", ""))
 
+    # the bar is always dark here, so use the light logo variant when the build ships one
+    hub_logo = b["logo"]
+    _lt = re.sub(r"(\.\w+)$", r"-light\1", hub_logo)
+    if out_dir and os.path.exists(os.path.join(out_dir, _lt)):
+        hub_logo = _lt
+
     css = f"""
 :root{{--bg:#ffffff;--bg-alt:#f6f7f6;--fg:#1e2420;--muted:#546358;--border:#e2e6e3;--accent:{b["accent"]};--ink:{ink};--chrome:{b.get("chrome_bg", "#111")}}}
 @media (prefers-color-scheme:dark){{:root:not([data-theme="light"]){{--bg:#0e1412;--bg-alt:#141b18;--fg:#e6ebe7;--muted:#9cab9f;--border:#243328;--ink:{b["accent"]}}}}}
@@ -191,16 +197,16 @@ select{{max-width:100%}}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
 <style>{css}{seo["css"] if seo else ""}</style></head><body data-first-dir="{_e(seo["first_dir"]) if seo else ""}">
 <a class="skip" href="#main">Skip to content</a>
-<header class="top"><div class="wrap"><img src="{_e(b["logo"])}" alt="{_e(content["client"])}" height="36" width="99"><nav aria-label="Sections"><a href="#three">The three</a>{'<a href="#pick">Our pick</a>' if recommend else ''}<a href="#compare">Compare</a><a href="#search">Search</a>{seo["nav"] if seo else ""}<a href="#heard">Fixed</a><a href="#confirm">To confirm</a><a href="#every">Every page</a><a href="#plan">The plan</a><a href="#turn">Your turn</a>{ds_link}</nav></div></header>
+<header class="top"><div class="wrap"><img src="{_e(hub_logo)}" alt="{_e(content["client"])}" height="36" width="99"><nav aria-label="Sections"><a href="#three">The three</a>{'<a href="#pick">Our pick</a>' if recommend else ''}<a href="#compare">Compare</a><a href="#search">Search</a>{seo["nav"] if seo else ""}<a href="#heard">Fixed</a><a href="#confirm">To confirm</a><a href="#every">Every page</a><a href="#plan">The plan</a><a href="#turn">Your turn</a>{ds_link}</nav></div></header>
 <main id="main">
 <section><div class="wrap"><p class="eyebrow">Quantum Business Solutions for {_e(content["client"])}</p><h1>Same site. Three ways to design it.</h1>
-<p class="lead">Each one is the whole site, not a home page and two mockups: every page is built and live in all three. The words are the same in all three and the composition is not, so the decision in front of you is about direction, not copy. Open any one, then use the switcher pinned to the bottom of the page to flip between all three without losing your place.</p></div></section>
+<p class="lead">Each one is the whole site, not a home page and two mockups: every page is built and live in all three. The words are the same in all three and the composition is not, so the decision in front of you is about direction, not copy. Open any one, then use the Directions tab at the edge of the page to flip between all three without losing your place.</p></div></section>
 <section id="three"><div class="wrap">{three_head}<div class="dirs">{"".join(specs)}</div>{pick_html}</div></section>
 <section id="compare"><div class="wrap"><p class="eyebrow">Side by side</p><h2>The same page, all three at once</h2><div class="cmp-bar"><label for="cmp">Pick a page</label><select id="cmp">{page_opts}</select></div><p class="cmp-note">Side by side needs a wider screen. On a phone, open each direction from the cards above.</p><div class="frames">{frames}</div></div></section>
 {search_html}
 <section id="heard"><div class="wrap"><div class="two"><div><p class="eyebrow">What we are treating as fixed</p><h2>What your site and brand profile already say</h2><p class="lead" style="margin-bottom:12px">{_e(heard_intro)}</p><ul>{heard}</ul></div><div><p class="eyebrow">What we found</p><h2>And what we would do about it</h2><ul>{found}</ul></div></div></div></section>
 <section id="confirm"><div class="wrap"><p class="eyebrow">To confirm with you</p><h2>Ten things we wrote as a draft, not a fact</h2><p class="lead">Each of these appears on the pages. None is built until you confirm or correct it.</p><ul class="confirm">{confirm}</ul></div></section>
-<section id="every"><div class="wrap"><p class="eyebrow">Every page</p><h2>{len(pages)} pages, built and live in all three</h2><p class="lead">One row per page; the three links open it in each direction.</p><div class="every">{every}</div></div></section>
+<section id="every"><div class="wrap"><p class="eyebrow">Every page</p><h2>{len(pages)} pages, built and live in all three</h2><p class="lead">One row per page; the three links open it in each direction. The preview covers {len(pages)} pages; the remaining product pages generate from one table at build.</p><div class="every">{every}</div></div></section>
 <section id="plan"><div class="wrap"><p class="eyebrow">The plan</p><h2>From a choice to a live site</h2><div class="plan">{plan}</div>{('<div class="alts single" style="margin-top:28px">' + std + '</div>') if std else ""}</div></section>
 <section id="turn"><div class="wrap"><div class="turn"><p class="eyebrow">Your turn</p><h2>Tell us which one, and what you would change</h2><p class="lead" style="margin-bottom:18px">Reply with the direction and anything on any page you would change. Nothing is locked until you say so.</p><a class="btn" href="mailto:{_e(qc.get("email", ""))}?subject={_e(content["client"])}%20website%20direction">Email {_e(qc.get("name", "us"))}</a><a class="btn" style="background:transparent;border:1px solid var(--accent);color:var(--ink)" href="tel:{_e(phone_href)}">Call {_e(qc.get("phone", ""))}</a></div></div></section>
 </main>

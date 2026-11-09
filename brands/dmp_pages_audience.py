@@ -90,10 +90,12 @@ PAGES.append({
     "schema": [],
     "sections": [
         _hero("For architects, engineers and consultants",
-              "Seven written specs and <em>73 CAD drawings</em>.",
+              "Spec DMP in minutes: <em>written specs, CAD and a bill of materials.</em>",
               "Everything needed to put a DMP system into a specification: spec sheets for each product, design on a digital floor plan, and Inside Sales to help with system design.",
               {"label": "Open A&E support", "href": "support/ae-support.html"}, {"label": "Find a system", "href": "find-a-system.html"},
               IMG + "tab-spec-1200.jpg", "A DMP product specification and a control panel", 1200, 900),
+        {"type": "badges", "label": "Listings", "items": [["UL 2610", "JamAlert, commercial premises security alarm units and systems"], ["UL 864 10th Edition", "XF6 fire panel, Listed for wireless"], ["UL Classified", "SCS-VR virtual receiver software"], ["SOC 2 Type II", "Dealer Admin and Virtual Keypad, every year"]],
+         "note": "Listings as stated on DMP product pages. DMP compliance to confirm they are current before publishing."},
         {"type": "cards", "alt": True, "eyebrow": "What you can start from", "heading": "Four places a specification begins",
          "items": [
              ["Spec sheets", "One product, its specifications and ordering details, for example the XR550 Spec Sheet or the VUE 5MP Cameras Spec Sheet."],
@@ -112,9 +114,14 @@ PAGES.append({
          "body": "Spec sheets, installation and programming guides, quick start guides, technical updates, battery calculators and CAD drawings are in one library. Inside Sales can point you to the right one if you are not sure which you need.",
          "bullets": ["Sixteen product categories, plus international variants", "File types: PDF, XLSX, PPTX and ZIP", "Documents are listed on each product page"],
          "image": IMG + "tab-intrusion-1200.jpg", "image_alt": "A DMP control panel circuit board", "image_w": 1200, "image_h": 900},
+        {"type": "detail", "stage": True, "eyebrow": "The spec pack", "heading": "Download the spec pack from the library.",
+         "body": "Spec sheets, A&E specifications, installation guides and CAD drawings sit in one documentation library, filtered by product category and document type.",
+         "bullets": ["Written specs for the XF6, DualComNF, SCS-1R, XT30/XT50, XR150/XR550, CX-702 and XTL Series", "73 CAD drawings in six groups", "Inside Sales can point you to the right document"],
+         "image": IMG + "tab-spec-1200.jpg", "image_alt": "A tablet showing a floor plan with DMP devices", "image_w": 1200, "image_h": 900,
+         "cta": {"label": "Download the spec pack", "href": "support/documentation.html"}},
         {"type": "services", "heading": "Start from the system or the building",
          "intro": "Each opens a page with the products, specifications and documents for that part of a system.",
-         "items": [["Product finder", "Choose the building and what it needs, and see matching products.", "find-a-system.html"],
+         "items": [["Product finder", "Choose a product type and a system, and see matching products.", "find-a-system.html"],
                    ["Products by system", "Intrusion, access control, fire, video, communicators, wireless, panels and software.", "services.html"],
                    ["Technology partners", "Six partners with verified DMP integrations.", "partners.html"]]},
         {"type": "faq", "heading": "Questions from specifiers", "items": [
@@ -135,7 +142,7 @@ PAGES.append({
         _hero("For building owners and managers",
               "Buy through a dealer. <em>Choose a good one.</em>",
               "We make the panels, keypads, communicators and software, and authorized dealers design, install and service them. Start with the building and a short list of questions.",
-              {"label": "Find a dealer", "href": "contact.html"}, {"label": "Find a system", "href": "find-a-system.html"},
+              {"label": "Find a dealer", "href": "find-a-dealer.html"}, {"label": "Find a system", "href": "find-a-system.html"},
               IMG + "tab-owner-1200.jpg", "A person checking a phone as they leave a building", 1200, 900),
         {"type": "cards", "alt": True, "eyebrow": "How it works", "heading": "Four steps from the first call to a system you control",
          "items": [
@@ -229,9 +236,16 @@ PAGES.append({
     ]})
 
 # ================================================================================================ find-a-system
-BUILDINGS = [("commercial", "Commercial"), ("financial-institutions", "Financial institutions"), ("retail", "Retail"), ("government", "Government"),
-             ("industrial-manufacturing", "Industrial and manufacturing"), ("education", "Education"), ("healthcare-wellness", "Healthcare and wellness"),
-             ("multi-tenant", "Multi-tenant"), ("religious-institutions", "Religious institutions"), ("storage-units", "Storage units"), ("residential", "Residential")]
+# The building-type filter was removed: nearly every product tags every building, so it narrowed nothing. The first filter is now the product type.
+TYPES = [("panels", "Control panels"), ("keypads", "Keypads"), ("access", "Credentials and access"), ("comm", "Communicators and receivers"),
+         ("sensors", "Detectors and wireless devices"), ("cameras", "Cameras and gateways"), ("software", "Apps and software")]
+PRODUCT_TYPE = {}
+for _k, _ss in {"panels": "xt75 xt50 xtlplus xtltouch xr150 xr550 xr650 tmsentry xf6 xr150fc-2 xr550fc-2", "keypads": "7-inch-touchscreen-keypad graphic-touchscreen 9800-series 7000-series aqualite-series icon-series",
+                "access": "digital-key-credential mobile-credential dmp-bluetooth-reader-and-mobile-credential 734n x1 entre-lite entre-enterprise",
+                "comm": "cellcom dualcom 263lte 263lte-firstnet 265lte scs-vr-virtual-receiver-software scs-1r jamalert", "sensors": "850 630f 2w-blx 1100xh 1101 1128 1142 1164 1100t",
+                "cameras": "xv-gateways-with-alarmvision v-6022wc vplus-7061-fe vplus-7121-fe vplus-7081-bdv vue-video-doorbell", "software": "virtual-keypad dealer-admin remote-link"}.items():
+    for _s in _ss.split():
+        PRODUCT_TYPE[_s] = _k
 NEEDS = [("intrusion", "Intrusion"), ("access", "Access control"), ("fire", "Fire"), ("video", "Video"), ("wireless", "Wireless"),
          ("mobile", "Mobile and cloud"), ("comm", "Communicators")]
 # Needs follow each product's own page text: category, blurb and the system line in services. Conservative on purpose.
@@ -252,33 +266,31 @@ PRODUCT_NEEDS = {
     "vplus-7081-bdv": ["video"], "vue-video-doorbell": ["video"],
     "1100xh": ["wireless"], "1101": ["wireless"], "1128": ["wireless", "intrusion"], "1142": ["wireless", "intrusion"], "1164": ["wireless", "fire"], "1100t": ["wireless"],
 }
-# Only narrowing with a real basis: TMSentry is developed for teller machine security, which the financial institutions page features.
-PRODUCT_BUILDINGS = {"tmsentry": ["financial-institutions"]}
-ALL_B = [k for k, _ in BUILDINGS]
-_missing = [s for s in _prod.PRODUCTS if s not in PRODUCT_NEEDS]
+_missing = [s for s in _prod.PRODUCTS if s not in PRODUCT_NEEDS or s not in PRODUCT_TYPE]
 assert not _missing, _missing
-FINDER_PRODUCTS = [{"name": p["name"], "img": p["image"], "href": f"products/{s}.html", "blurb": p["blurb"],
-                    "buildings": PRODUCT_BUILDINGS.get(s, ALL_B), "needs": PRODUCT_NEEDS[s]} for s, p in _prod.PRODUCTS.items()]
+FINDER_PRODUCTS = [{"name": p["name"] + (" (coming soon)" if s == "xr650" else ""), "img": p["image"], "href": f"products/{s}.html", "blurb": p["blurb"],
+                    "buildings": [PRODUCT_TYPE[s]], "needs": PRODUCT_NEEDS[s]} for s, p in _prod.PRODUCTS.items()]
 FLAGSHIP = ["xr550", "xt75", "x1", "digital-key-credential", "vplus-7081-bdv", "virtual-keypad", "dealer-admin", "xf6"]
 SHOWCASE = [[_prod.PRODUCTS[s]["name"], _prod.PRODUCTS[s]["image"], f"products/{s}.html", _prod.PRODUCTS[s]["blurb"]] for s in FLAGSHIP]
 
 PAGES.append({
     "file": "find-a-system.html",
     "title": title("Find a system"),
-    "description": desc("Pick the building and what it needs, and see matching DMP products: intrusion, access control, fire, video, wireless, mobile and communicators."),
+    "description": desc("Pick a product type and a system, and see matching DMP products: intrusion, access control, fire, video, wireless, mobile and communicators."),
     "crumbs": [["Home", "index.html"], ["Find a system", "find-a-system.html"]],
     "schema": [itemlist("DMP products", [[f["name"], f["href"]] for f in FINDER_PRODUCTS])],
     "sections": [
         _hero("Find a system",
-              f"{len(FINDER_PRODUCTS)} products, <em>sorted by what the building needs</em>.",
-              "Intrusion, access control, fire, video, wireless, mobile and communicators from one manufacturer. Choose a building type, choose a need, and open the product page.",
+              "Find the right DMP product <em>in two clicks.</em>",
+              "Intrusion, access control, fire, video, wireless, mobile and communicators from one manufacturer. Choose a product type, choose a system, and open the product page.",
               {"label": "Jump to the finder", "href": "#finder"}, {"label": "Products by system", "href": "services.html"},
               IMG + "tab-intrusion-1200.jpg", "A DMP control panel circuit board", 1200, 900),
         {"type": "showcase3d", "id": "flagships", "eyebrow": "Flagship products", "heading": "Eight products that show what one platform does.",
          "intro": "From the XR550 with 96 doors to a credential that lives in a phone's wallet.", "items": SHOWCASE},
-        {"type": "finder", "id": "finder", "eyebrow": "Product finder", "heading": "Choose a building, then a need.",
-         "intro": "DMP products are not building-specific, so every product is available for every building type. The needs narrow the list.",
-         "buildings": [{"key": k, "label": l} for k, l in BUILDINGS], "needs": [{"key": k, "label": l} for k, l in NEEDS],
+        {"type": "finder", "id": "finder", "eyebrow": "Product finder", "heading": "Choose a product type, then a system.",
+         "building_label": "Product type", "need_label": "System",
+         "intro": "Each filter narrows the list. The industry pages say which products we feature for each kind of building.",
+         "buildings": [{"key": k, "label": l} for k, l in TYPES], "needs": [{"key": k, "label": l} for k, l in NEEDS],
          "products": FINDER_PRODUCTS},
         {"type": "stats3d", "id": "facts", "items": [["50", "Years making security systems"], ["SOC 2 Type II", "Examined every year"], ["14", "Product categories"], ["USA", "Manufactured with U.S. and global components"]]},
         {"type": "resources", "eyebrow": "By system", "heading": "Prefer to browse a whole system?", "items": SYSTEM_RES},
@@ -337,14 +349,42 @@ PAGES.append({
         LEADFORM,
     ]})
 
+# ================================================================================================ find-a-dealer
+PAGES.append({
+    "file": "find-a-dealer.html",
+    "title": title("Find an authorized dealer"),
+    "description": desc("DMP sells only through authorized dealers. Tell us where the building is and what kind of building it is, and a person at DMP will reply."),
+    "crumbs": [["Home", "index.html"], ["For building owners", "for-building-owners.html"], ["Find a dealer", "find-a-dealer.html"]],
+    "schema": [],
+    "sections": [
+        _hero("Find a dealer",
+              "Find an authorized DMP dealer <em>near you</em>.",
+              "DMP sells only through authorized dealers and distributors. Tell us where the building is and what it needs, and a person at DMP will reply.",
+              {"label": "Call Inside Sales 877-757-4367", "href": "tel:+18777574367"}, {"label": "Sales directory", "href": "support/sales-directory.html"},
+              IMG + "tab-owner-1200.jpg", "A person checking a phone as they leave a building", 1200, 900),
+        {"type": "spotlight", "id": "how", "eyebrow": "How it works", "heading": "From your address to an authorized dealer.",
+         "body": "We make the panels, keypads, communicators and software. Authorized dealers design, install and service the systems, so the right first step is a conversation with DMP about where you are.",
+         "needs": ["Tell us: where the building is, and what kind of building it is", "A person replies: Inside Sales connects you with the regional sales manager for your territory", "Meet a dealer: an authorized dealer designs, installs and services the system"],
+         "image": IMG + "tab-owner-1200.jpg", "image_alt": "A person checking a phone as they leave a building", "tag": "Buy through a dealer", "cta": {"label": "Tell us your location", "href": "#start"}},
+        {"type": "tiles", "id": "paths", "eyebrow": "Prefer to look it up yourself?", "heading": "Three other ways in.", "items": [
+            ["Sales directory", "Regional sales managers by territory, with titles and regions.", "support/sales-directory.html", IMG + "hq-exterior-1200.jpg"],
+            ["Call Inside Sales", "877-757-4367, 8 a.m. to 5 p.m. Central. A person will point you to the right dealer.", "contact.html", IMG + "tab-mobile-1200.jpg"],
+            ["Outside the U.S.", "Authorized distributors in the United Kingdom, Mexico, South Africa and more.", "international.html", IMG + "banner-allin-1200.jpg"]]},
+        {**LEADFORM, "id": "start", "heading": "Tell us your location and building",
+         "body": "Say where the building is and what kind of building it is, and a person at DMP will reply."},
+        {"type": "faq", "heading": "Questions about finding a dealer", "items": cf("who", "person", "where")},
+    ]})
+
 TO_CONFIRM += [
     "Dealer tiers and pricing: the dealer pages we read do not describe tiers, discounts or prices, so none are written. DMP to confirm whether tiers exist and whether any can be shown.",
     "The single sign-in is a proposal. How Marketing Central (portal.assets.site) and the Buy site (buy.dmp.com) authenticate today is unconfirmed; the network diagram on the dealer portal page is labelled as a proposed design for DMP IT to validate.",
     "Dealer CRM record: which system is the source of truth for dealers, and whether DMP wants role-based tiles, is unconfirmed.",
     "Only the Order button links to the Buy site. Marketing Central login and sign-up are external to the preview and are not linked.",
-    "Product finder tags: needs were inferred conservatively from each product's own page text. Every product shows for every building, except TMSentry (financial institutions, because it is developed for teller machine security). DMP to confirm tags and whether any building narrowing is wanted.",
+    "Product finder tags: systems were inferred conservatively from each product's own page text, and the product type (panel, keypad, credential, communicator, detector, camera, software) from its name and category. The building-type filter was removed because every product fits every building. DMP to confirm the tags.",
     "The 8 flagship products in the showcase (XR550, XT75, X1, Digital Key, VUE Plus 8MP bullet, Virtual Keypad, Dealer Admin, XF6) are our selection. DMP to confirm the lineup. The XR650 is left out because it is marked coming soon.",
     "Stats: 50 years (founded 1975; fifty years in business reported for 2025), SOC 2 Type II, 14 product categories and 'manufactured in the USA with U.S. and global components' come from existing site copy. Confirm the 14 count against the current product catalog.",
+    "Find a dealer: the page and its form are a placeholder for a real dealer locator. No window for a reply is stated because DMP's pages state none. DMP to confirm who answers the form, how fast, and whether a locator is wanted.",
+    "Specifier page: the new headline says 'in minutes'. DMP to confirm that claim, and DMP compliance to sign off the Listings strip (UL 2610, UL 864 10th Edition, UL Classified) before publishing.",
     "Finding a dealer: no public dealer locator exists on the pages we read. The page routes owners to Inside Sales and the contact form. DMP to confirm that is how owners should be handled, and whether a locator is wanted.",
     "Specifier page: the free System Surveyor dealer tier and 'no certification required' are taken from the partner page. UL 864 10th Edition and UL Classified claims are taken from the XF6 and SCS-VR product pages. DMP to confirm they are current.",
     "The building owner questions to ask a dealer are general buying advice, not DMP claims. DMP to approve the wording, especially the questions on monitoring and changing dealers.",

@@ -27,10 +27,10 @@ E = lambda s: html.escape(str(s if s is not None else ""), quote=True)  # noqa: 
 SEV = {"Critical": "#b42318", "High": "#c4320a", "Medium": "#b54708", "Low": "#5b616b"}
 GRADE = {"A": "#1b7f4b", "B": "#3b7d3a", "C": "#b54708", "D": "#c4320a", "F": "#b42318"}
 DONE = {
-    "title_len": "Title cut to 60 characters or fewer", "city": "City added to the title", "meta_len": "Meta description rewritten to length",
+    "title_len": "Title cut to 60 characters or fewer", "topic": "Title names the product or category", "meta_len": "Meta description rewritten to length",
     "h1": "One H1 on the page", "h2": "Copy broken into H2 sections", "question": "A question heading added", "words": "Copy deepened past 300 words",
     "alt": "Alt text on every image", "links": "Ten or more internal links", "faq": "FAQ marked up as FAQPage", "service": "Service or Article schema added",
-    "local": "LocalBusiness schema added", "review": "Review schema waits for the Google review program", "canonical": "Self-referencing canonical",
+    "org": "Organization has address, ContactPoint and sameAs", "review": "Review schema waits for the Google review program", "canonical": "Self-referencing canonical",
     "og": "Branded share image", "form": "Form or tap-to-call number added",
 }
 
@@ -286,7 +286,7 @@ def _load(content_path):
     aud_p = content_path.replace(".content.json", ".audit.json")
     if not (os.path.exists(seo_p) and os.path.exists(aud_p)):
         return None, None
-    return json.load(open(seo_p, encoding="utf-8")), json.load(open(aud_p, encoding="utf-8"))
+    return json.load(open(seo_p, encoding="utf-8")), A.rescore_legacy(json.load(open(aud_p, encoding="utf-8")))
 
 
 def _tokens(s):
@@ -296,12 +296,16 @@ def _tokens(s):
 def map_pages(live, build_files, seo):
     """old path -> (new file, kind). kind is rebuilt, merged or retired."""
     over = seo.get("redirect_overrides", {})
+    table = seo.get("redirect_table", {})   # content-level map: old path -> [new file, kind], kind rebuilt, merged, retired or gone (410)
     retire = [re.compile(r) for r in seo.get("retire", [])]
     rules = [(re.compile(rx), tgt) for rx, tgt in seo.get("redirect_rules", [])]
     stems = {f: _tokens(f) for f in build_files}
     out = {}
     for p in live:
         path = p["path"]
+        if path in table:
+            out[path] = (table[path][0], table[path][1])
+            continue
         if path in over:
             out[path] = (over[path], "rebuilt" if over[path] not in ("index.html", "blog.html") else "merged")
             continue
@@ -385,10 +389,10 @@ def _cmp_rows(today, build, n_today, n_build):
         ("Pages scoring D or F", frac(today["grade_d_f"], n_today), frac(build["grade_d_f"], n_build)),
         ("Pages with FAQPage schema", frac(today["faq"], n_today), frac(build["faq"], n_build)),
         ("Pages with Service or Article schema", frac(today["service_or_article"], n_today), frac(build["service_or_article"], n_build)),
-        ("Pages with LocalBusiness schema", frac(today["local"], n_today), frac(build["local"], n_build)),
+        ("Pages whose Organization has address, ContactPoint and sameAs", frac(today.get("org_full", 0), n_today), frac(build["org_full"], n_build)),
         ("Pages with a question-form heading", frac(today["question"], n_today), frac(build["question"], n_build)),
         ("Pages under 300 words", frac(today["under_300"], n_today), frac(build["under_300"], n_build)),
-        ("Titles with the city in them", frac(today["city_title"], n_today), frac(build["city_title"], n_build)),
+        ("Titles that name the product or category", frac(today["topic_title"], n_today), frac(build["topic_title"], n_build)),
         ("Pages with an image missing alt text", frac(today["no_alt_pages"], n_today), frac(build["no_alt_pages"], n_build)),
     ]
     return rows
@@ -453,8 +457,8 @@ def report_html(content, seo, audit, build, cmp_rows, base, dslugs, roles_avg, b
     money = [p for p in audit["pages"] if p["type"] in ("service", "industry", "city")]
     money.sort(key=lambda p: p["score"])
     worst_rows = [[_link(p["url"], p["path"]), (f"<span class='sc' style='--g:{GRADE[p['grade']]}'>{p['score']} {p['grade']}</span>", ""), ("yes", "ok") if p["faq"] else (("shown, no schema", "warn") if p.get("faq_visible") else ("no", "bad")), ("yes", "ok") if p["service"] else ("no", "bad"),
-                   ("yes", "ok") if p["question_headings"] else ("no", "bad"), f"{p['words']:,}", ("yes", "ok") if p["checks"]["city"] else ("no", "bad"), "; ".join(p["recommendations"][:2])] for p in money[:24]]
-    worst_tbl = _tbl(["Service, industry and location page", "Score", "FAQPage", "Service schema", "Question heading", "Words", "City in title", "First two fixes"], worst_rows)
+                   ("yes", "ok") if p["question_headings"] else ("no", "bad"), f"{p['words']:,}", ("yes", "ok") if p["checks"]["topic"] else ("no", "bad"), "; ".join(p["recommendations"][:2])] for p in money[:24]]
+    worst_tbl = _tbl(["Service, industry and location page", "Score", "FAQPage", "Service schema", "Question heading", "Words", "Title names topic", "First two fixes"], worst_rows)
 
     def found_do(block):
         found = "".join(f"<li>{E(x)}</li>" for x in block.get("found", []))
@@ -480,10 +484,10 @@ def report_html(content, seo, audit, build, cmp_rows, base, dslugs, roles_avg, b
         p = by_path.get(path)
         if not p:
             continue
-        crawl_rows.append([_link(f"https://{dom}{path}", path), f"{p['title']} ({p['title_len']} chars)", ("yes", "ok") if p["checks"]["city"] else ("no", "bad"), p["meta_len"] or "none", p["h1"] or "none", p["h2_count"],
+        crawl_rows.append([_link(f"https://{dom}{path}", path), f"{p['title']} ({p['title_len']} chars)", ("yes", "ok") if p["checks"]["topic"] else ("no", "bad"), p["meta_len"] or "none", p["h1"] or "none", p["h2_count"],
                            ", ".join(t for t in p["schema"] if t not in ("ListItem", "EntryPoint", "ImageObject", "PropertyValueSpecification", "SearchAction", "ReadAction", "WebPage", "WebSite", "BreadcrumbList")) or "none",
                            ("yes", "ok") if p["faq"] else ("no", "bad"), f"{p['words']:,}"])
-    crawl_tbl = _tbl(["Page", "Title", "City in title", "Meta length", "H1", "H2s", "Schema", "FAQ", "Words"], crawl_rows)
+    crawl_tbl = _tbl(["Page", "Title", "Title names topic", "Meta length", "H1", "H2s", "Schema", "FAQ", "Words"], crawl_rows)
     cp_rows = [[r["domain"], _link(r["url"], r["url"].replace("https://", "").replace("http://", "")), r["title"], f"{r['words']:,}", r["schema"], ("yes", "ok") if r["faq"] else ("no", "bad"), r.get("pricing", "no"), ("yes", "ok") if r.get("reviews") else ("no", "bad"), r.get("form", "no")] for r in seo.get("competitor_pages", [])]
     cp_tbl = _tbl(["Competitor", "Page", "Title", "Words", "Schema", "FAQ", "Pricing", "Reviews", "Form above fold"], cp_rows)
 
@@ -574,10 +578,11 @@ def _every_section(sec_id, audit, seo, build_by_path, mapping, cmp_rows, roles_a
     eight = _stiles([(s["avg_score"], "average readiness score out of 100"), (f"{s['grade_b_plus']} of {n}", "pages scoring B or better"), (f"{s['grade_d_f']} of {n}", "pages scoring D or F"),
                      (f"{s['faq']} of {n}", "pages with FAQPage schema"), (f"{s['service_or_article']} of {n}", "pages with Service or Article schema"), (s["review"], "pages with Review or rating schema"),
                      (f"{s['question']} of {n}", "pages with a question-form heading"), (f"{s['under_300']} of {n}", "pages under 300 words")], "eight")
+    eight += '<p class="pv-scorenote">Scores are from our own checks (16 checks). We will also run Lighthouse and Google Rich Results Test on the real build and send the raw files.</p>'
     cmp_box = "".join(f'<div class="cmp-row"><span class="lbl">{E(l)}</span><span class="today">{E(t)}</span><span class="arrow" aria-hidden="true"></span><span class="build">{E(bd)}</span></div>' for l, t, bd in cmp_rows)
     opts = "".join(f'<span class="opt"><b>{E(d.title())}</b> {E(v)}</span>' for d, v in roles_avg)
     solo = build_by_path is None  # analysis only, no build to compare against
-    kinds = {"rebuilt": 0, "merged": 0, "retired": 0, "migrated": 0}
+    kinds = {"rebuilt": 0, "merged": 0, "retired": 0, "migrated": 0, "gone": 0}
     for _, k in (mapping or {}).values():
         kinds[k] += 1
     migrated = f", {kinds['migrated']} posts migrate to the blog at launch under their service line" if kinds["migrated"] else ""
@@ -623,14 +628,14 @@ def _every_section(sec_id, audit, seo, build_by_path, mapping, cmp_rows, roles_a
         bent = (bp or {}).get("entity") or {}
         # the two dimensions overlap on one point: skip the entity wording when the readiness fix already says it
         ent_recs = [A.ENTITY_FIXES[k] for k in (ent.get("failed") or [])
-                    if not (k == "primary" and ("service" in p["failed"] or "local" in p["failed"]))]
+                    if not (k == "primary" and "service" in p["failed"])]
         did = list(p["recommendations"]) + ent_recs if solo else (
             [DONE[k] for k in p["failed"] if bp and bp["checks"].get(k)]
             + [A.ENTITY_FIXES[k] for k in (ent.get("failed") or []) if bent.get("checks", {}).get(k)
-               and not (k == "primary" and ("service" in p["failed"] or "local" in p["failed"]))])
+               and not (k == "primary" and "service" in p["failed"])])
         if solo and p["type"] == "form":  # a booking or request form is not a page to rank; say so instead of asking for 300 words
-            did = ["Take it out of the index (noindex) and out of the sitemap; keep one booking page per service and redirect the duplicate"] + [r for r in did if r.startswith(("Add the city", "Write a meta", "Give the page"))]
-        if kind == "retired":
+            did = ["Take it out of the index (noindex) and out of the sitemap; keep one booking page per service and redirect the duplicate"] + [r for r in did if r.startswith(("Name the product", "Write a meta", "Give the page"))]
+        if kind in ("retired", "gone"):
             did = []
         if kind == "merged":
             did.insert(0, f"Merged into {tgt}, which carries this page's earning terms")
@@ -638,6 +643,8 @@ def _every_section(sec_id, audit, seo, build_by_path, mapping, cmp_rows, roles_a
             did.insert(0, "Migrated to the blog at launch under its service line, with BlogPosting schema, a named author and a FAQ; the post template below is the model")
         elif kind == "retired":
             did.insert(0, f"Retired; a permanent redirect sends the URL to {tgt}")
+        elif kind == "gone":
+            did.insert(0, "Internal page (intranet or staff notice): returns 410 Gone, with no redirect")
         did_li = "".join(f"<li>{E(x)}</li>" for x in did) or "<li>Nothing to fix on this page</li>"
         bscore = f'<b style="--g:{GRADE[bp["grade"]]}">{bp["score"]}<i>{bp["grade"]}</i></b><span>{fixed} checks fixed</span>' if bp else '<b style="--g:#5b616b">&ndash;</b><span>no page</span>'
         ent_block = ""
@@ -663,7 +670,7 @@ def _every_section(sec_id, audit, seo, build_by_path, mapping, cmp_rows, roles_a
 
     h2 = f"{n} pages today, and what we would do on each" if solo else f"{n} pages today, and the page that replaces each one"
     cmp_block = "" if solo else f'''<div class="cmpbox"><div class="cmphead"><h3 class="h3">The same sixteen checks, run on the build</h3><p>Every recommendation on the cards below is already in place on all three directions. The scores on the right are the build, scored by the same script.</p></div><div class="cmp-rows"><div class="cmp-row head"><span class="lbl"></span><span class="today">{E(dom)} today</span><span class="arrow"></span><span class="build">The build, any direction</span></div>{cmp_box}</div><div class="opts">{opts}</div>
-<p class="fine" style="margin-top:14px">Page for page: {kinds["rebuilt"]} URLs on {E(dom)} map to a rebuilt page, {kinds["merged"]} merge into a stronger page that carries their terms{migrated}, and {kinds["retired"]} retired pages redirect to the nearest page. The 301 map is in the download.</p>
+<p class="fine" style="margin-top:14px">Page for page: {kinds["rebuilt"]} URLs on {E(dom)} map to a rebuilt page, {kinds["merged"]} merge into a stronger page that carries their terms{migrated}, and {kinds["retired"]} retired pages redirect to the nearest page{(", and " + str(kinds["gone"]) + " internal pages return 410 Gone") if kinds["gone"] else ""}. The 301 map is in the download.</p>
 <p class="fine">What is deliberately not marked up: Review and AggregateRating. Those wait for the Google review program, because marking up self-published testimonials is against Google&#39;s guidelines and we will not do it. That is the gap between the build and 100.</p></div>'''
     downloads = '<a class="btn small" href="seo-audit-pages.xlsx" download>Download the spreadsheet (Excel)</a><a class="btn small ghost" href="seo-audit-pages.csv" download>CSV</a>' + ("" if solo else '<a class="btn small ghost" href="redirects.csv" download>Redirect map (CSV)</a>')
     audit_html = f'''<section id="{sec_id}"><div class="wrap wide"><p class="eyebrow">Every page on {E(dom)}</p><h2>{h2}</h2><p class="lead">Every URL in the sitemap, fetched {E(date)} and parsed for title, meta description, headings, words, images, links and JSON-LD schema. Each page gets a readiness score out of 100 across sixteen checks, weighted toward what answer engines read: FAQ schema, Service schema, question-form headings and depth. Red is a check the page fails today. {"What we would do about each one is on the right, and every path opens the live page in a new tab." if solo else "The fixes for each page are on the right."}</p>{eight}
@@ -683,6 +690,7 @@ var d0=document.body.getAttribute("data-first-dir")||"";w.querySelectorAll("a.op
 
 PKG_CSS = '''
 .stiles.eight{grid-template-columns:repeat(4,1fr)}
+.pv-scorenote{font-size:14.5px;color:var(--muted);margin:14px 0 0;max-width:72ch}
 .fnds{display:grid;gap:12px;margin-top:16px}.fnd{display:grid;grid-template-columns:48px 1fr;gap:14px;background:var(--bg);border:1px solid var(--border);border-left:5px solid var(--accent);border-radius:12px;padding:18px 20px}.fnd .rank{font-size:30px;font-weight:800;color:var(--ink);line-height:1}.fnd h3{margin:6px 0 8px;font-size:19px}.fnd dl{margin:0;display:grid;gap:6px}.fnd dt{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}.fnd dd{margin:2px 0 0;font-size:14.5px}
 .sev{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--sev);border-radius:999px;padding:3px 9px}
 .wrap.wide{max-width:1200px}
@@ -755,7 +763,7 @@ def to_xlsx(audit, seo, mapping, path):
         return ws
 
     yn = lambda v: "yes" if v else "no"
-    head = ["URL", "Path", "Page type", "Score", "Grade", "Checks failing", "Title", "Title length", "City in title", "Meta description", "Meta length", "H1", "H1 count", "H2 count",
+    head = ["URL", "Path", "Page type", "Score", "Grade", "Checks failing", "Title", "Title length", "Title names topic", "Meta description", "Meta length", "H1", "H1 count", "H2 count",
             "Question headings", "Words", "Images", "Images missing alt", "Internal links", "Canonical", "FAQPage schema", "FAQ shown on page", "Service or Article schema", "LocalBusiness schema", "Review schema", "Schema types", "Noindex", "Form on page",
             "Entity score", "Entity grade", "Schema nodes", "Entity checks failing", "What we would do"]
     if mapping:
@@ -763,7 +771,7 @@ def to_xlsx(audit, seo, mapping, path):
     rows = []
     for p in sorted(audit["pages"], key=lambda x: x["score"]):
         ent = p.get("entity") or {}
-        r = [p["url"], p["path"], p["type"], p["score"], p["grade"], p["issues"], p["title"], p["title_len"], yn(p["checks"]["city"]), p["meta"], p["meta_len"], p["h1"], p["h1_count"], p["h2_count"],
+        r = [p["url"], p["path"], p["type"], p["score"], p["grade"], p["issues"], p["title"], p["title_len"], yn(p["checks"]["topic"]), p["meta"], p["meta_len"], p["h1"], p["h1_count"], p["h2_count"],
              p["question_headings"], p["words"], p["images"], p["images_no_alt"], p["internal_links"], p["canonical"], yn(p["faq"]), yn(p.get("faq_visible")), yn(p["service"] or p["article"]), yn(p["local"]), yn(p["review"]),
              ", ".join(p["schema"]), yn(p["noindex"]), yn(p["has_form"]),
              ent.get("score", ""), ent.get("grade", ""), ent.get("nodes", ""), ", ".join(ent.get("failed") or []),
@@ -798,7 +806,7 @@ def to_xlsx(audit, seo, mapping, path):
     site = audit.get("site") or {}
     sheet("Site checks", ["Check", "Result"], [[k, ("yes" if v is True else "no" if v is False else v)] for k, v in site.items()] + [[t, "yes" if ok else "no"] for ok, t in seo["sitewide"]], [70, 30])
     if mapping:
-        sheet("Redirects", ["Old URL", "New path in the build", "Status", "Kind"], [[p["path"], "/" + mapping[p["path"]][0], 301, mapping[p["path"]][1]] for p in audit["pages"]], [50, 44, 8, 10])
+        sheet("Redirects", ["Old URL", "New path in the build", "Status", "Kind"], [[p["path"], ("/" + mapping[p["path"]][0]) if mapping[p["path"]][1] != "gone" else "", 410 if mapping[p["path"]][1] == "gone" else 301, mapping[p["path"]][1]] for p in audit["pages"]], [50, 44, 8, 10])
     wb.save(path)
 
 
@@ -848,6 +856,7 @@ def write(content, content_path, themes, roles, base, out_dir, slug_of):
     build = builds[first]
     build_by_path = {p["path"]: p for p in build["pages"]}
     build_files = {p["path"].lstrip("/") for p in build["pages"]}
+    seo = dict(seo, redirect_table=content.get("redirects") or {})
     mapping = map_pages(audit["pages"], build_files, seo)
     cmp_rows = _cmp_rows(audit["summary"], build["summary"], audit["count"], build["summary"]["count"])
     roles_avg = [(d, f"{builds[d]['summary']['avg_score']} average, {builds[d]['summary']['grade_a']} of {builds[d]['summary']['count']} A") for d in dslugs]
@@ -862,7 +871,7 @@ def write(content, content_path, themes, roles, base, out_dir, slug_of):
     w.writerow([f"old_url_on_{dom}", "new_path_in_build", "status", "kind"])
     for p in audit["pages"]:
         tgt, kind = mapping[p["path"]]
-        w.writerow([p["path"], "/" + tgt, "301", kind])
+        w.writerow([p["path"], "" if kind == "gone" else "/" + tgt, "410" if kind == "gone" else "301", kind])
     open(os.path.join(out_dir, "redirects.csv"), "w", encoding="utf-8", newline="").write(buf.getvalue())
     json.dump({"first": first, "summaries": {d: builds[d]["summary"] for d in dslugs}}, open(os.path.join(out_dir, "seo-build-scores.json"), "w"), indent=1)
     frags = hub_fragments(content, seo, audit, build_by_path, mapping, cmp_rows, roles_avg, dom, date)

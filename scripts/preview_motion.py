@@ -25,6 +25,13 @@ def _head(s, ctx, center=True):
     return f'<div class="pv-center mo-head">{eb}{h}{intro}</div>'
 
 
+def _chip_link(name, L, E):
+    """A product chip links to the matching product or system page when one exists; otherwise plain text."""
+    import preview_polish
+    h = preview_polish.product_href(name)
+    return f'<a class="pv-chip-a" href="{E(L(h))}">{E(name)}</a>' if h else E(name)
+
+
 def _slug(x):
     return re.sub(r"[^a-z0-9]+", "-", str(x).lower()).strip("-")
 
@@ -95,6 +102,8 @@ ICONS = {
     "support": '<path d="M4 13v-1a8 8 0 0 1 16 0v1"/><rect x="3" y="13" width="4" height="6" rx="1.500"/><rect x="17" y="13" width="4" height="6" rx="1.500"/><path d="M19 19c0 1.500-2 2.500-5 2.500"/>',
     "quote": '<path d="M5 3h14v18l-3-2-2 2-2-2-2 2-2-2-3 2z"/><path d="M9 8h6M9 12h6M9 16h3"/>',
 }
+PORTAL_LINKS = {"docs": "support/documentation.html", "cart": "support/become-a-dealer.html", "megaphone": "support/marketing.html",
+                "training": "training.html", "support": "support.html", "quote": "support/get-a-quote.html"}
 ICON_DEFAULT = '<circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/>'
 
 
@@ -105,9 +114,17 @@ def _icon(key):
 def _portal(s, ctx):
     E, L = ctx["E"], ctx["L"]
     pid = s.get("id", "portal")
-    tiles = "".join(
-        f'<div class="mo-pt"><span class="mo-pt-i">{_icon(t[2] if len(t) > 2 else "")}</span><h3>{E(t[0])}</h3><p>{E(t[1])}</p><span class="mo-pt-open" aria-hidden="true">Open</span></div>'
-        for t in s.get("tiles", []))
+    buy = s.get("cta_href", "") if str(s.get("cta_href", "")).startswith("https://buy.dmp.com") else ""
+    hmap = dict(PORTAL_LINKS)
+    hmap["cart"] = buy or "support/become-a-dealer.html"
+
+    def _tile(t):
+        key = t[2] if len(t) > 2 else ""
+        href = t[3] if len(t) > 3 and t[3] else hmap.get(key, "support/documentation.html")
+        ext = ' rel="noopener"' if str(href).startswith("http") else ""
+        return (f'<a class="mo-pt" href="{E(L(href))}"{ext}><span class="mo-pt-i">{_icon(key)}</span><h3>{E(t[0])}</h3><p>{E(t[1])}</p>'
+                f'<span class="mo-pt-open" aria-hidden="true">Open</span></a>')
+    tiles = "".join(_tile(t) for t in s.get("tiles", []))
     nav = "".join(f'<i style="width:{w}%"></i>' for w in (70, 55, 64, 48, 58))
     who = E(ctx.get("client_short", "Dealer"))
     lock = '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>'
@@ -117,9 +134,11 @@ def _portal(s, ctx):
             f'<div class="mo-bar"><span class="mo-dots" aria-hidden="true"><i></i><i></i><i></i></span>'
             f'<span class="mo-url">{lock}<span>dealer sign-in</span></span><span class="mo-bar-r" aria-hidden="true"></span></div>'
             f'<div class="mo-screen"><div class="mo-login" data-login><div class="mo-login-card">'
-            f'<span class="mo-logo" aria-hidden="true">{who[:1]}</span><h3>{E(s.get("login_title", "Dealer sign-in"))}</h3>'
-            f'<span class="mo-fake" aria-hidden="true"></span><span class="mo-fake" aria-hidden="true"></span>'
-            f'<button type="button" class="q-btn mo-signin" data-signin>{E(s.get("signin_label", "Sign in"))}</button></div></div>'
+            f'<span class="mo-tag">Preview</span><span class="mo-logo" aria-hidden="true">{who[:1]}</span><h3>{E(s.get("login_title", "Dealer sign-in"))}</h3>'
+            f'<div class="mo-fld" aria-hidden="true"><span class="mo-fl">Dealer ID</span><span class="mo-fake"></span></div>'
+            f'<div class="mo-fld" aria-hidden="true"><span class="mo-fl">Password</span><span class="mo-fake"></span></div>'
+            f'<button type="button" class="q-btn mo-signin" data-signin aria-describedby="{E(pid)}-pn">{E(s.get("signin_label", "Sign in"))}</button>'
+            f'<p class="mo-pnote" id="{E(pid)}-pn">Preview only. This shows an example dashboard; nothing is sent and no account is needed.</p></div></div>'
             f'<div class="mo-dash" data-dash aria-hidden="true"><div class="mo-side">{nav}</div>'
             f'<div class="mo-main"><div class="mo-dash-top"><div><b>{E(s.get("welcome", "Welcome back"))}</b><span>{E(s.get("welcome_sub", "Everything for your next install, in one place"))}</span></div>'
             f'<button type="button" class="mo-out" data-out tabindex="-1">{E(s.get("signout_label", "Sign out"))}</button></div>'
@@ -159,7 +178,8 @@ def _stats3d(s, ctx):
     cells = []
     for i, (v, k) in enumerate(items):
         txt = str(v)
-        cells.append(f'<div class="mo-sc" style="--z:{[1, 2, 3, 2][i % 4]}"><div class="mo-sc-in"><b data-num>{E(txt)}</b><span>{E(k)}</span></div></div>')
+        _tcls = "" if re.match(r"^[^A-Za-z]*\d[\d,.]*\s*[%+kKmMbB]?\+?$", txt.strip()) else ' class="mo-sc-t"'
+        cells.append(f'<div class="mo-sc" style="--z:{[1, 2, 3, 2][i % 4]}"><div class="mo-sc-in"><b data-num{_tcls}>{E(txt)}</b><span>{E(k)}</span></div></div>')
     return (f'<section class="q-section mo-stats"{(" id=" + chr(34) + E(s["id"]) + chr(34)) if s.get("id") else ""} data-mo="stats3d">'
             f'<div class="q-container"><div class="mo-sgrid" data-n="{len(items)}">{"".join(cells)}</div></div></section>')
 
@@ -466,7 +486,7 @@ def _explorer(s, ctx):
                 '<circle class="ex-ring-bg" cx="20" cy="20" r="17" pathLength="100"/><circle class="ex-ring-fg" cx="20" cy="20" r="17" pathLength="100"/></svg>')
         rail.append(f'<li><a class="ex-tab" id="{E(eid)}-t{i}" href="{href}" data-i="{i}" aria-controls="{E(eid)}-p{i}"{" aria-current=true" if i == 0 else ""}>'
                     f'<span class="ex-ico">{ring}{svg(_ex_icon(t))}</span><span class="ex-lab">{E(t["label"])}</span><span class="ex-num" aria-hidden="true">{i + 1:02d}</span></a></li>')
-        chips = "".join(f'<li class="ex-chip"><span class="ex-dot" aria-hidden="true"></span>{E(b)}</li>' for b in t.get("bullets", [])[:4])
+        chips = "".join(f'<li class="ex-chip"><span class="ex-dot" aria-hidden="true"></span>{_chip_link(b, L, E)}</li>' for b in t.get("bullets", [])[:4])
         img = (f'<div class="ex-plate"><div class="ex-glow" aria-hidden="true"></div><div class="ex-float"><div class="ex-card">'
                f'<img src="{E(rel(t["image"]))}" alt="{E(t.get("image_alt", ""))}" width="1200" height="900" decoding="async"{"" if i == 0 else " loading=lazy"}>'
                f'<span class="ex-sheen" aria-hidden="true"></span></div></div><div class="ex-shadow" aria-hidden="true"></div></div>') if t.get("image") else ""
@@ -520,6 +540,7 @@ EX_CSS = r"""
  -webkit-mask-image:radial-gradient(90% 90% at 70% 45%,#000 40%,transparent 100%);mask-image:radial-gradient(90% 90% at 70% 45%,#000 40%,transparent 100%)}
 .ex-panels{position:relative;z-index:1;display:grid}
 .ex-panel{grid-area:1/1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:20px;align-items:center;padding:44px 44px 44px 48px;position:relative}
+html:not(.js-ex) .ex-panel[hidden]{display:none}
 .js-ex .ex-panel{visibility:hidden;opacity:0;pointer-events:none;transform:translateX(calc(var(--exd,1)*46px));transition:opacity .55s ease,transform .7s cubic-bezier(.2,.8,.2,1),visibility 0s .7s}
 .js-ex .ex-panel.is-on{visibility:visible;opacity:1;pointer-events:auto;transform:none;transition:opacity .55s ease .08s,transform .7s cubic-bezier(.2,.8,.2,1) .08s,visibility 0s}
 .js-ex .ex-panel.is-out{transform:translateX(calc(var(--exd,1)*-46px))}
@@ -623,3 +644,200 @@ addEventListener('load',drawAll);requestAnimationFrame(drawAll)});
 """
 EXTRA_CSS3 = EXTRA_CSS3 + EX_CSS
 MOTION_JS = MOTION_JS + "\n" + EX_JS
+
+
+# ----------------------------------------------------------------------------- 7. journey
+# A scroll-driven story: five large icon nodes on a glowing line, a signal pulse that travels with scroll (and
+# auto-plays once on first reveal), one big caption panel for the active step. Server HTML is a plain vertical
+# list of five cards (no JS, reduced motion). Items use the same data shape as the "flow" section:
+# steps: [{label, when, summary, title, body, receive:[...]}]
+
+_JY_ICONS = [
+    # detector: body with lens and radiating arcs
+    '<rect x="5" y="3.500" width="14" height="10" rx="3.500"/><circle cx="12" cy="8.500" r="2.500"/><path d="M8 17.500c2.500 1.800 5.500 1.800 8 0M5.500 20.500c4 2.800 9 2.800 13 0"/>',
+    # control panel: keypad
+    '<rect x="5" y="2.500" width="14" height="19" rx="2.500"/><rect x="8" y="5.500" width="8" height="3.500" rx="1"/><path d="M9 13h.01M12 13h.01M15 13h.01M9 16h.01M12 16h.01M15 16h.01M9 19h.01M12 19h.01M15 19h.01" stroke-width="2.400"/>',
+    # communicator: antenna with waves
+    '<circle cx="12" cy="9.500" r="1.800"/><path d="M12 11.500V21M8.500 21h7M8.300 6.200a5 5 0 0 0 0 6.600M15.700 6.200a5 5 0 0 1 0 6.600M5.500 3.800a9 9 0 0 0 0 11.400M18.500 3.800a9 9 0 0 1 0 11.400"/>',
+    # monitoring center: headset
+    '<path d="M4.500 14v-2a7.500 7.500 0 0 1 15 0v2"/><rect x="3" y="13" width="4.500" height="6.500" rx="2"/><rect x="16.500" y="13" width="4.500" height="6.500" rx="2"/><path d="M19 19.500c0 1.600-1.800 2.500-4.500 2.500H12.500"/>',
+    # phone
+    '<rect x="7" y="2.500" width="10" height="19" rx="2.500"/><path d="M11 18.500h2M9.800 7.500l1.600 1.600 2.800-3"/>',
+]
+
+
+def _journey(s, ctx):
+    E = ctx["E"]
+    jid = s.get("id", "journey")
+    steps = s["steps"]
+    n = len(steps)
+    icon = lambda i: ('<svg class="jy-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" '
+                      f'stroke-linejoin="round" aria-hidden="true" focusable="false">{_JY_ICONS[i % len(_JY_ICONS)]}</svg>')
+    lis = []
+    for i, t in enumerate(steps):
+        chips = "".join(f'<li class="jy-chip"><span class="jy-dot" aria-hidden="true"></span>{_chip_link(b, ctx["L"], E)}</li>' for b in t.get("receive", [])[:3])
+        incl = f'<p class="jy-incl">{E(s.get("receive_label", "DMP products at this step"))}</p><ul class="jy-chips">{chips}</ul>' if chips else ""
+        lis.append(
+            f'<li class="jy-step" data-i="{i}" data-when="{E(t.get("when", ""))}">'
+            f'<button type="button" class="jy-node" id="{E(jid)}-n{i}" data-i="{i}" aria-controls="{E(jid)}-panel"><span class="jy-orb"><span class="jy-ring" aria-hidden="true"></span>{icon(i)}</span>'
+            f'<span class="jy-num" aria-hidden="true">{i + 1:02d}</span></button>'
+            f'<div class="jy-card"><h3 class="jy-lab"><span class="jy-sr">Step {i + 1}: </span>{E(t["label"])}</h3>'
+            + (f'<p class="jy-when">{E(t["when"])}</p>' if t.get("when") else "")
+            + f'<p class="jy-cap">{E(t.get("summary", ""))}</p>'
+            f'<div class="jy-detail"><p class="jy-t">{E(t.get("title", t["label"]))}</p><p class="jy-p">{E(t.get("body", ""))}</p>{incl}</div></div></li>')
+    return (f'{ctx["sec_open"](s)} <div class="q-container mo-jy" id="{E(jid)}-w" data-mo="journey" data-n="{n}">{_head(s, ctx)}'
+            f'<div class="jy-stage"><div class="jy-bg" aria-hidden="true"></div>'
+            f'<div class="jy-path"><div class="jy-line" aria-hidden="true"><i class="jy-fill"></i><b class="jy-pulse"></b></div>'
+            f'<ol class="jy-steps">{"".join(lis)}</ol></div></div></div></section>')
+
+
+RENDER_EXTRA3["journey"] = _journey
+
+JY_CSS = r"""
+/* ===== journey ===== */
+.mo-jy{--jy-ground:#0b1220;--jy-ground2:#121c30;--jy-fg:#f4f6fb;--jy-mut:#b7c0d3;--p:0}
+.jy-stage{position:relative;margin-top:40px;overflow:hidden;border-radius:22px;background:linear-gradient(160deg,var(--jy-ground2),var(--jy-ground) 60%);color:var(--jy-fg);padding:36px 16px 28px;box-shadow:0 40px 80px -40px rgba(0,0,0,.55);isolation:isolate}
+.jy-bg{position:absolute;inset:0;z-index:0;pointer-events:none;background:
+ radial-gradient(60% 55% at 50% 12%,color-mix(in srgb,var(--q-gold) 26%,transparent),transparent 70%),
+ linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px) 0 0/44px 44px,
+ linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px) 0 0/44px 44px;
+ -webkit-mask-image:radial-gradient(95% 95% at 50% 30%,#000 40%,transparent 100%);mask-image:radial-gradient(95% 95% at 50% 30%,#000 40%,transparent 100%)}
+.jy-path{position:relative;z-index:1}
+.jy-steps{list-style:none;margin:0;padding:0;position:relative;display:flex;flex-direction:column;gap:18px}
+/* vertical line (static list, phones) */
+.jy-line{position:absolute;z-index:0;left:31px;top:32px;bottom:32px;width:4px;margin-left:-2px;border-radius:4px;background:rgba(255,255,255,.16)}
+.jy-fill{display:block;position:absolute;left:0;top:0;width:100%;height:100%;border-radius:4px;background:linear-gradient(180deg,var(--q-gold),color-mix(in srgb,var(--q-gold) 60%,#fff));box-shadow:0 0 16px color-mix(in srgb,var(--q-gold) 70%,transparent)}
+.jy-pulse{display:none}
+.jy-step{position:relative;z-index:1;display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;align-items:start}
+.jy-node{position:relative;display:block;width:64px;height:64px;padding:0;border:0;background:none;color:inherit;font:inherit;cursor:pointer;border-radius:50%}
+.jy-node:focus-visible{outline:3px solid #fff;outline-offset:4px}
+.jy-orb{position:relative;display:grid;place-items:center;width:64px;height:64px;border-radius:50%;background:var(--jy-ground);border:2px solid var(--q-gold);color:var(--q-gold);box-shadow:0 0 0 6px var(--jy-ground),0 0 26px color-mix(in srgb,var(--q-gold) 45%,transparent);transition:transform .5s cubic-bezier(.2,.9,.3,1.3),background .4s,color .4s,border-color .4s,box-shadow .4s}
+.jy-ic{width:32px;height:32px}
+.jy-ring{position:absolute;inset:-2px;border-radius:50%;border:2px solid var(--q-gold);opacity:0;pointer-events:none}
+.jy-num{display:none}
+.jy-card{padding:20px 20px 22px;border-radius:16px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);transition:opacity .5s,transform .5s,border-color .4s,background .4s}
+.jy-lab{margin:0;font-family:var(--q-display,var(--q-sans));font-size:26px;line-height:1.15;font-weight:700;color:var(--jy-fg)}
+.jy-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.jy-when{margin:6px 0 0;font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--q-gold)}
+.jy-cap{display:none;margin:10px 0 0;font-size:17px;line-height:1.45;color:var(--jy-mut)}
+.jy-detail{margin-top:14px}
+.jy-t{margin:0;font-size:19px;line-height:1.3;font-weight:700;color:var(--jy-fg)}
+.jy-p{margin:10px 0 0;font-size:17px;line-height:1.6;color:var(--jy-mut)}
+.jy-incl{margin:18px 0 10px;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--jy-mut)}
+.jy-chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.jy-chip{display:inline-flex;align-items:center;gap:10px;padding:9px 16px 9px 12px;border-radius:99px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.07);font-size:15px;font-weight:600;line-height:1.3;color:var(--jy-fg)}
+.jy-dot{flex:none;width:8px;height:8px;border-radius:50%;background:var(--q-gold);box-shadow:0 0 0 4px color-mix(in srgb,var(--q-gold) 28%,transparent)}
+.jy-panel,.jy-bar{display:none}
+
+/* JS on: phones keep the vertical timeline and the line draws down with scroll */
+.js-jy .jy-fill{height:var(--fy,0px)}
+.js-jy .jy-step:not(.is-lit) .jy-orb{background:#18233a;border-color:rgba(255,255,255,.28);color:#aab5cb;box-shadow:0 0 0 6px var(--jy-ground)}
+.js-jy .jy-step:not(.is-lit) .jy-card{opacity:.5;transform:translateY(10px);border-color:rgba(255,255,255,.1)}
+.js-jy .jy-step.is-cur .jy-orb{background:var(--q-gold);color:var(--cta-fg);transform:scale(1.1)}
+.js-jy .jy-step.is-cur .jy-card{border-color:color-mix(in srgb,var(--q-gold) 65%,transparent);background:rgba(255,255,255,.09)}
+.js-jy .jy-step.is-cur .jy-ring{animation:jyring 2.2s ease-out infinite}
+@keyframes jyring{0%{transform:scale(1);opacity:.85}100%{transform:scale(1.75);opacity:0}}
+@keyframes jyflow{to{background-position:0 -64px}}
+@keyframes jyflowx{to{background-position:64px 0}}
+
+@media(max-width:479px){.jy-stage{padding:28px 12px 24px}.jy-step{grid-template-columns:48px minmax(0,1fr);gap:12px}.jy-node,.jy-orb{width:48px;height:48px}.jy-ic{width:25px;height:25px}.jy-line{left:24px;top:24px;bottom:24px}.jy-card{padding:16px 16px 18px}.jy-lab{font-size:24px}.jy-orb{box-shadow:0 0 0 4px var(--jy-ground),0 0 20px color-mix(in srgb,var(--q-gold) 45%,transparent)}.js-jy .jy-step:not(.is-lit) .jy-orb{box-shadow:0 0 0 4px var(--jy-ground)}}
+/* wide: horizontal path + one big caption panel */
+@media(min-width:768px){
+.jy-stage{padding:52px 40px 44px}
+.js-jy .jy-bar{display:flex;justify-content:flex-end;position:relative;z-index:2;margin:-18px 0 6px}
+.jy-replay{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 20px;border-radius:99px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:var(--jy-fg);font:inherit;font-size:16px;font-weight:700;cursor:pointer;transition:background .25s,border-color .25s}
+.jy-replay:hover{background:rgba(255,255,255,.16);border-color:var(--q-gold)}
+.jy-replay:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.jy-replay svg{width:18px;height:18px}
+.js-jy .jy-steps{display:grid;grid-template-columns:repeat(var(--n,5),minmax(0,1fr));gap:0;align-items:start}
+.js-jy .jy-line{left:10%;right:10%;top:61px;bottom:auto;width:auto;height:4px;margin:0;transform:none}
+.js-jy .jy-fill{width:calc(var(--p)*100%);height:100%;background:linear-gradient(90deg,color-mix(in srgb,var(--q-gold) 70%,#000),var(--q-gold))}
+.js-jy .jy-fill::after{content:"";position:absolute;inset:0;border-radius:4px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.95) 0 7px,transparent 7px 64px);background-size:64px 100%;animation:jyflowx 1.1s linear infinite;-webkit-mask-image:linear-gradient(90deg,transparent,#000 30%);mask-image:linear-gradient(90deg,transparent,#000 30%);opacity:.9}
+.js-jy .jy-line::before{content:"";position:absolute;inset:0;border-radius:4px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.4) 0 6px,transparent 6px 64px);animation:jyflowx 2.4s linear infinite}
+.js-jy .jy-pulse{display:block;position:absolute;top:50%;left:calc(var(--p)*100%);width:26px;height:26px;margin:-13px 0 0 -13px;border-radius:50%;background:#fff;box-shadow:0 0 0 6px color-mix(in srgb,var(--q-gold) 55%,transparent),0 0 34px 12px color-mix(in srgb,var(--q-gold) 80%,transparent);z-index:3}
+.js-jy .jy-pulse::before{content:"";position:absolute;right:50%;top:50%;width:150px;height:8px;margin-top:-4px;border-radius:8px;background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--q-gold) 90%,transparent));filter:blur(2px)}
+.js-jy .jy-step{display:flex;flex-direction:column;align-items:center;text-align:center;gap:0;padding:0 10px}
+.js-jy .jy-node{width:122px;height:122px}
+.js-jy .jy-orb{width:122px;height:122px;border-width:3px;box-shadow:0 0 0 8px var(--jy-ground),0 0 34px color-mix(in srgb,var(--q-gold) 40%,transparent)}
+.js-jy .jy-ic{width:58px;height:58px}
+.js-jy .jy-step:not(.is-lit) .jy-orb{box-shadow:0 0 0 8px var(--jy-ground)}
+.js-jy .jy-step.is-cur .jy-orb{transform:scale(1.14);box-shadow:0 0 0 8px var(--jy-ground),0 0 56px color-mix(in srgb,var(--q-gold) 75%,transparent)}
+.js-jy .jy-num{display:block;position:absolute;right:-2px;top:-2px;min-width:34px;height:34px;padding:0 6px;border-radius:99px;background:var(--jy-ground);border:2px solid currentColor;font-size:14px;font-weight:800;line-height:30px;text-align:center;color:#aab5cb;font-variant-numeric:tabular-nums;z-index:2}
+.js-jy .jy-step.is-lit .jy-num{color:var(--q-gold)}
+.js-jy .jy-card{margin-top:22px;padding:0;border:0;background:none;transform:none;opacity:1}
+.js-jy .jy-step:not(.is-lit) .jy-card{opacity:1;transform:none}
+.js-jy .jy-step.is-cur .jy-card{background:none}
+.js-jy .jy-lab{font-size:26px;color:#c3cce0;transition:color .4s}
+.js-jy .jy-step.is-lit .jy-lab{color:var(--jy-fg)}
+.js-jy .jy-when{display:none}
+.js-jy .jy-cap{display:block;margin:10px auto 0;max-width:23ch;font-size:17px;opacity:0;transform:translateY(8px);transition:opacity .5s .1s,transform .5s .1s}
+.js-jy .jy-step.is-lit .jy-cap{opacity:1;transform:none}
+.js-jy .jy-detail{display:none}
+.js-jy .jy-panel{display:grid;position:relative;z-index:1;margin-top:40px;border:1px solid rgba(255,255,255,.16);border-radius:20px;background:rgba(255,255,255,.055);overflow:hidden;box-shadow:inset 0 1px 0 rgba(255,255,255,.1)}
+.jy-pane{grid-area:1/1;position:relative;display:flex;align-items:center;padding:40px 48px;min-height:260px;visibility:hidden;opacity:0;transform:translateY(16px);transition:opacity .45s ease,transform .6s cubic-bezier(.2,.8,.2,1),visibility 0s .6s}
+.jy-pane.is-on{visibility:visible;opacity:1;transform:none;transition:opacity .5s ease .1s,transform .6s cubic-bezier(.2,.8,.2,1) .1s,visibility 0s}
+.jy-big{position:absolute;right:36px;top:50%;transform:translateY(-52%);font-family:var(--q-display,var(--q-sans));font-size:clamp(150px,17vw,250px);line-height:1;font-weight:800;letter-spacing:-.04em;color:rgba(255,255,255,.07);pointer-events:none;user-select:none}
+.jy-pc{position:relative;z-index:1;max-width:min(760px,100%)}
+.jy-k{margin:0 0 14px;display:flex;align-items:center;gap:12px;font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--q-gold)}
+.jy-k span{display:inline-block;padding:3px 10px;border:1px solid currentColor;border-radius:99px;letter-spacing:.06em}
+.jy-pane .jy-t{font-family:var(--q-display,var(--q-sans));font-size:clamp(28px,2.7vw,40px);line-height:1.12;text-wrap:balance}
+.jy-pane .jy-p{margin-top:16px;font-size:19px;line-height:1.6;max-width:62ch}
+.jy-pane .jy-incl{margin-top:24px}
+.jy-pane .jy-chip{font-size:16px}
+}
+@media(min-width:768px) and (max-width:1023px){
+.js-jy .jy-node,.js-jy .jy-orb{width:96px;height:96px}.js-jy .jy-ic{width:46px;height:46px}.js-jy .jy-line{top:47px;left:10%;right:10%}
+.js-jy .jy-lab{font-size:22px}.js-jy .jy-cap{font-size:16px}.jy-stage{padding:44px 20px 36px}.jy-pane{padding:32px 28px}.jy-big{font-size:110px;right:16px;top:8px;transform:none}}
+@media(prefers-reduced-motion:reduce){.jy-ring,.jy-fill::after,.jy-line::before{animation:none!important}.jy-orb,.jy-card,.jy-pane{transition:none!important}}
+"""
+
+JY_JS = r"""(function(){
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var desk=function(){return matchMedia('(min-width:768px)').matches};
+function clamp(x){return x<0?0:x>1?1:x}
+[].slice.call(document.querySelectorAll('[data-mo=journey]')).forEach(function(root){
+var steps=[].slice.call(root.querySelectorAll('.jy-step')),n=steps.length;if(n<2)return;
+var stage=root.querySelector('.jy-stage'),path=root.querySelector('.jy-path'),list=root.querySelector('.jy-steps'),btns=steps.map(function(s){return s.querySelector('.jy-node')});
+root.classList.add('js-jy');root.style.setProperty('--n',n);
+/* panel + replay */
+var panel=document.createElement('div');panel.className='jy-panel';panel.id=root.id+'-panel';panel.setAttribute('role','region');panel.setAttribute('aria-live','off');panel.setAttribute('aria-label','Selected step');
+var panes=steps.map(function(s,i){var pn=document.createElement('div');pn.className='jy-pane';pn.setAttribute('aria-hidden',i?'true':'false');
+pn.innerHTML='<span class="jy-big" aria-hidden="true">0'+(i+1)+'</span><div class="jy-pc"><p class="jy-k"><span>0'+(i+1)+'</span>'+(s.getAttribute('data-when')||'')+'</p>'+s.querySelector('.jy-detail').innerHTML+'</div>';panel.appendChild(pn);return pn});
+var bar=document.createElement('div');bar.className='jy-bar';
+bar.innerHTML='<button type="button" class="jy-replay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.500 12a8.500 8.500 0 1 0 2.600-6.100M3.500 4v4.500H8"/></svg>Replay</button>';
+stage.insertBefore(bar,path);path.appendChild(panel);
+var rb=bar.firstChild,P=0,cur=-1,mode='auto',started=false,t0=0,raf=0,tw=null,curSel=0;
+function paint(i){if(i===cur)return;cur=i;panes.forEach(function(p,j){p.classList.toggle('is-on',j===i);p.setAttribute('aria-hidden',j===i?'false':'true')});
+btns.forEach(function(b,j){if(j===i)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current')})}
+function renderDesk(){path.style.setProperty('--p',P.toFixed(4));root.style.setProperty('--p',P.toFixed(4));root.setAttribute('data-p',P.toFixed(3));var c=0;
+steps.forEach(function(s,i){var r=P>=i/(n-1)-.025;if(r)c=i;s.classList.toggle('is-lit',r)});if(mode==='manual')c=curSel;steps.forEach(function(s,i){s.classList.toggle('is-cur',i===c)});paint(c)}
+function renderMob(){var vy=innerHeight*.62,r=list.getBoundingClientRect(),fy=Math.max(0,Math.min(r.height,vy-r.top)),c=0;
+var first=btns[0].getBoundingClientRect(),lastB=btns[n-1].getBoundingClientRect(),lr=path.querySelector('.jy-line').getBoundingClientRect();
+path.style.setProperty('--fy',Math.max(0,Math.min(lr.height,vy-lr.top)).toFixed(0)+'px');
+steps.forEach(function(s,i){var b=btns[i].getBoundingClientRect(),r2=b.top+b.height/2<=vy;if(r2)c=i;s.classList.toggle('is-lit',r2)});steps.forEach(function(s,i){s.classList.toggle('is-cur',i===c)});paint(c);root.setAttribute('data-p',(lr.height?Math.max(0,Math.min(lr.height,vy-lr.top))/lr.height:0).toFixed(3))}
+function scrollP(){var r=stage.getBoundingClientRect();return clamp((innerHeight*.85-r.top)/(innerHeight*.55))}
+var SEG=700,DW=800;
+function autoP(t){var k=SEG+DW,s=Math.min(n-2,Math.floor(t/k)),u=t-s*k,f=clamp(u/SEG);f=f<.5?2*f*f:1-Math.pow(-2*f+2,2)/2;if(t>=(n-1)*k-DW)return 1;return (s+f)/(n-1)}
+function ease(f){return f<.5?2*f*f:1-Math.pow(-2*f+2,2)/2}
+function frame(ts){raf=0;var go=false;
+if(tw){var f=clamp((ts-tw.t)/tw.d);P=tw.a+(tw.b-tw.a)*ease(f);if(f<1)go=true;else{P=tw.b;tw=null}}
+else if(mode==='auto'||mode==='replay'){var a=autoP(ts-t0);P=mode==='auto'?Math.max(P,a,scrollP()):a;if(ts-t0<(n-1)*(SEG+DW)-DW)go=true;else{P=1;mode='done'}}
+renderDesk();if(go)raf=requestAnimationFrame(frame)}
+function kick(){if(!raf)raf=requestAnimationFrame(frame)}
+function select(i,focus){i=Math.max(0,Math.min(n-1,i));if(mode==='manual'&&curSel===i&&(!tw||tw.i===i)){if(focus)btns[i].focus();return}mode='manual';curSel=i;panel.setAttribute('aria-live','polite');
+var b=i/(n-1);tw={i:i,a:P,b:b,d:Math.max(450,Math.abs(b-P)*(n-1)*300),t:performance.now()};if(focus)btns[i].focus();kick()}
+btns.forEach(function(b,i){b.addEventListener('click',function(){if(desk())select(i,false)});b.addEventListener('focus',function(){if(desk()&&!tw&&(mode!=='manual'||curSel!==i))select(i,false)})});
+root.addEventListener('keydown',function(e){if(!desk()||!stage.contains(e.target)||e.target===rb)return;var k=e.key,i=cur<0?0:(mode==='manual'?curSel:cur);
+if(k==='ArrowRight'||k==='ArrowDown')i++;else if(k==='ArrowLeft'||k==='ArrowUp')i--;else if(k==='Home')i=0;else if(k==='End')i=n-1;else return;e.preventDefault();select(i,true)});
+rb.addEventListener('click',function(){tw=null;mode='replay';P=0;curSel=0;panel.setAttribute('aria-live','off');t0=performance.now();renderDesk();kick()});
+function tick(){raf2=0;if(desk()){if(mode==='auto'){var sp=scrollP();if(sp>P){P=sp;renderDesk()}}else if(!raf)renderDesk()}else renderMob()}
+var raf2=0;function onScroll(){if(!raf2)raf2=requestAnimationFrame(tick)}
+addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(onScroll);
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&!started&&desk()){started=true;if(mode==='auto'){t0=performance.now();kick()}}})},{threshold:.3});io.observe(stage)}
+else if(desk()){started=true;t0=performance.now();kick()}
+(desk()?renderDesk:renderMob)();onScroll();
+});
+})();"""
+EXTRA_CSS3 = EXTRA_CSS3 + JY_CSS
+MOTION_JS = MOTION_JS + "\n" + JY_JS

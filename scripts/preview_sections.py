@@ -191,22 +191,42 @@ def _testimonials(s, ctx):
 
 
 def _timeline(s, ctx):
-    """History rail: a line across the years, one card per milestone, optional image, vertical on phones."""
+    """History stage: a dark cinematic band. A line draws across the years and lights each milestone in turn;
+    portrait photo cards (a signal graphic stands in where an item has no photo); one row up to six, vertical on phones."""
     E = ctx["E"]
     tid = s.get("id", "story")
-    cards = []
-    for i, it in enumerate(s["items"]):
-        y, t, d = it[0], it[1], it[2]
-        img = f'<div class="img"><img src="{E(ctx["rel"](it[3]))}" alt="" width="600" height="400" loading="lazy"></div>' if len(it) > 3 and it[3] else ""
-        cards.append(f'<li style="--i:{i}"><span class="dot" aria-hidden="true"></span><div class="y">{E(y)}</div>{img}<h3>{E(t)}</h3><p>{E(d)}</p></li>')
-    n = len(cards)
+    items = s["items"]
+    n = len(items)
     per = n if n <= 6 else -(-n // -(-n // 7))   # one row up to six; otherwise balanced rows of at most seven
+    cards = []
+    for i, it in enumerate(items):
+        y, t, d = it[0], it[1], it[2]
+        has = len(it) > 3 and it[3]
+        if has:
+            media = f'<div class="img"><img src="{E(ctx["rel"](it[3]))}" alt="" width="600" height="400" loading="lazy"></div>'
+        elif any(len(o) > 3 and o[3] for o in items):
+            media = '<div class="img ph" aria-hidden="true"><b></b></div>'   # signal graphic keeps the row even
+        else:
+            media = ""
+        lng = " long" if len(str(y)) > 7 else ""
+        cards.append(f'<li class="tl-li{lng}" style="--i:{i % per}"><span class="dot" aria-hidden="true"></span><div class="y">{E(y)}</div><div class="card">{media}<h3>{E(t)}</h3><p>{E(d)}</p></div></li>')
     rows = [cards[i:i + per] for i in range(0, n, per)]
-    head = f'<div class="pv-center"><div class="q-eyebrow">{E(s.get("eyebrow", ""))}</div><h2 class="q-h2" style="margin-top:22px;max-width:760px">{E(s["heading"])}</h2>{f"<p class=q-lead style=max-width:640px;margin:16px_auto_0>{E(s[chr(105)+chr(110)+chr(116)+chr(114)+chr(111)])}</p>".replace("_", " ") if s.get("intro") else ""}</div>'
-    js = f"""<script>(function(){{var ws=document.querySelectorAll('[data-tl="{E(tid)}"]');if(!ws.length)return;
-if('IntersectionObserver' in window){{var o=new IntersectionObserver(function(es){{es.forEach(function(e){{if(e.isIntersecting)e.target.classList.add('in')}})}},{{threshold:.2}});ws.forEach(function(w){{o.observe(w)}})}}else{{ws.forEach(function(w){{w.classList.add('in')}})}}}})();</script>"""
-    blocks = "".join(f'<div class="pv-tl2 pv-tl2-fit" data-tl="{E(tid)}" data-n="{len(r)}" style="--n:{len(r)}"><div class="line" aria-hidden="true"><i></i></div><ol aria-label="{E(s["heading"])}">{"".join(r)}</ol></div>' for r in rows)
-    return f'{ctx["sec_open"](s)} <div class="q-container">{head}{blocks}</div>{js}</section>'
+    spanb = ""
+    try:   # "1975 to 2025" only when the first and last milestones are plain years
+        y0, y1 = str(items[0][0]).strip(), str(items[-1][0]).strip()
+        if n >= 5 and len(y0) == 4 and len(y1) == 4 and y0.isdigit() and y1.isdigit() and int(y1) - int(y0) >= 10:
+            spanb = f'<div class="tl-span" aria-hidden="true"><b>{y0}</b><i></i><b>{y1}</b><span>{int(y1) - int(y0)} years</span></div>'
+    except Exception:
+        spanb = ""
+    intro = f'<p class="q-lead">{E(s["intro"])}</p>' if s.get("intro") else ""
+    head = f'<div class="pv-center tl-head"><div class="q-eyebrow">{E(s.get("eyebrow", ""))}</div><h2 class="q-h2" style="margin-top:22px;max-width:760px">{E(s["heading"])}</h2>{intro}{spanb}</div>'
+    js = f"""<script>(function(){{var ws=[].slice.call(document.querySelectorAll('[data-tl="{E(tid)}"]'));if(!ws.length)return;
+function on(w){{w.classList.add('in')}}
+if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){{ws.forEach(on);return}}
+var o=new IntersectionObserver(function(es){{es.forEach(function(e){{if(e.isIntersecting||e.boundingClientRect.top<0){{on(e.target);o.unobserve(e.target)}}}})}},{{threshold:0,rootMargin:'0px 0px -12% 0px'}});ws.forEach(function(w){{o.observe(w)}});
+function chk(){{ws.forEach(function(w){{if(w.getBoundingClientRect().top<innerHeight*.9)on(w)}})}}addEventListener('scroll',chk,{{passive:true}});addEventListener('hashchange',chk);setTimeout(chk,900)}})();</script>"""
+    blocks = "".join(f'<div class="pv-tl2 pv-tl2-fit{" has-img" if any("class=\"img" in c for c in r) else ""}" data-tl="{E(tid)}" data-n="{len(r)}" style="--n:{len(r)}"><div class="line" aria-hidden="true"><i></i></div><ol aria-label="{E(s["heading"])}">{"".join(r)}</ol></div>' for r in rows)
+    return f'{ctx["sec_open"](s).replace("class=\"q-section", "class=\"q-section pv-tl-stage", 1)} <div class="q-container tl-wrap">{head}{blocks}</div>{js}</section>'
 
 
 def _tabs(s, ctx):
@@ -346,7 +366,11 @@ def _sticky(s, ctx):
 
 def _resources(s, ctx):
     E = ctx["E"]
-    cards = "".join(f'<a class="pv-tilt" href="{E(ctx["L"](h))}"><span class="k">{E(k)}</span><h3>{E(t)}</h3><p>{E(d)}</p><span>{E(l)}</span></a>' for k, t, d, l, h in s["items"])
+    def _card(it):
+        k, t, d, l, h = it[:5]
+        th = f'<span class="pv-rthumb"><img src="{E(ctx["rel"](it[5]))}" alt="" width="640" height="360" loading="lazy" decoding="async"></span>' if len(it) > 5 and it[5] else ""
+        return f'<a class="pv-tilt{" pv-has-thumb" if th else ""}" href="{E(ctx["L"](h))}">{th}<span class="k">{E(k)}</span><h3>{E(t)}</h3><p>{E(d)}</p><span>{E(l)}</span></a>'
+    cards = "".join(_card(it) for it in s["items"])
     return f'{ctx["sec_open"](s)} <div class="q-container"><div class="pv-split"><h2 class="q-h2">{E(s["heading"])}</h2><p>{E(s.get("intro"))}</p></div><div class="pv-res{" pv-res-5" if len(s["items"]) == 5 else " pv-res-c2" if len(s["items"]) == 4 else " pv-res-c4" if len(s["items"]) % 4 == 0 and len(s["items"]) % 3 else ""}" style="grid-template-columns:repeat({(lambda n: 3 if n % 3 == 0 else 2 if n % 2 == 0 else min(n, 3))(len(s["items"]))},1fr)">{cards}</div></div></section>'
 
 

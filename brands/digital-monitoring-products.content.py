@@ -40,23 +40,23 @@ SERVICES = [
      "Intrusion panels that <em>grow with the site</em>.",
      "We build intrusion around the control panel. The XT Series, XTL Series and XR Series scale from a small business to a large site, and every one reports through our own communicators.",
      [["Hybrid by design", "The XT75 is a hybrid intrusion panel for residential or small business applications. It integrates intrusion, access control and AlarmVision on one panel."],
-      ["Scales up", "The XR550 supports 96 doors of access control, and the XR650 won top honors at the 2026 ESX Innovation Awards."],
+      ["Scales up", "The XR550, our proven flagship, supports 96 doors of access control. The XR650, which won Best of Show at ESX 2026, is coming soon."],
       ["Built against false alarms", "Cancel/Verify false alarm prevention has been a DMP feature since 2007. Video verification and AlarmVision add a second look."]],
-     ["XT30, XT50 and XT75 control panels", "XTLplus and XTLtouch residential panels", "XR150, XR550 and XR650 panels", "TMSentry compact panel for teller machine security", "Motion, glassbreak, contact and wireless detectors", "JamAlert cellular jamming detection"],
-     [["Which intrusion panels does DMP make?", "The XT30, XT50, XT75, XTLplus, XTLtouch, XR150, XR550 and XR650, plus the TMSentry compact panel for teller machines. Each has its own page."],
+     ["XT30, XT50 and XT75 control panels", "XTLplus and XTLtouch residential panels", "XR150 and XR550 panels, with the XR650 coming soon", "TMSentry compact panel for teller machine security", "Motion, glassbreak, contact and wireless detectors", "JamAlert cellular jamming detection"],
+     [["Which intrusion panels does DMP make?", "The XT30, XT50, XT75, XTLplus, XTLtouch, XR150 and XR550, plus the TMSentry compact panel for teller machines. The XR650 is coming soon. Each has its own page."],
       ["What is a hybrid intrusion panel?", "One panel that runs intrusion and access control together, so doors and alarm zones share a single system. The XT75 is one."],
       ["What is cellular jamming?", "An attempt to block the cellular signal an alarm uses to report. Our JamAlert product detects it."],
       ["Does DMP sell alarm systems to building owners?", "We sell through authorized dealers and distributors. Owners start with a DMP dealer."]],
      [["Control panel", "XT75", "Hybrid intrusion panel for residential or small business applications, with intrusion, access control and AlarmVision on one panel.", P("control-panels/xt-series/xt75")],
       ["Control panel", "XT50", "From the XT Series, the line we introduced in 2008 as the first panel with built-in wireless receiver and network, cellular and dialer communications.", P("control-panels/xt-series/xt50")],
       ["Control panel", "XR150", "XR Series panel. We introduced the XR Series in 2013, and it is 32 times faster than the generation before.", P("control-panels/xr-series/xr150")],
-      ["Control panel", "XR550", "XR Series panel with 96 doors of access control, introduced in 2015.", P("control-panels/xr-series/xr550")],
-      ["Control panel", "XR650", "XR Series panel and 2026 ESX Innovation Awards winner.", P("control-panels/xr-series/xr650")],
+      ["Control panel", "XR550", "Our proven flagship: XR Series panel with 96 doors of access control, introduced in 2015.", P("control-panels/xr-series/xr550")],
+      ["Control panel", "XR650", "Coming soon. XR Series panel and ESX 2026 Best of Show winner.", P("control-panels/xr-series/xr650")],
       ["Residential", "XTLplus", "Second generation residential panel, introduced in 2016.", P("control-panels/xtl-series/xtlplus")],
       ["Residential", "XTLtouch", "Enhanced all-in-one solution introduced in 2018.", P("control-panels/xtl-series/xtltouch")],
       ["Banking", "TMSentry", "Compact control panel developed for teller machine security.", P("control-panels/tmsentry/tmsentry")],
       ["Detection", "JamAlert", "Cellular jamming detection, introduced in 2025.", P("intrusion/jamalert/jamalert")]],
-     SITE + "/products/intrusion", IMG + "cell-jammers-1200.jpg", "A JamAlert device shown over a cell tower and skyline"],
+     SITE + "/products/intrusion", IMG + "tab-intrusion-1200.jpg", "The DMP XT75 control board"],
     ["access-control", "Access Control", "access control",
      "Access control from a stand-alone cloud system to the Entré enterprise software.",
      IMG + "x1-1200.jpg", "Access control",
@@ -263,7 +263,7 @@ INDUSTRIES = [
       ["Featured", "FirstNet communicators", "Communicators approved for the FirstNet public-safety broadband network.", P("cell-network-communicators/xt-xr-series-communicators/263lte-firstnet")]],
      [], None,
      [["What is FirstNet?", "The nationwide public-safety broadband network. We offer communicators approved for it, which gives alarm companies a more reliable network experience than a commercial wireless network."]]],
-    ["multi-tenant", "Multi-tenant", IMG + "digital-key-1200.jpg", "Security solutions for multi-dwelling units.",
+    ["multi-tenant", "Multi-tenant", IMG + "sensor-1112-1200.jpg", "Security solutions for multi-dwelling units.",
      "Systems built from our components combine intrusion with fire protection, access control and video. With the Virtual Keypad app, customers can control their systems remotely, along with locks, lights, thermostats and more.",
      ["Mobile wallet credentials for residents and staff", "Virtual Keypad's Access Only user: basic access without viewing events or video, changing door lock status or receiving push notifications", "Suited to pools, fitness centers, community rooms and other private amenities"],
      [["Featured", "XR550", "An integrated panel that combines access, intrusion, fire and video in one system.", P("control-panels/xr-series/xr550")],
@@ -388,18 +388,100 @@ def itemlist(name, items):
             "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": it[1], "url": it[3]} for i, it in enumerate(items)]}
 
 
+# ---- creative-director lift for the system pages: per-system hero, stats, big visual module and cross-links
+SYS_LIFT = {
+    "intrusion": {"float": "xt75-1200.png", "bg": "jamalert-1200.jpg", "video": "hero-signal-2", "big": "showcase3d",
+                  "head": None, "outcomes": ["One panel for alarm, doors and video", "Starts small, scales to 96 doors", "A second look before a dispatch"],
+                  "stats": [["2008", "XT Series introduced"], ["2013", "XR Series introduced"], ["96", "Doors on the XR550"], ["2007", "Cancel/Verify false alarm prevention"]],
+                  "big_head": "Pick the panel that fits the building.", "big_intro": "From the XT75 hybrid to our proven XR550 flagship. Drag, swipe or use the arrow keys.",
+                  "with": ["access-control", "video", "communicators"]},
+    "access-control": {"float": "p-digital-key-credential-1200.png", "bg": "hero-hq-dark-2100.jpg", "video": "hero-loop-hq", "big": "network",
+                       "head": None, "outcomes": ["Doors that open from a phone", "Cloud or on-site, your choice", "Open standards at the door"],
+                       "stats": [["2021", "X1 Series cloud access control"], ["3", "Entré editions: Lite, Business, Enterprise"], ["2020", "OSDP, BIN code and 1100 wireless added"], ["NFC", "Digital Key works on a dead phone"]],
+                       "big_head": "Doors, alarm and phone on one platform.", "big_intro": "Select a part of the system to see what it does.", "hub": "Access control",
+                       "with": ["intrusion", "video", "mobile-automation"]},
+    "fire": {"float": "p-xf6-1200.png", "bg": "firetruck-1200.jpg", "video": "hero-loop-plant", "big": "showcase3d",
+             "head": "Fire signals that take <em>the same path as the alarm</em>.", "outcomes": ["Signals go straight to the monitoring center", "Reports the way the alarm does", "More than one panel to choose"],
+             "stats": [["24V", "XF6 fire control panel"], ["3", "Fire panels: XF6, XR150FC, XR550FC"], ["2", "Reporting paths on the XF6: network and optional cellular"]],
+             "big_head": "The fire catalogue, panel to pull station.", "big_intro": "Panels, detectors, pull stations and annunciators. Drag, swipe or use the arrow keys.",
+             "with": ["intrusion", "communicators", "wireless"]},
+    "video": {"float": "p-xv-gateways-with-alarmvision-1200.png", "bg": "vue-plus-1200.jpg", "video": "hero-loop-campus", "big": "showcase3d",
+              "head": None, "outcomes": ["Cameras that raise the alarm", "One platform, from camera to VMS", "Video next to the alarm in one app"],
+              "stats": [["2023", "XV-24 with AlarmVision introduced"], ["2026", "VUE Plus line and VK VMS launched"], ["3", "Camera series: V-6000, V-5000, V-4000"]],
+              "big_head": "See the cameras, gateways and doorbell.", "big_intro": "Drag, swipe or use the arrow keys.",
+              "with": ["intrusion", "access-control", "mobile-automation"]},
+    "communicators": {"float": "p-263lte-1200.png", "bg": "vault-1200.jpg", "video": "hero-signal-1", "big": "network",
+                      "head": None, "outcomes": ["The first FirstNet panel communicator", "More than one way out", "Both ends of the link"],
+                      "stats": [["2009", "SCS-VR, first software-only receiver"], ["2019", "ComSeries universal LTE communicators"], ["2020", "First FirstNet panel communicator"], ["2025", "VAULT encrypted connectivity introduced"]],
+                      "big_head": "Follow the signal from the panel to the receiver.", "big_intro": "Select a piece of the path to see what it does.", "hub": "Alarm signal",
+                      "with": ["intrusion", "fire", "wireless"]},
+    "wireless": {"float": "p-1100xh-1200.png", "bg": "sensor-1112-1200.jpg", "video": "hero-signal-2", "big": "network",
+                 "head": None, "outcomes": ["Encrypted since 2019", "Upgrade without rewiring", "A device for every zone"],
+                 "stats": [["2004", "Two-way wireless introduced"], ["2019", "AES encryption on the 1100 Series"], ["2021", "1100T and 1100TF translators"], ["900 MHz", "Supervised, two-way wireless"]],
+                 "big_head": "One wireless line, from receiver to detector.", "big_intro": "Select a device to see where it fits.", "hub": "1100 Series",
+                 "with": ["intrusion", "fire", "panels-keypads"]},
+    "panels-keypads": {"float": "keypad-722-1200.png", "bg": "hero-hq-dark-2100.jpg", "video": "hero-loop-hq", "big": "showcase3d",
+                       "head": "Pick the panel. <em>The keypad and the app already match.</em>", "outcomes": ["A keypad for every wall", "A panel that fits the building", "The whole cabinet from one maker"],
+                       "stats": [["2004", "Thinline keypads introduced"], ["2013", "Graphic touchscreen keypad"], ["2023", "7-inch touchscreen keypad"], ["3", "Panel families: XT, XTL and XR"]],
+                       "big_head": "Every keypad, from touchscreen to Thinline.", "big_intro": "Drag, swipe or use the arrow keys.",
+                       "with": ["intrusion", "access-control", "mobile-automation"]},
+    "mobile-automation": {"float": "vk-mock-1200.png", "bg": "tab-mobile-1200.jpg", "video": "hero-loop-campus", "big": "network",
+                          "head": None, "outcomes": ["The owner's remote, branded by the dealer", "Program panels in bulk", "Examined every year, SOC 2 Type II"],
+                          "stats": [["2011", "Virtual Keypad introduced"], ["2012", "Z-Wave on XTL and XT panels"], ["2019", "Mass programming and bulk firmware"], ["SOC 2", "Type II, examined every year"]],
+                          "big_head": "The owner's remote and the dealer's toolbox.", "big_intro": "Select a tool to see who uses it and why.", "hub": "Software",
+                          "with": ["intrusion", "access-control", "video"],
+                          "nodes": [["Virtual Keypad", "The remote control app, with mobile wallet credentials added in 2024."], ["Dealer Admin", "Programming, firmware and templates for dealers."],
+                                    ["Remote Link", "Dealer software for remote panel connection."], ["Mobile wallet credentials", "Digital Key sits in the phone's wallet and is managed in Virtual Keypad."],
+                                    ["Z-Wave automation", "Z-Wave has been integrated with XTL and XT Series panels since 2012."], ["SOC 2 Type II", "Dealer Admin and Virtual Keypad are examined every year by a licensed CPA firm."]]},
+}
+SYSTEM_VIDEOS = {slug: v["video"] for slug, v in SYS_LIFT.items()}
+
+
+def _prod_rows(products):
+    """[(name, image, page, blurb)] for the SERVICES products that have a product page of their own."""
+    import sys
+    sys.path.insert(0, HERE)
+    import dmp_pages_products as pm
+    rows = []
+    for x in products:
+        page = pm.URL_MAP.get(x[3])
+        if not page:
+            continue
+        slug = page.split("/")[-1].replace(".html", "")
+        rows.append((x[1] + (" (coming soon)" if pm.PRODUCTS[slug]["blurb"].startswith("Coming soon") else ""), pm.PRODUCTS[slug]["image"], page, x[2]))
+    return rows
+
+
 def service_page(slug, navlabel, short, one, image, eyebrow, heading, subhead, benefits, included, faq, products, cat_url, dimg, dalt):
+    cfg = SYS_LIFT[slug]
+    rows = _prod_rows(products)
+    named = [x[1] for x in products]
+    benefits = [[cfg["outcomes"][i], b[1]] for i, b in enumerate(benefits)]
+    card_a = {"eyebrow": f"In {navlabel}", "title": "Start from the product", "body": one,
+              "items": [f"{x[0]}" for x in rows[:3]], "label": "Browse the range", "href": f"services/{slug}.html#range"}
+    card_b = {"eyebrow": "Jump to", "links": [[x[0], x[2]] for x in rows[:4]]}
     secs = [
-        {"type": "hero", "layout": "split", "eyebrow": eyebrow, "heading": heading, "subhead": subhead,
-         "primary": CTA, "secondary": {"label": "All products", "href": "services.html"},
-         "image": image, "image_alt": f"DMP {short}", "image_w": 1200, "image_h": 800},
-        {"type": "cards", "alt": True, "eyebrow": "What sets it apart", "heading": f"Three things to know about {short}", "items": benefits},
-        {"type": "resources", "heading": f"The {short} range", "intro": "Select a product for its full page.", "items": [[x[0], x[1], x[2], "View product", x[3]] for x in products]},
-        {"type": "detail", "alt": True, "eyebrow": "In this category", "heading": f"What we build for {short}", "body": one, "bullets": included, "image": dimg, "image_alt": dalt, "flip": True},
-        {"type": "services", "heading": "Works with", "intro": "Each system runs on the same platform.",
-         "items": [[x[1], x[3], f"services/{x[0]}.html"] for x in SERVICES if x[0] != slug][:3]},
-        {"type": "faq", "heading": f"Questions about {navlabel.lower()}", "items": list(faq) + cf("who", "person", "docs")},
-        LEADFORM,
+        {"type": "hero-layered", "id": "hero-layered", "eyebrow": eyebrow, "heading": cfg["head"] or heading, "subhead": subhead,
+         "primary": {"label": f"Get specs and CAD for {short}" if slug not in ("mobile-automation", "communicators") else f"Get specs for {short}", "href": "for-specifiers.html"},
+         "secondary": {"label": "Talk to Inside Sales", "href": "contact.html"},
+         "image": IMG + cfg["bg"], "image_w": 1200, "image_h": 800, "float": IMG + cfg["float"], "float_alt": f"DMP {short}",
+         "stats": cfg["stats"], "card_a": card_a, "card_b": card_b},
+        {"type": "cards", "cls": "lf-num", "eyebrow": "What sets it apart", "heading": f"What you get with DMP {short}", "items": benefits},
+    ]
+    big = {"id": "range", "dark": True, "eyebrow": f"The {short} range", "heading": cfg["big_head"], "intro": cfg["big_intro"]}
+    if cfg["big"] == "showcase3d":
+        secs.append({"type": "showcase3d", **big, "items": [[r[0], r[1], r[2], r[3]] for r in rows[:9]]})
+    else:
+        nodes = cfg.get("nodes") or [[r[0], r[3]] for r in rows[:8]]
+        secs.append({"type": "network", **big, "hub": cfg["hub"], "nodes": nodes})
+        secs.append({"type": "works", "eyebrow": "Every product", "heading": f"The {short} range, one page each", "intro": "Select a product for its full page, spec sheet and documents.",
+                     "link_label": "View product", "items": [[r[0], r[3], r[2], r[1]] for r in rows[:6]]})
+    secs += [
+        {"type": "detail", "alt": True, "dark": cfg["big"] == "network", "eyebrow": "In this category", "heading": f"What we build for {short}", "body": one, "bullets": included, "image": dimg, "image_alt": dalt, "flip": True},
+        {"type": "works", "alt": cfg["big"] != "network", "heading": "Works with", "intro": "Each system runs on the same platform.", "link_label": "See the system",
+         "items": [[SERVICE_INDEX[w][1], SERVICE_INDEX[w][3], f"services/{w}.html", IMG + SYS_LIFT[w]["float"]] for w in cfg["with"]]},
+        {"type": "faq", "alt": cfg["big"] == "network", "heading": f"Questions about {navlabel.lower()}", "items": list(faq) + cf("who", "person", "docs")},
+        {**LEADFORM, "alt": False, "dark": True},
     ]
     return {"file": f"services/{slug}.html", "title": f"{navlabel} | {CLIENT}, Springfield, Missouri",
             "description": desc(f"{one} {subhead}"),
@@ -407,21 +489,37 @@ def service_page(slug, navlabel, short, one, image, eyebrow, heading, subhead, b
             "crumbs": [["Home", "index.html"], ["Products", "services.html"], [navlabel, f"services/{slug}.html"]], "sections": secs}
 
 
+from dmp_industry_lift import IND_CLIP, IND_STATS, IND_NEED, IND_LINEUP, SYSTEM_PHOTOS  # noqa: E402
+
+
 def industry_page(slug, name, image, headline, why, bullets, featured, library, contact_role, faq):
+    import dmp_pages_products as _p
+    clip = IND_CLIP.get(slug, "hero-loop-hq")
+    lineup = [[_p.PRODUCTS[k]["name"], _p.PRODUCTS[k]["image"], f"products/{k}.html", _p.PRODUCTS[k]["blurb"]] for k in IND_LINEUP[slug]]
     secs = [
-        {"type": "hero", "layout": "split", "eyebrow": name, "heading": IND_H1.get(slug, headline),
-         "subhead": headline,
-         "primary": CTA, "secondary": {"label": "All industries", "href": "industries.html"}, "image": image, "image_alt": f"{name}: DMP", "image_w": 1200, "image_h": 800},
-        {"type": "detail", "alt": True, "eyebrow": "Why DMP", "heading": f"Why DMP for {name.lower()}", "body": why, "bullets": bullets},
-        {"type": "resources", "heading": "Featured products", "intro": "The products dealers reach for first in this market.", "items": [[x[0], x[1], x[2], "View product", x[3]] for x in featured]},
+        {"type": "hero-layered", "id": "hero-layered", "eyebrow": name, "heading": IND_H1.get(slug, headline), "subhead": headline,
+         "primary": CTA, "secondary": {"label": "All industries", "href": "industries.html"},
+         "image": f"{IMG}{clip}-poster.jpg", "image_w": 1600, "image_h": 900,
+         "hv": {"src": f"{IMG}{clip}.mp4", "webm": f"{IMG}{clip}.webm", "poster": f"{IMG}{clip}-poster.jpg"},
+         "stats": IND_STATS[slug],
+         "card_a": {"eyebrow": "Featured here", "title": f"Where dealers start in {name.lower()}", "body": "The products dealers reach for first in this market.",
+                    "items": [x[1] for x in featured], "label": "See the lineup", "href": "#lineup"},
+         "card_b": {"eyebrow": "Specifying a building?", "title": "Talk to a person", "body": "Inside Sales supports system design and quotes.",
+                    "links": [["Contact DMP", "contact.html"], ["Find a system", "find-a-system.html"]]}},
+        {"type": "spotlight", "id": "needs", "eyebrow": "What this building needs", "heading": IND_NEED.get(slug, f"Why DMP for {name.lower()}"), "body": why,
+         "needs": bullets, "image": image, "image_alt": f"{name}: DMP", "tag": name, "cta": {"label": "Talk to DMP about " + name.lower(), "href": "contact.html"}},
+        {"type": "showcase3d", "id": "lineup", "stage": True, "eyebrow": "The hardware", "heading": f"The hardware behind {name.lower()} systems",
+         "intro": "Drag, swipe or use the arrow keys. Click a product to open it.", "items": lineup},
     ]
     if library:
         secs.append({"type": "cards", "alt": True, "eyebrow": "The library", "heading": f"The library for {name.lower()}", "intro": "White papers, spec sheets and guides for this market.", "items": [[t, "Available from DMP."] for t in library]})
+    secs += [{"type": "tiles", "id": "systems", "eyebrow": "One manufacturer", "heading": "Four systems that work together here", "intro": "Each has its own page, its own products and its own documents.",
+              "items": [[SERVICE_INDEX[x][1], brief(SERVICE_INDEX[x][3], 100), f"services/{x}.html", IMG + SYSTEM_PHOTOS[x]] for x in ("intrusion", "access-control", "fire", "video")]},
+             {"type": "stats3d", "id": "facts", "items": [["50", "Years making security systems"], ["SOC 2 Type II", "Examined every year"], ["14", "Product categories"], ["USA", "Made with U.S. and global components"]]}]
     if contact_role:
-        secs.append({"type": "detail", "eyebrow": "Talk to DMP", "heading": f"A dedicated {contact_role.lower()}", "body": f"We have a {contact_role.lower()} for this market. Inside Sales, 877-757-4367, can route the question, and our directory shows your regional sales manager.", "bullets": ["Inside Sales, 8 a.m. to 5 p.m. Central", "Regional sales manager directory"]})
-    secs += [{"type": "services", "heading": "Systems that work together here", "intro": "Each has its own page.",
-              "items": [[SERVICE_INDEX[x][1], SERVICE_INDEX[x][3], f"services/{x}.html"] for x in ("intrusion", "access-control", "fire", "video")]},
-             {"type": "faq", "heading": f"Questions about {name.lower()} security", "items": list(faq) + cf("who", "what", "person", "docs")},
+        secs.append({"type": "detail", "stage": True, "eyebrow": "Talk to DMP", "heading": f"A dedicated {contact_role.lower()}", "body": f"We have a {contact_role.lower()} for this market. Inside Sales, 877-757-4367, can route the question, and our directory shows your regional sales manager.",
+                     "bullets": ["Inside Sales, 8 a.m. to 5 p.m. Central", "Regional sales manager directory"], "image": IMG + "team-2021-1200.jpg", "image_alt": "DMP employees at the headquarters", "image_w": 1200, "image_h": 800})
+    secs += [{"type": "faq", "stage": not contact_role, "heading": f"Questions about {name.lower()} security", "items": list(faq) + cf("who", "what", "person", "docs")},
              LEADFORM]
     return {"file": f"industries/{slug}.html", "title": f"Security systems for {name.lower()} | {CLIENT}, Springfield, Missouri",
             "description": desc(f"{headline} {why}", 158),
@@ -457,16 +555,22 @@ def build():
             {"title": "Products", "links": [[s[1], f"services/{s[0]}.html"] for s in SERVICES]},
             {"title": "Industries", "links": [[i[1], f"industries/{i[0]}.html"] for i in INDUSTRIES]},
             {"title": "Support and training", "links": [["Contact and support", "support.html"], ["Technical support FAQs", "support/tech-faqs.html"], ["Documentation", "support/documentation.html"], ["Dealer services", "support/dealer-services.html"], ["Training", "training.html"], ["Technology partners", "partners.html"], ["Get a quote", "support/get-a-quote.html"]]},
-            {"title": "Company", "links": [["About", "about.html"], ["Careers", "about/careers.html"], ["Certifications", "about/certifications.html"], ["Springfield, Missouri", "locations.html"], ["News and resources", "resources.html"], ["Events", "events.html"], ["International", "international.html"], ["Contact", "contact.html"]]},
+            {"title": "Company", "links": [["About", "about.html"], ["Careers", "about/careers.html"], ["Certifications", "about/certifications.html"], ["Springfield, Missouri", "locations.html"], ["News and resources", "resources.html"], ["Events", "events.html"], ["International", "international.html"], ["Trust center", "trust.html"], ["Accessibility", "accessibility.html"], ["Contact", "contact.html"]]},
         ],
         "legal": [["Privacy policy", "privacy-policy.html"], ["Terms of use", "terms-of-use.html"]],
     }
     schema = {"org_name": CLIENT, "org_url": SITE, "org_logo": SITE + "/static/logo-light.DC983iDA.svg",
-              "org_description": "Digital Monitoring Products manufactures intrusion, access control, fire and video security systems in Springfield, Missouri, and sells them through authorized dealers and distributors. Founded in 1975.",
-              "sameAs": [], "telephone": "+1-877-757-4367", "founded": FOUNDED, "slogan": "Built in Springfield since 1975"}
-    schema.update({"short_name": "DMP", "title_city": "Springfield, Missouri", "cities": ["Springfield", "Springfield, Missouri", "Missouri", "MO"],
+              "org_description": "Digital Monitoring Products manufactures intrusion, access control, fire and video security systems in the USA and sells them through authorized dealers and distributors across the United States. Founded in 1975.",
+              "sameAs": ["https://www.linkedin.com/company/dmpalarms", "https://www.youtube.com/@DMPAlarms", "https://www.facebook.com/DMPAlarms/",
+                         "https://www.crunchbase.com/organization/digital-monitoring-products",
+                         "https://www.bbb.org/us/mo/springfield/profile/security-system-monitors/digital-monitoring-products-0734-21335"],
+              "telephone": "+1-877-757-4367", "founded": FOUNDED, "slogan": "Security systems made in the USA since 1975"}
+    schema.update({"short_name": "DMP", "title_short_brand": True, "title_no_cut": True, "cities": [], "local_business": False, "founding_location": "Springfield, Missouri",
+                   "contact_points": [["Sales", "+1-877-757-4367"], ["Technical Support", "+1-888-436-7832"], ["Customer Service", "+1-866-266-2826"], ["Activation and billing (SecureCom Wireless)", "+1-877-300-8030"]],
+                   "post_globs": ["blog/*", "news/*"], "news_globs": ["news/*"], "og_per_page": True,
+                   "crumb_parent_urls": {"products": "services", "news": "resources"},
+                   "catalog_name": "DMP product lines", "catalog": [[x[1], f"services/{x[0]}.html"] for x in SERVICES],
                    "area_served": [{"@type": "Country", "name": "United States"}], "service_globs": [],
-                   "meta_tail": "Digital Monitoring Products, Springfield, Missouri.",
                    "local": [{"slug": "springfield-headquarters", "name": "Digital Monitoring Products headquarters", "street": "2500 N. Partnership Boulevard", "city": "Springfield",
                               "region": "MO", "postal": "65803", "country": "US", "telephone": "+1-877-757-4367"}]})
     nav = [
@@ -474,29 +578,38 @@ def build():
         {"label": "Industries", "href": "industries.html", "children": [[i[1], f"industries/{i[0]}.html"] for i in INDUSTRIES]},
         {"label": "Support", "href": "support.html", "children": [["Contact and support", "support.html"], ["Technical support FAQs", "support/tech-faqs.html"], ["Documentation", "support/documentation.html"], ["Dealer services", "support/dealer-services.html"], ["Design tools", "support/design-tools.html"], ["Architect and engineer support", "support/ae-support.html"], ["Training", "training.html"], ["Get a quote", "support/get-a-quote.html"]]},
         {"label": "Partners", "href": "partners.html", "children": [["Technology partners", "partners.html"], ["Become a partner", "partners/become-a-partner.html"], ["Become a dealer", "support/become-a-dealer.html"]]},
-        {"label": "Resources", "href": "blog.html", "children": [["Blog", "blog.html"], ["Find a system", "find-a-system.html"], ["For dealers", "for-dealers.html"], ["For specifiers", "for-specifiers.html"], ["For building owners", "for-building-owners.html"], ["Dealer portal preview", "dealer-portal.html"], ["Why DMP", "why-dmp.html"]]},
+        {"label": "Resources", "href": "blog.html", "children": [["Blog", "blog.html"], ["Find a system", "find-a-system.html"], ["Dealer system-fit check", "assessment.html"], ["Savings estimator", "savings-estimator.html"], ["Dealer stories", "stories.html"], ["Trust center", "trust.html"], ["Find a dealer", "find-a-dealer.html"], ["For dealers", "for-dealers.html"], ["For specifiers", "for-specifiers.html"], ["For building owners", "for-building-owners.html"], ["Dealer portal preview", "dealer-portal.html"], ["Why DMP", "why-dmp.html"]]},
         {"label": "Company", "href": "about.html", "children": [["About DMP", "about.html"], ["Careers", "about/careers.html"], ["DMP Cares", "about/dmp-cares.html"], ["Certifications", "about/certifications.html"], ["Springfield, Missouri", "locations.html"], ["News and resources", "resources.html"], ["Events", "events.html"], ["International", "international.html"], ["FAQ", "faq.html"], ["Contact", "contact.html"]]},
     ]
     pages = []
     # ------------------------------------------------------------------ home
-    pages.append({"file": "index.html", "title": f"{CLIENT} | Security systems built in Springfield, Missouri since 1975",
-                  "description": "Digital Monitoring Products designs and builds intrusion, access control, fire and video systems in Springfield, Missouri, and sells them through authorized dealers. Since 1975.",
+    pages.append({"file": "index.html", "title": "Intrusion, access control, fire and video systems | DMP",
+                  "description": "Digital Monitoring Products makes intrusion, access control, fire and video systems and sells them through authorized dealers across the United States.",
                   "sections": [
         {"type": "hero-layered", "id": "hero-layered", "eyebrow": "Springfield, Missouri, since 1975",
-         "heading": "Four systems. <em>One platform.</em>",
-         "subhead": "We manufacture the panels, keypads, communicators and software behind the systems dealers install, and sell them through authorized dealers and distributors.",
-         "primary": CTA, "secondary": {"label": "See the products", "href": "services.html"},
+         "heading": "Intrusion, access, fire and video, <em>on one platform.</em>",
+         "subhead": "We manufacture the panels, keypads, communicators and software behind the systems dealers install, and sell them only through authorized dealers and distributors.",
+         "primary": {"label": "Become a dealer", "href": "support/become-a-dealer.html"}, "secondary": {"label": "Order at buy.DMP.com", "href": BUY},
          "image": IMG + "hero-hq-dark-2100.jpg", "image_w": 2100, "image_h": 900,
+         "float": IMG + "p-xr550-1200.png", "float_alt": "The DMP XR550 control panel",
          "stats": [["1975", "Founded in Springfield"], ["14", "Product categories"], ["SOC\u00a02", "Type II examination, every year"], ["24/7", "Dealer ordering at buy.DMP.com"]],
          "card_a": {"eyebrow": "Specifying a system", "title": "Start from the product", "body": "Panels, readers, cameras and communicators, each with a page and a spec sheet.",
-                    "items": ["XT75, XR550 and XR650 control panels", "Digital Key and Entré access control", "VUE Plus cameras and AlarmVision"], "label": "Browse products", "href": "services.html"},
+                    "items": ["XT75 and XR550 control panels, with the award-winning XR650 coming soon", "Digital Key and Entré access control", "VUE Plus cameras and AlarmVision"], "label": "Browse products", "href": "services.html"},
          "card_b": {"eyebrow": "Already a DMP dealer?", "title": "The fast lane", "body": "Order, look up a document or reach a person.",
-                    "links": [["Order at buy.DMP.com", BUY], ["Technical documentation", DOCS], ["Contact and support", "contact.html"]]}},
+                    "links": [["Technical documentation", DOCS], ["Dealer services", "support/dealer-services.html"], ["Contact and support", "contact.html"]]},
+         "variants": {
+             "clean": {"type": "hero-grid", "finder_label": "I protect a", "finder": [[i[1], f"industries/{i[0]}.html"] for i in INDUSTRIES[:6]],
+                       "tiles": [["XR550 Control Panel", IMG + "p-xr550-1200.png", "products/xr550.html", "Intrusion"], ["XT75 Control Panel", IMG + "xt75-1200.png", "products/xt75.html", "Intrusion"],
+                                 ["Digital Key", IMG + "p-digital-key-credential-1200.png", "products/digital-key-credential.html", "Access control"],
+                                 ["XF6 Fire Control Panel", IMG + "p-xf6-1200.png", "products/xf6.html", "Fire"], ["Virtual Keypad", IMG + "p-virtual-keypad-1200.png", "products/virtual-keypad.html", "Software"]]},
+             "press": {"type": "hero-press", "masthead": ["Springfield, Missouri", "Making security systems since 1975", "Sold through authorized dealers"],
+                       "lead": {"kicker": NEWS[0][0], "title": NEWS[0][1], "body": NEWS[0][2], "href": NEWS[0][4], "image": IMG + "vue-plus-1200.jpg", "alt": "A VUE Plus camera", "label": "Read the story"},
+                       "side": [[NEWS[3][0], NEWS[3][1], NEWS[3][4]], [NEWS[2][0], NEWS[2][1], NEWS[2][4]], [NEWS[1][0], NEWS[1][1], NEWS[1][4]]]}}},
         {"type": "partners", "caption": "Industry associations and alliances", "items": ASSOCIATIONS},
-        {"type": "stats3d", "id": "facts", "items": [["50", "Years making security systems"], ["SOC 2 Type II", "Examined every year"], ["14", "Product categories"], ["USA", "Made with U.S. and global components"]]},
-        {"type": "explorer", "id": "systems", "eyebrow": "One manufacturer", "heading": "Four systems, and the app that runs them", "items": [
+        {"type": "stats3d", "id": "facts", "items": [["50", "Years making security systems"], ["SOC 2 Type II", "Examined every year"], ["14", "Product categories"], ["Missouri", "Made in Springfield with U.S. and global components"]]},
+        {"type": "explorer", "id": "systems", "eyebrow": "One manufacturer", "heading": "Four systems on one platform, run from one app.", "items": [
             {"label": "Intrusion", "title": "Intrusion panels from XT to XR", "body": "The XT75 is a hybrid intrusion panel for residential or small business applications. It integrates intrusion, access control and AlarmVision, bridging the gap between the XT and XR Series.",
-             "bullets": ["XT30, XT50 and XT75", "XR150, XR550 and XR650", "TMSentry for teller machines"], "image": IMG + "tab-intrusion-1200.jpg", "image_alt": "The DMP XT75 control board", "href": "services/intrusion.html", "link_label": "Intrusion systems"},
+             "bullets": ["XT30, XT50 and XT75", "XR150 and XR550, with the XR650 coming soon", "TMSentry for teller machines"], "image": IMG + "tab-intrusion-1200.jpg", "image_alt": "The DMP XT75 control board", "href": "services/intrusion.html", "link_label": "Intrusion systems"},
             {"label": "Access control", "title": "Access control beyond the fob", "body": "Digital Key adds a credential to an Apple or Google device's mobile wallet, so the smartphone works as a secure, contactless credential.",
              "bullets": ["Digital Key and mobile credentials", "X1 Series cloud access control", "Entré Lite, Business and Enterprise"], "image": IMG + "tab-access-1200.jpg", "image_alt": "A phone held to a door reader", "href": "services/access-control.html", "link_label": "Access control"},
             {"label": "Fire", "title": "A 24V fire solution", "body": "The XF6 fire control panel is built for single-site applications and comes with network and optional cellular communications that send all signals directly to the monitoring center.",
@@ -505,15 +618,15 @@ def build():
              "bullets": ["VUE Plus camera line", "VK VMS video management", "XV gateways with AlarmVision"], "image": IMG + "tab-video-1200.jpg", "image_alt": "A VUE Plus camera", "href": "services/video.html", "link_label": "Video"},
             {"label": "Mobile", "title": "Virtual Keypad and Dealer Admin", "body": "Virtual Keypad lets dealers brand a full-featured remote control. Dealer Admin handles mass panel programming and bulk firmware updates. Both are examined annually for SOC 2 Type II.",
              "bullets": ["Virtual Keypad for iOS, Android and the browser", "Dealer Admin programming templates", "Mobile wallet credentials"], "image": IMG + "tab-mobile-1200.jpg", "image_alt": "Virtual Keypad on a laptop, tablet and phone", "href": "services/mobile-automation.html", "link_label": "Virtual Keypad and software"}]},
-        {"type": "showcase3d", "id": "flagships", "eyebrow": "The range", "heading": "Meet the products behind the platform.", "intro": "Drag, swipe or use the arrow keys. Click a product to open it.", "items": _aud.SHOWCASE},
-        {"type": "flow", "id": "how", "alt": True, "eyebrow": "How a DMP system works", "heading": "Follow one alarm from the sensor to the phone",
-         "intro": "Five steps, one manufacturer. Select a step to see what happens and which DMP products do the work.", "detail_eyebrow": "What happens", "receive_label": "DMP products at this step", "steps": [
+        {"type": "showcase3d", "id": "flagships", "dark": True, "eyebrow": "The range", "heading": "Meet the products behind the platform.", "intro": "Drag, swipe or use the arrow keys. Click a product to open it.", "items": _aud.SHOWCASE},
+        {"type": "journey", "id": "how", "alt": True, "eyebrow": "How a DMP system works", "heading": "Follow one alarm from the sensor to the phone",
+         "intro": "Five steps, one manufacturer. Scroll to follow the signal, or select a step to see what happens and which DMP products do the work.", "detail_eyebrow": "What happens", "receive_label": "DMP products at this step", "steps": [
             {"label": "Detect", "when": "Sensors and cameras", "summary": "Doors, windows, motion, smoke, glass and video.", "title": "Detectors and cameras see the event",
              "body": "Door and window contacts, motion and glassbreak detectors, smoke, heat and CO detectors and cameras all report to the panel, wired or over our 1100 Series wireless, which has been AES encrypted since 2019. AlarmVision analytics let cameras act like smart motion detectors.",
              "receive": ["1100 Series wireless devices", "Motion, glassbreak and contact detectors", "Smoke, heat and CO detectors", "VUE Plus cameras and XV gateways"]},
             {"label": "Decide", "when": "Control panel", "summary": "XT, XTL and XR Series; XF6 for fire.", "title": "The panel decides what the event means",
              "body": "Cancel/Verify false alarm prevention has been a DMP feature since 2007. The XT75 runs intrusion, access control and AlarmVision together, and the XR550 supports 96 doors of access control.",
-             "receive": ["XT30, XT50 and XT75", "XR150, XR550 and XR650", "XF6 fire control panel", "TMSentry for teller machines"]},
+             "receive": ["XT30, XT50 and XT75", "XR150 and XR550 (XR650 coming soon)", "XF6 fire control panel", "TMSentry for teller machines"]},
             {"label": "Report", "when": "Communicators", "summary": "Cellular, network and Wi-Fi paths.", "title": "The signal goes out on more than one path",
              "body": "We offer LTE, Wi-Fi and universal communicators, including the first alarm panel communicator for the AT&T FirstNet network (2020). The XR550 supports up to eight communication paths and moves to a backup path instantly. JamAlert detects cellular jamming, and VAULT encrypts the link to our cloud.",
              "receive": ["263LTE and 265LTE", "Dual Com and Cell Com", "763 Wi-Fi", "JamAlert and VAULT"]},
@@ -539,14 +652,14 @@ def build():
          "image": IMG + "plant-1200.jpg", "image_alt": "The DMP production floor in Springfield, Missouri", "image_w": 1200, "image_h": 800},
         {"type": "timeline", "id": "story", "eyebrow": "Fifty years of firsts", "heading": "From a central station receiver to a cloud platform",
          "intro": "Milestones from our history.", "items": [TIMELINE[0], TIMELINE[3], TIMELINE[7], TIMELINE[10], TIMELINE[11], TIMELINE[13]]},
-        {"type": "resources", "heading": "What we shipped and earned in 2026", "intro": "Launches, awards and customer stories.", "items": NEWS[:3]},
+        {"type": "resources", "dark": True, "heading": "What we shipped and earned in 2026", "intro": "Launches, awards and customer stories.", "items": NEWS[:3]},
         {"type": "faq", "id": "faq", "heading": "Quick answers for dealers and specifiers", "items": cf("who", "where", "usa", "order", "soc")},
-        {"type": "contact", "id": "contact", "heading": "Talk to a person at DMP", "body": "Tell us who you are and what you are specifying.",
+        {"type": "contact", "id": "contact", "dark": True, "heading": "Talk to a person at DMP", "body": "Tell us who you are and what you are specifying.",
          "options": ["I am a dealer", "I am specifying a building", "I own a building", "Something else"], "submit": "Send to DMP",
          "note": "Inside Sales, 8 a.m. to 5 p.m. Central."},
     ]})
     # ------------------------------------------------------------------ products hub
-    pages.append({"file": "services.html", "title": f"Products | {CLIENT}, Springfield, Missouri",
+    pages.append({"file": "services.html", "title": "Products | DMP",
                   "description": "Our catalogue by system: intrusion, access control, fire, video, communicators, wireless, panels and keypads, Virtual Keypad and software.",
                   "sections": [
         {"type": "hero", "layout": "centered", "eyebrow": "Products", "heading": "Every part of the system. <em>One manufacturer.</em>",
@@ -567,11 +680,19 @@ def build():
     pages.append({"file": "industries.html", "title": f"Industries | {CLIENT}, Springfield, Missouri",
                   "description": "Eleven industries, each with its own page: commercial, financial institutions, retail, government, industrial, education, healthcare, multi-tenant, religious, storage and residential.",
                   "sections": [
-        {"type": "hero", "layout": "centered", "eyebrow": "Industries", "heading": "Eleven kinds of building. <em>One manufacturer.</em>",
-         "subhead": "See what we offer for each, the products we feature and the documents behind them.", "primary": CTA,
-         "image": IMG + "banner-allin-1200.jpg", "image_alt": "A DMP circuit board with the shield 'All in on DMP: access control, communicators, fire, intrusion, video'", "image_w": 1200, "image_h": 495},
-        {"type": "services", "heading": "Start with the building you protect", "intro": "Choose the nearest match.",
-         "items": [[i[1], i[3], f"industries/{i[0]}.html"] for i in INDUSTRIES]},
+        {"type": "hero-layered", "id": "hero-layered", "eyebrow": "Industries", "heading": "Eleven kinds of building. <em>One manufacturer.</em>",
+         "subhead": "See what we offer for each, the products we feature and the documents behind them.", "primary": CTA, "secondary": {"label": "Find a system", "href": "find-a-system.html"},
+         "image": IMG + "hero-loop-hq-poster.jpg", "image_w": 1600, "image_h": 900,
+         "hv": {"src": IMG + "hero-loop-hq.mp4", "webm": IMG + "hero-loop-hq.webm", "poster": IMG + "hero-loop-hq-poster.jpg"},
+         "stats": [["11", "Industry pages"], ["4", "Systems in every one"], ["8", "System families with their own pages"]],
+         "card_a": {"eyebrow": "Not sure where you fit?", "title": "Start with the building", "body": "Choose the nearest match below. Every page lists the products dealers reach for first.",
+                    "items": ["Commercial, retail and financial", "Education, healthcare and government", "Residential, storage and multi-tenant"], "label": "Browse the buildings", "href": "#buildings"}},
+        {"type": "tiles", "id": "buildings", "variant": "mosaic", "eyebrow": "Start with the building you protect", "heading": "Choose the nearest match.",
+         "intro": "Each page opens with what that building needs, then the hardware, the four systems and the questions owners ask.",
+         "items": [[i[1], i[3], f"industries/{i[0]}.html", i[2]] for i in INDUSTRIES]},
+        {"type": "billboard", "image": IMG + "banner-allin-1200.jpg", "image_alt": "A DMP circuit board with the shield 'All in on DMP: access control, communicators, fire, intrusion, video'",
+         "eyebrow": "Whatever the building", "heading": "Intrusion, access, fire and video. All in on DMP.", "text": "One manufacturer for the panels, keypads, communicators and software, sold through authorized dealers.",
+         "cta": {"label": "Find a system", "href": "find-a-system.html"}},
         {"type": "faq", "heading": "Questions about industries", "items": cf("what", "who", "person")},
         LEADFORM]})
     for i in INDUSTRIES:
@@ -580,23 +701,29 @@ def build():
     pages.append({"file": "about.html", "title": f"About {CLIENT} | Manufacturer in Springfield, Missouri since 1975",
                   "description": "Digital Monitoring Products has manufactured security systems in Springfield, Missouri since 1975. Our mission, values, history, leadership and independent SOC 2 Type II examinations.",
                   "sections": [
-        {"type": "hero", "layout": "split", "eyebrow": "About DMP", "heading": "We build security systems <em>to create jobs</em>.",
-         "subhead": "Our purpose: the security of families determines the strength of society, and a strong society reaches out to the rest of the world.", "primary": CTA,
-         "image": IMG + "hq-exterior-1200.jpg", "image_alt": "The DMP headquarters in Springfield, Missouri, with the American flag in front", "image_w": 1200, "image_h": 800},
-        {"type": "proof", "alt": True, "eyebrow": "Our mission", "value": "We care. We have fun. We profit.",
-         "text": "We provide customer-driven products through listening, anticipating needs and responding quickly with innovative solutions that work. We insist on the integrity of our products and our people.", "source": "DMP mission statement"},
+        {"type": "hero-layered", "id": "hero-layered", "eyebrow": "About DMP", "heading": "We build security systems <em>to create jobs</em>.",
+         "subhead": "Our purpose: the security of families determines the strength of society, and a strong society reaches out to the rest of the world.", "primary": CTA, "secondary": {"label": "Fifty years of firsts", "href": "#story"},
+         "image": IMG + "hero-loop-plant-poster.jpg", "image_w": 1600, "image_h": 900,
+         "hv": {"src": IMG + "hero-loop-plant.mp4", "webm": IMG + "hero-loop-plant.webm", "poster": IMG + "hero-loop-plant-poster.jpg"},
+         "stats": [["1975", "Founded in Springfield"], ["50", "Years making security systems"], ["SOC\u00a02", "Type II, examined every year"], ["USA", "Made with U.S. and global components"]],
+         "card_a": {"eyebrow": "Our mission", "title": "We care. We have fun. We profit.", "body": "Customer-driven products, built with integrity.",
+                    "items": ["Listening to customers", "Anticipating needs", "Responding quickly"], "label": "Meet the leaders", "href": "#leaders"}},
+        {"type": "spotlight", "id": "mission", "eyebrow": "Our mission", "heading": "We care. We have fun. We profit.",
+         "body": "We provide customer-driven products through listening, anticipating needs and responding quickly with innovative solutions that work. We insist on the integrity of our products and our people.",
+         "needs": ["Listen: customer-driven products start with listening", "Anticipate: respond quickly with innovative solutions that work", "Insist on integrity: in our products and in our people"],
+         "image": IMG + "team-2021-1200.jpg", "image_alt": "DMP employees gathered in front of the headquarters", "tag": "The DMP team", "cta": {"label": "Contact DMP", "href": "contact.html"}},
         {"type": "timeline", "id": "story", "eyebrow": "Our history", "heading": "Fifty years of firsts",
          "intro": "How we began, and what followed.", "items": TIMELINE},
-        {"type": "values", "alt": True, "eyebrow": "Our values", "heading": "Six values, in our own words", "items": VALUES},
-        {"type": "detail", "eyebrow": "Where we build", "heading": "Manufactured in the USA, with U.S. and global components",
+        {"type": "spotlight", "id": "plant", "flip": True, "eyebrow": "Where we build", "heading": "Made in Springfield, with U.S. and global components.",
          "body": "'Made in the USA' is something you rarely see today. Like other manufacturers, we rely on some components that are not indigenous to the U.S. Manufacturing in the U.S. builds a tighter partnership with customers and the community.",
-         "bullets": ["2500 N. Partnership Boulevard, Springfield, Missouri 65803", "Jobs for Springfield-area residents"],
-         "image": IMG + "plant-1200.jpg", "image_alt": "The DMP production floor", "image_w": 1200, "image_h": 800},
+         "needs": ["Headquarters: 2500 N. Partnership Boulevard, Springfield, Missouri 65803", "Jobs: for Springfield-area residents", "Tested: every DMP product is quality tested before it ships"],
+         "image": IMG + "plant-1200.jpg", "image_alt": "The DMP production floor", "tag": "Our production floor"},
+        {"type": "values", "stage": True, "eyebrow": "Our values", "heading": "Six values, in our own words", "items": VALUES},
         {"type": "cards", "alt": True, "eyebrow": "Certifications", "heading": "Examined by outsiders, every year", "items": [
             ["SOC 2 Type II", "We complete independent SOC 2 Type II examinations annually, conducted by a licensed CPA firm to AICPA standards."],
             ["Tier 4 data center", "Dealer Admin and Virtual Keypad are hosted in a Tier 4 data center with fully redundant subsystems."],
             ["SOC 3 report", "The SOC 3 report is intended for public distribution. SOC 2 reports go to customers and partners under confidentiality."]]},
-        {"type": "leadership", "heading": "Twelve people run DMP", "intro": "The people who lead DMP.", "people": LEADERS,
+        {"type": "leadership", "id": "leaders", "stage": True, "heading": "Twelve people run DMP", "intro": "The people who lead DMP.", "people": LEADERS,
          "orgs_intro": "Industry associations and alliances", "orgs": ASSOCIATIONS},
         {"type": "faq", "id": "faq", "heading": "Questions about DMP", "items": cf("where", "usa", "what", "who", "soc", "person")},
         LEADFORM]})
@@ -604,19 +731,27 @@ def build():
     pages.append({"file": "locations.html", "title": f"Springfield, Missouri headquarters | {CLIENT}",
                   "description": "Digital Monitoring Products is headquartered and manufactures at 2500 N. Partnership Boulevard, Springfield, Missouri 65803. Phone 877-757-4367.",
                   "sections": [
-        {"type": "hero", "layout": "split", "eyebrow": "Springfield, Missouri", "heading": "One headquarters. <em>Authorized distributors worldwide.</em>",
-         "subhead": "2500 N. Partnership Boulevard, Springfield, Missouri 65803. Inside Sales 877-757-4367.", "primary": CTA,
-         "image": IMG + "hq-exterior-2-1200.png", "image_alt": "The DMP headquarters entrance sign with the American flag", "image_w": 1200, "image_h": 675},
-        {"type": "cards", "alt": True, "eyebrow": "Reach a person", "heading": "Call the right team", "items": [
-            ["Inside Sales, 877-757-4367", "System design, architect and engineer support, pre-sales support, quotes and pricing, and Dealer Direct assistance. 8 a.m. to 5 p.m. Central. InsideSales@DMP.com."],
-            ["Technical Support, 888-436-7832", "Installation, programming, troubleshooting and diagnostics. 7 a.m. to 7 p.m. Central. TechSupport@DMP.com."],
-            ["Customer Service, 866-266-2826", "Products and ordering, software activations, the Buy Site, shipping and order entry. 8 a.m. to 6 p.m. Central. CustomerService@DMP.com."]]},
-        {"type": "cards", "eyebrow": "Beyond the U.S.", "heading": "Authorized distributors worldwide", "intro": "Our authorized distributors outside the U.S.", "items": [
-            ["Benelux", "Sabelco"], ["Greece and Cyprus", "GQ Tech"], ["Hungary", "Object Guard"], ["Latin America and the Caribbean", "ISTC"],
-            ["Mexico", "Otwo and Tecnoseguridad"], ["South Africa, Mozambique and Zambia", "Regal"], ["United Kingdom and Ireland", "ADI EU"]]},
+        {"type": "hero-layered", "id": "hero-layered", "eyebrow": "Springfield, Missouri", "heading": "One headquarters. <em>Authorized distributors worldwide.</em>",
+         "subhead": "2500 N. Partnership Boulevard, Springfield, Missouri 65803. Inside Sales 877-757-4367.", "primary": CTA, "secondary": {"label": "International distributors", "href": "international.html"},
+         "image": IMG + "hero-loop-campus-poster.jpg", "image_w": 1600, "image_h": 900,
+         "hv": {"src": IMG + "hero-loop-campus.mp4", "webm": IMG + "hero-loop-campus.webm", "poster": IMG + "hero-loop-campus-poster.jpg"},
+         "stats": [["1975", "Made here since"], ["7", "Distributor regions outside the U.S."], ["7 to 7", "Technical Support hours, Central"]],
+         "card_b": {"eyebrow": "Need a person?", "title": "Call Inside Sales", "body": "877-757-4367, 8 a.m. to 5 p.m. Central.", "links": [["Contact DMP", "contact.html"], ["Find a dealer", "find-a-dealer.html"]]}},
+        {"type": "hqmap", "stage": True, "eyebrow": "Headquarters", "heading": "Where every DMP product is made.", "map_label": "A locator panel marking Springfield, Missouri",
+         "coords": "37.2\u00b0 N, 93.3\u00b0 W", "place": "Springfield, Missouri", "chips": ["Headquarters", "Manufacturing", "Technical Support", "Inside Sales"],
+         "body": "Security systems have been designed, built and supported in one place since 1975, and sold through authorized dealers and distributors.",
+         "facts": [["Address", "2500 N. Partnership Boulevard, Springfield, Missouri 65803"], ["Inside Sales", "877-757-4367"], ["Email", "InsideSales@DMP.com"], ["Founded", "1975, by Rick Britton"]],
+         "image": IMG + "hq-exterior-2-1200.png", "image_alt": "The DMP headquarters entrance sign with the American flag"},
+        {"type": "network", "id": "distributors", "alt": True, "eyebrow": "Beyond the U.S.", "heading": "Authorized distributors worldwide", "hub": "DMP", "intro": "Our authorized distributors outside the U.S. Select a region to see who serves it.",
+         "nodes": [["Benelux", "Sabelco"], ["Greece and Cyprus", "GQ Tech"], ["Hungary", "Object Guard"], ["Latin America and the Caribbean", "ISTC"],
+                   ["Mexico", "Otwo and Tecnoseguridad"], ["South Africa, Mozambique and Zambia", "Regal"], ["United Kingdom and Ireland", "ADI EU"]]},
+        {"type": "callboard", "stage": True, "eyebrow": "Reach a person", "heading": "Call the right team", "items": [
+            {"label": "Inside Sales", "number": "877-757-4367", "text": "System design, architect and engineer support, pre-sales support, quotes and pricing, and Dealer Direct assistance.", "hours": "8 a.m. to 5 p.m. Central", "email": "InsideSales@DMP.com"},
+            {"label": "Technical Support", "number": "888-436-7832", "text": "Installation, programming, troubleshooting and diagnostics.", "hours": "7 a.m. to 7 p.m. Central", "email": "TechSupport@DMP.com"},
+            {"label": "Customer Service", "number": "866-266-2826", "text": "Products and ordering, software activations, the Buy Site, shipping and order entry.", "hours": "8 a.m. to 6 p.m. Central", "email": "CustomerService@DMP.com"}]},
         {"type": "faq", "id": "faq", "heading": "Where DMP works", "items": cf("where", "usa", "intl", "who", "person")},
         LEADFORM]})
-    pages.append({"file": "resources.html", "title": f"News and resources | {CLIENT}, Springfield, Missouri",
+    pages.append({"file": "resources.html", "title": "News and resources | DMP",
                   "description": "Recent news, case studies and product announcements from Digital Monitoring Products, with our technical documentation and training library.",
                   "sections": [
         {"type": "hero", "layout": "centered", "eyebrow": "News and resources", "heading": "Launches, awards and <em>the library behind them</em>.",
@@ -628,7 +763,7 @@ def build():
             ["Training videos", "Webinars and training, including the System Surveyor design session."],
             ["Technical Support FAQs", "Answers to the questions Technical Support hears most."]]},
         LEADFORM]})
-    pages.append({"file": "faq.html", "title": f"FAQ | {CLIENT}, Springfield, Missouri",
+    pages.append({"file": "faq.html", "title": "FAQ | DMP",
                   "description": "Answers about Digital Monitoring Products: who it sells to, what it makes, where it is made, how dealers order and how to reach a person.",
                   "sections": [
         {"type": "hero", "layout": "centered", "eyebrow": "FAQ", "heading": "Straight answers for <em>dealers, specifiers and owners</em>.", "subhead": "If yours is not here, call Inside Sales at 877-757-4367."},
@@ -637,18 +772,29 @@ def build():
     pages.append({"file": "contact.html", "title": f"Contact and support | {CLIENT}, Springfield, Missouri",
                   "description": "Contact Digital Monitoring Products: Inside Sales 877-757-4367, Technical Support 888-436-7832, Customer Service 866-266-2826, with hours and email.",
                   "sections": [
-        {"type": "hero", "layout": "centered", "eyebrow": "Contact and support", "heading": "Reach the <em>right person</em> the first time.",
-         "subhead": "Dealers, specifiers and building owners start in the same place."},
-        {"type": "contact", "id": "form", "heading": "Tell us what you need", "body": "Choose what fits best.",
+        {"type": "hero-layered", "id": "hero-layered", "eyebrow": "Contact and support", "heading": "Reach the <em>right person</em> the first time.",
+         "subhead": "Dealers, specifiers and building owners start in the same place.", "primary": {"label": "Call 877-757-4367", "href": PHONE_HREF}, "secondary": {"label": "Write to us", "href": "#form"},
+         "image": IMG + "hero-loop-hq-poster.jpg", "image_w": 1600, "image_h": 900,
+         "hv": {"src": IMG + "hero-loop-hq.mp4", "webm": IMG + "hero-loop-hq.webm", "poster": IMG + "hero-loop-hq-poster.jpg"},
+         "card_b": {"eyebrow": "Already a DMP dealer?", "title": "The fast lane", "body": "Order, look up a document or reach support.",
+                    "links": [["Order at buy.DMP.com", BUY], ["Technical documentation", DOCS], ["Support", "support.html"]]}},
+        {"type": "callboard", "stage": True, "id": "phones", "eyebrow": "By phone", "heading": "Four lines. Pick the one that matches your question.", "items": [
+            {"label": "Quotes and system design", "number": "877-757-4367", "text": "Inside Sales: system design, quotes and pricing.", "hours": "8 a.m. to 5 p.m. Central", "email": "InsideSales@DMP.com"},
+            {"label": "Installation and programming", "number": "888-436-7832", "text": "Technical Support: installation, programming and troubleshooting.", "hours": "7 a.m. to 7 p.m. Central", "email": "TechSupport@DMP.com"},
+            {"label": "Orders and shipping", "number": "866-266-2826", "text": "Customer Service: products and ordering, software activations, shipping.", "hours": "8 a.m. to 6 p.m. Central", "email": "CustomerService@DMP.com"},
+            {"label": "Cellular activation", "number": "877-300-8030", "text": "SecureCom Wireless: activation and billing.", "hours": "8 a.m. to 5 p.m. Central"}]},
+        {"type": "contact", "id": "form", "heading": "Prefer to write? Tell us what you need.", "body": "Choose what fits best and a person will reply.",
          "options": ["I am a dealer", "I am specifying a building", "I own a building", "Something else"], "submit": "Send to DMP",
          "note": "Inside Sales, 8 a.m. to 5 p.m. Central."},
-        {"type": "cards", "alt": True, "eyebrow": "By phone", "heading": "Call the right team", "items": [
-            ["Inside Sales, 877-757-4367", "System design, quotes and pricing. 8 a.m. to 5 p.m. Central."],
-            ["Technical Support, 888-436-7832", "Installation, programming and troubleshooting. 7 a.m. to 7 p.m. Central."],
-            ["Customer Service, 866-266-2826", "Products and ordering, software activations, shipping. 8 a.m. to 6 p.m. Central."],
-            ["SecureCom Wireless, 877-300-8030", "Activation and billing. 8 a.m. to 5 p.m. Central."]]},
-        {"type": "detail", "eyebrow": "Self-service", "heading": "Before you call", "body": "Our library answers most installation questions.",
-         "bullets": ["Technical documentation", "Training videos", "Technical Support FAQs", "Dealer services and the regional sales manager directory"]},
+        {"type": "tiles", "id": "selfservice", "eyebrow": "Self-service", "heading": "Before you call, try the library.", "intro": "Our library answers most installation questions.", "items": [
+            ["Technical documentation", "Spec sheets, installation and programming guides.", "support/documentation.html", IMG + "tab-spec-1200.jpg"],
+            ["Training videos", "Webinars and training, including the System Surveyor design session.", "training.html", IMG + "system-surveyor-1200.jpg"],
+            ["Technical Support FAQs", "Answers to the questions Technical Support hears most.", "support/tech-faqs.html", IMG + "tab-intrusion-1200.jpg"],
+            ["Dealer services", "Services for dealers and the regional sales manager directory.", "support/dealer-services.html", IMG + "tab-mobile-1200.jpg"]]},
+        {"type": "hqmap", "stage": True, "eyebrow": "One fact about us", "heading": "DMP is headquartered in Springfield, Missouri.", "map_label": "A locator panel marking Springfield, Missouri",
+         "coords": "37.2\u00b0 N, 93.3\u00b0 W", "place": "Springfield, Missouri", "chips": ["Headquarters", "Authorized dealers nationwide"],
+         "body": "We make our products here and sell them through authorized dealers and distributors, so the best first call is the number above that matches your question.",
+         "facts": [["Address", "2500 N. Partnership Boulevard, Springfield, Missouri 65803"], ["Made here", "Since 1975"]]},
         {"type": "faq", "heading": "Before you write", "items": cf("person", "who", "where", "docs", "order")},
     ]})
 
@@ -660,7 +806,7 @@ def build():
                   "DMP is a current Quantum client with a HubSpot CRM, marketing, sales and service launch under way, so the site has to feed that: forms that create records and one place for dealers to start.",
                   "DMP's own brand is yellow, black and beige. The previews use that palette, DMP's real logo and DMP's own photography, so what you see is closer to the finished site than a mood board."],
         "found": ["Search (Semrush US database, 9 November 2026): about 23,660 organic visits a month on 7,521 keywords, but 75 percent of that is navigational, people already searching the brand. DMP is not in the top ten for any of seven national category searches such as fire alarm control panel and access control panel. An AI-answer test on national buyer questions has not been run yet.",
-                  "A page-level audit of 241 public pages on www.dmp.com (9 November 2026) averages 35 out of 100, and no page scores above a D. The home page is the strongest at 52: it has a title, one H1, a canonical, a phone link and a form.",
+                  "A page-level audit of 241 public pages on www.dmp.com (9 November 2026) averages 42 out of 100 on sixteen checks, and the best page scores 60. The home page scores 52: it has a title, one H1, a canonical, a phone link and a form.",
                   "The front door and the robots file: https://dmp.com/ answers 301 to http://www.dmp.com/, which answers 307. robots.txt returns HTTP 404 although it holds rules and Sitemap lines, so crawlers ignore it. The sitemap is live (369 products, 26 categories, 197 pages), and there is no llms.txt.",
                   "Markup: Organization (address, phone, founding date) is on 226 of 241 pages. None carries Product, ItemList, FAQPage or ContactPoint markup, and there are no sameAs links.",
                   "Page content: 175 of 241 pages have under 300 words, 107 share one default description, 66 titles are under 25 characters, 226 pages have an image with no alt text, and only 36 have a question heading.",
@@ -727,7 +873,7 @@ def finalize(data):
     import sys
     sys.path.insert(0, HERE)
     mods = []
-    for fam in ("products", "support", "company", "partners", "audience", "blog"):
+    for fam in ("products", "support", "company", "partners", "audience", "blog", "tools"):
         try:
             mods.append(importlib.import_module(f"dmp_pages_{fam}"))
         except ModuleNotFoundError as e:
@@ -771,7 +917,15 @@ def finalize(data):
         return x
 
     data["pages"] = [walk(pg) if True else pg for pg in data["pages"]]
-    return data
+    import dmp_lift_pages
+    dmp_lift_pages.apply(data)
+    import dmp_seo_pass
+    data = dmp_seo_pass.apply(data, {"SITE": SITE, "URL_MAP": url_map, "NEWS_MAP": news_map, "SYSTEM_BY_SEGMENT": SYSTEM_BY_SEGMENT,
+                                     "INDUSTRIES": INDUSTRIES, "PRODUCTS": next(m for m in mods if hasattr(m, "PRODUCTS")).PRODUCTS})
+    import dmp_pop1   # pop pass 1: doors, news, proof, selectors, flows, compare, buy bar
+    data = dmp_pop1.apply(data)
+    import dmp_cutouts
+    return dmp_cutouts.apply(data)
 
 
 if __name__ == "__main__":

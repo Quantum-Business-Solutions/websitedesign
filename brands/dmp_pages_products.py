@@ -1154,7 +1154,7 @@ P("1100t", "/products/wireless/wireless-translators/1100t", "1100T Wireless Tran
 PRODUCTS = {}
 URL_MAP = {}
 for r in RAW:
-    PRODUCTS[r["slug"]] = {"name": r["name"], "kicker": r["kicker"], "blurb": r["blurb"], "image": r["image"], "system": r["system"], "dmp_path": r["dmp_path"]}
+    PRODUCTS[r["slug"]] = {"name": r["name"], "kicker": r["kicker"], "blurb": ("Coming soon, not orderable. " + r["blurb"]) if "coming soon" in r["kicker"].lower() else r["blurb"], "image": r["image"], "system": r["system"], "dmp_path": r["dmp_path"]}
     URL_MAP[SITE + r["dmp_path"]] = f"products/{r['slug']}.html"
 
 
@@ -1167,57 +1167,97 @@ def _dims(path):
         return (1200, 800)
 
 
+SYS_IMG = {"intrusion": "xt75-1200.png", "access-control": "p-digital-key-credential-1200.png", "fire": "p-xf6-1200.png", "video": "p-xv-gateways-with-alarmvision-1200.png",
+           "communicators": "p-263lte-1200.png", "wireless": "p-1100xh-1200.png", "panels-keypads": "keypad-722-1200.png", "mobile-automation": "vk-mock-1200.png"}
+
+
 def _works(r):
+    """Related products and systems as [name, blurb, href, image] for the image-led 'Works with' cards."""
     items = []
     for k in r["rel"]:
         if k in PRODUCTS:
-            p = PRODUCTS[k]; items.append([p["name"], p["blurb"], f"products/{k}.html"])
+            p = PRODUCTS[k]; items.append([p["name"] + (" (coming soon)" if p["blurb"].startswith("Coming soon") else ""), p["blurb"], f"products/{k}.html", p["image"]])
         elif k in SYS:
-            items.append([SYS[k], SYS_BODY[k], f"services/{k}.html"])
+            items.append([SYS[k], SYS_BODY[k], f"services/{k}.html", IMG + SYS_IMG[k]])
         else:
             raise SystemExit("bad related " + k)
     return items
 
 
+LISTINGS = {"xr550": "UL bank, safe and vault; ANSI/UL 365, 609, 864, 985, 1023, 1076, 1610 and 1635; CSFM, FDNY and LAFD"}
+
+
+def _stage_kind(path):
+    """float: transparent product shot; light: bright opaque photo (shown on a white plate); dark: dark opaque photo."""
+    try:
+        from PIL import Image
+        with Image.open(os.path.join(ASSETS, path.replace("assets/", "", 1))) as im:
+            rgba = im.convert("RGBA"); w, h = rgba.size
+            pts = [rgba.getpixel(q) for q in ((2, 2), (w - 3, 2), (2, h - 3), (w - 3, h - 3))]
+            if sum(1 for q in pts if q[3] < 200) >= 3:
+                return "float"
+            return "light" if sum(sum(q[:3]) / 3 for q in pts) / 4 > 150 else "dark"
+    except Exception:
+        return "float"
+
+
+def _chips(specs):
+    out = [[k, v] for k, v in specs if len(str(v)) <= 22]
+    return out[:3]
+
+
 def _page(r):
     s, n, sysl = r["slug"], r["short"], SYS[r["system"]]
     w, h = _dims(r["image"])
+    soon = "coming soon" in r["kicker"].lower()
     secs = [
-        {"type": "hero", "layout": "split", "eyebrow": r["kicker"], "heading": r["h"], "subhead": r["sub"],
+        {"type": "prodstage", "id": "pstage", "eyebrow": r["kicker"], "heading": r["h"], "subhead": r["sub"],
          "primary": {"label": f"Ask DMP about the {n}", "href": "contact.html"},
-         "secondary": {"label": f"See all {sysl.lower()}", "href": f"services/{r['system']}.html"},
-         "image": r["image"], "image_alt": r["alt"], "image_w": w, "image_h": h},
+         "actions": ([] if soon else [{"label": "Order on buy.DMP.com (dealers)", "href": BUY, "external": True}]) + [{"label": "Spec sheet", "href": "support/documentation.html"}],
+         "fine": ["Dealers: sign in on the Buy site to see your pricing. ", "Not a dealer? Ask DMP for one near you.", "find-a-dealer.html"] if not soon else ["Not yet orderable. ", "Ask DMP when it ships.", "contact.html"],
+         "image": r["image"], "image_alt": r["alt"], "image_w": w, "image_h": h, "kind": _stage_kind(r["image"]),
+         "chips": _chips(r["specs"]), "tag": "Coming soon, not orderable" if soon else ""},
         {"type": "detail", "alt": True, "eyebrow": "What it is", "heading": f"The {n} at a glance", "body": r["what"], "bullets": r["bullets"]},
     ]
     if len(r["feats"]) in (3, 6):
-        secs.append({"type": "cards", "eyebrow": "Key features", "heading": f"What the {n} does", "items": r["feats"]})
+        secs.append({"type": "cards", "cls": "lf-num", "eyebrow": "Key features", "heading": f"What the {n} does", "items": r["feats"]})
     elif len(r["feats"]) >= 3:
         raise SystemExit(f"{s}: features must be 3 or 6, got {len(r['feats'])}")
-    if r["specs"]:
-        assert len(r["specs"]) in (3, 4, 6, 8, 9), (s, len(r["specs"]))
-        secs.append({"type": "cards", "alt": True, "eyebrow": "Specifications", "heading": f"{n} specifications", "items": r["specs"]})
-    if r["lib"]:
-        assert len(r["lib"]) in (3, 4, 6, 9), (s, len(r["lib"]))
-        secs.append({"type": "cards", "eyebrow": "In the library", "heading": f"Documents for the {n}", "intro": "Documents for this product are available from DMP.", "items": r["lib"]})
+    specs = list(r["specs"])
+    if specs and s in LISTINGS and not any("isting" in k for k, v in specs):
+        specs.append(["Listings and approvals", LISTINGS[s]])   # exact standards, as the page's own FAQ states them
+    if specs:
+        assert len(specs) in (3, 4, 6, 8, 9), (s, len(specs))
+        secs.append({"type": "specs", "dark": True, "eyebrow": "Specifications", "heading": f"{n} specifications", "items": specs})
     works = _works(r)
     assert len(works) == 3, s
+    secs.append({"type": "works", "alt": True, "heading": "Works with", "intro": f"Where the {n} fits in a DMP system.", "link_label": "Open", "items": works})
+    if r["lib"]:
+        assert len(r["lib"]) in (3, 4, 6, 9), (s, len(r["lib"]))
+        secs.append({"type": "doclist", "eyebrow": "In the library", "heading": f"Documents for the {n}", "intro": "Documents for this product are available from DMP.", "items": r["lib"], "href": "support/documentation.html"})
     secs += [
-        {"type": "services", "heading": "Works with", "intro": f"Where the {n} fits in a DMP system.", "items": works},
-        {"type": "faq", "heading": f"Questions about the {n}", "items": r["faq"]},
-        LEADFORM,
+        {"type": "faq", "alt": True, "heading": f"Questions about the {n}", "items": r["faq"]},
+        {**LEADFORM, "alt": False, "dark": True},
     ]
     assert 2 <= len(r["faq"]) <= 4, s
     prod = {"@context": "https://schema.org", "@type": "Product", "name": r["name"], "description": r["d"], "brand": {"@type": "Brand", "name": "DMP"},
-            "category": r["kicker"], "image": [r["image"]]}
-    if r["mpn"]: prod["mpn"] = r["mpn"]
+            "category": r["kicker"], "image": [f"{SITE}/{r['image']}"], "url": f"{SITE}/products/{s}", "isRelatedTo": []}
+    if r["mpn"]: prod["mpn"] = r["mpn"]; prod["sku"] = r["mpn"]
+    for _k in r["rel"]:   # the "Works with" items, as related products and services
+        if _k in PRODUCTS: prod["isRelatedTo"].append({"@type": "Product", "name": PRODUCTS[_k]["name"], "url": f"{SITE}/products/{_k}"})
+        elif _k in SYS: prod["isRelatedTo"].append({"@type": "Service", "name": SYS[_k], "url": f"{SITE}/services/{_k}"})
+    if s == "xr650":   # dmp.com marks the XR650 coming soon
+        prod["offers"] = {"@type": "Offer", "url": f"{SITE}/products/{s}", "availability": "https://schema.org/PreOrder", "seller": {"@id": f"{SITE}/#organization"}}
     return {"file": f"products/{s}.html", "title": title(r["name"]), "description": desc(r["d"]),
             "crumbs": [["Home", "index.html"], ["Products", "services.html"], [sysl, f"services/{r['system']}.html"], [r["name"], f"products/{s}.html"]],
             "schema": [prod], "sections": secs}
 
 
+TITLE_OVERRIDES = globals().get("TITLE_OVERRIDES", {})   # keeps the build working if the title overrides are defined later or elsewhere
 PAGES = [_page(r) for r in RAW]
 
 TO_CONFIRM = [
+    "Product markup: the XR650 page carries Offer availability PreOrder because dmp.com marks it coming soon. DMP to confirm release timing, and supply a price or a dealer-pricing statement if an Offer is wanted on other products. sku and mpn are set only where the product page states a part number.",
     "Images come from each product's og:image on dmp.com. The XR650 image carries a burned-in COMING SOON banner and the VUE Plus 7061, 7121 and 7081 images are cropped on a black background; DMP should supply clean product shots.",
     "The XR650 is marked coming soon on dmp.com; confirm whether the page should stay live, and add release timing if known. FIPS 140-3, 802.1x and Active Directory features are marked as available with licenses.",
     "VUE Plus 7121-FE shares the 7061-FE product photo on dmp.com; DMP to supply a 12MP-specific image if one exists.",

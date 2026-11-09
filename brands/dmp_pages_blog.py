@@ -7,6 +7,7 @@ from dmp_common import *
 
 PAGES = []
 TO_CONFIRM = []
+HERO_IMG = {}   # post file -> hero image, reused as the thumbnail on the blog index
 
 ORG = {"@type": "Organization", "name": CLIENT}
 
@@ -31,19 +32,26 @@ def sec(heading, body, bullets, flip=False, alt=False):
     return d
 
 
+def engineer_note(topic):
+    """A placeholder callout for DMP product staff. No quote is written: DMP supplies the wording."""
+    return {"type": "detail", "stage": True, "eyebrow": "Engineer's note", "heading": "A note from a DMP product expert goes here.",
+            "body": f"Placeholder: a DMP product or support engineer adds a short, signed note on {topic.lower()}, such as a tip from the field or a common mistake. DMP supplies the wording and the name before anything is published.",
+            "bullets": ["Placeholder for DMP product staff", "Download the comparison table from the documentation library"],
+            "cta": {"label": "Download the comparison table", "href": "support/documentation.html"}}
+
+
 def related(items):
     return {"type": "services", "heading": "Related DMP products", "intro": "Each has its own page with features, specifications and questions.", "items": items}
 
 
 def post(slug, topic, h1, short_title, blurb, sub, image, answer_text, sections, rel, faq):
     file = f"blog/{slug}.html"
+    HERO_IMG[file] = image.get("image", "")
     d = desc(blurb)
-    secs = [hero(topic, h1, sub, image), answer(answer_text)] + sections + [related(rel), {"type": "faq", "heading": "Questions we hear", "items": faq}, LEADFORM]
+    secs = [hero(topic, h1, sub, image), answer(answer_text)] + sections + [engineer_note(topic), related(rel), {"type": "faq", "heading": "Questions we hear", "items": faq}, LEADFORM]
     PAGES.append({
         "file": file, "title": title(short_title), "description": d,
         "crumbs": [["Home", "index.html"], ["Blog", "blog.html"], [short_title, file]],
-        "schema": [{"@context": "https://schema.org", "@type": "Article", "headline": h1, "description": d,
-                    "author": dict(ORG), "publisher": dict(ORG), "mainEntityOfPage": {"@type": "WebPage", "@id": file}}],
         "sections": secs})
 
 
@@ -54,7 +62,7 @@ post("which-commercial-intrusion-panel", "Intrusion",
      "How the XT50, XT75, XR150, XR550 and XR650 intrusion panels differ in zones, users, areas and doors, and which building each one fits.",
      "Five DMP panels, from the 58-zone XT50 to the XR650 with 300,000 user codes. Here is where each one belongs.",
      img("p-xr550-1200.png", "The DMP XR550 control panel", 1200, 818),
-     "Match the panel to the size and risk of the building. The XT50 and XT75 suit residential and small to medium business. The XR150 handles 142 inputs and 10,000 user codes. The XR550 reaches 574 zones and 96 doors, and the XR650, coming soon, holds 300,000 user codes.",
+     "Match the panel to the size and risk of the building. The XT50 and XT75 suit residential and small to medium business. The XR150 handles 142 inputs and 10,000 user codes. The XR550 reaches 574 zones and 96 doors, and the XR650, announced with availability to be confirmed, holds 300,000 user codes.",
      [sec("Which panel fits a small shop, office or home?",
           "The XT50 and XT75 are our hybrid panels for residential and small business. The XT50 supports 10 onboard zones plus 32 wired or 48 wireless, for up to 58 total zones, and it includes an onboard 1100D Series Wireless Receiver. It also carries one two-wire smoke detector zone and supports the Virtual Keypad app with daily opening and closing schedules. The XT75 does something different: it integrates intrusion, access control and AlarmVision on one network panel.",
           ["XT50: 99 user codes, six areas, eight doors of access, eight supervised keypads and a 200-event buffer",
@@ -75,7 +83,7 @@ post("which-commercial-intrusion-panel", "Intrusion",
            "Remote flash update and programming",
            "Adaptive Technology plus multi-lingual menus per user"]),
       sec("What is the XR650 for, and can you order it yet?",
-          "Not yet: the XR650 is coming soon. It is built for complex enterprise environments, with massive user capacity, advanced cybersecurity and IT-ready networking. It holds 300,000 user codes with 1,000 groups, up to 100 areas, 574 zones and 96 doors of access control. Bluetooth and mobile programming, a dual keypad bus and dual OSDP support make it easier to program.",
+          "The XR650 is announced, and availability is to be confirmed. It is built for complex enterprise environments, with massive user capacity, advanced cybersecurity and IT-ready networking. It holds 300,000 user codes with 1,000 groups, up to 100 areas, 574 zones and 96 doors of access control. Bluetooth and mobile programming, a dual keypad bus and dual OSDP support make it easier to program.",
           ["XR-to-XR communication controls all XR panels from one keypad",
            "Dual NIC keeps public network communication apart from a physically isolated network for video and access control devices",
            "TLS 1.3, AES encryption and PKI with dual certificate trust domains",
@@ -91,7 +99,7 @@ post("which-commercial-intrusion-panel", "Intrusion",
                 ["XT75", "Residential and small to medium business", "See the XT75 page", "See the XT75 page", "See the XT75 page", "See the XT75 page"],
                 ["XR150", "Commercial or residential", "142", "10,000", "8", "8"],
                 ["XR550", "Demanding commercial and large residential", "574", "10,000", "32", "32 out of the box, 96 maximum"],
-                ["XR650 (coming soon)", "Enterprise and multisite", "Up to 574", "300,000", "Up to 100", "96"]]},
+                ["XR650 (announced, availability to be confirmed)", "Enterprise and multisite", "Up to 574", "300,000", "Up to 100", "96"]]},
       sec("What should you ask before you choose?",
           "Five questions settle most panel choices, and each answer comes from the panel's product page.",
           ["How many doors will the panel control? Eight on the XT50 or XR150, up to 96 on the XR550 or XR650",
@@ -103,11 +111,11 @@ post("which-commercial-intrusion-panel", "Intrusion",
       ["XT75 Control Panel", "Intrusion, access control and AlarmVision on one network panel.", "products/xt75.html"],
       ["XR150 Control Panel", "142 inputs, 10,000 user codes, eight doors of access and compatibility with all 1100 Series Wireless.", "products/xr150.html"],
       ["XR550 Control Panel", "574 zones, up to 96 doors, UL bank, safe and vault listing and encrypted communication options.", "products/xr550.html"],
-      ["XR650 Control Panel", "Coming soon: 300,000 user codes and up to 100 areas.", "products/xr650.html"]],
+      ["XR650 Control Panel", "Announced, availability to be confirmed: 300,000 user codes and up to 100 areas.", "products/xr650.html"]],
      [["Can an XT50 add cellular later?", "Yes. You can add wireless or cellular (LTE) technology later to expand capabilities."],
       ["How many doors can an XR150 control?", "Up to eight doors of access, through the 7073, 7873 or 734/734N."],
       ["Which panels work with AlarmVision?", "The XT75 and the XR Series panels. AlarmVision integrates cameras, analytics and the control panel in one platform."],
-      ["Is the XR650 available now?", "It is coming soon. Inside Sales, 877-757-4367, can say more."],
+      ["Is the XR650 available now?", "It is announced, and availability is to be confirmed. Inside Sales, 877-757-4367, can say more."],
       ["Which listings does the XR550 carry?", "Among them UL bank, safe and vault, ANSI/UL 365, 609, 864, 985, 1023, 1076, 1610 and 1635, plus CSFM, FDNY and LAFD."]])
 
 # =========================================================================== (b) cellular
@@ -351,7 +359,7 @@ post("soc-2-type-ii-security-platform", "Software and cloud",
            "The XR550 offers encrypted 10/100 network or Wi-Fi communication options",
            "The SCS-1R and SCS-VR receivers carry NIST AES certification",
            "JamAlert is UL 2610 certified",
-           "The XR650, coming soon, lists TLS 1.3, AES encryption and PKI with dual certificate trust domains, with FIPS 140-3, 802.1x network authentication and Active Directory client integration available with licenses"], flip=True, alt=True)],
+           "The XR650, announced with availability to be confirmed, lists TLS 1.3, AES encryption and PKI with dual certificate trust domains, with FIPS 140-3, 802.1x network authentication and Active Directory client integration available with licenses"], flip=True, alt=True)],
      [["Dealer Admin", "The cloud portal for managing a dealer's business and customers' panels, with Single Sign-On and Custom Roles.", "products/dealer-admin.html"],
       ["Virtual Keypad", "Remote management for customers on Android, iPhone and the web, with Real Alarm or False Alarm verification.", "products/virtual-keypad.html"],
       ["263LTE Cellular Communicator", "NIST AES certified LTE communication for XT and XR panels, sent directly to the receiver.", "products/263lte.html"],
@@ -433,6 +441,7 @@ POSTS = [
     ["Software and cloud", "What does SOC 2 Type II mean for a security platform?", "What our annual examination of Dealer Admin and Virtual Keypad covers, and who can see the reports.", "Read the article", "blog/soc-2-type-ii-security-platform.html"],
     ["Communicators and wireless", "What should you know before a wireless security retrofit?", "Receivers, the 1100T translator, retrofit devices and how to test the signal.", "Read the article", "blog/wireless-security-devices-retrofit.html"],
 ]
+POSTS = [p + [HERO_IMG[p[4]]] if HERO_IMG.get(p[4]) else p for p in POSTS]   # sixth item: thumbnail for the blog index
 PAGES.append({
     "file": "blog.html", "title": title("Blog"),
     "description": desc("Answers for dealers, specifiers and building owners: intrusion panels, cellular communication, cloud access control, video verification, SOC 2 and wireless."),
@@ -468,7 +477,9 @@ TO_CONFIRM += [
     "Blog: DMP has no blog today. All seven pages are sample articles written only from the product, support, company and partner pages in this site. DMP should decide whether to publish a blog, who writes it and who approves it.",
     "Blog: a DMP product or engineering reviewer should check the technical accuracy of every post, in particular panel figures (XT50, XR150, XR550, XR650), the cellular firmware versions, Entré licensing and the wireless test steps.",
     "Blog: the XT75 row of the panel comparison table points to the XT75 page because the product page gives no zone, user, area or door counts. Add the figures if DMP wants a complete table.",
-    "Blog: the XR650 is described as coming soon, as on its product page. Confirm the status before publishing, and update the post when it ships.",
+    "Blog: the XR650 is described as announced, with availability to be confirmed, because its product page says coming soon. DMP to confirm the status and release timing before publishing, and update the post when it ships.",
+    "Blog: the FIPS 140-3 statement ('available with licenses') is repeated from the XR650 product page and is not a certification claim. DMP product management to confirm exactly what is validated and under which license before this is published, or remove it.",
+    "Blog: every post has an Engineer's note placeholder and a Download the comparison table link to the documentation library. DMP product staff must supply the note text and name (no quote is written for them), and DMP to confirm a comparison table document exists to link to.",
     "Blog: the cellular post uses the firmware table for current modems only. The older modem table (463C, 464-263, 263H/C) is not covered. Confirm the table is still current.",
     "Blog: the cellular diagram says SecureCom Wireless sends data directly to the DMP monitoring center receiver without a network operations center, as the 263LTE page states. Confirm that this also holds for the 265LTE, CellCom and DualCom.",
     "Blog: the SOC 2 post defines nothing beyond what DMP's pages state. If DMP wants a plain-language definition of Type II, supply wording from the AICPA or the examiner. Confirm that Inside Sales can route report requests.",

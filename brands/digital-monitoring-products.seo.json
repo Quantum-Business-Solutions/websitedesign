@@ -4,16 +4,16 @@
   "intro": "DMP is a national manufacturer that sells through dealers, so every search measure here is national, in Semrush's US database, pulled on 9 November 2026. The backlink concentration figures and the brand reputation search come from the earlier pull of 13 September 2026 and are dated where they appear. The page-level numbers come from an audit of 241 public pages on www.dmp.com on 9 November 2026: the home page, the pages, the product categories and a sample of product pages. A correction to the September report: that crawl started at the redirecting apex and could read one URL, so its findings about the home page's title, H1, canonical, robots.txt, sitemap and structured data were wrong for the real site. They are replaced here. This is the baseline we measure against at 30, 60 and 90 days.",
   "tiles": [
    [
-    "7,521",
-    "organic keywords in the US database, but 75 percent of the traffic is navigational"
-   ],
-   [
-    "23,660",
-    "organic visits a month, worth $248,538 a month in paid equivalent"
+    "75%",
+    "of visits are people who already know DMP. The traffic is navigational, across 7,521 organic keywords in the US database"
    ],
    [
     "0 of 7",
-    "national category searches with DMP in the top ten, such as fire alarm control panel and access control panel"
+    "category searches reach page one. National category searches with DMP in the top ten, such as fire alarm control panel and access control panel"
+   ],
+   [
+    "23,660",
+    "organic visits a month. Semrush estimate of traffic value, not revenue: $248,538 a month in paid equivalent"
    ],
    [
     "39",
@@ -82,7 +82,7 @@
   {
    "severity": "Medium",
    "title": "Pages say little about what they are: short titles, one shared description, thin copy, images without alt text",
-   "evidence": "Of 241 pages audited, 66 have a title under 25 characters (usually the part name and 'DMP.com'), 107 share one default meta description, 175 have fewer than 300 words (median 174) and 226 have at least one image with no alt attribute. 137 use the same default Open Graph image. The home page is the strongest page at 52 of 100, and no page scores above a D. 15 pages returned an unusual response during the crawl (title 'POST data') and need a re-check, so they are left out of these counts.",
+   "evidence": "Of 241 pages audited, 66 have a title under 25 characters (usually the part name and 'DMP.com'), 107 share one default meta description, 175 have fewer than 300 words (median 174) and 226 have at least one image with no alt attribute. 137 use the same default Open Graph image. The home page scores 52 of 100 and the best page scores 60. 15 pages returned an unusual response during the crawl (title 'POST data') and need a re-check, so they are left out of these counts.",
    "cost": "A title like 'XT75 | DMP.com' does not say what the product is, so a search result or an AI summary cannot tell a panel from a keypad. Shared descriptions and thin copy give engines nothing to quote, and missing alt text is an accessibility failure on almost every page.",
    "fix": "Generate a descriptive title, a unique description, alt text and 300 or more words from the product table for every product page, and give shared links a product image. In the build."
   },
@@ -270,7 +270,7 @@
    ],
    [
     "30 days",
-    "Add Organization JSON-LD to the home page with the legal name, the headquarters address in Springfield, Missouri, the phone number, the logo and sameAs links to LinkedIn, Crunchbase, BBB, YouTube and Grokipedia."
+    "Add Organization JSON-LD to the home page with the legal name, the headquarters address in Springfield, Missouri, the phone number, the logo and sameAs links to LinkedIn, YouTube, Facebook, Crunchbase and the BBB profile."
    ],
    [
     "60 days",
@@ -310,9 +310,9 @@
   "heading": "Nothing on dmp.com tells a machine who Digital Monitoring Products is"
  },
  "today": [
-  "Semrush shows dmp.com with 7,521 organic keywords and 23,660 organic visits a month in the US database, valued at $248,538 a month in equivalent paid traffic, and zero paid keywords running (9 November 2026).",
+  "Semrush shows dmp.com with 7,521 organic keywords and 23,660 organic visits a month in the US database, valued at $248,538 a month in equivalent paid traffic (a Semrush estimate of traffic value, not revenue), and zero paid keywords running (9 November 2026).",
   "75 per cent of that organic traffic is navigational, 17,705 of 23,660 visits: \"dmp\" alone at 9,900 a month brings 7,920 of them, a third of the total.",
-  "The home page is sound on the basics: a title, one H1, a canonical tag, 628 words, a phone link, a form and Organization markup with the address, phone number and founding date. It still scores 52 of 100, and across 241 public pages the average is 35 and none scores above a D.",
+  "The home page is sound on the basics: a title, one H1, a canonical tag, 628 words, a phone link, a form and Organization markup with the address, phone number and founding date. It still scores 52 of 100, and across 241 public pages the average is 42 and the best page scores 60 (a C).",
   "https://www.dmp.com/robots.txt answers HTTP 404 although it holds rules and Sitemap lines, so crawlers ignore it. The XML sitemap is live and lists 369 products, 26 categories and 197 pages. The apex takes a 301 to http://www.dmp.com/, then a 307.",
   "The pages that earn the visits are product and support pages: the home page takes 49.01 per cent of organic traffic across 209 keywords, the dealer admin page 3.52 per cent, the 734 access module page 2.93 per cent and the control panels index 2.63 per cent (13 September pull).",
   "175 of 241 pages have fewer than 300 words, 107 share one default meta description, 66 titles are under 25 characters, 226 pages have an image without alt text, and none carries Product, FAQPage or sameAs markup.",
@@ -1526,7 +1526,7 @@
   ],
   [
    "Days 45 to 60",
-   "Build the about and proof pages, add sameAs links from the home page schema to LinkedIn, Crunchbase, BBB, YouTube and Grokipedia, and add Product markup to the catalogue pages. Keep the Springfield headquarters address in the Organization markup."
+   "Build the about and proof pages, add sameAs links from the home page schema to LinkedIn, YouTube, Facebook, Crunchbase and the BBB profile, and add Product markup to the catalogue pages. Keep the Springfield headquarters address in the Organization markup."
   ],
   [
    "Days 60 to 90",
@@ -1556,7 +1556,7 @@
   [
    "Average page score across the audited pages",
    "QBS page audit, the same 241 public pages",
-   "35 of 100 today; 55 by day 60, 75 by day 90"
+   "42 of 100 today; 55 by day 60, 75 by day 90"
   ],
   [
    "Pages with a question heading and FAQPage markup",
@@ -1663,9 +1663,9 @@
   "heading": "Where you stand in search today, and what changes",
   "intro": "Measured before we touched anything, so the work can be judged against it.",
   "today": [
-   "Semrush shows dmp.com with 7,521 organic keywords and 23,660 organic visits a month in the US database, valued at $248,538 a month in equivalent paid traffic, and zero paid keywords running.",
+   "Semrush shows dmp.com with 7,521 organic keywords and 23,660 organic visits a month in the US database, valued at $248,538 a month in equivalent paid traffic (a Semrush estimate of traffic value, not revenue), and zero paid keywords running.",
    "75 per cent of that organic traffic is navigational: \"dmp\" alone at 9,900 a month brings a third of it. For seven national category searches, such as fire alarm control panel and access control panel, DMP is not in the top ten.",
-   "The home page is sound on the basics (title, one H1, canonical, 628 words, a phone link, a form and Organization markup) and still scores 52 of 100. Across 241 public pages the average is 35 and none scores above a D.",
+   "The home page is sound on the basics (title, one H1, canonical, 628 words, a phone link, a form and Organization markup) and still scores 52 of 100. Across 241 public pages the average is 42 and the best page scores 60 (a C).",
    "https://www.dmp.com/robots.txt answers HTTP 404 although it holds rules and Sitemap lines, so crawlers ignore it. The sitemap is live, and the apex takes a 301 to http://www.dmp.com/ and then a 307.",
    "The pages that earn the visits are product and support pages: the home page takes 49.01 per cent of organic traffic across 209 keywords, the dealer admin page 3.52 per cent, the 734 access module page 2.93 per cent and the control panels index 2.63 per cent.",
    "No page carries Product, FAQPage, ContactPoint or sameAs markup. 175 of 241 pages have fewer than 300 words and 107 share one default description."

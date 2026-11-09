@@ -29,7 +29,7 @@ def brief(text, n=150):
     if len(text) <= n: return text
     cut = text[:n]; i = max(cut.rfind(". "), cut.rfind("! "), cut.rfind("? "))
     return cut[:i + 1] if i > 60 else cut[:cut.rfind(" ")].rstrip(",;:") + "."
-def title(name): return f"{name} | {CLIENT}"
+def title(name): return f"{name} | DMP"
 def itemlist(name, items):
     """items: [[name, url], ...] -> an ItemList JSON-LD block."""
     return {"@context": "https://schema.org", "@type": "ItemList", "name": name,
