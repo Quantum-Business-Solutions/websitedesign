@@ -121,6 +121,8 @@ def hub(content, themes, recommend, base, roles, standard, client_tokens, out_di
     qc = pitch.get("qbs_contact", {})
     std = ('<a class="alt" href="standard.html" target="_blank" rel="noopener"><h3 class="h4">The Quantum Website Standard</h3>'
            '<p>The ten things every site we build is guaranteed to have at launch, and the evidence you receive for each.</p><span>Open</span></a>') if standard else ""
+    for t_, d_, h_ in pitch.get("more", []):
+        std += (f'<a class="alt" href="{_e(h_)}" target="_blank" rel="noopener"><h3 class="h4">{_e(t_)}</h3><p>{_e(d_)}</p><span>Open</span></a>')
     phone_href = re.sub(r"[^0-9+]", "", qc.get("phone", ""))
 
     css = f"""
@@ -167,7 +169,7 @@ h3,.h3{{font-size:22px;margin:0 0 6px;letter-spacing:-.01em}}h4,.h4{{font-size:1
 .two{{display:grid;grid-template-columns:1fr 1fr;gap:40px}}
 .stiles{{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}}.stile{{border:1px solid var(--border);border-radius:12px;padding:18px 20px;background:var(--bg-alt)}}.stile b{{display:block;font-size:34px;line-height:1;letter-spacing:-.02em;color:var(--ink)}}.stile span{{display:block;margin-top:8px;font-size:13.5px;color:var(--muted)}}
 .asof{{font-size:13px;color:var(--muted);font-weight:400;margin-left:8px}}
-.tblwrap{{overflow-x:auto;margin-top:14px}}table.seo{{width:100%;border-collapse:collapse;font-size:14.5px}}table.seo th,table.seo td{{text-align:left;padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:top}}table.seo th{{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}}table.seo code{{font-size:13px;background:var(--bg-alt);padding:2px 6px;border-radius:6px}}
+.tblwrap{{overflow-x:auto;margin-top:14px}}table.seo{{width:100%;border-collapse:collapse;font-size:14.5px}}table.seo th,table.seo td{{text-align:left;padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:top}}table.seo th{{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}}table.seo code{{font-size:13px;background:var(--bg-alt);padding:2px 6px;border-radius:6px}}
 @media(max-width:767px){{.stiles{{grid-template-columns:1fr 1fr}}}}
 ul{{margin:0;padding-left:18px}}li{{margin:8px 0;color:var(--fg)}}li::marker{{color:var(--accent)}}
 .plan{{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}}.step{{border-top:2px solid var(--accent);padding-top:12px}}.when{{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);font-weight:700}}.step p{{margin:8px 0 0;font-size:14.5px;color:var(--muted)}}

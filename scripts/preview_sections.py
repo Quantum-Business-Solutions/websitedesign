@@ -200,11 +200,13 @@ def _timeline(s, ctx):
         img = f'<div class="img"><img src="{E(ctx["rel"](it[3]))}" alt="" width="600" height="400" loading="lazy"></div>' if len(it) > 3 and it[3] else ""
         cards.append(f'<li style="--i:{i}"><span class="dot" aria-hidden="true"></span><div class="y">{E(y)}</div>{img}<h3>{E(t)}</h3><p>{E(d)}</p></li>')
     n = len(cards)
+    per = n if n <= 6 else -(-n // -(-n // 7))   # one row up to six; otherwise balanced rows of at most seven
+    rows = [cards[i:i + per] for i in range(0, n, per)]
     head = f'<div class="pv-center"><div class="q-eyebrow">{E(s.get("eyebrow", ""))}</div><h2 class="q-h2" style="margin-top:22px;max-width:760px">{E(s["heading"])}</h2>{f"<p class=q-lead style=max-width:640px;margin:16px_auto_0>{E(s[chr(105)+chr(110)+chr(116)+chr(114)+chr(111)])}</p>".replace("_", " ") if s.get("intro") else ""}</div>'
-    nav = f'<div class="pv-tl2-nav"><button type="button" data-d="-1" aria-label="Earlier">&larr;</button><button type="button" data-d="1" aria-label="Later">&rarr;</button></div>' if n > 3 else ""
-    js = f"""<script>(function(){{var w=document.getElementById("{tid}-tl");if(!w)return;var r=w.querySelector('ol');w.querySelectorAll('.pv-tl2-nav button').forEach(function(b){{b.addEventListener('click',function(){{r.scrollBy({{left:(+b.getAttribute('data-d'))*Math.min(r.clientWidth*.8,720),behavior:'smooth'}})}})}});
-if('IntersectionObserver' in window){{new IntersectionObserver(function(es){{es.forEach(function(e){{if(e.isIntersecting)w.classList.add('in')}})}},{{threshold:.2}}).observe(w)}}else{{w.classList.add('in')}}}})();</script>"""
-    return f'{ctx["sec_open"](s)} <div class="q-container">{head}<div class="pv-tl2" id="{E(tid)}-tl" data-n="{n}">{nav}<div class="line" aria-hidden="true"><i></i></div><ol tabindex="0" aria-label="{E(s["heading"])}">{"".join(cards)}</ol></div></div>{js}</section>'
+    js = f"""<script>(function(){{var ws=document.querySelectorAll('[data-tl="{E(tid)}"]');if(!ws.length)return;
+if('IntersectionObserver' in window){{var o=new IntersectionObserver(function(es){{es.forEach(function(e){{if(e.isIntersecting)e.target.classList.add('in')}})}},{{threshold:.2}});ws.forEach(function(w){{o.observe(w)}})}}else{{ws.forEach(function(w){{w.classList.add('in')}})}}}})();</script>"""
+    blocks = "".join(f'<div class="pv-tl2 pv-tl2-fit" data-tl="{E(tid)}" data-n="{len(r)}" style="--n:{len(r)}"><div class="line" aria-hidden="true"><i></i></div><ol aria-label="{E(s["heading"])}">{"".join(r)}</ol></div>' for r in rows)
+    return f'{ctx["sec_open"](s)} <div class="q-container">{head}{blocks}</div>{js}</section>'
 
 
 def _tabs(s, ctx):

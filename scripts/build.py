@@ -72,6 +72,10 @@ def main(argv=None):
     if os.path.isdir(extra):
         shutil.copytree(extra, os.path.join(out, "assets"), dirs_exist_ok=True)
         print(f"copied client assets from {os.path.relpath(extra, ROOT)}")
+    pages_dir = os.path.join(ROOT, "brands", f"{a.slug}.pages")
+    if os.path.isdir(pages_dir):
+        shutil.copytree(pages_dir, out, dirs_exist_ok=True)
+        print(f"copied client pages from {os.path.relpath(pages_dir, ROOT)}")
 
     roles = "|".join(f"{k}: {v}" for k, v in cfg["roles"].items())
     cmd = [sys.executable, os.path.join(HERE, "preview.py"), "--content", content_json, "--themes", ",".join(cfg["themes"]),

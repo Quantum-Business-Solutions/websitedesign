@@ -108,7 +108,7 @@ def client_tokens(theme: str, brand: dict) -> tuple[str, dict]:
         b_css = open(os.path.join(reskin.SOURCE_DIR, borrowed, "css", "quantum.css"), encoding="utf-8").read().replace("\u2014", "-")
         type_src = reskin.parse_native(b_css)
         imports = re.findall(r"@import url\([^)]*\);?", b_css)
-        css = "".join(i if i.endswith(";") else i + ";" for i in imports) + "\n" + css
+        css = "".join(i if i.endswith(";") else i + ";" for i in imports) + "\n" + re.sub(r"@import url\([^)]*\);?", "", css)
     for key in ("--q-serif", "--q-sans"):
         face = (type_src.get(key) or "").split(",")[0].strip().strip("'\"").lower()
         if face in FALLBACKS:
