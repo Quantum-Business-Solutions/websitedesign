@@ -1,0 +1,16 @@
+{
+ "content": "brands/digital-monitoring-products.content.py",
+ "themes": [
+  "Quantum Showcase",
+  "Quantum Clean",
+  "Quantum Press"
+ ],
+ "recommend": "Quantum Clean",
+ "roles": {
+  "Showcase": "safe: image-led and sales-forward, the most familiar register for a security manufacturer",
+  "Clean": "stretch: a plain, fast, high-contrast catalogue built for dealers and specifiers scanning for a product",
+  "Press": "wildcard: editorial and serif, so a manufacturer reads like an established company"
+ },
+ "base_url": "https://clientcommand.thequantumleap.business/s/5e9d7074a72c7fef20bb0405ec69264f",
+ "out": "../out-digital-monitoring-products"
+}

@@ -1,0 +1,1733 @@
+{
+ "measured": "13 September 2026",
+ "hero": {
+  "intro": "The numbers below come from a crawl of dmp.com on 13 September 2026, a Semrush pull on the domain and its competitors, nine buyer searches run live from Springfield, Missouri, and six questions put to Claude with web search from the same city. This is the baseline we measure against at 30, 60 and 90 days.",
+  "tiles": [
+   [
+    "7,462",
+    "organic keywords, but 66 percent of the traffic is branded"
+   ],
+   [
+    "24,493",
+    "organic visits a month, worth $247,680 a month in paid equivalent"
+   ],
+   [
+    "0 of 9",
+    "top-ten appearances for the buyer searches asked from Springfield"
+   ],
+   [
+    "39",
+    "Authority Score, against 60 at vivint.com, 55 at safehome.org and 24 at barcomsecurity.com"
+   ]
+  ],
+  "heading": "Where dmp.com stands, and what it is worth to fix"
+ },
+ "findings": [
+  {
+   "fix": "Build one Springfield, Missouri page at /springfield-missouri/ covering the headquarters, the product lines and the local dealer list, titled for the city and the state so the engines stop confusing it with the other Springfields. In the build.",
+   "cost": "Every buyer, specifier and installer searching security in Springfield lands on a competitor or on a page about Springfield Illinois, Ohio or Tennessee. DMP is headquartered in the city and is not in the conversation for a set of terms whose difficulty scores are 0 and 1.",
+   "title": "DMP does not appear in the top ten for a single buyer search asked from its own city",
+   "evidence": "Nine searches were run from Springfield, Missouri and dmp.com is absent from all nine top-ten lists. barcomsecurity.com holds position 1 for 'commercial security system springfield' and appears in five of the nine, passfireandsecurity.com in five, centralillinoissecurity.com in five, safehome.org in six and vivint.com in five. The terms that carry demand are small but easy: 'commercial security system springfield' is 90 a month at difficulty 1, 'video surveillance system springfield' 90 a month at difficulty 0, 'access control system springfield' 20 a month at difficulty 0, 'alarm monitoring springfield' 10 a month at difficulty 0. The other four have no Semrush entry, which puts them under about 10 a month.",
+   "severity": "Critical"
+  },
+  {
+   "fix": "The fix is the same body of work that fixes the search results: a Springfield page, seven named service pages and Organization schema on the home page so the engine has something to read and attribute. In the build, then measured again at 30 and 90 days.",
+   "cost": "When someone asks an assistant who supplies intrusion, access control or monitoring in Springfield, the answer is assembled from other companies' pages and from directories DMP has no profile on. That is a channel where the brand simply does not exist.",
+   "title": "Named in none of the AI answers about security in Springfield",
+   "evidence": "Six questions were put to Claude with web search from Springfield, Missouri on 13 September 2026. Four returned an answer and two timed out. DMP was named in 0 and cited in 0. The sources the engine read instead were barcomsecurity.com in three answers, expertise.com in three, and atlassecurity.com, georgealarm.com, securitymonster.com, springfieldalarmcompany.com and vivint.com in two each.",
+   "severity": "Critical"
+  },
+  {
+   "fix": "Serve a 301 from dmp.com to the canonical host, publish robots.txt and an XML sitemap at both hosts, and put a self-referencing canonical on the home page. In the build, week one.",
+   "cost": "Every tool, partner and answer engine that starts at dmp.com rather than www.dmp.com gets a redirect and no map of the site. It also means the eight AI crawlers are allowed only because there is no file saying otherwise, not because anyone decided it.",
+   "title": "The apex domain answers with a 307 and carries no robots.txt and no sitemap",
+   "evidence": "A crawl starting at https://dmp.com/ found exactly 1 URL. It returned HTTP 307, 2 words of body text, an empty title, no H1, no canonical, no internal links and no structured data. No robots.txt was readable and no XML sitemap was found at that host. Semrush shows the www host ranking for 7,462 keywords, so the catalogue is indexed, but nothing at the apex tells a crawler or an audit tool where to go.",
+   "severity": "Critical"
+  },
+  {
+   "fix": "Add Organization plus LocalBusiness schema to the home page with the Springfield address, a tappable phone number and sameAs links to the company's LinkedIn, YouTube, Facebook and Crunchbase profiles, and add Product schema to the control panel, keypad and access control template. In the build.",
+   "cost": "Search engines and answer engines have no confirmed statement of who DMP is, where it is or what it makes, so they fall back on third-party pages such as Indeed, Glassdoor and Reddit. A manufacturer with a product catalogue is also publishing no Product markup, so its panels and keypads cannot be surfaced as products.",
+   "title": "The company is not described as an entity anywhere a machine can read it",
+   "evidence": "The page the crawler could read carries no structured data at all: 0 Organization, 0 LocalBusiness, 0 Product, 0 BreadcrumbList, 0 FAQPage, and 0 sameAs links to any profile. There is no machine-readable address and no tappable phone number. vivint.com's Springfield page carries Organization, Service, PostalAddress, GeoCoordinates and ContactPoint; safehome.org's carries Organization, LocalBusiness, PostalAddress, ItemList and BreadcrumbList.",
+   "severity": "High"
+  },
+  {
+   "fix": "Build the seven service line pages and a resource hub that target category language rather than part numbers, starting with access control and fire. In the build for the pages, 90-day plan for the content programme.",
+   "cost": "The site harvests existing dealers and customers looking up model numbers and support logins. It does not introduce DMP to anyone who has not already heard the name, so the whole top of the funnel depends on trade shows, reps and word of mouth.",
+   "title": "Two thirds of the traffic is people who already know the brand",
+   "evidence": "Semrush puts branded share at 66 percent. The top organic term is 'dmp' at 9,900 a month, holding 32.33 percent of all traffic on its own, followed by 'digital monitoring products' at 880 and a long list of part numbers: 'dmp xr150' 390, 'dmp keypad' 390, 'dmp xr550' 260, 'dmp 734' 210. The one high-volume non-branded term in the top thirty is 'white on white paper' at 12,100 a month, position 9, which lands on the JamAlert white paper and has nothing to do with security.",
+   "severity": "High"
+  },
+  {
+   "fix": "Build a page for each of the seven lines at /intrusion-alarm-systems/, /access-control-systems/, /fire-alarm-systems/, /video-surveillance/, /alarm-monitoring/, /wireless-security-systems/ and /commercial-security-systems/, each with Service schema, question headings and links down to the relevant SKUs. In the build.",
+   "cost": "A buyer who searches 'access control systems' (9,900 a month) or 'fire detection and fire alarm system' (6,600 a month) meets a part number page written for someone who already chose the part. Those searches go to distributors and integrators instead.",
+   "title": "Seven product and service lines have no page of their own that we could find",
+   "evidence": "The seven lines on record, intrusion alarm systems, access control systems, fire alarm systems, video surveillance, alarm monitoring and communicators, wireless security systems and commercial security systems, have no page path recorded and none was reachable from the apex crawl. The answer-shaped content component scores 0 of 100 and the on-page fundamentals component 8 of 100. Semrush shows the top-ranking pages are all individual SKUs such as /products/control-panels/xr-series/xr150 and /products/access-control/modules/734.",
+   "severity": "High"
+  },
+  {
+   "fix": "Publish an about and proof page carrying dealer testimonials, installation case studies and Review markup, and link it from the home page and every service page. In the 30-day plan.",
+   "cost": "Anyone checking DMP out before specifying it, and any AI answer summarising the brand, reads employment complaints first because the company publishes nothing that answers the question. No Review or AggregateRating markup exists anywhere on the site to compete.",
+   "title": "The brand reputation result is owned by job boards and Reddit",
+   "evidence": "The search 'digital monitoring products reviews', run from Springfield, returns indeed.com at 1, glassdoor.com at 2 and a r/springfieldMO thread at 3 titled 'I can't recommend anyone work for DMP'. Positions 4 to 10 are simplyhired.com, a second glassdoor.com result, facebook.com, a second indeed.com result, ipvm.com, mammothsecurity.com and securityinfowatch.com. dmp.com appears nowhere on the page.",
+   "severity": "High"
+  },
+  {
+   "fix": "Put six to eight questions with direct answers and FAQPage markup at the foot of each of the seven service pages, drawn from the question lists above. In the build for the markup, 30-day plan for the copy.",
+   "cost": "These are exactly the phrasings answer engines lift from. Because nobody in this set has claimed them, the ground is open and DMP is choosing not to stand on it.",
+   "title": "Nothing on the site answers a question in the words buyers use",
+   "evidence": "The crawl found 0 question headings and 0 FAQPage markup on the money page, and no blog or insights section. Semrush records real question demand across the lines: 'how to turn off fire alarm system' 720 a month, 'how to reset fire alarm system' 320, 'what is access control system' 210, 'what is fire alarm system' 210, 'what is the best home video surveillance system' 210, 'what is a central station fire alarm system' 170. None of the four Springfield competitors carries FAQPage markup either.",
+   "severity": "High"
+  },
+  {
+   "fix": "Put a tappable phone number, the Springfield address and a short 'find a dealer' form on the home page and repeat them on all seven service pages and the Springfield page. In the build.",
+   "cost": "A dealer or specifier who does reach dmp.com has to go looking for a route to a human. Every step between interest and contact loses a share of the people on it.",
+   "title": "The page that should take the enquiry offers no way to make one",
+   "evidence": "The home page has no form, no tel link, no readable address and no contact vendor script. The demand capture component scores 1 of 100 and money page readiness averages 4 of 100 across the one money page measured. vivint.com, safehome.org and centralillinoissecurity.com all carry a form on their Springfield pages; barcomsecurity.com carries a phone number.",
+   "severity": "Medium"
+  },
+  {
+   "fix": "Point the access control and fire pages at the difficulty 22 to 42 commercial terms and build supporting question pages beneath them. In the 90-day plan.",
+   "cost": "There is no pipeline of non-branded demand at all, and the winnable commercial terms are being left to distributors while the unwinnable consumer terms are quoted as the target.",
+   "title": "The category head terms are all unranked, and the reachable ones are being ignored",
+   "evidence": "DMP holds no position for any of the ten highest-volume terms in its categories: 'security camera' 550,000 a month, 'adt' 246,000, 'diy home security systems' 135,000, 'best home security cameras' 110,000, 'home security systems' 74,000. Semrush values reaching position 3 on that set at 173,873 clicks a month and $1,063,192 a month in paid equivalent. Those are consumer terms at difficulty 46 to 79 and the outlook on every one is long haul, but the commercial terms are within reach of an Authority Score of 39: 'access control systems' 9,900 at difficulty 58, 'fire detection and fire alarm system' 6,600 at 42, 'smart smoke detector' 6,600 at 35, 'access control companies' 1,600 at 29, 'door access control systems' 1,600 at 22.",
+   "severity": "Medium"
+  },
+  {
+   "fix": "Earn links from domains that have none yet, starting with security trade publications, the Springfield chamber and business press, and dealer sites, and ask partners who link with a logo to put the company name in the alt text. In the 90-day plan.",
+   "cost": "The headline link number overstates the real position. If that one relationship or that one site changes, most of the profile goes with it, and image links say nothing about what DMP makes, so they build no topical signal.",
+   "title": "The backlink total rests on one relationship",
+   "evidence": "The profile is 22,880 links from 1,916 referring domains, above the median of 832 across the five competitors measured, and 88.1 percent of the links pass authority. But nationaljeweler.com accounts for 85.3 percent of every link to the site, and 89.7 percent of links, 20,514 of 22,880, are image links carrying no anchor text. Authority Score is 39 against 60 at vivint.com and 55 at safehome.org.",
+   "severity": "Medium"
+  },
+  {
+   "fix": "Publish a deliberate robots.txt that names and allows the eight crawlers, and an llms.txt listing the home page, the seven service pages, the Springfield page and the support hub. In the build, week one.",
+   "cost": "Low today, but the moment anyone adds a default robots.txt the access can disappear without being noticed, and there is no file telling an engine which pages matter.",
+   "title": "AI crawlers are allowed by accident, not by policy, and llms.txt is not published",
+   "evidence": "GPTBot, ClaudeBot, anthropic-ai, PerplexityBot, Google-Extended, CCBot, Bingbot and Googlebot are all able to read the site, which scores 94 of 100 on AI answer access against 100 at safehome.org. That permission exists because no robots.txt was readable, not because a file grants it. llms.txt is not published.",
+   "severity": "Low"
+  },
+  {
+   "fix": "Once the service pages exist, run a small brand-defence campaign on the five brand terms and a test on 'access control companies' and 'door access control systems'. In the 90-day plan.",
+   "cost": "Nothing is being wasted, but nothing is being defended either. With 'dmp' at 9,900 a month and rising dealer interest, a competitor or a distributor can bid on the brand name at any time and pay very little for it.",
+   "title": "No paid search at all, and no paid-sourced contacts in the CRM",
+   "evidence": "DMP runs 0 ad keywords. HubSpot records 0 contacts from paid search, 0 from paid social and 0 from display in the 90 days since 15 June 2026. vivint.com buys ten of its own brand terms, including 'vivint' at 165,000 a month and $8.05 a click and 'vivint security' at 22,200 a month and $11.90 a click.",
+   "severity": "Low"
+  }
+ ],
+ "compare": {
+  "rows": [
+   [
+    "Organization or LocalBusiness schema",
+    "none",
+    "Organization, PostalAddress, GeoCoordinates",
+    "Organization, LocalBusiness, PostalAddress",
+    "none"
+   ],
+   [
+    "FAQPage schema",
+    "none",
+    "none",
+    "none",
+    "none"
+   ],
+   [
+    "Service schema",
+    "none",
+    "yes",
+    "none",
+    "none"
+   ],
+   [
+    "Review or AggregateRating schema",
+    "none",
+    "none",
+    "none",
+    "none"
+   ],
+   [
+    "Words on the money page",
+    "2, on a 307 response",
+    "3,272",
+    "1,853",
+    "1,078"
+   ],
+   [
+    "A page for the headquarters city",
+    "none found",
+    "/locations/illinois/springfield",
+    "/security-systems/oregon/springfield/",
+    "/springfield/"
+   ],
+   [
+    "Referring domains and Authority Score",
+    "1,916 and 39",
+    "10,364 and 60",
+    "10,674 and 55",
+    "832 and 24"
+   ],
+   [
+    "Position for 'commercial security system springfield' (90 a month)",
+    "not in the top ten",
+    "not in the top ten",
+    "4",
+    "1"
+   ],
+   [
+    "Form or phone on the money page",
+    "neither",
+    "form",
+    "form",
+    "phone only"
+   ],
+   [
+    "AI crawlers allowed",
+    "all 8 read the site, by absence of robots.txt",
+    "4 of 4 allowed",
+    "4 of 4 allowed",
+    "4 of 4 allowed"
+   ]
+  ],
+  "intro": "Each column was parsed the same way on 13 September 2026: the client's money page at dmp.com, and for each competitor the exact page that ranked in the Springfield searches.",
+  "columns": [
+   "DMP (dmp.com)",
+   "vivint.com",
+   "safehome.org",
+   "barcomsecurity.com"
+  ],
+  "verdict": "Barcom wins the Springfield results with 1,078 words, a phone number and almost no markup, which shows how low the bar is in this market. Vivint and SafeHome win the wider category with a named city page, a form and a full entity description in schema. Copy Barcom's city page structure and Vivint's markup, and take the FAQ ground that none of the four has claimed."
+ },
+ "moves": [
+  {
+   "body": "A crawl starting at https://dmp.com/ found one URL that returned HTTP 307 with 2 words, no title, no H1 and no canonical, and neither robots.txt nor an XML sitemap was readable there. Serve a permanent redirect from the apex to the canonical host, publish robots.txt and an XML sitemap at both hosts, and add a self-referencing canonical to the home page. Name the eight AI crawlers in the new robots.txt so their access is a decision rather than an accident, and publish llms.txt alongside it. This is the cheapest fix in the report and every other measurement depends on it.",
+   "when": "Build, week one",
+   "title": "Fix the front door: 301, robots.txt, sitemap, canonical",
+   "where": "In the build"
+  },
+  {
+   "body": "The page we could read carries no structured data, no address, no phone number and 0 sameAs links. Add Organization plus LocalBusiness schema to the home page with the Springfield, Missouri address, a tappable phone number and sameAs links to LinkedIn, YouTube, Facebook and Crunchbase, then put the same address and phone in the visible footer. Vivint's Springfield page carries Organization, Service, PostalAddress, GeoCoordinates and ContactPoint and is cited in two of the four AI answers we captured. Without this, the strongest description of DMP available to an answer engine is a Glassdoor page.",
+   "when": "Build, week one",
+   "title": "Describe the company to machines on the home page",
+   "where": "In the build"
+  },
+  {
+   "body": "DMP appears in 0 of 9 top-ten lists asked from Springfield, and the pages beating it are frequently about Springfield Illinois, Ohio or Tennessee. The winnable terms are 'commercial security system springfield' at 90 a month and difficulty 1 and 'video surveillance system springfield' at 90 a month and difficulty 0. Build /springfield-missouri/ with the state in the title, the headquarters story, the seven product lines, the local dealer list, a form and a phone number, and LocalBusiness schema. Barcom holds position 1 on that page type with 1,078 words and no schema at all.",
+   "when": "Build, weeks two and three",
+   "title": "Build the Springfield, Missouri page",
+   "where": "In the build"
+  },
+  {
+   "body": "None of the seven lines has a page of its own, the answer-shaped content score is 0 of 100 and on-page fundamentals is 8 of 100. Build /intrusion-alarm-systems/, /access-control-systems/, /fire-alarm-systems/, /video-surveillance/, /alarm-monitoring/, /wireless-security-systems/ and /commercial-security-systems/, each 900 words or more with Service schema, links down to the matching SKUs, and six to eight questions marked up as FAQPage. Use the measured question demand: 'how to turn off fire alarm system' 720 a month, 'how to reset fire alarm system' 320, 'what is access control system' 210, 'what is the best home video surveillance system' 210. None of the four Springfield competitors carries FAQPage markup, so this ground is unclaimed.",
+   "when": "30 days, marketing",
+   "title": "Build the seven service line pages with questions answered on them",
+   "where": "In the 30-day plan"
+  },
+  {
+   "body": "'digital monitoring products reviews' returns Indeed at 1, Glassdoor at 2 and a Reddit thread criticising DMP as an employer at 3, with dmp.com nowhere in the top ten, and 66 percent of organic traffic is already branded. Publish an about and proof page with dealer testimonials, case studies and Review markup, and link it from the home page and all seven service pages. At the same time point the access control and fire pages at the commercial terms within reach of an Authority Score of 39: 'access control companies' 1,600 a month at difficulty 29, 'door access control systems' 1,600 at 22, 'smart smoke detector' 6,600 at 35, 'fire detection and fire alarm system' 6,600 at 42. Support both with links from trade press, the Springfield business community and dealer sites, since 85.3 percent of the current profile comes from a single domain.",
+   "when": "90 days, marketing and sales",
+   "title": "Take back the brand result and start on the reachable commercial terms",
+   "where": "In the 90-day plan"
+  }
+ ],
+ "blog": {
+  "do": [
+   [
+    "Build",
+    "Create an insights section with its own index page, linked from the main navigation, and put Article schema on every post template."
+   ],
+   [
+    "30 days",
+    "Publish three answer pages tied to the pulled questions: what an access control system is and how it works, how a monitored fire alarm system works, and how to choose a video surveillance system. Each one answers the question in the first fifty words."
+   ],
+   [
+    "60 days",
+    "Add a FAQ block marked up as FAQPage to each of the seven service line pages, using the pulled questions for that line, and link every post to its service line page."
+   ],
+   [
+    "90 days",
+    "Publish three more posts against the DIY wireless and smart smoke detector questions, and review the jamalert white paper page so the traffic it already earns lands on something relevant."
+   ]
+  ],
+  "found": [
+   "Publishing scored 0 of 100 on this run: no blog or insights section was found at all.",
+   "The one readable page has no H2 sections and no question headings, so there is not a single answer-shaped block anywhere the crawler reached.",
+   "The question demand is real and unclaimed: \"how to turn off fire alarm system\" at 720 a month, \"do it yourself wireless home security systems\" at 320, \"what is access control system\" at 210, \"what is the best home video surveillance system\" at 210, and \"how does access control system work\" at 70.",
+   "Intrusion questions are thinner: \"what is intrusion alarm system\" is 20 a month and the rest of that set sits under 10, so intrusion content should be written for dealers and specifiers, not for search volume.",
+   "One resource page, /resources/white-papers/jamalert-white-paper, ranks 9th for \"white on white paper\" at 12,100 a month, which is accidental traffic from a phrase that has nothing to do with alarms."
+  ],
+  "intro": "The crawl found no blog or insights section on dmp.com, and the one page the crawler could read carries two words of copy and no headings. That means there is nothing on the site written in the language a buyer or an AI engine uses when it asks how a system works, what it costs or which type to choose. Semrush does show a white paper URL ranking at position 9 for a 12,100 a month phrase, so long-form material exists somewhere behind the front door, but the site as a machine sees it today publishes nothing.",
+  "tiles": [
+   [
+    "0",
+    "posts found on dmp.com"
+   ],
+   [
+    "2",
+    "words on the only page the crawler could read"
+   ],
+   [
+    "0",
+    "pages with Article schema"
+   ],
+   [
+    "0",
+    "pages with a FAQ block"
+   ]
+  ],
+  "heading": "No blog, no insights section, no answers in buyers' words"
+ },
+ "entity": {
+  "do": [
+   [
+    "Build",
+    "Serve the home page at one canonical host with a 200 response, a title and a single H1 that both name Digital Monitoring Products, Springfield, Missouri and the category."
+   ],
+   [
+    "30 days",
+    "Add Organization and LocalBusiness JSON-LD to the home page with the legal name, the Springfield address, the phone number, the logo and sameAs links to LinkedIn, Crunchbase, BBB, YouTube and Grokipedia."
+   ],
+   [
+    "60 days",
+    "Add Product schema to the control panel, keypad and access module pages that already earn traffic, and Service schema to the seven service line pages."
+   ],
+   [
+    "90 days",
+    "Claim and complete the Google Business Profile and the BBB and Crunchbase entries so the details match the schema word for word, then add Review markup once first-party reviews are collected."
+   ]
+  ],
+  "found": [
+   "Organization schema, LocalBusiness schema and Review schema are all absent from the home page, and the structured data component scored 0 of 100.",
+   "There are no sameAs links, so nothing on dmp.com connects the company to its LinkedIn, Crunchbase, BBB or Grokipedia entries, all of which already link back to the site.",
+   "No address a search engine can read and no tappable phone number were found anywhere on the site, and there are no location pages.",
+   "The home page has no title, no meta description and no H1, so even the plainest name signal is missing.",
+   "Authority is not the problem: 1,916 referring domains with an Authority Score of 39, above the median of 832 domains across the five measured competitors. The company is well linked and badly described."
+  ],
+  "intro": "An answer engine decides what a company is from structured data on its home page and from the profiles that data points to. DMP publishes none of it. The home page returned a 307 and carried no schema of any kind, no address, no phone number and no sameAs links, so every machine reading the site has to guess. That is why the brand result is filled by job boards and why Claude named other companies instead.",
+  "tiles": [
+   [
+    "0",
+    "schema types on the home page"
+   ],
+   [
+    "0",
+    "sameAs links to company profiles"
+   ],
+   [
+    "1,916",
+    "referring domains pointing at dmp.com"
+   ],
+   [
+    "0",
+    "review markup found"
+   ]
+  ],
+  "heading": "Nothing on dmp.com tells a machine who Digital Monitoring Products is"
+ },
+ "today": [
+  "Semrush shows dmp.com with 7,462 organic keywords and 24,493 organic visits a month, valued at 247,680 a month in equivalent paid traffic, and zero paid keywords running.",
+  "66 per cent of that organic traffic comes from people already searching the brand: \"dmp\" alone at 9,900 a month accounts for 32.33 per cent of it.",
+  "The home page returned a 307 and, as read on 13 September 2026, had an empty title, an empty H1, two words of copy, no canonical tag, no Open Graph image and no internal links.",
+  "The crawler could reach exactly one URL on the site, because there is no robots.txt at dmp.com/robots.txt and no XML sitemap to follow.",
+  "The pages that earn the visits are product and support pages: the home page takes 49.01 per cent of organic traffic across 209 keywords, the dealer admin page 3.52 per cent, the 734 access module page 2.93 per cent and the control panels index 2.63 per cent.",
+  "The single money page, the home page, scored 4 of 100 in the page audit: no form, no tappable phone number, no FAQ, no city in the title and no schema.",
+  "Asked nine buyer searches from Springfield, Missouri, DMP appeared in the top ten for none of them.",
+  "Backlinks are strong on paper, 22,880 links from 1,916 domains at Authority Score 39, but 85.3 per cent of the links come from a single domain, nationaljeweler.com, and 89.7 per cent are image links carrying no anchor text."
+ ],
+ "competitors": {
+  "rows": [
+   [
+    "dmp.com",
+    "24,493",
+    "7,462",
+    "39"
+   ],
+   [
+    "safehome.org",
+    "314,641",
+    "75,289",
+    "55"
+   ],
+   [
+    "passfireandsecurity.com",
+    "1,824",
+    "1,039",
+    "27"
+   ],
+   [
+    "barcomsecurity.com",
+    "963",
+    "844",
+    "24"
+   ],
+   [
+    "centralillinoissecurity.com",
+    "709",
+    "622",
+    "23"
+   ],
+   [
+    "vivint.com",
+    "313,203",
+    "81,113",
+    "60"
+   ]
+  ],
+  "intro": "These five came out of the live searches asked from Springfield, Missouri on 13 September 2026: safehome.org, passfireandsecurity.com, barcomsecurity.com and centralillinoissecurity.com each took five or six of the ten places across the buyer queries, and vivint.com took five."
+ },
+ "opportunities": {
+  "rows": [
+   [
+    "commercial security system springfield",
+    "90",
+    "1",
+    "not ranking",
+    "barcomsecurity.com at 1, centralillinoissecurity.com at 2"
+   ],
+   [
+    "video surveillance system springfield",
+    "90",
+    "0",
+    "not ranking",
+    "centralillinoissecurity.com at 1, barcomsecurity.com at 2"
+   ],
+   [
+    "access control system springfield",
+    "20",
+    "0",
+    "not ranking",
+    "centralillinoissecurity.com at 1, eccoinc.com at 2"
+   ],
+   [
+    "alarm monitoring springfield",
+    "10",
+    "0",
+    "not ranking",
+    "passfireandsecurity.com at 1, cintas.com at 2"
+   ],
+   [
+    "intrusion alarm system springfield",
+    "under 10 a month, no Semrush entry",
+    "no entry",
+    "not ranking",
+    "passfireandsecurity.com at 1, barcomsecurity.com at 2"
+   ],
+   [
+    "fire alarm system springfield",
+    "under 10 a month, no Semrush entry",
+    "no entry",
+    "not ranking",
+    "summitfiresecurity.com at 1, firetron.com at 2"
+   ],
+   [
+    "wireless security system springfield",
+    "under 10 a month, no Semrush entry",
+    "no entry",
+    "not ranking",
+    "securitymonster.com at 1, vivint.com at 2"
+   ],
+   [
+    "best security alarm company springfield",
+    "under 10 a month, no Semrush entry",
+    "no entry",
+    "not ranking",
+    "springfieldalarmcompany.com at 1, passfireandsecurity.com at 2"
+   ],
+   [
+    "door access control",
+    "1,600",
+    "15",
+    "not ranking",
+    "not pulled"
+   ],
+   [
+    "access systems",
+    "1,600",
+    "20",
+    "not ranking",
+    "not pulled"
+   ],
+   [
+    "door access control systems",
+    "1,600",
+    "22",
+    "not ranking",
+    "not pulled"
+   ],
+   [
+    "access control companies",
+    "1,600",
+    "29",
+    "not ranking",
+    "not pulled"
+   ],
+   [
+    "smart smoke detector",
+    "6,600",
+    "35",
+    "not ranking",
+    "not pulled"
+   ],
+   [
+    "fire detection and fire alarm system",
+    "6,600",
+    "42",
+    "not ranking",
+    "not pulled"
+   ],
+   [
+    "access control systems",
+    "9,900",
+    "58",
+    "not ranking",
+    "not pulled"
+   ],
+   [
+    "access control",
+    "14,800",
+    "76",
+    "not ranking",
+    "not pulled"
+   ]
+  ],
+  "intro": "These are the terms pulled from Semrush and checked against the live Springfield results on 13 September 2026. DMP ranks for none of them. The local ones are small in volume but almost free to win, with difficulty at 0 or 1 and DMP's Authority Score at 39; the national category terms are the long haul and should be approached through the service line pages, not chased head-on."
+ },
+ "clusters": [
+  {
+   "name": "Fire Alarm Systems",
+   "rows": [
+    [
+     "smoke detector",
+     "49,500",
+     "74",
+     "1.19",
+     "informational,commercial"
+    ],
+    [
+     "fire alarm",
+     "22,200",
+     "73",
+     "3.23",
+     "informational"
+    ],
+    [
+     "detector smoke detector",
+     "18,100",
+     "70",
+     "1.19",
+     "informational,commercial"
+    ],
+    [
+     "smoke/fire detectors",
+     "18,100",
+     "65",
+     "1.19",
+     "informational,commercial"
+    ],
+    [
+     "alarm smoke detectors",
+     "14,800",
+     "68",
+     "1.06",
+     "informational,commercial"
+    ],
+    [
+     "smoke alarm",
+     "14,800",
+     "68",
+     "1.06",
+     "commercial"
+    ],
+    [
+     "smoke detectors",
+     "14,800",
+     "78",
+     "1.19",
+     "commercial"
+    ],
+    [
+     "simplex",
+     "12,100",
+     "68",
+     "4.27",
+     "informational"
+    ],
+    [
+     "alarm systems fire",
+     "9,900",
+     "58",
+     "3.23",
+     "commercial"
+    ],
+    [
+     "fire detection and fire alarm system",
+     "6,600",
+     "42",
+     "8.24",
+     "informational"
+    ],
+    [
+     "fire detector",
+     "6,600",
+     "68",
+     "1.19",
+     "informational,commercial"
+    ],
+    [
+     "smart smoke detector",
+     "6,600",
+     "35",
+     "1.65",
+     "informational,commercial"
+    ]
+   ],
+   "seed": "fire alarm system"
+  },
+  {
+   "name": "Access Control Systems",
+   "rows": [
+    [
+     "access control",
+     "14,800",
+     "76",
+     "8.98",
+     "informational"
+    ],
+    [
+     "access control systems",
+     "9,900",
+     "58",
+     "13.96",
+     "commercial"
+    ],
+    [
+     "access access control",
+     "4,400",
+     "46",
+     "8.98",
+     "informational"
+    ],
+    [
+     "access control access control",
+     "4,400",
+     "65",
+     "8.98",
+     "informational,commercial"
+    ],
+    [
+     "access control and",
+     "3,600",
+     "56",
+     "8.98",
+     "informational"
+    ],
+    [
+     "access control solutions",
+     "2,400",
+     "43",
+     "10.79",
+     "commercial"
+    ],
+    [
+     "avigilon alta",
+     "1,900",
+     "18",
+     "7.07",
+     "navigational"
+    ],
+    [
+     "access control companies",
+     "1,600",
+     "29",
+     "20.73",
+     "commercial"
+    ],
+    [
+     "access systems",
+     "1,600",
+     "20",
+     "6.73",
+     "navigational"
+    ],
+    [
+     "door access control",
+     "1,600",
+     "15",
+     "9.85",
+     "informational,commercial"
+    ],
+    [
+     "door access control systems",
+     "1,600",
+     "22",
+     "17.06",
+     "informational,commercial"
+    ],
+    [
+     "access control security",
+     "1,300",
+     "55",
+     "8.28",
+     "informational"
+    ]
+   ],
+   "seed": "access control system"
+  },
+  {
+   "name": "Intrusion Alarm Systems",
+   "rows": [
+    [
+     "adt",
+     "246,000",
+     "79",
+     "5.92",
+     "navigational"
+    ],
+    [
+     "adt customer service",
+     "135,000",
+     "47",
+     "0",
+     "informational,navigational"
+    ],
+    [
+     "diy home security systems",
+     "135,000",
+     "46",
+     "9.67",
+     "commercial"
+    ],
+    [
+     "adt login",
+     "74,000",
+     "54",
+     "4.1",
+     "transactional"
+    ],
+    [
+     "home security systems",
+     "74,000",
+     "71",
+     "22.29",
+     "commercial"
+    ],
+    [
+     "home security system",
+     "49,500",
+     "74",
+     "22.29",
+     "commercial"
+    ],
+    [
+     "adt security",
+     "33,100",
+     "74",
+     "7.58",
+     "navigational"
+    ],
+    [
+     "adt customer service phone number",
+     "22,200",
+     "43",
+     "0",
+     "informational,navigational"
+    ],
+    [
+     "adt home security",
+     "22,200",
+     "67",
+     "11.39",
+     "navigational"
+    ],
+    [
+     "best home security system",
+     "22,200",
+     "59",
+     "14.51",
+     "commercial"
+    ],
+    [
+     "home security",
+     "22,200",
+     "65",
+     "17.53",
+     "commercial"
+    ],
+    [
+     "my adt",
+     "18,100",
+     "35",
+     "4.12",
+     "informational"
+    ]
+   ],
+   "seed": "intrusion alarm system"
+  },
+  {
+   "name": "Wireless Security Systems",
+   "rows": [
+    [
+     "security camera",
+     "550,000",
+     "66",
+     "5.3",
+     "informational,commercial"
+    ],
+    [
+     "diy home security systems",
+     "135,000",
+     "46",
+     "9.67",
+     "commercial"
+    ],
+    [
+     "best home security cameras",
+     "110,000",
+     "63",
+     "4.06",
+     "commercial"
+    ],
+    [
+     "home security systems",
+     "74,000",
+     "71",
+     "22.29",
+     "commercial"
+    ],
+    [
+     "security cameras",
+     "60,500",
+     "77",
+     "5.3",
+     "commercial"
+    ],
+    [
+     "home security system",
+     "49,500",
+     "74",
+     "22.29",
+     "commercial"
+    ],
+    [
+     "arlo camera",
+     "40,500",
+     "59",
+     "0.88",
+     "informational,transactional"
+    ],
+    [
+     "secretary camera",
+     "33,100",
+     "83",
+     "5.3",
+     "informational,commercial"
+    ],
+    [
+     "arlo smart security cameras",
+     "27,100",
+     "56",
+     "0.88",
+     "informational,transactional"
+    ],
+    [
+     "home security cameras",
+     "27,100",
+     "71",
+     "5.38",
+     "informational,commercial"
+    ],
+    [
+     "surveillance cameras security",
+     "27,100",
+     "82",
+     "5.3",
+     "commercial"
+    ],
+    [
+     "arlo cameras",
+     "22,200",
+     "55",
+     "0.88",
+     "informational,transactional"
+    ]
+   ],
+   "seed": "wireless security system"
+  },
+  {
+   "name": "Video Surveillance",
+   "rows": [
+    [
+     "security camera",
+     "550,000",
+     "66",
+     "5.3",
+     "informational,commercial"
+    ],
+    [
+     "best home security cameras",
+     "110,000",
+     "63",
+     "4.06",
+     "commercial"
+    ],
+    [
+     "security cameras",
+     "60,500",
+     "77",
+     "5.3",
+     "commercial"
+    ],
+    [
+     "surveillance",
+     "49,500",
+     "80",
+     "8.26",
+     "informational"
+    ],
+    [
+     "secretary camera",
+     "33,100",
+     "83",
+     "5.3",
+     "informational,commercial"
+    ],
+    [
+     "cameras for security at home",
+     "27,100",
+     "74",
+     "5.38",
+     "informational,commercial"
+    ],
+    [
+     "home security cameras",
+     "27,100",
+     "71",
+     "5.38",
+     "informational,commercial"
+    ],
+    [
+     "surveillance cameras security",
+     "27,100",
+     "82",
+     "5.3",
+     "commercial"
+    ],
+    [
+     "house security cameras",
+     "22,200",
+     "74",
+     "5.38",
+     "commercial"
+    ],
+    [
+     "cameras for home security",
+     "18,100",
+     "71",
+     "5.38",
+     "informational,commercial"
+    ],
+    [
+     "camera per",
+     "14,800",
+     "69",
+     "0.8",
+     "commercial"
+    ],
+    [
+     "security camera security camera",
+     "14,800",
+     "62",
+     "5.3",
+     "informational,commercial"
+    ]
+   ],
+   "seed": "video surveillance system"
+  },
+  {
+   "name": "Alarm Monitoring and Communicators",
+   "rows": [],
+   "seed": "alarm monitoring communicator"
+  }
+ ],
+ "questions": [
+  {
+   "items": [
+    [
+     "how to turn off fire alarm system",
+     "720"
+    ],
+    [
+     "how to reset fire alarm system",
+     "320"
+    ],
+    [
+     "what is fire alarm system",
+     "210"
+    ],
+    [
+     "what is a central station fire alarm system",
+     "170"
+    ],
+    [
+     "what is a central fire alarm system",
+     "140"
+    ],
+    [
+     "what is a fire alarm system",
+     "110"
+    ],
+    [
+     "what are the types of fire alarm systems",
+     "90"
+    ],
+    [
+     "do temperatures affect my fire alarm system",
+     "70"
+    ],
+    [
+     "what is a monitored fire alarm system",
+     "70"
+    ],
+    [
+     "which fire alarm system is the simplest of all systems",
+     "70"
+    ],
+    [
+     "how do fire alarm systems work",
+     "50"
+    ],
+    [
+     "how does a fire alarm system work",
+     "50"
+    ]
+   ],
+   "topic": "fire alarm system"
+  },
+  {
+   "items": [
+    [
+     "what is access control system",
+     "210"
+    ],
+    [
+     "what is an access control system",
+     "90"
+    ],
+    [
+     "how document management systems manage permissions and access control",
+     "70"
+    ],
+    [
+     "how does access control system work",
+     "70"
+    ],
+    [
+     "what is access control systems",
+     "70"
+    ],
+    [
+     "what is biometric access control system",
+     "70"
+    ],
+    [
+     "what is physical access control system",
+     "70"
+    ],
+    [
+     "what is a biometric access control system",
+     "50"
+    ],
+    [
+     "how do document management systems manage permissions and access control",
+     "40"
+    ],
+    [
+     "how much to install a access control system",
+     "40"
+    ],
+    [
+     "how to install access control system",
+     "40"
+    ],
+    [
+     "what is a physical access control system",
+     "40"
+    ]
+   ],
+   "topic": "access control system"
+  },
+  {
+   "items": [
+    [
+     "what is intrusion alarm system",
+     "20"
+    ],
+    [
+     "how to prevent false alarms in intrusion detection systems",
+     "10"
+    ],
+    [
+     "how intrusion alarm system works",
+     "0"
+    ],
+    [
+     "how to write a service contract for intrusion alarm system",
+     "0"
+    ],
+    [
+     "what is an intrusion alarm system",
+     "0"
+    ],
+    [
+     "what is anti intrusion alarm system",
+     "0"
+    ],
+    [
+     "what is false alarm in intrusion detection system",
+     "0"
+    ]
+   ],
+   "topic": "intrusion alarm system"
+  },
+  {
+   "items": [
+    [
+     "do it yourself wireless home security systems",
+     "320"
+    ],
+    [
+     "do it yourself wireless security system",
+     "320"
+    ],
+    [
+     "do it yourself wireless security systems",
+     "70"
+    ],
+    [
+     "what is the best wireless home security system",
+     "50"
+    ],
+    [
+     "what is the best wireless security system",
+     "50"
+    ],
+    [
+     "do it yourself wireless home security system",
+     "30"
+    ],
+    [
+     "what is the best wireless security camera system",
+     "30"
+    ],
+    [
+     "are adt security systems wireless",
+     "20"
+    ],
+    [
+     "are home security systems wireless",
+     "20"
+    ],
+    [
+     "are wired security systems better than wireless",
+     "20"
+    ],
+    [
+     "are wireless alarm systems secure",
+     "20"
+    ],
+    [
+     "are wireless home security systems reliable",
+     "20"
+    ]
+   ],
+   "topic": "wireless security system"
+  },
+  {
+   "items": [
+    [
+     "what is the best home video surveillance system",
+     "210"
+    ],
+    [
+     "what is the best video surveillance system",
+     "110"
+    ],
+    [
+     "a system for video surveillance and monitoring",
+     "50"
+    ],
+    [
+     "do it yourself home video surveillance systems",
+     "40"
+    ],
+    [
+     "do it yourself video surveillance system",
+     "30"
+    ],
+    [
+     "what does the term video surveillance system refer to",
+     "30"
+    ],
+    [
+     "how do video surveillance systems protect large facilities",
+     "20"
+    ],
+    [
+     "how much does a video surveillance system cost",
+     "20"
+    ],
+    [
+     "how much is a video surveillance system",
+     "20"
+    ],
+    [
+     "how much is adt video surveillance system",
+     "20"
+    ],
+    [
+     "how to choose a video surveillance system",
+     "20"
+    ],
+    [
+     "how to install a home video surveillance system",
+     "20"
+    ]
+   ],
+   "topic": "video surveillance system"
+  },
+  {
+   "items": [
+    [
+     "how do home alarm systems communicate with a monitoring company",
+     "0"
+    ]
+   ],
+   "topic": "alarm monitoring communicator"
+  }
+ ],
+ "money_pages": [
+  "/"
+ ],
+ "competitor_pages": [
+  {
+   "faq": false,
+   "url": "https://www.safehome.org/security-systems/oregon/springfield/",
+   "form": "yes",
+   "title": "Best Home Security Systems in Springfield, OR | SafeHome.org",
+   "words": 1853,
+   "domain": "safehome.org",
+   "schema": "BreadcrumbList, City, EntryPoint, ImageObject, ItemList, ListItem, LocalBusiness, Organization, PostalAddress, PropertyValueSpecification, ReadAction, SearchAction, State, WebPage, WebSite",
+   "pricing": "yes",
+   "reviews": false
+  },
+  {
+   "faq": false,
+   "url": "https://www.passfireandsecurity.com/service-area/springfield",
+   "form": "yes",
+   "title": "Fire and Security Services in Springfield, Missouri | Atlas Security is Now PASS",
+   "words": 596,
+   "domain": "passfireandsecurity.com",
+   "schema": "none",
+   "pricing": "no",
+   "reviews": false
+  },
+  {
+   "faq": false,
+   "url": "https://barcomsecurity.com/springfield/",
+   "form": "phone only",
+   "title": "Springfield - Barcom Security & Fire",
+   "words": 1078,
+   "domain": "barcomsecurity.com",
+   "schema": "BreadcrumbList, ListItem, WebPage",
+   "pricing": "yes",
+   "reviews": false
+  },
+  {
+   "faq": false,
+   "url": "https://www.centralillinoissecurity.com/",
+   "form": "yes",
+   "title": "Security Systems for Home & Office Central Illinois Security",
+   "words": 203,
+   "domain": "centralillinoissecurity.com",
+   "schema": "none",
+   "pricing": "no",
+   "reviews": false
+  },
+  {
+   "faq": false,
+   "url": "https://www.vivint.com/locations/illinois/springfield",
+   "form": "yes",
+   "title": "Home Security Company Near Springfield, IL | Vivint®️",
+   "words": 3272,
+   "domain": "vivint.com",
+   "schema": "Audience, ContactPoint, Country, GeoCoordinates, ImageObject, Organization, Place, PostalAddress, Service, Thing, WebPage",
+   "pricing": "yes",
+   "reviews": false
+  }
+ ],
+ "aeo": {
+  "rows": [
+   {
+    "query": "intrusion alarm system springfield",
+    "results": [
+     "passfireandsecurity.com",
+     "barcomsecurity.com",
+     "nca-alarms.com",
+     "safehome.org",
+     "centralillinoissecurity.com",
+     "forbel.com",
+     "vivint.com",
+     "yelp.com",
+     "davisulmer.com",
+     "facebook.com"
+    ],
+    "position": null
+   },
+   {
+    "query": "access control system springfield",
+    "results": [
+     "centralillinoissecurity.com",
+     "eccoinc.com",
+     "mys3tech.com",
+     "locksnkeys.com",
+     "bbb.org",
+     "atronicalarms.com",
+     "hsisecurity.com",
+     "yellowpages.com",
+     "giffordlock.com",
+     "techtreepartners.com"
+    ],
+    "position": null
+   },
+   {
+    "query": "fire alarm system springfield",
+    "results": [
+     "summitfiresecurity.com",
+     "firetron.com",
+     "cintas.com",
+     "dynamark.cc",
+     "springfield-ma.gov",
+     "passfireandsecurity.com",
+     "mapquest.com",
+     "kauffmanco.net",
+     "yellowpages.com",
+     "passfireandsecurity.com"
+    ],
+    "position": null
+   },
+   {
+    "query": "video surveillance system springfield",
+    "results": [
+     "centralillinoissecurity.com",
+     "barcomsecurity.com",
+     "safehome.org",
+     "vivint.com",
+     "eccoinc.com",
+     "camerasecuritynow.com",
+     "yelp.com",
+     "fluenthome.com",
+     "condortech.com",
+     "alert360.com"
+    ],
+    "position": null
+   },
+   {
+    "query": "alarm monitoring springfield",
+    "results": [
+     "passfireandsecurity.com",
+     "cintas.com",
+     "barcomsecurity.com",
+     "davisulmer.com",
+     "safehome.org",
+     "youngs-security.com",
+     "centralillinoissecurity.com",
+     "vivint.com",
+     "springfieldalarmcompany.com",
+     "illinoisalarm.com"
+    ],
+    "position": null
+   },
+   {
+    "query": "wireless security system springfield",
+    "results": [
+     "securitymonster.com",
+     "vivint.com",
+     "youngs-security.com",
+     "nca-alarms.com",
+     "wirefly.com",
+     "safehome.org",
+     "barcomsecurity.com",
+     "hometheaterreview.com",
+     "alert360.com",
+     "youtube.com"
+    ],
+    "position": null
+   },
+   {
+    "query": "commercial security system springfield",
+    "results": [
+     "barcomsecurity.com",
+     "centralillinoissecurity.com",
+     "sentrysecurity.com",
+     "safehome.org",
+     "alert360.com",
+     "forbel.com",
+     "davisulmer.com",
+     "youngs-security.com",
+     "northeastsecuritysolutions.com",
+     "yelp.com"
+    ],
+    "position": null
+   },
+   {
+    "query": "best security alarm company springfield",
+    "results": [
+     "springfieldalarmcompany.com",
+     "passfireandsecurity.com",
+     "safehome.org",
+     "georgealarm.com",
+     "youngs-security.com",
+     "yelp.com",
+     "vivint.com",
+     "alert360.com",
+     "usnews.com",
+     "hometheaterreview.com"
+    ],
+    "position": null
+   },
+   {
+    "query": "digital monitoring products reviews",
+    "results": [
+     "indeed.com",
+     "glassdoor.com",
+     "reddit.com",
+     "simplyhired.com",
+     "glassdoor.com",
+     "facebook.com",
+     "indeed.com",
+     "ipvm.com",
+     "mammothsecurity.com",
+     "securityinfowatch.com"
+    ],
+    "position": null
+   }
+  ],
+  "intro": "On 13 September 2026 we asked Claude with web search six buyer questions about security in Springfield, the same six that map to DMP's service lines. Four returned an answer and two timed out; DMP was named in none of them and cited in none of them, while barcomsecurity.com and expertise.com were read in three answers each."
+ },
+ "crawlers": [
+  [
+   "GPTBot",
+   true
+  ],
+  [
+   "ClaudeBot",
+   true
+  ],
+  [
+   "anthropic-ai",
+   true
+  ],
+  [
+   "PerplexityBot",
+   true
+  ],
+  [
+   "Google-Extended",
+   true
+  ],
+  [
+   "CCBot",
+   true
+  ],
+  [
+   "Bingbot",
+   true
+  ],
+  [
+   "Googlebot",
+   true
+  ]
+ ],
+ "backlinks": {
+  "rows": [
+   [
+    "dmp.com",
+    "39",
+    "1,916",
+    "22,880"
+   ],
+   [
+    "safehome.org",
+    "55",
+    "10,674",
+    "175,094"
+   ],
+   [
+    "passfireandsecurity.com",
+    "27",
+    "410",
+    "1,975"
+   ],
+   [
+    "barcomsecurity.com",
+    "24",
+    "832",
+    "3,092"
+   ],
+   [
+    "centralillinoissecurity.com",
+    "23",
+    "242",
+    "618"
+   ],
+   [
+    "vivint.com",
+    "60",
+    "10,364",
+    "172,985"
+   ]
+  ],
+  "heading": "1,916 domains of authority, and 85 per cent of the links come from one site",
+  "top_ref": [
+   [
+    "amazon.com",
+    "100"
+   ],
+   [
+    "apple.com",
+    "100"
+   ],
+   [
+    "indeed.com",
+    "100"
+   ],
+   [
+    "yahoo.com",
+    "100"
+   ],
+   [
+    "bing.com",
+    "92"
+   ],
+   [
+    "substack.com",
+    "86"
+   ],
+   [
+    "dell.com",
+    "84"
+   ],
+   [
+    "cnet.com",
+    "83"
+   ],
+   [
+    "va.gov",
+    "83"
+   ],
+   [
+    "vimeo.com",
+    "83"
+   ],
+   [
+    "alibaba.com",
+    "80"
+   ],
+   [
+    "bbb.org",
+    "79"
+   ],
+   [
+    "apkpure.com",
+    "77"
+   ],
+   [
+    "glassdoor.com",
+    "77"
+   ],
+   [
+    "nist.gov",
+    "75"
+   ]
+  ]
+ },
+ "local": [
+  "The query \"digital monitoring products reviews\", asked from Springfield, Missouri, returns no dmp.com page in the top ten.",
+  "Indeed holds first place with \"Working at Digital Monitoring Products, Inc.: 25 Reviews\", an employer review page, not a product one.",
+  "Glassdoor holds second place and appears twice in the top ten with employer reviews.",
+  "A Reddit thread in r/springfieldMO sits third, titled \"I can't recommend anyone work for DMP\".",
+  "SimplyHired, Facebook and a second Indeed listing take four more of the ten places.",
+  "The only industry results are ipvm.com, mammothsecurity.com and securityinfowatch.com, none of them owned or influenced by DMP.",
+  "No star rating appears in any result title except Indeed's count of 25 reviews, and no review markup was found on dmp.com, so no rating can be shown next to the brand in search.",
+  "Across the eight service and buyer queries asked from Springfield, Missouri, DMP is absent from all top tens; the ten places are held by passfireandsecurity.com, barcomsecurity.com, centralillinoissecurity.com, eccoinc.com, safehome.org, vivint.com, springfieldalarmcompany.com and others."
+ ],
+ "plan": [
+  [
+   "Days 1 to 10",
+   "Fix the front door. Replace the 307 on the apex with a single 301 to one canonical host, publish robots.txt and an XML sitemap covering every product, support and resource URL, add a self-referencing canonical tag, and give the home page a title, a meta description, one H1 and Organization plus LocalBusiness schema with the Springfield address and phone number."
+  ],
+  [
+   "Days 10 to 45",
+   "Build the seven service line pages: intrusion alarm systems, access control systems, fire alarm systems, video surveillance, alarm monitoring and communicators, wireless security systems and commercial security systems. Each gets 800 words or more, H2 sections, a FAQ block marked up as FAQPage using the pulled questions, Service schema, ten or more internal links and an enquiry form."
+  ],
+  [
+   "Days 45 to 60",
+   "Build the Springfield, Missouri page with the city in the title, the address, a tappable phone number, a form and links to the seven service pages, and add sameAs links from the home page schema to LinkedIn, Crunchbase, BBB, YouTube and Grokipedia."
+  ],
+  [
+   "Days 60 to 90",
+   "Take back the brand result: publish an about page, a careers page and a company news page under dmp.com so branded queries have owned destinations, start collecting first-party reviews, and publish the first three answer posts against the access control, fire alarm and video surveillance questions."
+  ],
+  [
+   "Day 90",
+   "Re-run the same nine Springfield searches, the same six AI questions and the same page audit against this baseline, and decide whether to open a small paid search test on the reachable access control terms rather than the 543,664 a month the full national list would cost."
+  ]
+ ],
+ "measure": [
+  [
+   "Buyer searches where the site appears in the top ten",
+   "Live results asked from Springfield, Missouri",
+   "0 of 9 today; 1 by day 30, 2 by day 60, 3 by day 90"
+  ],
+  [
+   "AI answers that name DMP",
+   "Claude with web search, the same six questions",
+   "0 of 6 today; 0 by day 30, 1 by day 60, 2 by day 90"
+  ],
+  [
+   "Non-branded share of organic traffic",
+   "Semrush",
+   "34 per cent today; 36 per cent by day 60, 40 per cent by day 90"
+  ],
+  [
+   "URLs a crawler can reach from the front door",
+   "QBS site crawl",
+   "1 today; the full sitemap by day 10, and every service page indexed by day 60"
+  ],
+  [
+   "Home page audit score",
+   "QBS page audit",
+   "4 of 100 today; 60 by day 30, 80 by day 90"
+  ],
+  [
+   "Service line pages live with a FAQ marked up as FAQPage",
+   "QBS site crawl",
+   "0 today; 4 by day 45, 7 by day 60"
+  ],
+  [
+   "Enquiry paths on money pages",
+   "QBS page audit",
+   "0 of 1 today; a form and a tappable phone number on every service and location page by day 60"
+  ]
+ ],
+ "sitewide": [
+  [
+   true,
+   "The site is served over HTTPS."
+  ],
+  [
+   false,
+   "The apex domain answers with a 307 redirect and no single canonical host could be confirmed, so crawlers reached one URL only."
+  ],
+  [
+   false,
+   "robots.txt: none found at dmp.com/robots.txt."
+  ],
+  [
+   true,
+   "GPTBot, ClaudeBot, anthropic-ai, PerplexityBot, Google-Extended, CCBot, Bingbot and Googlebot all reach the site, but only because no file exists to stop or steer them."
+  ],
+  [
+   false,
+   "llms.txt is not published."
+  ],
+  [
+   false,
+   "No XML sitemap was found, so nothing tells search engines which pages exist."
+  ],
+  [
+   false,
+   "Organization schema on the home page: absent, along with every other schema type."
+  ],
+  [
+   false,
+   "LocalBusiness schema with a readable Springfield address: absent, and no tappable phone number was found."
+  ],
+  [
+   false,
+   "No Open Graph image, so links shared to LinkedIn or Facebook render without a branded card."
+  ],
+  [
+   false,
+   "No form and no forms vendor detected on the one money page, so the home page offers no way to make an enquiry."
+  ],
+  [
+   false,
+   "Canonical tags: 0 of 1 pages carry one."
+  ],
+  [
+   true,
+   "No accidental noindex: 0 of 1 pages are blocked from search."
+  ],
+  [
+   false,
+   "Average words per page: 2, against a 300 word minimum for a page that can rank."
+  ],
+  [
+   false,
+   "Internal links on the readable page: 0, so no authority flows to product or service pages from the front door."
+  ]
+ ],
+ "redirect_overrides": {
+  "/": "index.html"
+ },
+ "redirect_rules": [
+  [
+   "^/(tag|category|author)/",
+   "blog.html"
+  ]
+ ],
+ "retire": [],
+ "retire_target": "index.html",
+ "merge_target": "index.html",
+ "post_target": "blog.html",
+ "build_types": [
+  [
+   "^/products/industries/",
+   "industry"
+  ],
+  [
+   "^/products/",
+   "service"
+  ],
+  [
+   "^/about-us",
+   "service"
+  ]
+ ],
+ "hub": {
+  "heading": "Where you stand in search today, and what changes",
+  "intro": "Measured before we touched anything, so the work can be judged against it.",
+  "today": [
+   "Semrush shows dmp.com with 7,462 organic keywords and 24,493 organic visits a month, valued at 247,680 a month in equivalent paid traffic, and zero paid keywords running.",
+   "66 per cent of that organic traffic comes from people already searching the brand: \"dmp\" alone at 9,900 a month accounts for 32.33 per cent of it.",
+   "The home page returned a 307 and, as read on 13 September 2026, had an empty title, an empty H1, two words of copy, no canonical tag, no Open Graph image and no internal links.",
+   "The crawler could reach exactly one URL on the site, because there is no robots.txt at dmp.com/robots.txt and no XML sitemap to follow.",
+   "The pages that earn the visits are product and support pages: the home page takes 49.01 per cent of organic traffic across 209 keywords, the dealer admin page 3.52 per cent, the 734 access module page 2.93 per cent and the control panels index 2.63 per cent."
+  ],
+  "after": [
+   "Every URL answers once, at one canonical host, with a robots.txt and a sitemap.",
+   "Eight product line pages, each with a FAQ marked up as FAQPage and Service schema.",
+   "A Springfield, Missouri page with the address, phone and a form.",
+   "Organization and LocalBusiness schema on the home page, with sameAs links.",
+   "An about page, a careers page and a news section the brand search can land on."
+  ],
+  "keep": [
+   [
+    "/products/*",
+    "services/*.html",
+    "Product pages that already earn traffic keep their address or get a 301"
+   ]
+  ],
+  "note": "Rankings and traffic depend on the market and on what you publish after launch. What we promise is that nothing about the build is the reason they do not come, that every number is re-measured at 30, 60 and 90 days, and that you see the same report we do."
+ }
+}
