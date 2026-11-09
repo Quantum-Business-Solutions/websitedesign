@@ -8,8 +8,11 @@ name: Website directions
 # Client Command as a site, and commits the brand files back to main so the client is on the fifteen-minute
 # path from then on. Nothing here touches HubSpot or Vercel.
 #
-# One secret: ANTHROPIC_API_KEY (the authoring). Client Command is reached with the job's OIDC token, which it
-# verifies was minted for this workflow in this repository; there is no shared key to leak or rotate.
+# The authoring runs on the Claude subscription first (secret CLAUDE_CODE_OAUTH_TOKEN, made with `claude setup-token`).
+# If that step cannot finish (the plan's usage limit, or any error), the same step runs again on the API key (secret
+# ANTHROPIC_API_KEY) and the build log says so. Either secret alone is enough; with neither the build stops in the first
+# minute and says which to add. Client Command is reached with the job's OIDC token, which it verifies was minted for this
+# workflow in this repository; there is no shared key to leak or rotate.
 
 on:
   workflow_dispatch:
@@ -39,6 +42,20 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Check there is a Claude credential
+        id: auth
+        env:
+          OAUTH: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          APIKEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -n "$OAUTH" ]; then echo "oauth=true" >> "$GITHUB_OUTPUT"; else echo "oauth=false" >> "$GITHUB_OUTPUT"; fi
+          if [ -n "$APIKEY" ]; then echo "api=true" >> "$GITHUB_OUTPUT"; else echo "api=false" >> "$GITHUB_OUTPUT"; fi
+          if [ -z "$OAUTH" ] && [ -z "$APIKEY" ]; then
+            echo "FAIL_REASON=The websitedesign repository has no Claude credential. Add CLAUDE_CODE_OAUTH_TOKEN (run claude setup-token) or ANTHROPIC_API_KEY under Settings, Secrets and variables, Actions." >> "$GITHUB_ENV"
+            echo "::error::No Claude credential: add CLAUDE_CODE_OAUTH_TOKEN or ANTHROPIC_API_KEY as an Actions secret."
+            exit 1
+          fi
+
       - name: Fetch the brief
         id: brief
         run: python3 scripts/cc.py brief "$CC_BUILD_ID" >> "$GITHUB_OUTPUT"
@@ -64,13 +81,39 @@ jobs:
           python3 scripts/cc.py progress "$CC_BUILD_ID" read "Reading $DOMAIN: the sitemap, every page, the audit"
           python3 scripts/cc.py scaffold "$CC_BUILD_ID"
 
-      - name: Write the content and render the three directions
+      - name: Write the content and render the three directions (Claude subscription)
+        id: sub
+        if: steps.auth.outputs.oauth == 'true'
+        continue-on-error: true
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          prompt: "/directions ${{ steps.brief.outputs.slug }}"
+          claude_args: "--max-turns 300 --allowedTools Bash,Read,Write,Edit,MultiEdit,Glob,Grep,WebFetch,TodoWrite"
+
+      - name: Say the build moved to the API key
+        if: steps.sub.outcome == 'failure' && steps.auth.outputs.api == 'true'
+        run: python3 scripts/cc.py progress "$CC_BUILD_ID" auth "The Claude subscription step did not finish (usage limit or an error); continuing on the API key" || true
+
+      - name: Write the content and render the three directions (API key)
+        id: api
+        if: steps.sub.outcome != 'success' && steps.auth.outputs.api == 'true'
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           prompt: "/directions ${{ steps.brief.outputs.slug }}"
           claude_args: "--max-turns 300 --allowedTools Bash,Read,Write,Edit,MultiEdit,Glob,Grep,WebFetch,TodoWrite"
+
+      # always(): a failed API-key step has already failed the job, and a step with no status function is skipped
+      # after a failure, so the specific reason below would never reach Client Command. A step that was never reached
+      # (an earlier step failed) reads 'skipped' on both, so this does not speak for a failure it did not see.
+      - name: Stop if neither Claude step finished
+        if: always() && steps.sub.outcome != 'success' && steps.api.outcome != 'success' && (steps.sub.outcome == 'failure' || steps.api.outcome == 'failure')
+        run: |
+          echo "FAIL_REASON=Claude did not finish writing the content (subscription: ${{ steps.sub.outcome }}, API key: ${{ steps.api.outcome }}). The run log has the step." >> "$GITHUB_ENV"
+          exit 1
 
       - name: Render once more, deterministically
         env:
@@ -102,4 +145,4 @@ jobs:
 
       - name: Tell Client Command it failed
         if: failure() || cancelled()
-        run: python3 scripts/cc.py fail "$CC_BUILD_ID" "The Website directions workflow stopped before the site was uploaded (${{ job.status }}). The run log has the step." || true
+        run: python3 scripts/cc.py fail "$CC_BUILD_ID" "${FAIL_REASON:-The Website directions workflow stopped before the site was uploaded (${{ job.status }}). The run log has the step.}" || true
