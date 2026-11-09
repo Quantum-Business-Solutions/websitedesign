@@ -406,7 +406,7 @@ def build():
          "subhead": "DMP designs and manufactures intrusion, access control, fire and video systems, and sells them through authorized dealers and distributors.",
          "primary": CTA, "secondary": {"label": "See the products", "href": "services.html"},
          "image": IMG + "hero-hq-dark-2100.jpg", "image_w": 2100, "image_h": 900,
-         "stats": [["1975", "Founded in Springfield"], ["14", "Product categories on dmp.com"], ["SOC 2", "Type II examination, every year"], ["24/7", "Dealer ordering at buy.DMP.com"]],
+         "stats": [["1975", "Founded in Springfield"], ["14", "Product categories on dmp.com"], ["SOC\u00a02", "Type II examination, every year"], ["24/7", "Dealer ordering at buy.DMP.com"]],
          "card_a": {"eyebrow": "Specifying a system", "title": "Start from the product", "body": "Panels, readers, cameras and communicators, each with a page and a spec sheet.",
                     "items": ["XT75, XR550 and XR650 control panels", "Digital Key and Entré access control", "VUE Plus cameras and AlarmVision"], "label": "Browse products", "href": "services.html"},
          "card_b": {"eyebrow": "Already a DMP dealer?", "title": "The fast lane", "body": "Order, look up a document or reach a person.",
