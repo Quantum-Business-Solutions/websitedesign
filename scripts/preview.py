@@ -127,6 +127,20 @@ def client_tokens(theme: str, brand: dict) -> tuple[str, dict]:
         tok["--chrome-accent"] = ca
     else:
         tok["--chrome-accent"] = ink
+    # The stage: the dark ground the signature modules sit on (layered hero, before/after, wheel hub, calculator).
+    # They were written against a dark chrome and painted white type on --chrome-bg, so a client whose logo needs a
+    # light header (IMS) got white on white. A dark chrome is the stage; otherwise the accent sunk most of the way
+    # to black, so the stage still reads as the brand.
+    if tok["--chrome-fg"].lower().startswith("#f"):
+        tok["--stage"] = chrome_bg
+    else:
+        r, g, b = reskin.hex_to_rgb(brand["accent"])
+        tok["--stage"] = reskin.rgb_to_hex(r * .22 + 6 / 255, g * .22 + 10 / 255, b * .22 + 18 / 255)  # hex_to_rgb works in 0..1
+    # The accent as it must read ON the stage: a deep brand blue is invisible on a deep navy, so lift it until it holds 4.5:1.
+    sa = brand["accent"].lower()
+    while reskin.contrast_ratio(sa, tok["--stage"]) < 4.5 and reskin.relative_luminance(sa) < 0.95:
+        sa = reskin.lighten(sa, 0.06)
+    tok["--stage-accent"] = sa
     return css, tok
 
 
@@ -242,9 +256,9 @@ h1,h2,h3{text-wrap:balance}
 /* service-area map */
 .pv-map-wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center}
 .pv-map-svg{width:100%;height:auto;display:block}
-.pv-map-svg .land{fill:var(--bg-alt);stroke:var(--fg);stroke-width:1.2;stroke-linejoin:round}
+.pv-map-svg .land{fill:var(--bg-alt);stroke:var(--fg);stroke-width:1.2;stroke-linejoin:round;vector-effect:non-scaling-stroke}
 .pv-map-svg .ring{fill:var(--q-gold);fill-opacity:.12;stroke:var(--accent-ink);stroke-dasharray:3 3;stroke-width:.8}
-.pv-map-svg .pin{fill:var(--accent-ink);stroke:#fff;stroke-width:1.5}.pv-map-svg .pin.hq{fill:var(--chrome-bg)}
+.pv-map-svg .pin{fill:var(--accent-ink);stroke:#fff;stroke-width:1.5}.pv-map-svg .pin.hq{fill:var(--stage)}
 .pv-map-svg text{font:600 11px/1 var(--q-sans);fill:var(--fg)}
 .pv-map-list{list-style:none;margin:0;padding:0;display:grid;gap:0}
 .pv-map-list li{display:grid;grid-template-columns:1fr auto;gap:8px 18px;padding:14px 0;border-top:1px solid var(--border);align-items:baseline}
@@ -630,7 +644,10 @@ def r_contact(s, ctx):
 def r_detail(s, ctx):
     bullets = "".join(f"<li>{E(b)}</li>" for b in s.get("bullets", []))
     right = ""
-    if s.get("image"):
+    if s.get("image") and s.get("list_with_text"):
+        # the list reads with the heading it belongs to, and the image stands alone
+        right = f'<div class="pv-detail-img"><img src="{E(ctx["rel"](s["image"]))}"{ctx["srcset"](s["image"])} alt="{E(s.get("image_alt", ""))}" width="{s.get("image_w", 1200)}" height="{s.get("image_h", 800)}" loading="lazy" decoding="async"></div>'
+    elif s.get("image"):
         right = (f'<div class="pv-detail-img"><img src="{E(ctx["rel"](s["image"]))}"{ctx["srcset"](s["image"])} alt="{E(s.get("image_alt", ""))}" width="{s.get("image_w", 1200)}" height="{s.get("image_h", 800)}" loading="lazy" decoding="async"></div>'
                  + (f'<ul>{bullets}</ul>' if bullets else ""))
         bullets = ""

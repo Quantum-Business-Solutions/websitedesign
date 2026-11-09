@@ -117,7 +117,7 @@ STORY3D = {"type": "story3d", "id": "device", "eyebrow": "Take a closer look", "
     "poster": "assets/fleet/MODEL.png", "alt": "ALT", "hint": "Drag to turn", "cta": {"label": "CTA", "href": "services/x.html"},
     "steps": [],  # {"k","title","body","orbit":"30deg 72deg 100%","points":[..]}
     **({"model": MODEL} if MODEL else {})}
-HISTORY = {"type": "timeline", "id": "story", "eyebrow": f"Since {FOUNDED}", "heading": "HEADING", "intro": "The dates we could source are here; the rest are on the To confirm list.",
+HISTORY = {"type": "timeline", "id": "story", "eyebrow": f"Since {FOUNDED}", "heading": "HEADING", "intro": "INTRO: one line, client-facing. Unsourced dates go to pitch[\"confirm\"], never into this sentence.",
     "items": []}  # [year, title, body, optional image]
 MAP = {"type": "map", "id": "map", "heading": "HEADING", "intro": "INTRO", "region": REGION, "ring": 40,
        "items": [{"name": L[1], "lon": L[7], "lat": L[8], "href": f"locations/{L[0]}.html", "sub": L[2], "hq": i == 0} for i, L in enumerate(LOCATIONS)]}
