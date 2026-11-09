@@ -116,7 +116,7 @@ PAGES.append(partner_page(
 
 PAGES.append(partner_page(
     "system-surveyor", "System Surveyor", "System Surveyor",
-    "Design with <em>real DMP panels, keypads and readers</em>, from site walk to signed proposal.",
+    "Design with <em>real DMP panels, not placeholders</em>.",
     "System Surveyor is a digital system design platform. The DMP product catalog loads into it in minutes, so a design never uses generic placeholders.",
     "Thousands of integrators plan their installations here.",
     "System Surveyor is a digital system design platform built for security professionals. It supports intrusion, access control, fire and video layouts and gives dealers a faster, more professional path from site walk to signed proposal.",
@@ -172,7 +172,7 @@ PAGES.append(partner_page(
 
 PAGES.append(partner_page(
     "genetec", "Genetec", "Genetec",
-    "Arm, disarm and bypass DMP intrusion areas <em>from inside Genetec Security Center</em>.",
+    "Arm and disarm DMP intrusion <em>from Genetec Security Center</em>.",
     "Security Center manages DMP intrusion panels beside video, access control and ALPR, and synchronizes DMP users with Genetec access control cardholders.",
     "More than 25 years in physical security, headquartered in Montreal.",
     "Genetec serves 42,500+ customers through accredited channel partners and consultants in over 159 countries. Its portfolio covers video management, access control and ALPR, built on an open architecture with cybersecurity at its core, plus intrusion, intercom and digital evidence management. It serves government, education, healthcare, retail, transportation, utilities, critical infrastructure and enterprise organizations.",
@@ -200,7 +200,7 @@ PAGES.append(partner_page(
 
 PAGES.append(partner_page(
     "havenlock", "HavenLock", "HavenLock",
-    "A door lock that resists <em>more than twice the force of a standard commercial maglock</em>.",
+    "Resists <em>more than twice the force</em> of a standard maglock.",
     "HavenLock Generation 4 installs on a single Cat 6 PoE+ cable run and works with the systems a site already has, so dealers spend less time and labor on each door.",
     "A veteran-founded access control company in Nashville, Tennessee.",
     "HavenLock builds next-generation door security for commercial facilities. Its Generation 4 solution is engineered to withstand more than twice the force of a standard commercial maglock with a streamlined installation designed for everyday use, built around reliability, durability and accountability.",
@@ -228,8 +228,8 @@ PAGES.append(partner_page(
 
 PAGES.append(partner_page(
     "assa-abloy-aperio", "ASSA ABLOY Aperio", "Aperio",
-    "Up to <em>16 wireless locks on one hub</em>, managed from an XR150 or XR550 panel.",
-    "Our 734A Access Control Wireless Lock Integration Module and an Aperio AH30 Gen5 hub bring battery-powered Aperio locks into the familiar DMP control experience.",
+    "Up to <em>16 wireless locks on one hub</em>.",
+    "Our 734A Access Control Wireless Lock Integration Module and an Aperio AH30 Gen5 hub bring battery-powered Aperio locks into the familiar DMP control experience, managed from an XR150 or XR550 panel.",
     "A global leader in access solutions.",
     "ASSA ABLOY offers a broad portfolio of locking technologies for commercial facilities. Aperio wireless locking extends electronic access control to doors and other openings without wired connections at every lock. Through the DMP 734A module and the Aperio AH30 Gen5 RS-485 Communication Hub, compatible Aperio wireless locks work with XR150 and XR550 control panels while the customer keeps the DMP system and workflow they know.",
     ["Compatible Aperio wireless locks connect to XR150 and XR550 panels", "Battery-powered locks simplify retrofits", "Encrypted wireless communication between Aperio devices and the hub"],
@@ -266,7 +266,7 @@ PAGES.append({
     "crumbs": [["Home", "index.html"], ["Technology partners", "partners.html"], ["Become a technology partner", "partners/become-a-partner.html"]],
     "sections": [
         {"type": "hero", "layout": "split", "eyebrow": "Technology Partner Program",
-         "heading": "Four tests decide which products <em>we integrate with DMP</em>.",
+         "heading": "Four tests decide which products <em>we integrate</em>.",
          "subhead": "Integrations with software providers, hardware manufacturers and technology platforms make a more connected ecosystem that gives dealers and customers more flexibility, efficiency and value. Tell us what you build.",
          "primary": {"label": "Apply to the program", "href": "partners/become-a-partner.html#apply"}, "secondary": {"label": "See current partners", "href": "partners.html"},
          "image": IMG + "tab-spec-1200.jpg", "image_alt": "A designer working on a digital floor plan on a tablet", "image_w": 1200, "image_h": 900},
@@ -319,7 +319,7 @@ PAGES.append({
     "schema": [itemlist("DMP training", [["DMP University", "training/dmp-university.html"], ["Technical training", "training/technical-training.html"], ["Sales training", "training/sales-training.html"], ["End user training", "training/end-user-training.html"]])],
     "sections": [
         {"type": "hero", "layout": "split", "eyebrow": "DMP training",
-         "heading": "Expert-level champions of DMP products: <em>fewer support calls, more referrals</em>.",
+         "heading": "Train with DMP: <em>fewer support calls, more referrals</em>.",
          "subhead": "Trained technicians mean fewer service calls, faster installs and happier customers. Pick free online courses, four-day bootcamps at our headquarters, regional Tech Training Tours or monthly Tech Talk webinars.",
          "primary": {"label": "Technical training", "href": "training/technical-training.html"}, "secondary": {"label": "DMP University", "href": "training/dmp-university.html"},
          "image": IMG + "hq-exterior-1200.jpg", "image_alt": "DMP headquarters in Springfield, Missouri, where bootcamps are held", "image_w": 1200, "image_h": 800},
@@ -355,7 +355,7 @@ PAGES.append({
     "crumbs": [["Home", "index.html"], ["Training", "training.html"], ["DMP University", "training/dmp-university.html"]],
     "sections": [
         {"type": "hero", "layout": "split", "eyebrow": "DMP University",
-         "heading": "Dozens of free, on-demand courses, from wherever you are.",
+         "heading": "Dozens of free courses, <em>on demand, from anywhere</em>.",
          "subhead": "Sharpen your skills, become the subject matter expert and complete jobs faster. DMP University is our learning management system for dealers.",
          "primary": {"label": "Ask about access", "href": "contact.html"}, "secondary": {"label": "Technical documentation", "href": "support/documentation.html"},
          "image": IMG + "tab-mobile-1200.jpg", "image_alt": "DMP software on a laptop, tablet and phone", "image_w": 1200, "image_h": 900},
@@ -403,7 +403,7 @@ PAGES.append({
     "crumbs": [["Home", "index.html"], ["Training", "training.html"], ["Technical training", "training/technical-training.html"]],
     "sections": [
         {"type": "hero", "layout": "split", "eyebrow": "Technical training",
-         "heading": "Three and a half days at headquarters turn a technician into a <em>DMP champion</em>.",
+         "heading": "Three and a half days. <em>One DMP champion.</em>",
          "subhead": "Create expert-level champions of DMP products: fewer support calls, more referrals, more revenue for everyone. Technician Bootcamp, Advanced Bootcamp, Tech Training Tours, classes at your location and free online courses.",
          "primary": {"label": "Register or schedule", "href": "training/technical-training.html#register"}, "secondary": {"label": "DMP University", "href": "training/dmp-university.html"},
          "image": IMG + "hq-exterior-1200.jpg", "image_alt": "DMP headquarters in Springfield, Missouri", "image_w": 1200, "image_h": 800},
@@ -439,7 +439,7 @@ PAGES.append({
     "crumbs": [["Home", "index.html"], ["Training", "training.html"], ["Sales training", "training/sales-training.html"]],
     "sections": [
         {"type": "hero", "layout": "split", "eyebrow": "Sales training",
-         "heading": "200 sales training videos are ready the day you ask.",
+         "heading": "<em>200 sales training videos</em>, ready the day you ask.",
          "subhead": "Equip your sales team to provide paramount service for your customers. For training on DMP products, contact your Regional Sales Manager. For immediate training, use DMP University.",
          "primary": {"label": "Find your Regional Sales Manager", "href": "support/sales-directory.html"}, "secondary": {"label": "DMP University", "href": "training/dmp-university.html"},
          "image": IMG + "team-2021-1200.jpg", "image_alt": "The DMP team gathered at headquarters", "image_w": 1200, "image_h": 933},
@@ -472,7 +472,7 @@ PAGES.append({
     "crumbs": [["Home", "index.html"], ["Training", "training.html"], ["End user training", "training/end-user-training.html"]],
     "sections": [
         {"type": "hero", "layout": "split", "eyebrow": "End user training",
-         "heading": "We run your customer's Virtual Keypad training for <em>$150 an hour</em>.",
+         "heading": "Customer Virtual Keypad training, <em>$150 an hour</em>.",
          "subhead": "Skip the hassle and expense of designing and delivering Virtual Keypad training sessions. A customized, live webinar session is available to order.",
          "primary": {"label": "Order at buy.DMP.com", "href": BUY}, "secondary": {"label": "About Virtual Keypad", "href": "products/virtual-keypad.html"},
          "image": IMG + "tab-mobile-1200.jpg", "image_alt": "Virtual Keypad on a laptop, a tablet and a phone", "image_w": 1200, "image_h": 900},

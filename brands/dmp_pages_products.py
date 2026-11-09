@@ -45,7 +45,7 @@ def IM(slug):
 # ============================================================ ACCESS CONTROL
 P("digital-key-credential", "/products/access-control/credentials/digital-key-credential", "Digital Key Credential", "Digital Key", "Mobile credential", "access-control",
   IM("digital-key-credential"),
-  "A <em>Digital Key</em> credential still opens the door when the phone has run out of power.",
+  "<em>Digital Key</em> opens the door on a dead phone.",
   "Android and iOS customers load a secure credential into their phone's mobile wallet, and the reader does the rest.",
   "Instead of keeping track of a key fob or card, your customers can carry a Digital Key credential on an NFC-enabled smartphone. The phone works as a secure, contactless credential and the reader authenticates or denies access.",
   ["Works over NFC without the Virtual Keypad app, and even when the phone has run out of power",
@@ -67,7 +67,7 @@ P("digital-key-credential", "/products/access-control/credentials/digital-key-cr
 
 P("mobile-credential", "/products/access-control/credentials/mobile-credential", "Mobile Bluetooth Credential", "Mobile Bluetooth Credential", "Mobile credential", "access-control",
   IM("mobile-credential"),
-  "A <em>Mobile Bluetooth Credential</em> is nearly impossible to clone, and a lost one is disabled from Dealer Admin.",
+  "<em>Mobile Bluetooth Credential</em>: nearly impossible to clone.",
   "Customers use a BLE-enabled smartphone as the credential and the reader authenticates or denies access automatically.",
   "Some people would rather use a smartphone than keep track of a key fob or card. The Mobile Bluetooth Credential loads on a Bluetooth Low Energy smartphone so it works as a contactless access credential.",
   ["Nearly impossible to copy or clone, and less likely to be lost or stolen than a traditional prox card",
@@ -88,7 +88,7 @@ P("mobile-credential", "/products/access-control/credentials/mobile-credential",
 
 P("dmp-bluetooth-reader-and-mobile-credential", "/products/access-control/readers/dmp-bluetooth-reader-and-mobile-credential", "SR3 Bluetooth Reader", "SR3", "Access control reader", "access-control",
   IM("dmp-bluetooth-reader-and-mobile-credential"),
-  "The <em>SR3</em> reads mobile Bluetooth credentials and 125 kHz prox cards, and its IP67 rating takes it outdoors.",
+  "<em>SR3</em>: one reader for phones and prox cards.",
   "One reader for phones and cards, installed without special wiring.",
   "The SR3 Bluetooth Reader is an all-in-one reader for Bluetooth Low Energy credentials and 125 kHz prox. It is cost effective and easy to install, and it needs no special wiring.",
   ["Supports Mobile Bluetooth Credentials and 125 kHz proximity credentials",
@@ -109,7 +109,7 @@ P("dmp-bluetooth-reader-and-mobile-credential", "/products/access-control/reader
 
 P("734n", "/products/access-control/modules/734n", "734N Network Access Control Module", "734N", "Access control module", "access-control",
   IM("734n"),
-  "The <em>734N</em> puts door access on the network cabling a building already has.",
+  "The <em>734N</em> runs doors on existing network cabling.",
   "Codeless entry, arming and disarming from a reader, with OSDP support.",
   "The 734N Network Access Control Module takes advantage of pre-wired network cabling to speed installation, or to reach outlying areas where network is already located. It connects proximity readers to panels for codeless entry and for arming and disarming with DMP access cards or credentials.",
   ["Four programmable zones and a 10 Amp Form C (SPDT) door strike relay",
@@ -131,7 +131,7 @@ P("734n", "/products/access-control/modules/734n", "734N Network Access Control 
 
 P("x1", "/products/access-control/x1/x1", "X1 Single-Door Access Controller", "X1", "Access controller", "access-control",
   IM("x1"),
-  "The <em>X1</em> runs a single door from the cloud, with a network or Wi-Fi communicator onboard.",
+  "The <em>X1</em> runs one door from the cloud.",
   "Programmed in DMP's administrative portal and maintained in Virtual Keypad.",
   "The X1 is a single-door access controller with an onboard network or Wi-Fi communicator. The X1 Series is a cloud-based access control system, fully programmed in DMP's administrative portal and maintained in Virtual Keypad.",
   ["Two reader inputs (in and out), a door position switch input, a request to exit input and a customizable input",
@@ -153,7 +153,7 @@ P("x1", "/products/access-control/x1/x1", "X1 Single-Door Access Controller", "X
 
 P("entre-lite", "/products/entr%C3%A9-software/access-control-software/entr%C3%A9-lite", "Entré Lite", "Entré Lite", "Access control software", "access-control",
   IM("entre-lite"),
-  "<em>Entré Lite</em> manages up to 16 access control doors across multiple facilities from one private network.",
+  "<em>Entré Lite</em>: up to 16 doors across multiple facilities.",
   "Intrusion and access control for small retail and small commercial, from one screen.",
   "Entré Lite gives XR Series control panel users the ability to manage intrusion and access control across multiple facilities from a private network. It provides 16 doors of access control.",
   ["Up to 16 access control doors",
@@ -171,7 +171,7 @@ P("entre-lite", "/products/entr%C3%A9-software/access-control-software/entr%C3%A
 
 P("entre-enterprise", "/products/entr%C3%A9-software/access-control-software/entr%C3%A9-enterprise", "Entré Enterprise", "Entré Enterprise", "Access control software", "access-control",
   IM("entre-enterprise"),
-  "<em>Entré Enterprise</em> starts at 96 doors and expands to 400 doors and 500 panels.",
+  "<em>Entré Enterprise</em> starts at 96 doors, scales to 400.",
   "Intrusion and access control across multiple facilities, from a private network.",
   "Entré Enterprise gives XR Series control panel users the ability to manage intrusion and access control across multiple facilities from a private network. It provides 96 doors of access control, with additional licenses available to expand up to 400 doors and 500 panels.",
   ["96 doors of access control, expandable to 400 doors and 500 panels with additional licenses",
@@ -195,7 +195,7 @@ P("entre-enterprise", "/products/entr%C3%A9-software/access-control-software/ent
 # ============================================================ COMMUNICATORS AND MONITORING
 P("cellcom", "/products/cell-network-communicators/universal-communicators/cellcom", "CellCom Universal Alarm Communicator", "CellCom", "Cellular communicator", "communicators",
   IM("cellcom"),
-  "<em>CellCom</em> puts almost any panel on the LTE network and adds remote control through Virtual Keypad.",
+  "<em>CellCom</em> puts almost any panel on LTE.",
   "A simple add-on for competitor and legacy takeovers.",
   "The CellCom LTE Cellular Alarm Communicator provides a fully supervised alarm communication path over the LTE network. With this simple add-on, almost every panel can take advantage of remote system management and control.",
   ["Arming and disarming come standard, with the ability to view up to six cameras",
@@ -216,7 +216,7 @@ P("cellcom", "/products/cell-network-communicators/universal-communicators/cellc
 
 P("dualcom", "/products/cell-network-communicators/universal-communicators/dualcom", "DualCom Universal Alarm Communicator", "DualCom", "Network and cellular communicator", "communicators",
   IM("dualcom"),
-  "<em>DualCom</em> puts primary network and LTE backup communication on one board, so you can take over other panels.",
+  "<em>DualCom</em> puts network and LTE backup on one board.",
   "Capture Contact ID from a panel's dialer output and send it over a supervised path.",
   "The DualCom LTE Communicator provides a fully supervised alarm communication path. It integrates primary network communication and LTE backup on one PCB, and you can use it to take over panels.",
   ["Captures Contact ID messages from a control panel's dialer output, based on SIA DC051999.09DCS",
@@ -238,7 +238,7 @@ P("dualcom", "/products/cell-network-communicators/universal-communicators/dualc
 
 P("263lte", "/products/cell-network-communicators/xt-xr-series-communicators/263lte", "XR & XT Series LTE Cellular Communicator", "263LTE", "Cellular communicator", "communicators",
   IM("263lte"),
-  "The <em>263LTE</em> carries XT and XR panel alarms over LTE straight to an SCS-1R or SCS-VR receiver.",
+  "<em>263LTE</em> alarms reach the receiver with no NOC between.",
   "No network operations center in the middle, so your customers get faster response.",
   "Working hand-in-hand with partner carriers, SecureCom Wireless uses DMP's LTE cellular communicators to transmit data from the panel or devices directly to the DMP monitoring center receiver, without first going through a network operations center. In an emergency, that means faster response.",
   ["AT&T and Verizon cellular communicator for DMP XT and XR Series panels",
@@ -260,7 +260,7 @@ P("263lte", "/products/cell-network-communicators/xt-xr-series-communicators/263
 
 P("263lte-firstnet", "/products/cell-network-communicators/xt-xr-series-communicators/263lte-firstnet", "FirstNet Ready LTE Cellular Communicator", "263LTE-FN", "Cellular communicator", "communicators",
   IM("263lte-firstnet"),
-  "The <em>263LTE-FN</em> is approved for FirstNet's Band 14, the spectrum set aside for public safety.",
+  "The <em>263LTE-FN</em> rides FirstNet's public safety Band 14.",
   "Alarm companies get the network's nationwide, high-quality spectrum for alarm transmission.",
   "The 263LTE-FN provides wireless communication for DMP XR Series panels and is approved for use on FirstNet, built with AT&T in a public-private partnership with the First Responder Network Authority. Alarm companies get Band 14, the nationwide spectrum set aside by the federal government specifically for FirstNet.",
   ["Approved for use on the FirstNet mobile broadband public-safety network",
@@ -282,7 +282,7 @@ P("263lte-firstnet", "/products/cell-network-communicators/xt-xr-series-communic
 
 P("265lte", "/products/cell-network-communicators/xtl-series-communicators/265lte", "XTL Series LTE Cellular Communicator", "265LTE", "Cellular communicator", "communicators",
   IM("265lte"),
-  "The <em>265LTE</em> adds LTE to an XTL panel with no extra enclosure, power supply or battery.",
+  "<em>265LTE</em> adds LTE to an XTL, no extra enclosure.",
   "The panel powers it, and it comes ready for activation with SecureCom Wireless.",
   "The 265LTE Cellular Communicator provides wireless communication on XTL Series panels. It gives a fully supervised alarm communication path over the AT&T or Verizon LTE networks.",
   ["Powered by the panel, so no additional enclosure, power supply or battery backup is needed",
@@ -303,7 +303,7 @@ P("265lte", "/products/cell-network-communicators/xtl-series-communicators/265lt
 
 P("scs-vr-virtual-receiver-software", "/products/monitoring-center/monitoring-center-software/scs-vr-virtual-receiver-software", "SCS-VR Virtual Receiver Software", "SCS-VR", "Monitoring center software", "communicators",
   IM("scs-vr-virtual-receiver-software"),
-  "<em>SCS-VR</em> takes alarm signals on a server, with no rack-mounted receiver to maintain, house or power.",
+  "<em>SCS-VR</em> takes alarms on a server, not a rack.",
   "A UL Classified virtual receiver for network IP and cellular communications.",
   "SCS-VR is a UL Classified software solution that runs on a server as a virtual receiver for network IP and cellular communications. It manages alarm signals and supervision messages without the maintenance, space or power requirements of a rack-mounted hardware receiver.",
   ["Licensing options for small organizations through those monitoring thousands of accounts",
@@ -324,7 +324,7 @@ P("scs-vr-virtual-receiver-software", "/products/monitoring-center/monitoring-ce
 
 P("scs-1r", "/products/monitoring-center/receivers/scs-1r", "SCS-1R Network Enabled Receiver", "SCS-1R", "Central station receiver", "communicators",
   IM("scs-1r"),
-  "The <em>SCS-1R</em> takes four dialer lines and one network line into a single central station receiver.",
+  "<em>SCS-1R</em>: four dialer lines and a network line.",
   "Computerized monitoring of DMP panels, with full English readout on every alarm message.",
   "The SCS-1R provides central stations with computerized monitoring of DMP panels. It includes every system component required to provide four digital dialer lines and one line that can receive data over a network.",
   ["Monitors dialer, LAN/WAN or internet accounts for alarm, trouble, user and system reports",
@@ -347,7 +347,7 @@ P("scs-1r", "/products/monitoring-center/receivers/scs-1r", "SCS-1R Network Enab
 # ============================================================ PANELS AND KEYPADS
 P("xt75", "/products/control-panels/xt-series/xt75", "XT75 Control Panel", "XT75", "Control panel", "panels-keypads",
   IM("xt75"),
-  "The <em>XT75</em> puts intrusion, access control and AlarmVision on one panel.",
+  "<em>XT75</em>: intrusion, access control and AlarmVision on one panel.",
   "A hybrid network panel for residential and small to medium business installations.",
   "The XT75 is a hybrid intrusion panel for residential or small business applications. It integrates intrusion, access control and AlarmVision on a single network panel.",
   ["Integrates intrusion, access control and AlarmVision",
@@ -370,7 +370,7 @@ P("xt75", "/products/control-panels/xt-series/xt75", "XT75 Control Panel", "XT75
 
 P("xt50", "/products/control-panels/xt-series/xt50", "XT50 Control Panel", "XT50", "Control panel", "panels-keypads",
   IM("xt50"),
-  "The <em>XT50</em> expands to 58 zones and carries 99 user codes in a residential or small business panel.",
+  "The <em>XT50</em> expands to 58 zones, 99 user codes.",
   "Add dialer, network, wireless or cellular communication now or later.",
   "The XT50 is a hybrid intrusion panel for residential or small business applications. The XT50 Burglary/Fire/Door Control Panel supports 10 onboard zones plus 32 wired or 48 wireless, for up to 58 total zones and one two-wire smoke detector zone.",
   ["Includes an onboard 1100D Series Wireless Receiver",
@@ -391,7 +391,7 @@ P("xt50", "/products/control-panels/xt-series/xt50", "XT50 Control Panel", "XT50
 
 P("xtlplus", "/products/control-panels/xtl-series/xtlplus", "XTLplus Control Panel", "XTLplus", "Wireless control panel", "panels-keypads",
   IM("xtlplus"),
-  "The <em>XTLplus</em> packs 99 two-way wireless zones, Wi-Fi and Z-Wave into one small panel.",
+  "<em>XTLplus</em>: 99 wireless zones, Wi-Fi and Z-Wave, one panel.",
   "All the features of a residential or small commercial panel, in a single small footprint.",
   "The XTLplus is a wireless control panel with Wi-Fi and Z-Wave on board. Onboard cellular communications can be added with a 265 Cell Communicator.",
   ["99 two-way, 900 MHz wireless zones and dual communication",
@@ -412,7 +412,7 @@ P("xtlplus", "/products/control-panels/xtl-series/xtlplus", "XTLplus Control Pan
 
 P("xtltouch", "/products/control-panels/xtl-series/xtltouch", "XTLtouch All-In-One", "XTLtouch", "All-in-one control panel", "panels-keypads",
   IM("xtltouch"),
-  "The <em>XTLtouch</em> lets the customer put the siren where they want it, with up to eight wireless sirens.",
+  "<em>XTLtouch</em>: up to eight sirens, wherever the customer wants.",
   "An enhanced all-in-one panel the size of a keypad, for tabletop or wall mounting.",
   "All-in-one systems are popular with dealers for their simplicity and speed of installation. Unlike most, the XTLtouch does not put the siren at the keypad: it supports up to eight wireless sirens so the siren goes where the customer wants it.",
   ["99 zones of 900 MHz two-way wireless, Wi-Fi and Z-Wave in every unit",
@@ -433,7 +433,7 @@ P("xtltouch", "/products/control-panels/xtl-series/xtltouch", "XTLtouch All-In-O
 
 P("xr150", "/products/control-panels/xr-series/xr150", "XR150 Control Panel", "XR150", "Control panel", "panels-keypads",
   IM("xr150"),
-  "The <em>XR150</em> handles 142 inputs, 10,000 user codes and eight doors of access on one panel.",
+  "The <em>XR150</em> handles 142 inputs and 10,000 user codes.",
   "A fully scalable panel for commercial or residential applications.",
   "The XR150 is a fully scalable and flexible panel that meets commercial or residential applications. It has 142 inputs, one built-in LX Bus with 100 zones, and 10,000 user codes with 99 profiles.",
   ["Eight keypads give 32 zones",
@@ -454,7 +454,7 @@ P("xr150", "/products/control-panels/xr-series/xr150", "XR150 Control Panel", "X
 
 P("xr550", "/products/control-panels/xr-series/xr550", "XR550 Control Panel", "XR550", "Control panel", "panels-keypads",
   IM("xr550"),
-  "The <em>XR550</em> runs up to 96 doors of access control and 574 zones, with AES encrypted communication options.",
+  "The <em>XR550</em> runs 96 doors and 574 zones.",
   "Our flagship panel integrates intrusion and commercial fire with powerful access control.",
   "The XR550 is a fully scalable and flexible panel for your most demanding commercial or large residential applications. It features more total zones, wireless zones, areas, keypads and access control doors than any other panel in its class, plus AES encrypted communication options.",
   ["96 doors of access control and 10,000 user codes with 99 profiles",
@@ -478,7 +478,7 @@ P("xr550", "/products/control-panels/xr-series/xr550", "XR550 Control Panel", "X
 
 P("xr650", "/products/control-panels/xr-series/xr650", "XR650 Control Panel", "XR650", "Control panel, coming soon", "panels-keypads",
   IM("xr650"),
-  "The <em>XR650</em> supports 300,000 user codes and up to 100 areas on one enterprise panel.",
+  "<em>XR650</em>: 300,000 user codes and up to 100 areas.",
   "Bank-grade cybersecurity and IT-ready networking for multisite, high-security organizations.",
   "The XR650 is built for complex enterprise environments: massive user capacity, advanced cybersecurity and IT-ready networking. It gives systems room to grow over time without redesign. The XR650 is coming soon.",
   ["300,000 user codes with 1,000 groups, up to 100 areas and 574 zones",
@@ -502,7 +502,7 @@ P("xr650", "/products/control-panels/xr-series/xr650", "XR650 Control Panel", "X
 
 P("tmsentry", "/products/control-panels/tmsentry/tmsentry", "TMSentry", "TMSentry", "ATM control panel", "panels-keypads",
   IM("tmsentry"),
-  "<em>TMSentry</em> fits built-in encryption and six supervised zones into a compact ATM and ITM panel.",
+  "<em>TMSentry</em>: built-in encryption, six zones, slim ATM panel.",
   "The next generation of teller machine security, sized for slimmer machines.",
   "TMSentry is the next generation of teller machine security. Its compact size fits new, slimmer ATMs and ITMs, or serves as a space-saving upgrade to existing teller machines. Built-in encryption and six supervised zones give financial customers the highest level of protection in the most compact size available on the market.",
   ["Built-in encryption and six supervised zones",
@@ -525,7 +525,7 @@ P("tmsentry", "/products/control-panels/tmsentry/tmsentry", "TMSentry", "TMSentr
 # keypads
 P("7-inch-touchscreen-keypad", "/products/keypads/touchscreen/7-inch-touchscreen-keypad", "7-Inch Touchscreen Keypad (8800 Series)", "7-Inch Touchscreen Keypad", "Touchscreen keypad", "panels-keypads",
   IM("7-inch-touchscreen-keypad"),
-  "The <em>8862 and 8863</em> put a 7-inch touchscreen, a proximity reader and a 5MP camera in one keypad.",
+  "<em>8862 and 8863</em>: touchscreen, reader, camera, one keypad.",
   "Choose the 8862 for core keypad applications, or the 8863 for more connection, credential and backup-power options.",
   "The 7-Inch Touchscreen Keypad is designed for the way you install. Touchscreen control, a built-in proximity reader and a 5MP camera come together in the 8862 and 8863, and the keypad is compatible with all DMP panels.",
   ["Both models: 7-inch touchscreen, built-in proximity reader and 5MP onboard camera",
@@ -550,7 +550,7 @@ P("7-inch-touchscreen-keypad", "/products/keypads/touchscreen/7-inch-touchscreen
 
 P("graphic-touchscreen", "/products/keypads/touchscreen/graphic-touchscreen", "5-Inch Touchscreen Keypad", "5-Inch Touchscreen Keypad", "Touchscreen keypad", "panels-keypads",
   IM("graphic-touchscreen"),
-  "The <em>5-inch touchscreen keypad</em> arms and disarms through an interactive shield, with no code typed on screen.",
+  "The <em>5-inch touchscreen keypad</em> arms with no typed code.",
   "A resistive touchscreen with a carousel menu of shortcuts, for access and burglary applications.",
   "The 5-inch touchscreen keypad has an interactive shield for quick arming and disarming without touching the screen to enter codes. It suits access and burglary applications and is compatible with all DMP panels.",
   ["5-inch interactive display with a resistive screen",
@@ -572,7 +572,7 @@ P("graphic-touchscreen", "/products/keypads/touchscreen/graphic-touchscreen", "5
 
 P("9800-series", "/products/keypads/touchscreen/9800-series", "Wireless Touchscreen Keypad", "9800 Series", "Wireless touchscreen keypad", "panels-keypads",
   IM("9800-series"),
-  "The <em>9800 Series</em> is the 7800 Series touchscreen keypad, without the wires.",
+  "<em>9800 Series</em>: the 7800 Series touchscreen without wires.",
   "A 5-inch wireless touchscreen for access and burglary applications.",
   "The 9800 Series Wireless Touchscreen Keypad works exactly like DMP's award-winning 7800 Series wired keypads, except it is wireless. It has a 5-inch interactive display with a resistive screen and is suitable for access and burglary applications.",
   ["5-inch wireless touchscreen with a resistive screen",
@@ -593,7 +593,7 @@ P("9800-series", "/products/keypads/touchscreen/9800-series", "Wireless Touchscr
 
 P("7000-series", "/products/keypads/thinline/7000-series", "Thinline Series Keypad", "Thinline", "LCD keypad", "panels-keypads",
   IM("7000-series"),
-  "The <em>Thinline</em> keypad shows alarms visually and audibly and lets users cancel or verify one right at the keypad.",
+  "<em>Thinline</em>: cancel or verify an alarm at the keypad.",
   "A 32-character LCD keypad with a green backlit keyboard, compatible with all DMP panels.",
   "The Thinline Series keypad gives visual and audible alarm notification, with a simple way to cancel or verify an alarm at the keypad. It is a sleek 32-character alphanumeric LCD keypad with a green backlit keyboard.",
   ["Self-test diagnostics and three two-button panics",
@@ -614,7 +614,7 @@ P("7000-series", "/products/keypads/thinline/7000-series", "Thinline Series Keyp
 
 P("aqualite-series", "/products/keypads/aqualite/aqualite-series", "Aqualite Series Keypad", "Aqualite", "LCD keypad", "panels-keypads",
   IM("aqualite-series"),
-  "The <em>Aqualite</em> keypad carries the Thinline's features under a blue backlit keyboard.",
+  "<em>Aqualite</em>: Thinline features, blue backlit keyboard.",
   "Visual and audible alarm notification, and a simple way to cancel or verify an alarm at the keypad.",
   "The Aqualite Series keypad is dressed in blue backlighting and loaded with the same flexible features as DMP's Thinline model. It is compatible with all DMP panels.",
   ["32-character alphanumeric LCD with a blue backlit keyboard",
@@ -635,7 +635,7 @@ P("aqualite-series", "/products/keypads/aqualite/aqualite-series", "Aqualite Ser
 
 P("icon-series", "/products/keypads/icon-series/icon-series", "Icon Series Keypad", "Icon", "Icon keypad", "panels-keypads",
   IM("icon-series"),
-  "The <em>Icon</em> keypad pairs easy-to-understand icons with a three-character display for simple arming.",
+  "<em>Icon</em>: icons and three characters for simple arming.",
   "For when simplicity and economy are the main concern.",
   "The Icon Series keypad is a fixed icon LCD keypad that displays both intuitive symbols and messages for panel operation. It is compatible with XT30 and XT50 panels.",
   ["Available in the Thinline Series plastics, with green backlighting",
@@ -658,7 +658,7 @@ P("icon-series", "/products/keypads/icon-series/icon-series", "Icon Series Keypa
 # ============================================================ FIRE
 P("xf6", "/products/fire/fire-control-panels/xf6", "XF6 Series Fire Control Panels", "XF6", "Fire control panel", "fire",
   IM("xf6"),
-  "The <em>XF6</em> is an addressable 24V fire panel, UL 864 10th Edition Listed for wireless, that reports over network or cellular.",
+  "<em>XF6</em>: addressable 24V fire panel, network or cellular reporting.",
   "Built for single-site applications, with testing and programming through Dealer Admin and Virtual Keypad.",
   "The XF6 is a state-of-the-art 24V control panel built for single-site applications. It has network and optional cellular communications that send all signals directly to the monitoring center, and it is both addressable and UL 864 10th Edition Listed for wireless.",
   ["Supports up to 500 wireless devices, with a wireless range up to 1.7 miles",
@@ -683,7 +683,7 @@ P("xf6", "/products/fire/fire-control-panels/xf6", "XF6 Series Fire Control Pane
 
 P("xr150fc-2", "/products/fire/fire-control-panels/xr150fc-2", "XR150FC Control Panel", "XR150FC", "Fire control panel", "fire",
   IM("xr150fc-2"),
-  "The <em>XR150FC</em> puts a fire command center keyboard on a combined access control, burglary and fire panel.",
+  "<em>XR150FC</em>: access, burglary and fire on one panel.",
   "Reliable fire monitoring for any single site commercial or industrial installation.",
   "The XR150FC Series Panel is a versatile 12 VDC combined access control, burglary and fire communicator panel, with a built-in LCD fire command center keyboard with membrane keyswitch.",
   ["Use up to seven supervised 32-character LCD keypads, plus zone and output expansion modules",
@@ -705,7 +705,7 @@ P("xr150fc-2", "/products/fire/fire-control-panels/xr150fc-2", "XR150FC Control 
 
 P("xr550fc-2", "/products/fire/fire-control-panels/xr550fc-2", "XR550FC Control Panel", "XR550FC", "Fire control panel", "fire",
   IM("xr550fc-2"),
-  "The <em>XR550FC</em> pairs integrated intrusion and fire protection with 32 doors of access, upgradable to 96.",
+  "<em>XR550FC</em>: 32 doors of access, upgradable to 96.",
   "Our most powerful access control capabilities on a panel with a built-in fire command center.",
   "The XR550FC Series Panel is a versatile 12 VDC combined access control, burglary and fire communicator panel, with a built-in LCD fire command center keyboard with membrane keyswitch.",
   ["Use up to 15 supervised 32-character LCD keypads, plus zone and output expansion modules",
@@ -727,7 +727,7 @@ P("xr550fc-2", "/products/fire/fire-control-panels/xr550fc-2", "XR550FC Control 
 
 P("850", "/products/fire/pull-stations/850", "850 Pull Station", "850", "Fire pull station", "fire",
   IM("850"),
-  "The <em>850</em> manual pull station is die-cast metal with gold-plated contacts that resist corrosion.",
+  "The <em>850</em> pull station: die-cast metal, gold-plated contacts.",
   "Single or dual action pulls, with SPST contacts and terminal strip connections.",
   "The 850 is a high-quality, die-cast metal manual pull station in single or dual action versions. It has SPST contacts and terminal strip connections, and scored acrylic breakrods are used with the 850 Series.",
   ["Gold-plated contacts avoid corrosion risks",
@@ -748,7 +748,7 @@ P("850", "/products/fire/pull-stations/850", "850 Pull Station", "850", "Fire pu
 
 P("630f", "/products/fire/remote-annunciators/630f", "630F Remote Annunciator", "630F", "Fire remote annunciator", "fire",
   IM("630f"),
-  "The <em>630F</em> shows fire system events in full text on a 32-character display.",
+  "The <em>630F</em> shows fire events in full text.",
   "A 20-key remote annunciator with the backbox and trim frame included.",
   "The 630F is a 20-key remote fire annunciator with a 32-character full text LCD readout that displays system events and menu prompts. The backbox and trim frame give an attractive installation.",
   ["Protected by either keyswitch or code",
@@ -769,7 +769,7 @@ P("630f", "/products/fire/remote-annunciators/630f", "630F Remote Annunciator", 
 
 P("2w-blx", "/products/fire/smoke-detectors/2w-blx", "2W-BLX System Sensor Smoke Detector", "2W-BLX", "Addressable smoke detector", "fire",
   IM("2w-blx"),
-  "The <em>2W-BLX</em> tells responders the exact location of an alarm, so they do not waste time searching for the fire.",
+  "The <em>2W-BLX</em> tells responders exactly where the alarm is.",
   "An addressable photoelectric detector for the LX-Bus of XR Series panels.",
   "With DMP's single-point addressable smoke detectors, facility owners and emergency responders instantly know the exact trouble location in an alarm situation. The 2W-BLX is an addressable photoelectric detector with an optical sensing chamber and an advanced microprocessor.",
   ["Includes an addressable single-point module for connection to the LX-Bus of XR Series panels",
@@ -791,7 +791,7 @@ P("2w-blx", "/products/fire/smoke-detectors/2w-blx", "2W-BLX System Sensor Smoke
 # ============================================================ INTRUSION
 P("jamalert", "/products/intrusion/jamalert/jamalert", "JamAlert", "JamAlert", "Cellular jamming detector", "intrusion",
   IM("jamalert"),
-  "<em>JamAlert</em> detects cellular jamming and works with DMP and non-DMP alarm panels.",
+  "<em>JamAlert</em> detects cellular jamming, on DMP and other panels.",
   "An extra layer of protection against devices that interrupt cellular alarm transmission.",
   "JamAlert detects when cellular frequencies are being jammed. Early detection of jamming threats can mitigate interruptions in critical communications. It can be wired to a zone on a control panel or to ancillary notification devices, so customers instantly know when their site is being compromised.",
   ["Antenna simultaneously monitors a broad spectrum of cellular frequencies",
@@ -817,7 +817,7 @@ P("jamalert", "/products/intrusion/jamalert/jamalert", "JamAlert", "JamAlert", "
 # ============================================================ VIRTUAL KEYPAD AND SOFTWARE
 P("virtual-keypad", "/products/mobile-platforms/end-user-apps/virtual-keypad", "Virtual Keypad", "Virtual Keypad", "Customer app", "mobile-automation",
   IM("virtual-keypad"),
-  "<em>Virtual Keypad</em> lets customers run their security system, lights, locks and cameras from a computer, tablet or phone.",
+  "<em>Virtual Keypad</em> runs the system, lights, locks and cameras.",
   "Remote management over a cellular or network connection, branded with the dealer's logo.",
   "Virtual Keypad gives your customers the convenience of remotely managing their security systems from their computer, tablet or smartphone. Users can check status, arm and disarm, and control lights, thermostats, door locks, appliances, cameras and garage doors.",
   ["Area, All/Perimeter and Home/Sleep/Away arming, for businesses and homes",
@@ -841,7 +841,7 @@ P("virtual-keypad", "/products/mobile-platforms/end-user-apps/virtual-keypad", "
 
 P("dealer-admin", "/products/mobile-platforms/dealer-apps/dealer-admin", "Dealer Admin", "Dealer Admin", "Dealer portal", "mobile-automation",
   IM("dealer-admin"),
-  "<em>Dealer Admin</em> manages every customer panel, user and communicator from one cloud portal.",
+  "<em>Dealer Admin</em> manages every customer panel from one portal.",
   "Panel programming and so much more, for dealers.",
   "Dealer Admin is a cloud-based portal that lets you manage your business and your customers' DMP panels, including universal communicators and more.",
   ["Bulk remote updates and mass programming changes, with system health on a single dashboard",
@@ -865,7 +865,7 @@ P("dealer-admin", "/products/mobile-platforms/dealer-apps/dealer-admin", "Dealer
 
 P("remote-link", "/products/mobile-platforms/dealer-apps/remote-link", "Remote Link", "Remote Link", "Panel management software", "mobile-automation",
   IM("remote-link"),
-  "<em>Remote Link</em> lets you trap panels, update firmware and change programming from a laptop.",
+  "<em>Remote Link</em> updates firmware and programming from a laptop.",
   "Panel management software for monitoring centers and dealers.",
   "Remote Link offers a simple interface with easy access to the information you need. You can maintain subscriber accounts, trap panels, update panel firmware, change programming and user codes, silence alarms, arm or disarm a system and bypass zones, all from a laptop.",
   ["Maintain subscriber accounts",
@@ -887,7 +887,7 @@ P("remote-link", "/products/mobile-platforms/dealer-apps/remote-link", "Remote L
 # ============================================================ VIDEO
 P("xv-gateways-with-alarmvision", "/products/video/alarmvision/xv-gateways-with-alarmvision", "XV Gateways with AlarmVision", "XV Gateways", "Video analytics gateway", "video",
   IM("xv-gateways-with-alarmvision"),
-  "<em>XV Gateways</em> turn your customers' cameras into smart motion detectors that trigger XT75 and XR panel alarms in real time.",
+  "<em>XV Gateways</em> turn cameras into smart motion detectors.",
   "AlarmVision's patented technology brings cameras, analytics and the control panel into one platform.",
   "XV Gateways with AlarmVision turn your customers' cameras into a crime deterrent tool, so they know their property is actively monitored. AlarmVision integrates cameras, analytics and XT75 or XR Series control panels in one platform to create smart motion detectors that trigger panel responses and alarms.",
   ["Loitering, person, vehicle and animal analysis and detection",
@@ -911,7 +911,7 @@ P("xv-gateways-with-alarmvision", "/products/video/alarmvision/xv-gateways-with-
 
 P("v-6022wc", "/products/video/v-6000-series-cameras/v-6022wc", "V-6022WC Cube Camera", "V-6022WC", "Cube camera", "video",
   IM("v-6022wc"),
-  "The <em>V-6022WC</em> is a 2-megapixel indoor cube camera with motion event analytics.",
+  "The <em>V-6022WC</em>: 2-megapixel indoor cube, motion analytics.",
   "A compact, NDAA compliant camera for small business and retail.",
   "The V-6022WC is a 2-megapixel cube camera with motion events analytics, for indoor use in small business and retail.",
   ["2MP resolution with a 110 degree horizontal field of view",
@@ -932,7 +932,7 @@ P("v-6022wc", "/products/video/v-6000-series-cameras/v-6022wc", "V-6022WC Cube C
 
 P("vplus-7061-fe", "/products/video/vue-cameras/vplus-7061-fe", "VUE Plus 6MP Fisheye Camera (VPLUS-7061-FE)", "VUE Plus 6MP Fisheye", "Fisheye camera", "video",
   IM("vplus-7061-fe"),
-  "The <em>VUE Plus 6MP Fisheye</em> sees 360 degrees and runs AlarmVision onboard.",
+  "<em>VUE Plus 6MP Fisheye</em>: 360 degrees, AlarmVision onboard.",
   "Live video, cloud clips and push notifications once it is added in Dealer Admin.",
   "The VUE Plus 6MP Fisheye camera offers a 360 degree field of view, with onboard AlarmVision capabilities, a built-in microphone, dewarping modes and intelligent analytics. Add it in Dealer Admin to give customers live video, cloud clips and push notifications.",
   ["ONVIF and NDAA compliant",
@@ -953,7 +953,7 @@ P("vplus-7061-fe", "/products/video/vue-cameras/vplus-7061-fe", "VUE Plus 6MP Fi
 
 P("vplus-7121-fe", "/products/video/vue-cameras/vplus-7121-fe", "VUE Plus 12MP Fisheye Camera (VPLUS-7121-FE)", "VUE Plus 12MP Fisheye", "Fisheye camera", "video",
   IM("vplus-7121-fe"),
-  "The <em>VUE Plus 12MP Fisheye</em> covers open floors in 360 degrees at 12 megapixels.",
+  "<em>VUE Plus 12MP Fisheye</em>: 360 degrees at 12 megapixels.",
   "Onboard AlarmVision, a built-in microphone and dewarping modes, for open floor retail and industrial.",
   "The VUE Plus 12MP Fisheye camera offers a 360 degree field of view, with onboard AlarmVision capabilities, a built-in microphone, dewarping modes and intelligent analytics. Add it in Dealer Admin to give customers live video, cloud clips and push notifications.",
   ["ONVIF and NDAA compliant",
@@ -974,7 +974,7 @@ P("vplus-7121-fe", "/products/video/vue-cameras/vplus-7121-fe", "VUE Plus 12MP F
 
 P("vplus-7081-bdv", "/products/video/vue-cameras/vplus-7081-bdv", "VUE Plus 8MP Varifocal Bullet Camera (VPLUS-7081-BDV)", "VUE Plus 8MP Varifocal Bullet", "Bullet camera", "video",
   IM("vplus-7081-bdv"),
-  "The <em>VUE Plus 8MP Varifocal Bullet</em> has red and blue deterrence lights and a motorized lens for tough locations.",
+  "<em>VUE Plus 8MP Varifocal Bullet</em>: red and blue deterrence lights.",
   "A built-in microphone and speaker give customers two-way capabilities.",
   "The VUE Plus 8MP Varifocal Bullet camera has a motorized varifocal lens for installation in challenging locations. It has onboard AlarmVision capabilities, a built-in microphone and speaker, red and blue deterrence lights and advanced analytics.",
   ["ONVIF and NDAA compliant",
@@ -995,7 +995,7 @@ P("vplus-7081-bdv", "/products/video/vue-cameras/vplus-7081-bdv", "VUE Plus 8MP 
 
 P("vue-video-doorbell", "/products/video/vue-cameras/vue-video-doorbell", "VUE Video Doorbell", "VUE Video Doorbell", "Video doorbell", "video",
   IM("vue-video-doorbell"),
-  "The <em>VUE Video Doorbell</em> gives monitoring station operators video verification during an alarm.",
+  "The <em>VUE Video Doorbell</em> gives operators video verification.",
   "A first line of defense with real-time streaming and AI motion detection.",
   "The VUE Video Doorbell does much more than show who is at the door. It streams real-time video, detects motion with AI, works with Dealer Admin and Virtual Keypad, and gives true video verification that works directly with monitoring station software.",
   ["5MP / 3K resolution (1620 by 2880) at a 9:16 aspect ratio for a vertical view of visitors and packages",
@@ -1022,7 +1022,7 @@ P("vue-video-doorbell", "/products/video/vue-cameras/vue-video-doorbell", "VUE V
 # ============================================================ WIRELESS
 P("1100xh", "/products/wireless/receivers-repeaters/1100xh", "1100XH Wireless Receiver", "1100XH", "Wireless receiver", "wireless",
   IM("1100xh"),
-  "The <em>1100XH</em> adds up to 500 wireless transmitters to an XR Series or XT75 panel as easily as adding a keypad.",
+  "The <em>1100XH</em> adds up to 500 wireless transmitters.",
   "Two-way, supervised 900 MHz communication with extra amplification for distance and harsh buildings.",
   "The 1100XH lets you add wireless transmitters to XR Series and XT75 Series panels as easily as adding a keypad. It supports up to 500 wireless transmitters, satisfying all wireless applications, and is competitively priced for residential or commercial installations.",
   ["Two-way, supervised communication using 900 MHz frequency-hopping spread-spectrum technology",
@@ -1044,7 +1044,7 @@ P("1100xh", "/products/wireless/receivers-repeaters/1100xh", "1100XH Wireless Re
 
 P("1101", "/products/wireless/door-window-zone-inputs/1101", "1101 Universal Transmitter", "1101", "Wireless transmitter", "wireless",
   IM("1101"),
-  "The <em>1101</em> gives you two independent zones from a single wireless transmitter.",
+  "One <em>1101</em> transmitter, two independent zones.",
   "Two internal magnetic reed switches and an onboard terminal block for external contacts.",
   "The 1101 has two internal magnetic reed switches and an onboard terminal block for external contact wiring. Both sets of contacts, internal and external, can be programmed to operate at the same time, giving two independent reporting zones from one transmitter.",
   ["Two internal magnetic reed switches",
@@ -1066,7 +1066,7 @@ P("1101", "/products/wireless/door-window-zone-inputs/1101", "1101 Universal Tra
 
 P("1128", "/products/wireless/glassbreak-detectors/1128", "1128 Glassbreak Detector", "1128", "Wireless glassbreak detector", "wireless",
   IM("1128"),
-  "The <em>1128</em> detects glassbreak up to 20 feet from framed glass in an outside wall, and sends a low-battery signal to the keypad.",
+  "The <em>1128</em> detects glassbreak up to 20 feet away.",
   "A fully supervised, low-current wireless shock and glassbreak sensor.",
   "The 1128 Wireless Glassbreak Detector is a fully supervised, low-current shock and glassbreak sensor. It provides detection coverage up to 20 feet from framed glass mounted in an outside wall.",
   ["Detection coverage up to 20 feet",
@@ -1087,7 +1087,7 @@ P("1128", "/products/wireless/glassbreak-detectors/1128", "1128 Glassbreak Detec
 
 P("1142", "/products/wireless/panic-holdup/1142", "1142 Two-Button Wireless Panic", "1142", "Wireless panic", "wireless",
   IM("1142"),
-  "The <em>1142</em> two-button wireless panic mounts under the counter, and a programmable LED confirms the alarm was sent.",
+  "<em>1142</em>: under-counter panic with an LED that confirms.",
   "A belt clip version is designed to be worn on a belt.",
   "The 1142 Two-Button Wireless Panic is designed for installation under the counter. Programmable LED feedback lets you know when a panic alarm has been sent. It includes one 3V lithium battery (CR123A).",
   ["Programmable LED feedback confirms the panic alarm was sent",
@@ -1109,7 +1109,7 @@ P("1142", "/products/wireless/panic-holdup/1142", "1142 Two-Button Wireless Pani
 
 P("1164", "/products/wireless/smoke-heat-co-detectors/1164", "1164 Smoke Detector with Synchronized Sounder", "1164", "Wireless smoke detector", "wireless",
   IM("1164"),
-  "When one <em>1164</em> sounds, the panel commands every 1164 on the system to sound, with up to 572 units on one system.",
+  "When one <em>1164</em> sounds, every 1164 sounds.",
   "A battery-powered, low-profile photoelectric smoke detector with an integrated synchronized sounder.",
   "The 1164 is a battery-powered wireless photoelectric smoke detector with an integrated synchronized sounder. In installations with multiple smoke detectors, when one 1164 sounds it signals the panel to command all 1164s to sound.",
   ["Up to 572 units on one system",
@@ -1130,7 +1130,7 @@ P("1164", "/products/wireless/smoke-heat-co-detectors/1164", "1164 Smoke Detecto
 
 P("1100t", "/products/wireless/wireless-translators/1100t", "1100T Wireless Translator", "1100T", "Wireless translator", "wireless",
   IM("1100t"),
-  "One <em>1100T</em> learns in up to 128 zones of Interlogix, Honeywell 5800, 2GIG and DSC transmitters.",
+  "One <em>1100T</em> learns up to 128 competitor zones.",
   "Take over a non-DMP system and upgrade it to DMP panels, receivers and software management tools.",
   "The 1100T Wireless Translator allows upgrades of non-DMP systems with one-way, low-frequency wireless transmitters. It works with transmitters from Interlogix, Honeywell 5800, 2GIG and DSC, and talks to a DMP panel through a DMP 1100 Series receiver's wireless connection, which eliminates wiring.",
   ["Existing transmitters keep sending supervision and low battery messages to the panel",

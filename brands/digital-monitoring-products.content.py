@@ -37,7 +37,7 @@ SERVICES = [
     ["intrusion", "Intrusion Systems", "intrusion systems",
      "Control panels, detectors and cellular-jam protection for intrusion alarm systems.",
      IMG + "xt75-1200.png", "Intrusion",
-     "Intrusion panels that <em>grow from a small business to a large site</em>.",
+     "Intrusion panels that <em>grow with the site</em>.",
      "We build intrusion around the control panel. The XT Series, XTL Series and XR Series scale from a small business to a large site, and every one reports through our own communicators.",
      [["Hybrid by design", "The XT75 is a hybrid intrusion panel for residential or small business applications. It integrates intrusion, access control and AlarmVision on one panel."],
       ["Scales up", "The XR550 supports 96 doors of access control, and the XR650 won top honors at the 2026 ESX Innovation Awards."],
@@ -60,7 +60,7 @@ SERVICES = [
     ["access-control", "Access Control", "access control",
      "Access control from a stand-alone cloud system to the Entré enterprise software.",
      IMG + "x1-1200.jpg", "Access control",
-     "Doors that answer <em>to the same system</em> as the alarm.",
+     "Your doors and your alarm, <em>on one system</em>.",
      "We make the controllers, readers, credentials and software, so a door, an alarm zone and a camera can sit on one platform. The newest credential lives in a phone's wallet.",
      [["A key in the phone", "Digital Key adds a credential to an Apple or Google device's mobile wallet, so the smartphone works as a secure, contactless credential. No fob to track."],
       ["Cloud or on site", "The X1 Series, introduced in 2021, is stand-alone cloud-based access control. Entré software comes in Lite, Business and Enterprise editions, plus Entré NOC."],
@@ -80,7 +80,7 @@ SERVICES = [
     ["fire", "Fire Systems", "fire systems",
      "Fire alarm control panels, detectors and communicators.",
      IMG + "xf6-installed-1200.jpg", "Fire",
-     "Fire alarm panels <em>that report like everything else</em>.",
+     "Fire panels that <em>report the way the alarm does</em>.",
      "The XF6 fire control panel is built for single-site applications and comes with network and optional cellular communications that send all signals directly to the monitoring center.",
      [["A 24V solution", "The XF6 is a 24V solution with powerful testing and programming features, built for single-site applications."],
       ["Reports the same way", "Network and optional cellular communications are on the panel, so fire signals take the path the rest of the system uses."],
@@ -120,7 +120,7 @@ SERVICES = [
     ["communicators", "Communicators and Monitoring", "communicators and monitoring",
      "Cellular, network and universal communicators, and the monitoring center equipment that receives them.",
      IMG + "dualsim-1200.jpg", "Communicators",
-     "More than one path <em>to the monitoring center</em>.",
+     "The alarm signal gets <em>more than one way out</em>.",
      "Our communicators carry alarm signals over LTE, network and Wi-Fi paths, including the first alarm panel communicator for the AT&T FirstNet network. On the other end, we build the receiver.",
      [["First for FirstNet", "In 2020 we introduced the first alarm panel communicator for the AT&T FirstNet network."],
       ["More than one path", "The ComSeries universal LTE and LTE/network communicators arrived in 2019. Cellular, network and Wi-Fi communicators sit in one category."],
@@ -140,7 +140,7 @@ SERVICES = [
     ["wireless", "Wireless", "wireless security",
      "The 1100 Series wireless line: transmitters, detectors, receivers and translators.",
      IMG + "jamalert-1200.jpg", "Wireless",
-     "Encrypted, two-way wireless that <em>upgrades what dealers already installed</em>.",
+     "Encrypted two-way wireless <em>that upgrades what is already installed</em>.",
      "We have made two-way wireless since 2004. The 1100 Series added AES encryption in 2019, and the 1100T and 1100TF translators let a dealer upgrade a competitor's wireless transmitters without rewiring.",
      [["AES encrypted", "Our 1100 Series wireless has been AES encrypted since 2019."],
       ["Upgrade without rewiring", "The 1100T and 1100TF translators, introduced in 2021, allow upgrade of competitors' wireless transmitters."],
@@ -160,7 +160,7 @@ SERVICES = [
     ["panels-keypads", "Panels and Keypads", "panels and keypads",
      "Control panels, keypads, modules, expanders, power supplies and enclosures.",
      IMG + "keypad-722-1200.png", "Hardware",
-     "Start with the panel. <em>Finish with a keypad anyone can use.</em>",
+     "Start with the panel. <em>Finish at the keypad.</em>",
      "Control panels, keypads, modules and expanders, power supplies and enclosures are each their own category. The keypads range from a 7-inch touchscreen to the Thinline and Aqualite series.",
      [["A keypad for every wall", "7-inch and 5-inch touchscreen keypads, 9800, Thinline, Aqualite and Icon series."],
       ["Modules and expanders", "Zone, output and auxiliary modules extend a panel to the size of the building."],
@@ -180,7 +180,7 @@ SERVICES = [
     ["mobile-automation", "Virtual Keypad and Software", "Virtual Keypad and software",
      "Virtual Keypad, Dealer Admin, Entré, Z-Wave automation and the cloud services behind them.",
      IMG + "vk-mock-1200.png", "Software",
-     "Control in the owner's pocket. <em>Programming in the dealer's hands.</em>",
+     "The owner's remote. <em>The dealer's programming tool.</em>",
      "Virtual Keypad lets dealers brand a full-featured remote control for their customers. Dealer Admin programs panels in bulk. Both are hosted in a Tier 4 data center and examined annually for SOC 2 Type II.",
      [["Virtual Keypad", "Introduced in 2011 as an app dealers could brand. Rebuilt in 2018 for iOS and Android, with browser-based control at VirtualKeypad.com since 2017."],
       ["Dealer Admin", "Mass panel programming and bulk firmware update arrived in 2019, with auto-programming and pre-programming templates in 2022."],
@@ -199,17 +199,17 @@ SERVICES = [
 # Written from DMP's own industry pages (dmp.com/products/industries/*), read 9 Nov 2026.
 # slug, name, hero image, headline, why (DMP's words, condensed), bullets, featured [[kicker, name, desc, url]], library titles, contact role, faq
 IND = SITE + "/products/industries/"
-IND_H1 = {"commercial": "A security system should do more than sound an alarm.",
-          "financial-institutions": "A security system that also helps run the branch.",
-          "retail": "One system across every store.",
-          "government": "Built in the U.S.A. for federal, state and local government.",
-          "industrial-manufacturing": "Intrusion and access control on one system, with no extra wiring.",
-          "education": "Campus security with a lockdown, and a phone for a key.",
-          "healthcare-wellness": "Protect the building and the patient records inside it.",
-          "multi-tenant": "A phone for a key, and an access level just for the pool.",
-          "religious-institutions": "Every DMP product is quality tested before it ships.",
-          "storage-units": "Many panels. One site. One command.",
-          "residential": "Home, Sleep, Away: three arming levels, one touch."}
+IND_H1 = {"commercial": "A system that does more <em>than sound an alarm</em>.",
+          "financial-institutions": "A security system that <em>also helps run the branch</em>.",
+          "retail": "Run every store's system <em>with one action</em>.",
+          "government": "Designed and built in the U.S.A. <em>for government customers</em>.",
+          "industrial-manufacturing": "Intrusion and access, <em>one system, no extra wiring</em>.",
+          "education": "Lock every public door <em>in one action</em>.",
+          "healthcare-wellness": "Protect the building <em>and the records inside it</em>.",
+          "multi-tenant": "A phone for a key. <em>A pool-only access level.</em>",
+          "religious-institutions": "<em>100 percent</em> of DMP products are tested before shipping.",
+          "storage-units": "Many panels. One site. <em>One command.</em>",
+          "residential": "Home, Sleep, Away: three arming levels, <em>one touch</em>."}
 INDUSTRIES = [
     ["commercial", "Commercial", IMG + "hq-exterior-2-1200.png", "Scalable, convenient solutions for commercial customers.",
      "A security system should do much more than just sound an alarm when there's an intrusion. High-functioning systems provide a blanket of security with features and functions that enable commercial customers to protect their employees, facilities and businesses more effectively. Our systems are designed with employees and service providers in mind, so keypads are easy to operate regardless of experience level.",
@@ -432,6 +432,12 @@ SERVICE_INDEX = {s[0]: s for s in SERVICES}
 WHEEL_ITEMS = [[s[1], brief(s[3], 140), f"services/{s[0]}.html", s[1]] for s in SERVICES]
 
 
+try:
+    import dmp_pages_audience as _aud
+except ImportError:
+    _aud = None
+
+
 def build():
     brand = {
         "accent": "#FFD23D", "ink_secondary": "#111111", "chrome": "light",
@@ -468,6 +474,7 @@ def build():
         {"label": "Industries", "href": "industries.html", "children": [[i[1], f"industries/{i[0]}.html"] for i in INDUSTRIES]},
         {"label": "Support", "href": "support.html", "children": [["Contact and support", "support.html"], ["Technical support FAQs", "support/tech-faqs.html"], ["Documentation", "support/documentation.html"], ["Dealer services", "support/dealer-services.html"], ["Design tools", "support/design-tools.html"], ["Architect and engineer support", "support/ae-support.html"], ["Training", "training.html"], ["Get a quote", "support/get-a-quote.html"]]},
         {"label": "Partners", "href": "partners.html", "children": [["Technology partners", "partners.html"], ["Become a partner", "partners/become-a-partner.html"], ["Become a dealer", "support/become-a-dealer.html"]]},
+        {"label": "Resources", "href": "blog.html", "children": [["Blog", "blog.html"], ["Find a system", "find-a-system.html"], ["For dealers", "for-dealers.html"], ["For specifiers", "for-specifiers.html"], ["For building owners", "for-building-owners.html"], ["Dealer portal preview", "dealer-portal.html"], ["Why DMP", "why-dmp.html"]]},
         {"label": "Company", "href": "about.html", "children": [["About DMP", "about.html"], ["Careers", "about/careers.html"], ["DMP Cares", "about/dmp-cares.html"], ["Certifications", "about/certifications.html"], ["Springfield, Missouri", "locations.html"], ["News and resources", "resources.html"], ["Events", "events.html"], ["International", "international.html"], ["FAQ", "faq.html"], ["Contact", "contact.html"]]},
     ]
     pages = []
@@ -476,7 +483,7 @@ def build():
                   "description": "Digital Monitoring Products designs and builds intrusion, access control, fire and video systems in Springfield, Missouri, and sells them through authorized dealers. Since 1975.",
                   "sections": [
         {"type": "hero-layered", "id": "hero-layered", "eyebrow": "Springfield, Missouri, since 1975",
-         "heading": "One platform for intrusion, access, fire and video. <em>Built in Springfield since 1975.</em>",
+         "heading": "Four systems. <em>One platform.</em>",
          "subhead": "We manufacture the panels, keypads, communicators and software behind the systems dealers install, and sell them through authorized dealers and distributors.",
          "primary": CTA, "secondary": {"label": "See the products", "href": "services.html"},
          "image": IMG + "hero-hq-dark-2100.jpg", "image_w": 2100, "image_h": 900,
@@ -486,7 +493,8 @@ def build():
          "card_b": {"eyebrow": "Already a DMP dealer?", "title": "The fast lane", "body": "Order, look up a document or reach a person.",
                     "links": [["Order at buy.DMP.com", BUY], ["Technical documentation", DOCS], ["Contact and support", "contact.html"]]}},
         {"type": "partners", "caption": "Industry associations and alliances", "items": ASSOCIATIONS},
-        {"type": "tabs", "id": "systems", "eyebrow": "One manufacturer", "heading": "Five systems that work as one", "items": [
+        {"type": "stats3d", "id": "facts", "items": [["50", "Years making security systems"], ["SOC 2 Type II", "Examined every year"], ["14", "Product categories"], ["USA", "Made with U.S. and global components"]]},
+        {"type": "tabs", "id": "systems", "eyebrow": "One manufacturer", "heading": "Four systems, and the app that runs them", "items": [
             {"label": "Intrusion", "title": "Intrusion panels from XT to XR", "body": "The XT75 is a hybrid intrusion panel for residential or small business applications. It integrates intrusion, access control and AlarmVision, bridging the gap between the XT and XR Series.",
              "bullets": ["XT30, XT50 and XT75", "XR150, XR550 and XR650", "TMSentry for teller machines"], "image": IMG + "tab-intrusion-1200.jpg", "image_alt": "The DMP XT75 control board", "href": "services/intrusion.html", "link_label": "Intrusion systems"},
             {"label": "Access control", "title": "Access control beyond the fob", "body": "Digital Key adds a credential to an Apple or Google device's mobile wallet, so the smartphone works as a secure, contactless credential.",
@@ -497,6 +505,7 @@ def build():
              "bullets": ["VUE Plus camera line", "VK VMS video management", "XV gateways with AlarmVision"], "image": IMG + "tab-video-1200.jpg", "image_alt": "A VUE Plus camera", "href": "services/video.html", "link_label": "Video"},
             {"label": "Mobile", "title": "Virtual Keypad and Dealer Admin", "body": "Virtual Keypad lets dealers brand a full-featured remote control. Dealer Admin handles mass panel programming and bulk firmware updates. Both are examined annually for SOC 2 Type II.",
              "bullets": ["Virtual Keypad for iOS, Android and the browser", "Dealer Admin programming templates", "Mobile wallet credentials"], "image": IMG + "tab-mobile-1200.jpg", "image_alt": "Virtual Keypad on a laptop, tablet and phone", "href": "services/mobile-automation.html", "link_label": "Virtual Keypad and software"}]},
+        {"type": "showcase3d", "id": "flagships", "eyebrow": "The range", "heading": "Meet the products behind the platform.", "intro": "Drag, swipe or use the arrow keys. Click a product to open it.", "items": _aud.SHOWCASE},
         {"type": "flow", "id": "how", "alt": True, "eyebrow": "How a DMP system works", "heading": "Follow one alarm from the sensor to the phone",
          "intro": "Five steps, one manufacturer. Select a step to see what happens and which DMP products do the work.", "detail_eyebrow": "What happens", "receive_label": "DMP products at this step", "steps": [
             {"label": "Detect", "when": "Sensors and cameras", "summary": "Doors, windows, motion, smoke, glass and video.", "title": "Detectors and cameras see the event",
@@ -514,20 +523,23 @@ def build():
             {"label": "Control", "when": "Dealer and owner", "summary": "Apps, credentials and cloud tools.", "title": "Owners and dealers stay in control",
              "body": "Owners use Virtual Keypad on iOS, Android or the browser, and mobile wallet credentials such as Digital Key. Dealers program panels in bulk with Dealer Admin. Both cloud services are examined annually for SOC 2 Type II.",
              "receive": ["Virtual Keypad", "Digital Key", "Dealer Admin", "Entré access control software"]}]},
-        {"type": "tabs", "id": "who", "eyebrow": "Whoever you are", "heading": "Dealer, specifier or building owner: start here", "items": [
+        {"type": "tabs", "id": "who", "eyebrow": "Whoever you are", "heading": "Dealer, specifier or owner: start where you sit", "items": [
             {"label": "Dealers", "title": "Order, program and get support", "body": "Dealers order at buy.DMP.com 24 hours a day, program panels with Dealer Admin, and reach Technical Support from 7 a.m. to 7 p.m. Central. We also offer Dealer Services and a regional sales manager directory.",
              "bullets": ["Order at buy.DMP.com", "Dealer Admin: mass programming, bulk firmware updates, templates", "Technical documentation, training videos and tech FAQs", "Find your regional sales manager"], "image": IMG + "tab-mobile-1200.jpg", "image_alt": "Virtual Keypad and Dealer Admin on laptop, tablet and phone", "href": "contact.html", "link_label": "Contact and support"},
             {"label": "Specifiers", "title": "Design support from people who know the system", "body": "Our Inside Sales team supports system design, architects and engineers, pre-sales questions and quotes. In March 2026 we announced an integration with System Surveyor to streamline intrusion and access control system design for dealers.",
              "bullets": ["Spec sheets on every product page", "Inside Sales: 877-757-4367", "System Surveyor integration", "Industry brochures and white papers"], "image": IMG + "tab-spec-1200.jpg", "image_alt": "A tablet showing a floor plan in System Surveyor", "href": "resources.html", "link_label": "News and resources"},
             {"label": "Building owners", "title": "Start with a dealer", "body": "We sell through authorized dealers and distributors. Pick the kind of building you run, see how our systems fit it, then ask a dealer to specify the system.",
              "bullets": ["Eleven industries, each with a page", "Intrusion, access control, fire and video from one manufacturer", "Control from a phone with Virtual Keypad"], "image": IMG + "tab-owner-1200.jpg", "image_alt": "A person checking a phone as they leave a building", "href": "industries.html", "link_label": "Browse industries"}]},
-        {"type": "detail", "id": "made-here", "alt": True, "eyebrow": "Made in Springfield", "heading": "Built in Springfield, by Springfield people.",
+        {"type": "portal", "id": "portal", "eyebrow": "For dealers", "heading": "One sign-in for everything a dealer needs.", "intro": "A preview of the dealer home we would build: documents, ordering, Marketing Central, training, support and quotes behind one login. How it connects to the Buy site and Marketing Central is a proposed design to confirm with DMP IT.",
+         "tiles": [["Documentation library", "Spec sheets, guides and firmware notes.", "docs"], ["Order on the Buy site", "Place orders 24 hours a day.", "cart"], ["Marketing Central", "Brand-approved sales and marketing material.", "megaphone"], ["DMP University", "Training for your team.", "training"], ["Technical support", "Reach a person, or search the FAQs.", "support"], ["Get a quote", "Start a system design request.", "quote"]],
+         "signin_label": "Sign in", "cta_label": "See the dealer portal preview", "cta_href": "dealer-portal.html"},
+        {"type": "detail", "id": "made-here", "alt": True, "eyebrow": "Made in Springfield", "heading": "Making it in the U.S. keeps us close to our dealers.",
          "body": "Manufacturing in the U.S. builds a tighter partnership with our customers and our community. We are honored to employ Springfield-area residents who are dedicated to the industry and its dealers.",
          "bullets": ["Headquarters: 2500 N. Partnership Boulevard, Springfield, Missouri", "Founded in 1975 by Rick Britton", "SOC 2 Type II examined by a licensed CPA firm every year"],
          "image": IMG + "plant-1200.jpg", "image_alt": "The DMP production floor in Springfield, Missouri", "image_w": 1200, "image_h": 800},
         {"type": "timeline", "id": "story", "eyebrow": "Fifty years of firsts", "heading": "From a central station receiver to a cloud platform",
          "intro": "Milestones from our history.", "items": [TIMELINE[0], TIMELINE[3], TIMELINE[7], TIMELINE[10], TIMELINE[11], TIMELINE[13]]},
-        {"type": "resources", "heading": "New from DMP", "intro": "Launches, awards and customer stories.", "items": NEWS[:3]},
+        {"type": "resources", "heading": "What we shipped and earned in 2026", "intro": "Launches, awards and customer stories.", "items": NEWS[:3]},
         {"type": "faq", "id": "faq", "heading": "Quick answers for dealers and specifiers", "items": cf("who", "where", "usa", "order", "soc")},
         {"type": "contact", "id": "contact", "heading": "Talk to a person at DMP", "body": "Tell us who you are and what you are specifying.",
          "options": ["I am a dealer", "I am specifying a building", "I own a building", "Something else"], "submit": "Send to DMP",
@@ -537,10 +549,10 @@ def build():
     pages.append({"file": "services.html", "title": f"Products | {CLIENT}, Springfield, Missouri",
                   "description": "Our catalogue by system: intrusion, access control, fire, video, communicators, wireless, panels and keypads, Virtual Keypad and software.",
                   "sections": [
-        {"type": "hero", "layout": "centered", "eyebrow": "Products", "heading": "Every part of a security system, <em>from one manufacturer</em>.",
+        {"type": "hero", "layout": "centered", "eyebrow": "Products", "heading": "Every part of the system. <em>One manufacturer.</em>",
          "subhead": "Start from the system you are specifying. See what we make for it and every product behind it.", "primary": CTA,
          "image": IMG + "banner-allin-1200.jpg", "image_alt": "A DMP circuit board with the shield 'All in on DMP: access control, communicators, fire, intrusion, video'", "image_w": 1200, "image_h": 495},
-        {"type": "wheel", "id": "wheel", "eyebrow": "One range", "heading": "Pick a system. See what DMP makes for it.", "intro": "Hover a segment.",
+        {"type": "wheel", "id": "wheel", "eyebrow": "One range", "heading": "Pick a system. See every part we make for it.", "intro": "Hover a segment.",
          "items": WHEEL_ITEMS, "hub": "DMP", "hub_sub": "Since 1975", "ring": "SECURITY, FIRE, ACCESS AND VIDEO", "panel_eyebrow": "Hover a segment", "link_label": "See the product line"},
         {"type": "resources", "heading": "All eight systems", "intro": "Every system, with its products, the questions buyers ask and the documents behind them.",
          "items": [[s[5], s[1], s[3], "See the line", f"services/{s[0]}.html"] for s in SERVICES]},
@@ -555,10 +567,10 @@ def build():
     pages.append({"file": "industries.html", "title": f"Industries | {CLIENT}, Springfield, Missouri",
                   "description": "Eleven industries, each with its own page: commercial, financial institutions, retail, government, industrial, education, healthcare, multi-tenant, religious, storage and residential.",
                   "sections": [
-        {"type": "hero", "layout": "centered", "eyebrow": "Industries", "heading": "Eleven kinds of building. <em>One manufacturer behind all of them.</em>",
+        {"type": "hero", "layout": "centered", "eyebrow": "Industries", "heading": "Eleven kinds of building. <em>One manufacturer.</em>",
          "subhead": "See what we offer for each, the products we feature and the documents behind them.", "primary": CTA,
          "image": IMG + "banner-allin-1200.jpg", "image_alt": "A DMP circuit board with the shield 'All in on DMP: access control, communicators, fire, intrusion, video'", "image_w": 1200, "image_h": 495},
-        {"type": "services", "heading": "Find your kind of building", "intro": "Choose the nearest match.",
+        {"type": "services", "heading": "Start with the building you protect", "intro": "Choose the nearest match.",
          "items": [[i[1], i[3], f"industries/{i[0]}.html"] for i in INDUSTRIES]},
         {"type": "faq", "heading": "Questions about industries", "items": cf("what", "who", "person")},
         LEADFORM]})
@@ -568,23 +580,23 @@ def build():
     pages.append({"file": "about.html", "title": f"About {CLIENT} | Manufacturer in Springfield, Missouri since 1975",
                   "description": "Digital Monitoring Products has manufactured security systems in Springfield, Missouri since 1975. Our mission, values, history, leadership and independent SOC 2 Type II examinations.",
                   "sections": [
-        {"type": "hero", "layout": "split", "eyebrow": "About DMP", "heading": "We manufacture security systems <em>to create jobs</em> that support families.",
+        {"type": "hero", "layout": "split", "eyebrow": "About DMP", "heading": "We build security systems <em>to create jobs</em>.",
          "subhead": "Our purpose: the security of families determines the strength of society, and a strong society reaches out to the rest of the world.", "primary": CTA,
          "image": IMG + "hq-exterior-1200.jpg", "image_alt": "The DMP headquarters in Springfield, Missouri, with the American flag in front", "image_w": 1200, "image_h": 800},
         {"type": "proof", "alt": True, "eyebrow": "Our mission", "value": "We care. We have fun. We profit.",
          "text": "We provide customer-driven products through listening, anticipating needs and responding quickly with innovative solutions that work. We insist on the integrity of our products and our people.", "source": "DMP mission statement"},
         {"type": "timeline", "id": "story", "eyebrow": "Our history", "heading": "Fifty years of firsts",
          "intro": "How we began, and what followed.", "items": TIMELINE},
-        {"type": "values", "alt": True, "eyebrow": "Our values", "heading": "What we stand for", "items": VALUES},
+        {"type": "values", "alt": True, "eyebrow": "Our values", "heading": "Six values, in our own words", "items": VALUES},
         {"type": "detail", "eyebrow": "Where we build", "heading": "Manufactured in the USA, with U.S. and global components",
          "body": "'Made in the USA' is something you rarely see today. Like other manufacturers, we rely on some components that are not indigenous to the U.S. Manufacturing in the U.S. builds a tighter partnership with customers and the community.",
          "bullets": ["2500 N. Partnership Boulevard, Springfield, Missouri 65803", "Jobs for Springfield-area residents"],
          "image": IMG + "plant-1200.jpg", "image_alt": "The DMP production floor", "image_w": 1200, "image_h": 800},
-        {"type": "cards", "alt": True, "eyebrow": "Certifications", "heading": "Independently examined", "items": [
+        {"type": "cards", "alt": True, "eyebrow": "Certifications", "heading": "Examined by outsiders, every year", "items": [
             ["SOC 2 Type II", "We complete independent SOC 2 Type II examinations annually, conducted by a licensed CPA firm to AICPA standards."],
             ["Tier 4 data center", "Dealer Admin and Virtual Keypad are hosted in a Tier 4 data center with fully redundant subsystems."],
             ["SOC 3 report", "The SOC 3 report is intended for public distribution. SOC 2 reports go to customers and partners under confidentiality."]]},
-        {"type": "leadership", "heading": "Executive management group", "intro": "The people who lead DMP.", "people": LEADERS,
+        {"type": "leadership", "heading": "Twelve people run DMP", "intro": "The people who lead DMP.", "people": LEADERS,
          "orgs_intro": "Industry associations and alliances", "orgs": ASSOCIATIONS},
         {"type": "faq", "id": "faq", "heading": "Questions about DMP", "items": cf("where", "usa", "what", "who", "soc", "person")},
         LEADFORM]})
@@ -592,7 +604,7 @@ def build():
     pages.append({"file": "locations.html", "title": f"Springfield, Missouri headquarters | {CLIENT}",
                   "description": "Digital Monitoring Products is headquartered and manufactures at 2500 N. Partnership Boulevard, Springfield, Missouri 65803. Phone 877-757-4367.",
                   "sections": [
-        {"type": "hero", "layout": "split", "eyebrow": "Springfield, Missouri", "heading": "Headquartered in <em>Springfield</em>, Missouri, since 1975.",
+        {"type": "hero", "layout": "split", "eyebrow": "Springfield, Missouri", "heading": "One headquarters. <em>Authorized distributors worldwide.</em>",
          "subhead": "2500 N. Partnership Boulevard, Springfield, Missouri 65803. Inside Sales 877-757-4367.", "primary": CTA,
          "image": IMG + "hq-exterior-2-1200.png", "image_alt": "The DMP headquarters entrance sign with the American flag", "image_w": 1200, "image_h": 675},
         {"type": "cards", "alt": True, "eyebrow": "Reach a person", "heading": "Call the right team", "items": [
@@ -607,7 +619,7 @@ def build():
     pages.append({"file": "resources.html", "title": f"News and resources | {CLIENT}, Springfield, Missouri",
                   "description": "Recent news, case studies and product announcements from Digital Monitoring Products, with our technical documentation and training library.",
                   "sections": [
-        {"type": "hero", "layout": "centered", "eyebrow": "News and resources", "heading": "New from DMP, <em>and where to dig deeper</em>.",
+        {"type": "hero", "layout": "centered", "eyebrow": "News and resources", "heading": "Launches, awards and <em>the library behind them</em>.",
          "subhead": "Product launches, awards and customer stories, with the technical library behind them.", "primary": {"label": "Technical documentation", "href": DOCS},
          "image": IMG + "fifty-1200.jpg", "image_alt": "All DMP employees in front of the headquarters, with the banner 'Welcome to the standard of excellence in commercial security'", "image_w": 1200, "image_h": 495},
         {"type": "resources", "heading": "Recent announcements", "intro": "Select a story to read it.", "items": NEWS[:6]},
@@ -627,7 +639,7 @@ def build():
                   "sections": [
         {"type": "hero", "layout": "centered", "eyebrow": "Contact and support", "heading": "Reach the <em>right person</em> the first time.",
          "subhead": "Dealers, specifiers and building owners start in the same place."},
-        {"type": "contact", "id": "form", "heading": "Contact DMP", "body": "Choose what fits best.",
+        {"type": "contact", "id": "form", "heading": "Tell us what you need", "body": "Choose what fits best.",
          "options": ["I am a dealer", "I am specifying a building", "I own a building", "Something else"], "submit": "Send to DMP",
          "note": "Inside Sales, 8 a.m. to 5 p.m. Central."},
         {"type": "cards", "alt": True, "eyebrow": "By phone", "heading": "Call the right team", "items": [
@@ -715,7 +727,7 @@ def finalize(data):
     import sys
     sys.path.insert(0, HERE)
     mods = []
-    for fam in ("products", "support", "company", "partners"):
+    for fam in ("products", "support", "company", "partners", "audience", "blog"):
         try:
             mods.append(importlib.import_module(f"dmp_pages_{fam}"))
         except ModuleNotFoundError as e:

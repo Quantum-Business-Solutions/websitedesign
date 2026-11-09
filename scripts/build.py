@@ -84,6 +84,10 @@ def main(argv=None):
         cmd += ["--recommend", cfg["recommend"]]
     sh(cmd)
 
+    _c = json.load(open(content_json)); dom = (_c.get("schema") or {}).get("org_url") or (("https://" + _c["domain_hint"]) if _c.get("domain_hint") else "")
+    if dom:
+        sh([sys.executable, os.path.join(HERE, "launch_package.py"), content_json, out, dom])
+
     # score the first direction with the same checks the hub uses
     first = os.path.join(out, cfg["themes"][0].replace("Quantum ", "").lower())
     cities = ",".join((content.get("schema") or {}).get("cities", []))

@@ -37,6 +37,7 @@ import themefix  # noqa: E402
 from preview_hub import hub  # noqa: E402
 import preview_sections  # noqa: E402
 import preview_modules  # noqa: E402
+import preview_motion  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DASH_HITS: list[str] = []
@@ -408,7 +409,7 @@ html{scroll-padding-bottom:72px}
 .q-form .hs-button{min-height:48px;font-size:16px;width:100%}
 .pv-form-note{font-size:13px;color:var(--fg-muted);margin:12px 0 0}
 /* detail */
-.pv-detail>*,.pv-split>*{min-width:0}.pv-detail p,.pv-detail .body{white-space:pre-line;overflow-wrap:anywhere}
+.q-lead,.q-container p,.q-container li{overflow-wrap:anywhere}.pv-detail>*,.pv-split>*{min-width:0}.pv-detail p,.pv-detail .body{white-space:pre-line;overflow-wrap:anywhere}
 .pv-detail{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start}
 .pv-detail .q-h2{margin-top:14px}
 .pv-detail ul{margin:22px 0 0;padding-left:20px;color:var(--fg);line-height:1.8;font-size:16px}
@@ -678,6 +679,7 @@ RENDER = {"hero": r_hero, "partners": r_partners, "stats": r_stats, "services": 
           "leadform": r_leadform}
 RENDER.update(preview_sections.RENDER_EXTRA)
 RENDER.update(preview_modules.RENDER_EXTRA2)
+RENDER.update(preview_motion.RENDER_EXTRA3)
 
 
 # ------------------------------------------------------------------------------ chrome
@@ -1091,6 +1093,7 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
 {PREVIEW_CSS}
 {preview_sections.EXTRA_CSS}
 {preview_modules.EXTRA_CSS2}
+{preview_motion.EXTRA_CSS3}
 /* ===== direction system: {E(dslug)} ===== */
 {DIRECTION_CSS.get(dslug, "")}
 /* ===== client heading setting (brand.heading): one headline weight and tracking across the directions ===== */
@@ -1112,6 +1115,7 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
 {switcher(themes, theme, page["file"], recommend)}
 <script>{PREVIEW_JS}</script>
 <script>{preview_modules.DEPTH_JS}</script>
+<script>{preview_motion.MOTION_JS}</script>
 </body>
 </html>
 '''

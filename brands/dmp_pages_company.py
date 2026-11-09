@@ -439,7 +439,7 @@ PAGES.append({
     "description": desc("Work at a family-owned tech company in the Ozarks: manufacturing, sales, tech support and software engineering jobs, an on-site medical clinic and a free home security system."),
     "crumbs": [["Home", "index.html"], ["About", "about.html"], ["Careers", "about/careers.html"]],
     "sections": [
-        hero_news("Careers", "A family-owned tech company <em>in the heart of the Ozarks</em>",
+        hero_news("Careers", "A family-owned tech company <em>in the Ozarks</em>",
                   "We design, engineer and manufacture cutting-edge security systems for commercial and residential applications, in Springfield, Missouri. Joining us means joining a team committed to its mission and values, including giving back to the community and pursuing excellence every day.",
                   IMG + "hq-exterior-1200.jpg", "The DMP headquarters in Springfield, Missouri",
                   {"label": "How we give back", "href": "about/dmp-cares.html"}),
@@ -467,7 +467,7 @@ PAGES.append({
     "description": desc("Generosity is one of our company values. We support worthy causes and give our people the chance to give money, time and talent, with a goal of 50,000 volunteer hours."),
     "crumbs": [["Home", "index.html"], ["About", "about.html"], ["DMP Cares", "about/dmp-cares.html"]],
     "sections": [
-        hero_news("DMP Cares", "Giving is greater than receiving, and it is one of our <em>company values</em>",
+        hero_news("DMP Cares", "Giving is one of our <em>company values</em>",
                   "We believe the blessings of generosity extend well beyond the recipient. DMP Cares is the sum of our efforts, and of each person's commitment to a lifestyle of generosity.",
                   IMG + "team-2021-1200.jpg", "The DMP team at the Springfield, Missouri headquarters"),
         {"type": "cards", "alt": True, "eyebrow": "How we give", "heading": "Money, time and talent: three ways our people give",
@@ -492,7 +492,7 @@ PAGES.append({
     "crumbs": [["Home", "index.html"], ["About", "about.html"], ["Certifications", "about/certifications.html"]],
     "schema": [{"@context": "https://schema.org", "@type": "WebPage", "name": "Certifications", "about": "SOC 2 Type II"}],
     "sections": [
-        hero_news("Certifications", "A licensed CPA firm examines our SOC 2 Type II controls <em>every year</em>",
+        hero_news("Certifications", "Our SOC 2 Type II controls, <em>examined every year</em>",
                   "Dealer Admin and Virtual Keypad, our SaaS applications, are hosted in a Tier 4 data center and examined independently each year in line with AICPA standards.",
                   IMG + "tab-mobile-1200.jpg", "Virtual Keypad on a phone"),
         {"type": "detail", "alt": True, "eyebrow": "Where it runs", "heading": "Dealer Admin and Virtual Keypad are hosted in a Tier 4 data center",
@@ -524,7 +524,7 @@ PAGES.append({
     "crumbs": [["Home", "index.html"], ["Events", "events.html"]],
     "sections": [
         {"type": "hero", "layout": "centered", "eyebrow": "Events",
-         "heading": "Whether you run the company or wire the panel, <em>there is an event for you</em>",
+         "heading": "Owner or technician, <em>there is an event for you</em>",
          "subhead": "Whether you are a DMP dealer executive, technician, salesperson or marketing professional, we have an event for you and your team.",
          "primary": CTA, "secondary": {"label": "Training programs", "href": "training.html"}},
         {"type": "cards", "alt": True, "eyebrow": "Technician training", "heading": "Six hands-on training events for dealer technicians",
@@ -569,7 +569,7 @@ PAGES.append({
     "crumbs": [["Home", "index.html"], ["International", "international.html"]],
     "schema": [itemlist("Authorized DMP international distributors", [[d[1], d[2]] for d in DIST])],
     "sections": [
-        hero_news("International", "Every product is rigorously tested before it leaves our facility, <em>wherever it ships</em>",
+        hero_news("International", "Tested before it ships, <em>wherever it ships</em>",
                   "DMP products are built to meet real security needs with powerful features and dependable performance. They are available through authorized dealers and distributors internationally.",
                   IMG + "plant-1200.jpg", "DMP products being built in Springfield, Missouri",
                   {"label": "Browse our systems", "href": "services.html"}),
@@ -615,7 +615,7 @@ NEWS = []
 NEWS.append(["News, 11 Sep 2026", "DMP Launches VK VMS, Enabling 24/7 Video Management With AlarmVision", "A cloud video management system inside Virtual Keypad, with new XV Plus Gateways.", "Read the story", "news/vk-vms.html"])
 PAGES.append(news_page("vk-vms", "", "DMP launches VK VMS, enabling 24/7 video management with AlarmVision",
   "VK VMS adds live video viewing and on-site device management to Virtual Keypad, with AlarmVision Plus and Pro subscriptions and new XV Plus Gateways.",
-  hero_news("News, 11 September 2026", "DMP launches VK VMS, enabling <em>24/7 video management</em> with AlarmVision",
+  hero_news("News, 11 September 2026", "VK VMS: <em>24/7 video management</em> with AlarmVision",
             "Launch expands our Gateway family with new XV Plus Gateways.", IMG + "xv-plus-gateway-1200.jpg", "A DMP XV Plus Gateway", {"label": "See video systems", "href": "services/video.html"}),
   [{"type": "detail", "alt": True, "eyebrow": "SPRINGFIELD, Mo.", "heading": "A cloud video management solution built into Virtual Keypad",
     "body": "VK VMS is a new cloud-based, integrated video management solution that delivers live video viewing and on-site device management to our flagship Virtual Keypad platform. The launch introduces AlarmVision subscription tiers and XV Plus Gateways, enabling professional monitoring in our growing video platform.",
@@ -679,7 +679,7 @@ PAGES.append(news_page("vue-portfolio", "", "The next evolution of the VUE portf
 NEWS.append(["News, 6 May 2026", "JamAlert Achieves UL Certification", "UL 2610 certification for JamAlert in commercial burglary applications.", "Read the story", "news/jamalert-ul.html"])
 PAGES.append(news_page("jamalert-ul", "", "JamAlert achieves UL certification for commercial burglary applications",
   "JamAlert cellular jamming detection has achieved UL 2610 certification, the standard for commercial premises security alarm units and systems.",
-  hero_news("News, 6 May 2026", "JamAlert achieves <em>UL certification</em> for use in commercial burglary applications",
+  hero_news("News, 6 May 2026", "JamAlert earns <em>UL certification</em> for commercial burglary applications",
             "Our cellular jamming detection technology has achieved UL 2610 certification.", IMG + "jamalert-1200.jpg", "A JamAlert cellular jamming detector", {"label": "Our certifications", "href": "about/certifications.html"}),
   [{"type": "detail", "alt": True, "eyebrow": "Springfield, MO", "heading": "UL 2610 is the standard for commercial premises security alarm units and systems",
     "body": "UL 2610 defines requirements for how commercial intrusion and holdup alarm systems must be designed, built, tested and perform. The certification marks a significant milestone for JamAlert, providing independent validation of its performance and reliability while expanding its applicability in regulated and compliance-driven environments.",
@@ -700,7 +700,7 @@ PAGES.append(news_page("jamalert-ul", "", "JamAlert achieves UL certification fo
 NEWS.append(["News, 27 Apr 2026", "XR650 Wins Top Honors at 2026 ESX Innovation Awards", "The XR650 takes the Intrusion Innovation Award and Best of Show.", "Read the story", "news/xr650-esx-award.html"])
 PAGES.append(news_page("xr650-esx-award", "", "XR650 wins Intrusion Innovation Award and Best of Show at 2026 ESX",
   "The XR650 enterprise control panel won the Intrusion Detection category and Best of Show at the 2026 Electronic Security Expo Innovation Awards in Irving, Texas.",
-  hero_news("News, 27 April 2026", "XR650 wins Intrusion Innovation Award and <em>Best of Show</em> at the 2026 ESX Innovation Awards",
+  hero_news("News, 27 April 2026", "XR650 wins <em>Best of Show</em> at ESX 2026",
             "Our category-winning enterprise control panel earns the event's highest overall honor.", IMG + "xr650-esx-1200.jpg", "DMP team members on stage at ESX with the XR650 display beside them", {"label": "Intrusion systems", "href": "services/intrusion.html"}),
   [{"type": "detail", "alt": True, "eyebrow": "Irving, Texas", "heading": "The XR650 was named Best of Show at the 2026 Electronic Security Expo",
     "body": "The ESX Innovation Awards recognize products that advance the security industry across a variety of technology categories. The XR650 was first named the winner of the Intrusion Detection category.",
@@ -722,7 +722,7 @@ PAGES.append(news_page("xr650-esx-award", "", "XR650 wins Intrusion Innovation A
 NEWS.append(["News, 9 Apr 2026", "DMP Launches VUE Camera Line Delivering Intelligent Video and Active Deterrence", "Three 5MP VUE cameras with analytics and active deterrence.", "Read the story", "news/vue-camera-line.html"])
 PAGES.append(news_page("vue-camera-line", "", "DMP launches VUE camera line delivering intelligent video and active deterrence",
   "Three new 5MP VUE cameras, bullet, turret and dome, add person and vehicle detection, active deterrence lighting, two-way audio and Virtual Keypad integration.",
-  hero_news("News, 9 April 2026", "DMP launches the VUE camera line: <em>three 5MP cameras</em> with analytics and active deterrence",
+  hero_news("News, 9 April 2026", "VUE launches with <em>three 5MP cameras</em> and active deterrence",
             "New 5MP cameras advance our video portfolio with advanced analytics, integrated deterrence and commercial-grade performance.", IMG + "vue-cameras-5mp-1200.jpg", "The VUE dome, turret and bullet cameras", {"label": "See video systems", "href": "services/video.html"}),
   [{"type": "detail", "alt": True, "eyebrow": "SPRINGFIELD, Mo.", "heading": "A trio of 5MP cameras for retail, QSR and medium to large commercial installations",
     "body": "The VUE lineup includes bullet, turret and dome form factors. Building on the recent introduction of the VUE Video Doorbell, this release strengthens the VUE portfolio with professional-grade cameras that offer improved performance, expanded capabilities and seamless integration across the DMP ecosystem.",
@@ -744,7 +744,7 @@ PAGES.append(news_page("vue-camera-line", "", "DMP launches VUE camera line deli
 NEWS.append(["News, 19 Mar 2026", "Integration with System Surveyor Streamlines Intrusion and Access Control System Design for Dealers", "Design DMP systems on digital floor plans with System Surveyor.", "Read the story", "news/system-surveyor.html"])
 PAGES.append(news_page("system-surveyor", "", "DMP launches partnership with System Surveyor",
   "Our integration with System Surveyor lets dealers design intrusion, access control, fire and video systems on digital floor plans, with a bill of materials generated automatically.",
-  hero_news("News, 19 March 2026", "DMP launches a partnership with System Surveyor to <em>streamline system design</em> for dealers",
+  hero_news("News, 19 March 2026", "System Surveyor partnership <em>streamlines system design</em> for dealers",
             "Integration streamlines intrusion and access control system design for dealers.", IMG + "system-surveyor-1200.jpg", "A hand holding a tablet showing a floor plan in System Surveyor", {"label": "About the partner", "href": "partners/system-surveyor.html"}),
   [{"type": "detail", "alt": True, "eyebrow": "Springfield, Mo.", "heading": "Dealers get a mobile, collaborative system design platform",
     "body": "We announced a partnership with System Surveyor, a digital system design platform for security and technology integrators. The collaboration gives DMP dealers advanced tools to simplify system planning, automate documentation and accelerate the sales process.",
@@ -785,7 +785,7 @@ PAGES.append(news_page("small-sensor-big-save", "", "Customer success story: a s
 NEWS.append(["News, 29 Oct 2025", "DMP Introduces VAULT: Secure, Encrypted Connectivity for Cloud-Based Security Applications", "Cloud access for Virtual Keypad and Dealer Admin, with systems kept off the public internet.", "Read the story", "news/vault.html"])
 PAGES.append(news_page("vault", "", "DMP introduces VAULT: secure, encrypted connectivity for cloud-based security applications",
   "VAULT, Virtual Access Using Layered Tunneling, lets dealers and enterprises use Virtual Keypad and Dealer Admin while keeping security systems off the public internet.",
-  hero_news("News, 29 October 2025", "VAULT gives cloud applications <em>secure, encrypted connectivity</em> without exposing systems to the public internet",
+  hero_news("News, 29 October 2025", "VAULT: <em>encrypted connectivity</em>, no public internet exposure",
             "Secure access to cloud applications without exposing systems to the public internet.", IMG + "vault-1200.jpg", "The VAULT secure connectivity appliance graphic", {"label": "Our certifications", "href": "about/certifications.html"}),
   [{"type": "detail", "alt": True, "eyebrow": "Springfield, Mo.", "heading": "A private, encrypted tunnel to SecureCom Wireless infrastructure",
     "body": "Virtual Access Using Layered Tunneling (VAULT) is a secure communication platform that allows dealers and enterprise customers to use our cloud applications while keeping their security systems off the public internet. Organizations can use Virtual Keypad and Dealer Admin without exposing systems directly. VAULT creates a private, encrypted tunnel between a customer's corporate network and the SecureCom Wireless infrastructure, so systems reach our cloud services through a controlled and isolated connection.",

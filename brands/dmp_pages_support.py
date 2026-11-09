@@ -114,7 +114,7 @@ Q_GLOSSARY = ["How can I learn more about DMP and industry terminology?",
 CATS = {
  "access-control": {
     "label": "Access control", "short": "Access Control",
-    "heading": "Why the door will not open: six denied messages and what each one means.",
+    "heading": "Six access denied messages, <em>and what each means</em>.",
     "sub": "Card swipes that disarm, key fobs by panel and the access denied messages in the panel event history.",
     "image": IMG + "tab-access-1200.jpg", "alt": "A phone held to a door reader", "w": 1200, "h": 900,
     "blurb": "Card swipe programming, key fob zones and what each access denied message means.",
@@ -132,7 +132,7 @@ CATS = {
                 ("Documentation library", "Installation and programming guides for door modules.", "support/documentation.html")]},
  "cellular-network-communication": {
     "label": "Cellular and network communication", "short": "Cellular and Network",
-    "heading": "Where the cellular status failure chart lives, and which firmware each modem needs.",
+    "heading": "Cellular failures and <em>the firmware each modem needs</em>.",
     "sub": "Diagnostics errors on a cellular communicator and the panel firmware that has to be in place before a cellular modem goes in.",
     "image": IMG + "p-263lte-1200.png", "alt": "The DMP 263LTE cellular communicator", "w": 1200, "h": 995,
     "blurb": "Cell diagnostics errors and the firmware version each cellular modem needs.",
@@ -153,7 +153,7 @@ CATS = {
                 ("Documentation library", "The DMP Troubleshooting Guide and technical updates.", "support/documentation.html")]},
  "control-panel": {
     "label": "Control panels", "short": "Control Panels",
-    "heading": "Programming codes, firmware and Remote Link settings for XT, XTL and XR panels.",
+    "heading": "XT, XTL and XR panels: <em>codes, firmware, Remote Link</em>.",
     "sub": "The codes that open Programming and Diagnostics, where the default user code comes from, and every firmware update path by panel.",
     "image": IMG + "tab-intrusion-1200.jpg", "alt": "The DMP XT75 control board", "w": 1200, "h": 900,
     "blurb": "Programming and diagnostics codes, firmware updates, Remote Link, wireless and keypad setup by panel.",
@@ -166,7 +166,7 @@ CATS = {
                 ("Panel and keypad products", "Control panels, keypads, modules and expanders.", "services/panels-keypads.html")]},
  "keypads": {
     "label": "Keypads", "short": "Keypads",
-    "heading": "Address a keypad, update its firmware and get into installer options.",
+    "heading": "Address a keypad, update it, <em>reach installer options</em>.",
     "sub": "Firmware updates for the 5-Inch (7800/9800) and 7-Inch (8860) touchscreen keypads, keypad addressing and the installer code.",
     "image": IMG + "p-9800-series-1200.png", "alt": "A DMP 9800 Series touchscreen keypad", "w": 1200, "h": 800,
     "blurb": "Firmware updates for 5-Inch and 7-Inch touchscreen keypads, addressing and installer options.",
@@ -184,7 +184,7 @@ CATS = {
                 ("End-user training", "Keypad how-to videos for customers.", "training/end-user-training.html")]},
  "mobile-platforms": {
     "label": "Mobile platforms", "short": "Mobile Platforms",
-    "heading": "Virtual Keypad help files, App Keys and push notifications, answered.",
+    "heading": "Virtual Keypad: help files, App Keys, <em>push notifications</em>.",
     "sub": "Where the Virtual Keypad and Panel to Panel help files are, what to check when an app will not connect and how push notifications are enabled.",
     "image": IMG + "tab-mobile-1200.jpg", "alt": "Virtual Keypad and Dealer Admin on laptop, tablet and phone", "w": 1200, "h": 900,
     "blurb": "Help files, App Keys, EASYconnect, push notifications and Remote Link downloads.",
@@ -199,7 +199,7 @@ CATS = {
                 ("End-user training", "How-to videos for Virtual Keypad.", "training/end-user-training.html")]},
  "monitoring-center": {
     "label": "Monitoring center", "short": "Monitoring Center",
-    "heading": "Digital Key privacy, panel firmware updates and receiving signals on an SCS-1R or SCS-VR.",
+    "heading": "Digital Key privacy, firmware updates, <em>SCS-1R and SCS-VR signals</em>.",
     "sub": "What the Digital Key does and does not track, every panel firmware update path, Remote Link settings and the network traffic a receiver needs.",
     "image": IMG + "p-scs-1r-1200.png", "alt": "The DMP SCS-1R receiver", "w": 1200, "h": 800,
     "blurb": "Digital Key privacy, panel firmware updates, Remote Link and SCS-1R or SCS-VR signal handling.",
@@ -219,7 +219,7 @@ CATS = {
                 ("Communicator products", "Cellular and network communicators.", "services/communicators.html")]},
  "video": {
     "label": "Video", "short": "Video",
-    "heading": "Camera will not add to Dealer Admin? Reset 4000, 5000 and 6000 Series cameras this way.",
+    "heading": "Camera will not add? <em>Reset 4000, 5000 and 6000 Series.</em>",
     "sub": "Which ports to open outbound for video, and the factory reset for each camera series.",
     "image": IMG + "tab-video-1200.jpg", "alt": "A VUE Plus camera", "w": 1200, "h": 900,
     "blurb": "Outbound ports for video and the factory reset for 4000, 5000 and 6000 Series cameras.",
@@ -233,7 +233,7 @@ CATS = {
                 ("Control panel FAQs", "Dealer Admin connections and App Keys.", "support/tech-faqs/control-panel.html")]},
  "wireless": {
     "label": "Wireless", "short": "Wireless",
-    "heading": "Wireless Trouble, zone numbers and 1100R repeaters, explained.",
+    "heading": "Wireless Trouble, zone numbers and <em>1100R repeaters</em>, explained.",
     "sub": "What Wireless Trouble means, how to test every wireless zone, where zone numbers start on XR panels and which receiver goes with which panel.",
     "image": IMG + "p-1100xh-1200.png", "alt": "The DMP 1100XH wireless receiver", "w": 1200, "h": 823,
     "blurb": "Wireless Trouble, zone tests, repeaters, receivers and low battery messages.",
@@ -292,7 +292,7 @@ PAGES.append({"file": "support.html", "title": title("Support and contacts"),
             {"@type": "ContactPoint", "contactType": "technical support", "telephone": "+1-888-436-7832", "email": "TechSupport@DMP.com", "hoursAvailable": "Mo-Fr 07:00-19:00"},
             {"@type": "ContactPoint", "contactType": "customer service", "telephone": "+1-866-266-2826", "email": "CustomerService@DMP.com", "hoursAvailable": "Mo-Fr 08:00-18:00"}]}}],
     "sections": [
-        {"type": "hero", "layout": "split", "eyebrow": "Support and contacts", "heading": "Technical Support picks up from 7 a.m. to 7 p.m. Central.",
+        {"type": "hero", "layout": "split", "eyebrow": "Support and contacts", "heading": "Technical Support answers <em>7 a.m. to 7 p.m. Central</em>.",
          "subhead": "Four phone lines, each run by the team that owns the answer: Inside Sales, Technical Support, Customer Service and SecureCom Wireless. Times below are Central.",
          "primary": {"label": "Call Technical Support 888-436-7832", "href": TECH_HREF}, "secondary": {"label": "Technical FAQs", "href": "support/tech-faqs.html"},
          "image": IMG + "hq-exterior-1200.jpg", "image_alt": "The DMP headquarters in Springfield, Missouri, with the American flag in front", "image_w": 1200, "image_h": 800},
@@ -331,7 +331,7 @@ PAGES.append({"file": "support/tech-faqs.html", "title": title("Technical suppor
     "crumbs": crumbs(["Technical support FAQs", "support/tech-faqs.html"]),
     "schema": [itemlist("DMP technical FAQ categories", [[CATS[c]["label"], faq_url(c)] for c in ORDER])],
     "sections": [
-        {"type": "hero", "layout": "split", "eyebrow": "Technical FAQs", "heading": "Panel codes, firmware versions and wireless zone numbers, answered in one place.",
+        {"type": "hero", "layout": "split", "eyebrow": "Technical FAQs", "heading": "Panel codes, firmware and zone numbers, <em>answered</em>.",
          "subhead": "Eight categories of answers from DMP Technical Support, written for the dealer standing at the panel.",
          "primary": {"label": "Call Technical Support", "href": TECH_HREF}, "secondary": {"label": "Documentation library", "href": "support/documentation.html"},
          "image": IMG + "tab-intrusion-1200.jpg", "image_alt": "The DMP XT75 control board", "image_w": 1200, "image_h": 900},
@@ -371,7 +371,7 @@ PAGES.append({"file": "support/documentation.html", "title": title("Technical do
     "description": desc("The DMP document library: spec sheets, installation and programming guides, quick start guides, technical updates, white papers, case studies and videos."),
     "crumbs": crumbs(["Documentation", "support/documentation.html"]),
     "sections": [
-        {"type": "hero", "layout": "split", "eyebrow": "Documentation library", "heading": "More than 900 documents, from XR550 spec sheets to VUE Video Doorbell updates.",
+        {"type": "hero", "layout": "split", "eyebrow": "Documentation library", "heading": "More than <em>900 documents</em>, filtered by what you need.",
          "subhead": "Every document type we publish, what each one is for and real titles to look for. Filter the library by product category, document type and file type.",
          "primary": {"label": "Ask Technical Support", "href": TECH_HREF}, "secondary": {"label": "Technical FAQs", "href": "support/tech-faqs.html"},
          "image": IMG + "tab-spec-1200.jpg", "image_alt": "A tablet showing a floor plan in System Surveyor", "image_w": 1200, "image_h": 900},
@@ -396,7 +396,7 @@ PAGES.append({"file": "support/dealer-services.html", "title": title("Dealer ser
     "description": desc("Dealer services from DMP: Dealer Admin, Dealer Account, free firmware, the Customer Return Center, marketing support and a three year warranty."),
     "crumbs": crumbs(["Dealer services", "support/dealer-services.html"]),
     "sections": [
-        {"type": "hero", "layout": "split", "eyebrow": "Dealer services", "heading": "Firmware updates are free, and every product carries a three year warranty.",
+        {"type": "hero", "layout": "split", "eyebrow": "Dealer services", "heading": "Free firmware updates and <em>a three year warranty</em>.",
          "subhead": "Since 1975, our sole purpose has been to create customer-driven products for professional security dealers. While others have made security a piece of their business, we have made it the entirety of ours.",
          "primary": {"label": "Become a dealer", "href": "support/become-a-dealer.html"}, "secondary": {"label": "Marketing support", "href": "support/marketing.html"},
          "image": IMG + "plant-1200.jpg", "image_alt": "The DMP production floor in Springfield, Missouri", "image_w": 1200, "image_h": 800},
@@ -434,7 +434,7 @@ PAGES.append({"file": "support/design-tools.html", "title": title("Design tools:
     "description": desc("Design DMP intrusion, access control, fire and video systems on a digital floor plan in System Surveyor, with an automatic bill of materials and DMP catalog files."),
     "crumbs": crumbs(["Design tools", "support/design-tools.html"]),
     "sections": [
-        {"type": "hero", "layout": "split", "eyebrow": "Design tools", "heading": "Place DMP panels, keypads and readers on a floor plan, and get the bill of materials instantly.",
+        {"type": "hero", "layout": "split", "eyebrow": "Design tools", "heading": "Floor plan in, <em>bill of materials out</em>.",
          "subhead": "System Surveyor lets security professionals design DMP systems, intrusion, access control, fire and video, on a digital floor plan, placing devices and capturing project requirements in real time.",
          "primary": {"label": "About System Surveyor", "href": "partners/system-surveyor.html"}, "secondary": {"label": "Get a quote", "href": "support/get-a-quote.html"},
          "image": IMG + "system-surveyor-1200.jpg", "image_alt": "A hand holding a tablet showing a floor plan in System Surveyor", "image_w": 1200, "image_h": 732},
@@ -474,7 +474,7 @@ PAGES.append({"file": "support/ae-support.html", "title": title("A&E support: sp
     "description": desc(f"A&E specs for {len(AE_SPECS)} DMP products and CAD drawings for {sum(len(x) for _, x in CAD)} panels, enclosures, modules, keypads, wireless devices and door applications."),
     "crumbs": crumbs(["A&E support", "support/ae-support.html"]),
     "sections": [
-        {"type": "hero", "layout": "split", "eyebrow": "Architect and engineer support", "heading": f"{sum(len(x) for _, x in CAD)} CAD drawings, from the XR550N board to a three-door mantrap.",
+        {"type": "hero", "layout": "split", "eyebrow": "Architect and engineer support", "heading": f"{sum(len(x) for _, x in CAD)} CAD drawings, <em>board to three-door mantrap</em>.",
          "subhead": f"Specification text for {len(AE_SPECS)} DMP products and drawings in six groups, so architects and engineers can put DMP systems into plans and specifications.",
          "primary": {"label": "Talk to Inside Sales", "href": "contact.html"}, "secondary": {"label": "Design tools", "href": "support/design-tools.html"},
          "image": IMG + "p-xr550-1200.png", "image_alt": "The DMP XR550 control panel", "image_w": 1200, "image_h": 818},
@@ -496,7 +496,7 @@ PAGES.append({"file": "support/get-a-quote.html", "title": title("Get a quote"),
     "description": desc("Request a quote from DMP: tell us your company, location and product interest, and an authorized dealer network and DMP security professionals will help."),
     "crumbs": crumbs(["Get a quote", "support/get-a-quote.html"]),
     "sections": [
-        {"type": "hero", "layout": "split", "eyebrow": "Get a quote", "heading": "One location or thousands of sites: intrusion, fire, access, video and cellular, quoted together.",
+        {"type": "hero", "layout": "split", "eyebrow": "Get a quote", "heading": "One site or thousands, <em>quoted together</em>.",
          "subhead": "Complete the form to discuss project requirements or learn more about DMP products and services.",
          "primary": {"label": "Start the quote form", "href": "support/get-a-quote.html#quote"}, "secondary": {"label": "Call Inside Sales", "href": "tel:+18777574367"},
          "image": IMG + "tab-owner-1200.jpg", "image_alt": "A person checking a phone as they leave a building", "image_w": 1200, "image_h": 900},
@@ -521,7 +521,7 @@ PAGES.append({"file": "support/become-a-dealer.html", "title": title("Become a D
     "description": desc("Apply to become an authorized DMP dealer. We look for $5,000 to $10,000 of equipment purchases a month, and approval typically takes a few days."),
     "crumbs": crumbs(["Become a dealer", "support/become-a-dealer.html"]),
     "sections": [
-        {"type": "hero", "layout": "split", "eyebrow": "Become a dealer", "heading": "Approval to become an authorized DMP dealer should take just a few days.",
+        {"type": "hero", "layout": "split", "eyebrow": "Become a dealer", "heading": "Dealer approval <em>should take just a few days</em>.",
          "subhead": "DMP is a privately held independent manufacturer of intrusion, fire, access control and cellular alarm products, available exclusively through our authorized dealer network.",
          "primary": {"label": "Apply now", "href": "support/become-a-dealer.html#apply"}, "secondary": {"label": "Dealer services", "href": "support/dealer-services.html"},
          "image": IMG + "hq-exterior-1200.jpg", "image_alt": "The DMP headquarters in Springfield, Missouri, with the American flag in front", "image_w": 1200, "image_h": 800},
@@ -555,7 +555,7 @@ PAGES.append({"file": "support/sales-directory.html", "title": title("Sales dire
     "description": desc("DMP's sales team by role and territory: 19 regional sales managers, directors of sales, national accounts, financial, government, retail and international."),
     "crumbs": crumbs(["Sales directory", "support/sales-directory.html"]),
     "sections": [
-        {"type": "hero", "layout": "split", "eyebrow": "Sales directory", "heading": f"{len(RSM)} regional sales managers, from New England to Four Corners and Los Angeles.",
+        {"type": "hero", "layout": "split", "eyebrow": "Sales directory", "heading": f"{len(RSM)} regional sales managers, <em>New England to Los Angeles</em>.",
          "subhead": "Our sales team is organized by region, by market and by account type. Inside Sales connects you with the right person for your territory.",
          "primary": {"label": "Call Inside Sales 877-757-4367", "href": "tel:+18777574367"}, "secondary": {"label": "International distributors", "href": "international.html"},
          "image": IMG + "hq-exterior-1200.jpg", "image_alt": "The DMP headquarters in Springfield, Missouri, with the American flag in front", "image_w": 1200, "image_h": 800},
@@ -584,7 +584,7 @@ PAGES.append({"file": "support/marketing.html", "title": title("Marketing suppor
     "description": desc("Marketing Central for DMP dealers: free account, hundreds of assets with your logo, 75+ custom videos, and print at our cost with no markup."),
     "crumbs": crumbs(["Marketing support", "support/marketing.html"]),
     "sections": [
-        {"type": "hero", "layout": "split", "eyebrow": "Marketing support", "heading": "We print and ship brochures and sell sheets at our cost, with no markup.",
+        {"type": "hero", "layout": "split", "eyebrow": "Marketing support", "heading": "Brochures and sell sheets <em>at our cost, no markup</em>.",
          "subhead": "Customize marketing materials with your logo and contact information. Your account is free, and so are most assets.",
          "primary": {"label": "Sign up for Marketing Central", "href": "support/marketing.html#signup"}, "secondary": {"label": "Private label", "href": "support/private-label.html"},
          "image": IMG + "tab-spec-1200.jpg", "image_alt": "A tablet showing a floor plan in System Surveyor", "image_w": 1200, "image_h": 900},
@@ -612,7 +612,7 @@ PAGES.append({"file": "support/private-label.html", "title": title("Private labe
     "description": desc("Private label from DMP: custom Digital Key credentials, branded Wavelynx readers, Farpointe credentials, custom keypads and free custom videos."),
     "crumbs": crumbs(["Marketing support", "support/marketing.html"], ["Private label", "support/private-label.html"]),
     "sections": [
-        {"type": "hero", "layout": "split", "eyebrow": "Private label", "heading": "Your name on the Digital Key in your customer's pocket.",
+        {"type": "hero", "layout": "split", "eyebrow": "Private label", "heading": "Your name on the <em>Digital Key</em> in a pocket.",
          "subhead": "Keep your brand in front of your customers with custom Digital Keys, branded readers and credentials, and custom keypads.",
          "primary": {"label": "Get started", "href": "support/private-label.html#start"}, "secondary": {"label": "Marketing support", "href": "support/marketing.html"},
          "image": IMG + "digital-key-1200.jpg", "image_alt": "A hand holding a phone to a door reader", "image_w": 1200, "image_h": 501},
