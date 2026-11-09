@@ -248,7 +248,7 @@ def _calculator(s, ctx):
 
 def _comparison(s, ctx):
     E = ctx["E"]
-    cols = s["columns"]
+    cols = [c if isinstance(c, dict) else {"label": c} for c in s["columns"]]
     head = "".join(f'<th{" class=rec" if c.get("recommended") else ""}>{E(c["label"])}{"<span class=tag>Most common</span>" if c.get("recommended") else ""}</th>' for c in cols)
     rows = "".join("<tr>" + f"<td>{E(row[0])}</td>" + "".join(f"<td>{E(v)}</td>" for v in row[1:]) + "</tr>" for row in s["rows"])
     return f'{ctx["sec_open"](s)} <div class="q-container"><div class="pv-split"><h2 class="q-h2">{E(s["heading"])}</h2><p>{E(s.get("intro"))}</p></div><div class="pv-cmp" tabindex="0" role="region" aria-label="{E(s["heading"])}"><table><thead><tr><th scope="row">Option</th>{head}</tr></thead><tbody>{rows}</tbody></table></div><p class="pv-cmp-hint">Swipe sideways to compare all three.</p>{f"<p style=font-size:14px;color:var(--fg-muted);margin-top:14px>{E(s[chr(110)+chr(111)+chr(116)+chr(101)])}</p>" if s.get("note") else ""}</div></section>'

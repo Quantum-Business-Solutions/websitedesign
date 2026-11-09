@@ -914,6 +914,10 @@ def schema_blocks(content, page, base, dslug, title=None, description=None):
                  ("numberOfEmployees", sch.get("employees")), ("areaServed", sch.get("area_served")), ("slogan", sch.get("slogan"))):
         if v:
             org[k] = {"@type": "ImageObject", "url": v} if k == "logo" else ({"@type": "QuantitativeValue", "value": v} if k == "numberOfEmployees" else v)
+    if sch.get("catalog"):
+        # the organization's real product lines, as an OfferCatalog: [[name, url], ...]
+        org["hasOfferCatalog"] = {"@type": "OfferCatalog", "name": sch.get("catalog_name", "Product lines"),
+                                  "itemListElement": [{"@type": "OfferCatalog", "name": n, "url": (u if u.startswith("http") else f"{site}/{u.replace('.html', '')}")} for n, u in sch["catalog"]]}
     if sch.get("telephone"):
         org["telephone"] = sch["telephone"]
         org["contactPoint"] = {"@type": "ContactPoint", "contactType": "Sales", "telephone": sch["telephone"], "areaServed": "US", "availableLanguage": "English"}
@@ -1088,6 +1092,8 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
 {preview_modules.EXTRA_CSS2}
 /* ===== direction system: {E(dslug)} ===== */
 {DIRECTION_CSS.get(dslug, "")}
+/* ===== client heading setting (brand.heading): one headline weight and tracking across the directions ===== */
+{(lambda h: f".q-h1,.q-h2{{font-weight:{h.get('weight', 800)};letter-spacing:{h.get('tracking', '-.03em')};font-style:normal}}" if h else "")(b.get("heading"))}
 /* ===== mobile, after the direction system so it wins ===== */
 {MOBILE_LAST_CSS}
 </style>

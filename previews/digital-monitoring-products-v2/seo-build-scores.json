@@ -2,330 +2,330 @@
  "first": "showcase",
  "summaries": {
   "showcase": {
-   "count": 27,
+   "count": 40,
    "avg_score": 85,
-   "grade_a": 25,
-   "grade_b_plus": 26,
+   "grade_a": 37,
+   "grade_b_plus": 39,
    "grade_d_f": 0,
-   "faq": 26,
+   "faq": 38,
    "service_or_article": 0,
-   "local": 27,
+   "local": 40,
    "review": 0,
-   "question": 27,
+   "question": 40,
    "under_300": 2,
-   "city_title": 27,
-   "breadcrumb": 26,
+   "city_title": 40,
+   "breadcrumb": 39,
    "no_alt_pages": 0,
-   "avg_words": 489,
+   "avg_words": 526,
    "entity_avg": 87,
-   "entity_a": 27,
+   "entity_a": 40,
    "entity_d_f": 0,
    "entity_checks": {
     "org": {
-     "pass": 27,
-     "of": 27
+     "pass": 40,
+     "of": 40
     },
     "page_type": {
-     "pass": 27,
-     "of": 27
+     "pass": 40,
+     "of": 40
     },
     "primary": {
-     "pass": 27,
-     "of": 27
+     "pass": 40,
+     "of": 40
     },
     "website": {
      "pass": 1,
      "of": 1
     },
     "breadcrumb": {
-     "pass": 26,
-     "of": 26
+     "pass": 39,
+     "of": 39
     },
     "person": {
      "pass": 0,
-     "of": 27
+     "of": 40
     },
     "sameas": {
      "pass": 0,
-     "of": 27
+     "of": 40
     },
     "provider": {
-     "pass": 27,
-     "of": 27
+     "pass": 40,
+     "of": 40
     },
     "area": {
-     "pass": 27,
-     "of": 27
+     "pass": 40,
+     "of": 40
     },
     "author": {
      "pass": 0,
      "of": 0
     },
     "contact": {
-     "pass": 27,
-     "of": 27
+     "pass": 40,
+     "of": 40
     },
     "about": {
-     "pass": 27,
-     "of": 27
+     "pass": 40,
+     "of": 40
     },
     "dates": {
-     "pass": 27,
-     "of": 27
+     "pass": 40,
+     "of": 40
     },
     "ids": {
-     "pass": 27,
-     "of": 27
+     "pass": 40,
+     "of": 40
     },
     "resolve": {
-     "pass": 27,
-     "of": 27
+     "pass": 40,
+     "of": 40
     },
     "clean": {
-     "pass": 27,
-     "of": 27
+     "pass": 40,
+     "of": 40
     }
    },
    "schema_types": {
-    "ImageObject": 27,
-    "WebPage": 27,
-    "Organization": 27,
-    "LocalBusiness": 27,
-    "PostalAddress": 27,
-    "ContactPoint": 27,
-    "Country": 27,
-    "ListItem": 26,
-    "FAQPage": 26,
-    "BreadcrumbList": 26,
-    "Question": 26,
-    "Answer": 26,
+    "WebPage": 40,
+    "LocalBusiness": 40,
+    "ImageObject": 40,
+    "Organization": 40,
+    "Country": 40,
+    "ContactPoint": 40,
+    "PostalAddress": 40,
+    "BreadcrumbList": 39,
+    "ListItem": 39,
+    "Question": 38,
+    "FAQPage": 38,
+    "Answer": 38,
+    "ItemList": 10,
     "CollectionPage": 8,
-    "ItemList": 8,
     "WebSite": 1
    },
    "by_type": {
     "company": {
-     "count": 27,
+     "count": 40,
      "avg": 85,
      "entity": 87
     }
    }
   },
   "clean": {
-   "count": 27,
+   "count": 40,
    "avg_score": 85,
-   "grade_a": 25,
-   "grade_b_plus": 26,
+   "grade_a": 37,
+   "grade_b_plus": 39,
    "grade_d_f": 0,
-   "faq": 26,
+   "faq": 38,
    "service_or_article": 0,
-   "local": 27,
+   "local": 40,
    "review": 0,
-   "question": 27,
+   "question": 40,
    "under_300": 2,
-   "city_title": 27,
-   "breadcrumb": 26,
+   "city_title": 40,
+   "breadcrumb": 39,
    "no_alt_pages": 0,
-   "avg_words": 489,
+   "avg_words": 526,
    "entity_avg": 87,
-   "entity_a": 27,
+   "entity_a": 40,
    "entity_d_f": 0,
    "entity_checks": {
     "org": {
-     "pass": 27,
-     "of": 27
+     "pass": 40,
+     "of": 40
     },
     "page_type": {
-     "pass": 27,
-     "of": 27
+     "pass": 40,
+     "of": 40
     },
     "primary": {
-     "pass": 27,
-     "of": 27
+     "pass": 40,
+     "of": 40
     },
     "website": {
      "pass": 1,
      "of": 1
     },
     "breadcrumb": {
-     "pass": 26,
-     "of": 26
+     "pass": 39,
+     "of": 39
     },
     "person": {
      "pass": 0,
-     "of": 27
+     "of": 40
     },
     "sameas": {
      "pass": 0,
-     "of": 27
+     "of": 40
     },
     "provider": {
-     "pass": 27,
-     "of": 27
+     "pass": 40,
+     "of": 40
     },
     "area": {
-     "pass": 27,
-     "of": 27
+     "pass": 40,
+     "of": 40
     },
     "author": {
      "pass": 0,
      "of": 0
     },
     "contact": {
-     "pass": 27,
-     "of": 27
+     "pass": 40,
+     "of": 40
     },
     "about": {
-     "pass": 27,
-     "of": 27
+     "pass": 40,
+     "of": 40
     },
     "dates": {
-     "pass": 27,
-     "of": 27
+     "pass": 40,
+     "of": 40
     },
     "ids": {
-     "pass": 27,
-     "of": 27
+     "pass": 40,
+     "of": 40
     },
     "resolve": {
-     "pass": 27,
-     "of": 27
+     "pass": 40,
+     "of": 40
     },
     "clean": {
-     "pass": 27,
-     "of": 27
+     "pass": 40,
+     "of": 40
     }
    },
    "schema_types": {
-    "ImageObject": 27,
-    "WebPage": 27,
-    "Organization": 27,
-    "LocalBusiness": 27,
-    "PostalAddress": 27,
-    "ContactPoint": 27,
-    "Country": 27,
-    "ListItem": 26,
-    "FAQPage": 26,
-    "BreadcrumbList": 26,
-    "Question": 26,
-    "Answer": 26,
+    "WebPage": 40,
+    "LocalBusiness": 40,
+    "ImageObject": 40,
+    "Organization": 40,
+    "Country": 40,
+    "ContactPoint": 40,
+    "PostalAddress": 40,
+    "BreadcrumbList": 39,
+    "ListItem": 39,
+    "Question": 38,
+    "FAQPage": 38,
+    "Answer": 38,
+    "ItemList": 10,
     "CollectionPage": 8,
-    "ItemList": 8,
     "WebSite": 1
    },
    "by_type": {
     "company": {
-     "count": 27,
+     "count": 40,
      "avg": 85,
      "entity": 87
     }
    }
   },
   "press": {
-   "count": 27,
+   "count": 40,
    "avg_score": 85,
-   "grade_a": 25,
-   "grade_b_plus": 26,
+   "grade_a": 37,
+   "grade_b_plus": 39,
    "grade_d_f": 0,
-   "faq": 26,
+   "faq": 38,
    "service_or_article": 0,
-   "local": 27,
+   "local": 40,
    "review": 0,
-   "question": 27,
+   "question": 40,
    "under_300": 2,
-   "city_title": 27,
-   "breadcrumb": 26,
+   "city_title": 40,
+   "breadcrumb": 39,
    "no_alt_pages": 0,
-   "avg_words": 489,
+   "avg_words": 526,
    "entity_avg": 87,
-   "entity_a": 27,
+   "entity_a": 40,
    "entity_d_f": 0,
    "entity_checks": {
     "org": {
-     "pass": 27,
-     "of": 27
+     "pass": 40,
+     "of": 40
     },
     "page_type": {
-     "pass": 27,
-     "of": 27
+     "pass": 40,
+     "of": 40
     },
     "primary": {
-     "pass": 27,
-     "of": 27
+     "pass": 40,
+     "of": 40
     },
     "website": {
      "pass": 1,
      "of": 1
     },
     "breadcrumb": {
-     "pass": 26,
-     "of": 26
+     "pass": 39,
+     "of": 39
     },
     "person": {
      "pass": 0,
-     "of": 27
+     "of": 40
     },
     "sameas": {
      "pass": 0,
-     "of": 27
+     "of": 40
     },
     "provider": {
-     "pass": 27,
-     "of": 27
+     "pass": 40,
+     "of": 40
     },
     "area": {
-     "pass": 27,
-     "of": 27
+     "pass": 40,
+     "of": 40
     },
     "author": {
      "pass": 0,
      "of": 0
     },
     "contact": {
-     "pass": 27,
-     "of": 27
+     "pass": 40,
+     "of": 40
     },
     "about": {
-     "pass": 27,
-     "of": 27
+     "pass": 40,
+     "of": 40
     },
     "dates": {
-     "pass": 27,
-     "of": 27
+     "pass": 40,
+     "of": 40
     },
     "ids": {
-     "pass": 27,
-     "of": 27
+     "pass": 40,
+     "of": 40
     },
     "resolve": {
-     "pass": 27,
-     "of": 27
+     "pass": 40,
+     "of": 40
     },
     "clean": {
-     "pass": 27,
-     "of": 27
+     "pass": 40,
+     "of": 40
     }
    },
    "schema_types": {
-    "ImageObject": 27,
-    "WebPage": 27,
-    "Organization": 27,
-    "LocalBusiness": 27,
-    "PostalAddress": 27,
-    "ContactPoint": 27,
-    "Country": 27,
-    "ListItem": 26,
-    "FAQPage": 26,
-    "BreadcrumbList": 26,
-    "Question": 26,
-    "Answer": 26,
+    "WebPage": 40,
+    "LocalBusiness": 40,
+    "ImageObject": 40,
+    "Organization": 40,
+    "Country": 40,
+    "ContactPoint": 40,
+    "PostalAddress": 40,
+    "BreadcrumbList": 39,
+    "ListItem": 39,
+    "Question": 38,
+    "FAQPage": 38,
+    "Answer": 38,
+    "ItemList": 10,
     "CollectionPage": 8,
-    "ItemList": 8,
     "WebSite": 1
    },
    "by_type": {
     "company": {
-     "count": 27,
+     "count": 40,
      "avg": 85,
      "entity": 87
     }
