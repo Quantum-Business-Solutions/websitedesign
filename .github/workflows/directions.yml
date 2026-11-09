@@ -106,8 +106,11 @@ jobs:
           prompt: "/directions ${{ steps.brief.outputs.slug }}"
           claude_args: "--max-turns 300 --allowedTools Bash,Read,Write,Edit,MultiEdit,Glob,Grep,WebFetch,TodoWrite"
 
+      # always(): a failed API-key step has already failed the job, and a step with no status function is skipped
+      # after a failure, so the specific reason below would never reach Client Command. A step that was never reached
+      # (an earlier step failed) reads 'skipped' on both, so this does not speak for a failure it did not see.
       - name: Stop if neither Claude step finished
-        if: steps.sub.outcome != 'success' && steps.api.outcome != 'success'
+        if: always() && steps.sub.outcome != 'success' && steps.api.outcome != 'success' && (steps.sub.outcome == 'failure' || steps.api.outcome == 'failure')
         run: |
           echo "FAIL_REASON=Claude did not finish writing the content (subscription: ${{ steps.sub.outcome }}, API key: ${{ steps.api.outcome }}). The run log has the step." >> "$GITHUB_ENV"
           exit 1
