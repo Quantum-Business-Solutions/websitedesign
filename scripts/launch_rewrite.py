@@ -22,7 +22,7 @@ def rewrite(html, domain, rel):
 
     def img(m):
         v = m.group(2)
-        v = re.sub(r"^https?://[^/]+/(?:(?:clean|showcase|press)/)?", "", v)
+        v = re.sub(r"^https?://[^/]+/(?:s/[0-9a-f]{16,}/)?(?:(?:clean|showcase|press)/)?", "", v)
         return m.group(1) + f"{domain}/{v}" + m.group(3)
     html = re.sub(r'(<meta (?:property="og:image"|name="twitter:image") content=")([^"]*)(")', img, html)
     html = re.sub(r'<nav class="pv-switch".*?</nav>', "", html, flags=re.S)

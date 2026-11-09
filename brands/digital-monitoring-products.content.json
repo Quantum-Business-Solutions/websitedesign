@@ -398,7 +398,78 @@
      "Virtual Keypad and Software",
      "services/mobile-automation.html"
     ]
-   ]
+   ],
+   "dw_mega": {
+    "kind": "products",
+    "tiles": [
+     [
+      "Intrusion",
+      "Control panels, detectors and cellular-jam protection for intrusion alarm systems.",
+      "services/intrusion.html",
+      "assets/p-xr550-1200-cut.png"
+     ],
+     [
+      "Access control",
+      "Access control from a stand-alone cloud system to the Entré enterprise software.",
+      "services/access-control.html",
+      "assets/p-x1-1200-cut.png"
+     ],
+     [
+      "Fire",
+      "Fire alarm control panels, detectors and communicators.",
+      "services/fire.html",
+      "assets/p-xf6-1200-cut.png"
+     ],
+     [
+      "Video",
+      "VUE Plus cameras, AlarmVision analytics and the VK VMS video management platform.",
+      "services/video.html",
+      "assets/p-vplus-7061-fe-1200-cut.png"
+     ],
+     [
+      "Communicators",
+      "Cellular, network and universal communicators, and the monitoring center equipment that receives them.",
+      "services/communicators.html",
+      "assets/p-263lte-1200-cut.png"
+     ],
+     [
+      "Wireless",
+      "The 1100 Series wireless line: transmitters, detectors, receivers and translators.",
+      "services/wireless.html",
+      "assets/p-1100xh-1200-cut.png"
+     ],
+     [
+      "Panels and keypads",
+      "Control panels, keypads, modules, expanders, power supplies and enclosures.",
+      "services/panels-keypads.html",
+      "assets/keypad-722-1200-cut.png"
+     ],
+     [
+      "Software",
+      "Virtual Keypad, Dealer Admin, Entré, Z-Wave automation and the cloud services behind them.",
+      "services/mobile-automation.html",
+      "assets/p-virtual-keypad-1200-cut.png"
+     ]
+    ],
+    "featured": {
+     "eyebrow": "Flagship panel",
+     "name": "XR550 Control Panel",
+     "image": "assets/p-xr550-1200-cut.png",
+     "href": "products/xr550.html",
+     "body": "96 doors, 574 zones and 10,000 user codes, with encrypted communication options.",
+     "label": "View the XR550"
+    },
+    "foot": [
+     [
+      "All products",
+      "services.html"
+     ],
+     [
+      "Find a system",
+      "find-a-system.html"
+     ]
+    ]
+   }
   },
   {
    "label": "Industries",
@@ -448,7 +519,77 @@
      "Residential",
      "industries/residential.html"
     ]
-   ]
+   ],
+   "dw_mega": {
+    "kind": "industries",
+    "chips": [
+     [
+      "Commercial",
+      "industries/commercial.html",
+      "assets/hq-exterior-2-1200.png"
+     ],
+     [
+      "Financial institutions",
+      "industries/financial-institutions.html",
+      "assets/vault-1200.jpg"
+     ],
+     [
+      "Retail",
+      "industries/retail.html",
+      "assets/tab-mobile-1200.jpg"
+     ],
+     [
+      "Government",
+      "industries/government.html",
+      "assets/tab-access-1200.jpg"
+     ],
+     [
+      "Industrial and manufacturing",
+      "industries/industrial-manufacturing.html",
+      "assets/plant-1200.jpg"
+     ],
+     [
+      "Education",
+      "industries/education.html",
+      "assets/digital-key-1200.jpg"
+     ],
+     [
+      "Healthcare and wellness",
+      "industries/healthcare-wellness.html",
+      "assets/dualsim-1200.jpg"
+     ],
+     [
+      "Multi-tenant",
+      "industries/multi-tenant.html",
+      "assets/sensor-1112-1200.jpg"
+     ],
+     [
+      "Religious institutions",
+      "industries/religious-institutions.html",
+      "assets/tab-intrusion-1200.jpg"
+     ],
+     [
+      "Storage units",
+      "industries/storage-units.html",
+      "assets/alarmvision-1200.jpg"
+     ],
+     [
+      "Residential",
+      "industries/residential.html",
+      "assets/phone-commercial-1200.jpg"
+     ]
+    ],
+    "foot": [
+     [
+      "All eleven industries",
+      "industries.html"
+     ],
+     [
+      "Find a system",
+      "find-a-system.html"
+     ]
+    ]
+   }
   },
   {
    "label": "Support",
@@ -486,7 +627,76 @@
      "Get a quote",
      "support/get-a-quote.html"
     ]
-   ]
+   ],
+   "dw_mega": {
+    "kind": "support",
+    "lines": [
+     {
+      "label": "Quotes and system design",
+      "number": "877-757-4367",
+      "text": "Inside Sales: system design, quotes and pricing.",
+      "hours": "8 a.m. to 5 p.m. Central"
+     },
+     {
+      "label": "Installation and programming",
+      "number": "888-436-7832",
+      "text": "Technical Support: installation, programming and troubleshooting.",
+      "hours": "7 a.m. to 7 p.m. Central"
+     },
+     {
+      "label": "Orders and shipping",
+      "number": "866-266-2826",
+      "text": "Customer Service: products and ordering, software activations, shipping.",
+      "hours": "8 a.m. to 6 p.m. Central"
+     },
+     {
+      "label": "Cellular activation",
+      "number": "877-300-8030",
+      "text": "SecureCom Wireless: activation and billing.",
+      "hours": "8 a.m. to 5 p.m. Central"
+     }
+    ],
+    "links": [
+     [
+      "Technical support FAQs",
+      "support/tech-faqs.html"
+     ],
+     [
+      "Documentation",
+      "support/documentation.html"
+     ],
+     [
+      "Dealer services",
+      "support/dealer-services.html"
+     ],
+     [
+      "Design tools",
+      "support/design-tools.html"
+     ],
+     [
+      "Architect and engineer support",
+      "support/ae-support.html"
+     ],
+     [
+      "Training",
+      "training.html"
+     ],
+     [
+      "Get a quote",
+      "support/get-a-quote.html"
+     ]
+    ],
+    "foot": [
+     [
+      "Contact and support",
+      "support.html"
+     ],
+     [
+      "Technical documentation",
+      "support/documentation.html"
+     ]
+    ]
+   }
   },
   {
    "label": "Partners",
@@ -815,7 +1025,8 @@
        "Missouri",
        "Made in Springfield with U.S. and global components"
       ]
-     ]
+     ],
+     "alt": true
     },
     {
      "type": "explorer",
@@ -894,6 +1105,229 @@
        "link_label": "Virtual Keypad and software"
       }
      ]
+    },
+    {
+     "type": "dwbuilding",
+     "id": "building",
+     "dark": true,
+     "eyebrow": "Protect the whole building",
+     "heading": "Walk the building. See what protects each spot.",
+     "intro": "Pick a spot on the building, or take the guided tour. Every stop lists the DMP products that belong there.",
+     "spots": [
+      {
+       "id": "roof",
+       "label": "Roof",
+       "title": "The communicator on the roof",
+       "lede": "Alarms travel over LTE cellular straight to the DMP monitoring center receiver, with no network operations center in between.",
+       "products": [
+        {
+         "name": "263LTE",
+         "kicker": "Cellular communicator",
+         "image": "assets/p-263lte-1200-cut.png",
+         "href": "products/263lte.html",
+         "fact": "AT&T and Verizon cellular communicator for XT and XR Series panels.",
+         "soon": false
+        },
+        {
+         "name": "265LTE",
+         "kicker": "Cellular communicator",
+         "image": "assets/p-265lte-1200-cut.png",
+         "href": "products/265lte.html",
+         "fact": "Adds LTE to an XTL panel. The panel powers it, so no extra enclosure.",
+         "soon": false
+        },
+        {
+         "name": "SCS-VR",
+         "kicker": "Monitoring center software",
+         "image": "assets/p-scs-vr-virtual-receiver-software-1200-cut.png",
+         "href": "products/scs-vr-virtual-receiver-software.html",
+         "fact": "A UL Classified virtual receiver that runs on a server, for network IP and cellular signals.",
+         "soon": false
+        }
+       ]
+      },
+      {
+       "id": "windows",
+       "label": "Windows",
+       "title": "Windows and openings",
+       "lede": "The 1100 Series wireless line: transmitters, detectors, receivers and translators.",
+       "products": [
+        {
+         "name": "1128 Glassbreak Detector",
+         "kicker": "Wireless glassbreak detector",
+         "image": "assets/p-1128-1200-cut.png",
+         "href": "products/1128.html",
+         "fact": "Detects glassbreak up to 20 feet from framed glass in an outside wall.",
+         "soon": false
+        },
+        {
+         "name": "1101 Universal Transmitter",
+         "kicker": "Wireless transmitter",
+         "image": "assets/p-1101-1200-cut.png",
+         "href": "products/1101.html",
+         "fact": "Two independent reporting zones from one transmitter.",
+         "soon": false
+        }
+       ],
+       "more": {
+        "label": "See the wireless line",
+        "href": "services/wireless.html"
+       }
+      },
+      {
+       "id": "door",
+       "label": "Main door",
+       "title": "The main door",
+       "lede": "Access control from a single door to hundreds.",
+       "products": [
+        {
+         "name": "X1",
+         "kicker": "Access controller",
+         "image": "assets/p-x1-1200-cut.png",
+         "href": "products/x1.html",
+         "fact": "A single-door access controller with an onboard network or Wi-Fi communicator.",
+         "soon": false
+        },
+        {
+         "name": "Entré Enterprise",
+         "kicker": "Access control software",
+         "image": "assets/p-entre-enterprise-1200-cut.png",
+         "href": "products/entre-enterprise.html",
+         "fact": "96 doors of access control, expandable to 400 doors and 500 panels.",
+         "soon": false
+        }
+       ]
+      },
+      {
+       "id": "gate",
+       "label": "Parking gate and lot",
+       "title": "The parking gate and lot",
+       "lede": "Credentials at the gate, cameras over the lot.",
+       "products": [
+        {
+         "name": "SR3 Bluetooth Reader",
+         "kicker": "Access control reader",
+         "image": "assets/p-dmp-bluetooth-reader-and-mobile-credential-1200-cut.png",
+         "href": "products/dmp-bluetooth-reader-and-mobile-credential.html",
+         "fact": "One reader for phones and 125 kHz prox cards, rated IP67 for harsh environments.",
+         "soon": false
+        },
+        {
+         "name": "VUE Plus 6MP Fisheye",
+         "kicker": "Fisheye camera",
+         "image": "assets/p-vplus-7061-fe-1200-cut.png",
+         "href": "products/vplus-7061-fe.html",
+         "fact": "A 360 degree view with AlarmVision onboard, indoor or outdoor.",
+         "soon": false
+        },
+        {
+         "name": "XV Gateways with AlarmVision",
+         "kicker": "Video analytics gateway",
+         "image": "assets/p-xv-gateways-with-alarmvision-1200-cut.png",
+         "href": "products/xv-gateways-with-alarmvision.html",
+         "fact": "Loitering, person, vehicle and animal detection from your customers' cameras.",
+         "soon": false
+        }
+       ]
+      },
+      {
+       "id": "panel",
+       "label": "Panel room",
+       "title": "The panel closet",
+       "lede": "The control panel, sized from small business to the largest sites.",
+       "products": [
+        {
+         "name": "XR550",
+         "kicker": "Control panel",
+         "image": "assets/p-xr550-1200-cut.png",
+         "href": "products/xr550.html",
+         "fact": "96 doors of access control, 574 zones and 10,000 user codes.",
+         "soon": false
+        },
+        {
+         "name": "XT75",
+         "kicker": "Control panel",
+         "image": "assets/xt75-1200-cut.png",
+         "href": "products/xt75.html",
+         "fact": "Intrusion, access control and AlarmVision on a single network panel.",
+         "soon": false
+        }
+       ]
+      },
+      {
+       "id": "stair",
+       "label": "Stairwell",
+       "title": "The stairwell",
+       "lede": "Addressable fire detection tells owners and responders the exact location of an alarm.",
+       "products": [
+        {
+         "name": "XF6",
+         "kicker": "Fire control panel",
+         "image": "assets/p-xf6-1200-cut.png",
+         "href": "products/xf6.html",
+         "fact": "An addressable 24V fire panel with network or optional cellular reporting.",
+         "soon": false
+        },
+        {
+         "name": "2W-BLX Smoke Detector",
+         "kicker": "Addressable smoke detector",
+         "image": "assets/p-2w-blx-1200-cut.png",
+         "href": "products/2w-blx.html",
+         "fact": "An addressable photoelectric detector, listed to ANSI/UL 268.",
+         "soon": false
+        }
+       ]
+      },
+      {
+       "id": "teller",
+       "label": "Teller and vault",
+       "title": "The teller line and vault",
+       "lede": "Bank-grade protection for financial customers.",
+       "products": [
+        {
+         "name": "XR550",
+         "kicker": "Control panel",
+         "image": "assets/p-xr550-1200-cut.png",
+         "href": "products/xr550.html",
+         "fact": "UL bank, safe and vault listing, with Card Plus Pin and Dual Authority.",
+         "soon": false
+        },
+        {
+         "name": "TMSentry",
+         "kicker": "ATM control panel",
+         "image": "assets/p-tmsentry-1200-cut.png",
+         "href": "products/tmsentry.html",
+         "fact": "Built-in encryption and six supervised zones in a slim ATM and ITM panel.",
+         "soon": false
+        }
+       ]
+      },
+      {
+       "id": "phone",
+       "label": "Owner's phone",
+       "title": "The owner's phone",
+       "lede": "Owners and dealers stay in control from anywhere.",
+       "products": [
+        {
+         "name": "Virtual Keypad",
+         "kicker": "Customer app",
+         "image": "assets/p-virtual-keypad-1200-cut.png",
+         "href": "products/virtual-keypad.html",
+         "fact": "Check status, arm and disarm, and control locks and cameras from a phone, tablet or computer.",
+         "soon": false
+        },
+        {
+         "name": "Digital Key",
+         "kicker": "Mobile credential",
+         "image": "assets/p-digital-key-credential-1200-cut.png",
+         "href": "products/digital-key-credential.html",
+         "fact": "A secure credential in the phone's mobile wallet that works over NFC, even on a dead phone.",
+         "soon": false
+        }
+       ]
+      }
+     ],
+     "note": "A starting point. A dealer confirms the design."
     },
     {
      "type": "showcase3d",
@@ -1047,7 +1481,8 @@
         "Dealer Admin: mass programming, bulk firmware updates, templates"
        ],
        "href": "for-dealers.html",
-       "cta": "Go to dealers"
+       "cta": "Go to dealers",
+       "icon": "partner"
       },
       {
        "kicker": "For specifiers",
@@ -1060,7 +1495,8 @@
         "System Surveyor integration for intrusion and access design"
        ],
        "href": "for-specifiers.html",
-       "cta": "Go to specifiers"
+       "cta": "Go to specifiers",
+       "icon": "docs"
       },
       {
        "kicker": "For building owners",
@@ -1072,7 +1508,8 @@
         "Control from a phone with Virtual Keypad"
        ],
        "href": "for-building-owners.html",
-       "cta": "Go to building owners"
+       "cta": "Go to building owners",
+       "icon": "intrusion"
       }
      ]
     },
@@ -1322,7 +1759,8 @@
        "Is our software independently examined?",
        "Yes. We complete independent SOC 2 Type II examinations annually, by a licensed CPA firm, for Dealer Admin and Virtual Keypad."
       ]
-     ]
+     ],
+     "alt": true
     },
     {
      "type": "contact",
@@ -1833,25 +2271,52 @@
      }
     },
     {
-     "type": "cards",
-     "cls": "lf-num",
+     "type": "dw2-story",
+     "id": "overview",
      "eyebrow": "What sets it apart",
      "heading": "What you get with DMP intrusion systems",
-     "items": [
-      [
-       "One panel for alarm, doors and video",
-       "The XT75 is a hybrid intrusion panel for residential or small business applications. It integrates intrusion, access control and AlarmVision on one panel."
-      ],
-      [
-       "Starts small, scales to 96 doors",
-       "The XR550, our proven flagship, supports 96 doors of access control. The XR650, which won Best of Show at ESX 2026, is coming soon."
-      ],
-      [
-       "A second look before a dispatch",
-       "Cancel/Verify false alarm prevention has been a DMP feature since 2007. Video verification and AlarmVision add a second look."
-      ]
-     ],
-     "id": "overview"
+     "image": "assets/xt75-1200-cut.png",
+     "alt": "DMP intrusion systems",
+     "steps": [
+      {
+       "title": "One panel for alarm, doors and video",
+       "text": "The XT75 is a hybrid intrusion panel for residential or small business applications. It integrates intrusion, access control and AlarmVision on one panel."
+      },
+      {
+       "title": "Starts small, scales to 96 doors",
+       "text": "The XR550, our proven flagship, supports 96 doors of access control. The XR650, which won Best of Show at ESX 2026, is coming soon."
+      },
+      {
+       "title": "A second look before a dispatch",
+       "text": "Cancel/Verify false alarm prevention has been a DMP feature since 2007. Video verification and AlarmVision add a second look."
+      },
+      {
+       "title": "Start from the product",
+       "text": "Control panels, detectors and cellular-jam protection for intrusion alarm systems.",
+       "links": [
+        [
+         "XT75",
+         "products/xt75.html"
+        ],
+        [
+         "XT50",
+         "products/xt50.html"
+        ],
+        [
+         "XR150",
+         "products/xr150.html"
+        ],
+        [
+         "XR550",
+         "products/xr550.html"
+        ]
+       ],
+       "cta": [
+        "Browse the range",
+        "services/intrusion.html#range"
+       ]
+      }
+     ]
     },
     {
      "type": "flowviz",
@@ -3316,25 +3781,52 @@
      }
     },
     {
-     "type": "cards",
-     "cls": "lf-num",
+     "type": "dw2-story",
+     "id": "overview",
      "eyebrow": "What sets it apart",
      "heading": "What you get with DMP fire systems",
-     "items": [
-      [
-       "Signals go straight to the monitoring center",
-       "The XF6 is a 24V solution with powerful testing and programming features, built for single-site applications."
-      ],
-      [
-       "Reports the way the alarm does",
-       "Network and optional cellular communications are on the panel, so fire signals take the path the rest of the system uses."
-      ],
-      [
-       "More than one panel to choose",
-       "XR150FC and XR550FC fire panels, wireless smoke, heat and CO detectors, pull stations and remote annunciators sit in the same catalogue."
-      ]
-     ],
-     "id": "overview"
+     "image": "assets/p-xf6-1200-cut.png",
+     "alt": "DMP fire systems",
+     "steps": [
+      {
+       "title": "Signals go straight to the monitoring center",
+       "text": "The XF6 is a 24V solution with powerful testing and programming features, built for single-site applications."
+      },
+      {
+       "title": "Reports the way the alarm does",
+       "text": "Network and optional cellular communications are on the panel, so fire signals take the path the rest of the system uses."
+      },
+      {
+       "title": "More than one panel to choose",
+       "text": "XR150FC and XR550FC fire panels, wireless smoke, heat and CO detectors, pull stations and remote annunciators sit in the same catalogue."
+      },
+      {
+       "title": "Start from the product",
+       "text": "Fire alarm control panels, detectors and communicators.",
+       "links": [
+        [
+         "XF6",
+         "products/xf6.html"
+        ],
+        [
+         "XR550FC",
+         "products/xr550fc-2.html"
+        ],
+        [
+         "XR150FC",
+         "products/xr150fc-2.html"
+        ],
+        [
+         "2W-BLX smoke detector",
+         "products/2w-blx.html"
+        ]
+       ],
+       "cta": [
+        "Browse the range",
+        "services/fire.html#range"
+       ]
+      }
+     ]
     },
     {
      "type": "flowviz",
@@ -3949,25 +4441,52 @@
      }
     },
     {
-     "type": "cards",
-     "cls": "lf-num",
+     "type": "dw2-story",
+     "id": "overview",
      "eyebrow": "What sets it apart",
      "heading": "What you get with DMP video",
-     "items": [
-      [
-       "Cameras that raise the alarm",
-       "The XV-24 with AlarmVision, introduced in 2023, uses analytics to trigger alarms into XR Series panels."
-      ],
-      [
-       "One platform, from camera to VMS",
-       "In September 2026 we launched VK VMS for 24/7 video management with AlarmVision. It makes DMP video a complete platform."
-      ],
-      [
-       "Video next to the alarm in one app",
-       "Camera drivers for AlarmVision and Virtual Keypad put cameras beside the alarm in the apps dealers already use."
-      ]
-     ],
-     "id": "overview"
+     "image": "assets/p-xv-gateways-with-alarmvision-1200-cut.png",
+     "alt": "DMP video",
+     "steps": [
+      {
+       "title": "Cameras that raise the alarm",
+       "text": "The XV-24 with AlarmVision, introduced in 2023, uses analytics to trigger alarms into XR Series panels."
+      },
+      {
+       "title": "One platform, from camera to VMS",
+       "text": "In September 2026 we launched VK VMS for 24/7 video management with AlarmVision. It makes DMP video a complete platform."
+      },
+      {
+       "title": "Video next to the alarm in one app",
+       "text": "Camera drivers for AlarmVision and Virtual Keypad put cameras beside the alarm in the apps dealers already use."
+      },
+      {
+       "title": "Start from the product",
+       "text": "VUE Plus cameras, AlarmVision analytics and the VK VMS video management platform.",
+       "links": [
+        [
+         "VUE Plus 8MP varifocal bullet",
+         "products/vplus-7081-bdv.html"
+        ],
+        [
+         "VUE Plus 12MP fisheye",
+         "products/vplus-7121-fe.html"
+        ],
+        [
+         "VUE Plus 6MP fisheye",
+         "products/vplus-7061-fe.html"
+        ],
+        [
+         "VUE video doorbell",
+         "products/vue-video-doorbell.html"
+        ]
+       ],
+       "cta": [
+        "Browse the range",
+        "services/video.html#range"
+       ]
+      }
+     ]
     },
     {
      "type": "flowviz",
@@ -5820,25 +6339,52 @@
      }
     },
     {
-     "type": "cards",
-     "cls": "lf-num",
+     "type": "dw2-story",
+     "id": "overview",
      "eyebrow": "What sets it apart",
      "heading": "What you get with DMP panels and keypads",
-     "items": [
-      [
-       "A keypad for every wall",
-       "7-inch and 5-inch touchscreen keypads, 9800, Thinline, Aqualite and Icon series."
-      ],
-      [
-       "A panel that fits the building",
-       "Zone, output and auxiliary modules extend a panel to the size of the building."
-      ],
-      [
-       "The whole cabinet from one maker",
-       "Power supplies, transformers, batteries and enclosures complete the install."
-      ]
-     ],
-     "id": "overview"
+     "image": "assets/keypad-722-1200-cut.png",
+     "alt": "DMP panels and keypads",
+     "steps": [
+      {
+       "title": "A keypad for every wall",
+       "text": "7-inch and 5-inch touchscreen keypads, 9800, Thinline, Aqualite and Icon series."
+      },
+      {
+       "title": "A panel that fits the building",
+       "text": "Zone, output and auxiliary modules extend a panel to the size of the building."
+      },
+      {
+       "title": "The whole cabinet from one maker",
+       "text": "Power supplies, transformers, batteries and enclosures complete the install."
+      },
+      {
+       "title": "Start from the product",
+       "text": "Control panels, keypads, modules, expanders, power supplies and enclosures.",
+       "links": [
+        [
+         "7-inch touchscreen keypad",
+         "products/7-inch-touchscreen-keypad.html"
+        ],
+        [
+         "Graphic touchscreen keypad",
+         "products/graphic-touchscreen.html"
+        ],
+        [
+         "9800 series",
+         "products/9800-series.html"
+        ],
+        [
+         "Thinline 7000 series",
+         "products/7000-series.html"
+        ]
+       ],
+       "cta": [
+        "Browse the range",
+        "services/panels-keypads.html#range"
+       ]
+      }
+     ]
     },
     {
      "type": "flowviz",
@@ -7096,7 +7642,8 @@
        "USA",
        "Made with U.S. and global components"
       ]
-     ]
+     ],
+     "alt": true
     },
     {
      "type": "faq",
@@ -7359,7 +7906,8 @@
        "USA",
        "Made with U.S. and global components"
       ]
-     ]
+     ],
+     "alt": true
     },
     {
      "type": "detail",
@@ -7637,7 +8185,8 @@
        "USA",
        "Made with U.S. and global components"
       ]
-     ]
+     ],
+     "alt": true
     },
     {
      "type": "detail",
@@ -7915,7 +8464,8 @@
        "USA",
        "Made with U.S. and global components"
       ]
-     ]
+     ],
+     "alt": true
     },
     {
      "type": "detail",
@@ -8159,7 +8709,8 @@
        "USA",
        "Made with U.S. and global components"
       ]
-     ]
+     ],
+     "alt": true
     },
     {
      "type": "faq",
@@ -8387,7 +8938,8 @@
        "USA",
        "Made with U.S. and global components"
       ]
-     ]
+     ],
+     "alt": true
     },
     {
      "type": "faq",
@@ -8615,7 +9167,8 @@
        "USA",
        "Made with U.S. and global components"
       ]
-     ]
+     ],
+     "alt": true
     },
     {
      "type": "faq",
@@ -8843,7 +9396,8 @@
        "USA",
        "Made with U.S. and global components"
       ]
-     ]
+     ],
+     "alt": true
     },
     {
      "type": "faq",
@@ -9071,7 +9625,8 @@
        "USA",
        "Made with U.S. and global components"
       ]
-     ]
+     ],
+     "alt": true
     },
     {
      "type": "faq",
@@ -9299,7 +9854,8 @@
        "USA",
        "Made with U.S. and global components"
       ]
-     ]
+     ],
+     "alt": true
     },
     {
      "type": "faq",
@@ -9529,7 +10085,8 @@
        "USA",
        "Made with U.S. and global components"
       ]
-     ]
+     ],
+     "alt": true
     },
     {
      "type": "faq",
@@ -10382,7 +10939,8 @@
        "support/dealer-services.html",
        "assets/tab-mobile-1200.jpg"
       ]
-     ]
+     ],
+     "alt": true
     },
     {
      "type": "hqmap",
@@ -16791,36 +17349,50 @@
      ]
     },
     {
-     "type": "cards",
-     "cls": "lf-num",
-     "eyebrow": "Key features",
-     "heading": "What the XR550 does",
+     "type": "dwanatomy",
+     "id": "anatomy",
+     "dark": true,
+     "soft": false,
+     "eyebrow": "Anatomy",
+     "heading": "XR550, feature by feature",
+     "name": "XR550",
+     "image": "assets/p-xr550-1200-cut.png",
+     "image_alt": "The DMP XR550",
+     "image_w": 1200,
+     "image_h": 818,
      "items": [
-      [
-       "Built for the largest jobs",
-       "From extremely large residential to high-security industrial to multi-site nationwide installations."
-      ],
-      [
-       "Encrypted communication",
-       "Encrypted 10/100 network or Wi-Fi, LTE cellular or dialer."
-      ],
-      [
-       "Plan the day",
-       "99 assignable schedules for areas, doors and profiles."
-      ],
-      [
-       "Remote service",
-       "Remote flash update and programming."
-      ],
-      [
-       "Adaptive Technology",
-       "Adaptive Technology plus multi-lingual menus per user."
-      ],
-      [
-       "Bank grade",
-       "UL bank, safe and vault, Card Plus Pin and Dual Authority."
-      ]
-     ]
+      {
+       "n": 1,
+       "title": "Built for the largest jobs",
+       "text": "From extremely large residential to high-security industrial to multi-site nationwide installations."
+      },
+      {
+       "n": 2,
+       "title": "Encrypted communication",
+       "text": "Encrypted 10/100 network or Wi-Fi, LTE cellular or dialer."
+      },
+      {
+       "n": 3,
+       "title": "Plan the day",
+       "text": "99 assignable schedules for areas, doors and profiles."
+      },
+      {
+       "n": 4,
+       "title": "Remote service",
+       "text": "Remote flash update and programming."
+      },
+      {
+       "n": 5,
+       "title": "Adaptive Technology",
+       "text": "Adaptive Technology plus multi-lingual menus per user."
+      },
+      {
+       "n": 6,
+       "title": "Bank grade",
+       "text": "UL bank, safe and vault, Card Plus Pin and Dual Authority."
+      }
+     ],
+     "note": "Callouts around the picture list the features on this page. They do not point to the position of a part."
     },
     {
      "type": "specs",
@@ -17213,36 +17785,50 @@
      ]
     },
     {
-     "type": "cards",
-     "cls": "lf-num",
-     "eyebrow": "Key features",
-     "heading": "What the XR650 does",
+     "type": "dwanatomy",
+     "id": "anatomy",
+     "dark": true,
+     "soft": false,
+     "eyebrow": "Anatomy",
+     "heading": "XR650, feature by feature",
+     "name": "XR650",
+     "image": "assets/p-xr650-1200-cut.png",
+     "image_alt": "The DMP XR650",
+     "image_w": 1200,
+     "image_h": 818,
      "items": [
-      [
-       "Massive user capacity",
-       "300,000 user codes with 1,000 groups, up to 100 areas, 574 zones and 96 doors of access control."
-      ],
-      [
-       "Bank-grade cybersecurity",
-       "FIPS 140-3 (available with licenses), TLS 1.3, AES encryption, PKI with dual certificate trust domains and IPV4 and IPV6 support."
-      ],
-      [
-       "Two networks, kept apart",
-       "Dual NIC for secure public network communication while keeping a physically isolated network for video and access control devices."
-      ],
-      [
-       "One keypad for a campus",
-       "XR-to-XR panel communication controls all XR panels from one keypad."
-      ],
-      [
-       "Always supervised",
-       "The communication path is always supervised with Adaptive Technology, at minimal cellular cost."
-      ],
-      [
-       "Easy to program",
-       "Bluetooth and mobile programming, dual keypad bus and dual OSDP support."
-      ]
-     ]
+      {
+       "n": 1,
+       "title": "Massive user capacity",
+       "text": "300,000 user codes with 1,000 groups, up to 100 areas, 574 zones and 96 doors of access control."
+      },
+      {
+       "n": 2,
+       "title": "Bank-grade cybersecurity",
+       "text": "FIPS 140-3 (available with licenses), TLS 1.3, AES encryption, PKI with dual certificate trust domains and IPV4 and IPV6 support."
+      },
+      {
+       "n": 3,
+       "title": "Two networks, kept apart",
+       "text": "Dual NIC for secure public network communication while keeping a physically isolated network for video and access control devices."
+      },
+      {
+       "n": 4,
+       "title": "One keypad for a campus",
+       "text": "XR-to-XR panel communication controls all XR panels from one keypad."
+      },
+      {
+       "n": 5,
+       "title": "Always supervised",
+       "text": "The communication path is always supervised with Adaptive Technology, at minimal cellular cost."
+      },
+      {
+       "n": 6,
+       "title": "Easy to program",
+       "text": "Bluetooth and mobile programming, dual keypad bus and dual OSDP support."
+      }
+     ],
+     "note": "Callouts around the picture list the features on this page. They do not point to the position of a part."
     },
     {
      "type": "specs",
@@ -17903,36 +18489,50 @@
      ]
     },
     {
-     "type": "cards",
-     "cls": "lf-num",
-     "eyebrow": "Key features",
-     "heading": "What the 7-Inch Touchscreen Keypad does",
+     "type": "dwanatomy",
+     "id": "anatomy",
+     "dark": true,
+     "soft": false,
+     "eyebrow": "Anatomy",
+     "heading": "7-Inch Touchscreen Keypad, feature by feature",
+     "name": "7-Inch Touchscreen Keypad",
+     "image": "assets/keypad-722-1200-cut.png",
+     "image_alt": "The DMP 7-Inch Touchscreen Keypad",
+     "image_w": 1200,
+     "image_h": 800,
      "items": [
-      [
-       "Screen, reader and camera",
-       "A 7-inch touchscreen, a built-in proximity reader and a 5MP onboard camera."
-      ],
-      [
-       "Connected",
-       "Wi-Fi and Bluetooth connectivity, an enhanced 2.4 GHz Wi-Fi antenna and an enhanced speaker."
-      ],
-      [
-       "Wired or wireless to the panel",
-       "A 4-wire keypad bus with an included harness, and on the 8863 DMP 900 MHz panel communication."
-      ],
-      [
-       "Power and backup options",
-       "The 8863 adds a network input for optional PoE and optional local battery backup."
-      ],
-      [
-       "Third-party readers",
-       "The 8863 adds an external Wiegand or OSDP reader input."
-      ],
-      [
-       "Still supported",
-       "DMP continues to provide feature, maintenance and security updates for existing 8860 installations."
-      ]
-     ]
+      {
+       "n": 1,
+       "title": "Screen, reader and camera",
+       "text": "A 7-inch touchscreen, a built-in proximity reader and a 5MP onboard camera."
+      },
+      {
+       "n": 2,
+       "title": "Connected",
+       "text": "Wi-Fi and Bluetooth connectivity, an enhanced 2.4 GHz Wi-Fi antenna and an enhanced speaker."
+      },
+      {
+       "n": 3,
+       "title": "Wired or wireless to the panel",
+       "text": "A 4-wire keypad bus with an included harness, and on the 8863 DMP 900 MHz panel communication."
+      },
+      {
+       "n": 4,
+       "title": "Power and backup options",
+       "text": "The 8863 adds a network input for optional PoE and optional local battery backup."
+      },
+      {
+       "n": 5,
+       "title": "Third-party readers",
+       "text": "The 8863 adds an external Wiegand or OSDP reader input."
+      },
+      {
+       "n": 6,
+       "title": "Still supported",
+       "text": "DMP continues to provide feature, maintenance and security updates for existing 8860 installations."
+      }
+     ],
+     "note": "Callouts around the picture list the features on this page. They do not point to the position of a part."
     },
     {
      "type": "specs",
@@ -19724,36 +20324,50 @@
      ]
     },
     {
-     "type": "cards",
-     "cls": "lf-num",
-     "eyebrow": "Key features",
-     "heading": "What the XF6 does",
+     "type": "dwanatomy",
+     "id": "anatomy",
+     "dark": true,
+     "soft": false,
+     "eyebrow": "Anatomy",
+     "heading": "XF6, feature by feature",
+     "name": "XF6",
+     "image": "assets/p-xf6-1200-cut.png",
+     "image_alt": "The DMP XF6",
+     "image_w": 1200,
+     "image_h": 945,
      "items": [
-      [
-       "Advanced fire monitoring",
-       "Real-time alerts and accurate detection, with testing and programming available through Dealer Admin and Virtual Keypad."
-      ],
-      [
-       "Network and cellular integration",
-       "Onboard Ethernet and cellular connections allow centralized monitoring and control."
-      ],
-      [
-       "Powerful solution",
-       "A 24V power supply runs the customer's fire accessories, and additional 24V power supplies can be added."
-      ],
-      [
-       "Rock solid reliability",
-       "Affordable, commercial UL Listed wireless fire panels that support up to 500 devices, with a wireless range up to 1.7 miles."
-      ],
-      [
-       "Inspection Reminder",
-       "An exclusive feature that automates the inspection schedule and provides an audit report of completed inspections."
-      ],
-      [
-       "Two sizes",
-       "XF6-100 with one 12V 100-zone LX-Bus, and XF6-500 with five, each with six onboard 24V Class B zones."
-      ]
-     ]
+      {
+       "n": 1,
+       "title": "Advanced fire monitoring",
+       "text": "Real-time alerts and accurate detection, with testing and programming available through Dealer Admin and Virtual Keypad."
+      },
+      {
+       "n": 2,
+       "title": "Network and cellular integration",
+       "text": "Onboard Ethernet and cellular connections allow centralized monitoring and control."
+      },
+      {
+       "n": 3,
+       "title": "Powerful solution",
+       "text": "A 24V power supply runs the customer's fire accessories, and additional 24V power supplies can be added."
+      },
+      {
+       "n": 4,
+       "title": "Rock solid reliability",
+       "text": "Affordable, commercial UL Listed wireless fire panels that support up to 500 devices, with a wireless range up to 1.7 miles."
+      },
+      {
+       "n": 5,
+       "title": "Inspection Reminder",
+       "text": "An exclusive feature that automates the inspection schedule and provides an audit report of completed inspections."
+      },
+      {
+       "n": 6,
+       "title": "Two sizes",
+       "text": "XF6-100 with one 12V 100-zone LX-Bus, and XF6-500 with five, each with six onboard 24V Class B zones."
+      }
+     ],
+     "note": "Callouts around the picture list the features on this page. They do not point to the position of a part."
     },
     {
      "type": "specs",
@@ -21694,36 +22308,50 @@
      ]
     },
     {
-     "type": "cards",
-     "cls": "lf-num",
-     "eyebrow": "Key features",
-     "heading": "What the JamAlert does",
+     "type": "dwanatomy",
+     "id": "anatomy",
+     "dark": true,
+     "soft": false,
+     "eyebrow": "Anatomy",
+     "heading": "JamAlert, feature by feature",
+     "name": "JamAlert",
+     "image": "assets/p-jamalert-1200-cut.png",
+     "image_alt": "The DMP JamAlert",
+     "image_w": 1200,
+     "image_h": 819,
      "items": [
-      [
-       "Broad spectrum",
-       "The antenna simultaneously monitors a broad spectrum of cellular frequencies."
-      ],
-      [
-       "Tamper protected",
-       "Wall tamper and case tamper prevent attempts to disable the unit."
-      ],
-      [
-       "Three sets of outputs",
-       "Two sets of NO/C/NC outputs for jamming detection and one for tamper detection."
-      ],
-      [
-       "Clear status",
-       "Two LEDs: one indicates power, one indicates jamming detected."
-      ],
-      [
-       "Universal compatibility",
-       "Works with DMP and non-DMP alarm panels."
-      ],
-      [
-       "Flexible power",
-       "Powered from the control panel or from a separate 12 V power supply."
-      ]
-     ]
+      {
+       "n": 1,
+       "title": "Broad spectrum",
+       "text": "The antenna simultaneously monitors a broad spectrum of cellular frequencies."
+      },
+      {
+       "n": 2,
+       "title": "Tamper protected",
+       "text": "Wall tamper and case tamper prevent attempts to disable the unit."
+      },
+      {
+       "n": 3,
+       "title": "Three sets of outputs",
+       "text": "Two sets of NO/C/NC outputs for jamming detection and one for tamper detection."
+      },
+      {
+       "n": 4,
+       "title": "Clear status",
+       "text": "Two LEDs: one indicates power, one indicates jamming detected."
+      },
+      {
+       "n": 5,
+       "title": "Universal compatibility",
+       "text": "Works with DMP and non-DMP alarm panels."
+      },
+      {
+       "n": 6,
+       "title": "Flexible power",
+       "text": "Powered from the control panel or from a separate 12 V power supply."
+      }
+     ],
+     "note": "Callouts around the picture list the features on this page. They do not point to the position of a part."
     },
     {
      "type": "specs",
@@ -22014,36 +22642,50 @@
      ]
     },
     {
-     "type": "cards",
-     "cls": "lf-num",
-     "eyebrow": "Key features",
-     "heading": "What the Virtual Keypad does",
+     "type": "dwanatomy",
+     "id": "anatomy",
+     "dark": true,
+     "soft": true,
+     "eyebrow": "Inside the app",
+     "heading": "Virtual Keypad, feature by feature",
+     "name": "Virtual Keypad",
+     "image": "assets/p-virtual-keypad-1200-cut.png",
+     "image_alt": "The DMP Virtual Keypad",
+     "image_w": 1200,
+     "image_h": 800,
      "items": [
-      [
-       "Remote management",
-       "Remotely control lights, thermostats, door locks, appliances, cameras and garage doors, plus arming, disarming and output control."
-      ],
-      [
-       "Intuitive alarm verification",
-       "When a system is in alarm, users tap the notification, view live camera footage and confirm with Real Alarm or False Alarm."
-      ],
-      [
-       "Users and profiles",
-       "On XR Series, the system manager can create up to 99 profiles and assign each user to up to four of them."
-      ],
-      [
-       "Geofence",
-       "Link a geofence to a Favorite, so it activates when users enter or exit a location."
-      ],
-      [
-       "Actions",
-       "System, Video and Custom Actions run Favorites or record clips on events such as Armed, Disarmed, Access Granted or Access Denied."
-      ],
-      [
-       "Your brand",
-       "Dealers can insert their logo, contact details and social media icons."
-      ]
-     ]
+      {
+       "n": 1,
+       "title": "Remote management",
+       "text": "Remotely control lights, thermostats, door locks, appliances, cameras and garage doors, plus arming, disarming and output control."
+      },
+      {
+       "n": 2,
+       "title": "Intuitive alarm verification",
+       "text": "When a system is in alarm, users tap the notification, view live camera footage and confirm with Real Alarm or False Alarm."
+      },
+      {
+       "n": 3,
+       "title": "Users and profiles",
+       "text": "On XR Series, the system manager can create up to 99 profiles and assign each user to up to four of them."
+      },
+      {
+       "n": 4,
+       "title": "Geofence",
+       "text": "Link a geofence to a Favorite, so it activates when users enter or exit a location."
+      },
+      {
+       "n": 5,
+       "title": "Actions",
+       "text": "System, Video and Custom Actions run Favorites or record clips on events such as Armed, Disarmed, Access Granted or Access Denied."
+      },
+      {
+       "n": 6,
+       "title": "Your brand",
+       "text": "Dealers can insert their logo, contact details and social media icons."
+      }
+     ],
+     "note": "Callouts around the picture list the features on this page. They do not point to the position of a part."
     },
     {
      "type": "specs",
@@ -22331,36 +22973,50 @@
      ]
     },
     {
-     "type": "cards",
-     "cls": "lf-num",
-     "eyebrow": "Key features",
-     "heading": "What the Dealer Admin does",
+     "type": "dwanatomy",
+     "id": "anatomy",
+     "dark": true,
+     "soft": true,
+     "eyebrow": "Inside the app",
+     "heading": "Dealer Admin, feature by feature",
+     "name": "Dealer Admin",
+     "image": "assets/p-dealer-admin-1200-cut.png",
+     "image_alt": "The DMP Dealer Admin",
+     "image_w": 1200,
+     "image_h": 654,
      "items": [
-      [
-       "Single Sign-On",
-       "Enhances security and reduces time spent managing passwords and usernames."
-      ],
-      [
-       "Account management",
-       "Create, add and delete customers, and see each user's location, system type, version and connection method on the customer dashboard."
-      ],
-      [
-       "Programming and updates",
-       "Perform bulk remote updates and mass programming changes, and view system health status on a single dashboard."
-      ],
-      [
-       "Manage app users",
-       "Create and manage Virtual Keypad app users, and enable app features from one location."
-      ],
-      [
-       "Reporting and analytics",
-       "Reports, analytics and dashboards to help you spot trends and make informed decisions."
-      ],
-      [
-       "Custom referrals",
-       "Put your customer referral program in your customers' hands to create warm leads."
-      ]
-     ]
+      {
+       "n": 1,
+       "title": "Single Sign-On",
+       "text": "Enhances security and reduces time spent managing passwords and usernames."
+      },
+      {
+       "n": 2,
+       "title": "Account management",
+       "text": "Create, add and delete customers, and see each user's location, system type, version and connection method on the customer dashboard."
+      },
+      {
+       "n": 3,
+       "title": "Programming and updates",
+       "text": "Perform bulk remote updates and mass programming changes, and view system health status on a single dashboard."
+      },
+      {
+       "n": 4,
+       "title": "Manage app users",
+       "text": "Create and manage Virtual Keypad app users, and enable app features from one location."
+      },
+      {
+       "n": 5,
+       "title": "Reporting and analytics",
+       "text": "Reports, analytics and dashboards to help you spot trends and make informed decisions."
+      },
+      {
+       "n": 6,
+       "title": "Custom referrals",
+       "text": "Put your customer referral program in your customers' hands to create warm leads."
+      }
+     ],
+     "note": "Callouts around the picture list the features on this page. They do not point to the position of a part."
     },
     {
      "type": "specs",
@@ -22939,36 +23595,50 @@
      ]
     },
     {
-     "type": "cards",
-     "cls": "lf-num",
-     "eyebrow": "Key features",
-     "heading": "What the XV Gateways does",
+     "type": "dwanatomy",
+     "id": "anatomy",
+     "dark": true,
+     "soft": false,
+     "eyebrow": "Anatomy",
+     "heading": "XV Gateways, feature by feature",
+     "name": "XV Gateways",
+     "image": "assets/p-xv-gateways-with-alarmvision-1200-cut.png",
+     "image_alt": "The DMP XV Gateways",
+     "image_w": 1200,
+     "image_h": 851,
      "items": [
-      [
-       "Smart analytics",
-       "Loitering, person, vehicle and animal analysis and detection."
-      ],
-      [
-       "Open camera support",
-       "Supports ONVIF and RTSP cameras, and is NDAA compliant."
-      ],
-      [
-       "Detection regions",
-       "Up to four detection regions per camera."
-      ],
-      [
-       "Two-way audio",
-       "Supports two-way audio with ONVIF-compliant IP speakers."
-      ],
-      [
-       "Plenty of storage",
-       "1 TB to 4 TB of internal storage, with a timeline to view bookmarked recordings."
-      ],
-      [
-       "Panel integration",
-       "Compatible with XT75 and XR Series control panels."
-      ]
-     ]
+      {
+       "n": 1,
+       "title": "Smart analytics",
+       "text": "Loitering, person, vehicle and animal analysis and detection."
+      },
+      {
+       "n": 2,
+       "title": "Open camera support",
+       "text": "Supports ONVIF and RTSP cameras, and is NDAA compliant."
+      },
+      {
+       "n": 3,
+       "title": "Detection regions",
+       "text": "Up to four detection regions per camera."
+      },
+      {
+       "n": 4,
+       "title": "Two-way audio",
+       "text": "Supports two-way audio with ONVIF-compliant IP speakers."
+      },
+      {
+       "n": 5,
+       "title": "Plenty of storage",
+       "text": "1 TB to 4 TB of internal storage, with a timeline to view bookmarked recordings."
+      },
+      {
+       "n": 6,
+       "title": "Panel integration",
+       "text": "Compatible with XT75 and XR Series control panels."
+      }
+     ],
+     "note": "Callouts around the picture list the features on this page. They do not point to the position of a part."
     },
     {
      "type": "specs",
@@ -24842,36 +25512,50 @@
      ]
     },
     {
-     "type": "cards",
-     "cls": "lf-num",
-     "eyebrow": "Key features",
-     "heading": "What the VUE Video Doorbell does",
+     "type": "dwanatomy",
+     "id": "anatomy",
+     "dark": true,
+     "soft": false,
+     "eyebrow": "Anatomy",
+     "heading": "VUE Video Doorbell, feature by feature",
+     "name": "VUE Video Doorbell",
+     "image": "assets/p-vue-video-doorbell-1200-cut.png",
+     "image_alt": "The DMP VUE Video Doorbell",
+     "image_w": 1200,
+     "image_h": 818,
      "items": [
-      [
-       "Video verification",
-       "Operators can view video footage during an alarm for faster, more informed responses."
-      ],
-      [
-       "Vertical view",
-       "5MP / 3K at 9:16, with a 120 degree horizontal and 180 degree vertical field of view."
-      ],
-      [
-       "AI detection",
-       "Person, vehicle and package detection with four AI detection regions."
-      ],
-      [
-       "Balanced exposure",
-       "True WDR for challenging lighting."
-      ],
-      [
-       "Flexible install",
-       "PoE or an 8 to 24 VAC adapter, hardwired or 2.4 GHz and 5 GHz Wi-Fi."
-      ],
-      [
-       "Works with a mechanical chime",
-       "Supports a mechanical chime."
-      ]
-     ]
+      {
+       "n": 1,
+       "title": "Video verification",
+       "text": "Operators can view video footage during an alarm for faster, more informed responses."
+      },
+      {
+       "n": 2,
+       "title": "Vertical view",
+       "text": "5MP / 3K at 9:16, with a 120 degree horizontal and 180 degree vertical field of view."
+      },
+      {
+       "n": 3,
+       "title": "AI detection",
+       "text": "Person, vehicle and package detection with four AI detection regions."
+      },
+      {
+       "n": 4,
+       "title": "Balanced exposure",
+       "text": "True WDR for challenging lighting."
+      },
+      {
+       "n": 5,
+       "title": "Flexible install",
+       "text": "PoE or an 8 to 24 VAC adapter, hardwired or 2.4 GHz and 5 GHz Wi-Fi."
+      },
+      {
+       "n": 6,
+       "title": "Works with a mechanical chime",
+       "text": "Supports a mechanical chime."
+      }
+     ],
+     "note": "Callouts around the picture list the features on this page. They do not point to the position of a part."
     },
     {
      "type": "specs",
@@ -31037,6 +31721,95 @@
      }
     },
     {
+     "type": "dw2-map",
+     "id": "map",
+     "dark": true,
+     "eyebrow": "Worldwide",
+     "heading": "Eight authorized distributors on one map",
+     "intro": "Each distributor with its website and the DMP contact for the region.",
+     "hint": "Hover, focus or tap a pin.",
+     "hq": [
+      37.2,
+      -93.3
+     ],
+     "hq_label": "Springfield, Missouri",
+     "items": [
+      {
+       "region": "Benelux (Belgium, Netherlands, Luxembourg)",
+       "company": "Sabelco",
+       "contact": "Mark NeSmith",
+       "label": "Visit Sabelco",
+       "url": "https://sabelco.com",
+       "lat": 51.2,
+       "lon": 5.2
+      },
+      {
+       "region": "Greece and Cyprus",
+       "company": "GQ Tech",
+       "contact": "Mark NeSmith",
+       "label": "Visit GQ Tech",
+       "url": "https://gqt.gr/el",
+       "lat": 36.6,
+       "lon": 27.0
+      },
+      {
+       "region": "Hungary",
+       "company": "Object Guard",
+       "contact": "Mark NeSmith",
+       "label": "Visit Object Guard",
+       "url": "https://www.objekt-or.hu/",
+       "lat": 47.2,
+       "lon": 19.4
+      },
+      {
+       "region": "Latin America and the Caribbean",
+       "company": "ISTC",
+       "contact": "Mark NeSmith",
+       "label": "Visit ISTC",
+       "url": "https://istccorp.com/",
+       "lat": 13.0,
+       "lon": -72.0
+      },
+      {
+       "region": "Mexico",
+       "company": "Otwo",
+       "contact": "Mark NeSmith",
+       "label": "Visit Otwo",
+       "url": "https://otwo.com.mx/",
+       "lat": 25.5,
+       "lon": -104.5
+      },
+      {
+       "region": "Mexico",
+       "company": "Tecnoseguridad",
+       "contact": "Mark NeSmith",
+       "label": "Visit Tecnoseguridad",
+       "url": "https://tecnoseguridad.mx/",
+       "lat": 17.8,
+       "lon": -96.5
+      },
+      {
+       "region": "South Africa, Mozambique and Zambia",
+       "company": "Regal",
+       "contact": "Mark NeSmith",
+       "label": "Visit Regal",
+       "url": "https://regalsecurity.co.za/",
+       "lat": -24.5,
+       "lon": 29.5
+      },
+      {
+       "region": "United Kingdom and Ireland",
+       "company": "ADI EU",
+       "contact": "Doug Dacre",
+       "label": "Visit ADI EU",
+       "url": "https://www.adiglobal.com/",
+       "lat": 53.4,
+       "lon": -5.8
+      }
+     ],
+     "aria": "World map of the eight authorized DMP distributors"
+    },
+    {
      "type": "resources",
      "id": "find-your-distributor",
      "heading": "Find your distributor: eight authorized partners, from Benelux to South Africa",
@@ -34784,7 +35557,15 @@
        "Send us the project and the product type, and Inside Sales replies. Inside Sales is 877-757-4367, 8 a.m. to 5 p.m. Central."
       ]
      ],
-     "stage": true
+     "stage": true,
+     "icons": [
+      "docs",
+      "cloud",
+      "partner",
+      "training",
+      "support",
+      "docs"
+     ]
     },
     {
      "type": "detail",
@@ -34863,6 +35644,14 @@
        "Regional sales managers",
        "Each territory has a regional sales manager. Inside Sales connects you with the right one."
       ]
+     ],
+     "icons": [
+      "cloud",
+      "partner",
+      "communicator",
+      "support",
+      "intrusion",
+      "partner"
      ]
     },
     {
@@ -35040,7 +35829,13 @@
        "System design, architect and engineer support and pre-sales support at 877-757-4367, 8 a.m. to 5 p.m. Central."
       ]
      ],
-     "stage": true
+     "stage": true,
+     "icons": [
+      "docs",
+      "partner",
+      "cloud",
+      "support"
+     ]
     },
     {
      "type": "detail",
@@ -35251,7 +36046,13 @@
        "Virtual Keypad runs on iOS and Android and in a browser. It arms and disarms the system and controls locks, lights and thermostats."
       ]
      ],
-     "stage": true
+     "stage": true,
+     "icons": [
+      "access",
+      "support",
+      "docs",
+      "mobile"
+     ]
     },
     {
      "type": "cards",
@@ -35282,6 +36083,14 @@
        "What happens if I change dealers?",
        "Ask who holds the programming and the customer account, and how it would be handed over."
       ]
+     ],
+     "icons": [
+      "keypad",
+      "communicator",
+      "access",
+      "mobile",
+      "support",
+      "partner"
      ]
     },
     {
@@ -35500,7 +36309,8 @@
      ],
      "cta_label": "Order on the Buy site",
      "cta_href": "https://buy.dmp.com/dmp/Shop",
-     "signin_label": "Dealer sign-in"
+     "signin_label": "Dealer sign-in",
+     "alt": true
     },
     {
      "type": "network",
@@ -35534,7 +36344,8 @@
        "Dealer Admin and Dealer Account",
        "Programming, customers, invoices and licenses, which dealers already use."
       ]
-     ]
+     ],
+     "dark": true
     },
     {
      "type": "cards",
@@ -35595,7 +36406,8 @@
        "How do I become a dealer?",
        "Apply on the become a dealer page. Approval to become an authorized DMP dealer should take just a few days."
       ]
-     ]
+     ],
+     "dark": true
     },
     {
      "type": "leadform",
@@ -36006,7 +36818,8 @@
        "products/xf6.html",
        "An addressable 24V fire panel, UL 864 10th Edition Listed for wireless, with network and cellular reporting."
       ]
-     ]
+     ],
+     "dark": true
     },
     {
      "type": "finder",
@@ -36719,7 +37532,8 @@
        "USA",
        "Manufactured with U.S. and global components"
       ]
-     ]
+     ],
+     "alt": true
     },
     {
      "type": "resources",
@@ -36800,7 +37614,8 @@
        "Where are the spec sheets?",
        "On each product page and in the technical documentation library."
       ]
-     ]
+     ],
+     "dark": true
     },
     {
      "type": "leadform",
@@ -39120,7 +39935,7 @@
     },
     {
      "type": "faq",
-     "alt": true,
+     "alt": false,
      "heading": "Questions about these articles",
      "items": [
       [

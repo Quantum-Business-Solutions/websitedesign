@@ -607,18 +607,18 @@ def _contact(p):
     def tel(label, num, text):
         return {"tel": num, "label": label, "text": text, "hours": hours.get(num, "")}
     roles = [
-        {"key": "dealer", "label": "I am a dealer", "hint": "Order, program, get support", "icon": "wrench", "title": "Dealers: order, install, get answers", "lead": "The fastest routes for an authorized dealer.",
+        {"key": "dealer", "label": "I am a dealer", "hint": "Order, program, get support", "icon": "partner", "title": "Dealers: order, install, get answers", "lead": "The fastest routes for an authorized dealer.",
          "actions": [{"href": BUY, "label": "Order at buy.DMP.com", "text": "The Buy site takes orders 24 hours a day.", "icon": "cart"},
                      tel("Technical Support", "888-436-7832", "Installation, programming and troubleshooting."),
                      tel("Customer Service", "866-266-2826", "Products and ordering, software activations, shipping."),
                      {"href": "support/documentation.html", "label": "Technical documentation", "text": "Spec sheets, installation and programming guides, quick start guides.", "icon": "doc"},
                      {"href": "support/become-a-dealer.html", "label": "Not a dealer yet? Apply", "text": "Approval should take just a few days.", "icon": "star"}]},
-        {"key": "specifier", "label": "I am specifying a building", "hint": "Design, specs, quotes", "icon": "build", "title": "Specifiers: design support and documents", "lead": "System design help from a person, and the documents to write the spec.",
+        {"key": "specifier", "label": "I am specifying a building", "hint": "Design, specs, quotes", "icon": "docs", "title": "Specifiers: design support and documents", "lead": "System design help from a person, and the documents to write the spec.",
          "actions": [tel("Inside Sales", PHONE, "System design, architect and engineer support, pre-sales support, quotes and pricing."),
                      {"href": "support/ae-support.html", "label": "Architect and engineer support", "text": "A&E specifications and CAD drawings for panels, enclosures, modules, keypads and wireless.", "icon": "doc"},
                      {"href": "support/design-tools.html", "label": "Design tools", "text": "Design DMP systems on a digital floor plan and generate a bill of materials.", "icon": "layers"},
                      {"href": "support/get-a-quote.html", "label": "Get a quote", "text": "Tell us what you are specifying and where. A person will reply.", "icon": "quote"}]},
-        {"key": "owner", "label": "I own a building", "hint": "Find a dealer, ask the right questions", "icon": "home", "title": "Building owners: start with a dealer", "lead": "DMP sells through authorized dealers and distributors, so a dealer is the first call.",
+        {"key": "owner", "label": "I own a building", "hint": "Find a dealer, ask the right questions", "icon": "access", "title": "Building owners: start with a dealer", "lead": "DMP sells through authorized dealers and distributors, so a dealer is the first call.",
          "actions": [{"href": "find-a-dealer.html", "label": "Find an authorized dealer", "text": "Tell us where the building is and what it needs, and a person replies.", "icon": "pin"},
                      tel("Inside Sales", PHONE, "Give your city or state and Inside Sales connects you with the regional sales manager for your territory."),
                      {"href": "for-building-owners.html", "label": "Six questions to ask a dealer", "text": "What separates a good proposal from a vague one.", "icon": "check"}]},
@@ -639,7 +639,7 @@ def _support(pages, p):
     cats = []
     if tf:
         tl = next((s for s in tf["sections"] if s["type"] == "tiles"), None)
-        icons = {"access-control": "key", "cellular-network-communication": "signal", "control-panel": "layers", "keypads": "keypad", "mobile-platforms": "phone", "monitoring-center": "server", "video": "camera", "wireless": "plug"}
+        icons = {"access-control": "access", "cellular-network-communication": "communicator", "control-panel": "intrusion", "keypads": "keypad", "mobile-platforms": "mobile", "monitoring-center": "cloud", "video": "video", "wireless": "communicator"}
         for it in (tl["items"] if tl else []):
             slug = it[2].rsplit("/", 1)[-1].replace(".html", "")
             pg = pages.get(it[2])
@@ -664,7 +664,7 @@ def _support(pages, p):
     chooser = {"type": "p2-chooser", "id": "start-here", "dark": True, "eyebrow": "Start here", "heading": "Tell us what you need. We point to the exact page.",
                "intro": "Type a word, or pick one of the four things people ask for most.", "placeholder": "Try: firmware, programming code, spec sheet, activation",
                "tech": "888-436-7832, 7 a.m. to 7 p.m. Central",
-               "needs": [{"label": "Fix or program a panel", "text": "Codes, firmware and wireless setup, answered by panel.", "href": "support/tech-faqs/control-panel.html", "icon": "wrench"},
+               "needs": [{"label": "Fix or program a panel", "text": "Codes, firmware and wireless setup, answered by panel.", "href": "support/tech-faqs/control-panel.html", "icon": "support"},
                          {"label": "Find a spec sheet or guide", "text": "More than 900 documents in the library.", "href": "support/documentation.html", "icon": "doc"},
                          {"label": "Learn a product", "text": "DMP University, technical, sales and end-user training.", "href": "training.html", "icon": "cap"},
                          {"label": "Activate cellular service", "text": "Activation and billing on SecureComWireless.com.", "href": "https://securecomwireless.com/", "icon": "signal"}],

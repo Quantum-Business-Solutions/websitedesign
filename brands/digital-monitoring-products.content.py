@@ -925,7 +925,11 @@ def finalize(data):
     import dmp_pop1   # pop pass 1: doors, news, proof, selectors, flows, compare, buy bar
     data = dmp_pop1.apply(data)
     import dmp_cutouts
-    return dmp_cutouts.apply(data)
+    data = dmp_cutouts.apply(data)
+    import dmp_dw1   # design wow pass 1: building cutaway, product anatomy, mega menu data (after cutouts)
+    data = dmp_dw1.apply(data)
+    import dmp_dw2   # design wave B: pinned stories, distributor map, icon keys, page rhythm flags
+    return dmp_dw2.apply(data)
 
 
 if __name__ == "__main__":

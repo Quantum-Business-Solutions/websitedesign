@@ -45,6 +45,8 @@ import preview_pop2  # noqa: E402
 import preview_pop1  # noqa: E402
 import preview_polish  # noqa: E402
 import preview_pop3  # noqa: E402
+import preview_dw1  # noqa: E402
+import preview_dw2  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DASH_HITS: list[str] = []
@@ -692,6 +694,9 @@ RENDER.update(preview_cd.RENDER_CD)
 RENDER.update(preview_pop2.RENDER_POP2)
 RENDER.update(preview_pop1.RENDER_POP1)
 RENDER.update(preview_pop3.RENDER_POP3)
+RENDER.update(preview_dw1.RENDER_DW1)
+RENDER.update(preview_dw2.RENDER_DW2)
+preview_dw2.wrap(RENDER)
 
 
 # ------------------------------------------------------------------------------ chrome
@@ -738,7 +743,10 @@ def header(content, ctx):
                 panel = f'<div class="q-subnav pv-mega"><div class="pv-mega-in">{cols}{feat}</div><div class="pv-mega-foot"><a href="{E(L(it["href"]))}">All {E(it["label"].lower())}</a></div></div>'
             else:
                 panel = '<div class="q-subnav">' + "".join(f'<a href="{E(L(h))}">{E(l)}</a>' for l, h in it["children"]) + "</div>"
-            nav.append(f'<div class="q-nav-item{" pv-has-mega" if it.get("groups") else ""}"><a href="{E(L(it["href"]))}" aria-haspopup="true"{cur}>{label}<span class="q-caret" aria-hidden="true"></span></a>{panel}</div>')
+            dwm = preview_dw1.mega_panel(it, ctx)
+            if dwm:
+                panel = dwm[0]
+            nav.append(f'<div class="q-nav-item{" pv-has-mega" if it.get("groups") or dwm else ""}"{" data-dwm" if dwm else ""}><a href="{E(L(it["href"]))}" aria-haspopup="true"{cur}>{label}<span class="q-caret" aria-hidden="true"></span></a>{panel}</div>')
             # mobile accordion
             links = ""
             if it.get("groups"):
@@ -747,6 +755,8 @@ def header(content, ctx):
                 links += f'<a href="{E(L(it["href"]))}" class="pv-mall">All {E(it["label"].lower())}</a>'
             else:
                 links = "".join(f'<a href="{E(L(h))}">{E(l)}</a>' for l, h in it["children"])
+            if dwm:
+                links = dwm[1]
             mnav.append(f'<details class="q-msub"{" open" if cur else ""}><summary>{label}<span class="q-caret" aria-hidden="true"></span></summary><div class="q-msub-links">{links}</div></details>')
         else:
             nav.append(f'<a href="{E(L(it["href"]))}"{cur}>{label}</a>')
@@ -786,6 +796,10 @@ def crumbs(page, ctx, site=""):
 
 
 def footer(content, ctx):
+    return preview_dw2.footer(content, ctx)
+
+
+def _footer_legacy(content, ctx):
     b = content["brand"]
     lw, lh = b.get("logo_w", 300), b.get("logo_h", 100)
     logo = (f'<img src="{E(ctx["rel"](b["logo"]))}" alt="{E(b.get("logo_alt", content["client"]))}" width="{round(36 * lw / lh)}" height="36" loading="lazy">'
@@ -1159,6 +1173,8 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
 {MOBILE_LAST_CSS}
 {preview_polish.POLISH_CSS}
 {preview_pop3.POP3_CSS}
+{preview_dw1.DW1_CSS}
+{preview_dw2.DW2_CSS}
 </style>
 {schema_blocks(content, page, base, dslug, p_title, p_desc)}
 {"".join(f'<script type="application/ld+json">{json.dumps(blk, ensure_ascii=False)}</script>' for blk in page.get("schema", []))}
@@ -1181,6 +1197,8 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
 <script>{preview_polish.POLISH_JS}</script>
 <script>{preview_pop3.POP3_JS}</script>
 <script>{preview_pop2.POP2_JS}</script>
+<script>{preview_dw1.DW1_JS}</script>
+<script>{preview_dw2.DW2_JS}</script>
 </body>
 </html>
 '''

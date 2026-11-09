@@ -679,7 +679,7 @@ def _journey(s, ctx):
         incl = f'<p class="jy-incl">{E(s.get("receive_label", "DMP products at this step"))}</p><ul class="jy-chips">{chips}</ul>' if chips else ""
         lis.append(
             f'<li class="jy-step" data-i="{i}" data-when="{E(t.get("when", ""))}">'
-            f'<button type="button" class="jy-node" id="{E(jid)}-n{i}" data-i="{i}" aria-controls="{E(jid)}-panel"><span class="jy-orb"><span class="jy-ring" aria-hidden="true"></span>{icon(i)}</span>'
+            f'<button type="button" class="jy-node" id="{E(jid)}-n{i}" data-i="{i}" aria-label="Step {i + 1}: {E(t["label"])}" aria-controls="{E(jid)}-panel"><span class="jy-orb"><span class="jy-ring" aria-hidden="true"></span>{icon(i)}</span>'
             f'<span class="jy-num" aria-hidden="true">{i + 1:02d}</span></button>'
             f'<div class="jy-card"><h3 class="jy-lab"><span class="jy-sr">Step {i + 1}: </span>{E(t["label"])}</h3>'
             + (f'<p class="jy-when">{E(t["when"])}</p>' if t.get("when") else "")

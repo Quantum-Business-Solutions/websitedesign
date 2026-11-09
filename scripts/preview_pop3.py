@@ -454,7 +454,10 @@ b.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest(
  else if(k==='none')done({choice:'essential'});
  else if(k==='prefs'){var p=$('.pp3-prefs',b);p.hidden=!p.hidden;a.setAttribute('aria-expanded',String(!p.hidden));b.classList.toggle('open',!p.hidden);if(!p.hidden)$('input[data-k]',b).focus()}
  else if(k==='save')done({choice:'custom',analytics:$('input[data-k=analytics]',b).checked,marketing:$('input[data-k=marketing]',b).checked})});
-d.body.appendChild(b);
+var shown=false;function show(){if(shown)return;shown=true;d.body.appendChild(b)}
+/* keep the first impression clean: the preview banner appears after a long read or a deep scroll, never over the hero */
+setTimeout(show,25000);
+addEventListener('scroll',function f(){if(scrollY>2200){removeEventListener('scroll',f);show()}},{passive:true});
 })();
 })();
 """
