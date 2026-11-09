@@ -115,6 +115,12 @@ def client_tokens(theme: str, brand: dict) -> tuple[str, dict]:
             tok[key] = FALLBACKS[face]
         elif borrowed and type_src.get(key):
             tok[key] = type_src[key]
+    # A client-named face for one direction ("type": {"Quantum Showcase": {"serif": "Archivo"}}): a Google font by name,
+    # imported here, for when the client likes a face none of the nine themes carries (IMS, 9 Nov: Archivo, not Bricolage).
+    for slot, face in ((brand.get("type") or {}).get(theme) or {}).items():
+        fam = face.replace(" ", "+")
+        css = f"@import url('https://fonts.googleapis.com/css2?family={fam}:wght@400;500;600;700;800&display=swap');\n" + css
+        tok["--q-serif" if slot == "serif" else "--q-sans"] = f"'{face}',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif"
     chrome_bg = brand.get("chrome_bg") if brand.get("chrome") == "dark" else native["--bg"]
     tok["--chrome-bg"] = chrome_bg
     tok["--chrome-fg"] = reskin.best_on(chrome_bg)
