@@ -21,10 +21,12 @@ EXTRA_CSS = r'''
 .pv-play{position:absolute;inset:0;margin:auto;width:84px;height:84px;border-radius:50%;border:0;background:var(--q-gold);color:var(--cta-fg);cursor:pointer;display:grid;place-items:center;box-shadow:0 18px 40px rgba(0,0,0,.35);transition:transform .2s}.pv-play:hover{transform:scale(1.06)}.pv-play span{display:block;width:0;height:0;border-style:solid;border-width:14px 0 14px 24px;border-color:transparent transparent transparent currentColor;margin-left:6px}.pv-play:focus-visible{outline:3px solid #fff;outline-offset:3px}
 .pv-video-cap{font-size:14px;color:var(--fg-muted);text-align:center;margin:14px 0 0}
 .pv-hero-video{position:relative;overflow:hidden;background:var(--stage);color:#fff}
-.pv-hero-video video,.pv-hero-video .pv-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.42}
+.pv-hero-video video,.pv-hero-video .pv-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.9}
 .pv-hero-video .q-container{position:relative;z-index:1;padding-top:96px;padding-bottom:96px}
 .pv-hero-video .q-h1,.pv-hero-video .q-lead{color:#fff}
-.pv-hero-video .q-eyebrow{color:var(--q-gold)}.pv-hero-video .q-eyebrow::before{background:var(--q-gold)}
+.pv-hero-video::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,12,22,.82) 0%,rgba(6,12,22,.55) 55%,rgba(6,12,22,.2) 100%);pointer-events:none}
+.pv-hero-video .q-h1 em{color:var(--stage-accent,var(--q-gold));font-style:normal}
+.pv-hero-video .q-eyebrow{color:var(--stage-accent,var(--q-gold))}.pv-hero-video .q-eyebrow::before{background:var(--stage-accent,var(--q-gold))}
 .pv-hero-video .q-btn-ghost{color:#fff}
 .pv-hero-video .pv-hero-note{color:rgba(255,255,255,.78)}
 /* ===== testimonials ===== */
@@ -246,6 +248,29 @@ def _calculator(s, ctx):
 <script>(function(){{var r=document.getElementById("{cid}");if(!r)return;var d=r.querySelector("#{cid}-d"),m=r.querySelector("#{cid}-m"),c=r.querySelector("#{cid}-c");var f=function(n){{return n.toLocaleString("en-US")}};var $=function(n){{return "$"+Math.round(n).toLocaleString("en-US")}};function u(){{var dv=+d.value,mv=+m.value,cv=+c.value;r.querySelector('output[for="{cid}-d"]').textContent=f(dv);r.querySelector('output[for="{cid}-m"]').textContent=f(mv);r.querySelector('output[for="{cid}-c"]').textContent=f(cv);var pages=(mv*{mono})+(cv*{color});var hours=dv*{labor_min}/60*52;var labor=hours*{labor_rate};var year=pages*12+labor;r.querySelector('[data-out=total]').textContent=$(year)+" / yr";r.querySelector('[data-out=cpp]').textContent="$"+((mv+cv)?(pages/(mv+cv)):0).toFixed(3);r.querySelector('[data-out=hours]').textContent=f(Math.round(hours));r.querySelector('[data-out=save]').textContent=$(year*{saving})+" / yr";r.querySelector('[data-out=orders]').textContent=f(Math.round(dv*6))}}[d,m,c].forEach(function(i){{i.addEventListener("input",u)}});u()}})();</script></section>'''
 
 
+def _capex_calc(s, ctx):
+    """Buy the rooms or subscribe to them. Rate factors are illustrative; the page says so."""
+    E = ctx["E"]
+    cid = s.get("id", "capex")
+    f36, f60 = s.get("factors", [0.032, 0.021])
+    hr = s.get("hourly", 65)
+    return f'''{ctx["sec_open"](s)} <div class="q-container"><div class="pv-center" style="margin-bottom:40px"><div class="q-eyebrow">{E(s.get("eyebrow"))}</div><h2 class="q-h2" style="margin-top:22px;max-width:760px">{E(s["heading"])}</h2><p class="q-lead" style="max-width:620px;margin-top:14px">{E(s.get("intro"))}</p></div>
+<div class="pv-calc" id="{cid}">
+<div class="in">
+<div><label for="{cid}-r">Rooms</label><div class="row"><input id="{cid}-r" type="range" min="1" max="100" value="{s.get("rooms", 12)}"><output for="{cid}-r"></output></div></div>
+<div><label for="{cid}-c">Equipment and installation per room</label><div class="row"><input id="{cid}-c" type="range" min="5000" max="150000" step="2500" value="{s.get("per_room", 35000)}"><output for="{cid}-c"></output></div></div>
+<div><label for="{cid}-h">Hours your team spends on each room a month</label><div class="row"><input id="{cid}-h" type="range" min="0" max="10" step="0.5" value="{s.get("hours", 2)}"><output for="{cid}-h"></output></div></div>
+<div><label for="{cid}-t">Term</label><div class="row"><select id="{cid}-t" style="flex:1;min-height:44px;font:inherit;padding:8px 10px;border:1px solid var(--border);border-radius:var(--radius);background:var(--card);color:var(--fg)"><option value="36">36 months</option><option value="60" selected>60 months</option></select></div></div>
+<p class="note">{E(s.get("note", "Illustrative only. The monthly figure uses a typical rate for the term you choose and includes support, monitoring and planned upgrades. Your account manager quotes the real number."))}</p>
+</div>
+<div class="out">
+<div class="big"><div class="k">Capital kept in the business on day one</div><div class="v" data-out="cap">$0</div><div class="d">What buying the rooms outright would cost before the first meeting is held.</div></div>
+<div class="small"><div><div class="k">As a service, a month</div><div class="v" data-out="mo">$0</div></div><div><div class="k">Per room, a month</div><div class="v" data-out="room">$0</div></div><div><div class="k">Support hours back a year</div><div class="v" data-out="hrs">0</div></div><div><div class="k">Value of that time a year</div><div class="v" data-out="val">$0</div></div></div>
+<p style="margin:6px 0 0"><a class="q-btn" href="{E(ctx["L"](s.get("cta_href", "contact.html")))}">{E(s.get("cta_label", "Get the real number"))}</a></p>
+</div></div></div>
+<script>(function(){{var r=document.getElementById("{cid}");if(!r)return;var R=r.querySelector("#{cid}-r"),C=r.querySelector("#{cid}-c"),H=r.querySelector("#{cid}-h"),T=r.querySelector("#{cid}-t");var f=function(n){{return Math.round(n).toLocaleString("en-US")}};var $=function(n){{return "$"+f(n)}};function u(){{var rv=+R.value,cv=+C.value,hv=+H.value,fac=T.value==="36"?{f36}:{f60};r.querySelector('output[for="{cid}-r"]').textContent=rv;r.querySelector('output[for="{cid}-c"]').textContent=$(cv);r.querySelector('output[for="{cid}-h"]').textContent=hv;var cap=rv*cv,mo=cap*fac,hrs=rv*hv*12;r.querySelector("[data-out=cap]").textContent=$(cap);r.querySelector("[data-out=mo]").textContent=$(mo);r.querySelector("[data-out=room]").textContent=$(mo/rv);r.querySelector("[data-out=hrs]").textContent=f(hrs);r.querySelector("[data-out=val]").textContent=$(hrs*{hr})}}[R,C,H,T].forEach(function(i){{i.addEventListener("input",u)}});u()}})();</script></section>'''
+
+
 def _comparison(s, ctx):
     E = ctx["E"]
     cols = s["columns"]
@@ -371,6 +396,6 @@ def _related(s, ctx):
 
 
 RENDER_EXTRA = {"hero-video": _hero_video, "video": _video, "testimonials": _testimonials, "timeline": _timeline,
-                "tabs": _tabs, "calculator": _calculator, "comparison": _comparison, "checklist": _checklist,
+                "tabs": _tabs, "calculator": _calculator, "capex-calc": _capex_calc, "comparison": _comparison, "checklist": _checklist,
                 "values": _values, "proof": _proof, "map": _map, "leadership": _leadership, "sticky": _sticky, "resources": _resources,
                 "article": _article, "related": _related}

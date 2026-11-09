@@ -1161,7 +1161,7 @@ def main(argv=None):
     import preview_seo  # noqa: E402
     preview_design.write(content, themes, roles, client_tokens, a.out)
     seo = preview_seo.write(content, a.content, themes, roles, base, a.out, slug_of)
-    open(os.path.join(a.out, "index.html"), "w", encoding="utf-8").write(hub(content, themes, a.recommend, base, roles, not a.no_standard, client_tokens, a.out, seo))
+    open(os.path.join(a.out, "index.html"), "w", encoding="utf-8").write(hub(content, themes, a.recommend, base, roles, not a.no_standard and os.path.exists(os.path.join(a.out, "standard.html")), client_tokens, a.out, seo))
     print(f"wrote {written} pages + hub to {a.out}")
     if DASH_HITS:
         print(f"\nwarning: {len(DASH_HITS)} string(s) contained an em/en dash and were rewritten with a comma. Fix the content file:")
