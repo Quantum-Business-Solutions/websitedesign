@@ -122,6 +122,15 @@ jobs:
           python3 scripts/cc.py progress "$CC_BUILD_ID" render "Rendering the three directions and the hub"
           python3 scripts/build.py "$SLUG" --shots
 
+      # The same gate the /directions command runs. It does not stop the upload: a preview with a FAIL is still worth
+      # opening, and Client Command shows the FAIL beside the build so a person knows it needs work before it is sent.
+      - name: Quality gate
+        env:
+          SLUG: ${{ steps.brief.outputs.slug }}
+        run: |
+          python3 scripts/cc.py progress "$CC_BUILD_ID" gate "Checking the build against the quality standard"
+          python3 scripts/directions_qa.py "$SLUG" || echo "The gate found FAILs; they are listed on the build in Client Command"
+
       - name: Upload into Client Command
         env:
           SLUG: ${{ steps.brief.outputs.slug }}
@@ -138,10 +147,17 @@ jobs:
           git config user.name "QBS conveyor"
           git config user.email "conveyor@thequantumleap.business"
           rm -f "brands/$SLUG.brief.json" "$SLUG.site.zip"
+          # Stage the brand files AND any tracked script the run had to change (the IMS build added a map region to
+          # scripts/preview_sections.py; left unstaged it made `git pull --rebase` refuse, so the IMS brand files
+          # never reached main on 9 Nov 2026). Commit first, then rebase, and retry the push if main moved.
           git add "brands/$SLUG."*
+          git add -u scripts library verticals themes 2>/dev/null || true
           git commit -q -m "$CLIENT: three directions from the Client Command brief (build $CC_BUILD_ID)" || { echo "nothing to commit"; exit 0; }
-          git pull -q --rebase origin main
-          git push -q origin HEAD:main
+          for i in 1 2 3 4; do
+            git pull -q --rebase --autostash origin main && git push -q origin HEAD:main && exit 0
+            echo "push attempt $i did not land; trying again"; sleep $((i * 3))
+          done
+          echo "::error::The brand files could not be pushed to main"; exit 1
 
       - name: Tell Client Command it failed
         if: failure() || cancelled()

@@ -30,7 +30,8 @@ EXTRA_CSS2 = r"""
 .pv-lh .lane .k{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.7);margin-right:6px}
 .pv-lh .lane a{display:inline-flex;align-items:center;min-height:40px;padding:0 14px;border-radius:999px;border:1px solid rgba(255,255,255,.28);color:#fff;text-decoration:none;font-size:14px;font-weight:600;background:rgba(255,255,255,.06)}
 .pv-lh .lane a:hover{border-color:var(--q-gold);color:var(--q-gold)}
-.pv-lh .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,color-mix(in srgb,var(--chrome-bg) 92%,transparent) 0%,color-mix(in srgb,var(--chrome-bg) 78%,transparent) 45%,color-mix(in srgb,var(--chrome-bg) 40%,transparent) 100%),linear-gradient(180deg,transparent 60%,var(--chrome-bg) 100%)}
+.pv-lh .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,color-mix(in srgb,var(--hero-bg,var(--chrome-bg)) 92%,transparent) 0%,color-mix(in srgb,var(--hero-bg,var(--chrome-bg)) 80%,transparent) 50%,color-mix(in srgb,var(--hero-bg,var(--chrome-bg)) 52%,transparent) 100%),linear-gradient(180deg,transparent 60%,var(--hero-bg,var(--chrome-bg)) 100%)}
+.pv-lh{background:var(--hero-bg,var(--chrome-bg))}
 .pv-lh .glow{position:absolute;inset:-20%;z-index:0;pointer-events:none;background:radial-gradient(600px circle at var(--mx,70%) var(--my,40%),color-mix(in srgb,var(--q-gold) 26%,transparent),transparent 60%);transition:opacity .4s;opacity:.9}
 .pv-lh .q-container{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;padding-top:104px;padding-bottom:120px}
 .pv-lh .q-eyebrow{color:var(--q-gold)}.pv-lh .q-eyebrow::before{background:var(--q-gold)}

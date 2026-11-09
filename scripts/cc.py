@@ -169,7 +169,19 @@ def cmd_finish(build_id: str, slug: str, out_dir: str, zip_path: str) -> None:
         pass
     try:
         sc = json.load(open(os.path.join(out_dir, "seo-build-scores.first.json"), encoding="utf-8"))
-        summary["score"] = {"avg": sc.get("avg_score"), "grade_a": sc.get("grade_a"), "count": sc.get("count")}
+        # seo_audit.py writes {"dir", "count", "pages", "summary": {...}}: the numbers live under "summary".
+        # Reading them from the top level left the score null on every build (IMS and DMP, 9 Nov 2026).
+        sm = sc.get("summary") or sc
+        summary["score"] = {"avg": sm.get("avg_score"), "grade_a": sm.get("grade_a"), "count": sm.get("count"),
+                            "entity_avg": sm.get("entity_avg"), "under_300": sm.get("under_300")}
+    except Exception:  # noqa: BLE001
+        pass
+    try:
+        # the gate's result (scripts/directions_qa.py) so the build shows what a person must look at before it is sent
+        qa = json.load(open(os.path.join(out_dir, "qa.json"), encoding="utf-8"))["rows"]
+        summary["qa"] = {"pass": sum(r["level"] == "PASS" for r in qa), "warn": sum(r["level"] == "WARN" for r in qa),
+                         "fail": sum(r["level"] == "FAIL" for r in qa),
+                         "problems": [f'{r["level"]} {r["check"]}: {r["message"]}'[:220] for r in qa if r["level"] != "PASS"][:30]}
     except Exception:  # noqa: BLE001
         pass
     try:

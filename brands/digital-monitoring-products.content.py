@@ -234,9 +234,12 @@ WHEEL_ITEMS = [[s[1], brief(s[3], 140), f"services/{s[0]}.html", s[1]] for s in 
 
 def build():
     brand = {
-        "accent": "#B3001B", "ink_secondary": "#1A1A1A", "chrome": "light",
-        "logo": "assets/dmp-wordmark.svg", "logo_alt": CLIENT, "logo_w": 600, "logo_h": 160,
-        "logo_note": "A plain DMP wordmark set for the preview. dmp.com could not be read, so their real logo has not been used. Send the vector file.",
+        # Measured from dmp.com on 9 Nov 2026 (Firecrawl branding read of the home page): yellow #FFD23D on black #000003,
+        # HCo Gotham SSm (licensed, so Montserrat stands in), square cards and inputs with pill-shaped buttons, the white "light" logo for a dark header.
+        "accent": "#FFD23D", "ink_secondary": "#000003", "chrome": "dark", "chrome_bg": "#0b0b0c",
+        "fonts": {"heading": "HCo Gotham SSm", "body": "HCo Gotham SSm"}, "radius": 0, "button_radius": 999,
+        "logo": "assets/dmp-logo.svg", "logo_alt": CLIENT, "logo_w": 100, "logo_h": 37,
+        "logo_note": "DMP's own logo SVG from dmp.com (white, built for a dark ground). Send the full-colour version for light bands.",
         "phone": PHONE, "phone_href": PHONE_HREF, "email": "",
         "utility": [{"label": "For dealers", "href": "contact.html"}],
         "cta": CTA,
@@ -251,7 +254,7 @@ def build():
         ],
         "legal": [],
     }
-    schema = {"org_name": CLIENT, "org_url": "https://www.dmp.com", "org_logo": "https://www.dmp.com/assets/dmp-wordmark.svg",
+    schema = {"org_name": CLIENT, "org_url": "https://www.dmp.com", "org_logo": "https://www.dmp.com/static/logo-light.DC983iDA.svg",
               "org_description": "Digital Monitoring Products designs and builds intrusion, access control, fire and video security systems, sold through dealers, and is headquartered in Springfield, Missouri.",
               "sameAs": [], "telephone": ""}
     schema.update({"short_name": "DMP", "title_city": "Springfield, Missouri", "cities": ["Springfield", "Springfield, Missouri", "Missouri", "MO"],
@@ -363,8 +366,8 @@ def build():
         "choose_intro": "The words and the pages are the same in all three. What differs is the register. Open each one and tell us which feels like DMP.",
         "pick_reasons": [["The audience is dealers and specifiers", "They scan a catalogue to find a panel or a module. Clean puts the product names and categories first and stays out of the way."],
                          ["The site is large", "dmp.com lists dozens of product pages and a deep resource library. A plain, fast, high-contrast layout carries that better than a showy one."],
-                         ["We have no brand guide yet", "Clean makes the fewest assumptions about brand, so DMP's real logo and colours can drop in without a redesign."]],
-        "pick_change": "Replace the placeholder wordmark and accent with DMP's real logo and colour, which we could not read from dmp.com.",
+                         ["The brand is already strong", "DMP's yellow on black carries the page. Clean keeps the surface plain so the yellow is the only loud thing on it."]],
+        "pick_change": "Send the full-colour logo and the Gotham licence or a web-font file, so the headings are DMP's own face and not the closest free one.",
         "alternatives": [["Quantum Showcase", "The safe, image-led choice: layered, sales-forward, and the one that shows the most photography once DMP supplies its own."],
                          ["Quantum Press", "The wildcard: serif and editorial, so a manufacturer reads like an established company."]],
         "plan": [["Days 1 to 10", "Serve the site at one canonical host with a 301, publish robots.txt and a sitemap, add titles, one H1 per page and Organization plus LocalBusiness schema."],
@@ -379,7 +382,7 @@ def build():
         "confirm": [
             "Everything on dmp.com page by page. www.dmp.com serves pages only after a JavaScript bot challenge, so this run read the sitemap, robots.txt and the portal SEO analysis only. Every page was written from product and category names, not from DMP's own copy. All copy needs DMP review.",
             "The promise. There is no brief from DMP, so the home page line is ours and unconfirmed.",
-            "The logo, accent colour and typefaces. The preview uses a plain DMP wordmark and a deep red placeholder accent. Neither comes from DMP.",
+            "Typeface. DMP sets its site in HCo Gotham SSm, a licensed face we cannot ship. Montserrat stands in. The logo, yellow and black are read from dmp.com; please confirm they are the current brand.",
             "Legal name, street address and phone number. None were readable, so none appear. The mobile menu shows a \"Call\" link with no number until the phone is supplied.",
             "The year DMP was founded, staff counts, certifications and awards. None are sourced, so none appear.",
             "Testimonials, partners, team and customer names. None were readable, so none appear.",
