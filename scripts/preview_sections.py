@@ -246,12 +246,22 @@ def _calculator(s, ctx):
 <script>(function(){{var r=document.getElementById("{cid}");if(!r)return;var d=r.querySelector("#{cid}-d"),m=r.querySelector("#{cid}-m"),c=r.querySelector("#{cid}-c");var f=function(n){{return n.toLocaleString("en-US")}};var $=function(n){{return "$"+Math.round(n).toLocaleString("en-US")}};function u(){{var dv=+d.value,mv=+m.value,cv=+c.value;r.querySelector('output[for="{cid}-d"]').textContent=f(dv);r.querySelector('output[for="{cid}-m"]').textContent=f(mv);r.querySelector('output[for="{cid}-c"]').textContent=f(cv);var pages=(mv*{mono})+(cv*{color});var hours=dv*{labor_min}/60*52;var labor=hours*{labor_rate};var year=pages*12+labor;r.querySelector('[data-out=total]').textContent=$(year)+" / yr";r.querySelector('[data-out=cpp]').textContent="$"+((mv+cv)?(pages/(mv+cv)):0).toFixed(3);r.querySelector('[data-out=hours]').textContent=f(Math.round(hours));r.querySelector('[data-out=save]').textContent=$(year*{saving})+" / yr";r.querySelector('[data-out=orders]').textContent=f(Math.round(dv*6))}}[d,m,c].forEach(function(i){{i.addEventListener("input",u)}});u()}})();</script></section>'''
 
 
+def _proof_size(v):
+    n = len(str(v))
+    if n <= 5:
+        return ""
+    return "font-size:clamp(34px,%.1fvw,%dpx);overflow-wrap:anywhere" % (max(46 / n, 3.2) * 1.0 if False else 96 / n, max(52, int(900 / n)))
+
+
 def _comparison(s, ctx):
     E = ctx["E"]
     cols = [c if isinstance(c, dict) else {"label": c} for c in s["columns"]]
+    first = "Option"
+    if s["rows"] and len(cols) == len(s["rows"][0]):
+        first, cols = cols[0]["label"], cols[1:]
     head = "".join(f'<th{" class=rec" if c.get("recommended") else ""}>{E(c["label"])}{"<span class=tag>Most common</span>" if c.get("recommended") else ""}</th>' for c in cols)
     rows = "".join("<tr>" + f"<td>{E(row[0])}</td>" + "".join(f"<td>{E(v)}</td>" for v in row[1:]) + "</tr>" for row in s["rows"])
-    return f'{ctx["sec_open"](s)} <div class="q-container"><div class="pv-split"><h2 class="q-h2">{E(s["heading"])}</h2><p>{E(s.get("intro"))}</p></div><div class="pv-cmp" tabindex="0" role="region" aria-label="{E(s["heading"])}"><table><thead><tr><th scope="row">Option</th>{head}</tr></thead><tbody>{rows}</tbody></table></div><p class="pv-cmp-hint">Swipe sideways to compare all three.</p>{f"<p style=font-size:14px;color:var(--fg-muted);margin-top:14px>{E(s[chr(110)+chr(111)+chr(116)+chr(101)])}</p>" if s.get("note") else ""}</div></section>'
+    return f'{ctx["sec_open"](s)} <div class="q-container"><div class="pv-split"><h2 class="q-h2">{E(s["heading"])}</h2><p>{E(s.get("intro"))}</p></div><div class="pv-cmp" tabindex="0" role="region" aria-label="{E(s["heading"])}"><table><thead><tr><th scope="row">{E(first)}</th>{head}</tr></thead><tbody>{rows}</tbody></table></div><p class="pv-cmp-hint">Swipe sideways to see every column.</p>{f"<p style=font-size:14px;color:var(--fg-muted);margin-top:14px>{E(s[chr(110)+chr(111)+chr(116)+chr(101)])}</p>" if s.get("note") else ""}</div></section>'
 
 
 def _checklist(s, ctx):
@@ -265,7 +275,7 @@ def _checklist(s, ctx):
 def _proof(s, ctx):
     E = ctx["E"]
     src = f'<p class="src">{E(s["source"])}</p>' if s.get("source") else ""
-    return f'{ctx["sec_open"](s)} <div class="q-container pv-proof"><div class="q-eyebrow" style="justify-content:center">{E(s.get("eyebrow", ""))}</div><b>{E(s["value"])}</b><p class="q-lead">{E(s["text"])}</p>{src}</div></section>'
+    return f'{ctx["sec_open"](s)} <div class="q-container pv-proof"><div class="q-eyebrow" style="justify-content:center">{E(s.get("eyebrow", ""))}</div><b style="{_proof_size(s["value"])}">{E(s["value"])}</b><p class="q-lead">{E(s["text"])}</p>{src}</div></section>'
 
 
 # North Carolina outline, lon/lat, simplified. Drawn once, projected in _map.

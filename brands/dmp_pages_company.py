@@ -514,7 +514,7 @@ PAGES.append({
         {"type": "faq", "heading": "Questions about our SOC reports",
          "items": [["Which applications are covered?", "The Dealer Admin and Virtual Keypad SaaS applications, which are hosted within a Tier 4 data center."],
                    ["How often is the examination done?", "Annually, by a licensed CPA firm, in accordance with AICPA standards."],
-                   ["Who can see the SOC 2 report?", "Customers and partners, under appropriate confidentiality arrangements. The SOC 3 report is intended for public distribution."]] + cf("soc")[:0]},
+                   ["Who can see the SOC 2 report?", "Customers and partners, under appropriate confidentiality arrangements. The SOC 3 report is intended for public distribution."]]},
         LEADFORM]})
 
 # ----------------------------------------------------------------------------------------------- events
@@ -612,11 +612,7 @@ PAGES.append(legal_page("terms-of-use.html", "Terms of Use", TERMS_UPDATED, TERM
 
 # ----------------------------------------------------------------------------------------------- news
 NEWS = []
-P = lambda *a: PAGES.append(news_page(*a))
-
 NEWS.append(["News, 11 Sep 2026", "DMP Launches VK VMS, Enabling 24/7 Video Management With AlarmVision", "A cloud video management system inside Virtual Keypad, with new XV Plus Gateways.", "Read the story", "news/vk-vms.html"])
-P("vk-vms", "News, 11 September 2026", "DMP launches VK VMS, enabling 24/7 video management with AlarmVision",
-  "VK VMS adds live video viewing and on-site device management to Virtual Keypad, with AlarmVision Plus and Pro subscriptions and new XV Plus Gateways.", None, [], None) if False else None
 PAGES.append(news_page("vk-vms", "", "DMP launches VK VMS, enabling 24/7 video management with AlarmVision",
   "VK VMS adds live video viewing and on-site device management to Virtual Keypad, with AlarmVision Plus and Pro subscriptions and new XV Plus Gateways.",
   hero_news("News, 11 September 2026", "DMP launches VK VMS, enabling <em>24/7 video management</em> with AlarmVision",
@@ -642,7 +638,7 @@ PAGES.append(news_page("vk-vms", "", "DMP launches VK VMS, enabling 24/7 video m
               ["XV Plus-80R", "The rackmounted version: up to 80 rated camera megapixels and 4 TB of storage."],
               ["Simpler installation", "All models eliminate the need for inbound ports, port forwarding or a separate VPN appliance."]]},
    {"type": "resources", "heading": "Related products and systems", "intro": "Where the VK VMS launch fits in our video platform.",
-    "items": [["Product", "XV Plus Gateways with AlarmVision", "The gateway hardware that activates VK VMS.", "View product", "products/xv-plus-gateways-with-alarmvision.html"],
+    "items": [["Product", "XV Plus Gateways with AlarmVision", "The gateway hardware that activates VK VMS.", "View product", "products/xv-gateways-with-alarmvision.html"],
               ["Product", "VUE Plus 8MP Varifocal Bullet Camera", "VUE Plus cameras are designed to work with AlarmVision Plus.", "View product", "products/vplus-7081-bdv.html"],
               ["System", "Video", "Our video systems, from cameras to monitoring.", "See video systems", "services/video.html"]]}]))
 
@@ -667,13 +663,13 @@ PAGES.append(news_page("vue-portfolio", "", "The next evolution of the VUE portf
    {"type": "resources", "heading": "Eight VUE Plus models: varifocal, panoramic, mini dome and fisheye",
     "intro": "Each model has its own product page.",
     "items": [["8MP bullet", "VUE Plus 8MP Varifocal Bullet Camera", "VPLUS-7081-BDV", "View product", "products/vplus-7081-bdv.html"],
-              ["8MP bullet", "VUE Plus 8MP Panoramic Bullet Camera", "VPLUS-7081-BDP", "View product", "products/vplus-7081-bdp.html"],
-              ["8MP dome", "VUE Plus 8MP Mini Dome Camera", "VPLUS-7081-MD", "View product", "products/vplus-7081-md.html"],
-              ["8MP dome", "VUE Plus 8MP Varifocal Dome Camera", "VPLUS-7081-DV", "View product", "products/vplus-7081-dv.html"],
+              ["8MP bullet", "VUE Plus 8MP Panoramic Bullet Camera", "VPLUS-7081-BDP", "View product", "services/video.html"],
+              ["8MP dome", "VUE Plus 8MP Mini Dome Camera", "VPLUS-7081-MD", "View product", "services/video.html"],
+              ["8MP dome", "VUE Plus 8MP Varifocal Dome Camera", "VPLUS-7081-DV", "View product", "services/video.html"],
               ["6MP fisheye", "VUE Plus 6MP Fisheye Camera", "VPLUS-7061-FE", "View product", "products/vplus-7061-fe.html"],
               ["12MP fisheye", "VUE Plus 12MP Fisheye Camera", "VPLUS-7121-FE", "View product", "products/vplus-7121-fe.html"],
-              ["8MP turret", "VUE Plus 8MP Varifocal Turret Camera", "VPLUS-7081-TDV", "View product", "products/vplus-7081-tdv.html"],
-              ["8MP turret", "VUE Plus 8MP Panoramic Turret Camera", "VPLUS-7081-TDP", "View product", "products/vplus-7081-tdp.html"]]},
+              ["8MP turret", "VUE Plus 8MP Varifocal Turret Camera", "VPLUS-7081-TDV", "View product", "services/video.html"],
+              ["8MP turret", "VUE Plus 8MP Panoramic Turret Camera", "VPLUS-7081-TDP", "View product", "services/video.html"]]},
    {"type": "detail", "alt": True, "eyebrow": "Documents", "heading": "A sales sheet, a video booklet and a spec sheet for every VUE Plus model",
     "body": "Literature that goes with the VUE Plus launch, available from DMP.",
     "bullets": ["LT-3199 VUE Plus Cameras Sales Sheet", "LT-3110 Video Solutions Booklet", "LT-3195 VUE Plus 8MP Varifocal Bullet Camera Spec Sheet", "LT-3193 VUE Plus 8 MP Panoramic Bullet Camera Spec Sheet",
@@ -741,9 +737,9 @@ PAGES.append(news_page("vue-camera-line", "", "DMP launches VUE camera line deli
    {"type": "proof", "eyebrow": "On the launch", "value": "The launch of VUE Cameras marks a significant advancement for our video lineup.",
     "text": "Compared to our previous generation, these cameras deliver improved performance, sharper image quality and more capable analytics, helping dealers provide faster, more reliable and more proactive security.", "source": "Ken Francis, Executive Vice President of Video Solutions"},
    {"type": "resources", "heading": "The three VUE cameras", "intro": "Each form factor has its own product page.",
-    "items": [["Bullet", "VUE Bullet camera", "5MP, with deterrence lighting and two-way audio.", "View product", "products/vue-bullet.html"],
-              ["Turret", "VUE Turret camera", "5MP, with deterrence lighting and two-way audio.", "View product", "products/vue-turret.html"],
-              ["Dome", "VUE Dome camera", "5MP with person and vehicle detection.", "View product", "products/vue-dome.html"]]}]))
+    "items": [["Bullet", "VUE Bullet camera", "5MP, with deterrence lighting and two-way audio.", "View product", "services/video.html"],
+              ["Turret", "VUE Turret camera", "5MP, with deterrence lighting and two-way audio.", "View product", "services/video.html"],
+              ["Dome", "VUE Dome camera", "5MP with person and vehicle detection.", "View product", "services/video.html"]]}]))
 
 NEWS.append(["News, 19 Mar 2026", "Integration with System Surveyor Streamlines Intrusion and Access Control System Design for Dealers", "Design DMP systems on digital floor plans with System Surveyor.", "Read the story", "news/system-surveyor.html"])
 PAGES.append(news_page("system-surveyor", "", "DMP launches partnership with System Surveyor",
@@ -782,7 +778,7 @@ PAGES.append(news_page("small-sensor-big-save", "", "Customer success story: a s
    {"type": "proof", "alt": True, "eyebrow": "The result", "value": "The early warning helped minimize potential water damage, saving valuable time and costly repairs.",
     "text": "Catch leaks and temperature changes early with the 1112 Wireless Water and Temperature Detector.", "source": "Customer success story, October 2026"},
    {"type": "resources", "heading": "The products in this story", "intro": "Dealers order the 1112 at buy.DMP.com.",
-    "items": [["Sensor", "1112 Wireless Water and Temperature Detector", "Features and specifications.", "View product", "products/1112.html"],
+    "items": [["Sensor", "1112 Wireless Water and Temperature Detector", "Features and specifications.", "View product", "services/wireless.html"],
               ["Panel", "XT75", "The control panel the sensor was connected to.", "View product", "products/xt75.html"],
               ["System", "Wireless", "The 1100 Series Wireless environmental sensors.", "See wireless", "services/wireless.html"]]}]))
 
@@ -807,7 +803,7 @@ PAGES.append(news_page("vault", "", "DMP introduces VAULT: secure, encrypted con
    {"type": "proof", "alt": True, "eyebrow": "Why we built it", "value": "Our enterprise customers asked us for the highest grade of security for their businesses.",
     "text": "VAULT gives them the ability to use powerful cloud applications while keeping their systems isolated from the public internet.", "source": "Brad Tucker, Vice President of Product Management and Support"},
    {"type": "resources", "heading": "Related products and markets", "intro": "Where VAULT is used.",
-    "items": [["Product", "VAULT", "The secure connectivity platform and appliance.", "View product", "products/vault.html"],
+    "items": [["Product", "VAULT", "The secure connectivity platform and appliance.", "View product", "services/communicators.html"],
               ["Software", "Virtual Keypad and mobile", "Centralized management through Virtual Keypad.", "See mobile and automation", "services/mobile-automation.html"],
               ["Industry", "Financial institutions", "Banks and credit unions that keep strict network boundaries.", "See the industry", "industries/financial-institutions.html"],
               ["Industry", "Government", "Government agencies handling sensitive information.", "See the industry", "industries/government.html"]]}]))

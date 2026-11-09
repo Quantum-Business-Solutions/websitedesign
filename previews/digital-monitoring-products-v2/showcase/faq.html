@@ -513,6 +513,7 @@ html{scroll-padding-bottom:72px}
 .q-form .hs-button{min-height:48px;font-size:16px;width:100%}
 .pv-form-note{font-size:13px;color:var(--fg-muted);margin:12px 0 0}
 /* detail */
+.pv-detail>*,.pv-split>*{min-width:0}.pv-detail p,.pv-detail .body{white-space:pre-line;overflow-wrap:anywhere}
 .pv-detail{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start}
 .pv-detail .q-h2{margin-top:14px}
 .pv-detail ul{margin:22px 0 0;padding-left:20px;color:var(--fg);line-height:1.8;font-size:16px}
@@ -969,7 +970,7 @@ html.pv-js [data-dir="showcase"] .pv-lh .fcard.a{animation:pv-up .8s cubic-bezie
 .pv-tl2-fit[data-n="5"] li h3,.pv-tl2-fit[data-n="6"] li h3,.pv-tl2-fit[data-n="7"] li h3{font-size:16px}
 .pv-tl2-fit[data-n="5"] li p,.pv-tl2-fit[data-n="6"] li p,.pv-tl2-fit[data-n="7"] li p{font-size:14px;line-height:1.5}
 @media(min-width:768px) and (max-width:1023px){.pv-tl2-fit .line{display:none}.pv-tl2-fit ol{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:30px}.pv-tl2-fit li::before{content:"";position:absolute;left:0;right:-22px;top:118px;height:2px;background:var(--q-gold);opacity:.55}.pv-tl2-fit li:nth-child(3n)::before{right:0}}
-@media(max-width:767px){.pv-tl2-fit ol{grid-template-columns:1fr}.pv-tl2-fit{margin-top:24px}}
+@media(max-width:767px){.pv-tl2.pv-tl2-fit[data-n] ol,.pv-tl2-fit ol{grid-template-columns:1fr}.pv-tl2-fit{margin-top:24px}}
 
 
 /* ===== direction system: showcase ===== */

@@ -408,6 +408,7 @@ html{scroll-padding-bottom:72px}
 .q-form .hs-button{min-height:48px;font-size:16px;width:100%}
 .pv-form-note{font-size:13px;color:var(--fg-muted);margin:12px 0 0}
 /* detail */
+.pv-detail>*,.pv-split>*{min-width:0}.pv-detail p,.pv-detail .body{white-space:pre-line;overflow-wrap:anywhere}
 .pv-detail{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start}
 .pv-detail .q-h2{margin-top:14px}
 .pv-detail ul{margin:22px 0 0;padding-left:20px;color:var(--fg);line-height:1.8;font-size:16px}

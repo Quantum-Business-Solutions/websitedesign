@@ -647,10 +647,10 @@ def build():
         "heard": ["DMP sells through authorized dealers and distributors, so the site's first job is dealers and specifiers: find the product, get the spec sheet, place the order, reach a person.",
                   "DMP is a current Quantum client with a HubSpot CRM, marketing, sales and service launch under way, so the site has to feed that: forms that create records and one place for dealers to start.",
                   "DMP's own brand is yellow, black and beige. The previews use that palette, DMP's real logo and DMP's own photography, so what you see is closer to the finished site than a mood board."],
-        "found": ["Search (Semrush and live searches, 13 September 2026): about 24,493 organic visits a month on 7,462 keywords, but 66 percent of that is people already searching the brand. DMP appeared in none of nine buyer searches from Springfield and was named in none of six AI answers.",
+        "found": ["Search (Semrush US database, 9 November 2026): about 23,660 organic visits a month on 7,521 keywords, but 75 percent of that is navigational, people already searching the brand. DMP is not in the top ten for any of seven national category searches such as fire alarm control panel and access control panel. An AI-answer test on national buyer questions has not been run yet.",
                   "A page-level audit of 241 public pages on www.dmp.com (9 November 2026) averages 35 out of 100, and no page scores above a D. The home page is the strongest at 52: it has a title, one H1, a canonical, a phone link and a form.",
                   "The front door and the robots file: https://dmp.com/ answers 301 to http://www.dmp.com/, which answers 307. robots.txt returns HTTP 404 although it holds rules and Sitemap lines, so crawlers ignore it. The sitemap is live (369 products, 26 categories, 197 pages), and there is no llms.txt.",
-                  "Markup: Organization (address, phone, founding date) is on 226 of 241 pages. None carries Product, ItemList, FAQPage, LocalBusiness or ContactPoint markup, and there are no sameAs links.",
+                  "Markup: Organization (address, phone, founding date) is on 226 of 241 pages. None carries Product, ItemList, FAQPage or ContactPoint markup, and there are no sameAs links.",
                   "Page content: 175 of 241 pages have under 300 words, 107 share one default description, 66 titles are under 25 characters, 226 pages have an image with no alt text, and only 36 have a question heading.",
                   "Correction to the September report: its crawl started at the redirecting apex and read one URL, so its findings about the home page's title, H1, canonical, robots.txt, sitemap and structured data were wrong for the real site. They are replaced here.",
                   "Strengths to keep: 50 years of history, a real manufacturing story, SOC 2 Type II examinations, 14 product categories, a deep library of spec sheets and guides, and 1,916 referring domains."],
@@ -666,25 +666,25 @@ def build():
         "pick_change": "Confirm the yellow, replace the theme typefaces with DMP's own (Gotham is licensed) and swap in any new photography DMP has.",
         "alternatives": [["Quantum Showcase", "The image-led choice: layered and sales-forward, and the one that makes the most of DMP's product photography."],
                          ["Quantum Press", "The wildcard: serif and editorial, so a 50-year-old manufacturer reads like the established name it is."]],
-        "plan": [["Days 1 to 10", "Serve the site at one canonical host with a single HTTPS 301, name the crawlers in robots.txt, publish llms.txt, and add sameAs links and a Springfield LocalBusiness block to the Organization markup."],
+        "plan": [["Days 1 to 10", "Serve the site at one canonical host with a single HTTPS 301, name the crawlers in robots.txt, publish llms.txt, and add sameAs links to the Organization markup, which keeps the headquarters address as it is."],
                  ["Days 10 to 30", "Confirm the items below, decide how the product catalogue is built (see the first item), and sign off copy for each of the eight system lines."],
                  ["Days 30 to 45", "Build the eight system pages with question headings, FAQ markup, product lists and an enquiry form on each."],
-                 ["Days 45 to 60", "Build the Springfield page and the about and proof pages, and add Product markup to the catalogue pages."],
+                 ["Days 45 to 60", "Build the about and proof pages, and add Product markup to the catalogue pages."],
                  ["Days 60 to 90", "Publish the first three answer posts against access control, fire alarm and video surveillance questions, and the news and resources hub."],
-                 ["Day 90", "Re-run the same nine Springfield searches, the same six AI questions and the same page audit against the baseline."]],
-        "search": {"heading": "Where you stand in search today, and what changes", "intro": "Measured before we touched anything.", "as_of": "13 September 2026",
-                   "today_stats": [["24,493", "Organic visits a month"], ["7,462", "Organic keywords"], ["0 of 9", "Top-ten results in Springfield"], ["39", "Authority Score"]],
-                   "today": ["24,493 organic visits a month, 66 percent of them searches for the brand itself.",
-                             "0 of 9 buyer searches from Springfield put DMP in the top ten, and DMP was named in 0 of 6 AI answers.",
+                 ["Day 90", "Re-run the same national keyword set, the same AI questions and the same page audit against the baseline."]],
+        "search": {"heading": "Where you stand in search today, and what changes", "intro": "Measured before we touched anything.", "as_of": "9 November 2026",
+                   "today_stats": [["23,660", "Organic visits a month"], ["7,521", "Organic keywords"], ["0 of 7", "National category searches in the top ten"], ["39", "Authority Score"]],
+                   "today": ["23,660 organic visits a month, 75 percent of them navigational searches for the brand itself.",
+                             "0 of 7 national category searches put DMP in the top ten. The AI-answer test on national buyer questions has not been run yet.",
                              "Product pages carry Organization markup but no Product or FAQ markup, and no question headings.",
-                             "No llms.txt, no sameAs links and no Springfield location page."],
+                             "No llms.txt and no sameAs links."],
                    "after": ["Eight system pages written in the words buyers search, each with question headings and FAQ markup.",
-                             "A Springfield, Missouri page with the address, phone lines and LocalBusiness markup.",
+                             "Category pages for panels, access control, fire and communicators, written as the answer to the dealer's or specifier's search.",
                              "Product and ItemList markup on the catalogue pages, sameAs links and an llms.txt.",
                              "One HTTPS 301 at the front door and a robots.txt that names the crawlers."],
                    "keep": [["http://dmp.com/", "https://www.dmp.com/", "One hop instead of two, and none through plain HTTP."],
                             ["/products/... part-number pages", "unchanged", "Every product page keeps its address, so the pages that earn today's traffic keep it."]],
-                   "note": "Rankings or traffic. Those depend on the market and on what DMP publishes after launch. We promise the inputs, and we measure the result against the 13 September baseline at 30, 60 and 90 days."},
+                   "note": "Rankings or traffic. Those depend on the market and on what DMP publishes after launch. We promise the inputs, and we measure the result against the 9 November baseline at 30, 60 and 90 days."},
         "confirm": [
             "How the product catalogue is built. dmp.com has hundreds of product pages (the sitemap lists panels, keypads, modules, readers, cameras and accessories by part number). HubSpot's page limits depend on the tier, so we need DMP's tier before deciding between building every product page in HubSpot and keeping the catalogue on its current system behind the new front door.",
             "The promise line. The home page says 'Security systems, built in Springfield', which is DMP's founding story, not a confirmed tagline.",
@@ -718,8 +718,8 @@ def finalize(data):
     for fam in ("products", "support", "company", "partners"):
         try:
             mods.append(importlib.import_module(f"dmp_pages_{fam}"))
-        except ModuleNotFoundError:
-            pass
+        except ModuleNotFoundError as e:
+            raise SystemExit(f"missing page module dmp_pages_{fam}: {e}")
     have = {pg["file"] for pg in data["pages"]}
     for m in mods:
         for pg in m.PAGES:

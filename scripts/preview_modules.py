@@ -519,7 +519,7 @@ TIMELINE_CSS = r"""
 .pv-tl2-fit[data-n="5"] li h3,.pv-tl2-fit[data-n="6"] li h3,.pv-tl2-fit[data-n="7"] li h3{font-size:16px}
 .pv-tl2-fit[data-n="5"] li p,.pv-tl2-fit[data-n="6"] li p,.pv-tl2-fit[data-n="7"] li p{font-size:14px;line-height:1.5}
 @media(min-width:768px) and (max-width:1023px){.pv-tl2-fit .line{display:none}.pv-tl2-fit ol{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:30px}.pv-tl2-fit li::before{content:"";position:absolute;left:0;right:-22px;top:118px;height:2px;background:var(--q-gold);opacity:.55}.pv-tl2-fit li:nth-child(3n)::before{right:0}}
-@media(max-width:767px){.pv-tl2-fit ol{grid-template-columns:1fr}.pv-tl2-fit{margin-top:24px}}
+@media(max-width:767px){.pv-tl2.pv-tl2-fit[data-n] ol,.pv-tl2-fit ol{grid-template-columns:1fr}.pv-tl2-fit{margin-top:24px}}
 
 """
 EXTRA_CSS2 = EXTRA_CSS2 + TIMELINE_CSS

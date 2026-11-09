@@ -296,6 +296,13 @@ PAGES.append({
     ]})
 
 # ----------------------------------------------------------------------------------------------- training
+import re as _re
+
+def _short(d):
+    m = _re.match(r"([A-Za-z]+)\b.*?(\d{4})", d)
+    return (m.group(1)[:3] + " " + m.group(2)) if m else d
+
+
 BOOT_DATES = [
     ["December 15 to 18, 2026", "DMP Technician Bootcamp December", "Four days at our Springfield headquarters, with hands-on labs on XTLtouch, 1100 Series Wireless, XT Series, XR Series, X1 Series and more."],
     ["January 19 to 22, 2027", "DMP Technician Bootcamp January", "The same bootcamp, Tuesday through Friday."],
@@ -323,7 +330,7 @@ PAGES.append({
                    ["Sales", "Sales training", "Ask your Regional Sales Manager, or start with the 200 sales videos.", "See sales training", "training/sales-training.html"],
                    ["For your customers", "End user training", "A one-hour live Virtual Keypad webinar for your customer, $150 per session.", "See end user training", "training/end-user-training.html"]]},
         {"type": "timeline", "alt": True, "eyebrow": "Upcoming in-person sessions", "heading": "Six bootcamps and tours between December 2026 and March 2027",
-         "items": [[d[0], d[1], d[2], ""] for d in BOOT_DATES]},
+         "items": [[_short(d[0]), d[1], d[0] + ". " + d[2], ""] for d in BOOT_DATES]},
         {"type": "cards", "eyebrow": "Webinars", "heading": "Product webinars with live demos and live Q&A",
          "intro": "Dates and presenters are announced with each session. The topics are fixed.",
          "items": [["XV-24 with AlarmVision", "Use case scenarios, live product demos and live Q&A on the XV-24 video gateway with AlarmVision."],
@@ -400,7 +407,7 @@ PAGES.append({
          "subhead": "Create expert-level champions of DMP products: fewer support calls, more referrals, more revenue for everyone. Technician Bootcamp, Advanced Bootcamp, Tech Training Tours, classes at your location and free online courses.",
          "primary": {"label": "Register or schedule", "href": "training/technical-training.html#register"}, "secondary": {"label": "DMP University", "href": "training/dmp-university.html"},
          "image": IMG + "hq-exterior-1200.jpg", "image_alt": "DMP headquarters in Springfield, Missouri", "image_w": 1200, "image_h": 800},
-        {"type": "timeline", "alt": True, "eyebrow": "Upcoming opportunities", "heading": "Six sessions between December 15, 2026 and March 26, 2027", "items": [[d[0], d[1], d[2], ""] for d in BOOT_DATES]},
+        {"type": "timeline", "alt": True, "eyebrow": "Upcoming opportunities", "heading": "Six sessions between December 15, 2026 and March 26, 2027", "items": [[_short(d[0]), d[1], d[0] + ". " + d[2], ""] for d in BOOT_DATES]},
         {"type": "detail", "eyebrow": "DMP Technician Bootcamp", "heading": "Every bootcamp day starts at 8:15 a.m. and ends with a lab.",
          "body": "Hands-on training labs for dealer technicians with basic alarm installation experience, taught by our Regional Training Managers at headquarters. Times are Central. Prerequisites: basic alarm installation experience, basic computer skills and mobile app exposure.",
          "bullets": ["Tuesday: product tour, pre-test, DMP Foundations, XTLtouch, 1100 Series Wireless, DMP University, TMSentry overview, Dealer Admin and XT Series, dismissal at 5:00 p.m.",
