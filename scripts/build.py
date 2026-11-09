@@ -99,6 +99,8 @@ def main(argv=None):
     except Exception:  # noqa: BLE001
         print(r.stdout[-400:], r.stderr[-400:])
 
+    sh([sys.executable, os.path.join(HERE, "dedupe_assets.py"), out])
+
     if a.shots:
         os.makedirs(os.path.join(out, "screenshots"), exist_ok=True)
         for w, name in ((1280, "hub-1280"), (390, "hub-390")):
