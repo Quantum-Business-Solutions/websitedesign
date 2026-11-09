@@ -1038,8 +1038,14 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
     ctx = {"rel": rel, "L": L, "partner_logo": partner_logo, "brand": b, "year": 2026, "srcset": srcset, "file": page["file"],
            "E": E, "RAW": RAW, "sec_open": sec_open, "depth": depth, "client": content.get("client", ""), "client_short": content.get("client", "").split(" ")[0]}
     secs = []
+    _hv = b.get("hero_video")
+    _hvp = (b.get("hero_video_pages") or {}).get(page["file"])
+    if _hvp is not None:
+        _hv = {**(_hv or {}), **_hvp} if _hvp else None   # {} on a page switches the video off there
     for sec in page["sections"]:
         sec = dict(sec)
+        if sec.get("type") == "hero-layered" and _hv and _hv.get("src") and "hv" not in sec:
+            sec["hv"] = _hv
         v = (sec.pop("variants", None) or {}).get(dslug)
         if v:
             sec.update(v)
@@ -1133,6 +1139,16 @@ def main(argv=None):
     a = p.parse_args(argv)
 
     content = json.load(open(a.content, encoding="utf-8"))
+    # optional sidecar brands/<slug>.video.json: {"src","webm","poster"} plus {"pages": {"index.html": {...}}}
+    _slug = os.path.basename(a.content).split(".content.")[0]
+    _vp = os.path.join(os.path.dirname(os.path.abspath(a.content)), f"{_slug}.video.json")
+    if os.path.exists(_vp):
+        _v = json.load(open(_vp, encoding="utf-8"))
+        _pages = _v.pop("pages", None)
+        if _v:
+            content["brand"]["hero_video"] = {**(content["brand"].get("hero_video") or {}), **_v}
+        if _pages:
+            content["brand"]["hero_video_pages"] = _pages
     themes = [t.strip() for t in a.themes.split(",") if t.strip()]
     roles = dict(zip(themes, [r.strip() for r in a.roles.split("|")])) if a.roles else {}
     base = a.base_url.rstrip("/")

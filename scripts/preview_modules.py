@@ -18,6 +18,12 @@ EXTRA_CSS2 = r"""
 .pv-lh .bg img,.pv-lh .bg video{width:100%;height:100%;object-fit:cover;display:block;opacity:.55;transform:scale(1.04);animation:pv-kb 38s ease-in-out infinite alternate}
 .pv-lh .bg video{opacity:.62;animation:none;transform:none}
 @keyframes pv-kb{from{transform:scale(1.04) translate(0,0)}to{transform:scale(1.14) translate(-1.5%,1%)}}
+.pv-lh .bg.hv img.hv-poster{opacity:.7;animation:none;transform:none}
+.pv-lh .bg.hv video{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease}
+.pv-lh .bg.hv video.on{opacity:1}
+.pv-lh:has(.bg.hv) .net{display:none}
+.pv-lh .bg.hv::after{background:linear-gradient(90deg,color-mix(in srgb,var(--lh-bg,#0c0d0f) 88%,transparent) 0%,color-mix(in srgb,var(--lh-bg,#0c0d0f) 64%,transparent) 48%,color-mix(in srgb,var(--lh-bg,#0c0d0f) 20%,transparent) 100%),linear-gradient(180deg,color-mix(in srgb,var(--lh-bg,#0c0d0f) 30%,transparent) 0%,transparent 30%,transparent 55%,var(--lh-bg,#0c0d0f) 100%)}
+@media (max-width:767px){.pv-lh .bg.hv img.hv-poster{opacity:.55}.pv-lh .bg.hv::after{background:linear-gradient(180deg,color-mix(in srgb,var(--lh-bg,#0c0d0f) 88%,transparent),color-mix(in srgb,var(--lh-bg,#0c0d0f) 80%,transparent))}}
 .pv-lh .net{position:absolute;inset:0;z-index:0;width:100%;height:100%;pointer-events:none;opacity:.9}
 .pv-lh .hero3d{position:relative;height:580px;margin-left:12%;animation:pv-float 8s ease-in-out infinite}
 @keyframes pv-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
@@ -229,7 +235,13 @@ def _hero_layered(s, ctx):
     """Dark hero: background plate, pointer glow, headline, proof strip, two floating cards with depth."""
     E, RAW, L = ctx["E"], ctx["RAW"], ctx["L"]
     hid = s.get("id", "hero")
-    if s.get("video"):
+    hv = s.get("hv")
+    if hv and hv.get("src"):
+        pimg = hv.get("poster") or s.get("image")
+        pimg_html = (f'<img class="hv-poster" src="{E(ctx["rel"](pimg))}" alt="" width="1600" height="900" fetchpriority="high" decoding="async">') if pimg else ""
+        wb = f' data-webm="{E(ctx["rel"](hv["webm"]))}"' if hv.get("webm") else ""
+        bg = (f'<div class="bg hv" data-mp4="{E(ctx["rel"](hv["src"]))}"{wb} data-poster="{E(ctx["rel"](pimg)) if pimg else ""}">{pimg_html}</div>')
+    elif s.get("video"):
         poster = f' poster="{E(ctx["rel"](s["image"]))}"' if s.get("image") else ""
         bg = f'<div class="bg"><video autoplay muted loop playsinline preload="metadata"{poster} aria-hidden="true" width="{s.get("image_w", 2100)}" height="{s.get("image_h", 900)}"><source src="{E(ctx["rel"](s["video"]))}" type="video/mp4"></video></div>'
     else:
@@ -260,6 +272,16 @@ def _hero_layered(s, ctx):
 if(!rm&&fine){{var g=h.querySelector('.glow');h.addEventListener('pointermove',function(e){{var r=h.getBoundingClientRect();h.style.setProperty('--mx',((e.clientX-r.left)/r.width*100).toFixed(1)+'%');h.style.setProperty('--my',((e.clientY-r.top)/r.height*100).toFixed(1)+'%');
 h.querySelectorAll('.pv-depth').forEach(function(c){{var d=+c.getAttribute('data-depth')||1,x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform='translate3d('+(-x*10*d).toFixed(1)+'px,'+(-y*10*d).toFixed(1)+'px,0) rotateX('+(y*-4).toFixed(2)+'deg) rotateY('+(x*5).toFixed(2)+'deg)'}})}});
 h.addEventListener('pointerleave',function(){{h.querySelectorAll('.pv-depth').forEach(function(c){{c.style.transform=''}})}})}}
+var hb=h.querySelector('.bg.hv');if(hb){{var mqW=matchMedia('(min-width:768px)'),mqR=matchMedia('(prefers-reduced-motion: reduce)'),vd=null,vio=null;
+function hvOn(){{if(vd||!mqW.matches||mqR.matches)return;vd=document.createElement('video');vd.muted=true;vd.loop=true;vd.playsInline=true;vd.autoplay=true;vd.preload='metadata';vd.setAttribute('aria-hidden','true');vd.setAttribute('muted','');vd.setAttribute('playsinline','');vd.disablePictureInPicture=true;
+if(hb.dataset.poster)vd.poster=hb.dataset.poster;
+if(hb.dataset.webm&&vd.canPlayType('video/webm; codecs="vp9"')){{var w=document.createElement('source');w.src=hb.dataset.webm;w.type='video/webm; codecs="vp9"';vd.appendChild(w)}}
+var m=document.createElement('source');m.src=hb.dataset.mp4;m.type='video/mp4';vd.appendChild(m);
+vd.addEventListener('playing',function(){{vd.classList.add('on')}});hb.appendChild(vd);var pr=vd.play();if(pr&&pr.catch)pr.catch(function(){{}});
+if('IntersectionObserver' in window){{vio=new IntersectionObserver(function(es){{es.forEach(function(e){{if(!vd)return;if(e.isIntersecting){{var q=vd.play();if(q&&q.catch)q.catch(function(){{}})}}else vd.pause()}})}});vio.observe(h)}}}}
+function hvOff(){{if(!vd)return;if(vio){{vio.disconnect();vio=null}}vd.pause();vd.remove();vd=null}}
+function hvSync(){{(mqW.matches&&!mqR.matches)?hvOn():hvOff()}}
+hvSync();[mqW,mqR].forEach(function(m){{m.addEventListener?m.addEventListener('change',hvSync):m.addListener(hvSync)}})}}
 var cv=h.querySelector('canvas.net');if(cv&&!rm&&cv.getContext){{var cx=cv.getContext('2d'),W,H,P=[],run=false,raf=0,col=getComputedStyle(h).getPropertyValue('--q-gold').trim()||'#65bc7b';
 function size(){{var r=h.getBoundingClientRect();W=cv.width=Math.floor(r.width);H=cv.height=Math.floor(r.height);var n=W<768?22:W<1200?40:56;P=[];for(var i=0;i<n;i++)P.push({{x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.22,vy:(Math.random()-.5)*.22,r:1.2+Math.random()*1.8}})}}
 function tick(){{if(!run)return;cx.clearRect(0,0,W,H);var i,j,a,b,d;for(i=0;i<P.length;i++){{a=P[i];a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>W)a.vx*=-1;if(a.y<0||a.y>H)a.vy*=-1}}

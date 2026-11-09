@@ -1,0 +1,9 @@
+{
+  "src": "assets/hero-signal-1.mp4",
+  "webm": "assets/hero-signal-1.webm",
+  "poster": "assets/hero-signal-1-poster.jpg",
+  "pages": {
+    "about.html": {"src": "assets/hero-loop-plant.mp4", "webm": "assets/hero-loop-plant.webm", "poster": "assets/hero-loop-plant-poster.jpg"},
+    "locations.html": {"src": "assets/hero-loop-campus.mp4", "webm": "assets/hero-loop-campus.webm", "poster": "assets/hero-loop-campus-poster.jpg"}
+  }
+}

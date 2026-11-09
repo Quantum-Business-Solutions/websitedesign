@@ -494,7 +494,7 @@ def build():
                     "links": [["Order at buy.DMP.com", BUY], ["Technical documentation", DOCS], ["Contact and support", "contact.html"]]}},
         {"type": "partners", "caption": "Industry associations and alliances", "items": ASSOCIATIONS},
         {"type": "stats3d", "id": "facts", "items": [["50", "Years making security systems"], ["SOC 2 Type II", "Examined every year"], ["14", "Product categories"], ["USA", "Made with U.S. and global components"]]},
-        {"type": "tabs", "id": "systems", "eyebrow": "One manufacturer", "heading": "Four systems, and the app that runs them", "items": [
+        {"type": "explorer", "id": "systems", "eyebrow": "One manufacturer", "heading": "Four systems, and the app that runs them", "items": [
             {"label": "Intrusion", "title": "Intrusion panels from XT to XR", "body": "The XT75 is a hybrid intrusion panel for residential or small business applications. It integrates intrusion, access control and AlarmVision, bridging the gap between the XT and XR Series.",
              "bullets": ["XT30, XT50 and XT75", "XR150, XR550 and XR650", "TMSentry for teller machines"], "image": IMG + "tab-intrusion-1200.jpg", "image_alt": "The DMP XT75 control board", "href": "services/intrusion.html", "link_label": "Intrusion systems"},
             {"label": "Access control", "title": "Access control beyond the fob", "body": "Digital Key adds a credential to an Apple or Google device's mobile wallet, so the smartphone works as a secure, contactless credential.",
