@@ -316,7 +316,7 @@ def _map(s, ctx):
 def _values(s, ctx):
     E = ctx["E"]
     cards = "".join(f'<div class="q-card"><h3>{E(t)}</h3><p>{E(d)}</p></div>' for t, d in s["items"])
-    return f'{ctx["sec_open"](s)} <div class="q-container"><div class="pv-center" style="margin-bottom:40px"><div class="q-eyebrow">{E(s.get("eyebrow"))}</div><h2 class="q-h2" style="margin-top:22px;max-width:760px">{E(s["heading"])}</h2></div><div class="pv-values" style="grid-template-columns:repeat({min(len(s["items"]), 3)},1fr)">{cards}</div></div></section>'
+    return f'{ctx["sec_open"](s)} <div class="q-container"><div class="pv-center" style="margin-bottom:40px"><div class="q-eyebrow">{E(s.get("eyebrow"))}</div><h2 class="q-h2" style="margin-top:22px;max-width:760px">{E(s["heading"])}</h2></div><div class="pv-values" style="grid-template-columns:repeat({(lambda n: 2 if n in (2, 4) else 3 if n % 3 == 0 else 4 if n % 4 == 0 else 5 if n == 5 else 2 if n % 2 == 0 else 3)(len(s["items"]))},1fr)">{cards}</div></div></section>'
 
 
 def _leadership(s, ctx):
@@ -329,13 +329,13 @@ def _leadership(s, ctx):
 
 def _sticky(s, ctx):
     E = ctx["E"]
-    return f'<nav class="pv-sticky" aria-label="Quick actions"><a class="a" href="{E(ctx["L"](s.get("primary_href", "contact.html")))}">{E(s.get("primary", "Request an assessment"))}</a><a class="b" href="{E(s.get("secondary_href", ctx["brand"].get("phone_href", "#")))}">{E(s.get("secondary", "Call"))}</a></nav>'
+    return f'<nav class="pv-sticky" aria-label="Quick actions"><a class="a" href="{E(ctx["L"](s.get("primary_href", "contact.html")))}">{E(s.get("primary", "Request an assessment"))}</a><a class="b" href="{E(ctx["L"](s.get("secondary_href", ctx["brand"].get("phone_href", "#"))))}">{E(s.get("secondary", "Call"))}</a></nav>'
 
 
 def _resources(s, ctx):
     E = ctx["E"]
     cards = "".join(f'<a class="pv-tilt" href="{E(ctx["L"](h))}"><span class="k">{E(k)}</span><h3>{E(t)}</h3><p>{E(d)}</p><span>{E(l)}</span></a>' for k, t, d, l, h in s["items"])
-    return f'{ctx["sec_open"](s)} <div class="q-container"><div class="pv-split"><h2 class="q-h2">{E(s["heading"])}</h2><p>{E(s.get("intro"))}</p></div><div class="pv-res{" pv-res-5" if len(s["items"]) == 5 else ""}" style="grid-template-columns:repeat({min(len(s["items"]), 3)},1fr)">{cards}</div></div></section>'
+    return f'{ctx["sec_open"](s)} <div class="q-container"><div class="pv-split"><h2 class="q-h2">{E(s["heading"])}</h2><p>{E(s.get("intro"))}</p></div><div class="pv-res{" pv-res-5" if len(s["items"]) == 5 else ""}" style="grid-template-columns:repeat({(lambda n: 2 if n in (2, 4) else 3 if n % 3 == 0 else 4 if n % 4 == 0 else 5 if n == 5 else 2 if n % 2 == 0 else 3)(len(s["items"]))},1fr)">{cards}</div></div></section>'
 
 
 def _article(s, ctx):

@@ -21,6 +21,7 @@ import argparse
 import glob
 import json
 import os
+import shutil
 import subprocess
 import sys
 
@@ -64,6 +65,13 @@ def main(argv=None):
             if rel not in keep:
                 os.remove(f)
                 print("removed stale", rel)
+
+    # client images: anything in brands/<slug>.assets/ is copied into <out>/assets before rendering, so the
+    # srcset check in preview.py sees the -600 siblings and a rebuild into a fresh folder keeps the images.
+    extra = os.path.join(ROOT, "brands", f"{a.slug}.assets")
+    if os.path.isdir(extra):
+        shutil.copytree(extra, os.path.join(out, "assets"), dirs_exist_ok=True)
+        print(f"copied client assets from {os.path.relpath(extra, ROOT)}")
 
     roles = "|".join(f"{k}: {v}" for k, v in cfg["roles"].items())
     cmd = [sys.executable, os.path.join(HERE, "preview.py"), "--content", content_json, "--themes", ",".join(cfg["themes"]),

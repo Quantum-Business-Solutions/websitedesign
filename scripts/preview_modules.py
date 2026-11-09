@@ -13,7 +13,7 @@ import math
 
 EXTRA_CSS2 = r"""
 /* ===== layered hero (dark, floating cards, pointer glow) ===== */
-.pv-lh{position:relative;overflow:hidden;background:var(--chrome-bg);color:#fff;isolation:isolate}
+.pv-lh{position:relative;overflow:hidden;background:var(--lh-bg,#0c0d0f);color:#fff;isolation:isolate}
 .pv-lh .bg{position:absolute;inset:0;z-index:0}
 .pv-lh .bg img,.pv-lh .bg video{width:100%;height:100%;object-fit:cover;display:block;opacity:.55;transform:scale(1.04);animation:pv-kb 38s ease-in-out infinite alternate}
 .pv-lh .bg video{opacity:.62;animation:none;transform:none}
@@ -30,7 +30,7 @@ EXTRA_CSS2 = r"""
 .pv-lh .lane .k{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.7);margin-right:6px}
 .pv-lh .lane a{display:inline-flex;align-items:center;min-height:40px;padding:0 14px;border-radius:999px;border:1px solid rgba(255,255,255,.28);color:#fff;text-decoration:none;font-size:14px;font-weight:600;background:rgba(255,255,255,.06)}
 .pv-lh .lane a:hover{border-color:var(--q-gold);color:var(--q-gold)}
-.pv-lh .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,color-mix(in srgb,var(--chrome-bg) 92%,transparent) 0%,color-mix(in srgb,var(--chrome-bg) 78%,transparent) 45%,color-mix(in srgb,var(--chrome-bg) 40%,transparent) 100%),linear-gradient(180deg,transparent 60%,var(--chrome-bg) 100%)}
+.pv-lh .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,color-mix(in srgb,var(--lh-bg,#0c0d0f) 92%,transparent) 0%,color-mix(in srgb,var(--lh-bg,#0c0d0f) 78%,transparent) 45%,color-mix(in srgb,var(--lh-bg,#0c0d0f) 40%,transparent) 100%),linear-gradient(180deg,transparent 60%,var(--lh-bg,#0c0d0f) 100%)}
 .pv-lh .glow{position:absolute;inset:-20%;z-index:0;pointer-events:none;background:radial-gradient(600px circle at var(--mx,70%) var(--my,40%),color-mix(in srgb,var(--q-gold) 26%,transparent),transparent 60%);transition:opacity .4s;opacity:.9}
 .pv-lh .q-container{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;padding-top:104px;padding-bottom:120px}
 .pv-lh .q-eyebrow{color:var(--q-gold)}.pv-lh .q-eyebrow::before{background:var(--q-gold)}
@@ -67,7 +67,7 @@ EXTRA_CSS2 = r"""
 .pv-wheel .segg.on,.pv-wheel a:hover .segg,.pv-wheel a:focus-visible .segg{transform:translate(var(--dx),var(--dy))}
 .pv-wheel .segg.on .seg,.pv-wheel a:hover .seg,.pv-wheel a:focus-visible .seg{fill:url(#pvw-on);filter:url(#pvw-shadow)}
 .pv-wheel .lab{font:600 13px/1.2 var(--q-sans);fill:var(--fg);pointer-events:none;transition:fill .25s}
-.pv-wheel .num{font:800 11px/1 var(--q-sans);fill:var(--fg-muted);pointer-events:none;letter-spacing:.06em;transition:fill .25s}
+.pv-wheel .num{font:800 13px/1 var(--q-sans);fill:var(--fg-muted);pointer-events:none;letter-spacing:.06em;transition:fill .25s}
 .pv-wheel .segg.on .lab,.pv-wheel a:hover .lab,.pv-wheel .segg.on .num,.pv-wheel a:hover .num{fill:var(--cta-fg)}
 .pv-wheel .orbit{fill:none;stroke:var(--q-gold);stroke-opacity:.45;stroke-width:1.2;stroke-dasharray:3 9;transform-box:view-box;transform-origin:center;animation:pv-orbit 90s linear infinite}
 .pv-wheel .orbit2{fill:none;stroke:var(--border);stroke-width:1}
@@ -77,8 +77,8 @@ EXTRA_CSS2 = r"""
 .pv-wheel .hubring{fill:none;stroke:var(--q-gold);stroke-width:2;stroke-opacity:.9}
 .pv-wheel .pulse{fill:none;stroke:var(--q-gold);stroke-width:2;transform-box:fill-box;transform-origin:center;animation:pv-pulse 3.2s ease-out infinite;opacity:0}
 @keyframes pv-pulse{0%{transform:scale(.9);opacity:.7}100%{transform:scale(1.35);opacity:0}}
-.pv-wheel .hubt{font:800 22px/1 var(--q-serif);fill:#fff;text-anchor:middle;letter-spacing:-.02em}.pv-wheel .hubs{font:600 11px/1 var(--q-sans);fill:rgba(255,255,255,.75);text-anchor:middle;letter-spacing:.12em;text-transform:uppercase}
-.pv-wheel .ring{font:700 12px/1 var(--q-sans);fill:var(--fg-muted);letter-spacing:.22em}
+.pv-wheel .hubt{font:800 22px/1 var(--q-serif);fill:#fff;text-anchor:middle;letter-spacing:-.02em}.pv-wheel .hubs{font:600 13px/1 var(--q-sans);fill:rgba(255,255,255,.88);text-anchor:middle;letter-spacing:.12em;text-transform:uppercase}
+.pv-wheel .ring{font:700 13px/1 var(--q-sans);fill:var(--fg-muted);letter-spacing:.22em}
 .pv-wheel .panel{position:relative}
 .pv-wheel .panel .bignum{position:absolute;right:0;top:-18px;font:800 120px/1 var(--q-serif);letter-spacing:-.05em;color:var(--q-gold);opacity:.12;pointer-events:none;user-select:none}
 .pv-wheel .panel .bar{height:3px;background:var(--border);border-radius:2px;margin:18px 0 6px;overflow:hidden}
