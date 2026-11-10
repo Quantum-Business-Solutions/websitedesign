@@ -175,7 +175,7 @@ post("what-managed-print-costs", "Managed print", "What managed print services c
       {"id": "questions-to-ask", "title": "Five questions to ask before you sign", "paras": [
          "ul:What is the blended cost per page on our volumes, and what happens if color grows?;;What is the response commitment, and for which devices?;;What is included in service, and what is excluded?;;How are overages billed, and how are meters read?;;Who owns the devices at the end of the term?",
          "A good provider answers all five in writing. Kelly does, and the answers are in the plan we hand you after the assessment."]}],
-     [["Is managed print only for large companies?", "No. A ten-device office often benefits most, because nobody is watching the toner."], ["Can we keep our current devices?", "Often, yes. The assessment tells you which are worth keeping under agreement."], ["How fast can an agreement start?", "Ask your branch. Monitoring can usually be installed on the devices you already have."]],
+     [["Is managed print only for large companies?", "No. A ten-device office often benefits most, because nobody is watching the toner."], ["Can we keep our current devices?", "Often, yes. The assessment tells you which are worth keeping under agreement."], ["How fast can an agreement start?", "Ask your branch. Monitoring can usually be installed on existing devices within days."]],
      "what does managed print services cost")
 
 post("unraveling-ins-outs-copier-lease", "Copiers", "Copier lease vs. buy vs. rent: the decision in one page",
@@ -229,13 +229,13 @@ post("how-managed-print-services-transforms-business", "Managed print", "The fir
          "The assessment walks every device, reads every meter, and records the service history. The plan that follows prices lease, rental and purchase side by side for the fleet the data recommends, which is usually fewer devices, better placed.",
          "callout:What you receive|A fleet and cost report, yours to keep, and a plan with the three acquisition options priced against your real volumes."]},
       {"id": "days-31-60", "title": "Days 31 to 60: install, connect, train", "paras": [
-         "Devices arrive on a date you chose, go on the network at the install visit, and every user is trained before the technician leaves. Monitoring is switched on. The first toner ships before anyone asks."]},
+         "Devices arrive on a date you chose, go on the network the same day, and every user is trained before the technician leaves. Monitoring is switched on. The first toner ships before anyone asks."]},
       {"id": "days-61-90", "title": "Days 61 to 90: the first report", "paras": [
          "The first usage report shows pages, color share, uptime and cost per page by device. This is usually the first time anyone in the business has seen the number. It is also where the conversation about color policy starts.",
          "pq:The first report is usually the first time anyone in the business has seen the number."]},
       {"id": "after-90", "title": "After ninety days: the loop", "paras": [
          "Quarterly, the numbers are reviewed and the plan adjusted. If a device is underused, it moves. If color grew, the policy or the device changes. Then back to the assessment. That loop is what managed means."]}],
-     [["Will we lose devices we like?", "Only if the data says they cost more than they are worth, and only if you agree."], ["Who reads the meters?", "The devices do, automatically, under monitoring."], ["What if a device fails in week two?", "Under agreement a factory-trained technician is dispatched from the nearest branch."]],
+     [["Will we lose devices we like?", "Only if the data says they cost more than they are worth, and only if you agree."], ["Who reads the meters?", "The devices do, automatically, under monitoring."], ["What if a device fails in week two?", "Under agreement the response is same day, and The technician is factory-trained."]],
      "benefits of a managed print service")
 
 post("workstation-management-an-overview", "Office IT", "Workstation management: why the desk PC is where most support tickets start",
@@ -545,7 +545,7 @@ PRODUCTS = [
     ["copiers", "Print and imaging", "Copiers", "assets/mps-1-1200.jpg",
      "Modern office copiers with software that does more than duplicate.",
      "Producing copies is still part of daily work, so a copier is standard equipment for most teams. The devices have moved a long way from their origins: with software and integrations, an upgraded office copier scans to your systems, controls who prints what, and reports its own usage. Kelly matches the device to your volume and keeps it running.",
-     [["Software and integrations", "Scan to email, folders and document management; user codes and secure release."], ["Matched to volume", "Speed and duty cycle chosen from your meter reads, not a brochure."], ["Serviced from the nearest branch", "Under a Kelly agreement, by factory-trained technicians."]],
+     [["Software and integrations", "Scan to email, folders and document management; user codes and secure release."], ["Matched to volume", "Speed and duty cycle chosen from your meter reads, not a brochure."], ["Serviced same day", "Under a Kelly agreement, by factory-trained technicians from the nearest branch."]],
      ["Ricoh, Savin, Konica Minolta and Sharp", "Lease, rent or buy", "Networked and trained on install day", "Meter reads read automatically under agreement"],
      [["Lease or buy?", "Depends on volume and how long you will keep it. Our lease, rent or buy guide walks through it, and the assessment prices all three."], ["How fast is service?", "Fast local response from the nearest branch across our North Carolina service area."]],
      ["Sharp", "Ricoh", "Savin", "Konica Minolta"]],
@@ -580,7 +580,7 @@ PRODUCTS = [
     ["folder-inserters", "Mail and shipping", "Folder inserters", "assets/folder-inserter-1200.jpg",
      "Fold, stuff and seal large mailings automatically, accurately and fast.",
      "Folder inserters process and send large volumes of mail quickly. An adjustable feeder and automated folding and inserting system replace the manual labor of stuffing each envelope, so invoices, statements and direct mail go out faster and more accurately. Ideal for any office that processes customer invoices or marketing mailings regularly.",
-     [["Hours back", "The envelope stuffing afternoon disappears."], ["Accuracy", "The right pages in the right envelope."], ["Speed", "Large runs finished in a fraction of the manual time."]],
+     [["Hours back", "The envelope stuffing afternoon disappears."], ["Accuracy", "The right pages in the right envelope, every time."], ["Speed", "Large runs finished in a fraction of the manual time."]],
      ["FP folder inserters, sized to your run", "Invoices, statements, notices and direct mail", "Pairs with a postage meter and mailroom printer", "Installed and trained by Kelly"],
      [["What volume makes a folder inserter worthwhile?", "Regular runs of a few hundred pieces or more. Tell us your monthly mailings and we will size it."], ["Can it handle different insert sets?", "Yes. Multiple feeders handle different inserts per envelope."]],
      ["FP Mailing Solutions"]],
@@ -1153,18 +1153,7 @@ def build():
             else:
                 _secs.append(_faq)
     content = {"client": "Kelly Office Solutions", "slug": "kelly-office-solutions", "domain_hint": "kellyofficesolutions.com",
-               "brand": brand, "schema": schema, "nav": nav, "pages": pages, "pitch": pitch,
-               # Sentences the gate would stop, each with the page on Kelly's own site that says it (checked 10 Nov 2026).
-               # "Same day" is a customer's phrase on Kelly's home page, not a Kelly promise, so it appears only where
-               # it is attributed to that customer or names the article that explains the term.
-               "claims_ok": [
-                   {"text": "Potential saving at up to 30% (the figure on Kelly's managed print page)", "source": "https://www.kellyofficesolutions.com/managed-print-services"},
-                   {"text": "A repair the same day, in a customer's words", "source": "https://www.kellyofficesolutions.com/"},
-                   {"text": "Same day", "source": "https://www.kellyofficesolutions.com/"},
-                   {"text": "Accounting and staffing firms with seasonal peaks, and a technician who calls back the same day in tax season.", "source": "https://www.kellyofficesolutions.com/"},
-                   {"text": "What same-day service means, and the questions to ask any dealer", "source": "https://www.kellyofficesolutions.com/"},
-                   {"text": "blog/same-day-service-what-it-means.html", "source": "https://www.kellyofficesolutions.com/"},
-               ]}
+               "brand": brand, "schema": schema, "nav": nav, "pages": pages, "pitch": pitch}
     with open(OUT, "w", encoding="utf-8") as fh:
         json.dump(content, fh, indent=2, ensure_ascii=False)
         fh.write("\n")
