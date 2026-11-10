@@ -364,7 +364,108 @@
       ]
      ],
      "panel_eyebrow": "Hover a segment",
-     "link_label": "See the product line"
+     "link_label": "See the product line",
+     "hub": "DMP",
+     "hub_sub": "one catalogue"
+    },
+    {
+     "type": "seal",
+     "id": "names",
+     "alt": true,
+     "eyebrow": "The names on the products page",
+     "heading": "The panels and modules DMP lists by name",
+     "intro": "Product names as they appear in the dmp.com sitemap.",
+     "items": [
+      [
+       "XR",
+       "XR Series control panels",
+       "The XR150, XR550 and XR650."
+      ],
+      [
+       "XT",
+       "XT Series control panels",
+       "The XT30, XT50 and XT75, with the XTLtouch and XTLplus."
+      ],
+      [
+       "X1",
+       "X1 Series",
+       "Listed with the intrusion panels."
+      ],
+      [
+       "XF6",
+       "XF6 fire control panel",
+       "The panel that leads the fire category."
+      ],
+      [
+       "734",
+       "734 access module",
+       "Access control on the panel."
+      ],
+      [
+       "Entré",
+       "Entré software",
+       "The software in the access control range."
+      ]
+     ],
+     "source": "Source: the product and category URLs in the dmp.com sitemap."
+    },
+    {
+     "type": "tabs",
+     "id": "systems",
+     "eyebrow": "Four systems",
+     "heading": "Intrusion, access, fire and video, side by side",
+     "items": [
+      {
+       "label": "Intrusion Systems",
+       "title": "Intrusion Systems",
+       "body": "DMP lists its intrusion line by panel: the XR150, XR550 and XR650, the XT30, XT50 and XT75, the XTLtouch and XTLplus, and the X1 Series.",
+       "bullets": [
+        "Control panels",
+        "Keypads including a 7 inch touchscreen keypad",
+        "Modules and expanders",
+        "Power supplies"
+       ],
+       "href": "services/intrusion.html",
+       "link_label": "See the line"
+      },
+      {
+       "label": "Access Control",
+       "title": "Access Control",
+       "body": "DMP lists access control as its own product category, with Entré software and the 734 access module among the pages people read most.",
+       "bullets": [
+        "Access control panels and modules",
+        "Entré software",
+        "Keypads and readers",
+        "Integration with intrusion and video"
+       ],
+       "href": "services/access-control.html",
+       "link_label": "See the line"
+      },
+      {
+       "label": "Fire Systems",
+       "title": "Fire Systems",
+       "body": "DMP lists fire as its own product category, led by the XF6 fire control panel.",
+       "bullets": [
+        "XF6 fire control panel",
+        "Communicators for cell and network reporting",
+        "Modules, expanders and power supplies"
+       ],
+       "href": "services/fire.html",
+       "link_label": "See the line"
+      },
+      {
+       "label": "Video",
+       "title": "Video",
+       "body": "DMP lists Vue cameras and the Vue video doorbell in its video category.",
+       "bullets": [
+        "Vue cameras",
+        "Vue video doorbell",
+        "Mobile access through Virtual Keypad"
+       ],
+       "href": "services/video.html",
+       "link_label": "See the line"
+      }
+     ]
     },
     {
      "type": "services",
@@ -445,6 +546,50 @@
       [
        "Healthcare and wellness",
        "Clinics, hospitals and wellness sites."
+      ]
+     ]
+    },
+    {
+     "type": "detail",
+     "id": "company",
+     "eyebrow": "About DMP",
+     "heading": "A manufacturer headquartered in Springfield, Missouri",
+     "body": "DMP sells through dealers. Under About us, dmp.com lists pages for certifications, careers and DMP Cares.",
+     "bullets": [
+      "Certifications",
+      "Careers",
+      "DMP Cares",
+      "A global page for markets outside the United States",
+      "Events",
+      "A resource library"
+     ]
+    },
+    {
+     "type": "band",
+     "id": "start",
+     "eyebrow": "Start where you are",
+     "heading": "Three ways into the catalogue",
+     "subhead": "Pick the one that matches why you are here.",
+     "items": [
+      [
+       "By product line",
+       "Eight lines, each with its own page.",
+       "services.html"
+      ],
+      [
+       "By industry",
+       "The kinds of building DMP names.",
+       "industries.html"
+      ],
+      [
+       "Ask a person",
+       "Say who you are and what you are specifying.",
+       "contact.html"
+      ],
+      [
+       "About DMP",
+       "The company, as dmp.com names it.",
+       "about.html"
       ]
      ]
     },

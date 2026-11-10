@@ -309,7 +309,7 @@ SERVICES = [
      "Overflow session streaming, webcasting and video conferencing, for live and virtual attendees.",
      "assets/svc-streaming.jpg", "Streaming Services",
      "Reach the people <em>outside the room</em>.",
-     "Overflow streaming, webcasting and two-way video conferencing, planned around your goals and your audience and delivered by an experienced crew on state-of-the-art equipment.",
+     "Overflow streaming, webcasting and two-way video conferencing, planned around your goals and your audience and delivered by an experienced crew.",
      [["Overflow sessions", "When a session room is full, we broadcast it into overflow rooms so no attendee is left out."],
       ["Webcasting", "HD video from one source to many viewers over an international content delivery network, with branded registration and flexible security."],
       ["Video conferencing", "Two-way HD video between locations, built into existing infrastructure or as point-to-point connections."]],
@@ -352,7 +352,7 @@ INDUSTRIES = [
       ["Can you build permanent campus systems?", "Yes. Systems Integration designs and installs classrooms, video walls and athletic center AV, and Managed Services keeps them running."]]],
     ["pharmaceutical-medical", "Pharmaceutical and medical", "assets/ind-pharma-medical.jpg", "Meetings that demand confidentiality, an understanding of compliance and national consistency.",
      "IMS supports POA meetings, product launches, investigator meetings, training meetings, symposia, national sales meetings and continuing medical education. We provide the confidentiality these events require, understand the role compliance plays, and offer consistent equipment and labor pricing across the country.",
-     ["Investigator meetings, symposia and national sales meetings", "Audience response systems and seamless video switching", "Digital event recording and live camera feeds", "Consistent equipment and labor pricing nationwide"],
+     ["Investigator meetings, symposia and national sales meetings", "Audience response systems and video switching", "Digital event recording and live camera feeds", "Consistent equipment and labor pricing nationwide"],
      [["Do you understand compliance requirements?", "Yes. We understand the role compliance plays in pharmaceutical and medical education events and provide the confidentiality they require."],
       ["Can you staff meetings in several cities?", "Yes, with consistent equipment and labor pricing across the country."]]],
     ["associations-nonprofits", "Associations and nonprofits", "assets/ind-associations.jpg", "Board meetings, congresses and membership meetings, planned toward the mission and the budget.",
@@ -506,7 +506,7 @@ def location_page(slug, city, a1, a2, phone, phone_href, label, lon, lat, st):
             "sections": [
                 {"type": "hero", "layout": "split", "eyebrow": eyebrow, "heading": f"AV, events and managed services, <em>{'from ' + city if hq else 'in ' + city}</em>.",
                  "subhead": (f"The IMS headquarters serves {area}. Systems Integration, Managed Services and Event Staging are one company, reached on one number: {phone}." if hq else
-                             f"The IMS {city} office serves {area}, with the full company behind it. One number reaches every office: {phone}."),
+                             f"The IMS {city} office serves {area}, with the full company behind it. One number reaches all five offices: {phone}."),
                  "primary": {"label": f"Call {phone}", "href": phone_href}, "secondary": {"label": "Talk to IMS", "href": "contact.html"},
                  "image": image, "image_alt": "The IMS team" if hq else f"IMS work, {city}", "image_w": 1600, "image_h": 900},
                 {"type": "cards", "alt": True, "eyebrow": f"From {city}", "heading": f"What IMS does from {city}", "items": [
@@ -764,7 +764,7 @@ def build():
          "primary": {"label": f"Call {PHONE}", "href": PHONE_HREF}, "secondary": {"label": "Use the form", "href": "#form"},
          "image": "assets/team-kickoff-2024.jpg", "image_alt": "The IMS team", "image_w": 1600, "image_h": 900},
         dict(CONTACT, id="form", heading="Start here"),
-        {"type": "locations", "alt": True, "detailed": True, "heading": "Offices", "intro": f"One number reaches every office: {PHONE}.",
+        {"type": "locations", "alt": True, "detailed": True, "heading": "Offices", "intro": f"One number reaches all five offices: {PHONE}.",
          "items": [[f"{L[1]} ({L[6]})", L[2], L[3], L[4], L[5]] for L in LOCATIONS]},
     ]})
 
@@ -875,7 +875,23 @@ def build():
             else:
                 _secs.append(_faq)
     return {"client": CLIENT, "slug": "ims-technology-services", "domain_hint": "imsts.com",
-            "brand": brand, "schema": schema, "nav": nav, "pages": pages, "pitch": pitch}
+            "brand": brand, "schema": schema, "nav": nav, "pages": pages, "pitch": pitch,
+            # Sentences the gate would stop, each with the page on imsts.com that says it (checked 10 Nov 2026).
+            "claims_ok": [
+                {"text": "24/7", "source": f"{SITE}/managed-services"},
+                {"text": "Rooms watched around the clock", "source": f"{SITE}/managed-services"},
+                {"text": "Managed Services monitors installed systems 24/7/365, with tiers that match coverage to what is mission-critical.", "source": f"{SITE}/managed-services"},
+                {"text": "Rooms watched 24/7/365 by the people who installed them", "source": f"{SITE}/managed-services"},
+                {"text": "Rooms watched 24/7/365.", "source": f"{SITE}/managed-services"},
+                {"text": "IMS Managed Services monitors the rooms 24/7/365 and keeps them ready, with 4Sight reporting for leadership.", "source": f"{SITE}/managed-services"},
+                {"text": "24/7/365 monitoring, with tiers that match coverage to what is mission-critical.", "source": f"{SITE}/managed-services"},
+                {"text": "Keep the rooms ready 24/7/365, with 4Sight and an IMS service team.", "source": f"{SITE}/managed-services"},
+                {"text": "24/7 monitoring and management that catches most issues before they become downtime.", "source": f"{SITE}/avaas"},
+                {"text": "The right AV solution, with the Solution Replacement Guarantee (SRG)", "source": f"{SITE}/avaas"},
+                {"text": "What is the Solution Replacement Guarantee?", "source": f"{SITE}/avaas"},
+                {"text": "Presentation, projection, playback, mapping, blends and live recording on state-of-the-art equipment.", "source": f"{SITE}/event-staging"},
+                {"text": "A dedicated production manager and account representative for every customer", "source": f"{SITE}/event-staging"},
+            ]}
 
 
 if __name__ == "__main__":

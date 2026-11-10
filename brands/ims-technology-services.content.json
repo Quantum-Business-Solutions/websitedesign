@@ -2714,7 +2714,7 @@
      "layout": "split",
      "eyebrow": "Streaming Services",
      "heading": "Reach the people <em>outside the room</em>.",
-     "subhead": "Overflow streaming, webcasting and two-way video conferencing, planned around your goals and your audience and delivered by an experienced crew on state-of-the-art equipment.",
+     "subhead": "Overflow streaming, webcasting and two-way video conferencing, planned around your goals and your audience and delivered by an experienced crew.",
      "primary": {
       "label": "Talk to IMS",
       "href": "contact.html"
@@ -4617,7 +4617,7 @@
      "body": "IMS supports POA meetings, product launches, investigator meetings, training meetings, symposia, national sales meetings and continuing medical education. We provide the confidentiality these events require, understand the role compliance plays, and offer consistent equipment and labor pricing across the country.",
      "bullets": [
       "Investigator meetings, symposia and national sales meetings",
-      "Audience response systems and seamless video switching",
+      "Audience response systems and video switching",
       "Digital event recording and live camera feeds",
       "Consistent equipment and labor pricing nationwide"
      ],
@@ -6397,7 +6397,7 @@
      "layout": "split",
      "eyebrow": "Linwood, Event Staging",
      "heading": "AV, events and managed services, <em>in Linwood</em>.",
-     "subhead": "The IMS Linwood office serves Greater Philadelphia, the northeast and customers nationally, with the full company behind it. One number reaches every office: 610-361-1870.",
+     "subhead": "The IMS Linwood office serves Greater Philadelphia, the northeast and customers nationally, with the full company behind it. One number reaches all five offices: 610-361-1870.",
      "primary": {
       "label": "Call 610-361-1870",
       "href": "tel:+16103611870"
@@ -6573,7 +6573,7 @@
      "layout": "split",
      "eyebrow": "Orlando, Southeast",
      "heading": "AV, events and managed services, <em>in Orlando</em>.",
-     "subhead": "The IMS Orlando office serves the southeast, with the full company behind it. One number reaches every office: 610-361-1870.",
+     "subhead": "The IMS Orlando office serves the southeast, with the full company behind it. One number reaches all five offices: 610-361-1870.",
      "primary": {
       "label": "Call 610-361-1870",
       "href": "tel:+16103611870"
@@ -6749,7 +6749,7 @@
      "layout": "split",
      "eyebrow": "Plano, Mid-West",
      "heading": "AV, events and managed services, <em>in Plano</em>.",
-     "subhead": "The IMS Plano office serves the middle of the country, with the full company behind it. One number reaches every office: 610-361-1870.",
+     "subhead": "The IMS Plano office serves the middle of the country, with the full company behind it. One number reaches all five offices: 610-361-1870.",
      "primary": {
       "label": "Call 610-361-1870",
       "href": "tel:+16103611870"
@@ -6925,7 +6925,7 @@
      "layout": "split",
      "eyebrow": "Westlake Village, West Coast",
      "heading": "AV, events and managed services, <em>in Westlake Village</em>.",
-     "subhead": "The IMS Westlake Village office serves the west coast, with the full company behind it. One number reaches every office: 610-361-1870.",
+     "subhead": "The IMS Westlake Village office serves the west coast, with the full company behind it. One number reaches all five offices: 610-361-1870.",
      "primary": {
       "label": "Call 610-361-1870",
       "href": "tel:+16103611870"
@@ -7203,7 +7203,7 @@
      "alt": true,
      "detailed": true,
      "heading": "Offices",
-     "intro": "One number reaches every office: 610-361-1870.",
+     "intro": "One number reaches all five offices: 610-361-1870.",
      "items": [
       [
        "Garnet Valley (Headquarters)",
@@ -7393,5 +7393,59 @@
    "A recent event reel. The only video on your YouTube channel is ten years old. Send the 2025 event technology video from Facebook, or any recent reel, and it becomes the moving hero on Showcase."
   ],
   "footer": "Prepared for Jason Smith, IMS Technology Services. Nothing here is live or indexed. Every photograph is IMS's own work, from imsts.com."
- }
+ },
+ "claims_ok": [
+  {
+   "text": "24/7",
+   "source": "https://www.imsts.com/managed-services"
+  },
+  {
+   "text": "Rooms watched around the clock",
+   "source": "https://www.imsts.com/managed-services"
+  },
+  {
+   "text": "Managed Services monitors installed systems 24/7/365, with tiers that match coverage to what is mission-critical.",
+   "source": "https://www.imsts.com/managed-services"
+  },
+  {
+   "text": "Rooms watched 24/7/365 by the people who installed them",
+   "source": "https://www.imsts.com/managed-services"
+  },
+  {
+   "text": "Rooms watched 24/7/365.",
+   "source": "https://www.imsts.com/managed-services"
+  },
+  {
+   "text": "IMS Managed Services monitors the rooms 24/7/365 and keeps them ready, with 4Sight reporting for leadership.",
+   "source": "https://www.imsts.com/managed-services"
+  },
+  {
+   "text": "24/7/365 monitoring, with tiers that match coverage to what is mission-critical.",
+   "source": "https://www.imsts.com/managed-services"
+  },
+  {
+   "text": "Keep the rooms ready 24/7/365, with 4Sight and an IMS service team.",
+   "source": "https://www.imsts.com/managed-services"
+  },
+  {
+   "text": "24/7 monitoring and management that catches most issues before they become downtime.",
+   "source": "https://www.imsts.com/avaas"
+  },
+  {
+   "text": "The right AV solution, with the Solution Replacement Guarantee (SRG)",
+   "source": "https://www.imsts.com/avaas"
+  },
+  {
+   "text": "What is the Solution Replacement Guarantee?",
+   "source": "https://www.imsts.com/avaas"
+  },
+  {
+   "text": "Presentation, projection, playback, mapping, blends and live recording on state-of-the-art equipment.",
+   "source": "https://www.imsts.com/event-staging"
+  },
+  {
+   "text": "A dedicated production manager and account representative for every customer",
+   "source": "https://www.imsts.com/event-staging"
+  }
+ ]
 }
