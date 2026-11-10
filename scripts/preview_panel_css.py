@@ -22,8 +22,9 @@ SYS_CSS = r"""
 .pv-lh .bg.hv.env.flip img.hv-poster{transform:scaleX(-1)}
 @keyframes pn-kb-flip{from{transform:scaleX(-1) scale(1.04) translate(0,0)}to{transform:scaleX(-1) scale(1.14) translate(-1.5%,1%)}}
 .pv-lh .bg.env::after,.pv-lh .bg.hv.env::after{background:linear-gradient(90deg,color-mix(in srgb,var(--lh-bg,#0c0d0f) 94%,transparent) 0%,color-mix(in srgb,var(--lh-bg,#0c0d0f) 80%,transparent) 38%,color-mix(in srgb,var(--lh-bg,#0c0d0f) 34%,transparent) 72%,color-mix(in srgb,var(--lh-bg,#0c0d0f) 46%,transparent) 100%),linear-gradient(180deg,color-mix(in srgb,var(--lh-bg,#0c0d0f) 52%,transparent) 0%,transparent 26%,transparent 58%,var(--lh-bg,#0c0d0f) 100%)}
-@media(max-width:1024px){.pv-lh .bg.env::after,.pv-lh .bg.hv.env::after{background:linear-gradient(180deg,color-mix(in srgb,var(--lh-bg,#0c0d0f) 80%,transparent) 0%,color-mix(in srgb,var(--lh-bg,#0c0d0f) 86%,transparent) 55%,var(--lh-bg,#0c0d0f) 100%)}}
+@media(max-width:1024px){.pv-lh .bg.env::after,.pv-lh .bg.hv.env::after{background:linear-gradient(180deg,color-mix(in srgb,var(--lh-bg,#0c0d0f) 62%,transparent) 0%,color-mix(in srgb,var(--lh-bg,#0c0d0f) 74%,transparent) 50%,var(--lh-bg,#0c0d0f) 100%)}.pv-lh .bg.env img{opacity:.7}}
 @media(prefers-reduced-motion:reduce){.pv-lh .bg.env img{animation:none!important}.pv-lh .bg.env.flip img{transform:scaleX(-1)}}
+html[data-dir="showcase"] .pv-lh .bg.hv.env[data-mp4*="hero-signal"] video.on{mix-blend-mode:screen;opacity:.9}
 .pv-envcap{position:absolute;right:16px;bottom:12px;z-index:3;margin:0;padding:4px 9px;font:500 13px/1.2 var(--q-sans);letter-spacing:.02em;color:#fff;background:rgba(0,0,0,.62);border-radius:2px;pointer-events:none}
 .pv-lh:has(.bg.hv:not([data-mp4*="hero-signal"]) video.on) .pv-envcap{display:none}
 @media(max-width:767px){.pv-envcap{right:10px;bottom:8px}}
@@ -38,6 +39,7 @@ html[data-sys] .pv-lh .hero3d .disc{background:radial-gradient(ellipse at center
 html[data-sys] .pv-lh .fcard:not(.b) .k{color:var(--sys)}
 html[data-sys] .pv-lh .fcard.b .k{color:var(--sys-ink)}
 .mo-tag{font-size:13px}
+.tl-span b,.tl-span span{font-size:13px!important}
 html[data-sys] .pv-lh .fcard li::before{background:var(--sys);box-shadow:inset 0 0 0 4px color-mix(in srgb,var(--sys) 35%,#000)}
 html[data-sys] .lf-ps{border-top:3px solid var(--sys)}
 html[data-sys] .lf-ps .q-eyebrow{color:var(--sys)}
@@ -214,7 +216,7 @@ html[data-pn="disarmed"] .pn-zb-home a em{color:var(--pn-amber)}
 .pn-h1-word{position:relative;display:inline-block;padding:.03em .14em .05em .1em;margin-left:-.1em;color:#0a0a0b;z-index:0}
 .pn-h1-word::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--pn-y);transform-origin:left;transition:transform .55s var(--pn-ease)}
 html[data-pn="disarmed"] .pn-h1-word,html[data-pn="arming"] .pn-h1-word{color:var(--pn-bk);-webkit-text-stroke:.035em var(--pn-st);paint-order:stroke fill}
-html[data-pn="disarmed"] .pn-h1-word::before,html[data-pn="arming"] .pn-h1-word::before{transform:scaleX(0)}
+html[data-pn="disarmed"] .pn-h1-word::before,html[data-pn="arming"] .pn-h1-word::before{transform:scaleX(0);opacity:0}
 html[data-pn="arming"] .pn-h1-word{animation:pn-blinkt .5s steps(2) infinite}
 .pn-lede{max-width:34em;margin-top:clamp(20px,3.2vh,34px)!important;font-size:clamp(16px,1.2vw,19px);line-height:1.55;color:#cfcec7}
 .pn-lede strong{color:var(--pn-y);font-weight:700}
@@ -335,6 +337,9 @@ html:not(.pn-js) .pn-kp-demo{display:none}
 .pn-zone h3{font-family:var(--pn-disp);font-weight:800;font-size:28px;letter-spacing:.005em;line-height:1;text-transform:uppercase}
 .pn-zone h3 a{color:inherit;text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 100%/0 2px no-repeat;transition:background-size .35s var(--pn-ease)}
 .pn-zone h3 a:hover{background-size:100% 2px}
+@media(max-width:767px){.pn-zone h3 a{display:inline-flex;align-items:center;min-height:44px;min-width:44px;background-position:0 86%}.pn-calls p,.pn-notes p,.pn-path li p{margin-top:0!important}}
+.pn-zone{scroll-margin-top:-62px}
+@media(max-width:767px){.pn-zone{scroll-margin-top:-36px}}
 .pn-more{margin-top:28px!important}
 
 /* Z1 intrusion */
