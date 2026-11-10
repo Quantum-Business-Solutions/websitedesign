@@ -346,3 +346,16 @@
 }
 .ns:not(.ns-js) .console,.ns:not(.ns-js) .ns-points{padding-left:var(--pn-pad,28px);padding-right:var(--pn-pad,28px)}
 .ns:not(.ns-js) .ns-cap{position:static;display:inline-block;margin:16px var(--pn-pad,28px) 0}
+
+/* ---- round 3b (edited here in the repo file, not in the scratch generator) ---- */
+.pn-night .ns-more{display:flex;flex-wrap:wrap;align-items:center;gap:0 28px;margin:0;padding:6px var(--pn-pad,28px);border-top:1px solid rgba(255,255,255,.11);background:#04060e;font:600 13px/1.2 "JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;letter-spacing:.1em;text-transform:uppercase;color:#b9bdc6}
+.pn-night .ns-more a{display:inline-flex;align-items:center;gap:8px;min-height:44px;color:#ffd23d;text-decoration:underline;text-underline-offset:4px}
+.pn-night .ns-more a:hover{color:#fff}
+.pn-night .ns-more a:focus-visible{outline:3px solid #fff;outline-offset:2px}
+/* the stage sits under the sticky header: the header's real height is measured (night.js sets --ns-top), 96px is only the fallback */
+/* an in-page link lands the stage flush under the header: the measured header minus the page's scroll-padding (172px, 140px on phones) */
+.pn-night{scroll-margin-top:calc(var(--ns-top,96px) - 172px)}
+@media (max-width:767px){.pn-night{scroll-margin-top:calc(var(--ns-top,96px) - 140px)}}
+@media (min-width:900px) and (min-aspect-ratio:1/1){.ns{height:min(calc(100vh - var(--ns-top,96px)),940px);height:min(calc(100svh - var(--ns-top,96px)),940px)}}
+/* phones: opening a point or resetting the alarm scrolls the stage to just under the measured header (night.js), so the
+   chip row and the Run button clear the fixed Contact / Products bar */

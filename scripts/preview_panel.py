@@ -277,7 +277,29 @@ def _feature(s, ctx):
             f'<div class="q-container"><p class="pnf-intro">{E(s.get("intro", ""))}</p><ol class="pnf-cols">{cols}</ol>{more}</div></section>')
 
 
-RENDER_PANEL = {"pn-hero": _hero, "pn-zone": _zone, "pn-feature": _feature}
+def _brief(s, ctx):
+    """Showcase home: news and guides as one panel readout. Two columns of dated lines, every one a link."""
+    E, L = ctx["E"], ctx["L"]
+    hid = s.get("id", "brief")
+    cols = ""
+    for ci, c in enumerate(s.get("cols", [])):
+        rows = ""
+        for i, (tag, title, text, href) in enumerate(c["items"]):
+            rows += (f'<li class="pn-rv"><span class="pn-bn" aria-hidden="true">{i + 1:02d}</span><div><p class="pn-bt">{E(tag)}</p>'
+                     f'<h4><a href="{E(L(href))}">{E(title)} <span aria-hidden="true">&rarr;</span></a></h4><p>{E(text)}</p></div></li>')
+        cols += (f'<div class="pn-bcol"><p class="pn-bk"><i class="pn-led" aria-hidden="true"></i>{E(c["k"])}</p>'
+                 f'<h3 id="{E(hid)}-c{ci}">{E(c["title"])}</h3><ol aria-labelledby="{E(hid)}-c{ci}">{rows}</ol></div>')
+    return _keep(f'<section class="pn-brief" id="{E(hid)}" aria-labelledby="{E(hid)}-h"><div class="pn-bin">'
+                 f'{_shead(s.get("eyebrow", "Briefing"), "News / Guides")}<header class="pn-bhead"><h2 id="{E(hid)}-h" class="pn-h2">{E(s["heading"])}</h2></header>'
+                 f'<div class="pn-bgrid">{cols}</div></div></section>')
+
+
+def _none(s, ctx):
+    """A section that exists in one direction only: the base type renders nothing, a variant supplies the real section."""
+    return ""
+
+
+RENDER_PANEL = {"pn-hero": _hero, "pn-zone": _zone, "pn-feature": _feature, "pn-brief": _brief, "pn-none": _none}
 
 
 # ------------------------------------------------------------------------------------------------ Showcase regrade
@@ -372,6 +394,42 @@ def _zonebar(page, root):
             f'<ol>{"".join(items)}</ol>{right}</nav>')
 
 
+# chapter rail (Showcase home, wide screens): section id, label. Only chapters whose section is on the page are listed.
+CHAPTERS = [("hero-layered", "Panel"), ("z1", "Zones"), ("night", "Night shift"), ("scenes", "Scenes"), ("z6", "Dealers"),
+            ("proof", "Proof"), ("who", "Start here"), ("brief", "News"), ("contact", "Contact")]
+
+
+def _chapters(doc):
+    E = _html.escape
+    have = [(i, t) for i, t in CHAPTERS if f' id="{i}"' in doc]
+    if len(have) < 3:
+        return ""
+    ON = ' class="is-on" aria-current="true"'
+    li = "".join(f'<li><a href="#{E(i)}" data-ch="{E(i)}" data-t="{E(t)}" aria-label="Chapter {n + 1}, {E(t)}"{ON if n == 0 else ""}><i class="pn-led" aria-hidden="true"></i><span aria-hidden="true"><b>{n + 1:02d}</b> {E(t)}</span></a></li>'
+                 for n, (i, t) in enumerate(have))
+    return (f'<nav class="pn-ch" aria-label="Chapters on this page"><ol>{li}</ol>'
+            f'<span class="pn-ch-tag" aria-hidden="true"><b data-pn-chn>01</b> / {len(have):02d} <em data-pn-cht>{E(have[0][1])}</em></span></nav>')
+
+
+# Showcase home: the modules after the zones get the same head row the zones have (tag, rule, meta), so the page reads as
+# one panel from top to bottom. Decorative (aria-hidden): each section keeps its own eyebrow and heading.
+SECTION_HEADS = {"proof": ("Proof", "Since 1975"), "story": ("History", "1975 to 2025"),
+                 "who": ("Start here", "Dealers / Specifiers / Building owners"),
+                 "faq": ("Questions", "Dealers / Specifiers"), "contact": ("Contact", "Inside Sales")}
+
+
+def _shead(label, meta):
+    E = _html.escape
+    return (f'<div class="pn-sh" aria-hidden="true"><span class="pn-sh-t"><i class="pn-led"></i>{E(label)}</span>'
+            f'<span class="pn-sh-r"></span><span class="pn-sh-m">{E(meta)}</span></div>')
+
+
+def _section_heads(doc):
+    for sid, (label, meta) in SECTION_HEADS.items():
+        doc = re.sub(r'(<section class="q-section[^"]*" id="%s"[^>]*>)' % re.escape(sid), lambda m: m.group(1) + _shead(label, meta), doc, count=1)
+    return doc
+
+
 RAIL = ('<div class="pn-beat" aria-hidden="true"><i class="pn-beat-base"></i><i class="pn-beat-live"></i>'
         '<span class="pn-beat-tag"><b>SUPERVISED</b> <em data-pn-beat>CHECK-IN 0001</em></span></div>')
 
@@ -454,7 +512,9 @@ def post(doc: str, content: dict, page: dict, dslug: str) -> str:
     doc = doc.replace("</head>", _fonts(dslug, up) + "\n</head>", 1)
 
     if dslug == "showcase":
+        if home:
+            doc = _section_heads(doc)
         if zb:
             doc = doc.replace("</div></header>", "</div>" + _zonebar(page, root) + "</header>", 1)
-        doc = doc.replace("</body>", RAIL + "\n<script>" + PANEL_JS + "</script>\n</body>", 1)
+        doc = doc.replace("</body>", (_chapters(doc) if home else "") + RAIL + "\n<script>" + PANEL_JS + "</script>\n</body>", 1)
     return doc

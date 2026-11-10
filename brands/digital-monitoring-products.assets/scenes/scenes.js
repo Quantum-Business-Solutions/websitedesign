@@ -1,5 +1,5 @@
 /* Scenes (Showcase home). Progressive enhancement only: without this file every scene is a complete, static composition.
-   What it adds: each scene pins for about one screen of scroll and plays two beats, the product first, then the copy.
+   What it adds: each scene pins for about half a screen of scroll and plays two beats, the product first, then the copy.
    Only transform and opacity change, on three elements per scene, and only for scenes on screen.
    Guards: off under prefers-reduced-motion; off for a scene whose copy does not fit the screen; and a frame-time guard
    that parks every scene in its finished state for good if scrolling cannot hold the frame rate.
@@ -49,7 +49,7 @@
       var s = S[i]; if (!s.live || !s.on) continue;
       if (!any) { any = true; measure(); }
       var r = s.el.getBoundingClientRect(), range = r.height - vh, p = range > 0 ? (top - r.top) / range : 1;
-      var k = Math.round(ease((p - 0.2) / 0.42) * 1000) / 1000;
+      var k = Math.round(ease((p - 0.05) / 0.5) * 1000) / 1000;   /* round 3b: a 138vh scene, so the beat starts sooner and holds for the last 45% */
       if (k !== s.k) { s.k = k; s.el.style.setProperty('--k', k); s.col.style.pointerEvents = k < 0.5 ? 'none' : ''; }
     }
   }

@@ -49,7 +49,7 @@
 .scn-cap::before{content:"";display:inline-block;width:7px;height:7px;margin-right:8px;border:1px solid currentColor;border-radius:50%}
 
 /* live: scenes.js pins each scene and drives --k from 0 (product first) to 1 (product in place, copy in) */
-.scn.scn-live{height:215vh}
+.scn.scn-live{height:138vh}
 .scn.scn-live .scn-pin{position:sticky;top:var(--scn-top,0px);height:calc(100vh - var(--scn-top,0px));height:calc(100svh - var(--scn-top,0px));min-height:0}
 .scn.scn-live .scn-prod{transform:translate3d(calc(var(--dx,24vw)*(1 - var(--k))),0,0) scale(calc(1 + .3*(1 - var(--k))));will-change:transform}
 .scn.scn-live[data-side="l"] .scn-prod{--dx:-24vw}

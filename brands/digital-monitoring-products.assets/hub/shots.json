@@ -26,8 +26,8 @@
    2800
   ],
   "type": [
-   528,
-   318
+   488,
+   322
   ]
  },
  "press": {
@@ -42,9 +42,9 @@
   "look": {
    "accent": "#ffd23d",
    "body_face": "Inter",
-   "heading_color": "#333630",
+   "heading_color": "#ffffff",
    "heading_face": "Playfair Display",
-   "hero_ground": "#f7f4ec",
+   "hero_ground": "#14110c",
    "page_ground": "#f7f4ec",
    "text_color": "#333630"
   },
@@ -57,8 +57,8 @@
    2800
   ],
   "type": [
-   631,
-   389
+   720,
+   273
   ]
  },
  "showcase": {

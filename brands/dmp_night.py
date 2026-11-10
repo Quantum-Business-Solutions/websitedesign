@@ -114,29 +114,77 @@ SCENES_SECTION = {
     "scenes": SCENES,
 }
 
-AFTER = "z6"          # the last zone: the two pieces follow the walk through the zones
+# Round 3b: the Showcase home page, re-sequenced. hero, proof of range (zones 1 to 5), the signature moments (Night shift,
+# then Scenes), trust (dealers, proof, history), action (three doors, news and guides, questions, contact).
+# What left the home page and why (Showcase only; Clean and Press keep every section):
+#   building   the cutaway is the same idea as Night shift (one building, products at eight points). It moves to the
+#              systems page, where its longer product lists belong, and Night shift links to it.
+#   how        five steps from sensor to phone is the Night shift test alarm told twice. It moves to the systems page too.
+#   flagships  all eight products in the carousel are already linked from zones 1 to 5 with the same facts.
+#   made-here  zone 6 says the same thing with the plant video; the full paragraph is on the company page.
+#   news + guides  become one compact panel section (pn-brief) that keeps all six headlines, summaries and links.
+#   ready      the closing band repeats the two calls to action zone 6 and the hero already carry; the page ends on contact.
+#   portal     the dealer sign-in mock is the whole of dealer-portal.html already; zone 6 links to it by name.
+HOME_ORDER = ["hero-layered", "assoc", "z1", "z2", "z3", "z4", "z5", "night", "scenes", "z6", "proof", "story", "who",
+              "brief", "faq", "contact"]
+MOVE_TO = "services.html"            # the systems overview
+MOVED = ["building", "how"]
+SCENE_ZONE = [1, 2, 4, 1, 3, 5]      # which zone each scene lights in the zone bar (the server aisle is communication: intrusion)
+
+
+def _brief(order):
+    cols = []
+    for sid, k in (("news", "News"), ("guides", "Guides")):
+        s = order[sid]
+        cols.append({"k": k, "title": s["heading"], "items": [[it[0], it[1], it[2], it[4]] for it in s["items"]]})
+    return {"type": "pn-brief", "id": "brief", "eyebrow": "Briefing", "heading": "News and guides", "cols": cols}
 
 
 def apply(data):
     if data.get("slug") != "digital-monitoring-products":
         return data
+    import copy
     home = next((p for p in data["pages"] if p["file"] == "index.html"), None)
     comp = (home or {}).get("compose") or {}
     order = comp.get("showcase")
-    if not home or not order or AFTER not in order:
-        raise SystemExit("dmp_night: the Showcase home page has no compose order with '%s' (dmp_panel must run first)" % AFTER)
-    have = {s.get("id") for s in home["sections"]}
+    if not home or not order:
+        raise SystemExit("dmp_night: the Showcase home page has no compose order (dmp_panel must run first)")
+    have = {s.get("id"): s for s in home["sections"]}
     files = {p["file"] for p in data["pages"]}
-    for sec in (SCENES_SECTION, NIGHT):
+    for i, sc in enumerate(SCENES):
+        sc["zone"] = SCENE_ZONE[i]
+    night = dict(NIGHT)
+    night["more"] = [["Every product, point by point", MOVE_TO + "#building"], ["The signal path in five steps", MOVE_TO + "#how"]]
+    for sec in (SCENES_SECTION, night, _brief(have)):
         if sec["id"] in have:
             raise SystemExit("dmp_night: the home page already has a section '%s'" % sec["id"])
-        for it in sec.get("scenes", []) + sec.get("points", []):
-            for h in [it["href"]] + [l[1] for l in it.get("links", [])]:
-                if h not in files:
-                    raise SystemExit("dmp_night: '%s' links to a page that does not exist: %s" % (sec["id"], h))
+        hrefs = [h for it in sec.get("scenes", []) + sec.get("points", []) for h in [it["href"]] + [l[1] for l in it.get("links", [])]]
+        hrefs += [l[1].split("#")[0] for l in sec.get("more", [])] + [it[3] for c in sec.get("cols", []) for it in c["items"]]
+        for h in hrefs:
+            if h not in files:
+                raise SystemExit("dmp_night: '%s' links to a page that does not exist: %s" % (sec["id"], h))
         home["sections"].append(sec)
-    i = order.index(AFTER) + 1
-    comp["showcase"] = order[:i] + ["scenes", "night"] + order[i:]
+        have[sec["id"]] = sec
+    missing = [i for i in HOME_ORDER if i not in have]
+    if missing:
+        raise SystemExit("dmp_night: the home page has no section %s" % missing)
+    comp["showcase"] = list(HOME_ORDER)
+    # the site footer opens with "Talk to a person at DMP" and the phone number, so on this page the form above it says what it is
+    have["contact"].setdefault("variants", {}).setdefault("showcase", {})["heading"] = "Write to Inside Sales"
+
+    # the cutaway and the five-step journey move to the systems page, Showcase only: the base type renders nothing, so
+    # Clean and Press pages are unchanged, and the Showcase variant is the section exactly as it was on the home page
+    svc = next((p for p in data["pages"] if p["file"] == MOVE_TO), None)
+    if not svc:
+        raise SystemExit("dmp_night: %s is missing" % MOVE_TO)
+    at = 2 if len(svc["sections"]) > 2 else len(svc["sections"])
+    for sid in reversed(MOVED):
+        if any(s.get("id") == sid for s in svc["sections"]):
+            raise SystemExit("dmp_night: %s already has a section '%s'" % (MOVE_TO, sid))
+        src = copy.deepcopy(have[sid])
+        src.pop("variants", None)
+        svc["sections"].insert(at, {"type": "pn-none", "id": sid, "variants": {"showcase": src}})
+
     p = data.get("pitch")
     if p:
         note = ("Showcase home page: the six 'Scenes' and the 'Night shift' building are illustrations, captioned as such, and the test alarm is a "

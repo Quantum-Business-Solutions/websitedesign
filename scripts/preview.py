@@ -701,6 +701,7 @@ RENDER.update(preview_dw1.RENDER_DW1)
 RENDER.update(preview_dw2.RENDER_DW2)
 RENDER.update(preview_panel.RENDER_PANEL)
 RENDER.update(preview_tools.RENDER_TOOLS)
+RENDER.update({**__import__("preview_clean").RENDER_CLEAN, **__import__("preview_press").RENDER_PRESS})   # round 3a (DMP Clean and Press)
 RENDER.update({**__import__("preview_night").RENDER_NIGHT, **__import__("preview_scenes").RENDER_SCENES})   # round 2a (DMP Showcase home)
 preview_dw2.wrap(RENDER)
 
@@ -1250,6 +1251,7 @@ def main(argv=None):
             doc = render_page(content, page, t, css, tok, themes, a.recommend, base, a.out, slug_of(t))
             doc = preview_panel.post(doc, content, page, slug_of(t))   # DMP only: panel art direction, system colours
             doc = preview_tools.post(doc, content, page, slug_of(t))   # DMP only: configurator, keypad page, print spec sheet
+            doc = __import__("preview_press").post(__import__("preview_clean").post(doc, content, page, slug_of(t)), content, page, slug_of(t))   # round 3a, DMP Clean and Press only
             dest = os.path.join(d, page["file"]); os.makedirs(os.path.dirname(dest), exist_ok=True)
             open(dest, "w", encoding="utf-8").write(doc); written += 1
         preview_polish.write_index(a.out, slug_of(t))

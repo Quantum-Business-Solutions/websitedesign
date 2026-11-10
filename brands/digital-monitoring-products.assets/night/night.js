@@ -165,7 +165,7 @@
     var im = $('#ns-pcImg'); im.src = s.img; im.alt = s.alt; $('#ns-pcGo').href = s.href; $('#ns-pcGo').setAttribute('aria-label', 'View the ' + s.name);
     hsEls[k].classList.add('ns-is-on'); hsEls[k].setAttribute('aria-expanded', 'true'); chips[k].setAttribute('aria-pressed', 'true');
     ns.classList.add('has-card'); pcard.hidden = false; pcard.style.animation = 'none'; void pcard.offsetWidth; pcard.style.animation = '';
-    if (stacked) { setCam(camAt(UV[k][0], UV[k][1], 1.45, M.W / 2, M.H * 0.34), 700); if (pin) stage.scrollIntoView({ block: 'start', behavior: reduced ? 'auto' : 'smooth' }); }
+    if (stacked) { setCam(camAt(UV[k][0], UV[k][1], 1.45, M.W / 2, M.H * 0.34), 700); if (pin) window.scrollTo({ top: stage.getBoundingClientRect().top + window.pageYOffset - hdTop(), behavior: reduced ? 'auto' : 'smooth' }); }
     placeCard();
   }
   function closeSpot() {
@@ -266,7 +266,7 @@
     closeSpot(); clearTimers(); clearWires(); frozen = true;
     [cMc, cPh, cCam].forEach(function (c) { show(c, false); c.classList.remove('ver', 'tap', 'anim-tap', 'cur', 'ns-hot'); });
     stage.classList.remove('shake', 'flashing');
-    if (stacked) window.scrollTo({ top: ns.getBoundingClientRect().top + window.pageYOffset, behavior: reduced ? 'auto' : 'smooth' });
+    if (stacked) window.scrollTo({ top: ns.getBoundingClientRect().top + window.pageYOffset - hdTop(), behavior: reduced ? 'auto' : 'smooth' });
   }
   function runAnimated() {
     prep(); ns.dataset.seq = 'run'; measure(); ns.classList.add('anim'); applyStep(0, true);
@@ -329,6 +329,17 @@
   });
   document.addEventListener('visibilitychange', setRun);
   measure(); setCam(base(), 0);
+
+  /* round 3b: the sticky header's painted height is measured (its last bar's bottom edge), not assumed to be 96px.
+     Measured when the section comes on screen, because the header is taller at the very top of the page. */
+  var nsSec = ns.closest ? (ns.closest('.pn-night') || ns) : ns, nsHd = document.querySelector('.q-header');
+  if (nsHd) { var nsHp = getComputedStyle(nsHd).position; if (nsHp !== 'sticky' && nsHp !== 'fixed') nsHd = null; }
+  function hdTop() {
+    var t = nsHd ? Math.max(0, Math.round((nsHd.lastElementChild || nsHd).getBoundingClientRect().bottom)) : 0;
+    if (t !== hdTop.last) { hdTop.last = t; nsSec.style.setProperty('--ns-top', t + 'px'); }
+    return t;
+  }
+  if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { if (es[0].isIntersecting) { var b = hdTop.last; hdTop(); if (b !== hdTop.last && !stacked) relayout(); } }, { rootMargin: '0px 0px -30% 0px' }).observe(nsSec);
 
   /* test hook for deterministic screenshots */
   window.__ns = { get lite() { return lite; }, get running() { return running; }, setT: setT, open: openSpot, close: closeSpot, step: function (n) { prep(); ns.dataset.seq = 'step'; stepnav.hidden = false; measure(); setCam(seqBase(), 0); goStep(n); }, reset: reset };

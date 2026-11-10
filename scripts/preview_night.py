@@ -379,9 +379,11 @@ def _night(s, ctx):
                 f'data-img="{E(rel(p["image"]))}" data-alt="{E(p["alt"])}" data-fact="{E(p["fact"])}" data-href="{E(L(p["href"]))}">'
                 f'<b>{E(p["where"])}</b><a href="{E(L(p["href"]))}">{E(p["name"])}</a><p>{E(p["kind"])}. {E(p["fact"])}</p></li>')
     points = f'<ul class="ns-points" id="ns-points">{pts}</ul><p class="ns-cap">{E(s.get("note", "Illustrative scene"))}</p>'
+    more = "".join(f'<a href="{E(L(h))}">{E(t)} <span aria-hidden="true">&rarr;</span></a>' for t, h in s.get("more", []))
+    more = f'<p class="ns-more"><span>On the systems page</span>{more}</p>' if more else ""
     stage = STAGE.replace("@@TITLE@@", title).replace("@@RAIL@@", rail).replace("@@POINTS@@", points)
     return (MARK_A + f'<section class="pn-night" id="{E(hid)}" aria-labelledby="{E(hid)}-h">'
-            f'<link rel="stylesheet" href="{E(rel("assets/night/night.css"))}">{stage}'
+            f'<link rel="stylesheet" href="{E(rel("assets/night/night.css"))}">{stage}{more}'
             f'<script src="{E(rel("assets/night/night.js"))}" defer></script></section>' + MARK_B)
 
 

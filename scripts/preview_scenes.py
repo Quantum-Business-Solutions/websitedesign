@@ -34,7 +34,7 @@ def _scene(i, sc, ctx):
         stats += f"<div{soon}><dt>{E(st[1])}</dt><dd>{E(st[0])}</dd></div>"
     go = "".join(f'<a href="{E(L(h))}">{E(t)} <span aria-hidden="true">&rarr;</span></a>' for t, h in sc.get("links", []))
     leak = sc.get("leak") or [18, 8]
-    return f'''<article class="scn" id="scn-{n}" data-side="{E(sc.get("side", "r"))}" aria-labelledby="scn-{n}-h" style="--lx:{leak[0]}%;--ly:{leak[1]}%">
+    return f'''<article class="scn" id="scn-{n}"{f' data-zone="{int(sc["zone"])}"' if sc.get("zone") else ""} data-side="{E(sc.get("side", "r"))}" aria-labelledby="scn-{n}-h" style="--lx:{leak[0]}%;--ly:{leak[1]}%">
 <div class="scn-pin">
 <img class="scn-env" src="{E(rel(base + "-800.jpg"))}" srcset="{E(rel(base + "-800.jpg"))} 800w, {E(rel(env))} 1280w, {E(rel(base + "-1920.jpg"))} 1920w" sizes="100vw" alt="{E(sc["env_alt"])}" width="1920" height="1086" loading="lazy" decoding="async">
 <div class="scn-scrim" aria-hidden="true"></div>

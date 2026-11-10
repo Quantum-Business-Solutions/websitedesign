@@ -905,98 +905,144 @@
      },
      "variants": {
       "clean": {
-       "type": "hero-grid",
-       "finder_label": "I protect a",
-       "finder": [
+       "type": "cl-hero",
+       "sheet": "Sheet 01",
+       "eyebrow": "Springfield, Missouri, since 1975",
+       "heading": "Intrusion, access, fire and video, <em>on one platform.</em>",
+       "subhead": "We manufacture the panels, keypads, communicators and software behind the systems dealers install, and sell them only through authorized dealers and distributors.",
+       "primary": {
+        "label": "Find a dealer",
+        "href": "find-a-dealer.html"
+       },
+       "secondary": {
+        "label": "Become a dealer",
+        "href": "support/become-a-dealer.html"
+       },
+       "lane": [
         [
-         "Commercial",
-         "industries/commercial.html"
+         "Product matrix",
+         "#matrix"
         ],
         [
-         "Financial institutions",
-         "industries/financial-institutions.html"
+         "Find your panel",
+         "#find-panel"
         ],
         [
-         "Retail",
-         "industries/retail.html"
+         "Technical documentation",
+         "support/documentation.html"
         ],
         [
-         "Government",
-         "industries/government.html"
-        ],
-        [
-         "Industrial and manufacturing",
-         "industries/industrial-manufacturing.html"
-        ],
-        [
-         "Education",
-         "industries/education.html"
+         "Order at buy.DMP.com",
+         "https://buy.dmp.com/dmp/Shop"
         ]
        ],
-       "tiles": [
+       "figure": {
+        "image": "assets/p-xr550-1200-cut.png",
+        "w": 1090,
+        "h": 552,
+        "alt": "The DMP XR550 control panel in its open enclosure",
+        "href": "products/xr550.html",
+        "label": "Open the XR550",
+        "fig": "Fig. 01 / XR550",
+        "note": "Lines carry specifications, not measurements.",
+        "dims": [
+         [
+          "t",
+          "574",
+          "total zones"
+         ],
+         [
+          "l",
+          "96",
+          "doors of access, maximum"
+         ],
+         [
+          "b",
+          "10,000",
+          "user codes"
+         ],
+         [
+          "r",
+          "32",
+          "areas"
+         ]
+        ]
+       },
+       "title": [
         [
-         "XR550 Control Panel",
-         "assets/p-xr550-1200-cut.png",
-         "products/xr550.html",
-         "Intrusion"
+         "Founded",
+         "1975",
+         "Springfield, Missouri"
         ],
         [
-         "XT75 Control Panel",
-         "assets/xt75-1200-cut.png",
-         "products/xt75.html",
-         "Intrusion"
+         "Systems",
+         "04",
+         "Intrusion, access, fire, video"
         ],
         [
-         "Digital Key",
-         "assets/p-digital-key-credential-1200-cut.png",
-         "products/digital-key-credential.html",
-         "Access control"
+         "Catalog",
+         "14",
+         "Product categories"
         ],
         [
-         "XF6 Fire Control Panel",
-         "assets/p-xf6-1200-cut.png",
-         "products/xf6.html",
-         "Fire"
+         "Cloud",
+         "SOC 2",
+         "Type II, examined every year"
         ],
         [
-         "Virtual Keypad",
-         "assets/p-virtual-keypad-1200-cut.png",
-         "products/virtual-keypad.html",
-         "Software"
+         "On this sheet",
+         "50",
+         "Products with a page and specifications"
         ]
        ]
       },
       "press": {
-       "type": "hero-press",
-       "masthead": [
+       "type": "pr-cover",
+       "name": "Digital Monitoring Products",
+       "issue": [
         "Springfield, Missouri",
         "Making security systems since 1975",
         "Sold through authorized dealers"
        ],
-       "lead": {
-        "kicker": "News, 11 Sep 2026",
-        "title": "DMP launches VK VMS, enabling 24/7 video management with AlarmVision",
-        "body": "Our video platform becomes complete, with VK VMS and the XV Plus gateways.",
-        "href": "news/vk-vms.html",
-        "image": "assets/vue-plus-1200.jpg",
-        "alt": "A VUE Plus camera",
-        "label": "Read the story"
+       "kicker": "Cover story",
+       "heading": "Intrusion, access, fire and video, <em>on one platform.</em>",
+       "subhead": "We manufacture the panels, keypads, communicators and software behind the systems dealers install, and sell them only through authorized dealers and distributors.",
+       "primary": {
+        "label": "Find a dealer",
+        "href": "find-a-dealer.html"
        },
-       "side": [
+       "secondary": {
+        "label": "Become a dealer",
+        "href": "support/become-a-dealer.html"
+       },
+       "image": "assets/hero-hq-dark-2100.jpg",
+       "alt": "The DMP headquarters building in Springfield, Missouri",
+       "credit": "Photograph: DMP headquarters, Springfield, Missouri",
+       "toc_label": "Inside",
+       "lines": [
         [
-         "News, 27 Apr 2026",
-         "XR650 wins top honors at 2026 ESX Innovation Awards",
-         "news/xr650-esx-award.html"
+         "News",
+         "DMP launches VK VMS, enabling 24/7 video management with AlarmVision",
+         "",
+         "#news"
         ],
         [
-         "News, 6 May 2026",
-         "JamAlert achieves UL certification",
-         "news/jamalert-ul.html"
+         "Feature",
+         "Fifty years of firsts",
+         "From a central station receiver to a cloud platform",
+         "#story"
         ],
         [
-         "News, 1 Jul 2026",
-         "The next evolution of the VUE portfolio is here",
-         "news/vue-portfolio.html"
+         "Voices",
+         "In their own words",
+         "Quotations from this year's announcements.",
+         "#voices"
+        ],
+        [
+         "Made in Springfield",
+         "Making it in the U.S. keeps us close to our dealers.",
+         "",
+         "#made-here"
         ]
        ]
       },
@@ -1584,7 +1630,12 @@
        "cta": "Go to building owners",
        "icon": "intrusion"
       }
-     ]
+     ],
+     "variants": {
+      "clean": {
+       "type": "cl-doors"
+      }
+     }
     },
     {
      "type": "portal",
@@ -1654,7 +1705,12 @@
        "sub": "One manufacturer"
       }
      ],
-     "foot": "Made in Springfield, Missouri, with U.S. and global components."
+     "foot": "Made in Springfield, Missouri, with U.S. and global components.",
+     "variants": {
+      "clean": {
+       "type": "cl-proof"
+      }
+     }
     },
     {
      "type": "detail",
@@ -1719,12 +1775,10 @@
      ],
      "variants": {
       "press": {
-       "type": "pn-feature",
+       "type": "pr-feature",
        "kicker": "Feature",
        "cover": "assets/env/env-08-campus-aerial-1280.jpg",
        "cover_caption": "Illustrative scene",
-       "quote": "Rick Britton starts developing a central station product at Atlas Security. DMP begins as an R&D department.",
-       "quote_by": "1975, Springfield, Missouri",
        "more": [
         "Read the company story",
         "about.html#story"
@@ -1776,7 +1830,23 @@
        "contain"
       ]
      ],
-     "id": "news"
+     "id": "news",
+     "variants": {
+      "press": {
+       "type": "pr-lead",
+       "side_label": "Also in the news",
+       "quote": {
+        "value": "We heard our dealers clearly.",
+        "text": "They want more video management functionality and flexibility in how they deploy and quote AlarmVision. VK VMS and the new AlarmVision options are a direct response to that feedback.",
+        "name": "Ken Francis",
+        "role": "Executive Vice President of Video Solutions",
+        "source": "Ken Francis, Executive Vice President of Video Solutions",
+        "href": "news/vk-vms.html",
+        "from": "Read the story: DMP launches VK VMS, enabling 24/7 video management with AlarmVision"
+       },
+       "more": null
+      }
+     }
     },
     {
      "type": "newsfeat",
@@ -1863,7 +1933,12 @@
       "Something else"
      ],
      "submit": "Send to DMP",
-     "note": "Inside Sales, 8 a.m. to 5 p.m. Central."
+     "note": "Inside Sales, 8 a.m. to 5 p.m. Central.",
+     "variants": {
+      "showcase": {
+       "heading": "Write to Inside Sales"
+      }
+     }
     },
     {
      "type": "closer",
@@ -2251,7 +2326,8 @@
          "products/xr550.html"
         ]
        ],
-       "caption": "Illustrative scene. XR550 shown with its enclosure door open."
+       "caption": "Illustrative scene. XR550 shown with its enclosure door open.",
+       "zone": 1
       },
       {
        "place": "Office lobby",
@@ -2293,7 +2369,8 @@
          "products/x1.html"
         ]
        ],
-       "caption": "Illustrative scene. X1 shown with its enclosure open."
+       "caption": "Illustrative scene. X1 shown with its enclosure open.",
+       "zone": 2
       },
       {
        "place": "Parking lot",
@@ -2335,7 +2412,8 @@
          "products/vplus-7081-bdv.html"
         ]
        ],
-       "caption": "Illustrative scene. Not a customer installation."
+       "caption": "Illustrative scene. Not a customer installation.",
+       "zone": 4
       },
       {
        "place": "Server aisle",
@@ -2381,7 +2459,8 @@
          "trust.html"
         ]
        ],
-       "caption": "Illustrative scene. Component view, not rack hardware."
+       "caption": "Illustrative scene. Component view, not rack hardware.",
+       "zone": 1
       },
       {
        "place": "Bank branch",
@@ -2423,7 +2502,8 @@
          "products/xf6.html"
         ]
        ],
-       "caption": "Illustrative scene. Not a customer installation."
+       "caption": "Illustrative scene. Not a customer installation.",
+       "zone": 3
       },
       {
        "place": "Campus",
@@ -2469,7 +2549,8 @@
          "find-a-dealer.html"
         ]
        ],
-       "caption": "Illustrative scene. Devices shown for illustration."
+       "caption": "Illustrative scene. Devices shown for illustration.",
+       "zone": 5
       }
      ]
     },
@@ -2599,7 +2680,1142 @@
        "href": "products/virtual-keypad.html"
       }
      ],
-     "note": "Illustrative scene. Demonstration only, no signal is sent."
+     "note": "Illustrative scene. Demonstration only, no signal is sent.",
+     "more": [
+      [
+       "Every product, point by point",
+       "services.html#building"
+      ],
+      [
+       "The signal path in five steps",
+       "services.html#how"
+      ]
+     ]
+    },
+    {
+     "type": "pn-brief",
+     "id": "brief",
+     "eyebrow": "Briefing",
+     "heading": "News and guides",
+     "cols": [
+      {
+       "k": "News",
+       "title": "What we shipped and earned in 2026",
+       "items": [
+        [
+         "News, 11 Sep 2026",
+         "DMP launches VK VMS, enabling 24/7 video management with AlarmVision",
+         "Our video platform becomes complete, with VK VMS and the XV Plus gateways.",
+         "news/vk-vms.html"
+        ],
+        [
+         "News, 1 Jul 2026",
+         "The next evolution of the VUE portfolio is here",
+         "More cameras join the VUE Plus family.",
+         "news/vue-portfolio.html"
+        ],
+        [
+         "News, 6 May 2026",
+         "JamAlert achieves UL certification",
+         "JamAlert, our cellular jamming detection, earns a UL certification.",
+         "news/jamalert-ul.html"
+        ]
+       ]
+      },
+      {
+       "k": "Guides",
+       "title": "Guides for dealers and specifiers",
+       "items": [
+        [
+         "Blog",
+         "Which commercial intrusion panel fits which building",
+         "How the XT50, XT75, XR150, XR550 and XR650 intrusion panels differ in zones, users, areas and doors.",
+         "blog/which-commercial-intrusion-panel.html"
+        ],
+        [
+         "Blog",
+         "How cellular alarm communication works",
+         "How an LTE alarm signal travels from the panel to the receiver, and how the 263LTE, 265LTE.",
+         "blog/cellular-alarm-communication-options.html"
+        ],
+        [
+         "Blog",
+         "Cloud-based access control: what a dealer needs to know",
+         "How the X1 cloud-based controller, Entré software and mobile credentials fit together.",
+         "blog/cloud-based-access-control-dealer-guide.html"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "type": "cl-matrix",
+     "id": "matrix",
+     "eyebrow": "Product matrix",
+     "heading": "50 products, one table.",
+     "intro": "Every product with a page on this site, with its system, its type and two lines from its specifications. Filter by system or search by name.",
+     "caption": "DMP products with their system, type and key specifications",
+     "rows": [
+      {
+       "name": "XT75 Control Panel",
+       "href": "products/xt75.html",
+       "family": "Panels and Keypads",
+       "sys": "intrusion",
+       "kind": "Control panel",
+       "thumb": "assets/xt75-1200-cut-600.png",
+       "specs": [
+        [
+         "XT75PCB",
+         "Network panel, board only"
+        ],
+        [
+         "Firmware",
+         "Version 255, June 17, 2026"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "XT50 Control Panel",
+       "href": "products/xt50.html",
+       "family": "Panels and Keypads",
+       "sys": "intrusion",
+       "kind": "Control panel",
+       "thumb": "assets/p-xt50-1200-cut-600.png",
+       "specs": [
+        [
+         "Total zones",
+         "58"
+        ],
+        [
+         "Hardwired zones",
+         "42"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "XTLplus Control Panel",
+       "href": "products/xtlplus.html",
+       "family": "Panels and Keypads",
+       "sys": "intrusion",
+       "kind": "Wireless control panel",
+       "thumb": "assets/p-xtlplus-1200-cut-600.png",
+       "specs": [
+        [
+         "Total zones",
+         "99 wireless"
+        ],
+        [
+         "Areas",
+         "6"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "XTLtouch All-In-One",
+       "href": "products/xtltouch.html",
+       "family": "Panels and Keypads",
+       "sys": "intrusion",
+       "kind": "All-in-one control panel",
+       "thumb": "assets/p-xtltouch-1200-cut-600.png",
+       "specs": [
+        [
+         "Total zones",
+         "99 wireless"
+        ],
+        [
+         "Areas",
+         "6"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "XR150 Control Panel",
+       "href": "products/xr150.html",
+       "family": "Panels and Keypads",
+       "sys": "intrusion",
+       "kind": "Control panel",
+       "thumb": "assets/p-xr150-1200-cut-600.png",
+       "specs": [
+        [
+         "Total zones",
+         "142"
+        ],
+        [
+         "Wireless zones",
+         "100"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "XR550 Control Panel",
+       "href": "products/xr550.html",
+       "family": "Panels and Keypads",
+       "sys": "intrusion",
+       "kind": "Control panel",
+       "thumb": "assets/p-xr550-1200-cut-600.png",
+       "specs": [
+        [
+         "Total zones",
+         "574"
+        ],
+        [
+         "Wireless zones",
+         "500"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "XR650 Control Panel",
+       "href": "products/xr650.html",
+       "family": "Panels and Keypads",
+       "sys": "intrusion",
+       "kind": "Control panel",
+       "thumb": "assets/p-xr650-1200-cut-600.png",
+       "specs": [
+        [
+         "User codes",
+         "300,000 with 1,000 groups"
+        ],
+        [
+         "Areas",
+         "Up to 100"
+        ]
+       ],
+       "soon": "Coming soon, not orderable"
+      },
+      {
+       "name": "TMSentry",
+       "href": "products/tmsentry.html",
+       "family": "Panels and Keypads",
+       "sys": "intrusion",
+       "kind": "ATM control panel",
+       "thumb": "assets/p-tmsentry-1200-cut-600.png",
+       "specs": [
+        [
+         "TMSENTRY",
+         "ATM panel"
+        ],
+        [
+         "Supervised zones",
+         "Six"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "7-Inch Touchscreen Keypad (8800 Series)",
+       "href": "products/7-inch-touchscreen-keypad.html",
+       "family": "Panels and Keypads",
+       "sys": "intrusion",
+       "kind": "Touchscreen keypad",
+       "thumb": "assets/keypad-722-1200-cut-600.png",
+       "specs": [
+        [
+         "Screen",
+         "7-inch touchscreen"
+        ],
+        [
+         "Reader",
+         "Built-in proximity reader"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "5-Inch Touchscreen Keypad",
+       "href": "products/graphic-touchscreen.html",
+       "family": "Panels and Keypads",
+       "sys": "intrusion",
+       "kind": "Touchscreen keypad",
+       "thumb": "assets/p-graphic-touchscreen-1200-cut-600.png",
+       "specs": [
+        [
+         "7883",
+         "Multi-technology reader, white"
+        ],
+        [
+         "Panels",
+         "Compatible with all DMP panels"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "Wireless Touchscreen Keypad",
+       "href": "products/9800-series.html",
+       "family": "Panels and Keypads",
+       "sys": "intrusion",
+       "kind": "Wireless touchscreen keypad",
+       "thumb": "assets/p-9800-series-1200-cut-600.png",
+       "specs": [
+        [
+         "9862-B",
+         "With prox reader, black"
+        ],
+        [
+         "9862-W",
+         "With prox reader, white"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "Thinline Series Keypad",
+       "href": "products/7000-series.html",
+       "family": "Panels and Keypads",
+       "sys": "intrusion",
+       "kind": "LCD keypad",
+       "thumb": "assets/p-7000-series-1200-cut-600.png",
+       "specs": [
+        [
+         "7060",
+         "LCD keypad, ivory or white"
+        ],
+        [
+         "7063",
+         "With prox reader, white"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "Aqualite Series Keypad",
+       "href": "products/aqualite-series.html",
+       "family": "Panels and Keypads",
+       "sys": "intrusion",
+       "kind": "LCD keypad",
+       "thumb": "assets/p-aqualite-series-1200-cut-600.png",
+       "specs": [
+        [
+         "7060A-W",
+         "LCD keypad"
+        ],
+        [
+         "7060AN-W",
+         "With numeric-only keyboard"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "Icon Series Keypad",
+       "href": "products/icon-series.html",
+       "family": "Panels and Keypads",
+       "sys": "intrusion",
+       "kind": "Icon keypad",
+       "thumb": "assets/p-icon-series-1200-cut-600.png",
+       "specs": [
+        [
+         "7360-W",
+         "Thinline Icon Series keypad"
+        ],
+        [
+         "Panels",
+         "XT30 and XT50"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "JamAlert",
+       "href": "products/jamalert.html",
+       "family": "Intrusion Systems",
+       "sys": "intrusion",
+       "kind": "Cellular jamming detector",
+       "thumb": "assets/p-jamalert-1200-cut-600.png",
+       "specs": [
+        [
+         "Outputs",
+         "Three sets of NO/C/NC"
+        ],
+        [
+         "Jamming outputs",
+         "Two"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "CellCom Universal Alarm Communicator",
+       "href": "products/cellcom.html",
+       "family": "Communicators and Monitoring",
+       "sys": "intrusion",
+       "kind": "Cellular communicator",
+       "thumb": "assets/p-cellcom-1200-cut-600.png",
+       "specs": [
+        [
+         "Network",
+         "LTE"
+        ],
+        [
+         "Antenna",
+         "External 383P included"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "DualCom Universal Alarm Communicator",
+       "href": "products/dualcom.html",
+       "family": "Communicators and Monitoring",
+       "sys": "intrusion",
+       "kind": "Network and cellular communicator",
+       "thumb": "assets/p-dualcom-1200-cut-600.png",
+       "specs": [
+        [
+         "DUALCOMW-2",
+         "Wi-Fi and LTE, DualSIM"
+        ],
+        [
+         "DUALCOMWZ-LA",
+         "Wi-Fi, Z-Wave and LTE, AT&T"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "XR & XT Series LTE Cellular Communicator",
+       "href": "products/263lte.html",
+       "family": "Communicators and Monitoring",
+       "sys": "intrusion",
+       "kind": "Cellular communicator",
+       "thumb": "assets/p-263lte-1200-cut-600.png",
+       "specs": [
+        [
+         "263LTE-2/381-2",
+         "With 381-2 cable, DualSIM"
+        ],
+        [
+         "263LTE-FN",
+         "FirstNet Ready, AT&T"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "FirstNet Ready LTE Cellular Communicator",
+       "href": "products/263lte-firstnet.html",
+       "family": "Communicators and Monitoring",
+       "sys": "intrusion",
+       "kind": "Cellular communicator",
+       "thumb": "assets/p-263lte-firstnet-1200-cut-600.png",
+       "specs": [
+        [
+         "Panels",
+         "DMP XR Series"
+        ],
+        [
+         "Fire departments",
+         "FDNY and LAFD"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "XTL Series LTE Cellular Communicator",
+       "href": "products/265lte.html",
+       "family": "Communicators and Monitoring",
+       "sys": "intrusion",
+       "kind": "Cellular communicator",
+       "thumb": "assets/p-265lte-1200-cut-600.png",
+       "specs": [
+        [
+         "265LTE-A",
+         "XTLplus, AT&T"
+        ],
+        [
+         "265LTE-A-TOUCH",
+         "XTLtouch, AT&T"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "SCS-VR Virtual Receiver Software",
+       "href": "products/scs-vr-virtual-receiver-software.html",
+       "family": "Communicators and Monitoring",
+       "sys": "intrusion",
+       "kind": "Monitoring center software",
+       "thumb": "assets/p-scs-vr-virtual-receiver-software-1200-cut-600.png",
+       "specs": [
+        [
+         "Communications",
+         "Network IP and cellular"
+        ],
+        [
+         "Runs on",
+         "A server"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "SCS-1R Network Enabled Receiver",
+       "href": "products/scs-1r.html",
+       "family": "Communicators and Monitoring",
+       "sys": "intrusion",
+       "kind": "Central station receiver",
+       "thumb": "assets/p-scs-1r-1200-cut-600.png",
+       "specs": [
+        [
+         "Dialer lines",
+         "Four digital"
+        ],
+        [
+         "Network line",
+         "One"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "1100XH Wireless Receiver",
+       "href": "products/1100xh.html",
+       "family": "Wireless",
+       "sys": "intrusion",
+       "kind": "Wireless receiver",
+       "thumb": "assets/p-1100xh-1200-cut-600.png",
+       "specs": [
+        [
+         "1100XH-W",
+         "Wireless high power receiver"
+        ],
+        [
+         "Repeaters on XR",
+         "Up to 16 with firmware 210/310"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "1101 Universal Transmitter",
+       "href": "products/1101.html",
+       "family": "Wireless",
+       "sys": "intrusion",
+       "kind": "Wireless transmitter",
+       "thumb": "assets/p-1101-1200-cut-600.png",
+       "specs": [
+        [
+         "Internal contacts",
+         "Two magnetic reed switches"
+        ],
+        [
+         "Zones",
+         "Two independent zones"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "1128 Glassbreak Detector",
+       "href": "products/1128.html",
+       "family": "Wireless",
+       "sys": "intrusion",
+       "kind": "Wireless glassbreak detector",
+       "thumb": "assets/p-1128-1200-cut-600.png",
+       "specs": [
+        [
+         "Coverage",
+         "Up to 20 feet"
+        ],
+        [
+         "1128",
+         "Wireless glassbreak detector"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "1142 Two-Button Wireless Panic",
+       "href": "products/1142.html",
+       "family": "Wireless",
+       "sys": "intrusion",
+       "kind": "Wireless panic",
+       "thumb": "assets/p-1142-1200-cut-600.png",
+       "specs": [
+        [
+         "1142BC-B and 1142BC-W",
+         "With belt clip, black or white"
+        ],
+        [
+         "1142HD",
+         "Heavy duty"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "1164 Smoke Detector with Synchronized Sounder",
+       "href": "products/1164.html",
+       "family": "Wireless",
+       "sys": "intrusion",
+       "kind": "Wireless smoke detector",
+       "thumb": "assets/p-1164-1200-cut-600.png",
+       "specs": [
+        [
+         "Units per system",
+         "Up to 572"
+        ],
+        [
+         "1164-W",
+         "Wireless smoke detector"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "1100T Wireless Translator",
+       "href": "products/1100t.html",
+       "family": "Wireless",
+       "sys": "intrusion",
+       "kind": "Wireless translator",
+       "thumb": "assets/p-1100t-1200-cut-600.png",
+       "specs": [
+        [
+         "Zones",
+         "Up to 128"
+        ],
+        [
+         "1100T",
+         "Wireless translator"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "Digital Key Credential",
+       "href": "products/digital-key-credential.html",
+       "family": "Access Control",
+       "sys": "access",
+       "kind": "Mobile credential",
+       "thumb": "assets/p-digital-key-credential-1200-cut-600.png",
+       "specs": [],
+       "soon": ""
+      },
+      {
+       "name": "Mobile Bluetooth Credential",
+       "href": "products/mobile-credential.html",
+       "family": "Access Control",
+       "sys": "access",
+       "kind": "Mobile credential",
+       "thumb": "assets/p-mobile-credential-1200-cut-600.png",
+       "specs": [
+        [
+         "Phones",
+         "BLE-enabled smartphones"
+        ],
+        [
+         "Managed in",
+         "Dealer Admin"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "SR3 Bluetooth Reader",
+       "href": "products/dmp-bluetooth-reader-and-mobile-credential.html",
+       "family": "Access Control",
+       "sys": "access",
+       "kind": "Access control reader",
+       "thumb": "assets/p-dmp-bluetooth-reader-and-mobile-credential-1200-cut-600.png",
+       "specs": [
+        [
+         "Ingress rating",
+         "IP67"
+        ],
+        [
+         "Wireless",
+         "Bluetooth Low Energy"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "734N Network Access Control Module",
+       "href": "products/734n.html",
+       "family": "Access Control",
+       "sys": "access",
+       "kind": "Access control module",
+       "thumb": "assets/p-734n-1200-cut-600.png",
+       "specs": [
+        [
+         "Zones",
+         "Four programmable zones"
+        ],
+        [
+         "Door strike relay",
+         "10 Amp Form C (SPDT)"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "X1 Single-Door Access Controller",
+       "href": "products/x1.html",
+       "family": "Access Control",
+       "sys": "access",
+       "kind": "Access controller",
+       "thumb": "assets/p-x1-1200-cut-600.png",
+       "specs": [
+        [
+         "Communication",
+         "Onboard network or Wi-Fi"
+        ],
+        [
+         "Reader inputs",
+         "Two (in and out)"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "Entré Lite",
+       "href": "products/entre-lite.html",
+       "family": "Access Control",
+       "sys": "access",
+       "kind": "Access control software",
+       "thumb": "assets/p-entre-lite-1200-cut-600.png",
+       "specs": [],
+       "soon": ""
+      },
+      {
+       "name": "Entré Enterprise",
+       "href": "products/entre-enterprise.html",
+       "family": "Access Control",
+       "sys": "access",
+       "kind": "Access control software",
+       "thumb": "assets/p-entre-enterprise-1200-cut-600.png",
+       "specs": [
+        [
+         "Doors included",
+         "96"
+        ],
+        [
+         "Maximum doors",
+         "400 with additional licenses"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "XF6 Series Fire Control Panels",
+       "href": "products/xf6.html",
+       "family": "Fire Systems",
+       "sys": "fire",
+       "kind": "Fire control panel",
+       "thumb": "assets/p-xf6-1200-cut-600.png",
+       "specs": [
+        [
+         "XF6-100K and XF6-500K",
+         "With a 630F on the door"
+        ],
+        [
+         "Wireless range",
+         "Up to 1.7 miles"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "XR150FC Control Panel",
+       "href": "products/xr150fc-2.html",
+       "family": "Fire Systems",
+       "sys": "fire",
+       "kind": "Fire control panel",
+       "thumb": "assets/p-xr150fc-2-1200-cut-600.png",
+       "specs": [
+        [
+         "Doors of access",
+         "Up to 8"
+        ],
+        [
+         "Listings",
+         "CSFM and FCC Part 15"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "XR550FC Control Panel",
+       "href": "products/xr550fc-2.html",
+       "family": "Fire Systems",
+       "sys": "fire",
+       "kind": "Fire control panel",
+       "thumb": "assets/p-xr550fc-2-1200-cut-600.png",
+       "specs": [
+        [
+         "Doors of access",
+         "32, upgradable to 96"
+        ],
+        [
+         "Listings",
+         "CSFM and FCC Part 15"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "850 Pull Station",
+       "href": "products/850.html",
+       "family": "Fire Systems",
+       "sys": "fire",
+       "kind": "Fire pull station",
+       "thumb": "assets/p-850-1200-cut-600.png",
+       "specs": [
+        [
+         "850D/711 and 850D/711S",
+         "Dual action with zone expander"
+        ],
+        [
+         "Contacts",
+         "SPST, gold plated"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "630F Remote Annunciator",
+       "href": "products/630f.html",
+       "family": "Fire Systems",
+       "sys": "fire",
+       "kind": "Fire remote annunciator",
+       "thumb": "assets/p-630f-1200-cut-600.png",
+       "specs": [
+        [
+         "Keys",
+         "20"
+        ],
+        [
+         "Display",
+         "32-character LCD"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "2W-BLX System Sensor Smoke Detector",
+       "href": "products/2w-blx.html",
+       "family": "Fire Systems",
+       "sys": "fire",
+       "kind": "Addressable smoke detector",
+       "thumb": "assets/p-2w-blx-1200-cut-600.png",
+       "specs": [
+        [
+         "Connection",
+         "LX-Bus of XR Series panels"
+        ],
+        [
+         "Listing",
+         "ANSI/UL 268"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "XV Gateways with AlarmVision",
+       "href": "products/xv-gateways-with-alarmvision.html",
+       "family": "Video",
+       "sys": "video",
+       "kind": "Video analytics gateway",
+       "thumb": "assets/p-xv-gateways-with-alarmvision-1200-cut-600.png",
+       "specs": [
+        [
+         "Processing",
+         "24 to 96 MP"
+        ],
+        [
+         "Storage",
+         "1 TB to 4 TB internal"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "V-6022WC Cube Camera",
+       "href": "products/v-6022wc.html",
+       "family": "Video",
+       "sys": "video",
+       "kind": "Cube camera",
+       "thumb": "assets/p-v-6022wc-1200-cut-600.png",
+       "specs": [
+        [
+         "Resolution",
+         "2MP"
+        ],
+        [
+         "Analytics",
+         "Motion events"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "VUE Plus 6MP Fisheye Camera (VPLUS-7061-FE)",
+       "href": "products/vplus-7061-fe.html",
+       "family": "Video",
+       "sys": "video",
+       "kind": "Fisheye camera",
+       "thumb": "assets/p-vplus-7061-fe-1200-cut-600.png",
+       "specs": [
+        [
+         "Resolution",
+         "6MP"
+        ],
+        [
+         "Field of view",
+         "360 degrees"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "VUE Plus 12MP Fisheye Camera (VPLUS-7121-FE)",
+       "href": "products/vplus-7121-fe.html",
+       "family": "Video",
+       "sys": "video",
+       "kind": "Fisheye camera",
+       "thumb": "assets/p-vplus-7121-fe-1200-cut-600.png",
+       "specs": [
+        [
+         "Resolution",
+         "12MP"
+        ],
+        [
+         "Field of view",
+         "360 degrees"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "VUE Plus 8MP Varifocal Bullet Camera (VPLUS-7081-BDV)",
+       "href": "products/vplus-7081-bdv.html",
+       "family": "Video",
+       "sys": "video",
+       "kind": "Bullet camera",
+       "thumb": "assets/p-vplus-7081-bdv-1200-cut-600.png",
+       "specs": [
+        [
+         "Resolution",
+         "8MP"
+        ],
+        [
+         "Focal length",
+         "3.6 to 11 mm"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "VUE Video Doorbell",
+       "href": "products/vue-video-doorbell.html",
+       "family": "Video",
+       "sys": "video",
+       "kind": "Video doorbell",
+       "thumb": "assets/p-vue-video-doorbell-1200-cut-600.png",
+       "specs": [
+        [
+         "Resolution",
+         "5MP / 3K (1620 by 2880), 9:16"
+        ],
+        [
+         "Power",
+         "PoE or 8 to 24 VAC adapter"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "Virtual Keypad",
+       "href": "products/virtual-keypad.html",
+       "family": "Virtual Keypad and Software",
+       "sys": "mobile",
+       "kind": "Customer app",
+       "thumb": "assets/p-virtual-keypad-1200-cut-600.png",
+       "specs": [
+        [
+         "Platforms",
+         "Android, iPhone and web"
+        ],
+        [
+         "Area arming",
+         "Up to six areas"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "Dealer Admin",
+       "href": "products/dealer-admin.html",
+       "family": "Virtual Keypad and Software",
+       "sys": "mobile",
+       "kind": "Dealer portal",
+       "thumb": "assets/p-dealer-admin-1200-cut-600.png",
+       "specs": [
+        [
+         "Account management",
+         "Customer dashboard"
+        ],
+        [
+         "Access",
+         "Single Sign-On option"
+        ]
+       ],
+       "soon": ""
+      },
+      {
+       "name": "Remote Link",
+       "href": "products/remote-link.html",
+       "family": "Virtual Keypad and Software",
+       "sys": "mobile",
+       "kind": "Panel management software",
+       "thumb": "assets/p-remote-link-1200-cut-600.png",
+       "specs": [
+        [
+         "Latest version",
+         "2.62, June 19, 2026"
+        ],
+        [
+         "Cost of update",
+         "Free of charge"
+        ]
+       ],
+       "soon": ""
+      }
+     ],
+     "first": 12,
+     "more": "Show all 50 products",
+     "placeholder": "XR550, keypad, camera",
+     "foot": "Specifications as listed on each product page. The XR650 is coming soon and cannot be ordered yet."
+    },
+    {
+     "type": "cl-finder",
+     "id": "find-panel",
+     "eyebrow": "Find your panel",
+     "heading": "Control panels, drawn to scale by zone count.",
+     "intro": "Set the number of zones the building needs and the panels that list at least that many stay lit. Doors of access and user codes sit beside each one.",
+     "panels": [
+      {
+       "name": "XT50",
+       "kind": "Control panel",
+       "href": "products/xt50.html",
+       "zones": 58,
+       "zones_label": "58",
+       "doors": "8",
+       "doors_n": 8,
+       "users": "99",
+       "soon": ""
+      },
+      {
+       "name": "XTLplus",
+       "kind": "Wireless control panel",
+       "href": "products/xtlplus.html",
+       "zones": 99,
+       "zones_label": "99 wireless",
+       "doors": "Not listed",
+       "doors_n": 0,
+       "users": "99",
+       "soon": ""
+      },
+      {
+       "name": "XTLtouch",
+       "kind": "All-in-one control panel",
+       "href": "products/xtltouch.html",
+       "zones": 99,
+       "zones_label": "99 wireless",
+       "doors": "Not listed",
+       "doors_n": 0,
+       "users": "99",
+       "soon": ""
+      },
+      {
+       "name": "XR150",
+       "kind": "Control panel",
+       "href": "products/xr150.html",
+       "zones": 142,
+       "zones_label": "142",
+       "doors": "8",
+       "doors_n": 8,
+       "users": "10,000",
+       "soon": ""
+      },
+      {
+       "name": "XR550",
+       "kind": "Control panel",
+       "href": "products/xr550.html",
+       "zones": 574,
+       "zones_label": "574",
+       "doors": "32 / 96 max",
+       "doors_n": 96,
+       "users": "10,000",
+       "soon": ""
+      },
+      {
+       "name": "XR650",
+       "kind": "Control panel",
+       "href": "products/xr650.html",
+       "zones": 574,
+       "zones_label": "Up to 574",
+       "doors": "96",
+       "doors_n": 96,
+       "users": "300,000 with 1,000 groups",
+       "soon": "Coming soon, not orderable"
+      }
+     ],
+     "max": 600,
+     "slider_max": 574,
+     "ticks": [
+      0,
+      100,
+      200,
+      300,
+      400,
+      500,
+      600
+     ],
+     "all": "6 control panels, from 58 to 574 zones. Move the slider to narrow them.",
+     "foot": "Zone counts, doors and user codes as listed on each product page. A starting point: a DMP dealer confirms the design."
+    },
+    {
+     "type": "pr-quotes",
+     "id": "voices",
+     "eyebrow": "Voices",
+     "heading": "In their own words",
+     "quotes": [
+      {
+       "value": "By bringing AlarmVision directly to the edge, your cameras will know when your panel is armed without additional hardware or complex integrations.",
+       "text": "The security industry is being asked to verify alarms faster, respond smarter and reduce false dispatches. VUE Plus cameras do exactly that by combining onboard intelligence with direct panel integration.",
+       "name": "Rick Britton",
+       "role": "CEO",
+       "source": "Rick Britton, CEO",
+       "href": "news/vue-portfolio.html",
+       "from": "Read the story: The next evolution of the VUE portfolio is here"
+      },
+      {
+       "value": "The XR650 was built for organizations operating at the highest level, where scale, security and growth cannot be compromised.",
+       "text": "Enterprise security and cybersecurity expectations are evolving, and the intrusion detection system infrastructure must rise to the occasion.",
+       "name": "Mark Hillenburg",
+       "role": "Vice President of Industry Relations",
+       "source": "Mark Hillenburg, Vice President of Industry Relations",
+       "href": "news/xr650-esx-award.html",
+       "from": "Read the story: XR650 wins Intrusion Innovation Award and Best of Show at 2026 ESX"
+      },
+      {
+       "value": "Our enterprise customers asked us for the highest grade of security for their businesses.",
+       "text": "VAULT gives them the ability to use powerful cloud applications while keeping their systems isolated from the public internet.",
+       "name": "Brad Tucker",
+       "role": "Vice President of Product Management and Support",
+       "source": "Brad Tucker, Vice President of Product Management and Support",
+       "href": "news/vault.html",
+       "from": "Read the story: DMP introduces VAULT: secure, encrypted connectivity for cloud-based security applications"
+      }
+     ]
     }
    ],
    "compose": {
@@ -2611,30 +3827,22 @@
      "z3",
      "z4",
      "z5",
-     "building",
-     "how",
-     "flagships",
-     "z6",
-     "scenes",
      "night",
-     "who",
-     "portal",
+     "scenes",
+     "z6",
      "proof",
-     "made-here",
      "story",
-     "news",
-     "guides",
+     "who",
+     "brief",
      "faq",
-     "contact",
-     "ready"
+     "contact"
     ],
     "clean": [
      "hero-layered",
      "assoc",
-     "facts",
+     "matrix",
+     "find-panel",
      "systems",
-     "building",
-     "flagships",
      "how",
      "who",
      "portal",
@@ -2649,18 +3857,16 @@
     ],
     "press": [
      "hero-layered",
+     "news",
      "assoc",
-     "facts",
      "systems",
      "building",
-     "flagships",
      "how",
+     "story",
      "who",
      "portal",
-     "proof",
      "made-here",
-     "story",
-     "news",
+     "voices",
      "guides",
      "faq",
      "contact",
@@ -2782,6 +3988,317 @@
      "ring": "SECURITY, FIRE, ACCESS AND VIDEO",
      "panel_eyebrow": "Hover a segment",
      "link_label": "See the product line"
+    },
+    {
+     "type": "pn-none",
+     "id": "building",
+     "variants": {
+      "showcase": {
+       "type": "dwbuilding",
+       "id": "building",
+       "dark": true,
+       "eyebrow": "Protect the whole building",
+       "heading": "Walk the building. See what protects each spot.",
+       "intro": "Pick a spot on the building, or take the guided tour. Every stop lists the DMP products that belong there.",
+       "spots": [
+        {
+         "id": "roof",
+         "label": "Roof",
+         "title": "The communicator on the roof",
+         "lede": "Alarms travel over LTE cellular straight to the DMP monitoring center receiver, with no network operations center in between.",
+         "products": [
+          {
+           "name": "263LTE",
+           "kicker": "Cellular communicator",
+           "image": "assets/p-263lte-1200-cut.png",
+           "href": "products/263lte.html",
+           "fact": "AT&T and Verizon cellular communicator for XT and XR Series panels.",
+           "soon": false
+          },
+          {
+           "name": "265LTE",
+           "kicker": "Cellular communicator",
+           "image": "assets/p-265lte-1200-cut.png",
+           "href": "products/265lte.html",
+           "fact": "Adds LTE to an XTL panel. The panel powers it, so no extra enclosure.",
+           "soon": false
+          },
+          {
+           "name": "SCS-VR",
+           "kicker": "Monitoring center software",
+           "image": "assets/p-scs-vr-virtual-receiver-software-1200-cut.png",
+           "href": "products/scs-vr-virtual-receiver-software.html",
+           "fact": "A UL Classified virtual receiver that runs on a server, for network IP and cellular signals.",
+           "soon": false
+          }
+         ]
+        },
+        {
+         "id": "windows",
+         "label": "Windows",
+         "title": "Windows and openings",
+         "lede": "The 1100 Series wireless line: transmitters, detectors, receivers and translators.",
+         "products": [
+          {
+           "name": "1128 Glassbreak Detector",
+           "kicker": "Wireless glassbreak detector",
+           "image": "assets/p-1128-1200-cut.png",
+           "href": "products/1128.html",
+           "fact": "Detects glassbreak up to 20 feet from framed glass in an outside wall.",
+           "soon": false
+          },
+          {
+           "name": "1101 Universal Transmitter",
+           "kicker": "Wireless transmitter",
+           "image": "assets/p-1101-1200-cut.png",
+           "href": "products/1101.html",
+           "fact": "Two independent reporting zones from one transmitter.",
+           "soon": false
+          }
+         ],
+         "more": {
+          "label": "See the wireless line",
+          "href": "services/wireless.html"
+         }
+        },
+        {
+         "id": "door",
+         "label": "Main door",
+         "title": "The main door",
+         "lede": "Access control from a single door to hundreds.",
+         "products": [
+          {
+           "name": "X1",
+           "kicker": "Access controller",
+           "image": "assets/p-x1-1200-cut.png",
+           "href": "products/x1.html",
+           "fact": "A single-door access controller with an onboard network or Wi-Fi communicator.",
+           "soon": false
+          },
+          {
+           "name": "Entré Enterprise",
+           "kicker": "Access control software",
+           "image": "assets/p-entre-enterprise-1200-cut.png",
+           "href": "products/entre-enterprise.html",
+           "fact": "96 doors of access control, expandable to 400 doors and 500 panels.",
+           "soon": false
+          }
+         ]
+        },
+        {
+         "id": "gate",
+         "label": "Parking gate and lot",
+         "title": "The parking gate and lot",
+         "lede": "Credentials at the gate, cameras over the lot.",
+         "products": [
+          {
+           "name": "SR3 Bluetooth Reader",
+           "kicker": "Access control reader",
+           "image": "assets/p-dmp-bluetooth-reader-and-mobile-credential-1200-cut.png",
+           "href": "products/dmp-bluetooth-reader-and-mobile-credential.html",
+           "fact": "One reader for phones and 125 kHz prox cards, rated IP67 for harsh environments.",
+           "soon": false
+          },
+          {
+           "name": "VUE Plus 6MP Fisheye",
+           "kicker": "Fisheye camera",
+           "image": "assets/p-vplus-7061-fe-1200-cut.png",
+           "href": "products/vplus-7061-fe.html",
+           "fact": "A 360 degree view with AlarmVision onboard, indoor or outdoor.",
+           "soon": false
+          },
+          {
+           "name": "XV Gateways with AlarmVision",
+           "kicker": "Video analytics gateway",
+           "image": "assets/p-xv-gateways-with-alarmvision-1200-cut.png",
+           "href": "products/xv-gateways-with-alarmvision.html",
+           "fact": "Loitering, person, vehicle and animal detection from your customers' cameras.",
+           "soon": false
+          }
+         ]
+        },
+        {
+         "id": "panel",
+         "label": "Panel room",
+         "title": "The panel closet",
+         "lede": "The control panel, sized from small business to very large sites.",
+         "products": [
+          {
+           "name": "XR550",
+           "kicker": "Control panel",
+           "image": "assets/p-xr550-1200-cut.png",
+           "href": "products/xr550.html",
+           "fact": "96 doors of access control, 574 zones and 10,000 user codes.",
+           "soon": false
+          },
+          {
+           "name": "XT75",
+           "kicker": "Control panel",
+           "image": "assets/xt75-1200-cut.png",
+           "href": "products/xt75.html",
+           "fact": "Intrusion, access control and AlarmVision on a single network panel.",
+           "soon": false
+          }
+         ]
+        },
+        {
+         "id": "stair",
+         "label": "Stairwell",
+         "title": "The stairwell",
+         "lede": "Addressable fire detection tells owners and responders the exact location of an alarm.",
+         "products": [
+          {
+           "name": "XF6",
+           "kicker": "Fire control panel",
+           "image": "assets/p-xf6-1200-cut.png",
+           "href": "products/xf6.html",
+           "fact": "An addressable 24V fire panel with network or optional cellular reporting.",
+           "soon": false
+          },
+          {
+           "name": "2W-BLX Smoke Detector",
+           "kicker": "Addressable smoke detector",
+           "image": "assets/p-2w-blx-1200-cut.png",
+           "href": "products/2w-blx.html",
+           "fact": "An addressable photoelectric detector, listed to ANSI/UL 268.",
+           "soon": false
+          }
+         ]
+        },
+        {
+         "id": "teller",
+         "label": "Teller and vault",
+         "title": "The teller line and vault",
+         "lede": "Bank-grade protection for financial customers.",
+         "products": [
+          {
+           "name": "XR550",
+           "kicker": "Control panel",
+           "image": "assets/p-xr550-1200-cut.png",
+           "href": "products/xr550.html",
+           "fact": "UL bank, safe and vault listing, with Card Plus Pin and Dual Authority.",
+           "soon": false
+          },
+          {
+           "name": "TMSentry",
+           "kicker": "ATM control panel",
+           "image": "assets/p-tmsentry-1200-cut.png",
+           "href": "products/tmsentry.html",
+           "fact": "Built-in encryption and six supervised zones in a slim ATM and ITM panel.",
+           "soon": false
+          }
+         ]
+        },
+        {
+         "id": "phone",
+         "label": "Owner's phone",
+         "title": "The owner's phone",
+         "lede": "Owners and dealers stay in control from anywhere.",
+         "products": [
+          {
+           "name": "Virtual Keypad",
+           "kicker": "Customer app",
+           "image": "assets/p-virtual-keypad-1200-cut.png",
+           "href": "products/virtual-keypad.html",
+           "fact": "Check status, arm and disarm, and control locks and cameras from a phone, tablet or computer.",
+           "soon": false
+          },
+          {
+           "name": "Digital Key",
+           "kicker": "Mobile credential",
+           "image": "assets/p-digital-key-credential-1200-cut.png",
+           "href": "products/digital-key-credential.html",
+           "fact": "A secure credential in the phone's mobile wallet that works over NFC, even on a dead phone.",
+           "soon": false
+          }
+         ]
+        }
+       ],
+       "note": "A starting point. A dealer confirms the design."
+      }
+     }
+    },
+    {
+     "type": "pn-none",
+     "id": "how",
+     "variants": {
+      "showcase": {
+       "type": "journey",
+       "id": "how",
+       "alt": true,
+       "eyebrow": "How a DMP system works",
+       "heading": "Follow one alarm from the sensor to the phone",
+       "intro": "Five steps, one manufacturer. Scroll to follow the signal, or select a step to see what happens and which DMP products do the work.",
+       "detail_eyebrow": "What happens",
+       "receive_label": "DMP products at this step",
+       "steps": [
+        {
+         "label": "Detect",
+         "when": "Sensors and cameras",
+         "summary": "Doors, windows, motion, smoke, glass and video.",
+         "title": "Detectors and cameras see the event",
+         "body": "Door and window contacts, motion and glassbreak detectors, smoke, heat and CO detectors and cameras all report to the panel, wired or over our 1100 Series wireless, which has been AES encrypted since 2019. AlarmVision analytics let cameras act like smart motion detectors.",
+         "receive": [
+          "1100 Series wireless devices",
+          "Motion, glassbreak and contact detectors",
+          "Smoke, heat and CO detectors",
+          "VUE Plus cameras and XV gateways"
+         ]
+        },
+        {
+         "label": "Decide",
+         "when": "Control panel",
+         "summary": "XT, XTL and XR Series; XF6 for fire.",
+         "title": "The panel decides what the event means",
+         "body": "Cancel/Verify false alarm prevention has been a DMP feature since 2007. The XT75 runs intrusion, access control and AlarmVision together, and the XR550 supports 96 doors of access control.",
+         "receive": [
+          "XT30, XT50 and XT75",
+          "XR150 and XR550 (XR650 coming soon)",
+          "XF6 fire control panel",
+          "TMSentry for teller machines"
+         ]
+        },
+        {
+         "label": "Report",
+         "when": "Communicators",
+         "summary": "Cellular, network and Wi-Fi paths.",
+         "title": "The signal goes out on more than one path",
+         "body": "We offer LTE, Wi-Fi and universal communicators, including the first alarm panel communicator for the AT&T FirstNet network (2020). The XR550 supports up to eight communication paths and moves to a backup path instantly. JamAlert detects cellular jamming, and VAULT encrypts the link to our cloud.",
+         "receive": [
+          "263LTE and 265LTE",
+          "DualCom and CellCom",
+          "763 Wi-Fi",
+          "JamAlert and VAULT"
+         ]
+        },
+        {
+         "label": "Respond",
+         "when": "Monitoring center",
+         "summary": "Receivers, software and line cards.",
+         "title": "The monitoring center receives it",
+         "body": "At the central station a DMP receiver takes the signal. We introduced SCS-VR in 2009 as the first software-only central station receiver, and still offer SCS receivers and line cards.",
+         "receive": [
+          "SCS-VR virtual receiver software",
+          "SCS-1R receiver",
+          "SCS line cards"
+         ]
+        },
+        {
+         "label": "Control",
+         "when": "Dealer and owner",
+         "summary": "Apps, credentials and cloud tools.",
+         "title": "Owners and dealers stay in control",
+         "body": "Owners use Virtual Keypad on iOS, Android or the browser, and mobile wallet credentials such as Digital Key. Dealers program panels in bulk with Dealer Admin. Both cloud services are examined annually for SOC 2 Type II.",
+         "receive": [
+          "Virtual Keypad",
+          "Digital Key",
+          "Dealer Admin",
+          "Entré access control software"
+         ]
+        }
+       ]
+      }
+     }
     },
     {
      "type": "resources",

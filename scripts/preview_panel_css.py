@@ -582,6 +582,90 @@ html:not(.pn-js) .pn-kp-demo{display:none}
   .pn-sweep{display:none}
   .pn-snd{display:none!important}
 }
+
+/* ================= round 3b: tighter home, chapter rail, briefing, native modules ================= */
+/* rhythm: every panel section on the home page breathes the same amount */
+.pn-zone{padding:clamp(56px,6vw,96px) var(--pn-pad)}
+.pn-zhead{margin-bottom:clamp(28px,3.4vw,52px)}
+
+/* ---- chapter rail: the right-hand twin of the heartbeat (wide screens only) ---- */
+.pn-ch{display:none}
+@media(min-width:1320px){
+  .pn-ch{display:block;position:fixed;right:0;top:0;bottom:0;width:30px;z-index:61;pointer-events:none;border-left:1px solid var(--pn-line);background:var(--pn-bk)}
+  .pn-ch ol{position:absolute;right:0;top:50%;transform:translateY(-50%);margin:0;padding:0;list-style:none;pointer-events:auto}
+  .pn-ch li{margin:0;padding:0}
+  .pn-ch a{position:relative;display:flex;align-items:center;justify-content:center;width:30px;height:34px;text-decoration:none}
+  .pn-ch a::before{content:"";position:absolute;left:50%;top:-1px;width:1px;height:calc(50% - 7px);background:var(--pn-line2)}
+  .pn-ch a::after{content:"";position:absolute;left:50%;bottom:0;width:1px;height:calc(50% - 7px);background:var(--pn-line2)}
+  .pn-ch li:first-child a::before,.pn-ch li:last-child a::after{content:none}
+  .pn-ch a .pn-led{width:8px;height:8px;border-radius:1px}
+  .pn-ch a:hover .pn-led{background:#8a8c90}
+  .pn-ch a.is-on .pn-led{background:var(--pn-y);box-shadow:0 0 0 3px color-mix(in srgb,var(--pn-y) 22%,transparent),0 0 12px var(--pn-y)}
+  .pn-ch a span{position:absolute;right:34px;top:50%;transform:translate(8px,-50%);white-space:nowrap;padding:8px 11px;background:#16171a;border:1px solid var(--pn-line2);font:600 13px/1 var(--pn-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--pn-txt);opacity:0;visibility:hidden;transition:opacity .2s,transform .2s var(--pn-ease),visibility .2s}
+  .pn-ch a span b{color:var(--pn-y);font-weight:700;margin-right:4px}
+  .pn-ch a:hover span,.pn-ch a:focus span,.pn-ch a:focus-visible span{opacity:1;visibility:visible;transform:translate(0,-50%)}
+  .pn-ch a:focus-visible{outline:2px solid var(--pn-y);outline-offset:-3px}
+  .pn-ch-tag{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);writing-mode:vertical-rl;font:600 13px/1 var(--pn-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--pn-mut);white-space:nowrap}
+  .pn-ch-tag b{color:var(--pn-y);font-weight:700}.pn-ch-tag em{font-style:normal}
+}
+@media(min-width:1320px) and (max-height:620px){.pn-ch-tag{display:none}}
+
+/* ---- briefing: news and guides as one readout ---- */
+.pn-brief{position:relative;padding:clamp(56px,6vw,96px) var(--pn-pad);border-top:1px solid var(--pn-line);background:var(--pn-ink);color:var(--pn-txt);font-family:var(--q-sans)}
+.pn-brief :where(p,h2,h3,h4,ol){margin:0;padding:0}.pn-brief ol{list-style:none}
+.pn-bin{max-width:1560px;margin:0 auto}
+.pn-bhead{margin-bottom:clamp(24px,3vw,40px)}
+.pn-beb{display:flex;align-items:center;gap:12px;font:600 13px/1 var(--pn-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--pn-y)}
+.pn-beb::before{content:"";width:28px;height:1px;background:var(--pn-y)}
+.pn-brief .pn-h2{font-family:var(--pn-disp);font-weight:800;font-size:clamp(40px,4.5vw,72px);line-height:.94;text-transform:uppercase;color:var(--pn-txt)}
+.pn-bgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(28px,4vw,72px)}
+.pn-bcol{border-top:2px solid var(--pn-txt);padding-top:16px}
+.pn-bk{display:flex;align-items:center;gap:10px;font:600 13px/1 var(--pn-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--pn-mut)}
+.pn-bk .pn-led{background:var(--pn-y);box-shadow:0 0 10px var(--pn-y)}
+.pn-bcol h3{margin-top:12px;font-family:var(--pn-disp);font-weight:700;font-size:clamp(24px,2.2vw,32px);line-height:1.05;text-transform:uppercase;color:var(--pn-txt)}
+.pn-bcol ol{margin-top:18px}
+.pn-bcol li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:0 8px;padding:18px 0;border-top:1px solid var(--pn-line2)}
+.pn-bn{font:700 13px/1.5 var(--pn-mono);letter-spacing:.08em;color:var(--pn-y)}
+.pn-bt{font:600 13px/1.5 var(--pn-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--pn-mut)}
+.pn-bcol h4{margin-top:6px;font-family:var(--q-sans);font-size:19px;line-height:1.3;font-weight:700;letter-spacing:0;text-transform:none}
+.pn-bcol h4 a{display:inline-block;padding:4px 0;color:var(--pn-txt);text-decoration:none;background:linear-gradient(var(--pn-y),var(--pn-y)) 0 100%/0 2px no-repeat;transition:background-size .35s var(--pn-ease),color .2s}
+.pn-bcol h4 a:hover{color:var(--pn-y);background-size:100% 2px}
+.pn-bcol h4 a:focus-visible{outline:2px solid var(--pn-y);outline-offset:3px}
+.pn-bcol li p:last-child{margin-top:6px;font-size:15px;line-height:1.5;color:var(--pn-mut);max-width:44em}
+@media(max-width:899px){.pn-bgrid{grid-template-columns:minmax(0,1fr)}.pn-bcol h4 a{padding:10px 0}}
+@media(prefers-reduced-motion:reduce){.pn-ch *,.pn-brief *{transition-duration:.01ms!important}}
+
+/* ---- home page: one head row for every section after the zones, one vertical rhythm ---- */
+.pn-sh{display:flex;align-items:center;gap:16px;max-width:1560px;margin:0 auto clamp(28px,3.4vw,52px);padding:0 var(--pn-pad);font:600 13px/1 var(--pn-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--pn-mut)}
+.pn-sh-t{display:inline-flex;align-items:center;gap:9px;padding:7px 10px;border:1px solid var(--pn-y);color:var(--pn-y);white-space:nowrap}
+.pn-sh-t .pn-led{background:var(--pn-y);box-shadow:0 0 10px var(--pn-y)}
+.pn-sh-r{flex:1;height:7px;min-width:20px;background:repeating-linear-gradient(90deg,var(--pn-line2) 0 1px,transparent 1px 6px)}
+.pn-sh-m{white-space:nowrap}
+.pn-brief .pn-sh{padding:0}
+@media(max-width:767px){.pn-sh-m{display:none}}
+html.pn-home[data-dir="showcase"] main > .q-section:not(.pp-closer){padding-top:clamp(56px,6vw,96px);padding-bottom:clamp(56px,6vw,96px)}
+html.pn-home[data-dir="showcase"] main > .q-section.lf-dark::before{content:none}
+/* chapter links land like zone links: flush under the header and zone bar */
+html.pn-home[data-dir="showcase"] :is(main > .q-section,.pn-brief,.pn-scenes){scroll-margin-top:-62px}
+html.pn-home[data-dir="showcase"] .pn-hero{scroll-margin-top:600px}
+@media(max-width:767px){html.pn-home[data-dir="showcase"] :is(main > .q-section,.pn-brief,.pn-scenes){scroll-margin-top:-36px}}
+/* native details on the modules that came from the rounded era */
+html.pn-home[data-dir="showcase"] .pp-num{font-family:var(--pn-disp);font-weight:800;letter-spacing:0;line-height:.86}
+html.pn-home[data-dir="showcase"] .pp-pr .s{font-family:var(--pn-mono);font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+html.pn-home[data-dir="showcase"] .pp-pr-foot{font-family:var(--pn-mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+@media(min-width:900px){html.pn-home[data-dir="showcase"] .pp-pr + .pp-pr{border-left:1px solid var(--pn-line2)}}
+html.pn-home[data-dir="showcase"] .pv-tl2 .y{font-family:var(--pn-disp);font-weight:800;letter-spacing:0}
+html.pn-home[data-dir="showcase"] .pv-tl2 .card{border-radius:2px;box-shadow:none;border:1px solid var(--pn-line2)}
+html.pn-home[data-dir="showcase"] .pv-tl2 .card h3{font-family:var(--pn-disp);font-weight:700;font-size:22px;line-height:1.05;letter-spacing:0;text-transform:uppercase}
+html.pn-home[data-dir="showcase"] .tl-span{font-family:var(--pn-mono);border-radius:0}
+html.pn-home[data-dir="showcase"] .pp-door{border-radius:2px;box-shadow:none;border:1px solid var(--pn-line2)}
+html.pn-home[data-dir="showcase"] .pp-door-k{border-radius:0;font-family:var(--pn-mono);letter-spacing:.1em;box-shadow:none}
+html.pn-home[data-dir="showcase"] .pp-door-n{font-family:var(--pn-disp);font-weight:800}
+html.pn-home[data-dir="showcase"] .pp-door-b h3{font-family:var(--pn-disp);font-weight:700;font-size:clamp(26px,2.2vw,32px);line-height:1.02;letter-spacing:0;text-transform:uppercase}
+html.pn-home[data-dir="showcase"] .pp-door-go{border-radius:0;font-family:var(--pn-mono);font-size:13px;letter-spacing:.09em;text-transform:uppercase;box-shadow:4px 4px 0 color-mix(in srgb,var(--pn-y) 26%,transparent)}
+html.pn-home[data-dir="showcase"] .dw2-ci{border-radius:0}
+html[data-dir="showcase"] .pv-contact a.q-btn{color:#0a0a0b!important}
+html.pn-home[data-dir="showcase"] .pv-faq :is(summary,button){font-weight:600}
 """
 
 CLEAN_CSS = r"""
@@ -813,16 +897,30 @@ var small=window.matchMedia('(max-width:599px)'),menu=$('.pn-kp-menu');
 function inert(){if(!menu)return;if(small.matches){menu.setAttribute('inert','');menu.setAttribute('aria-hidden','true')}else{menu.removeAttribute('inert');menu.removeAttribute('aria-hidden')}}
 inert();if(small.addEventListener)small.addEventListener('change',inert);else if(small.addListener)small.addListener(inert);
 
-/* ---------- zones light as their scene comes into view ---------- */
-var links=$$('.pn-zb-home a[data-z]'),zones=$$('.pn-zone[data-zone]');
+/* ---------- zones light as their scene comes into view (zone scenes, and the Scenes that belong to a zone) ---------- */
+var links=$$('.pn-zb-home a[data-z]'),zones=$$('[data-zone]');
 function setActive(k){
   links.forEach(function(a){var z=+a.getAttribute('data-z');a.classList.toggle('is-on',z===k);if(z===k)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current')});
 }
+/* ---------- chapter rail: which chapter is under the middle of the screen ---------- */
+var chs=$$('.pn-ch a[data-ch]'),chn=$('[data-pn-chn]'),cht=$('[data-pn-cht]');
+if(chs.length){
+  var chTg=chs.map(function(a){return document.getElementById(a.getAttribute('data-ch'))}),chCur=-1,chTick=false;
+  var chSpy=function(){
+    chTick=false;var y=window.innerHeight*0.45,k=0;
+    for(var i=0;i<chTg.length;i++){if(chTg[i]&&chTg[i].getBoundingClientRect().top<=y)k=i}
+    if(k===chCur)return;chCur=k;
+    chs.forEach(function(a,i){a.classList.toggle('is-on',i===k);if(i===k)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current')});
+    if(chn)chn.textContent=('0'+(k+1)).slice(-2);if(cht)cht.textContent=chs[k].getAttribute('data-t')||'';
+  };
+  window.addEventListener('scroll',function(){if(!chTick){chTick=true;requestAnimationFrame(chSpy)}},{passive:true});
+  window.addEventListener('resize',chSpy);chSpy();
+}
 if('IntersectionObserver' in window){
-  var vis={};
+  var vis=[];
   var io=new IntersectionObserver(function(es){
-    es.forEach(function(e){vis[e.target.getAttribute('data-zone')]=e.isIntersecting});
-    var on=0;zones.forEach(function(s){if(vis[s.getAttribute('data-zone')])on=+s.getAttribute('data-zone')});setActive(on);
+    es.forEach(function(e){vis[zones.indexOf(e.target)]=e.isIntersecting});
+    var on=0;zones.forEach(function(s,i){if(vis[i])on=+s.getAttribute('data-zone')});setActive(on);
   },{rootMargin:'-42% 0px -56% 0px'});
   zones.forEach(function(s){io.observe(s)});
   var liveIO=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('pn-live',e.isIntersecting)})},{rootMargin:'80px 0px'});
