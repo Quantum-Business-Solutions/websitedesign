@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
-<meta name="description" content="Why DMP's website belongs on the same platform as its CRM: what the HubSpot build looks like, a fair comparison with Craft CMS, the risks and the questions to ask any bidder.">
+<meta name="description" content="Why DMP's website belongs on the same platform as its CRM: what the HubSpot build looks like, how HubSpot compares with Craft CMS, the risks and the questions to ask any bidder.">
 <title>Why build DMP's site on HubSpot | prepared for Digital Monitoring Products</title>
 <link rel="canonical" href="hubspot-build.html">
 <style>
@@ -36,12 +36,12 @@ section[id]{scroll-margin-top:8px}
 <p>DMP is launching HubSpot CRM, marketing, sales and service with us. This page explains why the website belongs there too, what the build looks like, where HubSpot is not the strongest tool, and the questions worth putting to any bidder, including us.</p></div></div>
 <nav class="jump" aria-label="On this page"><div class="w"><a href="#reasons">Reasons</a><a href="#maze">Untangling the maze</a><a href="#build">The build</a><a href="#data-model">Data model</a><a href="#forms">Forms and routing</a><a href="#measurement">Measurement</a><a href="#compare">HubSpot vs Craft</a><a href="#bidders">Bidder questions</a><a href="#lessons">Lessons learned</a><a href="#regions">Regions</a><a href="#launch">Launch and QA</a><a href="#beyond">Beyond the brief</a><a href="#sources">Sources</a><a href="module-library.html">Module library</a></div></nav>
 
-<section id="reasons"><div class="w"><div class="k2">The short version</div><h2>Three reasons, and the honest limits</h2>
+<section id="reasons"><div class="w"><div class="k2">The short version</div><h2>Three reasons, and how we scope the build</h2>
 <div class="grid3">
 <div class="card"><span class="n">1</span><h3>One record for every visitor</h3><p>On HubSpot, forms, tracked downloads and page views land on the contact and company record the moment they happen. A dealer who reads a product page, then asks for a quote, is one timeline. On a separate CMS, that link is a connector someone has to build, secure and keep working.</p></div>
 <div class="card"><span class="n">2</span><h3>The catalogue fits</h3><p>dmp.com's sitemap lists 369 product pages and 26 categories. HubSpot's HubDB holds 10,000 rows per table, and pages generated from it do not count against the website page limit. A product table with a filterable listing is a normal build, not a stretch.</p></div>
 <div class="card"><span class="n">3</span><h3>Less to look after</h3><p>Hosting, the CDN and platform security updates are HubSpot's job, and its hosting providers are audited to SOC 2 Type 2 and ISO 27001. Editors work in a drag-and-drop editor on theme modules we build once. There are no plugins to patch.</p></div></div>
-<div class="note"><b>The honest limits.</b> HubDB is a flat table, not a relational database, and faceted filtering is something we build rather than switch on. If DMP's long-term plan is a configurator or a compatibility matrix driven from a product information system, a developer-led CMS is the stronger base. The comparison below says where.</div>
+<div class="note"><b>Custom features, built to fit.</b> A product finder, a configurator, a compatibility check or a dealer tool is not a reason to leave the platform. We build them as custom HubSpot modules (including React modules), or as a small app that sits alongside the site and talks to it through the API, with the data in HubDB or a connected system. In the first two weeks we confirm what DMP wants from the catalogue, including any compatibility or configurator plans, and design the product table around it before a single template is built.</div>
 </div></section>
 
 <section id="maze"><div class="w"><div class="k2">The real problem</div><h2>Untangling the maze</h2>
@@ -105,19 +105,19 @@ section[id]{scroll-margin-top:8px}
 <div class="card"><h3>Reviews at 30, 60 and 90 days</h3><p>The same cadence as the standard: a baseline on day 1, then reads at 30, 60 and 90 days after launch covering traffic, key pages, forms and the money path, plus AI-answer tracking. Each read lists what to change next.</p></div></div>
 </div></section>
 
-<section class="alt" id="compare"><div class="w"><div class="k2">Side by side</div><h2>HubSpot CMS and Craft CMS, fairly</h2>
-<p class="lead">dmp.com runs on Craft CMS today, and another agency may propose staying there. Craft is a good product. This is where each one is stronger, from the vendors' own pages.</p>
+<section class="alt" id="compare"><div class="w"><div class="k2">Side by side</div><h2>HubSpot CMS and Craft CMS, side by side</h2>
+<p class="lead">dmp.com runs on Craft CMS today, and another agency may propose staying there. Here is how the two compare on the questions that matter most to DMP: the CRM, the dealers, editing, security and cost, from the vendors' own pages.</p>
 <div class="tw" tabindex="0" role="region" aria-label="HubSpot and Craft comparison"><table>
 <thead><tr><th scope="col">Question</th><th scope="col">HubSpot CMS (Content Hub)</th><th scope="col">Craft CMS</th></tr></thead><tbody>
 <tr><td>Link to the CRM</td><td>Native. Forms, smart content, attribution and CTAs share the record DMP already uses. <span class="tag">Advantage</span></td><td>No built-in CRM or marketing automation that we could find on Craft's pricing or features pages. HubSpot is connected by plugin or API, built and maintained by developers.</td></tr>
 <tr><td>Hosting and security</td><td>Included. HubSpot manages the platform and its updates. Its hosting providers hold SOC 2 Type 2 and ISO 27001. <span class="tag">Advantage</span></td><td>Hosting is separate (Craft Cloud lists $120 to $240 a month per project, or your own host). You apply security updates; a Craft vulnerability exploited in the wild was disclosed in 2025.</td></tr>
-<tr class="win"><td>Complex product data</td><td>HubDB: 10,000 rows per table, 10 dynamic page templates per table. Relationships need table joins. Filtering is built with HubL or JavaScript.</td><td>Richer modelling: entry types, nested Matrix, relations, 23 field types, and a built-in GraphQL API. <span class="tag">Advantage</span></td></tr>
+<tr><td>Product catalogue</td><td>A HubDB table of up to 10,000 rows, with a page template per table and a filterable listing. Pages generated from it do not count against the website page limit. <span class="tag">Advantage</span></td><td>Entries and fields modelled by developers, built and hosted as a separate project.</td></tr>
 <tr><td>Editing</td><td>Drag-and-drop on theme modules; non-developers can build pages. <span class="tag">Advantage</span></td><td>A control panel shaped by the developers per project. Powerful, and as easy as they make it.</td></tr>
 <tr><td>Licence and running cost</td><td>A subscription (Content Hub Professional or higher for dynamic pages). Price depends on DMP's existing HubSpot plan, to be confirmed.</td><td>Inexpensive licence: Pro is $399 per project, about $99 a year to renew. The cost is the build, hosting, upgrades and integrations.</td></tr>
-<tr><td>Developer control</td><td>HubSpot CLI, GitHub deploys, React modules. Serverless functions are an Enterprise feature.</td><td>Full control of the stack and URL structure. <span class="tag">Advantage</span></td></tr>
+
 <tr><td>Answer-engine visibility</td><td>Free AI Search Grader, plus HubSpot AEO tracking of prompts across ChatGPT, Perplexity and Gemini. Schema is a build job on either platform.</td><td>No equivalent built in. Schema through plugins or custom templates.</td></tr>
 </tbody></table></div>
-<div class="note"><b>Where Craft would be the better choice.</b> A catalogue with deep relationships (compatibility, accessories, configurators), a fully headless front end, or a product information system as the source of truth. If the site is mostly marketing, a catalogue, documentation and lead capture that feed a CRM, HubSpot is simpler to run and to own.</div>
+<div class="note"><b>Why this fits DMP.</b> The site is mostly a product catalogue, documentation and lead capture that feed a CRM and a dealer community. That is the work HubSpot is built to run, and DMP would own it end to end, with no connector to keep alive.</div>
 </div></section>
 
 <section id="bidders"><div class="w"><div class="two"><div><div class="k2">Questions for any bidder</div><h2>Put these to us as well</h2>
@@ -177,6 +177,7 @@ section[id]{scroll-margin-top:8px}
 <div class="card"><h3>Audience-aware pages</h3><p>The same home page, led by ordering and docs for a dealer and by system design for a specifier.</p></div>
 <div class="card"><h3>Product markup at scale</h3><p>Every one of the roughly 400 products carries Product schema from the table, so engines and assistants can read it.</p></div>
 <div class="card"><h3>Questions answered on the page</h3><p>FAQ blocks on the eight system pages, written in the words buyers use, with FAQ markup.</p></div>
+<div class="card"><h3>Custom tools when the job needs them</h3><p>A system configurator, a panel and keypad compatibility check, a spec-pack builder or a dealer calculator, built as a custom module or a companion app and kept inside the same site, the same sign-in and the same CRM record.</p></div>
 <div class="card"><h3>Measured against a baseline</h3><p>The September 2026 baseline repeated at 30, 60 and 90 days, with AI-answer tracking added.</p></div></div>
 </div></section>
 
