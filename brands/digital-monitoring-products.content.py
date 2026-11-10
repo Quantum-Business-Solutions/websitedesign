@@ -939,7 +939,8 @@ def finalize(data):
     import dmp_dw2   # design wave B: pinned stories, distributor map, icon keys, page rhythm flags
     data = dmp_dw2.apply(data)
     import dmp_panel   # panel pass: keypad hero, zone scenes, system keys, environment backgrounds
-    return dmp_panel.apply(data)
+    data = __import__("dmp_night").apply(dmp_panel.apply(data))   # round 2a: scenes and night shift, Showcase home only
+    return __import__("dmp_tools").apply(data)   # round 2b: configurator, keypad demo page, keypad 404 (last: reads the finished pages)
 
 
 if __name__ == "__main__":

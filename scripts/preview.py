@@ -49,6 +49,7 @@ import preview_dw1  # noqa: E402
 import preview_dw2  # noqa: E402
 import preview_vis  # noqa: E402
 import preview_panel  # noqa: E402
+import preview_tools  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DASH_HITS: list[str] = []
@@ -699,6 +700,8 @@ RENDER.update(preview_pop3.RENDER_POP3)
 RENDER.update(preview_dw1.RENDER_DW1)
 RENDER.update(preview_dw2.RENDER_DW2)
 RENDER.update(preview_panel.RENDER_PANEL)
+RENDER.update(preview_tools.RENDER_TOOLS)
+RENDER.update({**__import__("preview_night").RENDER_NIGHT, **__import__("preview_scenes").RENDER_SCENES})   # round 2a (DMP Showcase home)
 preview_dw2.wrap(RENDER)
 
 
@@ -1246,6 +1249,7 @@ def main(argv=None):
         for page in content["pages"]:
             doc = render_page(content, page, t, css, tok, themes, a.recommend, base, a.out, slug_of(t))
             doc = preview_panel.post(doc, content, page, slug_of(t))   # DMP only: panel art direction, system colours
+            doc = preview_tools.post(doc, content, page, slug_of(t))   # DMP only: configurator, keypad page, print spec sheet
             dest = os.path.join(d, page["file"]); os.makedirs(os.path.dirname(dest), exist_ok=True)
             open(dest, "w", encoding="utf-8").write(doc); written += 1
         preview_polish.write_index(a.out, slug_of(t))
