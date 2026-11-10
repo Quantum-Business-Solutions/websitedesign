@@ -1202,7 +1202,7 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
 <script>{preview_modules.DEPTH_JS}</script>
 <script>{preview_motion.MOTION_JS}</script>
 <script>{preview_pop1.POP1_JS}</script>
-<script>{preview_notice.NOTICE_JS}</script>
+<script>{preview_notice.with_contact(preview_notice.NOTICE_JS, content)}</script>
 <script>{preview_polish.POLISH_JS}</script>
 <script>{preview_pop3.POP3_JS}</script>
 <script>{preview_pop2.POP2_JS}</script>

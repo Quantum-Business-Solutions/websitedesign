@@ -41,7 +41,7 @@ if(i.required||isEmail||/name|first|last/i.test(i.id+i.name)){if(!ok){i.setAttri
 var sub=f.querySelector('[type=submit]');
 if(bad){var er=d.createElement('p');er.className='pv-fe';er.setAttribute('role','alert');er.id='pv-fe-'+(f.id||Math.floor(Math.random()*1e6));bads.forEach(function(x){x.setAttribute('aria-describedby',((x.getAttribute('aria-describedby')||'')+' '+er.id).trim())});er.textContent='Please fill in the highlighted fields (a name and a valid email).';(sub&&sub.parentNode===f?f:f).appendChild(er);bad.focus();return;}
 var ok=d.createElement('div');ok.className='pv-fn';ok.setAttribute('role','status');
-f.appendChild(ok);setTimeout(function(){ok.innerHTML='<b>Preview only. This form did not send.</b>On the live site this goes to DMP’s team. For now, call 877-757-4367 (8 a.m. to 5 p.m. Central) or email InsideSales@DMP.com.'},60);
+f.appendChild(ok);setTimeout(function(){ok.innerHTML='<b>Preview only. This form did not send.</b>__PV_CONTACT__'},60);
 });
 });
 })();
@@ -54,3 +54,13 @@ import re as _re
 _cut = _re.search(r"\[\]\.forEach\.call\(d\.querySelectorAll\(['\"]form\.q-form['\"]\)", NOTICE_JS)
 assert _cut, "preview_notice: the form handler marker moved; NOTICE_BAR_JS needs a new cut point"
 NOTICE_BAR_JS = NOTICE_JS[:_cut.start()].rstrip() + "\n})();"
+
+
+_DMP_CONTACT = "On the live site this goes to DMP’s team. For now, call 877-757-4367 (8 a.m. to 5 p.m. Central) or email InsideSales@DMP.com."
+_GENERIC_CONTACT = "On the live site this goes to the team. For now, use the contact details on the Contact page."
+
+
+def with_contact(js, content):
+    """Fill the form-confirmation contact line. DMP's details are used only for the DMP preview."""
+    msg = _DMP_CONTACT if (content or {}).get("slug") == "digital-monitoring-products" else _GENERIC_CONTACT
+    return js.replace("__PV_CONTACT__", msg)
