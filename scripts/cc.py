@@ -182,6 +182,10 @@ def cmd_finish(build_id: str, slug: str, out_dir: str, zip_path: str) -> None:
         summary["qa"] = {"pass": sum(r["level"] == "PASS" for r in qa), "warn": sum(r["level"] == "WARN" for r in qa),
                          "fail": sum(r["level"] == "FAIL" for r in qa),
                          "problems": [f'{r["level"]} {r["check"]}: {r["message"]}'[:220] for r in qa if r["level"] != "PASS"][:30]}
+        # the pictures the gate took (each direction's home page at 1280 and 390), as paths inside the uploaded site
+        if os.path.exists(os.path.join(out_dir, "qa", "contact-sheet.jpg")):
+            summary["qa"]["pictures"] = "qa/index.html"
+            summary["qa"]["contact_sheet"] = "qa/contact-sheet.jpg"
     except Exception:  # noqa: BLE001
         pass
     try:

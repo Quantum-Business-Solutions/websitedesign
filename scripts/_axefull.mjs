@@ -1,7 +1,7 @@
 import { chromium } from 'playwright';
 import { chromePath } from './_chrome.mjs';
 const [file] = process.argv.slice(2);
-const b = await chromium.launch({ executablePath: chromePath(), args: ['--headless=new','--no-sandbox'] });
+const b = await chromium.launch({ executablePath: chromePath(), args: ['--headless=new', '--no-sandbox'] });
 const p = await b.newPage({ viewport: { width: 1280, height: 900 } });
 await p.route(/fonts\.(googleapis|gstatic)\.com/, r => r.abort());
 await p.goto('file://' + file); await p.addScriptTag({ path: '/home/user/websitedesign/node_modules/axe-core/axe.min.js' });

@@ -88,6 +88,46 @@ class Gate:
         return any(r["level"] == "FAIL" for r in self.rows)
 
 
+def write_qa_page(out: str, slug: str, client: str, rows: list) -> None:
+    """<out>/qa/index.html: the gate's result beside pictures of each direction's home page at 1280 and 390, so the
+    person who opens the build in Client Command judges it by eye and not from a pass or fail alone. Internal: noindex."""
+    import html as _h
+    qa = os.path.join(out, "qa")
+    sp = os.path.join(qa, "shots.json")
+    if not os.path.exists(sp):
+        return
+    shots = json.load(open(sp, encoding="utf-8"))
+    e = _h.escape
+    n = Counter(r["level"] for r in rows)
+    order = {"FAIL": 0, "WARN": 1, "PASS": 2}
+    trs = "".join(f'<tr class="{r["level"].lower()}"><td><b>{r["level"]}</b></td><td>{e(r["check"])}</td><td>{e(r["message"])}</td><td>{e(r.get("where", ""))}</td></tr>'
+                  for r in sorted(rows, key=lambda r: order.get(r["level"], 3)))
+    cols = []
+    for d in dict.fromkeys(s["dir"] for s in shots):
+        a = next((s for s in shots if s["dir"] == d and s["w"] == 1280), None)
+        b = next((s for s in shots if s["dir"] == d and s["w"] == 390), None)
+        pics = "".join(f'<a href="{e(s["file"])}"><img src="{e(s["file"])}" alt="{e(d)} home page at {s["w"]} wide" loading="lazy" style="width:{"72%" if s["w"] == 1280 else "24%"}"></a>' for s in (a, b) if s)
+        cols.append(f'<section><h2>{e(d.title())}</h2><p><a href="../{e(d)}/index.html">Open the live page</a></p><div class="pics">{pics}</div></section>')
+    doc = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow"><title>{e(client)}: quality check and pictures</title>
+<style>body{{margin:0;font:16px/1.55 Arial,Helvetica,sans-serif;color:#14171c;background:#f3f4f6}}main{{max-width:1500px;margin:0 auto;padding:28px 20px 80px}}
+h1{{font-size:28px;line-height:1.15;margin:0 0 6px}}h2{{font-size:20px;margin:0 0 4px}}p{{margin:0 0 14px;color:#4a5060}}a{{color:#0b4f9e}}
+.sum{{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 22px}}.sum span{{padding:8px 14px;border-radius:999px;font-weight:700;background:#fff;border:1px solid #d9dce2}}
+.sum .f{{background:#fde8e8;border-color:#e3a3a3;color:#8a1c1c}}.sum .w{{background:#fff4d6;border-color:#e0c36a;color:#6b4e00}}.sum .p{{background:#e4f5e8;border-color:#9fd0aa;color:#1d5e2c}}
+.grid{{display:grid;grid-template-columns:repeat({max(1, len(cols))},minmax(0,1fr));gap:20px;align-items:start}}section{{background:#fff;border:1px solid #d9dce2;border-radius:10px;padding:16px}}
+.pics{{display:flex;gap:4%;align-items:flex-start}}.pics img{{display:block;width:100%;border:1px solid #d9dce2;border-radius:4px}}.pics a{{display:contents}}
+table{{width:100%;border-collapse:collapse;background:#fff;border:1px solid #d9dce2;border-radius:10px;margin-top:26px;font-size:14.5px}}td{{padding:9px 12px;border-top:1px solid #eceef2;vertical-align:top}}
+tr.fail td:first-child{{color:#a11919}}tr.warn td:first-child{{color:#7a5a00}}tr.pass td:first-child{{color:#1d6b33}}
+@media(max-width:900px){{.grid{{grid-template-columns:1fr}}}}</style></head><body><main>
+<h1>{e(client)}: quality check and pictures</h1>
+<p>The home page of each direction, whole, at 1280 and 390 wide, taken by the gate (scripts/directions_qa.py). Look before the link goes to the client: a FAIL stops it, a WARN is read by a person, and the beauty bar in process/directions-standard.md section 9 says what good looks like.</p>
+<div class="sum"><span class="f">{n["FAIL"]} fail</span><span class="w">{n["WARN"]} warn</span><span class="p">{n["PASS"]} pass</span><a href="contact-sheet.jpg">One-image contact sheet</a></div>
+<div class="grid">{"".join(cols)}</div>
+<table><tbody>{trs}</tbody></table>
+</main></body></html>"""
+    open(os.path.join(qa, "index.html"), "w", encoding="utf-8").write(doc)
+
+
 def main(argv=None):
     argv = argv if argv is not None else sys.argv[1:]
     if not argv:
@@ -234,12 +274,17 @@ def main(argv=None):
         except Exception:  # noqa: BLE001
             g.add("WARN", "rendered", "the browser checks did not run: " + (r.stderr or r.stdout)[-200:])
 
-    json.dump({"slug": slug, "rows": g.rows}, open(os.path.join(out, "qa.json"), "w"), indent=1)
+    json.dump({"slug": slug, "rows": g.rows, "contact_sheet": "qa/contact-sheet.jpg" if os.path.exists(os.path.join(out, "qa", "contact-sheet.jpg")) else None,
+               "pictures": "qa/index.html" if os.path.exists(os.path.join(out, "qa", "shots.json")) else None},
+              open(os.path.join(out, "qa.json"), "w"), indent=1)
+    write_qa_page(out, slug, content.get("client", slug), g.rows)
     width = max(len(r["check"]) for r in g.rows)
     for r in g.rows:
         print(f"  {r['level']:4}  {r['check']:<{width}}  {r['message']}" + (f"   [{r['where']}]" if r["where"] else ""))
     n = Counter(r["level"] for r in g.rows)
     print(f"\n  {n['PASS']} pass, {n['WARN']} warn, {n['FAIL']} fail")
+    if os.path.exists(os.path.join(out, "qa", "index.html")):
+        print(f"  pictures: {os.path.join(out, 'qa', 'index.html')} and {os.path.join(out, 'qa', 'contact-sheet.jpg')}")
     return 1 if g.failed else 0
 
 

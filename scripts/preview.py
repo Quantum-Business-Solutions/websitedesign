@@ -706,6 +706,8 @@ if(stk&&hb&&'IntersectionObserver' in window){new IntersectionObserver(function(
 var hd=document.querySelector('.q-header');if(hd){var sc=function(){hd.classList.toggle('is-scrolled',scrollY>80)};addEventListener('scroll',sc,{passive:true});sc()}
 /* mobile menu open: hide the bottom bars so the panel is not covered */
 var mn=document.querySelector('.q-mnav');if(mn){mn.addEventListener('toggle',function(){document.documentElement.classList.toggle('menu-open',mn.open)})}
+/* two 3D viewers on one page each add a "Live announcements" region: name each after its model so the landmarks are unique */
+if(window.customElements&&document.querySelector('model-viewer')){customElements.whenDefined('model-viewer').then(function(){setTimeout(function(){document.querySelectorAll('model-viewer').forEach(function(m,i){var r=m.shadowRoot&&m.shadowRoot.querySelector('[role=region]');if(r)r.setAttribute('aria-label','Live announcements, '+(m.getAttribute('alt')||'3D model')+' '+(i+1))})},0)})}
 /* video facade: poster + play, iframe only on click */
 document.querySelectorAll('.pv-video[data-embed]').forEach(function(v){
   var b=v.querySelector('button');if(!b)return;

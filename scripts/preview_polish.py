@@ -84,6 +84,11 @@ a.q-card:hover,.pv-res a:hover{translate:0 -3px;border-color:color-mix(in srgb,v
 .q-bg-alt{background:var(--bg-alt);box-shadow:inset 0 1px 0 var(--border),inset 0 -1px 0 var(--border)}
 .pv-seal .item{padding:24px;gap:18px;background:var(--card);box-shadow:var(--rest)}
 .pv-seal .badge::before{background:var(--card)}
+/* four across leaves each commitment about 170px of text beside its badge: stack the badge above instead */
+.pv-seal[style*="--cols:4"] .item{grid-template-columns:1fr;gap:14px;align-content:start}
+.pv-seal[style*="--cols:4"] .badge{width:56px;height:56px}
+@media(max-width:1024px){.pv-seal[style*="--cols:4"]{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.pv-seal[style*="--cols:4"]{grid-template-columns:1fr}.pv-seal[style*="--cols:4"] .item{grid-template-columns:56px 1fr}}
 .pv-flow .detail{box-shadow:var(--rest)}
 .pv-check label{align-items:center;transition:border-color .2s,background .2s}
 .pv-check label:hover{border-color:color-mix(in srgb,var(--accent-ink) 55%,transparent)}
@@ -106,6 +111,7 @@ a.q-card:hover,.pv-res a:hover{translate:0 -3px;border-color:color-mix(in srgb,v
 .pv-metric .v{font-size:clamp(28px,2.4vw,34px);letter-spacing:-.02em}
 .pv-wheel .panel .bignum{opacity:.09;top:-34px;font-size:104px;z-index:0}
 .pv-wheel .panel > :not(.bignum){position:relative;z-index:1}
+.pv-wheel .panel .bignum::after{content:attr(data-ghost)}
 .pv-wheel .panel h3{font-size:clamp(24px,2.1vw,28px)}
 .pv-wheel ol a{font-size:15px}
 .pv-hero-img,.pv-detail-img,.pv-tabs .img,.pv-video,.pv-hero-wide{border-color:var(--border)}
@@ -201,6 +207,9 @@ FINISH_CSS = r"""
   [data-dir="showcase"] .pv-stat b,[data-dir] .pv-stat b{font-size:40px}
   [data-dir="showcase"] .pv-stat{padding:20px 12px}
 }
+
+.q-eyebrow + .q-h2,.q-eyebrow + .q-h1{margin-top:16px!important}
+.pv-lh .q-eyebrow + .q-h1{margin-top:20px!important}
 
 /* ===== motion: one thing moves at a time, and nothing loops for decoration ===== */
 html.pv-js .pv-rv{transform:translateY(12px)}
