@@ -272,7 +272,7 @@ var box=d.getElementById('pv-search');if(!box)return;
 var inp=box.querySelector('input'),ul=box.querySelector('.pv-search-r'),hint=box.querySelector('.pv-search-h'),root=box.getAttribute('data-root')||'',idx=null,loading=false,last=null,sel=-1,res=[];
 var q=[];function load(cb){if(idx)return cb();q.push(cb);if(loading)return;loading=true;
 fetch(root+'search-index.json').then(function(r){return r.json()}).then(function(j){idx=j;loading=false;var f=q;q=[];f.forEach(function(x){x()})}).catch(function(){loading=false;hint.textContent='The search index could not be loaded. It is generated with the build and needs the site served over http.'})}
-function open(){last=d.activeElement;box.hidden=false;d.documentElement.style.overflow='hidden';inp.value='';ul.innerHTML='';hint.textContent='Type to search. Try XR550, UL 864 or dealer portal. Arrow keys to move, Enter to open.';load(function(){});inp.focus();setTimeout(function(){inp.focus()},0)}
+function open(){last=d.activeElement;if(mn&&mn.open){mn.open=false}box.hidden=false;d.documentElement.style.overflow='hidden';inp.value='';ul.innerHTML='';hint.textContent='Type to search. Try XR550, UL 864 or dealer portal. Arrow keys to move, Enter to open.';load(function(){});inp.focus();setTimeout(function(){inp.focus()},0)}
 function close(){inp.setAttribute('aria-expanded','false');inp.removeAttribute('aria-activedescendant');box.hidden=true;d.documentElement.style.overflow='';if(last&&last.focus)last.focus()}
 function esc(s){return s.replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 function terms(q){return q.toLowerCase().split(/[^a-z0-9\u00e9]+/).filter(function(x){return x.length>0})}
