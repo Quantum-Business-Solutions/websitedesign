@@ -10,6 +10,13 @@ import re
 import reskin
 
 
+def _count_words(n):
+    """The confirm heading used to say Ten whatever the list held."""
+    w = ["No things", "One thing", "Two things", "Three things", "Four things", "Five things", "Six things", "Seven things", "Eight things", "Nine things", "Ten things",
+         "Eleven things", "Twelve things", "Thirteen things", "Fourteen things", "Fifteen things"]
+    return w[n] if n < len(w) else f"{n} things"
+
+
 def _e(s) -> str:
     s = "" if s is None else str(s)
     s = re.sub(r"\s*[—–]\s*", ", ", s)
@@ -53,7 +60,9 @@ def hub(content, themes, recommend, base, roles, standard, client_tokens, out_di
         css, tok = client_tokens(t, b)
         nat = reskin.parse_native(css)
         short = t.replace("Quantum ", "")
-        face = (nat.get("--q-serif") or "").split(",")[0].strip("'\"")
+        # the face the pages actually render (the token), never the theme's native one: Showcase's native display
+        # face is replaced by the house type, and the card used to name the face nobody would see
+        face = (tok.get("--q-serif") or nat.get("--q-serif") or "").split(",")[0].strip().strip("'\"")
         rec = '<span class="rec">our recommendation</span>' if t == recommend else ""
         thumb = f"screenshots/{_slug(t)}-home-1440.jpg"
         has_thumb = bool(out_dir) and os.path.exists(os.path.join(out_dir, thumb))
@@ -197,7 +206,7 @@ select{{max-width:100%}}
 <section id="compare"><div class="wrap"><p class="eyebrow">Side by side</p><h2>The same page, all three at once</h2><div class="cmp-bar"><label for="cmp">Pick a page</label><select id="cmp">{page_opts}</select></div><p class="cmp-note">Side by side needs a wider screen. On a phone, open each direction from the cards above.</p><div class="frames">{frames}</div></div></section>
 {search_html}
 <section id="heard"><div class="wrap"><div class="two"><div><p class="eyebrow">What we are treating as fixed</p><h2>What your site and brand profile already say</h2><p class="lead" style="margin-bottom:12px">{_e(heard_intro)}</p><ul>{heard}</ul></div><div><p class="eyebrow">What we found</p><h2>And what we would do about it</h2><ul>{found}</ul></div></div></div></section>
-<section id="confirm"><div class="wrap"><p class="eyebrow">To confirm with you</p><h2>Ten things we wrote as a draft, not a fact</h2><p class="lead">Each of these appears on the pages. None is built until you confirm or correct it.</p><ul class="confirm">{confirm}</ul></div></section>
+<section id="confirm"><div class="wrap"><p class="eyebrow">To confirm with you</p><h2>{_count_words(len(pitch.get("confirm") or []))} we wrote as a draft, not a fact</h2><p class="lead">Each of these appears on the pages. None is built until you confirm or correct it.</p><ul class="confirm">{confirm}</ul></div></section>
 <section id="every"><div class="wrap"><p class="eyebrow">Every page</p><h2>{len(pages)} pages, built and live in all three</h2><p class="lead">One row per page; the three links open it in each direction.</p><div class="every">{every}</div></div></section>
 <section id="plan"><div class="wrap"><p class="eyebrow">The plan</p><h2>From a choice to a live site</h2><div class="plan">{plan}</div>{('<div class="alts single" style="margin-top:28px">' + std + '</div>') if std else ""}</div></section>
 <section id="turn"><div class="wrap"><div class="turn"><p class="eyebrow">Your turn</p><h2>Tell us which one, and what you would change</h2><p class="lead" style="margin-bottom:18px">Reply with the direction and anything on any page you would change. Nothing is locked until you say so.</p><a class="btn" href="mailto:{_e(qc.get("email", ""))}?subject={_e(content["client"])}%20website%20direction">Email {_e(qc.get("name", "us"))}</a><a class="btn" style="background:transparent;border:1px solid var(--accent);color:var(--ink)" href="tel:{_e(phone_href)}">Call {_e(qc.get("phone", ""))}</a></div></div></section>

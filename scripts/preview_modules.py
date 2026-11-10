@@ -12,8 +12,16 @@ import json
 import math
 
 EXTRA_CSS2 = r"""
+
+/* layered hero, photo variant: the client's own work, crossfading (keyframes are emitted per slide count) */
+.pv-lh .bg.slides img{position:absolute;inset:0;opacity:0}
+.pv-lh-photo .bg::after{background:linear-gradient(90deg,color-mix(in srgb,var(--stage) 90%,transparent) 0%,color-mix(in srgb,var(--stage) 62%,transparent) 48%,color-mix(in srgb,var(--stage) 18%,transparent) 100%),linear-gradient(180deg,transparent 62%,var(--stage) 100%)}
+.pv-lh-cap{position:absolute;right:28px;bottom:22px;z-index:2;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.75);height:1.4em}
+.pv-lh-cap span{position:absolute;right:0;bottom:0;white-space:nowrap;opacity:0}
+@media(prefers-reduced-motion:reduce){.pv-lh .bg.slides img,.pv-lh-cap span{animation:none!important}.pv-lh .bg.slides img:first-child{opacity:.6}.pv-lh-cap span:first-child{opacity:1}}
+@media(max-width:767px){.pv-lh-cap{display:none}}
 /* ===== layered hero (dark, floating cards, pointer glow) ===== */
-.pv-lh{position:relative;overflow:hidden;background:var(--chrome-bg);color:#fff;isolation:isolate}
+.pv-lh{position:relative;overflow:hidden;background:var(--stage);color:#fff;isolation:isolate}
 .pv-lh .bg{position:absolute;inset:0;z-index:0}
 .pv-lh .bg img,.pv-lh .bg video{width:100%;height:100%;object-fit:cover;display:block;opacity:.55;transform:scale(1.04);animation:pv-kb 38s ease-in-out infinite alternate}
 .pv-lh .bg video{opacity:.62;animation:none;transform:none}
@@ -34,8 +42,8 @@ EXTRA_CSS2 = r"""
 .pv-lh{background:var(--hero-bg,var(--chrome-bg))}
 .pv-lh .glow{position:absolute;inset:-20%;z-index:0;pointer-events:none;background:radial-gradient(600px circle at var(--mx,70%) var(--my,40%),color-mix(in srgb,var(--q-gold) 26%,transparent),transparent 60%);transition:opacity .4s;opacity:.9}
 .pv-lh .q-container{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;padding-top:104px;padding-bottom:120px}
-.pv-lh .q-eyebrow{color:var(--q-gold)}.pv-lh .q-eyebrow::before{background:var(--q-gold)}
-.pv-lh .q-h1{color:#fff;margin-top:22px}.pv-lh .q-h1 em{color:var(--q-gold);font-style:normal}
+.pv-lh .q-eyebrow{color:var(--stage-accent,var(--q-gold))}.pv-lh .q-eyebrow::before{background:var(--stage-accent,var(--q-gold))}
+.pv-lh .q-h1{color:#fff;margin-top:22px}.pv-lh .q-h1 em{color:var(--stage-accent,var(--q-gold));font-style:normal}
 .pv-lh .q-lead{color:rgba(255,255,255,.82);max-width:560px;margin-top:24px}
 .pv-lh .pv-btns .q-btn{background:var(--q-gold);color:var(--cta-fg);border-color:var(--q-gold)}
 .pv-lh .pv-btns .q-btn-ghost{color:#fff;border-color:rgba(255,255,255,.35)}
@@ -44,7 +52,7 @@ EXTRA_CSS2 = r"""
 .pv-lh .stack{position:relative;min-height:640px;perspective:1200px}
 .pv-lh .fcard{position:absolute;width:min(350px,100%);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-radius:calc(var(--radius) + 8px);padding:26px 26px 22px;color:#fff;box-shadow:0 30px 80px rgba(0,0,0,.45);transform-style:preserve-3d;transition:transform .35s ease,box-shadow .35s ease;will-change:transform}
 .pv-lh .fcard.a{right:0;top:0;z-index:2}.pv-lh .fcard.b{left:0;top:340px;z-index:1;background:rgba(255,255,255,.96);color:var(--fg,#111);border-color:rgba(255,255,255,.9)}
-.pv-lh .fcard .k{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--q-gold);margin-bottom:10px}
+.pv-lh .fcard .k{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--stage-accent,var(--q-gold));margin-bottom:10px}
 .pv-lh .fcard.b .k{color:var(--accent-ink)}
 .pv-lh .fcard .t{margin:0 0 8px;font-size:21px;line-height:1.2;font-weight:700;letter-spacing:-.01em}
 .pv-lh .fcard p{margin:0;font-size:14.5px;line-height:1.55;color:rgba(255,255,255,.78)}.pv-lh .fcard.b p{color:var(--fg-muted,#555)}
@@ -143,7 +151,7 @@ EXTRA_CSS2 = r"""
 @media(max-width:767px){.pv-fleet .arrows{display:none}.pv-fleet .rail{grid-auto-columns:82%}}
 
 /* ===== commitments seal ===== */
-.pv-seal{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px}
+.pv-seal{display:grid;grid-template-columns:repeat(var(--cols,4),1fr);gap:18px;margin-top:44px}
 .pv-seal .item{display:grid;grid-template-columns:64px 1fr;gap:16px;align-items:start;padding:22px;border:1px solid var(--border);border-radius:calc(var(--radius) + 6px);background:var(--card)}
 .pv-seal .badge{width:64px;height:64px;border-radius:50%;background:conic-gradient(var(--q-gold) 0 75%,color-mix(in srgb,var(--q-gold) 30%,transparent) 75% 100%);display:grid;place-items:center;position:relative}
 .pv-seal .badge::before{content:"";position:absolute;inset:6px;border-radius:50%;background:var(--card)}
@@ -157,13 +165,13 @@ EXTRA_CSS2 = r"""
 /* ===== before / after slider ===== */
 .pv-ba{margin-top:44px;position:relative;display:grid;border-radius:calc(var(--radius) + 8px);overflow:hidden;border:1px solid var(--border);background:var(--card);--pos:50%}.pv-ba .before,.pv-ba .after{grid-area:1/1}
 .pv-ba .pane{padding:40px 44px 56px;min-height:400px;box-sizing:border-box}.pv-ba .before .pane{max-width:50%;padding-right:64px}.pv-ba .after .pane{padding-left:calc(50% + 44px)}
-.pv-ba .after{position:relative;background:var(--chrome-bg);color:#fff;clip-path:inset(0 0 0 var(--pos));transition:clip-path .05s linear}
+.pv-ba .after{position:relative;background:var(--stage);color:#fff;clip-path:inset(0 0 0 var(--pos));transition:clip-path .05s linear}
 .pv-ba .after .pane{height:100%}
-.pv-ba .k{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--accent-ink);margin-bottom:12px}.pv-ba .after .k{color:var(--q-gold)}
+.pv-ba .k{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--accent-ink);margin-bottom:12px}.pv-ba .after .k{color:var(--stage-accent,var(--q-gold))}
 .pv-ba h3{margin:0 0 14px;font-size:clamp(22px,2.2vw,30px);line-height:1.12;letter-spacing:-.02em;overflow-wrap:anywhere}
 .pv-ba ul{list-style:none;margin:0;padding:0;display:grid;gap:10px;max-width:46ch}
 .pv-ba li{display:flex;gap:10px;font-size:15.5px;line-height:1.5}.pv-ba .before li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--fg-muted);flex:none;margin-top:8px;opacity:.5}
-.pv-ba .after li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--q-gold);flex:none;margin-top:8px}
+.pv-ba .after li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--stage-accent,var(--q-gold));flex:none;margin-top:8px}
 .pv-ba .after p,.pv-ba .before p{margin:0 0 14px;color:inherit;opacity:.8}
 .pv-ba .handle{position:absolute;top:0;bottom:0;left:var(--pos);width:2px;background:var(--q-gold);transform:translateX(-1px);z-index:3;pointer-events:none}
 .pv-ba .handle::after{content:"\2194";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:var(--q-gold);color:var(--cta-fg);display:grid;place-items:center;font-size:20px;font-weight:700;box-shadow:0 10px 30px rgba(0,0,0,.25)}
@@ -194,7 +202,7 @@ EXTRA_CSS2 = r"""
 /* ===== support launcher (desktop) ===== */
 .pv-sl{position:fixed;left:18px;bottom:18px;z-index:88;display:none;opacity:0;transform:translateY(10px);transition:opacity .3s,transform .3s;pointer-events:none}.pv-sl.on{opacity:1;transform:none;pointer-events:auto}
 @media(min-width:768px){.pv-sl{display:block}}
-.pv-sl > button{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 18px 0 14px;border-radius:999px;border:0;background:var(--chrome-bg);color:#fff;font:600 14.5px/1 var(--q-sans);cursor:pointer;box-shadow:0 14px 34px rgba(0,0,0,.28)}
+.pv-sl > button{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 18px 0 14px;border-radius:999px;border:0;background:var(--stage);color:#fff;font:600 14.5px/1 var(--q-sans);cursor:pointer;box-shadow:0 14px 34px rgba(0,0,0,.28)}
 .pv-sl > button i{width:10px;height:10px;border-radius:50%;background:var(--q-gold);box-shadow:0 0 0 4px color-mix(in srgb,var(--q-gold) 30%,transparent)}
 .pv-sl .drawer{position:absolute;left:0;bottom:60px;width:340px;background:var(--bg);color:var(--fg);border:1px solid var(--border);border-radius:16px;box-shadow:0 30px 80px rgba(0,0,0,.3);padding:20px 20px 16px}
 .pv-sl .drawer[hidden]{display:none}
@@ -233,6 +241,19 @@ def _hero_layered(s, ctx):
     if s.get("video"):
         poster = f' poster="{E(ctx["rel"](s["image"]))}"' if s.get("image") else ""
         bg = f'<div class="bg"><video autoplay muted loop playsinline preload="metadata"{poster} aria-hidden="true" width="{s.get("image_w", 2100)}" height="{s.get("image_h", 900)}"><source src="{E(ctx["rel"](s["video"]))}" type="video/mp4"></video></div>'
+    elif s.get("slides"):
+        # a crossfading set of the client's own photographs; the first is the LCP image, the rest load lazily
+        n = len(s["slides"])
+        imgs = "".join(f'<img src="{E(ctx["rel"](im))}" alt="" width="{s.get("image_w", 1920)}" height="{s.get("image_h", 1080)}" style="--k:{i}"'
+                       + (' fetchpriority="high"' if i == 0 else ' loading="lazy"') + ' decoding="async">' for i, im in enumerate(s["slides"]))
+        T, f = n * 7, 1.4  # seconds per cycle, seconds of fade
+        on, fd = 100 / n, f / (n * 7) * 100
+        kf = (f'<style>@keyframes pv-xf{n}{{0%{{opacity:0;transform:scale(1.03)}}{fd:.2f}%{{opacity:.9}}{on:.2f}%{{opacity:.9}}'
+              f'{min(on + fd, 99):.2f}%{{opacity:0;transform:scale(1.1)}}100%{{opacity:0}}}}'
+              f'@keyframes pv-cf{n}{{0%{{opacity:0}}{fd:.2f}%{{opacity:1}}{on - fd / 2:.2f}%{{opacity:1}}{on:.2f}%{{opacity:0}}100%{{opacity:0}}}}'
+              f'#{E(hid)} .bg.slides img{{animation:pv-xf{n} {T}s linear infinite;animation-delay:calc(var(--k)*7s)}}'
+              f'#{E(hid)} .pv-lh-cap span{{animation:pv-cf{n} {T}s linear infinite;animation-delay:calc(var(--k)*7s)}}</style>')
+        bg = f'{kf}<div class="bg slides" style="--n:{n}">{imgs}</div>'
     else:
         bg = f'<div class="bg"><img src="{E(ctx["rel"](s["image"]))}" alt="" width="{s.get("image_w", 2100)}" height="{s.get("image_h", 900)}" fetchpriority="high" decoding="async"></div>' if s.get("image") else '<div class="bg"></div>'
     stats = ""
@@ -268,7 +289,9 @@ cx.lineWidth=1;for(i=0;i<P.length;i++){{a=P[i];for(j=i+1;j<P.length;j++){{b=P[j]
 for(i=0;i<P.length;i++){{a=P[i];cx.globalAlpha=.75;cx.fillStyle=col;cx.beginPath();cx.arc(a.x,a.y,a.r,0,6.283);cx.fill()}}cx.globalAlpha=1;raf=requestAnimationFrame(tick)}}
 size();addEventListener('resize',size,{{passive:true}});
 if('IntersectionObserver' in window){{new IntersectionObserver(function(es){{es.forEach(function(e){{if(e.isIntersecting&&!run){{run=true;tick()}}else if(!e.isIntersecting){{run=false;cancelAnimationFrame(raf)}}}})}}).observe(h)}}else{{run=true;tick()}}}}}})();</script>"""
-    return f'''<section class="q-section pv-lh" id="{E(hid)}">{bg}<canvas class="net" aria-hidden="true"></canvas><div class="glow" aria-hidden="true"></div><div class="q-container"><div>{f'<div class="q-eyebrow">{E(s["eyebrow"])}</div>' if s.get("eyebrow") else ""}
+    net = '<canvas class="net" aria-hidden="true"></canvas>' if s.get("network", True) else ""
+    cap = f'<div class="pv-lh-cap" aria-hidden="true">{"".join(f"<span style=--k:{i}>{E(c)}</span>" for i, c in enumerate(s.get("captions", [])))}</div>' if s.get("captions") else ""
+    return f'''<section class="q-section pv-lh{" pv-lh-photo" if s.get("slides") else ""}" id="{E(hid)}">{bg}{net}{cap}<div class="glow" aria-hidden="true"></div><div class="q-container"><div>{f'<div class="q-eyebrow">{E(s["eyebrow"])}</div>' if s.get("eyebrow") else ""}
 <h1 class="q-h1">{RAW(s["heading"])}</h1><div class="q-lead">{E(s.get("subhead", ""))}</div>{_btns(s, ctx)}{lane}{note}{stats}</div>
 <div class="stack{" has3d" if three else ""}">{three}{ca}{cb}</div></div>{js}</section>'''
 
@@ -309,14 +332,14 @@ def _wheel(s, ctx):
     ring_id = f"{wid}-ring"
     defs = ('<defs><radialGradient id="pvw-seg" cx="50%" cy="50%" r="50%"><stop offset="55%" style="stop-color:var(--card)"/><stop offset="100%" style="stop-color:var(--bg-alt)"/></radialGradient>'
             '<linearGradient id="pvw-on" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--q-gold-bright)"/><stop offset="1" style="stop-color:var(--q-gold)"/></linearGradient>'
-            '<radialGradient id="pvw-hub" cx="35%" cy="30%" r="80%"><stop offset="0" style="stop-color:var(--chrome-bg);stop-opacity:.75"/><stop offset="1" style="stop-color:var(--chrome-bg)"/></radialGradient>'
+            '<radialGradient id="pvw-hub" cx="35%" cy="30%" r="80%"><stop offset="0" style="stop-color:var(--stage);stop-opacity:.75"/><stop offset="1" style="stop-color:var(--stage)"/></radialGradient>'
             '<filter id="pvw-shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000" flood-opacity=".22"/></filter>'
             f'<path id="{ring_id}" d="M{cx},{cy} m-{r_out + 22},0 a{r_out + 22},{r_out + 22} 0 1,1 {2 * (r_out + 22)},0"/></defs>')
     svg = (f'<svg viewBox="-16 -16 592 592" role="group" aria-labelledby="{wid}-t"><title id="{wid}-t">{E(s.get("alt", "The service lines as a wheel"))}</title>{defs}'
            f'<circle class="orbit" cx="{cx}" cy="{cy}" r="{r_out + 12}"/><circle class="orbit2" cx="{cx}" cy="{cy}" r="{r_in - 4}"/><g class="ticks">{"".join(ticks)}</g>'
            f'{"".join(segs)}<circle class="pulse" cx="{cx}" cy="{cy}" r="{r_in - 12}"/><circle class="hub" cx="{cx}" cy="{cy}" r="{r_in - 12}"/><circle class="hubring" cx="{cx}" cy="{cy}" r="{r_in - 20}"/>'
            f'<text class="hubt" x="{cx}" y="{cy + 2}">{hub_t}</text><text class="hubs" x="{cx}" y="{cy + 24}">{hub_s}</text>'
-           f'<text class="ring"><textPath href="#{ring_id}" startOffset="50%" text-anchor="middle">{E(s.get("ring", "EVERYTHING AN OFFICE RUNS ON"))}</textPath></text></svg>')
+           f'<text class="ring"><textPath href="#{ring_id}" startOffset="50%" text-anchor="middle">{E(s.get("ring", ""))}</textPath></text></svg>')
     first = items[0]
     panel = (f'<div class="panel" data-panel><div class="bignum" data-n aria-hidden="true">01</div><div class="q-eyebrow">{E(s.get("panel_eyebrow", "Hover a segment"))}</div><h3 data-t>{E(first[0])}</h3><p data-b>{E(first[1])}</p>'
              f'<a class="go" data-l href="{E(L(first[2]))}">{E(s.get("link_label", "See the service"))}</a><div class="bar" aria-hidden="true"><i></i></div><ol>{"".join(labels)}</ol></div>')
@@ -370,7 +393,9 @@ def _seal(s, ctx):
     items = "".join(f'<div class="item"><div class="badge" aria-hidden="true"><b>{E(m)}</b></div><div><h3>{E(t)}</h3><p>{E(d)}</p></div></div>' for m, t, d in s["items"])
     src = f'<p class="src">{E(s["source"])}</p>' if s.get("source") else ""
     head = f'<div class="pv-center"><div class="q-eyebrow">{E(s.get("eyebrow", ""))}</div><h2 class="q-h2" style="margin-top:22px;max-width:760px">{E(s["heading"])}</h2>{f"<p class=q-lead style=max-width:640px;margin:16px_auto_0>{E(s[chr(105)+chr(110)+chr(116)+chr(114)+chr(111)])}</p>".replace("_", " ") if s.get("intro") else ""}</div>'
-    return f'{ctx["sec_open"](s)} <div class="q-container">{head}<div class="pv-seal">{items}{src}</div></div></section>'
+    n = len(s["items"])
+    cols = 3 if n % 3 == 0 and n % 4 else 4  # never an orphan row (design/guardrails.md, the card-grid rule)
+    return f'{ctx["sec_open"](s)} <div class="q-container">{head}<div class="pv-seal" style="--cols:{cols}">{items}{src}</div></div></section>'
 
 
 def _beforeafter(s, ctx):
@@ -443,8 +468,8 @@ html.pv-js .pv-rv.in{opacity:1;transform:none;transition:opacity .7s cubic-bezie
 .pv-tilt{position:relative}
 .pv-tilt::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(420px circle at var(--px,50%) var(--py,50%),rgba(255,255,255,.26),transparent 60%);mix-blend-mode:soft-light;z-index:2}
 .pv-tilt:hover::after{opacity:1}
-[data-dir="showcase"] .pv-grid .q-card:hover,[data-dir="showcase"] .pv-loc .q-card:hover{box-shadow:0 30px 60px rgba(0,5,69,.16)}
-[data-dir="showcase"] main .q-bg-alt{box-shadow:inset 0 30px 50px -40px rgba(0,5,69,.35)}
+[data-dir="showcase"] .pv-grid .q-card:hover,[data-dir="showcase"] .pv-loc .q-card:hover{box-shadow:0 30px 60px rgb(var(--shade,0 5 69) / .16)}
+[data-dir="showcase"] main .q-bg-alt{box-shadow:inset 0 30px 50px -40px rgb(var(--shade,0 5 69) / .35)}
 .q-header.is-scrolled{backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:color-mix(in srgb,var(--chrome-bg) 86%,transparent)}
 /* stage: perspective floor and a spotlight that follows the pointer */
 .pv-stage{position:relative;overflow:hidden;isolation:isolate}
@@ -454,7 +479,7 @@ html.pv-js .pv-rv.in{opacity:1;transform:none;transition:opacity .7s cubic-bezie
 .pv-stage::after{content:"";position:absolute;inset:-10%;z-index:1;pointer-events:none;background:radial-gradient(560px circle at var(--mx,50%) var(--my,30%),color-mix(in srgb,var(--q-gold) 20%,transparent),transparent 62%)}
 /* fleet: devices float over a floor shadow */
 .pv-fleet .dev .img{position:relative}
-.pv-fleet .dev .img::after{content:"";position:absolute;left:16%;right:16%;bottom:4px;height:24px;border-radius:50%;background:radial-gradient(ellipse at center,rgba(0,5,69,.30),transparent 70%);filter:blur(4px);z-index:0}
+.pv-fleet .dev .img::after{content:"";position:absolute;left:16%;right:16%;bottom:4px;height:24px;border-radius:50%;background:radial-gradient(ellipse at center,rgb(var(--shade,0 5 69) / .30),transparent 70%);filter:blur(4px);z-index:0}
 .pv-fleet .dev .img img{position:relative;z-index:1;animation:pv-float 7s ease-in-out infinite}
 .pv-fleet .dev:nth-child(2) .img img{animation-delay:-1.1s}.pv-fleet .dev:nth-child(3) .img img{animation-delay:-2.3s}.pv-fleet .dev:nth-child(4) .img img{animation-delay:-3.4s}.pv-fleet .dev:nth-child(5) .img img{animation-delay:-4.6s}.pv-fleet .dev:nth-child(6) .img img{animation-delay:-5.7s}
 /* hero choreography, Showcase only, JS on */
@@ -517,7 +542,7 @@ EXTRA_CSS2 = EXTRA_CSS2 + TIMELINE_CSS
 DEPTH_JS = r"""(function(){var d=document.documentElement;d.classList.add('pv-js');var rm=matchMedia('(prefers-reduced-motion: reduce)').matches,fine=matchMedia('(pointer:fine) and (min-width:1025px)').matches,dir=d.getAttribute('data-dir')||'';
 /* reveal below the first section, staggered per parent */
 if(!rm&&'IntersectionObserver' in window){var first=document.querySelector('main > section');
-var sel='main .q-card,main .pv-stat,main .pv-svc a,main .pv-seal .item,main .pv-flow .node,main .pv-fleet .dev,main .pv-hot-list li,main .pv-wheel,main .pv-ba,main .pv-3d,main .pv-cmp,main .pv-story .stage,main .pv-map-svg,main .pv-tl2 li,main .pv-post,main .pv-quote,main .pv-cs,main .pv-metric,main section .q-h2,main section .q-lead,main .pv-proof b';
+var sel='main .q-card,main .pv-stat,main .pv-svc a,main .pv-seal .item,main .pv-flow .node,main .pv-fleet .dev,main .pv-hot-list li,main .pv-wheel,main .pv-ba,main .pv-3d,main .pv-cmp,main .pv-story .stage,main .pv-map-svg,main .pv-tl2 li,main .pv-work .w,main .pv-awards .a,main .pv-post,main .pv-quote,main .pv-cs,main .pv-metric,main section .q-h2,main section .q-lead,main .pv-proof b';
 var els=[].slice.call(document.querySelectorAll(sel)).filter(function(e){return !(first&&first.contains(e))&&!e.closest('.pv-lh')});
 els.forEach(function(e){var p=e.parentElement;p.__pvN=p.__pvN||0;e.style.setProperty('--i',Math.min(p.__pvN,8));p.__pvN++;e.classList.add('pv-rv')});
 var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting||x.boundingClientRect.top<0){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:0,rootMargin:'0px 0px 35% 0px'});
@@ -564,3 +589,73 @@ if('IntersectionObserver' in window){{new IntersectionObserver(function(es){{es.
 
 
 RENDER_EXTRA2["story3d"] = _story3d
+
+
+# ===== the work: real projects as an editorial mosaic, and the awards wall =====
+WORK_CSS = r"""
+.pv-work-sec{background:var(--stage);color:#fff}
+.pv-work-sec .q-h2{color:#fff}.pv-work-sec .q-lead{color:rgba(255,255,255,.78)}.pv-work-sec .q-eyebrow{color:var(--stage-accent,var(--q-gold))}
+.pv-work-sec .q-eyebrow::before{background:var(--stage-accent,var(--q-gold))}
+.pv-work-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:44px;flex-wrap:wrap}
+.pv-work-head .q-lead{max-width:520px;margin:0}
+.pv-work{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:clamp(190px,17vw,250px);gap:14px}
+.pv-work .w{position:relative;display:block;overflow:hidden;border-radius:calc(var(--radius) + 6px);background:#000;color:#fff;text-decoration:none;grid-column:span 2;isolation:isolate}
+.pv-work .w:first-child{grid-column:span 4;grid-row:span 2}
+.pv-work.n5 .w:nth-child(n+4),.pv-work.n7 .w:nth-child(n+4){grid-column:span 3}
+.pv-work .w img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1),opacity .4s;opacity:.92}
+.pv-work .w::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.82) 100%);z-index:1}
+.pv-work .w:hover img,.pv-work .w:focus-visible img{transform:scale(1.06);opacity:1}
+.pv-work .cap{position:absolute;left:0;right:0;bottom:0;padding:20px 22px;z-index:2}
+.pv-work .w:first-child .cap{padding:30px 32px}
+.pv-work .chip{display:inline-block;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;padding:6px 10px;border-radius:999px;background:var(--q-gold);color:var(--cta-fg);margin-bottom:10px}
+.pv-work h3{margin:0;font-size:18px;line-height:1.2;letter-spacing:-.01em;color:#fff}
+.pv-work .w:first-child h3{font-size:clamp(24px,2.4vw,34px)}
+.pv-work .cap p{margin:6px 0 0;font-size:14px;line-height:1.45;color:rgba(255,255,255,.8);max-width:52ch}
+.pv-work .w:not(:first-child) .cap p{display:none}
+.pv-work-foot{margin-top:28px;font-size:13.5px;color:rgba(255,255,255,.6)}
+@media(max-width:900px){.pv-work{grid-template-columns:1fr 1fr;grid-auto-rows:220px}.pv-work .w,.pv-work .w:first-child,.pv-work.n5 .w:nth-child(n),.pv-work.n7 .w:nth-child(n){grid-column:span 1;grid-row:span 1}.pv-work .w:first-child{grid-column:span 2;grid-row:span 1;min-height:300px}}
+@media(max-width:560px){.pv-work{grid-template-columns:1fr;grid-auto-rows:auto}.pv-work .w,.pv-work .w:first-child{grid-column:span 1;min-height:0;aspect-ratio:4/3}.pv-work .w:not(:first-child) .cap p{display:block}.pv-work .cap,.pv-work .w:first-child .cap{padding:18px}.pv-work .w:first-child h3{font-size:22px}}
+@media(prefers-reduced-motion:reduce){.pv-work .w img{transition:none}}
+.pv-awards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:8px}
+@media(max-width:820px){.pv-awards{grid-template-columns:repeat(2,1fr)}}
+.pv-awards .a{background:var(--card);border:1px solid var(--border);border-radius:calc(var(--radius) + 4px);padding:18px 16px 16px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px}
+.pv-awards .a img{width:100%;max-width:150px;height:110px;object-fit:contain}
+.pv-awards .a b{font-size:14px;line-height:1.3}
+.pv-awards .a span{font-size:12.5px;line-height:1.4;color:var(--fg-muted)}
+"""
+
+
+def _work(s, ctx):
+    """Real projects as a mosaic: the first is the feature, each card names the project and the award it won."""
+    E, L = ctx["E"], ctx["L"]
+    items = s["items"]  # {"title","line","image","chip","href","alt"}
+    cards = []
+    for i, it in enumerate(items):
+        chip = f'<span class="chip">{E(it["chip"])}</span>' if it.get("chip") else ""
+        tag = "a" if it.get("href") else "div"
+        href = f' href="{E(L(it["href"]))}"' if it.get("href") else ""
+        cards.append(f'<{tag} class="w"{href}><img src="{E(ctx["rel"](it["image"]))}" alt="{E(it.get("alt", it["title"]))}" width="1600" height="1000" loading="{"eager" if i < 3 else "lazy"}" decoding="async">'
+                     f'<div class="cap">{chip}<h3>{E(it["title"])}</h3><p>{E(it.get("line", ""))}</p></div></{tag}>')
+    eyebrow = f'<div class="q-eyebrow">{E(s["eyebrow"])}</div>' if s.get("eyebrow") else ""
+    intro = f'<p class="q-lead">{E(s["intro"])}</p>' if s.get("intro") else ""
+    foot = f'<div class="pv-work-foot">{E(s["foot"])}</div>' if s.get("foot") else ""
+    sid = f' id="{E(s["id"])}"' if s.get("id") else ""
+    return (f'<section class="q-section pv-work-sec"{sid}><div class="q-container"><div class="pv-work-head"><div>{eyebrow}'
+            f'<h2 class="q-h2" style="margin-top:22px;max-width:720px">{E(s["heading"])}</h2></div>{intro}</div>'
+            f'<div class="pv-work n{len(items)}">{"".join(cards)}</div>{foot}</div></section>')
+
+
+def _awards(s, ctx):
+    """The awards wall: the badges the client publishes, each with who gave it and when."""
+    E = ctx["E"]
+    cells = "".join(f'<div class="a"><img src="{E(ctx["rel"](im))}" alt="{E(t)}" width="300" height="220" loading="lazy" decoding="async"><b>{E(t)}</b><span>{E(d)}</span></div>'
+                    for im, t, d in s["items"])
+    eyebrow = f'<div class="q-eyebrow">{E(s["eyebrow"])}</div>' if s.get("eyebrow") else ""
+    intro = f'<p class="q-lead" style="max-width:640px;margin:16px auto 0">{E(s["intro"])}</p>' if s.get("intro") else ""
+    return (f'{ctx["sec_open"](s)} <div class="q-container"><div class="pv-center" style="margin-bottom:40px">{eyebrow}'
+            f'<h2 class="q-h2" style="margin-top:22px;max-width:760px">{E(s["heading"])}</h2>{intro}</div><div class="pv-awards">{cells}</div></div></section>')
+
+
+RENDER_EXTRA2["work"] = _work
+RENDER_EXTRA2["awards"] = _awards
+EXTRA_CSS2 = EXTRA_CSS2 + WORK_CSS
