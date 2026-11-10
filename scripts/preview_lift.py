@@ -245,7 +245,7 @@ def _prodstage(s, ctx):
 
 def _doclist(s, ctx):
     E, L = ctx["E"], ctx["L"]
-    rows = "".join(f'<li><span class="ic" aria-hidden="true"></span><div><b>{E(t)}</b><span>{E(d)}</span></div><em>Library link added at build</em></li>' for t, d in s["items"])
+    rows = "".join(f'<li><span class="ic" aria-hidden="true"></span><div><b>{E(t)}</b><span>{E(d)}</span></div><em>In the DMP library</em></li>' for t, d in s["items"])
     return f'{ctx["sec_open"](s)}<div class="q-container">{_head(s, ctx)}<ul class="lf-doclist">{rows}</ul></div></section>'
 
 
@@ -273,7 +273,7 @@ def _hero_grid(s, ctx):
     E, RAW, L, rel = ctx["E"], ctx["RAW"], ctx["L"], ctx["rel"]
     chips = "".join(f'<a href="{E(L(h))}">{E(t)}</a>' for t, h in s.get("finder", []))
     find = f'<div class="lf-find"><span>{E(s.get("finder_label", "Find your building"))}</span><div>{chips}</div></div>' if chips else ""
-    tiles = "".join(f'<a class="lf-tile" href="{E(L(h))}"><img src="{E(rel(img))}" alt="" width="600" height="600" decoding="async"{" fetchpriority=high" if i == 0 else ""}><span class="t"><span class="k">{E(k)}</span><b>{E(n)}</b></span></a>'
+    tiles = "".join(f'<a class="lf-tile" href="{E(L(h))}"><img src="{E(rel(img))}" alt="" width="600" height="600" decoding="async"{" fetchpriority=high" if i == 0 else " loading=lazy"}><span class="t"><span class="k">{E(k)}</span><b>{E(n)}</b></span></a>'
                     for i, (n, img, h, k) in enumerate(s.get("tiles", [])))
     return (f'<section class="q-section lf-hg" id="{E(s.get("id", "hero"))}"><div class="q-container lf-hg-wrap"><div>'
             f'{_eyebrow(s, E)}<h1 class="q-h1">{RAW(s["heading"])}</h1>'

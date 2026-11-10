@@ -195,7 +195,7 @@ CATS = {
                  ("Connecting the app and sending notifications", [Q_DEALERCONN, Q_PUSH, Q_EASY]),
                  ("Schedules, Remote Link and default codes", [Q_AUTOARM, Q_RLDOWNLOAD, Q_DEFCODE])],
     "related": [("Control panel FAQs", "App Keys, Remote Options and communication paths.", "support/tech-faqs/control-panel.html"),
-                ("Mobile and automation products", "Virtual Keypad and automation.", "services/mobile-automation.html"),
+                ("Virtual Keypad and software products", "Virtual Keypad, Dealer Admin and automation.", "services/mobile-automation.html"),
                 ("End-user training", "How-to videos for Virtual Keypad.", "training/end-user-training.html")]},
  "monitoring-center": {
     "label": "Monitoring center", "short": "Monitoring Center",
@@ -299,14 +299,14 @@ PAGES.append({"file": "support.html", "title": title("Support and contacts"),
         {"type": "cards", "alt": True, "eyebrow": "Pick the right line", "heading": "Who to call for what, with hours and email",
          "items": [["Inside Sales: 877-757-4367", "System design, architect and engineer support, pre-sales support, quotes and pricing, and Dealer Direct assistance. 8 a.m. to 5 p.m. Central. InsideSales@DMP.com."],
                    ["Technical Support: 888-436-7832", "Installation, programming, troubleshooting and diagnostic issues. 7 a.m. to 7 p.m. Central. TechSupport@DMP.com."],
-                   ["Customer Service: 866-266-2826", "Products and ordering, software activations, the Buy Site, shipping and order entry questions. 8 a.m. to 6 p.m. Central. CustomerService@DMP.com."],
+                   ["Customer Service: 866-266-2826", "Products and ordering, software activations, the Buy site, shipping and order entry questions. 8 a.m. to 6 p.m. Central. CustomerService@DMP.com."],
                    ["SecureCom Wireless: 877-300-8030", "Activation or billing questions. 8 a.m. to 5 p.m. Central. CustomerService@SecureComWireless.com. Website: SecureComWireless.com."]]},
         {"type": "resources", "heading": "Fixing something or learning a product? Start with one of these four.", "intro": "Answers, documents, courses and wireless service.",
          "items": [["Answers", "Technical FAQs", "Codes, firmware, Remote Link, wireless zones and more, in eight categories.", "Open the FAQs", "support/tech-faqs.html"],
                    ["Documents", "Documentation library", "Spec sheets, installation and programming guides, quick start guides and technical updates.", "Open the library", "support/documentation.html"],
                    ["Courses", "Training", "DMP University, technical, sales and end-user training.", "See training", "training.html"],
                    ["Service", "SecureCom Wireless", "Activation and billing for cellular service on SecureComWireless.com.", "Go to SecureComWireless.com", "https://securecomwireless.com/"]]},
-        {"type": "resources", "heading": "Specifying, selling or signing up as a dealer? These eight pages cover it.", "intro": "Tools for designers and dealers, and how to become one.",
+        {"type": "resources", "heading": "Specifying, selling or signing up as a dealer? These eight pages cover it.", "intro": "Tools for designers and dealers, and how to become one.",
          "items": [["Design", "Design tools", "Design DMP systems on a digital floor plan and generate a bill of materials.", "Open design tools", "support/design-tools.html"],
                    ["Specifications", "A&E support", "A&E specs and CAD drawings for panels, enclosures, modules, keypads and wireless.", "Open A&E support", "support/ae-support.html"],
                    ["Quotes", "Get a quote", "Tell us what you are specifying and where. A person will reply.", "Get a quote", "support/get-a-quote.html"],
@@ -315,12 +315,12 @@ PAGES.append({"file": "support.html", "title": title("Support and contacts"),
                    ["Join", "Become a dealer", "How the application works and what we look for in a dealer.", "Apply", "support/become-a-dealer.html"],
                    ["Marketing", "Marketing support", "Marketing Central assets, custom videos and print at our cost.", "See marketing support", "support/marketing.html"],
                    ["Branding", "Private label", "Custom keypads, Digital Keys, branded readers and credentials.", "See private label", "support/private-label.html"]]},
-        {"type": "services", "alt": True, "heading": "Find your regional sales manager, or a distributor outside the U.S.",
+        {"type": "services", "alt": True, "heading": "Find your regional sales manager, or a distributor outside the U.S.",
          "intro": "The directory lists titles and territories, and Inside Sales routes the call.",
          "items": [["Sales regions and regional sales managers", "From the Carolinas and New England to Four Corners and Los Angeles, each region has a regional sales manager.", "support/sales-directory.html"],
                    ["International distributors", "DMP products are available through authorized dealers and distributors outside the United States.", "international.html"],
                    ["Not sure who to call?", "Inside Sales at 877-757-4367 will point you to the right person.", "contact.html"]]},
-        {"type": "cards", "eyebrow": "2026 holiday closures", "heading": "We are closed on eight days in 2026, from New Year's Day to Christmas Day.",
+        {"type": "cards", "eyebrow": "2026 holiday closures", "heading": "We are closed on eight days in 2026, from New Year's Day to Christmas Day.",
          "items": [list(h) for h in HOLIDAYS]},
         LEADFORM]})
 
@@ -366,7 +366,8 @@ DOC_TYPES = [
     ["Training videos", "Short videos that show how to use a product or sell it.",
      "Examples: Virtual Keypad How-To; 7-Inch Keypad How-To; Replacing Batteries How-To; AlarmVision; VUE Video Doorbell."]]
 SYS = [("intrusion", "Intrusion"), ("access-control", "Access control"), ("fire", "Fire"), ("video", "Video"), ("communicators", "Communicators"),
-       ("wireless", "Wireless"), ("panels-keypads", "Panels and keypads"), ("mobile-automation", "Mobile and automation")]
+       ("wireless", "Wireless"), ("panels-keypads", "Panels and keypads"), ("mobile-automation", "Virtual Keypad and software")]
+_SN = {"communicators": "communicator", "panels and keypads": "panel and keypad", "virtual keypad and software": "Virtual Keypad and software"}
 PAGES.append({"file": "support/documentation.html", "title": title("Technical documentation library"),
     "description": desc("The DMP document library: spec sheets, installation and programming guides, quick start guides, technical updates, white papers, case studies and videos."),
     "crumbs": crumbs(["Documentation", "support/documentation.html"]),
@@ -380,11 +381,11 @@ PAGES.append({"file": "support/documentation.html", "title": title("Technical do
          "body": "The library holds more than the eight headline types. Filter by resource type to reach any of these, and by file type (PDF, XLSX, PPTX or ZIP).",
          "bullets": ["A&E specs and CAD drawings (see A&E support)", "Application notes, tech tips and how-to guides", "Battery calculators and compatibility guides", "Compliance guides, compliance notes and compliance statements",
                      "Help files, user guides and quick reference cards", "Programming sheets and installation sheets", "System design guides and lab guides", "Training presentations and sales training notes", "Dealer Digest issues"]},
-        {"type": "detail", "alt": True, "eyebrow": "Filter by product category", "heading": "Sixteen product categories, plus international variants",
+        {"type": "detail", "alt": True, "eyebrow": "Filter by product category", "heading": "Sixteen library categories, plus international variants",
          "body": "Start from the part of the system you are working on: Access Control, Automation, Cell and Network Communicators, Control Panels, Dealer Admin, Entré Software, Fire, Intrusion, Keypads, Software Platforms, Modules and Expanders, Monitoring Center, Power Supplies, Video, Virtual Keypad and Wireless. International versions of communicators, control panels, keypads, modules and expanders, power supplies and wireless have their own categories.",
          "bullets": ["Search by model number, for example XT75 or 1100", "Narrow to one document type, such as Technical Updates", "Open the PDF, spreadsheet, presentation or archive you need"]},
         {"type": "resources", "heading": "Browse the product lines whose documents you need", "intro": "Each system page links to its products and their documents.",
-         "items": [[n, f"{n} documents", f"Spec sheets, guides and updates for {n.lower()} products.", f"See {n.lower()} products", f"services/{s}.html"] for s, n in SYS]},
+         "items": [[n, f"{n} documents", f"Spec sheets, guides and updates for {_SN.get(n.lower(), n.lower())} products.", f"See {_SN.get(n.lower(), n.lower())} products", f"services/{s}.html"] for s, n in SYS]},
         {"type": "faq", "heading": "Finding the right document", "items": [
             ["Where is the General Troubleshooting Guide?", "In the documentation library. The Cell Status Failure Identification Chart, which explains cellular diagnostics errors, is on page 30 of the DMP Troubleshooting Guide."],
             ["What does a technical update tell me?", "Each one covers a specific release, for example SCS-VR Version 1.5.3 (10/8/26) or the VUE Video Doorbell Version 142 (10/22/26), and says what changed."],
@@ -393,20 +394,20 @@ PAGES.append({"file": "support/documentation.html", "title": title("Technical do
 
 # ------------------------------------------------------------------------------------------------ dealer services
 PAGES.append({"file": "support/dealer-services.html", "title": title("Dealer services"),
-    "description": desc("Dealer services from DMP: Dealer Admin, Dealer Account, free firmware, the Customer Return Center, marketing support and a three year warranty."),
+    "description": desc("Dealer services from DMP: Dealer Admin, Dealer Account, free firmware, the Customer Return Center, marketing support and a three-year warranty."),
     "crumbs": crumbs(["Dealer services", "support/dealer-services.html"]),
     "sections": [
-        {"type": "hero", "layout": "split", "eyebrow": "Dealer services", "heading": "Free firmware updates and <em>a three year warranty</em>.",
+        {"type": "hero", "layout": "split", "eyebrow": "Dealer services", "heading": "Free firmware updates and <em>a three-year warranty</em>.",
          "subhead": "Since 1975, our sole purpose has been to create customer-driven products for professional security dealers. While others have made security a piece of their business, we have made it the entirety of ours.",
          "primary": {"label": "Become a dealer", "href": "support/become-a-dealer.html"}, "secondary": {"label": "Marketing support", "href": "support/marketing.html"},
          "image": IMG + "plant-1200.jpg", "image_alt": "The DMP production floor in Springfield, Missouri", "image_w": 1200, "image_h": 800},
         {"type": "cards", "alt": True, "eyebrow": "Six services", "heading": "What every authorized dealer gets",
-         "items": [["Dealer Admin", "Your one stop shop for managing your business and your customers' systems. See an overview of your customers' systems and their status, view analytics, perform mass programming and bulk remote updates, and more."],
+         "items": [["Dealer Admin", "Your one-stop shop for managing your business and your customers' systems. See an overview of your customers' systems and their status, view analytics, perform mass programming and bulk remote updates, and more."],
                    ["Dealer Account (accounting)", "Securely pay invoices, schedule payments and review the status of software licenses and more."],
                    ["Marketing support", "Your brand is the one that should be promoted, not ours. Custom brand your keypads and customize professional materials with your logo and your staff's contact information."],
                    ["Product firmware updates", "Software and firmware updates are available from DMP free of charge."],
                    ["Customer Return Center", "Our goal is to turn around every request for product updates or repairs in one business day, which is possible because of our online Customer Return Center."],
-                   ["Three year warranty", "DMP warrants that the products it manufactures are without defects for three years from the purchase date, in accordance with our Terms and Conditions."]]},
+                   ["Three-year warranty", "DMP warrants that the products it manufactures are without defects for three years from the purchase date, in accordance with our Terms and Conditions."]]},
         {"type": "detail", "eyebrow": "Dealer Admin", "heading": "One cloud portal for every customer's panel, with unlimited Global Holiday Dates.",
          "body": "Dealer Admin is a cloud-based portal for managing your business and your customers' DMP panels, including universal communicators. Create, add and delete customers; see location, system type, version and connection method on the customer dashboard; and manage Virtual Keypad app users from one place.",
          "bullets": ["Map and weather view, with filters by panel, system, carrier, technology and status", "Bulk Remote Update, even across thousands of panels that support remote updates", "Mass Programming dashboard with a status check on every change",
@@ -546,7 +547,7 @@ PAGES.append({"file": "support/become-a-dealer.html", "title": title("Become a D
         {"type": "faq", "heading": "Dealer questions answered", "items": [
             ["Does DMP sell directly to building owners?", COMMON_FAQ["who"][1]],
             ["How do dealers place an order?", "At buy.DMP.com, which takes orders 24 hours a day, or through DMP Customer Service."],
-            ["What does a dealer get?", "Dealer Admin, Dealer Account, free firmware updates, the Customer Return Center, marketing support and a three year warranty. See dealer services for details."]]},
+            ["What does a dealer get?", "Dealer Admin, Dealer Account, free firmware updates, the Customer Return Center, marketing support and a three-year warranty. See dealer services for details."]]},
         LEADFORM]})
 
 # ------------------------------------------------------------------------------------------------ sales directory
@@ -633,7 +634,7 @@ PAGES.append({"file": "support/private-label.html", "title": title("Private labe
         {"type": "contact", "id": "start", "heading": "Start a private label order", "body": "Tell us which items you want branded. Email PrivateLabel@DMP.com or send the form.",
          "options": ["Custom Digital Key credentials", "Branded Wavelynx readers or credentials", "Branded Farpointe credentials", "Custom keypads", "Custom videos"], "submit": "Send to private label",
          "note": "PrivateLabel@DMP.com"},
-        LEADFORM]})
+        {**LEADFORM, "id": "contact-us"}]})
 
 TO_CONFIRM = [
     "All forms (quote request, dealer application, Marketing Central sign-up, private label, lead form) are placeholders until the HubSpot forms are wired. The field lists on get-a-quote and become-a-dealer come from the fields on the current dmp.com forms; the option lists for business type, major markets and annual revenue were not reproduced.",

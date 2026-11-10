@@ -13,10 +13,10 @@ LEADFORM = {"type": "leadform", "alt": True, "id": "start", "heading": "Tell us 
             "body": "Say who you are, what the building is and which products you are looking at, and a person will reply.",
             "submit": "Send to DMP", "note": "Inside Sales is 877-757-4367, 8 a.m. to 5 p.m. Central."}
 COMMON_FAQ = {
-    "who": ["Does DMP sell directly to building owners?", "DMP sells through authorized dealers and distributors. A building owner starts with a dealer, and DMP's inside sales team helps with system design."],
+    "who": ["Does DMP sell directly to building owners?", "DMP sells through authorized dealers and distributors. A building owner starts with a dealer, and DMP's Inside Sales team helps with system design."],
     "where": ["Where is DMP based?", "Digital Monitoring Products is headquartered at 2500 N. Partnership Boulevard, Springfield, Missouri 65803, and has made its products there since 1975."],
     "what": ["What does DMP make?", "Intrusion, access control, fire and video systems, with the communicators, keypads, wireless devices, Virtual Keypad and software that go with them."],
-    "usa": ["Is DMP made in the USA?", "DMP says its products are manufactured in the USA with U.S. and global components, in Springfield, Missouri."],
+    "usa": ["Is DMP made in the USA?", "DMP products are manufactured in the USA with U.S. and global components, in Springfield, Missouri."],
     "person": ["How do I reach a person?", "Inside Sales is 877-757-4367, Technical Support 888-436-7832 and Customer Service 866-266-2826. The support page lists hours and email addresses."],
     "order": ["How do dealers place an order?", "At buy.DMP.com, which takes orders 24 hours a day, or through DMP Customer Service."],
     "soc": ["Is DMP's software independently examined?", "Yes. DMP completes independent SOC 2 Type II examinations annually, by a licensed CPA firm, for Dealer Admin and Virtual Keypad."],
@@ -24,7 +24,11 @@ COMMON_FAQ = {
 def cf(*keys): return [COMMON_FAQ[k] for k in keys]
 def desc(text, n=155):
     if len(text) <= n: return text
-    cut = text[:n]; return cut[:cut.rfind(" ")].rstrip(",;:") + "."
+    cut = text[:n + 1]; ends = [m.end() for m in re.finditer(r"(?:(?<=[a-z0-9\)])|(?<=[A-Z]{2}))[.!?](?=\s)", cut) if m.end() >= 70]
+    if ends: return cut[:ends[-1]].strip()
+    cut = text[:n]; j = max(cut.rfind(", "), cut.rfind("; "), cut.rfind(": "))
+    if j >= 70: return cut[:j].rstrip(",;: ") + "."
+    return cut[:cut.rfind(" ")].rstrip(",;:") + "."
 def brief(text, n=150):
     if len(text) <= n: return text
     cut = text[:n]; i = max(cut.rfind(". "), cut.rfind("! "), cut.rfind("? "))

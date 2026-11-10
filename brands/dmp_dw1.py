@@ -53,7 +53,7 @@ SPOTS = [
          _p("vplus-7061-fe", "VUE Plus 6MP Fisheye", "A 360 degree view with AlarmVision onboard, indoor or outdoor."),
          _p("xv-gateways-with-alarmvision", "XV Gateways with AlarmVision", "Loitering, person, vehicle and animal detection from your customers' cameras.")]},
     {"id": "panel", "label": "Panel room", "title": "The panel closet",
-     "lede": "The control panel, sized from small business to the largest sites.",
+     "lede": "The control panel, sized from small business to very large sites.",
      "products": [
          _p("xr550", "XR550", "96 doors of access control, 574 zones and 10,000 user codes."),
          _p("xt75", "XT75", "Intrusion, access control and AlarmVision on a single network panel.")]},

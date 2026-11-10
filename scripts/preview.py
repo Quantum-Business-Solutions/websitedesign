@@ -47,6 +47,7 @@ import preview_polish  # noqa: E402
 import preview_pop3  # noqa: E402
 import preview_dw1  # noqa: E402
 import preview_dw2  # noqa: E402
+import preview_vis  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DASH_HITS: list[str] = []
@@ -211,7 +212,7 @@ html{scroll-padding-top:130px}
 img{max-width:100%;height:auto}
 .embedded .pv-switch,.embedded .pv-util{display:none}
 .q-skip{position:absolute;top:-200px;left:8px;z-index:100;background:var(--q-gold);color:var(--cta-fg);padding:10px 16px;border-radius:6px;font-weight:600}
-.q-skip:focus{top:8px}
+.q-skip:focus{top:8px}#main:focus{outline:0}
 h1,h2,h3{text-wrap:balance}
 .q-eyebrow{font-size:13px}
 .q-btn,.q-btn-ghost{min-height:44px}
@@ -624,7 +625,7 @@ def r_locations(s, ctx):
 
 
 def r_faq(s, ctx):
-    items = "".join(f'<details{" open" if i == 0 else ""}><summary>{E(q)}<span>+</span></summary><p>{E(a)}</p></details>' for i, (q, a) in enumerate(s["items"]))
+    items = "".join(f'<details{" open" if i == 0 else ""}><summary>{E(q)}<span aria-hidden="true">+</span></summary><p>{E(a)}</p></details>' for i, (q, a) in enumerate(s["items"]))
     ld = json.dumps({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in s["items"]]}, ensure_ascii=False)
     return f'{sec_open(s)} <div class="q-container pv-faq" style="max-width:860px"><h2 class="q-h2" style="text-align:center;margin-bottom:36px">{E(s["heading"])}</h2>{items}</div><script type="application/ld+json">{ld}</script></section>'
@@ -769,7 +770,7 @@ def header(content, ctx):
     lw, lh = b.get("logo_w", 300), b.get("logo_h", 100)
     logo = (f'<img src="{E(ctx["rel"](b["logo"]))}" alt="{E(b.get("logo_alt", content["client"]))}" width="{round(40 * lw / lh)}" height="40" loading="eager">'
             if b.get("logo") else f'<span class="q-logo-text">{E(content["client"])}</span>')
-    return f'''<header class="q-header"><a class="q-skip" href="#q-content">Skip to content</a>
+    return f'''<header class="q-header">
 <div class="pv-util"><div class="q-container">{util}</div></div>
 <div class="q-container q-header-in">
   <a href="{E(L("index.html"))}" class="q-header-logo" aria-label="{E(content["client"])} home">{logo}</a>
@@ -833,7 +834,7 @@ def switcher(themes, this_theme, page_file, recommend):
     cur_name = this_theme.replace("Quantum ", "")
     _ic = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>'
     return (f'<nav class="pv-switch" aria-label="Preview directions"><button type="button" class="pv-sw-tab" aria-expanded="false" aria-label="Directions, now {E(cur_name)}">{_ic}<span>Directions</span></button><div class="pv-sw-list">{links}<a href="{up}index.html">All three</a></div></nav>'
-            f'<details class="pv-switch-m"><summary aria-label="Change direction, now {E(cur_name)}">{_ic}Directions</summary><nav class="menu" aria-label="Preview directions">{links}<a href="{up}index.html">All three</a></nav></details>'
+            f'<details class="pv-switch-m"><summary aria-label="Directions, now {E(cur_name)}">{_ic}Directions</summary><nav class="menu" aria-label="Directions menu">{links}<a href="{up}index.html">All three</a></nav></details>'
             '<script>if(top!==self){document.documentElement.classList.add("embedded")}</script>')
 
 
@@ -1178,13 +1179,16 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
 {preview_pop3.POP3_CSS}
 {preview_dw1.DW1_CSS}
 {preview_dw2.DW2_CSS}
+{preview_vis.VIS_CSS}
 </style>
 {schema_blocks(content, page, base, dslug, p_title, p_desc)}
 {"".join(f'<script type="application/ld+json">{json.dumps(blk, ensure_ascii=False)}</script>' for blk in page.get("schema", []))}
 </head>
 <body>
+<a class="q-skip" href="#main">Skip to content</a>
+<script>{preview_notice.NOTICE_BAR_JS}</script>
 {header(content, ctx)}
-{crumbs(page, ctx, (content.get("schema") or {}).get("org_url") or base)}<main id="main">
+{crumbs(page, ctx, (content.get("schema") or {}).get("org_url") or base)}<main id="main" tabindex="-1">
 {body}
 </main>
 {footer(content, ctx)}

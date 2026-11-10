@@ -264,7 +264,7 @@ def _calc(s, ctx):
                 f'{f"<span aria-hidden=true>{suf}</span>" if suf else ""}</div><p class="pp3-err" id="{i}-e" role="alert"></p></div>')
     fields = (fld("pc-calls", "Service calls per month", "Count the calls your company makes in a typical month.", "your number")
               + fld("pc-cost", "Average cost per call", "Vehicle, fuel, parts and anything else a call costs, not counting technician time.", "your number", pre="$")
-              + fld("pc-share", "Share that could be handled remotely", "Your own judgement of the calls that need no visit, as a percent from 0 to 100.", "your number", suf="%")
+              + fld("pc-share", "Share that could be handled remotely", "Your own judgment of the calls that need no visit, as a percent from 0 to 100.", "your number", suf="%")
               + fld("pc-rate", "Technician hourly cost", "What an hour of technician time costs you.", "your number", pre="$")
               + fld("pc-hrs", "Technician hours per call (travel plus on site)", "Needed to value technician time. Leave empty to leave labor out.", "your number"))
     caps = "".join(f'<li><b>{E(t)}</b> {E(b)} <a href="{E(L(h))}">{E(lb)}</a></li>' for t, b, lb, h in s["caps"])
@@ -327,7 +327,7 @@ def _gate(s, ctx):
     ch = "".join(f'<li><div><b>{E(t)}</b><span>{E(b)}</span></div></li>' for t, b in s["chapters"])
     return f'''{ctx["sec_open"](s)}<div class="pp3-wrap"><div class="pp3-gate" data-pp3-gate>
 <div><div class="pp3-cover" role="img" aria-label="Mock cover of the dealer playbook, title to be confirmed"><small>Dealer playbook</small><strong>Title to be confirmed</strong><span>Placeholder cover</span></div></div>
-<div><div class="q-eyebrow">{E(s["eyebrow"])}</div><h2 class="q-h2" style="margin-top:18px">{E(s["heading"])}</h2><p class="q-lead" style="margin-top:14px">{E(s["intro"])}</p>
+<div><div class="q-eyebrow">{E(s["eyebrow"])}</div><h1 class="q-h2" style="margin-top:18px">{E(s["heading"])}</h1><p class="q-lead" style="margin-top:14px">{E(s["intro"])}</p>
 <form class="pp3-gform" novalidate data-gate-form><div><label for="pg-n">Name</label><input class="pp3-in" id="pg-n" type="text" autocomplete="name"></div><div><label for="pg-e">Work email</label><input class="pp3-in" id="pg-e" type="email" autocomplete="email"></div><div><label for="pg-c">Company</label><input class="pp3-in" id="pg-c" type="text" autocomplete="organization"></div>
 <p class="pp3-err" data-gate-err role="alert"></p><div><button type="submit" class="pp3-btn gold">Get the playbook</button></div></form>
 <div class="pp3-thanks" data-gate-thanks hidden tabindex="-1" role="status"><h3>Thank you. Check your email.</h3><p data-gate-msg></p><button type="button" class="pp3-btn ghost" data-gate-reset>Use a different email</button></div>
@@ -448,13 +448,14 @@ try{v=localStorage.getItem(KEY)}catch(e){}
 if(v)return;
 var b=mk('div','pp3-cc');b.setAttribute('role','region');b.setAttribute('aria-label','Cookie consent (preview)');
 b.innerHTML='<p class="pre">Preview of the consent banner; the live site uses HubSpot’s consent tool.</p><h2>Cookies on this site</h2><p class="txt">Essential cookies keep the site working. Optional analytics and marketing cookies are only used if you allow them. Wording to be confirmed.</p><div class="pp3-prefs" hidden><fieldset><legend class="sr-only" style="position:absolute;left:-9999px">Cookie preferences</legend><label><input type="checkbox" checked disabled> Essential, always on</label><label><input type="checkbox" data-k="analytics"> Analytics</label><label><input type="checkbox" data-k="marketing"> Marketing</label></fieldset><div class="row"><button type="button" class="pri" data-a="save">Save preferences</button></div></div><div class="row pp3-main"><button type="button" class="pri" data-a="all">Accept all</button><button type="button" data-a="none">Reject non-essential</button><button type="button" data-a="prefs" aria-expanded="false">Preferences</button></div>';
-function done(c){var o={v:1,choice:c.choice,analytics:!!c.analytics,marketing:!!c.marketing};try{localStorage.setItem(KEY,JSON.stringify(o))}catch(e){}b.remove()}
+function done(c){var o={v:1,choice:c.choice,analytics:!!c.analytics,marketing:!!c.marketing};try{localStorage.setItem(KEY,JSON.stringify(o))}catch(e){}var hadFocus=b.contains(d.activeElement);b.remove();d.documentElement.style.scrollPaddingBottom='';d.body.style.paddingBottom='';if(hadFocus){var mm=d.getElementById('main');if(mm)mm.focus({preventScroll:true})}}
 b.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('button[data-a]');if(!a)return;var k=a.getAttribute('data-a');
  if(k==='all')done({choice:'all',analytics:1,marketing:1});
  else if(k==='none')done({choice:'essential'});
  else if(k==='prefs'){var p=$('.pp3-prefs',b);p.hidden=!p.hidden;a.setAttribute('aria-expanded',String(!p.hidden));b.classList.toggle('open',!p.hidden);if(!p.hidden)$('input[data-k]',b).focus()}
  else if(k==='save')done({choice:'custom',analytics:$('input[data-k=analytics]',b).checked,marketing:$('input[data-k=marketing]',b).checked})});
-var shown=false;function show(){if(shown)return;shown=true;d.body.appendChild(b)}
+var shown=false;function pad(){var h=b.isConnected?b.offsetHeight:0;d.documentElement.style.scrollPaddingBottom=h?(h+16)+'px':'';d.body.style.paddingBottom=h?h+'px':''}
+function show(){if(shown)return;shown=true;d.body.appendChild(b);pad();if(window.ResizeObserver)new ResizeObserver(pad).observe(b)}
 /* keep the first impression clean: the preview banner appears after a long read or a deep scroll, never over the hero */
 setTimeout(show,25000);
 addEventListener('scroll',function f(){if(scrollY>2200){removeEventListener('scroll',f);show()}},{passive:true});

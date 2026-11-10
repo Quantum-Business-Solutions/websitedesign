@@ -493,7 +493,7 @@ def _compare(s, ctx):
     E, L = ctx["E"], ctx["L"]
     cols = s["cols"]
     n = len(cols)
-    head = '<div class="pp-cmp-h"><div class="pp-cmp-l"></div>'
+    head = '<div class="pp-cmp-h" role="row"><div class="pp-cmp-l" role="cell"></div>'
     for c in cols:
         tag = ""
         if c.get("here"):
@@ -501,7 +501,7 @@ def _compare(s, ctx):
         elif c.get("soon"):
             tag = '<span class="pp-cmp-tag soon">Coming soon</span>'
         name = E(c["name"]) if c.get("here") else f'<a href="{E(L(c["href"]))}">{E(c["name"])}</a>'
-        head += (f'<div class="pp-cmp-c{" here" if c.get("here") else ""}"><div class="pp-cmp-t">{tag}</div><div class="pp-cmp-img">{_img(ctx, c["image"], "", 600, 400)}</div>'
+        head += (f'<div class="pp-cmp-c{" here" if c.get("here") else ""}" role="columnheader"><div class="pp-cmp-t">{tag}</div><div class="pp-cmp-img">{_img(ctx, c["image"], "", 600, 400)}</div>'
                  f'<h3>{name}</h3><span class="k">{E(c["kicker"])}</span></div>')
     head += "</div>"
     rows = ""
@@ -509,8 +509,8 @@ def _compare(s, ctx):
         cells = ""
         for ci, v in enumerate(vals):
             cls = "pp-cmp-v" + (" here" if cols[ci].get("here") else "") + (" na" if v is None else "")
-            cells += f'<div class="{cls}">{E(v) if v is not None else "Not listed on its page"}</div>'
-        rows += f'<div class="pp-cmp-r"><div class="pp-cmp-l">{E(label)}</div>{cells}</div>'
+            cells += f'<div class="{cls}" role="cell">{E(v) if v is not None else "Not listed on its page"}</div>'
+        rows += f'<div class="pp-cmp-r" role="row"><div class="pp-cmp-l" role="rowheader">{E(label)}</div>{cells}</div>'
     note = f'<p class="pp-cmp-n">{E(s["note"])}</p>' if s.get("note") else ""
     return f'{ctx["sec_open"](s, "pp-cmp-sec")}<div class="q-container">{_hd(s, ctx)}<div class="pp-cmp" style="--n:{n}" role="table" aria-label="{E(s.get("heading", "Compare"))}">{head}{rows}</div>{note}</div></section>'
 

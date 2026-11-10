@@ -328,7 +328,7 @@ DW2_CSS = r"""
 .dw2-hq span{position:absolute;left:-4px;top:20px;white-space:nowrap;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#fff;padding:4px 10px;border-radius:999px;background:rgba(11,18,32,.82)}
 .dw2-pin{position:absolute;width:0;height:0;z-index:3}
 .dw2-pin:hover,.dw2-pin:focus-within,.dw2-pin.open{z-index:9}
-.dw2-pb{position:absolute;left:-22px;top:-22px;width:44px;height:44px;padding:0;border:0;border-radius:50%;background:transparent;cursor:pointer;display:grid;place-items:center}
+.dw2-pb{position:absolute;left:-16px;top:-16px;width:32px;height:32px;padding:0;border:0;border-radius:50%;background:transparent;cursor:pointer;display:grid;place-items:center}
 .dw2-pb b{position:absolute;width:15px;height:15px;border-radius:50%;background:#ffd23d;box-shadow:0 0 0 3px #0b1220,0 0 18px 2px rgba(255,210,61,.8);transition:transform .25s}
 .dw2-pb i{position:absolute;width:15px;height:15px;border-radius:50%;border:2px solid #ffd23d;animation:dw2-pulse 2.6s ease-out infinite;animation-delay:var(--d);pointer-events:none}
 .dw2-pb i+i{animation-delay:calc(var(--d) + 1.3s)}
@@ -428,9 +428,9 @@ document.querySelectorAll('.dw2-map').forEach(function(map){
   pins.forEach(function(p){
     var b=p.querySelector('.dw2-pb');
     b.addEventListener('click',function(e){var o=!p.classList.contains('open');p.classList.remove('off');closeAll(p);p.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false');e.stopPropagation()});
-    p.addEventListener('mouseenter',function(){closeAll(p)});p.addEventListener('focusin',function(){closeAll(p)});
+    p.addEventListener('mouseenter',function(){closeAll(p)});p.addEventListener('focusin',function(){closeAll(p);if(!p.classList.contains('off'))b.setAttribute('aria-expanded','true')});
     p.addEventListener('mouseleave',function(){p.classList.remove('off')});
-    p.addEventListener('focusout',function(){setTimeout(function(){if(!p.contains(document.activeElement)){p.classList.remove('off')}},0)});
+    p.addEventListener('focusout',function(){setTimeout(function(){if(!p.contains(document.activeElement)){p.classList.remove('off');if(!p.classList.contains('open'))b.setAttribute('aria-expanded','false')}},0)});
   });
   document.addEventListener('click',function(e){if(!map.contains(e.target))closeAll()});
   map.addEventListener('keydown',function(e){

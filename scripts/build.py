@@ -34,6 +34,22 @@ def sh(cmd, cwd=ROOT, check=True):
     return subprocess.run(cmd, cwd=cwd, check=check, text=True, capture_output=False)
 
 
+def package_size(out, limit_mb=50):
+    """Estimate the deploy zip (deflate per file, like a real zip) and warn when it nears the upload limit."""
+    import zlib
+    n = raw = zipped = 0
+    for dp, dn, fs in os.walk(out):
+        dn[:] = [d for d in dn if d not in (".git", "screenshots", "node_modules")]
+        for f in fs:
+            full = os.path.join(dp, f)
+            data = open(full, "rb").read()
+            n += 1
+            raw += len(data)
+            zipped += len(data) if f.lower().endswith((".png", ".jpg", ".jpeg", ".webp", ".mp4", ".webm", ".woff2", ".zip")) else len(zlib.compress(data, 6))
+    mb = zipped / 1048576
+    print(f"package: {n} files, {raw / 1048576:.1f} MB raw, about {mb:.1f} MB zipped (limit {limit_mb} MB)" + ("  WARNING: close to the limit" if mb > limit_mb * 0.85 else ""))
+
+
 def main(argv=None):
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("slug")
@@ -100,6 +116,7 @@ def main(argv=None):
         print(r.stdout[-400:], r.stderr[-400:])
 
     sh([sys.executable, os.path.join(HERE, "dedupe_assets.py"), out])
+    package_size(out)
 
     if a.shots:
         os.makedirs(os.path.join(out, "screenshots"), exist_ok=True)

@@ -31,7 +31,7 @@ RAW = []   # filled by P(); page dicts are built after PRODUCTS is complete
 def P(slug, dmp_path, name, short, kicker, system, image, h, sub, what, bullets, feats, specs, lib, rel, faq, d, blurb, mpn=None, alt=None):
     RAW.append(dict(slug=slug, dmp_path=dmp_path, name=name, short=short, kicker=kicker, system=system, image=image, h=h, sub=sub,
                     what=what, bullets=bullets, feats=feats, specs=specs, lib=lib, rel=rel, faq=faq, d=d, blurb=blurb, mpn=mpn,
-                    alt=alt or f"The DMP {short}"))
+                    alt=alt or f"The DMP {name}"))
 
 
 def IM(slug):
@@ -354,7 +354,7 @@ P("xt75", "/products/control-panels/xt-series/xt75", "XT75 Control Panel", "XT75
    "Built for residential and small to medium business",
    "Three versions: small enclosure, medium enclosure and board only",
    "Listed for residential fire, residential burglary and commercial burglary"],
-  [["Three systems, one panel", "The XT75 seamlessly integrates intrusion, access control and AlarmVision."],
+  [["Three systems, one panel", "The XT75 integrates intrusion, access control and AlarmVision."],
    ["Complete zone alarm reports", "With firmware version 255, when an Entry Delay ends all tripped zones are reported regardless of area, matching the XT30 and XT50 panels."],
    ["Reliable shortcut arming", "Firmware version 255 corrects shortcut arming commands so Home/Sleep/Away systems are armed correctly."]],
   [["XT75", "Network panel, small gray enclosure"], ["XT75M", "Network panel, medium gray enclosure"], ["XT75PCB", "Network panel, board only"], ["Applications", "Residential and small to medium business"],
@@ -441,7 +441,7 @@ P("xr150", "/products/control-panels/xr-series/xr150", "XR150 Control Panel", "X
    "Supports the Virtual Keypad app and up to eight doors of access",
    "Includes a 50 VA transformer"],
   [["Room for everything", "142 inputs, eight keypads for 32 zones, and one built-in LX Bus with 100 zones."],
-   ["10,000 users", "10,000 user codes with 99 profiles."],
+   ["10,000 user codes", "With 99 profiles."],
    ["Add technology later", "Dialer and network connectivity, with the option to add wireless or cellular later."]],
   [["Total zones", "142"], ["Wireless zones", "100"], ["Areas", "8"], ["Event buffer", "12,000"], ["User codes", "10,000"], ["Doors of access", "8"], ["Supervised keypads", "8"], ["Relay outputs", "2 to 106"]],
   L(True, ("XR Series compliance note", "Listings and compliance."), ("XR Series compliance guide", "Listings and compliance."), ("Firmware release notes", "Version 263."), ("DMP panel feature comparison guide", "Comparison guide.")),
@@ -461,7 +461,7 @@ P("xr550", "/products/control-panels/xr-series/xr550", "XR550 Control Panel", "X
    "Encrypted 10/100 network or Wi-Fi, LTE cellular or dialer",
    "UL bank, safe and vault, Card Plus Pin and Dual Authority",
    "Lockdown operation from a keypad or the app"],
-  [["Built for the largest jobs", "From extremely large residential to high-security industrial to multi-site nationwide installations."],
+  [["Built for big jobs", "From extremely large residential to high-security industrial to multi-site nationwide installations."],
    ["Encrypted communication", "Encrypted 10/100 network or Wi-Fi, LTE cellular or dialer."],
    ["Plan the day", "99 assignable schedules for areas, doors and profiles."],
    ["Remote service", "Remote flash update and programming."],
@@ -473,7 +473,7 @@ P("xr550", "/products/control-panels/xr-series/xr550", "XR550 Control Panel", "X
   [["How many doors can the XR550 control?", "It supports 32 doors out of the box and up to 96 doors of access control."],
    ["Is its communication encrypted?", "Encrypted communication options are available: the XR550 \"E\" versions use an encrypted 10/100 network or Wi-Fi."],
    ["Which listings does it carry?", "Among them UL bank, safe and vault, ANSI/UL 365, 609, 864, 985, 1023, 1076, 1610 and 1635, plus CSFM, FDNY and LAFD."]],
-  "The XR550 flagship control panel supports 96 doors, 574 zones and 10,000 users, with AES encrypted communication for commercial and large residential.",
+  "The XR550 flagship control panel supports 96 doors, 574 zones and 10,000 user codes, with AES encrypted communication for commercial and large residential.",
   "Our flagship panel: 96 doors, 574 zones and 10,000 user codes, with encrypted communication options.", mpn="XR550")
 
 P("xr650", "/products/control-panels/xr-series/xr650", "XR650 Control Panel", "XR650", "Control panel, coming soon", "panels-keypads",
@@ -494,11 +494,11 @@ P("xr650", "/products/control-panels/xr-series/xr650", "XR650 Control Panel", "X
   [["User codes", "300,000 with 1,000 groups"], ["Areas", "Up to 100"], ["Zones", "Up to 574"], ["Doors of access", "96"], ["Power supply", "Regulated 12 VDC, 4A max auxiliary"], ["Bank listings", "UL Bank, Safe and Vault; EN 50131 Grade 3"]],
   L(False, ("DMP panel feature comparison guide", "Comparison guide.")),
   ["xr550", "entre-enterprise", "panels-keypads"],
-  [["Is the XR650 available now?", "It is coming soon."],
-   ["How many users can it hold?", "300,000 user codes with 1,000 groups."],
+  [["Is the XR650 available now?", "No. The XR650 is coming soon and not yet orderable."],
+   ["How many user codes can it hold?", "300,000 user codes with 1,000 groups."],
    ["What cybersecurity features does it have?", "Bank-grade cybersecurity including TLS 1.3, AES encryption, PKI with dual certificate trust domains and dual NICs. Some features, such as FIPS 140-3, 802.1x network authentication and Active Directory client integration, are available with licenses."]],
   "The XR650 enterprise control panel, coming soon, supports 300,000 user codes, 100 areas, 574 zones and bank-grade cybersecurity.",
-  "A coming-soon enterprise panel with 300,000 user codes, 100 areas and bank-grade cybersecurity.", mpn="XR650")
+  "An enterprise panel with 300,000 user codes, 100 areas and bank-grade cybersecurity.", mpn="XR650")
 
 P("tmsentry", "/products/control-panels/tmsentry/tmsentry", "TMSentry", "TMSentry", "ATM control panel", "panels-keypads",
   IM("tmsentry"),
@@ -660,7 +660,7 @@ P("xf6", "/products/fire/fire-control-panels/xf6", "XF6 Series Fire Control Pane
   IM("xf6"),
   "<em>XF6</em>: addressable 24V fire panel, network or cellular reporting.",
   "Built for single-site applications, with testing and programming through Dealer Admin and Virtual Keypad.",
-  "The XF6 is a state-of-the-art 24V control panel built for single-site applications. It has network and optional cellular communications that send all signals directly to the monitoring center, and it is both addressable and UL 864 10th Edition Listed for wireless.",
+  "The XF6 is a 24V control panel built for single-site applications. It has network and optional cellular communications that send all signals directly to the monitoring center, and it is both addressable and UL 864 10th Edition Listed for wireless.",
   ["Supports up to 500 wireless devices, with a wireless range up to 1.7 miles",
    "Onboard Ethernet and optional cellular communication to the monitoring center",
    "24V power supply for fire accessories, with additional 24V supplies available",
@@ -773,7 +773,7 @@ P("2w-blx", "/products/fire/smoke-detectors/2w-blx", "2W-BLX System Sensor Smoke
   "An addressable photoelectric detector for the LX-Bus of XR Series panels.",
   "With DMP's single-point addressable smoke detectors, facility owners and emergency responders instantly know the exact trouble location in an alarm situation. The 2W-BLX is an addressable photoelectric detector with an optical sensing chamber and an advanced microprocessor.",
   ["Includes an addressable single-point module for connection to the LX-Bus of XR Series panels",
-   "State-of-the-art optical sensing chamber with an advanced microprocessor",
+   "Optical sensing chamber with an advanced microprocessor",
    "Listed to ANSI/UL 268, Smoke-Automatic Fire Detectors",
    "Used for fire in small to large business, commercial and enterprise installations"],
   [["Exact location", "Single-point addressable detection means owners and responders instantly know where the trouble is."],
@@ -1208,19 +1208,20 @@ def _chips(specs):
 
 def _page(r):
     s, n, sysl = r["slug"], r["short"], SYS[r["system"]]
+    _t = "" if n in ("Entré Lite", "Entré Enterprise", "CellCom", "DualCom", "TMSentry", "JamAlert", "Virtual Keypad", "Dealer Admin", "Remote Link") else "the "
     w, h = _dims(r["image"])
     soon = "coming soon" in r["kicker"].lower()
     secs = [
         {"type": "prodstage", "id": "pstage", "eyebrow": r["kicker"], "heading": r["h"], "subhead": r["sub"],
-         "primary": {"label": f"Ask DMP about the {n}", "href": "contact.html"},
+         "primary": {"label": f"Ask DMP about {_t}{n}", "href": "contact.html"},
          "actions": ([] if soon else [{"label": "Order on buy.DMP.com (dealers)", "href": BUY, "external": True}]) + [{"label": "Spec sheet", "href": "support/documentation.html"}],
          "fine": ["Dealers: sign in on the Buy site to see your pricing. ", "Not a dealer? Ask DMP for one near you.", "find-a-dealer.html"] if not soon else ["Not yet orderable. ", "Ask DMP when it ships.", "contact.html"],
          "image": r["image"], "image_alt": r["alt"], "image_w": w, "image_h": h, "kind": _stage_kind(r["image"]),
          "chips": _chips(r["specs"]), "tag": "Coming soon, not orderable" if soon else ""},
-        {"type": "detail", "alt": True, "eyebrow": "What it is", "heading": f"The {n} at a glance", "body": r["what"], "bullets": r["bullets"]},
+        {"type": "detail", "alt": True, "eyebrow": "What it is", "heading": f"{_t.capitalize()}{n} at a glance", "body": r["what"], "bullets": r["bullets"]},
     ]
     if len(r["feats"]) in (3, 6):
-        secs.append({"type": "cards", "cls": "lf-num", "eyebrow": "Key features", "heading": f"What the {n} does", "items": r["feats"]})
+        secs.append({"type": "cards", "cls": "lf-num", "eyebrow": "Key features", "heading": f"What {_t}{n} does", "items": r["feats"]})
     elif len(r["feats"]) >= 3:
         raise SystemExit(f"{s}: features must be 3 or 6, got {len(r['feats'])}")
     specs = list(r["specs"])
@@ -1231,12 +1232,12 @@ def _page(r):
         secs.append({"type": "specs", "dark": True, "eyebrow": "Specifications", "heading": f"{n} specifications", "items": specs})
     works = _works(r)
     assert len(works) == 3, s
-    secs.append({"type": "works", "alt": True, "heading": "Works with", "intro": f"Where the {n} fits in a DMP system.", "link_label": "Open", "items": works})
+    secs.append({"type": "works", "alt": True, "heading": "Works with", "intro": f"Where {_t}{n} fits in a DMP system.", "link_label": "Open", "items": works})
     if r["lib"]:
         assert len(r["lib"]) in (3, 4, 6, 9), (s, len(r["lib"]))
-        secs.append({"type": "doclist", "eyebrow": "In the library", "heading": f"Documents for the {n}", "intro": "Documents for this product are available from DMP.", "items": r["lib"], "href": "support/documentation.html"})
+        secs.append({"type": "doclist", "eyebrow": "In the library", "heading": f"Documents for {_t}{n}", "intro": "Documents for this product are available from DMP.", "items": r["lib"], "href": "support/documentation.html"})
     secs += [
-        {"type": "faq", "alt": True, "heading": f"Questions about the {n}", "items": r["faq"]},
+        {"type": "faq", "alt": True, "heading": f"Questions about {_t}{n}", "items": r["faq"]},
         {**LEADFORM, "alt": False, "dark": True},
     ]
     assert 2 <= len(r["faq"]) <= 4, s

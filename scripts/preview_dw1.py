@@ -133,7 +133,7 @@ def _building(s, ctx):
 <div class="dw-det" id="dw-d{i}" role="region" aria-labelledby="dw-b{i}"><h3>{E(sp["title"])}</h3><p class="dw-lede">{E(sp["lede"])}</p><div class="dw-pcs">{"".join(_pcard(p, ctx) for p in sp["products"])}</div>{more}</div></li>''')
     return f'''{_open(s, "dw")} <div class="q-container" data-dw="bld" data-n="{n}">
 <div class="dw-hd"><div class="q-eyebrow">{E(s.get("eyebrow"))}</div><h2 class="q-h2">{E(s["heading"])}</h2><p class="q-lead">{E(s.get("intro"))}</p></div>
-<div class="dw-grid"><div class="dw-left"><div class="dw-stage">{_SVG}<div class="dw-hsl">{"".join(hot)}</div></div>
+<div class="dw-grid"><div class="dw-left"><div class="dw-stage">{_SVG}<div class="dw-hsl" role="group" aria-label="Spots on the building">{"".join(hot)}</div></div>
 <div class="dw-tour"><button type="button" class="dw-tbtn pp-btn gold" aria-pressed="false"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M6 4l10 6-10 6z" fill="currentColor"/></svg><span>Take the guided tour</span></button>
 <p class="dw-tstat" aria-live="polite"><span class="dw-tn">Stop 1 of {n}</span> <span class="dw-tl">{E(spots[0]["label"])}</span></p><span class="dw-prog" aria-hidden="true"><i></i></span></div></div>
 <ol class="dw-list" aria-label="Places in the building">{"".join(lis)}</ol></div>
@@ -177,7 +177,7 @@ def mega_panel(it, ctx):
     if kind == "products":
         tiles = "".join(f'<li><a class="dw-mt" href="{E(L(h))}"><span class="dw-mt-i"><img src="{E(rel(_small(img)))}" alt="" width="120" height="90" loading="lazy" decoding="async"></span><span class="dw-mt-t"><b>{E(l)}</b><span>{E(p)}</span></span></a></li>' for l, p, h, img in m["tiles"])
         f = m["featured"]
-        inner = (f'<div class="dw-m-main"><p class="dw-m-k">Eight systems, one manufacturer</p><ul class="dw-m-tiles">{tiles}</ul></div>'
+        inner = (f'<div class="dw-m-main"><p class="dw-m-k">Eight product lines, one manufacturer</p><ul class="dw-m-tiles">{tiles}</ul></div>'
                  f'<a class="dw-m-feat" href="{E(L(f["href"]))}"><span class="dw-m-fi"><img src="{E(rel(_small(f["image"])))}" alt="" width="360" height="260" loading="lazy" decoding="async"></span><span class="dw-m-fk">{E(f["eyebrow"])}</span><b>{E(f["name"])}</b><span class="dw-m-fb">{E(f["body"])}</span><span class="dw-m-fl">{E(f["label"])}</span></a>')
         mob = "".join(f'<a class="dw-ma" href="{E(L(h))}"><img class="dw-mth" src="{E(rel(_small(img)))}" alt="" width="44" height="44" loading="lazy"><span>{E(l)}</span></a>' for l, p, h, img in m["tiles"])
     elif kind == "industries":
@@ -409,7 +409,7 @@ var sec=root.closest('.dw')||root,hs=R('.dw-hs',root),bs=R('.dw-lb',root),lis=R(
 tbtn=root.querySelector('.dw-tbtn'),tn=root.querySelector('.dw-tn'),tl=root.querySelector('.dw-tl'),cur=-1,timer=0,hov=0,STEP=5500;
 sec.classList.add('dw-on');sec.style.setProperty('--dw-step',STEP+'ms');
 function act(i){if(i===cur)return;cur=i;lis.forEach(function(l,k){l.classList.toggle('on',k===i)});
-hs.forEach(function(h,k){h.classList.toggle('on',k===i);h.setAttribute('aria-pressed',k===i?'true':'false')});
+hs.forEach(function(h,k){h.classList.toggle('on',k===i);h.setAttribute('aria-pressed',k===i?'true':'false');h.tabIndex=k===i?0:-1});
 bs.forEach(function(b,k){b.setAttribute('aria-expanded',k===i?'true':'false')});
 sec.setAttribute('data-act',ids[i]);tn.textContent='Stop '+(i+1)+' of '+n;tl.textContent=bs[i].querySelector('.t').textContent;
 if(timer){var p=sec.querySelector('.dw-prog i');if(p){p.style.animation='none';void p.offsetWidth;p.style.animation=''}}}
@@ -428,6 +428,7 @@ if(t){e.preventDefault();stop();t.focus();act(+t.getAttribute('data-i'))}})});
 bs.forEach(function(b,k){b.addEventListener('click',function(){stop();act(k)});
 b.addEventListener('keydown',function(e){var t=null;if(e.key==='ArrowDown')t=bs[(k+1)%n];else if(e.key==='ArrowUp')t=bs[(k+n-1)%n];if(t){e.preventDefault();t.focus()}})});
 d.addEventListener('keydown',function(e){if(e.key==='Escape'&&timer&&root.contains(d.activeElement))stop()});
+root.addEventListener('focusin',function(e){var t=e.target;if(timer&&t!==tbtn){stop();if(t.classList&&t.classList.contains('dw-hs'))act(+t.getAttribute('data-i'))}});
 if('IntersectionObserver' in window)new IntersectionObserver(function(es){if(!es[0].isIntersecting&&timer)stop()},{threshold:.1}).observe(root);
 act(0)});
 
@@ -482,6 +483,7 @@ hd.style.setProperty('--dw-h0',h0+'px');hd.style.setProperty('--dw-u',uh+'px');h
 hd.classList.add('dw-fix');upd(true)}
 function pp(v){de.style.setProperty('--pp-hdr',v+'px');de.style.setProperty('--p2-top',v+'px')}
 function upd(force){ticking=false;var y=scrollY,c=cond;if(y>80)c=true;else if(y<36)c=false;if(c!==cond||force){cond=c;hd.classList.toggle('dw-cond',c);pp(parseInt(hd.style.getPropertyValue(c?'--dw-h1':'--dw-h0'))||0);pos()}}
+if(ut)ut.addEventListener('focusin',function(){if(cond)scrollTo(0,0)});
 meas();addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(function(){upd(false)})}},{passive:true});
 var rt=0;addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(meas,150)});
 if(d.fonts&&d.fonts.ready)d.fonts.ready.then(function(){meas()})}

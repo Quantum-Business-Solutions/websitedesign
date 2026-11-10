@@ -963,7 +963,7 @@
        ],
        "lead": {
         "kicker": "News, 11 Sep 2026",
-        "title": "DMP Launches VK VMS, Enabling 24/7 Video Management With AlarmVision",
+        "title": "DMP launches VK VMS, enabling 24/7 video management with AlarmVision",
         "body": "Our video platform becomes complete, with VK VMS and the XV Plus gateways.",
         "href": "news/vk-vms.html",
         "image": "assets/vue-plus-1200.jpg",
@@ -973,17 +973,17 @@
        "side": [
         [
          "News, 27 Apr 2026",
-         "XR650 Wins Top Honors at 2026 ESX Innovation Awards",
+         "XR650 wins top honors at 2026 ESX Innovation Awards",
          "news/xr650-esx-award.html"
         ],
         [
          "News, 6 May 2026",
-         "JamAlert Achieves UL Certification",
+         "JamAlert achieves UL certification",
          "news/jamalert-ul.html"
         ],
         [
          "News, 1 Jul 2026",
-         "The Next Evolution of the VUE Portfolio Is Here",
+         "The next evolution of the VUE portfolio is here",
          "news/vue-portfolio.html"
         ]
        ]
@@ -1064,7 +1064,7 @@
       },
       {
        "label": "Fire",
-       "title": "A 24V fire solution",
+       "title": "A 24V fire control panel",
        "body": "The XF6 fire control panel is built for single-site applications and comes with network and optional cellular communications that send all signals directly to the monitoring center.",
        "bullets": [
         "XF6, XR150FC and XR550FC",
@@ -1091,7 +1091,7 @@
        "link_label": "Video"
       },
       {
-       "label": "Mobile",
+       "label": "The app",
        "title": "Virtual Keypad and Dealer Admin",
        "body": "Virtual Keypad lets dealers brand a full-featured remote control. Dealer Admin handles mass panel programming and bulk firmware updates. Both are examined annually for SOC 2 Type II.",
        "bullets": [
@@ -1234,7 +1234,7 @@
        "id": "panel",
        "label": "Panel room",
        "title": "The panel closet",
-       "lede": "The control panel, sized from small business to the largest sites.",
+       "lede": "The control panel, sized from small business to very large sites.",
        "products": [
         {
          "name": "XR550",
@@ -1431,7 +1431,7 @@
        "body": "We offer LTE, Wi-Fi and universal communicators, including the first alarm panel communicator for the AT&T FirstNet network (2020). The XR550 supports up to eight communication paths and moves to a backup path instantly. JamAlert detects cellular jamming, and VAULT encrypts the link to our cloud.",
        "receive": [
         "263LTE and 265LTE",
-        "Dual Com and Cell Com",
+        "DualCom and CellCom",
         "763 Wi-Fi",
         "JamAlert and VAULT"
        ]
@@ -1518,7 +1518,7 @@
      "id": "portal",
      "eyebrow": "For dealers",
      "heading": "One sign-in for everything a dealer needs.",
-     "intro": "A preview of the dealer home we would build: documents, ordering, Marketing Central, training, support and quotes behind one login. How it connects to the Buy site and Marketing Central is a proposed design to confirm with DMP IT.",
+     "intro": "A preview of a dealer home: documents, ordering, Marketing Central, training, support and quotes behind one login. Proposed design, subject to DMP IT review.",
      "tiles": [
       [
        "Documentation library",
@@ -1653,21 +1653,21 @@
      "items": [
       [
        "News, 11 Sep 2026",
-       "DMP Launches VK VMS, Enabling 24/7 Video Management With AlarmVision",
+       "DMP launches VK VMS, enabling 24/7 video management with AlarmVision",
        "Our video platform becomes complete, with VK VMS and the XV Plus gateways.",
        "Read the story",
        "news/vk-vms.html"
       ],
       [
        "News, 1 Jul 2026",
-       "The Next Evolution of the VUE Portfolio Is Here",
+       "The next evolution of the VUE portfolio is here",
        "More cameras join the VUE Plus family.",
        "Read the story",
        "news/vue-portfolio.html"
       ],
       [
        "News, 6 May 2026",
-       "JamAlert Achieves UL Certification",
+       "JamAlert achieves UL certification",
        "JamAlert, our cellular jamming detection, earns a UL certification.",
        "Read the story",
        "news/jamalert-ul.html"
@@ -1756,7 +1756,7 @@
        "At buy.DMP.com, which takes orders 24 hours a day, or through DMP Customer Service."
       ],
       [
-       "Is our software independently examined?",
+       "Is DMP's software independently examined?",
        "Yes. We complete independent SOC 2 Type II examinations annually, by a licensed CPA firm, for Dealer Admin and Virtual Keypad."
       ]
      ],
@@ -1797,7 +1797,7 @@
   {
    "file": "services.html",
    "title": "Security products by system | DMP",
-   "description": "Our catalogue by system: intrusion, access control, fire, video, communicators, wireless, panels and keypads, Virtual Keypad and software.",
+   "description": "Our catalog by system: intrusion, access control, fire, video, communicators, wireless, panels and keypads, Virtual Keypad and software.",
    "sections": [
     {
      "type": "hero-layered",
@@ -1820,7 +1820,7 @@
      "stats": [
       [
        "8",
-       "Systems, each with its own page"
+       "Product lines, each with its own page"
       ],
       [
        "14",
@@ -1911,8 +1911,8 @@
     },
     {
      "type": "resources",
-     "heading": "All eight systems",
-     "intro": "Every system, with its products, the questions buyers ask and the documents behind them.",
+     "heading": "All eight product lines",
+     "intro": "Every line, with its products, the questions buyers ask and the documents behind them.",
      "items": [
       [
        "Intrusion",
@@ -1977,7 +1977,7 @@
      "alt": false,
      "eyebrow": "Buying",
      "heading": "Order any hour at buy.DMP.com",
-     "body": "Dealers order at buy.DMP.com 24 hours a day. Customer Service handles products and ordering, software activations, the Buy Site, shipping and order entry questions.",
+     "body": "Dealers order at buy.DMP.com 24 hours a day. Customer Service handles products and ordering, software activations, the Buy site, shipping and order entry questions.",
      "bullets": [
       "Customer Service 866-266-2826, 8 a.m. to 6 p.m. Central",
       "Inside Sales for system design and quotes, 877-757-4367",
@@ -2002,7 +2002,7 @@
   {
    "file": "services/intrusion.html",
    "title": "Intrusion alarm systems: XT, XTL and XR panels | DMP",
-   "description": "Control panels, detectors and cellular-jam protection for intrusion alarm systems. We build intrusion around the control panel. The XT Series, XTL Series.",
+   "description": "Control panels, detectors and cellular-jam protection for intrusion alarm systems. We build intrusion around the control panel.",
    "schema": [
     {
      "@context": "https://schema.org",
@@ -2174,7 +2174,7 @@
      "id": "hero-layered",
      "eyebrow": "Intrusion",
      "heading": "Intrusion panels that <em>grow with the site</em>.",
-     "subhead": "DMP intrusion systems are built around the control panel. The XT Series, XTL Series and XR Series scale from a small business to a large site, with the XT75 hybrid panel at the small end and 96 doors of access control on the XR550. Every panel reports through DMP's own communicators.",
+     "subhead": "DMP intrusion systems are built around the control panel. The XT Series, XTL Series and XR Series scale from a small business to a large site, with the XT75 hybrid panel at the small end and 96 doors of access control on the XR550. DMP builds the communicators too.",
      "primary": {
       "label": "Get specs and CAD for intrusion systems",
       "href": "for-specifiers.html"
@@ -2544,7 +2544,7 @@
        "kicker": "Control panel",
        "image": "assets/p-xr550-1200-cut.png",
        "href": "products/xr550.html",
-       "why": "574 total zones, 500 wireless zones and 32 out of the box, 96 maximum of access control.",
+       "why": "574 total zones, 500 wireless zones, and access control for up to 96 doors, 32 out of the box.",
        "facts": [
         [
          "Total zones",
@@ -3790,7 +3790,7 @@
      "steps": [
       {
        "title": "Signals go straight to the monitoring center",
-       "text": "The XF6 is a 24V solution with powerful testing and programming features, built for single-site applications."
+       "text": "The XF6 is a 24V fire panel with testing and programming features, built for single-site applications."
       },
       {
        "title": "Reports the way the alarm does",
@@ -3798,7 +3798,7 @@
       },
       {
        "title": "More than one panel to choose",
-       "text": "XR150FC and XR550FC fire panels, wireless smoke, heat and CO detectors, pull stations and remote annunciators sit in the same catalogue."
+       "text": "XR150FC and XR550FC fire panels, wireless smoke, heat and CO detectors, pull stations and remote annunciators sit in the same catalog."
       },
       {
        "title": "Start from the product",
@@ -4049,7 +4049,7 @@
      "id": "range",
      "dark": true,
      "eyebrow": "The fire systems range",
-     "heading": "The fire catalogue, panel to pull station.",
+     "heading": "The fire catalog, panel to pull station.",
      "intro": "Panels, detectors, pull stations and annunciators. Drag, swipe or use the arrow keys.",
      "items": [
       [
@@ -4218,7 +4218,7 @@
   {
    "file": "services/video.html",
    "title": "Video systems: VUE Plus cameras and AlarmVision | DMP",
-   "description": "VUE Plus cameras, AlarmVision analytics and the VK VMS video management platform. Our VUE Plus cameras, XV gateways and VK VMS give video the same.",
+   "description": "VUE Plus cameras, AlarmVision analytics and the VK VMS video management platform.",
    "schema": [
     {
      "@context": "https://schema.org",
@@ -4361,7 +4361,7 @@
      "image_w": 1200,
      "image_h": 800,
      "float": "assets/p-xv-gateways-with-alarmvision-1200-cut.png",
-     "float_alt": "DMP video",
+     "float_alt": "DMP video cameras and gateways",
      "stats": [
       [
        "2023",
@@ -4446,7 +4446,7 @@
      "eyebrow": "What sets it apart",
      "heading": "What you get with DMP video",
      "image": "assets/p-xv-gateways-with-alarmvision-1200-cut.png",
-     "alt": "DMP video",
+     "alt": "DMP video cameras and gateways",
      "steps": [
       {
        "title": "Cameras that raise the alarm",
@@ -4868,7 +4868,7 @@
       ],
       [
        "What is AlarmVision?",
-       "Our video analytics. It uses analytics to trigger alarms into XR Series panels."
+       "Our video analytics, which let cameras act as smart motion detectors and trigger alarms into XR Series panels."
       ],
       [
        "What is a VMS?",
@@ -4933,7 +4933,7 @@
   {
    "file": "services/communicators.html",
    "title": "Alarm communicators and monitoring center receivers | DMP",
-   "description": "Cellular, network and universal communicators, and the monitoring center equipment that receives them. Our communicators carry alarm signals over LTE.",
+   "description": "Cellular, network and universal communicators, and the monitoring center equipment that receives them.",
    "schema": [
     {
      "@context": "https://schema.org",
@@ -4968,7 +4968,7 @@
         "@type": "Offer",
         "itemOffered": {
          "@type": "Product",
-         "name": "Dual Com",
+         "name": "DualCom",
          "url": "https://www.dmp.com/products/dualcom"
         }
        },
@@ -4976,7 +4976,7 @@
         "@type": "Offer",
         "itemOffered": {
          "@type": "Product",
-         "name": "Cell Com",
+         "name": "CellCom",
          "url": "https://www.dmp.com/products/cellcom"
         }
        },
@@ -5019,13 +5019,13 @@
       {
        "@type": "ListItem",
        "position": 3,
-       "name": "Dual Com",
+       "name": "DualCom",
        "url": "https://www.dmp.com/products/dualcom"
       },
       {
        "@type": "ListItem",
        "position": 4,
-       "name": "Cell Com",
+       "name": "CellCom",
        "url": "https://www.dmp.com/products/cellcom"
       },
       {
@@ -5102,7 +5102,7 @@
       "items": [
        "263LTE",
        "265LTE",
-       "Dual Com"
+       "DualCom"
       ],
       "label": "Browse the range",
       "href": "services/communicators.html#range"
@@ -5119,11 +5119,11 @@
         "products/265lte.html"
        ],
        [
-        "Dual Com",
+        "DualCom",
         "products/dualcom.html"
        ],
        [
-        "Cell Com",
+        "CellCom",
         "products/cellcom.html"
        ]
       ]
@@ -5339,11 +5339,11 @@
        "LTE communicator for the XTL Series."
       ],
       [
-       "Dual Com",
+       "DualCom",
        "A universal communicator."
       ],
       [
-       "Cell Com",
+       "CellCom",
        "Universal LTE communicator."
       ],
       [
@@ -5376,13 +5376,13 @@
        "assets/p-265lte-1200-cut.png"
       ],
       [
-       "Dual Com",
+       "DualCom",
        "A universal communicator.",
        "products/dualcom.html",
        "assets/p-dualcom-1200-cut.png"
       ],
       [
-       "Cell Com",
+       "CellCom",
        "Universal LTE communicator.",
        "products/cellcom.html",
        "assets/p-cellcom-1200-cut.png"
@@ -5411,7 +5411,7 @@
      "body": "Cellular, network and universal communicators, and the monitoring center equipment that receives them.",
      "bullets": [
       "263LTE and 265LTE cellular communicators",
-      "Cell Com, Dual Com and PowerCom universal communicators",
+      "CellCom, DualCom and PowerCom universal communicators",
       "763 Wi-Fi network communicator",
       "SCS-VR virtual receiver software, SCS-1R receiver and line cards",
       "VAULT encrypted connectivity for cloud-based applications"
@@ -5523,7 +5523,7 @@
   {
    "file": "services/wireless.html",
    "title": "Wireless security: AES encrypted 1100 Series | DMP",
-   "description": "The 1100 Series wireless line: transmitters, detectors, receivers and translators. We have made two-way wireless since 2004. The 1100 Series added AES.",
+   "description": "The 1100 Series wireless line: transmitters, detectors, receivers and translators. We have made two-way wireless since 2004.",
    "schema": [
     {
      "@context": "https://schema.org",
@@ -6112,7 +6112,7 @@
   {
    "file": "services/panels-keypads.html",
    "title": "Control panels, keypads and modules | DMP",
-   "description": "Control panels, keypads, modules, expanders, power supplies and enclosures. Control panels, keypads, modules and expanders, power supplies and enclosures.",
+   "description": "Control panels, keypads, modules, expanders, power supplies and enclosures.",
    "schema": [
     {
      "@context": "https://schema.org",
@@ -6601,7 +6601,7 @@
        "kicker": "Control panel",
        "image": "assets/p-xr550-1200-cut.png",
        "href": "products/xr550.html",
-       "why": "574 total zones, 500 wireless zones and 32 out of the box, 96 maximum of access control.",
+       "why": "574 total zones, 500 wireless zones, and access control for up to 96 doors, 32 out of the box.",
        "facts": [
         [
          "Total zones",
@@ -6805,7 +6805,7 @@
   {
    "file": "services/mobile-automation.html",
    "title": "Virtual Keypad app and Dealer Admin software | DMP",
-   "description": "Virtual Keypad, Dealer Admin, Entré, Z-Wave automation and the cloud services behind them. Virtual Keypad lets dealers brand a full-featured remote.",
+   "description": "Virtual Keypad, Dealer Admin, Entré, Z-Wave automation and the cloud services behind them.",
    "schema": [
     {
      "@context": "https://schema.org",
@@ -7204,7 +7204,7 @@
     {
      "type": "faq",
      "alt": true,
-     "heading": "Questions about virtual keypad and software",
+     "heading": "Questions about Virtual Keypad and software",
      "items": [
       [
        "What is Virtual Keypad?",
@@ -7215,7 +7215,7 @@
        "The dealer's tool for programming panels, including mass programming and bulk firmware updates."
       ],
       [
-       "Is our software secure?",
+       "Is DMP's software secure?",
        "Dealer Admin and Virtual Keypad are hosted in a Tier 4 data center, and we complete independent SOC 2 Type II examinations every year."
       ],
       [
@@ -7312,7 +7312,7 @@
       ],
       [
        "8",
-       "System families with their own pages"
+       "Product lines with their own pages"
       ]
      ],
      "card_a": {
@@ -7362,7 +7362,7 @@
       ],
       [
        "Industrial and manufacturing",
-       "Robust systems for complex facilities.",
+       "Intrusion, access, fire and video for complex facilities.",
        "industries/industrial-manufacturing.html",
        "assets/x1-1200.jpg"
       ],
@@ -7386,7 +7386,7 @@
       ],
       [
        "Religious institutions",
-       "Rock-solid reliability.",
+       "Systems for houses of worship, tested before shipping.",
        "industries/religious-institutions.html",
        "assets/tab-intrusion-1200.jpg"
       ],
@@ -7398,7 +7398,7 @@
       ],
       [
        "Residential",
-       "Innovative solutions for residential customers.",
+       "Systems for residential customers.",
        "industries/residential.html",
        "assets/phone-commercial-1200.jpg"
       ]
@@ -7444,7 +7444,7 @@
   {
    "file": "industries/commercial.html",
    "title": "Security systems for commercial | DMP",
-   "description": "Scalable, convenient solutions for commercial customers. A security system should do much more than just sound an alarm when there's an intrusion..",
+   "description": "Scalable, convenient solutions for commercial customers. A security system should do much more than just sound an alarm when there's an intrusion.",
    "crumbs": [
     [
      "Home",
@@ -7493,7 +7493,7 @@
       ],
       [
        "5",
-       "Systems from one manufacturer"
+       "Product lines from one manufacturer"
       ]
      ],
      "card_a": {
@@ -7536,7 +7536,7 @@
       "Intrusion, fire, access, wireless and video from one manufacturer"
      ],
      "image": "assets/hq-exterior-2-1200.png",
-     "image_alt": "Commercial: DMP",
+     "image_alt": "DMP security products for commercial customers",
      "tag": "Commercial",
      "cta": {
       "label": "Talk to DMP about commercial",
@@ -7674,7 +7674,7 @@
   {
    "file": "industries/financial-institutions.html",
    "title": "Security systems for financial institutions | DMP",
-   "description": "A security system plus operational management. Our systems streamline credentialing through integrated access control and intrusion, reduce labor through.",
+   "description": "A security system plus operational management. Our systems streamline credentialing through integrated access control and intrusion.",
    "crumbs": [
     [
      "Home",
@@ -7767,7 +7767,7 @@
       "TMSentry: a compact panel developed for teller machine security"
      ],
      "image": "assets/vault-1200.jpg",
-     "image_alt": "Financial institutions: DMP",
+     "image_alt": "DMP security products for financial institutions customers",
      "tag": "Financial institutions",
      "cta": {
       "label": "Talk to DMP about financial institutions",
@@ -8046,7 +8046,7 @@
       "1100 Series wireless receivers and a published compatibility guide"
      ],
      "image": "assets/tab-mobile-1200.jpg",
-     "image_alt": "Retail: DMP",
+     "image_alt": "DMP security products for retail customers",
      "tag": "Retail",
      "cta": {
       "label": "Talk to DMP about retail",
@@ -8232,7 +8232,7 @@
   {
    "file": "industries/government.html",
    "title": "Security systems for government | DMP",
-   "description": "Security systems for government customers, designed and built in the U.S.A. with U.S.",
+   "description": "Security systems for government customers, designed and built in the U.S.A. with U.S. and global components and a national service network.",
    "crumbs": [
     [
      "Home",
@@ -8325,7 +8325,7 @@
       "A published white paper on NDAA, BAA and TAA compliance"
      ],
      "image": "assets/keypad-722-1200-cut.png",
-     "image_alt": "Government: DMP",
+     "image_alt": "DMP security products for government customers",
      "tag": "Government",
      "cta": {
       "label": "Talk to DMP about government",
@@ -8511,7 +8511,7 @@
   {
    "file": "industries/industrial-manufacturing.html",
    "title": "Security systems for industrial and manufacturing | DMP",
-   "description": "Robust systems for complex facilities. With an integrated system that supports intrusion, access control, commercial fire and video.",
+   "description": "Intrusion, access, fire and video for complex facilities. With an integrated system that supports intrusion, access control, commercial fire and video.",
    "crumbs": [
     [
      "Home",
@@ -8603,7 +8603,7 @@
       "AlarmVision turns cameras into smart motion detectors that trigger panel responses and alarms in real time"
      ],
      "image": "assets/x1-1200.jpg",
-     "image_alt": "Industrial and manufacturing: DMP",
+     "image_alt": "DMP security products for industrial and manufacturing customers",
      "tag": "Industrial and manufacturing",
      "cta": {
       "label": "Talk to DMP about industrial and manufacturing",
@@ -8741,7 +8741,7 @@
   {
    "file": "industries/education.html",
    "title": "Security systems for education | DMP",
-   "description": "Monitoring for school security. We provide a broad line of security hardware and software that can be configured into a customized solution, with features.",
+   "description": "Monitoring for school security. We provide a broad line of security hardware and software that can be configured into a customized solution.",
    "crumbs": [
     [
      "Home",
@@ -8832,7 +8832,7 @@
       "Lockdown: authorized staff can start a lockdown from the Virtual Keypad app, a system keypad or any PC running Entré software, which locks all public doors and restricts access to authorized users"
      ],
      "image": "assets/digital-key-1200.jpg",
-     "image_alt": "Education: DMP",
+     "image_alt": "DMP security products for education customers",
      "tag": "Education",
      "cta": {
       "label": "Talk to DMP about education",
@@ -9061,7 +9061,7 @@
       "We offer communicators approved for use on the FirstNet public-safety network"
      ],
      "image": "assets/dualsim-1200.jpg",
-     "image_alt": "Healthcare and wellness: DMP",
+     "image_alt": "DMP security products for healthcare and wellness customers",
      "tag": "Healthcare and wellness",
      "cta": {
       "label": "Talk to DMP about healthcare and wellness",
@@ -9290,7 +9290,7 @@
       "Suited to pools, fitness centers, community rooms and other private amenities"
      ],
      "image": "assets/sensor-1112-1200.jpg",
-     "image_alt": "Multi-tenant: DMP",
+     "image_alt": "DMP security products for multi-tenant customers",
      "tag": "Multi-tenant",
      "cta": {
       "label": "Talk to DMP about multi-tenant",
@@ -9428,7 +9428,7 @@
   {
    "file": "industries/religious-institutions.html",
    "title": "Security systems for religious institutions | DMP",
-   "description": "Rock-solid reliability. As a leading security manufacturer, we build products known for consistent reliability.",
+   "description": "Systems for houses of worship, tested before shipping. As a leading security manufacturer, we build products known for consistent reliability.",
    "crumbs": [
     [
      "Home",
@@ -9519,7 +9519,7 @@
       "Complete, easy-to-manage systems that integrate intrusion, access control and video surveillance"
      ],
      "image": "assets/tab-intrusion-1200.jpg",
-     "image_alt": "Religious institutions: DMP",
+     "image_alt": "DMP security products for religious institutions customers",
      "tag": "Religious institutions",
      "cta": {
       "label": "Talk to DMP about religious institutions",
@@ -9748,7 +9748,7 @@
       "AlarmVision with XT75 or XR Series panels triggers responses in real time"
      ],
      "image": "assets/alarmvision-1200.jpg",
-     "image_alt": "Storage units: DMP",
+     "image_alt": "DMP security products for storage units customers",
      "tag": "Storage units",
      "cta": {
       "label": "Talk to DMP about storage units",
@@ -9886,7 +9886,7 @@
   {
    "file": "industries/residential.html",
    "title": "Security systems for residential | DMP",
-   "description": "Innovative solutions for residential customers. Systems built from our components combine intrusion with fire protection.",
+   "description": "Systems for residential customers. Systems built from our components combine intrusion with fire protection, and are surprisingly easy to use.",
    "crumbs": [
     [
      "Home",
@@ -9979,7 +9979,7 @@
       "XTLtouch: the enhanced all-in-one wireless burglary panel"
      ],
      "image": "assets/phone-commercial-1200.jpg",
-     "image_alt": "Residential: DMP",
+     "image_alt": "DMP security products for residential customers",
      "tag": "Residential",
      "cta": {
       "label": "Talk to DMP about residential",
@@ -10431,7 +10431,7 @@
        "Our products are manufactured in the USA with U.S. and global components, in Springfield, Missouri."
       ],
       [
-       "Is our software independently examined?",
+       "Is DMP's software independently examined?",
        "Yes. We complete independent SOC 2 Type II examinations annually, by a licensed CPA firm, for Dealer Admin and Virtual Keypad."
       ]
      ]
@@ -10602,7 +10602,7 @@
       {
        "label": "Customer Service",
        "number": "866-266-2826",
-       "text": "Products and ordering, software activations, the Buy Site, shipping and order entry.",
+       "text": "Products and ordering, software activations, the Buy site, shipping and order entry.",
        "hours": "8 a.m. to 6 p.m. Central",
        "email": "CustomerService@DMP.com"
       }
@@ -10673,42 +10673,42 @@
      "items": [
       [
        "News, 11 Sep 2026",
-       "DMP Launches VK VMS, Enabling 24/7 Video Management With AlarmVision",
+       "DMP launches VK VMS, enabling 24/7 video management with AlarmVision",
        "Our video platform becomes complete, with VK VMS and the XV Plus gateways.",
        "Read the story",
        "news/vk-vms.html"
       ],
       [
        "News, 1 Jul 2026",
-       "The Next Evolution of the VUE Portfolio Is Here",
+       "The next evolution of the VUE portfolio is here",
        "More cameras join the VUE Plus family.",
        "Read the story",
        "news/vue-portfolio.html"
       ],
       [
        "News, 6 May 2026",
-       "JamAlert Achieves UL Certification",
+       "JamAlert achieves UL certification",
        "JamAlert, our cellular jamming detection, earns a UL certification.",
        "Read the story",
        "news/jamalert-ul.html"
       ],
       [
        "News, 27 Apr 2026",
-       "XR650 Wins Top Honors at 2026 ESX Innovation Awards",
+       "XR650 wins top honors at 2026 ESX Innovation Awards",
        "The XR650 control panel wins at the ESX Innovation Awards.",
        "Read the story",
        "news/xr650-esx-award.html"
       ],
       [
        "News, 9 Apr 2026",
-       "DMP Launches VUE Camera Line Delivering Intelligent Video and Active Deterrence",
+       "DMP launches VUE camera line delivering intelligent video and active deterrence",
        "The VUE camera line arrives.",
        "Read the story",
        "news/vue-camera-line.html"
       ],
       [
        "News, 19 Mar 2026",
-       "Integration with System Surveyor Streamlines Intrusion and Access Control System Design for Dealers",
+       "Integration with System Surveyor streamlines intrusion and access control system design for dealers",
        "A design tool integration for dealers.",
        "Read the story",
        "news/system-surveyor.html"
@@ -10783,7 +10783,7 @@
        "Yes. Our support and global pages list international products and a table of authorized distributors outside the U.S."
       ],
       [
-       "Is our software independently examined?",
+       "Is DMP's software independently examined?",
        "Yes. We complete independent SOC 2 Type II examinations annually, by a licensed CPA firm, for Dealer Admin and Virtual Keypad."
       ],
       [
@@ -11078,7 +11078,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/p-digital-key-credential-1200-cut.png",
-     "image_alt": "The DMP Digital Key",
+     "image_alt": "The DMP Digital Key Credential",
      "image_w": 1200,
      "image_h": 927,
      "kind": "float",
@@ -11209,7 +11209,7 @@
      "hub": {
       "name": "Digital Key",
       "image": "assets/p-digital-key-credential-1200-cut.png",
-      "alt": "The DMP Digital Key",
+      "alt": "The DMP Digital Key Credential",
       "light": false
      },
      "items": [
@@ -11757,7 +11757,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/p-dmp-bluetooth-reader-and-mobile-credential-1200-cut.png",
-     "image_alt": "The DMP SR3",
+     "image_alt": "The DMP SR3 Bluetooth Reader",
      "image_w": 1200,
      "image_h": 1060,
      "kind": "float",
@@ -11841,7 +11841,7 @@
      "hub": {
       "name": "SR3",
       "image": "assets/p-dmp-bluetooth-reader-and-mobile-credential-1200-cut.png",
-      "alt": "The DMP SR3",
+      "alt": "The DMP SR3 Bluetooth Reader",
       "light": false
      },
      "items": [
@@ -12048,7 +12048,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/p-734n-1200-cut.png",
-     "image_alt": "The DMP 734N",
+     "image_alt": "The DMP 734N Network Access Control Module",
      "image_w": 1200,
      "image_h": 800,
      "kind": "float",
@@ -12140,7 +12140,7 @@
      "hub": {
       "name": "734N",
       "image": "assets/p-734n-1200-cut.png",
-      "alt": "The DMP 734N",
+      "alt": "The DMP 734N Network Access Control Module",
       "light": false
      },
      "items": [
@@ -12347,7 +12347,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/p-x1-1200-cut.png",
-     "image_alt": "The DMP X1",
+     "image_alt": "The DMP X1 Single-Door Access Controller",
      "image_w": 1200,
      "image_h": 800,
      "kind": "light",
@@ -12439,7 +12439,7 @@
      "hub": {
       "name": "X1",
       "image": "assets/p-x1-1200-cut.png",
-      "alt": "The DMP X1",
+      "alt": "The DMP X1 Single-Door Access Controller",
       "light": true
      },
      "items": [
@@ -12632,7 +12632,7 @@
      "heading": "<em>Entré Lite</em>: up to 16 doors across multiple facilities.",
      "subhead": "Intrusion and access control for small retail and small commercial, from one screen.",
      "primary": {
-      "label": "Ask DMP about the Entré Lite",
+      "label": "Ask DMP about Entré Lite",
       "href": "contact.html"
      },
      "actions": [
@@ -12663,7 +12663,7 @@
      "type": "detail",
      "alt": true,
      "eyebrow": "What it is",
-     "heading": "The Entré Lite at a glance",
+     "heading": "Entré Lite at a glance",
      "body": "Entré Lite gives XR Series control panel users the ability to manage intrusion and access control across multiple facilities from a private network. It provides 16 doors of access control.",
      "bullets": [
       "Up to 16 access control doors",
@@ -12677,8 +12677,8 @@
      "id": "works-with",
      "dark": false,
      "eyebrow": "Works with",
-     "heading": "Where the Entré Lite connects",
-     "intro": "Where the Entré Lite fits in a DMP system.",
+     "heading": "Where Entré Lite connects",
+     "intro": "Where Entré Lite fits in a DMP system.",
      "link_label": "Open",
      "hub": {
       "name": "Entré Lite",
@@ -12710,7 +12710,7 @@
     {
      "type": "doclist",
      "eyebrow": "In the library",
-     "heading": "Documents for the Entré Lite",
+     "heading": "Documents for Entré Lite",
      "intro": "Documents for this product are available from DMP.",
      "items": [
       [
@@ -12735,7 +12735,7 @@
     {
      "type": "faq",
      "alt": true,
-     "heading": "Questions about the Entré Lite",
+     "heading": "Questions about Entré Lite",
      "items": [
       [
        "How many doors does Entré Lite manage?",
@@ -12868,7 +12868,7 @@
      "heading": "<em>Entré Enterprise</em> starts at 96 doors, scales to 400.",
      "subhead": "Intrusion and access control across multiple facilities, from a private network.",
      "primary": {
-      "label": "Ask DMP about the Entré Enterprise",
+      "label": "Ask DMP about Entré Enterprise",
       "href": "contact.html"
      },
      "actions": [
@@ -12912,7 +12912,7 @@
      "type": "detail",
      "alt": true,
      "eyebrow": "What it is",
-     "heading": "The Entré Enterprise at a glance",
+     "heading": "Entré Enterprise at a glance",
      "body": "Entré Enterprise gives XR Series control panel users the ability to manage intrusion and access control across multiple facilities from a private network. It provides 96 doors of access control, with additional licenses available to expand up to 400 doors and 500 panels.",
      "bullets": [
       "96 doors of access control, expandable to 400 doors and 500 panels with additional licenses",
@@ -12925,7 +12925,7 @@
      "type": "cards",
      "cls": "lf-num",
      "eyebrow": "Key features",
-     "heading": "What the Entré Enterprise does",
+     "heading": "What Entré Enterprise does",
      "items": [
       [
        "Scales by license",
@@ -12978,8 +12978,8 @@
      "id": "works-with",
      "dark": false,
      "eyebrow": "Works with",
-     "heading": "Where the Entré Enterprise connects",
-     "intro": "Where the Entré Enterprise fits in a DMP system.",
+     "heading": "Where Entré Enterprise connects",
+     "intro": "Where Entré Enterprise fits in a DMP system.",
      "link_label": "Open",
      "hub": {
       "name": "Entré Enterprise",
@@ -13011,7 +13011,7 @@
     {
      "type": "doclist",
      "eyebrow": "In the library",
-     "heading": "Documents for the Entré Enterprise",
+     "heading": "Documents for Entré Enterprise",
      "intro": "Documents for this product are available from DMP.",
      "items": [
       [
@@ -13036,7 +13036,7 @@
     {
      "type": "faq",
      "alt": true,
-     "heading": "Questions about the Entré Enterprise",
+     "heading": "Questions about Entré Enterprise",
      "items": [
       [
        "How many doors and panels can Entré Enterprise manage?",
@@ -13171,7 +13171,7 @@
      "heading": "<em>CellCom</em> puts almost any panel on LTE.",
      "subhead": "A simple add-on for competitor and legacy takeovers.",
      "primary": {
-      "label": "Ask DMP about the CellCom",
+      "label": "Ask DMP about CellCom",
       "href": "contact.html"
      },
      "actions": [
@@ -13191,7 +13191,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/p-cellcom-1200-cut.png",
-     "image_alt": "The DMP CellCom",
+     "image_alt": "The DMP CellCom Universal Alarm Communicator",
      "image_w": 1200,
      "image_h": 799,
      "kind": "float",
@@ -13215,7 +13215,7 @@
      "type": "detail",
      "alt": true,
      "eyebrow": "What it is",
-     "heading": "The CellCom at a glance",
+     "heading": "CellCom at a glance",
      "body": "The CellCom LTE Cellular Alarm Communicator provides a fully supervised alarm communication path over the LTE network. With this simple add-on, almost every panel can take advantage of remote system management and control.",
      "bullets": [
       "Arming and disarming come standard, with the ability to view up to six cameras",
@@ -13228,7 +13228,7 @@
      "type": "cards",
      "cls": "lf-num",
      "eyebrow": "Key features",
-     "heading": "What the CellCom does",
+     "heading": "What CellCom does",
      "items": [
       [
        "Fully supervised",
@@ -13281,13 +13281,13 @@
      "id": "works-with",
      "dark": false,
      "eyebrow": "Works with",
-     "heading": "Where the CellCom connects",
-     "intro": "Where the CellCom fits in a DMP system.",
+     "heading": "Where CellCom connects",
+     "intro": "Where CellCom fits in a DMP system.",
      "link_label": "Open",
      "hub": {
       "name": "CellCom",
       "image": "assets/p-cellcom-1200-cut.png",
-      "alt": "The DMP CellCom",
+      "alt": "The DMP CellCom Universal Alarm Communicator",
       "light": false
      },
      "items": [
@@ -13314,7 +13314,7 @@
     {
      "type": "doclist",
      "eyebrow": "In the library",
-     "heading": "Documents for the CellCom",
+     "heading": "Documents for CellCom",
      "intro": "Documents for this product are available from DMP.",
      "items": [
       [
@@ -13347,7 +13347,7 @@
     {
      "type": "faq",
      "alt": true,
-     "heading": "Questions about the CellCom",
+     "heading": "Questions about CellCom",
      "items": [
       [
        "What does CellCom do?",
@@ -13482,7 +13482,7 @@
      "heading": "<em>DualCom</em> puts network and LTE backup on one board.",
      "subhead": "Capture Contact ID from a panel's dialer output and send it over a supervised path.",
      "primary": {
-      "label": "Ask DMP about the DualCom",
+      "label": "Ask DMP about DualCom",
       "href": "contact.html"
      },
      "actions": [
@@ -13502,7 +13502,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/p-dualcom-1200-cut.png",
-     "image_alt": "The DMP DualCom",
+     "image_alt": "The DMP DualCom Universal Alarm Communicator",
      "image_w": 700,
      "image_h": 500,
      "kind": "float",
@@ -13522,7 +13522,7 @@
      "type": "detail",
      "alt": true,
      "eyebrow": "What it is",
-     "heading": "The DualCom at a glance",
+     "heading": "DualCom at a glance",
      "body": "The DualCom LTE Communicator provides a fully supervised alarm communication path. It integrates primary network communication and LTE backup on one PCB, and you can use it to take over panels.",
      "bullets": [
       "Captures Contact ID messages from a control panel's dialer output, based on SIA DC051999.09DCS",
@@ -13535,7 +13535,7 @@
      "type": "cards",
      "cls": "lf-num",
      "eyebrow": "Key features",
-     "heading": "What the DualCom does",
+     "heading": "What DualCom does",
      "items": [
       [
        "Primary and backup on one PCB",
@@ -13588,13 +13588,13 @@
      "id": "works-with",
      "dark": false,
      "eyebrow": "Works with",
-     "heading": "Where the DualCom connects",
-     "intro": "Where the DualCom fits in a DMP system.",
+     "heading": "Where DualCom connects",
+     "intro": "Where DualCom fits in a DMP system.",
      "link_label": "Open",
      "hub": {
       "name": "DualCom",
       "image": "assets/p-dualcom-1200-cut.png",
-      "alt": "The DMP DualCom",
+      "alt": "The DMP DualCom Universal Alarm Communicator",
       "light": false
      },
      "items": [
@@ -13621,7 +13621,7 @@
     {
      "type": "doclist",
      "eyebrow": "In the library",
-     "heading": "Documents for the DualCom",
+     "heading": "Documents for DualCom",
      "intro": "Documents for this product are available from DMP.",
      "items": [
       [
@@ -13654,7 +13654,7 @@
     {
      "type": "faq",
      "alt": true,
-     "heading": "Questions about the DualCom",
+     "heading": "Questions about DualCom",
      "items": [
       [
        "What does DualCom provide?",
@@ -13809,7 +13809,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/p-263lte-1200-cut.png",
-     "image_alt": "The DMP 263LTE",
+     "image_alt": "The DMP XR & XT Series LTE Cellular Communicator",
      "image_w": 1200,
      "image_h": 995,
      "kind": "float",
@@ -13939,7 +13939,7 @@
      "hub": {
       "name": "263LTE",
       "image": "assets/p-263lte-1200-cut.png",
-      "alt": "The DMP 263LTE",
+      "alt": "The DMP XR & XT Series LTE Cellular Communicator",
       "light": false
      },
      "items": [
@@ -14146,7 +14146,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/p-263lte-firstnet-1200-cut.png",
-     "image_alt": "The DMP 263LTE-FN",
+     "image_alt": "The DMP FirstNet Ready LTE Cellular Communicator",
      "image_w": 1200,
      "image_h": 800,
      "kind": "float",
@@ -14280,7 +14280,7 @@
      "hub": {
       "name": "263LTE-FN",
       "image": "assets/p-263lte-firstnet-1200-cut.png",
-      "alt": "The DMP 263LTE-FN",
+      "alt": "The DMP FirstNet Ready LTE Cellular Communicator",
       "light": false
      },
      "items": [
@@ -14487,7 +14487,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/p-265lte-1200-cut.png",
-     "image_alt": "The DMP 265LTE",
+     "image_alt": "The DMP XTL Series LTE Cellular Communicator",
      "image_w": 1200,
      "image_h": 800,
      "kind": "float",
@@ -14583,7 +14583,7 @@
      "hub": {
       "name": "265LTE",
       "image": "assets/p-265lte-1200-cut.png",
-      "alt": "The DMP 265LTE",
+      "alt": "The DMP XTL Series LTE Cellular Communicator",
       "light": false
      },
      "items": [
@@ -14788,7 +14788,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/p-scs-vr-virtual-receiver-software-1200-cut.png",
-     "image_alt": "The DMP SCS-VR",
+     "image_alt": "The DMP SCS-VR Virtual Receiver Software",
      "image_w": 1200,
      "image_h": 800,
      "kind": "float",
@@ -14880,7 +14880,7 @@
      "hub": {
       "name": "SCS-VR",
       "image": "assets/p-scs-vr-virtual-receiver-software-1200-cut.png",
-      "alt": "The DMP SCS-VR",
+      "alt": "The DMP SCS-VR Virtual Receiver Software",
       "light": false
      },
      "items": [
@@ -15107,7 +15107,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/p-scs-1r-1200-cut.png",
-     "image_alt": "The DMP SCS-1R",
+     "image_alt": "The DMP SCS-1R Network Enabled Receiver",
      "image_w": 1200,
      "image_h": 800,
      "kind": "float",
@@ -15203,7 +15203,7 @@
      "hub": {
       "name": "SCS-1R",
       "image": "assets/p-scs-1r-1200-cut.png",
-      "alt": "The DMP SCS-1R",
+      "alt": "The DMP SCS-1R Network Enabled Receiver",
       "light": false
      },
      "items": [
@@ -15410,7 +15410,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/xt75-1200-cut.png",
-     "image_alt": "The DMP XT75",
+     "image_alt": "The DMP XT75 Control Panel",
      "image_w": 1200,
      "image_h": 800,
      "kind": "float",
@@ -15438,7 +15438,7 @@
      "items": [
       [
        "Three systems, one panel",
-       "The XT75 seamlessly integrates intrusion, access control and AlarmVision."
+       "The XT75 integrates intrusion, access control and AlarmVision."
       ],
       [
        "Complete zone alarm reports",
@@ -15493,7 +15493,7 @@
      "hub": {
       "name": "XT75",
       "image": "assets/xt75-1200-cut.png",
-      "alt": "The DMP XT75",
+      "alt": "The DMP XT75 Control Panel",
       "light": false
      },
      "items": [
@@ -15719,7 +15719,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/p-xt50-1200-cut.png",
-     "image_alt": "The DMP XT50",
+     "image_alt": "The DMP XT50 Control Panel",
      "image_w": 1200,
      "image_h": 699,
      "kind": "float",
@@ -15907,7 +15907,7 @@
      "hub": {
       "name": "XT50",
       "image": "assets/p-xt50-1200-cut.png",
-      "alt": "The DMP XT50",
+      "alt": "The DMP XT50 Control Panel",
       "light": false
      },
      "items": [
@@ -16122,7 +16122,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/p-xtlplus-1200-cut.png",
-     "image_alt": "The DMP XTLplus",
+     "image_alt": "The DMP XTLplus Control Panel",
      "image_w": 1200,
      "image_h": 829,
      "kind": "float",
@@ -16302,7 +16302,7 @@
      "hub": {
       "name": "XTLplus",
       "image": "assets/p-xtlplus-1200-cut.png",
-      "alt": "The DMP XTLplus",
+      "alt": "The DMP XTLplus Control Panel",
       "light": false
      },
      "items": [
@@ -16517,7 +16517,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/p-xtltouch-1200-cut.png",
-     "image_alt": "The DMP XTLtouch",
+     "image_alt": "The DMP XTLtouch All-In-One",
      "image_w": 1200,
      "image_h": 829,
      "kind": "float",
@@ -16697,7 +16697,7 @@
      "hub": {
       "name": "XTLtouch",
       "image": "assets/p-xtltouch-1200-cut.png",
-      "alt": "The DMP XTLtouch",
+      "alt": "The DMP XTLtouch All-In-One",
       "light": false
      },
      "items": [
@@ -16912,7 +16912,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/p-xr150-1200-cut.png",
-     "image_alt": "The DMP XR150",
+     "image_alt": "The DMP XR150 Control Panel",
      "image_w": 1200,
      "image_h": 858,
      "kind": "float",
@@ -16956,8 +16956,8 @@
        "142 inputs, eight keypads for 32 zones, and one built-in LX Bus with 100 zones."
       ],
       [
-       "10,000 users",
-       "10,000 user codes with 99 profiles."
+       "10,000 user codes",
+       "With 99 profiles."
       ],
       [
        "Add technology later",
@@ -17100,7 +17100,7 @@
      "hub": {
       "name": "XR150",
       "image": "assets/p-xr150-1200-cut.png",
-      "alt": "The DMP XR150",
+      "alt": "The DMP XR150 Control Panel",
       "light": false
      },
      "items": [
@@ -17232,7 +17232,7 @@
   {
    "file": "products/xr550.html",
    "title": "XR550 flagship control panel with fire and access | DMP",
-   "description": "The XR550 flagship control panel supports 96 doors, 574 zones and 10,000 users, with AES encrypted communication for commercial and large residential.",
+   "description": "The XR550 flagship control panel supports 96 doors, 574 zones and 10,000 user codes, with AES encrypted communication for commercial and large residential.",
    "crumbs": [
     [
      "Home",
@@ -17256,7 +17256,7 @@
      "@context": "https://schema.org",
      "@type": "Product",
      "name": "XR550 Control Panel",
-     "description": "The XR550 flagship control panel supports 96 doors, 574 zones and 10,000 users, with AES encrypted communication for commercial and large residential.",
+     "description": "The XR550 flagship control panel supports 96 doors, 574 zones and 10,000 user codes, with AES encrypted communication for commercial and large residential.",
      "brand": {
       "@type": "Brand",
       "name": "DMP"
@@ -17315,7 +17315,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/p-xr550-1200-cut.png",
-     "image_alt": "The DMP XR550",
+     "image_alt": "The DMP XR550 Control Panel",
      "image_w": 1200,
      "image_h": 818,
      "kind": "float",
@@ -17357,13 +17357,13 @@
      "heading": "XR550, feature by feature",
      "name": "XR550",
      "image": "assets/p-xr550-1200-cut.png",
-     "image_alt": "The DMP XR550",
+     "image_alt": "The DMP XR550 Control Panel",
      "image_w": 1200,
      "image_h": 818,
      "items": [
       {
        "n": 1,
-       "title": "Built for the largest jobs",
+       "title": "Built for big jobs",
        "text": "From extremely large residential to high-security industrial to multi-site nationwide installations."
       },
       {
@@ -17533,7 +17533,7 @@
      "hub": {
       "name": "XR550",
       "image": "assets/p-xr550-1200-cut.png",
-      "alt": "The DMP XR550",
+      "alt": "The DMP XR550 Control Panel",
       "light": false
      },
      "items": [
@@ -17751,7 +17751,7 @@
       "contact.html"
      ],
      "image": "assets/p-xr650-1200-cut.png",
-     "image_alt": "The DMP XR650",
+     "image_alt": "The DMP XR650 Control Panel",
      "image_w": 1200,
      "image_h": 818,
      "kind": "float",
@@ -17793,7 +17793,7 @@
      "heading": "XR650, feature by feature",
      "name": "XR650",
      "image": "assets/p-xr650-1200-cut.png",
-     "image_alt": "The DMP XR650",
+     "image_alt": "The DMP XR650 Control Panel",
      "image_w": 1200,
      "image_h": 818,
      "items": [
@@ -17941,7 +17941,7 @@
      "hub": {
       "name": "XR650",
       "image": "assets/p-xr650-1200-cut.png",
-      "alt": "The DMP XR650",
+      "alt": "The DMP XR650 Control Panel",
       "light": false
      },
      "items": [
@@ -17997,10 +17997,10 @@
      "items": [
       [
        "Is the XR650 available now?",
-       "It is coming soon."
+       "No. The XR650 is coming soon and not yet orderable."
       ],
       [
-       "How many users can it hold?",
+       "How many user codes can it hold?",
        "300,000 user codes with 1,000 groups."
       ],
       [
@@ -18124,7 +18124,7 @@
      "heading": "<em>TMSentry</em>: built-in encryption, six zones, slim ATM panel.",
      "subhead": "The next generation of teller machine security, sized for slimmer machines.",
      "primary": {
-      "label": "Ask DMP about the TMSentry",
+      "label": "Ask DMP about TMSentry",
       "href": "contact.html"
      },
      "actions": [
@@ -18168,7 +18168,7 @@
      "type": "detail",
      "alt": true,
      "eyebrow": "What it is",
-     "heading": "The TMSentry at a glance",
+     "heading": "TMSentry at a glance",
      "body": "TMSentry is the next generation of teller machine security. Its compact size fits new, slimmer ATMs and ITMs, or serves as a space-saving upgrade to existing teller machines. Built-in encryption and six supervised zones give financial customers the highest level of protection in the most compact size available on the market.",
      "bullets": [
       "Built-in encryption and six supervised zones",
@@ -18181,7 +18181,7 @@
      "type": "cards",
      "cls": "lf-num",
      "eyebrow": "Key features",
-     "heading": "What the TMSentry does",
+     "heading": "What TMSentry does",
      "items": [
       [
        "Compact",
@@ -18234,8 +18234,8 @@
      "id": "works-with",
      "dark": false,
      "eyebrow": "Works with",
-     "heading": "Where the TMSentry connects",
-     "intro": "Where the TMSentry fits in a DMP system.",
+     "heading": "Where TMSentry connects",
+     "intro": "Where TMSentry fits in a DMP system.",
      "link_label": "Open",
      "hub": {
       "name": "TMSentry",
@@ -18267,7 +18267,7 @@
     {
      "type": "doclist",
      "eyebrow": "In the library",
-     "heading": "Documents for the TMSentry",
+     "heading": "Documents for TMSentry",
      "intro": "Documents for this product are available from DMP.",
      "items": [
       [
@@ -18300,7 +18300,7 @@
     {
      "type": "faq",
      "alt": true,
-     "heading": "Questions about the TMSentry",
+     "heading": "Questions about TMSentry",
      "items": [
       [
        "What is TMSentry?",
@@ -18455,7 +18455,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/keypad-722-1200-cut.png",
-     "image_alt": "The DMP 7-Inch Touchscreen Keypad",
+     "image_alt": "The DMP 7-Inch Touchscreen Keypad (8800 Series)",
      "image_w": 1200,
      "image_h": 800,
      "kind": "float",
@@ -18497,7 +18497,7 @@
      "heading": "7-Inch Touchscreen Keypad, feature by feature",
      "name": "7-Inch Touchscreen Keypad",
      "image": "assets/keypad-722-1200-cut.png",
-     "image_alt": "The DMP 7-Inch Touchscreen Keypad",
+     "image_alt": "The DMP 7-Inch Touchscreen Keypad (8800 Series)",
      "image_w": 1200,
      "image_h": 800,
      "items": [
@@ -18585,7 +18585,7 @@
      "hub": {
       "name": "7-Inch Touchscreen Keypad",
       "image": "assets/keypad-722-1200-cut.png",
-      "alt": "The DMP 7-Inch Touchscreen Keypad",
+      "alt": "The DMP 7-Inch Touchscreen Keypad (8800 Series)",
       "light": false
      },
      "items": [
@@ -19098,7 +19098,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/p-9800-series-1200-cut.png",
-     "image_alt": "The DMP 9800 Series",
+     "image_alt": "The DMP Wireless Touchscreen Keypad",
      "image_w": 1200,
      "image_h": 800,
      "kind": "float",
@@ -19182,7 +19182,7 @@
      "hub": {
       "name": "9800 Series",
       "image": "assets/p-9800-series-1200-cut.png",
-      "alt": "The DMP 9800 Series",
+      "alt": "The DMP Wireless Touchscreen Keypad",
       "light": false
      },
      "items": [
@@ -19389,7 +19389,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/p-7000-series-1200-cut.png",
-     "image_alt": "The DMP Thinline",
+     "image_alt": "The DMP Thinline Series Keypad",
      "image_w": 1200,
      "image_h": 933,
      "kind": "float",
@@ -19481,7 +19481,7 @@
      "hub": {
       "name": "Thinline",
       "image": "assets/p-7000-series-1200-cut.png",
-      "alt": "The DMP Thinline",
+      "alt": "The DMP Thinline Series Keypad",
       "light": false
      },
      "items": [
@@ -19688,7 +19688,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/p-aqualite-series-1200-cut.png",
-     "image_alt": "The DMP Aqualite",
+     "image_alt": "The DMP Aqualite Series Keypad",
      "image_w": 1200,
      "image_h": 949,
      "kind": "light",
@@ -19784,7 +19784,7 @@
      "hub": {
       "name": "Aqualite",
       "image": "assets/p-aqualite-series-1200-cut.png",
-      "alt": "The DMP Aqualite",
+      "alt": "The DMP Aqualite Series Keypad",
       "light": true
      },
      "items": [
@@ -19991,7 +19991,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/p-icon-series-1200-cut.png",
-     "image_alt": "The DMP Icon",
+     "image_alt": "The DMP Icon Series Keypad",
      "image_w": 1200,
      "image_h": 885,
      "kind": "light",
@@ -20087,7 +20087,7 @@
      "hub": {
       "name": "Icon",
       "image": "assets/p-icon-series-1200-cut.png",
-      "alt": "The DMP Icon",
+      "alt": "The DMP Icon Series Keypad",
       "light": true
      },
      "items": [
@@ -20294,7 +20294,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/p-xf6-1200-cut.png",
-     "image_alt": "The DMP XF6",
+     "image_alt": "The DMP XF6 Series Fire Control Panels",
      "image_w": 1200,
      "image_h": 945,
      "kind": "float",
@@ -20315,7 +20315,7 @@
      "alt": true,
      "eyebrow": "What it is",
      "heading": "The XF6 at a glance",
-     "body": "The XF6 is a state-of-the-art 24V control panel built for single-site applications. It has network and optional cellular communications that send all signals directly to the monitoring center, and it is both addressable and UL 864 10th Edition Listed for wireless.",
+     "body": "The XF6 is a 24V control panel built for single-site applications. It has network and optional cellular communications that send all signals directly to the monitoring center, and it is both addressable and UL 864 10th Edition Listed for wireless.",
      "bullets": [
       "Supports up to 500 wireless devices, with a wireless range up to 1.7 miles",
       "Onboard Ethernet and optional cellular communication to the monitoring center",
@@ -20332,7 +20332,7 @@
      "heading": "XF6, feature by feature",
      "name": "XF6",
      "image": "assets/p-xf6-1200-cut.png",
-     "image_alt": "The DMP XF6",
+     "image_alt": "The DMP XF6 Series Fire Control Panels",
      "image_w": 1200,
      "image_h": 945,
      "items": [
@@ -20412,7 +20412,7 @@
      "hub": {
       "name": "XF6",
       "image": "assets/p-xf6-1200-cut.png",
-      "alt": "The DMP XF6",
+      "alt": "The DMP XF6 Series Fire Control Panels",
       "light": false
      },
      "items": [
@@ -20626,7 +20626,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/p-xr150fc-2-1200-cut.png",
-     "image_alt": "The DMP XR150FC",
+     "image_alt": "The DMP XR150FC Control Panel",
      "image_w": 1200,
      "image_h": 754,
      "kind": "float",
@@ -20774,7 +20774,7 @@
      "hub": {
       "name": "XR150FC",
       "image": "assets/p-xr150fc-2-1200-cut.png",
-      "alt": "The DMP XR150FC",
+      "alt": "The DMP XR150FC Control Panel",
       "light": false
      },
      "items": [
@@ -20996,7 +20996,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/p-xr550fc-2-1200-cut.png",
-     "image_alt": "The DMP XR550FC",
+     "image_alt": "The DMP XR550FC Control Panel",
      "image_w": 1200,
      "image_h": 901,
      "kind": "light",
@@ -21144,7 +21144,7 @@
      "hub": {
       "name": "XR550FC",
       "image": "assets/p-xr550fc-2-1200-cut.png",
-      "alt": "The DMP XR550FC",
+      "alt": "The DMP XR550FC Control Panel",
       "light": true
      },
      "items": [
@@ -21366,7 +21366,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/p-850-1200-cut.png",
-     "image_alt": "The DMP 850",
+     "image_alt": "The DMP 850 Pull Station",
      "image_w": 1200,
      "image_h": 889,
      "kind": "float",
@@ -21458,7 +21458,7 @@
      "hub": {
       "name": "850",
       "image": "assets/p-850-1200-cut.png",
-      "alt": "The DMP 850",
+      "alt": "The DMP 850 Pull Station",
       "light": false
      },
      "items": [
@@ -21672,7 +21672,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/p-630f-1200-cut.png",
-     "image_alt": "The DMP 630F",
+     "image_alt": "The DMP 630F Remote Annunciator",
      "image_w": 1200,
      "image_h": 514,
      "kind": "float",
@@ -21768,7 +21768,7 @@
      "hub": {
       "name": "630F",
       "image": "assets/p-630f-1200-cut.png",
-      "alt": "The DMP 630F",
+      "alt": "The DMP 630F Remote Annunciator",
       "light": false
      },
      "items": [
@@ -21982,7 +21982,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/p-2w-blx-1200-cut.png",
-     "image_alt": "The DMP 2W-BLX",
+     "image_alt": "The DMP 2W-BLX System Sensor Smoke Detector",
      "image_w": 1000,
      "image_h": 667,
      "kind": "float",
@@ -22002,7 +22002,7 @@
      "body": "With DMP's single-point addressable smoke detectors, facility owners and emergency responders instantly know the exact trouble location in an alarm situation. The 2W-BLX is an addressable photoelectric detector with an optical sensing chamber and an advanced microprocessor.",
      "bullets": [
       "Includes an addressable single-point module for connection to the LX-Bus of XR Series panels",
-      "State-of-the-art optical sensing chamber with an advanced microprocessor",
+      "Optical sensing chamber with an advanced microprocessor",
       "Listed to ANSI/UL 268, Smoke-Automatic Fire Detectors",
       "Used for fire in small to large business, commercial and enterprise installations"
      ]
@@ -22062,7 +22062,7 @@
      "hub": {
       "name": "2W-BLX",
       "image": "assets/p-2w-blx-1200-cut.png",
-      "alt": "The DMP 2W-BLX",
+      "alt": "The DMP 2W-BLX System Sensor Smoke Detector",
       "light": false
      },
      "items": [
@@ -22254,7 +22254,7 @@
      "heading": "<em>JamAlert</em> detects cellular jamming, on DMP and other panels.",
      "subhead": "An extra layer of protection against devices that interrupt cellular alarm transmission.",
      "primary": {
-      "label": "Ask DMP about the JamAlert",
+      "label": "Ask DMP about JamAlert",
       "href": "contact.html"
      },
      "actions": [
@@ -22298,7 +22298,7 @@
      "type": "detail",
      "alt": true,
      "eyebrow": "What it is",
-     "heading": "The JamAlert at a glance",
+     "heading": "JamAlert at a glance",
      "body": "JamAlert detects when cellular frequencies are being jammed. Early detection of jamming threats can mitigate interruptions in critical communications. It can be wired to a zone on a control panel or to ancillary notification devices, so customers instantly know when their site is being compromised.",
      "bullets": [
       "Antenna simultaneously monitors a broad spectrum of cellular frequencies",
@@ -22390,8 +22390,8 @@
      "id": "works-with",
      "dark": false,
      "eyebrow": "Works with",
-     "heading": "Where the JamAlert connects",
-     "intro": "Where the JamAlert fits in a DMP system.",
+     "heading": "Where JamAlert connects",
+     "intro": "Where JamAlert fits in a DMP system.",
      "link_label": "Open",
      "hub": {
       "name": "JamAlert",
@@ -22423,7 +22423,7 @@
     {
      "type": "doclist",
      "eyebrow": "In the library",
-     "heading": "Documents for the JamAlert",
+     "heading": "Documents for JamAlert",
      "intro": "Documents for this product are available from DMP.",
      "items": [
       [
@@ -22448,7 +22448,7 @@
     {
      "type": "faq",
      "alt": true,
-     "heading": "Questions about the JamAlert",
+     "heading": "Questions about JamAlert",
      "items": [
       [
        "What does JamAlert detect?",
@@ -22588,7 +22588,7 @@
      "heading": "<em>Virtual Keypad</em> runs the system, lights, locks and cameras.",
      "subhead": "Remote management over a cellular or network connection, branded with the dealer's logo.",
      "primary": {
-      "label": "Ask DMP about the Virtual Keypad",
+      "label": "Ask DMP about Virtual Keypad",
       "href": "contact.html"
      },
      "actions": [
@@ -22632,7 +22632,7 @@
      "type": "detail",
      "alt": true,
      "eyebrow": "What it is",
-     "heading": "The Virtual Keypad at a glance",
+     "heading": "Virtual Keypad at a glance",
      "body": "Virtual Keypad gives your customers the convenience of remotely managing their security systems from their computer, tablet or smartphone. Users can check status, arm and disarm, and control lights, thermostats, door locks, appliances, cameras and garage doors.",
      "bullets": [
       "Area, All/Perimeter and Home/Sleep/Away arming, for businesses and homes",
@@ -22724,8 +22724,8 @@
      "id": "works-with",
      "dark": false,
      "eyebrow": "Works with",
-     "heading": "Where the Virtual Keypad connects",
-     "intro": "Where the Virtual Keypad fits in a DMP system.",
+     "heading": "Where Virtual Keypad connects",
+     "intro": "Where Virtual Keypad fits in a DMP system.",
      "link_label": "Open",
      "hub": {
       "name": "Virtual Keypad",
@@ -22757,7 +22757,7 @@
     {
      "type": "doclist",
      "eyebrow": "In the library",
-     "heading": "Documents for the Virtual Keypad",
+     "heading": "Documents for Virtual Keypad",
      "intro": "Documents for this product are available from DMP.",
      "items": [
       [
@@ -22790,7 +22790,7 @@
     {
      "type": "faq",
      "alt": true,
-     "heading": "Questions about the Virtual Keypad",
+     "heading": "Questions about Virtual Keypad",
      "items": [
       [
        "What can customers control with Virtual Keypad?",
@@ -22923,7 +22923,7 @@
      "heading": "<em>Dealer Admin</em> manages every customer panel from one portal.",
      "subhead": "Panel programming and so much more, for dealers.",
      "primary": {
-      "label": "Ask DMP about the Dealer Admin",
+      "label": "Ask DMP about Dealer Admin",
       "href": "contact.html"
      },
      "actions": [
@@ -22963,7 +22963,7 @@
      "type": "detail",
      "alt": true,
      "eyebrow": "What it is",
-     "heading": "The Dealer Admin at a glance",
+     "heading": "Dealer Admin at a glance",
      "body": "Dealer Admin is a cloud-based portal that lets you manage your business and your customers' DMP panels, including universal communicators and more.",
      "bullets": [
       "Bulk remote updates and mass programming changes, with system health on a single dashboard",
@@ -23055,8 +23055,8 @@
      "id": "works-with",
      "dark": false,
      "eyebrow": "Works with",
-     "heading": "Where the Dealer Admin connects",
-     "intro": "Where the Dealer Admin fits in a DMP system.",
+     "heading": "Where Dealer Admin connects",
+     "intro": "Where Dealer Admin fits in a DMP system.",
      "link_label": "Open",
      "hub": {
       "name": "Dealer Admin",
@@ -23088,7 +23088,7 @@
     {
      "type": "doclist",
      "eyebrow": "In the library",
-     "heading": "Documents for the Dealer Admin",
+     "heading": "Documents for Dealer Admin",
      "intro": "Documents for this product are available from DMP.",
      "items": [
       [
@@ -23109,7 +23109,7 @@
     {
      "type": "faq",
      "alt": true,
-     "heading": "Questions about the Dealer Admin",
+     "heading": "Questions about Dealer Admin",
      "items": [
       [
        "What is Dealer Admin?",
@@ -23242,7 +23242,7 @@
      "heading": "<em>Remote Link</em> updates firmware and programming from a laptop.",
      "subhead": "Panel management software for monitoring centers and dealers.",
      "primary": {
-      "label": "Ask DMP about the Remote Link",
+      "label": "Ask DMP about Remote Link",
       "href": "contact.html"
      },
      "actions": [
@@ -23282,7 +23282,7 @@
      "type": "detail",
      "alt": true,
      "eyebrow": "What it is",
-     "heading": "The Remote Link at a glance",
+     "heading": "Remote Link at a glance",
      "body": "Remote Link offers a simple interface with easy access to the information you need. You can maintain subscriber accounts, trap panels, update panel firmware, change programming and user codes, silence alarms, arm or disarm a system and bypass zones, all from a laptop.",
      "bullets": [
       "Maintain subscriber accounts",
@@ -23295,7 +23295,7 @@
      "type": "cards",
      "cls": "lf-num",
      "eyebrow": "Key features",
-     "heading": "What the Remote Link does",
+     "heading": "What Remote Link does",
      "items": [
       [
        "Everything from a laptop",
@@ -23340,8 +23340,8 @@
      "id": "works-with",
      "dark": false,
      "eyebrow": "Works with",
-     "heading": "Where the Remote Link connects",
-     "intro": "Where the Remote Link fits in a DMP system.",
+     "heading": "Where Remote Link connects",
+     "intro": "Where Remote Link fits in a DMP system.",
      "link_label": "Open",
      "hub": {
       "name": "Remote Link",
@@ -23373,7 +23373,7 @@
     {
      "type": "doclist",
      "eyebrow": "In the library",
-     "heading": "Documents for the Remote Link",
+     "heading": "Documents for Remote Link",
      "intro": "Documents for this product are available from DMP.",
      "items": [
       [
@@ -23406,7 +23406,7 @@
     {
      "type": "faq",
      "alt": true,
-     "heading": "Questions about the Remote Link",
+     "heading": "Questions about Remote Link",
      "items": [
       [
        "What can Remote Link do?",
@@ -23561,7 +23561,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/p-xv-gateways-with-alarmvision-1200-cut.png",
-     "image_alt": "The DMP XV Gateways",
+     "image_alt": "The DMP XV Gateways with AlarmVision",
      "image_w": 1200,
      "image_h": 851,
      "kind": "float",
@@ -23603,7 +23603,7 @@
      "heading": "XV Gateways, feature by feature",
      "name": "XV Gateways",
      "image": "assets/p-xv-gateways-with-alarmvision-1200-cut.png",
-     "image_alt": "The DMP XV Gateways",
+     "image_alt": "The DMP XV Gateways with AlarmVision",
      "image_w": 1200,
      "image_h": 851,
      "items": [
@@ -23683,7 +23683,7 @@
      "hub": {
       "name": "XV Gateways",
       "image": "assets/p-xv-gateways-with-alarmvision-1200-cut.png",
-      "alt": "The DMP XV Gateways",
+      "alt": "The DMP XV Gateways with AlarmVision",
       "light": false
      },
      "items": [
@@ -23890,7 +23890,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/p-v-6022wc-1200-cut.png",
-     "image_alt": "The DMP V-6022WC",
+     "image_alt": "The DMP V-6022WC Cube Camera",
      "image_w": 1200,
      "image_h": 863,
      "kind": "float",
@@ -24078,7 +24078,7 @@
      "hub": {
       "name": "V-6022WC",
       "image": "assets/p-v-6022wc-1200-cut.png",
-      "alt": "The DMP V-6022WC",
+      "alt": "The DMP V-6022WC Cube Camera",
       "light": false
      },
      "items": [
@@ -24285,7 +24285,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/p-vplus-7061-fe-1200-cut.png",
-     "image_alt": "The DMP VUE Plus 6MP Fisheye",
+     "image_alt": "The DMP VUE Plus 6MP Fisheye Camera (VPLUS-7061-FE)",
      "image_w": 1200,
      "image_h": 630,
      "kind": "dark",
@@ -24477,7 +24477,7 @@
      "hub": {
       "name": "VUE Plus 6MP Fisheye",
       "image": "assets/p-vplus-7061-fe-1200-cut.png",
-      "alt": "The DMP VUE Plus 6MP Fisheye",
+      "alt": "The DMP VUE Plus 6MP Fisheye Camera (VPLUS-7061-FE)",
       "light": true
      },
      "items": [
@@ -24684,7 +24684,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/p-vplus-7121-fe-1200-cut.png",
-     "image_alt": "The DMP VUE Plus 12MP Fisheye",
+     "image_alt": "The DMP VUE Plus 12MP Fisheye Camera (VPLUS-7121-FE)",
      "image_w": 1200,
      "image_h": 630,
      "kind": "dark",
@@ -24876,7 +24876,7 @@
      "hub": {
       "name": "VUE Plus 12MP Fisheye",
       "image": "assets/p-vplus-7121-fe-1200-cut.png",
-      "alt": "The DMP VUE Plus 12MP Fisheye",
+      "alt": "The DMP VUE Plus 12MP Fisheye Camera (VPLUS-7121-FE)",
       "light": true
      },
      "items": [
@@ -25083,7 +25083,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/p-vplus-7081-bdv-1200-cut.png",
-     "image_alt": "The DMP VUE Plus 8MP Varifocal Bullet",
+     "image_alt": "The DMP VUE Plus 8MP Varifocal Bullet Camera (VPLUS-7081-BDV)",
      "image_w": 1200,
      "image_h": 630,
      "kind": "dark",
@@ -25275,7 +25275,7 @@
      "hub": {
       "name": "VUE Plus 8MP Varifocal Bullet",
       "image": "assets/p-vplus-7081-bdv-1200-cut.png",
-      "alt": "The DMP VUE Plus 8MP Varifocal Bullet",
+      "alt": "The DMP VUE Plus 8MP Varifocal Bullet Camera (VPLUS-7081-BDV)",
       "light": true
      },
      "items": [
@@ -25815,7 +25815,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/p-1100xh-1200-cut.png",
-     "image_alt": "The DMP 1100XH",
+     "image_alt": "The DMP 1100XH Wireless Receiver",
      "image_w": 1200,
      "image_h": 823,
      "kind": "float",
@@ -25898,7 +25898,7 @@
      "hub": {
       "name": "1100XH",
       "image": "assets/p-1100xh-1200-cut.png",
-      "alt": "The DMP 1100XH",
+      "alt": "The DMP 1100XH Wireless Receiver",
       "light": false
      },
      "items": [
@@ -26120,7 +26120,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/p-1101-1200-cut.png",
-     "image_alt": "The DMP 1101",
+     "image_alt": "The DMP 1101 Universal Transmitter",
      "image_w": 1200,
      "image_h": 933,
      "kind": "light",
@@ -26265,7 +26265,7 @@
      "hub": {
       "name": "1101",
       "image": "assets/p-1101-1200-cut.png",
-      "alt": "The DMP 1101",
+      "alt": "The DMP 1101 Universal Transmitter",
       "light": true
      },
      "items": [
@@ -26479,7 +26479,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/p-1128-1200-cut.png",
-     "image_alt": "The DMP 1128",
+     "image_alt": "The DMP 1128 Glassbreak Detector",
      "image_w": 1200,
      "image_h": 912,
      "kind": "float",
@@ -26575,7 +26575,7 @@
      "hub": {
       "name": "1128",
       "image": "assets/p-1128-1200-cut.png",
-      "alt": "The DMP 1128",
+      "alt": "The DMP 1128 Glassbreak Detector",
       "light": false
      },
      "items": [
@@ -26789,7 +26789,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/p-1142-1200-cut.png",
-     "image_alt": "The DMP 1142",
+     "image_alt": "The DMP 1142 Two-Button Wireless Panic",
      "image_w": 1200,
      "image_h": 799,
      "kind": "float",
@@ -26934,7 +26934,7 @@
      "hub": {
       "name": "1142",
       "image": "assets/p-1142-1200-cut.png",
-      "alt": "The DMP 1142",
+      "alt": "The DMP 1142 Two-Button Wireless Panic",
       "light": false
      },
      "items": [
@@ -27148,7 +27148,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/p-1164-1200-cut.png",
-     "image_alt": "The DMP 1164",
+     "image_alt": "The DMP 1164 Smoke Detector with Synchronized Sounder",
      "image_w": 1200,
      "image_h": 800,
      "kind": "float",
@@ -27244,7 +27244,7 @@
      "hub": {
       "name": "1164",
       "image": "assets/p-1164-1200-cut.png",
-      "alt": "The DMP 1164",
+      "alt": "The DMP 1164 Smoke Detector with Synchronized Sounder",
       "light": false
      },
      "items": [
@@ -27458,7 +27458,7 @@
       "find-a-dealer.html"
      ],
      "image": "assets/p-1100t-1200-cut.png",
-     "image_alt": "The DMP 1100T",
+     "image_alt": "The DMP 1100T Wireless Translator",
      "image_w": 1200,
      "image_h": 609,
      "kind": "float",
@@ -27554,7 +27554,7 @@
      "hub": {
       "name": "1100T",
       "image": "assets/p-1100t-1200-cut.png",
-      "alt": "The DMP 1100T",
+      "alt": "The DMP 1100T Wireless Translator",
       "light": false
      },
      "items": [
@@ -27806,7 +27806,7 @@
       {
        "label": "Orders and shipping",
        "number": "866-266-2826",
-       "text": "Customer Service: products and ordering, software activations, the Buy Site, shipping and order entry questions.",
+       "text": "Customer Service: products and ordering, software activations, the Buy site, shipping and order entry questions.",
        "hours": "8 a.m. to 6 p.m. Central",
        "email": "CustomerService@DMP.com"
       },
@@ -27854,7 +27854,7 @@
     },
     {
      "type": "resources",
-     "heading": "Specifying, selling or signing up as a dealer? These eight pages cover it.",
+     "heading": "Specifying, selling or signing up as a dealer? These eight pages cover it.",
      "intro": "Tools for designers and dealers, and how to become one.",
      "items": [
       [
@@ -27918,7 +27918,7 @@
     {
      "type": "services",
      "alt": true,
-     "heading": "Find your regional sales manager, or a distributor outside the U.S.",
+     "heading": "Find your regional sales manager, or a distributor outside the U.S.",
      "intro": "The directory lists titles and territories, and Inside Sales routes the call.",
      "items": [
       [
@@ -27941,7 +27941,7 @@
     {
      "type": "cards",
      "eyebrow": "2026 holiday closures",
-     "heading": "We are closed on eight days in 2026, from New Year's Day to Christmas Day.",
+     "heading": "We are closed on eight days in 2026, from New Year's Day to Christmas Day.",
      "items": [
       [
        "New Year's Day",
@@ -29195,8 +29195,8 @@
        "support/tech-faqs/control-panel.html"
       ],
       [
-       "Mobile and automation products",
-       "Virtual Keypad and automation.",
+       "Virtual Keypad and software products",
+       "Virtual Keypad, Dealer Admin and automation.",
        "services/mobile-automation.html"
       ],
       [
@@ -29785,7 +29785,7 @@
       ],
       [
        "16",
-       "Product categories"
+       "Library categories"
       ],
       [
        "1",
@@ -29870,7 +29870,7 @@
      "type": "detail",
      "alt": true,
      "eyebrow": "Filter by product category",
-     "heading": "Sixteen product categories, plus international variants",
+     "heading": "Sixteen library categories, plus international variants",
      "body": "Start from the part of the system you are working on: Access Control, Automation, Cell and Network Communicators, Control Panels, Dealer Admin, Entré Software, Fire, Intrusion, Keypads, Software Platforms, Modules and Expanders, Monitoring Center, Power Supplies, Video, Virtual Keypad and Wireless. International versions of communicators, control panels, keypads, modules and expanders, power supplies and wireless have their own categories.",
      "bullets": [
       "Search by model number, for example XT75 or 1100",
@@ -29914,8 +29914,8 @@
       [
        "Communicators",
        "Communicators documents",
-       "Spec sheets, guides and updates for communicators products.",
-       "See communicators products",
+       "Spec sheets, guides and updates for communicator products.",
+       "See communicator products",
        "services/communicators.html"
       ],
       [
@@ -29928,15 +29928,15 @@
       [
        "Panels and keypads",
        "Panels and keypads documents",
-       "Spec sheets, guides and updates for panels and keypads products.",
-       "See panels and keypads products",
+       "Spec sheets, guides and updates for panel and keypad products.",
+       "See panel and keypad products",
        "services/panels-keypads.html"
       ],
       [
-       "Mobile and automation",
-       "Mobile and automation documents",
-       "Spec sheets, guides and updates for mobile and automation products.",
-       "See mobile and automation products",
+       "Virtual Keypad and software",
+       "Virtual Keypad and software documents",
+       "Spec sheets, guides and updates for Virtual Keypad and software products.",
+       "See Virtual Keypad and software products",
        "services/mobile-automation.html"
       ]
      ]
@@ -29977,7 +29977,7 @@
   {
    "file": "support/dealer-services.html",
    "title": "Dealer services: Dealer Admin, firmware, returns | DMP",
-   "description": "Dealer services from DMP: Dealer Admin, Dealer Account, free firmware, the Customer Return Center, marketing support and a three year warranty.",
+   "description": "Dealer services from DMP: Dealer Admin, Dealer Account, free firmware, the Customer Return Center, marketing support and a three-year warranty.",
    "crumbs": [
     [
      "Home",
@@ -29997,7 +29997,7 @@
      "type": "hero",
      "layout": "split",
      "eyebrow": "Dealer services",
-     "heading": "Free firmware updates and <em>a three year warranty</em>.",
+     "heading": "Free firmware updates and <em>a three-year warranty</em>.",
      "subhead": "Since 1975, our sole purpose has been to create customer-driven products for professional security dealers. While others have made security a piece of their business, we have made it the entirety of ours.",
      "primary": {
       "label": "Become a dealer",
@@ -30020,7 +30020,7 @@
      "items": [
       [
        "Dealer Admin",
-       "Your one stop shop for managing your business and your customers' systems. See an overview of your customers' systems and their status, view analytics, perform mass programming and bulk remote updates, and more."
+       "Your one-stop shop for managing your business and your customers' systems. See an overview of your customers' systems and their status, view analytics, perform mass programming and bulk remote updates, and more."
       ],
       [
        "Dealer Account (accounting)",
@@ -30039,7 +30039,7 @@
        "Our goal is to turn around every request for product updates or repairs in one business day, which is possible because of our online Customer Return Center."
       ],
       [
-       "Three year warranty",
+       "Three-year warranty",
        "DMP warrants that the products it manufactures are without defects for three years from the purchase date, in accordance with our Terms and Conditions."
       ]
      ]
@@ -30140,7 +30140,7 @@
   {
    "file": "support/design-tools.html",
    "title": "Design tools: System Surveyor | DMP",
-   "description": "Design DMP intrusion, access control, fire and video systems on a digital floor plan in System Surveyor, with an automatic bill of materials and DMP.",
+   "description": "Design DMP intrusion, access control, fire and video systems on a digital floor plan in System Surveyor.",
    "crumbs": [
     [
      "Home",
@@ -30674,7 +30674,7 @@
      "items": [
       [
        "What does a dealer get?",
-       "Dealer Admin, Dealer Account, free firmware updates, the Customer Return Center, marketing support and a three year warranty. See dealer services for details."
+       "Dealer Admin, Dealer Account, free firmware updates, the Customer Return Center, marketing support and a three-year warranty. See dealer services for details."
       ],
       [
        "How much equipment does a DMP dealer buy?",
@@ -31113,7 +31113,7 @@
     {
      "type": "leadform",
      "alt": true,
-     "id": "start",
+     "id": "contact-us",
      "heading": "Tell us what you are specifying",
      "body": "Say who you are, what the building is and which products you are looking at, and a person will reply.",
      "submit": "Send to DMP",
@@ -31124,7 +31124,7 @@
   {
    "file": "about/careers.html",
    "title": "Careers in Springfield, Missouri | DMP",
-   "description": "Work at a family-owned tech company in the Ozarks: manufacturing, sales, tech support and software engineering jobs, an on-site medical clinic and a free.",
+   "description": "Work at a family-owned tech company in the Ozarks: manufacturing, sales, tech support and software engineering jobs.",
    "crumbs": [
     [
      "Home",
@@ -31145,7 +31145,7 @@
      "layout": "split",
      "eyebrow": "Careers",
      "heading": "A family-owned tech company <em>in the Ozarks</em>",
-     "subhead": "We design, engineer and manufacture cutting-edge security systems for commercial and residential applications, in Springfield, Missouri. Joining us means joining a team committed to its mission and values, including giving back to the community and pursuing excellence every day.",
+     "subhead": "We design, engineer and manufacture security systems for commercial and residential applications, in Springfield, Missouri. Joining us means joining a team committed to its mission and values, including giving back to the community and pursuing excellence every day.",
      "primary": {
       "label": "Contact DMP",
       "href": "contact.html"
@@ -31300,7 +31300,7 @@
      "alt": true,
      "eyebrow": "Volunteer hours",
      "heading": "Our team is working toward 50,000 volunteer hours",
-     "body": "We are excited to work together towards 50,000 volunteer hours. Team members log their volunteer time in our HR system under the 2025 BHAG, Track to 50,000 Volunteer Hours.",
+     "body": "We are excited to work together toward 50,000 volunteer hours. Team members log their volunteer time in our HR system under the 2025 BHAG, Track to 50,000 Volunteer Hours.",
      "bullets": [
       "Volunteer time is self-reported by each team member",
       "The goal is shared across the whole company"
@@ -31422,7 +31422,7 @@
      "type": "cards",
      "alt": true,
      "eyebrow": "Beyond SOC 2",
-     "heading": "Listings and approvals we can state: UL 2610, UL Listed panels and FirstNet",
+     "heading": "Listings and approvals: UL 2610, UL Listed panels and FirstNet",
      "items": [
       [
        "JamAlert is UL 2610 certified",
@@ -31449,7 +31449,7 @@
      "items": [
       [
        "News, 6 May 2026",
-       "JamAlert Achieves UL Certification",
+       "JamAlert achieves UL certification",
        "How UL 2610 certification lets dealers specify JamAlert where UL Listed equipment is required.",
        "Read the story",
        "news/jamalert-ul.html"
@@ -31571,7 +31571,7 @@
       [
        "8 and 9 February 2027",
        "Dealer Roundtable, San Diego",
-       "At the San Diego Mission Bay Resort, 1775 E Mission Bay Dr. We have secured a group rate of $239. Register before Tuesday, January 12, 2027."
+       "At the San Diego Mission Bay Resort, 1775 E Mission Bay Dr. We have secured a group rate of $239. Register before Tuesday, 12 January 2027."
       ],
       [
        "Register by 15 March 2027",
@@ -31581,7 +31581,7 @@
       [
        "4 and 5 October 2027",
        "Dealer Roundtable, Hilton Head",
-       "At the Hilton Beachfront Resort and Spa, Hilton Head Island. We have secured a group rate of $269, available first come, first served. Register before Friday, September 17, 2027."
+       "At the Hilton Beachfront Resort and Spa, Hilton Head Island. We have secured a group rate of $269, available first come, first served. Register before Friday, 17 September 2027."
       ]
      ]
     },
@@ -31601,7 +31601,7 @@
      "type": "detail",
      "eyebrow": "Owners Forum 2027",
      "heading": "Connect with peers, learn to scale, and celebrate the Dealer Recognition Awards",
-     "body": "Owners Forum is an exclusive opportunity to connect with industry peers, engage in meaningful collaboration and discover the keys to scaling your business. Please register by Monday, March 15, 2027.",
+     "body": "Owners Forum is an exclusive opportunity to connect with industry peers, engage in meaningful collaboration and discover the keys to scaling your business. Please register by Monday, 15 March 2027.",
      "bullets": [
       "Speakers include a former LA Chargers Gameday host, a CEO who multiplied revenue for Tesla and Lyft, a TEDx speaker and top expert in business scaling, and an organizational psychologist who has sold millions of books",
       "A dealer panel and the annual DMP Dealer Recognition Awards",
@@ -31812,7 +31812,7 @@
     {
      "type": "resources",
      "id": "find-your-distributor",
-     "heading": "Find your distributor: eight authorized partners, from Benelux to South Africa",
+     "heading": "Find your distributor: eight authorized partners, from Benelux to South Africa",
      "intro": "To locate DMP products in your region, start with the authorized distributor for your country.",
      "items": [
       [
@@ -31877,7 +31877,7 @@
      "type": "cards",
      "alt": true,
      "eyebrow": "International products",
-     "heading": "International versions of our panels, keypads, wireless, communicators and video",
+     "heading": "International versions of our panels, keypads, wireless, communicators and video",
      "items": [
       [
        "Control panels",
@@ -31909,7 +31909,7 @@
      "type": "detail",
      "eyebrow": "International team",
      "heading": "Reach our international team in Springfield",
-     "body": "For more information on locating authorized dealers or distributors around the world, contact DMP Inside Sales at +1-866-266-2826 or CustomerService@DMP.com.",
+     "body": "For more information on locating authorized dealers or distributors around the world, contact DMP Customer Service at +1-866-266-2826 or CustomerService@DMP.com.",
      "bullets": [
       "International Sales: Mark NeSmith, MNeSmith@dmp.com, 417-839-2547",
       "International Sales: Doug Dacre, DDacre@dmp.com, (417) 447-9629",
@@ -31920,8 +31920,8 @@
      "type": "detail",
      "alt": true,
      "eyebrow": "Technical support",
-     "heading": "International technical support runs from 11:00 a.m. to 12:00 a.m. GMT",
-     "body": "Representatives are available from 11:00 a.m. to 12:00 a.m. GMT (6:00 a.m. to 7:00 p.m. CST). For support outside business hours, email InternationalSupport@dmp.com and we will schedule a call.",
+     "heading": "International technical support runs from 11:00 a.m. to 12:00 a.m. GMT",
+     "body": "Representatives are available from 11:00 a.m. to 12:00 a.m. GMT (6:00 a.m. to 7:00 p.m. Central). For support outside business hours, email InternationalSupport@dmp.com and we will schedule a call.",
      "bullets": [
       "Toll-free numbers for eight countries are listed below",
       "Email InternationalSupport@dmp.com for after-hours calls"
@@ -31971,7 +31971,7 @@
      "type": "detail",
      "alt": true,
      "eyebrow": "Customs and tariffs",
-     "heading": "Every physical DMP product carries a six-digit Harmonized System code",
+     "heading": "Every physical DMP product carries a six-digit Harmonized System code",
      "body": "The Harmonized System (HS) code is part of the international Harmonized Tariff System and is used to establish any tariff rates due when a DMP customer imports DMP goods into another country, or when we are the importer. Because future exports may not be known when a product is released, every physical product is assigned a code, as are sales literature and marketing giveaways. Software and other products delivered electronically do not need one. For example, DMP is the importer in Canada when a dealer buys products and their account is set to pay in Canadian dollars.",
      "bullets": [
       "Burglar or fire alarms and similar apparatus, including keypads, door contacts and monitoring hardware: 8531.10",
@@ -32343,7 +32343,7 @@
   {
    "file": "news/vue-portfolio.html",
    "title": "The next evolution of the VUE portfolio is here | DMP",
-   "description": "VUE Plus cameras add varifocal, panoramic and fisheye models in 6MP, 8MP and 12MP, with onboard AlarmVision, ONVIF compliance and direct XR and XT panel.",
+   "description": "VUE Plus cameras add varifocal, panoramic and fisheye models in 6MP, 8MP and 12MP, with onboard AlarmVision.",
    "crumbs": [
     [
      "Home",
@@ -32600,7 +32600,7 @@
      "type": "detail",
      "eyebrow": "Compatibility",
      "heading": "JamAlert works with DMP and other alarm systems",
-     "body": "JamAlert integrates seamlessly with DMP or other alarm systems to detect and alert on potential cellular jamming activity, helping ensure uninterrupted alarm communication."
+     "body": "JamAlert integrates with DMP or other alarm systems to detect and alert on potential cellular jamming activity, helping ensure uninterrupted alarm communication."
     },
     {
      "type": "resources",
@@ -32773,7 +32773,7 @@
   {
    "file": "news/vue-camera-line.html",
    "title": "DMP launches the VUE camera line | DMP",
-   "description": "Three new 5MP VUE cameras, bullet, turret and dome, add person and vehicle detection, active deterrence lighting, two-way audio and Virtual Keypad.",
+   "description": "Three new 5MP VUE cameras, bullet, turret and dome, add person and vehicle detection, active deterrence lighting.",
    "crumbs": [
     [
      "Home",
@@ -32813,7 +32813,7 @@
      "alt": true,
      "eyebrow": "SPRINGFIELD, Mo.",
      "heading": "A trio of 5MP cameras for retail, QSR and medium to large commercial installations",
-     "body": "The VUE lineup includes bullet, turret and dome form factors. Building on the recent introduction of the VUE Video Doorbell, this release strengthens the VUE portfolio with professional-grade cameras that offer improved performance, expanded capabilities and seamless integration across the DMP ecosystem.",
+     "body": "The VUE lineup includes bullet, turret and dome form factors. Building on the recent introduction of the VUE Video Doorbell, this release strengthens the VUE portfolio with professional-grade cameras that offer improved performance, expanded capabilities and integration across the DMP ecosystem.",
      "bullets": [
       "Bullet, turret and dome models",
       "Available now through authorized DMP dealers"
@@ -33447,7 +33447,7 @@
     {
      "type": "detail",
      "eyebrow": "What the program means for a dealer",
-     "heading": "Technology you already rely on works better beside a DMP panel.",
+     "heading": "Technology you already rely on works better beside a DMP panel.",
      "body": "Whether you manage access control, monitor live video, automate responses or connect to a monitoring center, these integrations are built to fit into your workflow. Requirements differ by partner: Evolon needs no special licensing or dealer certification, System Surveyor has a free dealer tier, Genetec needs one Genetec license per intrusion panel, and SureView needs a Class 3 License and a Device Server or OpsLink Server.",
      "bullets": [
       "Dealer Admin and Virtual Keypad stay the familiar tools for dealers and operators",
@@ -33671,7 +33671,7 @@
   {
    "file": "partners/system-surveyor.html",
    "title": "System Surveyor integration | DMP",
-   "description": "System Surveyor with DMP: System Surveyor is a digital system design platform. The DMP product catalog loads into it in minutes, so a design never uses.",
+   "description": "System Surveyor with DMP: System Surveyor is a digital system design platform.",
    "crumbs": [
     [
      "Home",
@@ -33990,7 +33990,7 @@
   {
    "file": "partners/genetec.html",
    "title": "Genetec integration with DMP systems | DMP",
-   "description": "Genetec with DMP: Security Center manages DMP intrusion panels beside video, access control and ALPR, and synchronizes DMP users with Genetec access.",
+   "description": "Genetec with DMP: Security Center manages DMP intrusion panels beside video, access control and ALPR.",
    "crumbs": [
     [
      "Home",
@@ -34151,7 +34151,7 @@
   {
    "file": "partners/havenlock.html",
    "title": "HavenLock integration with DMP systems | DMP",
-   "description": "HavenLock with DMP: HavenLock Generation 4 installs on a single Cat 6 PoE+ cable run and works with the systems a site already has, so dealers spend less.",
+   "description": "HavenLock with DMP: HavenLock Generation 4 installs on a single Cat 6 PoE+ cable run and works with the systems a site already has.",
    "crumbs": [
     [
      "Home",
@@ -34621,7 +34621,7 @@
   {
    "file": "training.html",
    "title": "Training for dealers and technicians | DMP",
-   "description": "DMP training: free on-demand courses in DMP University, in-person Technician Bootcamps in Springfield, sales training, Virtual Keypad end user sessions.",
+   "description": "DMP training: free on-demand courses in DMP University, in-person Technician Bootcamps in Springfield, sales training.",
    "crumbs": [
     [
      "Home",
@@ -34848,7 +34848,7 @@
   {
    "file": "training/dmp-university.html",
    "title": "DMP University: free on-demand training courses | DMP",
-   "description": "DMP University is our learning management system: dozens of free, on-demand courses, 200 sales videos and tools for administrators to assign and track.",
+   "description": "DMP University is our learning management system: dozens of free, on-demand courses.",
    "crumbs": [
     [
      "Home",
@@ -34976,7 +34976,7 @@
   {
    "file": "training/technical-training.html",
    "title": "Technical training: bootcamps and classes | DMP",
-   "description": "Technician Bootcamps, an Advanced Bootcamp, Tech Training Tours and 13 instructor-led courses on XR, XT, XTL, X1, fire, COM.",
+   "description": "Technician and Advanced Bootcamps, Tech Training Tours and 13 instructor-led courses on XR, XT, XTL, X1, fire, COM, Dealer Admin and Virtual Keypad.",
    "crumbs": [
     [
      "Home",
@@ -35402,10 +35402,10 @@
     {
      "type": "detail",
      "eyebrow": "How to order",
-     "heading": "Order on Buy.DMP.com or send a purchase order.",
+     "heading": "Order on buy.DMP.com or send a purchase order.",
      "body": "Cost is $150 per one-hour session. After you order, our expert training team will reach out to ensure we are supporting you and your customer's training needs.",
      "bullets": [
-      "Place an order on Buy.DMP.com",
+      "Place an order on buy.DMP.com",
       "Or submit a purchase order that references VKA ENDUSER TRAINING, with your customer's contact information, to CustomerService@DMP.com"
      ],
      "image": "assets/phone-commercial-1200.jpg",
@@ -35439,7 +35439,7 @@
      "heading": "Order your customer's training",
      "body": "Tell us the customer, the site and who should attend, and customer service will follow up on the order.",
      "options": [
-      "Order through Buy.DMP.com",
+      "Order through buy.DMP.com",
       "Send a purchase order",
       "Ask about dealer training"
      ],
@@ -35618,11 +35618,11 @@
      "type": "cards",
      "alt": true,
      "eyebrow": "A dealer account",
-     "heading": "Free firmware, a three year warranty and a return turned around in one business day.",
+     "heading": "Free firmware, a three-year warranty and a return center that aims for one business day.",
      "items": [
       [
        "Dealer Admin",
-       "Your one stop shop for managing your business and your customers' systems: status, analytics, mass programming and bulk remote updates."
+       "Your one-stop shop for managing your business and your customers' systems: status, analytics, mass programming and bulk remote updates."
       ],
       [
        "Dealer Account",
@@ -35637,7 +35637,7 @@
        "Our goal is for every request for a product update or repair to be turned around in one business day."
       ],
       [
-       "Three year warranty",
+       "Three-year warranty",
        "We warrant that the products we manufacture are without defects for three years from the purchase date, under our Terms and Conditions."
       ],
       [
@@ -35735,7 +35735,7 @@
      "type": "hero-layered",
      "id": "hero-layered",
      "eyebrow": "For architects, engineers and consultants",
-     "heading": "Spec DMP in minutes: <em>written specs, CAD and a bill of materials.</em>",
+     "heading": "Specify DMP with <em>written specs, CAD and a bill of materials.</em>",
      "subhead": "Everything needed to put a DMP system into a specification: spec sheets for each product, design on a digital floor plan, and Inside Sales to help with system design.",
      "image": "assets/hero-signal-2-poster.jpg",
      "image_w": 1600,
@@ -35804,7 +35804,7 @@
        "Dealer Admin and Virtual Keypad, every year"
       ]
      ],
-     "note": "Listings as stated on DMP product pages. DMP compliance to confirm they are current before publishing."
+     "note": "Listings as stated on DMP product pages. Check each product page for the current listing."
     },
     {
      "type": "cards",
@@ -35872,10 +35872,10 @@
     {
      "type": "detail",
      "eyebrow": "The library",
-     "heading": "More than 900 documents, filtered by product category and document type.",
+     "heading": "More than 900 documents, filtered by product category and document type.",
      "body": "Spec sheets, installation and programming guides, quick start guides, technical updates, battery calculators and CAD drawings are in one library. Inside Sales can point you to the right one if you are not sure which you need.",
      "bullets": [
-      "Sixteen product categories, plus international variants",
+      "Sixteen library categories, plus international variants",
       "File types: PDF, XLSX, PPTX and ZIP",
       "Documents are listed on each product page"
      ],
@@ -36057,7 +36057,7 @@
     {
      "type": "cards",
      "eyebrow": "What to ask",
-     "heading": "Six questions that separate a good proposal from a vague one",
+     "heading": "Six questions that separate a good proposal from a vague one",
      "items": [
       [
        "Which panel, and how many doors and zones does it support?",
@@ -36150,7 +36150,7 @@
     {
      "type": "detail",
      "eyebrow": "Finding a dealer",
-     "heading": "Call Inside Sales at 877-757-4367 with your city or state.",
+     "heading": "Call Inside Sales at 877-757-4367 with your city or state.",
      "body": "Tell us where the building is, or send the form below, and Inside Sales will connect you with the regional sales manager for your territory, who can point you to an authorized dealer. Our regional sales managers cover territories from New England to Los Angeles.",
      "bullets": [
       "Inside Sales is open 8 a.m. to 5 p.m. Central",
@@ -36203,7 +36203,7 @@
      "items": [
       [
        "Does DMP sell directly to building owners?",
-       "DMP sells through authorized dealers and distributors. A building owner starts with a dealer, and DMP's inside sales team helps with system design."
+       "DMP sells through authorized dealers and distributors. A building owner starts with a dealer, and DMP's Inside Sales team helps with system design."
       ],
       [
        "How do I reach a person?",
@@ -36211,7 +36211,7 @@
       ],
       [
        "Is DMP made in the USA?",
-       "DMP says its products are manufactured in the USA with U.S. and global components, in Springfield, Missouri."
+       "DMP products are manufactured in the USA with U.S. and global components, in Springfield, Missouri."
       ],
       [
        "Does the system need a monitoring contract?",
@@ -37145,7 +37145,7 @@
        "name": "XR650 Control Panel (coming soon)",
        "img": "assets/p-xr650-1200-cut.png",
        "href": "products/xr650.html",
-       "blurb": "Coming soon, not orderable. A coming-soon enterprise panel with 300,000 user codes, 100 areas and bank-grade cybersecurity.",
+       "blurb": "Coming soon, not orderable. An enterprise panel with 300,000 user codes, 100 areas and bank-grade cybersecurity.",
        "buildings": [
         "panels"
        ],
@@ -37700,12 +37700,12 @@
      "type": "detail",
      "alt": true,
      "eyebrow": "Made in the USA",
-     "heading": "Every DMP product is quality tested before it ships.",
+     "heading": "Every DMP product is quality tested before it ships.",
      "body": "We manufacture our products in the USA with U.S. and global components. Made in the USA is something you rarely see today, and building here keeps us close to our customers and our community.",
      "bullets": [
       "100 percent of products are quality tested before shipping",
       "Designed and built in the U.S.A. for federal, state and local government",
-      "Three year warranty, and a Customer Return Center aiming for one business day"
+      "Three-year warranty, and a Customer Return Center aiming for one business day"
      ],
      "image": "assets/plant-1200.jpg",
      "image_alt": "The DMP production floor",
@@ -37757,7 +37757,7 @@
     {
      "type": "detail",
      "eyebrow": "Open integrations",
-     "heading": "Six partners have verified integrations, and our access modules speak OSDP.",
+     "heading": "Six partners have verified integrations, and our access modules speak OSDP.",
      "body": "Evolon, System Surveyor, SureView, Genetec, HavenLock and ASSA ABLOY Aperio each have a verified integration with DMP. The 1100T translator learns in up to 128 zones of other makers' transmitters, so a dealer can take over a site without rewiring.",
      "bullets": [
       "Most integrations are configured in Dealer Admin with DMP API credentials",
@@ -37774,7 +37774,7 @@
      "alt": false,
      "flip": true,
      "eyebrow": "SOC 2 Type II",
-     "heading": "A licensed CPA firm examines Dealer Admin and Virtual Keypad every year.",
+     "heading": "A licensed CPA firm examines Dealer Admin and Virtual Keypad every year.",
      "body": "Both are hosted in a Tier 4 data center and examined in line with AICPA standards. The SOC 3 report is intended for public distribution, and SOC 2 reports go to customers and partners under confidentiality.",
      "bullets": [
       "Independent examination every year",
@@ -38013,7 +38013,7 @@
      "alt": true,
      "eyebrow": "The short answer",
      "heading": "In brief",
-     "body": "Match the panel to the size and risk of the building. The XT50 and XT75 suit residential and small to medium business. The XR150 handles 142 inputs and 10,000 user codes. The XR550 reaches 574 zones and 96 doors, and the XR650, announced with availability to be confirmed, holds 300,000 user codes."
+     "body": "Match the panel to the size and risk of the building. The XT50 and XT75 suit residential and small to medium business. The XR150 handles 142 inputs and 10,000 user codes. The XR550 reaches 574 zones and 96 doors, and the XR650, coming soon and not yet orderable, holds 300,000 user codes."
     },
     {
      "type": "detail",
@@ -38054,7 +38054,7 @@
     {
      "type": "detail",
      "heading": "What is the XR650 for, and can you order it yet?",
-     "body": "The XR650 is announced, and availability is to be confirmed. It is built for complex enterprise environments, with massive user capacity, advanced cybersecurity and IT-ready networking. It holds 300,000 user codes with 1,000 groups, up to 100 areas, 574 zones and 96 doors of access control. Bluetooth and mobile programming, a dual keypad bus and dual OSDP support make it easier to program.",
+     "body": "The XR650 is coming soon and is not yet orderable. It is built for complex enterprise environments, with massive user capacity, advanced cybersecurity and IT-ready networking. It holds 300,000 user codes with 1,000 groups, up to 100 areas, 574 zones and 96 doors of access control. Bluetooth and mobile programming, a dual keypad bus and dual OSDP support make it easier to program.",
      "bullets": [
       "XR-to-XR communication controls all XR panels from one keypad",
       "Dual NIC keeps public network communication apart from a physically isolated network for video and access control devices",
@@ -38134,7 +38134,7 @@
        "32 out of the box, 96 maximum"
       ],
       [
-       "XR650 (announced, availability to be confirmed)",
+       "XR650 (coming soon, not orderable)",
        "Enterprise and multisite",
        "Up to 574",
        "300,000",
@@ -38198,7 +38198,7 @@
       ],
       [
        "XR650 Control Panel",
-       "Announced, availability to be confirmed: 300,000 user codes and up to 100 areas.",
+       "Coming soon, not orderable: 300,000 user codes and up to 100 areas.",
        "products/xr650.html"
       ]
      ]
@@ -38221,7 +38221,7 @@
       ],
       [
        "Is the XR650 available now?",
-       "It is announced, and availability is to be confirmed. Inside Sales, 877-757-4367, can say more."
+       "No. The XR650 is coming soon and is not yet orderable. Inside Sales, 877-757-4367, can say more."
       ],
       [
        "Which listings does the XR550 carry?",
@@ -39313,7 +39313,7 @@
       "The XR550 offers encrypted 10/100 network or Wi-Fi communication options",
       "The SCS-1R and SCS-VR receivers carry NIST AES certification",
       "JamAlert is UL 2610 certified",
-      "The XR650, announced with availability to be confirmed, lists TLS 1.3, AES encryption and PKI with dual certificate trust domains, with FIPS 140-3, 802.1x network authentication and Active Directory client integration available with licenses"
+      "The XR650, coming soon and not yet orderable, lists TLS 1.3, AES encryption and PKI with dual certificate trust domains, with FIPS 140-3, 802.1x network authentication and Active Directory client integration available with licenses"
      ],
      "flip": true,
      "alt": true
@@ -39965,7 +39965,7 @@
   },
   {
    "file": "assessment.html",
-   "title": "Dealer system-fit check | DMP",
+   "title": "Dealer system-fit check: 14 questions | DMP",
    "description": "Fourteen yes, not sure or no questions on panels, communicators, remote service, access and video, with three places to look next. Illustrative scoring.",
    "crumbs": [
     [
@@ -40257,7 +40257,7 @@
      "id": "estimate",
      "eyebrow": "The estimator",
      "heading": "Your numbers, your math.",
-     "intro": "Nothing is pre-filled and no figure here comes from DMP. The share that could be handled remotely is your own judgement.",
+     "intro": "Nothing is pre-filled and no figure here comes from DMP. The share that could be handled remotely is your own judgment.",
      "caps": [
       [
        "Remote programming.",
@@ -40321,7 +40321,7 @@
   },
   {
    "file": "stories.html",
-   "title": "Dealer stories | DMP",
+   "title": "Dealer stories: installs with DMP products | DMP",
    "description": "Dealer stories: what an installer did, with which DMP products, and what happened. One published story today, and room for yours.",
    "crumbs": [
     [
@@ -40402,7 +40402,7 @@
      "alt": true,
      "id": "start",
      "heading": "Have a story to share?",
-     "body": "If you are an authorized DMP dealer with a result you can talk about, tell Inside Sales. How stories are collected and approved is to be confirmed.",
+     "body": "If you are an authorized DMP dealer with a result you can talk about, tell Inside Sales.",
      "submit": "Send to DMP",
      "note": "Inside Sales is 877-757-4367, 8 a.m. to 5 p.m. Central."
     }
@@ -40410,7 +40410,7 @@
   },
   {
    "file": "stories/template-dealer-story.html",
-   "title": "Dealer story template | DMP",
+   "title": "Dealer story template: layout preview | DMP",
    "description": "The layout of a DMP dealer story: metric band, quote card, challenge, solution, result and the products used. Every value is a placeholder.",
    "crumbs": [
     [
@@ -40492,7 +40492,7 @@
      "alt": true,
      "id": "start",
      "heading": "Want your dealer story here?",
-     "body": "Tell Inside Sales about an install you are proud of. Story approval steps are to be confirmed.",
+     "body": "Tell Inside Sales about an install you are proud of.",
      "submit": "Send to DMP",
      "note": "Inside Sales is 877-757-4367, 8 a.m. to 5 p.m. Central."
     }
@@ -40567,7 +40567,7 @@
   },
   {
    "file": "trust.html",
-   "title": "Trust center | DMP",
+   "title": "Trust center: SOC 2 Type II and security | DMP",
    "description": "SOC 2 Type II, certifications, security and privacy contacts and a security FAQ, using only what DMP's pages state. Items not yet confirmed are marked.",
    "crumbs": [
     [
@@ -41024,7 +41024,7 @@
   },
   {
    "file": "accessibility.html",
-   "title": "Accessibility statement | DMP",
+   "title": "Accessibility statement and WCAG 2.2 AA target | DMP",
    "description": "Our target is WCAG 2.2 AA. What has been checked so far, what is still to be done and how to tell us about a problem. No claim of full conformance.",
    "crumbs": [
     [
@@ -41098,7 +41098,7 @@
      "type": "detail",
      "eyebrow": "Feedback",
      "heading": "Tell us if something does not work.",
-     "body": "If a page or a tool is hard to use, contact Inside Sales on 877-757-4367, 8 a.m. to 5 p.m. Central, or at InsideSales@DMP.com, or use the contact page. Say which page and what got in the way. A response time is to be confirmed.",
+     "body": "If a page or a tool is hard to use, contact Inside Sales on 877-757-4367, 8 a.m. to 5 p.m. Central, or at InsideSales@DMP.com, or use the contact page. Say which page and what got in the way.",
      "bullets": [
       "Inside Sales: 877-757-4367",
       "InsideSales@DMP.com",
@@ -41145,7 +41145,7 @@
   },
   {
    "file": "404.html",
-   "title": "Page not found | DMP",
+   "title": "Page not found: search the site or call | DMP",
    "description": "The page was not found. Search the site, try a top link or call Inside Sales.",
    "crumbs": [
     [
@@ -41217,7 +41217,7 @@
    "email": "shawn@thequantumleap.business"
   },
   "prepared_for": "Digital Monitoring Products",
-  "heard_intro": "There is no design brief from DMP yet. This version is written from dmp.com itself, read on 9 November 2026: its history, certifications, support lines, product catalogue, news and photography, in DMP's own words wherever a claim is DMP's to make. Tell us where it is wrong; your words outrank ours.",
+  "heard_intro": "There is no design brief from DMP yet. This version is written from dmp.com itself, read on 9 November 2026: its history, certifications, support lines, product catalog, news and photography, in DMP's own words wherever a claim is DMP's to make. Tell us where it is wrong; your words outrank ours.",
   "heard": [
    "DMP sells through authorized dealers and distributors, so the site's first job is dealers and specifiers: find the product, get the spec sheet, place the order, reach a person.",
    "DMP is a current Quantum client with a HubSpot CRM, marketing, sales and service launch under way, so the site has to feed that: forms that create records and one place for dealers to start.",
@@ -41258,14 +41258,14 @@
   "pick_reasons": [
    [
     "The audience is dealers and specifiers",
-    "They scan a catalogue to find a panel or a module. Clean puts the product names and categories first and stays out of the way."
+    "They scan a catalog to find a panel or a module. Clean puts the product names and categories first and stays out of the way."
    ],
    [
     "DMP's own look is high contrast",
     "Yellow and black on white is already DMP's brand. Clean lets it read as confident rather than loud."
    ],
    [
-    "The catalogue is large",
+    "The catalog is large",
     "dmp.com lists hundreds of product pages and a deep library. A plain, fast layout carries that better than a showy one."
    ]
   ],
@@ -41287,7 +41287,7 @@
    ],
    [
     "Days 10 to 30",
-    "Confirm the items below, decide how the product catalogue is built (see the first item), and sign off copy for each of the eight system lines."
+    "Confirm the items below, decide how the product catalog is built (see the first item), and sign off copy for each of the eight system lines."
    ],
    [
     "Days 30 to 45",
@@ -41295,7 +41295,7 @@
    ],
    [
     "Days 45 to 60",
-    "Build the about and proof pages, and add Product markup to the catalogue pages."
+    "Build the about and proof pages, and add Product markup to the catalog pages."
    ],
    [
     "Days 60 to 90",
@@ -41337,7 +41337,7 @@
    "after": [
     "Eight system pages written in the words buyers search, each with question headings and FAQ markup.",
     "Category pages for panels, access control, fire and communicators, written as the answer to the dealer's or specifier's search.",
-    "Product and ItemList markup on the catalogue pages, sameAs links and an llms.txt.",
+    "Product and ItemList markup on the catalog pages, sameAs links and an llms.txt.",
     "One HTTPS 301 at the front door and a robots.txt that names the crawlers."
    ],
    "keep": [
@@ -41355,7 +41355,7 @@
    "note": "Rankings or traffic. Those depend on the market and on what DMP publishes after launch. We promise the inputs, and we measure the result against the 9 November baseline at 30, 60 and 90 days."
   },
   "confirm": [
-   "How the product catalogue is built. dmp.com has hundreds of product pages (the sitemap lists panels, keypads, modules, readers, cameras and accessories by part number). HubSpot's page limits depend on the tier, so we need DMP's tier before deciding between building every product page in HubSpot and keeping the catalogue on its current system behind the new front door.",
+   "How the product catalog is built. dmp.com has hundreds of product pages (the sitemap lists panels, keypads, modules, readers, cameras and accessories by part number). HubSpot's page limits depend on the tier, so we need DMP's tier before deciding between building every product page in HubSpot and keeping the catalog on its current system behind the new front door.",
    "The promise line. The home page says 'Security systems, built in Springfield', which is DMP's founding story, not a confirmed tagline.",
    "Typefaces. DMP uses Gotham. The previews use the Quantum theme typefaces; Gotham needs a licence for the real site.",
    "Photography and logos. Images come from dmp.com, as does the logo. They are used here for a private preview. Confirm rights, and supply anything newer.",
@@ -41429,7 +41429,7 @@
    "DMP University login lives on a separate domain (Training.DMP.com). It is mentioned as plain text; DMP should decide whether to link it, since only buy.dmp.com, partner sites and SecureComWireless.com may be linked.",
    "Sales training region map (RTM-Map_withregions_3_7_25.png) returned access denied, so it is not shown. Distributor websites and the DMP expert emails are shown as plain text, not links.",
    "Course PDFs (lab guides, course outlines, diagrams, comparison worksheet) are listed by title only; they cannot be downloaded in the preview.",
-   "End user training price ($150 per one-hour session) comes from the page body; the Buy.DMP.com order link goes to the shop home. Confirm the product code VKA ENDUSER TRAINING and current price.",
+   "End user training price ($150 per one-hour session) comes from the page body; the buy.DMP.com order link goes to the shop home. Confirm the product code VKA ENDUSER TRAINING and current price.",
    "Page images are reused from the existing asset set (AlarmVision, System Surveyor tablet, door-reader phone, headquarters, team photo). Confirm they are appropriate for each partner page.",
    "Dealer tiers and pricing: the dealer pages we read do not describe tiers, discounts or prices, so none are written. DMP to confirm whether tiers exist and whether any can be shown.",
    "The single sign-in is a proposal. How Marketing Central (portal.assets.site) and the Buy site (buy.dmp.com) authenticate today is unconfirmed; the network diagram on the dealer portal page is labelled as a proposed design for DMP IT to validate.",

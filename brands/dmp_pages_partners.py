@@ -45,7 +45,7 @@ PAGES.append({
              ["1. Find your integration", "Browse the six partners and pick the technology you already use or are evaluating. Each page links to full integration details and compatibility notes."],
              ["2. Connect through Dealer Admin", "Most integrations are configured in Dealer Admin using DMP API credentials. Your DMP dealer support team can walk you through the setup for your environment."],
              ["3. Manage everything together", "Once connected, DMP panels share event data, status and signals with your partner system, so you and your customer see one complete, unified view of security."]]},
-        {"type": "detail", "eyebrow": "What the program means for a dealer", "heading": "Technology you already rely on works better beside a DMP panel.",
+        {"type": "detail", "eyebrow": "What the program means for a dealer", "heading": "Technology you already rely on works better beside a DMP panel.",
          "body": "Whether you manage access control, monitor live video, automate responses or connect to a monitoring center, these integrations are built to fit into your workflow. Requirements differ by partner: Evolon needs no special licensing or dealer certification, System Surveyor has a free dealer tier, Genetec needs one Genetec license per intrusion panel, and SureView needs a Class 3 License and a Device Server or OpsLink Server.",
          "bullets": ["Dealer Admin and Virtual Keypad stay the familiar tools for dealers and operators", "Partner details, contacts and requirements are listed on every partner page", "Technical Support and Dealer Services can help with setup"],
          "image": IMG + "system-surveyor-1200.jpg", "image_alt": "A designer placing DMP devices on a digital floor plan on a tablet", "flip": True},
@@ -480,9 +480,9 @@ PAGES.append({
          "items": [["One hour of expert-led webinar training", "A DMP regional training manager leads a customized session on Virtual Keypad."],
                    ["Best practices, tips and tricks", "Experienced trainers help your end users operate their system confidently."],
                    ["You can join the session", "You have the flexibility to attend alongside your customer."]]},
-        {"type": "detail", "eyebrow": "How to order", "heading": "Order on Buy.DMP.com or send a purchase order.",
+        {"type": "detail", "eyebrow": "How to order", "heading": "Order on buy.DMP.com or send a purchase order.",
          "body": "Cost is $150 per one-hour session. After you order, our expert training team will reach out to ensure we are supporting you and your customer's training needs.",
-         "bullets": ["Place an order on Buy.DMP.com", "Or submit a purchase order that references VKA ENDUSER TRAINING, with your customer's contact information, to CustomerService@DMP.com"],
+         "bullets": ["Place an order on buy.DMP.com", "Or submit a purchase order that references VKA ENDUSER TRAINING, with your customer's contact information, to CustomerService@DMP.com"],
          "image": IMG + "phone-commercial-1200.jpg", "image_alt": "A man checking his phone on a city street", "flip": True},
         {"type": "faq", "heading": "Questions about end user training", "items": [
             ["Who is hosting this training?", "A DMP regional training manager, by webinar. The session uses the trainer's system, not the end user's system."],
@@ -490,7 +490,7 @@ PAGES.append({
             ["Is there a limit to the number of attendees?", "Attendees can include as many of the end user's employees as the end user wants and as is practical for a Zoom call. The dealer can attend too. Hosting multiple dealers or end users on the same webinar is not included."],
             ["Is this offered for dealer employees?", "Virtual Keypad training is available to dealers free of charge. The end user class can be provided free to dealers only, so the dealer knows what the customer would receive."]]},
         {"type": "contact", "heading": "Order your customer's training", "body": "Tell us the customer, the site and who should attend, and customer service will follow up on the order.",
-         "options": ["Order through Buy.DMP.com", "Send a purchase order", "Ask about dealer training"], "submit": "Send to DMP",
+         "options": ["Order through buy.DMP.com", "Send a purchase order", "Ask about dealer training"], "submit": "Send to DMP",
          "note": "Customer Service, 866-266-2826, 8 a.m. to 6 p.m. Central."},
         LEADFORM,
     ]})
@@ -512,6 +512,6 @@ TO_CONFIRM = [
     "DMP University login lives on a separate domain (Training.DMP.com). It is mentioned as plain text; DMP should decide whether to link it, since only buy.dmp.com, partner sites and SecureComWireless.com may be linked.",
     "Sales training region map (RTM-Map_withregions_3_7_25.png) returned access denied, so it is not shown. Distributor websites and the DMP expert emails are shown as plain text, not links.",
     "Course PDFs (lab guides, course outlines, diagrams, comparison worksheet) are listed by title only; they cannot be downloaded in the preview.",
-    "End user training price ($150 per one-hour session) comes from the page body; the Buy.DMP.com order link goes to the shop home. Confirm the product code VKA ENDUSER TRAINING and current price.",
+    "End user training price ($150 per one-hour session) comes from the page body; the buy.DMP.com order link goes to the shop home. Confirm the product code VKA ENDUSER TRAINING and current price.",
     "Page images are reused from the existing asset set (AlarmVision, System Surveyor tablet, door-reader phone, headquarters, team photo). Confirm they are appropriate for each partner page.",
 ]

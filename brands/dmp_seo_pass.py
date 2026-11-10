@@ -207,7 +207,7 @@ def prune_faq(page):
 
 # ---------------------------------------------------------------- the short answer under the H1
 SHORT = {
-    "services/intrusion.html": "DMP intrusion systems are built around the control panel. The XT Series, XTL Series and XR Series scale from a small business to a large site, with the XT75 hybrid panel at the small end and 96 doors of access control on the XR550. Every panel reports through DMP's own communicators.",
+    "services/intrusion.html": "DMP intrusion systems are built around the control panel. The XT Series, XTL Series and XR Series scale from a small business to a large site, with the XT75 hybrid panel at the small end and 96 doors of access control on the XR550. DMP builds the communicators too.",
     "services/access-control.html": "DMP access control runs from the stand-alone, cloud-based X1 Series to Entré Lite, Business, Enterprise and NOC software. Digital Key puts a credential in the mobile wallet of an Apple or Google device, and the modules support OSDP, BIN code and 1100 Series wireless, so doors and alarm zones share one platform.",
     "services/fire.html": "The XF6 is a 24V fire alarm control panel built for single-site applications, with network and optional cellular communications that send signals directly to the monitoring center. XR150FC and XR550FC fire panels, wireless smoke, heat and CO detectors, pull stations and remote annunciators complete the DMP fire range.",
     "services/video.html": "DMP video combines VUE Plus cameras, XV gateways with AlarmVision and the VK VMS video management platform, launched in September 2026. AlarmVision analytics raise alarms into XR Series panels, and camera drivers put cameras in Virtual Keypad, so video shares the accounts, apps and monitoring of the alarm system.",
@@ -286,6 +286,9 @@ def _insert_before_form(pg, sec):
 # ---------------------------------------------------------------- titles and descriptions
 # DMP is a national manufacturer: titles end "| DMP" and name the product or category. Whole phrases, 30 to 60 characters, never cut.
 TITLE_FIX = {
+    "404.html": "Page not found: search the site or call | DMP", "accessibility.html": "Accessibility statement and WCAG 2.2 AA target | DMP",
+    "assessment.html": "Dealer system-fit check: 14 questions | DMP", "stories.html": "Dealer stories: installs with DMP products | DMP",
+    "trust.html": "Trust center: SOC 2 Type II and security | DMP", "stories/template-dealer-story.html": "Dealer story template: layout preview | DMP",
     "index.html": "Intrusion, access control, fire and video systems | DMP",
     "about.html": "About DMP: a U.S. security manufacturer since 1975 | DMP",
     "services.html": "Security products by system | DMP", "industries.html": "Security systems by industry | DMP",
@@ -331,7 +334,7 @@ DESC_FIX = {   # each ends on a whole sentence, 155 characters or fewer, and say
     "about.html": "Digital Monitoring Products has made security systems in the USA since 1975. Our mission, values, history, leaders and independent SOC 2 Type II examinations.",
     "services/access-control.html": "DMP access control runs from the stand-alone, cloud-based X1 Series to Entré enterprise software, with controllers, readers and phone-wallet credentials.",
     "services/fire.html": "DMP fire alarm control panels, detectors and communicators, led by the XF6, a 24V panel for single-site applications with network and cellular reporting.",
-    "industries/government.html": "Security systems for government customers, designed and built in the U.S.A. with U.S. and global components, with a national installation and service network.",
+    "industries/government.html": "Security systems for government customers, designed and built in the U.S.A. with U.S. and global components and a national service network.",
     "industries/multi-tenant.html": "Security for multi-dwelling units that combines intrusion, fire protection, access control and video, with remote control through the Virtual Keypad app.",
     "industries/storage-units.html": "Security for storage facilities: flexible, scalable DMP hardware and software that manage many panels across one site with one command.",
     "support.html": "Four phone lines with hours: Inside Sales, Technical Support, Customer Service and SecureCom Wireless, plus FAQs, documentation and dealer services.",
@@ -344,7 +347,7 @@ DESC_FIX = {   # each ends on a whole sentence, 155 characters or fewer, and say
     "partners/evolon.html": "Evolon's AI video monitoring runs as a layer in the Virtual Keypad ecosystem, working with DMP intrusion panels and AlarmVision.",
     "partners/sureview.html": "SureView Response receives alarms from DMP SCS-1R and SCS-VR receivers and syncs panels and alarm points through Entré.",
     "partners/assa-abloy-aperio.html": "The DMP 734A module and an Aperio AH30 Gen5 hub bring battery-powered Aperio locks into the familiar DMP control experience on XR150 and XR550 panels.",
-    "training/technical-training.html": "Technician Bootcamps, an Advanced Bootcamp, Tech Training Tours and 13 instructor-led courses on XR, XT, XTL, X1, fire, COM, Dealer Admin and Virtual Keypad.",
+    "training/technical-training.html": "Technician and Advanced Bootcamps, Tech Training Tours and 13 instructor-led courses on XR, XT, XTL, X1, fire, COM, Dealer Admin and Virtual Keypad.",
     "blog.html": "Answers for dealers, specifiers and building owners on intrusion panels, cellular paths, cloud access control, video verification and SOC 2.",
 }
 for _k, _v in DESC_FIX.items():

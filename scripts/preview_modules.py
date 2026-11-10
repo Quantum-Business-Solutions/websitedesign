@@ -21,6 +21,8 @@ EXTRA_CSS2 = r"""
 .pv-lh .bg.hv img.hv-poster{opacity:.7;animation:none;transform:none}
 .pv-lh .bg.hv video{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease}
 .pv-lh .bg.hv video.on{opacity:1}
+.pv-lh.hv-still *{animation-play-state:paused!important}
+.pv-lh .hv-pp{position:absolute;right:20px;top:20px;z-index:6;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border-radius:99px;border:1px solid rgba(255,255,255,.45);background:rgba(8,10,14,.7);color:#fff;font:700 14px/1 inherit;font-family:inherit;cursor:pointer}.pv-lh .hv-pp:hover{background:rgba(8,10,14,.9);border-color:#fff}.pv-lh .hv-pp:focus-visible{outline:3px solid #fff;outline-offset:2px;box-shadow:0 0 0 5px #000}
 .pv-lh:has(.bg.hv) .net{display:none}
 .pv-lh .bg.hv::after{background:linear-gradient(90deg,color-mix(in srgb,var(--lh-bg,#0c0d0f) 88%,transparent) 0%,color-mix(in srgb,var(--lh-bg,#0c0d0f) 64%,transparent) 48%,color-mix(in srgb,var(--lh-bg,#0c0d0f) 20%,transparent) 100%),linear-gradient(180deg,color-mix(in srgb,var(--lh-bg,#0c0d0f) 30%,transparent) 0%,transparent 30%,transparent 55%,var(--lh-bg,#0c0d0f) 100%)}
 @media (max-width:767px){.pv-lh .bg.hv img.hv-poster{opacity:.55}.pv-lh .bg.hv::after{background:linear-gradient(180deg,color-mix(in srgb,var(--lh-bg,#0c0d0f) 88%,transparent),color-mix(in srgb,var(--lh-bg,#0c0d0f) 80%,transparent))}}
@@ -70,6 +72,7 @@ EXTRA_CSS2 = r"""
 .pv-wheel svg{width:100%;max-width:580px;height:auto;display:block;margin:0 auto;overflow:visible}
 .pv-wheel .segg{transition:transform .35s cubic-bezier(.2,.7,.2,1);transform-box:view-box}
 .pv-wheel .seg{fill:url(#pvw-seg);stroke:var(--bg);stroke-width:3;cursor:pointer;transition:fill .25s}
+.pv-wheel .pv-wpp{margin-top:14px;min-height:44px;padding:0 20px;border-radius:99px;border:1px solid var(--border);background:var(--card);color:var(--fg);font:700 14px/1 inherit;font-family:inherit;cursor:pointer}.pv-wheel .pv-wpp:focus-visible{outline:3px solid var(--accent-ink,#111);outline-offset:3px}
 .pv-wheel .segg.on,.pv-wheel a:hover .segg,.pv-wheel a:focus-visible .segg{transform:translate(var(--dx),var(--dy))}
 .pv-wheel .segg.on .seg,.pv-wheel a:hover .seg,.pv-wheel a:focus-visible .seg{fill:url(#pvw-on);filter:url(#pvw-shadow)}
 .pv-wheel .lab{font:600 13px/1.2 var(--q-sans);fill:var(--fg);pointer-events:none;transition:fill .25s}
@@ -231,6 +234,22 @@ def _btns(s, ctx):
     return f'<div class="pv-btns">{out}</div>' if out else ""
 
 
+def _poster_srcset(path, rel):
+    """srcset for a hero poster when a -800 sibling exists (x-poster.jpg -> x-poster-800.jpg): phones fetch ~40 KB instead of ~200 KB."""
+    import glob, os
+    base, ext = os.path.splitext(path)
+    small = f"{base}-800{ext}"
+    hits = glob.glob(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "brands", "*.assets", os.path.basename(small)))
+    if not hits:
+        return ""
+    try:
+        from PIL import Image
+        w = Image.open(hits[0].replace("-800" + ext, ext)).width
+    except Exception:  # noqa: BLE001
+        w = 1600
+    return f' srcset="{rel(small)} 800w, {rel(path)} {w}w" sizes="100vw"'
+
+
 def _hero_layered(s, ctx):
     """Dark hero: background plate, pointer glow, headline, proof strip, two floating cards with depth."""
     E, RAW, L = ctx["E"], ctx["RAW"], ctx["L"]
@@ -238,7 +257,7 @@ def _hero_layered(s, ctx):
     hv = s.get("hv")
     if hv and hv.get("src"):
         pimg = hv.get("poster") or s.get("image")
-        pimg_html = (f'<img class="hv-poster" src="{E(ctx["rel"](pimg))}" alt="" width="1600" height="900" fetchpriority="high" decoding="async">') if pimg else ""
+        pimg_html = (f'<img class="hv-poster" src="{E(ctx["rel"](pimg))}"{_poster_srcset(pimg, ctx["rel"])} alt="" width="1600" height="900" fetchpriority="high" decoding="async">') if pimg else ""
         wb = f' data-webm="{E(ctx["rel"](hv["webm"]))}"' if hv.get("webm") else ""
         bg = (f'<div class="bg hv" data-mp4="{E(ctx["rel"](hv["src"]))}"{wb} data-poster="{E(ctx["rel"](pimg)) if pimg else ""}">{pimg_html}</div>')
     elif s.get("video"):
@@ -279,13 +298,18 @@ if(!rm&&fine){{var g=h.querySelector('.glow');h.addEventListener('pointermove',f
 h.querySelectorAll('.pv-depth').forEach(function(c){{var d=+c.getAttribute('data-depth')||1,x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform='translate3d('+(-x*10*d).toFixed(1)+'px,'+(-y*10*d).toFixed(1)+'px,0) rotateX('+(y*-4).toFixed(2)+'deg) rotateY('+(x*5).toFixed(2)+'deg)'}})}});
 h.addEventListener('pointerleave',function(){{h.querySelectorAll('.pv-depth').forEach(function(c){{c.style.transform=''}})}})}}
 var hb=h.querySelector('.bg.hv');if(hb){{var mqW=matchMedia('(min-width:768px)'),mqR=matchMedia('(prefers-reduced-motion: reduce)'),vd=null,vio=null;
-function hvOn(){{if(vd||!mqW.matches||mqR.matches)return;vd=document.createElement('video');vd.muted=true;vd.loop=true;vd.playsInline=true;vd.autoplay=true;vd.preload='metadata';vd.setAttribute('aria-hidden','true');vd.setAttribute('muted','');vd.setAttribute('playsinline','');vd.disablePictureInPicture=true;
+function hvSlow(){{var c=navigator.connection||navigator.mozConnection||navigator.webkitConnection;return !!(c&&(c.saveData||/^(slow-2g|2g|3g)$/.test(c.effectiveType||'')))}}
+var hvQ=false,hvSeen=true,hvUser=false,hvBtn=null;
+function hvOn(){{if(vd||hvQ||!mqW.matches||mqR.matches||hvSlow())return;hvQ=true;var go=function(){{hvQ=false;hvStart()}};var idle=function(){{(window.requestIdleCallback||function(f){{setTimeout(f,300)}})(go,{{timeout:3000}})}};document.readyState==='complete'?idle():addEventListener('load',idle,{{once:true}})}}
+function hvStart(){{if(vd||!mqW.matches||mqR.matches||hvSlow())return;vd=document.createElement('video');vd.muted=true;vd.loop=true;vd.playsInline=true;vd.autoplay=true;vd.preload='metadata';vd.setAttribute('aria-hidden','true');vd.setAttribute('muted','');vd.setAttribute('playsinline','');vd.disablePictureInPicture=true;
 if(hb.dataset.poster)vd.poster=hb.dataset.poster;
 if(hb.dataset.webm&&vd.canPlayType('video/webm; codecs="vp9"')){{var w=document.createElement('source');w.src=hb.dataset.webm;w.type='video/webm; codecs="vp9"';vd.appendChild(w)}}
 var m=document.createElement('source');m.src=hb.dataset.mp4;m.type='video/mp4';vd.appendChild(m);
-vd.addEventListener('playing',function(){{vd.classList.add('on')}});hb.appendChild(vd);var pr=vd.play();if(pr&&pr.catch)pr.catch(function(){{}});
-if('IntersectionObserver' in window){{vio=new IntersectionObserver(function(es){{es.forEach(function(e){{if(!vd)return;if(e.isIntersecting){{var q=vd.play();if(q&&q.catch)q.catch(function(){{}})}}else vd.pause()}})}});vio.observe(h)}}}}
-function hvOff(){{if(!vd)return;if(vio){{vio.disconnect();vio=null}}vd.pause();vd.remove();vd=null}}
+vd.addEventListener('playing',function(){{vd.classList.add('on')}});hb.appendChild(vd);hvBtn=document.createElement('button');hvBtn.type='button';hvBtn.className='hv-pp';hvBtn.setAttribute('aria-label','Pause background video');hvBtn.innerHTML='<svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" focusable="false"><path d="M5 4h3.5v12H5zM11.5 4H15v12h-3.5z" fill="currentColor"/></svg><span>Pause video</span>';
+hvBtn.addEventListener('click',function(){{hvUser=!hvUser;h.classList.toggle('hv-still',hvUser);if(hvUser)vd.pause();else{{var q2=vd.play();if(q2&&q2.catch)q2.catch(function(){{}})}}hvBtn.setAttribute('aria-label',hvUser?'Play background video':'Pause background video');hvBtn.querySelector('span').textContent=hvUser?'Play video':'Pause video';hvBtn.querySelector('svg').innerHTML=hvUser?'<path d="M6 4l10 6-10 6z" fill="currentColor"/>':'<path d="M5 4h3.5v12H5zM11.5 4H15v12h-3.5z" fill="currentColor"/>'}});h.appendChild(hvBtn);var pr=vd.play();if(pr&&pr.catch)pr.catch(function(){{}});
+if('IntersectionObserver' in window){{vio=new IntersectionObserver(function(es){{es.forEach(function(e){{if(!vd)return;hvSeen=e.isIntersecting;if(e.isIntersecting&&!document.hidden&&!hvUser){{var q=vd.play();if(q&&q.catch)q.catch(function(){{}})}}else vd.pause()}})}});vio.observe(h)}}}}
+document.addEventListener('visibilitychange',function(){{if(!vd)return;if(document.hidden)vd.pause();else if(hvSeen&&!hvUser){{var q=vd.play();if(q&&q.catch)q.catch(function(){{}})}}}});
+function hvOff(){{if(!vd)return;if(vio){{vio.disconnect();vio=null}}vd.pause();vd.remove();vd=null;if(hvBtn){{hvBtn.remove();hvBtn=null}};hvUser=false}}
 function hvSync(){{(mqW.matches&&!mqR.matches)?hvOn():hvOff()}}
 hvSync();[mqW,mqR].forEach(function(m){{m.addEventListener?m.addEventListener('change',hvSync):m.addListener(hvSync)}})}}
 var cv=h.querySelector('canvas.net');if(cv&&!rm&&cv.getContext){{var cx=cv.getContext('2d'),W,H,P=[],run=false,raf=0,col=getComputedStyle(h).getPropertyValue('--q-gold').trim()||'#65bc7b';
@@ -339,7 +363,7 @@ def _wheel(s, ctx):
             '<radialGradient id="pvw-hub" cx="35%" cy="30%" r="80%"><stop offset="0" style="stop-color:var(--chrome-bg);stop-opacity:.75"/><stop offset="1" style="stop-color:var(--chrome-bg)"/></radialGradient>'
             '<filter id="pvw-shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000" flood-opacity=".22"/></filter>'
             f'<path id="{ring_id}" d="M{cx},{cy} m-{r_out + 22},0 a{r_out + 22},{r_out + 22} 0 1,1 {2 * (r_out + 22)},0"/></defs>')
-    svg = (f'<svg viewBox="-16 -16 592 592" role="group" aria-labelledby="{wid}-t"><title id="{wid}-t">{E(s.get("alt", "The service lines as a wheel"))}</title>{defs}'
+    svg = (f'<svg viewBox="-16 -16 592 592" role="group" aria-labelledby="{wid}-t"><title id="{wid}-t">{E(s.get("alt", "The eight product lines as a wheel"))}</title>{defs}'
            f'<circle class="orbit" cx="{cx}" cy="{cy}" r="{r_out + 12}"/><circle class="orbit2" cx="{cx}" cy="{cy}" r="{r_in - 4}"/><g class="ticks">{"".join(ticks)}</g>'
            f'{"".join(segs)}<circle class="pulse" cx="{cx}" cy="{cy}" r="{r_in - 12}"/><circle class="hub" cx="{cx}" cy="{cy}" r="{r_in - 12}"/><circle class="hubring" cx="{cx}" cy="{cy}" r="{r_in - 20}"/>'
            f'<text class="hubt" x="{cx}" y="{cy + 2}">{hub_t}</text><text class="hubs" x="{cx}" y="{cy + 24}">{hub_s}</text>'
@@ -351,7 +375,11 @@ def _wheel(s, ctx):
     js = f"""<script>(function(){{var w=document.getElementById("{wid}-w");if(!w)return;var D={data},t=w.querySelector('[data-t]'),b=w.querySelector('[data-b]'),l=w.querySelector('[data-l]'),cur=0;
 var nn=w.querySelector('[data-n]'),bar=w.querySelector('.bar i');function show(i){{cur=i;t.textContent=D[i][0];b.textContent=D[i][1];l.setAttribute('href',D[i][2]);if(nn)nn.textContent=(i+1<10?'0':'')+(i+1);w.querySelectorAll('.segg').forEach(function(p,j){{p.classList.toggle('on',j===i)}});w.querySelectorAll('ol a').forEach(function(a,j){{a.classList.toggle('on',j===i)}});if(bar){{bar.style.animation='none';void bar.offsetWidth;bar.style.animation=''}}}}
 w.querySelectorAll('svg a, ol a').forEach(function(a){{var i=+a.getAttribute('data-i');a.addEventListener('mouseenter',function(){{show(i)}});a.addEventListener('focus',function(){{show(i)}})}});show(0);
-if(!matchMedia('(prefers-reduced-motion: reduce)').matches){{var tm=setInterval(function(){{if(w.matches(':hover'))return;show((cur+1)%D.length)}},3200);w.addEventListener('pointerenter',function(){{clearInterval(tm);w.classList.add('held')}},{{once:true}})}}}})();</script>"""
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches){{var tm=0,pb=document.createElement('button'),pn=w.querySelector('.panel');pb.type='button';pb.className='pv-wpp';
+function run(){{tm=setInterval(function(){{if(w.matches(':hover'))return;show((cur+1)%D.length)}},3200);pb.textContent='Pause';pb.setAttribute('aria-label','Pause automatic cycling')}}
+function halt(){{clearInterval(tm);tm=0;w.classList.add('held');pb.textContent='Play';pb.setAttribute('aria-label','Resume automatic cycling')}}
+pb.addEventListener('click',function(){{if(tm)halt();else{{w.classList.remove('held');run()}}}});if(pn)pn.appendChild(pb);run();
+w.addEventListener('pointerenter',function(){{if(tm)halt()}},{{once:true}});w.addEventListener('focusin',function(e){{if(tm&&e.target!==pb)halt()}})}}}})();</script>"""
     head = f'<div class="pv-center" style="margin-bottom:40px"><div class="q-eyebrow">{E(s.get("eyebrow", ""))}</div><h2 class="q-h2" style="margin-top:22px;max-width:760px">{E(s["heading"])}</h2>{f"<p class=q-lead style=max-width:640px;margin:16px_auto_0>{E(s[chr(105)+chr(110)+chr(116)+chr(114)+chr(111)])}</p>".replace("_", " ") if s.get("intro") else ""}</div>'
     return f'{ctx["sec_open"](s)} <div class="q-container" id="{E(wid)}-w">{head}<div class="pv-wheel">{svg}{panel}</div></div>{js}</section>'
 
@@ -386,7 +414,7 @@ def _fleet(s, ctx):
     for it in s["items"]:  # {title, band, brands, image, bullets, href}
         bl = "".join(f"<li>{E(x)}</li>" for x in it.get("bullets", []))
         cards.append(f'<a class="dev pv-tilt" href="{E(L(it["href"]))}"><div class="img"><img src="{E(ctx["rel"](it["image"]))}" alt="{E(it.get("alt", it["title"]))}" width="600" height="600" loading="lazy" decoding="async"></div><div class="band">{E(it.get("band", ""))}</div><h3>{E(it["title"])}</h3><div class="brands">{E(it.get("brands", ""))}</div><ul>{bl}</ul><span class="go">{E(it.get("label", "See the product"))}</span></a>')
-    js = f"""<script>(function(){{var f=document.getElementById("{fid}");if(!f)return;var r=f.querySelector('.rail');f.querySelectorAll('.arrows button').forEach(function(b){{b.addEventListener('click',function(){{r.scrollBy({{left:(b.getAttribute('data-d')==='l'?-1:1)*(r.clientWidth*.8),behavior:'smooth'}})}})}})}})();</script>"""
+    js = f"""<script>(function(){{var f=document.getElementById("{fid}");if(!f)return;var r=f.querySelector('.rail');f.querySelectorAll('.arrows button').forEach(function(b){{b.addEventListener('click',function(){{r.scrollBy({{left:(b.getAttribute('data-d')==='l'?-1:1)*(r.clientWidth*.8),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}})}})}})}})();</script>"""
     head = f'<div class="pv-split"><h2 class="q-h2">{E(s["heading"])}</h2><p>{E(s.get("intro", ""))}</p></div>'
     return f'{ctx["sec_open"](s)} <div class="q-container" id="{E(fid)}">{head}<div class="pv-fleet"><div class="arrows" aria-hidden="true"><button type="button" data-d="l" tabindex="-1">&#8592;</button><button type="button" data-d="r" tabindex="-1">&#8594;</button></div><div class="rail">{"".join(cards)}</div></div></div>{js}</section>'
 

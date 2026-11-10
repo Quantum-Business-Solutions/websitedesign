@@ -59,7 +59,7 @@ QUESTIONS = [
 ]
 PAGES.append({
     "file": "assessment.html",
-    "title": title("Dealer system-fit check"),
+    "title": "Dealer system-fit check | Digital Monitoring Products",
     "description": desc("Fourteen yes, not sure or no questions on panels, communicators, remote service, access and video, with three places to look next. Illustrative scoring."),
     "crumbs": [["Home", "index.html"], ["Dealer system-fit check", "assessment.html"]],
     "schema": [],
@@ -92,7 +92,7 @@ PAGES.append({
               {"label": "Enter your numbers", "href": "#estimate"}, {"label": "Dealer Admin", "href": "products/dealer-admin.html"},
               IMG + "tab-spec-1200.jpg", "A DMP spec sheet and a control panel on a desk"),
         {"type": "p3calc", "id": "estimate", "eyebrow": "The estimator", "heading": "Your numbers, your math.",
-         "intro": "Nothing is pre-filled and no figure here comes from DMP. The share that could be handled remotely is your own judgement.",
+         "intro": "Nothing is pre-filled and no figure here comes from DMP. The share that could be handled remotely is your own judgment.",
          "caps": [["Remote programming.", "Remote Link updates firmware and programming from a laptop.", "Remote Link", "products/remote-link.html"],
                   ["Bulk updates.", "Dealer Admin performs bulk remote updates and mass programming changes, with system health status on a single dashboard.", "Dealer Admin", "products/dealer-admin.html"],
                   ["What can be remote.", "DMP does not say how many calls these remove, and neither does this page. Technical Support can talk through a specific call.", "Technical support FAQs", "support/tech-faqs.html"]]},
@@ -108,7 +108,7 @@ TO_CONFIRM.append("Savings estimator: inputs start empty and the formula is ours
 PH_METRICS = ["First result, to be supplied", "Second result, to be supplied", "Third result, to be supplied"]
 PAGES.append({
     "file": "stories.html",
-    "title": title("Dealer stories"),
+    "title": "Dealer stories | Digital Monitoring Products",
     "description": desc("Dealer stories: what an installer did, with which DMP products, and what happened. One published story today, and room for yours."),
     "crumbs": [["Home", "index.html"], ["Dealer stories", "stories.html"]],
     "schema": [],
@@ -128,11 +128,11 @@ PAGES.append({
                    ["Solution", "Which DMP products the dealer chose, linked to their pages."],
                    ["Result", "What happened. Numbers appear only when the dealer supplies them and DMP confirms them."],
                    ["Quote", "A line from the dealer or the customer, used with permission."]]},
-        _lead("Have a story to share?", "If you are an authorized DMP dealer with a result you can talk about, tell Inside Sales. How stories are collected and approved is to be confirmed."),
+        _lead("Have a story to share?", "If you are an authorized DMP dealer with a result you can talk about, tell Inside Sales."),
     ]})
 PAGES.append({
     "file": "stories/template-dealer-story.html",
-    "title": title("Dealer story template"),
+    "title": "Dealer story template | Digital Monitoring Products",
     "description": desc("The layout of a DMP dealer story: metric band, quote card, challenge, solution, result and the products used. Every value is a placeholder."),
     "crumbs": [["Home", "index.html"], ["Dealer stories", "stories.html"], ["Story template", "stories/template-dealer-story.html"]],
     "schema": [],
@@ -147,7 +147,7 @@ PAGES.append({
                  ["Result", "Placeholder. What happened afterwards. Any number is supplied by the dealer and confirmed by DMP."]],
          "products": [["Dealer Admin", "products/dealer-admin.html"], ["Virtual Keypad", "products/virtual-keypad.html"], ["XT75 control panel", "products/xt75.html"],
                       ["XR550 control panel", "products/xr550.html"], ["Communicators", "services/communicators.html"], ["VUE Plus video", "services/video.html"]]},
-        _lead("Want your dealer story here?", "Tell Inside Sales about an install you are proud of. Story approval steps are to be confirmed."),
+        _lead("Want your dealer story here?", "Tell Inside Sales about an install you are proud of."),
     ]})
 TO_CONFIRM += [
     "Dealer stories: the hub shows one real published story (the 1112 water-sensor story at news/small-sensor-big-save.html) and three placeholder cards. DMP to confirm who collects, approves and publishes dealer stories, and whether customer permission wording is needed. The template page contains no invented names, numbers or quotes.",
@@ -178,7 +178,7 @@ STATED = [["done", "Stated by DMP"]]
 CONF = [["confirm", "To confirm"]]
 PAGES.append({
     "file": "trust.html",
-    "title": title("Trust center"),
+    "title": "Trust center | Digital Monitoring Products",
     "description": desc("SOC 2 Type II, certifications, security and privacy contacts and a security FAQ, using only what DMP's pages state. Items not yet confirmed are marked."),
     "crumbs": [["Home", "index.html"], ["Trust center", "trust.html"]],
     "schema": [],
@@ -239,7 +239,7 @@ TO_CONFIRM += [
 # ================================================================================================ accessibility statement
 PAGES.append({
     "file": "accessibility.html",
-    "title": title("Accessibility statement"),
+    "title": "Accessibility statement | Digital Monitoring Products",
     "description": desc("Our target is WCAG 2.2 AA. What has been checked so far, what is still to be done and how to tell us about a problem. No claim of full conformance."),
     "crumbs": [["Home", "index.html"], ["Accessibility statement", "accessibility.html"]],
     "schema": [],
@@ -255,7 +255,7 @@ PAGES.append({
                    ["Reduced motion", "Count-ups, the score ring and the banner entrance switch off when your device asks for reduced motion."],
                    ["No script", "The system-fit check lists all of its questions as a plain checklist when JavaScript is off."]]},
         {"type": "detail", "eyebrow": "Feedback", "heading": "Tell us if something does not work.",
-         "body": "If a page or a tool is hard to use, contact Inside Sales on 877-757-4367, 8 a.m. to 5 p.m. Central, or at InsideSales@DMP.com, or use the contact page. Say which page and what got in the way. A response time is to be confirmed.",
+         "body": "If a page or a tool is hard to use, contact Inside Sales on 877-757-4367, 8 a.m. to 5 p.m. Central, or at InsideSales@DMP.com, or use the contact page. Say which page and what got in the way.",
          "bullets": ["Inside Sales: 877-757-4367", "InsideSales@DMP.com", "The contact page"], "cta": {"label": "Contact DMP", "href": "contact.html"},
          "image": IMG + "phone-commercial-1200.jpg", "image_alt": "A person checking a phone as they walk out of a building", "image_w": 1200, "image_h": 800},
         {"type": "faq", "alt": True, "heading": "Questions about accessibility", "items": [
@@ -271,7 +271,7 @@ TO_CONFIRM += [
 # ================================================================================================ 404 and consent banner
 PAGES.append({
     "file": "404.html",
-    "title": title("Page not found"),
+    "title": "Page not found | Digital Monitoring Products",
     "description": "The page was not found. Search the site, try a top link or call Inside Sales.",
     "crumbs": [["Home", "index.html"], ["Page not found", "404.html"]],
     "schema": [],

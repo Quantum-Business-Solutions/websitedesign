@@ -28,6 +28,8 @@ def rewrite(html, domain, rel):
     html = re.sub(r'<nav class="pv-switch".*?</nav>', "", html, flags=re.S)
     html = re.sub(r'<details class="pv-switch-m".*?</details>', "", html, flags=re.S)
     html = html.replace('<script>if(top!==self){document.documentElement.classList.add("embedded")}</script>', "")
+    # the design-preview bar script that runs first in <body> (preview_notice.NOTICE_BAR_JS) has no job on the live domain
+    html = re.sub(r"(<body>\n)<script>[^<]*?pv-notice[^<]*?</script>\n", r"\1", html, count=1, flags=re.S)
     return html
 
 
@@ -49,6 +51,13 @@ def main():
                 h = h.replace(f'"{up}assets/', f'"{"../" * depth}assets/').replace(f"'{up}assets/", f"'{'../' * depth}assets/").replace(f", {up}assets/", f", {'../' * depth}assets/")
                 open(dst, "w", encoding="utf-8").write(h)
                 n += 1
+            elif fn.endswith(".css") and "assets/" in open(f, encoding="utf-8", errors="ignore").read():
+                # shared stylesheets (_shared/*.css) point at the site assets folder with url(../../assets/...); the launch copy keeps
+                # the assets one level above the stylesheet's folder, so each url() loses one "../"
+                depth = rel.count("/")
+                css = open(f, encoding="utf-8").read()
+                css = css.replace(f"url({'../' * (depth + 1)}assets/", f"url({'../' * depth}assets/")
+                open(dst, "w", encoding="utf-8").write(css)
             else:
                 shutil.copy2(f, dst)
     assets = os.path.join(os.path.dirname(src), "assets")

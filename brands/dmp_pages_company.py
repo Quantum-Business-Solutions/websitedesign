@@ -440,7 +440,7 @@ PAGES.append({
     "crumbs": [["Home", "index.html"], ["About", "about.html"], ["Careers", "about/careers.html"]],
     "sections": [
         hero_news("Careers", "A family-owned tech company <em>in the Ozarks</em>",
-                  "We design, engineer and manufacture cutting-edge security systems for commercial and residential applications, in Springfield, Missouri. Joining us means joining a team committed to its mission and values, including giving back to the community and pursuing excellence every day.",
+                  "We design, engineer and manufacture security systems for commercial and residential applications, in Springfield, Missouri. Joining us means joining a team committed to its mission and values, including giving back to the community and pursuing excellence every day.",
                   IMG + "hq-exterior-1200.jpg", "The DMP headquarters in Springfield, Missouri",
                   {"label": "How we give back", "href": "about/dmp-cares.html"}),
         {"type": "cards", "alt": True, "eyebrow": "Benefits", "heading": "A medical clinic on site and a security system at home",
@@ -477,7 +477,7 @@ PAGES.append({
         {"type": "proof", "eyebrow": "Why it matters", "value": "We want our people to be generous people.",
          "text": "Giving serves others in need and reminds us to be thankful for our many blessings.", "source": "Our company value of generosity"},
         {"type": "detail", "alt": True, "eyebrow": "Volunteer hours", "heading": "Our team is working toward 50,000 volunteer hours",
-         "body": "We are excited to work together towards 50,000 volunteer hours. Team members log their volunteer time in our HR system under the 2025 BHAG, Track to 50,000 Volunteer Hours.",
+         "body": "We are excited to work together toward 50,000 volunteer hours. Team members log their volunteer time in our HR system under the 2025 BHAG, Track to 50,000 Volunteer Hours.",
          "bullets": ["Volunteer time is self-reported by each team member", "The goal is shared across the whole company"]},
         {"type": "values", "eyebrow": "Our value", "heading": "Generosity, in our own words",
          "items": [["Serve with your time", "Serve others with your time."], ["Serve with your money", "Serve others with your money."], ["Personal fulfillment", "Giving to others leads to personal fulfillment and happiness."]]},
@@ -502,13 +502,13 @@ PAGES.append({
          "items": [["Examined every year", "We complete independent SOC 2 Type II examinations annually, conducted by a licensed CPA firm in accordance with standards established by the American Institute of Certified Public Accountants (AICPA)."],
                    ["A SOC 3 report for everyone", "The SOC 3 report is intended for public distribution."],
                    ["SOC 2 reports for customers and partners", "SOC 2 reports are available to customers and partners under appropriate confidentiality arrangements."]]},
-        {"type": "cards", "alt": True, "eyebrow": "Beyond SOC 2", "heading": "Listings and approvals we can state: UL 2610, UL Listed panels and FirstNet",
+        {"type": "cards", "alt": True, "eyebrow": "Beyond SOC 2", "heading": "Listings and approvals: UL 2610, UL Listed panels and FirstNet",
          "items": [["JamAlert is UL 2610 certified", "Our cellular jamming detection technology has achieved UL 2610 certification, the standard for commercial premises security alarm units and systems."],
                    ["A UL Listed combination panel since 1997", "In 1997 we introduced a UL Listed combination burglary, fire and access control panel."],
                    ["Communicators approved for FirstNet", "We offer communicators approved for use on the FirstNet mobile broadband public-safety network, and made the first alarm panel communicator for the AT&T FirstNet network."],
                    ["Manufactured in the USA", "Our products are manufactured in Springfield, Missouri, with U.S. and global components."]]},
         {"type": "resources", "heading": "Read more", "intro": "The stories and product pages behind these listings.",
-         "items": [["News, 6 May 2026", "JamAlert Achieves UL Certification", "How UL 2610 certification lets dealers specify JamAlert where UL Listed equipment is required.", "Read the story", "news/jamalert-ul.html"],
+         "items": [["News, 6 May 2026", "JamAlert achieves UL certification", "How UL 2610 certification lets dealers specify JamAlert where UL Listed equipment is required.", "Read the story", "news/jamalert-ul.html"],
                    ["Product", "JamAlert", "Cellular jamming detection that works with DMP and other alarm systems.", "View product", "products/jamalert.html"],
                    ["Software", "Virtual Keypad", "The mobile and web platform covered by our SOC 2 Type II examination.", "See mobile and automation", "services/mobile-automation.html"]]},
         {"type": "faq", "heading": "Questions about our SOC reports",
@@ -536,16 +536,16 @@ PAGES.append({
                    ["Technician Bootcamp, March", "3 1/2 days of instruction and hands-on labs, finishing with a final test and survey and a lunch and closing ceremony. Includes the XTLtouch package."]]},
         {"type": "timeline", "id": "dealer-events", "eyebrow": "For owners and executives", "heading": "Dealer Roundtables in San Diego and Hilton Head, and Owners Forum 2027 in Las Vegas",
          "intro": "Space is limited at each event. Register before the date shown.",
-         "items": [["8 and 9 February 2027", "Dealer Roundtable, San Diego", "At the San Diego Mission Bay Resort, 1775 E Mission Bay Dr. We have secured a group rate of $239. Register before Tuesday, January 12, 2027."],
+         "items": [["8 and 9 February 2027", "Dealer Roundtable, San Diego", "At the San Diego Mission Bay Resort, 1775 E Mission Bay Dr. We have secured a group rate of $239. Register before Tuesday, 12 January 2027."],
                    ["Register by 15 March 2027", "Owners Forum 2027, Las Vegas", "At Resorts World Las Vegas, with a free shuttle between Resorts World and ISC West for guests in the DMP room block. Includes the annual DMP Dealer Recognition Awards."],
-                   ["4 and 5 October 2027", "Dealer Roundtable, Hilton Head", "At the Hilton Beachfront Resort and Spa, Hilton Head Island. We have secured a group rate of $269, available first come, first served. Register before Friday, September 17, 2027."]]},
+                   ["4 and 5 October 2027", "Dealer Roundtable, Hilton Head", "At the Hilton Beachfront Resort and Spa, Hilton Head Island. We have secured a group rate of $269, available first come, first served. Register before Friday, 17 September 2027."]]},
         {"type": "detail", "alt": True, "eyebrow": "Dealer Roundtable", "heading": "One and a half days of dealers teaching dealers",
          "body": "The Dealer Roundtable is hosted by members of the DMP Executive Management Group, including Owner and President Rick Britton. It gives DMP dealers and security personnel from around the country a chance to discuss best practices. Each topic runs about 30 minutes, followed by 15 minutes of discussion or a tabletop exercise, and most topics are presented or facilitated by other dealers.",
          "bullets": ["For owners and executive leadership, senior management, operations management and sales and marketing management",
                      "San Diego topics include the common-sense use of AI for sales and selling, a dealer panel, how DMP Sales Engineers can help you grow your sales, new things coming to the DMP Dealer Program, and the power of VK VMS as a unified platform",
                      "Hilton Head includes a session on navigating insurance claims as a dealer"]},
         {"type": "detail", "eyebrow": "Owners Forum 2027", "heading": "Connect with peers, learn to scale, and celebrate the Dealer Recognition Awards",
-         "body": "Owners Forum is an exclusive opportunity to connect with industry peers, engage in meaningful collaboration and discover the keys to scaling your business. Please register by Monday, March 15, 2027.",
+         "body": "Owners Forum is an exclusive opportunity to connect with industry peers, engage in meaningful collaboration and discover the keys to scaling your business. Please register by Monday, 15 March 2027.",
          "bullets": ["Speakers include a former LA Chargers Gameday host, a CEO who multiplied revenue for Tesla and Lyft, a TEDx speaker and top expert in business scaling, and an organizational psychologist who has sold millions of books",
                      "A dealer panel and the annual DMP Dealer Recognition Awards",
                      "High-level agenda: registration and breakfast at 8:00 a.m., opening remarks at 9:00 a.m., dealer awards at 10:00 a.m., lunch at 12:00 p.m., adjourn at 3:30 p.m.",
@@ -573,10 +573,10 @@ PAGES.append({
                   "DMP products are built to meet real security needs with powerful features and dependable performance. They are available through authorized dealers and distributors internationally.",
                   IMG + "plant-1200.jpg", "DMP products being built in Springfield, Missouri",
                   {"label": "Browse our systems", "href": "services.html"}),
-        {"type": "resources", "id": "find-your-distributor", "heading": "Find your distributor: eight authorized partners, from Benelux to South Africa",
+        {"type": "resources", "id": "find-your-distributor", "heading": "Find your distributor: eight authorized partners, from Benelux to South Africa",
          "intro": "To locate DMP products in your region, start with the authorized distributor for your country.",
          "items": [[d[0], d[1], f"Authorized DMP distributor. Our contact for this region is {d[3]}.", f"Visit {d[1]}", d[2]] for d in DIST]},
-        {"type": "cards", "alt": True, "eyebrow": "International products", "heading": "International versions of our panels, keypads, wireless, communicators and video",
+        {"type": "cards", "alt": True, "eyebrow": "International products", "heading": "International versions of our panels, keypads, wireless, communicators and video",
          "items": [["Control panels", "XR550, XR150, XT30, XTLplus and XTLtouch international control panels (the XTLtouch is the all-in-one), plus the International Panel Pack."],
                    ["Keypads", "The International Thinline Series Keypad and the International 5-Inch Touchscreen Keypad."],
                    ["Wireless", "1100D and 1100X international wireless receivers, the 1100R repeater, the 1122 PIR, 1128 glassbreak detector, 1135 siren, 1142 two-button panic, 1144 key fobs and 1103 transmitter."],
@@ -584,17 +584,17 @@ PAGES.append({
                    ["Video", "International XV Gateways with AlarmVision."],
                    ["Power supplies, modules and expanders", "The 503 power supply, 324 wire-in transformer, 318T, 318EXT and 318R battery harnesses, 381-25 and 381-12 SMA extension cables and 381-2 coax cable, plus the 712-8, 714-16, 714-8, 714-8PCB zone expansion modules, the 716 output expansion module and the 860 relay output module."]]},
         {"type": "detail", "eyebrow": "International team", "heading": "Reach our international team in Springfield",
-         "body": "For more information on locating authorized dealers or distributors around the world, contact DMP Inside Sales at +1-866-266-2826 or CustomerService@DMP.com.",
+         "body": "For more information on locating authorized dealers or distributors around the world, contact DMP Customer Service at +1-866-266-2826 or CustomerService@DMP.com.",
          "bullets": ["International Sales: Mark NeSmith, MNeSmith@dmp.com, 417-839-2547",
                      "International Sales: Doug Dacre, DDacre@dmp.com, (417) 447-9629",
                      "Mark NeSmith is our contact for every region except the United Kingdom and Ireland, which is Doug Dacre"]},
-        {"type": "detail", "alt": True, "eyebrow": "Technical support", "heading": "International technical support runs from 11:00 a.m. to 12:00 a.m. GMT",
-         "body": "Representatives are available from 11:00 a.m. to 12:00 a.m. GMT (6:00 a.m. to 7:00 p.m. CST). For support outside business hours, email InternationalSupport@dmp.com and we will schedule a call.",
+        {"type": "detail", "alt": True, "eyebrow": "Technical support", "heading": "International technical support runs from 11:00 a.m. to 12:00 a.m. GMT",
+         "body": "Representatives are available from 11:00 a.m. to 12:00 a.m. GMT (6:00 a.m. to 7:00 p.m. Central). For support outside business hours, email InternationalSupport@dmp.com and we will schedule a call.",
          "bullets": ["Toll-free numbers for eight countries are listed below", "Email InternationalSupport@dmp.com for after-hours calls"], "flip": True},
         {"type": "cards", "eyebrow": "Toll-free numbers", "heading": "Toll-free technical support in Belgium, France, Germany, Greece, Ireland, Mexico, South Africa and the United Kingdom",
          "items": [["Belgium", "+32080054707"], ["France", "+330805089291"], ["Germany", "+4908001825459"], ["Greece", "+308008481019"],
                    ["Ireland", "+3531800816836"], ["Mexico", "+52018003511041"], ["South Africa", "+270800014664"], ["United Kingdom", "+4408081349543"]]},
-        {"type": "detail", "alt": True, "eyebrow": "Customs and tariffs", "heading": "Every physical DMP product carries a six-digit Harmonized System code",
+        {"type": "detail", "alt": True, "eyebrow": "Customs and tariffs", "heading": "Every physical DMP product carries a six-digit Harmonized System code",
          "body": "The Harmonized System (HS) code is part of the international Harmonized Tariff System and is used to establish any tariff rates due when a DMP customer imports DMP goods into another country, or when we are the importer. Because future exports may not be known when a product is released, every physical product is assigned a code, as are sales literature and marketing giveaways. Software and other products delivered electronically do not need one. For example, DMP is the importer in Canada when a dealer buys products and their account is set to pay in Canadian dollars.",
          "bullets": ["Burglar or fire alarms and similar apparatus, including keypads, door contacts and monitoring hardware: 8531.10",
                      "Parts and accessories for alarm systems, and access control readers and hardware: 8531.90",
@@ -612,7 +612,7 @@ PAGES.append(legal_page("terms-of-use.html", "Terms of Use", TERMS_UPDATED, TERM
 
 # ----------------------------------------------------------------------------------------------- news
 NEWS = []
-NEWS.append(["News, 11 Sep 2026", "DMP Launches VK VMS, Enabling 24/7 Video Management With AlarmVision", "A cloud video management system inside Virtual Keypad, with new XV Plus Gateways.", "Read the story", "news/vk-vms.html"])
+NEWS.append(["News, 11 Sep 2026", "DMP launches VK VMS, enabling 24/7 video management with AlarmVision", "A cloud video management system inside Virtual Keypad, with new XV Plus Gateways.", "Read the story", "news/vk-vms.html"])
 PAGES.append(news_page("vk-vms", "", "DMP launches VK VMS, enabling 24/7 video management with AlarmVision",
   "VK VMS adds live video viewing and on-site device management to Virtual Keypad, with AlarmVision Plus and Pro subscriptions and new XV Plus Gateways.",
   hero_news("News, 11 September 2026", "VK VMS: <em>24/7 video management</em> with AlarmVision",
@@ -642,7 +642,7 @@ PAGES.append(news_page("vk-vms", "", "DMP launches VK VMS, enabling 24/7 video m
               ["Product", "VUE Plus 8MP Varifocal Bullet Camera", "VUE Plus cameras are designed to work with AlarmVision Plus.", "View product", "products/vplus-7081-bdv.html"],
               ["System", "Video", "Our video systems, from cameras to monitoring.", "See video systems", "services/video.html"]]}]))
 
-NEWS.append(["News, 1 Jul 2026", "The Next Evolution of the VUE Portfolio Is Here", "VUE Plus cameras add varifocal, panoramic and fisheye models with onboard AlarmVision.", "Read the story", "news/vue-portfolio.html"])
+NEWS.append(["News, 1 Jul 2026", "The next evolution of the VUE portfolio is here", "VUE Plus cameras add varifocal, panoramic and fisheye models with onboard AlarmVision.", "Read the story", "news/vue-portfolio.html"])
 PAGES.append(news_page("vue-portfolio", "", "The next evolution of the VUE portfolio is here",
   "VUE Plus cameras add varifocal, panoramic and fisheye models in 6MP, 8MP and 12MP, with onboard AlarmVision, ONVIF compliance and direct XR and XT panel integration.",
   hero_news("News, 1 July 2026", "VUE Plus cameras bring <em>AlarmVision to the edge</em>",
@@ -676,7 +676,7 @@ PAGES.append(news_page("vue-portfolio", "", "The next evolution of the VUE portf
                 "LT-3192 VUE Plus 8MP Mini Dome Camera Spec Sheet", "LT-3196 VUE Plus 8MP Varifocal Dome Camera Spec Sheet", "LT-3191 VUE Plus 6MP Fisheye Camera Spec Sheet",
                 "LT-3198 VUE Plus 12MP Fisheye Camera Spec Sheet", "LT-3197 VUE Plus 8MP Varifocal Turret Camera Spec Sheet", "LT-3194 VUE Plus 8MP Panoramic Turret Camera Spec Sheet"]}]))
 
-NEWS.append(["News, 6 May 2026", "JamAlert Achieves UL Certification", "UL 2610 certification for JamAlert in commercial burglary applications.", "Read the story", "news/jamalert-ul.html"])
+NEWS.append(["News, 6 May 2026", "JamAlert achieves UL certification", "UL 2610 certification for JamAlert in commercial burglary applications.", "Read the story", "news/jamalert-ul.html"])
 PAGES.append(news_page("jamalert-ul", "", "JamAlert achieves UL certification for commercial burglary applications",
   "JamAlert cellular jamming detection has achieved UL 2610 certification, the standard for commercial premises security alarm units and systems.",
   hero_news("News, 6 May 2026", "JamAlert earns <em>UL certification</em> for commercial burglary applications",
@@ -691,13 +691,13 @@ PAGES.append(news_page("jamalert-ul", "", "JamAlert achieves UL certification fo
    {"type": "proof", "alt": True, "eyebrow": "On the certification", "value": "Achieving UL certification for JamAlert is an important step forward for both our dealers and their customers.",
     "text": "It provides the third-party validation the industry has been looking for, while also enabling deployment in applications where UL Listed components are required.", "source": "Brad Tucker, Vice President of Product Management and Support"},
    {"type": "detail", "eyebrow": "Compatibility", "heading": "JamAlert works with DMP and other alarm systems",
-    "body": "JamAlert integrates seamlessly with DMP or other alarm systems to detect and alert on potential cellular jamming activity, helping ensure uninterrupted alarm communication."},
+    "body": "JamAlert integrates with DMP or other alarm systems to detect and alert on potential cellular jamming activity, helping ensure uninterrupted alarm communication."},
    {"type": "resources", "alt": True, "heading": "Related products and systems", "intro": "Where JamAlert fits.",
     "items": [["Product", "JamAlert", "Cellular jamming detection technology.", "View product", "products/jamalert.html"],
               ["System", "Communicators", "Cellular and network communicators for DMP panels.", "See communicators", "services/communicators.html"],
               ["System", "Intrusion", "Burglary and holdup systems for commercial buildings.", "See intrusion", "services/intrusion.html"]]}]))
 
-NEWS.append(["News, 27 Apr 2026", "XR650 Wins Top Honors at 2026 ESX Innovation Awards", "The XR650 takes the Intrusion Innovation Award and Best of Show.", "Read the story", "news/xr650-esx-award.html"])
+NEWS.append(["News, 27 Apr 2026", "XR650 wins top honors at 2026 ESX Innovation Awards", "The XR650 takes the Intrusion Innovation Award and Best of Show.", "Read the story", "news/xr650-esx-award.html"])
 PAGES.append(news_page("xr650-esx-award", "", "XR650 wins Intrusion Innovation Award and Best of Show at 2026 ESX",
   "The XR650 enterprise control panel won the Intrusion Detection category and Best of Show at the 2026 Electronic Security Expo Innovation Awards in Irving, Texas.",
   hero_news("News, 27 April 2026", "XR650 wins <em>Best of Show</em> at ESX 2026",
@@ -719,13 +719,13 @@ PAGES.append(news_page("xr650-esx-award", "", "XR650 wins Intrusion Innovation A
               ["Industry", "Financial institutions", "Security for banks and credit unions.", "See the industry", "industries/financial-institutions.html"],
               ["Industry", "Government", "Security for government facilities.", "See the industry", "industries/government.html"]]}]))
 
-NEWS.append(["News, 9 Apr 2026", "DMP Launches VUE Camera Line Delivering Intelligent Video and Active Deterrence", "Three 5MP VUE cameras with analytics and active deterrence.", "Read the story", "news/vue-camera-line.html"])
+NEWS.append(["News, 9 Apr 2026", "DMP launches VUE camera line delivering intelligent video and active deterrence", "Three 5MP VUE cameras with analytics and active deterrence.", "Read the story", "news/vue-camera-line.html"])
 PAGES.append(news_page("vue-camera-line", "", "DMP launches VUE camera line delivering intelligent video and active deterrence",
   "Three new 5MP VUE cameras, bullet, turret and dome, add person and vehicle detection, active deterrence lighting, two-way audio and Virtual Keypad integration.",
   hero_news("News, 9 April 2026", "VUE launches with <em>three 5MP cameras</em> and active deterrence",
             "New 5MP cameras advance our video portfolio with advanced analytics, integrated deterrence and commercial-grade performance.", IMG + "vue-cameras-5mp-1200.jpg", "The VUE dome, turret and bullet cameras", {"label": "See video systems", "href": "services/video.html"}),
   [{"type": "detail", "alt": True, "eyebrow": "SPRINGFIELD, Mo.", "heading": "A trio of 5MP cameras for retail, QSR and medium to large commercial installations",
-    "body": "The VUE lineup includes bullet, turret and dome form factors. Building on the recent introduction of the VUE Video Doorbell, this release strengthens the VUE portfolio with professional-grade cameras that offer improved performance, expanded capabilities and seamless integration across the DMP ecosystem.",
+    "body": "The VUE lineup includes bullet, turret and dome form factors. Building on the recent introduction of the VUE Video Doorbell, this release strengthens the VUE portfolio with professional-grade cameras that offer improved performance, expanded capabilities and integration across the DMP ecosystem.",
     "bullets": ["Bullet, turret and dome models", "Available now through authorized DMP dealers"]},
    {"type": "cards", "heading": "Sharper detail, smarter detection and a way to intervene",
     "items": [["5MP on every model", "Sharper detail, and faster, more confident alarm verification."],
@@ -741,7 +741,7 @@ PAGES.append(news_page("vue-camera-line", "", "DMP launches VUE camera line deli
               ["Turret", "VUE Turret camera", "5MP, with deterrence lighting and two-way audio.", "View product", "services/video.html"],
               ["Dome", "VUE Dome camera", "5MP with person and vehicle detection.", "View product", "services/video.html"]]}]))
 
-NEWS.append(["News, 19 Mar 2026", "Integration with System Surveyor Streamlines Intrusion and Access Control System Design for Dealers", "Design DMP systems on digital floor plans with System Surveyor.", "Read the story", "news/system-surveyor.html"])
+NEWS.append(["News, 19 Mar 2026", "Integration with System Surveyor streamlines intrusion and access control system design for dealers", "Design DMP systems on digital floor plans with System Surveyor.", "Read the story", "news/system-surveyor.html"])
 PAGES.append(news_page("system-surveyor", "", "DMP launches partnership with System Surveyor",
   "Our integration with System Surveyor lets dealers design intrusion, access control, fire and video systems on digital floor plans, with a bill of materials generated automatically.",
   hero_news("News, 19 March 2026", "System Surveyor partnership <em>streamlines system design</em> for dealers",
@@ -782,7 +782,7 @@ PAGES.append(news_page("small-sensor-big-save", "", "Customer success story: a s
               ["Panel", "XT75", "The control panel the sensor was connected to.", "View product", "products/xt75.html"],
               ["System", "Wireless", "The 1100 Series Wireless environmental sensors.", "See wireless", "services/wireless.html"]]}]))
 
-NEWS.append(["News, 29 Oct 2025", "DMP Introduces VAULT: Secure, Encrypted Connectivity for Cloud-Based Security Applications", "Cloud access for Virtual Keypad and Dealer Admin, with systems kept off the public internet.", "Read the story", "news/vault.html"])
+NEWS.append(["News, 29 Oct 2025", "DMP introduces VAULT: secure, encrypted connectivity for cloud-based security applications", "Cloud access for Virtual Keypad and Dealer Admin, with systems kept off the public internet.", "Read the story", "news/vault.html"])
 PAGES.append(news_page("vault", "", "DMP introduces VAULT: secure, encrypted connectivity for cloud-based security applications",
   "VAULT, Virtual Access Using Layered Tunneling, lets dealers and enterprises use Virtual Keypad and Dealer Admin while keeping security systems off the public internet.",
   hero_news("News, 29 October 2025", "VAULT: <em>encrypted connectivity</em>, no public internet exposure",

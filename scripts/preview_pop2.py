@@ -103,7 +103,7 @@ IND_NOUN = {"commercial": "A day in a commercial building", "financial-instituti
 IND_DAY = {
     "commercial": [
         ("Arrive", "Keypads anyone can use", "Our systems are designed with employees and service providers in mind, so keypads are easy to operate regardless of experience level.", "keypad", "products/7-inch-touchscreen-keypad.html"),
-        ("All day", "Five systems, one manufacturer", "Intrusion, fire, access, wireless and video from one manufacturer, so a blanket of security does much more than sound an alarm.", "layers", "services.html"),
+        ("All day", "Five product lines, one manufacturer", "Intrusion, fire, access, wireless and video from one manufacturer, so a blanket of security does much more than sound an alarm.", "layers", "services.html"),
         ("When a path fails", "A backup path, instantly", "DMP Adaptive Technology moves communication from the primary to a backup path instantly.", "bolt", "products/xr550.html"),
         ("Always connected", "Up to eight paths to the monitoring service", "The XR550 Series supports up to eight communication paths between the panel and the monitoring service. The XT Series carries network, cellular and dial-up on board.", "signal", "products/xt75.html"),
     ],
@@ -285,7 +285,7 @@ def _router(s, ctx):
                             f'<span class="p2-act-t"><b>{E(a["label"])}</b><small>{E(a["text"])}</small></span><span class="p2-act-go" aria-hidden="true">{ico("arrow", 18, 2.2)}</span></a></li>')
         panels.append(f'<div class="p2-rt-panel" id="{pid}" role="tabpanel" aria-labelledby="{pid}-t"><div class="p2-rt-ph"><span class="p2-rt-no">{i + 1:02d}</span>'
                       f'<h3>{E(p["title"])}</h3><p>{E(p["lead"])}</p></div><ul class="p2-acts">{"".join(acts)}</ul></div>')
-    return (f'{ctx["sec_open"](s, "p2-router")} <div class="q-container" id="{E(s.get("id", "router"))}">{_head(E, s)}'
+    return (f'{ctx["sec_open"](s, "p2-router")} <div class="q-container">{_head(E, s)}'
             f'<div class="p2-rt" data-p2="router"><div class="p2-rt-picks" role="tablist" aria-label="Who are you?">{"".join(pick)}</div>'
             f'<div class="p2-rt-stage" aria-live="polite"><div class="p2-rt-empty" aria-hidden="true"><span>{ico("users", 40, 1.4)}</span><b>Pick one</b>'
             f'<small>We show the exact next step: the right line, the right form or the right page.</small></div>{"".join(panels)}</div></div>'
@@ -502,7 +502,7 @@ def _finder_wrap(s, ctx):
     data = json.dumps(specs, ensure_ascii=False).replace("</", "<\\/")
     tray = ('<div class="p2-tray" data-p2="tray" hidden role="region" aria-label="Compare products">'
             '<div class="p2-tray-panel" hidden><div class="p2-tray-scroll"></div></div>'
-            '<div class="p2-tray-bar"><span class="p2-tray-t"><b>Compare</b><small data-c>0 of 3 selected</small></span><ul class="p2-tray-sel"></ul>'
+            '<div class="p2-tray-bar"><span class="p2-tray-t"><b>Compare</b><small data-c role="status" aria-live="polite">0 of 3 selected</small></span><ul class="p2-tray-sel"></ul>'
             '<button type="button" class="p2-tray-go" disabled>Compare specs</button><button type="button" class="p2-tray-clear" aria-label="Clear comparison">Clear</button></div></div>')
     k = html.rfind("</div></section>")
     extra = f'<script type="application/json" class="p2-fdata">{data}</script>{tray}'
@@ -551,7 +551,7 @@ def _industry(p, slug):
         return
     moments = IND_DAY[slug]
     day = {"type": "p2-day", "id": "day", "alt": True, "eyebrow": "A day in the building", "heading": IND_NOUN[slug],
-           "intro": f"{len(moments)} moments, each one tied to a real DMP capability named on this page.", "moments": moments}
+           "intro": f"{['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight'][len(moments)]} moments, each tied to a DMP capability named on this page.", "moments": moments}
     items = []
     for b in secs[sp].get("needs", []):
         m = re.match(r"^([^:]{2,48}): (.+)$", b)
@@ -568,7 +568,7 @@ def _industry(p, slug):
         items.append((lab, "", v))
     lineup = secs[k]["items"][0]
     out = {"type": "p2-outcomes", "id": "outcomes", "dark": True, "eyebrow": "The checklist", "heading": "What a good system does here",
-           "intro": "What to look for, in DMP's own words.", "items": items, "image": lineup[1], "image_alt": lineup[0], "caption": lineup[0]}
+           "intro": "What to look for in this kind of building.", "items": items, "image": lineup[1], "image_alt": lineup[0], "caption": lineup[0]}
     secs[k + 1:k + 1] = [day, out]
     cta = _ctasec(f"Talk to a DMP dealer about {IND_CTA.get(slug, nm)}", "DMP sells through authorized dealers. A dealer designs, installs and services the system, and Inside Sales supports the design.",
                {"label": "Find a dealer", "href": "find-a-dealer.html"}, _inside_sales(), "Next step", "Inside Sales, 8 a.m. to 5 p.m. Central.")
@@ -594,7 +594,7 @@ def _about(p):
         secs.insert(m + 1, {"type": "p2-numbers", "id": "numbers", "dark": True, "eyebrow": "By the numbers", "heading": "What fifty years of building security adds up to",
                             "items": [["100", "%", "Of DMP products are quality tested before shipping"], ["14", "", "Product categories"], ["900", "+", "Documents in the library"],
                                       ["200", "", "Sales training videos on DMP University"], ["3", "", "Year warranty on products we manufacture"], ["12", "", "People who lead DMP"]],
-                            "src": "All figures are from DMP's own pages on this site."})
+                            "src": "Figures as stated on DMP pages."})
 
 
 def _contact(p):
@@ -692,7 +692,7 @@ def _partners(p):
         c, ic, w, r = meta.get(n, ("Partner", "plug", [], ""))
         items.append({"name": n, "cat": c, "icon": ic, "works": w, "req": r, "text": _first_sentence(d), "href": h})
     secs[sv] = {"type": "p2-partners", "id": "partners", "eyebrow": "Integrates with DMP", "heading": secs[sv].get("heading", "Pick the partner that matches the job"),
-                "intro": "DMP at the centre, six partners with verified integrations around it, connected through Dealer Admin.", "hub": "Panels, Dealer Admin", "items": items}
+                "intro": "DMP at the center, six partners with verified integrations around it, connected through Dealer Admin.", "hub": "Panels, Dealer Admin", "items": items}
     d = _find(secs, lambda s: s.get("eyebrow") == "Build a connected solution")
     if d >= 0:
         secs.insert(d + 1, _ctasec("Make something that works with DMP", "Software providers, hardware makers and platforms can apply. We evaluate each on technical compatibility, customer value, market opportunity and long-term strategic alignment.",
@@ -721,7 +721,7 @@ def _training(p):
     if len(ses) < 3:
         return
     secs[t] = {"type": "p2-board", "id": "sessions", "alt": True, "eyebrow": secs[t].get("eyebrow", "Upcoming in-person sessions"), "heading": secs[t]["heading"],
-               "intro": "Dates are from DMP's published schedule. Days of the week are worked out from the dates.", "sessions": ses,
+               "intro": "Dates are from DMP's published schedule.", "sessions": ses,
                "cta": {"label": "See technical training", "href": "training/technical-training.html"}, "note": "Bootcamp registration includes a card payment."}
 
 
@@ -1261,10 +1261,12 @@ labels.forEach(function(l){h+='<tr><th scope="row">'+esc(l)+'</th>'+items.map(fu
 scroll.innerHTML=h+'</tbody></table>'}
 function ui(){tray.hidden=!pick.length;cnt.textContent=pick.length+' of 3 selected';go.disabled=pick.length<2;bar.innerHTML=pick.map(function(i){return '<li><span>'+esc(data[i].n)+'</span><button type="button" data-r="'+i+'" aria-label="Remove '+esc(data[i].n)+' from comparison">&times;</button></li>'}).join('');
 btns.forEach(function(b){var on=pick.indexOf(b.getAttribute('data-i'))>-1;b.setAttribute('aria-pressed',on?'true':'false');b.setAttribute('aria-disabled',!on&&pick.length>=3?'true':'false')});
-if(!panel.hidden){if(pick.length<2){panel.hidden=true;go.textContent='Compare specs'}else table()}}
-btns.forEach(function(b){b.addEventListener('click',function(){var i=b.getAttribute('data-i'),k=pick.indexOf(i);if(k>-1)pick.splice(k,1);else if(pick.length<3)pick.push(i);else return;ui()})});
-bar.addEventListener('click',function(e){var r=e.target.getAttribute&&e.target.getAttribute('data-r');if(r===null||r===undefined)return;pick.splice(pick.indexOf(r),1);ui()});
-go.addEventListener('click',function(){if(panel.hidden){table();panel.hidden=false;go.textContent='Hide comparison'}else{panel.hidden=true;go.textContent='Compare specs'}});
-tray.querySelector('.p2-tray-clear').addEventListener('click',function(){pick=[];panel.hidden=true;go.textContent='Compare specs';ui()});
-d.addEventListener('keydown',function(e){if(e.key==='Escape'&&!panel.hidden){panel.hidden=true;go.textContent='Compare specs'}})});
+if(!panel.hidden){if(pick.length<2){panel.hidden=true;go.textContent='Compare specs';gox(false)}else table()}}
+var lastB=null;panel.id=panel.id||'p2-tray-panel';go.setAttribute('aria-controls',panel.id);go.setAttribute('aria-expanded','false');
+function gox(o){go.setAttribute('aria-expanded',o?'true':'false')}
+btns.forEach(function(b){b.addEventListener('click',function(){var i=b.getAttribute('data-i'),k=pick.indexOf(i);if(k>-1)pick.splice(k,1);else if(pick.length<3)pick.push(i);else return;lastB=b;ui()})});
+bar.addEventListener('click',function(e){var r=e.target.getAttribute&&e.target.getAttribute('data-r');if(r===null||r===undefined)return;pick.splice(pick.indexOf(r),1);ui();var nx=bar.querySelector('button');if(nx)nx.focus();else if(lastB)lastB.focus()});
+go.addEventListener('click',function(){if(panel.hidden){table();panel.hidden=false;go.textContent='Hide comparison';gox(true)}else{panel.hidden=true;go.textContent='Compare specs';gox(false)}});
+tray.querySelector('.p2-tray-clear').addEventListener('click',function(){pick=[];panel.hidden=true;go.textContent='Compare specs';gox(false);ui();if(lastB)lastB.focus()});
+d.addEventListener('keydown',function(e){if(e.key==='Escape'&&!panel.hidden){panel.hidden=true;go.textContent='Compare specs';gox(false);if(tray.contains(d.activeElement))go.focus()}})});
 })();"""

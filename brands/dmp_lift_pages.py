@@ -58,7 +58,7 @@ def apply(data):
             p["sections"][i] = {"type": "callboard", "alt": True, "eyebrow": "Pick the right line", "heading": "Who to call for what, with hours and email", "items": [
                 {"label": "Quotes and system design", "number": "877-757-4367", "text": "Inside Sales: system design, architect and engineer support, pre-sales support, quotes and pricing, and Dealer Direct assistance.", "hours": "8 a.m. to 5 p.m. Central", "email": "InsideSales@DMP.com"},
                 {"label": "Installation and programming", "number": "888-436-7832", "text": "Technical Support: installation, programming, troubleshooting and diagnostic issues.", "hours": "7 a.m. to 7 p.m. Central", "email": "TechSupport@DMP.com"},
-                {"label": "Orders and shipping", "number": "866-266-2826", "text": "Customer Service: products and ordering, software activations, the Buy Site, shipping and order entry questions.", "hours": "8 a.m. to 6 p.m. Central", "email": "CustomerService@DMP.com"},
+                {"label": "Orders and shipping", "number": "866-266-2826", "text": "Customer Service: products and ordering, software activations, the Buy site, shipping and order entry questions.", "hours": "8 a.m. to 6 p.m. Central", "email": "CustomerService@DMP.com"},
                 {"label": "Cellular activation", "number": "877-300-8030", "text": "SecureCom Wireless: activation or billing questions. SecureComWireless.com.", "hours": "8 a.m. to 5 p.m. Central", "email": "CustomerService@SecureComWireless.com"}]}
         i = _find(p, "resources", "Fixing something")
         if i is not None:
@@ -84,7 +84,7 @@ def apply(data):
     # ---- documentation
     p = P("support/documentation.html")
     if p:
-        _hero(p, "hero-signal-1", [["900+", "Documents in the library"], ["16", "Product categories"], ["1", "Place to look"]])
+        _hero(p, "hero-signal-1", [["900+", "Documents in the library"], ["16", "Library categories"], ["1", "Place to look"]])
         _stage(p, "cards", "Which document answers which question")
     # ---- partners
     p = P("partners.html")
@@ -137,6 +137,6 @@ def apply(data):
     # ---- products hub (hero and rhythm only; the wheel and the cards stay as they are)
     p = P("services.html")
     if p:
-        _hero(p, "hero-loop-plant", [["8", "Systems, each with its own page"], ["14", "Product categories"], ["24/7", "Dealer ordering at buy.DMP.com"]])
+        _hero(p, "hero-loop-plant", [["8", "Product lines, each with its own page"], ["14", "Product categories"], ["24/7", "Dealer ordering at buy.DMP.com"]])
         _stage(p, "detail", "Order any hour")
     return data

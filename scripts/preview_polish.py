@@ -88,7 +88,7 @@ def search_html(ctx):
     root = "../" * ctx.get("depth", 0)
     return (f'<div class="pv-search" id="pv-search" data-root="{root}" hidden role="dialog" aria-modal="true" aria-label="Search the site">'
             '<div class="pv-search-box"><div class="pv-search-in"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>'
-            '<input type="search" id="pv-search-q" placeholder="Search products, part numbers, pages" aria-label="Search" autocomplete="off" spellcheck="false" aria-controls="pv-search-r">'
+            '<input type="search" id="pv-search-q" placeholder="Search products, part numbers, pages" aria-label="Search" autocomplete="off" spellcheck="false" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-controls="pv-search-r">'
             '<button type="button" class="pv-search-x" aria-label="Close search">Esc</button></div>'
             '<ul class="pv-search-r" id="pv-search-r" role="listbox" aria-label="Search results"></ul>'
             '<p class="pv-search-h" aria-live="polite">Type to search. Try XR550, UL 864 or dealer portal. Arrow keys to move, Enter to open.</p></div></div>')
@@ -121,7 +121,7 @@ POLISH_CSS = r"""
 .pv-switch .pv-sw-list a[aria-current]{background:rgba(255,255,255,.2);box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)}
 .pv-switch .lbl{display:none}
 .pv-switch-m{transition:opacity .25s}
-.pv-quiet{opacity:0!important;pointer-events:none!important}
+.pv-quiet:not(:focus-within){opacity:0!important;pointer-events:none!important}
 @media(max-width:767px){
   .pv-switch{display:none!important}
   .pv-switch-m{display:block;left:10px;right:auto;bottom:max(14px,env(safe-area-inset-bottom,0px))}
@@ -235,7 +235,7 @@ if(tab){tab.addEventListener('click',function(){var o=sw.classList.toggle('open'
 d.addEventListener('keydown',function(e){if(e.key==='Escape'&&sw.classList.contains('open')){sw.classList.remove('open');tab.setAttribute('aria-expanded','false');tab.focus()}});
 d.addEventListener('click',function(e){if(!sw.contains(e.target)){sw.classList.remove('open');tab.setAttribute('aria-expanded','false')}})}
 var swm=d.querySelector('.pv-switch-m'),qt=0;
-if(swm){addEventListener('scroll',function(){if(swm.open)return;swm.classList.add('pv-quiet');clearTimeout(qt);qt=setTimeout(function(){swm.classList.remove('pv-quiet')},900)},{passive:true})}
+if(swm){addEventListener('scroll',function(){if(swm.open||swm.contains(d.activeElement))return;swm.classList.add('pv-quiet');clearTimeout(qt);qt=setTimeout(function(){swm.classList.remove('pv-quiet')},900)},{passive:true})}
 /* carousel: arrow keys work while it is in view and nothing is being typed in */
 [].forEach.call(d.querySelectorAll('[data-mo=c3]'),function(root){
 var inView=false,st=root.querySelector('.mo-c3-stage');
@@ -254,13 +254,26 @@ function bal(){var vis=[].filter.call(g.children,function(c){return !c.hidden&&!
 var c=innerWidth>=1025?3:innerWidth>=768?2:1,n=vis.length,r=c>1?n%c:0;
 if(c===3){if(r===1)vis[n-1].classList.add('mo-lc1');if(r===2){vis[n-2].classList.add('mo-lc2a');vis[n-1].classList.add('mo-lc2b')}}else if(c===2&&r===1)vis[n-1].classList.add('mo-lcs')}
 bal();addEventListener('resize',bal);var w=g.closest('.mo-fnd');if(w)w.addEventListener('click',function(){setTimeout(bal,0);setTimeout(bal,340)})});
+/* partner marquee: a visible pause control (WCAG 2.2.2) */
+[].forEach.call(d.querySelectorAll('.pv-logos'),function(lg){var tr=lg.querySelector('.pv-logos-track');if(!tr||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var b=d.createElement('button');b.type='button';b.className='pv-lpp';b.setAttribute('aria-pressed','false');b.textContent='Pause scrolling';lg.insertAdjacentElement('afterend',b);
+b.addEventListener('click',function(){var o=lg.classList.toggle('pv-still');b.setAttribute('aria-pressed',o?'true':'false');b.textContent=o?'Resume scrolling':'Pause scrolling'})});
+/* mobile menu: aria-expanded, scroll lock, focus trap, Esc closes and restores focus */
+var mn=d.querySelector('.q-mnav'),ms=mn&&mn.querySelector('summary');
+if(mn&&ms){var sync=function(){var o=mn.open;ms.setAttribute('aria-expanded',o?'true':'false');ms.setAttribute('aria-label',o?'Close menu':'Open menu');var sb=d.getElementById('pv-search');d.documentElement.style.overflow=(o||(sb&&!sb.hidden))?'hidden':''};
+sync();mn.addEventListener('toggle',sync);
+d.addEventListener('keydown',function(e){if(!mn.open)return;
+if(e.key==='Escape'){e.preventDefault();mn.open=false;ms.focus()}
+else if(e.key==='Tab'){var f=[ms].concat([].slice.call(mn.querySelectorAll('.q-mnav-panel a[href],.q-mnav-panel button,.q-mnav-panel summary'))).filter(function(n){return n.offsetParent!==null||n===ms});var i=f.indexOf(d.activeElement);
+if(i<0){e.preventDefault();f[0].focus()}else if(e.shiftKey&&i===0){e.preventDefault();f[f.length-1].focus()}else if(!e.shiftKey&&i===f.length-1){e.preventDefault();f[0].focus()}}});
+addEventListener('resize',function(){if(mn.open&&innerWidth>1024){mn.open=false}})}
 /* search */
 var box=d.getElementById('pv-search');if(!box)return;
 var inp=box.querySelector('input'),ul=box.querySelector('.pv-search-r'),hint=box.querySelector('.pv-search-h'),root=box.getAttribute('data-root')||'',idx=null,loading=false,last=null,sel=-1,res=[];
 var q=[];function load(cb){if(idx)return cb();q.push(cb);if(loading)return;loading=true;
 fetch(root+'search-index.json').then(function(r){return r.json()}).then(function(j){idx=j;loading=false;var f=q;q=[];f.forEach(function(x){x()})}).catch(function(){loading=false;hint.textContent='The search index could not be loaded. It is generated with the build and needs the site served over http.'})}
 function open(){last=d.activeElement;box.hidden=false;d.documentElement.style.overflow='hidden';inp.value='';ul.innerHTML='';hint.textContent='Type to search. Try XR550, UL 864 or dealer portal. Arrow keys to move, Enter to open.';load(function(){});inp.focus();setTimeout(function(){inp.focus()},0)}
-function close(){box.hidden=true;d.documentElement.style.overflow='';if(last&&last.focus)last.focus()}
+function close(){inp.setAttribute('aria-expanded','false');inp.removeAttribute('aria-activedescendant');box.hidden=true;d.documentElement.style.overflow='';if(last&&last.focus)last.focus()}
 function esc(s){return s.replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 function terms(q){return q.toLowerCase().split(/[^a-z0-9\u00e9]+/).filter(function(x){return x.length>0})}
 function rx(w){return new RegExp('\\b'+w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+(w.length<=3?'\\b':''),'i')}
@@ -282,7 +295,7 @@ ul.innerHTML=res.map(function(x,i){return '<li role="presentation"><a role="opti
 hint.textContent=res.length?res.length+(res.length===1?' result':' results')+'. Arrow keys to move, Enter to open.':'No pages match "'+q+'". Try a part number such as XR550, or a word like dealer.';
 if(res.length)mark(0)}
 function mark(i){var as=ul.querySelectorAll('a');if(!as.length)return;sel=(i+as.length)%as.length;[].forEach.call(as,function(a,j){a.setAttribute('aria-selected',j===sel?'true':'false')});as[sel].scrollIntoView({block:'nearest'});inp.setAttribute('aria-activedescendant','pv-sr-'+sel)}
-inp.addEventListener('input',function(){load(show);show()});
+inp.addEventListener('input',function(){load(show);show();inp.setAttribute('aria-expanded',ul.children.length?'true':'false');if(!ul.children.length)inp.removeAttribute('aria-activedescendant')});
 box.addEventListener('keydown',function(e){
 if(e.key==='Escape'){e.preventDefault();close()}
 else if(e.key==='ArrowDown'){e.preventDefault();mark(sel+1)}
@@ -307,6 +320,28 @@ POLISH_CSS += r"""
 /* I: finder grid last row balance (classes set by the polish script) */
 @media(min-width:1025px){.mo-fnd-grid{grid-template-columns:repeat(6,minmax(0,1fr))}.mo-fnd-grid > .mo-fc{grid-column:span 2}.mo-fnd-grid > .mo-fc.mo-lc1{grid-column:3/span 2}.mo-fnd-grid > .mo-fc.mo-lc2a{grid-column:2/span 2}.mo-fnd-grid > .mo-fc.mo-lc2b{grid-column:4/span 2}}
 @media(min-width:768px) and (max-width:1024px){.mo-fnd-grid > .mo-fc.mo-lcs{grid-column:1/-1;width:calc(50% - 11px);justify-self:center}}
+.pv-logos.pv-still .pv-logos-track{animation-play-state:paused!important}
+.pv-lpp{display:block;margin:10px auto 0;min-height:44px;padding:0 18px;border:1px solid var(--border);border-radius:99px;background:transparent;color:var(--fg-muted);font:600 14px/1 inherit;font-family:inherit;cursor:pointer}.pv-lpp:hover{color:var(--fg);border-color:var(--fg)}.pv-lpp:focus-visible{outline:3px solid var(--accent-ink,#111);outline-offset:3px}
 .pv-chip-a{color:inherit;text-decoration:underline;text-decoration-color:rgba(255,255,255,.45);text-underline-offset:3px}
 .pv-chip-a:hover,.pv-chip-a:focus-visible{text-decoration-color:var(--q-gold);color:var(--q-gold);outline:0}
+"""
+
+
+POLISH_CSS += r"""
+/* K: accessibility states. Forced colors keeps a visible ring and a visible selected state; more contrast thickens it. */
+@media (forced-colors:active){
+  :focus-visible{outline:3px solid Highlight!important;outline-offset:3px!important;box-shadow:none!important}
+  .mo-chip[aria-pressed=true],.pp-chip[aria-pressed=true],.pp3-opt[aria-pressed=true],.p2-cmp[aria-pressed=true],.dw-hs[aria-pressed=true],.dw-lb[aria-expanded=true],.ex-tab[aria-selected=true],.p2-rt-pick[aria-selected=true],.pv-sw-tab[aria-expanded=true]{background:SelectedItem!important;color:SelectedItemText!important;border:2px solid SelectedItemText!important}
+  .mo-c3-dot[aria-current=true]::after{background:Highlight!important}
+  .pv-lpp,.ex-pp,.hv-pp,.jy-replay,.pv-wpp{border:2px solid ButtonText!important;background:ButtonFace!important;color:ButtonText!important}
+}
+@media (prefers-reduced-motion:reduce){
+  .pv-lh .hero3d.lf-float::after,.pv-lh .hero3d.lf-float img.fallback,.lf-ps-img,.lf-ps-ring.r2,.dw [data-z]{animation:none!important}
+  *,*::before,*::after{transition-duration:.01ms!important;transition-delay:0s!important}
+  html{scroll-behavior:auto!important}
+}
+@media (prefers-contrast:more){
+  :focus-visible{outline-width:4px!important}
+  .pv-lpp,.ex-pp,.hv-pp{border-width:2px}
+}
 """

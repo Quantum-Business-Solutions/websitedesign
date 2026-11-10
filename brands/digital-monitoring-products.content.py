@@ -38,7 +38,7 @@ SERVICES = [
      "Control panels, detectors and cellular-jam protection for intrusion alarm systems.",
      IMG + "xt75-1200.png", "Intrusion",
      "Intrusion panels that <em>grow with the site</em>.",
-     "We build intrusion around the control panel. The XT Series, XTL Series and XR Series scale from a small business to a large site, and every one reports through our own communicators.",
+     "We build intrusion around the control panel. The XT Series, XTL Series and XR Series scale from a small business to a large site, and we build the communicators that carry their signals to the monitoring center.",
      [["Hybrid by design", "The XT75 is a hybrid intrusion panel for residential or small business applications. It integrates intrusion, access control and AlarmVision on one panel."],
       ["Scales up", "The XR550, our proven flagship, supports 96 doors of access control. The XR650, which won Best of Show at ESX 2026, is coming soon."],
       ["Built against false alarms", "Cancel/Verify false alarm prevention has been a DMP feature since 2007. Video verification and AlarmVision add a second look."]],
@@ -82,9 +82,9 @@ SERVICES = [
      IMG + "xf6-installed-1200.jpg", "Fire",
      "Fire panels that <em>report the way the alarm does</em>.",
      "The XF6 fire control panel is built for single-site applications and comes with network and optional cellular communications that send all signals directly to the monitoring center.",
-     [["A 24V solution", "The XF6 is a 24V solution with powerful testing and programming features, built for single-site applications."],
+     [["A 24V fire panel", "The XF6 is a 24V fire panel with testing and programming features, built for single-site applications."],
       ["Reports the same way", "Network and optional cellular communications are on the panel, so fire signals take the path the rest of the system uses."],
-      ["Beyond one panel", "XR150FC and XR550FC fire panels, wireless smoke, heat and CO detectors, pull stations and remote annunciators sit in the same catalogue."]],
+      ["Beyond one panel", "XR150FC and XR550FC fire panels, wireless smoke, heat and CO detectors, pull stations and remote annunciators sit in the same catalog."]],
      ["XF6, XR150FC and XR550FC fire control panels", "Smoke detectors, pull stations and remote annunciators", "Wireless smoke, heat and CO detectors", "PowerCom Fire communicators, including FirstNet-ready", "Graphic remote annunciators"],
      [["Which fire control panels does DMP make?", "The XF6 fire control panel and the XR150FC and XR550FC fire panels. Our product pages list the detectors, pull stations and annunciators that go with them."],
       ["Can a fire panel report by cellular?", "The XF6 comes with network and optional cellular communications that send signals directly to the monitoring center."],
@@ -107,7 +107,7 @@ SERVICES = [
       ["One app", "Camera drivers for AlarmVision and Virtual Keypad put cameras beside the alarm in the apps dealers already use."]],
      ["VUE Plus cameras: bullet, turret, dome and fisheye", "VUE video doorbell", "V-6000, V-5000 and V-4000 series cameras", "XV gateways with AlarmVision", "VK VMS video management"],
      [["What video products does DMP make?", "The VUE Plus camera line, the VUE video doorbell, the V-6000, V-5000 and V-4000 series cameras, XV gateways with AlarmVision and the VK VMS platform."],
-      ["What is AlarmVision?", "Our video analytics. It uses analytics to trigger alarms into XR Series panels."],
+      ["What is AlarmVision?", "Our video analytics, which let cameras act as smart motion detectors and trigger alarms into XR Series panels."],
       ["What is a VMS?", "Video management software: the system that records, plays back and manages many cameras. VK VMS is ours."],
       ["Where do I see live video?", "In our mobile platforms, including Virtual Keypad, which supports camera drivers."]],
      [["Camera", "VUE Plus 8MP varifocal bullet", "From the VUE Plus line we launched in 2026.", P("video/vue-cameras/vplus-7081-bdv")],
@@ -125,15 +125,15 @@ SERVICES = [
      [["First for FirstNet", "In 2020 we introduced the first alarm panel communicator for the AT&T FirstNet network."],
       ["More than one path", "The ComSeries universal LTE and LTE/network communicators arrived in 2019. Cellular, network and Wi-Fi communicators sit in one category."],
       ["Both ends of the link", "We built the first software-only central station receiver, SCS-VR, in 2009, and still offer SCS receivers and line cards."]],
-     ["263LTE and 265LTE cellular communicators", "Cell Com, Dual Com and PowerCom universal communicators", "763 Wi-Fi network communicator", "SCS-VR virtual receiver software, SCS-1R receiver and line cards", "VAULT encrypted connectivity for cloud-based applications"],
+     ["263LTE and 265LTE cellular communicators", "CellCom, DualCom and PowerCom universal communicators", "763 Wi-Fi network communicator", "SCS-VR virtual receiver software, SCS-1R receiver and line cards", "VAULT encrypted connectivity for cloud-based applications"],
      [["What does a communicator do?", "It carries the alarm signal from the panel to the monitoring center, over cellular, network or both."],
       ["What is FirstNet?", "The AT&T network built for first responders. We made the first alarm panel communicator for it, in 2020."],
       ["What is SCS-VR?", "Our virtual receiver software. We introduced it in 2009 as the first software-only central station receiver."],
       ["What is VAULT?", "Our secure, encrypted connectivity for cloud-based security applications, introduced in October 2025."]],
      [["Cellular", "263LTE", "LTE communicator for XT and XR Series panels.", P("cell-network-communicators/xt-xr-series-communicators/263lte")],
       ["Cellular", "265LTE", "LTE communicator for the XTL Series.", P("cell-network-communicators/xtl-series-communicators/265lte")],
-      ["Universal", "Dual Com", "A universal communicator.", P("cell-network-communicators/universal-communicators/dualcom")],
-      ["Universal", "Cell Com", "Universal LTE communicator.", P("cell-network-communicators/universal-communicators/cellcom")],
+      ["Universal", "DualCom", "A universal communicator.", P("cell-network-communicators/universal-communicators/dualcom")],
+      ["Universal", "CellCom", "Universal LTE communicator.", P("cell-network-communicators/universal-communicators/cellcom")],
       ["Monitoring center", "SCS-VR virtual receiver", "Software-only central station receiver.", P("monitoring-center/monitoring-center-software/scs-vr-virtual-receiver-software")],
       ["Monitoring center", "SCS-1R receiver", "A hardware receiver for the monitoring center.", P("monitoring-center/receivers/scs-1r")]],
      SITE + "/products/cell-network-communicators", IMG + "vault-1200.jpg", "A glowing shield with a padlock"],
@@ -188,7 +188,7 @@ SERVICES = [
      ["Virtual Keypad for iOS, Android and the browser", "Mobile wallet credentials in Virtual Keypad", "Dealer Admin for programming and firmware", "Remote Link and Tech APP", "Z-Wave lights, locks and thermostats"],
      [["What is Virtual Keypad?", "Our remote control app: the system keypad on a phone. Dealers can brand it, and it has a browser version."],
       ["What is Dealer Admin?", "The dealer's tool for programming panels, including mass programming and bulk firmware updates."],
-      ["Is our software secure?", "Dealer Admin and Virtual Keypad are hosted in a Tier 4 data center, and we complete independent SOC 2 Type II examinations every year."],
+      ["Is DMP's software secure?", "Dealer Admin and Virtual Keypad are hosted in a Tier 4 data center, and we complete independent SOC 2 Type II examinations every year."],
       ["Does DMP support home automation?", "Z-Wave technology has been integrated with XTL and XT Series panels since 2012."]],
      [["Mobile", "Virtual Keypad", "The remote control app, with mobile wallet credentials added in 2024.", P("mobile-platforms/end-user-apps/virtual-keypad")],
       ["Dealer tool", "Dealer Admin", "Programming, firmware and templates for dealers.", P("mobile-platforms/dealer-apps/dealer-admin")],
@@ -242,7 +242,7 @@ INDUSTRIES = [
       ["Featured", "High-security touchscreen keypad", "Randomized digit location protects user codes, and a privacy filter restricts visibility to intended users.", P("keypads/touchscreen/7-inch-touchscreen-keypad")]],
      ["NDAA, BAA and TAA Compliance (white paper)", "NISPOM 5 313 Detailed Statement of Compliance (letter)", "Encrypted Cellular Communications for SCIF Installation (sheet)", "Network Security is Serious Business (white paper)", "SCIF Install Layout", "Isolation Transformer Kit and Expansion Module spec sheets"], "Executive Director of Government Solutions",
      [["Is DMP made in the USA?", "Our technology is designed and built in the U.S.A. with U.S. and global components, and we have a division dedicated to government customers."]]],
-    ["industrial-manufacturing", "Industrial and manufacturing", IMG + "x1-1200.jpg", "Robust systems for complex facilities.",
+    ["industrial-manufacturing", "Industrial and manufacturing", IMG + "x1-1200.jpg", "Intrusion, access, fire and video for complex facilities.",
      "With an integrated system that supports intrusion, access control, commercial fire and video, you get the full benefit of multiple security features working together.",
      ["XR Series panels communicate with X1 access control units without any additional wiring", "Manage intrusion and access control together in one unified solution", "Encrypted local and cloud communications", "AlarmVision turns cameras into smart motion detectors that trigger panel responses and alarms in real time"],
      [["Featured", "XR to X1", "XR Series panels communicate with X1 access control units without any additional wiring.", P("access-control/x1/x1")],
@@ -270,7 +270,7 @@ INDUSTRIES = [
       ["Featured", "Mobile wallet credentials", "Residents and staff use their smartphones as access credentials.", P("access-control/credentials/mobile-credential")]],
      [], None,
      [["What is an Access Only user?", "A Virtual Keypad user role that grants basic access without the ability to view events or video, change door lock status or receive push notifications, suited to amenities such as pools and fitness centers."]]],
-    ["religious-institutions", "Religious institutions", IMG + "tab-intrusion-1200.jpg", "Rock-solid reliability.",
+    ["religious-institutions", "Religious institutions", IMG + "tab-intrusion-1200.jpg", "Systems for houses of worship, tested before shipping.",
      "As a leading security manufacturer, we build products known for consistent reliability, and 100 percent of DMP products are quality tested before shipping.",
      ["XT75 integrates intrusion, access control and AlarmVision in a small footprint", "AlarmVision integrates cameras, analytics and XT75 or XR Series panels, creating smart motion detectors", "Complete, easy-to-manage systems that integrate intrusion, access control and video surveillance"],
      [["Featured", "XT75", "Seamlessly integrates intrusion, access control and AlarmVision for customers who need a robust system with a small footprint.", P("control-panels/xt-series/xt75")],
@@ -284,7 +284,7 @@ INDUSTRIES = [
       ["Featured", "XV gateways with AlarmVision", "Cameras, analytics and panels in one platform, creating smart motion detectors.", P("video/alarmvision/xv-gateways-with-alarmvision")]],
      [], None,
      [["Can several panels work together at one site?", "Yes. XR Series panel-to-panel communication lets multiple panels operate together over the same network, with simultaneous arming, fire exits and site-wide lockdowns and no additional wiring."]]],
-    ["residential", "Residential", IMG + "phone-commercial-1200.jpg", "Innovative solutions for residential customers.",
+    ["residential", "Residential", IMG + "phone-commercial-1200.jpg", "Systems for residential customers.",
      "Systems built from our components combine intrusion with fire protection, and are surprisingly easy to use. With the Virtual Keypad app, customers can control the system remotely, along with locks, lights, thermostats and more.",
      ["Home/Sleep/Away: one-touch access to three arming levels", "False Alarm Question: silence an alarm while keeping the system armed, and cancel false alarms quickly", "XTLplus residential packages: all-wireless solutions for easy, flexible installation", "XTLtouch: the enhanced all-in-one wireless burglary panel"],
      [["Featured", "XTLtouch", "The enhanced all-in-one solution: fast installation, reliable security and ease of operation.", P("control-panels/xtl-series/xtltouch")],
@@ -334,21 +334,29 @@ ASSOCIATIONS = ["Security Industry Association", "Electronic Security Associatio
 
 # [kicker, title, description, link label, url]: headlines and dates as posted on dmp.com
 NEWS = [
-    ["News, 11 Sep 2026", "DMP Launches VK VMS, Enabling 24/7 Video Management With AlarmVision", "Our video platform becomes complete, with VK VMS and the XV Plus gateways.", "Read the story", SITE + "/resources/news-updates/dmp-launches-vk-vms-enabling-24-7-video-management-with-alarmvision"],
-    ["News, 1 Jul 2026", "The Next Evolution of the VUE Portfolio Is Here", "More cameras join the VUE Plus family.", "Read the story", SITE + "/resources/news-updates/the-next-evolution-of-the-vue-portfolio-is-here"],
-    ["News, 6 May 2026", "JamAlert Achieves UL Certification", "JamAlert, our cellular jamming detection, earns a UL certification.", "Read the story", SITE + "/resources/news-updates/jamalert-achieves-ul-certification"],
-    ["News, 27 Apr 2026", "XR650 Wins Top Honors at 2026 ESX Innovation Awards", "The XR650 control panel wins at the ESX Innovation Awards.", "Read the story", SITE + "/resources/news-updates/xr650-wins-top-honors-at-2026-esx-innovation-awards"],
-    ["News, 9 Apr 2026", "DMP Launches VUE Camera Line Delivering Intelligent Video and Active Deterrence", "The VUE camera line arrives.", "Read the story", SITE + "/resources/news-updates/dmp-launches-vue-camera-line"],
-    ["News, 19 Mar 2026", "Integration with System Surveyor Streamlines Intrusion and Access Control System Design for Dealers", "A design tool integration for dealers.", "Read the story", SITE + "/resources/news-updates/dmp-launches-partnership-with-system-surveyor"],
+    ["News, 11 Sep 2026", "DMP launches VK VMS, enabling 24/7 video management with AlarmVision", "Our video platform becomes complete, with VK VMS and the XV Plus gateways.", "Read the story", SITE + "/resources/news-updates/dmp-launches-vk-vms-enabling-24-7-video-management-with-alarmvision"],
+    ["News, 1 Jul 2026", "The next evolution of the VUE portfolio is here", "More cameras join the VUE Plus family.", "Read the story", SITE + "/resources/news-updates/the-next-evolution-of-the-vue-portfolio-is-here"],
+    ["News, 6 May 2026", "JamAlert achieves UL certification", "JamAlert, our cellular jamming detection, earns a UL certification.", "Read the story", SITE + "/resources/news-updates/jamalert-achieves-ul-certification"],
+    ["News, 27 Apr 2026", "XR650 wins top honors at 2026 ESX Innovation Awards", "The XR650 control panel wins at the ESX Innovation Awards.", "Read the story", SITE + "/resources/news-updates/xr650-wins-top-honors-at-2026-esx-innovation-awards"],
+    ["News, 9 Apr 2026", "DMP launches VUE camera line delivering intelligent video and active deterrence", "The VUE camera line arrives.", "Read the story", SITE + "/resources/news-updates/dmp-launches-vue-camera-line"],
+    ["News, 19 Mar 2026", "Integration with System Surveyor streamlines intrusion and access control system design for dealers", "A design tool integration for dealers.", "Read the story", SITE + "/resources/news-updates/dmp-launches-partnership-with-system-surveyor"],
     ["Case study, 30 Oct 2026", "Customer Success Story: A Small Sensor. A Big Save.", "A customer story from our resource library.", "Read the story", SITE + "/resources/case-studies/customer-success-story-oct-2026"],
-    ["News, 29 Oct 2025", "DMP Introduces VAULT: Secure, Encrypted Connectivity for Cloud-Based Security Applications", "Encrypted connectivity for cloud applications.", "Read the story", SITE + "/resources/news-updates/dmp-introduces-vault"],
+    ["News, 29 Oct 2025", "DMP introduces VAULT: secure, encrypted connectivity for cloud-based security applications", "Encrypted connectivity for cloud applications.", "Read the story", SITE + "/resources/news-updates/dmp-introduces-vault"],
 ]
 
 # ------------------------------------------------------------------ helpers
 def desc(text, n=155):
     if len(text) <= n:
         return text
+    import re
+    cut = text[:n + 1]
+    ends = [m.end() for m in re.finditer(r"(?:(?<=[a-z0-9\)])|(?<=[A-Z]{2}))[.!?](?=\s)", cut) if m.end() >= 70]
+    if ends:
+        return cut[:ends[-1]].strip()
     cut = text[:n]
+    j = max(cut.rfind(", "), cut.rfind("; "), cut.rfind(": "))
+    if j >= 70:
+        return cut[:j].rstrip(",;: ") + "."
     return cut[:cut.rfind(" ")].rstrip(",;:") + "."
 
 
@@ -369,7 +377,7 @@ COMMON_FAQ = {
     "person": ["How do I reach a person?", "Inside Sales is 877-757-4367, Technical Support 888-436-7832 and Customer Service 866-266-2826. The contact page lists hours and email addresses."],
     "docs": ["Where do I find datasheets and installation guides?", "In our technical documentation library, which holds spec sheets, installation and programming guides, quick start guides and technical updates."],
     "order": ["How do dealers place an order?", "At buy.DMP.com, which takes orders 24 hours a day, or through DMP Customer Service."],
-    "soc": ["Is our software independently examined?", "Yes. We complete independent SOC 2 Type II examinations annually, by a licensed CPA firm, for Dealer Admin and Virtual Keypad."],
+    "soc": ["Is DMP's software independently examined?", "Yes. We complete independent SOC 2 Type II examinations annually, by a licensed CPA firm, for Dealer Admin and Virtual Keypad."],
 }
 
 
@@ -403,7 +411,7 @@ SYS_LIFT = {
     "fire": {"float": "p-xf6-1200.png", "bg": "firetruck-1200.jpg", "video": "hero-loop-plant", "big": "showcase3d",
              "head": "Fire signals that take <em>the same path as the alarm</em>.", "outcomes": ["Signals go straight to the monitoring center", "Reports the way the alarm does", "More than one panel to choose"],
              "stats": [["24V", "XF6 fire control panel"], ["3", "Fire panels: XF6, XR150FC, XR550FC"], ["2", "Reporting paths on the XF6: network and optional cellular"]],
-             "big_head": "The fire catalogue, panel to pull station.", "big_intro": "Panels, detectors, pull stations and annunciators. Drag, swipe or use the arrow keys.",
+             "big_head": "The fire catalog, panel to pull station.", "big_intro": "Panels, detectors, pull stations and annunciators. Drag, swipe or use the arrow keys.",
              "with": ["intrusion", "communicators", "wireless"]},
     "video": {"float": "p-xv-gateways-with-alarmvision-1200.png", "bg": "vue-plus-1200.jpg", "video": "hero-loop-campus", "big": "showcase3d",
               "head": None, "outcomes": ["Cameras that raise the alarm", "One platform, from camera to VMS", "Video next to the alarm in one app"],
@@ -464,7 +472,7 @@ def service_page(slug, navlabel, short, one, image, eyebrow, heading, subhead, b
         {"type": "hero-layered", "id": "hero-layered", "eyebrow": eyebrow, "heading": cfg["head"] or heading, "subhead": subhead,
          "primary": {"label": f"Get specs and CAD for {short}" if slug not in ("mobile-automation", "communicators") else f"Get specs for {short}", "href": "for-specifiers.html"},
          "secondary": {"label": "Talk to Inside Sales", "href": "contact.html"},
-         "image": IMG + cfg["bg"], "image_w": 1200, "image_h": 800, "float": IMG + cfg["float"], "float_alt": f"DMP {short}",
+         "image": IMG + cfg["bg"], "image_w": 1200, "image_h": 800, "float": IMG + cfg["float"], "float_alt": (f"DMP {short}" if short != "video" else "DMP video cameras and gateways"),
          "stats": cfg["stats"], "card_a": card_a, "card_b": card_b},
         {"type": "cards", "cls": "lf-num", "eyebrow": "What sets it apart", "heading": f"What you get with DMP {short}", "items": benefits},
     ]
@@ -480,7 +488,7 @@ def service_page(slug, navlabel, short, one, image, eyebrow, heading, subhead, b
         {"type": "detail", "alt": True, "dark": cfg["big"] == "network", "eyebrow": "In this category", "heading": f"What we build for {short}", "body": one, "bullets": included, "image": dimg, "image_alt": dalt, "flip": True},
         {"type": "works", "alt": cfg["big"] != "network", "heading": "Works with", "intro": "Each system runs on the same platform.", "link_label": "See the system",
          "items": [[SERVICE_INDEX[w][1], SERVICE_INDEX[w][3], f"services/{w}.html", IMG + SYS_LIFT[w]["float"]] for w in cfg["with"]]},
-        {"type": "faq", "alt": cfg["big"] == "network", "heading": f"Questions about {navlabel.lower()}", "items": list(faq) + cf("who", "person", "docs")},
+        {"type": "faq", "alt": cfg["big"] == "network", "heading": f"Questions about {navlabel.lower().replace('virtual keypad', 'Virtual Keypad')}", "items": list(faq) + cf("who", "person", "docs")},
         {**LEADFORM, "alt": False, "dark": True},
     ]
     return {"file": f"services/{slug}.html", "title": f"{navlabel} | {CLIENT}, Springfield, Missouri",
@@ -507,7 +515,7 @@ def industry_page(slug, name, image, headline, why, bullets, featured, library, 
          "card_b": {"eyebrow": "Specifying a building?", "title": "Talk to a person", "body": "Inside Sales supports system design and quotes.",
                     "links": [["Contact DMP", "contact.html"], ["Find a system", "find-a-system.html"]]}},
         {"type": "spotlight", "id": "needs", "eyebrow": "What this building needs", "heading": IND_NEED.get(slug, f"Why DMP for {name.lower()}"), "body": why,
-         "needs": bullets, "image": image, "image_alt": f"{name}: DMP", "tag": name, "cta": {"label": "Talk to DMP about " + name.lower(), "href": "contact.html"}},
+         "needs": bullets, "image": image, "image_alt": f"DMP security products for {name.lower()} customers", "tag": name, "cta": {"label": "Talk to DMP about " + name.lower(), "href": "contact.html"}},
         {"type": "showcase3d", "id": "lineup", "stage": True, "eyebrow": "The hardware", "heading": f"The hardware behind {name.lower()} systems",
          "intro": "Drag, swipe or use the arrow keys. Click a product to open it.", "items": lineup},
     ]
@@ -612,11 +620,11 @@ def build():
              "bullets": ["XT30, XT50 and XT75", "XR150 and XR550, with the XR650 coming soon", "TMSentry for teller machines"], "image": IMG + "tab-intrusion-1200.jpg", "image_alt": "The DMP XT75 control board", "href": "services/intrusion.html", "link_label": "Intrusion systems"},
             {"label": "Access control", "title": "Access control beyond the fob", "body": "Digital Key adds a credential to an Apple or Google device's mobile wallet, so the smartphone works as a secure, contactless credential.",
              "bullets": ["Digital Key and mobile credentials", "X1 Series cloud access control", "Entré Lite, Business and Enterprise"], "image": IMG + "tab-access-1200.jpg", "image_alt": "A phone held to a door reader", "href": "services/access-control.html", "link_label": "Access control"},
-            {"label": "Fire", "title": "A 24V fire solution", "body": "The XF6 fire control panel is built for single-site applications and comes with network and optional cellular communications that send all signals directly to the monitoring center.",
+            {"label": "Fire", "title": "A 24V fire control panel", "body": "The XF6 fire control panel is built for single-site applications and comes with network and optional cellular communications that send all signals directly to the monitoring center.",
              "bullets": ["XF6, XR150FC and XR550FC", "Smoke detectors and pull stations", "PowerCom Fire communicators"], "image": IMG + "tab-fire-1200.jpg", "image_alt": "The DMP XF6 fire control panel", "href": "services/fire.html", "link_label": "Fire systems"},
             {"label": "Video", "title": "Video that raises the alarm", "body": "DMP video became a complete platform with VK VMS and the XV Plus gateways. AlarmVision uses analytics to trigger alarms into XR Series panels.",
              "bullets": ["VUE Plus camera line", "VK VMS video management", "XV gateways with AlarmVision"], "image": IMG + "tab-video-1200.jpg", "image_alt": "A VUE Plus camera", "href": "services/video.html", "link_label": "Video"},
-            {"label": "Mobile", "title": "Virtual Keypad and Dealer Admin", "body": "Virtual Keypad lets dealers brand a full-featured remote control. Dealer Admin handles mass panel programming and bulk firmware updates. Both are examined annually for SOC 2 Type II.",
+            {"label": "The app", "title": "Virtual Keypad and Dealer Admin", "body": "Virtual Keypad lets dealers brand a full-featured remote control. Dealer Admin handles mass panel programming and bulk firmware updates. Both are examined annually for SOC 2 Type II.",
              "bullets": ["Virtual Keypad for iOS, Android and the browser", "Dealer Admin programming templates", "Mobile wallet credentials"], "image": IMG + "tab-mobile-1200.jpg", "image_alt": "Virtual Keypad on a laptop, tablet and phone", "href": "services/mobile-automation.html", "link_label": "Virtual Keypad and software"}]},
         {"type": "showcase3d", "id": "flagships", "dark": True, "eyebrow": "The range", "heading": "Meet the products behind the platform.", "intro": "Drag, swipe or use the arrow keys. Click a product to open it.", "items": _aud.SHOWCASE},
         {"type": "journey", "id": "how", "alt": True, "eyebrow": "How a DMP system works", "heading": "Follow one alarm from the sensor to the phone",
@@ -629,7 +637,7 @@ def build():
              "receive": ["XT30, XT50 and XT75", "XR150 and XR550 (XR650 coming soon)", "XF6 fire control panel", "TMSentry for teller machines"]},
             {"label": "Report", "when": "Communicators", "summary": "Cellular, network and Wi-Fi paths.", "title": "The signal goes out on more than one path",
              "body": "We offer LTE, Wi-Fi and universal communicators, including the first alarm panel communicator for the AT&T FirstNet network (2020). The XR550 supports up to eight communication paths and moves to a backup path instantly. JamAlert detects cellular jamming, and VAULT encrypts the link to our cloud.",
-             "receive": ["263LTE and 265LTE", "Dual Com and Cell Com", "763 Wi-Fi", "JamAlert and VAULT"]},
+             "receive": ["263LTE and 265LTE", "DualCom and CellCom", "763 Wi-Fi", "JamAlert and VAULT"]},
             {"label": "Respond", "when": "Monitoring center", "summary": "Receivers, software and line cards.", "title": "The monitoring center receives it",
              "body": "At the central station a DMP receiver takes the signal. We introduced SCS-VR in 2009 as the first software-only central station receiver, and still offer SCS receivers and line cards.",
              "receive": ["SCS-VR virtual receiver software", "SCS-1R receiver", "SCS line cards"]},
@@ -643,7 +651,7 @@ def build():
              "bullets": ["Spec sheets on every product page", "Inside Sales: 877-757-4367", "System Surveyor integration", "Industry brochures and white papers"], "image": IMG + "tab-spec-1200.jpg", "image_alt": "A tablet showing a floor plan in System Surveyor", "href": "resources.html", "link_label": "News and resources"},
             {"label": "Building owners", "title": "Start with a dealer", "body": "We sell through authorized dealers and distributors. Pick the kind of building you run, see how our systems fit it, then ask a dealer to specify the system.",
              "bullets": ["Eleven industries, each with a page", "Intrusion, access control, fire and video from one manufacturer", "Control from a phone with Virtual Keypad"], "image": IMG + "tab-owner-1200.jpg", "image_alt": "A person checking a phone as they leave a building", "href": "industries.html", "link_label": "Browse industries"}]},
-        {"type": "portal", "id": "portal", "eyebrow": "For dealers", "heading": "One sign-in for everything a dealer needs.", "intro": "A preview of the dealer home we would build: documents, ordering, Marketing Central, training, support and quotes behind one login. How it connects to the Buy site and Marketing Central is a proposed design to confirm with DMP IT.",
+        {"type": "portal", "id": "portal", "eyebrow": "For dealers", "heading": "One sign-in for everything a dealer needs.", "intro": "A preview of a dealer home: documents, ordering, Marketing Central, training, support and quotes behind one login. Proposed design, subject to DMP IT review.",
          "tiles": [["Documentation library", "Spec sheets, guides and firmware notes.", "docs"], ["Order on the Buy site", "Place orders 24 hours a day.", "cart"], ["Marketing Central", "Brand-approved sales and marketing material.", "megaphone"], ["DMP University", "Training for your team.", "training"], ["Technical support", "Reach a person, or search the FAQs.", "support"], ["Get a quote", "Start a system design request.", "quote"]],
          "signin_label": "Sign in", "cta_label": "See the dealer portal preview", "cta_href": "dealer-portal.html"},
         {"type": "detail", "id": "made-here", "alt": True, "eyebrow": "Made in Springfield", "heading": "Making it in the U.S. keeps us close to our dealers.",
@@ -660,16 +668,16 @@ def build():
     ]})
     # ------------------------------------------------------------------ products hub
     pages.append({"file": "services.html", "title": "Products | DMP",
-                  "description": "Our catalogue by system: intrusion, access control, fire, video, communicators, wireless, panels and keypads, Virtual Keypad and software.",
+                  "description": "Our catalog by system: intrusion, access control, fire, video, communicators, wireless, panels and keypads, Virtual Keypad and software.",
                   "sections": [
         {"type": "hero", "layout": "centered", "eyebrow": "Products", "heading": "Every part of the system. <em>One manufacturer.</em>",
          "subhead": "Start from the system you are specifying. See what we make for it and every product behind it.", "primary": CTA,
          "image": IMG + "banner-allin-1200.jpg", "image_alt": "A DMP circuit board with the shield 'All in on DMP: access control, communicators, fire, intrusion, video'", "image_w": 1200, "image_h": 495},
         {"type": "wheel", "id": "wheel", "eyebrow": "One range", "heading": "Pick a system. See every part we make for it.", "intro": "Hover a segment.",
          "items": WHEEL_ITEMS, "hub": "DMP", "hub_sub": "Since 1975", "ring": "SECURITY, FIRE, ACCESS AND VIDEO", "panel_eyebrow": "Hover a segment", "link_label": "See the product line"},
-        {"type": "resources", "heading": "All eight systems", "intro": "Every system, with its products, the questions buyers ask and the documents behind them.",
+        {"type": "resources", "heading": "All eight product lines", "intro": "Every line, with its products, the questions buyers ask and the documents behind them.",
          "items": [[s[5], s[1], s[3], "See the line", f"services/{s[0]}.html"] for s in SERVICES]},
-        {"type": "detail", "alt": True, "eyebrow": "Buying", "heading": "Order any hour at buy.DMP.com", "body": "Dealers order at buy.DMP.com 24 hours a day. Customer Service handles products and ordering, software activations, the Buy Site, shipping and order entry questions.",
+        {"type": "detail", "alt": True, "eyebrow": "Buying", "heading": "Order any hour at buy.DMP.com", "body": "Dealers order at buy.DMP.com 24 hours a day. Customer Service handles products and ordering, software activations, the Buy site, shipping and order entry questions.",
          "bullets": ["Customer Service 866-266-2826, 8 a.m. to 6 p.m. Central", "Inside Sales for system design and quotes, 877-757-4367", "International products and distributors on our global page"],
          "image": IMG + "system-surveyor-1200.jpg", "image_alt": "A hand holding a tablet showing a floor plan in System Surveyor", "flip": True},
         {"type": "faq", "heading": "Before you order", "items": cf("what", "who", "intl", "docs", "order")},
@@ -684,7 +692,7 @@ def build():
          "subhead": "See what we offer for each, the products we feature and the documents behind them.", "primary": CTA, "secondary": {"label": "Find a system", "href": "find-a-system.html"},
          "image": IMG + "hero-loop-hq-poster.jpg", "image_w": 1600, "image_h": 900,
          "hv": {"src": IMG + "hero-loop-hq.mp4", "webm": IMG + "hero-loop-hq.webm", "poster": IMG + "hero-loop-hq-poster.jpg"},
-         "stats": [["11", "Industry pages"], ["4", "Systems in every one"], ["8", "System families with their own pages"]],
+         "stats": [["11", "Industry pages"], ["4", "Systems in every one"], ["8", "Product lines with their own pages"]],
          "card_a": {"eyebrow": "Not sure where you fit?", "title": "Start with the building", "body": "Choose the nearest match below. Every page lists the products dealers reach for first.",
                     "items": ["Commercial, retail and financial", "Education, healthcare and government", "Residential, storage and multi-tenant"], "label": "Browse the buildings", "href": "#buildings"}},
         {"type": "tiles", "id": "buildings", "variant": "mosaic", "eyebrow": "Start with the building you protect", "heading": "Choose the nearest match.",
@@ -748,7 +756,7 @@ def build():
         {"type": "callboard", "stage": True, "eyebrow": "Reach a person", "heading": "Call the right team", "items": [
             {"label": "Inside Sales", "number": "877-757-4367", "text": "System design, architect and engineer support, pre-sales support, quotes and pricing, and Dealer Direct assistance.", "hours": "8 a.m. to 5 p.m. Central", "email": "InsideSales@DMP.com"},
             {"label": "Technical Support", "number": "888-436-7832", "text": "Installation, programming, troubleshooting and diagnostics.", "hours": "7 a.m. to 7 p.m. Central", "email": "TechSupport@DMP.com"},
-            {"label": "Customer Service", "number": "866-266-2826", "text": "Products and ordering, software activations, the Buy Site, shipping and order entry.", "hours": "8 a.m. to 6 p.m. Central", "email": "CustomerService@DMP.com"}]},
+            {"label": "Customer Service", "number": "866-266-2826", "text": "Products and ordering, software activations, the Buy site, shipping and order entry.", "hours": "8 a.m. to 6 p.m. Central", "email": "CustomerService@DMP.com"}]},
         {"type": "faq", "id": "faq", "heading": "Where DMP works", "items": cf("where", "usa", "intl", "who", "person")},
         LEADFORM]})
     pages.append({"file": "resources.html", "title": "News and resources | DMP",
@@ -801,7 +809,7 @@ def build():
     pitch = {
         "qbs_contact": {"name": "Shawn", "email": "shawn@thequantumleap.business"},
         "prepared_for": "Digital Monitoring Products",
-        "heard_intro": "There is no design brief from DMP yet. This version is written from dmp.com itself, read on 9 November 2026: its history, certifications, support lines, product catalogue, news and photography, in DMP's own words wherever a claim is DMP's to make. Tell us where it is wrong; your words outrank ours.",
+        "heard_intro": "There is no design brief from DMP yet. This version is written from dmp.com itself, read on 9 November 2026: its history, certifications, support lines, product catalog, news and photography, in DMP's own words wherever a claim is DMP's to make. Tell us where it is wrong; your words outrank ours.",
         "heard": ["DMP sells through authorized dealers and distributors, so the site's first job is dealers and specifiers: find the product, get the spec sheet, place the order, reach a person.",
                   "DMP is a current Quantum client with a HubSpot CRM, marketing, sales and service launch under way, so the site has to feed that: forms that create records and one place for dealers to start.",
                   "DMP's own brand is yellow, black and beige. The previews use that palette, DMP's real logo and DMP's own photography, so what you see is closer to the finished site than a mood board."],
@@ -818,16 +826,16 @@ def build():
         "choose_reasons": [["Showcase: image-led", "Layered photography and a sales-forward feel. It makes the most of DMP's product and facility photos."],
                            ["Clean: plain and fast", "High contrast, product names first. Built for dealers and specifiers scanning for a panel or module."],
                            ["Press: editorial", "Serif headings and a magazine feel, so a 50-year-old manufacturer reads like the established name it is."]],
-        "pick_reasons": [["The audience is dealers and specifiers", "They scan a catalogue to find a panel or a module. Clean puts the product names and categories first and stays out of the way."],
+        "pick_reasons": [["The audience is dealers and specifiers", "They scan a catalog to find a panel or a module. Clean puts the product names and categories first and stays out of the way."],
                          ["DMP's own look is high contrast", "Yellow and black on white is already DMP's brand. Clean lets it read as confident rather than loud."],
-                         ["The catalogue is large", "dmp.com lists hundreds of product pages and a deep library. A plain, fast layout carries that better than a showy one."]],
+                         ["The catalog is large", "dmp.com lists hundreds of product pages and a deep library. A plain, fast layout carries that better than a showy one."]],
         "pick_change": "Confirm the yellow, replace the theme typefaces with DMP's own (Gotham is licensed) and swap in any new photography DMP has.",
         "alternatives": [["Quantum Showcase", "The image-led choice: layered and sales-forward, and the one that makes the most of DMP's product photography."],
                          ["Quantum Press", "The wildcard: serif and editorial, so a 50-year-old manufacturer reads like the established name it is."]],
         "plan": [["Days 1 to 10", "Serve the site at one canonical host with a single HTTPS 301, name the crawlers in robots.txt, publish llms.txt, and add sameAs links to the Organization markup, which keeps the headquarters address as it is."],
-                 ["Days 10 to 30", "Confirm the items below, decide how the product catalogue is built (see the first item), and sign off copy for each of the eight system lines."],
+                 ["Days 10 to 30", "Confirm the items below, decide how the product catalog is built (see the first item), and sign off copy for each of the eight system lines."],
                  ["Days 30 to 45", "Build the eight system pages with question headings, FAQ markup, product lists and an enquiry form on each."],
-                 ["Days 45 to 60", "Build the about and proof pages, and add Product markup to the catalogue pages."],
+                 ["Days 45 to 60", "Build the about and proof pages, and add Product markup to the catalog pages."],
                  ["Days 60 to 90", "Publish the first three answer posts against access control, fire alarm and video surveillance questions, and the news and resources hub."],
                  ["Day 90", "Re-run the same national keyword set, the same AI questions and the same page audit against the baseline."]],
         "search": {"heading": "Where you stand in search today, and what changes", "intro": "Measured before we touched anything.", "as_of": "9 November 2026",
@@ -838,13 +846,13 @@ def build():
                              "No llms.txt and no sameAs links."],
                    "after": ["Eight system pages written in the words buyers search, each with question headings and FAQ markup.",
                              "Category pages for panels, access control, fire and communicators, written as the answer to the dealer's or specifier's search.",
-                             "Product and ItemList markup on the catalogue pages, sameAs links and an llms.txt.",
+                             "Product and ItemList markup on the catalog pages, sameAs links and an llms.txt.",
                              "One HTTPS 301 at the front door and a robots.txt that names the crawlers."],
                    "keep": [["http://dmp.com/", "https://www.dmp.com/", "One hop instead of two, and none through plain HTTP."],
                             ["/products/... part-number pages", "unchanged", "Every product page keeps its address, so the pages that earn today's traffic keep it."]],
                    "note": "Rankings or traffic. Those depend on the market and on what DMP publishes after launch. We promise the inputs, and we measure the result against the 9 November baseline at 30, 60 and 90 days."},
         "confirm": [
-            "How the product catalogue is built. dmp.com has hundreds of product pages (the sitemap lists panels, keypads, modules, readers, cameras and accessories by part number). HubSpot's page limits depend on the tier, so we need DMP's tier before deciding between building every product page in HubSpot and keeping the catalogue on its current system behind the new front door.",
+            "How the product catalog is built. dmp.com has hundreds of product pages (the sitemap lists panels, keypads, modules, readers, cameras and accessories by part number). HubSpot's page limits depend on the tier, so we need DMP's tier before deciding between building every product page in HubSpot and keeping the catalog on its current system behind the new front door.",
             "The promise line. The home page says 'Security systems, built in Springfield', which is DMP's founding story, not a confirmed tagline.",
             "Typefaces. DMP uses Gotham. The previews use the Quantum theme typefaces; Gotham needs a licence for the real site.",
             "Photography and logos. Images come from dmp.com, as does the logo. They are used here for a private preview. Confirm rights, and supply anything newer.",

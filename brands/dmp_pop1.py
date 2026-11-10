@@ -96,7 +96,7 @@ def _panel_selector():
     cards = {
         "xt50": _card("xt50", f"{_spec('xt50', 'Total zones')} total zones, {_spec('xt50', 'Wireless zones')} wireless zones and {_spec('xt50', 'Doors of access')} doors of access, with an onboard 1100D wireless receiver.", facts("xt50"), "View the XT50"),
         "xr150": _card("xr150", f"{_spec('xr150', 'Total zones')} total zones, {_spec('xr150', 'Wireless zones')} wireless zones and {_spec('xr150', 'Doors of access')} doors of access, with {_spec('xr150', 'User codes')} user codes.", facts("xr150"), "View the XR150"),
-        "xr550": _card("xr550", f"{_spec('xr550', 'Total zones')} total zones, {_spec('xr550', 'Wireless zones')} wireless zones and {_spec('xr550', 'Doors of access').lower()} of access control.", facts("xr550"), "View the XR550"),
+        "xr550": _card("xr550", f"{_spec('xr550', 'Total zones')} total zones, {_spec('xr550', 'Wireless zones')} wireless zones, and access control for up to 96 doors, 32 out of the box.", facts("xr550"), "View the XR550"),
     }
     rules = [{"when": [[0], [0], [0, 1]], "res": ["xt50"]}, {"when": [[0, 1], [0, 1], [0, 1]], "res": ["xr150"]}, {"when": [None, None, None], "res": ["xr550"]}]
     return {"type": "panelpick", "id": "fit", "alt": True, "eyebrow": "Find your fit", "heading": "Which panel fits?",
@@ -343,7 +343,7 @@ def _product(pg, r):
     if wi is not None:
         w = secs[wi]
         light = pm._stage_kind(pm.PRODUCTS[slug]["image"]) in ("light", "dark")
-        secs[wi] = {"type": "connect", "id": "works-with", "dark": cmp_ is not None, "eyebrow": "Works with", "heading": f"Where the {r['short']} connects",
+        secs[wi] = {"type": "connect", "id": "works-with", "dark": cmp_ is not None, "eyebrow": "Works with", "heading": f"Where {'' if r['short'] in ('Entré Lite', 'Entré Enterprise', 'CellCom', 'DualCom', 'TMSentry', 'JamAlert', 'Virtual Keypad', 'Dealer Admin', 'Remote Link') else 'the '}{r['short']} connects",
                     "intro": w.get("intro", ""), "link_label": "Open", "hub": {"name": r["short"], "image": r["image"], "alt": r["alt"], "light": light}, "items": w["items"]}
     bar = {"type": "buybar", "target": "pstage", "name": r["name"], "kicker": r["kicker"], "image": r["image"],
            "spec": {"label": "Spec sheet", "href": "support/documentation.html"}, "ask": {"label": "Ask DMP", "href": "contact.html"}}

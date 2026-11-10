@@ -4,7 +4,7 @@ Hero clip, three proof numbers (each from DMP's own wording on dmp.com/products/
 IND_CLIP = {"commercial": "hero-loop-hq", "financial-institutions": "hero-signal-2", "retail": "hero-loop-campus", "government": "hero-signal-1",
             "industrial-manufacturing": "hero-loop-plant", "education": "hero-loop-campus", "healthcare-wellness": "hero-signal-1",
             "multi-tenant": "hero-loop-hq", "religious-institutions": "hero-signal-2", "storage-units": "hero-loop-plant", "residential": "hero-signal-2"}
-IND_STATS = {"commercial": [["8", "Communication paths on the XR550"], ["3", "Paths on board the XT Series: network, cellular, dial-up"], ["5", "Systems from one manufacturer"]],
+IND_STATS = {"commercial": [["8", "Communication paths on the XR550"], ["3", "Paths on board the XT Series: network, cellular, dial-up"], ["5", "Product lines from one manufacturer"]],
              "financial-institutions": [["256-bit", "AES available for alarm communications"], ["VAULT", "Panels never touch the public internet"], ["No servers", "To buy or maintain with Security Command"]],
              "retail": [["1 screen", "For enterprise-wide system and user management"], ["1", "Database for access and intrusion credentials"], ["1100", "Series wireless, with a compatibility guide"]],
              "government": [["256-bit", "AES built into the XR550E"], ["UL 634", "Level 2 sensors for SCIFs, sold through DMP"], ["USA", "Designed and built in the U.S.A."]],
