@@ -391,6 +391,8 @@ DW1_CSS = r"""
 .q-btn:active,.q-btn-ghost:active,.pp-btn:active,.hs-button:active,.q-booknow:active,.q-mnav-cta:active,.pv-sbtn:active,.mo-chip:active,.pp-chip:active{transform:translateY(1px) scale(.97)!important;transition-duration:.08s;filter:brightness(.95)}
 a.q-card:active,.pv-post:active,.pv-res a:active,.lf-spec-c:active{transform:translateY(-1px) scale(.992)!important;transition-duration:.08s}
 @media(prefers-reduced-motion:reduce){.q-btn,.pp-btn,.hs-button,.q-booknow{transition:none}.q-btn:hover,.hs-button:hover,.q-booknow:hover{transform:none}.q-btn:active,.pp-btn:active,.hs-button:active{transform:none!important}}
+/* no-JS fallback (lead): list every stop with its details stacked, instead of overlapping panels */
+.dw:not(.dw-on) .dw-det{grid-column:auto;grid-row:auto;position:static;opacity:1;visibility:visible;pointer-events:auto;margin-top:8px}
 """
 
 # ============================================================================================ JS

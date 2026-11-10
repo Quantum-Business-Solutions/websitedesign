@@ -796,7 +796,10 @@ def crumbs(page, ctx, site=""):
 
 
 def footer(content, ctx):
-    return preview_dw2.footer(content, ctx)
+    # the bold DMP closing footer is client-specific; every other client keeps the generic footer
+    if content.get("slug") == "digital-monitoring-products":
+        return preview_dw2.footer(content, ctx)
+    return _footer_legacy(content, ctx)
 
 
 def _footer_legacy(content, ctx):
