@@ -3991,6 +3991,498 @@
     },
     {
      "type": "pn-none",
+     "id": "wall",
+     "variants": {
+      "showcase": {
+       "type": "tkwall",
+       "id": "wall",
+       "eyebrow": "The product wall",
+       "heading": "50 products, 5 system colours.",
+       "intro": "Every product page on this site, ringed in the colour of the system it belongs to. Filter by system, then select a product to open its page.",
+       "systems": [
+        [
+         "intrusion",
+         "Intrusion",
+         "#ffd23d"
+        ],
+        [
+         "access",
+         "Access control",
+         "#2fd47a"
+        ],
+        [
+         "fire",
+         "Fire",
+         "#ff5a4d"
+        ],
+        [
+         "video",
+         "Video",
+         "#4aa3ff"
+        ],
+        [
+         "mobile",
+         "Mobile and cloud",
+         "#9b87ff"
+        ]
+       ],
+       "items": [
+        {
+         "name": "CellCom Universal Alarm Communicator",
+         "href": "products/cellcom.html",
+         "img": "assets/p-cellcom-1200-cut.png",
+         "w": 1200,
+         "h": 799,
+         "sys": "intrusion",
+         "soon": false
+        },
+        {
+         "name": "DualCom Universal Alarm Communicator",
+         "href": "products/dualcom.html",
+         "img": "assets/p-dualcom-1200-cut.png",
+         "w": 700,
+         "h": 500,
+         "sys": "intrusion",
+         "soon": false
+        },
+        {
+         "name": "XR & XT Series LTE Cellular Communicator",
+         "href": "products/263lte.html",
+         "img": "assets/p-263lte-1200-cut.png",
+         "w": 1200,
+         "h": 995,
+         "sys": "intrusion",
+         "soon": false
+        },
+        {
+         "name": "FirstNet Ready LTE Cellular Communicator",
+         "href": "products/263lte-firstnet.html",
+         "img": "assets/p-263lte-firstnet-1200-cut.png",
+         "w": 1200,
+         "h": 800,
+         "sys": "intrusion",
+         "soon": false
+        },
+        {
+         "name": "XTL Series LTE Cellular Communicator",
+         "href": "products/265lte.html",
+         "img": "assets/p-265lte-1200-cut.png",
+         "w": 1200,
+         "h": 800,
+         "sys": "intrusion",
+         "soon": false
+        },
+        {
+         "name": "SCS-VR Virtual Receiver Software",
+         "href": "products/scs-vr-virtual-receiver-software.html",
+         "img": "assets/p-scs-vr-virtual-receiver-software-1200-cut.png",
+         "w": 1200,
+         "h": 800,
+         "sys": "intrusion",
+         "soon": false
+        },
+        {
+         "name": "SCS-1R Network Enabled Receiver",
+         "href": "products/scs-1r.html",
+         "img": "assets/p-scs-1r-1200-cut.png",
+         "w": 1200,
+         "h": 800,
+         "sys": "intrusion",
+         "soon": false
+        },
+        {
+         "name": "XT75 Control Panel",
+         "href": "products/xt75.html",
+         "img": "assets/xt75-1200-cut.png",
+         "w": 1200,
+         "h": 800,
+         "sys": "intrusion",
+         "soon": false
+        },
+        {
+         "name": "XT50 Control Panel",
+         "href": "products/xt50.html",
+         "img": "assets/p-xt50-1200-cut.png",
+         "w": 1200,
+         "h": 699,
+         "sys": "intrusion",
+         "soon": false
+        },
+        {
+         "name": "XTLplus Control Panel",
+         "href": "products/xtlplus.html",
+         "img": "assets/p-xtlplus-1200-cut.png",
+         "w": 1200,
+         "h": 829,
+         "sys": "intrusion",
+         "soon": false
+        },
+        {
+         "name": "XTLtouch All-In-One",
+         "href": "products/xtltouch.html",
+         "img": "assets/p-xtltouch-1200-cut.png",
+         "w": 1200,
+         "h": 829,
+         "sys": "intrusion",
+         "soon": false
+        },
+        {
+         "name": "XR150 Control Panel",
+         "href": "products/xr150.html",
+         "img": "assets/p-xr150-1200-cut.png",
+         "w": 1200,
+         "h": 858,
+         "sys": "intrusion",
+         "soon": false
+        },
+        {
+         "name": "XR550 Control Panel",
+         "href": "products/xr550.html",
+         "img": "assets/p-xr550-1200-cut.png",
+         "w": 1200,
+         "h": 818,
+         "sys": "intrusion",
+         "soon": false
+        },
+        {
+         "name": "XR650 Control Panel",
+         "href": "products/xr650.html",
+         "img": "assets/p-xr650-1200-cut.png",
+         "w": 1200,
+         "h": 818,
+         "sys": "intrusion",
+         "soon": true
+        },
+        {
+         "name": "TMSentry",
+         "href": "products/tmsentry.html",
+         "img": "assets/p-tmsentry-1200-cut.png",
+         "w": 1200,
+         "h": 764,
+         "sys": "intrusion",
+         "soon": false
+        },
+        {
+         "name": "7-Inch Touchscreen Keypad (8800 Series)",
+         "href": "products/7-inch-touchscreen-keypad.html",
+         "img": "assets/keypad-722-1200-cut.png",
+         "w": 1200,
+         "h": 800,
+         "sys": "intrusion",
+         "soon": false
+        },
+        {
+         "name": "5-Inch Touchscreen Keypad",
+         "href": "products/graphic-touchscreen.html",
+         "img": "assets/p-graphic-touchscreen-1200-cut.png",
+         "w": 1200,
+         "h": 800,
+         "sys": "intrusion",
+         "soon": false
+        },
+        {
+         "name": "Wireless Touchscreen Keypad",
+         "href": "products/9800-series.html",
+         "img": "assets/p-9800-series-1200-cut.png",
+         "w": 1200,
+         "h": 800,
+         "sys": "intrusion",
+         "soon": false
+        },
+        {
+         "name": "Thinline Series Keypad",
+         "href": "products/7000-series.html",
+         "img": "assets/p-7000-series-1200-cut.png",
+         "w": 1200,
+         "h": 933,
+         "sys": "intrusion",
+         "soon": false
+        },
+        {
+         "name": "Aqualite Series Keypad",
+         "href": "products/aqualite-series.html",
+         "img": "assets/p-aqualite-series-1200-cut.png",
+         "w": 1200,
+         "h": 949,
+         "sys": "intrusion",
+         "soon": false
+        },
+        {
+         "name": "Icon Series Keypad",
+         "href": "products/icon-series.html",
+         "img": "assets/p-icon-series-1200-cut.png",
+         "w": 1200,
+         "h": 885,
+         "sys": "intrusion",
+         "soon": false
+        },
+        {
+         "name": "JamAlert",
+         "href": "products/jamalert.html",
+         "img": "assets/p-jamalert-1200-cut.png",
+         "w": 1200,
+         "h": 819,
+         "sys": "intrusion",
+         "soon": false
+        },
+        {
+         "name": "1100XH Wireless Receiver",
+         "href": "products/1100xh.html",
+         "img": "assets/p-1100xh-1200-cut.png",
+         "w": 1200,
+         "h": 823,
+         "sys": "intrusion",
+         "soon": false
+        },
+        {
+         "name": "1101 Universal Transmitter",
+         "href": "products/1101.html",
+         "img": "assets/p-1101-1200-cut.png",
+         "w": 1200,
+         "h": 933,
+         "sys": "intrusion",
+         "soon": false
+        },
+        {
+         "name": "1128 Glassbreak Detector",
+         "href": "products/1128.html",
+         "img": "assets/p-1128-1200-cut.png",
+         "w": 1200,
+         "h": 912,
+         "sys": "intrusion",
+         "soon": false
+        },
+        {
+         "name": "1142 Two-Button Wireless Panic",
+         "href": "products/1142.html",
+         "img": "assets/p-1142-1200-cut.png",
+         "w": 1200,
+         "h": 799,
+         "sys": "intrusion",
+         "soon": false
+        },
+        {
+         "name": "1164 Smoke Detector with Synchronized Sounder",
+         "href": "products/1164.html",
+         "img": "assets/p-1164-1200-cut.png",
+         "w": 1200,
+         "h": 800,
+         "sys": "intrusion",
+         "soon": false
+        },
+        {
+         "name": "1100T Wireless Translator",
+         "href": "products/1100t.html",
+         "img": "assets/p-1100t-1200-cut.png",
+         "w": 1200,
+         "h": 609,
+         "sys": "intrusion",
+         "soon": false
+        },
+        {
+         "name": "Digital Key Credential",
+         "href": "products/digital-key-credential.html",
+         "img": "assets/p-digital-key-credential-1200-cut.png",
+         "w": 1200,
+         "h": 927,
+         "sys": "access",
+         "soon": false
+        },
+        {
+         "name": "Mobile Bluetooth Credential",
+         "href": "products/mobile-credential.html",
+         "img": "assets/p-mobile-credential-1200-cut.png",
+         "w": 1200,
+         "h": 933,
+         "sys": "access",
+         "soon": false
+        },
+        {
+         "name": "SR3 Bluetooth Reader",
+         "href": "products/dmp-bluetooth-reader-and-mobile-credential.html",
+         "img": "assets/p-dmp-bluetooth-reader-and-mobile-credential-1200-cut.png",
+         "w": 1200,
+         "h": 1060,
+         "sys": "access",
+         "soon": false
+        },
+        {
+         "name": "734N Network Access Control Module",
+         "href": "products/734n.html",
+         "img": "assets/p-734n-1200-cut.png",
+         "w": 1200,
+         "h": 800,
+         "sys": "access",
+         "soon": false
+        },
+        {
+         "name": "X1 Single-Door Access Controller",
+         "href": "products/x1.html",
+         "img": "assets/p-x1-1200-cut.png",
+         "w": 1200,
+         "h": 800,
+         "sys": "access",
+         "soon": false
+        },
+        {
+         "name": "Entré Lite",
+         "href": "products/entre-lite.html",
+         "img": "assets/p-entre-lite-1200-cut.png",
+         "w": 1200,
+         "h": 1201,
+         "sys": "access",
+         "soon": false
+        },
+        {
+         "name": "Entré Enterprise",
+         "href": "products/entre-enterprise.html",
+         "img": "assets/p-entre-enterprise-1200-cut.png",
+         "w": 1200,
+         "h": 1201,
+         "sys": "access",
+         "soon": false
+        },
+        {
+         "name": "XF6 Series Fire Control Panels",
+         "href": "products/xf6.html",
+         "img": "assets/p-xf6-1200-cut.png",
+         "w": 1200,
+         "h": 945,
+         "sys": "fire",
+         "soon": false
+        },
+        {
+         "name": "XR150FC Control Panel",
+         "href": "products/xr150fc-2.html",
+         "img": "assets/p-xr150fc-2-1200-cut.png",
+         "w": 1200,
+         "h": 754,
+         "sys": "fire",
+         "soon": false
+        },
+        {
+         "name": "XR550FC Control Panel",
+         "href": "products/xr550fc-2.html",
+         "img": "assets/p-xr550fc-2-1200-cut.png",
+         "w": 1200,
+         "h": 901,
+         "sys": "fire",
+         "soon": false
+        },
+        {
+         "name": "850 Pull Station",
+         "href": "products/850.html",
+         "img": "assets/p-850-1200-cut.png",
+         "w": 1200,
+         "h": 889,
+         "sys": "fire",
+         "soon": false
+        },
+        {
+         "name": "630F Remote Annunciator",
+         "href": "products/630f.html",
+         "img": "assets/p-630f-1200-cut.png",
+         "w": 1200,
+         "h": 514,
+         "sys": "fire",
+         "soon": false
+        },
+        {
+         "name": "2W-BLX System Sensor Smoke Detector",
+         "href": "products/2w-blx.html",
+         "img": "assets/p-2w-blx-1200-cut.png",
+         "w": 1000,
+         "h": 667,
+         "sys": "fire",
+         "soon": false
+        },
+        {
+         "name": "XV Gateways with AlarmVision",
+         "href": "products/xv-gateways-with-alarmvision.html",
+         "img": "assets/p-xv-gateways-with-alarmvision-1200-cut.png",
+         "w": 1200,
+         "h": 851,
+         "sys": "video",
+         "soon": false
+        },
+        {
+         "name": "V-6022WC Cube Camera",
+         "href": "products/v-6022wc.html",
+         "img": "assets/p-v-6022wc-1200-cut.png",
+         "w": 1200,
+         "h": 863,
+         "sys": "video",
+         "soon": false
+        },
+        {
+         "name": "VUE Plus 6MP Fisheye Camera (VPLUS-7061-FE)",
+         "href": "products/vplus-7061-fe.html",
+         "img": "assets/p-vplus-7061-fe-1200-cut.png",
+         "w": 1200,
+         "h": 630,
+         "sys": "video",
+         "soon": false
+        },
+        {
+         "name": "VUE Plus 12MP Fisheye Camera (VPLUS-7121-FE)",
+         "href": "products/vplus-7121-fe.html",
+         "img": "assets/p-vplus-7121-fe-1200-cut.png",
+         "w": 1200,
+         "h": 630,
+         "sys": "video",
+         "soon": false
+        },
+        {
+         "name": "VUE Plus 8MP Varifocal Bullet Camera (VPLUS-7081-BDV)",
+         "href": "products/vplus-7081-bdv.html",
+         "img": "assets/p-vplus-7081-bdv-1200-cut.png",
+         "w": 1200,
+         "h": 630,
+         "sys": "video",
+         "soon": false
+        },
+        {
+         "name": "VUE Video Doorbell",
+         "href": "products/vue-video-doorbell.html",
+         "img": "assets/p-vue-video-doorbell-1200-cut.png",
+         "w": 1200,
+         "h": 818,
+         "sys": "video",
+         "soon": false
+        },
+        {
+         "name": "Virtual Keypad",
+         "href": "products/virtual-keypad.html",
+         "img": "assets/p-virtual-keypad-1200-cut.png",
+         "w": 1200,
+         "h": 800,
+         "sys": "mobile",
+         "soon": false
+        },
+        {
+         "name": "Dealer Admin",
+         "href": "products/dealer-admin.html",
+         "img": "assets/p-dealer-admin-1200-cut.png",
+         "w": 1200,
+         "h": 654,
+         "sys": "mobile",
+         "soon": false
+        },
+        {
+         "name": "Remote Link",
+         "href": "products/remote-link.html",
+         "img": "assets/p-remote-link-1200-cut.png",
+         "w": 1200,
+         "h": 699,
+         "sys": "mobile",
+         "soon": false
+        }
+       ]
+      }
+     }
+    },
+    {
+     "type": "pn-none",
      "id": "building",
      "variants": {
       "showcase": {

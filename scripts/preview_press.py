@@ -214,7 +214,7 @@ html[data-dir="press"] .ex-pp:hover,html[data-dir="press"] .jy-replay:hover{back
 html[data-dir="press"] .ex-pp:focus-visible,html[data-dir="press"] .jy-node:focus-visible,html[data-dir="press"] .jy-replay:focus-visible{outline:3px solid var(--pr-ink);outline-offset:3px;box-shadow:none}
 html[data-dir="press"] .ex-strip{margin-top:0;border:0;border-top:1px solid var(--pr-ink);background:#fffdf7}
 html[data-dir="press"] .ex-strip-l{letter-spacing:.2em;color:var(--pr-ink)}
-html[data-dir="press"] .ex-pill{background:none;border:0;border-bottom:1px solid var(--pr-ink);padding:0 2px;font:italic 500 18px/1 var(--q-serif);color:var(--pr-ink)}
+html[data-dir="press"] .ex-pill{background:none;border:0;border-bottom:1px solid var(--pr-ink);padding:0 2px;min-width:44px;justify-content:center;font:italic 500 18px/1 var(--q-serif);color:var(--pr-ink)}
 html[data-dir="press"] .ex-pill:hover{transform:none;border-bottom-width:2px}
 html[data-dir="press"] .ex-pill .ex-ic{display:none}
 /* signal journey: a five step diagram on paper */
