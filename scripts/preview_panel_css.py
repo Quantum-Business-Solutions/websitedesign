@@ -39,6 +39,8 @@ html[data-sys] .pv-lh .hero3d .disc{background:radial-gradient(ellipse at center
 html[data-sys] .pv-lh .fcard:not(.b) .k{color:var(--sys)}
 html[data-sys] .pv-lh .fcard.b .k{color:var(--sys-ink)}
 .mo-tag{font-size:13px}
+html[data-dir="press"] .bignum{opacity:1;color:#958b6f}
+html[data-dir="clean"] .bignum{opacity:1;color:#8d939c}
 .tl-span b,.tl-span span{font-size:13px!important}
 html[data-sys] .pv-lh .fcard li::before{background:var(--sys);box-shadow:inset 0 0 0 4px color-mix(in srgb,var(--sys) 35%,#000)}
 html[data-sys] .lf-ps{border-top:3px solid var(--sys)}
@@ -101,6 +103,9 @@ html[data-dir="showcase"] main > .q-section{border-top:1px solid var(--pn-line)}
 html[data-dir="showcase"] .q-section .q-h2{position:relative}
 /* header and chrome */
 html[data-dir="showcase"] .q-header{background:#0a0a0b;border-bottom:1px solid var(--pn-line)}
+html[data-dir="showcase"] .q-header.dw-fix::before,html[data-dir="showcase"] .q-header.dw-cond::before{background:#0a0a0b;-webkit-backdrop-filter:none;backdrop-filter:none;border-bottom-color:var(--pn-line)}
+html[data-dir="showcase"].pn-zbar :is(.pp-subnav,.pp-bb){top:calc(var(--pp-hdr,81px) + var(--pn-zbh) + 2px)}
+html[data-dir="showcase"].pn-zbar:has(.pp-subnav){scroll-padding-top:calc(var(--pp-hdr,81px) + 72px + var(--pn-zbh))}
 html[data-dir="showcase"] .q-header-logo img{height:38px}
 html[data-dir="showcase"] .q-header-in{height:68px}
 html[data-dir="showcase"] .q-header .q-nav > a,html[data-dir="showcase"] .q-header .q-nav-item > a{font-family:var(--pn-mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase;font-weight:600}
@@ -346,12 +351,12 @@ html:not(.pn-js) .pn-kp-demo{display:none}
 .pn-z1{background:linear-gradient(180deg,#0a0a0b,#0e0e0f)}
 .pn-z1-grid{display:grid;grid-template-columns:minmax(0,58fr) minmax(0,42fr);column-gap:clamp(24px,4vw,72px);align-items:start}
 .pn-z1-num{grid-column:1;grid-row:1}
-.pn-num{position:relative;font-family:var(--pn-disp);font-weight:800;font-size:clamp(190px,36vw,620px);line-height:.74;letter-spacing:-.02em;margin-left:-.03em!important;font-variant-numeric:tabular-nums;white-space:nowrap}
+.pn-num{position:relative;font-family:var(--pn-disp);font-weight:800;font-size:clamp(190px,36vw,620px);line-height:.74;letter-spacing:-.02em;margin-left:-.17em!important;font-variant-numeric:tabular-nums;white-space:nowrap}
 .pn-num-o,.pn-num-f{padding-right:.04em}
 .pn-num-o{color:#0b0b0c;-webkit-text-stroke:3px var(--pn-y);paint-order:stroke fill}
-.pn-num-f{position:absolute;left:0;top:0;color:var(--pn-y);clip-path:inset(0 0 0 0)}
-.pn-js .pn-num-f{clip-path:inset(100% 0 0 0);transition:clip-path 1.6s cubic-bezier(.6,0,.1,1) .15s}
-.pn-js .pn-z1.seen .pn-num-f{clip-path:inset(0 0 0 0)}
+.pn-num-f{position:absolute;left:0;top:0;color:var(--pn-y);clip-path:inset(-30% -10% -30% -10%)}
+.pn-js .pn-num-f{clip-path:inset(130% -10% -30% -10%);transition:clip-path 1.6s cubic-bezier(.6,0,.1,1) .15s}
+.pn-js .pn-z1.seen .pn-num-f{clip-path:inset(-30% -10% -30% -10%)}
 .pn-num-unit{display:flex;align-items:baseline;gap:.6em;margin-top:clamp(18px,2.4vw,34px)!important;font:700 clamp(13px,1.3vw,18px)/1 var(--pn-mono);letter-spacing:.22em;text-transform:uppercase}
 .pn-num-unit b{font:800 2.6em/1 var(--pn-disp);letter-spacing:0;color:var(--pn-y);margin-right:.15em}
 .pn-num-plus{color:var(--pn-y)}
@@ -437,8 +442,10 @@ html:not(.pn-js) .pn-kp-demo{display:none}
 .pn-path ol{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
 .pn-path li{position:relative;padding:0 24px 0 0}
 .pn-path-line{position:absolute;left:0;right:0;top:calc(39px + 150px + 14px);height:1px;background:repeating-linear-gradient(90deg,color-mix(in srgb,var(--zc) 70%,transparent) 0 6px,transparent 6px 12px)}
-.pn-path-line i{position:absolute;left:0;top:-4px;width:9px;height:9px;border-radius:50%;background:#fff;box-shadow:0 0 0 4px color-mix(in srgb,var(--zc) 35%,transparent),0 0 22px 6px var(--zc);animation:pn-travel 4.4s cubic-bezier(.5,0,.5,1) infinite}
-@keyframes pn-travel{0%{left:0;opacity:0}6%{opacity:1}92%{opacity:1}100%{left:calc(100% - 9px);opacity:0}}
+.pn-path-line i{position:absolute;left:0;top:-4px;width:100%;height:9px;animation:pn-travel 4.4s cubic-bezier(.5,0,.5,1) infinite}
+.pn-path-line i::before{content:"";position:absolute;left:0;top:0;width:9px;height:9px;border-radius:50%;background:#fff;box-shadow:0 0 0 4px color-mix(in srgb,var(--zc) 35%,transparent),0 0 22px 6px var(--zc)}
+@keyframes pn-travel{0%{transform:translateX(0);opacity:0}6%{opacity:1}92%{opacity:1}100%{transform:translateX(calc(100% - 9px));opacity:0}}
+.pn-js .pn-zone:not(.pn-live) *,.pn-js .pn-hero:not(.pn-live) *{animation-play-state:paused!important}
 .pn-pn{position:absolute;left:0;top:0;font:700 13px/1 var(--pn-mono);letter-spacing:.12em;color:var(--zc)}
 .pn-pimg{height:150px;display:flex;align-items:center;justify-content:flex-start;padding-top:22px}
 .pn-pimg img{max-height:118px!important;width:auto!important;max-width:86%!important;filter:drop-shadow(0 0 22px color-mix(in srgb,var(--zc) 40%,transparent)) drop-shadow(0 14px 16px rgba(0,0,0,.6))}
@@ -530,7 +537,7 @@ html:not(.pn-js) .pn-kp-demo{display:none}
   .pn-path ol{grid-template-columns:1fr}
   .pn-path li{display:grid;grid-template-columns:104px 1fr;column-gap:18px;align-items:center;padding:16px 0 16px 28px;border-top:1px solid var(--pn-line)}
   .pn-path-line{left:5px;right:auto;top:44px;bottom:8px;width:1px;height:auto;background:repeating-linear-gradient(0deg,color-mix(in srgb,var(--zc) 70%,transparent) 0 6px,transparent 6px 12px)}
-  .pn-path-line i{left:-4px;top:0;animation-name:pn-travelv}
+  .pn-path-line i{left:-4px;top:0;width:9px;height:100%;animation-name:pn-travelv}
   .pn-pn{left:28px;top:14px}
   .pn-pimg{grid-row:1/3;height:96px;padding-top:14px}
   .pn-pimg img{max-height:74px!important;max-width:100%!important}
@@ -539,7 +546,7 @@ html:not(.pn-js) .pn-kp-demo{display:none}
   .pn-path li h3::before{left:calc(-28px - 104px - 18px);top:8px}
   .pn-path li p{margin-top:4px;align-self:start}
 }
-@keyframes pn-travelv{0%{top:0;opacity:0}6%{opacity:1}92%{opacity:1}100%{top:calc(100% - 9px);opacity:0}}
+@keyframes pn-travelv{0%{transform:translateY(0);opacity:0}6%{opacity:1}92%{opacity:1}100%{transform:translateY(calc(100% - 9px));opacity:0}}
 @media (max-width:599px){
   .pn-zone{font-size:16px}
   .pn-kp{width:calc(100% + 12px);margin-left:-6px}
@@ -567,9 +574,9 @@ html:not(.pn-js) .pn-kp-demo{display:none}
 @media (prefers-reduced-motion:reduce){
   .pn-hero *,.pn-zone *,.pn-zb *,.pn-beat *{animation:none!important;transition-duration:.01ms!important;transition-delay:0s!important}
   .pn-js .pn-rv{opacity:1;transform:none}
-  .pn-js .pn-num-f{clip-path:inset(0 0 0 0)}
+  .pn-js .pn-num-f{clip-path:inset(-30% -10% -30% -10%)}
   .pn-beat-live{-webkit-mask:none!important;mask:none!important;opacity:.4!important}
-  .pn-path-line i{left:50%;opacity:1}
+  .pn-path-line i{transform:translateX(50%);opacity:1}
   .pn-ring{opacity:.35;transform:translate(-50%,-50%) scale(2.4)}
   .pn-ring.r2{transform:translate(-50%,-50%) scale(3.6);opacity:.22}.pn-ring.r3{display:none}
   .pn-sweep{display:none}
@@ -818,9 +825,11 @@ if('IntersectionObserver' in window){
     var on=0;zones.forEach(function(s){if(vis[s.getAttribute('data-zone')])on=+s.getAttribute('data-zone')});setActive(on);
   },{rootMargin:'-42% 0px -56% 0px'});
   zones.forEach(function(s){io.observe(s)});
+  var liveIO=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('pn-live',e.isIntersecting)})},{rootMargin:'80px 0px'});
+  $$('.pn-zone,.pn-hero').forEach(function(el){liveIO.observe(el)});
   var seen=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;e.target.classList.add('in','seen');seen.unobserve(e.target)})},{rootMargin:'0px 0px -10% 0px',threshold:0.1});
   $$('.pn-rv,.pn-z1').forEach(function(el){seen.observe(el)});
-}else{$$('.pn-rv,.pn-z1').forEach(function(el){el.classList.add('in','seen')})}
+}else{$$('.pn-rv,.pn-z1').forEach(function(el){el.classList.add('in','seen')});$$('.pn-zone,.pn-hero').forEach(function(el){el.classList.add('pn-live')})}
 
 /* plant feed: load and play only in view, never with reduced motion, pause when the tab is hidden */
 var holder=$('[data-pn-video]'),vid=null;
