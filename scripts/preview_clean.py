@@ -100,7 +100,7 @@ def _finder(s, ctx):
     rows = ""
     for p in s["panels"]:
         soon = f'<span class="clm-soon">{E(p["soon"])}</span>' if p.get("soon") else ""
-        rows += (f'<li class="cl-rv{" is-soon" if p.get("soon") else ""}" data-z="{p["zones"]}" data-d="{p.get("doors_n", 0)}" data-name="{E(p["name"])}"{" data-soon=1" if p.get("soon") else ""}>'
+        rows += (f'<li class="cl-rv{" is-soon" if p.get("soon") else ""}{" is-wide" if p["zones"] / mx > 0.8 else ""}" data-z="{p["zones"]}" data-d="{p.get("doors_n", 0)}" data-name="{E(p["name"])}"{" data-soon=1" if p.get("soon") else ""}>'
                  f'<a class="clf-n" href="{E(L(p["href"]))}"><b>{E(p["name"])}</b><span>{E(p["kind"])}</span>{soon}</a>'
                  f'<div class="clf-track"><i class="clf-bar" style="--w:{p["zones"] / mx * 100:.2f}%"></i><span class="clf-v" style="--w:{p["zones"] / mx * 100:.2f}%">{E(p["zones_label"])}</span></div>'
                  f'<dl><div><dt>Doors</dt><dd>{E(p["doors"])}</dd></div><div><dt>User codes</dt><dd>{E(p["users"])}</dd></div></dl></li>')
