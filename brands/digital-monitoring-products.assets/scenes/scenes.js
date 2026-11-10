@@ -22,7 +22,7 @@
   function setLive(s, v) {
     if (s.live === v) return;
     s.live = v; s.el.classList.toggle('scn-live', v);
-    if (!v) { s.el.style.removeProperty('--k'); s.k = -1; }
+    if (!v) { s.el.style.removeProperty('--k'); s.k = -1; s.col.style.pointerEvents = ''; }
   }
   function arrange() {
     measure();
