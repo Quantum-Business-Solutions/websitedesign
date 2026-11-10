@@ -3,7 +3,7 @@
 preview.py puts POLISH_CSS after the page grammar and before each direction's own system, so a direction still owns its
 geometry and its character (Showcase floats, Clean rules, Press sets in serif) but none of them can fall below this
 floor. FINISH_CSS goes last, after the direction system, for the few rules a direction must not undo (motion restraint,
-focus rings, the type floor). The bar this implements is written down in process/directions-standard.md, section 9,
+focus rings, the type floor). The bar this implements is written down in process/directions-standard.md, rule 8,
 and measured by scripts/directions_qa.py.
 
 Nothing here invents content. A module with no data is still left out by its renderer.
@@ -95,6 +95,7 @@ a.q-card:hover,.pv-res a:hover{translate:0 -3px;border-color:color-mix(in srgb,v
 .pv-check label:has(input:checked){border-color:var(--accent-ink);background:color-mix(in srgb,var(--q-gold) 9%,var(--card))}
 .pv-tst figure{padding:32px;box-shadow:var(--rest)}
 .pv-tst blockquote{font-size:19px;line-height:1.55}
+.pv-tst:not(.pv-tst-feature) > figure:last-child:nth-child(odd){grid-column:1/-1}
 .pv-tst-feature{gap:var(--s-8)}
 .pv-tst-feature figure.lead{box-shadow:none}
 .pv-tst-feature figure.lead blockquote{font-size:clamp(22px,2.1vw,28px);line-height:1.4}
@@ -210,6 +211,11 @@ FINISH_CSS = r"""
 
 .q-eyebrow + .q-h2,.q-eyebrow + .q-h1{margin-top:16px!important}
 .pv-lh .q-eyebrow + .q-h1{margin-top:20px!important}
+
+/* ===== chrome states found by opening them: the menu wraps instead of clipping, and its button keeps the button colour ===== */
+.q-header .pv-mega a,.q-header .pv-mega .feat,.q-header .pv-mega .feat *{white-space:normal!important}
+.pv-mega .col,.pv-mega .feat{min-width:0;overflow-wrap:anywhere}
+.q-mnav-panel > a.q-mnav-cta{color:var(--cta-fg)!important;font-weight:600}
 
 /* ===== motion: one thing moves at a time, and nothing loops for decoration ===== */
 html.pv-js .pv-rv{transform:translateY(12px)}

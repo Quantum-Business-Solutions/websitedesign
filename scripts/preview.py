@@ -894,7 +894,10 @@ def r_leadform(s, ctx):
     fid = s.get("id", "lead")
     spec = s.get("fields") or [["Name", "text", "name"], ["Work email", "email", "email"], ["Phone", "tel", "tel"], ["Company", "text", "organization"]]
     fields = "".join(f'<label for="{E(fid)}-{i}">{E(l)}</label><input id="{E(fid)}-{i}" type="{E(t)}" autocomplete="{E(a)}">' for i, (l, t, a) in enumerate(spec))
-    return f'''{sec_open(s)} <div class="q-container pv-contact" style="align-items:center"><div><h2 class="q-h2">{E(s["heading"])}</h2><div class="q-lead" style="margin-top:16px">{E(s.get("body"))}</div><p style="margin-top:20px;font-size:15px;color:var(--fg-muted)">Or call <a href="{E(ctx["L"](brand["phone_href"]))}" style="color:var(--fg);font-weight:600;min-height:44px;display:inline-flex;align-items:center">{E(brand["phone"])}</a></p></div>
+    # thin state: no published phone, no "Or call" line with an empty link
+    orcall = (f'<p style="margin-top:20px;font-size:15px;color:var(--fg-muted)">Or call <a href="{E(ctx["L"](brand["phone_href"]))}" style="color:var(--fg);font-weight:600;min-height:44px;display:inline-flex;align-items:center">{E(brand["phone"])}</a></p>'
+              if brand.get("phone") and brand.get("phone_href") else "")
+    return f'''{sec_open(s)} <div class="q-container pv-contact" style="align-items:center"><div><h2 class="q-h2">{E(s["heading"])}</h2><div class="q-lead" style="margin-top:16px">{E(s.get("body"))}</div>{orcall}</div>
 <form class="q-form" onsubmit="return false">{fields}<input type="submit" class="hs-button" value="{E(s.get("submit", "Send"))}"><p class="pv-form-note">{E(s.get("note", ""))}</p></form></div></section>'''
 
 

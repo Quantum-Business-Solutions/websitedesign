@@ -68,7 +68,7 @@ async function fullShot(page, file) {
   return h;
 }
 
-// The beauty bar's measurable half (process/directions-standard.md, section 9), on one page at one width.
+// The beauty bar's measurable half (process/directions-standard.md, rule 8), on one page at one width.
 async function measure(page) {
   return page.evaluate(() => {
     const vis = e => { const r = e.getBoundingClientRect(), c = getComputedStyle(e); return r.width > 1 && r.height > 1 && c.visibility !== 'hidden' && c.display !== 'none'; };   // opacity is not tested: a scroll reveal starts at 0
@@ -106,7 +106,8 @@ async function measure(page) {
 try {
   for (const d of opt.dirs || ['showcase', 'clean', 'press']) {
     const url = pathToFileURL(path.join(out, d, 'index.html')).href;
-    const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
+    // motion reduced: every scroll reveal is in, so the type, contrast and axe checks see the whole page, not the first screen
+    const page = await browser.newPage({ viewport: { width: 1280, height: 900 }, reducedMotion: 'reduce' });
     try {
       await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
       await page.waitForTimeout(1200);

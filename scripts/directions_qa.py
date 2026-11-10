@@ -120,7 +120,7 @@ table{{width:100%;border-collapse:collapse;background:#fff;border:1px solid #d9d
 tr.fail td:first-child{{color:#a11919}}tr.warn td:first-child{{color:#7a5a00}}tr.pass td:first-child{{color:#1d6b33}}
 @media(max-width:900px){{.grid{{grid-template-columns:1fr}}}}</style></head><body><main>
 <h1>{e(client)}: quality check and pictures</h1>
-<p>The home page of each direction, whole, at 1280 and 390 wide, taken by the gate (scripts/directions_qa.py). Look before the link goes to the client: a FAIL stops it, a WARN is read by a person, and the beauty bar in process/directions-standard.md section 9 says what good looks like.</p>
+<p>The home page of each direction, whole, at 1280 and 390 wide, taken by the gate (scripts/directions_qa.py). Look before the link goes to the client: a FAIL stops it, a WARN is read by a person, and the beauty bar in process/directions-standard.md rule 8 says what good looks like.</p>
 <div class="sum"><span class="f">{n["FAIL"]} fail</span><span class="w">{n["WARN"]} warn</span><span class="p">{n["PASS"]} pass</span><a href="contact-sheet.jpg">One-image contact sheet</a></div>
 <div class="grid">{"".join(cols)}</div>
 <table><tbody>{trs}</tbody></table>
