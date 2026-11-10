@@ -39,8 +39,8 @@ html[data-sys] .pv-lh .hero3d .disc{background:radial-gradient(ellipse at center
 html[data-sys] .pv-lh .fcard:not(.b) .k{color:var(--sys)}
 html[data-sys] .pv-lh .fcard.b .k{color:var(--sys-ink)}
 .mo-tag{font-size:13px}
-html[data-dir="press"] .bignum{opacity:1;color:#958b6f}
-html[data-dir="clean"] .bignum{opacity:1;color:#8d939c}
+html[data-dir="press"] .bignum{opacity:1!important;color:#857b5f!important}
+html[data-dir="clean"] .bignum{opacity:1!important;color:#7f8690!important}
 .tl-span b,.tl-span span{font-size:13px!important}
 html[data-sys] .pv-lh .fcard li::before{background:var(--sys);box-shadow:inset 0 0 0 4px color-mix(in srgb,var(--sys) 35%,#000)}
 html[data-sys] .lf-ps{border-top:3px solid var(--sys)}
