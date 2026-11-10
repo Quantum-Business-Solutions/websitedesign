@@ -3243,7 +3243,6 @@
         ]
        ],
        "soon": false,
-       "light": true,
        "cta": "View the X1"
       },
       "entre-lite": {
@@ -3263,7 +3262,6 @@
         ]
        ],
        "soon": false,
-       "light": true,
        "cta": "View Entré Lite"
       },
       "entre-enterprise": {
@@ -3287,7 +3285,6 @@
         ]
        ],
        "soon": false,
-       "light": true,
        "cta": "View Entré Enterprise"
       },
       "mobile-credential": {
@@ -4032,7 +4029,6 @@
         ]
        ],
        "soon": false,
-       "light": true,
        "cta": "View the XR550FC"
       }
      },
@@ -4702,7 +4698,6 @@
         ]
        ],
        "soon": false,
-       "light": true,
        "cta": "View the fisheye"
       },
       "vplus-7081-bdv": {
@@ -4726,7 +4721,6 @@
         ]
        ],
        "soon": false,
-       "light": true,
        "cta": "View the bullet"
       },
       "v-6022wc": {
@@ -5886,7 +5880,6 @@
        "why": "A universal wireless transmitter that gives two independent zones from one device.",
        "facts": [],
        "soon": false,
-       "light": true,
        "cta": "Open the page"
       },
       "1100t": {
@@ -11080,7 +11073,7 @@
      "image": "assets/p-digital-key-credential-1200-cut.png",
      "image_alt": "The DMP Digital Key Credential",
      "image_w": 1200,
-     "image_h": 927,
+     "image_h": 800,
      "kind": "float",
      "chips": [],
      "tag": ""
@@ -11416,7 +11409,7 @@
      "image": "assets/p-mobile-credential-1200-cut.png",
      "image_alt": "The DMP Mobile Bluetooth Credential",
      "image_w": 1200,
-     "image_h": 933,
+     "image_h": 800,
      "kind": "float",
      "chips": [
       [
@@ -11759,7 +11752,7 @@
      "image": "assets/p-dmp-bluetooth-reader-and-mobile-credential-1200-cut.png",
      "image_alt": "The DMP SR3 Bluetooth Reader",
      "image_w": 1200,
-     "image_h": 1060,
+     "image_h": 800,
      "kind": "float",
      "chips": [
       [
@@ -12350,7 +12343,7 @@
      "image_alt": "The DMP X1 Single-Door Access Controller",
      "image_w": 1200,
      "image_h": 800,
-     "kind": "light",
+     "kind": "float",
      "chips": [
       [
        "Reader inputs",
@@ -12440,7 +12433,7 @@
       "name": "X1",
       "image": "assets/p-x1-1200-cut.png",
       "alt": "The DMP X1 Single-Door Access Controller",
-      "light": true
+      "light": false
      },
      "items": [
       [
@@ -12654,8 +12647,8 @@
      "image": "assets/p-entre-lite-1200-cut.png",
      "image_alt": "The DMP Entré Lite",
      "image_w": 1200,
-     "image_h": 1201,
-     "kind": "light",
+     "image_h": 800,
+     "kind": "float",
      "chips": [],
      "tag": ""
     },
@@ -12684,7 +12677,7 @@
       "name": "Entré Lite",
       "image": "assets/p-entre-lite-1200-cut.png",
       "alt": "The DMP Entré Lite",
-      "light": true
+      "light": false
      },
      "items": [
       [
@@ -12890,8 +12883,8 @@
      "image": "assets/p-entre-enterprise-1200-cut.png",
      "image_alt": "The DMP Entré Enterprise",
      "image_w": 1200,
-     "image_h": 1201,
-     "kind": "light",
+     "image_h": 800,
+     "kind": "float",
      "chips": [
       [
        "Doors included",
@@ -12985,7 +12978,7 @@
       "name": "Entré Enterprise",
       "image": "assets/p-entre-enterprise-1200-cut.png",
       "alt": "The DMP Entré Enterprise",
-      "light": true
+      "light": false
      },
      "items": [
       [
@@ -13193,7 +13186,7 @@
      "image": "assets/p-cellcom-1200-cut.png",
      "image_alt": "The DMP CellCom Universal Alarm Communicator",
      "image_w": 1200,
-     "image_h": 799,
+     "image_h": 800,
      "kind": "float",
      "chips": [
       [
@@ -13503,8 +13496,8 @@
      ],
      "image": "assets/p-dualcom-1200-cut.png",
      "image_alt": "The DMP DualCom Universal Alarm Communicator",
-     "image_w": 700,
-     "image_h": 500,
+     "image_w": 1200,
+     "image_h": 800,
      "kind": "float",
      "chips": [
       [
@@ -13811,7 +13804,7 @@
      "image": "assets/p-263lte-1200-cut.png",
      "image_alt": "The DMP XR & XT Series LTE Cellular Communicator",
      "image_w": 1200,
-     "image_h": 995,
+     "image_h": 800,
      "kind": "float",
      "chips": [
       [
@@ -15721,7 +15714,7 @@
      "image": "assets/p-xt50-1200-cut.png",
      "image_alt": "The DMP XT50 Control Panel",
      "image_w": 1200,
-     "image_h": 699,
+     "image_h": 800,
      "kind": "float",
      "chips": [
       [
@@ -16124,7 +16117,7 @@
      "image": "assets/p-xtlplus-1200-cut.png",
      "image_alt": "The DMP XTLplus Control Panel",
      "image_w": 1200,
-     "image_h": 829,
+     "image_h": 800,
      "kind": "float",
      "chips": [
       [
@@ -16519,7 +16512,7 @@
      "image": "assets/p-xtltouch-1200-cut.png",
      "image_alt": "The DMP XTLtouch All-In-One",
      "image_w": 1200,
-     "image_h": 829,
+     "image_h": 800,
      "kind": "float",
      "chips": [
       [
@@ -16914,7 +16907,7 @@
      "image": "assets/p-xr150-1200-cut.png",
      "image_alt": "The DMP XR150 Control Panel",
      "image_w": 1200,
-     "image_h": 858,
+     "image_h": 800,
      "kind": "float",
      "chips": [
       [
@@ -17317,7 +17310,7 @@
      "image": "assets/p-xr550-1200-cut.png",
      "image_alt": "The DMP XR550 Control Panel",
      "image_w": 1200,
-     "image_h": 818,
+     "image_h": 800,
      "kind": "float",
      "chips": [
       [
@@ -17359,7 +17352,7 @@
      "image": "assets/p-xr550-1200-cut.png",
      "image_alt": "The DMP XR550 Control Panel",
      "image_w": 1200,
-     "image_h": 818,
+     "image_h": 800,
      "items": [
       {
        "n": 1,
@@ -17753,7 +17746,7 @@
      "image": "assets/p-xr650-1200-cut.png",
      "image_alt": "The DMP XR650 Control Panel",
      "image_w": 1200,
-     "image_h": 818,
+     "image_h": 800,
      "kind": "float",
      "chips": [
       [
@@ -17795,7 +17788,7 @@
      "image": "assets/p-xr650-1200-cut.png",
      "image_alt": "The DMP XR650 Control Panel",
      "image_w": 1200,
-     "image_h": 818,
+     "image_h": 800,
      "items": [
       {
        "n": 1,
@@ -18146,8 +18139,8 @@
      "image": "assets/p-tmsentry-1200-cut.png",
      "image_alt": "The DMP TMSentry",
      "image_w": 1200,
-     "image_h": 764,
-     "kind": "light",
+     "image_h": 800,
+     "kind": "float",
      "chips": [
       [
        "TMSENTRY",
@@ -18241,7 +18234,7 @@
       "name": "TMSentry",
       "image": "assets/p-tmsentry-1200-cut.png",
       "alt": "The DMP TMSentry",
-      "light": true
+      "light": false
      },
      "items": [
       [
@@ -19391,7 +19384,7 @@
      "image": "assets/p-7000-series-1200-cut.png",
      "image_alt": "The DMP Thinline Series Keypad",
      "image_w": 1200,
-     "image_h": 933,
+     "image_h": 800,
      "kind": "float",
      "chips": [
       [
@@ -19690,8 +19683,8 @@
      "image": "assets/p-aqualite-series-1200-cut.png",
      "image_alt": "The DMP Aqualite Series Keypad",
      "image_w": 1200,
-     "image_h": 949,
-     "kind": "light",
+     "image_h": 800,
+     "kind": "float",
      "chips": [
       [
        "7060A-W",
@@ -19785,7 +19778,7 @@
       "name": "Aqualite",
       "image": "assets/p-aqualite-series-1200-cut.png",
       "alt": "The DMP Aqualite Series Keypad",
-      "light": true
+      "light": false
      },
      "items": [
       [
@@ -19993,8 +19986,8 @@
      "image": "assets/p-icon-series-1200-cut.png",
      "image_alt": "The DMP Icon Series Keypad",
      "image_w": 1200,
-     "image_h": 885,
-     "kind": "light",
+     "image_h": 800,
+     "kind": "float",
      "chips": [
       [
        "Panels",
@@ -20088,7 +20081,7 @@
       "name": "Icon",
       "image": "assets/p-icon-series-1200-cut.png",
       "alt": "The DMP Icon Series Keypad",
-      "light": true
+      "light": false
      },
      "items": [
       [
@@ -20296,7 +20289,7 @@
      "image": "assets/p-xf6-1200-cut.png",
      "image_alt": "The DMP XF6 Series Fire Control Panels",
      "image_w": 1200,
-     "image_h": 945,
+     "image_h": 800,
      "kind": "float",
      "chips": [
       [
@@ -20334,7 +20327,7 @@
      "image": "assets/p-xf6-1200-cut.png",
      "image_alt": "The DMP XF6 Series Fire Control Panels",
      "image_w": 1200,
-     "image_h": 945,
+     "image_h": 800,
      "items": [
       {
        "n": 1,
@@ -20628,7 +20621,7 @@
      "image": "assets/p-xr150fc-2-1200-cut.png",
      "image_alt": "The DMP XR150FC Control Panel",
      "image_w": 1200,
-     "image_h": 754,
+     "image_h": 800,
      "kind": "float",
      "chips": [
       [
@@ -20998,8 +20991,8 @@
      "image": "assets/p-xr550fc-2-1200-cut.png",
      "image_alt": "The DMP XR550FC Control Panel",
      "image_w": 1200,
-     "image_h": 901,
-     "kind": "light",
+     "image_h": 800,
+     "kind": "float",
      "chips": [
       [
        "Doors of access",
@@ -21145,7 +21138,7 @@
       "name": "XR550FC",
       "image": "assets/p-xr550fc-2-1200-cut.png",
       "alt": "The DMP XR550FC Control Panel",
-      "light": true
+      "light": false
      },
      "items": [
       [
@@ -21368,7 +21361,7 @@
      "image": "assets/p-850-1200-cut.png",
      "image_alt": "The DMP 850 Pull Station",
      "image_w": 1200,
-     "image_h": 889,
+     "image_h": 800,
      "kind": "float",
      "chips": [
       [
@@ -21674,7 +21667,7 @@
      "image": "assets/p-630f-1200-cut.png",
      "image_alt": "The DMP 630F Remote Annunciator",
      "image_w": 1200,
-     "image_h": 514,
+     "image_h": 800,
      "kind": "float",
      "chips": [
       [
@@ -21983,8 +21976,8 @@
      ],
      "image": "assets/p-2w-blx-1200-cut.png",
      "image_alt": "The DMP 2W-BLX System Sensor Smoke Detector",
-     "image_w": 1000,
-     "image_h": 667,
+     "image_w": 1200,
+     "image_h": 800,
      "kind": "float",
      "chips": [
       [
@@ -22276,7 +22269,7 @@
      "image": "assets/p-jamalert-1200-cut.png",
      "image_alt": "The DMP JamAlert",
      "image_w": 1200,
-     "image_h": 819,
+     "image_h": 800,
      "kind": "float",
      "chips": [
       [
@@ -22318,7 +22311,7 @@
      "image": "assets/p-jamalert-1200-cut.png",
      "image_alt": "The DMP JamAlert",
      "image_w": 1200,
-     "image_h": 819,
+     "image_h": 800,
      "items": [
       {
        "n": 1,
@@ -22945,7 +22938,7 @@
      "image": "assets/p-dealer-admin-1200-cut.png",
      "image_alt": "The DMP Dealer Admin",
      "image_w": 1200,
-     "image_h": 654,
+     "image_h": 800,
      "kind": "float",
      "chips": [
       [
@@ -22983,7 +22976,7 @@
      "image": "assets/p-dealer-admin-1200-cut.png",
      "image_alt": "The DMP Dealer Admin",
      "image_w": 1200,
-     "image_h": 654,
+     "image_h": 800,
      "items": [
       {
        "n": 1,
@@ -23264,7 +23257,7 @@
      "image": "assets/p-remote-link-1200-cut.png",
      "image_alt": "The DMP Remote Link",
      "image_w": 1200,
-     "image_h": 699,
+     "image_h": 800,
      "kind": "float",
      "chips": [
       [
@@ -23563,7 +23556,7 @@
      "image": "assets/p-xv-gateways-with-alarmvision-1200-cut.png",
      "image_alt": "The DMP XV Gateways with AlarmVision",
      "image_w": 1200,
-     "image_h": 851,
+     "image_h": 800,
      "kind": "float",
      "chips": [
       [
@@ -23605,7 +23598,7 @@
      "image": "assets/p-xv-gateways-with-alarmvision-1200-cut.png",
      "image_alt": "The DMP XV Gateways with AlarmVision",
      "image_w": 1200,
-     "image_h": 851,
+     "image_h": 800,
      "items": [
       {
        "n": 1,
@@ -23892,7 +23885,7 @@
      "image": "assets/p-v-6022wc-1200-cut.png",
      "image_alt": "The DMP V-6022WC Cube Camera",
      "image_w": 1200,
-     "image_h": 863,
+     "image_h": 800,
      "kind": "float",
      "chips": [
       [
@@ -24287,8 +24280,8 @@
      "image": "assets/p-vplus-7061-fe-1200-cut.png",
      "image_alt": "The DMP VUE Plus 6MP Fisheye Camera (VPLUS-7061-FE)",
      "image_w": 1200,
-     "image_h": 630,
-     "kind": "dark",
+     "image_h": 800,
+     "kind": "float",
      "chips": [
       [
        "Resolution",
@@ -24478,7 +24471,7 @@
       "name": "VUE Plus 6MP Fisheye",
       "image": "assets/p-vplus-7061-fe-1200-cut.png",
       "alt": "The DMP VUE Plus 6MP Fisheye Camera (VPLUS-7061-FE)",
-      "light": true
+      "light": false
      },
      "items": [
       [
@@ -24686,8 +24679,8 @@
      "image": "assets/p-vplus-7121-fe-1200-cut.png",
      "image_alt": "The DMP VUE Plus 12MP Fisheye Camera (VPLUS-7121-FE)",
      "image_w": 1200,
-     "image_h": 630,
-     "kind": "dark",
+     "image_h": 800,
+     "kind": "float",
      "chips": [
       [
        "Resolution",
@@ -24877,7 +24870,7 @@
       "name": "VUE Plus 12MP Fisheye",
       "image": "assets/p-vplus-7121-fe-1200-cut.png",
       "alt": "The DMP VUE Plus 12MP Fisheye Camera (VPLUS-7121-FE)",
-      "light": true
+      "light": false
      },
      "items": [
       [
@@ -25085,8 +25078,8 @@
      "image": "assets/p-vplus-7081-bdv-1200-cut.png",
      "image_alt": "The DMP VUE Plus 8MP Varifocal Bullet Camera (VPLUS-7081-BDV)",
      "image_w": 1200,
-     "image_h": 630,
-     "kind": "dark",
+     "image_h": 800,
+     "kind": "float",
      "chips": [
       [
        "Resolution",
@@ -25276,7 +25269,7 @@
       "name": "VUE Plus 8MP Varifocal Bullet",
       "image": "assets/p-vplus-7081-bdv-1200-cut.png",
       "alt": "The DMP VUE Plus 8MP Varifocal Bullet Camera (VPLUS-7081-BDV)",
-      "light": true
+      "light": false
      },
      "items": [
       [
@@ -25484,7 +25477,7 @@
      "image": "assets/p-vue-video-doorbell-1200-cut.png",
      "image_alt": "The DMP VUE Video Doorbell",
      "image_w": 1200,
-     "image_h": 818,
+     "image_h": 800,
      "kind": "float",
      "chips": [
       [
@@ -25522,7 +25515,7 @@
      "image": "assets/p-vue-video-doorbell-1200-cut.png",
      "image_alt": "The DMP VUE Video Doorbell",
      "image_w": 1200,
-     "image_h": 818,
+     "image_h": 800,
      "items": [
       {
        "n": 1,
@@ -25817,7 +25810,7 @@
      "image": "assets/p-1100xh-1200-cut.png",
      "image_alt": "The DMP 1100XH Wireless Receiver",
      "image_w": 1200,
-     "image_h": 823,
+     "image_h": 800,
      "kind": "float",
      "chips": [],
      "tag": ""
@@ -26122,8 +26115,8 @@
      "image": "assets/p-1101-1200-cut.png",
      "image_alt": "The DMP 1101 Universal Transmitter",
      "image_w": 1200,
-     "image_h": 933,
-     "kind": "light",
+     "image_h": 800,
+     "kind": "float",
      "chips": [
       [
        "Zones",
@@ -26266,7 +26259,7 @@
       "name": "1101",
       "image": "assets/p-1101-1200-cut.png",
       "alt": "The DMP 1101 Universal Transmitter",
-      "light": true
+      "light": false
      },
      "items": [
       [
@@ -26481,7 +26474,7 @@
      "image": "assets/p-1128-1200-cut.png",
      "image_alt": "The DMP 1128 Glassbreak Detector",
      "image_w": 1200,
-     "image_h": 912,
+     "image_h": 800,
      "kind": "float",
      "chips": [
       [
@@ -26791,7 +26784,7 @@
      "image": "assets/p-1142-1200-cut.png",
      "image_alt": "The DMP 1142 Two-Button Wireless Panic",
      "image_w": 1200,
-     "image_h": 799,
+     "image_h": 800,
      "kind": "float",
      "chips": [
       [
@@ -27460,7 +27453,7 @@
      "image": "assets/p-1100t-1200-cut.png",
      "image_alt": "The DMP 1100T Wireless Translator",
      "image_w": 1200,
-     "image_h": 609,
+     "image_h": 800,
      "kind": "float",
      "chips": [
       [

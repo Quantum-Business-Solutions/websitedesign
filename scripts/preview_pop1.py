@@ -413,8 +413,10 @@ def _newsfeat(s, ctx):
         big = i == 0
         cards.append(f'<a class="pp-nc {"big" if big else "sm"}" href="{E(L(href))}">{media}<div class="pp-nc-b"><h3>{E(title)}</h3><p>{E(body)}</p><span class="pp-nc-cue">{E(label)}</span></div></a>')
     side = "".join(cards[1:])
-    head = (f'<div class="pp-nf-head"><div>{f"<div class=q-eyebrow>{E(s["eyebrow"])}</div>" if s.get("eyebrow") else ""}<h2 class="q-h2">{E(s["heading"])}</h2></div>'
-            f'{f"<p class=q-lead>{E(s["intro"])}</p>" if s.get("intro") else ""}</div>')
+    eyebrow = f"<div class=q-eyebrow>{E(s['eyebrow'])}</div>" if s.get("eyebrow") else ""  # hoisted: nested quotes need Python 3.12
+    intro = f"<p class=q-lead>{E(s['intro'])}</p>" if s.get("intro") else ""
+    head = (f'<div class="pp-nf-head"><div>{eyebrow}<h2 class="q-h2">{E(s["heading"])}</h2></div>'
+            f'{intro}</div>')
     return f'{ctx["sec_open"](s, "pp-nf-sec")}<div class="q-container">{head}<div class="pp-nf">{cards[0]}<div class="pp-nf-side">{side}</div></div></div></section>'
 
 

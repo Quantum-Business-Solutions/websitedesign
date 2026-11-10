@@ -225,8 +225,11 @@ function on(w){{w.classList.add('in')}}
 if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){{ws.forEach(on);return}}
 var o=new IntersectionObserver(function(es){{es.forEach(function(e){{if(e.isIntersecting||e.boundingClientRect.top<0){{on(e.target);o.unobserve(e.target)}}}})}},{{threshold:0,rootMargin:'0px 0px -12% 0px'}});ws.forEach(function(w){{o.observe(w)}});
 function chk(){{ws.forEach(function(w){{if(w.getBoundingClientRect().top<innerHeight*.9)on(w)}})}}addEventListener('scroll',chk,{{passive:true}});addEventListener('hashchange',chk);setTimeout(chk,900)}})();</script>"""
-    blocks = "".join(f'<div class="pv-tl2 pv-tl2-fit{" has-img" if any("class=\"img" in c for c in r) else ""}" data-tl="{E(tid)}" data-n="{len(r)}" style="--n:{len(r)}"><div class="line" aria-hidden="true"><i></i></div><ol aria-label="{E(s["heading"])}">{"".join(r)}</ol></div>' for r in rows)
-    return f'{ctx["sec_open"](s).replace("class=\"q-section", "class=\"q-section pv-tl-stage", 1)} <div class="q-container tl-wrap">{head}{blocks}</div>{js}</section>'
+    def has_img(r):  # hoisted: a backslash inside an f-string expression is a syntax error before Python 3.12
+        return " has-img" if any('class="img' in c for c in r) else ""
+    blocks = "".join(f'<div class="pv-tl2 pv-tl2-fit{has_img(r)}" data-tl="{E(tid)}" data-n="{len(r)}" style="--n:{len(r)}"><div class="line" aria-hidden="true"><i></i></div><ol aria-label="{E(s["heading"])}">{"".join(r)}</ol></div>' for r in rows)
+    opened = ctx["sec_open"](s).replace('class="q-section', 'class="q-section pv-tl-stage', 1)  # hoisted: backslash-free for Python 3.11
+    return f'{opened} <div class="q-container tl-wrap">{head}{blocks}</div>{js}</section>'
 
 
 def _tabs(s, ctx):

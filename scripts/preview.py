@@ -103,6 +103,10 @@ def client_tokens(theme: str, brand: dict) -> tuple[str, dict]:
     _alt = native.get("--bg-alt", native["--bg"])
     _darker = _alt if reskin.relative_luminance(_alt) < reskin.relative_luminance(native["--bg"]) else native["--bg"]
     ink = reskin.darken_until(brand["accent"], _darker)
+    # A light accent (DMP yellow) darkened to clear 4.5:1 on white turns olive, which is nobody's brand. The brand's own
+    # answer is near-black text with the yellow as a fill, so text that would take the accent takes the ink instead.
+    if reskin.relative_luminance(brand["accent"]) > 0.45 and brand.get("ink_secondary"):
+        ink = brand["ink_secondary"]
     lift = brand["accent"] if ground == "dark" else reskin.darken_until(brand["accent"], native.get("--bg-alt", native["--bg"]))
     sec = brand.get("ink_secondary")
     cta_fg = sec if sec and reskin.contrast_ratio(sec, brand["accent"]) >= 4.5 else reskin.best_on(brand["accent"])
@@ -113,8 +117,14 @@ def client_tokens(theme: str, brand: dict) -> tuple[str, dict]:
     }
     # Typefaces: a brand may borrow another direction's type ("type_from": {"Quantum Showcase": "Quantum Clean"}),
     # keeping this direction's geometry and motion but setting headings and body in the other direction's faces.
+    # HOUSE_TYPE_FROM is the default: Showcase's own display grotesque (Bricolage Grotesque, weight 800, -3% tracking)
+    # reads as whimsical on a B2B site and every shipped site (Kelly, Van Ausdall) overrode it with Clean's Open Sans.
+    # A brand that sets its own type_from, or its own fonts, takes precedence.
     type_src = native
-    borrowed = (brand.get("type_from") or {}).get(theme)
+    type_from = brand.get("type_from")
+    if type_from is None and not brand.get("fonts"):
+        type_from = HOUSE_TYPE_FROM
+    borrowed = _norm_dirs(type_from or {}).get(theme)
     if borrowed:
         b_css = open(os.path.join(reskin.SOURCE_DIR, borrowed, "css", "quantum.css"), encoding="utf-8").read().replace("\u2014", "-")
         type_src = reskin.parse_native(b_css)
@@ -126,8 +136,32 @@ def client_tokens(theme: str, brand: dict) -> tuple[str, dict]:
             tok[key] = FALLBACKS[face]
         elif borrowed and type_src.get(key):
             tok[key] = type_src[key]
+    # The client's own faces (brand.fonts = {"heading": "Oswald", "body": "Open Sans"}, read from the live site).
+    # Showcase and Clean take them; Press keeps its editorial serif. A face we cannot load is swapped for its closest
+    # free neighbour and the swap is recorded in tok["--font-note"] so the QA gate can report it.
+    if brand.get("fonts") and theme != "Quantum Press":
+        imps = []
+        notes = []
+        for key, role in (("--q-serif", "heading"), ("--q-sans", "body")):
+            want = (brand["fonts"].get(role) or brand["fonts"].get("body") or "").strip()
+            if not want:
+                continue
+            stack, gkey, note = resolve_font(want, role)
+            tok[key] = stack
+            if gkey and gkey not in imps:
+                imps.append(gkey)
+            if note:
+                notes.append(note)
+        if imps:
+            css = ("@import url('https://fonts.googleapis.com/css2?" + "&".join("family=" + g for g in imps) + "&display=swap');\n") + css
+        if notes:
+            tok["--font-note"] = "'" + "; ".join(notes).replace("'", "") + "'"
     chrome_bg = brand.get("chrome_bg") if brand.get("chrome") == "dark" else native["--bg"]
     tok["--chrome-bg"] = chrome_bg
+    # The ground behind white hero type. The layered hero's scrim used to be built from --chrome-bg, which is the page
+    # WHITE for a light-header brand: white headline on a white scrim over a bright photo (the IMS build, 9 Nov 2026).
+    tok["--hero-bg"] = brand.get("hero_bg") or (chrome_bg if brand.get("chrome") == "dark" else deep_ground(brand["accent"], brand.get("navy")))
+    tok["--lh-bg"] = tok["--hero-bg"]  # the layered hero reads --lh-bg; one computed dark ground drives every hero scrim
     tok["--chrome-fg"] = reskin.best_on(chrome_bg)
     tok["--chrome-muted"] = "rgba(255,255,255,.72)" if tok["--chrome-fg"].lower().startswith("#f") else "rgba(0,0,0,.62)"
     tok["--chrome-border"] = "rgba(255,255,255,.12)" if tok["--chrome-fg"].lower().startswith("#f") else "rgba(0,0,0,.1)"
@@ -198,6 +232,88 @@ DIRECTION_CSS = {
 @media(max-width:767px){.pv-badge{right:10px;bottom:10px}}
 ''',
 }
+
+HOUSE_TYPE_FROM = {"Quantum Showcase": "Quantum Clean"}
+
+
+def _norm_dirs(m: dict) -> dict:
+    """type_from may be keyed by 'showcase' or 'Quantum Showcase'; values likewise."""
+    q = lambda x: x if x.startswith("Quantum ") else "Quantum " + x.title()
+    return {q(k): q(v) for k, v in m.items()}
+
+
+# Faces we will load from Google Fonts in a client build (family -> css2 spec), and the generic they fall back to.
+GOOGLE_FONTS = {
+    "open sans": ("Open+Sans:wght@400;500;600;700;800", "sans-serif"),
+    "inter": ("Inter:wght@400;500;600;700;800", "sans-serif"),
+    "oswald": ("Oswald:wght@400;500;600;700", "sans-serif"),
+    "poppins": ("Poppins:wght@400;500;600;700;800", "sans-serif"),
+    "jost": ("Jost:wght@400;500;600;700;800", "sans-serif"),
+    "roboto": ("Roboto:wght@400;500;700;900", "sans-serif"),
+    "roboto condensed": ("Roboto+Condensed:wght@400;700", "sans-serif"),
+    "montserrat": ("Montserrat:wght@400;500;600;700;800", "sans-serif"),
+    "lato": ("Lato:wght@400;700;900", "sans-serif"),
+    "source sans 3": ("Source+Sans+3:wght@400;600;700;800", "sans-serif"),
+    "work sans": ("Work+Sans:wght@400;500;600;700;800", "sans-serif"),
+    "dm sans": ("DM+Sans:wght@400;500;600;700", "sans-serif"),
+    "nunito sans": ("Nunito+Sans:wght@400;600;700;800", "sans-serif"),
+    "raleway": ("Raleway:wght@400;500;600;700;800", "sans-serif"),
+    "barlow": ("Barlow:wght@400;500;600;700;800", "sans-serif"),
+    "barlow condensed": ("Barlow+Condensed:wght@500;600;700", "sans-serif"),
+    "ibm plex sans": ("IBM+Plex+Sans:wght@400;500;600;700", "sans-serif"),
+    "playfair display": ("Playfair+Display:ital,wght@0,500;0,700;1,500", "serif"),
+    "merriweather": ("Merriweather:wght@400;700;900", "serif"),
+}
+# Licensed or system faces we cannot ship, and the free face that sits closest to them.
+FONT_NEIGHBOURS = {
+    "hco gotham ssm": "montserrat", "gotham": "montserrat", "gotham ssm": "montserrat", "proxima nova": "montserrat",
+    "helvetica neue": "inter", "helvetica": "inter", "arial": "inter", "segoe ui": "inter", "avenir": "nunito sans",
+    "futura": "jost", "din": "barlow", "trade gothic": "barlow", "myriad pro": "open sans", "frutiger": "open sans",
+}
+
+
+def resolve_font(name: str, role: str):
+    """(css stack, google key or None, note or None) for a brand face."""
+    key = re.sub(r"\s+", " ", name.strip().strip("'\"")).lower()
+    note = None
+    if key not in GOOGLE_FONTS:
+        near = FONT_NEIGHBOURS.get(key) or ("open sans" if role == "body" else "open sans")
+        note = f"{name} is not loadable here; {near.title()} stands in"
+        key = near
+    spec, generic = GOOGLE_FONTS[key]
+    fam = key.title().replace("Ibm", "IBM").replace("Dm ", "DM ")
+    return f"'{fam}',{'Arial,' if generic == 'sans-serif' else 'Georgia,'}{generic}", spec, note
+
+
+def deep_ground(accent: str, navy: str | None = None) -> str:
+    """A dark ground that belongs to the accent, for white type over photography on a light-header brand."""
+    if navy:
+        return navy
+    r, g, b = (int(accent.lstrip("#")[i:i + 2], 16) for i in (0, 2, 4))
+    if reskin.relative_luminance(accent) > 0.45:      # a yellow or light green has no deep tint: near-black
+        return "#0e1114"
+    return "#%02x%02x%02x" % (round(r * .16), round(g * .16), round(b * .2 + 4))
+
+
+def brand_shape_css(brand: dict) -> str:
+    """Corner shape from the live site (brand.radius, px). Square buttons stay square (IMS, DMP); rounded stay rounded."""
+    mark = ""
+    if reskin.relative_luminance(brand["accent"]) > 0.45 and brand.get("ink_secondary"):
+        # emphasis in a headline becomes a highlighter stroke of the accent, because accent-coloured text would not read
+        mark = (".q-h1 em,.q-h2 em{font-style:normal;background:linear-gradient(transparent 62%,var(--q-gold) 62%);"
+                "box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:0 .08em}")
+    r = brand.get("radius")
+    bt = brand.get("button_radius", r)          # buttons and cards are shaped separately: DMP's buttons are pills, its cards square
+    if r is None and bt is None:
+        return mark
+    r = max(0, min(int(r if r is not None else bt), 24))
+    bt = max(0, min(int(bt if bt is not None else r), 999))
+    return (mark + f":root{{--radius:{r}px}}"
+            f".q-btn,.q-btn-ghost,.q-form .hs-button,.q-form input[type=submit],.q-header .q-booknow,.q-mnav-cta,"
+            f".pv-lh .lane a,.pv-badge,.q-skip{{border-radius:{bt}px}}"
+            f".q-card,.pv-hero-img,.pv-stat,.pv-flow .detail,.pv-seal .item{{border-radius:{max(r, 0)}px}}"
+            f".q-form input[type=text],.q-form input[type=email],.q-form input[type=tel],.q-form select,.q-form textarea{{border-radius:{r}px}}")
+
 
 FALLBACKS = {"open sans": "'Open Sans',Arial,'Helvetica Neue',sans-serif",
              "bricolage grotesque": "'Bricolage Grotesque','Arial Black','Helvetica Neue',Arial,sans-serif",
@@ -1173,6 +1289,8 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
 {DIRECTION_CSS.get(dslug, "")}
 /* ===== client heading setting (brand.heading): one headline weight and tracking across the directions ===== */
 {(lambda h: f".q-h1,.q-h2{{font-weight:{h.get('weight', 800)};letter-spacing:{h.get('tracking', '-.03em')};font-style:normal}}" if h else "")(b.get("heading"))}
+/* ===== the client's corner shape, after the direction system so square stays square ===== */
+{brand_shape_css(content["brand"])}
 /* ===== mobile, after the direction system so it wins ===== */
 {MOBILE_LAST_CSS}
 {preview_polish.POLISH_CSS}
