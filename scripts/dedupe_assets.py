@@ -28,6 +28,8 @@ FONTS = (("Inter", "inter-latin-var.woff2", "400 800"), ("Open Sans", "opensans-
 # Metrics measured against Arial (Liberation Sans) with the real files: [size-adjust, ascent, descent] for weights 400-500 and 600-800.
 FALLBACK = {"Inter": ((106, 91.4, 22.7), (102.5, 94.5, 23.5)), "Open Sans": ((103.5, 103.3, 28.3), (105, 101.8, 27.9))}
 FONT_IMPORT = re.compile(r"@import\s+url\(\s*['\"]?https://fonts\.googleapis\.com[^)]*\)\s*;?")
+EXTRA_FONT = re.compile(r'<meta name="pv-preload-font" content="([^"]+)">')
+EXTRA_FONT_TAG = re.compile(r'<meta name="pv-preload-font" content="[^"]+">\s*')
 HEAD_PRECONNECT = re.compile(r'<link rel="preconnect" href="https://fonts\.(?:googleapis|gstatic)\.com"(?: crossorigin)?>\s*')
 
 
@@ -158,8 +160,11 @@ def main():
                 if link and "fonts.googleapis.com/css" not in html[:head_end] and 'rel="preload"' not in html[:head_end]:
                     hints = (f'<link rel="preload" href="{link.group(0).split(chr(34))[3]}" as="style">'
                              + ("".join(f'<link rel="preload" href="{arel}/fonts/{f}" as="font" type="font/woff2" crossorigin>' for f in ("opensans-latin-var.woff2", "inter-latin-var.woff2")) if PRELOAD_FONTS else "") + "\n")
-                    html = html[:link.start()] + hints + html[link.start():]
+                    # a page may ask for one more face up front: <meta name="pv-preload-font" content="../assets/fonts/x.woff2">
+                    extra = "".join(f'<link rel="preload" href="{u}" as="font" type="font/woff2" crossorigin>' for u in EXTRA_FONT.findall(html[:head_end])) if PRELOAD_FONTS else ""
+                    html = html[:link.start()] + hints.rstrip("\n") + extra + "\n" + html[link.start():]
                     html = HEAD_PRECONNECT.sub("", html, count=2)
+            html = EXTRA_FONT_TAG.sub("", html)
             html = defer_trailing(html)
             open(fp, "w", encoding="utf-8").write(html)
             saved += before - len(html.encode())

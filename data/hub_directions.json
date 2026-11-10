@@ -1,0 +1,9 @@
+{
+ "_note": "Tag chips on the chooser hub cards (scripts/preview_hub2.py). 'default' is keyed by direction folder and may set ground, type and mood; anything left out is read from the direction's own tokens. 'clients' is keyed by client slug, then direction folder, and gives the three chips outright.",
+ "default": {
+  "showcase": {"mood": "Cinematic"},
+  "clean": {"mood": "Spec sheet"},
+  "press": {"mood": "Editorial"}
+ },
+ "clients": {}
+}

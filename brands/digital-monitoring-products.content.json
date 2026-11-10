@@ -987,6 +987,66 @@
          "news/vue-portfolio.html"
         ]
        ]
+      },
+      "showcase": {
+       "type": "pn-hero",
+       "eyebrow": [
+        "Springfield, Missouri",
+        "Since 1975"
+       ],
+       "lines": [
+        "Four systems.",
+        "One platform."
+       ],
+       "subhead": "Intrusion, access control, fire and video on one platform, made in Springfield, Missouri and sold only through authorized dealers and distributors. This page is the panel.",
+       "primary": {
+        "label": "Find a dealer",
+        "href": "find-a-dealer.html"
+       },
+       "secondary": {
+        "label": "Become a dealer",
+        "href": "support/become-a-dealer.html"
+       },
+       "lane": [
+        [
+         "Walk the zones",
+         "#z1"
+        ],
+        [
+         "Order at buy.DMP.com",
+         "https://buy.dmp.com/dmp/Shop"
+        ],
+        [
+         "Technical documentation",
+         "support/documentation.html"
+        ],
+        [
+         "Dealer services",
+         "support/dealer-services.html"
+        ]
+       ],
+       "spec": [
+        [
+         "Founded",
+         "1975",
+         "Springfield, Missouri"
+        ],
+        [
+         "Systems",
+         "04",
+         "Intrusion, access, fire, video"
+        ],
+        [
+         "Catalog",
+         "14",
+         "Product categories"
+        ],
+        [
+         "Cloud",
+         "SOC 2",
+         "Type II, examined annually"
+        ]
+       ]
       }
      }
     },
@@ -1003,7 +1063,8 @@
       "National Retail Federation",
       "NFPA",
       "CANASA"
-     ]
+     ],
+     "id": "assoc"
     },
     {
      "type": "stats3d",
@@ -1643,7 +1704,21 @@
        "Cellular jamming detection with JamAlert, and fifty years in business.",
        "assets/fifty-600.jpg"
       ]
-     ]
+     ],
+     "variants": {
+      "press": {
+       "type": "pn-feature",
+       "kicker": "Feature",
+       "cover": "assets/env/env-08-campus-aerial-1280.jpg",
+       "cover_caption": "Illustrative scene",
+       "quote": "Rick Britton starts developing a central station product at Atlas Security. DMP begins as an R&D department.",
+       "quote_by": "1975, Springfield, Missouri",
+       "more": [
+        "Read the company story",
+        "about.html#story"
+       ]
+      }
+     }
     },
     {
      "type": "newsfeat",
@@ -1688,7 +1763,8 @@
        "assets/jamalert-1200.jpg",
        "contain"
       ]
-     ]
+     ],
+     "id": "news"
     },
     {
      "type": "newsfeat",
@@ -1791,8 +1867,394 @@
       "label": "Become a dealer",
       "href": "support/become-a-dealer.html"
      }
+    },
+    {
+     "type": "pn-zone",
+     "id": "z1",
+     "z": 1,
+     "name": "Intrusion",
+     "meta": "XR550 / Flagship control panel",
+     "num": "574",
+     "unit": [
+      "Zones",
+      "96",
+      "Doors"
+     ],
+     "heading": "The XR550 runs 96 doors and 574 zones.",
+     "body": "Our flagship panel integrates intrusion and commercial fire with powerful access control.",
+     "slab": {
+      "title": "Spec sheet",
+      "name": "XR550",
+      "items": [
+       [
+        "Total zones",
+        "574"
+       ],
+       [
+        "Wireless zones",
+        "500"
+       ],
+       [
+        "Areas",
+        "32"
+       ],
+       [
+        "Event buffer",
+        "12,000"
+       ],
+       [
+        "User codes",
+        "10,000"
+       ],
+       [
+        "Doors of access",
+        "32 out of the box, 96 maximum"
+       ],
+       [
+        "Supervised keypads",
+        "16"
+       ]
+      ],
+      "image": "assets/p-xr550-1200-cut.png",
+      "alt": "The DMP XR550 control panel in its open enclosure",
+      "href": "products/xr550.html",
+      "label": "Open the XR550"
+     },
+     "notes": [
+      {
+       "k": "Hybrid",
+       "title": "XT75",
+       "text": "A hybrid network panel for residential and small to medium business. Intrusion, access control and AlarmVision on one panel.",
+       "href": "products/xt75.html"
+      },
+      {
+       "k": "Since 2007",
+       "title": "Cancel/Verify",
+       "text": "False alarm prevention has been a DMP feature since 2007. Video verification and AlarmVision add a second look.",
+       "href": "services/intrusion.html"
+      },
+      {
+       "k": "Coming soon",
+       "soon": true,
+       "title": "XR650",
+       "text": "The next XR Series panel and ESX 2026 Best of Show winner. Not yet available to order.",
+       "href": "products/xr650.html"
+      }
+     ],
+     "more": [
+      "Intrusion systems",
+      "services/intrusion.html"
+     ]
+    },
+    {
+     "type": "pn-zone",
+     "id": "z2",
+     "z": 2,
+     "name": "Access control",
+     "meta": "Controllers / Readers / Credentials / Software",
+     "heading": "Access control from a single door <em>to hundreds.</em>",
+     "body": "Access control runs from the cloud-based X1 to Entré software, and Digital Key puts a credential in the phone's mobile wallet.",
+     "readout": [
+      "Door 01",
+      "Access granted"
+     ],
+     "image": "assets/p-dmp-bluetooth-reader-and-mobile-credential-1200-cut.png",
+     "alt": "The DMP SR3 Bluetooth reader",
+     "calls": [
+      {
+       "title": "X1",
+       "text": "A single-door access controller with an onboard network or Wi-Fi communicator.",
+       "href": "products/x1.html"
+      },
+      {
+       "title": "Entré",
+       "text": "96 doors of access control, expandable to 400 doors and 500 panels.",
+       "href": "products/entre-enterprise.html"
+      },
+      {
+       "title": "Digital Key",
+       "text": "A secure NFC credential in a smartphone's mobile wallet that works even when the phone is out of power.",
+       "href": "products/digital-key-credential.html"
+      },
+      {
+       "title": "SR3 reader",
+       "text": "One reader for phones and 125 kHz prox cards, rated IP67 for harsh environments.",
+       "href": "products/dmp-bluetooth-reader-and-mobile-credential.html"
+      }
+     ],
+     "more": [
+      "Access control",
+      "services/access-control.html"
+     ]
+    },
+    {
+     "type": "pn-zone",
+     "id": "z3",
+     "z": 3,
+     "name": "Fire",
+     "meta": "XF6 / Fire control panel",
+     "bg": "assets/env/env-09-stairwell-1280.jpg",
+     "big": [
+      "24",
+      "V"
+     ],
+     "heading": "A 24V fire panel that reports straight to the monitoring center.",
+     "lcd": [
+      "XF6 FIRE CONTROL PANEL",
+      "SINGLE-SITE APPLICATIONS",
+      "NETWORK + OPTIONAL CELLULAR",
+      "ALL SIGNALS DIRECT TO THE MONITORING CENTER"
+     ],
+     "lcd_label": "Panel reading: XF6 fire control panel. Single-site applications. Network and optional cellular communications. All signals direct to the monitoring center.",
+     "image": "assets/p-xf6-1200-cut.png",
+     "alt": "The red DMP XF6 fire control panel",
+     "href": "products/xf6.html",
+     "label": "Open the XF6",
+     "stats": [
+      [
+       "500",
+       "Wireless devices, up to"
+      ],
+      [
+       "1.7 mi",
+       "Wireless range, up to"
+      ],
+      [
+       "UL 864",
+       "10th Edition Listed for wireless"
+      ]
+     ],
+     "more": [
+      "Fire systems",
+      "services/fire.html"
+     ]
+    },
+    {
+     "type": "pn-zone",
+     "id": "z4",
+     "z": 4,
+     "name": "Video",
+     "meta": "VUE Plus / AlarmVision / VK VMS",
+     "heading": "The camera becomes a <em>smart motion detector.</em>",
+     "body": "AlarmVision integrates cameras, analytics and XT75 or XR Series control panels in one platform, creating smart motion detectors that trigger panel responses and alarms in real time.",
+     "image": "assets/alarmvision-1200.jpg",
+     "alt": "An AlarmVision scenario: two people highlighted in a camera frame",
+     "cap": [
+      "AlarmVision",
+      "Analytics active"
+     ],
+     "path_label": "Signal path",
+     "path": [
+      {
+       "title": "Camera",
+       "text": "VUE Plus bullet, turret, dome or fisheye.",
+       "image": "assets/p-vplus-7081-bdv-1200-cut-600.png",
+       "href": "products/vplus-7081-bdv.html"
+      },
+      {
+       "title": "XV gateway",
+       "text": "AlarmVision analytics read the scene.",
+       "image": "assets/p-xv-gateways-with-alarmvision-1200-cut-600.png",
+       "href": "products/xv-gateways-with-alarmvision.html"
+      },
+      {
+       "title": "Panel",
+       "text": "XT75 or XR Series takes it as an alarm.",
+       "image": "assets/xt75-1200-cut-600.png",
+       "href": "products/xt75.html"
+      },
+      {
+       "title": "VK VMS",
+       "text": "24/7 video management, with AlarmVision.",
+       "icon": true,
+       "href": "news/vk-vms.html"
+      }
+     ],
+     "more": [
+      "Video",
+      "services/video.html"
+     ]
+    },
+    {
+     "type": "pn-zone",
+     "id": "z5",
+     "z": 5,
+     "name": "Mobile",
+     "meta": "Virtual Keypad / Digital Key / Dealer Admin",
+     "heading": "The system keypad, <em>on a phone.</em>",
+     "body": "Virtual Keypad runs on Android, iPhone and the web, branded with the dealer's logo. Dealer Admin handles mass panel programming and bulk firmware updates. Digital Key puts the credential in the phone's mobile wallet.",
+     "image": "assets/p-virtual-keypad-1200-cut.png",
+     "alt": "Virtual Keypad on a laptop, a tablet and a phone",
+     "links": [
+      [
+       "Virtual Keypad",
+       "products/virtual-keypad.html"
+      ],
+      [
+       "Digital Key",
+       "products/digital-key-credential.html"
+      ],
+      [
+       "Dealer Admin",
+       "products/dealer-admin.html"
+      ]
+     ],
+     "plate": {
+      "k": "Independent examination",
+      "big": [
+       "SOC 2",
+       "Type II"
+      ],
+      "rows": [
+       [
+        "Examined",
+        "Annually"
+       ],
+       [
+        "By",
+        "A licensed CPA firm"
+       ],
+       [
+        "Covers",
+        "Dealer Admin, Virtual Keypad"
+       ],
+       [
+        "Hosted",
+        "Tier 4 data center"
+       ],
+       [
+        "SOC 3 report",
+        "For public distribution"
+       ]
+      ],
+      "href": "trust.html",
+      "label": "Trust and security"
+     },
+     "more": [
+      "Virtual Keypad and software",
+      "services/mobile-automation.html"
+     ]
+    },
+    {
+     "type": "pn-zone",
+     "id": "z6",
+     "z": 6,
+     "name": "Dealers",
+     "meta": "Made in Springfield, Missouri",
+     "year": "1975",
+     "heading": "Made in Springfield since 1975. Sold through authorized dealers.",
+     "body": "We make security systems in Springfield, Missouri, with U.S. and global components, and sell them only through authorized dealers and distributors. A building owner starts with a DMP dealer.",
+     "ctas": [
+      [
+       "Find a dealer",
+       "find-a-dealer.html"
+      ],
+      [
+       "Dealer portal preview",
+       "dealer-portal.html"
+      ],
+      [
+       "Become a dealer",
+       "support/become-a-dealer.html"
+      ]
+     ],
+     "video": {
+      "mp4": "assets/hero-loop-plant.mp4",
+      "webm": "assets/hero-loop-plant.webm",
+      "poster": "assets/hero-loop-plant-poster.jpg",
+      "label": "The DMP plant floor in Springfield, Missouri",
+      "cap": [
+       "Plant floor",
+       "Springfield, Missouri"
+      ]
+     },
+     "row": [
+      [
+       "Headquarters",
+       "Springfield, Missouri",
+       ""
+      ],
+      [
+       "Catalog",
+       "14 product categories",
+       "services.html"
+      ],
+      [
+       "Dealer ordering",
+       "buy.DMP.com, 24 hours a day",
+       "https://buy.dmp.com/dmp/Shop"
+      ],
+      [
+       "Founded",
+       "1975, by Rick Britton",
+       "about.html"
+      ]
+     ]
     }
-   ]
+   ],
+   "compose": {
+    "showcase": [
+     "hero-layered",
+     "assoc",
+     "z1",
+     "z2",
+     "z3",
+     "z4",
+     "z5",
+     "building",
+     "how",
+     "flagships",
+     "z6",
+     "who",
+     "portal",
+     "proof",
+     "made-here",
+     "story",
+     "news",
+     "guides",
+     "faq",
+     "contact",
+     "ready"
+    ],
+    "clean": [
+     "hero-layered",
+     "assoc",
+     "facts",
+     "systems",
+     "building",
+     "flagships",
+     "how",
+     "who",
+     "portal",
+     "proof",
+     "made-here",
+     "story",
+     "news",
+     "guides",
+     "faq",
+     "contact",
+     "ready"
+    ],
+    "press": [
+     "hero-layered",
+     "assoc",
+     "facts",
+     "systems",
+     "building",
+     "flagships",
+     "how",
+     "who",
+     "portal",
+     "proof",
+     "made-here",
+     "story",
+     "news",
+     "guides",
+     "faq",
+     "contact",
+     "ready"
+    ]
+   }
   },
   {
    "file": "services.html",
@@ -2238,6 +2700,17 @@
         "products/xr550.html"
        ]
       ]
+     },
+     "bg_image": "assets/env/env-03-parking-lot-1280.jpg",
+     "bg_flip": true,
+     "bg_caption": "Illustrative scene",
+     "variants": {
+      "clean": {
+       "hv": {}
+      },
+      "press": {
+       "hv": {}
+      }
      }
     },
     {
@@ -2769,7 +3242,9 @@
       "href": "contact.html"
      }
     }
-   ]
+   ],
+   "sys": "intrusion",
+   "sys_page": "services/intrusion.html"
   },
   {
    "file": "services/access-control.html",
@@ -2968,6 +3443,17 @@
         "products/entre-lite.html"
        ]
       ]
+     },
+     "bg_image": "assets/env/env-02-office-lobby-1280.jpg",
+     "bg_flip": false,
+     "bg_caption": "Illustrative scene",
+     "variants": {
+      "clean": {
+       "hv": {}
+      },
+      "press": {
+       "hv": {}
+      }
      }
     },
     {
@@ -3553,7 +4039,9 @@
       "href": "contact.html"
      }
     }
-   ]
+   ],
+   "sys": "access",
+   "sys_page": "services/access-control.html"
   },
   {
    "file": "services/fire.html",
@@ -3748,6 +4236,17 @@
         "products/2w-blx.html"
        ]
       ]
+     },
+     "bg_image": "assets/env/env-09-stairwell-1280.jpg",
+     "bg_flip": true,
+     "bg_caption": "Illustrative scene",
+     "variants": {
+      "clean": {
+       "hv": {}
+      },
+      "press": {
+       "hv": {}
+      }
      }
     },
     {
@@ -4213,7 +4712,9 @@
       "href": "contact.html"
      }
     }
-   ]
+   ],
+   "sys": "fire",
+   "sys_page": "services/fire.html"
   },
   {
    "file": "services/video.html",
@@ -4408,6 +4909,17 @@
         "products/vue-video-doorbell.html"
        ]
       ]
+     },
+     "bg_image": "assets/env/env-08-campus-aerial-1280.jpg",
+     "bg_flip": false,
+     "bg_caption": "Illustrative scene",
+     "variants": {
+      "clean": {
+       "hv": {}
+      },
+      "press": {
+       "hv": {}
+      }
      }
     },
     {
@@ -4928,7 +5440,9 @@
       "href": "contact.html"
      }
     }
-   ]
+   ],
+   "sys": "video",
+   "sys_page": "services/video.html"
   },
   {
    "file": "services/communicators.html",
@@ -5127,6 +5641,17 @@
         "products/cellcom.html"
        ]
       ]
+     },
+     "bg_image": "assets/env/env-08-campus-aerial-1280.jpg",
+     "bg_flip": false,
+     "bg_caption": "Illustrative scene",
+     "variants": {
+      "clean": {
+       "hv": {}
+      },
+      "press": {
+       "hv": {}
+      }
      }
     },
     {
@@ -5518,7 +6043,9 @@
       "href": "contact.html"
      }
     }
-   ]
+   ],
+   "sys": "intrusion",
+   "sys_page": "services/communicators.html"
   },
   {
    "file": "services/wireless.html",
@@ -5717,6 +6244,17 @@
         "products/1128.html"
        ]
       ]
+     },
+     "bg_image": "assets/env/env-01-school-corridor-1280.jpg",
+     "bg_flip": true,
+     "bg_caption": "Illustrative scene",
+     "variants": {
+      "clean": {
+       "hv": {}
+      },
+      "press": {
+       "hv": {}
+      }
      }
     },
     {
@@ -6107,7 +6645,9 @@
       "href": "contact.html"
      }
     }
-   ]
+   ],
+   "sys": "intrusion",
+   "sys_page": "services/wireless.html"
   },
   {
    "file": "services/panels-keypads.html",
@@ -6306,6 +6846,17 @@
         "products/7000-series.html"
        ]
       ]
+     },
+     "bg_image": "assets/env/env-05-server-aisle-1280.jpg",
+     "bg_flip": true,
+     "bg_caption": "Illustrative scene",
+     "variants": {
+      "clean": {
+       "hv": {}
+      },
+      "press": {
+       "hv": {}
+      }
      }
     },
     {
@@ -6800,7 +7351,9 @@
       "href": "contact.html"
      }
     }
-   ]
+   ],
+   "sys": "intrusion",
+   "sys_page": "services/panels-keypads.html"
   },
   {
    "file": "services/mobile-automation.html",
@@ -6953,6 +7506,17 @@
         "products/remote-link.html"
        ]
       ]
+     },
+     "bg_image": "assets/env/env-02-office-lobby-1280.jpg",
+     "bg_flip": false,
+     "bg_caption": "Illustrative scene",
+     "variants": {
+      "clean": {
+       "hv": {}
+      },
+      "press": {
+       "hv": {}
+      }
      }
     },
     {
@@ -7272,7 +7836,9 @@
       "href": "contact.html"
      }
     }
-   ]
+   ],
+   "sys": "mobile",
+   "sys_page": "services/mobile-automation.html"
   },
   {
    "file": "industries.html",
@@ -7326,6 +7892,17 @@
       ],
       "label": "Browse the buildings",
       "href": "#buildings"
+     },
+     "bg_image": "assets/env/env-08-campus-aerial-1280.jpg",
+     "bg_flip": false,
+     "bg_caption": "Illustrative scene",
+     "variants": {
+      "clean": {
+       "hv": {}
+      },
+      "press": {
+       "hv": {}
+      }
      }
     },
     {
@@ -7521,6 +8098,17 @@
         "find-a-system.html"
        ]
       ]
+     },
+     "bg_image": "assets/env/env-02-office-lobby-1280.jpg",
+     "bg_flip": false,
+     "bg_caption": "Illustrative scene",
+     "variants": {
+      "clean": {
+       "hv": {}
+      },
+      "press": {
+       "hv": {}
+      }
      }
     },
     {
@@ -7752,6 +8340,17 @@
         "find-a-system.html"
        ]
       ]
+     },
+     "bg_image": "assets/env/env-07-bank-branch-1280.jpg",
+     "bg_flip": false,
+     "bg_caption": "Illustrative scene",
+     "variants": {
+      "clean": {
+       "hv": {}
+      },
+      "press": {
+       "hv": {}
+      }
      }
     },
     {
@@ -8031,6 +8630,17 @@
         "find-a-system.html"
        ]
       ]
+     },
+     "bg_image": "assets/env/env-06-retail-storefront-1280.jpg",
+     "bg_flip": true,
+     "bg_caption": "Illustrative scene",
+     "variants": {
+      "clean": {
+       "hv": {}
+      },
+      "press": {
+       "hv": {}
+      }
      }
     },
     {
@@ -8310,6 +8920,17 @@
         "find-a-system.html"
        ]
       ]
+     },
+     "bg_image": "assets/env/env-08-campus-aerial-1280.jpg",
+     "bg_flip": false,
+     "bg_caption": "Illustrative scene",
+     "variants": {
+      "clean": {
+       "hv": {}
+      },
+      "press": {
+       "hv": {}
+      }
      }
     },
     {
@@ -8588,6 +9209,17 @@
         "find-a-system.html"
        ]
       ]
+     },
+     "bg_image": "assets/env/env-10-warehouse-dock-1280.jpg",
+     "bg_flip": false,
+     "bg_caption": "Illustrative scene",
+     "variants": {
+      "clean": {
+       "hv": {}
+      },
+      "press": {
+       "hv": {}
+      }
      }
     },
     {
@@ -8818,6 +9450,17 @@
         "find-a-system.html"
        ]
       ]
+     },
+     "bg_image": "assets/env/env-01-school-corridor-1280.jpg",
+     "bg_flip": true,
+     "bg_caption": "Illustrative scene",
+     "variants": {
+      "clean": {
+       "hv": {}
+      },
+      "press": {
+       "hv": {}
+      }
      }
     },
     {
@@ -9047,6 +9690,17 @@
         "find-a-system.html"
        ]
       ]
+     },
+     "bg_image": "assets/env/env-04-hospital-entrance-1280.jpg",
+     "bg_flip": false,
+     "bg_caption": "Illustrative scene",
+     "variants": {
+      "clean": {
+       "hv": {}
+      },
+      "press": {
+       "hv": {}
+      }
      }
     },
     {
@@ -9276,6 +9930,17 @@
         "find-a-system.html"
        ]
       ]
+     },
+     "bg_image": "assets/env/env-09-stairwell-1280.jpg",
+     "bg_flip": true,
+     "bg_caption": "Illustrative scene",
+     "variants": {
+      "clean": {
+       "hv": {}
+      },
+      "press": {
+       "hv": {}
+      }
      }
     },
     {
@@ -9505,6 +10170,17 @@
         "find-a-system.html"
        ]
       ]
+     },
+     "bg_image": "assets/env/env-02-office-lobby-1280.jpg",
+     "bg_flip": false,
+     "bg_caption": "Illustrative scene",
+     "variants": {
+      "clean": {
+       "hv": {}
+      },
+      "press": {
+       "hv": {}
+      }
      }
     },
     {
@@ -9734,6 +10410,17 @@
         "find-a-system.html"
        ]
       ]
+     },
+     "bg_image": "assets/env/env-10-warehouse-dock-1280.jpg",
+     "bg_flip": false,
+     "bg_caption": "Illustrative scene",
+     "variants": {
+      "clean": {
+       "hv": {}
+      },
+      "press": {
+       "hv": {}
+      }
      }
     },
     {
@@ -9964,6 +10651,17 @@
         "find-a-system.html"
        ]
       ]
+     },
+     "bg_image": "assets/env/env-01-school-corridor-1280.jpg",
+     "bg_flip": true,
+     "bg_caption": "Illustrative scene",
+     "variants": {
+      "clean": {
+       "hv": {}
+      },
+      "press": {
+       "hv": {}
+      }
      }
     },
     {
@@ -11328,7 +12026,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "access",
+   "sys_page": "services/access-control.html"
   },
   {
    "file": "products/mobile-credential.html",
@@ -11669,7 +12369,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "access",
+   "sys_page": "services/access-control.html"
   },
   {
    "file": "products/dmp-bluetooth-reader-and-mobile-credential.html",
@@ -11960,7 +12662,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "access",
+   "sys_page": "services/access-control.html"
   },
   {
    "file": "products/734n.html",
@@ -12259,7 +12963,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "access",
+   "sys_page": "services/access-control.html"
   },
   {
    "file": "products/x1.html",
@@ -12566,7 +13272,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "access",
+   "sys_page": "services/access-control.html"
   },
   {
    "file": "products/entre-lite.html",
@@ -12802,7 +13510,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "access",
+   "sys_page": "services/access-control.html"
   },
   {
    "file": "products/entre-enterprise.html",
@@ -13103,7 +13813,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "access",
+   "sys_page": "services/access-control.html"
   },
   {
    "file": "products/cellcom.html",
@@ -13414,7 +14126,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "intrusion",
+   "sys_page": "services/communicators.html"
   },
   {
    "file": "products/dualcom.html",
@@ -13721,7 +14435,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "intrusion",
+   "sys_page": "services/communicators.html"
   },
   {
    "file": "products/263lte.html",
@@ -14058,7 +14774,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "intrusion",
+   "sys_page": "services/communicators.html"
   },
   {
    "file": "products/263lte-firstnet.html",
@@ -14399,7 +15117,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "intrusion",
+   "sys_page": "services/communicators.html"
   },
   {
    "file": "products/265lte.html",
@@ -14702,7 +15422,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "intrusion",
+   "sys_page": "services/communicators.html"
   },
   {
    "file": "products/scs-vr-virtual-receiver-software.html",
@@ -15019,7 +15741,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "intrusion",
+   "sys_page": "services/communicators.html"
   },
   {
    "file": "products/scs-1r.html",
@@ -15322,7 +16046,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "intrusion",
+   "sys_page": "services/communicators.html"
   },
   {
    "file": "products/xt75.html",
@@ -15631,7 +16357,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "intrusion",
+   "sys_page": "services/panels-keypads.html"
   },
   {
    "file": "products/xt50.html",
@@ -16034,7 +16762,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "intrusion",
+   "sys_page": "services/panels-keypads.html"
   },
   {
    "file": "products/xtlplus.html",
@@ -16429,7 +17159,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "intrusion",
+   "sys_page": "services/panels-keypads.html"
   },
   {
    "file": "products/xtltouch.html",
@@ -16824,7 +17556,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "intrusion",
+   "sys_page": "services/panels-keypads.html"
   },
   {
    "file": "products/xr150.html",
@@ -17227,7 +17961,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "intrusion",
+   "sys_page": "services/panels-keypads.html"
   },
   {
    "file": "products/xr550.html",
@@ -17660,7 +18396,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "intrusion",
+   "sys_page": "services/panels-keypads.html"
   },
   {
    "file": "products/xr650.html",
@@ -18056,7 +18794,9 @@
       "href": "contact.html"
      }
     }
-   ]
+   ],
+   "sys": "intrusion",
+   "sys_page": "services/panels-keypads.html"
   },
   {
    "file": "products/tmsentry.html",
@@ -18367,7 +19107,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "intrusion",
+   "sys_page": "services/panels-keypads.html"
   },
   {
    "file": "products/7-inch-touchscreen-keypad.html",
@@ -18712,7 +19454,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "intrusion",
+   "sys_page": "services/panels-keypads.html"
   },
   {
    "file": "products/graphic-touchscreen.html",
@@ -19010,7 +19754,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "intrusion",
+   "sys_page": "services/panels-keypads.html"
   },
   {
    "file": "products/9800-series.html",
@@ -19301,7 +20047,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "intrusion",
+   "sys_page": "services/panels-keypads.html"
   },
   {
    "file": "products/7000-series.html",
@@ -19600,7 +20348,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "intrusion",
+   "sys_page": "services/panels-keypads.html"
   },
   {
    "file": "products/aqualite-series.html",
@@ -19903,7 +20653,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "intrusion",
+   "sys_page": "services/panels-keypads.html"
   },
   {
    "file": "products/icon-series.html",
@@ -20206,7 +20958,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "intrusion",
+   "sys_page": "services/panels-keypads.html"
   },
   {
    "file": "products/xf6.html",
@@ -20538,7 +21292,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "fire",
+   "sys_page": "services/fire.html"
   },
   {
    "file": "products/xr150fc-2.html",
@@ -20908,7 +21664,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "fire",
+   "sys_page": "services/fire.html"
   },
   {
    "file": "products/xr550fc-2.html",
@@ -21278,7 +22036,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "fire",
+   "sys_page": "services/fire.html"
   },
   {
    "file": "products/850.html",
@@ -21584,7 +22344,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "fire",
+   "sys_page": "services/fire.html"
   },
   {
    "file": "products/630f.html",
@@ -21894,7 +22656,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "fire",
+   "sys_page": "services/fire.html"
   },
   {
    "file": "products/2w-blx.html",
@@ -22188,7 +22952,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "fire",
+   "sys_page": "services/fire.html"
   },
   {
    "file": "products/jamalert.html",
@@ -22522,7 +23288,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "intrusion",
+   "sys_page": "services/intrusion.html"
   },
   {
    "file": "products/virtual-keypad.html",
@@ -22857,7 +23625,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "mobile",
+   "sys_page": "services/mobile-automation.html"
   },
   {
    "file": "products/dealer-admin.html",
@@ -23176,7 +23946,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "mobile",
+   "sys_page": "services/mobile-automation.html"
   },
   {
    "file": "products/remote-link.html",
@@ -23473,7 +24245,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "mobile",
+   "sys_page": "services/mobile-automation.html"
   },
   {
    "file": "products/xv-gateways-with-alarmvision.html",
@@ -23802,7 +24576,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "video",
+   "sys_page": "services/video.html"
   },
   {
    "file": "products/v-6022wc.html",
@@ -24197,7 +24973,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "video",
+   "sys_page": "services/video.html"
   },
   {
    "file": "products/vplus-7061-fe.html",
@@ -24596,7 +25374,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "video",
+   "sys_page": "services/video.html"
   },
   {
    "file": "products/vplus-7121-fe.html",
@@ -24995,7 +25775,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "video",
+   "sys_page": "services/video.html"
   },
   {
    "file": "products/vplus-7081-bdv.html",
@@ -25394,7 +26176,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "video",
+   "sys_page": "services/video.html"
   },
   {
    "file": "products/vue-video-doorbell.html",
@@ -25727,7 +26511,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "video",
+   "sys_page": "services/video.html"
   },
   {
    "file": "products/1100xh.html",
@@ -26032,7 +26818,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "intrusion",
+   "sys_page": "services/wireless.html"
   },
   {
    "file": "products/1101.html",
@@ -26391,7 +27179,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "intrusion",
+   "sys_page": "services/wireless.html"
   },
   {
    "file": "products/1128.html",
@@ -26701,7 +27491,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "intrusion",
+   "sys_page": "services/wireless.html"
   },
   {
    "file": "products/1142.html",
@@ -27060,7 +27852,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "intrusion",
+   "sys_page": "services/wireless.html"
   },
   {
    "file": "products/1164.html",
@@ -27370,7 +28164,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "intrusion",
+   "sys_page": "services/wireless.html"
   },
   {
    "file": "products/1100t.html",
@@ -27680,7 +28476,9 @@
       "href": "https://buy.dmp.com/dmp/Shop"
      }
     }
-   ]
+   ],
+   "sys": "intrusion",
+   "sys_page": "services/wireless.html"
   },
   {
    "file": "support.html",
@@ -41235,24 +42033,24 @@
   "more": [
    [
     "Why build it on HubSpot",
-    "One platform for the site, the CRM and the dealers: what the build looks like, a fair comparison with Craft CMS, the risks we would manage and the questions to ask any bidder.",
+    "One platform for the site, the CRM and the dealers: what the build looks like, how it compares with Craft CMS, custom features, the risks we would manage and the questions to ask any bidder.",
     "hubspot-build.html"
    ]
   ],
   "choose_heading": "Three directions. Your call.",
-  "choose_intro": "The words and the pages are the same in all three. What differs is the register. Open each one and tell us which feels like DMP.",
+  "choose_intro": "The words, the pages and the facts are the same in all three. What differs is the idea. Showcase turns the site into a security panel, Clean reads like a spec sheet, and Press reads like a magazine. Open each one and tell us which feels like DMP.",
   "choose_reasons": [
    [
-    "Showcase: image-led",
-    "Layered photography and a sales-forward feel. It makes the most of DMP's product and facility photos."
+    "Showcase: the Panel",
+    "Industrial black and DMP yellow. The home page is a keypad you can arm and disarm, six colour-coded zones walk the systems, and a supervised heartbeat runs down the edge of every page."
    ],
    [
-    "Clean: plain and fast",
-    "High contrast, product names first. Built for dealers and specifiers scanning for a panel or module."
+    "Clean: the spec sheet",
+    "White ground, hairline grid, mono labels and tabular numbers. Product names and data first, for dealers and specifiers scanning for a panel or module."
    ],
    [
-    "Press: editorial",
-    "Serif headings and a magazine feel, so a 50-year-old manufacturer reads like the established name it is."
+    "Press: the magazine",
+    "Serif headlines, full-bleed photo covers, a lead story and fifty years of firsts told as a feature, so a 50-year-old manufacturer reads like the established name it is."
    ]
   ],
   "pick_reasons": [
@@ -41273,11 +42071,11 @@
   "alternatives": [
    [
     "Quantum Showcase",
-    "The image-led choice: layered and sales-forward, and the one that makes the most of DMP's product photography."
+    "The signature choice: the site behaves like a DMP panel, in black and yellow, with every system colour-coded."
    ],
    [
     "Quantum Press",
-    "The wildcard: serif and editorial, so a 50-year-old manufacturer reads like the established name it is."
+    "The wildcard: serif and editorial, with photo covers and feature stories."
    ]
   ],
   "plan": [
@@ -41470,9 +42268,13 @@
    "Consent banner: a preview-only mock (Accept all, Reject non-essential, Preferences, choice kept in the browser's localStorage). The live site is to use HubSpot's consent tool, so the real categories, wording and region rules are DMP's to confirm. The preview labels itself as such on the banner.",
    "Article markup on blog posts and news items leaves datePublished, dateModified and author out on purpose. DMP must supply a publish date, a review date and a named author for each post; the hub's news dates can become datePublished once DMP confirms them.",
    "Organization logo: the only logo on dmp.com is an SVG. Search engines prefer a stable PNG or JPG (at least 112 by 112 pixels, on a plain background); DMP to supply one, and the markup will point at it.",
-   "sameAs lists the LinkedIn, YouTube, Facebook, Crunchbase and BBB profiles that exist today (checked 9 November 2026). dmp.com does not link any of them; DMP to confirm they are official and to add them to the site footer. The BBB profile is listed, not accredited."
+   "sameAs lists the LinkedIn, YouTube, Facebook, Crunchbase and BBB profiles that exist today (checked 9 November 2026). dmp.com does not link any of them; DMP to confirm they are official and to add them to the site footer. The BBB profile is listed, not accredited.",
+   "Environment backgrounds on the industry and system heroes are AI-generated placeholders, captioned 'Illustrative scene'. They are not DMP photographs. Replace them with real photography before launch, or approve them as illustrations.",
+   "Showcase headings are set in Barlow Condensed and labels in JetBrains Mono, Press headlines in Playfair Display, all open licence (SIL OFL) and self-hosted. If DMP licenses Gotham for the web, the display face is the first thing to swap.",
+   "System colours (intrusion yellow, access green, fire red, video blue, mobile violet) are our proposal, not an existing DMP standard. DMP to confirm or supply its own.",
+   "The home-page keypad in Showcase is a demonstration: nothing is armed and no signal is sent. DMP to confirm it is comfortable with a keypad likeness and the wording 'Armed' and 'Disarmed' on a marketing page."
   ],
-  "footer": "Prepared for Digital Monitoring Products. Nothing here is live or indexed. Logo and photographs are from dmp.com and are used in this private preview."
+  "footer": "Prepared for Digital Monitoring Products. Nothing here is live or indexed. Logo and photographs are from dmp.com and are used in this private preview. Environment scenes behind some headlines are AI-generated placeholders, not DMP photographs."
  },
  "redirects": {
   "/": [

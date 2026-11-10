@@ -7,9 +7,9 @@
  ],
  "recommend": null,
  "roles": {
-  "Showcase": "image-led and sales-forward, the most familiar register for a security manufacturer",
-  "Clean": "a plain, fast, high-contrast catalogue built for dealers and specifiers scanning for a product",
-  "Press": "editorial and serif, so a manufacturer reads like an established company"
+  "Showcase": "the Panel: cinematic, industrial black and DMP yellow. The home page is a working keypad you can arm and disarm, and six colour-coded zones walk you through intrusion, access, fire, video, mobile and dealers",
+  "Clean": "a Swiss spec-sheet catalogue: white ground, hairline grid, mono labels and tabular numbers, built for dealers and specifiers scanning for a product and its data",
+  "Press": "an editorial magazine: serif headlines, full-bleed photo covers, a lead story and fifty years of firsts told as a feature, so a manufacturer reads like an established company"
  },
  "base_url": "https://clientcommand.thequantumleap.business/s/8fdd037a11554d07f4a1c4eb21f0e854",
  "out": "../out-digital-monitoring-products"

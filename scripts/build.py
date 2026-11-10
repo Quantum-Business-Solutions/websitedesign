@@ -115,6 +115,14 @@ def main(argv=None):
     except Exception:  # noqa: BLE001
         print(r.stdout[-400:], r.stderr[-400:])
 
+    # hub card previews: screenshots of each direction's home page into <out>/assets/hub, saved back to the brand's
+    # assets so a machine without Playwright still has them. Never fatal: it warns and keeps the committed images.
+    try:
+        subprocess.run([sys.executable, os.path.join(HERE, "hub_shots.py"), out, "--dirs", ",".join(t.replace("Quantum ", "").lower() for t in cfg["themes"]),
+                        "--save", os.path.join(ROOT, "brands", f"{a.slug}.assets", "hub")], cwd=ROOT, text=True, timeout=420)
+    except Exception as e:  # noqa: BLE001
+        print(f"hub_shots: WARNING: skipped ({e}); the hub keeps the committed images")
+
     sh([sys.executable, os.path.join(HERE, "dedupe_assets.py"), out])
     package_size(out)
 

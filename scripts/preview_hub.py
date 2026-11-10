@@ -41,6 +41,9 @@ def _role(roles, t):
 
 def hub(content, themes, recommend, base, roles, standard, client_tokens, out_dir=None, seo=None):
     import os
+    if not os.environ.get("HUB_V1"):  # the chooser with pictures lives in preview_hub2.py; HUB_V1=1 keeps this page
+        import preview_hub2
+        return preview_hub2.hub(content, themes, recommend, base, roles, standard, client_tokens, out_dir, seo)
     ds_link = '<a href="design-system.html">Design system</a>' if out_dir and os.path.exists(os.path.join(out_dir, "design-system.html")) else ""
     b = content["brand"]
     pitch = content.get("pitch", {})

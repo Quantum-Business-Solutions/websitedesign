@@ -250,16 +250,35 @@ def _poster_srcset(path, rel):
     return f' srcset="{rel(small)} 800w, {rel(path)} {w}w" sizes="100vw"'
 
 
+def _bg_srcset(path, rel):
+    """srcset for an environment plate (x-1280.jpg with x-800.jpg and x-1920.jpg siblings in a brand's assets/env folder)."""
+    import glob, os, re
+    m = re.match(r"(.*)-1280\.jpg$", path)
+    if not m:
+        return ""
+    root = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "brands")
+    have = [w for w in (800, 1920) if glob.glob(os.path.join(root, "*.assets", "env", os.path.basename(f"{m.group(1)}-{w}.jpg")))]
+    if not have:
+        return ""
+    parts = [f"{rel(f'{m.group(1)}-{w}.jpg')} {w}w" for w in (800,) if w in have] + [f"{rel(path)} 1280w"] + [f"{rel(f'{m.group(1)}-{w}.jpg')} {w}w" for w in (1920,) if w in have]
+    return f' srcset="{", ".join(parts)}" sizes="100vw"'
+
+
 def _hero_layered(s, ctx):
-    """Dark hero: background plate, pointer glow, headline, proof strip, two floating cards with depth."""
+    """Dark hero: background plate, pointer glow, headline, proof strip, two floating cards with depth.
+    bg_image (optional) is an environment photograph: it is the poster under a brand video, and the sole background without one."""
     E, RAW, L = ctx["E"], ctx["RAW"], ctx["L"]
     hid = s.get("id", "hero")
     hv = s.get("hv")
+    env = s.get("bg_image")
+    envc = (" env" + (" flip" if s.get("bg_flip") else "")) if env else ""
     if hv and hv.get("src"):
-        pimg = hv.get("poster") or s.get("image")
-        pimg_html = (f'<img class="hv-poster" src="{E(ctx["rel"](pimg))}"{_poster_srcset(pimg, ctx["rel"])} alt="" width="1600" height="900" fetchpriority="high" decoding="async">') if pimg else ""
+        pimg = env or hv.get("poster") or s.get("image")
+        pimg_html = (f'<img class="hv-poster" src="{E(ctx["rel"](pimg))}"{_bg_srcset(pimg, ctx["rel"]) if env else _poster_srcset(pimg, ctx["rel"])} alt="" width="1600" height="900" fetchpriority="high" decoding="async">') if pimg else ""
         wb = f' data-webm="{E(ctx["rel"](hv["webm"]))}"' if hv.get("webm") else ""
-        bg = (f'<div class="bg hv" data-mp4="{E(ctx["rel"](hv["src"]))}"{wb} data-poster="{E(ctx["rel"](pimg)) if pimg else ""}">{pimg_html}</div>')
+        bg = (f'<div class="bg hv{envc}" data-mp4="{E(ctx["rel"](hv["src"]))}"{wb} data-poster="{E(ctx["rel"](pimg)) if pimg else ""}">{pimg_html}</div>')
+    elif env:
+        bg = f'<div class="bg{envc}"><img src="{E(ctx["rel"](env))}"{_bg_srcset(env, ctx["rel"])} alt="" width="1920" height="1086" fetchpriority="high" decoding="async"></div>'
     elif s.get("video"):
         poster = f' poster="{E(ctx["rel"](s["image"]))}"' if s.get("image") else ""
         bg = f'<div class="bg"><video autoplay muted loop playsinline preload="metadata"{poster} aria-hidden="true" width="{s.get("image_w", 2100)}" height="{s.get("image_h", 900)}"><source src="{E(ctx["rel"](s["video"]))}" type="video/mp4"></video></div>'
@@ -321,7 +340,7 @@ size();addEventListener('resize',size,{{passive:true}});
 if('IntersectionObserver' in window){{new IntersectionObserver(function(es){{es.forEach(function(e){{if(e.isIntersecting&&!run){{run=true;tick()}}else if(!e.isIntersecting){{run=false;cancelAnimationFrame(raf)}}}})}}).observe(h)}}else{{run=true;tick()}}}}}})();</script>"""
     return f'''<section class="q-section pv-lh{" lf-tight" if s.get("float") else ""}" id="{E(hid)}">{bg}<canvas class="net" aria-hidden="true"></canvas><div class="glow" aria-hidden="true"></div><div class="q-container"><div>{f'<div class="q-eyebrow">{E(s["eyebrow"])}</div>' if s.get("eyebrow") else ""}
 <h1 class="q-h1">{RAW(s["heading"])}</h1><div class="q-lead">{E(s.get("subhead", ""))}</div>{_btns(s, ctx)}{lane}{note}{stats}</div>
-<div class="stack{" has3d" if three else ""}">{three}{ca}{cb}</div></div>{js}</section>'''
+<div class="stack{" has3d" if three else ""}">{three}{ca}{cb}</div></div>{f'<p class="pv-envcap">{E(s["bg_caption"])}</p>' if env and s.get("bg_caption") else ""}{js}</section>'''
 
 
 def _wheel(s, ctx):

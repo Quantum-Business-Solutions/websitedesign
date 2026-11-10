@@ -820,7 +820,7 @@ def build():
                   "Page content: 175 of 241 pages have under 300 words, 107 share one default description, 66 titles are under 25 characters, 226 pages have an image with no alt text, and only 36 have a question heading.",
                   "Correction to the September report: its crawl started at the redirecting apex and read one URL, so its findings about the home page's title, H1, canonical, robots.txt, sitemap and structured data were wrong for the real site. They are replaced here.",
                   "Strengths to keep: 50 years of history, a real manufacturing story, SOC 2 Type II examinations, 14 product categories, a deep library of spec sheets and guides, and 1,916 referring domains."],
-        "more": [["Why build it on HubSpot", "One platform for the site, the CRM and the dealers: what the build looks like, a fair comparison with Craft CMS, the risks we would manage and the questions to ask any bidder.", "hubspot-build.html"]],
+        "more": [["Why build it on HubSpot", "One platform for the site, the CRM and the dealers: what the build looks like, how it compares with Craft CMS, custom features, the risks we would manage and the questions to ask any bidder.", "hubspot-build.html"]],
         "choose_heading": "Three directions. Your call.",
         "choose_intro": "The words and the pages are the same in all three. What differs is the register. Open each one and tell us which feels like DMP.",
         "choose_reasons": [["Showcase: image-led", "Layered photography and a sales-forward feel. It makes the most of DMP's product and facility photos."],
@@ -937,7 +937,9 @@ def finalize(data):
     import dmp_dw1   # design wow pass 1: building cutaway, product anatomy, mega menu data (after cutouts)
     data = dmp_dw1.apply(data)
     import dmp_dw2   # design wave B: pinned stories, distributor map, icon keys, page rhythm flags
-    return dmp_dw2.apply(data)
+    data = dmp_dw2.apply(data)
+    import dmp_panel   # panel pass: keypad hero, zone scenes, system keys, environment backgrounds
+    return dmp_panel.apply(data)
 
 
 if __name__ == "__main__":
