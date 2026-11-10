@@ -3900,8 +3900,8 @@
               "Speed and duty cycle chosen from your meter reads, not a brochure."
             ],
             [
-              "Serviced same day",
-              "Under a Kelly agreement, by factory-trained technicians from the nearest branch."
+              "Serviced from the nearest branch",
+              "Under a Kelly agreement, by factory-trained technicians."
             ]
           ]
         },
@@ -4779,7 +4779,7 @@
             ],
             [
               "Accuracy",
-              "The right pages in the right envelope, every time."
+              "The right pages in the right envelope."
             ],
             [
               "Speed",
@@ -8718,7 +8718,7 @@
             ],
             [
               "How fast can an agreement start?",
-              "Ask your branch. Monitoring can usually be installed on existing devices within days."
+              "Ask your branch. Monitoring can usually be installed on the devices you already have."
             ]
           ]
         },
@@ -9092,7 +9092,7 @@
               "id": "days-31-60",
               "title": "Days 31 to 60: install, connect, train",
               "paras": [
-                "Devices arrive on a date you chose, go on the network the same day, and every user is trained before the technician leaves. Monitoring is switched on. The first toner ships before anyone asks."
+                "Devices arrive on a date you chose, go on the network at the install visit, and every user is trained before the technician leaves. Monitoring is switched on. The first toner ships before anyone asks."
               ]
             },
             {
@@ -9131,7 +9131,7 @@
             ],
             [
               "What if a device fails in week two?",
-              "Under agreement the response is same day, and The technician is factory-trained."
+              "Under agreement a factory-trained technician is dispatched from the nearest branch."
             ]
           ]
         },
@@ -10109,5 +10109,31 @@
       "The cost calculator's rates. They are typical North Carolina figures for orientation; replace them with yours or keep the disclaimer."
     ],
     "footer": "Prepared for Claudia Coleman, Director of Marketing. Nothing here is live or indexed. Every number we could source comes from your current site, your brand profile or public data. Several service commitments on these pages (response time, the assessment report, the staged process, calculator rates) are our draft of what we think you do, and they are listed under To confirm. Photographs are yours where they exist on your site today (the van, the Greensboro office, the service pages); the rest are generated stand-ins until your own photography exists. Partner logos are the ones on your current site."
-  }
+  },
+  "claims_ok": [
+    {
+      "text": "Potential saving at up to 30% (the figure on Kelly's managed print page)",
+      "source": "https://www.kellyofficesolutions.com/managed-print-services"
+    },
+    {
+      "text": "A repair the same day, in a customer's words",
+      "source": "https://www.kellyofficesolutions.com/"
+    },
+    {
+      "text": "Same day",
+      "source": "https://www.kellyofficesolutions.com/"
+    },
+    {
+      "text": "Accounting and staffing firms with seasonal peaks, and a technician who calls back the same day in tax season.",
+      "source": "https://www.kellyofficesolutions.com/"
+    },
+    {
+      "text": "What same-day service means, and the questions to ask any dealer",
+      "source": "https://www.kellyofficesolutions.com/"
+    },
+    {
+      "text": "blog/same-day-service-what-it-means.html",
+      "source": "https://www.kellyofficesolutions.com/"
+    }
+  ]
 }

@@ -35,10 +35,16 @@ measure under `pitch["confirm"]`. A red or gold placeholder accent that is nobod
   both shipped this (Van Ausdall set `type_from: {"showcase": "clean"}`; Kelly's Showcase renders Open Sans 800). Showcase's own
   face, Bricolage Grotesque at weight 800 with negative tracking, reads as whimsical on a B2B site and is no longer
   used in a client build. `scripts/preview.py` applies the house type whenever the brand sets no type of its own.
+- **No route back to a rejected face.** `REJECTED_FACES` in `scripts/preview.py` lists the theme display faces
+  (Bricolage Grotesque, Fraunces, Instrument Serif) and the script and rounded display faces a brief could name. The
+  house mapping is the base even when a brand sets `type_from` or `fonts`; a rejected face named by a theme, a borrowed
+  direction or `brand.fonts` is replaced by the house face; its Google import and every mention of it are taken out of
+  the page. The hub card and the design-system page name and load the face the pages render.
 - When the client's own site uses a face on Google Fonts (Oswald, Poppins, Jost, Roboto, Montserrat, Lato, Open Sans...)
   set `brand.fonts` and Showcase and Clean use it. A licensed face we cannot ship (Gotham, Proxima Nova, Helvetica Neue)
   is swapped for its closest free neighbour by `FONT_NEIGHBOURS` in `scripts/preview.py`, and the swap goes in `pitch["confirm"]`.
-- The gate reads the computed font of the first headline in a real browser. A theme default leaking through is a FAIL.
+- The gate reads the computed font of the first headline in a real browser, then every face the browser actually drew in the
+  headings, buttons, numerals and body of each home page. A theme default leaking through is a FAIL.
 
 ## 3. The hero is readable, on any photograph
 
@@ -100,7 +106,29 @@ forms to reuse (one per intent, and the contact form is not the assessment form)
 cookie text for counsel; logo, manufacturer-image and customer-name permissions; the glossary (the standard call to action
 label); DNS, registrar and Search Console access and the prior agency; the HubSpot tier and page cap.
 
-## 8. Open decision
+## 8. The beauty bar: what good looks like, and what the gate measures
+
+The first three options a prospect sees have to look designed for them without anyone touching them by hand. The house
+finish (`scripts/preview_polish.py`) puts every module on one scale; the gate takes pictures and measures what can be
+measured. A person still looks, at `qa/index.html` in the build output.
+
+| | What good looks like | What fails the build |
+|---|---|---|
+| **Type** | House type only (rule 2). One scale: h1 40 to 66px sized by how long the headline is, h2 30 to 44px, h3 20 to 22px, lead 18 to 20px, body 16px, card copy 15.5px, labels 13px uppercase. Headings carry weight (700 on Clean, 800 on Showcase, 500 serif on Press), so a section heading never reads lighter than its own body. Numerals are lining and tabular | A rejected display, script or rounded face drawn anywhere or named in the page (`face-leak`). Text under 12px at 1280 or 390 (`type-floor`); under 13px is a WARN. More than one h1, or a heading level skipped (`heading-order`) |
+| **Spacing** | One section rhythm (72 to 112px, 64px on a phone). One heading stack: label, 16px, heading, 16px, lead, 48px, content. Cards and form panels 28 to 32px inside, 24px apart. Grids balance, with no orphan card and no orphan word in a heading | Sideways scroll at 390 (`overflow`) |
+| **Hero** | The first screen says what the company does, in its own words, over its own photograph where it has one. White type sits on the brand's deep ground (rule 3). A long headline steps down a size instead of running to five lines | Headline under 3:1 or lead under 4.5:1 against the pixels behind it (`legible`) |
+| **Density** | One idea per section, one proof per page. Ten or more sections on the home page, none of them empty. A module with no data is left out; a module with thin data takes its thin form (names with no logo files sit in a still row, a brand with no phone gets no Call button) | Under 10 sections or 8 module types on the home page (`home-richness`) |
+| **Colour** | The client's accent, its deep colour and neutrals. The alternate band is a tint of their deep colour, never a stock cream; cards on it are white; hairlines and shadows carry the same deep colour | More than three saturated colour families used as paint (`accent-count`); three is a WARN. Any text under 4.5:1, or 3:1 when large (`contrast-floor`). Any other axe violation on the home page (`axe`) |
+| **Imagery** | The client's own photographs first, one subject per image, no picture on more than six pages. Stand-ins are labelled generated and never show people or premises. Photographs sit in a frame with the direction's corner, never stretched | Missing logo (`logo`). Reuse and all-stand-in builds are WARNs (`image-reuse`, `own-imagery`) |
+| **Motion** | One thing moves at a time. Reveals travel 12px over half a second, once. Cards lift 3px on hover; nothing tilts, pulses, orbits or floats for decoration. The partner marquee takes 80 seconds a lap and stops on hover. Everything is still under reduced motion | Not measured: look at the page |
+| **States** | Every link, button, tab, field and card shows a hover and a keyboard focus ring that reads on its ground, light or dark. Form fields have a visible edge (3:1) and a labelled focus | Covered by `axe` and `contrast-floor` where it can be |
+
+**The pictures.** `scripts/directions_qa.py` writes `qa/contact-sheet.jpg` (the home page of each direction, whole, at 1280
+and 390, on one sheet), the six pictures on their own, and `qa/index.html`, which sets the pictures beside every PASS,
+WARN and FAIL. They upload with the site, so the person who opens the build in Client Command sees them at
+`<site address>/qa/`. The pictures are taken with motion reduced, so every scroll reveal is in.
+
+## 9. Open decision
 
 `schema_blocks()` in `scripts/preview.py` emits Organization and the headquarters LocalBusiness on every page, while
 `design/guardrails.md` says Organization belongs on the home page or one about page. The entity-graph score (11 Sep 2026)

@@ -132,7 +132,7 @@ def main(argv=None):
         if behind not in ("", "0"):
             sys.exit(f"origin/{br} is {behind} commit(s) ahead of the local {out}. Someone else pushed. Pull or reset to it, rebuild, then push. Nothing was pushed.")
         sh(["git", "add", "-A"], cwd=out)
-        msg = f"{a.message}\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01FeWbztza33MhFGyQMY13SN"
+        msg = f"{a.message}\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01FeWbztza33MhFGyQMY13SN"
         r = subprocess.run(["git", "commit", "-q", "-m", msg], cwd=out, text=True, capture_output=True)
         if r.returncode == 0:
             sh(["git", "push", "-q", "origin", "HEAD"], cwd=out)

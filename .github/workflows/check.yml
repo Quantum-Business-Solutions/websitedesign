@@ -1,0 +1,24 @@
+name: Check
+
+# Runs on every push and pull request. The team workflows run on Python 3.11; a script that only parses on a newer
+# Python (an f-string with a backslash or reused quotes is the usual one) passes on a laptop and crashes every build a
+# teammate starts from Client Command. This catches it before it reaches main.
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Every script and content file compiles on the Python the workflows use
+        run: |
+          python -m py_compile scripts/*.py brands/*.content.py
+      - name: Browser helpers parse
+        run: |
+          for f in scripts/*.mjs; do node --check "$f"; done

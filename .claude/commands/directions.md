@@ -128,10 +128,14 @@ system, removes stale pages, scores the first direction and screenshots the hub.
 python3 scripts/directions_qa.py <slug>
 ```
 
-It prints PASS, WARN or FAIL per check and writes `qa.json` and `claims-register.csv` into the output folder. **Fix every FAIL in the content
+It prints PASS, WARN or FAIL per check and writes `qa.json`, `claims-register.csv` and the pictures (`qa/contact-sheet.jpg`, `qa/index.html`: each
+direction's home page at 1280 and 390) into the output folder. **Fix every FAIL in the content
 file (not the output) and rerun.** The checks: starter text, em dashes, unsourced claims, near-duplicate pages, the home page kit, brand
-accent, logo, the rendered heading face, corner shape, headline and lead contrast against the photograph behind them, sideways scroll on a phone.
-Then **look**: Read `../out-<slug>/screenshots/hub-1280.jpg` and `hub-390.jpg` (the Read tool shows images), and check what a machine cannot:
+accent, logo, the rendered heading face, corner shape, headline and lead contrast against the photograph behind them, sideways scroll on a phone,
+and the measurable half of the beauty bar (`process/directions-standard.md`, rule 8): no rejected face, no text under 12px, heading order,
+at most three saturated colour families, the contrast floor, no axe violation.
+Then **look**: Read `../out-<slug>/qa/contact-sheet.jpg`, then `screenshots/hub-1280.jpg` and `hub-390.jpg` (the Read tool shows images), and check
+what a machine cannot, against the beauty bar:
 
 - The colours, face and corners look like the client's own site (open it in your head against the fetched CSS), not like a Quantum template.
 - The logo shows, is sharp and is theirs; the navigation names their services; card grids balance (2, 3, 4, 5, 6, 8).

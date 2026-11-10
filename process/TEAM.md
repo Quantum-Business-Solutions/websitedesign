@@ -35,4 +35,5 @@ When 1 and 2 land, step 3 above becomes `import_site_from_url` once, and the Ver
 - RUNBOOK.md: the eight phases, the fifteen-minute path, robustness rules.
 - repos.md: repositories, Vercel projects, knowledge base ids, the file table.
 - qa-findings.md: everything that went wrong once and the rule that came out of it.
+- directions-standard.md: what a three-directions build must be before a person sends the link, including the beauty bar (rule 8). The gate's pictures of every build are at `<site address>/qa/`: look at them before the link goes.
 - `.github/workflows/client.yml`: the rebuild and re-render workflow.

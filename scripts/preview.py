@@ -48,6 +48,7 @@ import preview_pop3  # noqa: E402
 import preview_dw1  # noqa: E402
 import preview_dw2  # noqa: E402
 import preview_vis  # noqa: E402
+import preview_house  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DASH_HITS: list[str] = []
@@ -99,6 +100,16 @@ def client_tokens(theme: str, brand: dict) -> tuple[str, dict]:
     native = reskin.parse_native(css)
     ground = "dark" if reskin.relative_luminance(native["--bg"]) < 0.18 else "light"
     d = reskin.derive_native(brand["accent"], ground)
+    # The alternate band belongs to the client. Showcase and Clean ship a warm cream band (#faf7ef) that suits a gold
+    # accent and nothing else: under a blue, green or yellow brand it reads as somebody else's template. So the band is
+    # a 5 percent tint of the brand's deep colour (its dark header, its navy, else its accent), half desaturated so a
+    # red brand does not get pink bands, and cards sit on it in white. brand.bg_alt overrides. Press keeps its paper.
+    tint = None
+    if ground == "light" and theme != "Quantum Press":
+        tint = brand.get("bg_alt") or band_tint(brand)
+        native = dict(native)
+        native["--bg-alt"] = tint
+        native["--card"] = "#ffffff"
     # Accent text must clear 4.5 on the section ground AND the alternate band; derive against the darker.
     _alt = native.get("--bg-alt", native["--bg"])
     _darker = _alt if reskin.relative_luminance(_alt) < reskin.relative_luminance(native["--bg"]) else native["--bg"]
@@ -115,16 +126,28 @@ def client_tokens(theme: str, brand: dict) -> tuple[str, dict]:
         "--accent": "var(--q-gold)", "--accent-ink": ink, "--accent-lift": lift, "--cta-fg": cta_fg,
         "--border": d["--border"] if ground == "light" else native.get("--border", d["--border"]),
     }
+    if tint:
+        tok["--bg-alt"] = tint
+        tok["--card"] = "#ffffff"
+    # Shadows carry the brand's deep colour, not one client's navy (they were rgba(0,5,69), which is Kelly's).
+    _deep = brand.get("navy") or (brand.get("chrome_bg") if brand.get("chrome") == "dark" else None) or deep_ground(brand["accent"])
+    tok["--shade"] = " ".join(str(int(_deep.lstrip("#")[i:i + 2], 16)) for i in (0, 2, 4))
+    if tint:
+        # hairlines in the deep colour: an accent-tinted border vanishes when the accent is a yellow (DMP)
+        tok["--border"] = f"rgb({tok['--shade']} / .14)"
     # Typefaces: a brand may borrow another direction's type ("type_from": {"Quantum Showcase": "Quantum Clean"}),
     # keeping this direction's geometry and motion but setting headings and body in the other direction's faces.
     # HOUSE_TYPE_FROM is the default: Showcase's own display grotesque (Bricolage Grotesque, weight 800, -3% tracking)
     # reads as whimsical on a B2B site and every shipped site (Kelly, Van Ausdall) overrode it with Clean's Open Sans.
     # A brand that sets its own type_from, or its own fonts, takes precedence.
     type_src = native
-    type_from = brand.get("type_from")
-    if type_from is None and not brand.get("fonts"):
-        type_from = HOUSE_TYPE_FROM
-    borrowed = _norm_dirs(type_from or {}).get(theme)
+    # The house mapping is the base, always: a brand that borrows type for one direction (or sets its own fonts for
+    # the body only) must not hand Showcase back to its own display face by leaving it out of the map.
+    type_from = dict(HOUSE_TYPE_FROM)
+    type_from.update(_norm_dirs(brand.get("type_from") or {}))
+    borrowed = type_from.get(theme)
+    if borrowed == theme:
+        borrowed = None
     if borrowed:
         b_css = open(os.path.join(reskin.SOURCE_DIR, borrowed, "css", "quantum.css"), encoding="utf-8").read().replace("\u2014", "-")
         type_src = reskin.parse_native(b_css)
@@ -156,6 +179,26 @@ def client_tokens(theme: str, brand: dict) -> tuple[str, dict]:
             css = ("@import url('https://fonts.googleapis.com/css2?" + "&".join("family=" + g for g in imps) + "&display=swap');\n") + css
         if notes:
             tok["--font-note"] = "'" + "; ".join(notes).replace("'", "") + "'"
+    # Last guard on type. Whatever the theme, the borrowed direction or the brand named, a rejected display, script or
+    # rounded face never reaches a client page: the slot falls back to the house face, the stylesheet stops importing
+    # it, and every literal mention of it in the theme CSS (its data-qdir presets carry Instrument Serif) is rewritten.
+    for key, house in (("--q-serif", HOUSE_PRESS if theme == "Quantum Press" else HOUSE_HEADING), ("--q-sans", HOUSE_BODY)):
+        stack = tok.get(key) or native.get(key) or ""
+        if not stack or is_rejected_face(stack):
+            if is_rejected_face(stack):
+                tok["--font-note"] = "'" + (tok.get("--font-note", "").strip("'") + "; " if tok.get("--font-note") else "") + "a display face that is not used in client builds was named; the house face stands in'"
+            tok[key] = house
+        else:
+            tok.setdefault(key, stack)
+    css = strip_rejected_faces(css, HOUSE_PRESS if theme == "Quantum Press" else HOUSE_HEADING)
+    # every face the page ends up using is imported, including a house face that stood in above
+    need = []
+    for key in ("--q-serif", "--q-sans"):
+        fam = _first_face(tok.get(key, "")).lower()
+        if fam in GOOGLE_FONTS and ("family=" + GOOGLE_FONTS[fam][0].split(":")[0]).lower() not in css.lower() and GOOGLE_FONTS[fam][0] not in need:
+            need.append(GOOGLE_FONTS[fam][0])
+    if need:
+        css = ("@import url('https://fonts.googleapis.com/css2?" + "&".join("family=" + g for g in need) + "&display=swap');\n") + css
     chrome_bg = brand.get("chrome_bg") if brand.get("chrome") == "dark" else native["--bg"]
     tok["--chrome-bg"] = chrome_bg
     # The ground behind white hero type. The layered hero's scrim used to be built from --chrome-bg, which is the page
@@ -172,6 +215,14 @@ def client_tokens(theme: str, brand: dict) -> tuple[str, dict]:
         tok["--chrome-accent"] = ca
     else:
         tok["--chrome-accent"] = ink
+    # The stage: the dark ground the signature modules sit on (before/after, wheel hub, calculator, work captions).
+    # It is the same ground the layered hero uses, so a light-header brand (IMS) never gets white type on white.
+    tok["--stage"] = tok["--hero-bg"]
+    # The accent as it must read ON the stage: a deep brand blue is invisible on a deep navy, so lift it until it holds 4.5:1.
+    sa = brand["accent"].lower()
+    while reskin.contrast_ratio(sa, tok["--stage"]) < 4.5 and reskin.relative_luminance(sa) < 0.95:
+        sa = reskin.lighten(sa, 0.06)
+    tok["--stage-accent"] = sa
     return css, tok
 
 
@@ -187,21 +238,21 @@ DIRECTION_CSS = {
 .q-h1,.q-h2,.pv-svc h3,.pv-cs .h,.pv-grid .q-card h3,.pv-loc .q-card h3,.pv-post h2,.pv-stage h3{font-weight:800;letter-spacing:-.03em}
 .q-h1{font-size:clamp(40px,4.6vw,68px);line-height:.98}
 .q-btn,.q-form .hs-button,.q-header .q-booknow,.q-mnav-cta{border-radius:999px}
-.q-card{border:0;box-shadow:0 14px 36px rgba(0,5,69,.08);border-radius:var(--radius)}
+.q-card{border:0;box-shadow:0 14px 36px rgb(var(--shade,0 5 69) / .08);border-radius:var(--radius)}
 .pv-band .q-card{border:1px solid var(--chrome-border);box-shadow:none}
 .pv-hero-grid > div:first-child{order:2}
-.pv-hero-img{border-radius:28px;border:0;box-shadow:0 30px 70px rgba(0,5,69,.14)}
+.pv-hero-img{border-radius:28px;border:0;box-shadow:0 30px 70px rgb(var(--shade,0 5 69) / .14)}
 .pv-badge{border-radius:999px;padding:14px 22px;border:0;box-shadow:0 10px 30px rgba(0,0,0,.12)}
 .pv-stat b{font-size:76px;font-weight:800;letter-spacing:-.03em}
-.pv-stats{gap:12px}.pv-stat{background:var(--card);border-radius:var(--radius);padding:28px 20px;box-shadow:0 10px 30px rgba(0,5,69,.06)}.pv-stat + .pv-stat{border-left:0}
+.pv-stats{gap:12px}.pv-stat{background:var(--card);border-radius:var(--radius);padding:28px 20px;box-shadow:0 10px 30px rgb(var(--shade,0 5 69) / .06)}.pv-stat + .pv-stat{border-left:0}
 .q-eyebrow{letter-spacing:.2em;font-weight:700}
 .q-eyebrow::before{width:10px;height:10px;border-radius:50%}
-.pv-svc a{border-top:0;background:var(--card);border-radius:var(--radius);margin-bottom:12px;padding:26px 24px;box-shadow:0 8px 24px rgba(0,5,69,.05)}
+.pv-svc a{border-top:0;background:var(--card);border-radius:var(--radius);margin-bottom:12px;padding:26px 24px;box-shadow:0 8px 24px rgb(var(--shade,0 5 69) / .05)}
 .pv-svc a:last-child{border-bottom:0}
 .pv-svc .num{display:none}.pv-svc a{grid-template-columns:1fr 130px}
 .q-stagenum{width:56px;height:56px;border:0;background:var(--q-gold);color:var(--cta-fg);font-family:var(--q-sans);font-weight:800}
 .pv-quote{border-left:0;padding-left:0;font-size:28px;font-weight:600}
-.pv-detail-img{border:0;box-shadow:0 20px 50px rgba(0,5,69,.12);border-radius:24px}
+.pv-detail-img{border:0;box-shadow:0 20px 50px rgb(var(--shade,0 5 69) / .12);border-radius:24px}
 @media(max-width:767px){.pv-hero-grid > div:first-child{order:0}.q-h1{font-size:40px}.pv-stat b{font-size:48px}}
 ''',
     "press": r'''
@@ -234,6 +285,42 @@ DIRECTION_CSS = {
 }
 
 HOUSE_TYPE_FROM = {"Quantum Showcase": "Quantum Clean"}
+HOUSE_HEADING = "'Open Sans',Arial,'Helvetica Neue',sans-serif"
+HOUSE_BODY = "'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif"
+HOUSE_PRESS = "'Playfair Display',Georgia,'Times New Roman',serif"
+# Faces that never reach a client page. The first three are the display faces the nine themes carry (Showcase's
+# Bricolage Grotesque, Flagship's Fraunces, the data-qdir presets' Instrument Serif); a client read them as whimsical
+# on a B2B site. The rest are the script and rounded display faces a brief or a borrowed direction could name.
+REJECTED_FACES = (
+    "bricolage grotesque", "fraunces", "instrument serif",
+    "pacifico", "lobster", "caveat", "dancing script", "satisfy", "great vibes", "kaushan script", "permanent marker",
+    "amatic sc", "indie flower", "shadows into light", "sacramento", "courgette", "comic sans ms", "comic neue",
+    "fredoka", "fredoka one", "baloo 2", "baloo", "comfortaa", "quicksand", "nunito", "varela round", "m plus rounded 1c",
+    "chewy", "bubblegum sans", "righteous", "bangers", "luckiest guy", "pangolin", "gochi hand", "patrick hand",
+)
+
+
+def _first_face(stack: str) -> str:
+    return (stack or "").split(",")[0].strip().strip("'\"")
+
+
+def is_rejected_face(stack: str) -> bool:
+    return re.sub(r"\s+", " ", _first_face(stack)).lower() in REJECTED_FACES
+
+
+def strip_rejected_faces(css: str, house: str) -> str:
+    """Take the rejected faces out of a stylesheet: out of every Google Fonts import, and out of every font stack."""
+    def _imp(m):
+        url = m.group(0)
+        for f in REJECTED_FACES:
+            url = re.sub(r"family=" + re.escape(f.title().replace(" ", "+")) + r"(?=[:&'\")])(:[^&'\")]*)?&?", "", url, flags=re.I)
+        url = url.replace("?&", "?").replace("&&", "&")
+        return "" if re.search(r"css2\?(display=swap)?['\")]", url) else url
+    css = re.sub(r"@import url\([^)]*fonts\.googleapis\.com[^)]*\);?", _imp, css)
+    first = _first_face(house)
+    for f in REJECTED_FACES:
+        css = re.sub(r"(['\"])" + re.escape(f) + r"\1", "'" + first + "'", css, flags=re.I)
+    return css
 
 
 def _norm_dirs(m: dict) -> dict:
@@ -276,7 +363,10 @@ def resolve_font(name: str, role: str):
     """(css stack, google key or None, note or None) for a brand face."""
     key = re.sub(r"\s+", " ", name.strip().strip("'\"")).lower()
     note = None
-    if key not in GOOGLE_FONTS:
+    if key in REJECTED_FACES:
+        note = "the face the brief names is a display face that is not used in client builds; Open Sans stands in"
+        key = "open sans"
+    elif key not in GOOGLE_FONTS:
         near = FONT_NEIGHBOURS.get(key) or ("open sans" if role == "body" else "open sans")
         note = f"{name} is not loadable here; {near.title()} stands in"
         key = near
@@ -295,13 +385,26 @@ def deep_ground(accent: str, navy: str | None = None) -> str:
     return "#%02x%02x%02x" % (round(r * .16), round(g * .16), round(b * .2 + 4))
 
 
+def band_tint(brand: dict) -> str:
+    """The light alternate ground for this brand: its deep colour's hue at 96.5 percent lightness and low saturation."""
+    import colorsys
+    src = brand.get("navy") or (brand.get("chrome_bg") if brand.get("chrome") == "dark" else None) or brand["accent"]
+    r, g, b = (int(src.lstrip("#")[i:i + 2], 16) / 255 for i in (0, 2, 4))
+    h, _l, sat = colorsys.rgb_to_hls(r, g, b)
+    warm = h < 0.2 or h > 0.8                     # reds, oranges, yellows: keep the band near neutral, never pink
+    sat = min(sat, 0.2 if warm else 0.26) if sat > 0.08 else 0.0
+    return "#%02x%02x%02x" % tuple(round(c * 255) for c in colorsys.hls_to_rgb(h, 0.965, sat))
+
+
 def brand_shape_css(brand: dict) -> str:
     """Corner shape from the live site (brand.radius, px). Square buttons stay square (IMS, DMP); rounded stay rounded."""
     mark = ""
     if reskin.relative_luminance(brand["accent"]) > 0.45 and brand.get("ink_secondary"):
         # emphasis in a headline becomes a highlighter stroke of the accent, because accent-coloured text would not read
         mark = (".q-h1 em,.q-h2 em{font-style:normal;background:linear-gradient(transparent 62%,var(--q-gold) 62%);"
-                "box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:0 .08em}")
+                "box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:0 .08em}"
+                # on a dark stage the emphasis is already the accent colour, so a stroke of the same colour would hide it
+                ".pv-lh .q-h1 em,.pv-lh .q-h2 em,.pv-hero-video .q-h1 em{background:none;padding:0}")
     r = brand.get("radius")
     bt = brand.get("button_radius", r)          # buttons and cards are shaped separately: DMP's buttons are pills, its cards square
     if r is None and bt is None:
@@ -316,7 +419,6 @@ def brand_shape_css(brand: dict) -> str:
 
 
 FALLBACKS = {"open sans": "'Open Sans',Arial,'Helvetica Neue',sans-serif",
-             "bricolage grotesque": "'Bricolage Grotesque','Arial Black','Helvetica Neue',Arial,sans-serif",
              "playfair display": "'Playfair Display',Georgia,'Times New Roman',serif",
              "inter": "'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif"}
 
@@ -369,9 +471,9 @@ h1,h2,h3{text-wrap:balance}
 /* service-area map */
 .pv-map-wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center}
 .pv-map-svg{width:100%;height:auto;display:block}
-.pv-map-svg .land{fill:var(--bg-alt);stroke:var(--fg);stroke-width:1.2;stroke-linejoin:round}
+.pv-map-svg .land{fill:var(--bg-alt);stroke:var(--fg);stroke-width:1.2;stroke-linejoin:round;vector-effect:non-scaling-stroke}
 .pv-map-svg .ring{fill:var(--q-gold);fill-opacity:.12;stroke:var(--accent-ink);stroke-dasharray:3 3;stroke-width:.8}
-.pv-map-svg .pin{fill:var(--accent-ink);stroke:#fff;stroke-width:1.5}.pv-map-svg .pin.hq{fill:var(--chrome-bg)}
+.pv-map-svg .pin{fill:var(--accent-ink);stroke:#fff;stroke-width:1.5}.pv-map-svg .pin.hq{fill:var(--stage)}
 .pv-map-svg text{font:600 11px/1 var(--q-sans);fill:var(--fg)}
 .pv-map-list{list-style:none;margin:0;padding:0;display:grid;gap:0}
 .pv-map-list li{display:grid;grid-template-columns:1fr auto;gap:8px 18px;padding:14px 0;border-top:1px solid var(--border);align-items:baseline}
@@ -619,6 +721,8 @@ if(stk&&hb&&'IntersectionObserver' in window){new IntersectionObserver(function(
 var hd=document.querySelector('.q-header');if(hd){var sc=function(){hd.classList.toggle('is-scrolled',scrollY>80)};addEventListener('scroll',sc,{passive:true});sc()}
 /* mobile menu open: hide the bottom bars so the panel is not covered */
 var mn=document.querySelector('.q-mnav');if(mn){mn.addEventListener('toggle',function(){document.documentElement.classList.toggle('menu-open',mn.open)})}
+/* two 3D viewers on one page each add a "Live announcements" region: name each after its model so the landmarks are unique */
+if(window.customElements&&document.querySelector('model-viewer')){customElements.whenDefined('model-viewer').then(function(){setTimeout(function(){document.querySelectorAll('model-viewer').forEach(function(m,i){var r=m.shadowRoot&&m.shadowRoot.querySelector('[role=region]');if(r)r.setAttribute('aria-label','Live announcements, '+(m.getAttribute('alt')||'3D model')+' '+(i+1))})},0)})}
 /* video facade: poster + play, iframe only on click */
 document.querySelectorAll('.pv-video[data-embed]').forEach(function(v){
   var b=v.querySelector('button');if(!b)return;
@@ -686,6 +790,10 @@ def r_partners(s, ctx):
         else:
             items.append(f"<span>{E(name)}</span>")
     track = "".join(items)
+    if not any(i.startswith("<img") for i in items):
+        # no logo files at all: a still, centred row of names. A marquee of plain words reads as a news ticker.
+        return (f'<section class="pv-partners"><div class="q-container"><p class="pv-cap">{E(s.get("caption", "Partners"))}</p></div>'
+                f'<div class="pv-logos pv-logos-text" role="region" aria-label="{E(s.get("caption", "Partners"))}"><div class="pv-logos-track">{track}</div></div></section>')
     return f'<section class="pv-partners"><div class="q-container"><p class="pv-cap">{E(s.get("caption", "Partners"))}</p></div><div class="pv-logos" role="region" aria-label="{E(s.get("caption", "Partners"))}"><div class="pv-logos-track">{track}</div><div class="pv-logos-track" aria-hidden="true">{track}</div></div></section>'
 
 
@@ -750,15 +858,26 @@ def r_faq(s, ctx):
 def r_contact(s, ctx):
     opts = "".join(f"<option>{E(o)}</option>" for o in s.get("options", []))
     brand = ctx["brand"]
+    # thin states: a brand with no published phone gets no "Call" button, one with no email no empty link, and a form
+    # with nothing to choose from no empty select
+    call = (f'<a class="q-btn" style="align-self:flex-start" href="{E(ctx["L"](brand["phone_href"]))}">Call {E(brand["phone"])}</a>'
+            if brand.get("phone") and brand.get("phone_href") else "")
+    mail = (f'<a href="mailto:{E(brand["email"])}" style="font-size:15px;color:var(--fg-muted);min-height:44px;display:inline-flex;align-items:center">{E(brand["email"])}</a>'
+            if brand.get("email") else "")
+    reach = f'<div style="margin-top:28px;display:flex;flex-direction:column;gap:14px">{call}{mail}</div>' if call or mail else ""
+    pick = f'<label for="f4">{E(s.get("pick_label", "What would you like to look at?"))}</label><select id="f4">{opts}</select>' if opts else ""
     return f'''{sec_open(s)} <div class="q-container pv-contact"><div><h2 class="q-h2">{E(s["heading"])}</h2><div class="q-lead" style="margin-top:20px">{E(s.get("body"))}</div>
-<div style="margin-top:28px;display:flex;flex-direction:column;gap:14px"><a class="q-btn" style="align-self:flex-start" href="{E(ctx["L"](brand["phone_href"]))}">Call {E(brand["phone"])}</a><a href="mailto:{E(brand["email"])}" style="font-size:15px;color:var(--fg-muted);min-height:44px;display:inline-flex;align-items:center">{E(brand["email"])}</a></div></div>
-<form class="q-form" onsubmit="return false"><label for="f1">Name</label><input id="f1" type="text" autocomplete="name"><label for="f2">Work email</label><input id="f2" type="email" autocomplete="email"><label for="f3">Phone</label><input id="f3" type="tel" autocomplete="tel"><label for="f4">What would you like to look at?</label><select id="f4">{opts}</select><input type="submit" class="hs-button" value="{E(s.get("submit", "Send"))}"><p class="pv-form-note">{E(s.get("note"))}</p></form></div></section>'''
+{reach}</div>
+<form class="q-form" onsubmit="return false"><label for="f1">Name</label><input id="f1" type="text" autocomplete="name"><label for="f2">Work email</label><input id="f2" type="email" autocomplete="email"><label for="f3">Phone</label><input id="f3" type="tel" autocomplete="tel">{pick}<input type="submit" class="hs-button" value="{E(s.get("submit", "Send"))}"><p class="pv-form-note">{E(s.get("note"))}</p></form></div></section>'''
 
 
 def r_detail(s, ctx):
     bullets = "".join(f"<li>{E(b)}</li>" for b in s.get("bullets", []))
     right = ""
-    if s.get("image"):
+    if s.get("image") and s.get("list_with_text"):
+        # the list reads with the heading it belongs to, and the image stands alone
+        right = f'<div class="pv-detail-img"><img src="{E(ctx["rel"](s["image"]))}"{ctx["srcset"](s["image"])} alt="{E(s.get("image_alt", ""))}" width="{s.get("image_w", 1200)}" height="{s.get("image_h", 800)}" loading="lazy" decoding="async"></div>'
+    elif s.get("image"):
         right = (f'<div class="pv-detail-img"><img src="{E(ctx["rel"](s["image"]))}"{ctx["srcset"](s["image"])} alt="{E(s.get("image_alt", ""))}" width="{s.get("image_w", 1200)}" height="{s.get("image_h", 800)}" loading="lazy" decoding="async"></div>'
                  + (f'<ul>{bullets}</ul>' if bullets else ""))
         bullets = ""
@@ -790,7 +909,10 @@ def r_leadform(s, ctx):
     fid = s.get("id", "lead")
     spec = s.get("fields") or [["Name", "text", "name"], ["Work email", "email", "email"], ["Phone", "tel", "tel"], ["Company", "text", "organization"]]
     fields = "".join(f'<label for="{E(fid)}-{i}">{E(l)}</label><input id="{E(fid)}-{i}" type="{E(t)}" autocomplete="{E(a)}">' for i, (l, t, a) in enumerate(spec))
-    return f'''{sec_open(s)} <div class="q-container pv-contact" style="align-items:center"><div><h2 class="q-h2">{E(s["heading"])}</h2><div class="q-lead" style="margin-top:16px">{E(s.get("body"))}</div><p style="margin-top:20px;font-size:15px;color:var(--fg-muted)">Or call <a href="{E(ctx["L"](brand["phone_href"]))}" style="color:var(--fg);font-weight:600;min-height:44px;display:inline-flex;align-items:center">{E(brand["phone"])}</a></p></div>
+    # thin state: no published phone, no "Or call" line with an empty link
+    orcall = (f'<p style="margin-top:20px;font-size:15px;color:var(--fg-muted)">Or call <a href="{E(ctx["L"](brand["phone_href"]))}" style="color:var(--fg);font-weight:600;min-height:44px;display:inline-flex;align-items:center">{E(brand["phone"])}</a></p>'
+              if brand.get("phone") and brand.get("phone_href") else "")
+    return f'''{sec_open(s)} <div class="q-container pv-contact" style="align-items:center"><div><h2 class="q-h2">{E(s["heading"])}</h2><div class="q-lead" style="margin-top:16px">{E(s.get("body"))}</div>{orcall}</div>
 <form class="q-form" onsubmit="return false">{fields}<input type="submit" class="hs-button" value="{E(s.get("submit", "Send"))}"><p class="pv-form-note">{E(s.get("note", ""))}</p></form></div></section>'''
 
 
@@ -1183,6 +1305,13 @@ def srcset_for(path: str, out_dir: str) -> str:
     return f' srcset="../{small} 600w, ../{path} {m.group(2)}w" sizes="(max-width: 1024px) 100vw, 50vw"'
 
 
+def _h1_fit(m):
+    """A headline is sized by how much it says: a long sentence at display size runs to five lines beside a photo."""
+    n = len(re.sub(r"<[^>]+>", "", m.group(2)).strip())
+    cls = "q-h1 is-xlong" if n > 78 else "q-h1 is-long" if n > 46 else "q-h1"
+    return f'<h1 class="{cls}"{m.group(1)}>{m.group(2)}</h1>'
+
+
 def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir, dslug):
     b = content["brand"]
     partners_dir = os.path.join(out_dir, "assets", "partners")
@@ -1212,7 +1341,7 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
         return ss.replace('"../', '"' + up).replace(', ../', ', ' + up)
 
     ctx = {"rel": rel, "L": L, "partner_logo": partner_logo, "brand": b, "year": 2026, "srcset": srcset, "file": page["file"],
-           "E": E, "RAW": RAW, "sec_open": sec_open, "depth": depth, "client": content.get("client", ""), "client_short": content.get("client", "").split(" ")[0]}
+           "E": E, "RAW": RAW, "sec_open": sec_open, "depth": depth, "client": content.get("client", ""), "client_short": content.get("short") or b.get("short") or content.get("client", "").split(" ")[0]}
     secs = []
     _hv = b.get("hero_video")
     _hvp = (b.get("hero_video_pages") or {}).get(page["file"])
@@ -1236,6 +1365,7 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
     if any(x["type"] in ("leadform", "contact") for x in secs) and secs and secs[-1]["type"] == "cta":
         secs = secs[:-1]   # two "start with the assessment" blocks in a row read as a template bug
     body = "".join(RENDER[s["type"]](s, ctx) for s in secs)
+    body = re.sub(r'<h1 class="q-h1"([^>]*)>(.*?)</h1>', _h1_fit, body, flags=re.S)
     if not b.get("email"):
         body = re.sub(r'<a href="mailto:"[^>]*></a>', "", body)
     canonical = f"{base}/{dslug}/" if page["file"] == "index.html" else f"{base}/{dslug}/{page['file']}"
@@ -1285,10 +1415,12 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
 {preview_cd.CD_CSS}
 {preview_pop2.POP2_CSS}
 {preview_pop1.POP1_CSS}
+{preview_house.HOUSE_CSS}
 /* ===== direction system: {E(dslug)} ===== */
 {DIRECTION_CSS.get(dslug, "")}
 /* ===== client heading setting (brand.heading): one headline weight and tracking across the directions ===== */
 {(lambda h: f".q-h1,.q-h2{{font-weight:{h.get('weight', 800)};letter-spacing:{h.get('tracking', '-.03em')};font-style:normal}}" if h else "")(b.get("heading"))}
+{preview_house.HOUSE_FINISH_CSS}
 /* ===== the client's corner shape, after the direction system so square stays square ===== */
 {brand_shape_css(content["brand"])}
 /* ===== mobile, after the direction system so it wins ===== */
@@ -1369,7 +1501,7 @@ def main(argv=None):
     import preview_seo  # noqa: E402
     preview_design.write(content, themes, roles, client_tokens, a.out)
     seo = preview_seo.write(content, a.content, themes, roles, base, a.out, slug_of)
-    open(os.path.join(a.out, "index.html"), "w", encoding="utf-8").write(hub(content, themes, a.recommend, base, roles, not a.no_standard, client_tokens, a.out, seo))
+    open(os.path.join(a.out, "index.html"), "w", encoding="utf-8").write(hub(content, themes, a.recommend, base, roles, not a.no_standard and os.path.exists(os.path.join(a.out, "standard.html")), client_tokens, a.out, seo))
     print(f"wrote {written} pages + hub to {a.out}")
     if DASH_HITS:
         print(f"\nwarning: {len(DASH_HITS)} string(s) contained an em/en dash and were rewritten with a comma. Fix the content file:")

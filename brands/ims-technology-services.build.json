@@ -1,0 +1,16 @@
+{
+ "content": "brands/ims-technology-services.content.py",
+ "themes": [
+  "Quantum Showcase",
+  "Quantum Clean",
+  "Quantum Press"
+ ],
+ "recommend": "Quantum Showcase",
+ "roles": {
+  "Showcase": "The recommendation: your own stages and award-winning rooms, full-bleed and moving, with One IMS told in motion.",
+  "Clean": "For the IT and facilities buyer: the same work and proof, in a plainer layout that is fastest to scan.",
+  "Press": "For the heritage story: thirty-two years and the award record, told in an editorial serif."
+ },
+ "base_url": "https://clientcommand.thequantumleap.business/s/8ed9924830331ee7f64f428c89f5e71d/",
+ "out": "../ims-technology-services"
+}

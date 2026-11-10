@@ -38,7 +38,19 @@ MODULES = {
     "cards": ("Cards", "Specular tilt and lift in Showcase", "Plain cards"),
     "stats": ("Stats", "Count up once on scroll, static ones marked", "Numbers"),
 }
-FACE_LINKS = "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=Open+Sans:wght@600;700;800&family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif&display=swap"
+# Only the house faces. The faces a direction actually renders are imported from its own stylesheet's @import lines
+# (face_links below), so a brand face (Montserrat for Gotham) shows as itself and no rejected display face is loaded.
+FACE_LINKS = "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Open+Sans:wght@600;700;800&family=Playfair+Display:wght@500;700&display=swap"
+
+
+def face_links(css_list) -> str:
+    import re
+    urls = [FACE_LINKS]
+    for css in css_list:
+        for u in re.findall(r"@import url\(['\"]?([^'\")]+)['\"]?\)", css or ""):
+            if "fonts.googleapis.com" in u and u not in urls:
+                urls.append(u)
+    return "".join(f'<link rel="stylesheet" href="{E(u)}">' for u in urls)
 
 
 def _face(stack: str) -> str:
@@ -61,7 +73,7 @@ def write(content, themes, roles, client_tokens, out_dir):
     for t in themes:
         css, tok = client_tokens(t, b)
         native = reskin.parse_native(css)
-        dirs.append({"theme": t, "name": t.replace("Quantum ", ""), "tok": tok, "native": native, "role": roles.get(t, "")})
+        dirs.append({"theme": t, "name": t.replace("Quantum ", ""), "tok": tok, "css": css, "native": native, "role": roles.get(t, "")})
     d0 = dirs[0]
     tok0 = d0["tok"]
     accent, ink, cta_fg, chrome = tok0["--q-gold"], tok0["--accent-ink"], tok0["--cta-fg"], tok0["--chrome-bg"]
@@ -134,7 +146,7 @@ def write(content, themes, roles, client_tokens, out_dir):
 <meta name="robots" content="noindex, nofollow">
 <title>{E(client)} Design System</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="{FACE_LINKS}">
+{face_links([d["css"] for d in dirs])}
 <style>
 :root{{--accent:{accent};--ink:{ink};--chrome:{chrome};--cta:{cta_fg};--bright:{bright};--bg:#ffffff;--bg-alt:{d0["native"].get("--bg-alt", "#f6f6f6")};--fg:{d0["native"].get("--fg", "#1a1a1a")};--muted:{d0["native"].get("--fg-muted", "#555")};--border:{tok0.get("--border", "#e4e4e4")};--sans:'{s_face}',system-ui,sans-serif;--show:'{h_face}',system-ui,sans-serif}}
 *{{box-sizing:border-box}}body{{margin:0;background:var(--bg);color:var(--fg);font:17px/1.55 var(--sans);-webkit-font-smoothing:antialiased}}a{{color:var(--ink)}}
@@ -168,7 +180,7 @@ footer{{padding:40px 0 60px;font-size:14px;color:var(--muted)}}:focus-visible{{o
 </head>
 <body>
 <header class="top"><div class="wrap"><img src="{E(logo)}" alt="{E(b.get("logo_alt", client))}" width="{b.get("logo_w", 300)}" height="{b.get("logo_h", 100)}"><nav aria-label="Sections"><a href="#color">Color</a><a href="#type">Type</a><a href="#directions">Directions</a><a href="#components">Components</a><a href="#imagery">Imagery</a><a href="#voice">Voice</a><a href="#logo">Logo</a><a href="index.html">Back to the preview</a></nav></div></header>
-<div class="hero"><div class="wrap"><div class="eyebrow">Design system, generated {E(str(__import__("datetime").date.today()))}</div><h1>One brand, {["one","two","three","four","five"][len(dirs)-1] if len(dirs) <= 5 else len(dirs)} directions, <em>every decision written down</em>.</h1>
+<main><div class="hero"><div class="wrap"><div class="eyebrow">Design system, generated {E(str(__import__("datetime").date.today()))}</div><h1>One brand, {["one","two","three","four","five"][len(dirs)-1] if len(dirs) <= 5 else len(dirs)} directions, <em>every decision written down</em>.</h1>
 <p class="lead">The colours, type, spacing, components, imagery rules and voice behind the {E(client)} preview. Every page in every direction derives from these tokens, so whichever direction is chosen, the build in HubSpot starts from a documented system rather than from taste.</p></div></div>
 <section id="color"><div class="wrap"><div class="eyebrow">Color</div><h2>One accent does the work. The chrome holds the frame. Everything else stays quiet.</h2>
 <p class="intro">The accent comes from the logo. It is the only accent on the site: buttons, the eyebrow dot, progress lines, the badge ring. Where it is too light to carry text, a darker ink derived from it is used for accent text and passes 4.5 to 1 on every ground.</p>
@@ -194,6 +206,7 @@ footer{{padding:40px 0 60px;font-size:14px;color:var(--muted)}}:focus-visible{{o
 <div class="rule"><div class="dont">Avoid</div><div><b>Heavy pages.</b> Hero plates at 2,100px, everything else at 1,200 and 600, lazy below the fold.</div></div></div></section>
 <section class="alt" id="voice"><div class="wrap"><div class="eyebrow">Voice</div><h2>Plain, specific, and sourced. The proof does the selling.</h2>{voice}</div></section>
 <section id="logo"><div class="wrap"><div class="eyebrow">Logo</div><h2>The current mark{", and directions for a fresher one" if concepts_note else ""}.</h2>{concepts_intro}<div class="grid g3">{logo_html}</div>{concepts_note}</div></section>
+</main>
 <footer><div class="wrap">{E(client)} design system, generated by Quantum Business Solutions from the preview's own tokens. Preview imagery is generated and labelled.</div></footer>
 </body>
 </html>
