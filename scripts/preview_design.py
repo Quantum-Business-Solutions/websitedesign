@@ -38,7 +38,19 @@ MODULES = {
     "cards": ("Cards", "Specular tilt and lift in Showcase", "Plain cards"),
     "stats": ("Stats", "Count up once on scroll, static ones marked", "Numbers"),
 }
-FACE_LINKS = "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=Open+Sans:wght@600;700;800&family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif&display=swap"
+# Only the house faces. The faces a direction actually renders are imported from its own stylesheet's @import lines
+# (face_links below), so a brand face (Montserrat for Gotham) shows as itself and no rejected display face is loaded.
+FACE_LINKS = "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Open+Sans:wght@600;700;800&family=Playfair+Display:wght@500;700&display=swap"
+
+
+def face_links(css_list) -> str:
+    import re
+    urls = [FACE_LINKS]
+    for css in css_list:
+        for u in re.findall(r"@import url\(['\"]?([^'\")]+)['\"]?\)", css or ""):
+            if "fonts.googleapis.com" in u and u not in urls:
+                urls.append(u)
+    return "".join(f'<link rel="stylesheet" href="{E(u)}">' for u in urls)
 
 
 def _face(stack: str) -> str:
@@ -61,7 +73,7 @@ def write(content, themes, roles, client_tokens, out_dir):
     for t in themes:
         css, tok = client_tokens(t, b)
         native = reskin.parse_native(css)
-        dirs.append({"theme": t, "name": t.replace("Quantum ", ""), "tok": tok, "native": native, "role": roles.get(t, "")})
+        dirs.append({"theme": t, "name": t.replace("Quantum ", ""), "tok": tok, "css": css, "native": native, "role": roles.get(t, "")})
     d0 = dirs[0]
     tok0 = d0["tok"]
     accent, ink, cta_fg, chrome = tok0["--q-gold"], tok0["--accent-ink"], tok0["--cta-fg"], tok0["--chrome-bg"]
@@ -134,7 +146,7 @@ def write(content, themes, roles, client_tokens, out_dir):
 <meta name="robots" content="noindex, nofollow">
 <title>{E(client)} Design System</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="{FACE_LINKS}">
+{face_links([d["css"] for d in dirs])}
 <style>
 :root{{--accent:{accent};--ink:{ink};--chrome:{chrome};--cta:{cta_fg};--bright:{bright};--bg:#ffffff;--bg-alt:{d0["native"].get("--bg-alt", "#f6f6f6")};--fg:{d0["native"].get("--fg", "#1a1a1a")};--muted:{d0["native"].get("--fg-muted", "#555")};--border:{tok0.get("--border", "#e4e4e4")};--sans:'{s_face}',system-ui,sans-serif;--show:'{h_face}',system-ui,sans-serif}}
 *{{box-sizing:border-box}}body{{margin:0;background:var(--bg);color:var(--fg);font:17px/1.55 var(--sans);-webkit-font-smoothing:antialiased}}a{{color:var(--ink)}}
