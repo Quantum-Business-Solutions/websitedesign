@@ -343,6 +343,10 @@ html:not(.pn-js) .pn-kp-demo{display:none}
 .pn-zone h3 a{color:inherit;text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 100%/0 2px no-repeat;transition:background-size .35s var(--pn-ease)}
 .pn-zone h3 a:hover{background-size:100% 2px}
 @media(max-width:767px){.pn-zone h3 a{display:inline-flex;align-items:center;min-height:44px;min-width:44px;background-position:0 86%}.pn-calls p,.pn-notes p,.pn-path li p{margin-top:0!important}}
+/* round 4b: the same 44px rule on tablets, plus the keypad's on-screen menu, its Arm pill and the dealer facts row */
+@media(min-width:768px) and (max-width:1024px){.pn-zone h3 a{display:inline-flex;align-items:center;min-height:44px;min-width:44px;background-position:0 86%}}
+@media(max-width:1024px){.pn-z6-row a{display:inline-flex;align-items:center;min-height:44px}}
+@media(min-width:600px) and (max-width:1024px){.pn-kp-menu a{flex:0 1 44px;min-height:44px}.pn-kp-arm{min-height:44px}}
 .pn-zone{scroll-margin-top:-62px}
 @media(max-width:767px){.pn-zone{scroll-margin-top:-36px}}
 .pn-more{margin-top:28px!important}

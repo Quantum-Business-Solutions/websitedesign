@@ -8,8 +8,8 @@
  "recommend": null,
  "roles": {
   "Showcase": "the Panel: cinematic, industrial black and DMP yellow, with a home page that is a working keypad you can arm and disarm and six colour-coded zones for intrusion, access, fire, video, mobile and dealers",
-  "Clean": "a Swiss spec-sheet catalogue: white ground, hairline grid, mono labels and tabular numbers, built for dealers and specifiers scanning for a product and its data",
-  "Press": "an editorial magazine: serif headlines, full-bleed photo covers, a lead story and fifty years of firsts told as a feature, so a manufacturer reads like an established company"
+  "Clean": "a Swiss spec-sheet catalogue: white ground, hairline grid and mono labels, with a dimension-line hero, a product matrix and a panel finder, built for dealers and specifiers scanning for a product and its data",
+  "Press": "an editorial magazine: serif headlines and photo covers, with a cover story, a contents page, voices from DMP's executives and fifty years of firsts told as a feature"
  },
  "base_url": "https://clientcommand.thequantumleap.business/s/8fdd037a11554d07f4a1c4eb21f0e854",
  "out": "../out-digital-monitoring-products"

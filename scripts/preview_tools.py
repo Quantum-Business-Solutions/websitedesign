@@ -186,7 +186,84 @@ def _nf(s, ctx):
     return _keep(out)
 
 
-RENDER_TOOLS = {"tkcfg": _cfg, "tkplay": _play, "tknf": _nf}
+# ------------------------------------------------------------------------------------------------ product wall
+
+def _wall(s, ctx):
+    """Round 4b: every product page as a cutout in a system-colour ring, filterable by system (Showcase catalogue only).
+    Without JavaScript the filter bar is hidden and the whole wall shows, each tile labelled with its system."""
+    E, L, rel = ctx["E"], ctx["L"], ctx["rel"]
+    items, systems = s["items"], [x for x in s["systems"] if any(i["sys"] == x[0] for i in s["items"])]
+    label = {k: lab for k, lab, _c in systems}
+    colour = {k: c for k, _lab, c in systems}
+    n = len(items)
+
+    def fbtn(k, lab, c, count, on=False):
+        dot = '<i aria-hidden="true"></i>' if k != "all" else ""
+        return (f'<button type="button" class="tk-wf" data-tk-wf="{E(k)}" aria-pressed="{"true" if on else "false"}" style="--zc:{c}">'
+                f'{dot}<span>{E(lab)}</span><b>{count}</b></button>')
+    bar = fbtn("all", "All systems", "#f3f2ed", n, True) + "".join(
+        fbtn(k, lab, c, sum(1 for i in items if i["sys"] == k)) for k, lab, c in systems)
+    tiles = ""
+    for i in items:
+        soon = '<span class="tk-wsoon">Coming soon, not orderable</span>' if i.get("soon") else ""
+        img = (f'<img src="{E(rel(_thumb(i["img"])))}" alt="" width="{i.get("w", 600)}" height="{i.get("h", 450)}" loading="lazy" decoding="async">' if i.get("img") else "")
+        tiles += (f'<li class="tk-wt" data-sys="{E(i["sys"])}" style="--zc:{colour.get(i["sys"], "#8a8f98")}"><a href="{E(L(i["href"]))}">'
+                  f'<span class="tk-wring" aria-hidden="true">{img}</span><span class="tk-wn">{E(i["name"])}</span>'
+                  f'<span class="tk-ws"><i aria-hidden="true"></i>{E(label.get(i["sys"], i["sys"]))}</span>{soon}</a></li>')
+    return _keep(f'''<section class="q-section tk-wall" id="{E(s.get("id", "wall"))}" data-tk-wall>{JS_FLAG}
+<div class="q-container">
+<div class="tk-whead"><div class="q-eyebrow">{E(s.get("eyebrow", ""))}</div><h2 class="q-h2">{E(s["heading"])}</h2><p class="q-lead">{E(s.get("intro", ""))}</p></div>
+<div class="tk-wbar tk-js-only" role="group" aria-label="Filter the products by system">{bar}</div>
+<p class="tk-wcount tk-js-only" role="status" aria-live="polite" data-tk-wn>Showing all {n} products.</p>
+<ul class="tk-wgrid">{tiles}</ul>
+</div></section>''')
+
+
+WALL_CSS = r"""
+/* ===== product wall (scripts/preview_tools.py, round 4b): Showcase catalogue only ===== */
+.tk-wall{background:#0a0a0b;color:#f3f2ed;--tk-mono:'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'Liberation Mono',monospace;border-top:1px solid rgba(255,255,255,.11)}
+html:not(.tk-js) .tk-wall .tk-js-only{display:none!important}
+.tk-whead{max-width:820px;margin:0 0 clamp(22px,3vw,34px)}
+.tk-whead .q-h2{color:#f3f2ed;margin:14px 0 0}
+.tk-whead .q-lead{color:#b4b3ab;margin:14px 0 0;max-width:660px}
+.tk-wbar{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.tk-wf{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 16px;border:1.5px solid rgba(255,255,255,.24);border-radius:2px;background:transparent;color:#f3f2ed;font:700 13px/1 var(--tk-mono);letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.tk-wf i{width:10px;height:10px;border-radius:50%;background:var(--zc);box-shadow:0 0 10px var(--zc);flex:none}
+.tk-wf b{font:700 13px/1 var(--tk-mono);color:#b4b3ab;font-variant-numeric:tabular-nums}
+.tk-wf:hover{border-color:var(--zc)}
+.tk-wf[aria-pressed="true"]{background:var(--zc);border-color:var(--zc);color:#0a0a0b}
+.tk-wf[aria-pressed="true"] b{color:#0a0a0b}
+.tk-wf[aria-pressed="true"] i{background:#0a0a0b;box-shadow:none}
+.tk-wall :is(a,button):focus-visible{outline:3px solid #fff;outline-offset:3px}
+.tk-wcount{margin:0 0 22px;font:500 13px/1.4 var(--tk-mono);letter-spacing:.06em;text-transform:uppercase;color:#b4b3ab}
+.tk-wgrid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:clamp(18px,2.4vw,34px) clamp(12px,1.6vw,22px)}
+.tk-wt[hidden]{display:none}
+.tk-wt a{display:flex;flex-direction:column;align-items:center;gap:10px;min-height:44px;text-align:center;text-decoration:none;color:#f3f2ed}
+.tk-wring{position:relative;display:grid;place-items:center;width:min(100%,148px);aspect-ratio:1;border-radius:50%;border:2px solid var(--zc);background:radial-gradient(circle at 50% 40%,#4a4e57 0%,#2a2d33 46%,#141517 78%);box-shadow:0 0 0 5px color-mix(in srgb,var(--zc) 14%,transparent),0 14px 30px rgba(0,0,0,.5);transition:transform .25s cubic-bezier(.2,.7,.1,1),box-shadow .25s}
+.tk-wring img{position:absolute;left:17%;top:17%;width:66%!important;height:66%!important;max-width:none;object-fit:contain;filter:drop-shadow(0 6px 10px rgba(0,0,0,.55))}
+.tk-wt a:hover .tk-wring,.tk-wt a:focus-visible .tk-wring{transform:translateY(-4px);box-shadow:0 0 0 7px color-mix(in srgb,var(--zc) 30%,transparent),0 18px 34px rgba(0,0,0,.55)}
+.tk-wn{font:700 15px/1.25 var(--q-sans,inherit);color:#f3f2ed;text-wrap:balance}
+.tk-wt a:hover .tk-wn{text-decoration:underline;text-underline-offset:3px}
+.tk-ws{display:inline-flex;align-items:center;gap:7px;font:500 13px/1 var(--tk-mono);letter-spacing:.06em;text-transform:uppercase;color:#b4b3ab}
+.tk-ws i{width:7px;height:7px;border-radius:50%;background:var(--zc);flex:none}
+.tk-wsoon{font:700 13px/1.2 var(--tk-mono);letter-spacing:.04em;text-transform:uppercase;color:#0a0a0b;background:#f3f2ed;padding:5px 8px;border-radius:2px}
+@media(max-width:599px){.tk-wgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.tk-wring{width:min(100%,128px)}.tk-wf{flex:1 1 auto;justify-content:center;padding:0 12px}}
+@media(prefers-reduced-motion:reduce){.tk-wall *{transition-duration:.01ms!important}}
+@media(forced-colors:active){.tk-wf[aria-pressed="true"]{background:SelectedItem;color:SelectedItemText}.tk-wring{border-color:CanvasText}}
+"""
+
+WALL_JS = r"""
+(function(){var w=document.querySelector('[data-tk-wall]');if(!w)return;
+var bs=[].slice.call(w.querySelectorAll('[data-tk-wf]')),ts=[].slice.call(w.querySelectorAll('.tk-wt')),n=w.querySelector('[data-tk-wn]');
+function set(k){var c=0,lab='';bs.forEach(function(b){var on=b.getAttribute('data-tk-wf')===k;b.setAttribute('aria-pressed',String(on));if(on)lab=b.querySelector('span').textContent});
+ts.forEach(function(t){var on=k==='all'||t.getAttribute('data-sys')===k;t.hidden=!on;if(on)c++});
+if(n)n.textContent=k==='all'?'Showing all '+c+' products.':'Showing '+c+' of '+ts.length+' products: '+lab+'.'}
+bs.forEach(function(b,i){b.addEventListener('click',function(){set(b.getAttribute('aria-pressed')==='true'?'all':b.getAttribute('data-tk-wf'))});
+b.addEventListener('keydown',function(e){var d=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(!d)return;e.preventDefault();bs[(i+d+bs.length)%bs.length].focus()})});
+})();
+"""
+
+RENDER_TOOLS = {"tkcfg": _cfg, "tkplay": _play, "tknf": _nf, "tkwall": _wall}
 
 
 # ------------------------------------------------------------------------------------------------ CSS
@@ -692,9 +769,13 @@ def post(doc: str, content: dict, page: dict, dslug: str) -> str:
     types = {s.get("type") for s in page["sections"]}
     tool = types & set(RENDER_TOOLS)
     product = page["file"].startswith("products/") and "specs" in types
-    if not tool and not product:
+    wall = "data-tk-wall" in doc   # the wall is a Showcase-only variant, so look at the rendered page, not the section list
+    if not tool and not product and not wall:
         return doc
     css, js, cls = "", "", []
+    if wall:
+        css += WALL_CSS
+        js += WALL_JS
     if tool:
         css += TOOLS_CSS
     if "tkplay" in types:

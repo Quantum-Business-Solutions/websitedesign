@@ -73,6 +73,31 @@ VIS_CSS += r"""
 .pv-chip-a{position:relative}.pv-chip-a::after{content:"";position:absolute;inset:-12px -8px}
 """
 VIS_CSS += r"""
+/* round 4b: 44px tap targets on phones and tablets, every direction. Gated at 1024px so desktop output is unchanged.
+   Breadcrumb links, the skip link, the preview notice, the direction tab, lane pills, compare-table product names,
+   map pins and chip links (the journey pill becomes the hit area; elsewhere the invisible hit area grows to 44px). */
+@media(max-width:1024px){
+body .q-skip{padding:12px 16px}
+.pv-crumbs ol{padding:2px 0;align-items:center}
+.pv-crumbs li{display:inline-flex;align-items:center;min-height:44px}
+.pv-crumbs a{min-height:44px;min-width:44px}
+body .pv-notice{min-height:44px;padding-right:52px}
+body .pv-notice a{position:relative}
+body .pv-notice a::after{content:"";position:absolute;inset:-10px -6px}
+body .pv-notice button{width:44px;height:44px;right:4px}
+body .pv-sw-tab{width:44px}
+.pv-lh .lane a{min-height:44px}
+.pp-cmp-c h3 a{position:relative;display:inline-flex;align-items:center;min-height:44px}
+.pp-cmp-c h3 a::after{content:"";position:absolute;inset:0 -8px}
+.pp-fn li a{min-height:44px}
+.dw2-pb::after{content:"";position:absolute;inset:-6px;border-radius:50%}
+.pv-chip-a::after{inset:-13px -8px}
+.jy-chip:has(.pv-chip-a){position:relative;min-height:44px;box-sizing:border-box}
+.jy-chip:has(.pv-chip-a) .pv-chip-a{position:static}
+.jy-chip:has(.pv-chip-a) .pv-chip-a::after{inset:0;border-radius:99px}
+}
+"""
+VIS_CSS += r"""
 /* decorative glow and mesh layers may extend past the viewport: clip (not hidden, so sticky keeps working) */
 body{overflow-x:clip}
 """

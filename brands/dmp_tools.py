@@ -165,6 +165,38 @@ def _links(data):
             res[-1]["items"].append(item)
 
 
+def _wall(data):
+    """Round 4b: the product wall on the Showcase catalogue (services.html). Existing data only: one tile per product page,
+    its name from the page's own breadcrumb, its cutout from its own stage, its system from the Round 1 colour key."""
+    svc = _page(data, "services.html")
+    if not svc or any(s.get("id") == "wall" for s in svc["sections"]):
+        return
+    labels = {k: (lab, c) for k, lab, c, _h in SYSTEMS}
+    items = []
+    for pg in data["pages"]:
+        if not pg["file"].startswith("products/") or pg.get("sys") not in labels:
+            continue
+        stage = next((s for s in pg["sections"] if s.get("type") == "prodstage"), None)
+        if not stage or not stage.get("image"):
+            continue
+        soon = "coming soon" in (stage.get("eyebrow", "") + " " + " ".join(map(str, stage.get("fine", [])))).lower() or "not yet orderable" in " ".join(map(str, stage.get("fine", []))).lower()
+        items.append({"name": pg["crumbs"][-1][0], "href": pg["file"], "img": stage["image"], "w": stage.get("image_w", 600), "h": stage.get("image_h", 450),
+                      "sys": pg["sys"], "soon": soon})
+    if not items:
+        return
+    if any("xr650" in i["href"] and not i["soon"] for i in items):
+        raise SystemExit("dmp_tools: the XR650 must be marked coming soon on the product wall")
+    order = [k for k, _l, _c, _h in SYSTEMS]
+    items.sort(key=lambda i: order.index(i["sys"]))   # stable: keeps the catalogue order inside each system
+    used = [k for k in order if any(i["sys"] == k for i in items)]
+    wall = {"type": "tkwall", "id": "wall", "eyebrow": "The product wall",
+            "heading": f"{len(items)} products, {len(used)} system colours.",
+            "intro": "Every product page on this site, ringed in the colour of the system it belongs to. Filter by system, then select a product to open its page.",
+            "systems": [[k, labels[k][0], labels[k][1]] for k in used], "items": items}
+    at = next((n + 1 for n, s in enumerate(svc["sections"]) if s.get("type") == "wheel"), 1)
+    svc["sections"].insert(at, {"type": "pn-none", "id": "wall", "variants": {"showcase": wall}})
+
+
 def _pitch(data):
     p = data.get("pitch")
     if not p:
@@ -185,6 +217,7 @@ def apply(data):
         if pg["file"] not in have:
             data["pages"].append(pg)
     _nf(data)
+    _wall(data)
     _links(data)
     _pitch(data)
     return data
