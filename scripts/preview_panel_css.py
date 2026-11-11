@@ -106,6 +106,8 @@ html:not(.pn-js) .pn-js-only{display:none!important}
 
 /* ---- zone bar: a slim light strip inside the sticky header ---- */
 .pn-zb{display:flex;align-items:stretch;border-top:1px solid rgba(10,12,16,.1);background:#f6f6f3;--pn-st-ink:#0b6b3a}
+/* the sticky header ignores pointer events (dw-fix) and only re-enables its utility bar and nav; the zone strip must be clickable too */
+.q-header.dw-fix .pn-zb,.q-header .pn-zb,.pn-zb a{pointer-events:auto}
 html[data-pn="disarmed"] .pn-zb{--pn-st-ink:#9a4a00}
 html[data-pn="arming"] .pn-zb{--pn-st-ink:#6f5500}
 .pn-zb ol{flex:1;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));margin:0;padding:0}
