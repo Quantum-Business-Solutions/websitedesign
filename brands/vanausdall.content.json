@@ -2336,7 +2336,7 @@
        "when": "Week 1",
        "summary": "Your Technology Strength Score.",
        "title": "The information assessment",
-       "body": "Vulnerability scans, MFA, password policy, backup, patching, firewall reviews, disaster recovery and end-of-life systems: the twenty questions on the assessment, answered and verified.",
+       "body": "Vulnerability scans, MFA, password policy, backup, patching, firewall reviews, disaster recovery and end-of-life systems: the twenty questions in the Information part of the assessment, answered and verified.",
        "receive": [
         "A scorecard",
         "Every system and risk listed",

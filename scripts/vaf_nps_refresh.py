@@ -5,7 +5,7 @@
     python3 scripts/vaf_nps_refresh.py --apply    # rewrite the figure in the content, overrides and module defaults, then record it
 
 The figure is typed into about 220 places (hero stats, proof strips, schema text). After --apply, rebuild and publish:
-    python3 scripts/vaf_upload.py && python3 scripts/vaf_build.py templates all
+    python3 scripts/vaf_upload.py && python3 scripts/vaf_build.py templates all && python3 scripts/vaf_llms_upload.py
 Source: https://api.ceojuice.com/widgets2/nps?customernumber=215 (public, read-only).
 """
 import glob, json, os, re, sys, urllib.request
@@ -13,7 +13,8 @@ import glob, json, os, re, sys, urllib.request
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATE = os.path.join(ROOT, "brands/vanausdall.nps.json")
 WIDGET = "https://api.ceojuice.com/widgets2/nps?customernumber=215"
-FILES = (["brands/vanausdall.content.json"] + sorted(glob.glob(os.path.join(ROOT, "brands/vanausdall.overrides.*.json")))
+FILES = (["brands/vanausdall.content.json", "brands/vanausdall.extra-pages.json", "brands/vanausdall.llms.txt", "brands/vanausdall.content.py", "scripts/vaf_launch_files.py"]
+         + sorted(glob.glob(os.path.join(ROOT, "brands/vanausdall.overrides.*.json")))
          + sorted(glob.glob(os.path.join(ROOT, "themes/vaf/modules/*/fields.json"))))
 
 
@@ -45,7 +46,7 @@ def main():
             open(p, "w", encoding="utf-8").write(s.replace(cur, value)); n += c
     json.dump({"value": value, "as_of": __import__("datetime").date.today().isoformat(), "source": WIDGET, "measure": "Last complete 12 months"},
               open(STATE, "w"), indent=1)
-    print(f"Replaced {cur} with {value} in {n} places. Now upload the theme and rebuild the templates.")
+    print(f"Replaced {cur} with {value} in {n} places. Now upload the theme, rebuild the templates and re-upload llms.txt (scripts/vaf_llms_upload.py).")
 
 
 main()

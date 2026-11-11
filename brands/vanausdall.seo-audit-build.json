@@ -32,7 +32,7 @@
   "imgs": 74,
   "imgs_no_alt": 32,
   "words": 3765,
-  "internal_links": 163,
+  "internal_links": 164,
   "has_city": true
  },
  {
@@ -62,7 +62,7 @@
   "imgs": 7,
   "imgs_no_alt": 0,
   "words": 1639,
-  "internal_links": 208,
+  "internal_links": 209,
   "has_city": true
  },
  {
@@ -91,11 +91,11 @@
    "Service",
    "State"
   ],
-  "faq_questions": 4,
+  "faq_questions": 6,
   "imgs": 8,
   "imgs_no_alt": 0,
-  "words": 1595,
-  "internal_links": 137,
+  "words": 1693,
+  "internal_links": 138,
   "has_city": true
  },
  {
@@ -127,8 +127,8 @@
   "faq_questions": 4,
   "imgs": 7,
   "imgs_no_alt": 0,
-  "words": 1342,
-  "internal_links": 137,
+  "words": 1335,
+  "internal_links": 138,
   "has_city": true
  },
  {
@@ -160,8 +160,8 @@
   "faq_questions": 6,
   "imgs": 7,
   "imgs_no_alt": 0,
-  "words": 1204,
-  "internal_links": 144,
+  "words": 1200,
+  "internal_links": 145,
   "has_city": true
  },
  {
@@ -193,8 +193,8 @@
   "faq_questions": 6,
   "imgs": 7,
   "imgs_no_alt": 0,
-  "words": 1236,
-  "internal_links": 144,
+  "words": 1232,
+  "internal_links": 145,
   "has_city": true
  },
  {
@@ -226,8 +226,8 @@
   "faq_questions": 4,
   "imgs": 7,
   "imgs_no_alt": 0,
-  "words": 1306,
-  "internal_links": 137,
+  "words": 1303,
+  "internal_links": 138,
   "has_city": true
  },
  {
@@ -256,11 +256,11 @@
    "Service",
    "State"
   ],
-  "faq_questions": 4,
+  "faq_questions": 6,
   "imgs": 25,
   "imgs_no_alt": 0,
-  "words": 1552,
-  "internal_links": 140,
+  "words": 1672,
+  "internal_links": 141,
   "has_city": true
  },
  {
@@ -292,8 +292,8 @@
   "faq_questions": 4,
   "imgs": 7,
   "imgs_no_alt": 0,
-  "words": 1606,
-  "internal_links": 135,
+  "words": 1612,
+  "internal_links": 136,
   "has_city": true
  },
  {
@@ -325,8 +325,8 @@
   "faq_questions": 6,
   "imgs": 7,
   "imgs_no_alt": 0,
-  "words": 1189,
-  "internal_links": 142,
+  "words": 1195,
+  "internal_links": 143,
   "has_city": true
  },
  {
@@ -358,8 +358,8 @@
   "faq_questions": 6,
   "imgs": 7,
   "imgs_no_alt": 0,
-  "words": 1157,
-  "internal_links": 142,
+  "words": 1163,
+  "internal_links": 143,
   "has_city": true
  },
  {
@@ -391,8 +391,8 @@
   "faq_questions": 6,
   "imgs": 7,
   "imgs_no_alt": 0,
-  "words": 1241,
-  "internal_links": 144,
+  "words": 1248,
+  "internal_links": 145,
   "has_city": true
  },
  {
@@ -424,8 +424,8 @@
   "faq_questions": 4,
   "imgs": 7,
   "imgs_no_alt": 0,
-  "words": 1547,
-  "internal_links": 137,
+  "words": 1554,
+  "internal_links": 138,
   "has_city": true
  },
  {
@@ -457,8 +457,8 @@
   "faq_questions": 6,
   "imgs": 7,
   "imgs_no_alt": 0,
-  "words": 1194,
-  "internal_links": 144,
+  "words": 1185,
+  "internal_links": 145,
   "has_city": true
  },
  {
@@ -485,7 +485,7 @@
   "imgs": 18,
   "imgs_no_alt": 0,
   "words": 1622,
-  "internal_links": 137,
+  "internal_links": 138,
   "has_city": true
  },
  {
@@ -518,7 +518,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1320,
-  "internal_links": 139,
+  "internal_links": 140,
   "has_city": true
  },
  {
@@ -551,7 +551,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1215,
-  "internal_links": 138,
+  "internal_links": 139,
   "has_city": true
  },
  {
@@ -584,7 +584,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1229,
-  "internal_links": 137,
+  "internal_links": 138,
   "has_city": true
  },
  {
@@ -617,7 +617,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1279,
-  "internal_links": 139,
+  "internal_links": 140,
   "has_city": true
  },
  {
@@ -650,7 +650,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1176,
-  "internal_links": 136,
+  "internal_links": 137,
   "has_city": true
  },
  {
@@ -683,7 +683,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1189,
-  "internal_links": 138,
+  "internal_links": 139,
   "has_city": true
  },
  {
@@ -716,7 +716,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1333,
-  "internal_links": 141,
+  "internal_links": 142,
   "has_city": true
  },
  {
@@ -749,7 +749,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1299,
-  "internal_links": 139,
+  "internal_links": 140,
   "has_city": true
  },
  {
@@ -776,7 +776,7 @@
   "imgs": 2,
   "imgs_no_alt": 0,
   "words": 1213,
-  "internal_links": 139,
+  "internal_links": 140,
   "has_city": true
  },
  {
@@ -805,7 +805,7 @@
   "imgs": 4,
   "imgs_no_alt": 1,
   "words": 1089,
-  "internal_links": 126,
+  "internal_links": 127,
   "has_city": true
  },
  {
@@ -834,7 +834,7 @@
   "imgs": 4,
   "imgs_no_alt": 1,
   "words": 1495,
-  "internal_links": 139,
+  "internal_links": 140,
   "has_city": true
  },
  {
@@ -863,7 +863,7 @@
   "imgs": 4,
   "imgs_no_alt": 1,
   "words": 1101,
-  "internal_links": 126,
+  "internal_links": 127,
   "has_city": true
  },
  {
@@ -892,7 +892,7 @@
   "imgs": 4,
   "imgs_no_alt": 1,
   "words": 1069,
-  "internal_links": 125,
+  "internal_links": 126,
   "has_city": true
  },
  {
@@ -950,7 +950,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1012,
-  "internal_links": 124,
+  "internal_links": 125,
   "has_city": true
  },
  {
@@ -977,7 +977,7 @@
   "imgs": 2,
   "imgs_no_alt": 0,
   "words": 1083,
-  "internal_links": 126,
+  "internal_links": 127,
   "has_city": true
  },
  {
@@ -1004,7 +1004,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1062,
-  "internal_links": 124,
+  "internal_links": 125,
   "has_city": true
  },
  {
@@ -1014,7 +1014,7 @@
   "title_len": 52,
   "desc_len": 137,
   "h1": 1,
-  "h2": 10,
+  "h2": 11,
   "canonical": true,
   "og_image": true,
   "og_title": true,
@@ -1040,8 +1040,8 @@
   "faq_questions": 4,
   "imgs": 6,
   "imgs_no_alt": 1,
-  "words": 1631,
-  "internal_links": 127,
+  "words": 1717,
+  "internal_links": 128,
   "has_city": true
  },
  {
@@ -1068,7 +1068,7 @@
   "imgs": 68,
   "imgs_no_alt": 24,
   "words": 1089,
-  "internal_links": 125,
+  "internal_links": 126,
   "has_city": true
  },
  {
@@ -1078,7 +1078,7 @@
   "title_len": 45,
   "desc_len": 119,
   "h1": 1,
-  "h2": 7,
+  "h2": 10,
   "canonical": true,
   "og_image": true,
   "og_title": true,
@@ -1094,8 +1094,8 @@
   "faq_questions": 6,
   "imgs": 4,
   "imgs_no_alt": 1,
-  "words": 956,
-  "internal_links": 123,
+  "words": 1479,
+  "internal_links": 124,
   "has_city": true
  },
  {
@@ -1125,7 +1125,7 @@
   "imgs": 2,
   "imgs_no_alt": 0,
   "words": 1068,
-  "internal_links": 123,
+  "internal_links": 124,
   "has_city": true
  },
  {
@@ -1149,6 +1149,7 @@
    "ListItem",
    "LocalBusiness",
    "OpeningHoursSpecification",
+   "Organization",
    "PostalAddress",
    "Question"
   ],
@@ -1156,7 +1157,7 @@
   "imgs": 2,
   "imgs_no_alt": 0,
   "words": 1858,
-  "internal_links": 158,
+  "internal_links": 159,
   "has_city": true
  },
  {
@@ -1192,7 +1193,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1196,
-  "internal_links": 137,
+  "internal_links": 138,
   "has_city": true
  },
  {
@@ -1227,7 +1228,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1394,
-  "internal_links": 141,
+  "internal_links": 142,
   "has_city": false
  },
  {
@@ -1262,7 +1263,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1222,
-  "internal_links": 135,
+  "internal_links": 136,
   "has_city": false
  },
  {
@@ -1286,6 +1287,7 @@
    "ListItem",
    "LocalBusiness",
    "OpeningHoursSpecification",
+   "Organization",
    "PostalAddress",
    "Question"
   ],
@@ -1293,7 +1295,7 @@
   "imgs": 2,
   "imgs_no_alt": 0,
   "words": 982,
-  "internal_links": 125,
+  "internal_links": 126,
   "has_city": true
  },
  {
@@ -1322,8 +1324,8 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1415,
-  "internal_links": 144,
+  "words": 1422,
+  "internal_links": 145,
   "has_city": true
  },
  {
@@ -1350,7 +1352,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1056,
-  "internal_links": 126,
+  "internal_links": 127,
   "has_city": true
  },
  {
@@ -1384,7 +1386,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1382,
-  "internal_links": 138,
+  "internal_links": 139,
   "has_city": false
  },
  {
@@ -1418,7 +1420,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1236,
-  "internal_links": 145,
+  "internal_links": 146,
   "has_city": false
  },
  {
@@ -1452,7 +1454,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1364,
-  "internal_links": 145,
+  "internal_links": 146,
   "has_city": false
  },
  {
@@ -1486,7 +1488,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1264,
-  "internal_links": 145,
+  "internal_links": 146,
   "has_city": false
  },
  {
@@ -1515,8 +1517,8 @@
   "faq_questions": 5,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1274,
-  "internal_links": 137,
+  "words": 1267,
+  "internal_links": 138,
   "has_city": true
  },
  {
@@ -1550,7 +1552,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1506,
-  "internal_links": 139,
+  "internal_links": 140,
   "has_city": false
  },
  {
@@ -1579,7 +1581,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1539,
-  "internal_links": 142,
+  "internal_links": 143,
   "has_city": true
  },
  {
@@ -1607,8 +1609,8 @@
   "faq_questions": 3,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1141,
-  "internal_links": 128,
+  "words": 1139,
+  "internal_links": 129,
   "has_city": true
  },
  {
@@ -1637,7 +1639,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1359,
-  "internal_links": 134,
+  "internal_links": 135,
   "has_city": true
  },
  {
@@ -1666,7 +1668,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1360,
-  "internal_links": 134,
+  "internal_links": 135,
   "has_city": true
  },
  {
@@ -1694,8 +1696,8 @@
   "faq_questions": 3,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1511,
-  "internal_links": 142,
+  "words": 1563,
+  "internal_links": 143,
   "has_city": true
  },
  {
@@ -1724,7 +1726,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1545,
-  "internal_links": 128,
+  "internal_links": 129,
   "has_city": true
  },
  {
@@ -1753,7 +1755,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1208,
-  "internal_links": 128,
+  "internal_links": 129,
   "has_city": true
  },
  {
@@ -1782,7 +1784,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1166,
-  "internal_links": 128,
+  "internal_links": 129,
   "has_city": true
  },
  {
@@ -1811,7 +1813,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1223,
-  "internal_links": 128,
+  "internal_links": 129,
   "has_city": true
  },
  {
@@ -1840,7 +1842,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1314,
-  "internal_links": 134,
+  "internal_links": 135,
   "has_city": true
  },
  {
@@ -1869,7 +1871,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1257,
-  "internal_links": 128,
+  "internal_links": 129,
   "has_city": true
  },
  {
@@ -1898,7 +1900,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1347,
-  "internal_links": 134,
+  "internal_links": 135,
   "has_city": true
  },
  {
@@ -1927,7 +1929,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1098,
-  "internal_links": 128,
+  "internal_links": 129,
   "has_city": true
  },
  {
@@ -1956,7 +1958,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1183,
-  "internal_links": 128,
+  "internal_links": 129,
   "has_city": true
  },
  {
@@ -1985,8 +1987,8 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1338,
-  "internal_links": 144,
+  "words": 1334,
+  "internal_links": 145,
   "has_city": false
  },
  {
@@ -2020,7 +2022,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1441,
-  "internal_links": 139,
+  "internal_links": 140,
   "has_city": false
  },
  {
@@ -2054,7 +2056,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1242,
-  "internal_links": 145,
+  "internal_links": 146,
   "has_city": false
  },
  {
@@ -2088,7 +2090,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1363,
-  "internal_links": 145,
+  "internal_links": 146,
   "has_city": false
  },
  {
@@ -2122,7 +2124,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1295,
-  "internal_links": 145,
+  "internal_links": 146,
   "has_city": false
  },
  {
@@ -2153,8 +2155,8 @@
   "faq_questions": 7,
   "imgs": 15,
   "imgs_no_alt": 3,
-  "words": 1979,
-  "internal_links": 154,
+  "words": 1976,
+  "internal_links": 155,
   "has_city": false
  },
  {
@@ -2183,8 +2185,8 @@
   "faq_questions": 7,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1311,
-  "internal_links": 144,
+  "words": 1308,
+  "internal_links": 145,
   "has_city": true
  },
  {
@@ -2213,8 +2215,8 @@
   "faq_questions": 7,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1325,
-  "internal_links": 144,
+  "words": 1322,
+  "internal_links": 145,
   "has_city": true
  },
  {
@@ -2243,8 +2245,8 @@
   "faq_questions": 7,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1266,
-  "internal_links": 144,
+  "words": 1263,
+  "internal_links": 145,
   "has_city": true
  },
  {
@@ -2273,8 +2275,8 @@
   "faq_questions": 7,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1292,
-  "internal_links": 144,
+  "words": 1288,
+  "internal_links": 145,
   "has_city": true
  },
  {
@@ -2303,8 +2305,8 @@
   "faq_questions": 7,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1326,
-  "internal_links": 144,
+  "words": 1323,
+  "internal_links": 145,
   "has_city": true
  },
  {
@@ -2334,7 +2336,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1225,
-  "internal_links": 143,
+  "internal_links": 144,
   "has_city": true
  },
  {
@@ -2364,7 +2366,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1395,
-  "internal_links": 143,
+  "internal_links": 144,
   "has_city": true
  },
  {
@@ -2394,7 +2396,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 966,
-  "internal_links": 136,
+  "internal_links": 137,
   "has_city": true
  },
  {
@@ -2423,8 +2425,8 @@
   "faq_questions": 4,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1273,
-  "internal_links": 137,
+  "words": 1265,
+  "internal_links": 138,
   "has_city": true
  },
  {
@@ -2454,7 +2456,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1197,
-  "internal_links": 136,
+  "internal_links": 137,
   "has_city": true
  },
  {
@@ -2483,8 +2485,8 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1185,
-  "internal_links": 144,
+  "words": 1182,
+  "internal_links": 145,
   "has_city": true
  },
  {
@@ -2511,7 +2513,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 888,
-  "internal_links": 126,
+  "internal_links": 127,
   "has_city": true
  },
  {
@@ -2542,8 +2544,8 @@
   "faq_questions": 7,
   "imgs": 17,
   "imgs_no_alt": 3,
-  "words": 1938,
-  "internal_links": 152,
+  "words": 1944,
+  "internal_links": 153,
   "has_city": true
  },
  {
@@ -2572,8 +2574,8 @@
   "faq_questions": 4,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1459,
-  "internal_links": 137,
+  "words": 1452,
+  "internal_links": 138,
   "has_city": true
  },
  {
@@ -2602,8 +2604,8 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1407,
-  "internal_links": 144,
+  "words": 1400,
+  "internal_links": 145,
   "has_city": true
  },
  {
@@ -2632,8 +2634,8 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1408,
-  "internal_links": 144,
+  "words": 1415,
+  "internal_links": 145,
   "has_city": true
  },
  {
@@ -2662,8 +2664,8 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1217,
-  "internal_links": 144,
+  "words": 1224,
+  "internal_links": 145,
   "has_city": true
  },
  {
@@ -2690,7 +2692,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 984,
-  "internal_links": 126,
+  "internal_links": 127,
   "has_city": true
  },
  {
@@ -2720,7 +2722,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1161,
-  "internal_links": 143,
+  "internal_links": 144,
   "has_city": true
  },
  {
@@ -2754,7 +2756,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1258,
-  "internal_links": 146,
+  "internal_links": 147,
   "has_city": false
  },
  {
@@ -2788,7 +2790,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1314,
-  "internal_links": 132,
+  "internal_links": 133,
   "has_city": false
  },
  {
@@ -2822,7 +2824,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1284,
-  "internal_links": 132,
+  "internal_links": 133,
   "has_city": false
  },
  {
@@ -2856,7 +2858,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1210,
-  "internal_links": 132,
+  "internal_links": 133,
   "has_city": false
  },
  {
@@ -2890,7 +2892,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1181,
-  "internal_links": 132,
+  "internal_links": 133,
   "has_city": false
  },
  {
@@ -2924,7 +2926,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1104,
-  "internal_links": 132,
+  "internal_links": 133,
   "has_city": false
  },
  {
@@ -2958,7 +2960,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1471,
-  "internal_links": 138,
+  "internal_links": 139,
   "has_city": false
  },
  {
@@ -2992,7 +2994,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1474,
-  "internal_links": 146,
+  "internal_links": 147,
   "has_city": false
  },
  {
@@ -3026,7 +3028,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1398,
-  "internal_links": 146,
+  "internal_links": 147,
   "has_city": false
  },
  {
@@ -3060,7 +3062,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1316,
-  "internal_links": 132,
+  "internal_links": 133,
   "has_city": false
  },
  {
@@ -3094,7 +3096,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1459,
-  "internal_links": 146,
+  "internal_links": 147,
   "has_city": false
  },
  {
@@ -3128,7 +3130,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1456,
-  "internal_links": 146,
+  "internal_links": 147,
   "has_city": false
  },
  {
@@ -3157,8 +3159,8 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1452,
-  "internal_links": 144,
+  "words": 1445,
+  "internal_links": 145,
   "has_city": true
  },
  {
@@ -3187,8 +3189,8 @@
   "faq_questions": 7,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1482,
-  "internal_links": 144,
+  "words": 1475,
+  "internal_links": 145,
   "has_city": true
  },
  {
@@ -3222,7 +3224,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1434,
-  "internal_links": 138,
+  "internal_links": 139,
   "has_city": false
  },
  {
@@ -3256,7 +3258,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1114,
-  "internal_links": 132,
+  "internal_links": 133,
   "has_city": true
  },
  {
@@ -3288,7 +3290,7 @@
   "imgs": 31,
   "imgs_no_alt": 16,
   "words": 1894,
-  "internal_links": 154,
+  "internal_links": 155,
   "has_city": true
  },
  {
@@ -3317,8 +3319,8 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1118,
-  "internal_links": 144,
+  "words": 1111,
+  "internal_links": 145,
   "has_city": true
  },
  {
@@ -3347,8 +3349,8 @@
   "faq_questions": 4,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1440,
-  "internal_links": 137,
+  "words": 1433,
+  "internal_links": 138,
   "has_city": true
  },
  {
@@ -3377,8 +3379,8 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1259,
-  "internal_links": 144,
+  "words": 1256,
+  "internal_links": 145,
   "has_city": true
  },
  {
@@ -3408,7 +3410,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1331,
-  "internal_links": 143,
+  "internal_links": 144,
   "has_city": true
  },
  {
@@ -3437,8 +3439,8 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1251,
-  "internal_links": 137,
+  "words": 1244,
+  "internal_links": 138,
   "has_city": true
  },
  {
@@ -3467,8 +3469,8 @@
   "faq_questions": 7,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1409,
-  "internal_links": 144,
+  "words": 1402,
+  "internal_links": 145,
   "has_city": true
  },
  {
@@ -3497,8 +3499,8 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1259,
-  "internal_links": 137,
+  "words": 1252,
+  "internal_links": 138,
   "has_city": true
  },
  {
@@ -3527,8 +3529,8 @@
   "faq_questions": 7,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1273,
-  "internal_links": 137,
+  "words": 1266,
+  "internal_links": 138,
   "has_city": true
  },
  {
@@ -3557,8 +3559,8 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1438,
-  "internal_links": 144,
+  "words": 1431,
+  "internal_links": 145,
   "has_city": true
  },
  {
@@ -3587,8 +3589,8 @@
   "faq_questions": 7,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1390,
-  "internal_links": 144,
+  "words": 1383,
+  "internal_links": 145,
   "has_city": true
  },
  {
@@ -3622,7 +3624,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1453,
-  "internal_links": 139,
+  "internal_links": 140,
   "has_city": false
  },
  {
@@ -3656,7 +3658,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1302,
-  "internal_links": 145,
+  "internal_links": 146,
   "has_city": false
  },
  {
@@ -3690,7 +3692,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1398,
-  "internal_links": 145,
+  "internal_links": 146,
   "has_city": false
  },
  {
@@ -3724,7 +3726,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1156,
-  "internal_links": 132,
+  "internal_links": 133,
   "has_city": false
  },
  {
@@ -3753,8 +3755,8 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1205,
-  "internal_links": 144,
+  "words": 1197,
+  "internal_links": 145,
   "has_city": true
  },
  {
@@ -3783,8 +3785,8 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1408,
-  "internal_links": 144,
+  "words": 1401,
+  "internal_links": 145,
   "has_city": true
  },
  {
@@ -3813,8 +3815,8 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1193,
-  "internal_links": 144,
+  "words": 1186,
+  "internal_links": 145,
   "has_city": true
  },
  {
@@ -3848,7 +3850,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1381,
-  "internal_links": 138,
+  "internal_links": 139,
   "has_city": false
  },
  {
@@ -3877,8 +3879,8 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1115,
-  "internal_links": 137,
+  "words": 1108,
+  "internal_links": 138,
   "has_city": true
  },
  {
@@ -4069,8 +4071,8 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1422,
-  "internal_links": 142,
+  "words": 1428,
+  "internal_links": 143,
   "has_city": true
  },
  {
@@ -4099,8 +4101,8 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1216,
-  "internal_links": 142,
+  "words": 1222,
+  "internal_links": 143,
   "has_city": true
  },
  {
@@ -4129,8 +4131,8 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1340,
-  "internal_links": 144,
+  "words": 1332,
+  "internal_links": 145,
   "has_city": true
  },
  {
@@ -4161,8 +4163,8 @@
   "faq_questions": 5,
   "imgs": 16,
   "imgs_no_alt": 3,
-  "words": 1994,
-  "internal_links": 158,
+  "words": 2001,
+  "internal_links": 159,
   "has_city": true
  },
  {
@@ -4191,8 +4193,8 @@
   "faq_questions": 4,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1357,
-  "internal_links": 137,
+  "words": 1364,
+  "internal_links": 138,
   "has_city": true
  },
  {
@@ -4221,8 +4223,8 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1330,
-  "internal_links": 144,
+  "words": 1337,
+  "internal_links": 145,
   "has_city": true
  },
  {
@@ -4252,7 +4254,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1200,
-  "internal_links": 143,
+  "internal_links": 144,
   "has_city": true
  },
  {
@@ -4282,7 +4284,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1229,
-  "internal_links": 143,
+  "internal_links": 144,
   "has_city": true
  },
  {
@@ -4311,8 +4313,8 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1190,
-  "internal_links": 137,
+  "words": 1196,
+  "internal_links": 138,
   "has_city": false
  },
  {
@@ -4341,8 +4343,8 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1269,
-  "internal_links": 144,
+  "words": 1275,
+  "internal_links": 145,
   "has_city": true
  },
  {
@@ -4372,7 +4374,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1091,
-  "internal_links": 143,
+  "internal_links": 144,
   "has_city": true
  },
  {
@@ -4401,8 +4403,8 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1263,
-  "internal_links": 144,
+  "words": 1260,
+  "internal_links": 145,
   "has_city": true
  },
  {
@@ -4432,7 +4434,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1103,
-  "internal_links": 143,
+  "internal_links": 144,
   "has_city": true
  },
  {
@@ -4466,7 +4468,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1495,
-  "internal_links": 140,
+  "internal_links": 141,
   "has_city": false
  },
  {
@@ -4500,7 +4502,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1282,
-  "internal_links": 146,
+  "internal_links": 147,
   "has_city": false
  },
  {
@@ -4534,7 +4536,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1119,
-  "internal_links": 132,
+  "internal_links": 133,
   "has_city": false
  },
  {
@@ -4568,7 +4570,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1390,
-  "internal_links": 146,
+  "internal_links": 147,
   "has_city": false
  },
  {
@@ -4597,8 +4599,8 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1208,
-  "internal_links": 137,
+  "words": 1205,
+  "internal_links": 138,
   "has_city": true
  },
  {
@@ -4627,8 +4629,8 @@
   "faq_questions": 7,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1284,
-  "internal_links": 144,
+  "words": 1280,
+  "internal_links": 145,
   "has_city": true
  },
  {
@@ -4658,7 +4660,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1216,
-  "internal_links": 143,
+  "internal_links": 144,
   "has_city": true
  },
  {
@@ -4712,7 +4714,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1000,
-  "internal_links": 126,
+  "internal_links": 127,
   "has_city": true
  },
  {
@@ -4741,8 +4743,8 @@
   "faq_questions": 5,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1371,
-  "internal_links": 137,
+  "words": 1368,
+  "internal_links": 138,
   "has_city": true
  },
  {
@@ -4771,8 +4773,8 @@
   "faq_questions": 7,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1310,
-  "internal_links": 137,
+  "words": 1307,
+  "internal_links": 138,
   "has_city": true
  },
  {
@@ -4802,7 +4804,7 @@
   "imgs": 3,
   "imgs_no_alt": 0,
   "words": 1039,
-  "internal_links": 141,
+  "internal_links": 142,
   "has_city": true
  }
 ]

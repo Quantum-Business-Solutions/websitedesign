@@ -38,7 +38,7 @@ Owner key: **VAF** = Brian Courtney and the VAF team, **QBS** = Quantum Business
 - [ ] Blog posts keep their original publish dates.
 - [ ] Re-run `scripts/vaf_seo_compare.py`, `scripts/vaf_schema_check.py` and `scripts/vaf_claims_audit.py` on the production domain after cutover; every page A, no schema problems.
 - [ ] HubSpot's own blog JSON-LD and AMP output are off (done 29 Oct) so the theme's BlogPosting block is the only one.
-- [ ] Refresh the NPS figure from the CEO Juice widget every quarter (92.8 on 29 Oct 2026).
+- [ ] NPS figure: refreshed automatically from the CEO Juice widget on the 3rd of each month (scheduled task, scripts/vaf_nps_refresh.py; 94.6 on 11 Nov 2026). Check the first run on 3 Dec 2026 and that /about shows the live panel.
 
 ## 4. Quality assurance (QBS)
 
