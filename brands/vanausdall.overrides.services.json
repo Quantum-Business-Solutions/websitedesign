@@ -1316,7 +1316,7 @@
     "heading": "Measured service, not just promised service",
     "body": "Support is only as good as the people and process behind it. VAF's Customer Care Center processes requests, and customer scores are collected after service calls by an independent company.",
     "bullets": [
-     "Net Promoter Score of 92.8, audited by CEO Juice, against a US average of 10",
+     "Net Promoter Score of 94.6, audited by CEO Juice, against a US average of 10",
      "A 25 point inspection on every service call",
      "SOC 2 certification for how customer data is protected",
      "Technology advisors with an average tenure of fifteen years"
@@ -10346,19 +10346,6 @@
     "subhead": "Our innovation experts improve your business efficiency by eliminating technology you do not need, optimizing what you have, and creating a technology improvement roadmap that grows with you. It all starts with the Technology Strength Assessment."
    },
    {
-    "type": "detail",
-    "alt": true,
-    "eyebrow": "What happens next",
-    "heading": "Send the form, and here is what happens",
-    "body": "A person from the Indianapolis office reads it the same business day and calls to set a time; there is no autoresponder and no sales sequence. If the question is about an existing device or agreement, it is routed to the Client Service Center, which answers within 24 hours and dispatches a certified technician locally. If it is a new need, a technology advisor, whose average tenure with the company is fifteen years, walks the Technology Strength Assessment with you: ten to fifteen minutes on your devices, contracts, phones and workflows, then a written roadmap of what to eliminate, optimize and leverage. You keep the roadmap either way.",
-    "bullets": [
-     "Same-day reply from a named person in Indianapolis",
-     "Service requests answered within 24 hours",
-     "Assessment first, quote second",
-     "Offices in Indianapolis, Fort Wayne and Evansville; the fleet covers the state"
-    ]
-   },
-   {
     "type": "contact",
     "id": "form",
     "heading": "Let's talk",
@@ -10373,6 +10360,19 @@
     ],
     "submit": "Schedule my consultation",
     "note": "Or call (317) 634-2913, Monday through Friday, 7:00am to 5:00pm. Existing customers: the Client Service Center is faster."
+   },
+   {
+    "type": "detail",
+    "alt": true,
+    "eyebrow": "What happens next",
+    "heading": "Send the form, and here is what happens",
+    "body": "A person from the Indianapolis office reads it the same business day and calls to set a time; there is no autoresponder and no sales sequence. If the question is about an existing device or agreement, it is routed to the Client Service Center, which answers within 24 hours and dispatches a certified technician locally. If it is a new need, a technology advisor, whose average tenure with the company is fifteen years, walks the Technology Strength Assessment with you: ten to fifteen minutes on your devices, contracts, phones and workflows, then a written roadmap of what to eliminate, optimize and leverage. You keep the roadmap either way.",
+    "bullets": [
+     "Same-day reply from a named person in Indianapolis",
+     "Service requests answered within 24 hours",
+     "Assessment first, quote second",
+     "Offices in Indianapolis, Fort Wayne and Evansville; the fleet covers the state"
+    ]
    },
    {
     "type": "faq",

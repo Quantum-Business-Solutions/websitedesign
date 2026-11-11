@@ -1,6 +1,6 @@
 {
  "source": "https://www.vanausdall.com/technology-strength-assessment (VAF live assessment, read 2026-11-11)",
- "note": "Original wording, 4 areas x 2 parts x 10 yes/no questions = 80. Answer key (good answer, weight, Eliminate/Optimize/Leverage bucket, fix text) still to be confirmed by VAF; not part of the original page.",
+ "note": "Original wording, full text. 4 areas x 2 parts x 10 yes/no questions = 80. The original page has no answer key; see vanausdall.assessment-bank.json for the draft key VAF must confirm.",
  "areas": {
   "Information": [
    {
@@ -56,12 +56,12 @@
    {
     "n": 11,
     "part": 2,
-    "question": "In the event of a power outage, do you know that you have a battery backup system that will keep"
+    "question": "In the event of a power outage, do you know that you have a battery backup system that will keep your router, firewall and servers running for a minimum of 30 minutes?"
    },
    {
     "n": 12,
     "part": 2,
-    "question": "Do you utilize security awareness training to make sure users are trained to avoid email and"
+    "question": "Do you utilize security awareness training to make sure users are trained to avoid email and web-based hacking attempts?"
    },
    {
     "n": 13,
@@ -71,7 +71,7 @@
    {
     "n": 14,
     "part": 2,
-    "question": "Do you utilize server virtualization in order to leverage fault tolerance and disaster recovery"
+    "question": "Do you utilize server virtualization in order to leverage fault tolerance and disaster recovery gains?"
    },
    {
     "n": 15,
@@ -81,7 +81,7 @@
    {
     "n": 16,
     "part": 2,
-    "question": "Do you assess your technology vendors annually to ensure they extend your security standards and"
+    "question": "Do you assess your technology vendors annually to ensure they extend your security standards and policies?"
    },
    {
     "n": 17,
@@ -96,7 +96,7 @@
    {
     "n": 19,
     "part": 2,
-    "question": "Do you have a multi-cloud strategy that ensures common authentication, security and policies apply"
+    "question": "Do you have a multi-cloud strategy that ensures common authentication, security and policies apply across all cloud vendors?"
    },
    {
     "n": 20,
@@ -138,7 +138,7 @@
    {
     "n": 7,
     "part": 1,
-    "question": "Does your company have any sensitive customer or company information that should not be printed or"
+    "question": "Does your company have any sensitive customer or company information that should not be printed or should be restricted?"
    },
    {
     "n": 8,
@@ -188,7 +188,7 @@
    {
     "n": 17,
     "part": 2,
-    "question": "Are you confident and pleased that the supplier of the devices is providing excellent service, and"
+    "question": "Are you confident and pleased that the supplier of the devices is providing excellent service, and the cost of the related supplies/services is appropriate?"
    },
    {
     "n": 18,
@@ -203,7 +203,7 @@
    {
     "n": 20,
     "part": 2,
-    "question": "Does company management receive weekly/monthly reports detailing print/copy activity, job details"
+    "question": "Does company management receive weekly/monthly reports detailing print/copy activity, job details and cost?"
    }
   ],
   "Process": [
@@ -225,7 +225,7 @@
    {
     "n": 4,
     "part": 1,
-    "question": "Does your company utilize a clear defined strategy that allows you to continue operating at 100% if"
+    "question": "Does your company utilize a clear defined strategy that allows you to continue operating at 100% if the building and/or paper records were not accessible?"
    },
    {
     "n": 5,
@@ -235,7 +235,7 @@
    {
     "n": 6,
     "part": 1,
-    "question": "Does your administrative staff currently perform more than 50% of the day to day office services"
+    "question": "Does your administrative staff currently perform more than 50% of the day to day office services (copy print, mail, shipping/receiving, scanning)?"
    },
    {
     "n": 7,
@@ -265,7 +265,7 @@
    {
     "n": 12,
     "part": 2,
-    "question": "Does your company experience high turnover in your administrative staff and/or in-house resource"
+    "question": "Does your company experience high turnover in your administrative staff and/or in-house resource center?"
    },
    {
     "n": 13,
@@ -280,22 +280,22 @@
    {
     "n": 15,
     "part": 2,
-    "question": "Does your company utilize a paper visitor management system to track visitors as they enter and"
+    "question": "Does your company utilize a paper visitor management system to track visitors as they enter and leave your organization?"
    },
    {
     "n": 16,
     "part": 2,
-    "question": "Does your company currently deploy an electronic conference room management system for scheduling"
+    "question": "Does your company currently deploy an electronic conference room management system for scheduling and usage tracking?"
    },
    {
     "n": 17,
     "part": 2,
-    "question": "Does your company currently track inbound packages from the time they are received (dock) through"
+    "question": "Does your company currently track inbound packages from the time they are received (dock) through delivery to the end recipient (desktop)?"
    },
    {
     "n": 18,
     "part": 2,
-    "question": "Is your company currently taking full advantage of carrier and USPS discounts for outgoing overnight"
+    "question": "Is your company currently taking full advantage of carrier and USPS discounts for outgoing overnight mail parcels and USPS mail?"
    },
    {
     "n": 19,
@@ -347,7 +347,7 @@
    {
     "n": 8,
     "part": 1,
-    "question": "Are your Smart Phones connected to your corporate phone system (extension dialing, real time"
+    "question": "Are your Smart Phones connected to your corporate phone system (extension dialing, real time presence, corporate directory)?"
    },
    {
     "n": 9,
@@ -382,7 +382,7 @@
    {
     "n": 15,
     "part": 2,
-    "question": "Does your phone system have contact center functionality that queues calls, emails and chat requests"
+    "question": "Does your phone system have contact center functionality that queues calls, emails and chat requests within high call volume groups?"
    },
    {
     "n": 16,

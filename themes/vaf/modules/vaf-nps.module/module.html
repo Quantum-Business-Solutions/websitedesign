@@ -1,0 +1,24 @@
+<section class="q-section vaf-nps{% if module.alt_bg %} q-bg-alt{% endif %}"{% if module.anchor %} id="{{ module.anchor }}"{% endif %}>
+  <div class="q-container">
+    <header class="pv-center vn__head">
+      {% if module.eyebrow %}<div class="q-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      <h2 class="q-h2">{{ module.heading }}</h2>
+      {% if module.intro %}<p class="q-lead vn__intro">{{ module.intro }}</p>{% endif %}
+    </header>
+
+    {% if module.show_widget %}
+    <div class="vn__widget">
+      <iframe class="vn__frame" src="https://api.ceojuice.com/widgets2/nps?customernumber={{ module.customer_number|escape_attr }}" title="{{ module.widget_title|escape_attr }}" loading="lazy" scrolling="no" width="100%"></iframe>
+    </div>
+    {% endif %}
+
+    {% if module.show_comments and module.auth_key %}
+    <div class="vn__comments" data-vn-comments data-customer="{{ module.customer_number|escape_attr }}" data-key="{{ module.auth_key|escape_attr }}" data-count="{{ module.comments_count }}" hidden>
+      <h3 class="vn__ch">{{ module.comments_heading }}</h3>
+      <ul class="vn__list"></ul>
+    </div>
+    {% endif %}
+
+    {% if module.source %}<p class="vn__src">{{ module.source }}</p>{% endif %}
+  </div>
+</section>

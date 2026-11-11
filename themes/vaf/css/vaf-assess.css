@@ -66,3 +66,5 @@
 @media(max-width:900px){.va__areas{grid-template-columns:repeat(2,1fr)}.va__road{grid-template-columns:1fr}}
 @media(max-width:640px){.va__steps span{display:none}.va__steps{justify-content:center;gap:14px}.va__steps li{flex:none}.va__form{grid-template-columns:1fr}.va__barrow{grid-template-columns:96px 1fr 30px;gap:10px;font-size:14px}.va__areas{grid-template-columns:1fr}.va__opts{width:100%}.va__opt{flex:1}.va__score{justify-content:center;text-align:center}}
 @media print{.q-header,.pv-sticky,.va__actions,.va__nav,footer{display:none!important}}
+.va__pace{margin:10px 0 0;font-size:13px;font-weight:600;color:#52647c}
+.va__part{display:inline-block;margin-left:10px;padding:3px 10px;border-radius:999px;background:#e3ebf4;color:#1f5a8e;font-size:13px;font-weight:700;letter-spacing:.04em;vertical-align:middle}

@@ -20,37 +20,97 @@
     Process: 'Where paper still lives, which approvals wait in an inbox, and what your records retention really is.',
     Communication: 'Phones, internet and collaboration: what happens on the day something fails.'
   };
-  var BANK = [
-    ['Information', 'We run vulnerability scans on a regular schedule.', 'optimize', 'Put recurring vulnerability scans on the calendar and track what they find to closure.'],
-    ['Information', 'Multi-factor authentication is on for administrator and user accounts.', 'eliminate', 'Turn on MFA for every administrator and user account. It closes the most common way accounts are taken over.'],
-    ['Information', 'Server data is backed up nightly, with a copy off site or in the cloud.', 'eliminate', 'Add a nightly backup with an off-site or cloud copy so one failure cannot take your data with it.'],
-    ['Information', 'We test that our backups actually restore.', 'optimize', 'Schedule restore tests. A backup nobody has restored is a hope, not a plan.'],
-    ['Information', 'We have a written disaster recovery plan that is reviewed once or twice a year.', 'leverage', 'Write the disaster recovery plan down, name an owner and review it twice a year.'],
-    ['Print', 'We know what we spend each year on printer supplies and service.', 'optimize', 'Put supplies, service and device costs in one report. Most offices find they are paying for the same printing more than once.'],
-    ['Print', 'Our multifunction printers require users to sign in before releasing a print job.', 'eliminate', 'Require sign-in at the device so sensitive pages are never left in an output tray.'],
-    ['Print', 'One team owns our printer fleet and sees device reporting in one place.', 'optimize', 'Give the fleet one owner and one dashboard so repairs and toner stop being a scramble.'],
-    ['Print', 'Unclaimed print jobs are held, not printed and abandoned.', 'eliminate', 'Hold jobs until the owner is at the device. It cuts waste and keeps documents private.'],
-    ['Print', 'We have a replacement plan for devices that are past their service life.', 'leverage', 'List every device by age and plan replacements before the repairs outweigh the cost.'],
-    ['Process', 'We have a formal records retention schedule and we follow it.', 'eliminate', 'Adopt a retention schedule. Keeping everything forever is a cost and a legal risk.'],
-    ['Process', 'Our documents live in one central, searchable repository.', 'optimize', 'Move documents into one searchable repository so nobody hunts through drives and inboxes.'],
-    ['Process', 'Invoices, approvals and HR forms run through a workflow, not a paper trail or an inbox.', 'leverage', 'Automate the approvals that wait longest. They are usually the cheapest wins.'],
-    ['Process', 'Paper records are scanned and securely destroyed on a schedule.', 'optimize', 'Scan, index and shred on a schedule. The paper stops growing and the records become findable.'],
-    ['Process', 'Visitor and package tracking is digital.', 'leverage', 'Move visitor and package logs off the clipboard so they are searchable and auditable.'],
-    ['Communication', 'Our phone system has a documented disaster recovery plan.', 'eliminate', 'Plan where calls go when the phone system or the internet fails, and test it.'],
-    ['Communication', 'Staff can take office calls on a smartphone or laptop from anywhere.', 'leverage', 'Let the office number follow people to the field and home on any device.'],
-    ['Communication', 'The office has internet redundancy, so one outage does not stop work.', 'eliminate', 'Add a second internet path so a single outage does not take phones and cloud tools down.'],
-    ['Communication', 'Calls are recorded wherever compliance requires it.', 'optimize', 'Turn on call recording where rules require it, with retention and access controls.'],
-    ['Communication', 'Our chat, video and phone tools are connected to each other.', 'leverage', 'Connect phone, chat and video so a conversation can move between them without friction.']
-  ].map(function (r) { return { area: r[0], q: r[1], bucket: r[2], fix: r[3], w: 1 }; });
+  var BANK = [  // area, question, bucket, recommendation, good answer (yes, no, or none = profile question, not scored). 80 questions, 10 per step. Mirrors the HubDB table.
+    ['Information', 'Do you execute periodic vulnerability scans in order to test for your security position?', 'optimize', 'Put recurring vulnerability scans on the calendar and track every finding to closure.', 'yes'],
+    ['Information', 'Do you enable multi-factor authentication, for administrator and user accounts, in order to improve security for all accessed systems including email, line-of-business and VPN?', 'eliminate', 'Turn on multi-factor authentication for every administrator and user account, including email, line-of-business apps and VPN. It closes the most common way accounts are taken over.', 'yes'],
+    ['Information', 'Are your business\'s password and password change policies managed centrally and strong enough to protect your data?', 'eliminate', 'Manage passwords and password changes centrally, with a policy strong enough that a stolen password is not the way in.', 'yes'],
+    ['Information', 'Is your server data backed up nightly with more than one instance that is stored off-site or in the cloud?', 'eliminate', 'Back up server data every night and keep more than one copy, with at least one off site or in the cloud, so one failure cannot take your data with it.', 'yes'],
+    ['Information', 'Do you have someone patch your servers and computers at least once a month?', 'optimize', 'Patch servers and computers at least once a month, and name the person responsible.', 'yes'],
+    ['Information', 'Do you have procedures in place to review updates for your corporate firewall(s)?', 'optimize', 'Review corporate firewall updates on a schedule so a known weakness is not left open.', 'yes'],
+    ['Information', 'Are you confident that all computers in your company have a common anti-virus program that is centrally managed and that the computers consistently receive updated signature files?', 'eliminate', 'Put one centrally managed anti-virus on every computer, so every machine gets current signature files.', 'yes'],
+    ['Information', 'Do you have a procedure to perform restoration tests of your backups in order to assure they are working properly?', 'optimize', 'Schedule restore tests for your backups. A backup nobody has restored is a hope, not a plan.', 'yes'],
+    ['Information', 'Do you have a written Disaster Recovery Plan that includes IT systems and is revised once or twice a year?', 'leverage', 'Write the disaster recovery plan down, include your IT systems, name an owner and revise it once or twice a year.', 'yes'],
+    ['Information', 'Do you utilize device monitoring software in order to detect and remediate system issues and concerns quickly?', 'optimize', 'Use device monitoring software so system problems are caught and fixed before users notice.', 'yes'],
+    ['Information', 'In the event of a power outage, do you know that you have a battery backup system that will keep your router, firewall and servers running for a minimum of 30 minutes?', 'optimize', 'Add a battery backup that keeps your router, firewall and servers running for at least 30 minutes in a power outage.', 'yes'],
+    ['Information', 'Do you utilize security awareness training to make sure users are trained to avoid email and web-based hacking attempts?', 'optimize', 'Train every user to spot email and web-based hacking attempts, and repeat the training on a schedule.', 'yes'],
+    ['Information', 'Do you have software and operating systems that are in end-of-life status?', 'eliminate', 'Replace software and operating systems that have reached end of life. They no longer receive security fixes.', 'no'],
+    ['Information', 'Do you utilize server virtualization in order to leverage fault tolerance and disaster recovery gains?', 'leverage', 'Look at server virtualization for fault tolerance and faster disaster recovery.', 'yes'],
+    ['Information', 'Do you have the ability to send encrypted email when sharing potentially sensitive information?', 'optimize', 'Add the ability to send encrypted email when you share sensitive information.', 'yes'],
+    ['Information', 'Do you assess your technology vendors annually to ensure they extend your security standards and policies?', 'optimize', 'Assess your technology vendors every year to confirm they extend your security standards.', 'yes'],
+    ['Information', 'Do you share written Internet Usage and Corporate Email policies with your end users?', 'optimize', 'Share written Internet usage and corporate email policies with every user.', 'yes'],
+    ['Information', 'Do you have an operable employee onboarding and offboarding policy as it relates to IT?', 'optimize', 'Write an IT onboarding and offboarding policy so access is granted and removed on time.', 'yes'],
+    ['Information', 'Do you have a multi-cloud strategy that ensures common authentication, security and policies apply across all cloud vendors?', 'leverage', 'Plan a multi-cloud strategy so the same authentication, security and policies apply everywhere.', 'yes'],
+    ['Information', 'Do you have computers that are older than five years?', 'optimize', 'Replace computers older than five years on a schedule, so aging machines do not slow people down or add risk.', 'no'],
+    ['Print', 'Does your company have a strong and defined print strategy?', 'leverage', 'Define a print strategy: which devices you need, who owns them and what the goals are.', 'yes'],
+    ['Print', 'Are all of your printer devices networked?', 'optimize', 'Put every printer on the network so it can be monitored, secured and managed.', 'yes'],
+    ['Print', 'Do you know how much you spend annually on printer supplies and service?', 'optimize', 'Put supplies, service and device costs in one annual report so you know what printing really costs.', 'yes'],
+    ['Print', 'Have you ever had a strategic print assessment completed?', 'leverage', 'Have a strategic print assessment done to find the cost, risk and waste in your fleet.', 'yes'],
+    ['Print', 'Are you aware of current security concerns regarding printers?', 'eliminate', 'Learn the current security risks of printers and multifunction devices, and close the gaps.', 'yes'],
+    ['Print', 'Are print workflow efficiencies critical to your company’s success?', 'optimize', '', 'none'],
+    ['Print', 'Does your company have any sensitive customer or company information that should not be printed or should be restricted?', 'optimize', '', 'none'],
+    ['Print', 'Does your company have a strategy to track printing of sensitive information?', 'eliminate', 'Track the printing of sensitive information so you can see who printed what.', 'yes'],
+    ['Print', 'Are your MFP’s capable of authenticating for end user security?', 'eliminate', 'Require users to authenticate at the multifunction device so documents are released only to the right person.', 'yes'],
+    ['Print', 'Is most scanning done on MFPs?', 'leverage', 'Move scanning onto your multifunction devices to cut hand-offs and speed up document workflows.', 'yes'],
+    ['Print', 'Do you ever run out of toner or other print related supplies?', 'optimize', 'Set up automatic supply replenishment so you never run out of toner or other print supplies.', 'no'],
+    ['Print', 'Do you have a specific replacement strategy for when a printer breaks?', 'optimize', 'Agree a replacement plan for when a printer breaks, so work does not stop.', 'yes'],
+    ['Print', 'Do you utilize desktop printers for color printing?', 'optimize', '', 'none'],
+    ['Print', 'Do you have enough critical high-volume printers to meet your print needs?', 'optimize', 'Match your high-volume printers to your critical print needs, so peaks do not stall the office.', 'yes'],
+    ['Print', 'Do any of your printers or MFP’s frequently have unclaimed print jobs?', 'eliminate', 'Turn on secure print release so jobs are not left unclaimed in the output tray.', 'no'],
+    ['Print', 'Is your company still utilizing a on premise print server?', 'optimize', '', 'none'],
+    ['Print', 'Are you confident and pleased that the supplier of the devices is providing excellent service, and the cost of the related supplies/services is appropriate?', 'optimize', 'Hold your device supplier to the service you expect, and change supplier if they cannot meet it.', 'yes'],
+    ['Print', 'Do you have enough backup printers in storage in case they ever need to be deployed?', 'optimize', 'Keep enough backup printers in storage so a failure is a swap, not a delay.', 'yes'],
+    ['Print', 'Do you utilize any thermal print devices?', 'optimize', '', 'none'],
+    ['Print', 'Does company management receive weekly/monthly reports detailing print/copy activity, job details and cost?', 'optimize', 'Send management regular print and copy activity reports with job detail and costs.', 'yes'],
+    ['Process', 'Does your company have and execute a formal records retention schedule?', 'eliminate', 'Adopt a formal records retention schedule and follow it.', 'yes'],
+    ['Process', 'Does your company have a centralized document repository for your business records?', 'optimize', 'Keep business records in one centralized, searchable repository.', 'yes'],
+    ['Process', 'Are your current business processes more than 50% paper based?', 'eliminate', 'Move paper-based processes to electronic workflows to cut handling time and errors.', 'no'],
+    ['Process', 'Does your company utilize a clear defined strategy that allows you to continue operating at 100% if the building and/or paper records were not accessible?', 'eliminate', 'Write a continuity strategy so the business keeps operating at full capacity if the building or the paper records are not accessible.', 'yes'],
+    ['Process', 'Are more than 50% of your department records stored and accessed as paper files?', 'eliminate', 'Convert paper department files to searchable electronic records.', 'no'],
+    ['Process', 'Does your administrative staff currently perform more than 50% of the day to day office services (copy print, mail, shipping/receiving, scanning)?', 'optimize', 'Take routine office services off your administrative staff so they can focus on higher-value work.', 'no'],
+    ['Process', 'Does your company screen visitors or employees for Temperatures and/or health screening?', 'optimize', '', 'none'],
+    ['Process', 'Are you relocating, remodeling or opening a new location in the next 2 years?', 'optimize', '', 'none'],
+    ['Process', 'Does your company currently automate your AP processing?', 'leverage', 'Automate accounts payable processing to cut manual entry and speed approvals.', 'yes'],
+    ['Process', 'Does your company currently automate your HR/ON-BOARDING processes?', 'leverage', 'Automate HR and onboarding paperwork.', 'yes'],
+    ['Process', 'Is your LEGAL/CONTRACT MANAGEMENT documentation automated?', 'leverage', 'Automate legal and contract documentation.', 'yes'],
+    ['Process', 'Does your company experience high turnover in your administrative staff and/or in-house resource center?', 'optimize', 'Add a managed office-services option so staff turnover does not disrupt daily work.', 'no'],
+    ['Process', 'Does your company have a centralized resource center for office services?', 'optimize', 'Set up a centralized resource center for office services.', 'yes'],
+    ['Process', 'Does your company have a coverage plan when an employee is out ill or vacation?', 'optimize', 'Put a coverage plan in place for when an employee is out sick or on vacation.', 'yes'],
+    ['Process', 'Does your company utilize a paper visitor management system to track visitors as they enter and leave your organization?', 'optimize', 'Replace the paper visitor log with an electronic visitor management system.', 'no'],
+    ['Process', 'Does your company currently deploy an electronic conference room management system for scheduling and usage tracking?', 'leverage', 'Use an electronic conference room management system for scheduling.', 'yes'],
+    ['Process', 'Does your company currently track inbound packages from the time they are received (dock) through delivery to the end recipient (desktop)?', 'optimize', 'Track inbound packages from the dock to the desktop.', 'yes'],
+    ['Process', 'Is your company currently taking full advantage of carrier and USPS discounts for outgoing overnight mail parcels and USPS mail?', 'optimize', 'Take full advantage of carrier and USPS discounts on outgoing mail and overnight shipping.', 'yes'],
+    ['Process', 'Does your company currently have an electronic forms management and/or print submission tool ?', 'leverage', 'Use an electronic forms management or print submission tool.', 'yes'],
+    ['Process', 'Does your company have to outsource most of your print technology to local printers?', 'optimize', 'Bring print work in house or onto one managed service instead of outsourcing most of it to local printers.', 'no'],
+    ['Communication', 'Is your data switching infrastructure Power over Ethernet (PoE) compliant?', 'optimize', 'Use Power over Ethernet compliant switching so phones, access points and cameras can be powered from the network.', 'yes'],
+    ['Communication', 'Is your internet service satisfactory to your current business needs?', 'optimize', 'Review your internet service against what the business needs now, and fix the gaps.', 'yes'],
+    ['Communication', 'Do you subscribe to multiple internet services for traffic steering, shaping and/or failover?', 'eliminate', 'Subscribe to more than one internet service for traffic steering, shaping and failover.', 'yes'],
+    ['Communication', 'Do you have a disaster recovery plan for your business phone system?', 'eliminate', 'Write a disaster recovery plan for your business phone system.', 'yes'],
+    ['Communication', 'Do you currently support remote users that are fully integrated with your phone system?', 'leverage', 'Fully integrate remote users with your phone system.', 'yes'],
+    ['Communication', 'Do you currently utilize an IP based phone system?', 'optimize', 'Move to an IP-based phone system.', 'yes'],
+    ['Communication', 'Is your phone system cloud based?', 'leverage', 'Look at a cloud-based phone system.', 'yes'],
+    ['Communication', 'Are your Smart Phones connected to your corporate phone system (extension dialing, real time presence, corporate directory)?', 'leverage', 'Connect smart phones to your corporate phone system for extension dialing and real-time presence.', 'yes'],
+    ['Communication', 'Do you have the ability to record calls today?', 'optimize', 'Add call recording.', 'yes'],
+    ['Communication', 'Do you have a desktop client to manage call activity, real time presence, and call routing?', 'leverage', 'Give users a desktop client to manage call activity, real-time presence and call routing.', 'yes'],
+    ['Communication', 'Do you use Microsoft Teams for Videoconferencing and Collaboration?', 'leverage', 'Use Microsoft Teams for video conferencing and collaboration, connected to your phone system.', 'yes'],
+    ['Communication', 'Can you currently use your desktop or laptop as your phone?', 'leverage', 'Let people use a desktop or laptop as their phone.', 'yes'],
+    ['Communication', 'Do you have appropriate Wi-Fi coverage?', 'optimize', 'Fix Wi-Fi coverage gaps so every work area is covered.', 'yes'],
+    ['Communication', 'Do your meetings ever start late or not work effectively due to technology?', 'optimize', 'Fix the technology behind late or ineffective meetings.', 'no'],
+    ['Communication', 'Does your phone system have contact center functionality that queues calls, emails and chat requests within high call volume groups?', 'leverage', 'Add contact center functionality that queues calls, emails and chat requests in high call volume groups.', 'yes'],
+    ['Communication', 'Do you utilize call reports to analyze employee productivity?', 'optimize', 'Use call reports to see employee productivity.', 'yes'],
+    ['Communication', 'Do you have a dedicated employee or team to handle conference room technology in your workplace?', 'optimize', 'Give conference room technology a dedicated owner or team.', 'yes'],
+    ['Communication', 'Are you satisfied with your current conference room technology', 'optimize', 'Improve the conference room technology that is not working well for you.', 'yes'],
+    ['Communication', 'Does your company have a mobile service plan?', 'optimize', '', 'none'],
+    ['Communication', 'If yes, does your company have 50 or more mobile devices managed under a company mobile plan?', 'optimize', '', 'none'],
+  ].map(function (r) { return { area: r[0], q: r[1], bucket: r[2], fix: r[3], good: r[4] || 'yes', w: r[4] === 'none' ? 0 : 1 }; });
   var COPY = {
     title: 'Take the Technology Strength Assessment',
-    lead: 'Twenty yes or no questions across four areas. About five minutes. You get a score, a short eliminate, optimize and leverage roadmap, and a PDF.',
+    lead: 'Eighty yes or no questions in four areas, taken in eight short steps of ten. About 10 to 15 minutes. You get a score, an eliminate, optimize and leverage roadmap, and a PDF.',
     formTitle: 'Where should we send your results?',
     formNote: 'A person from the Indianapolis office reviews your answers and can walk the office with you. We use your details only to respond to this request.',
     submit: 'Show my results',
     bands: [[0, 'Exposed', 'Several basics are missing. The first fixes will pay back quickly.'], [40, 'Developing', 'You have a foundation. The gaps below are where to focus next.'], [70, 'Strong', 'A solid base. The roadmap below is about leverage and keeping it that way.']],
     cta: 'Schedule a consultation',
-    ctaNote: 'The full assessment has about eighty questions. A specialist can walk your office and confirm every answer.'
+    ctaNote: 'A specialist can walk your office, confirm every answer and build the roadmap with you.'
   };
 
   var ST = { i: 0, ans: {}, view: 'intro', bank: BANK, copy: COPY, code: '', lead: null };
@@ -65,7 +125,7 @@
     if (!CFG.questionsTable) return cb();
     var base = 'https://api.hubapi.com/cms/v3/hubdb/tables/';
     fetch(base + CFG.questionsTable + '/rows?portalId=' + CFG.portal + '&limit=200&sort=sort').then(function (r) { return r.ok ? r.json() : Promise.reject(); }).then(function (j) {
-      var rows = (j.results || []).map(function (r) { var v = r.values || {}; return { area: String(val(v.area) || ''), q: String(val(v.question) || ''), bucket: String(val(v.bucket) || 'optimize').toLowerCase(), fix: String(val(v.fix) || ''), w: parseFloat(val(v.weight)) || 1, sort: parseFloat(val(v.sort)) || 0 }; })
+      var rows = (j.results || []).map(function (r) { var v = r.values || {}; return { area: String(val(v.area) || ''), q: String(val(v.question) || ''), bucket: String(val(v.bucket) || 'optimize').toLowerCase(), fix: String(val(v.fix) || ''), good: (function (g) { g = String(g || 'yes').toLowerCase(); return g === 'no' || g === 'none' ? g : 'yes'; })(val(v.good)), w: isNaN(parseFloat(val(v.weight))) ? 1 : parseFloat(val(v.weight)), sort: parseFloat(val(v.sort)) || 0 }; })
         .filter(function (r) { return r.q && AREAS.indexOf(r.area) > -1; });
       if (rows.length >= 4) ST.bank = rows;
     }).catch(function () { }).then(function () {
@@ -84,12 +144,17 @@
 
   /* ---------- scoring ---------- */
   function areaQs(a) { return ST.bank.filter(function (r) { return r.area === a; }); }
+  /* eight steps: each area in parts of ten questions, in the order of the table */
+  var PART = 10;
+  function steps() { var out = []; AREAS.forEach(function (a) { var qs = areaQs(a), n = Math.max(1, Math.ceil(qs.length / PART)); for (var p = 0; p < n; p++) out.push({ area: a, part: p + 1, parts: n, qs: qs.slice(p * PART, (p + 1) * PART) }); }); return out; }
+  function scored(r) { return r.good !== 'none' && r.w !== 0; }
+  function isGood(r) { var a = ST.ans[key(r)]; return r.good === 'no' ? a === 0 : a === 1; }
   function key(r) { return ST.bank.indexOf(r); }
   function score() {
     var per = {}, tot = 0, max = 0;
     AREAS.forEach(function (a) {
       var qs = areaQs(a), got = 0, m = 0;
-      qs.forEach(function (r) { var w = r.w || 1; m += w; if (ST.ans[key(r)] === 1) got += w; });
+      qs.forEach(function (r) { if (!scored(r)) return; var w = r.w || 1; m += w; if (isGood(r)) got += w; });
       per[a] = m ? Math.round(100 * got / m) : 0; tot += got; max += m;
     });
     return { per: per, total: max ? Math.round(100 * tot / max) : 0 };
@@ -97,12 +162,12 @@
   function band(n) { var b = ST.copy.bands[0]; ST.copy.bands.forEach(function (x) { if (n >= x[0]) b = x; }); return b; }
   function roadmap() {
     var out = { eliminate: [], optimize: [], leverage: [] };
-    ST.bank.forEach(function (r) { if (ST.ans[key(r)] !== 1) (out[r.bucket] || out.optimize).push(r); });
+    ST.bank.forEach(function (r) { if (scored(r) && r.fix && !isGood(r)) (out[r.bucket] || out.optimize).push(r); });
     return out;
   }
   /* answers <-> short code, so a results link can be reopened */
-  function encode() { return ST.bank.map(function (r, i) { return ST.ans[i] === 1 ? '1' : '0'; }).join(''); }
-  function decode(c) { var a = {}; for (var i = 0; i < ST.bank.length; i++) a[i] = c.charAt(i) === '1' ? 1 : 0; return a; }
+  function encode() { return ST.bank.map(function (r, i) { return ST.ans[i] === 1 ? '1' : (ST.ans[i] === 0.5 ? '5' : '0'); }).join(''); }
+  function decode(c) { var a = {}; for (var i = 0; i < ST.bank.length; i++) a[i] = c.charAt(i) === '1' ? 1 : (c.charAt(i) === '5' ? 0.5 : 0); return a; }
 
   /* ---------- views ---------- */
   function draw() {
@@ -114,12 +179,13 @@
     else wrap.appendChild(viewResults());
     root.appendChild(wrap);
   }
-  function head(step) {
-    var h = el('div', 'va__top');
-    var steps = el('ol', 'va__steps');
-    AREAS.concat(['Results']).forEach(function (a, i) { var li = el('li', i < step ? 'is-done' : (i === step ? 'is-on' : ''), '<b>' + (i + 1) + '</b><span>' + esc(a) + '</span>'); steps.appendChild(li); });
-    h.appendChild(steps);
-    var bar = el('div', 'va__bar'); var f = el('i'); f.style.width = Math.round(100 * step / 5) + '%'; bar.appendChild(f); h.appendChild(bar);
+  function head(pos) {   /* pos: steps completed, 0 to 9 (eight question steps, then the contact step, then results) */
+    var h = el('div', 'va__top'), n = steps().length, ai = pos >= n + 1 ? AREAS.length + 1 : (pos >= n ? AREAS.length : Math.floor(pos / Math.max(1, n / AREAS.length)));
+    var list = el('ol', 'va__steps');
+    AREAS.concat(['Results']).forEach(function (a, i) { var li = el('li', i < ai ? 'is-done' : (i === ai ? 'is-on' : ''), '<b>' + (i + 1) + '</b><span>' + esc(a) + '</span>'); list.appendChild(li); });
+    h.appendChild(list);
+    var bar = el('div', 'va__bar'); var f = el('i'); f.style.width = Math.round(100 * pos / (n + 1)) + '%'; bar.appendChild(f); h.appendChild(bar);
+    if (pos <= n - 1) { var left = Math.max(1, Math.round((n - pos) * 1.5)); h.appendChild(el('p', 'va__pace', 'Step ' + (pos + 1) + ' of ' + n + ' &middot; about ' + left + ' minute' + (left === 1 ? '' : 's') + ' left')); }
     return h;
   }
   function viewIntro() {
@@ -134,10 +200,10 @@
     return d;
   }
   function viewQ() {
-    var a = AREAS[ST.i], qs = areaQs(a);
+    var S = steps(), cur = S[ST.i], a = cur.area, qs = cur.qs;
     var d = el('div', 'va__card');
     d.appendChild(head(ST.i));
-    d.appendChild(el('h2', 'va__h', esc(a)));
+    d.appendChild(el('h2', 'va__h', esc(a) + (cur.parts > 1 ? ' <small class="va__part">Part ' + cur.part + ' of ' + cur.parts + '</small>' : '')));
     d.appendChild(el('p', 'va__lead', esc(AREA_INTRO[a])));
     qs.forEach(function (r) {
       var k = key(r);
@@ -147,22 +213,22 @@
       [['Yes', 1], ['No', 0], ['Not sure', 0.5]].forEach(function (o) {
         var b = el('button', 'va__opt' + (ST.ans[k] === (o[1] === 0.5 ? 0.5 : o[1]) && k in ST.ans ? ' is-on' : ''), o[0]); b.type = 'button'; b.setAttribute('role', 'radio');
         b.setAttribute('aria-checked', (k in ST.ans && ST.ans[k] === o[1]) ? 'true' : 'false');
-        b.onclick = function () { ST.ans[k] = o[1]; Array.prototype.forEach.call(g.children, function (c) { c.classList.remove('is-on'); c.setAttribute('aria-checked', 'false'); }); b.classList.add('is-on'); b.setAttribute('aria-checked', 'true'); next.disabled = !complete(a); };
+        b.onclick = function () { ST.ans[k] = o[1]; Array.prototype.forEach.call(g.children, function (c) { c.classList.remove('is-on'); c.setAttribute('aria-checked', 'false'); }); b.classList.add('is-on'); b.setAttribute('aria-checked', 'true'); next.disabled = !complete(ST.i); };
         g.appendChild(b);
       });
       row.appendChild(g); d.appendChild(row);
     });
     var nav = el('div', 'va__nav');
     var back = el('button', 'va__btn va__btn--ghost', 'Back'); back.type = 'button'; back.onclick = function () { if (ST.i === 0) { ST.view = 'intro'; } else ST.i--; draw(); scrollTop(); };
-    var next = el('button', 'va__btn', ST.i === AREAS.length - 1 ? 'Finish' : 'Next: ' + AREAS[ST.i + 1]); next.type = 'button'; next.disabled = !complete(a);
-    next.onclick = function () { if (ST.i === AREAS.length - 1) ST.view = 'form'; else ST.i++; draw(); scrollTop(); };
+    var nx = S[ST.i + 1], next = el('button', 'va__btn', !nx ? 'Finish' : (nx.area !== a ? 'Next: ' + nx.area : 'Next: part ' + nx.part)); next.type = 'button'; next.disabled = !complete(ST.i);
+    next.onclick = function () { if (ST.i === S.length - 1) ST.view = 'form'; else ST.i++; draw(); scrollTop(); };
     nav.appendChild(back); nav.appendChild(next); d.appendChild(nav);
     return d;
   }
-  function complete(a) { return areaQs(a).every(function (r) { return key(r) in ST.ans; }); }
+  function complete(i) { var c = steps()[i]; return !!c && c.qs.every(function (r) { return key(r) in ST.ans; }); }
   function viewForm() {
     var d = el('div', 'va__card');
-    d.appendChild(head(4));
+    d.appendChild(head(steps().length));
     d.appendChild(el('h2', 'va__h', esc(ST.copy.formTitle)));
     d.appendChild(el('p', 'va__lead', esc(ST.copy.formNote)));
     var f = el('form', 'va__form'); f.noValidate = true;
@@ -179,14 +245,14 @@
       submit(v); history.replaceState(null, '', '#r=' + ST.code); draw(); scrollTop();
     };
     d.appendChild(f);
-    var back = el('button', 'va__btn va__btn--ghost va__btn--sm', 'Back'); back.type = 'button'; back.onclick = function () { ST.view = 'q'; ST.i = AREAS.length - 1; draw(); };
+    var back = el('button', 'va__btn va__btn--ghost va__btn--sm', 'Back'); back.type = 'button'; back.onclick = function () { ST.view = 'q'; ST.i = steps().length - 1; draw(); };
     d.appendChild(back);
     return d;
   }
   function viewResults() {
     var s = score(), b = band(s.total), rm = roadmap();
     var d = el('div', 'va__card va__res');
-    d.appendChild(head(5));
+    d.appendChild(head(steps().length + 1));
     var top = el('div', 'va__score');
     top.innerHTML = '<div class="va__ring" style="--p:' + s.total + '"><b>' + s.total + '</b><span>out of 100</span></div><div><p class="va__kicker">Your Technology Strength Score</p><h2 class="va__h">' + esc(b[1]) + '</h2><p class="va__lead">' + esc(b[2]) + '</p></div>';
     d.appendChild(top);
@@ -298,7 +364,7 @@
     var c = host.querySelector('.q-container') || host;
     root = el('div', 'va__root'); Array.prototype.forEach.call(c.children, function (k) { k.style.display = 'none'; k.setAttribute('aria-hidden', 'true'); }); c.appendChild(root); host.classList.add('va-host');
     loadHubDb(function () {
-      var m = (location.hash.match(/^#r=([01]+)$/) || [])[1], saved = null;
+      var m = (location.hash.match(/^#r=([015]+)$/) || [])[1], saved = null;
       try { saved = JSON.parse(localStorage.getItem('vafAssess') || 'null'); } catch (e) { }
       if (m && m.length >= ST.bank.length) { ST.ans = decode(m); ST.code = m; ST.lead = saved && saved.code === m ? saved.lead : null; ST.view = 'results'; }
       draw();

@@ -1,0 +1,137 @@
+[
+  {
+    "id": "anchor",
+    "name": "anchor",
+    "label": "Jump-link name (optional)",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "",
+    "help_text": "Optional. A short word with no spaces, such as score. Other links can then jump straight to this section by pointing at #score."
+  },
+  {
+    "id": "alt_bg",
+    "name": "alt_bg",
+    "label": "Alternate background",
+    "required": false,
+    "locked": false,
+    "type": "boolean",
+    "default": false,
+    "help_text": "Turn on to give this section a tinted background so neighbouring sections alternate between light and white.",
+    "display": "toggle"
+  },
+  {
+    "id": "eyebrow",
+    "name": "eyebrow",
+    "label": "Small label above the heading",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Live from CEO Juice",
+    "help_text": ""
+  },
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Our score and the latest comments, straight from the survey",
+    "help_text": ""
+  },
+  {
+    "id": "intro",
+    "name": "intro",
+    "label": "Intro",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "",
+    "help_text": "One or two sentences under the heading."
+  },
+  {
+    "id": "customer_number",
+    "name": "customer_number",
+    "label": "CEO Juice customer number",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "215",
+    "help_text": "VAF's customer number at CEO Juice. It identifies whose score and comments to show."
+  },
+  {
+    "id": "show_widget",
+    "name": "show_widget",
+    "label": "Show the live NPS score and awards",
+    "required": false,
+    "locked": false,
+    "type": "boolean",
+    "default": true,
+    "help_text": "Shows CEO Juice's own score panel: the World Class badge, the score against well-known companies, and the chart. It updates on its own.",
+    "display": "toggle"
+  },
+  {
+    "id": "widget_title",
+    "name": "widget_title",
+    "label": "Score panel title (for screen readers)",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Van Ausdall & Farrar Net Promoter Score, live from CEO Juice",
+    "help_text": ""
+  },
+  {
+    "id": "show_comments",
+    "name": "show_comments",
+    "label": "Show the latest customer comments",
+    "required": false,
+    "locked": false,
+    "type": "boolean",
+    "default": true,
+    "help_text": "Shows the newest survey comments, filled in live. If CEO Juice cannot be reached, this block stays hidden.",
+    "display": "toggle"
+  },
+  {
+    "id": "auth_key",
+    "name": "auth_key",
+    "label": "CEO Juice comments key",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "",
+    "help_text": "The key CEO Juice gives VAF for the comments feed (the same one the old site used). Leave blank to hide the live comments."
+  },
+  {
+    "id": "comments_heading",
+    "name": "comments_heading",
+    "label": "Comments heading",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "What customers said after their last service call",
+    "help_text": ""
+  },
+  {
+    "id": "comments_count",
+    "name": "comments_count",
+    "label": "How many comments to show",
+    "required": false,
+    "locked": false,
+    "type": "number",
+    "default": 6,
+    "help_text": "Between 3 and 12.",
+    "min": 3,
+    "max": 12
+  },
+  {
+    "id": "source",
+    "name": "source",
+    "label": "Source note",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "",
+    "help_text": "A short line under the section about where the numbers come from."
+  }
+]

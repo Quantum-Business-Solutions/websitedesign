@@ -116,6 +116,18 @@ def video(s):
     return clean(out)
 
 
+# ------------------------------------------------------------------ live NPS widget and latest comments (CEO Juice)
+def npswidget(s):
+    """The comments key is not kept in the repo: it is read from CEOJUICE_AUTH_KEY at build time (VAF's own key, public on their site)."""
+    out = common(s)
+    out.update({"eyebrow": s.get("eyebrow", "Live from CEO Juice"), "heading": s.get("heading", ""), "intro": s.get("intro", ""),
+                "customer_number": str(s.get("customer", "215")),
+                "show_widget": s.get("widget", True), "show_comments": s.get("comments", True),
+                "auth_key": os.environ.get("CEOJUICE_AUTH_KEY", ""), "comments_heading": s.get("comments_heading", "What customers said after their last service call"),
+                "comments_count": int(s.get("count", 6)), "source": s.get("source", "")})
+    return clean(out)
+
+
 # ------------------------------------------------------------------ article
 def _inline(t):
     """Plain paragraph text -> safe HTML (leave text that already carries markup alone)."""
@@ -165,4 +177,5 @@ REGISTRY = {
     "leadership": ("vaf-leadership", leadership),
     "video": ("vaf-video", video),
     "article": ("vaf-article", article),
+    "npswidget": ("vaf-nps", npswidget),
 }
