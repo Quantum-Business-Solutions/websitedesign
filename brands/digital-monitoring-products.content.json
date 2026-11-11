@@ -1056,7 +1056,7 @@
         "Four systems.",
         "One platform."
        ],
-       "subhead": "Intrusion, access control, fire and video on one platform, made in Springfield, Missouri and sold only through authorized dealers and distributors. This page is the panel.",
+       "subhead": "Intrusion, access control, fire and video on one platform, made in Springfield, Missouri and sold only through authorized dealers and distributors.",
        "primary": {
         "label": "Find a dealer",
         "href": "find-a-dealer.html"
@@ -1632,6 +1632,9 @@
       }
      ],
      "variants": {
+      "showcase": {
+       "dark": false
+      },
       "clean": {
        "type": "cl-doors"
       }
@@ -3828,12 +3831,12 @@
      "z4",
      "z5",
      "night",
+     "who",
      "scenes",
      "z6",
      "proof",
-     "story",
-     "who",
      "brief",
+     "story",
      "faq",
      "contact"
     ],
@@ -45944,11 +45947,11 @@
    ]
   ],
   "choose_heading": "Three directions. Your call.",
-  "choose_intro": "The words, the pages and the facts are the same in all three. What differs is the idea. Showcase turns the site into a security panel, Clean reads like a spec sheet, and Press reads like a magazine. Open each one and tell us which feels like DMP.",
+  "choose_intro": "The words, the pages and the facts are the same in all three. What differs is the idea. Showcase is DMP's own look with a working keypad up front, Clean reads like a spec sheet, and Press reads like a magazine. Open each one and tell us which feels like DMP.",
   "choose_reasons": [
    [
-    "Showcase: the Panel",
-    "Industrial black and DMP yellow. The home page is a keypad you can arm and disarm, six colour-coded zones walk the systems, and a supervised heartbeat runs down the edge of every page."
+    "Showcase: DMP, with a keypad",
+    "DMP's white header, yellow buttons and mixed-case headlines on light pages. The home page opens on a keypad you can arm and disarm, six colour-coded zones walk the systems, and Scenes and Night shift are the dark cinematic moments."
    ],
    [
     "Clean: the spec sheet",
@@ -45977,7 +45980,7 @@
   "alternatives": [
    [
     "Quantum Showcase",
-    "The signature choice: the site behaves like a DMP panel, in black and yellow, with every system colour-coded."
+    "The familiar one: DMP's own look, with a working keypad hero and every system colour-coded."
    ],
    [
     "Quantum Press",
@@ -46176,7 +46179,7 @@
    "Organization logo: the only logo on dmp.com is an SVG. Search engines prefer a stable PNG or JPG (at least 112 by 112 pixels, on a plain background); DMP to supply one, and the markup will point at it.",
    "sameAs lists the LinkedIn, YouTube, Facebook, Crunchbase and BBB profiles that exist today (checked 9 November 2026). dmp.com does not link any of them; DMP to confirm they are official and to add them to the site footer. The BBB profile is listed, not accredited.",
    "Environment backgrounds on the industry and system heroes are AI-generated placeholders, captioned 'Illustrative scene'. They are not DMP photographs. Replace them with real photography before launch, or approve them as illustrations.",
-   "Showcase headings are set in Barlow Condensed and labels in JetBrains Mono, Press headlines in Playfair Display, all open licence (SIL OFL) and self-hosted. If DMP licenses Gotham for the web, the display face is the first thing to swap.",
+   "Showcase sets the keypad headline, the large zone numerals and the Scenes and Night shift headlines in Barlow Condensed and small labels in JetBrains Mono, Press headlines in Playfair Display, all open licence (SIL OFL) and self-hosted. Other Showcase headings and body text use the site's own faces. If DMP licenses Gotham for the web, the display face is the first thing to swap.",
    "System colours (intrusion yellow, access green, fire red, video blue, mobile violet) are our proposal, not an existing DMP standard. DMP to confirm or supply its own.",
    "The home-page keypad in Showcase is a demonstration: nothing is armed and no signal is sent. DMP to confirm it is comfortable with a keypad likeness and the wording 'Armed' and 'Disarmed' on a marketing page.",
    "Showcase home page: the six 'Scenes' and the 'Night shift' building are illustrations, captioned as such, and the test alarm is a demonstration with no real event behind it. DMP to confirm it is comfortable with an alarm walk-through on a marketing page.",

@@ -1,13 +1,17 @@
-"""Panel art direction for the DMP preview: THE SITE IS A SECURITY PANEL.
+"""Panel art direction for the DMP preview.
+
+Showcase was dialled back after round 4: it is DMP's own site first (white header and footer, the theme's mixed-case
+headings, rounded yellow buttons, light and dark bands) with the panel ideas kept where they earn their place: the keypad
+hero, the slim zone bar, the six zone scenes, Scenes and Night shift. The notes below describe the mechanics.
 
 Everything here is gated on the DMP content slug (post() returns the page untouched for any other client), and the section
 types it registers (pn-hero, pn-zone, pn-feature) are only ever named by brands/dmp_panel.py.
 
   RENDER_PANEL      section renderers: the keypad hero, the six zone scenes, the Press feature story
-  post(doc, ...)    one pass over a finished page: system colour key, zone bar, heartbeat rail, the panel CSS and JS,
-                    the self-hosted display faces, and (Showcase only) the black-and-yellow regrade of the existing modules
+  post(doc, ...)    one pass over a finished page: system colour key, zone bar, chapter pager, the panel CSS and JS,
+                    the self-hosted display faces, and the navy-to-neutral regrade of the existing modules
 
-Showcase = the Panel (industrial black and DMP yellow, condensed display type, mono micro labels).
+Showcase = DMP's own site with a working keypad hero and six colour-coded zones (see the note above).
 Clean    = Swiss spec sheet (hairline grid, tick marks, dimension lines, tabular numerals).
 Press    = editorial magazine (serif headlines, photo covers, pull quotes, columns).
 """
@@ -290,7 +294,7 @@ def _brief(s, ctx):
         cols += (f'<div class="pn-bcol"><p class="pn-bk"><i class="pn-led" aria-hidden="true"></i>{E(c["k"])}</p>'
                  f'<h3 id="{E(hid)}-c{ci}">{E(c["title"])}</h3><ol aria-labelledby="{E(hid)}-c{ci}">{rows}</ol></div>')
     return _keep(f'<section class="pn-brief" id="{E(hid)}" aria-labelledby="{E(hid)}-h"><div class="pn-bin">'
-                 f'{_shead(s.get("eyebrow", "Briefing"), "News / Guides")}<header class="pn-bhead"><h2 id="{E(hid)}-h" class="pn-h2">{E(s["heading"])}</h2></header>'
+                 f'<header class="pn-bhead"><p class="pn-beb">{E(s.get("eyebrow", "Briefing"))}</p><h2 id="{E(hid)}-h" class="pn-h2">{E(s["heading"])}</h2></header>'
                  f'<div class="pn-bgrid">{cols}</div></div></section>')
 
 
@@ -349,20 +353,6 @@ def _regrade_text(t: str, tone) -> str:
     return _RGB.sub(rg, _HEX.sub(hx, t))
 
 
-_RADIUS = re.compile(r"border-radius:([^;}]+)")
-
-
-def _square(css: str) -> str:
-    """Industrial corners: every pixel radius (cards, pills, chips) becomes 2px; circles written as 50% stay round."""
-    def sub(m):
-        v = m.group(1)
-        if "%" in v or "inherit" in v or v.strip() in ("0", "0px", "1px", "2px"):
-            return m.group(0)
-        imp = "!important" if "!important" in v else ""
-        return "border-radius:2px" + imp
-    return _RADIUS.sub(sub, css)
-
-
 def regrade(doc: str, dslug: str) -> str:
     """Navy leaves the page (each direction has its own dark), skipping panel markup (the keypad is blue on purpose) and ld+json."""
     tone = TONE[dslug]
@@ -395,8 +385,8 @@ def _zonebar(page, root):
 
 
 # chapter rail (Showcase home, wide screens): section id, label. Only chapters whose section is on the page are listed.
-CHAPTERS = [("hero-layered", "Panel"), ("z1", "Zones"), ("night", "Night shift"), ("scenes", "Scenes"), ("z6", "Dealers"),
-            ("proof", "Proof"), ("who", "Start here"), ("brief", "News"), ("contact", "Contact")]
+CHAPTERS = [("hero-layered", "Keypad"), ("z1", "Zones"), ("night", "Night shift"), ("who", "Start here"), ("scenes", "Scenes"),
+            ("z6", "Dealers"), ("proof", "Proof"), ("brief", "News"), ("contact", "Contact")]
 
 
 def _chapters(doc):
@@ -409,29 +399,6 @@ def _chapters(doc):
                  for n, (i, t) in enumerate(have))
     return (f'<nav class="pn-ch" aria-label="Chapters on this page"><ol>{li}</ol>'
             f'<span class="pn-ch-tag" aria-hidden="true"><b data-pn-chn>01</b> / {len(have):02d} <em data-pn-cht>{E(have[0][1])}</em></span></nav>')
-
-
-# Showcase home: the modules after the zones get the same head row the zones have (tag, rule, meta), so the page reads as
-# one panel from top to bottom. Decorative (aria-hidden): each section keeps its own eyebrow and heading.
-SECTION_HEADS = {"proof": ("Proof", "Since 1975"), "story": ("History", "1975 to 2025"),
-                 "who": ("Start here", "Dealers / Specifiers / Building owners"),
-                 "faq": ("Questions", "Dealers / Specifiers"), "contact": ("Contact", "Inside Sales")}
-
-
-def _shead(label, meta):
-    E = _html.escape
-    return (f'<div class="pn-sh" aria-hidden="true"><span class="pn-sh-t"><i class="pn-led"></i>{E(label)}</span>'
-            f'<span class="pn-sh-r"></span><span class="pn-sh-m">{E(meta)}</span></div>')
-
-
-def _section_heads(doc):
-    for sid, (label, meta) in SECTION_HEADS.items():
-        doc = re.sub(r'(<section class="q-section[^"]*" id="%s"[^>]*>)' % re.escape(sid), lambda m: m.group(1) + _shead(label, meta), doc, count=1)
-    return doc
-
-
-RAIL = ('<div class="pn-beat" aria-hidden="true"><i class="pn-beat-base"></i><i class="pn-beat-live"></i>'
-        '<span class="pn-beat-tag"><b>SUPERVISED</b> <em data-pn-beat>CHECK-IN 0001</em></span></div>')
 
 
 def _fonts(dslug, up):
@@ -460,20 +427,6 @@ def _fonts(dslug, up):
     return ""
 
 
-_SECTION = re.compile(r'<section class="(q-section[^"]*)"')
-_LIGHT_OK = ("pv-lh", "lf-dark", "pv-dark", "pp-closer", "pv-tl-stage", "pn-")
-
-
-def _all_dark(doc):
-    """Showcase: every band takes the dark component variants the modules already ship (lf-dark)."""
-    def sub(m):
-        cls = m.group(1)
-        if any(k in cls for k in _LIGHT_OK):
-            return m.group(0)
-        return f'<section class="{cls} lf-dark pn-dk"'
-    return _SECTION.sub(sub, doc)
-
-
 def post(doc: str, content: dict, page: dict, dslug: str) -> str:
     if content.get("slug") != SLUG:
         return doc
@@ -486,18 +439,14 @@ def post(doc: str, content: dict, page: dict, dslug: str) -> str:
     if dslug in TONE:
         doc = regrade(doc, dslug)
     if dslug == "showcase":
-        doc = _all_dark(doc)
-        # DMP yellow becomes a variable in the stylesheet, so the DISARMED state can turn the whole page amber
+        # Dial-back: Showcase keeps DMP's own look (white chrome, the theme's rounded buttons and cards, light and dark bands
+        # in the rhythm the content sets). No all-dark pass, no squared corners, no light logo swap.
+        # DMP yellow becomes a variable in the stylesheet, so the DISARMED state can turn the accents amber
         i = doc.find("</style>")
         head = doc[:i]
         head = re.sub(r"rgba\(255,\s*210,\s*61,\s*(0?\.\d+|1|0)\)", lambda m: "color-mix(in srgb,var(--pn-y) %g%%,transparent)" % (float(m.group(1)) * 100), head)
         head = re.sub(r"(?<![&%\w])#ffd23d\b", "var(--pn-y)", head, flags=re.I)
-        head = _square(head)
         doc = head + doc[i:]
-        # light logo on the black header
-        h0, h1 = doc.find('<header class="q-header">'), doc.find("</header>")
-        if h0 >= 0 and h1 > h0:
-            doc = doc[:h0] + doc[h0:h1].replace("assets/dmp-logo.svg", "assets/dmp-logo-light.svg") + doc[h1:]
     doc = doc.replace(MARK_A, "").replace(MARK_B, "")
 
     attrs = f' data-pn="armed"' if dslug == "showcase" else ""
@@ -512,9 +461,7 @@ def post(doc: str, content: dict, page: dict, dslug: str) -> str:
     doc = doc.replace("</head>", _fonts(dslug, up) + "\n</head>", 1)
 
     if dslug == "showcase":
-        if home:
-            doc = _section_heads(doc)
         if zb:
             doc = doc.replace("</div></header>", "</div>" + _zonebar(page, root) + "</header>", 1)
-        doc = doc.replace("</body>", (_chapters(doc) if home else "") + RAIL + "\n<script>" + PANEL_JS + "</script>\n</body>", 1)
+        doc = doc.replace("</body>", (_chapters(doc) if home else "") + "\n<script>" + PANEL_JS + "</script>\n</body>", 1)
     return doc

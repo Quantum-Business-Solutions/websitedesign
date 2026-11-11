@@ -1,4 +1,5 @@
-"""Panel pass: THE SITE IS A SECURITY PANEL. Runs last in finalize(), after dmp_dw2.apply.
+"""Panel pass. Runs last in finalize(), after dmp_dw2.apply. (Showcase was dialled back after round 4: DMP's own look,
+with the keypad hero and the zones kept. See scripts/preview_panel.py.)
 
 What it adds (content only; the renderers, CSS and JS live in scripts/preview_panel.py):
   * home page: the keypad hero for Showcase (variants.showcase on the hero), six zone scenes z1..z6 and a compose order per
@@ -104,7 +105,7 @@ def _home(data):
         "type": "pn-hero",
         "eyebrow": ["Springfield, Missouri", "Since 1975"],
         "lines": ["Four systems.", "One platform."],
-        "subhead": "Intrusion, access control, fire and video on one platform, made in Springfield, Missouri and sold only through authorized dealers and distributors. This page is the panel.",
+        "subhead": "Intrusion, access control, fire and video on one platform, made in Springfield, Missouri and sold only through authorized dealers and distributors.",
         "primary": {"label": "Find a dealer", "href": "find-a-dealer.html"},
         "secondary": {"label": "Become a dealer", "href": "support/become-a-dealer.html"},
         "lane": [["Walk the zones", "#z1"], ["Order at buy.DMP.com", "https://buy.dmp.com/dmp/Shop"],
@@ -206,18 +207,18 @@ def _pitch(data):
     p = data.get("pitch")
     if not p:
         return
-    p["choose_intro"] = ("The words, the pages and the facts are the same in all three. What differs is the idea. Showcase turns the site into a security panel, "
+    p["choose_intro"] = ("The words, the pages and the facts are the same in all three. What differs is the idea. Showcase is DMP's own look with a working keypad up front, "
                          "Clean reads like a spec sheet, and Press reads like a magazine. Open each one and tell us which feels like DMP.")
     p["choose_reasons"] = [
-        ["Showcase: the Panel", "Industrial black and DMP yellow. The home page is a keypad you can arm and disarm, six colour-coded zones walk the systems, and a supervised heartbeat runs down the edge of every page."],
+        ["Showcase: DMP, with a keypad", "DMP's white header, yellow buttons and mixed-case headlines on light pages. The home page opens on a keypad you can arm and disarm, six colour-coded zones walk the systems, and Scenes and Night shift are the dark cinematic moments."],
         ["Clean: the spec sheet", "White ground, hairline grid, mono labels and tabular numbers. Product names and data first, for dealers and specifiers scanning for a panel or module."],
         ["Press: the magazine", "Serif headlines, full-bleed photo covers, a lead story and fifty years of firsts told as a feature, so a 50-year-old manufacturer reads like the established name it is."]]
     p["alternatives"] = [
-        ["Quantum Showcase", "The signature choice: the site behaves like a DMP panel, in black and yellow, with every system colour-coded."],
+        ["Quantum Showcase", "The familiar one: DMP's own look, with a working keypad hero and every system colour-coded."],
         ["Quantum Press", "The wildcard: serif and editorial, with photo covers and feature stories."]]
     notes = [
         "Environment backgrounds on the industry and system heroes are AI-generated placeholders, captioned 'Illustrative scene'. They are not DMP photographs. Replace them with real photography before launch, or approve them as illustrations.",
-        "Showcase headings are set in Barlow Condensed and labels in JetBrains Mono, Press headlines in Playfair Display, all open licence (SIL OFL) and self-hosted. If DMP licenses Gotham for the web, the display face is the first thing to swap.",
+        "Showcase sets the keypad headline, the large zone numerals and the Scenes and Night shift headlines in Barlow Condensed and small labels in JetBrains Mono, Press headlines in Playfair Display, all open licence (SIL OFL) and self-hosted. Other Showcase headings and body text use the site's own faces. If DMP licenses Gotham for the web, the display face is the first thing to swap.",
         "System colours (intrusion yellow, access green, fire red, video blue, mobile violet) are our proposal, not an existing DMP standard. DMP to confirm or supply its own.",
         "The home-page keypad in Showcase is a demonstration: nothing is armed and no signal is sent. DMP to confirm it is comfortable with a keypad likeness and the wording 'Armed' and 'Disarmed' on a marketing page.",
     ]

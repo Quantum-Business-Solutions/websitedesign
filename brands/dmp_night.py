@@ -125,8 +125,10 @@ SCENES_SECTION = {
 #   news + guides  become one compact panel section (pn-brief) that keeps all six headlines, summaries and links.
 #   ready      the closing band repeats the two calls to action zone 6 and the hero already carry; the page ends on contact.
 #   portal     the dealer sign-in mock is the whole of dealer-portal.html already; zone 6 links to it by name.
-HOME_ORDER = ["hero-layered", "assoc", "z1", "z2", "z3", "z4", "z5", "night", "scenes", "z6", "proof", "story", "who",
-              "brief", "faq", "contact"]
+# Dial-back order: light and dark bands alternate. Night shift and Scenes are the dark cinematic moments, the three doors sit
+# between them on a light ground, and proof and the timeline are the two dark accent bands after the yellow dealer zone.
+HOME_ORDER = ["hero-layered", "assoc", "z1", "z2", "z3", "z4", "z5", "night", "who", "scenes", "z6", "proof", "brief", "story",
+              "faq", "contact"]
 MOVE_TO = "services.html"            # the systems overview
 MOVED = ["building", "how"]
 SCENE_ZONE = [1, 2, 4, 1, 3, 5]      # which zone each scene lights in the zone bar (the server aisle is communication: intrusion)
@@ -171,6 +173,7 @@ def apply(data):
     comp["showcase"] = list(HOME_ORDER)
     # the site footer opens with "Talk to a person at DMP" and the phone number, so on this page the form above it says what it is
     have["contact"].setdefault("variants", {}).setdefault("showcase", {})["heading"] = "Write to Inside Sales"
+    have["who"].setdefault("variants", {}).setdefault("showcase", {})["dark"] = False     # a light band between Night shift and Scenes
 
     # the cutaway and the five-step journey move to the systems page, Showcase only: the base type renders nothing, so
     # Clean and Press pages are unchanged, and the Showcase variant is the section exactly as it was on the home page
