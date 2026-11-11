@@ -1,0 +1,414 @@
+{
+ "source": "https://www.vanausdall.com/technology-strength-assessment (VAF live assessment, read 2026-11-11)",
+ "note": "Original wording, 4 areas x 2 parts x 10 yes/no questions = 80. Answer key (good answer, weight, Eliminate/Optimize/Leverage bucket, fix text) still to be confirmed by VAF; not part of the original page.",
+ "areas": {
+  "Information": [
+   {
+    "n": 1,
+    "part": 1,
+    "question": "Do you execute periodic vulnerability scans in order to test for your security position?"
+   },
+   {
+    "n": 2,
+    "part": 1,
+    "question": "Do you enable multi-factor authentication, for administrator and user accounts, in order to improve security for all accessed systems including email, line-of-business and VPN?"
+   },
+   {
+    "n": 3,
+    "part": 1,
+    "question": "Are your business's password and password change policies managed centrally and strong enough to protect your data?"
+   },
+   {
+    "n": 4,
+    "part": 1,
+    "question": "Is your server data backed up nightly with more than one instance that is stored off-site or in the cloud?"
+   },
+   {
+    "n": 5,
+    "part": 1,
+    "question": "Do you have someone patch your servers and computers at least once a month?"
+   },
+   {
+    "n": 6,
+    "part": 1,
+    "question": "Do you have procedures in place to review updates for your corporate firewall(s)?"
+   },
+   {
+    "n": 7,
+    "part": 1,
+    "question": "Are you confident that all computers in your company have a common anti-virus program that is centrally managed and that the computers consistently receive updated signature files?"
+   },
+   {
+    "n": 8,
+    "part": 1,
+    "question": "Do you have a procedure to perform restoration tests of your backups in order to assure they are working properly?"
+   },
+   {
+    "n": 9,
+    "part": 1,
+    "question": "Do you have a written Disaster Recovery Plan that includes IT systems and is revised once or twice a year?"
+   },
+   {
+    "n": 10,
+    "part": 1,
+    "question": "Do you utilize device monitoring software in order to detect and remediate system issues and concerns quickly?"
+   },
+   {
+    "n": 11,
+    "part": 2,
+    "question": "In the event of a power outage, do you know that you have a battery backup system that will keep"
+   },
+   {
+    "n": 12,
+    "part": 2,
+    "question": "Do you utilize security awareness training to make sure users are trained to avoid email and"
+   },
+   {
+    "n": 13,
+    "part": 2,
+    "question": "Do you have software and operating systems that are in end-of-life status?"
+   },
+   {
+    "n": 14,
+    "part": 2,
+    "question": "Do you utilize server virtualization in order to leverage fault tolerance and disaster recovery"
+   },
+   {
+    "n": 15,
+    "part": 2,
+    "question": "Do you have the ability to send encrypted email when sharing potentially sensitive information?"
+   },
+   {
+    "n": 16,
+    "part": 2,
+    "question": "Do you assess your technology vendors annually to ensure they extend your security standards and"
+   },
+   {
+    "n": 17,
+    "part": 2,
+    "question": "Do you share written Internet Usage and Corporate Email policies with your end users?"
+   },
+   {
+    "n": 18,
+    "part": 2,
+    "question": "Do you have an operable employee onboarding and offboarding policy as it relates to IT?"
+   },
+   {
+    "n": 19,
+    "part": 2,
+    "question": "Do you have a multi-cloud strategy that ensures common authentication, security and policies apply"
+   },
+   {
+    "n": 20,
+    "part": 2,
+    "question": "Do you have computers that are older than five years?"
+   }
+  ],
+  "Print": [
+   {
+    "n": 1,
+    "part": 1,
+    "question": "Does your company have a strong and defined print strategy?"
+   },
+   {
+    "n": 2,
+    "part": 1,
+    "question": "Are all of your printer devices networked?"
+   },
+   {
+    "n": 3,
+    "part": 1,
+    "question": "Do you know how much you spend annually on printer supplies and service?"
+   },
+   {
+    "n": 4,
+    "part": 1,
+    "question": "Have you ever had a strategic print assessment completed?"
+   },
+   {
+    "n": 5,
+    "part": 1,
+    "question": "Are you aware of current security concerns regarding printers?"
+   },
+   {
+    "n": 6,
+    "part": 1,
+    "question": "Are print workflow efficiencies critical to your company’s success?"
+   },
+   {
+    "n": 7,
+    "part": 1,
+    "question": "Does your company have any sensitive customer or company information that should not be printed or"
+   },
+   {
+    "n": 8,
+    "part": 1,
+    "question": "Does your company have a strategy to track printing of sensitive information?"
+   },
+   {
+    "n": 9,
+    "part": 1,
+    "question": "Are your MFP’s capable of authenticating for end user security?"
+   },
+   {
+    "n": 10,
+    "part": 1,
+    "question": "Is most scanning done on MFPs?"
+   },
+   {
+    "n": 11,
+    "part": 2,
+    "question": "Do you ever run out of toner or other print related supplies?"
+   },
+   {
+    "n": 12,
+    "part": 2,
+    "question": "Do you have a specific replacement strategy for when a printer breaks?"
+   },
+   {
+    "n": 13,
+    "part": 2,
+    "question": "Do you utilize desktop printers for color printing?"
+   },
+   {
+    "n": 14,
+    "part": 2,
+    "question": "Do you have enough critical high-volume printers to meet your print needs?"
+   },
+   {
+    "n": 15,
+    "part": 2,
+    "question": "Do any of your printers or MFP’s frequently have unclaimed print jobs?"
+   },
+   {
+    "n": 16,
+    "part": 2,
+    "question": "Is your company still utilizing a on premise print server?"
+   },
+   {
+    "n": 17,
+    "part": 2,
+    "question": "Are you confident and pleased that the supplier of the devices is providing excellent service, and"
+   },
+   {
+    "n": 18,
+    "part": 2,
+    "question": "Do you have enough backup printers in storage in case they ever need to be deployed?"
+   },
+   {
+    "n": 19,
+    "part": 2,
+    "question": "Do you utilize any thermal print devices?"
+   },
+   {
+    "n": 20,
+    "part": 2,
+    "question": "Does company management receive weekly/monthly reports detailing print/copy activity, job details"
+   }
+  ],
+  "Process": [
+   {
+    "n": 1,
+    "part": 1,
+    "question": "Does your company have and execute a formal records retention schedule?"
+   },
+   {
+    "n": 2,
+    "part": 1,
+    "question": "Does your company have a centralized document repository for your business records?"
+   },
+   {
+    "n": 3,
+    "part": 1,
+    "question": "Are your current business processes more than 50% paper based?"
+   },
+   {
+    "n": 4,
+    "part": 1,
+    "question": "Does your company utilize a clear defined strategy that allows you to continue operating at 100% if"
+   },
+   {
+    "n": 5,
+    "part": 1,
+    "question": "Are more than 50% of your department records stored and accessed as paper files?"
+   },
+   {
+    "n": 6,
+    "part": 1,
+    "question": "Does your administrative staff currently perform more than 50% of the day to day office services"
+   },
+   {
+    "n": 7,
+    "part": 1,
+    "question": "Does your company screen visitors or employees for Temperatures and/or health screening?"
+   },
+   {
+    "n": 8,
+    "part": 1,
+    "question": "Are you relocating, remodeling or opening a new location in the next 2 years?"
+   },
+   {
+    "n": 9,
+    "part": 1,
+    "question": "Does your company currently automate your AP processing?"
+   },
+   {
+    "n": 10,
+    "part": 1,
+    "question": "Does your company currently automate your HR/ON-BOARDING processes?"
+   },
+   {
+    "n": 11,
+    "part": 2,
+    "question": "Is your LEGAL/CONTRACT MANAGEMENT documentation automated?"
+   },
+   {
+    "n": 12,
+    "part": 2,
+    "question": "Does your company experience high turnover in your administrative staff and/or in-house resource"
+   },
+   {
+    "n": 13,
+    "part": 2,
+    "question": "Does your company have a centralized resource center for office services?"
+   },
+   {
+    "n": 14,
+    "part": 2,
+    "question": "Does your company have a coverage plan when an employee is out ill or vacation?"
+   },
+   {
+    "n": 15,
+    "part": 2,
+    "question": "Does your company utilize a paper visitor management system to track visitors as they enter and"
+   },
+   {
+    "n": 16,
+    "part": 2,
+    "question": "Does your company currently deploy an electronic conference room management system for scheduling"
+   },
+   {
+    "n": 17,
+    "part": 2,
+    "question": "Does your company currently track inbound packages from the time they are received (dock) through"
+   },
+   {
+    "n": 18,
+    "part": 2,
+    "question": "Is your company currently taking full advantage of carrier and USPS discounts for outgoing overnight"
+   },
+   {
+    "n": 19,
+    "part": 2,
+    "question": "Does your company currently have an electronic forms management and/or print submission tool ?"
+   },
+   {
+    "n": 20,
+    "part": 2,
+    "question": "Does your company have to outsource most of your print technology to local printers?"
+   }
+  ],
+  "Communication": [
+   {
+    "n": 1,
+    "part": 1,
+    "question": "Is your data switching infrastructure Power over Ethernet (PoE) compliant?"
+   },
+   {
+    "n": 2,
+    "part": 1,
+    "question": "Is your internet service satisfactory to your current business needs?"
+   },
+   {
+    "n": 3,
+    "part": 1,
+    "question": "Do you subscribe to multiple internet services for traffic steering, shaping and/or failover?"
+   },
+   {
+    "n": 4,
+    "part": 1,
+    "question": "Do you have a disaster recovery plan for your business phone system?"
+   },
+   {
+    "n": 5,
+    "part": 1,
+    "question": "Do you currently support remote users that are fully integrated with your phone system?"
+   },
+   {
+    "n": 6,
+    "part": 1,
+    "question": "Do you currently utilize an IP based phone system?"
+   },
+   {
+    "n": 7,
+    "part": 1,
+    "question": "Is your phone system cloud based?"
+   },
+   {
+    "n": 8,
+    "part": 1,
+    "question": "Are your Smart Phones connected to your corporate phone system (extension dialing, real time"
+   },
+   {
+    "n": 9,
+    "part": 1,
+    "question": "Do you have the ability to record calls today?"
+   },
+   {
+    "n": 10,
+    "part": 1,
+    "question": "Do you have a desktop client to manage call activity, real time presence, and call routing?"
+   },
+   {
+    "n": 11,
+    "part": 2,
+    "question": "Do you use Microsoft Teams for Videoconferencing and Collaboration?"
+   },
+   {
+    "n": 12,
+    "part": 2,
+    "question": "Can you currently use your desktop or laptop as your phone?"
+   },
+   {
+    "n": 13,
+    "part": 2,
+    "question": "Do you have appropriate Wi-Fi coverage?"
+   },
+   {
+    "n": 14,
+    "part": 2,
+    "question": "Do your meetings ever start late or not work effectively due to technology?"
+   },
+   {
+    "n": 15,
+    "part": 2,
+    "question": "Does your phone system have contact center functionality that queues calls, emails and chat requests"
+   },
+   {
+    "n": 16,
+    "part": 2,
+    "question": "Do you utilize call reports to analyze employee productivity?"
+   },
+   {
+    "n": 17,
+    "part": 2,
+    "question": "Do you have a dedicated employee or team to handle conference room technology in your workplace?"
+   },
+   {
+    "n": 18,
+    "part": 2,
+    "question": "Are you satisfied with your current conference room technology"
+   },
+   {
+    "n": 19,
+    "part": 2,
+    "question": "Does your company have a mobile service plan?"
+   },
+   {
+    "n": 20,
+    "part": 2,
+    "question": "If yes, does your company have 50 or more mobile devices managed under a company mobile plan?"
+   }
+  ]
+ }
+}
