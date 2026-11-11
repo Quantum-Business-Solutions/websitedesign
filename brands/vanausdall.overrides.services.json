@@ -10181,7 +10181,7 @@
     "layout": "split",
     "eyebrow": "Find your place at VAF",
     "heading": "Your next bright idea? <em>Working here.</em>",
-    "subhead": "We have been part of the Indianapolis business community since 1914, back when our story began as a distributor for the Thomas Edison Company. A lot has changed. One thing has not: great people are what keep us going.",
+    "subhead": "We've been part of the Indianapolis business community since 1914, back when our story began as a distributor for the Thomas Edison Company. A lot has changed since then. We have, too. But one thing hasn't changed: great people are what keep us going.",
     "primary": {
      "label": "View open positions",
      "href": "https://workforcenow.cloud.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=76f18e20-dbb1-475b-98ad-e470199a4f66&ccId=19000101_000001&lang=en_US"
@@ -10196,6 +10196,13 @@
     "image_h": 800
    },
    {
+    "type": "detail",
+    "id": "story",
+    "eyebrow": "Our story",
+    "heading": "More than a century of bright ideas",
+    "body": "<p>Build your career with a company that's been finding better ways forward since 1914.</p><p>Today, Van Ausdall &amp; Farrar is a privately owned and operated technology company helping businesses throughout Indiana and the Midwest work smarter, communicate better, and keep moving forward.</p><p>You don't stay in business for more than 100 years by standing still. Through generations of new ideas, new technology, and new ways of doing business, we've continued to evolve while remaining privately owned and rooted right here in Indianapolis.</p><p>We're proud of where we've been. We’re even more excited about where we’re headed. And that's where you could come in.</p>"
+   },
+   {
     "type": "video",
     "id": "film",
     "alt": true,
@@ -10207,29 +10214,27 @@
     "caption": "VAF's own film"
    },
    {
-    "type": "values",
-    "eyebrow": "Who shines at VAF",
-    "heading": "A, C, T",
-    "items": [
-     [
-      "Accountability. Do it right.",
-      "Own your work. Follow through. Do what you say you are going to do."
-     ],
-     [
-      "Customer experience. Do it better.",
-      "Stay curious. Look for opportunities to improve. Do not settle for that is how we have always done it."
-     ],
-     [
-      "Together. Do it together.",
-      "Help your teammates. Share the wins. Step in when someone needs you. And yes, have some fun while you are at it."
-     ]
+    "type": "detail",
+    "id": "bright-spots",
+    "alt": true,
+    "flip": true,
+    "eyebrow": "A few bright spots",
+    "heading": "Big enough to build a career. Small enough to be known.",
+    "body": "<p>There are plenty of places you can work. We want VAF to be a place where you can build a career, make an impact and be known.</p><p>We're a locally owned Indianapolis company with more than 100 years behind us, and plenty ahead of us. Our size gives our employees something that's harder to find in a much larger organization: the opportunity to know our leaders, work across teams, explore different career paths and see the impact of what they do.</p>",
+    "bullets": [
+     "Build Your Career: With opportunities across IT, cybersecurity, sales, customer service, operations, print, communications and more, there are plenty of ways to grow, and your first role at VAF doesn't have to be your last.",
+     "Be Known: We're a smaller organization by design. Your work is visible, your contributions matter, and you won't get lost among thousands of employees.",
+     "Locally Owned. Deeply Rooted.: We've been part of the Indianapolis business community since 1914. More than a century later, we're still privately owned, locally based and continuing to evolve.",
+     "Access to Leadership: Our leaders aren't several organizational layers away. You'll have opportunities to know them, work with them and have your ideas heard.",
+     "Make an Impact and Be Recognized for It: We believe great work deserves to be noticed. From everyday wins to company-wide recognition, we want employees to know their contributions matter.",
+     "Work and Have a Life Outside of It: Many of our positions offer consistent Monday through Friday schedules, along with PTO, paid holidays and benefits designed to support life beyond work."
     ]
    },
    {
     "type": "cards",
-    "alt": true,
+    "alt": false,
     "id": "benefits",
-    "eyebrow": "A few bright spots",
+    "eyebrow": "Benefits and perks",
     "heading": "What comes with the job",
     "items": [
      [
@@ -10259,13 +10264,39 @@
     ]
    },
    {
+    "type": "detail",
+    "id": "who-shines",
+    "eyebrow": "Who shines at VAF",
+    "heading": "We're looking for people who want to do more than show up",
+    "body": "<p>People who take ownership, care about doing things right, aren't afraid to find a better way, and want to contribute to something bigger than themselves.</p><p>People who keep learning. Support the person next to them. And have some fun while they're at it.</p><p>Around here, that looks like:</p>"
+   },
+   {
+    "type": "values",
+    "eyebrow": "Our values",
+    "heading": "A, C, T",
+    "items": [
+     [
+      "Accountability. Do it right.",
+      "Own your work. Follow through. Do what you say you are going to do."
+     ],
+     [
+      "Customer experience. Do it better.",
+      "Stay curious. Look for opportunities to improve. Do not settle for that is how we have always done it."
+     ],
+     [
+      "Together. Do it together.",
+      "Help your teammates. Share the wins. Step in when someone needs you. And yes, have some fun while you are at it."
+     ]
+    ]
+   },
+   {
     "type": "faq",
     "alt": true,
     "heading": "Questions about working at Van Ausdall & Farrar",
     "items": [
      [
       "Where are the jobs?",
-      "Indianapolis headquarters at 6430 E 75th Street, the Fort Wayne and Evansville offices, and field service roles across Indiana."
+      "Van Ausdall & Farrar is headquartered at 6430 E 75th Street in Indianapolis, with offices in Fort Wayne and Evansville. Roles span IT, cybersecurity, sales, customer service, operations, print and communications. The open positions are on VAF's careers listing."
      ],
      [
       "What are the benefits?",
@@ -10273,7 +10304,7 @@
      ],
      [
       "How do I apply?",
-      "Send a resume to clientsuccess@vanausdall.com or apply through the listing. A person replies, not an autoresponder."
+      "Apply through VAF's careers listing, using the Explore careers at VAF button on this page. If you need disability accommodations, contact careers@vanausdall.com."
      ],
      [
       "What values does VAF look for in employees?",
@@ -10285,7 +10316,7 @@
      ],
      [
       "Is VAF an equal opportunity employer?",
-      "Yes. VAF states that it is an Equal Opportunity Employer."
+      "Yes. VAF states that it is an Equal Opportunity Employer. If you need disability accommodations, please contact careers@vanausdall.com."
      ]
     ]
    },
@@ -10328,7 +10359,7 @@
    {
     "type": "cta",
     "heading": "Think you would shine here?",
-    "subhead": "Bring your ideas, your drive and your willingness to learn. We will bring the opportunities, the support and a team that wants to see you succeed. Van Ausdall & Farrar is an Equal Opportunity Employer.",
+    "subhead": "Bring your ideas. Bring your drive. Bring your willingness to learn. We will bring the opportunities, the support, and a team that wants to see you succeed. Ready to see where you fit? Van Ausdall & Farrar is an Equal Opportunity Employer. If you need disability accommodations, please contact careers@vanausdall.com.",
     "primary": {
      "label": "Explore careers at VAF",
      "href": "https://workforcenow.cloud.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=76f18e20-dbb1-475b-98ad-e470199a4f66&ccId=19000101_000001&lang=en_US"
