@@ -5,12 +5,12 @@
   "Quantum Clean",
   "Quantum Press"
  ],
- "recommend": "Quantum Clean",
+ "recommend": null,
  "roles": {
-  "Showcase": "safe: image-led and sales-forward, the most familiar register for a security manufacturer",
-  "Clean": "stretch: a plain, fast, high-contrast catalogue built for dealers and specifiers scanning for a product",
-  "Press": "wildcard: editorial and serif, so a manufacturer reads like an established company"
+  "Showcase": "DMP's own look: white header, mixed-case headlines and rounded yellow buttons on light pages, with a home page that opens on a working keypad you can arm and disarm, six colour-coded zones and dark cinematic scenes",
+  "Clean": "a Swiss spec-sheet catalogue: white ground, hairline grid and mono labels, with a dimension-line hero, a product matrix and a panel finder, built for dealers and specifiers scanning for a product",
+  "Press": "an editorial magazine: serif headlines and photo covers, with a cover story, a contents page, voices from DMP's executives and fifty years of firsts told as a feature"
  },
- "base_url": "https://clientcommand.thequantumleap.business/s/5e9d7074a72c7fef20bb0405ec69264f",
+ "base_url": "https://clientcommand.thequantumleap.business/s/8fdd037a11554d07f4a1c4eb21f0e854",
  "out": "../out-digital-monitoring-products"
 }

@@ -21,6 +21,7 @@ import argparse
 import glob
 import json
 import os
+import shutil
 import subprocess
 import sys
 
@@ -31,6 +32,22 @@ ROOT = os.path.dirname(HERE)
 def sh(cmd, cwd=ROOT, check=True):
     print("$", " ".join(cmd) if isinstance(cmd, list) else cmd)
     return subprocess.run(cmd, cwd=cwd, check=check, text=True, capture_output=False)
+
+
+def package_size(out, limit_mb=50):
+    """Estimate the deploy zip (deflate per file, like a real zip) and warn when it nears the upload limit."""
+    import zlib
+    n = raw = zipped = 0
+    for dp, dn, fs in os.walk(out):
+        dn[:] = [d for d in dn if d not in (".git", "screenshots", "node_modules")]
+        for f in fs:
+            full = os.path.join(dp, f)
+            data = open(full, "rb").read()
+            n += 1
+            raw += len(data)
+            zipped += len(data) if f.lower().endswith((".png", ".jpg", ".jpeg", ".webp", ".mp4", ".webm", ".woff2", ".zip")) else len(zlib.compress(data, 6))
+    mb = zipped / 1048576
+    print(f"package: {n} files, {raw / 1048576:.1f} MB raw, about {mb:.1f} MB zipped (limit {limit_mb} MB)" + ("  WARNING: close to the limit" if mb > limit_mb * 0.85 else ""))
 
 
 def main(argv=None):
@@ -65,12 +82,27 @@ def main(argv=None):
                 os.remove(f)
                 print("removed stale", rel)
 
+    # client images: anything in brands/<slug>.assets/ is copied into <out>/assets before rendering, so the
+    # srcset check in preview.py sees the -600 siblings and a rebuild into a fresh folder keeps the images.
+    extra = os.path.join(ROOT, "brands", f"{a.slug}.assets")
+    if os.path.isdir(extra):
+        shutil.copytree(extra, os.path.join(out, "assets"), dirs_exist_ok=True)
+        print(f"copied client assets from {os.path.relpath(extra, ROOT)}")
+    pages_dir = os.path.join(ROOT, "brands", f"{a.slug}.pages")
+    if os.path.isdir(pages_dir):
+        shutil.copytree(pages_dir, out, dirs_exist_ok=True)
+        print(f"copied client pages from {os.path.relpath(pages_dir, ROOT)}")
+
     roles = "|".join(f"{k}: {v}" for k, v in cfg["roles"].items())
     cmd = [sys.executable, os.path.join(HERE, "preview.py"), "--content", content_json, "--themes", ",".join(cfg["themes"]),
            "--roles", roles, "--base-url", cfg["base_url"], "--out", out]
     if cfg.get("recommend"):
         cmd += ["--recommend", cfg["recommend"]]
     sh(cmd)
+
+    _c = json.load(open(content_json)); dom = (_c.get("schema") or {}).get("org_url") or (("https://" + _c["domain_hint"]) if _c.get("domain_hint") else "")
+    if dom:
+        sh([sys.executable, os.path.join(HERE, "launch_package.py"), content_json, out, dom])
 
     # score the first direction with the same checks the hub uses
     first = os.path.join(out, cfg["themes"][0].replace("Quantum ", "").lower())
@@ -82,6 +114,17 @@ def main(argv=None):
         print(f"  build {cfg['themes'][0]}: {summ['avg_score']} average, {summ['grade_a']} of {summ['count']} A")
     except Exception:  # noqa: BLE001
         print(r.stdout[-400:], r.stderr[-400:])
+
+    # hub card previews: screenshots of each direction's home page into <out>/assets/hub, saved back to the brand's
+    # assets so a machine without Playwright still has them. Never fatal: it warns and keeps the committed images.
+    try:
+        subprocess.run([sys.executable, os.path.join(HERE, "hub_shots.py"), out, "--dirs", ",".join(t.replace("Quantum ", "").lower() for t in cfg["themes"]),
+                        "--save", os.path.join(ROOT, "brands", f"{a.slug}.assets", "hub")], cwd=ROOT, text=True, timeout=420)
+    except Exception as e:  # noqa: BLE001
+        print(f"hub_shots: WARNING: skipped ({e}); the hub keeps the committed images")
+
+    sh([sys.executable, os.path.join(HERE, "dedupe_assets.py"), out])
+    package_size(out)
 
     if a.shots:
         os.makedirs(os.path.join(out, "screenshots"), exist_ok=True)

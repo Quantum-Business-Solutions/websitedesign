@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Why DMP's website belongs on the same platform as its CRM: what the HubSpot build looks like, how HubSpot compares with Craft CMS, the risks and the questions to ask any bidder.">
+<title>Why build DMP's site on HubSpot | prepared for Digital Monitoring Products</title>
+<link rel="canonical" href="hubspot-build.html">
+<style>
+:root{--bg:#fff;--alt:#f6f4ec;--fg:#16181c;--muted:#555b66;--line:#e4e1d6;--y:#FFD23D;--ink:#846600}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--ink)}h1,h2,h3{font-family:"Open Sans",Inter,system-ui,sans-serif;line-height:1.12;letter-spacing:-.02em;margin:0}
+.top{background:#0c0d0f;color:#fff}.top .w{display:flex;justify-content:space-between;align-items:center;gap:14px;min-height:60px}.top a{color:#fff;text-decoration:none;font-size:15px;min-height:44px;display:inline-flex;align-items:center}
+.w{max-width:1040px;margin:0 auto;padding:0 24px}
+.hero{background:#0c0d0f;color:#fff;padding:64px 0 72px}.hero .k{color:var(--y);font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase}
+.hero h1{font-size:clamp(34px,5vw,56px);margin:16px 0 18px;max-width:820px}.hero h1 em{color:var(--y);font-style:normal}.hero p{font-size:20px;color:#d7d9de;max-width:760px;margin:0}
+section{padding:56px 0;border-bottom:1px solid var(--line)}section.alt{background:var(--alt)}
+.k2{color:var(--ink);font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px}
+h2{font-size:clamp(26px,3.4vw,38px);margin-bottom:14px}h3{font-size:21px;margin:0 0 8px}p{margin:0 0 14px}.lead{font-size:19px;color:var(--muted);max-width:780px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px}.alt .card{background:#fff}
+.card p{color:var(--muted);font-size:16px;margin:0}.card .n{font:800 34px/1 "Open Sans",Inter,sans-serif;color:var(--ink);margin-bottom:10px;display:block}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:26px}.flow div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px}.flow b{display:block;font-size:15px;margin-bottom:4px}.flow span{font-size:14.5px;color:var(--muted)}
+.tw{overflow-x:auto;margin-top:22px;border:1px solid var(--line);border-radius:14px;background:#fff}table{border-collapse:collapse;width:100%;min-width:760px;font-size:15.5px}
+th,td{text-align:left;vertical-align:top;padding:14px 16px;border-bottom:1px solid var(--line)}th{background:#111;color:#fff;font-weight:600;font-size:14px}td:first-child{font-weight:700;width:19%}tr:last-child td{border-bottom:0}
+.tag{display:inline-block;font-size:13px;font-weight:700;border-radius:999px;padding:2px 10px;margin-right:6px;background:#fff3c2;color:#5a4500;border:1px solid #ecd47a}
+.win{background:#eef7ee}.two{display:grid;grid-template-columns:1fr 1fr;gap:26px}ul{margin:10px 0 0;padding-left:20px}li{margin:6px 0}
+.q li{color:var(--fg)}.note{background:#fff8dc;border:1px solid #ecd47a;border-radius:12px;padding:16px 18px;margin-top:22px;font-size:16px}
+.src{font-size:14px;color:var(--muted)}.src li{margin:4px 0;word-break:break-word}
+.jump{background:#fff;border-bottom:1px solid var(--line)}.jump .w{display:flex;flex-wrap:wrap;gap:6px 18px;padding-top:12px;padding-bottom:12px}.jump a{font-size:14.5px;font-weight:600;text-decoration:none;min-height:32px;display:inline-flex;align-items:center}.jump a:hover{text-decoration:underline}
+.st{display:inline-block;font-size:13px;font-weight:700;border-radius:999px;padding:2px 10px;background:#e8f1e8;color:#1f4d22;border:1px solid #b9d6b9;white-space:nowrap}.st.pl{background:#f0f0f0;color:#444;border-color:#d4d4d4}
+.tc{margin-top:22px}.tw.tc table{min-width:880px}td.s{width:auto}.mini{font-size:14.5px;color:var(--muted)}.steps{counter-reset:s;list-style:none;padding:0;margin:20px 0 0}.steps li{counter-increment:s;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px 16px 58px;position:relative;margin:10px 0}.steps li:before{content:counter(s);position:absolute;left:16px;top:14px;width:28px;height:28px;border-radius:50%;background:var(--y);color:#111;font-weight:800;display:flex;align-items:center;justify-content:center}.steps b{display:block}
+section[id]{scroll-margin-top:8px}
+@media(max-width:860px){.grid3,.two{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}section{padding:40px 0}.hero{padding:44px 0 52px}}
+@media(max-width:520px){.flow{grid-template-columns:1fr}}
+</style></head><body>
+<header class="top"><div class="w"><span>Quantum Business Solutions for Digital Monitoring Products</span><a href="index.html">&larr; Back to the three directions</a></div></header>
+<div class="hero"><div class="w"><div class="k">Build it on one platform</div>
+<h1>Your website, your CRM and your dealers, <em>on the same platform</em>.</h1>
+<p>DMP is launching HubSpot CRM, marketing, sales and service with us. This page explains why the website belongs there too, what the build looks like, where HubSpot is not the strongest tool, and the questions worth putting to any bidder, including us.</p></div></div>
+<nav class="jump" aria-label="On this page"><div class="w"><a href="#reasons">Reasons</a><a href="#maze">Untangling the maze</a><a href="#build">The build</a><a href="#data-model">Data model</a><a href="#forms">Forms and routing</a><a href="#measurement">Measurement</a><a href="#compare">HubSpot vs Craft</a><a href="#bidders">Bidder questions</a><a href="#lessons">Lessons learned</a><a href="#regions">Regions</a><a href="#launch">Launch and QA</a><a href="#beyond">Beyond the brief</a><a href="#sources">Sources</a><a href="module-library.html">Module library</a></div></nav>
+
+<section id="reasons"><div class="w"><div class="k2">The short version</div><h2>Three reasons, and how we scope the build</h2>
+<div class="grid3">
+<div class="card"><span class="n">1</span><h3>One record for every visitor</h3><p>On HubSpot, forms, tracked downloads and page views land on the contact and company record the moment they happen. A dealer who reads a product page, then asks for a quote, is one timeline. On a separate CMS, that link is a connector someone has to build, secure and keep working.</p></div>
+<div class="card"><span class="n">2</span><h3>The catalogue fits</h3><p>dmp.com's sitemap lists 369 product pages and 26 categories. HubSpot's HubDB holds 10,000 rows per table, and pages generated from it do not count against the website page limit. A product table with a filterable listing is a normal build, not a stretch.</p></div>
+<div class="card"><span class="n">3</span><h3>Less to look after</h3><p>Hosting, the CDN and platform security updates are HubSpot's job, and its hosting providers are audited to SOC 2 Type 2 and ISO 27001. Editors work in a drag-and-drop editor on theme modules we build once. There are no plugins to patch.</p></div></div>
+<div class="note"><b>Custom features, built to fit.</b> A product finder, a configurator, a compatibility check or a dealer tool is not a reason to leave the platform. We build them as custom HubSpot modules (including React modules), or as a small app that sits alongside the site and talks to it through the API, with the data in HubDB or a connected system. In the first two weeks we confirm what DMP wants from the catalogue, including any compatibility or configurator plans, and design the product table around it before a single template is built.</div>
+</div></section>
+
+<section id="maze"><div class="w"><div class="k2">The real problem</div><h2>Untangling the maze</h2>
+<p class="lead">dmp.com carries about 2,500 visible pages, plus an employee intranet, the Buy site, Marketing Central and a few connected sites. People describe it as a maze. A rebuild on any platform can make it look better. Only a change in structure makes it easier.</p>
+<div class="grid3">
+<div class="card"><span class="n">1</span><h3>Three front doors, not one menu</h3><p>Dealers, specifiers and building owners each start on a page built for them, with the same navigation underneath. The home page in each direction shows how.</p></div>
+<div class="card"><span class="n">2</span><h3>Pages by design, products by data</h3><p>Roughly a hundred designed pages cover the systems, industries, support, training, partners and company. The 369 product pages come from one table and one template, and documents live in one library instead of hundreds of pages.</p></div>
+<div class="card"><span class="n">3</span><h3>Connected sites, one sign-in</h3><p>Dealers reach the Buy site, Marketing Central and dealer-only documents through one sign-in tied to their CRM record (memberships, tier to confirm). The employee intranet stays separate.</p></div></div>
+<div class="note"><b>A plan, not a promise yet.</b> How Marketing Central and the Buy site connect depends on how they are built today. We would map them in the first two weeks, before any design is signed off.</div>
+</div></section>
+<section class="alt" id="build"><div class="w"><div class="k2">What the build looks like</div><h2>The three directions, made real in HubSpot</h2>
+<p class="lead">Every page in the directions you are looking at maps to a HubSpot template, and each repeated block maps to a module the team can edit.</p>
+<div class="flow">
+<div><b>Theme</b><span>One theme, the chosen direction, with modules for the hero, tabs, flow, timeline and cards. Your team edits copy and images without a developer.</span></div>
+<div><b>Catalogue</b><span>A HubDB table of products (name, category, family, description, spec sheet, image) renders every product page and category listing from one template each.</span></div>
+<div><b>Library</b><span>Spec sheets and guides stay as files. HubSpot cannot redirect file URLs, so file names are kept as they are today.</span></div>
+<div><b>Forms to CRM</b><span>Dealer, specifier and owner forms create or update contacts, route to the right owner and start the right workflow.</span></div>
+<div><b>Audiences</b><span>Smart content changes the home page and calls to action for dealers, specifiers and owners. Dealer-only content uses memberships (tier to confirm).</span></div></div>
+<p style="margin-top:22px"><a href="module-library.html"><b>See the module library</b></a>: every editor-facing module we would build, what editors can change in each, and which ones are already previewed in the sample site.</p>
+<div class="two" style="margin-top:30px"><div><h3>How we stage it</h3><p>The site is built and reviewed on a HubSpot address marked noindex, then pinned to dmp.com on launch day. Nothing indexable changes until the redirect map has been tested.</p></div>
+<div><h3>How we protect what ranks today</h3><p>A redirect map covers every URL that earns traffic, loaded in bulk (HubSpot takes up to 500 per CSV, 140 characters per URL). Product page addresses are kept wherever possible, lowercase.</p></div></div>
+</div></section>
+
+
+<section id="data-model"><div class="w"><div class="k2">The data model, visible</div><h2>The HubDB tables we would create</h2>
+<p class="lead">This is the catalogue made concrete. Each table is one source of truth, and each table that needs public pages gets one dynamic page template. Row counts are shown only where the preview already holds them; everything else is marked to size.</p>
+<div class="tw tc" tabindex="0" role="region" aria-label="HubDB tables for DMP"><table>
+<thead><tr><th scope="col">Table</th><th scope="col">Columns we would define</th><th scope="col">Pages it drives</th><th scope="col">Rows planned</th></tr></thead><tbody>
+<tr><td>Products</td><td>slug, name, category, system, image, blurb, specs (JSON), listings, works_with, status (orderable or coming soon), SEO title, SEO description</td><td>Dynamic page template for product pages, plus filtered listings for the finder and the category pages</td><td>54 product pages in the preview. Full catalogue: to size (dmp.com's sitemap lists 369 product pages)</td></tr>
+<tr><td>Documents</td><td>title, type, product, file URL, file type, audience (public, dealer, specifier)</td><td>Dynamic page template for the document library and per-product document lists</td><td>To size</td></tr>
+<tr><td>Distributors</td><td>country, company, URL, DMP expert</td><td>Dynamic page template for the international distributor pages</td><td>8 distributors on the international page</td></tr>
+<tr><td>Dealer directory and regions</td><td>region, manager, states</td><td>Dynamic page template for region pages and the find-a-dealer result</td><td>To size</td></tr>
+<tr><td>FAQ library</td><td>question, answer, system, audience, show on (page or product)</td><td>No pages of its own; feeds FAQ blocks and FAQ markup on system and product pages</td><td>To size</td></tr>
+<tr><td>Training sessions</td><td>title, dates, location, price status (to confirm), registration link</td><td>Dynamic page template for the training calendar and session pages</td><td>To size</td></tr>
+</tbody></table></div>
+<div class="note"><b>Why this matters.</b> A row is edited once and shows up everywhere it is used: the product page, the finder, the spec pack, the markup. HubDB holds 10,000 rows per table and allows 10 dynamic page templates per table, so every table above fits with room to spare. Relationships between tables (works_with, product to document) are joins we build in the templates, not something HubDB does for us.</div>
+</div></section>
+
+<section class="alt" id="forms"><div class="w"><div class="k2">Forms and routing</div><h2>One form per intent, each with a named owner</h2>
+<p class="lead">Every form is defined before build: what it is for, who owns the reply, what the visitor sees next and what starts in the CRM. Owners and routing rules below are proposals, to confirm with DMP.</p>
+<div class="tw tc" tabindex="0" role="region" aria-label="Forms by intent"><table>
+<thead><tr><th scope="col">Form (intent)</th><th scope="col">Hidden source field</th><th scope="col">Owner and routing rule (to confirm)</th><th scope="col">Thank-you state</th><th scope="col">Follow-up workflow</th></tr></thead><tbody>
+<tr><td>Dealer application</td><td>source = dealer-application, plus page</td><td>Dealer development team; by region once the regions table is signed off</td><td>On-page confirmation with what happens next and the expected reply time (to confirm)</td><td>Create company and contact, set dealer-prospect stage, task for the owner, confirmation email</td></tr>
+<tr><td>Specifier or spec pack request</td><td>source = spec-pack, plus system or product</td><td>Specifier support team (to confirm)</td><td>Download starts on the page, with a second step to book a call</td><td>Deliver the pack, tag the system of interest, short nurture series</td></tr>
+<tr><td>Building owner: find a dealer</td><td>source = find-a-dealer, plus state</td><td>Regional manager for the state, from the regions table</td><td>Named dealer or regional contact shown straight away</td><td>Notify the manager team, record the lead on the contact, follow-up check</td></tr>
+<tr><td>Inside Sales</td><td>source = inside-sales, plus page</td><td>Inside Sales team</td><td>On-page confirmation and a phone number</td><td>Round-robin inside the team (to confirm), task and email</td></tr>
+<tr><td>Technical Support and RMA</td><td>source = support or rma</td><td>Technical Support team, kept apart from sales routing</td><td>Confirmation with a reference number</td><td>Create a ticket in Service Hub (tier to confirm), acknowledge by email</td></tr>
+<tr><td>Event registration</td><td>source = event, plus event name</td><td>Marketing events owner (to confirm)</td><td>Confirmation with date, place and calendar link</td><td>Confirmation and reminder emails, post-event follow-up</td></tr>
+<tr><td>Newsletter or lead magnet</td><td>source = newsletter or the asset name</td><td>Marketing; no sales owner until a score or intent threshold is met (to confirm)</td><td>On-page confirmation, download link where there is one</td><td>Subscribe to the right list, welcome email</td></tr>
+<tr><td>Training request</td><td>source = training, plus session</td><td>Training team</td><td>Confirmation with the session details or a note that the team will reply</td><td>Task for the trainer, confirmation email, reminder before the session</td></tr>
+</tbody></table></div>
+<div class="two" style="margin-top:24px"><div><h3>Consent text</h3><p>Every form carries consent wording and a link to the privacy page, and the newsletter and lead magnet forms capture marketing consent separately from the request. The wording itself is DMP's to approve (to confirm with DMP's legal contact).</p></div>
+<div><h3>Notify teams, not people</h3><p>Form notifications go to teams or shared mailboxes, not to individual user IDs. A person who leaves or changes role should not silently stop a dealer application from reaching anyone.</p></div></div>
+</div></section>
+
+<section id="measurement"><div class="w"><div class="k2">Measurement plan</div><h2>What we count, and when we look</h2>
+<p class="lead">Conversion events are named before build so every one is tracked from day one. Reporting combines GA4 with HubSpot attribution, so a visit, a form and a deal read as one story. No baseline numbers are stated here; the baseline is recorded before launch and the reads compare against it.</p>
+<div class="grid3">
+<div class="card"><h3>Named events</h3><ul class="mini"><li>Form submits, one per intent (the eight forms above)</li><li>Spec pack download</li><li>Dealer portal sign-in clicks</li><li>buy.dmp.com outbound clicks</li><li>Phone taps</li><li>Search use</li><li>Finder use</li><li>Assessment completion</li></ul></div>
+<div class="card"><h3>Source tagging</h3><p>Each form writes its hidden source field to the contact. Campaign links carry UTM tags, so GA4 and HubSpot attribution agree on where a lead came from. A short tagging guide goes to everyone who posts a link.</p></div>
+<div class="card"><h3>Reviews at 30, 60 and 90 days</h3><p>The same cadence as the standard: a baseline on day 1, then reads at 30, 60 and 90 days after launch covering traffic, key pages, forms and the money path, plus AI-answer tracking. Each read lists what to change next.</p></div></div>
+</div></section>
+
+<section class="alt" id="compare"><div class="w"><div class="k2">Side by side</div><h2>HubSpot CMS and Craft CMS, side by side</h2>
+<p class="lead">dmp.com runs on Craft CMS today, and another agency may propose staying there. Here is how the two compare on the questions that matter most to DMP: the CRM, the dealers, editing, security and cost, from the vendors' own pages.</p>
+<div class="tw" tabindex="0" role="region" aria-label="HubSpot and Craft comparison"><table>
+<thead><tr><th scope="col">Question</th><th scope="col">HubSpot CMS (Content Hub)</th><th scope="col">Craft CMS</th></tr></thead><tbody>
+<tr><td>Link to the CRM</td><td>Native. Forms, smart content, attribution and CTAs share the record DMP already uses. <span class="tag">Advantage</span></td><td>No built-in CRM or marketing automation that we could find on Craft's pricing or features pages. HubSpot is connected by plugin or API, built and maintained by developers.</td></tr>
+<tr><td>Hosting and security</td><td>Included. HubSpot manages the platform and its updates. Its hosting providers hold SOC 2 Type 2 and ISO 27001. <span class="tag">Advantage</span></td><td>Hosting is separate (Craft Cloud lists $120 to $240 a month per project, or your own host). You apply security updates; a Craft vulnerability exploited in the wild was disclosed in 2025.</td></tr>
+<tr><td>Product catalogue</td><td>A HubDB table of up to 10,000 rows, with a page template per table and a filterable listing. Pages generated from it do not count against the website page limit. <span class="tag">Advantage</span></td><td>Entries and fields modelled by developers, built and hosted as a separate project.</td></tr>
+<tr><td>Editing</td><td>Drag-and-drop on theme modules; non-developers can build pages. <span class="tag">Advantage</span></td><td>A control panel shaped by the developers per project. Powerful, and as easy as they make it.</td></tr>
+<tr><td>Licence and running cost</td><td>A subscription (Content Hub Professional or higher for dynamic pages). Price depends on DMP's existing HubSpot plan, to be confirmed.</td><td>Inexpensive licence: Pro is $399 per project, about $99 a year to renew. The cost is the build, hosting, upgrades and integrations.</td></tr>
+
+<tr><td>Answer-engine visibility</td><td>Free AI Search Grader, plus HubSpot AEO tracking of prompts across ChatGPT, Perplexity and Gemini. Schema is a build job on either platform.</td><td>No equivalent built in. Schema through plugins or custom templates.</td></tr>
+</tbody></table></div>
+<div class="note"><b>Why this fits DMP.</b> The site is mostly a product catalogue, documentation and lead capture that feed a CRM and a dealer community. That is the work HubSpot is built to run, and DMP would own it end to end, with no connector to keep alive.</div>
+</div></section>
+
+<section id="bidders"><div class="w"><div class="two"><div><div class="k2">Questions for any bidder</div><h2>Put these to us as well</h2>
+<ul class="q"><li>Who patches the CMS and its plugins, and how fast?</li><li>What is the plan for roughly 600 URLs and the existing rankings, and how is it tested before launch?</li><li>How do forms reach the CRM, and who fixes it when it breaks?</li><li>Who owns the structured data and keeps it correct as products change?</li><li>What does year two cost: hosting, licences, upgrades and support?</li><li>What happens to editing when the developer is not available?</li></ul></div>
+<div><div class="k2">Risks we would manage on HubSpot</div><h2>What could go wrong</h2>
+<ul><li><b>Catalogue architecture.</b> Settle table design, filters and the 10-template limit before any page is drawn.</li><li><b>Tier.</b> Dynamic pages and memberships need Content Hub Professional or Enterprise; confirm what DMP holds.</li><li><b>Lowercase paths.</b> HubDB dynamic page paths must be lowercase, so mixed-case product URLs need mapping.</li><li><b>File URLs.</b> Files cannot be redirected, so document names stay as they are.</li><li><b>Hand edits.</b> Protect editors' changes from being overwritten by a rebuild.</li></ul></div></div></div></section>
+
+
+<section class="alt" id="lessons"><div class="w"><div class="k2">What we learned on three earlier HubSpot builds</div><h2>Five lessons, and how we pre-empt each</h2>
+<p class="lead">These come from three earlier HubSpot site builds. Clients are not named. Each lesson changes how we plan this one.</p>
+<ol class="steps">
+<li><b>Plan tiers cap site pages.</b>Product pages live in HubDB and dynamic pages, so the catalogue never competes with the page allowance. First-week task: <em>confirm DMP's HubSpot tier and page limits first.</em></li>
+<li><b>Draft pages are not publicly viewable.</b>So QA does not run on drafts. We review on a staged, noindex publish that anyone on the team can open.</li>
+<li><b>Theme fields accept only simple types.</b>Header, footer and schema therefore become modules, not theme fields, so they can hold links, groups and structured data.</li>
+<li><b>Unsourced claims leak out of previews.</b>Every claim sits on a to-confirm list until DMP signs it off. Nothing ships on the strength of a preview.</li>
+<li><b>Forms need owners before build.</b>Routing owners, consent text and thank-you states are defined first, and the money path (form, owner, task, reply) is tested end to end before launch.</li></ol>
+<div class="note"><b>First-week task: confirm DMP's HubSpot tier and page limits.</b> Tier decides dynamic pages, memberships, serverless functions and page allowances. Everything on this page assumes Content Hub Professional or higher, to confirm.</div>
+</div></section>
+
+<section id="regions"><div class="w"><div class="k2">Regions and languages</div><h2>US first, ready for the rest</h2>
+<p class="lead">A plan, not a commitment. The first release is the US site in English. The structure is built so international pages can follow without a rebuild.</p>
+<div class="grid3">
+<div class="card"><h3>US first</h3><p>All templates, the catalogue and the dealer routes launch for the US. Region pages use the Dealer directory table.</p></div>
+<div class="card"><h3>hreflang-ready</h3><p>The international distributor pages (8 distributors on the international page today) sit in a structure that can carry language and region variants, with hreflang pairs added when a translated page exists. We never publish an hreflang that points nowhere.</p></div>
+<div class="card"><h3>Translation workflow</h3><p>Options to choose from later: HubSpot multi-language variants with translations by DMP or an agency, or machine draft with human review. Which one, and which languages, is to confirm.</p></div></div>
+</div></section>
+
+<section class="alt" id="launch"><div class="w"><div class="k2">Launch plan and QA</div><h2>Nothing goes live until the gate list passes</h2>
+<p class="lead">The same checks as the quality standard, applied to the HubSpot build. The standard says what we measure; this is the order we do it in.</p>
+<ol class="steps">
+<li><b>Stage on a HubSpot address, noindex.</b>The site is built and reviewed on a hs-sites address marked noindex, so reviewers see the real thing and search engines see nothing.</li>
+<li><b>Import the redirect map.</b>Loaded from redirects.csv in bulk: 224 permanent (301) redirects and 17 removed-page (410) entries, per the current preview build. Tested after import, old URL to new URL to status.</li>
+<li><b>404 page.</b>A useful 404 with search and the three front doors, not a dead end.</li>
+<li><b>Robots, llms and sitemap package.</b>robots.txt, llms.txt and the sitemap prepared together, released at launch and not before.</li>
+<li><b>Canonical and Open Graph rewrite.</b>On launch day, scripts/launch_rewrite.py rewrites canonical and Open Graph addresses from the staging address to dmp.com, then the result is re-checked.</li>
+<li><b>Accessibility pass.</b>axe-core at 390 and 1440 wide, plus a manual keyboard pass and a screen reader pass on the key journeys.</li>
+<li><b>Forms test records.</b>One test submission per form, with who received it and when, recorded.</li>
+<li><b>Performance budget.</b>Core Web Vitals measured on the staged URL, and the numbers reported against a budget agreed with DMP (figures to confirm).</li></ol>
+<h3 style="margin-top:28px">Sign-off gate list</h3>
+<div class="tw tc" tabindex="0" role="region" aria-label="Sign-off gate list"><table>
+<thead><tr><th scope="col">Gate</th><th scope="col">Evidence</th><th scope="col">Signed off by</th></tr></thead><tbody>
+<tr><td>Claims list</td><td>Every to-confirm item resolved or removed</td><td>DMP</td></tr>
+<tr><td>Redirects</td><td>Redirect map with tested status</td><td>Quantum Business Solutions, DMP review</td></tr>
+<tr><td>Accessibility</td><td>axe-core report, keyboard and screen reader notes</td><td>Quantum Business Solutions</td></tr>
+<tr><td>Forms and money path</td><td>Form test record, per form</td><td>DMP form owners</td></tr>
+<tr><td>Structured data</td><td>Validation results for the page types in use</td><td>Quantum Business Solutions</td></tr>
+<tr><td>Performance</td><td>Core Web Vitals on the staged URL</td><td>Quantum Business Solutions, DMP review</td></tr>
+<tr><td>Go-live</td><td>All of the above, then the domain is pinned</td><td>DMP</td></tr>
+</tbody></table></div>
+<p class="mini" style="margin-top:12px">See the <a href="standard.html">quality standard</a> for the full list of checks and the evidence we hand over.</p>
+</div></section>
+
+<section id="beyond"><div class="w"><div class="k2">Beyond the brief</div><h2>What would make it better than any rebuild</h2>
+<div class="grid3">
+<div class="card"><h3>A product finder</h3><p>Filter the catalogue by system, panel family and use, from the HubDB table. Dealers find the part in two clicks.</p></div>
+<div class="card"><h3>A dealer-only library</h3><p>Pricing sheets, brand assets and training behind memberships, with access recorded on the CRM record.</p></div>
+<div class="card"><h3>Audience-aware pages</h3><p>The same home page, led by ordering and docs for a dealer and by system design for a specifier.</p></div>
+<div class="card"><h3>Product markup at scale</h3><p>Every one of the roughly 400 products carries Product schema from the table, so engines and assistants can read it.</p></div>
+<div class="card"><h3>Questions answered on the page</h3><p>FAQ blocks on the eight system pages, written in the words buyers use, with FAQ markup.</p></div>
+<div class="card"><h3>Custom tools when the job needs them</h3><p>A system configurator, a panel and keypad compatibility check, a spec-pack builder or a dealer calculator, built as a custom module or a companion app and kept inside the same site, the same sign-in and the same CRM record. <a href="showcase/configurator.html">See a working preview of the configurator</a> (filter only, not a compatibility matrix).</p></div>
+<div class="card"><h3>Measured against a baseline</h3><p>The September 2026 baseline repeated at 30, 60 and 90 days, with AI-answer tracking added.</p></div></div>
+</div></section>
+
+<section class="alt" id="sources"><div class="w"><div class="k2">Sources, read 9 November 2026</div>
+<ul class="src">
+<li>HubDB limits: developers.hubspot.com/docs/cms/start-building/features/storage/hubdb</li>
+<li>HubDB dynamic pages: developers.hubspot.com/docs/cms/start-building/features/data-driven-content/hubdb/overview</li>
+<li>Page limits and plans: hubspot.com/pricing/content (HubSpot's CMS product is now named Content Hub; legacy CMS Hub subscriptions differ)</li>
+<li>Security and compliance: legal.hubspot.com/security and trust.hubspot.com</li>
+<li>Answer-engine tools: hubspot.com/products/aeo</li>
+<li>Bulk redirects: knowledge.hubspot.com/domains-and-urls/bulk-upload-url-redirects</li>
+<li>Craft pricing, renewals, Cloud and security: craftcms.com/pricing, craftcms.com/cloud, craftcms.com/knowledge-base/security-faq</li>
+<li>dmp.com product and category counts: its XML sitemap. dmp.com runs Craft CMS, shown by its CraftSessionId cookie, and sits behind a Sucuri proxy.</li></ul>
+<p class="src" style="margin-top:12px">Not confirmed: HubSpot's WAF tier and uptime percentage, a cap on redirects, serverless function limits, and which plan tier unlocks memberships. We would confirm each with HubSpot before signing off a design.</p></div></section>
+<div class="w" style="padding-top:22px;padding-bottom:36px"><a href="module-library.html">Module library</a> &middot; <a href="standard.html">Quality standard</a> &middot; <a href="index.html">Back to the three directions</a></div>
+</body></html>

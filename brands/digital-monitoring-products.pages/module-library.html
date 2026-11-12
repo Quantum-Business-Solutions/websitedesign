@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<meta name="description" content="The editor-facing HubSpot modules we would build for the DMP site, what editors can change in each, and which are already previewed in the sample site.">
+<title>Module library | prepared for Digital Monitoring Products</title>
+<link rel="canonical" href="module-library.html">
+<style>
+:root{--bg:#fff;--alt:#f6f4ec;--fg:#16181c;--muted:#555b66;--line:#e4e1d6;--y:#FFD23D;--ink:#846600}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--ink)}h1,h2,h3{font-family:"Open Sans",Inter,system-ui,sans-serif;line-height:1.12;letter-spacing:-.02em;margin:0}
+.top{background:#0c0d0f;color:#fff}.top .w{display:flex;justify-content:space-between;align-items:center;gap:14px;min-height:60px}.top a{color:#fff;text-decoration:none;font-size:15px;min-height:44px;display:inline-flex;align-items:center}
+.w{max-width:1040px;margin:0 auto;padding:0 24px}
+.hero{background:#0c0d0f;color:#fff;padding:64px 0 72px}.hero .k{color:var(--y);font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase}
+.hero h1{font-size:clamp(34px,5vw,56px);margin:16px 0 18px;max-width:820px}.hero h1 em{color:var(--y);font-style:normal}.hero p{font-size:20px;color:#d7d9de;max-width:760px;margin:0}
+section{padding:56px 0;border-bottom:1px solid var(--line)}section.alt{background:var(--alt)}
+.k2{color:var(--ink);font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px}
+h2{font-size:clamp(26px,3.4vw,38px);margin-bottom:14px}h3{font-size:21px;margin:0 0 8px}p{margin:0 0 14px}.lead{font-size:19px;color:var(--muted);max-width:780px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px}.alt .card{background:#fff}
+.card p{color:var(--muted);font-size:16px;margin:0}.card .n{font:800 34px/1 "Open Sans",Inter,sans-serif;color:var(--ink);margin-bottom:10px;display:block}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:26px}.flow div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px}.flow b{display:block;font-size:15px;margin-bottom:4px}.flow span{font-size:14.5px;color:var(--muted)}
+.tw{overflow-x:auto;margin-top:22px;border:1px solid var(--line);border-radius:14px;background:#fff}table{border-collapse:collapse;width:100%;min-width:760px;font-size:15.5px}
+th,td{text-align:left;vertical-align:top;padding:14px 16px;border-bottom:1px solid var(--line)}th{background:#111;color:#fff;font-weight:600;font-size:14px}td:first-child{font-weight:700;width:19%}tr:last-child td{border-bottom:0}
+.tag{display:inline-block;font-size:13px;font-weight:700;border-radius:999px;padding:2px 10px;margin-right:6px;background:#fff3c2;color:#5a4500;border:1px solid #ecd47a}
+.win{background:#eef7ee}.two{display:grid;grid-template-columns:1fr 1fr;gap:26px}ul{margin:10px 0 0;padding-left:20px}li{margin:6px 0}
+.q li{color:var(--fg)}.note{background:#fff8dc;border:1px solid #ecd47a;border-radius:12px;padding:16px 18px;margin-top:22px;font-size:16px}
+.src{font-size:14px;color:var(--muted)}.src li{margin:4px 0;word-break:break-word}
+.jump{background:#fff;border-bottom:1px solid var(--line)}.jump .w{display:flex;flex-wrap:wrap;gap:6px 18px;padding-top:12px;padding-bottom:12px}.jump a{font-size:14.5px;font-weight:600;text-decoration:none;min-height:32px;display:inline-flex;align-items:center}.jump a:hover{text-decoration:underline}
+.st{display:inline-block;font-size:13px;font-weight:700;border-radius:999px;padding:2px 10px;background:#e8f1e8;color:#1f4d22;border:1px solid #b9d6b9;white-space:nowrap}.st.pl{background:#f0f0f0;color:#444;border-color:#d4d4d4}
+.tc{margin-top:22px}.tw.tc table{min-width:880px}td.s{width:auto}.mini{font-size:14.5px;color:var(--muted)}.steps{counter-reset:s;list-style:none;padding:0;margin:20px 0 0}.steps li{counter-increment:s;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px 16px 58px;position:relative;margin:10px 0}.steps li:before{content:counter(s);position:absolute;left:16px;top:14px;width:28px;height:28px;border-radius:50%;background:var(--y);color:#111;font-weight:800;display:flex;align-items:center;justify-content:center}.steps b{display:block}
+section[id]{scroll-margin-top:8px}
+@media(max-width:860px){.grid3,.two{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}section{padding:40px 0}.hero{padding:44px 0 52px}}
+@media(max-width:520px){.flow{grid-template-columns:1fr}}
+</style></head><body>
+<header class="top"><div class="w"><span>Quantum Business Solutions for Digital Monitoring Products</span><a href="hubspot-build.html">&larr; Back to Why HubSpot</a></div></header>
+<div class="hero"><div class="w"><div class="k">Module library</div>
+<h1>What your team can change, <em>without a developer</em>.</h1>
+<p>Each block in the sample site becomes a HubSpot module we build once. Editors change the content listed below. Layout and behaviour stay consistent because a developer owns them.</p></div></div>
+<section><div class="w"><div class="k2">Editor-facing modules</div><h2>19 modules</h2>
+<p class="lead">Status shows whether the module is already previewed in the sample site or is planned for the build. Nothing here is built in HubSpot yet.</p>
+<div class="tw tc" tabindex="0" role="region" aria-label="Module library"><table>
+<thead><tr><th scope="col">Module</th><th scope="col">What editors can change</th><th scope="col">Status</th></tr></thead><tbody>
+<tr><td>Hero with video</td><td>Headline, supporting line, buttons, background video or image, poster frame.</td><td><span class="st">Previewed in the sample site</span></td></tr>
+<tr><td>Product stage</td><td>Featured product, image, short copy and the link to its page; choice of product from the Products table.</td><td><span class="st">Previewed in the sample site</span></td></tr>
+<tr><td>Finder</td><td>Which filters show (system, category, use), default filter, result card fields.</td><td><span class="st">Previewed in the sample site</span></td></tr>
+<tr><td>3D carousel</td><td>Which items appear, their order, captions and links.</td><td><span class="st">Previewed in the sample site</span></td></tr>
+<tr><td>Explorer</td><td>Tabs or hotspots, the text and image behind each, the link out.</td><td><td>Explorer</td><td>Tabs or hotspots, the text and image behind each, the link out.</td><td><span class="st">Previewed in the sample site</span></td></tr>
+<tr><td>Journey</td><td>Steps in the flow, each step's title, text and link.</td><td><td>Journey</td><td>Steps in the flow, each step's title, text and link.</td><td><span class="st">Previewed in the sample site</span></td></tr>
+<tr><td>Timeline</td><td>Entries, dates, text and optional image.</td><td><span class="st">Previewed in the sample site</span></td></tr>
+<tr><td>Dealer portal tile grid</td><td>Tiles, labels, icons and destinations, including buy.dmp.com and Marketing Central links.</td><td><span class="st">Previewed in the sample site</span></td></tr>
+<tr><td>Comparison table</td><td>Columns, rows, cell text and which column is highlighted.</td><td><span class="st">Previewed in the sample site</span></td></tr>
+<tr><td>Stats band</td><td>Figures, labels and source notes. Each figure carries a source field so it can be checked.</td><td><span class="st">Previewed in the sample site</span></td></tr>
+<tr><td>FAQ with markup</td><td>Questions and answers, picked from the FAQ library or written on the page; FAQ markup is generated from them.</td><td><span class="st">Previewed in the sample site</span></td></tr>
+<tr><td>Resource cards</td><td>Which documents or posts show, from the Documents table or by hand; card labels.</td><td><span class="st">Previewed in the sample site</span></td></tr>
+<tr><td>Blog post template</td><td>Title, author, date, summary, body, related posts and calls to action.</td><td><span class="st">Previewed in the sample site</span></td></tr>
+<tr><td>Case story template</td><td>Customer, challenge, result, quote, images and the product used. Results need a source or are marked to confirm.</td><td><span class="st">Previewed in the sample site</span></td></tr>
+<tr><td>Call board</td><td>Calls to action, phone number and hours, and the form or link each leads to.</td><td><span class="st">Previewed in the sample site</span></td></tr>
+<tr><td>Form block</td><td>Which HubSpot form, its heading, intro text and thank-you state; the hidden source field is set here.</td><td><td>Form block</td><td>Which HubSpot form, its heading, intro text and thank-you state; the hidden source field is set here.</td><td><span class="st">Previewed in the sample site</span></td></tr>
+<tr><td>Assessment</td><td>Questions, answer options, scoring bands and the result text and next step.</td><td><td>Assessment</td><td>Questions, answer options, scoring bands and the result text and next step.</td><td><span class="st">Previewed in the sample site</span></td></tr>
+<tr><td>Calculator</td><td>Inputs, labels, units and result wording. Formulas are set by a developer, and the numbers are to confirm with DMP.</td><td><td>Calculator</td><td>Inputs, labels, units and result wording. Formulas are set by a developer, and the numbers are to confirm with DMP.</td><td><span class="st">Previewed in the sample site</span></td></tr>
+<tr><td>Cookie consent</td><td>Banner text, categories and the privacy page link. Wording is DMP's to approve.</td><td><td>Cookie consent</td><td>Banner text, categories and the privacy page link. Wording is DMP's to approve.</td><td><span class="st">Previewed in the sample site</span></td></tr>
+</tbody></table></div>
+<div class="note"><b>Header, footer and schema are modules too.</b> HubSpot theme fields accept only simple types, so the navigation, footer and structured data are built as modules (see the lessons on the <a href="hubspot-build.html#lessons">main page</a>). They are not editor-facing here because changes go through a controlled review.</div>
+<p class="mini" style="margin-top:18px"><a href="hubspot-build.html#data-model">The data model</a> &middot; <a href="hubspot-build.html#forms">Forms and routing</a> &middot; <a href="hubspot-build.html">Back to Why HubSpot</a></p>
+</div></section>
+</body></html>

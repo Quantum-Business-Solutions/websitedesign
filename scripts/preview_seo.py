@@ -27,10 +27,10 @@ E = lambda s: html.escape(str(s if s is not None else ""), quote=True)  # noqa: 
 SEV = {"Critical": "#b42318", "High": "#c4320a", "Medium": "#b54708", "Low": "#5b616b"}
 GRADE = {"A": "#1b7f4b", "B": "#3b7d3a", "C": "#b54708", "D": "#c4320a", "F": "#b42318"}
 DONE = {
-    "title_len": "Title cut to 60 characters or fewer", "city": "City added to the title", "meta_len": "Meta description rewritten to length",
+    "title_len": "Title cut to 60 characters or fewer", "topic": "Title names the product or category", "meta_len": "Meta description rewritten to length",
     "h1": "One H1 on the page", "h2": "Copy broken into H2 sections", "question": "A question heading added", "words": "Copy deepened past 300 words",
     "alt": "Alt text on every image", "links": "Ten or more internal links", "faq": "FAQ marked up as FAQPage", "service": "Service or Article schema added",
-    "local": "LocalBusiness schema added", "review": "Review schema waits for the Google review program", "canonical": "Self-referencing canonical",
+    "org": "Organization has address, ContactPoint and sameAs", "review": "Review schema waits for the Google review program", "canonical": "Self-referencing canonical",
     "og": "Branded share image", "form": "Form or tap-to-call number added",
 }
 
@@ -70,11 +70,11 @@ def _gauge(today, build):
         return (f'<svg class="gauge" viewBox="0 0 140 140" role="img" aria-label="Readiness score today {today} of 100">'
                 f'<circle cx="{c}" cy="{c}" r="{r}" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="12"/>{arc(today, "#ffb4a8", 12)}'
                 f'<text x="{c}" y="{c - 4}" text-anchor="middle" font-size="30" font-weight="800" fill="#fff">{today}</text>'
-                f'<text x="{c}" y="{c + 18}" text-anchor="middle" font-size="12" fill="rgba(255,255,255,.8)">of 100 today</text></svg>')
+                f'<text x="{c}" y="{c + 18}" text-anchor="middle" font-size="13" fill="rgba(255,255,255,.8)">of 100 today</text></svg>')
     return (f'<svg class="gauge" viewBox="0 0 140 140" role="img" aria-label="Readiness score today {today} of 100, the build {build} of 100">'
             f'<circle cx="{c}" cy="{c}" r="{r}" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="12"/>{arc(build, "#8fe3b0", 12)}{arc(today, "#ffb4a8", 6)}'
             f'<text x="{c}" y="{c - 4}" text-anchor="middle" font-size="30" font-weight="800" fill="#fff">{build}</text>'
-            f'<text x="{c}" y="{c + 18}" text-anchor="middle" font-size="12" fill="rgba(255,255,255,.8)">from {today} today</text></svg>')
+            f'<text x="{c}" y="{c + 18}" text-anchor="middle" font-size="13" fill="rgba(255,255,255,.8)">from {today} today</text></svg>')
 
 
 def _ring(score, label, sub=""):
@@ -175,10 +175,10 @@ def _scatter(rows, highlight):
     grid = ""
     for i in range(1, 4):
         yy = H - pad - (i / 4) * (H - pad - top)
-        grid += f'<line x1="{pad}" y1="{yy:.1f}" x2="{W - 12}" y2="{yy:.1f}" stroke="var(--line)" stroke-dasharray="3 4"/><text x="{pad - 6}" y="{yy + 4:.1f}" text-anchor="end" font-size="11" fill="var(--muted)">{int(mv * i / 4):,}</text>'
+        grid += f'<line x1="{pad}" y1="{yy:.1f}" x2="{W - 12}" y2="{yy:.1f}" stroke="var(--line)" stroke-dasharray="3 4"/><text x="{pad - 6}" y="{yy + 4:.1f}" text-anchor="end" font-size="13" fill="var(--muted)">{int(mv * i / 4):,}</text>'
     for i in range(1, 5):
         xx = pad + (i / 4) * (W - pad - 12)
-        grid += f'<text x="{xx:.1f}" y="{H - pad + 16}" text-anchor="middle" font-size="11" fill="var(--muted)">{int(ma * i / 4)}</text>'
+        grid += f'<text x="{xx:.1f}" y="{H - pad + 16}" text-anchor="middle" font-size="13" fill="var(--muted)">{int(ma * i / 4)}</text>'
     placed = []  # (x, y, label_y, side, name, me)
 
     def span(x, side, name):  # horizontal extent of a label, about 6.6 px a character at 12 px
@@ -205,10 +205,10 @@ def _scatter(rows, highlight):
         lx = x + side * 12
         if abs(ly - y) > 6:
             dots += f'<line x1="{x:.1f}" y1="{y:.1f}" x2="{lx - side * 3:.1f}" y2="{ly - 3:.1f}" stroke="var(--muted)" stroke-width="0.8"/>'
-        dots += f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{9 if me else 6}" fill="{"var(--accent)" if me else "#9aa4b2"}"/><text x="{lx:.1f}" y="{ly + 4:.1f}" font-size="12" text-anchor="{"end" if side < 0 else "start"}" fill="var(--fg)" font-weight="{700 if me else 400}">{E(name)}</text>'
+        dots += f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{9 if me else 6}" fill="{"var(--accent)" if me else "#9aa4b2"}"/><text x="{lx:.1f}" y="{ly + 4:.1f}" font-size="13" text-anchor="{"end" if side < 0 else "start"}" fill="var(--fg)" font-weight="{700 if me else 400}">{E(name)}</text>'
     return (f'<figure class="scatter" aria-label="Authority Score against organic visits a month for the client and its competitors"><figcaption>Authority against visits: who converts links into traffic</figcaption>'
             f'<svg viewBox="0 0 {W} {H}">{grid}<line x1="{pad}" y1="{H - pad}" x2="{W - 12}" y2="{H - pad}" stroke="var(--border)"/><line x1="{pad}" y1="{top}" x2="{pad}" y2="{H - pad}" stroke="var(--border)"/>'
-            f'<text x="{(W + pad) / 2}" y="{H - 8}" text-anchor="middle" font-size="12" fill="var(--muted)">Authority Score</text><text x="14" y="{(H - pad + top) / 2}" text-anchor="middle" font-size="12" fill="var(--muted)" transform="rotate(-90 14 {(H - pad + top) / 2})">Organic visits a month</text>{dots}</svg></figure>')
+            f'<text x="{(W + pad) / 2}" y="{H - 8}" text-anchor="middle" font-size="13" fill="var(--muted)">Authority Score</text><text x="14" y="{(H - pad + top) / 2}" text-anchor="middle" font-size="13" fill="var(--muted)" transform="rotate(-90 14 {(H - pad + top) / 2})">Organic visits a month</text>{dots}</svg></figure>')
 
 
 def _opps(rows, short):
@@ -286,7 +286,7 @@ def _load(content_path):
     aud_p = content_path.replace(".content.json", ".audit.json")
     if not (os.path.exists(seo_p) and os.path.exists(aud_p)):
         return None, None
-    return json.load(open(seo_p, encoding="utf-8")), json.load(open(aud_p, encoding="utf-8"))
+    return json.load(open(seo_p, encoding="utf-8")), A.rescore_legacy(json.load(open(aud_p, encoding="utf-8")))
 
 
 def _tokens(s):
@@ -296,12 +296,16 @@ def _tokens(s):
 def map_pages(live, build_files, seo):
     """old path -> (new file, kind). kind is rebuilt, merged or retired."""
     over = seo.get("redirect_overrides", {})
+    table = seo.get("redirect_table", {})   # content-level map: old path -> [new file, kind], kind rebuilt, merged, retired or gone (410)
     retire = [re.compile(r) for r in seo.get("retire", [])]
     rules = [(re.compile(rx), tgt) for rx, tgt in seo.get("redirect_rules", [])]
     stems = {f: _tokens(f) for f in build_files}
     out = {}
     for p in live:
         path = p["path"]
+        if path in table:
+            out[path] = (table[path][0], table[path][1])
+            continue
         if path in over:
             out[path] = (over[path], "rebuilt" if over[path] not in ("index.html", "blog.html") else "merged")
             continue
@@ -385,10 +389,10 @@ def _cmp_rows(today, build, n_today, n_build):
         ("Pages scoring D or F", frac(today["grade_d_f"], n_today), frac(build["grade_d_f"], n_build)),
         ("Pages with FAQPage schema", frac(today["faq"], n_today), frac(build["faq"], n_build)),
         ("Pages with Service or Article schema", frac(today["service_or_article"], n_today), frac(build["service_or_article"], n_build)),
-        ("Pages with LocalBusiness schema", frac(today["local"], n_today), frac(build["local"], n_build)),
+        ("Pages whose Organization has address, ContactPoint and sameAs", frac(today.get("org_full", 0), n_today), frac(build["org_full"], n_build)),
         ("Pages with a question-form heading", frac(today["question"], n_today), frac(build["question"], n_build)),
         ("Pages under 300 words", frac(today["under_300"], n_today), frac(build["under_300"], n_build)),
-        ("Titles with the city in them", frac(today["city_title"], n_today), frac(build["city_title"], n_build)),
+        ("Titles that name the product or category", frac(today["topic_title"], n_today), frac(build["topic_title"], n_build)),
         ("Pages with an image missing alt text", frac(today["no_alt_pages"], n_today), frac(build["no_alt_pages"], n_build)),
     ]
     return rows
@@ -453,8 +457,8 @@ def report_html(content, seo, audit, build, cmp_rows, base, dslugs, roles_avg, b
     money = [p for p in audit["pages"] if p["type"] in ("service", "industry", "city")]
     money.sort(key=lambda p: p["score"])
     worst_rows = [[_link(p["url"], p["path"]), (f"<span class='sc' style='--g:{GRADE[p['grade']]}'>{p['score']} {p['grade']}</span>", ""), ("yes", "ok") if p["faq"] else (("shown, no schema", "warn") if p.get("faq_visible") else ("no", "bad")), ("yes", "ok") if p["service"] else ("no", "bad"),
-                   ("yes", "ok") if p["question_headings"] else ("no", "bad"), f"{p['words']:,}", ("yes", "ok") if p["checks"]["city"] else ("no", "bad"), "; ".join(p["recommendations"][:2])] for p in money[:24]]
-    worst_tbl = _tbl(["Service, industry and location page", "Score", "FAQPage", "Service schema", "Question heading", "Words", "City in title", "First two fixes"], worst_rows)
+                   ("yes", "ok") if p["question_headings"] else ("no", "bad"), f"{p['words']:,}", ("yes", "ok") if p["checks"]["topic"] else ("no", "bad"), "; ".join(p["recommendations"][:2])] for p in money[:24]]
+    worst_tbl = _tbl(["Service, industry and location page", "Score", "FAQPage", "Service schema", "Question heading", "Words", "Title names topic", "First two fixes"], worst_rows)
 
     def found_do(block):
         found = "".join(f"<li>{E(x)}</li>" for x in block.get("found", []))
@@ -480,10 +484,10 @@ def report_html(content, seo, audit, build, cmp_rows, base, dslugs, roles_avg, b
         p = by_path.get(path)
         if not p:
             continue
-        crawl_rows.append([_link(f"https://{dom}{path}", path), f"{p['title']} ({p['title_len']} chars)", ("yes", "ok") if p["checks"]["city"] else ("no", "bad"), p["meta_len"] or "none", p["h1"] or "none", p["h2_count"],
+        crawl_rows.append([_link(f"https://{dom}{path}", path), f"{p['title']} ({p['title_len']} chars)", ("yes", "ok") if p["checks"]["topic"] else ("no", "bad"), p["meta_len"] or "none", p["h1"] or "none", p["h2_count"],
                            ", ".join(t for t in p["schema"] if t not in ("ListItem", "EntryPoint", "ImageObject", "PropertyValueSpecification", "SearchAction", "ReadAction", "WebPage", "WebSite", "BreadcrumbList")) or "none",
                            ("yes", "ok") if p["faq"] else ("no", "bad"), f"{p['words']:,}"])
-    crawl_tbl = _tbl(["Page", "Title", "City in title", "Meta length", "H1", "H2s", "Schema", "FAQ", "Words"], crawl_rows)
+    crawl_tbl = _tbl(["Page", "Title", "Title names topic", "Meta length", "H1", "H2s", "Schema", "FAQ", "Words"], crawl_rows)
     cp_rows = [[r["domain"], _link(r["url"], r["url"].replace("https://", "").replace("http://", "")), r["title"], f"{r['words']:,}", r["schema"], ("yes", "ok") if r["faq"] else ("no", "bad"), r.get("pricing", "no"), ("yes", "ok") if r.get("reviews") else ("no", "bad"), r.get("form", "no")] for r in seo.get("competitor_pages", [])]
     cp_tbl = _tbl(["Competitor", "Page", "Title", "Words", "Schema", "FAQ", "Pricing", "Reviews", "Form above fold"], cp_rows)
 
@@ -512,10 +516,10 @@ def report_html(content, seo, audit, build, cmp_rows, base, dslugs, roles_avg, b
 .lead{{font-size:18px;color:var(--muted);max-width:760px;margin:0 0 22px}}.hero{{background:var(--navy);color:#fff;padding:64px 0;border-top:0}}.hero .eyebrow{{color:#fff;opacity:.85}}.hero .lead{{color:rgba(255,255,255,.85)}}.hero h1{{color:#fff}}
 .stiles{{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}}.stiles.six{{grid-template-columns:repeat(3,1fr)}}.stile{{background:#fff;border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:12px;padding:18px 20px}}.stile b{{display:block;font-size:34px;line-height:1;letter-spacing:-.02em;color:var(--ink)}}.stile span{{display:block;margin-top:8px;font-size:13.5px;color:var(--muted)}}
 .hero .stile{{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-top:3px solid var(--accent)}}.hero .stile b{{color:#fff}}.hero .stile span{{color:rgba(255,255,255,.8)}}
-.chips{{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 22px}}.chip,.sev{{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--sev);border-radius:999px;padding:4px 10px}}
+.chips{{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 22px}}.chip,.sev{{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--sev);border-radius:999px;padding:4px 10px}}
 .findings{{display:grid;gap:14px}}.finding{{display:grid;grid-template-columns:56px 1fr;gap:16px;background:#fff;border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:12px;padding:20px 22px;box-shadow:0 10px 30px rgba(0,0,0,.05)}}.finding .rank{{font-size:34px;font-weight:800;color:var(--ink);line-height:1}}.finding h3{{margin:8px 0 10px;font-size:20px}}
-.finding dl{{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0}}.finding dt{{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}}.finding dd{{margin:4px 0 0;font-size:15px}}
-.tblwrap{{overflow-x:auto;margin:14px 0 6px}}table{{width:100%;border-collapse:collapse;font-size:14.5px;background:#fff}}th,td{{text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top}}th{{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:#f6f8fa}}code{{font-size:13px;background:#f3f4f6;padding:1px 5px;border-radius:4px}}
+.finding dl{{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0}}.finding dt{{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}}.finding dd{{margin:4px 0 0;font-size:15px}}
+.tblwrap{{overflow-x:auto;margin:14px 0 6px}}table{{width:100%;border-collapse:collapse;font-size:14.5px;background:#fff}}th,td{{text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top}}th{{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:#f6f8fa}}code{{font-size:13px;background:#f3f4f6;padding:1px 5px;border-radius:4px}}
 .ok{{color:#067647;font-weight:700}}.bad{{color:#b42318;font-weight:700}}.na{{color:var(--muted)}}.vol{{color:var(--muted);font-size:13px}}
 .qgrid{{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}}.qcol h3{{margin-top:8px}}ul{{padding-left:18px}}li{{margin:6px 0}}
 .steps{{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}}.step{{background:#fff;border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:12px;padding:16px 18px}}.step .when{{font-weight:700;color:var(--ink);margin-bottom:6px}}.step p{{margin:0;font-size:14.5px}}
@@ -523,21 +527,21 @@ def report_html(content, seo, audit, build, cmp_rows, base, dslugs, roles_avg, b
 .sc{{display:inline-block;color:#fff;background:var(--g);border-radius:6px;padding:2px 8px;font-size:13px;font-weight:700}}
 .verdict{{margin-top:22px;padding:22px 26px;background:var(--navy);color:#fff;border-radius:12px;font-size:18px;line-height:1.5}}
 .lev{{display:grid;gap:14px}}.levi{{display:grid;grid-template-columns:56px 1fr;gap:16px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 22px;box-shadow:0 10px 30px rgba(0,0,0,.05)}}.levi .n{{font-size:34px;font-weight:800;color:var(--ink);line-height:1}}.levi h3{{margin:6px 0 6px;font-size:20px}}.levi .meta{{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 8px;color:var(--muted);font-size:14px;align-items:center}}.levi .tag{{background:color-mix(in srgb,var(--accent) 14%,#fff);color:var(--ink2);border-radius:999px;padding:2px 10px;font-weight:600}}.levi .when{{font-weight:700;color:var(--ink)}}.levi p{{margin:0}}
-.dolist p{{margin:8px 0;padding-left:0}}.dolist .when{{display:inline-block;min-width:78px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}}
+.dolist p{{margin:8px 0;padding-left:0}}.dolist .when{{display:inline-block;min-width:78px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}}
 .note{{background:#fff;border-left:4px solid var(--accent);padding:12px 18px;color:var(--muted);margin:24px 0 0}}.fine{{font-size:13px;color:var(--muted);margin-top:14px}}
 .btn{{display:inline-block;background:var(--accent);color:#000;padding:12px 20px;border-radius:999px;font-weight:600;text-decoration:none}}
-.cmpbox{{margin-top:28px;background:var(--navy);color:#fff;border-radius:16px;padding:26px 28px}}.cmpbox h3{{color:#fff;margin:0 0 6px}}.cmpbox p{{color:rgba(255,255,255,.8);margin:0 0 16px}}.cmp-rows{{display:grid;gap:6px}}.cmp-row{{display:grid;grid-template-columns:1.6fr 1fr 40px 1fr;align-items:center;gap:10px;padding:9px 12px;border-radius:10px;background:rgba(255,255,255,.06)}}.cmp-row.head{{background:none;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.7);padding-bottom:0}}.cmp-row .lbl{{font-weight:600}}.cmp-row .today{{color:#ffb4a8;font-weight:700;text-align:right}}.cmp-row .build{{color:#8fe3b0;font-weight:800;font-size:17px}}.cmp-row .arrow{{width:40px;height:2px;background:rgba(255,255,255,.35);justify-self:center;position:relative}}.cmp-row .arrow::after{{content:"";position:absolute;right:-1px;top:-4px;border:5px solid transparent;border-left-color:rgba(255,255,255,.35)}}.cmp-row.head .arrow{{background:none}}.cmp-row.head .arrow::after{{display:none}}
+.cmpbox{{margin-top:28px;background:var(--navy);color:#fff;border-radius:16px;padding:26px 28px}}.cmpbox h3{{color:#fff;margin:0 0 6px}}.cmpbox p{{color:rgba(255,255,255,.8);margin:0 0 16px}}.cmp-rows{{display:grid;gap:6px}}.cmp-row{{display:grid;grid-template-columns:1.6fr 1fr 40px 1fr;align-items:center;gap:10px;padding:9px 12px;border-radius:10px;background:rgba(255,255,255,.06)}}.cmp-row.head{{background:none;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.7);padding-bottom:0}}.cmp-row .lbl{{font-weight:600}}.cmp-row .today{{color:#ffb4a8;font-weight:700;text-align:right}}.cmp-row .build{{color:#8fe3b0;font-weight:800;font-size:17px}}.cmp-row .arrow{{width:40px;height:2px;background:rgba(255,255,255,.35);justify-self:center;position:relative}}.cmp-row .arrow::after{{content:"";position:absolute;right:-1px;top:-4px;border:5px solid transparent;border-left-color:rgba(255,255,255,.35)}}.cmp-row.head .arrow{{background:none}}.cmp-row.head .arrow::after{{display:none}}
 .opts{{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}}.opt{{background:rgba(255,255,255,.1);border-radius:999px;padding:6px 12px;font-size:13.5px}}.opt b{{margin-right:4px}}
 .hero-grid{{display:grid;grid-template-columns:1fr 240px;gap:40px;align-items:center}}.gauge-wrap{{text-align:center}}.gauge{{width:200px;height:200px}}.gauge-wrap p{{font-size:13px;color:rgba(255,255,255,.75);margin:8px 0 0}}
-.bars{{margin:18px 0 26px;padding:18px 20px;background:#fff;border:1px solid var(--line);border-radius:12px}}.bars figcaption{{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:10px}}.bar-row{{display:grid;grid-template-columns:220px 1fr 70px;gap:12px;align-items:center;padding:5px 0;font-size:14px}}.bar-t{{height:10px;background:var(--alt);border-radius:999px;overflow:hidden}}.bar-t i{{display:block;height:100%;background:#9aa4b2;border-radius:999px}}.bar-row.me .bar-t i{{background:var(--accent)}}.bar-row.me .bar-k{{font-weight:700}}.bar-v{{text-align:right;font-variant-numeric:tabular-nums;color:var(--muted)}}
+.bars{{margin:18px 0 26px;padding:18px 20px;background:#fff;border:1px solid var(--line);border-radius:12px}}.bars figcaption{{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:10px}}.bar-row{{display:grid;grid-template-columns:220px 1fr 70px;gap:12px;align-items:center;padding:5px 0;font-size:14px}}.bar-t{{height:10px;background:var(--alt);border-radius:999px;overflow:hidden}}.bar-t i{{display:block;height:100%;background:#9aa4b2;border-radius:999px}}.bar-row.me .bar-t i{{background:var(--accent)}}.bar-row.me .bar-k{{font-weight:700}}.bar-v{{text-align:right;font-variant-numeric:tabular-nums;color:var(--muted)}}
 .donut-band{{padding:28px 0;background:#fff;border-top:0}}.donuts{{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}}.donut{{margin:0;display:grid;grid-template-columns:110px 1fr;gap:14px;align-items:center;padding:14px 16px;border:1px solid var(--line);border-radius:12px}}.donut svg{{width:110px;height:110px}}.donut figcaption b{{display:block;font-size:15px}}.donut figcaption span{{display:block;font-size:13px;color:var(--muted);margin-top:4px}}
-.grades{{margin:22px 0;padding:18px 20px;background:#fff;border:1px solid var(--line);border-radius:12px}}.grades figcaption,.scatter figcaption,.matrix figcaption{{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}}.grades .key i{{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:middle;margin:0 4px 0 10px}}.grades i.t{{background:#ffb4a8}}.grades i.b{{background:#8fe3b0}}.grow{{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;align-items:end}}.gbars{{height:150px;display:flex;align-items:flex-end;gap:6px;justify-content:center;border-bottom:1px solid var(--line);padding:0 10px}}.gbars i{{display:block;width:34px;border-radius:6px 6px 0 0;min-height:2px}}.gbars i.t{{background:#ffb4a8}}.gbars i.b{{background:#8fe3b0}}.gl{{display:block;text-align:center;margin-top:8px;font-size:12px;color:var(--muted)}}.gl b{{display:block;font-size:20px}}
+.grades,.bars,.scatter,.matrix{{overflow-x:auto}}.grades{{margin:22px 0;padding:18px 20px;background:#fff;border:1px solid var(--line);border-radius:12px}}.grades figcaption,.scatter figcaption,.matrix figcaption{{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}}.grades .key i{{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:middle;margin:0 4px 0 10px}}.grades i.t{{background:#ffb4a8}}.grades i.b{{background:#8fe3b0}}.grow{{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;align-items:end}}.gbars{{height:150px;display:flex;align-items:flex-end;gap:6px;justify-content:center;border-bottom:1px solid var(--line);padding:0 10px}}.gbars i{{display:block;width:34px;border-radius:6px 6px 0 0;min-height:2px}}.gbars i.t{{background:#ffb4a8}}.gbars i.b{{background:#8fe3b0}}.gl{{display:block;text-align:center;margin-top:8px;font-size:13px;color:var(--muted)}}.gl b{{display:block;font-size:20px}}
 .scatter{{margin:18px 0 26px;padding:18px 20px;background:#fff;border:1px solid var(--line);border-radius:12px}}.scatter svg{{width:100%;height:auto;max-width:640px;display:block}}
-.bars.opps .bar-row{{grid-template-columns:260px 1fr 70px 110px}}.bar-p b{{font-size:12px;letter-spacing:.04em;text-transform:uppercase}}
-.matrix{{margin:18px 0 26px;padding:18px 20px;background:#fff;border:1px solid var(--line);border-radius:12px}}.mhead,.mrow{{display:grid;grid-template-columns:280px 1fr 70px;gap:14px;align-items:center;padding:6px 0;border-bottom:1px dotted var(--line);font-size:14px}}.mhead{{border-bottom:1px solid var(--line);color:var(--muted);font-size:11px}}.mcells{{display:grid;grid-template-columns:repeat(10,1fr);gap:4px}}.mcells i{{display:block;height:18px;border-radius:4px;background:var(--alt)}}.mcells i.me{{background:var(--accent);box-shadow:0 0 0 2px #fff,0 0 0 3px var(--accent)}}.mcells em{{font-style:normal;text-align:center;display:block}}.mv{{text-align:right;font-weight:700}}.mv:has(+ *){{}}
+.bars.opps .bar-row{{grid-template-columns:260px 1fr 70px 110px}}.bar-p b{{font-size:13px;letter-spacing:.04em;text-transform:uppercase}}
+.matrix{{margin:18px 0 26px;padding:18px 20px;background:#fff;border:1px solid var(--line);border-radius:12px}}.mhead,.mrow{{display:grid;grid-template-columns:280px 1fr 70px;gap:14px;align-items:center;padding:6px 0;border-bottom:1px dotted var(--line);font-size:14px}}.mhead{{border-bottom:1px solid var(--line);color:var(--muted);font-size:13px}}.mcells{{display:grid;grid-template-columns:repeat(10,1fr);gap:4px}}.mcells i{{display:block;height:18px;border-radius:4px;background:var(--alt)}}.mcells i.me{{background:var(--accent);box-shadow:0 0 0 2px #fff,0 0 0 3px var(--accent)}}.mcells em{{font-style:normal;text-align:center;display:block}}.mv{{text-align:right;font-weight:700}}.mv:has(+ *){{}}
 .warn,b.warn{{color:#8a5a00;font-weight:700}}.h3{{font-size:19px;margin:30px 0 8px}}.h4{{font-size:16px;margin:0}}.wrap.wide{{max-width:1200px}}.two{{display:grid;grid-template-columns:1fr 1fr;gap:32px}}.asof{{font-weight:400;color:var(--muted);font-size:13px;margin-left:8px}}
 @media print{{.top,.afilter,.open-build{{display:none!important}}section{{padding:28px 0;break-inside:avoid}}.hero{{background:var(--navy)!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}}.pg{{break-inside:avoid}}.pglist{{display:block}}body{{font-size:13px}}h1{{font-size:32px}}h2{{font-size:22px}}}}
-@media(max-width:900px){{.stiles,.stiles.six,.steps,.qgrid,.finding dl{{grid-template-columns:1fr 1fr}}.hero-grid{{grid-template-columns:1fr}}.bar-row,.bars.opps .bar-row{{grid-template-columns:1fr 60px 90px}}.bar-t{{grid-column:1/-1}}.donuts{{grid-template-columns:1fr}}.grow{{gap:8px}}.gbars i{{width:22px}}.mhead,.mrow{{grid-template-columns:1fr 60px}}.mcells{{grid-column:1/-1}}}}@media(max-width:600px){{.stiles,.stiles.six,.steps,.qgrid,.finding dl{{grid-template-columns:1fr}}.finding,.levi{{grid-template-columns:40px 1fr}}.cmpbox{{padding:20px 16px}}.cmp-row{{grid-template-columns:1fr 1fr;gap:4px}}.cmp-row.head{{display:none}}.cmp-row .lbl{{grid-column:1/-1}}.cmp-row .arrow{{display:none}}.cmp-row .today{{text-align:left}}.cmp-row .today::before{{content:"Today";display:block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.65)}}.cmp-row .build::before{{content:"The build";display:block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.65)}}}}.cmp-row>span{{min-width:0;overflow-wrap:anywhere}}
+@media(max-width:900px){{.stiles,.stiles.six,.steps,.qgrid,.finding dl{{grid-template-columns:1fr 1fr}}.hero-grid{{grid-template-columns:1fr}}.bar-row,.bars.opps .bar-row{{grid-template-columns:1fr 60px 90px}}.bar-t{{grid-column:1/-1}}.donuts{{grid-template-columns:1fr}}.grow{{gap:8px}}.gbars i{{width:22px}}.mhead,.mrow{{grid-template-columns:1fr 60px}}.mcells{{grid-column:1/-1}}}}@media(max-width:600px){{.stiles,.stiles.six,.steps,.qgrid,.finding dl{{grid-template-columns:1fr}}.finding,.levi{{grid-template-columns:40px 1fr}}.cmpbox{{padding:20px 16px}}.cmp-row{{grid-template-columns:1fr 1fr;gap:4px}}.cmp-row.head{{display:none}}.cmp-row .lbl{{grid-column:1/-1}}.cmp-row .arrow{{display:none}}.cmp-row .today{{text-align:left}}.cmp-row .today::before{{content:"Today";display:block;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.65)}}.cmp-row .build::before{{content:"The build";display:block;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.65)}}}}.cmp-row>span{{min-width:0;overflow-wrap:anywhere}}
 {PKG_CSS}</style></head>
 <body data-first-dir="{E(dslugs[0]) if dslugs else ""}">
 <header class="top">{'<span>Search and AI answer analysis</span>' if solo else '<a href="index.html">&larr; Back to the three directions</a>'}<span>Quantum Business Solutions for {E(client)}</span></header><main>
@@ -574,10 +578,11 @@ def _every_section(sec_id, audit, seo, build_by_path, mapping, cmp_rows, roles_a
     eight = _stiles([(s["avg_score"], "average readiness score out of 100"), (f"{s['grade_b_plus']} of {n}", "pages scoring B or better"), (f"{s['grade_d_f']} of {n}", "pages scoring D or F"),
                      (f"{s['faq']} of {n}", "pages with FAQPage schema"), (f"{s['service_or_article']} of {n}", "pages with Service or Article schema"), (s["review"], "pages with Review or rating schema"),
                      (f"{s['question']} of {n}", "pages with a question-form heading"), (f"{s['under_300']} of {n}", "pages under 300 words")], "eight")
+    eight += '<p class="pv-scorenote">Scores are from our own checks (16 checks). We will also run Lighthouse and Google Rich Results Test on the real build and send the raw files.</p>'
     cmp_box = "".join(f'<div class="cmp-row"><span class="lbl">{E(l)}</span><span class="today">{E(t)}</span><span class="arrow" aria-hidden="true"></span><span class="build">{E(bd)}</span></div>' for l, t, bd in cmp_rows)
     opts = "".join(f'<span class="opt"><b>{E(d.title())}</b> {E(v)}</span>' for d, v in roles_avg)
     solo = build_by_path is None  # analysis only, no build to compare against
-    kinds = {"rebuilt": 0, "merged": 0, "retired": 0, "migrated": 0}
+    kinds = {"rebuilt": 0, "merged": 0, "retired": 0, "migrated": 0, "gone": 0}
     for _, k in (mapping or {}).values():
         kinds[k] += 1
     migrated = f", {kinds['migrated']} posts migrate to the blog at launch under their service line" if kinds["migrated"] else ""
@@ -623,14 +628,14 @@ def _every_section(sec_id, audit, seo, build_by_path, mapping, cmp_rows, roles_a
         bent = (bp or {}).get("entity") or {}
         # the two dimensions overlap on one point: skip the entity wording when the readiness fix already says it
         ent_recs = [A.ENTITY_FIXES[k] for k in (ent.get("failed") or [])
-                    if not (k == "primary" and ("service" in p["failed"] or "local" in p["failed"]))]
+                    if not (k == "primary" and "service" in p["failed"])]
         did = list(p["recommendations"]) + ent_recs if solo else (
             [DONE[k] for k in p["failed"] if bp and bp["checks"].get(k)]
             + [A.ENTITY_FIXES[k] for k in (ent.get("failed") or []) if bent.get("checks", {}).get(k)
-               and not (k == "primary" and ("service" in p["failed"] or "local" in p["failed"]))])
+               and not (k == "primary" and "service" in p["failed"])])
         if solo and p["type"] == "form":  # a booking or request form is not a page to rank; say so instead of asking for 300 words
-            did = ["Take it out of the index (noindex) and out of the sitemap; keep one booking page per service and redirect the duplicate"] + [r for r in did if r.startswith(("Add the city", "Write a meta", "Give the page"))]
-        if kind == "retired":
+            did = ["Take it out of the index (noindex) and out of the sitemap; keep one booking page per service and redirect the duplicate"] + [r for r in did if r.startswith(("Name the product", "Write a meta", "Give the page"))]
+        if kind in ("retired", "gone"):
             did = []
         if kind == "merged":
             did.insert(0, f"Merged into {tgt}, which carries this page's earning terms")
@@ -638,6 +643,8 @@ def _every_section(sec_id, audit, seo, build_by_path, mapping, cmp_rows, roles_a
             did.insert(0, "Migrated to the blog at launch under its service line, with BlogPosting schema, a named author and a FAQ; the post template below is the model")
         elif kind == "retired":
             did.insert(0, f"Retired; a permanent redirect sends the URL to {tgt}")
+        elif kind == "gone":
+            did.insert(0, "Internal page (intranet or staff notice): returns 410 Gone, with no redirect")
         did_li = "".join(f"<li>{E(x)}</li>" for x in did) or "<li>Nothing to fix on this page</li>"
         bscore = f'<b style="--g:{GRADE[bp["grade"]]}">{bp["score"]}<i>{bp["grade"]}</i></b><span>{fixed} checks fixed</span>' if bp else '<b style="--g:#5b616b">&ndash;</b><span>no page</span>'
         ent_block = ""
@@ -663,7 +670,7 @@ def _every_section(sec_id, audit, seo, build_by_path, mapping, cmp_rows, roles_a
 
     h2 = f"{n} pages today, and what we would do on each" if solo else f"{n} pages today, and the page that replaces each one"
     cmp_block = "" if solo else f'''<div class="cmpbox"><div class="cmphead"><h3 class="h3">The same sixteen checks, run on the build</h3><p>Every recommendation on the cards below is already in place on all three directions. The scores on the right are the build, scored by the same script.</p></div><div class="cmp-rows"><div class="cmp-row head"><span class="lbl"></span><span class="today">{E(dom)} today</span><span class="arrow"></span><span class="build">The build, any direction</span></div>{cmp_box}</div><div class="opts">{opts}</div>
-<p class="fine" style="margin-top:14px">Page for page: {kinds["rebuilt"]} URLs on {E(dom)} map to a rebuilt page, {kinds["merged"]} merge into a stronger page that carries their terms{migrated}, and {kinds["retired"]} retired pages redirect to the nearest page. The 301 map is in the download.</p>
+<p class="fine" style="margin-top:14px">Page for page: {kinds["rebuilt"]} URLs on {E(dom)} map to a rebuilt page, {kinds["merged"]} merge into a stronger page that carries their terms{migrated}, and {kinds["retired"]} retired pages redirect to the nearest page{(", and " + str(kinds["gone"]) + " internal pages return 410 Gone") if kinds["gone"] else ""}. The 301 map is in the download.</p>
 <p class="fine">What is deliberately not marked up: Review and AggregateRating. Those wait for the Google review program, because marking up self-published testimonials is against Google&#39;s guidelines and we will not do it. That is the gap between the build and 100.</p></div>'''
     downloads = '<a class="btn small" href="seo-audit-pages.xlsx" download>Download the spreadsheet (Excel)</a><a class="btn small ghost" href="seo-audit-pages.csv" download>CSV</a>' + ("" if solo else '<a class="btn small ghost" href="redirects.csv" download>Redirect map (CSV)</a>')
     audit_html = f'''<section id="{sec_id}"><div class="wrap wide"><p class="eyebrow">Every page on {E(dom)}</p><h2>{h2}</h2><p class="lead">Every URL in the sitemap, fetched {E(date)} and parsed for title, meta description, headings, words, images, links and JSON-LD schema. Each page gets a readiness score out of 100 across sixteen checks, weighted toward what answer engines read: FAQ schema, Service schema, question-form headings and depth. Red is a check the page fails today. {"What we would do about each one is on the right, and every path opens the live page in a new tab." if solo else "The fixes for each page are on the right."}</p>{eight}
@@ -683,27 +690,28 @@ var d0=document.body.getAttribute("data-first-dir")||"";w.querySelectorAll("a.op
 
 PKG_CSS = '''
 .stiles.eight{grid-template-columns:repeat(4,1fr)}
-.fnds{display:grid;gap:12px;margin-top:16px}.fnd{display:grid;grid-template-columns:48px 1fr;gap:14px;background:var(--bg);border:1px solid var(--border);border-left:5px solid var(--accent);border-radius:12px;padding:18px 20px}.fnd .rank{font-size:30px;font-weight:800;color:var(--ink);line-height:1}.fnd h3{margin:6px 0 8px;font-size:19px}.fnd dl{margin:0;display:grid;gap:6px}.fnd dt{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}.fnd dd{margin:2px 0 0;font-size:14.5px}
-.sev{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--sev);border-radius:999px;padding:3px 9px}
+.pv-scorenote{font-size:14.5px;color:var(--muted);margin:14px 0 0;max-width:72ch}
+.fnds{display:grid;gap:12px;margin-top:16px}.fnd{display:grid;grid-template-columns:48px 1fr;gap:14px;background:var(--bg);border:1px solid var(--border);border-left:5px solid var(--accent);border-radius:12px;padding:18px 20px}.fnd .rank{font-size:30px;font-weight:800;color:var(--ink);line-height:1}.fnd h3{margin:6px 0 8px;font-size:19px}.fnd dl{margin:0;display:grid;gap:6px}.fnd dt{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}.fnd dd{margin:2px 0 0;font-size:14.5px}
+.sev{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--sev);border-radius:999px;padding:3px 9px}
 .wrap.wide{max-width:1200px}
 .cmpbox{margin-top:28px;background:var(--chrome);color:#fff;border-radius:16px;padding:26px 28px}.cmpbox .h3,.cmpbox h3{color:#fff;margin:0 0 6px}.cmpbox p{color:rgba(255,255,255,.8);margin:0 0 16px}.cmpbox .fine{color:rgba(255,255,255,.75)}
-.cmp-rows{display:grid;gap:6px}.cmp-row{display:grid;grid-template-columns:1.6fr 1fr 40px 1fr;align-items:center;gap:10px;padding:9px 12px;border-radius:10px;background:rgba(255,255,255,.06)}.cmp-row.head{background:none;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.7);padding-bottom:0}.cmp-row .lbl{font-weight:600}.cmp-row .today{color:#ffb4a8;font-weight:700;text-align:right}.cmp-row .build{color:#8fe3b0;font-weight:800;font-size:17px}.cmp-row .arrow{width:40px;height:2px;background:rgba(255,255,255,.35);justify-self:center;position:relative}.cmp-row .arrow::after{content:"";position:absolute;right:-1px;top:-4px;border:5px solid transparent;border-left-color:rgba(255,255,255,.35)}.cmp-row.head .arrow{background:none}.cmp-row.head .arrow::after{display:none}
+.cmp-rows{display:grid;gap:6px}.cmp-row{display:grid;grid-template-columns:1.6fr 1fr 40px 1fr;align-items:center;gap:10px;padding:9px 12px;border-radius:10px;background:rgba(255,255,255,.06)}.cmp-row.head{background:none;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.7);padding-bottom:0}.cmp-row .lbl{font-weight:600}.cmp-row .today{color:#ffb4a8;font-weight:700;text-align:right}.cmp-row .build{color:#8fe3b0;font-weight:800;font-size:17px}.cmp-row .arrow{width:40px;height:2px;background:rgba(255,255,255,.35);justify-self:center;position:relative}.cmp-row .arrow::after{content:"";position:absolute;right:-1px;top:-4px;border:5px solid transparent;border-left-color:rgba(255,255,255,.35)}.cmp-row.head .arrow{background:none}.cmp-row.head .arrow::after{display:none}
 .opts{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.opt{background:rgba(255,255,255,.1);border-radius:999px;padding:6px 12px;font-size:13.5px}.opt b{margin-right:4px}
 .sitechk{list-style:none;padding:0;margin:8px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:6px 18px}.sitechk li{padding:8px 12px;border:1px solid var(--border);border-radius:10px;font-size:14.5px;background:var(--bg)}.sitechk li b{display:inline-block;min-width:34px;font-weight:800}.sitechk li.ok b{color:#1b7f4b}.sitechk li.bad b{color:#b3261e}
 .afilter{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:26px 0 14px}.afilter input[type=search],.afilter select{font:inherit;font-size:14.5px;padding:9px 12px;border:1px solid var(--border);border-radius:10px;background:var(--bg);color:var(--fg);min-height:44px}.afilter input[type=search]{flex:1;min-width:220px}.afilter label{font-size:14px;display:inline-flex;align-items:center;gap:6px}.afilter #acount{color:var(--muted);font-size:14px;margin-left:auto}.btn.small{padding:9px 14px;font-size:14px}.btn.ghost{background:transparent;border:1px solid var(--accent);color:var(--fg)}
 .pglist{display:grid;gap:12px}.pg{display:grid;grid-template-columns:1.1fr .8fr 2fr 1.2fr;gap:18px;padding:16px 18px;border:1px solid var(--border);border-radius:14px;background:var(--bg)}.pg[hidden]{display:none}
-.pg-id a{color:var(--ink);font-weight:700;text-decoration:none;word-break:break-all}.pg-id small{display:block;color:var(--muted);font-size:12.5px;margin-top:2px}.pg-id .type{display:inline-block;margin-top:8px;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}.schs{display:flex;gap:4px;flex-wrap:wrap;margin-top:8px}.sch{font-size:11.5px;border:1px solid var(--border);border-radius:999px;padding:2px 8px;color:var(--muted)}
-.pg-scores{display:grid;gap:10px;align-content:start}.pg-score .k{display:block;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}.pg-score b{display:inline-block;font-size:30px;line-height:1;color:var(--g);letter-spacing:-.02em}.pg-score b i{font-style:normal;font-size:14px;margin-left:4px;color:#fff;background:var(--g);border-radius:6px;padding:1px 6px;vertical-align:middle}.pg-score span:last-child{display:block;font-size:12.5px;color:var(--muted)}.pg-score.build{padding-top:6px;border-top:1px dashed var(--border)}
-.pg-checks{display:grid;grid-template-columns:1fr 1fr;gap:4px 14px;font-size:12.5px;align-content:start}.pg-checks .legend{grid-column:1/-1;color:var(--muted);font-size:12px;margin-bottom:2px}.pl2{display:grid;grid-template-columns:1fr auto 14px auto;gap:6px;align-items:center;padding:3px 0;border-bottom:1px dotted var(--border)}.pl2 i{font-style:normal;color:var(--muted)}.pl2 b.ok{color:#1b7f4b}.pl2 b.bad{color:#b3261e}.pl2 em,.legend em{display:inline-block;width:12px;height:2px;background:var(--muted);position:relative}.pl2 em::after,.legend em::after{content:"";position:absolute;right:-2px;top:-3px;border:4px solid transparent;border-left-color:var(--muted)}
-.pg-new h4{margin:0 0 6px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}.pg-new .did{margin:0;padding-left:16px;font-size:13.5px}.pg-new .did li{margin:2px 0}.pg-new .open-build{display:inline-block;margin-top:8px;font-size:13.5px;font-weight:600;color:var(--ink)}
+.pg-id a{color:var(--ink);font-weight:700;text-decoration:none;word-break:break-all}.pg-id small{display:block;color:var(--muted);font-size:13px;margin-top:2px}.pg-id .type{display:inline-block;margin-top:8px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}.schs{display:flex;gap:4px;flex-wrap:wrap;margin-top:8px}.sch{font-size:13px;border:1px solid var(--border);border-radius:999px;padding:2px 8px;color:var(--muted)}
+.pg-scores{display:grid;gap:10px;align-content:start}.pg-score .k{display:block;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}.pg-score b{display:inline-block;font-size:30px;line-height:1;color:var(--g);letter-spacing:-.02em}.pg-score b i{font-style:normal;font-size:14px;margin-left:4px;color:#fff;background:var(--g);border-radius:6px;padding:1px 6px;vertical-align:middle}.pg-score span:last-child{display:block;font-size:13px;color:var(--muted)}.pg-score.build{padding-top:6px;border-top:1px dashed var(--border)}
+.pg-checks{display:grid;grid-template-columns:1fr 1fr;gap:4px 14px;font-size:13px;align-content:start}.pg-checks .legend{grid-column:1/-1;color:var(--muted);font-size:13px;margin-bottom:2px}.pl2{display:grid;grid-template-columns:1fr auto 14px auto;gap:6px;align-items:center;padding:3px 0;border-bottom:1px dotted var(--border)}.pl2 i{font-style:normal;color:var(--muted)}.pl2 b.ok{color:#1b7f4b}.pl2 b.bad{color:#b3261e}.pl2 em,.legend em{display:inline-block;width:12px;height:2px;background:var(--muted);position:relative}.pl2 em::after,.legend em::after{content:"";position:absolute;right:-2px;top:-3px;border:4px solid transparent;border-left-color:var(--muted)}
+.pg-new h4{margin:0 0 6px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}.pg-new .did{margin:0;padding-left:16px;font-size:13.5px}.pg-new .did li{margin:2px 0}.pg-new .open-build{display:inline-block;margin-top:8px;font-size:13.5px;font-weight:600;color:var(--ink)}
 .cmp-row>span{min-width:0;overflow-wrap:anywhere}
 .pg.solo{grid-template-columns:1.2fr .9fr 2fr 1.3fr}
 .pg-score.ent b{font-size:22px}.pg-score.ent .arr{display:inline-block;width:14px;height:2px;background:var(--muted);vertical-align:middle;margin:0 2px}
 .bars.ent .bar-row{grid-template-columns:230px 1fr 90px 150px}
-.ring{margin:14px 0 0;display:grid;justify-items:center}.ring svg{width:104px;height:104px}.ring figcaption{text-align:center;margin-top:4px}.ring figcaption b{display:block;font-size:13px;color:#fff}.ring figcaption span{display:block;font-size:12px;color:rgba(255,255,255,.75)}
+.ring{margin:14px 0 0;display:grid;justify-items:center}.ring svg{width:104px;height:104px}.ring figcaption{text-align:center;margin-top:4px}.ring figcaption b{display:block;font-size:13px;color:#fff}.ring figcaption span{display:block;font-size:13px;color:rgba(255,255,255,.75)}
 a.ringlink{text-decoration:none}.pl1{display:grid;grid-template-columns:1fr auto;gap:8px;padding:2px 0;border-bottom:1px dotted var(--border)}.pl1 i{font-style:normal;color:var(--muted)}.pl1 b{font-weight:700;text-align:right}
 b.warn,.warn{color:#8a5a00;font-weight:700}
-@media(max-width:1000px){.pg,.pg.solo{grid-template-columns:1fr 1fr}.pg-checks{grid-column:1/-1}.stiles.eight{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.pg,.pg.solo,.pg-checks,.sitechk{grid-template-columns:1fr}.cmpbox{padding:20px 16px}.cmp-row{grid-template-columns:1fr 1fr;gap:4px}.cmp-row.head{display:none}.cmp-row .lbl{grid-column:1/-1}.cmp-row .arrow{display:none}.cmp-row .today{text-align:left}.cmp-row .today::before{content:"Today ";font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.65);display:block}.cmp-row .build::before{content:"The build ";font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.65);display:block;font-weight:600}}
+@media(max-width:1000px){.pg,.pg.solo{grid-template-columns:1fr 1fr}.pg-checks{grid-column:1/-1}.stiles.eight{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.pg,.pg.solo,.pg-checks,.sitechk{grid-template-columns:1fr}.cmpbox{padding:20px 16px}.cmp-row{grid-template-columns:1fr 1fr;gap:4px}.cmp-row.head{display:none}.cmp-row .lbl{grid-column:1/-1}.cmp-row .arrow{display:none}.cmp-row .today{text-align:left}.cmp-row .today::before{content:"Today ";font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.65);display:block}.cmp-row .build::before{content:"The build ";font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.65);display:block;font-weight:600}}
 '''
 
 
@@ -755,7 +763,7 @@ def to_xlsx(audit, seo, mapping, path):
         return ws
 
     yn = lambda v: "yes" if v else "no"
-    head = ["URL", "Path", "Page type", "Score", "Grade", "Checks failing", "Title", "Title length", "City in title", "Meta description", "Meta length", "H1", "H1 count", "H2 count",
+    head = ["URL", "Path", "Page type", "Score", "Grade", "Checks failing", "Title", "Title length", "Title names topic", "Meta description", "Meta length", "H1", "H1 count", "H2 count",
             "Question headings", "Words", "Images", "Images missing alt", "Internal links", "Canonical", "FAQPage schema", "FAQ shown on page", "Service or Article schema", "LocalBusiness schema", "Review schema", "Schema types", "Noindex", "Form on page",
             "Entity score", "Entity grade", "Schema nodes", "Entity checks failing", "What we would do"]
     if mapping:
@@ -763,7 +771,7 @@ def to_xlsx(audit, seo, mapping, path):
     rows = []
     for p in sorted(audit["pages"], key=lambda x: x["score"]):
         ent = p.get("entity") or {}
-        r = [p["url"], p["path"], p["type"], p["score"], p["grade"], p["issues"], p["title"], p["title_len"], yn(p["checks"]["city"]), p["meta"], p["meta_len"], p["h1"], p["h1_count"], p["h2_count"],
+        r = [p["url"], p["path"], p["type"], p["score"], p["grade"], p["issues"], p["title"], p["title_len"], yn(p["checks"]["topic"]), p["meta"], p["meta_len"], p["h1"], p["h1_count"], p["h2_count"],
              p["question_headings"], p["words"], p["images"], p["images_no_alt"], p["internal_links"], p["canonical"], yn(p["faq"]), yn(p.get("faq_visible")), yn(p["service"] or p["article"]), yn(p["local"]), yn(p["review"]),
              ", ".join(p["schema"]), yn(p["noindex"]), yn(p["has_form"]),
              ent.get("score", ""), ent.get("grade", ""), ent.get("nodes", ""), ", ".join(ent.get("failed") or []),
@@ -798,7 +806,7 @@ def to_xlsx(audit, seo, mapping, path):
     site = audit.get("site") or {}
     sheet("Site checks", ["Check", "Result"], [[k, ("yes" if v is True else "no" if v is False else v)] for k, v in site.items()] + [[t, "yes" if ok else "no"] for ok, t in seo["sitewide"]], [70, 30])
     if mapping:
-        sheet("Redirects", ["Old URL", "New path in the build", "Status", "Kind"], [[p["path"], "/" + mapping[p["path"]][0], 301, mapping[p["path"]][1]] for p in audit["pages"]], [50, 44, 8, 10])
+        sheet("Redirects", ["Old URL", "New path in the build", "Status", "Kind"], [[p["path"], ("/" + mapping[p["path"]][0]) if mapping[p["path"]][1] != "gone" else "", 410 if mapping[p["path"]][1] == "gone" else 301, mapping[p["path"]][1]] for p in audit["pages"]], [50, 44, 8, 10])
     wb.save(path)
 
 
@@ -848,6 +856,7 @@ def write(content, content_path, themes, roles, base, out_dir, slug_of):
     build = builds[first]
     build_by_path = {p["path"]: p for p in build["pages"]}
     build_files = {p["path"].lstrip("/") for p in build["pages"]}
+    seo = dict(seo, redirect_table=content.get("redirects") or {})
     mapping = map_pages(audit["pages"], build_files, seo)
     cmp_rows = _cmp_rows(audit["summary"], build["summary"], audit["count"], build["summary"]["count"])
     roles_avg = [(d, f"{builds[d]['summary']['avg_score']} average, {builds[d]['summary']['grade_a']} of {builds[d]['summary']['count']} A") for d in dslugs]
@@ -862,7 +871,7 @@ def write(content, content_path, themes, roles, base, out_dir, slug_of):
     w.writerow([f"old_url_on_{dom}", "new_path_in_build", "status", "kind"])
     for p in audit["pages"]:
         tgt, kind = mapping[p["path"]]
-        w.writerow([p["path"], "/" + tgt, "301", kind])
+        w.writerow([p["path"], "" if kind == "gone" else "/" + tgt, "410" if kind == "gone" else "301", kind])
     open(os.path.join(out_dir, "redirects.csv"), "w", encoding="utf-8", newline="").write(buf.getvalue())
     json.dump({"first": first, "summaries": {d: builds[d]["summary"] for d in dslugs}}, open(os.path.join(out_dir, "seo-build-scores.json"), "w"), indent=1)
     frags = hub_fragments(content, seo, audit, build_by_path, mapping, cmp_rows, roles_avg, dom, date)

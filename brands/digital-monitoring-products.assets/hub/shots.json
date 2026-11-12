@@ -1,0 +1,95 @@
+{
+ "clean": {
+  "hero-640": [
+   640,
+   400
+  ],
+  "hero-960": [
+   960,
+   600
+  ],
+  "look": {
+   "accent": "#ffd23d",
+   "body_face": "JetBrains Mono",
+   "heading_color": "#0b0d10",
+   "heading_face": "Open Sans",
+   "hero_ground": "#ffffff",
+   "page_ground": "#ffffff",
+   "text_color": "#0b0d10"
+  },
+  "tall-640": [
+   640,
+   1867
+  ],
+  "tall-960": [
+   960,
+   2800
+  ],
+  "type": [
+   488,
+   322
+  ]
+ },
+ "press": {
+  "hero-640": [
+   640,
+   400
+  ],
+  "hero-960": [
+   960,
+   600
+  ],
+  "look": {
+   "accent": "#ffd23d",
+   "body_face": "Inter",
+   "heading_color": "#ffffff",
+   "heading_face": "Playfair Display",
+   "hero_ground": "#14110c",
+   "page_ground": "#f7f4ec",
+   "text_color": "#333630"
+  },
+  "tall-640": [
+   640,
+   1867
+  ],
+  "tall-960": [
+   960,
+   2800
+  ],
+  "type": [
+   720,
+   273
+  ]
+ },
+ "showcase": {
+  "hero-640": [
+   640,
+   400
+  ],
+  "hero-960": [
+   960,
+   600
+  ],
+  "look": {
+   "accent": "#ffd23d",
+   "body_face": "Barlow Condensed",
+   "heading_color": "#f3f2ed",
+   "heading_face": "Barlow Condensed",
+   "hero_ground": "#0a0a0b",
+   "page_ground": "#ffffff",
+   "text_color": "#0b0c0e"
+  },
+  "tall-640": [
+   640,
+   1867
+  ],
+  "tall-960": [
+   960,
+   2800
+  ],
+  "type": [
+   616,
+   338
+  ]
+ }
+}

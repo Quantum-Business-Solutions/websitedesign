@@ -1,0 +1,57 @@
+{
+ "src": "assets/hero-signal-1.mp4",
+ "webm": "assets/hero-signal-1.webm",
+ "poster": "assets/hero-signal-1-poster.jpg",
+ "pages": {
+  "about.html": {
+   "src": "assets/hero-loop-plant.mp4",
+   "webm": "assets/hero-loop-plant.webm",
+   "poster": "assets/hero-loop-plant-poster.jpg"
+  },
+  "locations.html": {
+   "src": "assets/hero-loop-campus.mp4",
+   "webm": "assets/hero-loop-campus.webm",
+   "poster": "assets/hero-loop-campus-poster.jpg"
+  },
+  "services/intrusion.html": {
+   "src": "assets/hero-signal-2.mp4",
+   "webm": "assets/hero-signal-2.webm",
+   "poster": "assets/hero-signal-2-poster.jpg"
+  },
+  "services/access-control.html": {
+   "src": "assets/hero-loop-hq.mp4",
+   "webm": "assets/hero-loop-hq.webm",
+   "poster": "assets/hero-loop-hq-poster.jpg"
+  },
+  "services/fire.html": {
+   "src": "assets/hero-loop-plant.mp4",
+   "webm": "assets/hero-loop-plant.webm",
+   "poster": "assets/hero-loop-plant-poster.jpg"
+  },
+  "services/video.html": {
+   "src": "assets/hero-loop-campus.mp4",
+   "webm": "assets/hero-loop-campus.webm",
+   "poster": "assets/hero-loop-campus-poster.jpg"
+  },
+  "services/communicators.html": {
+   "src": "assets/hero-signal-1.mp4",
+   "webm": "assets/hero-signal-1.webm",
+   "poster": "assets/hero-signal-1-poster.jpg"
+  },
+  "services/wireless.html": {
+   "src": "assets/hero-signal-2.mp4",
+   "webm": "assets/hero-signal-2.webm",
+   "poster": "assets/hero-signal-2-poster.jpg"
+  },
+  "services/panels-keypads.html": {
+   "src": "assets/hero-loop-hq.mp4",
+   "webm": "assets/hero-loop-hq.webm",
+   "poster": "assets/hero-loop-hq-poster.jpg"
+  },
+  "services/mobile-automation.html": {
+   "src": "assets/hero-loop-campus.mp4",
+   "webm": "assets/hero-loop-campus.webm",
+   "poster": "assets/hero-loop-campus-poster.jpg"
+  }
+ }
+}

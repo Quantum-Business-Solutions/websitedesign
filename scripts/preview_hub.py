@@ -41,6 +41,9 @@ def _role(roles, t):
 
 def hub(content, themes, recommend, base, roles, standard, client_tokens, out_dir=None, seo=None):
     import os
+    if not os.environ.get("HUB_V1"):  # the chooser with pictures lives in preview_hub2.py; HUB_V1=1 keeps this page
+        import preview_hub2
+        return preview_hub2.hub(content, themes, recommend, base, roles, standard, client_tokens, out_dir, seo)
     ds_link = '<a href="design-system.html">Design system</a>' if out_dir and os.path.exists(os.path.join(out_dir, "design-system.html")) else ""
     b = content["brand"]
     pitch = content.get("pitch", {})
@@ -121,7 +124,15 @@ def hub(content, themes, recommend, base, roles, standard, client_tokens, out_di
     qc = pitch.get("qbs_contact", {})
     std = ('<a class="alt" href="standard.html" target="_blank" rel="noopener"><h3 class="h4">The Quantum Website Standard</h3>'
            '<p>The ten things every site we build is guaranteed to have at launch, and the evidence you receive for each.</p><span>Open</span></a>') if standard else ""
+    for t_, d_, h_ in pitch.get("more", []):
+        std += (f'<a class="alt" href="{_e(h_)}" target="_blank" rel="noopener"><h3 class="h4">{_e(t_)}</h3><p>{_e(d_)}</p><span>Open</span></a>')
     phone_href = re.sub(r"[^0-9+]", "", qc.get("phone", ""))
+
+    # the bar is always dark here, so use the light logo variant when the build ships one
+    hub_logo = b["logo"]
+    _lt = re.sub(r"(\.\w+)$", r"-light\1", hub_logo)
+    if out_dir and os.path.exists(os.path.join(out_dir, _lt)):
+        hub_logo = _lt
 
     css = f"""
 :root{{--bg:#ffffff;--bg-alt:#f6f7f6;--fg:#1e2420;--muted:#546358;--border:#e2e6e3;--accent:{b["accent"]};--ink:{ink};--chrome:{b.get("chrome_bg", "#111")}}}
@@ -152,7 +163,7 @@ h3,.h3{{font-size:22px;margin:0 0 6px;letter-spacing:-.01em}}h4,.h4{{font-size:1
 .pick{{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}}
 .why{{padding:16px 0;border-top:1px solid var(--border)}}.why:last-of-type{{border-bottom:1px solid var(--border)}}.why p{{margin:4px 0 0;color:var(--muted);font-size:15px}}
 .change{{background:var(--bg-alt);border:1px solid var(--border);border-radius:12px;padding:20px 22px;margin-top:22px;font-size:15px}}
-.alts{{display:grid;grid-template-columns:1fr 1fr;gap:16px}}.alts.single{{grid-template-columns:1fr;max-width:560px}}.alt{{display:block;border:1px solid var(--border);border-radius:12px;padding:20px 22px;text-decoration:none;color:inherit;background:var(--bg-alt)}}.alt:hover{{border-color:var(--accent)}}.alt p{{color:var(--muted);font-size:14.5px;margin:0 0 10px}}.alt span{{font-weight:600;color:var(--ink);font-size:14px}}
+.alts{{display:grid;grid-template-columns:1fr 1fr;gap:16px}}.alts.single{{grid-template-columns:1fr 1fr}}.alt{{display:block;border:1px solid var(--border);border-radius:12px;padding:20px 22px;text-decoration:none;color:inherit;background:var(--bg-alt)}}.alt:hover{{border-color:var(--accent)}}.alt p{{color:var(--muted);font-size:14.5px;margin:0 0 10px}}.alt span{{font-weight:600;color:var(--ink);font-size:14px}}
 .cmp-bar{{display:flex;gap:14px;align-items:center;margin:0 0 18px;flex-wrap:wrap}}select{{font:inherit;font-size:16px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;background:var(--bg);color:var(--fg);min-height:44px}}
 .frames{{display:grid;grid-template-columns:repeat({n},1fr);gap:14px}}.frames figure{{margin:0}}.frames figcaption{{font-size:13px;color:var(--muted);margin:0 0 8px;font-weight:600}}
 .frames .scale{{width:100%;aspect-ratio:1440/1000;overflow:hidden;border:1px solid var(--border);border-radius:12px;background:#fff;position:relative}}
@@ -167,10 +178,10 @@ h3,.h3{{font-size:22px;margin:0 0 6px;letter-spacing:-.01em}}h4,.h4{{font-size:1
 .two{{display:grid;grid-template-columns:1fr 1fr;gap:40px}}
 .stiles{{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}}.stile{{border:1px solid var(--border);border-radius:12px;padding:18px 20px;background:var(--bg-alt)}}.stile b{{display:block;font-size:34px;line-height:1;letter-spacing:-.02em;color:var(--ink)}}.stile span{{display:block;margin-top:8px;font-size:13.5px;color:var(--muted)}}
 .asof{{font-size:13px;color:var(--muted);font-weight:400;margin-left:8px}}
-.tblwrap{{overflow-x:auto;margin-top:14px}}table.seo{{width:100%;border-collapse:collapse;font-size:14.5px}}table.seo th,table.seo td{{text-align:left;padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:top}}table.seo th{{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}}table.seo code{{font-size:13px;background:var(--bg-alt);padding:2px 6px;border-radius:6px}}
+.tblwrap{{overflow-x:auto;margin-top:14px}}table.seo{{width:100%;border-collapse:collapse;font-size:14.5px}}table.seo th,table.seo td{{text-align:left;padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:top}}table.seo th{{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}}table.seo code{{font-size:13px;background:var(--bg-alt);padding:2px 6px;border-radius:6px}}
 @media(max-width:767px){{.stiles{{grid-template-columns:1fr 1fr}}}}
 ul{{margin:0;padding-left:18px}}li{{margin:8px 0;color:var(--fg)}}li::marker{{color:var(--accent)}}
-.plan{{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}}.step{{border-top:2px solid var(--accent);padding-top:12px}}.when{{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);font-weight:700}}.step p{{margin:8px 0 0;font-size:14.5px;color:var(--muted)}}
+.plan{{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:st;position:relative}}.step{{counter-increment:st;position:relative;background:var(--bg-alt);border:1px solid var(--border);border-radius:16px;padding:22px 20px 24px}}.step:before{{content:counter(st);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--accent);color:var(--on-accent,#111);font-weight:800;font-size:16px;margin-bottom:14px}}.when{{display:inline-block;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);font-weight:700;border-bottom:2px solid var(--accent);padding-bottom:3px}}.step p{{margin:12px 0 0;font-size:16px;line-height:1.55;color:var(--fg)}}
 .turn{{background:var(--bg-alt);border:1px solid var(--border);border-radius:14px;padding:28px}}.turn a.btn{{margin:0 12px 12px 0}}
 footer{{padding:36px 0 80px;color:var(--muted);font-size:13.5px;max-width:66ch}}
 select{{max-width:100%}}
@@ -189,16 +200,16 @@ select{{max-width:100%}}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
 <style>{css}{seo["css"] if seo else ""}</style></head><body data-first-dir="{_e(seo["first_dir"]) if seo else ""}">
 <a class="skip" href="#main">Skip to content</a>
-<header class="top"><div class="wrap"><img src="{_e(b["logo"])}" alt="{_e(content["client"])}" height="36" width="99"><nav aria-label="Sections"><a href="#three">The three</a>{'<a href="#pick">Our pick</a>' if recommend else ''}<a href="#compare">Compare</a><a href="#search">Search</a>{seo["nav"] if seo else ""}<a href="#heard">Fixed</a><a href="#confirm">To confirm</a><a href="#every">Every page</a><a href="#plan">The plan</a><a href="#turn">Your turn</a>{ds_link}</nav></div></header>
+<header class="top"><div class="wrap"><img src="{_e(hub_logo)}" alt="{_e(content["client"])}" height="36" width="99"><nav aria-label="Sections"><a href="#three">The three</a>{'<a href="#pick">Our pick</a>' if recommend else ''}<a href="#compare">Compare</a><a href="#search">Search</a>{seo["nav"] if seo else ""}<a href="#heard">Fixed</a><a href="#confirm">To confirm</a><a href="#every">Every page</a><a href="#plan">The plan</a><a href="#turn">Your turn</a>{ds_link}</nav></div></header>
 <main id="main">
 <section><div class="wrap"><p class="eyebrow">Quantum Business Solutions for {_e(content["client"])}</p><h1>Same site. Three ways to design it.</h1>
-<p class="lead">Each one is the whole site, not a home page and two mockups: every page is built and live in all three. The words are the same in all three and the composition is not, so the decision in front of you is about direction, not copy. Open any one, then use the switcher pinned to the bottom of the page to flip between all three without losing your place.</p></div></section>
+<p class="lead">Each one is the whole site, not a home page and two mockups: every page is built and live in all three. The words are the same in all three and the composition is not, so the decision in front of you is about direction, not copy. Open any one, then use the Directions tab at the edge of the page to flip between all three without losing your place.</p></div></section>
 <section id="three"><div class="wrap">{three_head}<div class="dirs">{"".join(specs)}</div>{pick_html}</div></section>
 <section id="compare"><div class="wrap"><p class="eyebrow">Side by side</p><h2>The same page, all three at once</h2><div class="cmp-bar"><label for="cmp">Pick a page</label><select id="cmp">{page_opts}</select></div><p class="cmp-note">Side by side needs a wider screen. On a phone, open each direction from the cards above.</p><div class="frames">{frames}</div></div></section>
 {search_html}
 <section id="heard"><div class="wrap"><div class="two"><div><p class="eyebrow">What we are treating as fixed</p><h2>What your site and brand profile already say</h2><p class="lead" style="margin-bottom:12px">{_e(heard_intro)}</p><ul>{heard}</ul></div><div><p class="eyebrow">What we found</p><h2>And what we would do about it</h2><ul>{found}</ul></div></div></div></section>
 <section id="confirm"><div class="wrap"><p class="eyebrow">To confirm with you</p><h2>Ten things we wrote as a draft, not a fact</h2><p class="lead">Each of these appears on the pages. None is built until you confirm or correct it.</p><ul class="confirm">{confirm}</ul></div></section>
-<section id="every"><div class="wrap"><p class="eyebrow">Every page</p><h2>{len(pages)} pages, built and live in all three</h2><p class="lead">One row per page; the three links open it in each direction.</p><div class="every">{every}</div></div></section>
+<section id="every"><div class="wrap"><p class="eyebrow">Every page</p><h2>{len(pages)} pages, built and live in all three</h2><p class="lead">One row per page; the three links open it in each direction. The preview covers {len(pages)} pages; the remaining product pages generate from one table at build.</p><div class="every">{every}</div></div></section>
 <section id="plan"><div class="wrap"><p class="eyebrow">The plan</p><h2>From a choice to a live site</h2><div class="plan">{plan}</div>{('<div class="alts single" style="margin-top:28px">' + std + '</div>') if std else ""}</div></section>
 <section id="turn"><div class="wrap"><div class="turn"><p class="eyebrow">Your turn</p><h2>Tell us which one, and what you would change</h2><p class="lead" style="margin-bottom:18px">Reply with the direction and anything on any page you would change. Nothing is locked until you say so.</p><a class="btn" href="mailto:{_e(qc.get("email", ""))}?subject={_e(content["client"])}%20website%20direction">Email {_e(qc.get("name", "us"))}</a><a class="btn" style="background:transparent;border:1px solid var(--accent);color:var(--ink)" href="tel:{_e(phone_href)}">Call {_e(qc.get("phone", ""))}</a></div></div></section>
 </main>

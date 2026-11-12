@@ -37,6 +37,19 @@ import themefix  # noqa: E402
 from preview_hub import hub  # noqa: E402
 import preview_sections  # noqa: E402
 import preview_modules  # noqa: E402
+import preview_motion
+import preview_notice  # noqa: E402
+import preview_lift  # noqa: E402
+import preview_cd  # noqa: E402
+import preview_pop2  # noqa: E402
+import preview_pop1  # noqa: E402
+import preview_polish  # noqa: E402
+import preview_pop3  # noqa: E402
+import preview_dw1  # noqa: E402
+import preview_dw2  # noqa: E402
+import preview_vis  # noqa: E402
+import preview_panel  # noqa: E402
+import preview_tools  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DASH_HITS: list[str] = []
@@ -108,7 +121,7 @@ def client_tokens(theme: str, brand: dict) -> tuple[str, dict]:
         b_css = open(os.path.join(reskin.SOURCE_DIR, borrowed, "css", "quantum.css"), encoding="utf-8").read().replace("\u2014", "-")
         type_src = reskin.parse_native(b_css)
         imports = re.findall(r"@import url\([^)]*\);?", b_css)
-        css = "".join(i if i.endswith(";") else i + ";" for i in imports) + "\n" + css
+        css = "".join(i if i.endswith(";") else i + ";" for i in imports) + "\n" + re.sub(r"@import url\([^)]*\);?", "", css)
     for key in ("--q-serif", "--q-sans"):
         face = (type_src.get(key) or "").split(",")[0].strip().strip("'\"").lower()
         if face in FALLBACKS:
@@ -201,7 +214,7 @@ html{scroll-padding-top:130px}
 img{max-width:100%;height:auto}
 .embedded .pv-switch,.embedded .pv-util{display:none}
 .q-skip{position:absolute;top:-200px;left:8px;z-index:100;background:var(--q-gold);color:var(--cta-fg);padding:10px 16px;border-radius:6px;font-weight:600}
-.q-skip:focus{top:8px}
+.q-skip:focus{top:8px}#main:focus{outline:0}
 h1,h2,h3{text-wrap:balance}
 .q-eyebrow{font-size:13px}
 .q-btn,.q-btn-ghost{min-height:44px}
@@ -267,7 +280,7 @@ html{scroll-padding-bottom:72px}
 .pv-cmp table td:first-child,.pv-cmp table th:first-child{position:sticky;left:0;background:var(--bg);z-index:1}
 .pv-cmp-hint{display:none;font-size:13.5px;color:var(--fg-muted);margin:8px 0 0}
 @media(max-width:767px){.pv-cmp-hint{display:block}}
-@media(min-width:1200px){.pv-res.pv-res-5{grid-template-columns:repeat(5,1fr)!important}}
+@media(min-width:1200px){.pv-res.pv-res-5{grid-template-columns:repeat(5,1fr)!important}.pv-res.pv-res-c2{grid-template-columns:repeat(2,1fr)!important}.pv-res.pv-res-c4{grid-template-columns:repeat(4,1fr)!important}}
 @media(max-width:480px){.pv-grid-4{grid-template-columns:1fr!important}}
 .q-msub > summary{white-space:normal}
 .q-header .q-nav > a[aria-current],.q-header .q-nav-item > a[aria-current]{color:var(--chrome-accent)}
@@ -374,7 +387,7 @@ html{scroll-padding-bottom:72px}
 .pv-metric .d{font-size:14px;color:var(--fg-muted);margin-top:6px}
 /* cards */
 .pv-grid{display:grid;gap:20px}
-.pv-grid-2{grid-template-columns:repeat(2,1fr)}.pv-grid-3{grid-template-columns:repeat(3,1fr)}.pv-grid-4{grid-template-columns:repeat(4,1fr)}.pv-grid-5{grid-template-columns:repeat(5,1fr)}
+.pv-grid > *{min-width:0}.pv-grid .q-card{overflow-wrap:break-word}.pv-grid-2{grid-template-columns:repeat(2,1fr)}.pv-grid-3{grid-template-columns:repeat(3,1fr)}.pv-grid-4{grid-template-columns:repeat(4,1fr)}.pv-grid-5{grid-template-columns:repeat(5,1fr)}
 .pv-grid .q-card h3{font-family:var(--q-serif);font-size:22px;margin:0 0 10px;font-weight:600;color:var(--fg)}
 .pv-grid .q-card p{font-size:15px;line-height:1.7;color:var(--fg-muted);margin:0}
 .pv-grid .q-card a{color:var(--fg);font-weight:600;text-decoration:none;display:inline-flex;align-items:center;min-height:44px}
@@ -408,6 +421,7 @@ html{scroll-padding-bottom:72px}
 .q-form .hs-button{min-height:48px;font-size:16px;width:100%}
 .pv-form-note{font-size:13px;color:var(--fg-muted);margin:12px 0 0}
 /* detail */
+.q-lead,.q-container p,.q-container li{overflow-wrap:anywhere}.pv-detail>*,.pv-split>*{min-width:0}.pv-detail p,.pv-detail .body{white-space:pre-line;overflow-wrap:anywhere}
 .pv-detail{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start}
 .pv-detail .q-h2{margin-top:14px}
 .pv-detail ul{margin:22px 0 0;padding-left:20px;color:var(--fg);line-height:1.8;font-size:16px}
@@ -516,7 +530,7 @@ MOBILE_LAST_CSS = r"""
 # ----------------------------------------------------------------------------- sections
 
 def sec_open(s: dict, extra_cls: str = "") -> str:
-    cls = "q-section" + (" q-bg-alt" if s.get("alt") else "") + (" " + extra_cls if extra_cls else "")
+    cls = "q-section" + (" q-bg-alt" if s.get("alt") else "") + (" lf-dark" if s.get("dark") else "") + (" pv-dark" if s.get("stage") else "") + (" " + s["cls"] if s.get("cls") else "") + (" " + extra_cls if extra_cls else "")
     idattr = f' id="{E(s["id"])}"' if s.get("id") else ""
     return f'<section class="{cls}"{idattr}>'
 
@@ -613,7 +627,7 @@ def r_locations(s, ctx):
 
 
 def r_faq(s, ctx):
-    items = "".join(f'<details{" open" if i == 0 else ""}><summary>{E(q)}<span>+</span></summary><p>{E(a)}</p></details>' for i, (q, a) in enumerate(s["items"]))
+    items = "".join(f'<details{" open" if i == 0 else ""}><summary>{E(q)}<span aria-hidden="true">+</span></summary><p>{E(a)}</p></details>' for i, (q, a) in enumerate(s["items"]))
     ld = json.dumps({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in s["items"]]}, ensure_ascii=False)
     return f'{sec_open(s)} <div class="q-container pv-faq" style="max-width:860px"><h2 class="q-h2" style="text-align:center;margin-bottom:36px">{E(s["heading"])}</h2>{items}</div><script type="application/ld+json">{ld}</script></section>'
@@ -638,9 +652,9 @@ def r_detail(s, ctx):
         fields = "".join(f'<label for="{E(s["id"])}-{i}">{E(f)}</label><input id="{E(s["id"])}-{i}" type="text">' for i, f in enumerate(s["form"]["fields"]))
         right = f'<form class="q-form" onsubmit="return false">{fields}<input type="submit" class="hs-button" value="{E(s["form"]["submit"])}"></form>'
     else:
-        right = f'<ul>{bullets}</ul>'
+        right = f'<ul>{bullets}</ul>' if bullets else ""   # no empty <ul></ul> beside a text-only block
         bullets = ""
-    return f'''{sec_open(s)} <div class="q-container pv-detail{" pv-flip" if s.get("flip") else ""}"><div><div class="q-eyebrow">{E(s.get("eyebrow"))}</div><h2 class="q-h2">{E(s["heading"])}</h2><div class="q-lead">{E(s.get("body"))}</div>{f"<ul>{bullets}</ul>" if bullets else ""}</div><div>{right}</div></div></section>'''
+    return f'''{sec_open(s)} <div class="q-container pv-detail{" pv-flip" if s.get("flip") else ""}"><div><div class="q-eyebrow">{E(s.get("eyebrow"))}</div><h2 class="q-h2">{E(s["heading"])}</h2><div class="q-lead">{E(s.get("body"))}</div>{f"<ul>{bullets}</ul>" if bullets else ""}{(f'<p style="margin-top:26px"><a class="q-btn" href="{E(ctx["L"](s["cta"]["href"]))}">{E(s["cta"]["label"])}</a></p>') if s.get("cta") else ""}</div><div>{right}</div></div></section>'''
 
 
 def r_listing(s, ctx):
@@ -677,6 +691,19 @@ RENDER = {"hero": r_hero, "partners": r_partners, "stats": r_stats, "services": 
           "leadform": r_leadform}
 RENDER.update(preview_sections.RENDER_EXTRA)
 RENDER.update(preview_modules.RENDER_EXTRA2)
+RENDER.update(preview_motion.RENDER_EXTRA3)
+RENDER.update(preview_lift.RENDER_EXTRA4)
+RENDER.update(preview_cd.RENDER_CD)
+RENDER.update(preview_pop2.RENDER_POP2)
+RENDER.update(preview_pop1.RENDER_POP1)
+RENDER.update(preview_pop3.RENDER_POP3)
+RENDER.update(preview_dw1.RENDER_DW1)
+RENDER.update(preview_dw2.RENDER_DW2)
+RENDER.update(preview_panel.RENDER_PANEL)
+RENDER.update(preview_tools.RENDER_TOOLS)
+RENDER.update({**__import__("preview_clean").RENDER_CLEAN, **__import__("preview_press").RENDER_PRESS})   # round 3a (DMP Clean and Press)
+RENDER.update({**__import__("preview_night").RENDER_NIGHT, **__import__("preview_scenes").RENDER_SCENES})   # round 2a (DMP Showcase home)
+preview_dw2.wrap(RENDER)
 
 
 # ------------------------------------------------------------------------------ chrome
@@ -723,7 +750,10 @@ def header(content, ctx):
                 panel = f'<div class="q-subnav pv-mega"><div class="pv-mega-in">{cols}{feat}</div><div class="pv-mega-foot"><a href="{E(L(it["href"]))}">All {E(it["label"].lower())}</a></div></div>'
             else:
                 panel = '<div class="q-subnav">' + "".join(f'<a href="{E(L(h))}">{E(l)}</a>' for l, h in it["children"]) + "</div>"
-            nav.append(f'<div class="q-nav-item{" pv-has-mega" if it.get("groups") else ""}"><a href="{E(L(it["href"]))}" aria-haspopup="true"{cur}>{label}<span class="q-caret" aria-hidden="true"></span></a>{panel}</div>')
+            dwm = preview_dw1.mega_panel(it, ctx)
+            if dwm:
+                panel = dwm[0]
+            nav.append(f'<div class="q-nav-item{" pv-has-mega" if it.get("groups") or dwm else ""}"{" data-dwm" if dwm else ""}><a href="{E(L(it["href"]))}" aria-haspopup="true"{cur}>{label}<span class="q-caret" aria-hidden="true"></span></a>{panel}</div>')
             # mobile accordion
             links = ""
             if it.get("groups"):
@@ -732,6 +762,8 @@ def header(content, ctx):
                 links += f'<a href="{E(L(it["href"]))}" class="pv-mall">All {E(it["label"].lower())}</a>'
             else:
                 links = "".join(f'<a href="{E(L(h))}">{E(l)}</a>' for l, h in it["children"])
+            if dwm:
+                links = dwm[1]
             mnav.append(f'<details class="q-msub"{" open" if cur else ""}><summary>{label}<span class="q-caret" aria-hidden="true"></span></summary><div class="q-msub-links">{links}</div></details>')
         else:
             nav.append(f'<a href="{E(L(it["href"]))}"{cur}>{label}</a>')
@@ -744,17 +776,18 @@ def header(content, ctx):
     lw, lh = b.get("logo_w", 300), b.get("logo_h", 100)
     logo = (f'<img src="{E(ctx["rel"](b["logo"]))}" alt="{E(b.get("logo_alt", content["client"]))}" width="{round(40 * lw / lh)}" height="40" loading="eager">'
             if b.get("logo") else f'<span class="q-logo-text">{E(content["client"])}</span>')
-    return f'''<header class="q-header"><a class="q-skip" href="#q-content">Skip to content</a>
+    return f'''<header class="q-header">
 <div class="pv-util"><div class="q-container">{util}</div></div>
 <div class="q-container q-header-in">
   <a href="{E(L("index.html"))}" class="q-header-logo" aria-label="{E(content["client"])} home">{logo}</a>
   <nav class="q-nav" aria-label="Main navigation">{"".join(nav)}{cta}</nav>
-  <details class="q-mnav"><summary aria-label="Open menu"><span></span><span></span><span></span></summary><div class="q-mnav-panel">{mnav_s}{mcta}</div></details>
+  {preview_polish.search_button()}
+  <details class="q-mnav"><summary aria-label="Open menu"><span></span><span></span><span></span></summary><div class="q-mnav-panel">{preview_polish.search_button(True)}{mnav_s}{mcta}</div></details>
 </div></header>
 <div id="q-content" tabindex="-1">'''
 
 
-def crumbs(page, ctx):
+def crumbs(page, ctx, site=""):
     c = page.get("crumbs")
     if not c:
         return ""
@@ -762,11 +795,21 @@ def crumbs(page, ctx):
     for i, (l, h) in enumerate(c):
         last = i == len(c) - 1
         items.append(f'<li>{"<span aria-current=page>" + E(l) + "</span>" if last else f"<a href={chr(34)}{E(ctx[chr(76)](h))}{chr(34)}>{E(l)}</a>"}</li>')
-    ld = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": l} for i, (l, h) in enumerate(c)]}
+    def _u(h):
+        h = h.replace(".html", "")
+        return f"{site}/" if h == "index" else f"{site}/{h}"
+    ld = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": l, "item": _u(h)} for i, (l, h) in enumerate(c)]}
     return f'<nav class="pv-crumbs" aria-label="Breadcrumb"><div class="q-container"><ol>{"".join(items)}</ol></div></nav><script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'
 
 
 def footer(content, ctx):
+    # the bold DMP closing footer is client-specific; every other client keeps the generic footer
+    if content.get("slug") == "digital-monitoring-products":
+        return preview_dw2.footer(content, ctx)
+    return _footer_legacy(content, ctx)
+
+
+def _footer_legacy(content, ctx):
     b = content["brand"]
     lw, lh = b.get("logo_w", 300), b.get("logo_h", 100)
     logo = (f'<img src="{E(ctx["rel"](b["logo"]))}" alt="{E(b.get("logo_alt", content["client"]))}" width="{round(36 * lw / lh)}" height="36" loading="lazy">'
@@ -795,8 +838,9 @@ def switcher(themes, this_theme, page_file, recommend):
         return f'<a href="{up}{slug_of(t)}/{page_file}"{cur}>{E(label)}</a>'
     links = "".join(link(t) for t in themes)
     cur_name = this_theme.replace("Quantum ", "")
-    return (f'<nav class="pv-switch" aria-label="Preview directions"><span class="lbl">Direction</span>{links}<a href="{up}index.html">All three</a></nav>'
-            f'<details class="pv-switch-m"><summary aria-label="Change direction">Direction: {E(cur_name)} &#9662;</summary><nav class="menu" aria-label="Preview directions">{links}<a href="{up}index.html">All three</a></nav></details>'
+    _ic = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>'
+    return (f'<nav class="pv-switch" aria-label="Preview directions"><button type="button" class="pv-sw-tab" aria-expanded="false" aria-label="Directions, now {E(cur_name)}">{_ic}<span>Directions</span></button><div class="pv-sw-list">{links}<a href="{up}index.html">All three</a></div></nav>'
+            f'<details class="pv-switch-m"><summary aria-label="Directions, now {E(cur_name)}">{_ic}Directions</summary><nav class="menu" aria-label="Directions menu">{links}<a href="{up}index.html">All three</a></nav></details>'
             '<script>if(top!==self){document.documentElement.classList.add("embedded")}</script>')
 
 
@@ -836,6 +880,8 @@ def normalize_meta(page, content):
             if city_only:
                 return opts
             return opts + [f"{h} | {client}", f"{h} | {short}"]
+        if sch.get("title_short_brand"):
+            return [f"{h} | {short}"]
         return [f"{h} | {client}", f"{h} | {short}"]
 
     def fit(h, city_only=False):
@@ -865,6 +911,9 @@ def normalize_meta(page, content):
 
     # the service area in the title outranks the full brand name: try city-bearing forms first
     out = shorten(head, city_only=True) if city_tag else None
+    if not out and sch.get("title_no_cut"):
+        # never cut a title mid-phrase: use the full head with the short brand, and let the content carry a shorter page title
+        out = fit(head) or f"{head} | {short}"
     if not out:
         out = shorten(head, city_only=False)
     if not out:
@@ -891,6 +940,15 @@ def normalize_meta(page, content):
     return out, desc, notes
 
 
+def page_image(page):
+    """The first section image on the page (its hero image), as a relative asset path, or ''."""
+    for sec in page.get("sections", []):
+        im = sec.get("image")
+        if isinstance(im, str) and im.startswith("assets/"):
+            return im
+    return ""
+
+
 def schema_blocks(content, page, base, dslug, title=None, description=None):
     """Organization and the headquarters LocalBusiness on every page; WebSite on the home page;
     BreadcrumbList elsewhere; Service on service, industry and product pages; BlogPosting on posts.
@@ -914,19 +972,28 @@ def schema_blocks(content, page, base, dslug, title=None, description=None):
                  ("numberOfEmployees", sch.get("employees")), ("areaServed", sch.get("area_served")), ("slogan", sch.get("slogan"))):
         if v:
             org[k] = {"@type": "ImageObject", "url": v} if k == "logo" else ({"@type": "QuantitativeValue", "value": v} if k == "numberOfEmployees" else v)
+    if sch.get("catalog"):
+        # the organization's real product lines, as an OfferCatalog: [[name, url], ...]
+        org["hasOfferCatalog"] = {"@type": "OfferCatalog", "name": sch.get("catalog_name", "Product lines"),
+                                  "itemListElement": [{"@type": "OfferCatalog", "name": n, "url": (u if u.startswith("http") else f"{site}/{u.replace('.html', '')}")} for n, u in sch["catalog"]]}
     if sch.get("telephone"):
         org["telephone"] = sch["telephone"]
         org["contactPoint"] = {"@type": "ContactPoint", "contactType": "Sales", "telephone": sch["telephone"], "areaServed": "US", "availableLanguage": "English"}
+    if sch.get("contact_points"):
+        # [[contactType, telephone], ...]: one ContactPoint per published line
+        org["contactPoint"] = [{"@type": "ContactPoint", "contactType": ct, "telephone": tel, "areaServed": "US", "availableLanguage": "English"} for ct, tel in sch["contact_points"]]
     local = sch.get("local") or []
     if local:
         hq = local[0]
         org["address"] = {"@type": "PostalAddress", "streetAddress": hq.get("street"), "addressLocality": hq.get("city"), "addressRegion": hq.get("region"), "postalCode": hq.get("postal"), "addressCountry": hq.get("country", "US")}
+        if sch.get("founding_location"):
+            org["foundingLocation"] = {"@type": "Place", "name": sch["founding_location"], "address": dict(org["address"])}
         if len(local) > 1:
             org["subOrganization"] = [{"@id": f"{site}/#local-{l['slug']}"} for l in local[1:]]
     blocks.append(org)
     if page["file"] == "index.html":
         blocks.append({"@context": "https://schema.org", "@type": "WebSite", "@id": f"{site}/#website", "url": site, "name": sch["org_name"], "publisher": {"@id": f"{site}/#organization"}, "inLanguage": "en-US"})
-    if local and "LocalBusiness" not in own:
+    if local and "LocalBusiness" not in own and sch.get("local_business", True):
         hq = local[0]
         lb = {"@context": "https://schema.org", "@type": sch.get("local_type", "LocalBusiness"), "@id": f"{site}/#local-{hq['slug']}", "name": hq.get("name") or sch["org_name"], "url": site,
               "parentOrganization": {"@id": f"{site}/#organization"},
@@ -943,12 +1010,14 @@ def schema_blocks(content, page, base, dslug, title=None, description=None):
         blocks.append(lb)
     if page["file"] != "index.html":
         name = title.split("|")[0].strip()
-        items = [{"@type": "ListItem", "position": 1, "name": "Home", "item": f"{site}/"}]
-        parts = page["file"].split("/")
-        if len(parts) > 1:
-            items.append({"@type": "ListItem", "position": 2, "name": parts[0].replace("-", " ").title(), "item": f"{site}/{parts[0]}"})
-        items.append({"@type": "ListItem", "position": len(items) + 1, "name": name, "item": f"{site}/{page['file'].replace('.html', '')}"})
-        blocks.append({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": items})
+        if not page.get("crumbs"):   # pages with crumbs get their BreadcrumbList from crumbs(): one list per page
+            items = [{"@type": "ListItem", "position": 1, "name": "Home", "item": f"{site}/"}]
+            parts = page["file"].split("/")
+            if len(parts) > 1:
+                parent = (sch.get("crumb_parent_urls") or {}).get(parts[0], parts[0])
+                items.append({"@type": "ListItem", "position": 2, "name": parts[0].replace("-", " ").title(), "item": f"{site}/{parent}"})
+            items.append({"@type": "ListItem", "position": len(items) + 1, "name": name, "item": f"{site}/{page['file'].replace('.html', '')}"})
+            blocks.append({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": items})
         page_url = f"{site}/{page['file'].replace('.html', '')}"
         svc_globs = sch.get("service_globs", ["services/*", "industries/*", "products/*", "brands/*"])
         post_globs = sch.get("post_globs", ["blog/*", "guides/*", "resources/*"])
@@ -959,9 +1028,13 @@ def schema_blocks(content, page, base, dslug, title=None, description=None):
                 svc["areaServed"] = sch["area_served"]
             blocks.append(svc)
         elif any(fnmatch.fnmatch(page["file"], g) for g in post_globs) and not (own & {"BlogPosting", "Article", "NewsArticle"}):
-            post = {"@context": "https://schema.org", "@type": "BlogPosting", "@id": f"{page_url}#article", "headline": name, "description": description, "url": page_url,
-                    "mainEntityOfPage": page_url, "author": {"@id": f"{site}/#person-{(sch.get('people') or [{}])[0].get('slug')}"} if sch.get("people") else {"@id": f"{site}/#organization"},
-                    "publisher": {"@id": f"{site}/#organization"}, "inLanguage": "en-US"}
+            is_news = any(fnmatch.fnmatch(page["file"], g) for g in sch.get("news_globs", []))
+            post = {"@context": "https://schema.org", "@type": "NewsArticle" if is_news else "BlogPosting", "@id": f"{page_url}#article", "headline": name, "description": description, "url": page_url,
+                    "mainEntityOfPage": {"@type": "WebPage", "@id": page_url}, "author": {"@id": f"{site}/#person-{(sch.get('people') or [{}])[0].get('slug')}"} if sch.get("people") else {"@id": f"{site}/#organization"},
+                    "publisher": {"@type": "Organization", "@id": f"{site}/#organization", "name": sch["org_name"], **({"logo": {"@type": "ImageObject", "url": sch["org_logo"]}} if sch.get("org_logo") else {})}, "inLanguage": "en-US"}
+            _img = page_image(page)
+            if _img:
+                post["image"] = f"{site}/{_img}"
             for k, v in (("datePublished", page.get("date")), ("dateModified", page.get("modified") or page.get("date")), ("articleSection", page.get("section"))):
                 if v:
                     post[k] = v
@@ -1031,8 +1104,14 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
     ctx = {"rel": rel, "L": L, "partner_logo": partner_logo, "brand": b, "year": 2026, "srcset": srcset, "file": page["file"],
            "E": E, "RAW": RAW, "sec_open": sec_open, "depth": depth, "client": content.get("client", ""), "client_short": content.get("client", "").split(" ")[0]}
     secs = []
+    _hv = b.get("hero_video")
+    _hvp = (b.get("hero_video_pages") or {}).get(page["file"])
+    if _hvp is not None:
+        _hv = {**(_hv or {}), **_hvp} if _hvp else None   # {} on a page switches the video off there
     for sec in page["sections"]:
         sec = dict(sec)
+        if sec.get("type") == "hero-layered" and _hv and _hv.get("src") and "hv" not in sec:
+            sec["hv"] = _hv
         v = (sec.pop("variants", None) or {}).get(dslug)
         if v:
             sec.update(v)
@@ -1051,8 +1130,12 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
         body = re.sub(r'<a href="mailto:"[^>]*></a>', "", body)
     canonical = f"{base}/{dslug}/" if page["file"] == "index.html" else f"{base}/{dslug}/{page['file']}"
     og_img = f"{base}/assets/hero-og.jpg"
+    _pi = page_image(page) if (content.get("schema") or {}).get("og_per_page") else ""
+    if _pi and os.path.exists(os.path.join(out_dir, _pi)):
+        og_img = f"{base}/{_pi}"
     p_title, p_desc, _notes = normalize_meta(page, content)
     tokcss = "\n  ".join(f"{k}:{v};" for k, v in tok.items())
+    preview_polish.collect(dslug, page, p_title, p_desc, body)
     return f'''<!doctype html>
 <html lang="en" data-dir="{E(dslug)}">
 <head>
@@ -1086,25 +1169,49 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
 {PREVIEW_CSS}
 {preview_sections.EXTRA_CSS}
 {preview_modules.EXTRA_CSS2}
+{preview_motion.EXTRA_CSS3}
+{preview_notice.NOTICE_CSS}
+{preview_lift.EXTRA_CSS4}
+{preview_cd.CD_CSS}
+{preview_pop2.POP2_CSS}
+{preview_pop1.POP1_CSS}
 /* ===== direction system: {E(dslug)} ===== */
 {DIRECTION_CSS.get(dslug, "")}
+/* ===== client heading setting (brand.heading): one headline weight and tracking across the directions ===== */
+{(lambda h: f".q-h1,.q-h2{{font-weight:{h.get('weight', 800)};letter-spacing:{h.get('tracking', '-.03em')};font-style:normal}}" if h else "")(b.get("heading"))}
 /* ===== mobile, after the direction system so it wins ===== */
 {MOBILE_LAST_CSS}
+{preview_polish.POLISH_CSS}
+{preview_pop3.POP3_CSS}
+{preview_dw1.DW1_CSS}
+{preview_dw2.DW2_CSS}
+{preview_vis.VIS_CSS}
 </style>
 {schema_blocks(content, page, base, dslug, p_title, p_desc)}
 {"".join(f'<script type="application/ld+json">{json.dumps(blk, ensure_ascii=False)}</script>' for blk in page.get("schema", []))}
 </head>
 <body>
+<a class="q-skip" href="#main">Skip to content</a>
+<script>{preview_notice.NOTICE_BAR_JS}</script>
 {header(content, ctx)}
-{crumbs(page, ctx)}<main id="main">
+{crumbs(page, ctx, (content.get("schema") or {}).get("org_url") or base)}<main id="main" tabindex="-1">
 {body}
 </main>
 {footer(content, ctx)}
 {preview_sections.RENDER_EXTRA["sticky"](b.get("sticky", {}), ctx) if b.get("sticky") else ""}
 {preview_modules._launcher(b["launcher"], ctx) if b.get("launcher") else ""}
 {switcher(themes, theme, page["file"], recommend)}
+{preview_polish.search_html(ctx)}
 <script>{PREVIEW_JS}</script>
 <script>{preview_modules.DEPTH_JS}</script>
+<script>{preview_motion.MOTION_JS}</script>
+<script>{preview_pop1.POP1_JS}</script>
+<script>{preview_notice.with_contact(preview_notice.NOTICE_JS, content)}</script>
+<script>{preview_polish.POLISH_JS}</script>
+<script>{preview_pop3.POP3_JS}</script>
+<script>{preview_pop2.POP2_JS}</script>
+<script>{preview_dw1.DW1_JS}</script>
+<script>{preview_dw2.DW2_JS}</script>
 </body>
 </html>
 '''
@@ -1122,6 +1229,17 @@ def main(argv=None):
     a = p.parse_args(argv)
 
     content = json.load(open(a.content, encoding="utf-8"))
+    preview_pop2.augment(content)
+    # optional sidecar brands/<slug>.video.json: {"src","webm","poster"} plus {"pages": {"index.html": {...}}}
+    _slug = os.path.basename(a.content).split(".content.")[0]
+    _vp = os.path.join(os.path.dirname(os.path.abspath(a.content)), f"{_slug}.video.json")
+    if os.path.exists(_vp):
+        _v = json.load(open(_vp, encoding="utf-8"))
+        _pages = _v.pop("pages", None)
+        if _v:
+            content["brand"]["hero_video"] = {**(content["brand"].get("hero_video") or {}), **_v}
+        if _pages:
+            content["brand"]["hero_video_pages"] = _pages
     themes = [t.strip() for t in a.themes.split(",") if t.strip()]
     roles = dict(zip(themes, [r.strip() for r in a.roles.split("|")])) if a.roles else {}
     base = a.base_url.rstrip("/")
@@ -1131,8 +1249,12 @@ def main(argv=None):
         d = os.path.join(a.out, slug_of(t)); os.makedirs(d, exist_ok=True)
         for page in content["pages"]:
             doc = render_page(content, page, t, css, tok, themes, a.recommend, base, a.out, slug_of(t))
+            doc = preview_panel.post(doc, content, page, slug_of(t))   # DMP only: panel art direction, system colours
+            doc = preview_tools.post(doc, content, page, slug_of(t))   # DMP only: configurator, keypad page, print spec sheet
+            doc = __import__("preview_press").post(__import__("preview_clean").post(doc, content, page, slug_of(t)), content, page, slug_of(t))   # round 3a, DMP Clean and Press only
             dest = os.path.join(d, page["file"]); os.makedirs(os.path.dirname(dest), exist_ok=True)
             open(dest, "w", encoding="utf-8").write(doc); written += 1
+        preview_polish.write_index(a.out, slug_of(t))
         print(f"  {t:20} {len(content['pages'])} pages  accent {tok['--q-gold']} ink {tok['--accent-ink']} cta-fg {tok['--cta-fg']} chrome {tok['--chrome-bg']}")
     import preview_design  # noqa: E402
     import preview_seo  # noqa: E402

@@ -191,20 +191,42 @@ def _testimonials(s, ctx):
 
 
 def _timeline(s, ctx):
-    """History rail: a line across the years, one card per milestone, optional image, vertical on phones."""
+    """History stage: a dark cinematic band. A line draws across the years and lights each milestone in turn;
+    portrait photo cards (a signal graphic stands in where an item has no photo); one row up to six, vertical on phones."""
     E = ctx["E"]
     tid = s.get("id", "story")
+    items = s["items"]
+    n = len(items)
+    per = n if n <= 6 else -(-n // -(-n // 7))   # one row up to six; otherwise balanced rows of at most seven
     cards = []
-    for i, it in enumerate(s["items"]):
+    for i, it in enumerate(items):
         y, t, d = it[0], it[1], it[2]
-        img = f'<div class="img"><img src="{E(ctx["rel"](it[3]))}" alt="" width="600" height="400" loading="lazy"></div>' if len(it) > 3 and it[3] else ""
-        cards.append(f'<li style="--i:{i}"><span class="dot" aria-hidden="true"></span><div class="y">{E(y)}</div>{img}<h3>{E(t)}</h3><p>{E(d)}</p></li>')
-    n = len(cards)
-    head = f'<div class="pv-center"><div class="q-eyebrow">{E(s.get("eyebrow", ""))}</div><h2 class="q-h2" style="margin-top:22px;max-width:760px">{E(s["heading"])}</h2>{f"<p class=q-lead style=max-width:640px;margin:16px_auto_0>{E(s[chr(105)+chr(110)+chr(116)+chr(114)+chr(111)])}</p>".replace("_", " ") if s.get("intro") else ""}</div>'
-    nav = f'<div class="pv-tl2-nav"><button type="button" data-d="-1" aria-label="Earlier">&larr;</button><button type="button" data-d="1" aria-label="Later">&rarr;</button></div>' if n > 3 else ""
-    js = f"""<script>(function(){{var w=document.getElementById("{tid}-tl");if(!w)return;var r=w.querySelector('ol');w.querySelectorAll('.pv-tl2-nav button').forEach(function(b){{b.addEventListener('click',function(){{r.scrollBy({{left:(+b.getAttribute('data-d'))*Math.min(r.clientWidth*.8,720),behavior:'smooth'}})}})}});
-if('IntersectionObserver' in window){{new IntersectionObserver(function(es){{es.forEach(function(e){{if(e.isIntersecting)w.classList.add('in')}})}},{{threshold:.2}}).observe(w)}}else{{w.classList.add('in')}}}})();</script>"""
-    return f'{ctx["sec_open"](s)} <div class="q-container">{head}<div class="pv-tl2" id="{E(tid)}-tl" data-n="{n}">{nav}<div class="line" aria-hidden="true"><i></i></div><ol tabindex="0" aria-label="{E(s["heading"])}">{"".join(cards)}</ol></div></div>{js}</section>'
+        has = len(it) > 3 and it[3]
+        if has:
+            media = f'<div class="img"><img src="{E(ctx["rel"](it[3]))}" alt="" width="600" height="400" loading="lazy"></div>'
+        elif any(len(o) > 3 and o[3] for o in items):
+            media = '<div class="img ph" aria-hidden="true"><b></b></div>'   # signal graphic keeps the row even
+        else:
+            media = ""
+        lng = " long" if len(str(y)) > 7 else ""
+        cards.append(f'<li class="tl-li{lng}" style="--i:{i % per}"><span class="dot" aria-hidden="true"></span><div class="y">{E(y)}</div><div class="card">{media}<h3>{E(t)}</h3><p>{E(d)}</p></div></li>')
+    rows = [cards[i:i + per] for i in range(0, n, per)]
+    spanb = ""
+    try:   # "1975 to 2025" only when the first and last milestones are plain years
+        y0, y1 = str(items[0][0]).strip(), str(items[-1][0]).strip()
+        if n >= 5 and len(y0) == 4 and len(y1) == 4 and y0.isdigit() and y1.isdigit() and int(y1) - int(y0) >= 10:
+            spanb = f'<div class="tl-span" aria-hidden="true"><b>{y0}</b><i></i><b>{y1}</b><span>{int(y1) - int(y0)} years</span></div>'
+    except Exception:
+        spanb = ""
+    intro = f'<p class="q-lead">{E(s["intro"])}</p>' if s.get("intro") else ""
+    head = f'<div class="pv-center tl-head"><div class="q-eyebrow">{E(s.get("eyebrow", ""))}</div><h2 class="q-h2" style="margin-top:22px;max-width:760px">{E(s["heading"])}</h2>{intro}{spanb}</div>'
+    js = f"""<script>(function(){{var ws=[].slice.call(document.querySelectorAll('[data-tl="{E(tid)}"]'));if(!ws.length)return;
+function on(w){{w.classList.add('in')}}
+if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){{ws.forEach(on);return}}
+var o=new IntersectionObserver(function(es){{es.forEach(function(e){{if(e.isIntersecting||e.boundingClientRect.top<0){{on(e.target);o.unobserve(e.target)}}}})}},{{threshold:0,rootMargin:'0px 0px -12% 0px'}});ws.forEach(function(w){{o.observe(w)}});
+function chk(){{ws.forEach(function(w){{if(w.getBoundingClientRect().top<innerHeight*.9)on(w)}})}}addEventListener('scroll',chk,{{passive:true}});addEventListener('hashchange',chk);setTimeout(chk,900)}})();</script>"""
+    blocks = "".join(f'<div class="pv-tl2 pv-tl2-fit{" has-img" if any("class=\"img" in c for c in r) else ""}" data-tl="{E(tid)}" data-n="{len(r)}" style="--n:{len(r)}"><div class="line" aria-hidden="true"><i></i></div><ol aria-label="{E(s["heading"])}">{"".join(r)}</ol></div>' for r in rows)
+    return f'{ctx["sec_open"](s).replace("class=\"q-section", "class=\"q-section pv-tl-stage", 1)} <div class="q-container tl-wrap">{head}{blocks}</div>{js}</section>'
 
 
 def _tabs(s, ctx):
@@ -244,12 +266,22 @@ def _calculator(s, ctx):
 <script>(function(){{var r=document.getElementById("{cid}");if(!r)return;var d=r.querySelector("#{cid}-d"),m=r.querySelector("#{cid}-m"),c=r.querySelector("#{cid}-c");var f=function(n){{return n.toLocaleString("en-US")}};var $=function(n){{return "$"+Math.round(n).toLocaleString("en-US")}};function u(){{var dv=+d.value,mv=+m.value,cv=+c.value;r.querySelector('output[for="{cid}-d"]').textContent=f(dv);r.querySelector('output[for="{cid}-m"]').textContent=f(mv);r.querySelector('output[for="{cid}-c"]').textContent=f(cv);var pages=(mv*{mono})+(cv*{color});var hours=dv*{labor_min}/60*52;var labor=hours*{labor_rate};var year=pages*12+labor;r.querySelector('[data-out=total]').textContent=$(year)+" / yr";r.querySelector('[data-out=cpp]').textContent="$"+((mv+cv)?(pages/(mv+cv)):0).toFixed(3);r.querySelector('[data-out=hours]').textContent=f(Math.round(hours));r.querySelector('[data-out=save]').textContent=$(year*{saving})+" / yr";r.querySelector('[data-out=orders]').textContent=f(Math.round(dv*6))}}[d,m,c].forEach(function(i){{i.addEventListener("input",u)}});u()}})();</script></section>'''
 
 
+def _proof_size(v):
+    n = len(str(v))
+    if n <= 5:
+        return ""
+    return "font-size:clamp(34px,%.1fvw,%dpx);overflow-wrap:anywhere" % (max(46 / n, 3.2) * 1.0 if False else 96 / n, max(52, int(900 / n)))
+
+
 def _comparison(s, ctx):
     E = ctx["E"]
-    cols = s["columns"]
+    cols = [c if isinstance(c, dict) else {"label": c} for c in s["columns"]]
+    first = "Option"
+    if s["rows"] and len(cols) == len(s["rows"][0]):
+        first, cols = cols[0]["label"], cols[1:]
     head = "".join(f'<th{" class=rec" if c.get("recommended") else ""}>{E(c["label"])}{"<span class=tag>Most common</span>" if c.get("recommended") else ""}</th>' for c in cols)
     rows = "".join("<tr>" + f"<td>{E(row[0])}</td>" + "".join(f"<td>{E(v)}</td>" for v in row[1:]) + "</tr>" for row in s["rows"])
-    return f'{ctx["sec_open"](s)} <div class="q-container"><div class="pv-split"><h2 class="q-h2">{E(s["heading"])}</h2><p>{E(s.get("intro"))}</p></div><div class="pv-cmp" tabindex="0" role="region" aria-label="{E(s["heading"])}"><table><thead><tr><th scope="row">Option</th>{head}</tr></thead><tbody>{rows}</tbody></table></div><p class="pv-cmp-hint">Swipe sideways to compare all three.</p>{f"<p style=font-size:14px;color:var(--fg-muted);margin-top:14px>{E(s[chr(110)+chr(111)+chr(116)+chr(101)])}</p>" if s.get("note") else ""}</div></section>'
+    return f'{ctx["sec_open"](s)} <div class="q-container"><div class="pv-split"><h2 class="q-h2">{E(s["heading"])}</h2><p>{E(s.get("intro"))}</p></div><div class="pv-cmp" tabindex="0" role="region" aria-label="{E(s["heading"])}"><table><thead><tr><th scope="row">{E(first)}</th>{head}</tr></thead><tbody>{rows}</tbody></table></div><p class="pv-cmp-hint">Swipe sideways to see every column.</p>{f"<p style=font-size:14px;color:var(--fg-muted);margin-top:14px>{E(s[chr(110)+chr(111)+chr(116)+chr(101)])}</p>" if s.get("note") else ""}</div></section>'
 
 
 def _checklist(s, ctx):
@@ -263,7 +295,7 @@ def _checklist(s, ctx):
 def _proof(s, ctx):
     E = ctx["E"]
     src = f'<p class="src">{E(s["source"])}</p>' if s.get("source") else ""
-    return f'{ctx["sec_open"](s)} <div class="q-container pv-proof"><div class="q-eyebrow" style="justify-content:center">{E(s.get("eyebrow", ""))}</div><b>{E(s["value"])}</b><p class="q-lead">{E(s["text"])}</p>{src}</div></section>'
+    return f'{ctx["sec_open"](s)} <div class="q-container pv-proof"><div class="q-eyebrow" style="justify-content:center">{E(s.get("eyebrow", ""))}</div><b style="{_proof_size(s["value"])}">{E(s["value"])}</b><p class="q-lead">{E(s["text"])}</p>{src}</div></section>'
 
 
 # North Carolina outline, lon/lat, simplified. Drawn once, projected in _map.
@@ -316,7 +348,7 @@ def _map(s, ctx):
 def _values(s, ctx):
     E = ctx["E"]
     cards = "".join(f'<div class="q-card"><h3>{E(t)}</h3><p>{E(d)}</p></div>' for t, d in s["items"])
-    return f'{ctx["sec_open"](s)} <div class="q-container"><div class="pv-center" style="margin-bottom:40px"><div class="q-eyebrow">{E(s.get("eyebrow"))}</div><h2 class="q-h2" style="margin-top:22px;max-width:760px">{E(s["heading"])}</h2></div><div class="pv-values" style="grid-template-columns:repeat({min(len(s["items"]), 3)},1fr)">{cards}</div></div></section>'
+    return f'{ctx["sec_open"](s)} <div class="q-container"><div class="pv-center" style="margin-bottom:40px"><div class="q-eyebrow">{E(s.get("eyebrow"))}</div><h2 class="q-h2" style="margin-top:22px;max-width:760px">{E(s["heading"])}</h2></div><div class="pv-values" style="grid-template-columns:repeat({(lambda n: 3 if n % 3 == 0 else 2 if n % 2 == 0 else min(n, 3))(len(s["items"]))},1fr)">{cards}</div></div></section>'
 
 
 def _leadership(s, ctx):
@@ -329,13 +361,17 @@ def _leadership(s, ctx):
 
 def _sticky(s, ctx):
     E = ctx["E"]
-    return f'<nav class="pv-sticky" aria-label="Quick actions"><a class="a" href="{E(ctx["L"](s.get("primary_href", "contact.html")))}">{E(s.get("primary", "Request an assessment"))}</a><a class="b" href="{E(s.get("secondary_href", ctx["brand"].get("phone_href", "#")))}">{E(s.get("secondary", "Call"))}</a></nav>'
+    return f'<nav class="pv-sticky" aria-label="Quick actions"><a class="a" href="{E(ctx["L"](s.get("primary_href", "contact.html")))}">{E(s.get("primary", "Request an assessment"))}</a><a class="b" href="{E(ctx["L"](s.get("secondary_href", ctx["brand"].get("phone_href", "#"))))}">{E(s.get("secondary", "Call"))}</a></nav>'
 
 
 def _resources(s, ctx):
     E = ctx["E"]
-    cards = "".join(f'<a class="pv-tilt" href="{E(ctx["L"](h))}"><span class="k">{E(k)}</span><h3>{E(t)}</h3><p>{E(d)}</p><span>{E(l)}</span></a>' for k, t, d, l, h in s["items"])
-    return f'{ctx["sec_open"](s)} <div class="q-container"><div class="pv-split"><h2 class="q-h2">{E(s["heading"])}</h2><p>{E(s.get("intro"))}</p></div><div class="pv-res{" pv-res-5" if len(s["items"]) == 5 else ""}" style="grid-template-columns:repeat({min(len(s["items"]), 3)},1fr)">{cards}</div></div></section>'
+    def _card(it):
+        k, t, d, l, h = it[:5]
+        th = f'<span class="pv-rthumb"><img src="{E(ctx["rel"](it[5]))}" alt="" width="640" height="360" loading="lazy" decoding="async"></span>' if len(it) > 5 and it[5] else ""
+        return f'<a class="pv-tilt{" pv-has-thumb" if th else ""}" href="{E(ctx["L"](h))}">{th}<span class="k">{E(k)}</span><h3>{E(t)}</h3><p>{E(d)}</p><span>{E(l)}</span></a>'
+    cards = "".join(_card(it) for it in s["items"])
+    return f'{ctx["sec_open"](s)} <div class="q-container"><div class="pv-split"><h2 class="q-h2">{E(s["heading"])}</h2><p>{E(s.get("intro"))}</p></div><div class="pv-res{" pv-res-5" if len(s["items"]) == 5 else " pv-res-c2" if len(s["items"]) == 4 else " pv-res-c4" if len(s["items"]) % 4 == 0 and len(s["items"]) % 3 else ""}" style="grid-template-columns:repeat({(lambda n: 3 if n % 3 == 0 else 2 if n % 2 == 0 else min(n, 3))(len(s["items"]))},1fr)">{cards}</div></div></section>'
 
 
 def _article(s, ctx):
