@@ -1,0 +1,16 @@
+{
+ "content": "brands/ramtech-building-systems.content.py",
+ "themes": [
+  "Quantum Showcase",
+  "Quantum Clean",
+  "Quantum Press"
+ ],
+ "recommend": "Quantum Clean",
+ "roles": {
+  "Showcase": "the safe one: big photographs of Ramtech's own buildings, a wheel of the four markets, a drag comparison of site-built and modular sequences",
+  "Clean": "the stretch: a plain, procedural site for the facility manager or procurement lead, with the planning offer, warranty and purchasing routes as checkable lists",
+  "Press": "the wildcard: serif on warm paper, the 1982 Arlington-to-Mansfield story high on the page, an established manufacturer rather than a catalogue"
+ },
+ "base_url": "https://clientcommand.thequantumleap.business/s/a10ce4071306688860d1db6bcc591fa8",
+ "out": "../out-ramtech-building-systems"
+}

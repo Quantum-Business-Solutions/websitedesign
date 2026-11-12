@@ -1,0 +1,2215 @@
+{
+ "client": "Ramtech Building Systems",
+ "slug": "ramtech-building-systems",
+ "domain_hint": "ramtechmodular.com",
+ "brand": {
+  "accent": "#cd2122",
+  "ink_secondary": "#181818",
+  "chrome": "dark",
+  "chrome_bg": "#181818",
+  "logo": "assets/logo.png",
+  "logo_alt": "Ramtech Building Systems",
+  "logo_w": 420,
+  "logo_h": 180,
+  "logo_note": "White wordmark fetched from the live site, so the header and footer sit on a dark ground. Ask for the vector.",
+  "phone": "(817) 473-9376",
+  "phone_href": "tel:+18174739376",
+  "email": "sales@ramtechmodular.com",
+  "utility": [
+   {
+    "label": "Warranty",
+    "href": "about.html#warranty"
+   },
+   {
+    "label": "FAQ",
+    "href": "faq.html"
+   }
+  ],
+  "cta": {
+   "label": "Start with no cost planning",
+   "href": "contact.html"
+  },
+  "sticky": {
+   "primary": "Start with no cost planning",
+   "primary_href": "contact.html",
+   "secondary": "Call Ramtech",
+   "secondary_href": "tel:+18174739376"
+  },
+  "launcher": {
+   "label": "Plan a project",
+   "eyebrow": "The fast lane",
+   "title": "What do you need?",
+   "links": [
+    [
+     "Education",
+     "services/education.html"
+    ],
+    [
+     "Healthcare",
+     "services/healthcare.html"
+    ],
+    [
+     "Commercial",
+     "services/commercial.html"
+    ],
+    [
+     "Government",
+     "services/government.html"
+    ],
+    [
+     "Frequently asked questions",
+     "faq.html"
+    ]
+   ],
+   "note": "A person at the Mansfield plant replies.",
+   "phone": "(817) 473-9376",
+   "phone_href": "tel:+18174739376"
+  },
+  "social": {
+   "facebook": "https://www.facebook.com/RamtechBuildingSystems/",
+   "linkedin": "https://www.linkedin.com/company/ramtech-building-systems-inc-",
+   "youtube": "https://www.youtube.com/user/RamtechGroup",
+   "x": "https://x.com/RamtechModular"
+  },
+  "tagline": "Design-build leader in commercial modular construction since 1982. A direct manufacturer in Mansfield, Texas.",
+  "footer_columns": [
+   {
+    "title": "What we build",
+    "links": [
+     [
+      "Education",
+      "services/education.html"
+     ],
+     [
+      "Healthcare",
+      "services/healthcare.html"
+     ],
+     [
+      "Commercial",
+      "services/commercial.html"
+     ],
+     [
+      "Government",
+      "services/government.html"
+     ],
+     [
+      "Permanent Modular Construction",
+      "services/permanent-modular-construction.html"
+     ],
+     [
+      "Relocatable Modular Buildings",
+      "services/relocatable-modular-buildings.html"
+     ]
+    ]
+   },
+   {
+    "title": "Specialty",
+    "links": [
+     [
+      "Multi-family and student housing",
+      "specialty/multi-family-and-student-housing.html"
+     ],
+     [
+      "SCIF buildings",
+      "specialty/scif-buildings.html"
+     ],
+     [
+      "Disaster recovery",
+      "specialty/disaster-recovery.html"
+     ]
+    ]
+   },
+   {
+    "title": "Company",
+    "links": [
+     [
+      "About",
+      "about.html"
+     ],
+     [
+      "Locations",
+      "locations.html"
+     ],
+     [
+      "FAQ",
+      "faq.html"
+     ],
+     [
+      "Contact",
+      "contact.html"
+     ]
+    ]
+   }
+  ],
+  "legal": [
+   [
+    "Privacy policy",
+    "https://www.ramtechmodular.com/privacy-policy/"
+   ],
+   [
+    "Terms of use",
+    "https://www.ramtechmodular.com/terms-of-service/"
+   ]
+  ]
+ },
+ "schema": {
+  "org_name": "Ramtech Building Systems, Inc.",
+  "org_url": "https://www.ramtechmodular.com/",
+  "org_logo": "https://y4f9m6d2.delivery.rocketcdn.me/wp-content/uploads/2017/11/Ramtech-Logo.png",
+  "org_description": "Design-build leader in commercial modular construction since 1982 and a direct manufacturer of relocatable and permanent modular buildings for education, healthcare, commercial and government buyers in the Southwest, from Mansfield, Texas.",
+  "sameAs": [
+   "https://www.facebook.com/RamtechBuildingSystems/",
+   "https://www.linkedin.com/company/ramtech-building-systems-inc-",
+   "https://www.youtube.com/user/RamtechGroup",
+   "https://x.com/RamtechModular"
+  ],
+  "telephone": "+1-817-473-9376",
+  "founded": "1982",
+  "short_name": "Ramtech",
+  "title_city": "Texas",
+  "cities": [
+   "Mansfield",
+   "Texas",
+   "TX",
+   "Southwest"
+  ],
+  "area_served": [
+   {
+    "@type": "State",
+    "name": "Texas"
+   },
+   {
+    "@type": "State",
+    "name": "Oklahoma"
+   }
+  ],
+  "meta_tail": "Ramtech Building Systems, a modular design-build manufacturer in Mansfield, Texas since 1982.",
+  "local": [
+   {
+    "slug": "mansfield",
+    "name": "Ramtech Building Systems",
+    "street": "1400 US Hwy 287 South",
+    "city": "Mansfield",
+    "region": "TX",
+    "postal": "76063",
+    "telephone": "+1-817-473-9376",
+    "lat": 32.5632,
+    "lon": -97.1417
+   }
+  ]
+ },
+ "nav": [
+  {
+   "label": "What we build",
+   "href": "services.html",
+   "children": [
+    [
+     "Education",
+     "services/education.html"
+    ],
+    [
+     "Healthcare",
+     "services/healthcare.html"
+    ],
+    [
+     "Commercial",
+     "services/commercial.html"
+    ],
+    [
+     "Government",
+     "services/government.html"
+    ],
+    [
+     "Permanent Modular Construction",
+     "services/permanent-modular-construction.html"
+    ],
+    [
+     "Relocatable Modular Buildings",
+     "services/relocatable-modular-buildings.html"
+    ]
+   ]
+  },
+  {
+   "label": "Specialty",
+   "href": "industries.html",
+   "children": [
+    [
+     "Multi-family and student housing",
+     "specialty/multi-family-and-student-housing.html"
+    ],
+    [
+     "SCIF buildings",
+     "specialty/scif-buildings.html"
+    ],
+    [
+     "Disaster recovery",
+     "specialty/disaster-recovery.html"
+    ]
+   ]
+  },
+  {
+   "label": "About",
+   "href": "about.html",
+   "children": [
+    [
+     "About Ramtech",
+     "about.html"
+    ],
+    [
+     "Locations",
+     "locations.html"
+    ],
+    [
+     "FAQ",
+     "faq.html"
+    ],
+    [
+     "Contact",
+     "contact.html"
+    ]
+   ]
+  }
+ ],
+ "pages": [
+  {
+   "file": "index.html",
+   "title": "Ramtech Building Systems | Modular buildings from a Texas design-build manufacturer",
+   "compose": {
+    "showcase": [
+     "hero-light",
+     "partners",
+     "wheel",
+     "ba",
+     "flow",
+     "proof",
+     "story",
+     "faq",
+     "contact"
+    ],
+    "clean": [
+     "hero-light",
+     "partners",
+     "seal",
+     "wheel",
+     "is-this-you",
+     "flow",
+     "story",
+     "faq",
+     "contact"
+    ],
+    "press": [
+     "hero-light",
+     "story",
+     "services",
+     "seal",
+     "proof",
+     "flow",
+     "faq",
+     "contact"
+    ]
+   },
+   "description": "A design-build leader in commercial modular construction since 1982. Direct manufacturer of relocatable and permanent modular buildings, Mansfield, Texas.",
+   "sections": [
+    {
+     "type": "hero",
+     "id": "hero-light",
+     "layout": "split",
+     "eyebrow": "Mansfield, Texas. Modular construction since 1982.",
+     "stats": [
+      [
+       "1982",
+       "Specializing in commercial modular since"
+      ],
+      [
+       "3,500+",
+       "Projects completed"
+      ],
+      [
+       "31",
+       "MBI Awards of Distinction"
+      ],
+      [
+       "20 acres",
+       "Manufacturing site in Mansfield"
+      ]
+     ],
+     "ribbon": [
+      "Modular Building Institute",
+      "BuyBoard",
+      "TIPS",
+      "BBB"
+     ],
+     "variants": {
+      "press": {
+       "stats": null,
+       "ribbon": [
+        "Mansfield, Texas. Since 1982.",
+        "A direct manufacturer",
+        "31 Awards of Distinction"
+       ]
+      }
+     },
+     "heading": "A design-build leader in <em>modular building construction</em>.",
+     "subhead": "Ramtech designs, manufactures and installs relocatable and permanent modular buildings for schools, healthcare providers, government agencies and commercial buyers, with no cost project planning and budgeting to start.",
+     "primary": {
+      "label": "Start with no cost planning",
+      "href": "contact.html"
+     },
+     "secondary": {
+      "label": "See what Ramtech builds",
+      "href": "services.html"
+     },
+     "note": "Photographs are Ramtech's own, from ramtechmodular.com",
+     "image": "assets/hero-main.jpg",
+     "image_alt": "A two-story Ramtech modular building with a red metal roof and brick exterior",
+     "image_w": 1200,
+     "image_h": 800,
+     "badge": {
+      "value": "31",
+      "label": "Modular Building Institute Awards of Distinction"
+     }
+    },
+    {
+     "type": "partners",
+     "id": "partners",
+     "caption": "Affiliations Ramtech shows on its own site.",
+     "items": [
+      "Modular Building Institute",
+      "Better Business Bureau",
+      "BuyBoard",
+      "TIPS"
+     ]
+    },
+    {
+     "type": "seal",
+     "id": "seal",
+     "eyebrow": "What every Ramtech customer gets",
+     "heading": "Not a slogan. A list you can check.",
+     "intro": "Each line is published on ramtechmodular.com.",
+     "items": [
+      [
+       "Direct",
+       "A manufacturer, not a broker",
+       "Ramtech designs, engineers, manufactures and installs its own buildings, from a 20 acre plant in Mansfield, Texas."
+      ],
+      [
+       "One year",
+       "Written warranty",
+       "A full one-year written warranty on every new relocatable or permanent modular building Ramtech manufactures and installs in the continental U.S."
+      ],
+      [
+       "31",
+       "Modular Building Institute Awards of Distinction",
+       "Received since the program started in 1987."
+      ],
+      [
+       "No cost",
+       "Project planning and budgeting",
+       "A floor plan, a site plan, an exterior rendering, outlined specifications and a preliminary budget before any design fee."
+      ],
+      [
+       "Fixed",
+       "A firm fixed price",
+       "Ramtech states the price before any construction activity takes place."
+      ],
+      [
+       "Co-ops",
+       "Buy through a purchasing cooperative",
+       "For schools and government agencies, many buildings are available through the cooperatives Ramtech is a vendor for, including BuyBoard and TIPS."
+      ]
+     ],
+     "source": "Sources: ramtechmodular.com warranty, awards, design-build, procurement options and relocatable purchase options pages."
+    },
+    {
+     "type": "wheel",
+     "id": "wheel",
+     "eyebrow": "What Ramtech builds",
+     "heading": "Four markets, two ways to build",
+     "intro": "Hover a segment. Education, healthcare, commercial and government, in permanent or relocatable construction.",
+     "items": [
+      [
+       "Education",
+       "Portable classrooms to complete permanent campuses for public, private, charter and faith-based schools, colleges and vocational schools.",
+       "services/education.html",
+       "Education"
+      ],
+      [
+       "Healthcare",
+       "Clinics, medical offices, imaging centers and specialty healthcare space, permanent or relocatable, in rural, remote and urban settings.",
+       "services/healthcare.html",
+       "Healthcare"
+      ],
+      [
+       "Commercial",
+       "Offices, industrial, retail and hospitality buildings, from small temporary facilities to large permanent ones.",
+       "services/commercial.html",
+       "Commercial"
+      ],
+      [
+       "Government",
+       "Federal, regional, state and local agencies, from administrative offices and clinics to barracks and correctional facilities.",
+       "services/government.html",
+       "Government"
+      ],
+      [
+       "Permanent Modular Construction",
+       "Two ways to build a permanent modular building: slab-on-grade and pier and beam.",
+       "services/permanent-modular-construction.html",
+       "Permanent Modular Construction"
+      ],
+      [
+       "Relocatable Modular Buildings",
+       "Buildings built 60 to 80 percent complete in the plant, set on a concrete block foundation, and designed to be moved.",
+       "services/relocatable-modular-buildings.html",
+       "Relocatable Modular Buildings"
+      ]
+     ],
+     "hub": "Ramtech",
+     "hub_sub": "design-build",
+     "ring": "MODULAR BUILDINGS FOR THE SOUTHWEST",
+     "panel_eyebrow": "Hover a segment",
+     "link_label": "See the building type"
+    },
+    {
+     "type": "checklist",
+     "id": "is-this-you",
+     "alt": true,
+     "eyebrow": "Is this you?",
+     "heading": "Six signs modular is worth pricing",
+     "intro": "Check what sounds familiar.",
+     "items": [
+      "Enrollment grew faster than the building plan",
+      "A lease on portable buildings is ending",
+      "The space is needed before a site-built schedule can deliver it",
+      "A clinic is needed where there is none",
+      "The budget has to be known before design starts",
+      "The building may need to move someday"
+     ],
+     "messages": [
+      "Check what sounds familiar.",
+      "One is normal.",
+      "Two is worth a conversation.",
+      "Three or more, and the no cost planning step is the place to start."
+     ],
+     "cta_label": "Start with no cost planning",
+     "cta_href": "contact.html"
+    },
+    {
+     "type": "services",
+     "id": "services",
+     "heading": "What Ramtech builds",
+     "intro": "Four markets and two ways to build, each with its own page.",
+     "items": [
+      [
+       "Education",
+       "Portable classrooms to complete permanent campuses for public, private, charter and faith-based schools, colleges and vocational schools.",
+       "services/education.html"
+      ],
+      [
+       "Healthcare",
+       "Clinics, medical offices, imaging centers and specialty healthcare space, permanent or relocatable, in rural, remote and urban settings.",
+       "services/healthcare.html"
+      ],
+      [
+       "Commercial",
+       "Offices, industrial, retail and hospitality buildings, from small temporary facilities to large permanent ones.",
+       "services/commercial.html"
+      ],
+      [
+       "Government",
+       "Federal, regional, state and local agencies, from administrative offices and clinics to barracks and correctional facilities.",
+       "services/government.html"
+      ],
+      [
+       "Permanent Modular Construction",
+       "Two ways to build a permanent modular building: slab-on-grade and pier and beam.",
+       "services/permanent-modular-construction.html"
+      ],
+      [
+       "Relocatable Modular Buildings",
+       "Buildings built 60 to 80 percent complete in the plant, set on a concrete block foundation, and designed to be moved.",
+       "services/relocatable-modular-buildings.html"
+      ]
+     ]
+    },
+    {
+     "type": "flow",
+     "id": "flow",
+     "alt": true,
+     "eyebrow": "How a project runs",
+     "heading": "Four stages, and the first one costs nothing",
+     "intro": "Ramtech describes its design-build process on its own site. Click a stage.",
+     "receive_label": "What you receive",
+     "steps": [
+      {
+       "label": "Plan",
+       "when": "Before any fee",
+       "summary": "A programming meeting, then no cost project planning and budgeting.",
+       "title": "No cost project planning and budgeting",
+       "body": "After an initial programming meeting Ramtech prepares the first set of drawings and a preliminary budget.",
+       "receive": [
+        "A basic floor plan and site plan",
+        "An exterior rendering",
+        "Outlined building specifications",
+        "A preliminary budget"
+       ]
+      },
+      {
+       "label": "Design",
+       "when": "After the budget is approved",
+       "summary": "A more in-depth programming meeting and design review.",
+       "title": "Design and a firm price",
+       "body": "The design phase begins with a fee that Ramtech states rarely exceeds 2 percent of the preliminary budget.",
+       "receive": [
+        "Detailed design",
+        "A firm fixed price before construction begins"
+       ]
+      },
+      {
+       "label": "Build",
+       "when": "Two tracks at once",
+       "summary": "The foundation on your site, the building in the plant.",
+       "title": "Manufacturing and site work together",
+       "body": "Ramtech builds a site-specific foundation while the building sections are manufactured in Mansfield.",
+       "receive": [
+        "Site development",
+        "Building sections made in the plant"
+       ]
+      },
+      {
+       "label": "Set and finish",
+       "when": "Delivery",
+       "summary": "Sections are shipped, set, weathered in and finished out.",
+       "title": "Installation and finish-out",
+       "body": "The sections are set on the foundation and the final finish-out is performed by Ramtech.",
+       "receive": [
+        "A finished building",
+        "A one-year written warranty from occupancy"
+       ]
+      }
+     ]
+    },
+    {
+     "type": "beforeafter",
+     "id": "ba",
+     "eyebrow": "Before and after",
+     "heading": "Drag to compare site-built with the Ramtech sequence",
+     "before": {
+      "eyebrow": "Site-built",
+      "title": "One step, then the next",
+      "body": "On a conventional site-built project, foundation, structure and finishes follow one another in order.",
+      "items": [
+       "Work waits on weather",
+       "More general conditions cost",
+       "Multiple contractors to coordinate"
+      ]
+     },
+     "after": {
+      "eyebrow": "With Ramtech",
+      "title": "Two tracks at once",
+      "body": "At Ramtech the foundation is built on site while the building sections are made in the plant. Ramtech states this is typically 25 to 40 percent faster than site construction.",
+      "items": [
+       "Factory-controlled production",
+       "Up to 10 to 25 percent lower design and construction costs, as Ramtech states",
+       "Design, manufacturing and construction under one roof"
+      ]
+     }
+    },
+    {
+     "type": "proof",
+     "id": "proof",
+     "alt": true,
+     "eyebrow": "Counted, not claimed",
+     "value": "31",
+     "text": "Modular Building Institute Awards of Distinction received since the program started in 1987, for excellence in design, manufacturing and construction.",
+     "source": "Source: ramtechmodular.com/awards"
+    },
+    {
+     "type": "timeline",
+     "id": "story",
+     "eyebrow": "Since 1982",
+     "heading": "From a dealership in Arlington to a 20 acre plant",
+     "intro": "The dates Ramtech publishes. The rest are on the To confirm list.",
+     "items": [
+      [
+       "1982",
+       "Ramtech Modular Design opens",
+       "A small modular dealership in Arlington, Texas, in an industry then controlled by large leasing companies."
+      ],
+      [
+       "The plant",
+       "A direct manufacturer in Mansfield",
+       "Frustrated by the product available for complex projects, Ramtech opened its own manufacturing plant on the 20 acre site it still occupies."
+      ],
+      [
+       "1987",
+       "First Awards of Distinction year",
+       "The Modular Building Institute awards program starts. Ramtech has since received 31."
+      ],
+      [
+       "Today",
+       "More than 3,500 projects",
+       "Ramtech serves on the Texas Industrial Building Code Council and holds leadership positions with the Modular Building Institute."
+      ]
+     ]
+    },
+    {
+     "type": "faq",
+     "id": "faq",
+     "alt": true,
+     "heading": "Questions we get on the first call",
+     "items": [
+      [
+       "How much faster is modular?",
+       "Ramtech states that modular construction is usually 25 to 40 percent faster than site construction, because the foundation and the building are made at the same time."
+      ],
+      [
+       "Is modular as durable as site-built?",
+       "Ramtech states that modular buildings use the same materials and are built to the same codes as site construction, and last as long when maintained."
+      ],
+      [
+       "What does the no cost planning cover?",
+       "A floor plan, a site plan, an exterior rendering, outlined specifications and a preliminary budget, before any design fee."
+      ],
+      [
+       "Can we buy through a purchasing cooperative?",
+       "For schools and government agencies, many buildings are available through the cooperatives Ramtech is a vendor for, including BuyBoard and TIPS."
+      ],
+      [
+       "What is the warranty?",
+       "A full one-year written warranty from the date of occupancy on every new building Ramtech manufactures and installs in the continental U.S."
+      ]
+     ]
+    },
+    {
+     "type": "contact",
+     "id": "contact",
+     "heading": "Start with no cost project planning and budgeting",
+     "body": "Tell us what you are building, where, and when you need it. Call the plant at (817) 473-9376 or send the form.",
+     "options": [
+      "Education",
+      "Healthcare",
+      "Commercial",
+      "Government",
+      "Permanent modular construction",
+      "Relocatable modular buildings",
+      "Multi-family or student housing",
+      "Something else"
+     ],
+     "submit": "Request planning and budgeting",
+     "note": "A person replies, not an autoresponder."
+    }
+   ]
+  },
+  {
+   "file": "services.html",
+   "title": "What We Build | Modular buildings | Ramtech Building Systems",
+   "description": "Education, healthcare, commercial and government buildings, in permanent or relocatable modular construction. Ramtech designs, manufactures and installs.",
+   "sections": [
+    {
+     "type": "hero",
+     "layout": "centered",
+     "eyebrow": "What we build",
+     "heading": "Four markets, <em>two ways to build</em>.",
+     "subhead": "Ramtech designs, manufactures and installs modular buildings for education, healthcare, commercial and government buyers, in permanent or relocatable construction.",
+     "primary": {
+      "label": "Start with no cost planning",
+      "href": "contact.html"
+     }
+    },
+    {
+     "type": "wheel",
+     "id": "wheel",
+     "eyebrow": "What Ramtech builds",
+     "heading": "Hover a segment",
+     "intro": "Each line has its own page.",
+     "items": [
+      [
+       "Education",
+       "Portable classrooms to complete permanent campuses for public, private, charter and faith-based schools, colleges and vocational schools.",
+       "services/education.html",
+       "Education"
+      ],
+      [
+       "Healthcare",
+       "Clinics, medical offices, imaging centers and specialty healthcare space, permanent or relocatable, in rural, remote and urban settings.",
+       "services/healthcare.html",
+       "Healthcare"
+      ],
+      [
+       "Commercial",
+       "Offices, industrial, retail and hospitality buildings, from small temporary facilities to large permanent ones.",
+       "services/commercial.html",
+       "Commercial"
+      ],
+      [
+       "Government",
+       "Federal, regional, state and local agencies, from administrative offices and clinics to barracks and correctional facilities.",
+       "services/government.html",
+       "Government"
+      ],
+      [
+       "Permanent Modular Construction",
+       "Two ways to build a permanent modular building: slab-on-grade and pier and beam.",
+       "services/permanent-modular-construction.html",
+       "Permanent Modular Construction"
+      ],
+      [
+       "Relocatable Modular Buildings",
+       "Buildings built 60 to 80 percent complete in the plant, set on a concrete block foundation, and designed to be moved.",
+       "services/relocatable-modular-buildings.html",
+       "Relocatable Modular Buildings"
+      ]
+     ],
+     "hub": "Ramtech",
+     "hub_sub": "design-build",
+     "ring": "MODULAR BUILDINGS FOR THE SOUTHWEST",
+     "panel_eyebrow": "Hover a segment",
+     "link_label": "See the building type"
+    },
+    {
+     "type": "resources",
+     "heading": "The six lines",
+     "intro": "What Ramtech builds, what is included, and the questions people ask.",
+     "items": [
+      [
+       "Education",
+       "Education",
+       "Portable classrooms to complete permanent campuses for public, private, charter and faith-based schools, colleges and vocational schools.",
+       "See education",
+       "services/education.html"
+      ],
+      [
+       "Healthcare",
+       "Healthcare",
+       "Clinics, medical offices, imaging centers and specialty healthcare space, permanent or relocatable, in rural, remote and urban settings.",
+       "See healthcare",
+       "services/healthcare.html"
+      ],
+      [
+       "Commercial",
+       "Commercial",
+       "Offices, industrial, retail and hospitality buildings, from small temporary facilities to large permanent ones.",
+       "See commercial",
+       "services/commercial.html"
+      ],
+      [
+       "Government",
+       "Government",
+       "Federal, regional, state and local agencies, from administrative offices and clinics to barracks and correctional facilities.",
+       "See government",
+       "services/government.html"
+      ],
+      [
+       "Permanent Modular Construction",
+       "Permanent Modular Construction",
+       "Two ways to build a permanent modular building: slab-on-grade and pier and beam.",
+       "See permanent modular construction",
+       "services/permanent-modular-construction.html"
+      ],
+      [
+       "Relocatable Modular Buildings",
+       "Relocatable Modular Buildings",
+       "Buildings built 60 to 80 percent complete in the plant, set on a concrete block foundation, and designed to be moved.",
+       "See relocatable modular buildings",
+       "services/relocatable-modular-buildings.html"
+      ]
+     ]
+    },
+    {
+     "type": "leadform",
+     "alt": true,
+     "id": "start",
+     "heading": "Start with no cost project planning and budgeting",
+     "body": "Tell us what you are building, where, and when you need it. Ramtech returns a floor plan, a site plan, an exterior rendering, outlined specifications and a preliminary budget.",
+     "submit": "Request planning and budgeting",
+     "note": "A person replies, not an autoresponder."
+    }
+   ]
+  },
+  {
+   "file": "services/education.html",
+   "title": "Education | Ramtech Building Systems",
+   "description": "Portable classrooms to complete permanent campuses for public, private, charter and faith-based schools, colleges and vocational schools. Since 1982.",
+   "crumbs": [
+    [
+     "Home",
+     "index.html"
+    ],
+    [
+     "What we build",
+     "services.html"
+    ],
+    [
+     "Education",
+     "services/education.html"
+    ]
+   ],
+   "sections": [
+    {
+     "type": "hero",
+     "layout": "split",
+     "eyebrow": "Education",
+     "heading": "Modular school buildings, <em>from one classroom to a whole campus</em>.",
+     "subhead": "Since 1982 Ramtech has built relocatable and permanent modular school buildings for public, private and faith-based K-12 schools, colleges and vocational schools throughout the Southwest.",
+     "primary": {
+      "label": "Start with no cost planning",
+      "href": "contact.html"
+     },
+     "secondary": {
+      "label": "All building types",
+      "href": "services.html"
+     },
+     "image": "assets/hero-education.jpg",
+     "image_alt": "Education: a Ramtech modular building",
+     "image_w": 1200,
+     "image_h": 800
+    },
+    {
+     "type": "cards",
+     "alt": true,
+     "eyebrow": "What Ramtech builds",
+     "heading": "What Ramtech brings to education buildings",
+     "items": [
+      [
+       "Portable classrooms and wings",
+       "Single classrooms, and multiple classroom buildings from 4 to 16 classrooms, from standard floor plans or a custom design."
+      ],
+      [
+       "Labs, cafeterias and offices",
+       "Computer lab classrooms, science labs, cafeterias and dining halls, administrative offices and restroom buildings."
+      ],
+      [
+       "Complete campuses",
+       "Ramtech built 17 relocatable buildings, 69,776 square feet in all, for West ISD after the 2013 fertilizer plant explosion."
+      ],
+      [
+       "Three ways to build",
+       "Relocatable, pier and beam permanent, or slab-on-grade permanent, chosen to fit the budget and how long the space is needed."
+      ]
+     ]
+    },
+    {
+     "type": "detail",
+     "eyebrow": "What is included",
+     "heading": "What you get",
+     "body": "Everything below is published on ramtechmodular.com. The planning step comes first and carries no cost.",
+     "bullets": [
+      "Relocatable buildings for growth, interim space or leased use",
+      "Permanent modular construction with site-applied finishes",
+      "In-house space planning, design and engineering",
+      "School-based health centers, content mastery and life skills classrooms",
+      "Purchase through cooperatives such as BuyBoard and TIPS where the district is a member"
+     ],
+     "image": "assets/hero-education.jpg",
+     "image_alt": "Education",
+     "flip": true
+    },
+    {
+     "type": "faq",
+     "heading": "Questions about education",
+     "items": [
+      [
+       "Can a school district buy through a cooperative?",
+       "For schools and government agencies, many Ramtech relocatable buildings are available through the purchasing cooperatives Ramtech is a vendor for. Ask which cooperative your district belongs to."
+      ],
+      [
+       "Does Ramtech build more than portable classrooms?",
+       "Yes. Ramtech builds classroom wings, labs, cafeterias, administrative offices, restroom buildings and complete permanent campuses."
+      ],
+      [
+       "Can the building be moved later?",
+       "Relocatable buildings are designed for that. Permanent modular construction is designed to match the life expectancy of a site-built building."
+      ]
+     ]
+    },
+    {
+     "type": "leadform",
+     "alt": true,
+     "id": "start",
+     "heading": "Start with no cost project planning and budgeting",
+     "body": "Tell us what you are building, where, and when you need it. Ramtech returns a floor plan, a site plan, an exterior rendering, outlined specifications and a preliminary budget.",
+     "submit": "Request planning and budgeting",
+     "note": "A person replies, not an autoresponder."
+    }
+   ]
+  },
+  {
+   "file": "services/healthcare.html",
+   "title": "Healthcare | Ramtech Building Systems",
+   "description": "Clinics, medical offices, imaging centers and specialty healthcare space, permanent or relocatable, in rural, remote and urban settings. Ramtech has built.",
+   "crumbs": [
+    [
+     "Home",
+     "index.html"
+    ],
+    [
+     "What we build",
+     "services.html"
+    ],
+    [
+     "Healthcare",
+     "services/healthcare.html"
+    ]
+   ],
+   "sections": [
+    {
+     "type": "hero",
+     "layout": "split",
+     "eyebrow": "Healthcare",
+     "heading": "Modular healthcare buildings, <em>permanent or relocatable</em>.",
+     "subhead": "Ramtech has built modular medical facilities, medical office buildings and specialty healthcare facilities for over three decades, with standard and customizable floor plans.",
+     "primary": {
+      "label": "Start with no cost planning",
+      "href": "contact.html"
+     },
+     "secondary": {
+      "label": "All building types",
+      "href": "services.html"
+     },
+     "image": "assets/healthcare.jpg",
+     "image_alt": "Healthcare: a Ramtech modular building",
+     "image_w": 1200,
+     "image_h": 800
+    },
+    {
+     "type": "cards",
+     "alt": true,
+     "eyebrow": "What Ramtech builds",
+     "heading": "What Ramtech brings to healthcare buildings",
+     "items": [
+      [
+       "Clinics and medical offices",
+       "Community health clinics, single-practitioner rural clinics and large medical office additions."
+      ],
+      [
+       "Diagnostic and specialty space",
+       "Diagnostic imaging centers and other specialty healthcare facilities built to the technical needs of the use."
+      ],
+      [
+       "Where the need is",
+       "Healthcare providers in remote, rural and urban locations, with a design-build team that handles the regulatory requirements."
+      ],
+      [
+       "Additions to what you have",
+       "New facilities and additions designed to join existing structures."
+      ]
+     ]
+    },
+    {
+     "type": "detail",
+     "eyebrow": "What is included",
+     "heading": "What you get",
+     "body": "Everything below is published on ramtechmodular.com. The planning step comes first and carries no cost.",
+     "bullets": [
+      "Slab-on-grade or pier and beam permanent modular construction",
+      "Relocatable medical buildings for interim or leased space",
+      "Standard medical floor plans and custom design",
+      "Design, manufacturing, installation and finish-out from one company"
+     ],
+     "image": "assets/healthcare.jpg",
+     "image_alt": "Healthcare",
+     "flip": true
+    },
+    {
+     "type": "faq",
+     "heading": "Questions about healthcare",
+     "items": [
+      [
+       "Do modular medical buildings meet the same codes?",
+       "Ramtech states that its modular buildings are built to meet or exceed the same codes and standards as site-built facilities."
+      ],
+      [
+       "Can Ramtech build a small rural clinic?",
+       "Yes. Ramtech names single-practitioner rural clinics and large urban medical office additions among the facilities it builds."
+      ]
+     ]
+    },
+    {
+     "type": "leadform",
+     "alt": true,
+     "id": "start",
+     "heading": "Start with no cost project planning and budgeting",
+     "body": "Tell us what you are building, where, and when you need it. Ramtech returns a floor plan, a site plan, an exterior rendering, outlined specifications and a preliminary budget.",
+     "submit": "Request planning and budgeting",
+     "note": "A person replies, not an autoresponder."
+    }
+   ]
+  },
+  {
+   "file": "services/commercial.html",
+   "title": "Commercial | Ramtech Building Systems",
+   "description": "Offices, industrial, retail and hospitality buildings, from small temporary facilities to large permanent ones. Ramtech has worked with many of the.",
+   "crumbs": [
+    [
+     "Home",
+     "index.html"
+    ],
+    [
+     "What we build",
+     "services.html"
+    ],
+    [
+     "Commercial",
+     "services/commercial.html"
+    ]
+   ],
+   "sections": [
+    {
+     "type": "hero",
+     "layout": "split",
+     "eyebrow": "Commercial",
+     "heading": "Commercial modular buildings <em>that fit the schedule</em>.",
+     "subhead": "Ramtech has worked with many of the country's largest companies, providing small and large modular buildings for industrial, office and retail use across the Southwest.",
+     "primary": {
+      "label": "Start with no cost planning",
+      "href": "contact.html"
+     },
+     "secondary": {
+      "label": "All building types",
+      "href": "services.html"
+     },
+     "image": "assets/commercial.jpg",
+     "image_alt": "Commercial: a Ramtech modular building",
+     "image_w": 1200,
+     "image_h": 800
+    },
+    {
+     "type": "cards",
+     "alt": true,
+     "eyebrow": "What Ramtech builds",
+     "heading": "What Ramtech brings to commercial buildings",
+     "items": [
+      [
+       "Offices and industrial",
+       "Relocatable job-site offices and permanent commercial offices, new or as an addition to a building you have."
+      ],
+      [
+       "Repeatable designs",
+       "A pier and beam dealership design built for Payne Automotive Group was made to be replicated across several South Texas locations."
+      ],
+      [
+       "Airport and hospitality",
+       "Panama City-Bay County Airport selected Ramtech for a 7,168 square foot steel terminal expansion."
+      ],
+      [
+       "One team to manage",
+       "Design-build removes the need to manage separate relationships with architects and contractors."
+      ]
+     ]
+    },
+    {
+     "type": "detail",
+     "eyebrow": "What is included",
+     "heading": "What you get",
+     "body": "Everything below is published on ramtechmodular.com. The planning step comes first and carries no cost.",
+     "bullets": [
+      "No cost project planning and budgeting",
+      "Slab-on-grade permanent modular construction for mid-size to large buildings",
+      "Pier and beam permanent modular construction for small to medium buildings",
+      "Relocatable buildings, purchased or leased"
+     ],
+     "image": "assets/commercial.jpg",
+     "image_alt": "Commercial",
+     "flip": true
+    },
+    {
+     "type": "faq",
+     "heading": "Questions about commercial",
+     "items": [
+      [
+       "How much can modular save?",
+       "Ramtech states that its commercial approaches can save 10 to 25 percent in design and construction costs. The no cost planning step gives you a preliminary budget to check that against."
+      ],
+      [
+       "Can I lease a commercial modular building?",
+       "Ramtech offers finance leases and relocatable leasing. A finance lease can allow 100 percent financing, and Ramtech's procurement page describes a $1 purchase at the end of the fixed term."
+      ]
+     ]
+    },
+    {
+     "type": "leadform",
+     "alt": true,
+     "id": "start",
+     "heading": "Start with no cost project planning and budgeting",
+     "body": "Tell us what you are building, where, and when you need it. Ramtech returns a floor plan, a site plan, an exterior rendering, outlined specifications and a preliminary budget.",
+     "submit": "Request planning and budgeting",
+     "note": "A person replies, not an autoresponder."
+    }
+   ]
+  },
+  {
+   "file": "services/government.html",
+   "title": "Government | Ramtech Building Systems",
+   "description": "Federal, regional, state and local agencies, from administrative offices and clinics to barracks and correctional facilities. Since 1982 Ramtech has.",
+   "crumbs": [
+    [
+     "Home",
+     "index.html"
+    ],
+    [
+     "What we build",
+     "services.html"
+    ],
+    [
+     "Government",
+     "services/government.html"
+    ]
+   ],
+   "sections": [
+    {
+     "type": "hero",
+     "layout": "split",
+     "eyebrow": "Government",
+     "heading": "Modular buildings for government, <em>built to the procurement requirements</em>.",
+     "subhead": "Since 1982 Ramtech has provided prefabricated building solutions to federal, regional, state and local government agencies, and has experience with their contracting requirements.",
+     "primary": {
+      "label": "Start with no cost planning",
+      "href": "contact.html"
+     },
+     "secondary": {
+      "label": "All building types",
+      "href": "services.html"
+     },
+     "image": "assets/government.jpg",
+     "image_alt": "Government: a Ramtech modular building",
+     "image_w": 1200,
+     "image_h": 800
+    },
+    {
+     "type": "cards",
+     "alt": true,
+     "eyebrow": "What Ramtech builds",
+     "heading": "What Ramtech brings to government buildings",
+     "items": [
+      [
+       "Offices, clinics and labs",
+       "Administrative offices, medical clinics and medical labs for government agencies."
+      ],
+      [
+       "Barracks and quarters",
+       "A 6,550 square foot temporary fire crew quarters at Vance Air Force Base in Enid, Oklahoma."
+      ],
+      [
+       "Public safety",
+       "A 4,760 square foot police station and holding facility for the City of Clyde, Texas, and a 2,184 square foot police headquarters in Cottonwood Shores, Texas."
+      ],
+      [
+       "Secure facilities",
+       "SCIFs, data and communication centers, built to ICD-705 requirements."
+      ]
+     ]
+    },
+    {
+     "type": "detail",
+     "eyebrow": "What is included",
+     "heading": "What you get",
+     "body": "Everything below is published on ramtechmodular.com. The planning step comes first and carries no cost.",
+     "bullets": [
+      "Design-build, construction manager at risk and other delivery methods",
+      "Purchase through cooperatives and directly from Ramtech",
+      "Relocatable and permanent modular construction",
+      "A one-year written warranty on every new building"
+     ],
+     "image": "assets/government.jpg",
+     "image_alt": "Government",
+     "flip": true
+    },
+    {
+     "type": "faq",
+     "heading": "Questions about government",
+     "items": [
+      [
+       "Which agencies does Ramtech work with?",
+       "Ramtech names federal, regional, state and local agencies, including the Department of Defense and the Army Corps of Engineers, and has worked with FEMA on disaster recovery."
+      ],
+      [
+       "Can a government agency buy through a cooperative?",
+       "In many cases yes. Ramtech is a vendor for select local, state and regional purchasing cooperatives."
+      ]
+     ]
+    },
+    {
+     "type": "leadform",
+     "alt": true,
+     "id": "start",
+     "heading": "Start with no cost project planning and budgeting",
+     "body": "Tell us what you are building, where, and when you need it. Ramtech returns a floor plan, a site plan, an exterior rendering, outlined specifications and a preliminary budget.",
+     "submit": "Request planning and budgeting",
+     "note": "A person replies, not an autoresponder."
+    }
+   ]
+  },
+  {
+   "file": "services/permanent-modular-construction.html",
+   "title": "Permanent Modular Construction | Ramtech Building Systems",
+   "description": "Two ways to build a permanent modular building: slab-on-grade and pier and beam. Permanent modular construction combines the speed of prefabrication with.",
+   "crumbs": [
+    [
+     "Home",
+     "index.html"
+    ],
+    [
+     "What we build",
+     "services.html"
+    ],
+    [
+     "Permanent Modular Construction",
+     "services/permanent-modular-construction.html"
+    ]
+   ],
+   "sections": [
+    {
+     "type": "hero",
+     "layout": "split",
+     "eyebrow": "Permanent modular construction",
+     "heading": "A permanent building that <em>comes off a factory floor</em>.",
+     "subhead": "Permanent modular construction combines the speed of prefabrication with site-applied interior and exterior finishes, at the same amenities and life expectancy as a site-built building.",
+     "primary": {
+      "label": "Start with no cost planning",
+      "href": "contact.html"
+     },
+     "secondary": {
+      "label": "All building types",
+      "href": "services.html"
+     },
+     "image": "assets/hero-main.jpg",
+     "image_alt": "Permanent Modular Construction: a Ramtech modular building",
+     "image_w": 1200,
+     "image_h": 800
+    },
+    {
+     "type": "cards",
+     "alt": true,
+     "eyebrow": "What Ramtech builds",
+     "heading": "What Ramtech brings to permanent modular construction",
+     "items": [
+      [
+       "Slab-on-grade",
+       "Sections built with ceiling and walls attached but no floor, then crane set onto a concrete slab. For grade-level entries, medium to large projects and additions."
+      ],
+      [
+       "Pier and beam",
+       "Small to medium projects with faster completion and less cost than site construction, and several forms of financing."
+      ],
+      [
+       "Two tracks at once",
+       "The foundation is built on your site while the building sections are built in the plant."
+      ],
+      [
+       "Design-build",
+       "Ramtech's own engineers, manufacturing and construction managers, working under one contract."
+      ]
+     ]
+    },
+    {
+     "type": "detail",
+     "eyebrow": "What is included",
+     "heading": "What you get",
+     "body": "Everything below is published on ramtechmodular.com. The planning step comes first and carries no cost.",
+     "bullets": [
+      "No cost project planning and budgeting",
+      "In-house engineering and design",
+      "Site development and installation",
+      "Delivery as design-build, construction manager at risk, or as a subcontractor to your prime contractor"
+     ],
+     "image": "assets/hero-main.jpg",
+     "image_alt": "Permanent Modular Construction",
+     "flip": true
+    },
+    {
+     "type": "faq",
+     "heading": "Questions about permanent modular construction",
+     "items": [
+      [
+       "Is it as durable as site-built?",
+       "Ramtech states that modular buildings use the same materials and are built to the same codes as site construction, and that they last as long as site-built structures when maintained."
+      ],
+      [
+       "What does design cost?",
+       "After the preliminary budget is approved, Ramtech states the design fee rarely exceeds 2 percent of that budget."
+      ]
+     ]
+    },
+    {
+     "type": "leadform",
+     "alt": true,
+     "id": "start",
+     "heading": "Start with no cost project planning and budgeting",
+     "body": "Tell us what you are building, where, and when you need it. Ramtech returns a floor plan, a site plan, an exterior rendering, outlined specifications and a preliminary budget.",
+     "submit": "Request planning and budgeting",
+     "note": "A person replies, not an autoresponder."
+    }
+   ]
+  },
+  {
+   "file": "services/relocatable-modular-buildings.html",
+   "title": "Relocatable Modular Buildings | Ramtech Building Systems",
+   "description": "Buildings built 60 to 80 percent complete in the plant, set on a concrete block foundation, and designed to be moved. From a double-wide portable.",
+   "crumbs": [
+    [
+     "Home",
+     "index.html"
+    ],
+    [
+     "What we build",
+     "services.html"
+    ],
+    [
+     "Relocatable Modular Buildings",
+     "services/relocatable-modular-buildings.html"
+    ]
+   ],
+   "sections": [
+    {
+     "type": "hero",
+     "layout": "split",
+     "eyebrow": "Relocatable modular buildings",
+     "heading": "Relocatable buildings, <em>delivered and set where you need them</em>.",
+     "subhead": "From a double-wide portable classroom to a multiple-building complex, Ramtech builds relocatable modular buildings in Type V (wood) and Type II (steel) construction.",
+     "primary": {
+      "label": "Start with no cost planning",
+      "href": "contact.html"
+     },
+     "secondary": {
+      "label": "All building types",
+      "href": "services.html"
+     },
+     "image": "assets/modular.jpg",
+     "image_alt": "Relocatable Modular Buildings: a Ramtech modular building",
+     "image_w": 1200,
+     "image_h": 800
+    },
+    {
+     "type": "cards",
+     "alt": true,
+     "eyebrow": "What Ramtech builds",
+     "heading": "What Ramtech brings to relocatable modular buildings",
+     "items": [
+      [
+       "Fast",
+       "Sections are typically built to 60 to 80 percent completion in the plant, then installed on a site-specific concrete block foundation."
+      ],
+      [
+       "Lower cost",
+       "A less costly option for temporary or interim facilities, or space you lease for a limited period."
+      ],
+      [
+       "Less site disruption",
+       "Final finish-out happens after the buildings are set and weathered in."
+      ],
+      [
+       "Move them later",
+       "Designed to be reused or repurposed when the need changes."
+      ]
+     ]
+    },
+    {
+     "type": "detail",
+     "eyebrow": "What is included",
+     "heading": "What you get",
+     "body": "Everything below is published on ramtechmodular.com. The planning step comes first and carries no cost.",
+     "bullets": [
+      "Needs analysis by designers, engineers and manufacturing and construction specialists",
+      "A floor plan to fit your requirement and budget",
+      "Delivery, set, skirting and final finish-out",
+      "Concurrent multi-site capability"
+     ],
+     "image": "assets/modular.jpg",
+     "image_alt": "Relocatable Modular Buildings",
+     "flip": true
+    },
+    {
+     "type": "faq",
+     "heading": "Questions about relocatable modular buildings",
+     "items": [
+      [
+       "Can I lease instead of buy?",
+       "Yes. Ramtech's relocatable purchase options page covers purchase, leasing and financing alternatives."
+      ],
+      [
+       "Do relocatable buildings need a foundation?",
+       "Yes, a site-specific concrete block foundation system."
+      ]
+     ]
+    },
+    {
+     "type": "leadform",
+     "alt": true,
+     "id": "start",
+     "heading": "Start with no cost project planning and budgeting",
+     "body": "Tell us what you are building, where, and when you need it. Ramtech returns a floor plan, a site plan, an exterior rendering, outlined specifications and a preliminary budget.",
+     "submit": "Request planning and budgeting",
+     "note": "A person replies, not an autoresponder."
+    }
+   ]
+  },
+  {
+   "file": "industries.html",
+   "title": "Specialty Buildings | Housing, SCIF, disaster recovery | Ramtech Building Systems",
+   "description": "Multi-family and student housing, SCIF buildings and disaster recovery space, built as modular construction by Ramtech Building Systems in Mansfield, Texas.",
+   "sections": [
+    {
+     "type": "hero",
+     "layout": "centered",
+     "eyebrow": "Specialty",
+     "heading": "Housing, secure facilities and <em>disaster recovery</em>.",
+     "subhead": "Three kinds of project that Ramtech builds across its markets, each with its own page.",
+     "primary": {
+      "label": "Start with no cost planning",
+      "href": "contact.html"
+     }
+    },
+    {
+     "type": "resources",
+     "heading": "Specialty buildings",
+     "intro": "Where Ramtech's design-build team is most often asked for something particular.",
+     "items": [
+      [
+       "Multi-family and student housing",
+       "Multi-family and student housing",
+       "Apartments, student housing, hospitality, assisted living and specialty housing, built as permanent modular construction.",
+       "See multi-family and student housing",
+       "specialty/multi-family-and-student-housing.html"
+      ],
+      [
+       "SCIF buildings",
+       "SCIF buildings",
+       "Temporary and permanent modular buildings for SCIFs, data and communication centers and other secure computing facilities.",
+       "See scif buildings",
+       "specialty/scif-buildings.html"
+      ],
+      [
+       "Disaster recovery",
+       "Disaster recovery",
+       "Temporary modular buildings and permanent space solutions to get a school, healthcare facility or business running again.",
+       "See disaster recovery",
+       "specialty/disaster-recovery.html"
+      ]
+     ]
+    },
+    {
+     "type": "leadform",
+     "alt": true,
+     "id": "start",
+     "heading": "Start with no cost project planning and budgeting",
+     "body": "Tell us what you are building, where, and when you need it. Ramtech returns a floor plan, a site plan, an exterior rendering, outlined specifications and a preliminary budget.",
+     "submit": "Request planning and budgeting",
+     "note": "A person replies, not an autoresponder."
+    }
+   ]
+  },
+  {
+   "file": "specialty/multi-family-and-student-housing.html",
+   "title": "Multi-family and student housing | Ramtech Building Systems",
+   "description": "Apartments, student housing, hospitality, assisted living and specialty housing, built as permanent modular construction. Developers, owners and.",
+   "crumbs": [
+    [
+     "Home",
+     "index.html"
+    ],
+    [
+     "Specialty",
+     "industries.html"
+    ],
+    [
+     "Multi-family and student housing",
+     "specialty/multi-family-and-student-housing.html"
+    ]
+   ],
+   "sections": [
+    {
+     "type": "hero",
+     "layout": "split",
+     "eyebrow": "Specialty",
+     "heading": "<em>Multi-family and student housing</em>, built modular.",
+     "subhead": "Apartments, student housing, hospitality, assisted living and specialty housing, built as permanent modular construction.",
+     "primary": {
+      "label": "Start with no cost planning",
+      "href": "contact.html"
+     },
+     "secondary": {
+      "label": "See what Ramtech builds",
+      "href": "services.html"
+     },
+     "image": "assets/hero-main.jpg",
+     "image_alt": "Multi-family and student housing",
+     "image_w": 1200,
+     "image_h": 800
+    },
+    {
+     "type": "detail",
+     "alt": true,
+     "eyebrow": "What Ramtech does here",
+     "heading": "Multi-family and student housing with Ramtech",
+     "body": "Developers, owners and architects bring Ramtech projects with aggressive timelines, labor challenges and site constraints. Ramtech's project managers work through design, specification, engineering, construction and installation.",
+     "bullets": [
+      "Student housing and university residence halls",
+      "Workforce and employee housing",
+      "Assisted living and senior housing",
+      "Military and government housing",
+      "Transitional and specialty housing"
+     ]
+    },
+    {
+     "type": "faq",
+     "heading": "Questions about multi-family and student housing",
+     "items": [
+      [
+       "Who is this for?",
+       "Developers, owners, architects and investors planning multi-family apartments, student housing, hospitality, assisted living or specialty housing."
+      ]
+     ]
+    },
+    {
+     "type": "leadform",
+     "alt": true,
+     "id": "start",
+     "heading": "Start with no cost project planning and budgeting",
+     "body": "Tell us what you are building, where, and when you need it. Ramtech returns a floor plan, a site plan, an exterior rendering, outlined specifications and a preliminary budget.",
+     "submit": "Request planning and budgeting",
+     "note": "A person replies, not an autoresponder."
+    }
+   ]
+  },
+  {
+   "file": "specialty/scif-buildings.html",
+   "title": "SCIF buildings | Ramtech Building Systems",
+   "description": "Temporary and permanent modular buildings for SCIFs, data and communication centers and other secure computing facilities. Ramtech has provided these.",
+   "crumbs": [
+    [
+     "Home",
+     "index.html"
+    ],
+    [
+     "Specialty",
+     "industries.html"
+    ],
+    [
+     "SCIF buildings",
+     "specialty/scif-buildings.html"
+    ]
+   ],
+   "sections": [
+    {
+     "type": "hero",
+     "layout": "split",
+     "eyebrow": "Specialty",
+     "heading": "<em>SCIF buildings</em>, built modular.",
+     "subhead": "Temporary and permanent modular buildings for SCIFs, data and communication centers and other secure computing facilities.",
+     "primary": {
+      "label": "Start with no cost planning",
+      "href": "contact.html"
+     },
+     "secondary": {
+      "label": "See what Ramtech builds",
+      "href": "services.html"
+     },
+     "image": "assets/government.jpg",
+     "image_alt": "SCIF buildings",
+     "image_w": 1200,
+     "image_h": 800
+    },
+    {
+     "type": "detail",
+     "alt": true,
+     "eyebrow": "What Ramtech does here",
+     "heading": "SCIF buildings with Ramtech",
+     "body": "Ramtech has provided these buildings for government and commercial clients for over 30 years, with experience working for the Department of Defense and the Army Corps of Engineers.",
+     "bullets": [
+      "Sensitive Compartmented Information Facilities",
+      "Data and communication centers",
+      "Requirements of ICD-705",
+      "Design-build delivery from one company"
+     ]
+    },
+    {
+     "type": "faq",
+     "heading": "Questions about scif buildings",
+     "items": [
+      [
+       "Which standards apply?",
+       "Ramtech's SCIF page names ICD-705 among the technical requirements it builds to."
+      ]
+     ]
+    },
+    {
+     "type": "leadform",
+     "alt": true,
+     "id": "start",
+     "heading": "Start with no cost project planning and budgeting",
+     "body": "Tell us what you are building, where, and when you need it. Ramtech returns a floor plan, a site plan, an exterior rendering, outlined specifications and a preliminary budget.",
+     "submit": "Request planning and budgeting",
+     "note": "A person replies, not an autoresponder."
+    }
+   ]
+  },
+  {
+   "file": "specialty/disaster-recovery.html",
+   "title": "Disaster recovery | Ramtech Building Systems",
+   "description": "Temporary modular buildings and permanent space solutions to get a school, healthcare facility or business running again. Ramtech has worked with.",
+   "crumbs": [
+    [
+     "Home",
+     "index.html"
+    ],
+    [
+     "Specialty",
+     "industries.html"
+    ],
+    [
+     "Disaster recovery",
+     "specialty/disaster-recovery.html"
+    ]
+   ],
+   "sections": [
+    {
+     "type": "hero",
+     "layout": "split",
+     "eyebrow": "Specialty",
+     "heading": "<em>Disaster recovery</em>, built modular.",
+     "subhead": "Temporary modular buildings and permanent space solutions to get a school, healthcare facility or business running again.",
+     "primary": {
+      "label": "Start with no cost planning",
+      "href": "contact.html"
+     },
+     "secondary": {
+      "label": "See what Ramtech builds",
+      "href": "services.html"
+     },
+     "image": "assets/modular.jpg",
+     "image_alt": "Disaster recovery",
+     "image_w": 1200,
+     "image_h": 800
+    },
+    {
+     "type": "detail",
+     "alt": true,
+     "eyebrow": "What Ramtech does here",
+     "heading": "Disaster recovery with Ramtech",
+     "body": "Ramtech has worked with education, healthcare, government and commercial organizations after flooding, tornadoes, earthquakes, hurricanes and blast explosions, and with local, state and federal agencies including FEMA.",
+     "bullets": [
+      "Temporary school campuses, including West ISD after the 2013 fertilizer plant explosion",
+      "Schools destroyed by hurricane in the U.S. Virgin Islands",
+      "A FEMA-funded temporary campus after flooding",
+      "Navigation of the rebuilding process with local, state and federal authorities"
+     ]
+    },
+    {
+     "type": "faq",
+     "heading": "Questions about disaster recovery",
+     "items": [
+      [
+       "Does Ramtech work with FEMA?",
+       "Ramtech states it has experience working with FEMA and with local, state and regional authorities on rebuilding."
+      ]
+     ]
+    },
+    {
+     "type": "leadform",
+     "alt": true,
+     "id": "start",
+     "heading": "Start with no cost project planning and budgeting",
+     "body": "Tell us what you are building, where, and when you need it. Ramtech returns a floor plan, a site plan, an exterior rendering, outlined specifications and a preliminary budget.",
+     "submit": "Request planning and budgeting",
+     "note": "A person replies, not an autoresponder."
+    }
+   ]
+  },
+  {
+   "file": "about.html",
+   "title": "About Ramtech Building Systems | Modular design-build since 1982",
+   "description": "Ramtech began as a small modular dealership in Arlington, Texas in 1982 and now manufactures its own buildings on a 20 acre site in Mansfield.",
+   "sections": [
+    {
+     "type": "hero",
+     "layout": "split",
+     "eyebrow": "About Ramtech",
+     "heading": "Design, manufacturing and construction, <em>since 1982</em>.",
+     "subhead": "Ramtech has provided more modular buildings to government agencies, schools, healthcare providers and commercial organizations than any other company in the Southwest, by its own account.",
+     "primary": {
+      "label": "Start with no cost planning",
+      "href": "contact.html"
+     },
+     "secondary": {
+      "label": "Locations",
+      "href": "locations.html"
+     },
+     "image": "assets/difference.jpg",
+     "image_alt": "Ramtech modular building",
+     "image_w": 1200,
+     "image_h": 800
+    },
+    {
+     "type": "stats",
+     "alt": true,
+     "items": [
+      [
+       "1982",
+       "Specializing in commercial modular"
+      ],
+      [
+       "3,500+",
+       "Projects completed"
+      ],
+      [
+       "31",
+       "MBI Awards of Distinction"
+      ],
+      [
+       "20 acres",
+       "Manufacturing site in Mansfield"
+      ]
+     ]
+    },
+    {
+     "type": "cards",
+     "eyebrow": "The Ramtech difference",
+     "heading": "Three capabilities",
+     "items": [
+      [
+       "Design",
+       "Experienced designers across every discipline produce efficient, economical building layouts and facades."
+      ],
+      [
+       "Manufacturing",
+       "Complete in-house space planning, design, manufacturing and engineering on every project."
+      ],
+      [
+       "Construction",
+       "A single-source solution for site development and building installation, from start to finish."
+      ]
+     ]
+    },
+    {
+     "type": "timeline",
+     "id": "story",
+     "eyebrow": "Since 1982",
+     "heading": "From a dealership in Arlington to a 20 acre plant",
+     "intro": "The dates Ramtech publishes. The rest are on the To confirm list.",
+     "items": [
+      [
+       "1982",
+       "Ramtech Modular Design opens",
+       "A small modular dealership in Arlington, Texas, in an industry then controlled by large leasing companies."
+      ],
+      [
+       "The plant",
+       "A direct manufacturer in Mansfield",
+       "Frustrated by the product available for complex projects, Ramtech opened its own manufacturing plant on the 20 acre site it still occupies."
+      ],
+      [
+       "1987",
+       "First Awards of Distinction year",
+       "The Modular Building Institute awards program starts. Ramtech has since received 31."
+      ],
+      [
+       "Today",
+       "More than 3,500 projects",
+       "Ramtech serves on the Texas Industrial Building Code Council and holds leadership positions with the Modular Building Institute."
+      ]
+     ]
+    },
+    {
+     "type": "detail",
+     "id": "warranty",
+     "alt": true,
+     "eyebrow": "Warranty",
+     "heading": "One year, in writing",
+     "body": "Ramtech provides a full one-year written warranty on every new relocatable or permanent modular building it manufactures and installs in the continental U.S. The period runs from the date of occupancy and covers defects in materials and workmanship under normal use. Equipment Ramtech buys from recognized manufacturers, such as heating and air-conditioning equipment and water heaters, typically carries its own warranty.",
+     "bullets": [
+      "Covers defects in materials and workmanship",
+      "Repair or replacement at no charge during the year",
+      "Applies to relocatable and permanent buildings"
+     ]
+    },
+    {
+     "type": "partners",
+     "id": "affiliations",
+     "caption": "Affiliations Ramtech shows on its own site.",
+     "items": [
+      "Modular Building Institute",
+      "Better Business Bureau",
+      "BuyBoard",
+      "TIPS"
+     ]
+    },
+    {
+     "type": "leadform",
+     "alt": true,
+     "id": "start",
+     "heading": "Start with no cost project planning and budgeting",
+     "body": "Tell us what you are building, where, and when you need it. Ramtech returns a floor plan, a site plan, an exterior rendering, outlined specifications and a preliminary budget.",
+     "submit": "Request planning and budgeting",
+     "note": "A person replies, not an autoresponder."
+    }
+   ]
+  },
+  {
+   "file": "locations.html",
+   "title": "Locations | Ramtech Building Systems, Mansfield, Texas",
+   "description": "Ramtech Building Systems is at 1400 US Hwy 287 South, Mansfield, Texas 76063, with a 20 acre manufacturing site. Call (817) 473-9376 or email sales.",
+   "sections": [
+    {
+     "type": "hero",
+     "layout": "centered",
+     "eyebrow": "Locations",
+     "heading": "One plant, <em>markets across the USA</em>.",
+     "subhead": "Ramtech designs and manufactures in Mansfield, Texas. Call (817) 473-9376.",
+     "primary": {
+      "label": "Call (817) 473-9376",
+      "href": "tel:+18174739376"
+     }
+    },
+    {
+     "type": "locations",
+     "detailed": true,
+     "heading": "Where we are",
+     "intro": "Headquarters and manufacturing site.",
+     "items": [
+      [
+       "Mansfield, Texas",
+       "1400 US Hwy 287 South",
+       "Mansfield, TX 76063",
+       "(817) 473-9376",
+       "tel:+18174739376"
+      ]
+     ]
+    },
+    {
+     "type": "leadform",
+     "alt": true,
+     "id": "start",
+     "heading": "Start with no cost project planning and budgeting",
+     "body": "Tell us what you are building, where, and when you need it. Ramtech returns a floor plan, a site plan, an exterior rendering, outlined specifications and a preliminary budget.",
+     "submit": "Request planning and budgeting",
+     "note": "A person replies, not an autoresponder."
+    }
+   ]
+  },
+  {
+   "file": "locations/mansfield.html",
+   "title": "Modular Buildings in Mansfield, TX | Ramtech Building Systems",
+   "description": "Ramtech Building Systems designs, manufactures and installs modular buildings from its plant at 1400 US Hwy 287 South, Mansfield, TX 76063. Call (817) 473-9376.",
+   "crumbs": [
+    [
+     "Home",
+     "index.html"
+    ],
+    [
+     "Locations",
+     "locations.html"
+    ],
+    [
+     "Mansfield, Texas",
+     "locations/mansfield.html"
+    ]
+   ],
+   "schema": [
+    {
+     "@context": "https://schema.org",
+     "@type": "GeneralContractor",
+     "@id": "https://www.ramtechmodular.com/#mansfield",
+     "name": "Ramtech Building Systems",
+     "telephone": "+1-817-473-9376",
+     "email": "sales@ramtechmodular.com",
+     "url": "https://www.ramtechmodular.com/",
+     "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1400 US Hwy 287 South",
+      "addressLocality": "Mansfield",
+      "addressRegion": "TX",
+      "postalCode": "76063",
+      "addressCountry": "US"
+     },
+     "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 32.5632,
+      "longitude": -97.1417
+     }
+    }
+   ],
+   "sections": [
+    {
+     "type": "hero",
+     "layout": "split",
+     "eyebrow": "Headquarters and plant",
+     "heading": "Designed, built and shipped from <em>Mansfield, Texas</em>.",
+     "subhead": "Ramtech's manufacturing plant sits on a 20 acre site in Mansfield, where the company has operated since it became a direct manufacturer.",
+     "primary": {
+      "label": "Call (817) 473-9376",
+      "href": "tel:+18174739376"
+     },
+     "secondary": {
+      "label": "Start with no cost planning",
+      "href": "contact.html"
+     },
+     "image": "assets/hero-main.jpg",
+     "image_alt": "A Ramtech modular building",
+     "image_w": 1200,
+     "image_h": 800
+    },
+    {
+     "type": "locations",
+     "heading": "Visit or call",
+     "intro": "1400 US Hwy 287 South, Mansfield, TX 76063. Email sales@ramtechmodular.com.",
+     "items": [
+      [
+       "Mansfield, Texas",
+       "1400 US Hwy 287 South",
+       "Mansfield, TX 76063",
+       "(817) 473-9376",
+       "tel:+18174739376"
+      ]
+     ]
+    },
+    {
+     "type": "faq",
+     "heading": "Questions about where Ramtech works",
+     "items": [
+      [
+       "Where does Ramtech build?",
+       "Ramtech serves markets across the USA and has built throughout the Southwest, with projects in Texas, Oklahoma and Arkansas, among others."
+      ],
+      [
+       "Does Ramtech work outside Texas?",
+       "Yes. Ramtech's own project profiles include buildings in Oklahoma and Arkansas and disaster recovery work in the U.S. Virgin Islands."
+      ]
+     ]
+    },
+    {
+     "type": "leadform",
+     "alt": true,
+     "id": "start",
+     "heading": "Start with no cost project planning and budgeting",
+     "body": "Tell us what you are building, where, and when you need it. Ramtech returns a floor plan, a site plan, an exterior rendering, outlined specifications and a preliminary budget.",
+     "submit": "Request planning and budgeting",
+     "note": "A person replies, not an autoresponder."
+    }
+   ]
+  },
+  {
+   "file": "faq.html",
+   "title": "FAQ | Modular construction questions | Ramtech Building Systems",
+   "description": "Straight answers on modular construction: cost, speed, durability, relocatable versus permanent, purchasing cooperatives, financing and warranty.",
+   "sections": [
+    {
+     "type": "hero",
+     "layout": "centered",
+     "eyebrow": "FAQ",
+     "heading": "Questions, <em>answered plainly</em>.",
+     "subhead": "Answers drawn from Ramtech's own FAQ. If yours is not here, call or send the form."
+    },
+    {
+     "type": "faq",
+     "heading": "About modular construction",
+     "items": [
+      [
+       "How much faster is modular?",
+       "Ramtech states that modular construction is usually 25 to 40 percent faster than site construction, because the foundation and the building are made at the same time."
+      ],
+      [
+       "Is modular as durable as site-built?",
+       "Ramtech states that modular buildings use the same materials and are built to the same codes as site construction, and last as long when maintained."
+      ],
+      [
+       "What does the no cost planning cover?",
+       "A floor plan, a site plan, an exterior rendering, outlined specifications and a preliminary budget, before any design fee."
+      ],
+      [
+       "Can we buy through a purchasing cooperative?",
+       "For schools and government agencies, many buildings are available through the cooperatives Ramtech is a vendor for, including BuyBoard and TIPS."
+      ],
+      [
+       "What is the warranty?",
+       "A full one-year written warranty from the date of occupancy on every new building Ramtech manufactures and installs in the continental U.S."
+      ],
+      [
+       "What is modular construction?",
+       "Controlled off-site factory production of engineered building sections, typically built 50 to 90 percent complete, then transported to the site, assembled and finished."
+      ],
+      [
+       "What is the difference between relocatable and permanent?",
+       "Both are made in the plant with the same materials as site-built structures. Relocatable buildings sit on a concrete block foundation and can be moved. Permanent buildings use a pier and beam or slab-on-grade foundation and site-applied finishes."
+      ],
+      [
+       "Can I finance a modular building?",
+       "Ramtech works with third-party finance companies, including finance leases, and can help you compare options."
+      ]
+     ]
+    },
+    {
+     "type": "leadform",
+     "alt": true,
+     "id": "start",
+     "heading": "Start with no cost project planning and budgeting",
+     "body": "Tell us what you are building, where, and when you need it. Ramtech returns a floor plan, a site plan, an exterior rendering, outlined specifications and a preliminary budget.",
+     "submit": "Request planning and budgeting",
+     "note": "A person replies, not an autoresponder."
+    }
+   ]
+  },
+  {
+   "file": "contact.html",
+   "title": "Contact | Start a project | Ramtech Building Systems",
+   "description": "Call Ramtech at (817) 473-9376 or send the form. 1400 US Hwy 287 South, Mansfield, TX 76063. Start with no cost project planning and budgeting.",
+   "sections": [
+    {
+     "type": "hero",
+     "layout": "centered",
+     "eyebrow": "Contact",
+     "heading": "Start a project, <em>or just call</em>.",
+     "subhead": "Tell us what you are building, where and when. Call (817) 473-9376 or email sales@ramtechmodular.com."
+    },
+    {
+     "type": "contact",
+     "id": "form",
+     "heading": "Start with no cost planning and budgeting",
+     "body": "Choose what you are thinking about.",
+     "options": [
+      "Education",
+      "Healthcare",
+      "Commercial",
+      "Government",
+      "Permanent modular construction",
+      "Relocatable modular buildings",
+      "Multi-family or student housing",
+      "Something else"
+     ],
+     "submit": "Request planning and budgeting",
+     "note": "A person replies, not an autoresponder."
+    },
+    {
+     "type": "locations",
+     "alt": true,
+     "heading": "Or visit the plant",
+     "intro": "Headquarters and manufacturing.",
+     "items": [
+      [
+       "Mansfield, Texas",
+       "1400 US Hwy 287 South",
+       "Mansfield, TX 76063",
+       "(817) 473-9376",
+       "tel:+18174739376"
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "pitch": {
+  "qbs_contact": {
+   "name": "Shawn",
+   "email": "shawn@thequantumleap.business",
+   "phone": ""
+  },
+  "prepared_for": "Ramtech Building Systems",
+  "heard_intro": "Ramtech is a prospect, so nothing here comes from a conversation. Everything comes from ramtechmodular.com and the brief Quantum filled in. Tell us where it is wrong; your words outrank ours.",
+  "heard": [
+   "The brief has no stated promise. The site's own headline is 'Ramtech is a design-build leader in modular building construction'; we used it, marked unconfirmed.",
+   "No likes, dislikes or ground preference were given. We chose the house light set.",
+   "Notes in the brief: design-build leader since 1982, direct manufacturer, more than 3,500 projects, the most modular buildings delivered to government, education, healthcare and commercial buyers in the Southwest.",
+   "The offer to lead with is no cost project planning and budgeting."
+  ],
+  "found": [
+   "829 URLs in the sitemap, 765 of them blog posts and image attachment pages. Average page score 44 of 100 (Quantum audit, November 2026).",
+   "No page title names a city. 517 pages are under 300 words, and only 2 carry FAQ markup.",
+   "Two figures disagree: the home page and Ramtech story say more than 3,500 projects; the Ramtech difference page says more than 4,000.",
+   "The site is open to AI crawlers (robots.txt allows them) but has no llms.txt file. The search and AI analysis for this domain has not been run, so no traffic figures appear here."
+  ],
+  "choose_heading": "Three directions. Your call.",
+  "choose_intro": "The words, the pages and the proof are identical in all three. What differs is the register. Open each one on your phone and tell us which feels like Ramtech.",
+  "choose_reasons": [
+   [
+    "If a plain, procedural site is the argument",
+    "Clean: white ground, a humanist sans, hairline cards. Built for the facility manager, school business officer or procurement lead reading a page in order."
+   ],
+   [
+    "If a contemporary, confident look is the argument",
+    "Showcase: image-led, rounded, more sales-forward. Shows the buildings first."
+   ],
+   [
+    "If established is the argument",
+    "Press: warm paper and a serif. Reads like the company that has been building since 1982."
+   ]
+  ],
+  "pick_reasons": [
+   [
+    "Buyers read to compare",
+    "School districts, agencies and healthcare administrators comparing builders want the process, the contract routes and the proof on the page. Clean puts them first."
+   ],
+   [
+    "The proof is procedural",
+    "No cost planning, a firm fixed price, a one-year warranty, purchasing cooperatives: Clean lets each one sit in a plain list a buyer can check."
+   ],
+   [
+    "It will age well",
+    "A 40-year-old builder that makes things should not look trendy. Clean is quiet enough for the buildings to be the subject."
+   ]
+  ],
+  "pick_change": "The Ramtech photographs are 2017 to 2019 and several are small. We would commission a current set of finished buildings before launch; the hero carries the whole page.",
+  "alternatives": [
+   [
+    "Quantum Showcase",
+    "The safe, sales-forward one: big building photographs, a wheel of the four markets, a drag comparison of site-built and modular sequences."
+   ],
+   [
+    "Quantum Press",
+    "The wildcard: serif headlines on warm paper, the 1982 story high on the page. Nobody in modular construction looks like this."
+   ]
+  ],
+  "plan": [
+   [
+    "Weeks 1 to 2",
+    "Choose a direction. Resolve the items under To confirm, starting with the promise and the project count."
+   ],
+   [
+    "Weeks 3 to 4",
+    "Copy review with Ramtech: the project profiles, the floor plans library, and which blog posts are worth keeping."
+   ],
+   [
+    "Weeks 5 to 7",
+    "Build in HubSpot: theme, templates, every page, forms routed to the right person at the plant."
+   ],
+   [
+    "Weeks 8 to 9",
+    "Review rounds, a permanent redirect for every URL that exists today, QA on the same gate this preview passed."
+   ],
+   [
+    "Week 10",
+    "Launch with the baseline captured the day before."
+   ],
+   [
+    "Days 60 to 90",
+    "Measure against the baseline and decide the first articles from the questions buyers ask."
+   ]
+  ],
+  "search": {
+   "heading": "Where you stand in search today",
+   "intro": "The search and AI analysis for this domain has not been pulled.",
+   "as_of": "not pulled",
+   "today_stats": [],
+   "today": [],
+   "after": [],
+   "keep": [],
+   "note": ""
+  },
+  "confirm": [
+   "Who this is for. The brief says Ramtech is a prospect and lists Kelly Williams as a possible contact on our side, unconfirmed. Kelly Williams is named on Ramtech's own site as its Vice President of Business Development. Confirm who at Ramtech receives this.",
+   "The promise. The brief gives none. We used the home page headline, 'a design-build leader in modular building construction'.",
+   "The project count. The home page and the Ramtech story say more than 3,500; the Ramtech difference page says more than 4,000. We used 3,500.",
+   "Accent and header colour. The brief gives none. #cd2122 (red) is the most frequent colour in Ramtech's child theme stylesheet and matches the roofs in the photographs; #181818 is the header ground because the logo is white. Neither was checked against brand guidelines.",
+   "The logo is a white-type PNG fetched from the live site. Ask for the vector and a dark-type version.",
+   "Photographs are Ramtech's own, 2017 to 2019, taken from the live site. Which project is in which photograph is not captioned on the site, so alt text is descriptive only.",
+   "No written testimonials. The site features video narrations by Marty Crawford (West ISD) and Rev. John Wilke (Immanuel Lutheran Church and School), but no quoted text. Nothing is attributed to them here.",
+   "Named people. Ramtech's design team page names nobody, so no team section appears.",
+   "Mansfield coordinates (32.5632, -97.1417) are approximate, used only for schema markup.",
+   "The map section is left out because the map module has no Texas outline and Ramtech lists one location.",
+   "Financing and lease figures on the specialty pages come from Ramtech's procurement pages: confirm the $1 end-of-lease purchase and 100 percent financing still apply.",
+   "The SCIF page was only partly readable in our fetch; the standards named here are ICD-705 only.",
+   "The 31 Awards of Distinction, and 'since 1987', come from the awards page; confirm the current count.",
+   "No search or AI analysis was run, so there is no search package on the hub."
+  ],
+  "footer": "Prepared for Ramtech Building Systems. Nothing here is live or indexed. Photographs are Ramtech's own, taken from ramtechmodular.com. Facts we could not source are listed under To confirm."
+ }
+}

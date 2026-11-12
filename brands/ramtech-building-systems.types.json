@@ -1,0 +1,30 @@
+[
+ [
+  "^/(tag|category|author)/",
+  "archive"
+ ],
+ [
+  "^/(services?|solutions?|products?)/",
+  "service"
+ ],
+ [
+  "^/(industries|markets|key-markets)/.",
+  "industry"
+ ],
+ [
+  "^/(locations?|contact-us)/.",
+  "city"
+ ],
+ [
+  "^/(blog|news|resources)/.",
+  "post"
+ ],
+ [
+  "-form/?$",
+  "form"
+ ],
+ [
+  "^/(privacy|terms|thank-you)",
+  "policy"
+ ]
+]
