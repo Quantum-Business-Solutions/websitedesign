@@ -235,7 +235,7 @@ h1,h2,h3{text-wrap:balance}
 .pv-hero-stats b{display:block;font-family:var(--q-serif);font-size:40px;line-height:1;font-weight:800;letter-spacing:-.03em;color:var(--accent-ink)}
 .pv-hero-stats span{display:block;margin-top:8px;font-size:13px;line-height:1.45;color:var(--fg-muted)}
 .pv-ribbon{background:var(--chrome-bg);color:var(--chrome-fg)}
-.pv-ribbon .q-container{display:flex;flex-wrap:wrap;gap:10px 36px;align-items:center;min-height:56px;padding-top:12px;padding-bottom:12px;font-size:14px}
+.pv-ribbon .q-container{display:flex;flex-wrap:wrap;gap:10px 36px;align-items:center;justify-content:center;text-align:center;min-height:56px;padding-top:12px;padding-bottom:12px;font-size:14px}
 .pv-ribbon span{display:inline-flex;align-items:center;gap:10px}.pv-ribbon span::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--q-gold)}
 /* proof numeral */
 .pv-proof{text-align:center}.pv-proof b{display:block;font-family:var(--q-serif);font-size:clamp(96px,14vw,200px);line-height:.95;font-weight:800;letter-spacing:-.04em;color:var(--accent-ink)}

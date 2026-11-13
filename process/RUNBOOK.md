@@ -138,7 +138,7 @@ critic, Fact checker and Mobile reviewer on the hub and the home page. **The cli
 URL only, and only after the gate and the agents pass.** Inputs: `process/INTAKE.md`.
 The content file is written by `brands/<slug>.content.py` (constants in, JSON out); edit the script,
 rerun it, rerun `preview.py`. Every rendered page must resolve its links from nested folders, so run
-the link and image check (`node scripts/preview_check.mjs <dir>/<page>.html ...`, run from this repo) before the gate. Motion (count-up, hero
+the link and image check (`node scripts/preview_check.mjs <dir>/<page>.html ...`, run from this repo) and the alignment check (`node scripts/qa_alignment.mjs <dir>/<page>.html ...`, which must pass at 1440 and 390) before the gate. Motion (count-up, hero
 parallax, card tilt, logo marquee) is on by default and turns itself off under
 `prefers-reduced-motion`; nothing on the page depends on it.
 

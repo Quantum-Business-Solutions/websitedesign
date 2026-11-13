@@ -127,6 +127,19 @@ one reference stays in that entry's prose in `design/references.md`.
   Only `BreadcrumbList` is site-wide. Putting `Organization` in `base.html` is what produced
   "ORGANIZATION 9 valid" in the Semrush audit: nine copies of one entity.
 
+## Alignment: everything on a row shares the axis of its neighbours
+
+House rule (Shawn, 2026-11-13, after the Ramtech Showcase affiliations row, a line of red dots and names, sat
+left under a centred heading and caption): **basic alignment is not optional.** A row of badges, dot-separated
+items, buttons, logos or stats sits on the same axis as the text above and below it. Centred section, centred row.
+Left-aligned section, left-aligned row. Never a row hugging one side of a centred block, and never a marker (dot, bullet,
+icon) that is not vertically centred on its text. Check at 1440 **and** 390, because mobile wrapping breaks rows that
+looked fine on desktop.
+
+Enforced, not hoped for: `node scripts/qa_alignment.mjs <page> ...` fails when a row's items sit off the container's centre
+while a neighbour is centred. It runs in `/directions` and `/preview`, and a page that fails it does not go to a client.
+The first build that tripped it was off by 385px at desktop width and nobody had measured it.
+
 ## We do not recommend a direction
 
 House rule (Shawn, 2026-11-13): **never tell the client which of the three directions we would pick.** No

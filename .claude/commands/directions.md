@@ -107,6 +107,9 @@ content rather than the output:
 - No em dashes (build.py prints every hit), no exclamation marks.
 - The logo shows in the header; the navigation names their services; card grids balance (2, 3, 4, 5, 6, 8).
 - Every direction has an `index.html` and every page the content names.
+- **Alignment.** `node scripts/qa_alignment.mjs ../out-<slug>/showcase/index.html ../out-<slug>/clean/index.html ../out-<slug>/press/index.html`
+  must print `alignment: all rows sit on the axis of their neighbours`. A row of badges, dots, buttons or stats
+  that is not on the same axis as the text around it is a defect, not a style (`design/guardrails.md`). Fix the CSS, rerun.
 - The first-direction score `build.py` prints is 80 or more. Under 80: titles carry the city, descriptions
   are 140 to 160 characters, one h1 per page, the description is not the title. Fix, rerun.
 

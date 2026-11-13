@@ -45,6 +45,8 @@ node scripts/verify.mjs https://<slug>.vercel.app/<dir>/ https://<slug>.vercel.a
 
 Under 80 on any page: fix the generator or the content, not the output.
 
+Then `node scripts/qa_alignment.mjs <dir>/index.html <dir>/services.html ...` on the home page of every direction and any page with a badge, stat or button row. It must pass at 1440 and 390 (design/guardrails.md, Alignment).
+
 ## 4 — QA agents, then the link
 
 Run the Copy critic, Fact checker and Mobile reviewer from `process/agents.md` against the hub and
