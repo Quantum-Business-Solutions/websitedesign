@@ -127,6 +127,14 @@ one reference stays in that entry's prose in `design/references.md`.
   Only `BreadcrumbList` is site-wide. Putting `Organization` in `base.html` is what produced
   "ORGANIZATION 9 valid" in the Semrush audit: nine copies of one entity.
 
+## We do not recommend a direction
+
+House rule (Shawn, 2026-11-13): **never tell the client which of the three directions we would pick.** No
+"our recommendation" box, no "(recommended)" in the switcher, no "we would build X" on the hub, no `--recommend`.
+The three are equals and the client chooses. This replaces the earlier "a pitch that refuses to have an opinion reads
+as hedging" reasoning in `process/decisions.md`. The tooling now ignores `--recommend` and `recommend` in a build config,
+so a stray flag cannot bring it back.
+
 ## Typefaces: straightforward, never whimsical
 
 House rule (Shawn, 2026-11-12, after Revolution's "less whimsical font", called out twice, and again on

@@ -24,7 +24,7 @@ then chooses.
 
 ```bash
 python3 scripts/preview.py --content brands/<slug>.content.json \
-    --themes "Quantum <A>,Quantum <B>,Quantum <C>" --recommend "Quantum <A>" \
+    --themes "Quantum <A>,Quantum <B>,Quantum <C>" \
     --roles "<A in one line>|<B in one line>|<C in one line>" \
     --base-url https://<slug>.vercel.app --out /path/to/<client-repo>
 ```
@@ -36,7 +36,7 @@ every page, the plan and the reply button. Every page is `noindex`.
 
 ## 3 — Look, then gate
 
-Screenshot the hub and the recommended home page at 1440 and 390 and **look**. Then:
+Screenshot the hub and each direction's home page at 1440 and 390 and **look**. Then:
 
 ```bash
 node scripts/verify.mjs https://<slug>.vercel.app/<dir>/ https://<slug>.vercel.app/<dir>/locations \
@@ -48,7 +48,7 @@ Under 80 on any page: fix the generator or the content, not the output.
 ## 4 — QA agents, then the link
 
 Run the Copy critic, Fact checker and Mobile reviewer from `process/agents.md` against the hub and
-the recommended home page. Close every correctness finding. Only then does the URL go to the client,
+each direction's home page. Close every correctness finding. Only then does the URL go to the client,
 and only the hub URL: they choose from there.
 
 ## 5 — Feed it back

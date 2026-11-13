@@ -57,9 +57,8 @@ like or hate, let that move the stretch and the wildcard. Write into `brands/<sl
 
 - `themes`: three, safe first.
 - `roles`: one line each, written for this client, not the starter's generic text.
-- `recommend`: our pick. A pitch that refuses to have an opinion reads as hedging (`process/decisions.md`),
-  so recommend unless `brief.notes` says not to, and give the reasons in `pitch["pick_reasons"]` tied to
-  what they said.
+- `recommend`: **always `null`.** We do not recommend a direction to the client; the three are presented as
+  equals and they choose (`design/guardrails.md`). Do not write `pick_reasons`, `pick_change` or an "our pick" anywhere.
 - `base_url` stays what `cc.py scaffold` set (Client Command's address), `out` stays `../out-<slug>`.
 
 ## 4 — The content file

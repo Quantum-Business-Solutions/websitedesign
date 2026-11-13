@@ -47,7 +47,6 @@ python3 scripts/mockup.py \
     --brief brands/<slug>.md \
     --roles "The safe one|The stretch|The wildcard" \
     --rationales "<why A>|<why B>|<why C>" \
-    --recommend "Quantum <A>" \
     --eyebrow "<their line, e.g. Four North Carolina offices · since 1947>" \
     --subhead "<the hero paragraph, written for THEIR visitor>" \
     --promise-note "<where the promise came from, if not an interview>" \
@@ -62,8 +61,7 @@ python3 scripts/mockup.py \
 **`--eyebrow`, `--subhead`, `--cards` and `--stats` are required and have no defaults.** The hero
 paragraph used to be filled from the brief's *design read*, which put "a regional
 office-technology dealer site for office, IT and facilities managers…" under the client's own
-headline. Write the subhead for their visitor. `--recommend` marks QBS's pick on the page
-(`process/decisions.md`: a pitch that refuses to have an opinion reads as hedging). `--findings`
+headline. Write the subhead for their visitor. We do not recommend a direction (`design/guardrails.md`); the three are equals. `--findings`
 renders "What we found, and what we'd do about it", which is the section that wins the meeting. The first Kelly render
 shipped a dental demo's "General dentistry / Orthodontics / Implants" cards under Kelly's headline,
 and only the screenshot caught it. Every word in the preview is now yours: pull the three services

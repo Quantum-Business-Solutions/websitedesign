@@ -96,7 +96,7 @@ hand it the brief and let it work.
 This is the step that separates a re-skin from something worth showing.
 
 **Ordering.** Clone and re-skin all three (Step 4) — that's cheap now. Everything in *this* step is
-expensive, so run it on **one** direction only: your recommended one before the pitch, so the set
+expensive, so run it on **one** direction only: the first in the order before the pitch, so the set
 isn't visibly uneven, then the client's pick after Step 7 if they chose differently. Three
 Higgsfield heroes and three polish passes when two get discarded is waste.
 

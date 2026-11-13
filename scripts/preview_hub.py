@@ -40,6 +40,9 @@ def _role(roles, t):
 
 
 def hub(content, themes, recommend, base, roles, standard, client_tokens, out_dir=None, seo=None):
+    # House rule (Shawn, 2026-11-13): we do not recommend a direction to the client. The three are presented as equals
+    # and the client chooses. Whatever the caller passes, no recommendation is rendered.
+    recommend = None
     import os
     ds_link = '<a href="design-system.html">Design system</a>' if out_dir and os.path.exists(os.path.join(out_dir, "design-system.html")) else ""
     b = content["brand"]

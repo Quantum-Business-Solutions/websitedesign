@@ -141,7 +141,7 @@ Place them with `compose` per direction; ids are what `compose` references.
 
 Type borrowing: `brand.type_from = {"Quantum Showcase": "Quantum Clean"}` keeps a direction's geometry and motion but sets its headings and body in another direction's faces, and pulls that theme's font import along. Kelly runs Showcase in Clean's Open Sans at Shawn's request.
 
-Directions: pass `--recommend` only when we are recommending; without it the hub shows "Your call" with the three cards and the switcher carries no "(recommended)". Order in `--themes` is the order on the hub and in the switcher.
+Directions: we never recommend one. The hub shows "Your call" with the three cards and the switcher carries no "(recommended)"; `--recommend` is ignored. Order in `--themes` is the order on the hub and in the switcher.
 
 Content-file helpers for Kelly: `_flow()` and `_ba()` build service-page modules from tuples; `SERVICE_MODULES[slug]` lists what each service page inserts after its benefits cards.
 Generated 3D: Higgsfield `generate_image_batch` (product render, plain white ground, no logos) then `remove_background(media_id=job_id)` then `generate_3d(model image_to_3d, should_texture:true)`; the textured GLB lands around 4MB. Label it generated in the intro.

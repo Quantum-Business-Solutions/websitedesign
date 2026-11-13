@@ -1002,6 +1002,7 @@ def srcset_for(path: str, out_dir: str) -> str:
 
 
 def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir, dslug):
+    recommend = None  # house rule: no recommended direction (design/guardrails.md)
     b = content["brand"]
     partners_dir = os.path.join(out_dir, "assets", "partners")
     depth = page["file"].count("/")           # blog/post.html -> 1

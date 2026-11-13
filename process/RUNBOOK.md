@@ -410,7 +410,7 @@ Two build facts from Revolution go in every plan: layout sections pushed through
 Every client starts from `brands/_starter.content.py`, which places the full signature set by default: layered hero with the network canvas and a 3D hero object, wheel, process chart on the home and every service page, before/after on every service page, seal, fleet rail, floor plan hotspots, scroll story, history rail, map (region per client), film slot, launcher, depth layer. Removing a module is a decision; adding one is not.
 
 Rules that came from Shawn this week:
-- No recommended direction unless we have a reason we can say out loud. Showcase first in the order. Run `preview.py` without `--recommend` and the hub shows "Your call".
+- No recommended direction, ever (Shawn, 2026-11-13). Showcase first in the order. The hub shows "Your call".
 - A direction may borrow another's typefaces (`brand.type_from`). Kelly runs Showcase in Clean's Open Sans.
 - Floor plan hotspots on every client with a physical place. Generate the isometric with the client's rooms named, measure once, place the points.
 - The history rail on every client with a founding date. Sourced years only; decades as honest placeholders, listed under To confirm.

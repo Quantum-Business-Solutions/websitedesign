@@ -91,13 +91,11 @@ the result?" → change order (new module behaviour).
 
 ## Which direction gets the Higgsfield render?
 
-**Rule:** One direction, and it's the one we'd recommend if asked — before the pitch. After the
-pitch, the one they chose, if different.
+**Rule:** One direction, the first in the order — before the pitch. After the pitch, the one they
+chose, if different. We do not tell the client which we prefer; first in the order is a cost decision, not a recommendation.
 
-**Test:** *"If the client said 'you pick', which would I pick?"* That one.
-
-**Example:** Three dealer directions; we'd recommend Clean. Render Clean's hero, use the theme's own
-hero treatment for the other two. If they pick Showcase, render Showcase after the call. Never three
+**Example:** Three dealer directions, Showcase first. Render Showcase's hero, use the theme's own
+hero treatment for the other two. If they pick Clean, render Clean after the call. Never three
 renders before a choice — two get discarded.
 
 **Escalate:** never. Credits are the only cost, and the rule already minimises them.

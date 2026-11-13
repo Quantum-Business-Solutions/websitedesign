@@ -615,6 +615,9 @@ def main():
     if len(CARD_BODIES) != 3:
         raise SystemExit("--card-bodies takes exactly three, pipe-separated")
     if a.recommend:
+        print("note: --recommend is ignored; we no longer recommend a direction (design/guardrails.md)")
+        a.recommend = None
+    if a.recommend:
         if a.recommend not in themes:
             raise SystemExit(f"--recommend must be one of the three themes: {themes}")
         RECOMMEND = a.recommend
