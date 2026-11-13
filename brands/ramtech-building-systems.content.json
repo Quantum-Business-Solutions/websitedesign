@@ -5,13 +5,11 @@
  "brand": {
   "accent": "#cd2122",
   "ink_secondary": "#181818",
-  "chrome": "dark",
-  "chrome_bg": "#181818",
-  "logo": "assets/logo.png",
+  "chrome": "light",
+  "logo": "assets/logo-color.png",
   "logo_alt": "Ramtech Building Systems",
-  "logo_w": 420,
-  "logo_h": 180,
-  "logo_note": "White wordmark fetched from the live site, so the header and footer sit on a dark ground. Ask for the vector.",
+  "logo_w": 295,
+  "logo_h": 132,
   "phone": "(817) 473-9376",
   "phone_href": "tel:+18174739376",
   "email": "sales@ramtechmodular.com",
@@ -166,14 +164,29 @@
   "telephone": "+1-817-473-9376",
   "founded": "1982",
   "short_name": "Ramtech",
-  "title_city": "Texas",
+  "title_city": "Mansfield, TX",
   "cities": [
    "Mansfield",
+   "Arlington",
+   "Dallas-Fort Worth",
+   "DFW",
    "Texas",
    "TX",
    "Southwest"
   ],
   "area_served": [
+   {
+    "@type": "City",
+    "name": "Mansfield, TX"
+   },
+   {
+    "@type": "City",
+    "name": "Arlington, TX"
+   },
+   {
+    "@type": "AdministrativeArea",
+    "name": "Dallas-Fort Worth"
+   },
    {
     "@type": "State",
     "name": "Texas"
@@ -273,7 +286,7 @@
  "pages": [
   {
    "file": "index.html",
-   "title": "Ramtech Building Systems | Modular buildings from a Texas design-build manufacturer",
+   "title": "Modular Buildings | Ramtech Building Systems",
    "compose": {
     "showcase": [
      "hero-light",
@@ -349,8 +362,8 @@
        ]
       }
      },
-     "heading": "A design-build leader in <em>modular building construction</em>.",
-     "subhead": "Ramtech designs, manufactures and installs relocatable and permanent modular buildings for schools, healthcare providers, government agencies and commercial buyers, with no cost project planning and budgeting to start.",
+     "heading": "Your building is made in our plant <em>while your site is prepared</em>, so you move in sooner, at a firm fixed price.",
+     "subhead": "A design-build leader in modular construction since 1982. Ramtech designs, manufactures and installs relocatable and permanent buildings for schools, healthcare providers, government agencies and commercial buyers, starting with no cost project planning and budgeting.",
      "primary": {
       "label": "Start with no cost planning",
       "href": "contact.html"
@@ -629,7 +642,7 @@
      "id": "story",
      "eyebrow": "Since 1982",
      "heading": "From a dealership in Arlington to a 20 acre plant",
-     "intro": "The dates Ramtech publishes. The rest are on the To confirm list.",
+     "intro": "The dates Ramtech publishes on its own site.",
      "items": [
       [
        "1982",
@@ -1786,7 +1799,7 @@
      "id": "story",
      "eyebrow": "Since 1982",
      "heading": "From a dealership in Arlington to a 20 acre plant",
-     "intro": "The dates Ramtech publishes. The rest are on the To confirm list.",
+     "intro": "The dates Ramtech publishes on its own site.",
      "items": [
       [
        "1982",
@@ -2104,18 +2117,22 @@
    "phone": ""
   },
   "prepared_for": "Ramtech Building Systems",
-  "heard_intro": "Ramtech is a prospect, so nothing here comes from a conversation. Everything comes from ramtechmodular.com and the brief Quantum filled in. Tell us where it is wrong; your words outrank ours.",
+  "heard_intro": "What we were given, in your words where we have them. Tell us where it is wrong; your words outrank ours.",
   "heard": [
-   "The brief has no stated promise. The site's own headline is 'Ramtech is a design-build leader in modular building construction'; we used it, marked unconfirmed.",
-   "No likes, dislikes or ground preference were given. We chose the house light set.",
-   "Notes in the brief: design-build leader since 1982, direct manufacturer, more than 3,500 projects, the most modular buildings delivered to government, education, healthcare and commercial buyers in the Southwest.",
-   "The offer to lead with is no cost project planning and budgeting."
+   "The promise a visitor must believe: 'Your building is made in our plant while your site is prepared, so you move in sooner, at a firm fixed price.' It is the first thing on the home page, word for word.",
+   "Light ground. Straightforward, professional typography only; no whimsical or quirky display fonts and no heavy black backgrounds. All three directions are light, and the header sits on white.",
+   "Showcase is set in Plus Jakarta Sans, as asked.",
+   "Design-build leader in commercial modular construction since 1982; a direct manufacturer on a 20 acre site in Mansfield, Texas; more than 3,500 projects; permanent (pier and beam, slab-on-grade) and relocatable modular; SCIF buildings, disaster recovery, multi-family and student housing.",
+   "Contract vehicles on the site today: MBI, BuyBoard and TIPS.",
+   "The lead offer is no cost project planning and budgeting. It is the button on every page."
   ],
   "found": [
-   "829 URLs in the sitemap, 765 of them blog posts and image attachment pages. Average page score 44 of 100 (Quantum audit, November 2026).",
-   "No page title names a city. 517 pages are under 300 words, and only 2 carry FAQ markup.",
-   "Two figures disagree: the home page and Ramtech story say more than 3,500 projects; the Ramtech difference page says more than 4,000.",
-   "The site is open to AI crawlers (robots.txt allows them) but has no llms.txt file. The search and AI analysis for this domain has not been run, so no traffic figures appear here."
+   "Semrush credits ramtechmodular.com with 2,084 organic keywords and about 2,343 visits a month, on an Authority Score of 24. Nearly nine visits in ten come from people who did not type the company name.",
+   "The site is 635 pages with an average page score of 49 of 100 (grade D); 424 of those pages score D or F. 13 findings, ranked on the Search page of this hub.",
+   "The home page title runs to 72 characters and its heading is the company's claim, which contains no term a buyer searches for. The home page has no form on it.",
+   "Every money page carries Article markup; none carries Service or FAQPage markup, and none shows a review.",
+   "Live searches from Mansfield put Ramtech first for six of seven local service searches, and absent from the top ten for the national head terms such as 'modular construction' and 'portable school buildings'.",
+   "All 13 AI crawlers tested are allowed in, but there is no llms.txt at the root of the site."
   ],
   "choose_heading": "Three directions. Your call.",
   "choose_intro": "The words, the pages and the proof are identical in all three. What differs is the register. Open each one on your phone and tell us which feels like Ramtech.",
@@ -2126,90 +2143,55 @@
    ],
    [
     "If a contemporary, confident look is the argument",
-    "Showcase: image-led, rounded, more sales-forward. Shows the buildings first."
+    "Showcase: Plus Jakarta Sans, image-led and rounded. Shows the buildings first."
    ],
    [
     "If established is the argument",
     "Press: warm paper and a serif. Reads like the company that has been building since 1982."
    ]
   ],
-  "pick_reasons": [
-   [
-    "Buyers read to compare",
-    "School districts, agencies and healthcare administrators comparing builders want the process, the contract routes and the proof on the page. Clean puts them first."
-   ],
-   [
-    "The proof is procedural",
-    "No cost planning, a firm fixed price, a one-year warranty, purchasing cooperatives: Clean lets each one sit in a plain list a buyer can check."
-   ],
-   [
-    "It will age well",
-    "A 40-year-old builder that makes things should not look trendy. Clean is quiet enough for the buildings to be the subject."
-   ]
-  ],
-  "pick_change": "The Ramtech photographs are 2017 to 2019 and several are small. We would commission a current set of finished buildings before launch; the hero carries the whole page.",
-  "alternatives": [
-   [
-    "Quantum Showcase",
-    "The safe, sales-forward one: big building photographs, a wheel of the four markets, a drag comparison of site-built and modular sequences."
-   ],
-   [
-    "Quantum Press",
-    "The wildcard: serif headlines on warm paper, the 1982 story high on the page. Nobody in modular construction looks like this."
-   ]
-  ],
   "plan": [
    [
-    "Weeks 1 to 2",
-    "Choose a direction. Resolve the items under To confirm, starting with the promise and the project count."
+    "Days 1 to 10",
+    "Choose a direction. Confirm the project count and the contact for each form."
    ],
    [
-    "Weeks 3 to 4",
+    "Days 10 to 30",
     "Copy review with Ramtech: the project profiles, the floor plans library, and which blog posts are worth keeping."
    ],
    [
-    "Weeks 5 to 7",
+    "Days 30 to 55",
     "Build in HubSpot: theme, templates, every page, forms routed to the right person at the plant."
    ],
    [
-    "Weeks 8 to 9",
+    "Days 55 to 70",
     "Review rounds, a permanent redirect for every URL that exists today, QA on the same gate this preview passed."
    ],
    [
-    "Week 10",
+    "Day 70",
     "Launch with the baseline captured the day before."
    ],
    [
-    "Days 60 to 90",
+    "Days 70 to 90",
     "Measure against the baseline and decide the first articles from the questions buyers ask."
    ]
   ],
-  "search": {
-   "heading": "Where you stand in search today",
-   "intro": "The search and AI analysis for this domain has not been pulled.",
-   "as_of": "not pulled",
-   "today_stats": [],
-   "today": [],
-   "after": [],
-   "keep": [],
-   "note": ""
-  },
   "confirm": [
-   "Who this is for. The brief says Ramtech is a prospect and lists Kelly Williams as a possible contact on our side, unconfirmed. Kelly Williams is named on Ramtech's own site as its Vice President of Business Development. Confirm who at Ramtech receives this.",
-   "The promise. The brief gives none. We used the home page headline, 'a design-build leader in modular building construction'.",
-   "The project count. The home page and the Ramtech story say more than 3,500; the Ramtech difference page says more than 4,000. We used 3,500.",
-   "Accent and header colour. The brief gives none. #cd2122 (red) is the most frequent colour in Ramtech's child theme stylesheet and matches the roofs in the photographs; #181818 is the header ground because the logo is white. Neither was checked against brand guidelines.",
-   "The logo is a white-type PNG fetched from the live site. Ask for the vector and a dark-type version.",
-   "Photographs are Ramtech's own, 2017 to 2019, taken from the live site. Which project is in which photograph is not captioned on the site, so alt text is descriptive only.",
-   "No written testimonials. The site features video narrations by Marty Crawford (West ISD) and Rev. John Wilke (Immanuel Lutheran Church and School), but no quoted text. Nothing is attributed to them here.",
-   "Named people. Ramtech's design team page names nobody, so no team section appears.",
-   "Mansfield coordinates (32.5632, -97.1417) are approximate, used only for schema markup.",
-   "The map section is left out because the map module has no Texas outline and Ramtech lists one location.",
-   "Financing and lease figures on the specialty pages come from Ramtech's procurement pages: confirm the $1 end-of-lease purchase and 100 percent financing still apply.",
-   "The SCIF page was only partly readable in our fetch; the standards named here are ICD-705 only.",
-   "The 31 Awards of Distinction, and 'since 1987', come from the awards page; confirm the current count.",
-   "No search or AI analysis was run, so there is no search package on the hub."
+   "Contact at Ramtech for this proposal. The brief names no one; Kelly Williams is shown on Ramtech's site as Vice President of Business Development.",
+   "Project count. The home page and the Ramtech story say more than 3,500, the brief says 3,500+, the Ramtech difference page says more than 4,000. Pages use 3,500.",
+   "Accent. #cd2122 is from the brief. It matches the roofs in the photographs; it was not checked against brand guidelines.",
+   "Logo. The colour logo (navy and maroon, 295 by 132 pixels) is taken from the live site, so the header is white. A vector file would sharpen it.",
+   "Photographs are Ramtech's own, 2017 to 2019, taken from the live site. The site does not caption which project is which, so alt text is descriptive only. A current set of finished buildings would help the hero.",
+   "Cities. Arlington is where Ramtech began in 1982 and Dallas-Fort Worth is the market; the site lists one address, in Mansfield. No Arlington or Dallas-Fort Worth office is shown.",
+   "No written testimonials are published (the video narrations are not quoted), so none appear.",
+   "The design team page names nobody, so no team section appears and no Person records are in the schema.",
+   "Mansfield coordinates (32.5632, -97.1417) are approximate and used only for schema markup.",
+   "No map section: the Texas map outline is not in the module and Ramtech lists one location.",
+   "Financing and lease terms ($1 end-of-lease purchase, 100 percent financing) come from Ramtech's procurement pages; confirm they still apply.",
+   "The SCIF page was only partly readable in our fetch; ICD-705 is the only standard named.",
+   "The 31 Awards of Distinction and 'since 1987' come from the awards page; confirm the current count.",
+   "Form recipient. Every form needs a named person at the plant before launch."
   ],
-  "footer": "Prepared for Ramtech Building Systems. Nothing here is live or indexed. Photographs are Ramtech's own, taken from ramtechmodular.com. Facts we could not source are listed under To confirm."
+  "footer": "Prepared for Ramtech Building Systems. Photographs are Ramtech's own, taken from ramtechmodular.com. Search figures are from the analysis run on 12 November 2026."
  }
 }

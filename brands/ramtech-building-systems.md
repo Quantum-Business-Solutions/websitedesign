@@ -12,9 +12,9 @@
 
 ## The promise
 
-The brief gives none. The home page headline, unconfirmed:
+From the brief, verbatim:
 
-> "Ramtech is a design-build leader in modular building construction"
+> "Your building is made in our plant while your site is prepared, so you move in sooner, at a firm fixed price."
 
 ## The design read
 
@@ -22,11 +22,15 @@ Reading this as: **B2B services and manufacturing site** for **school districts,
 
 ## Client-stated constraints
 
-- Ground: none stated (brief, Client Command).
-- Likes and dislikes: none given.
+- Ground: light (brief).
+- Dislikes: whimsical or quirky display fonts; heavy black backgrounds. Straightforward, professional typography only (brief).
+- Showcase is set in Plus Jakarta Sans (brief notes).
+- Do not recommend one direction; present all three as equals (brief).
+- Accent: #cd2122 (brief).
 - Offer: no cost project planning and budgeting (brief notes).
 - Service lines in this order: Education, Healthcare, Commercial, Government, Permanent Modular Construction, Relocatable Modular Buildings (brief).
-- Prospect, not yet a client. Contact on our side may be Kelly Williams (unconfirmed; the site names Kelly Williams as Ramtech's Vice President of Business Development).
+- Cities: Mansfield, TX; Arlington, TX; Dallas-Fort Worth (brief).
+- Prospect for a roughly $50,000 website project. Contact on our side: Shawn.
 
 ## Entity facts
 
@@ -45,13 +49,15 @@ Reading this as: **B2B services and manufacturing site** for **school districts,
 
 ## SEO baseline
 
-Not pulled. Site audit only: 829 sitemap URLs, average score 44, no page title with a city, 517 pages under 300 words, FAQ markup on 2 pages, no llms.txt, AI crawlers allowed.
+From the Client Command analysis of ramtechmodular.com, run 12 November 2026: 635 pages scored, 13 findings, readiness 49 of 100, grade D. 2,084 organic keywords, about 2,343 visits a month, Authority Score 24. Full package in `brands/ramtech-building-systems.seo.json`.
 
 ## Directions
 
-1. Quantum Showcase (safe)
-2. Quantum Clean (stretch, recommended)
-3. Quantum Press (wildcard)
+1. Quantum Showcase
+2. Quantum Clean
+3. Quantum Press
+
+Presented as equals. No direction is recommended.
 
 ## Chosen direction
 
