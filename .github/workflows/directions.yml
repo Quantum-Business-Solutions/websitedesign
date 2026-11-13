@@ -60,6 +60,15 @@ jobs:
         id: brief
         run: python3 scripts/cc.py brief "$CC_BUILD_ID" >> "$GITHUB_OUTPUT"
 
+      # A client whose content was tuned by hand (brands/<slug>.handtuned exists) keeps it: the two Claude steps below are
+      # skipped, so the committed content.py is rendered as written and not rewritten from the brief.
+      - name: Hand-tuned content?
+        id: hold
+        env:
+          SLUG: ${{ steps.brief.outputs.slug }}
+        run: |
+          if [ -f "brands/$SLUG.handtuned" ]; then echo "handtuned=true" >> "$GITHUB_OUTPUT"; else echo "handtuned=false" >> "$GITHUB_OUTPUT"; fi
+
       - name: Install
         run: |
           python3 scripts/cc.py progress "$CC_BUILD_ID" install "Setting up the build machine"
@@ -83,7 +92,7 @@ jobs:
 
       - name: Write the content and render the three directions (Claude subscription)
         id: sub
-        if: steps.auth.outputs.oauth == 'true'
+        if: steps.auth.outputs.oauth == 'true' && steps.hold.outputs.handtuned != 'true'
         continue-on-error: true
         uses: anthropics/claude-code-action@v1
         with:
@@ -98,7 +107,7 @@ jobs:
 
       - name: Write the content and render the three directions (API key)
         id: api
-        if: steps.sub.outcome != 'success' && steps.auth.outputs.api == 'true'
+        if: steps.sub.outcome != 'success' && steps.auth.outputs.api == 'true' && steps.hold.outputs.handtuned != 'true'
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}

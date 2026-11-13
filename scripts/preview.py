@@ -37,6 +37,7 @@ import themefix  # noqa: E402
 from preview_hub import hub  # noqa: E402
 import preview_sections  # noqa: E402
 import preview_modules  # noqa: E402
+import preview_wow  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DASH_HITS: list[str] = []
@@ -678,6 +679,7 @@ RENDER = {"hero": r_hero, "partners": r_partners, "stats": r_stats, "services": 
           "leadform": r_leadform}
 RENDER.update(preview_sections.RENDER_EXTRA)
 RENDER.update(preview_modules.RENDER_EXTRA2)
+RENDER.update(preview_wow.RENDER_WOW)   # opt-in: only a content file that names these types gets them
 
 
 # ------------------------------------------------------------------------------ chrome
@@ -1049,6 +1051,7 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
     if any(x["type"] in ("leadform", "contact") for x in secs) and secs and secs[-1]["type"] == "cta":
         secs = secs[:-1]   # two "start with the assessment" blocks in a row read as a template bug
     body = "".join(RENDER[s["type"]](s, ctx) for s in secs)
+    wow = preview_wow.uses(secs)   # the opt-in sections bring their own CSS and JS, and only to pages that use them
     if not b.get("email"):
         body = re.sub(r'<a href="mailto:"[^>]*></a>', "", body)
     canonical = f"{base}/{dslug}/" if page["file"] == "index.html" else f"{base}/{dslug}/{page['file']}"
@@ -1089,7 +1092,7 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
 {preview_sections.EXTRA_CSS}
 {preview_modules.EXTRA_CSS2}
 /* ===== direction system: {E(dslug)} ===== */
-{DIRECTION_CSS.get(dslug, "")}
+{DIRECTION_CSS.get(dslug, "")}{preview_wow.WOW_CSS if wow else ""}
 /* ===== mobile, after the direction system so it wins ===== */
 {MOBILE_LAST_CSS}
 </style>
@@ -1106,7 +1109,7 @@ def render_page(content, page, theme, css, tok, themes, recommend, base, out_dir
 {preview_modules._launcher(b["launcher"], ctx) if b.get("launcher") else ""}
 {switcher(themes, theme, page["file"], recommend)}
 <script>{PREVIEW_JS}</script>
-<script>{preview_modules.DEPTH_JS}</script>
+<script>{preview_modules.DEPTH_JS}</script>{f'<script>{preview_wow.WOW_JS}</script>' if wow else ''}
 </body>
 </html>
 '''

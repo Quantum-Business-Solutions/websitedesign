@@ -34,6 +34,12 @@ for (const t of targets) {
         const kids = [...row.children].filter(vis);
         if (kids.length < 2) continue;
         const rr = row.getBoundingClientRect();
+        // A list that has collapsed to one column (every item on its own line, same left edge) is a stack, not a row:
+        // a timeline with a rail down its left side is meant to be inset. Rows are what this check is about.
+        if (/^(OL|UL)$/.test(row.tagName)) {
+          const ls = kids.map(k => Math.round(k.getBoundingClientRect().left)), ts = kids.map(k => Math.round(k.getBoundingClientRect().top));
+          if (new Set(ls).size === 1 && new Set(ts).size === kids.length) continue;
+        }
         const left = Math.min(...kids.map(k => k.getBoundingClientRect().left));
         const right = Math.max(...kids.map(k => k.getBoundingClientRect().right));
         const cw = rr.width, uw = right - left;
@@ -43,9 +49,11 @@ for (const t of targets) {
         if (Math.abs(offset) <= TOL) continue;   // centred
         // Is the neighbourhood centred? Look at the row's own text-align and at siblings above and below.
         const near = [];
+        // Neighbours only count inside the same section: a centred hero above must not make a left-aligned section below it a defect.
+        const scope = row.closest('section') || document.body;
         let p = row;
-        for (let i = 0; i < 3 && p; i++, p = p.parentElement) {
-          for (const sib of [p.previousElementSibling, p.nextElementSibling]) if (sib) near.push(sib, ...sib.querySelectorAll('h1,h2,h3,p'));
+        for (let i = 0; i < 3 && p && p !== scope; i++, p = p.parentElement) {
+          for (const sib of [p.previousElementSibling, p.nextElementSibling]) if (sib && scope.contains(sib)) near.push(sib, ...sib.querySelectorAll('h1,h2,h3,p'));
         }
         const centredNeighbour = near.some(n => vis(n) && centred(n) && n.textContent.trim().length > 3);
         if (centred(row) || centredNeighbour) {

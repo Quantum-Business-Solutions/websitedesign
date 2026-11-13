@@ -161,21 +161,89 @@ def _ba(bid, heading, b_title, b_body, b_items, a_title, a_body, a_items, b_eyeb
             "after": {"eyebrow": a_eyebrow, "title": a_title, "body": a_body, "items": a_items}}
 
 
-LEADFORM = {"type": "leadform", "alt": True, "id": "start", "heading": "Start with no cost project planning and budgeting",
-            "body": "Tell us what you are building, where, and when you need it. Ramtech returns a floor plan, a site plan, an exterior rendering, outlined specifications and a preliminary budget.",
-            "submit": "Request planning and budgeting", "note": "A person replies, not an autoresponder."}
+PLAN_OPTIONS = ["Education", "Healthcare", "Commercial", "Government", "Permanent modular construction", "Relocatable modular buildings", "Multi-family or student housing", "Something else"]
+
+
+def _plan(pid="start", alt=True):
+    """The planning request: what comes back, what happens next, the form. Every line is from Ramtech's design-build page."""
+    return {"type": "plan", "id": pid, "alt": alt, "eyebrow": "The first step costs nothing",
+            "heading": "Start with no cost project planning and budgeting",
+            "body": "Tell us what you are building, where, and when you need it. Ramtech returns five things before any design fee.",
+            "sheets_label": "What Ramtech returns",
+            "sheets": [["floor", "A basic floor plan"], ["site", "A site plan"], ["render", "An exterior rendering"], ["spec", "Outlined building specifications"], ["budget", "A preliminary budget"]],
+            "next": [["A programming meeting.", "Ramtech starts with a meeting about what the building has to do."],
+                     ["Drawings and a preliminary budget.", "The first set of drawings and the budget come back at no cost."],
+                     ["Design, only if you approve the budget.", "Ramtech states the design fee rarely exceeds 2 percent of the preliminary budget, and gives a firm fixed price before construction begins."]],
+            "form_title": "Request planning and budgeting",
+            "fields": [["Name", "text", "name"], ["Organization", "text", "organization"], ["Work email", "email", "email"], ["Phone", "tel", "tel"],
+                       ["What are you building?", "select", "", True], ["Where is the site?", "text", "address-level2"], ["When is the space needed?", "text", ""]],
+            "options": PLAN_OPTIONS, "submit": "Request planning and budgeting", "note": "A person replies, not an autoresponder.",
+            "call_label": "Or call the plant at"}
+
+
+LEADFORM = _plan()
 
 SERVICE_INDEX = {s[0]: s for s in SERVICES}
 WHEEL_ITEMS = [[s[1], brief(s[3], 140), f"services/{s[0]}.html", s[1]] for s in SERVICES]
 
 
+# Photographs from the live site carry a title set into the top of the picture. focus crops to the building itself.
+FOCUS = {"assets/hero-education.jpg": "50% 100%", "assets/healthcare.jpg": "50% 100%", "assets/commercial.jpg": "50% 100%", "assets/government.jpg": "50% 100%",
+         "assets/modular.jpg": "50% 55%", "assets/hero-main.jpg": "50% 62%"}
+IMG_ALT = {"assets/hero-education.jpg": "A single-story modular education building with a stone entry wall and a landscaped lawn",
+           "assets/healthcare.jpg": "A modular medical building with a covered entry canopy",
+           "assets/commercial.jpg": "A relocatable modular office complex at an industrial site",
+           "assets/government.jpg": "A two-story brick modular building with a standing-seam metal roof",
+           "assets/modular.jpg": "A modular building section being moved into position by a telehandler",
+           "assets/hero-main.jpg": "A two-story Ramtech modular building with a red metal roof and brick exterior"}
+IMG_SIZE = {"assets/hero-main.jpg": (1920, 1080)}
+SERVICE_FACTS = {  # three per page, each already stated on that page or in the home page FAQ
+    "education": [["4 to 16", "classrooms in a multiple classroom building"], ["69,776 sq ft", "in 17 relocatable buildings for West ISD"], ["BuyBoard, TIPS", "cooperative purchasing where the district is a member"]],
+    "healthcare": [["Three decades", "building modular medical facilities"], ["Two ways", "permanent or relocatable construction"], ["One company", "design, manufacturing, installation and finish-out"]],
+    "commercial": [["10 to 25%", "lower design and construction costs in its commercial approaches, as Ramtech states"], ["7,168 sq ft", "steel terminal expansion, Panama City-Bay County Airport"], ["Buy or lease", "relocatable buildings and finance leases"]],
+    "government": [["6,550 sq ft", "fire crew quarters at Vance Air Force Base"], ["4,760 sq ft", "police station for the City of Clyde, Texas"], ["ICD-705", "requirements Ramtech builds SCIFs to"]],
+    "permanent-modular-construction": [["25 to 40%", "faster than site construction, as Ramtech states"], ["Two", "foundations: slab-on-grade, pier and beam"], ["2 percent", "of the preliminary budget is rarely exceeded by the design fee"]],
+    "relocatable-modular-buildings": [["60 to 80%", "complete when sections leave the plant"], ["Type V, Type II", "wood and steel construction"], ["Buy or lease", "with financing alternatives"]],
+}
+
+
+def page_hero(eyebrow, heading, subhead, image, secondary, facts=None, primary=None):
+    w, h = IMG_SIZE.get(image, (600, 400))
+    return {"type": "rxhero", "look": "page", "eyebrow": eyebrow, "heading": heading, "subhead": subhead, "primary": primary or PRIMARY, "secondary": secondary,
+            "image": image, "image_alt": IMG_ALT.get(image, "A Ramtech modular building"), "image_w": w, "image_h": h, "focus": FOCUS.get(image), "facts": facts}
+
+
+def tracks(tid="tracks", heading="Made in our plant while your site is prepared", alt=False, image=None, intro=None, eyebrow="Two tracks at once", variants=None):
+    """The promise as a timeline. Positions on the axis are a diagram, not a schedule: the modular sequence ends inside
+    the band Ramtech publishes (25 to 40 percent faster than site construction), and the legend says so."""
+    t = {"type": "tracks", "id": tid, "alt": alt, "eyebrow": eyebrow, "heading": heading,
+         "intro": intro or "On a site-built project the foundation, the structure and the finishes follow one another. At Ramtech the foundation is built on your site while the building sections are made in the plant.",
+         "figures": [["25 to 40%", "faster than site construction, as Ramtech states"], ["10 to 25%", "lower design and construction costs in its commercial approaches, as Ramtech states"]],
+         "aria": "Diagram comparing the Ramtech sequence with a site-built sequence",
+         "modular": {"title": "With Ramtech", "sub": "two tracks at once", "end": 0.67, "flag": "Move in",
+                     "lanes": [{"key": "In the plant", "bars": [["Building sections made", 0, 0.44]]},
+                               {"key": "On your site", "bars": [["Foundation", 0, 0.36], ["Set", 0.44, 0.54], ["Finish", 0.54, 0.67]]}]},
+         "sitebuilt": {"title": "Site-built", "sub": "one step, then the next", "flag": "Move in",
+                       "lanes": [{"key": "On your site", "bars": [["Foundation", 0, 0.3], ["Structure", 0.3, 0.68], ["Finishes", 0.68, 1]]}]},
+         "zone": "Shaded band: where a modular project finishes if it is 25 to 40 percent faster, the range Ramtech states. The diagram shows the order of work, not a schedule for your building.",
+         "steps": [["Both tracks start together", "Ramtech builds a site-specific foundation while the building sections are manufactured in Mansfield.", 0.02],
+                   ["The sections are shipped and set", "Each section is delivered and set on the foundation.", 0.44],
+                   ["Weathered in and finished out", "The final finish-out is performed by Ramtech once the building is set and weathered in.", 0.54],
+                   ["You move in", "With a one-year written warranty that runs from the date of occupancy.", 0.67]],
+         "source": "Sources: ramtechmodular.com design-build, permanent modular construction, FAQ and warranty pages."}
+    if image:
+        t.update({"image": image, "image_alt": IMG_ALT.get(image, ""), "caption": "A building section on the move. Photograph: Ramtech."})
+    if variants:
+        t["variants"] = variants
+    return t
+
+
 def service_page(slug, navlabel, short, one, image, eyebrow, heading, subhead, benefits, included, faq):
     secs = [
-        {"type": "hero", "layout": "split", "eyebrow": eyebrow, "heading": heading, "subhead": subhead,
-         "primary": PRIMARY, "secondary": {"label": "All building types", "href": "services.html"},
-         "image": image, "image_alt": f"{navlabel}: a Ramtech modular building", "image_w": 1200, "image_h": 800},
+        page_hero(eyebrow, heading, subhead, image, {"label": "All building types", "href": "services.html"}, SERVICE_FACTS.get(slug)),
         {"type": "cards", "alt": True, "eyebrow": "What Ramtech builds", "heading": f"What {SHORT} brings to {short}", "items": benefits},
-        {"type": "detail", "eyebrow": "What is included", "heading": "What you get", "body": "Everything below is published on ramtechmodular.com. The planning step comes first and carries no cost.", "bullets": included, "image": image, "image_alt": navlabel, "flip": True},
+        tracks(heading="Made in the plant while your site is prepared"),
+        {"type": "detail", "alt": True, "eyebrow": "What is included", "heading": "What you get", "body": "Everything below is published on ramtechmodular.com. The planning step comes first and carries no cost.", "bullets": included},
         {"type": "faq", "heading": f"Questions about {navlabel.lower()}", "items": faq},
         LEADFORM,
     ]
@@ -187,8 +255,7 @@ def industry_page(slug, name, image, one, body, bullets, faq):
     return {"file": f"specialty/{slug}.html", "title": f"{name} | {CLIENT}", "description": desc(one + " " + body),
             "crumbs": [["Home", "index.html"], ["Specialty", "industries.html"], [name, f"specialty/{slug}.html"]],
             "sections": [
-                {"type": "hero", "layout": "split", "eyebrow": "Specialty", "heading": f"<em>{name}</em>, built modular.", "subhead": one, "primary": PRIMARY, "secondary": SECONDARY,
-                 "image": image, "image_alt": name, "image_w": 1200, "image_h": 800},
+                page_hero("Specialty", f"<em>{name}</em>, built modular.", one, image, SECONDARY),
                 {"type": "detail", "alt": True, "eyebrow": "What Ramtech does here", "heading": f"{name} with Ramtech", "body": body, "bullets": bullets},
                 {"type": "faq", "heading": f"Questions about {name.lower()}", "items": faq},
                 LEADFORM]}
@@ -212,6 +279,62 @@ def location_page(slug, label, a1, a2, phone, phone_href, region, lon, lat):
                     ["Where does Ramtech build?", "Ramtech serves markets across the USA and has built throughout the Southwest, with projects in Texas, Oklahoma and Arkansas, among others."],
                     ["Does Ramtech work outside Texas?", "Yes. Ramtech's own project profiles include buildings in Oklahoma and Arkansas and disaster recovery work in the U.S. Virgin Islands."]]},
                 LEADFORM]}
+
+
+EXPLORER = {"type": "explorer", "id": "explorer", "eyebrow": "What Ramtech builds", "heading": "Four markets. Choose yours.",
+            "intro": "Each one changes what is built and how it is usually bought.",
+            "tabs_label": "Building type", "builds_label": "What Ramtech builds", "routes_label": "Ways to buy and build",
+            "items": [
+                {"label": "Education", "image": "assets/hero-education.jpg", "title": "From one classroom to a whole campus",
+                 "body": SERVICE_INDEX["education"][3],
+                 "builds": ["Portable classrooms and classroom wings, 4 to 16 classrooms", "Labs, cafeterias, administrative offices and restroom buildings", "Complete permanent campuses"],
+                 "routes": [["Purchasing cooperative", "BuyBoard or TIPS, where the district is a member"], ["Relocatable or permanent", "Chosen to fit the budget and how long the space is needed"]],
+                 "href": "services/education.html", "link": "See education buildings"},
+                {"label": "Healthcare", "image": "assets/healthcare.jpg", "title": "Clinics and medical offices, permanent or relocatable",
+                 "body": SERVICE_INDEX["healthcare"][3],
+                 "builds": ["Community health clinics and rural clinics", "Medical office buildings and additions", "Diagnostic imaging centers and specialty space"],
+                 "routes": [["Design-build, one company", "Design, manufacturing, installation and finish-out"], ["Permanent or relocatable", "Slab-on-grade or pier and beam, or relocatable for interim or leased space"]],
+                 "href": "services/healthcare.html", "link": "See healthcare buildings"},
+                {"label": "Commercial", "image": "assets/commercial.jpg", "title": "Offices, industrial, retail and hospitality",
+                 "body": SERVICE_INDEX["commercial"][3],
+                 "builds": ["Relocatable job-site offices", "Permanent commercial offices, new or as an addition", "Designs made to be repeated across locations"],
+                 "routes": [["Purchase or lease", "Relocatable buildings and finance leases"], ["One contract", "Design-build, with no separate architect and contractor to manage"]],
+                 "href": "services/commercial.html", "link": "See commercial buildings"},
+                {"label": "Government", "image": "assets/government.jpg", "title": "Built to the procurement requirements",
+                 "body": SERVICE_INDEX["government"][3],
+                 "builds": ["Administrative offices, medical clinics and labs", "Barracks, crew quarters and public safety buildings", "SCIFs and data centers, to ICD-705 requirements"],
+                 "routes": [["Purchasing cooperative", "Ramtech is a vendor for select local, state and regional cooperatives"], ["Delivery method", "Design-build, construction manager at risk and others"]],
+                 "href": "services/government.html", "link": "See government buildings"},
+            ]}
+for _it in EXPLORER["items"]:
+    _it["alt"] = IMG_ALT[_it["image"]]
+    _it["focus"] = FOCUS[_it["image"]]
+
+# Route guide: two questions, eight written answers. Each line restates something on Ramtech's procurement options,
+# relocatable purchase options, permanent modular construction or market pages.
+_BUILD = {"perm": ["Permanent modular construction", "Slab-on-grade for grade-level entries, medium to large projects and additions. Pier and beam for small to medium projects. Site-applied finishes, and the same life expectancy as a site-built building."],
+          "reloc": ["A relocatable modular building", "Built 60 to 80 percent complete in the plant, set on a site-specific concrete block foundation, and designed to be moved, reused or repurposed."]}
+_COOP = ["Through a purchasing cooperative", "For schools and government agencies, many buildings are available through the cooperatives Ramtech is a vendor for, including BuyBoard and TIPS. Ask which one you belong to."]
+_DIRECT = ["Directly from Ramtech", "Design-build under one contract, with a firm fixed price before any construction activity takes place."]
+_DELIVERY = ["By the delivery method you require", "Design-build, construction manager at risk, or as a subcontractor to your prime contractor."]
+_LEASE = ["Purchase, lease or finance", "Ramtech's relocatable purchase options cover purchase, leasing and financing alternatives."]
+_FINANCE = ["With third-party financing", "Ramtech works with third-party finance companies, including finance leases, and can help you compare options."]
+_BUYERS = [["school", "A school district or college", "a school district or college"], ["gov", "A government agency", "a government agency"],
+           ["health", "A healthcare provider", "a healthcare provider"], ["co", "A company or developer", "a company or developer"]]
+_NEEDS = [["perm", "A permanent building", "a permanent building"], ["reloc", "Interim space, or space that may move", "space that is interim or may move"]]
+_BUY = {("school", "perm"): [_COOP, _DIRECT], ("school", "reloc"): [_COOP, _LEASE],
+        ("gov", "perm"): [_COOP, _DELIVERY], ("gov", "reloc"): [_COOP, _LEASE],
+        ("health", "perm"): [_DIRECT, _FINANCE], ("health", "reloc"): [_LEASE, _DIRECT],
+        ("co", "perm"): [_DIRECT, _FINANCE], ("co", "reloc"): [_LEASE, _DIRECT]}
+ROUTES = {"type": "routes", "id": "routes", "alt": True, "eyebrow": "Which route is yours?", "heading": "Two answers, and the way in is on the page",
+          "intro": "Who is buying and how long the space is needed decide how the building is made and how it is bought.",
+          "buyer_legend": "Who is buying?", "need_legend": "What do you need?",
+          "buyers": [[b[0], b[1]] for b in _BUYERS], "needs": [[n[0], n[1]] for n in _NEEDS],
+          "labels": ["How it is built", "How you buy", "The first step"],
+          "first": ["No cost project planning and budgeting", "A floor plan, a site plan, an exterior rendering, outlined specifications and a preliminary budget, before any design fee."],
+          "cta": PRIMARY,
+          "results": [{"key": f"{b[0]}-{n[0]}", "title": f"For {b[2]} that needs {n[2]}", "build": _BUILD[n[0]], "buy": _BUY[(b[0], n[0])]} for b in _BUYERS for n in _NEEDS],
+          "source": "Sources: ramtechmodular.com procurement options, relocatable purchase options, permanent modular construction and design-build pages."}
 
 
 FLOW = _flow("flow", "How a project runs", "Four stages, and the first one costs nothing",
@@ -286,23 +409,25 @@ def build():
     pages = []
     pages.append({"file": "index.html", "title": f"Modular Buildings | {CLIENT}",
                   "compose": {
-                      "showcase": ["hero-light", "partners", "wheel", "ba", "flow", "proof", "story", "faq", "contact"],
-                      "clean": ["hero-light", "partners", "seal", "wheel", "is-this-you", "flow", "story", "faq", "contact"],
-                      "press": ["hero-light", "story", "services", "seal", "proof", "flow", "faq", "contact"]},
+                      "showcase": ["hero-light", "explorer", "tracks", "flow", "proof", "story", "faq", "contact"],
+                      "clean": ["hero-light", "tracks", "routes", "explorer", "seal", "flow", "story", "faq", "contact"],
+                      "press": ["hero-light", "story", "tracks", "services", "seal", "proof", "flow", "faq", "contact"]},
                   "description": "A design-build leader in commercial modular construction since 1982. Direct manufacturer of relocatable and permanent modular buildings, Mansfield, Texas.",
                   "sections": [
-        {"type": "hero", "id": "hero-light", "layout": "split", "eyebrow": "Mansfield, Texas. Modular construction since 1982.",
+        {"type": "rxhero", "id": "hero-light", "look": "photo", "eyebrow": "Mansfield, Texas. Modular construction since 1982.",
          "stats": [["1982", "Specializing in commercial modular since"], ["3,500+", "Projects completed"], ["31", "MBI Awards of Distinction"], ["20 acres", "Manufacturing site in Mansfield"]],
-         "ribbon": ["Modular Building Institute", "BuyBoard", "TIPS", "BBB"],
-         "variants": {"press": {"stats": None, "ribbon": ["Mansfield, Texas. Since 1982.", "A direct manufacturer", "31 Awards of Distinction"]}},
+         "affiliations": {"caption": AFFIL_NOTE.rstrip("."), "items": PARTNERS},
+         "now": {"label": "At the same time", "a": "In the plant: your building sections", "b": "On your site: the foundation"},
+         "variants": {"clean": {"look": "ledger", "now": None, "receive": {"label": "No cost planning returns", "items": ["A basic floor plan", "A site plan", "An exterior rendering", "Outlined specifications", "A preliminary budget"]}},
+                      "press": {"look": "plate", "now": None, "stats": None, "caption": "A two-story Ramtech modular building. Photograph: Ramtech.", "note": None}},
          "heading": "Your building is made in our plant <em>while your site is prepared</em>, so you move in sooner, at a firm fixed price.",
          "subhead": "A design-build leader in modular construction since 1982. Ramtech designs, manufactures and installs relocatable and permanent buildings for schools, healthcare providers, government agencies and commercial buyers, starting with no cost project planning and budgeting.",
          "primary": PRIMARY, "secondary": SECONDARY,
          "note": "Photographs are Ramtech's own, from ramtechmodular.com",
-         "image": "assets/hero-main.jpg", "image_alt": "A two-story Ramtech modular building with a red metal roof and brick exterior", "image_w": 1200, "image_h": 800,
-         "badge": {"value": "31", "label": "Modular Building Institute Awards of Distinction"}},
+         "image": "assets/hero-main.jpg", "image_alt": IMG_ALT["assets/hero-main.jpg"], "image_w": 1920, "image_h": 1080},
         {"type": "partners", "id": "partners", "caption": AFFIL_NOTE, "items": PARTNERS},
-        SEAL,
+        SEAL, EXPLORER, ROUTES,
+        tracks(image="assets/modular.jpg", variants={"clean": {"image": None}, "press": {"alt": False}}),
         {"type": "wheel", "id": "wheel", "eyebrow": "What Ramtech builds", "heading": "Four markets, two ways to build", "intro": "Hover a segment. Education, healthcare, commercial and government, in permanent or relocatable construction.", "items": WHEEL_ITEMS, "hub": "Ramtech", "hub_sub": "design-build", "ring": "MODULAR BUILDINGS FOR THE SOUTHWEST", "panel_eyebrow": "Hover a segment", "link_label": "See the building type"},
         {"type": "checklist", "id": "is-this-you", "alt": True, "eyebrow": "Is this you?", "heading": "Six signs modular is worth pricing",
          "intro": "Check what sounds familiar.",
@@ -315,14 +440,13 @@ def build():
         {"type": "proof", "id": "proof", "alt": True, "eyebrow": "Counted, not claimed", "value": "31", "text": "Modular Building Institute Awards of Distinction received since the program started in 1987, for excellence in design, manufacturing and construction.", "source": "Source: ramtechmodular.com/awards"},
         HISTORY,
         {"type": "faq", "id": "faq", "alt": True, "heading": "Questions we get on the first call", "items": faq_home},
-        {"type": "contact", "id": "contact", "heading": "Start with no cost project planning and budgeting", "body": "Tell us what you are building, where, and when you need it. Call the plant at " + PHONE + " or send the form.",
-         "options": ["Education", "Healthcare", "Commercial", "Government", "Permanent modular construction", "Relocatable modular buildings", "Multi-family or student housing", "Something else"], "submit": "Request planning and budgeting", "note": "A person replies, not an autoresponder."},
+        _plan("contact", alt=False),
     ]})
     pages.append({"file": "services.html", "title": f"What We Build | Modular buildings | {CLIENT}",
                   "description": "Education, healthcare, commercial and government buildings, in permanent or relocatable modular construction. Ramtech designs, manufactures and installs.",
                   "sections": [
         {"type": "hero", "layout": "centered", "eyebrow": "What we build", "heading": "Four markets, <em>two ways to build</em>.", "subhead": "Ramtech designs, manufactures and installs modular buildings for education, healthcare, commercial and government buyers, in permanent or relocatable construction.", "primary": PRIMARY},
-        {"type": "wheel", "id": "wheel", "eyebrow": "What Ramtech builds", "heading": "Hover a segment", "intro": "Each line has its own page.", "items": WHEEL_ITEMS, "hub": "Ramtech", "hub_sub": "design-build", "ring": "MODULAR BUILDINGS FOR THE SOUTHWEST", "panel_eyebrow": "Hover a segment", "link_label": "See the building type"},
+        dict(EXPLORER, alt=True),
         {"type": "resources", "heading": "The six lines", "intro": "What Ramtech builds, what is included, and the questions people ask.", "items": [[s[1], s[1], brief(s[3], 140), f"See {s[1].lower()}", f"services/{s[0]}.html"] for s in SERVICES]},
         LEADFORM]})
     for s in SERVICES:
@@ -367,9 +491,8 @@ def build():
     pages.append({"file": "contact.html", "title": f"Contact | Start a project | {CLIENT}", "description": f"Call Ramtech at {PHONE} or send the form. 1400 US Hwy 287 South, Mansfield, TX 76063. Start with no cost project planning and budgeting.",
                   "sections": [
         {"type": "hero", "layout": "centered", "eyebrow": "Contact", "heading": "Start a project, <em>or just call</em>.", "subhead": f"Tell us what you are building, where and when. Call {PHONE} or email {EMAIL}."},
-        {"type": "contact", "id": "form", "heading": "Start with no cost planning and budgeting", "body": "Choose what you are thinking about.",
-         "options": ["Education", "Healthcare", "Commercial", "Government", "Permanent modular construction", "Relocatable modular buildings", "Multi-family or student housing", "Something else"], "submit": "Request planning and budgeting", "note": "A person replies, not an autoresponder."},
-        {"type": "locations", "alt": True, "heading": "Or visit the plant", "intro": "Headquarters and manufacturing.", "items": [[l[1], l[2], l[3], l[4], l[5]] for l in LOCATIONS]},
+        _plan("form", alt=True),
+        {"type": "locations", "heading": "Or visit the plant", "intro": "Headquarters and manufacturing.", "items": [[l[1], l[2], l[3], l[4], l[5]] for l in LOCATIONS]},
     ]})
 
     pitch = {
