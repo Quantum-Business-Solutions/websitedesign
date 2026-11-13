@@ -144637,21 +144637,21 @@
    }
   },
   "schema_types": {
-   "GeoCoordinates": 829,
-   "PostalAddress": 829,
-   "OpeningHoursSpecification": 829,
    "GeneralContractor": 829,
+   "PostalAddress": 829,
+   "GeoCoordinates": 829,
+   "OpeningHoursSpecification": 829,
    "Organization": 437,
-   "ImageObject": 434,
    "Article": 434,
+   "ImageObject": 434,
    "Person": 433,
    "Thing": 56,
    "WebPage": 55,
    "Country": 2,
-   "CollectionPage": 2,
    "Question": 2,
-   "FAQPage": 2,
    "Answer": 2,
+   "FAQPage": 2,
+   "CollectionPage": 2,
    "Blog": 1
   },
   "by_type": {
