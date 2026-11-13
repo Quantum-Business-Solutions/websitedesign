@@ -1,5 +1,5 @@
 /* Quantum 2026 theme — dark + light */
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap');
 
 :root{
   --q-gold:#c4a44a; --q-gold-bright:#d4ba6a; --q-gold-dim:#9a7d3f;
@@ -160,7 +160,7 @@ nav[data-q-spy] a.is-active{color:var(--accent-ink);}
 /* ===== NATIVE DIRECTION: Showcase (distinct type) ===== */
 :root, [data-theme="dark"], [data-theme="light"] {
   --q-gold:#9a7d3f; --q-gold-bright:#85692f; --q-gold-dim:#9a7d3f;
-  --q-serif:'Bricolage Grotesque',sans-serif; --q-sans:'Inter',sans-serif;
+  --q-serif:'Plus Jakarta Sans',sans-serif; --q-sans:'Plus Jakarta Sans',sans-serif;
   --bg:#ffffff; --bg-alt:#faf7ef; --fg:#101725; --fg-muted:#5a6070;
   --border:#eceae4; --card:#faf7ef; --cta-fg:#0b0d10;
   --accent:var(--q-gold);

@@ -46,7 +46,7 @@ GOOGLE_FONTS = (
     "&family=Playfair+Display:ital,wght@0,500;0,700;1,500"
     "&family=Spectral:wght@400;600"
     "&family=Newsreader:opsz,wght@6..72,400;6..72,600"
-    "&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700"
+    "&family=Plus+Jakarta+Sans:wght@400;500;600;700;800"
     "&family=Inter:wght@400;500;600"
     "&family=DM+Sans:wght@400;500;600;700"
     "&display=swap"
@@ -71,7 +71,7 @@ FONT_QUERY = {
     "open sans": "Open+Sans:wght@400;600", "playfair display": "Playfair+Display:ital,wght@0,500;0,700;1,500",
     "spectral": "Spectral:wght@400;600", "newsreader": "Newsreader:opsz,wght@6..72,400;6..72,600",
     "bricolage grotesque": "Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700",
-    "inter": "Inter:wght@400;500;600", "dm sans": "DM+Sans:wght@400;500;600;700",
+    "plus jakarta sans": "Plus+Jakarta+Sans:wght@400;500;600;700;800", "inter": "Inter:wght@400;500;600", "dm sans": "DM+Sans:wght@400;500;600;700",
 }
 
 

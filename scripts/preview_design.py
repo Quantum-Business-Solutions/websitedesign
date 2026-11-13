@@ -38,7 +38,7 @@ MODULES = {
     "cards": ("Cards", "Specular tilt and lift in Showcase", "Plain cards"),
     "stats": ("Stats", "Count up once on scroll, static ones marked", "Numbers"),
 }
-FACE_LINKS = "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=Open+Sans:wght@600;700;800&family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif&display=swap"
+FACE_LINKS = "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Open+Sans:wght@600;700;800&family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif&display=swap"
 
 
 def _face(stack: str) -> str:

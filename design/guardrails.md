@@ -127,6 +127,14 @@ one reference stays in that entry's prose in `design/references.md`.
   Only `BreadcrumbList` is site-wide. Putting `Organization` in `base.html` is what produced
   "ORGANIZATION 9 valid" in the Semrush audit: nine copies of one entity.
 
+## Typefaces: straightforward, never whimsical
+
+House rule (Shawn, 2026-11-12, after Revolution's "less whimsical font", called out twice, and again on
+the Ramtech Showcase): **no whimsical or quirky display faces** in any direction. Headings are
+clean, humanist or geometric sans, or a restrained serif. Showcase ships **Plus Jakarta Sans**, the face on
+Revolution Office's real site. **Bricolage Grotesque is retired.** Check any new theme's heading
+face against this before the first render, not after the client reacts.
+
 ## Typefaces on the watchlist
 
 Two faces are LLM defaults — the ones a model reaches for when it has nothing to design against.

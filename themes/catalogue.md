@@ -33,7 +33,7 @@ other six.
 | **Press** | Light | Playfair Display | Editorial, traditional-premium | Consultancies, law, finance, heritage brands |
 | **Paper** | Light | Spectral | Long-form, considered, literary | Content-heavy sites; thought leadership |
 | **Journal** | Light | Newsreader | Journalistic, credible, text-forward | Research, reports, media, anything evidence-led |
-| **Showcase** | Light | Bricolage Grotesque | Contemporary creative, design-aware | Agencies, portfolios, creative services |
+| **Showcase** | Light | Plus Jakarta Sans | Contemporary creative, design-aware | Agencies, portfolios, creative services |
 
 Four dark (Flagship, Void, Signal, Converter) · five light (Clean, Press, Paper, Journal, Showcase).
 

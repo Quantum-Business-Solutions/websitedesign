@@ -191,6 +191,7 @@ DIRECTION_CSS = {
 FALLBACKS = {"open sans": "'Open Sans',Arial,'Helvetica Neue',sans-serif",
              "bricolage grotesque": "'Bricolage Grotesque','Arial Black','Helvetica Neue',Arial,sans-serif",
              "playfair display": "'Playfair Display',Georgia,'Times New Roman',serif",
+             "plus jakarta sans": "'Plus Jakarta Sans','Helvetica Neue',Arial,sans-serif",
              "inter": "'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif"}
 
 PREVIEW_CSS = r'''
