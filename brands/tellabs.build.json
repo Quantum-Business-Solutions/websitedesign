@@ -1,0 +1,16 @@
+{
+ "content": "brands/tellabs.content.py",
+ "themes": [
+  "Quantum Clean",
+  "Quantum Journal",
+  "Quantum Showcase"
+ ],
+ "recommend": null,
+ "roles": {
+  "Clean": "the plain, quick-to-scan site for IT leaders: the promise, the proof and the five parts of Optical LAN, with no ornament",
+  "Journal": "a serif, text-forward site for evidence-led buyers who read the tutorial, white papers and case studies before they call",
+  "Showcase": "the image-led site: eight industries on a wheel, the before and after, and the timeline, the most sales-forward of the three"
+ },
+ "base_url": "https://clientcommand.thequantumleap.business/s/482920d2b5e1b95580749df07323aa92",
+ "out": "../out-tellabs"
+}
