@@ -142,21 +142,21 @@ EXTRA_CSS2 = r"""
 @media(max-width:767px){.pv-fleet .arrows{display:none}.pv-fleet .rail{grid-auto-columns:82%}}
 
 /* ===== commitments seal ===== */
-.pv-seal{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px}
-.pv-seal .item{display:grid;grid-template-columns:64px 1fr;gap:16px;align-items:start;padding:22px;border:1px solid var(--border);border-radius:calc(var(--radius) + 6px);background:var(--card)}
-.pv-seal .badge{width:64px;height:64px;border-radius:50%;background:conic-gradient(var(--q-gold) 0 75%,color-mix(in srgb,var(--q-gold) 30%,transparent) 75% 100%);display:grid;place-items:center;position:relative}
+.pv-seal{display:grid;grid-template-columns:repeat(var(--cols,4),minmax(0,1fr));gap:18px;margin-top:44px}
+.pv-seal .item{display:grid;grid-template-columns:76px 1fr;gap:16px;align-items:start;padding:22px;border:1px solid var(--border);border-radius:calc(var(--radius) + 6px);background:var(--card)}
+.pv-seal .badge{width:76px;height:76px;border-radius:50%;background:conic-gradient(var(--q-gold) 0 75%,color-mix(in srgb,var(--q-gold) 30%,transparent) 75% 100%);display:grid;place-items:center;position:relative}
 .pv-seal .badge::before{content:"";position:absolute;inset:6px;border-radius:50%;background:var(--card)}
-.pv-seal .badge b{position:relative;font:800 15px/1 var(--q-serif);color:var(--fg);letter-spacing:-.02em;text-align:center}
+.pv-seal .badge b{position:relative;font:800 13px/1.05 var(--q-serif);white-space:nowrap;max-width:60px;color:var(--fg);letter-spacing:-.02em;text-align:center}
 .pv-seal h3{margin:0 0 6px;font-size:16.5px;line-height:1.3;font-weight:700}
 .pv-seal p{margin:0;font-size:14px;line-height:1.5;color:var(--fg-muted)}
-.pv-seal .src{grid-column:1/-1;font-size:13px;color:var(--fg-muted);margin-top:4px}
-@media(max-width:1024px){.pv-seal{grid-template-columns:repeat(2,1fr)}}
+.pv-seal .src{grid-column:1/-1;font-size:13px;color:var(--fg-muted);margin-top:4px;text-align:center}
+@media(max-width:1024px){.pv-seal{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:480px){.pv-seal{grid-template-columns:1fr}}
 
 /* ===== before / after slider ===== */
 .pv-ba{margin-top:44px;position:relative;display:grid;border-radius:calc(var(--radius) + 8px);overflow:hidden;border:1px solid var(--border);background:var(--card);--pos:50%}.pv-ba .before,.pv-ba .after{grid-area:1/1}
 .pv-ba .pane{padding:40px 44px 56px;min-height:400px;box-sizing:border-box}.pv-ba .before .pane{max-width:50%;padding-right:64px}.pv-ba .after .pane{padding-left:calc(50% + 44px)}
-.pv-ba .after{position:relative;background:var(--chrome-bg);color:#fff;clip-path:inset(0 0 0 var(--pos));transition:clip-path .05s linear}
+.pv-ba .after{position:relative;background:var(--chrome-bg);color:var(--chrome-fg,#fff);clip-path:inset(0 0 0 var(--pos));transition:clip-path .05s linear}
 .pv-ba .after .pane{height:100%}
 .pv-ba .k{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--accent-ink);margin-bottom:12px}.pv-ba .after .k{color:var(--q-gold)}
 .pv-ba h3{margin:0 0 14px;font-size:clamp(22px,2.2vw,30px);line-height:1.12;letter-spacing:-.02em;overflow-wrap:anywhere}
@@ -315,7 +315,7 @@ def _wheel(s, ctx):
            f'<circle class="orbit" cx="{cx}" cy="{cy}" r="{r_out + 12}"/><circle class="orbit2" cx="{cx}" cy="{cy}" r="{r_in - 4}"/><g class="ticks">{"".join(ticks)}</g>'
            f'{"".join(segs)}<circle class="pulse" cx="{cx}" cy="{cy}" r="{r_in - 12}"/><circle class="hub" cx="{cx}" cy="{cy}" r="{r_in - 12}"/><circle class="hubring" cx="{cx}" cy="{cy}" r="{r_in - 20}"/>'
            f'<text class="hubt" x="{cx}" y="{cy + 2}">{hub_t}</text><text class="hubs" x="{cx}" y="{cy + 24}">{hub_s}</text>'
-           f'<text class="ring"><textPath href="#{ring_id}" startOffset="50%" text-anchor="middle">{E(s.get("ring", "EVERYTHING AN OFFICE RUNS ON"))}</textPath></text></svg>')
+           f'<text class="ring"><textPath href="#{ring_id}" startOffset="50%" text-anchor="middle">{E(s.get("ring", ""))}</textPath></text></svg>')
     first = items[0]
     panel = (f'<div class="panel" data-panel><div class="bignum" data-n aria-hidden="true">01</div><div class="q-eyebrow">{E(s.get("panel_eyebrow", "Hover a segment"))}</div><h3 data-t>{E(first[0])}</h3><p data-b>{E(first[1])}</p>'
              f'<a class="go" data-l href="{E(L(first[2]))}">{E(s.get("link_label", "See the service"))}</a><div class="bar" aria-hidden="true"><i></i></div><ol>{"".join(labels)}</ol></div>')
@@ -363,13 +363,18 @@ def _fleet(s, ctx):
     return f'{ctx["sec_open"](s)} <div class="q-container" id="{E(fid)}">{head}<div class="pv-fleet"><div class="arrows" aria-hidden="true"><button type="button" data-d="l" tabindex="-1">&#8592;</button><button type="button" data-d="r" tabindex="-1">&#8594;</button></div><div class="rail">{"".join(cards)}</div></div></div>{js}</section>'
 
 
+def _seal_cols(n):
+    """Columns that leave no orphan row: 6 and 9 and 3 and 5 sit in threes, 4 and 8 and 7 and 12 in fours, 2 in twos."""
+    return {1: 1, 2: 2, 3: 3, 4: 4, 5: 3, 6: 3, 7: 4, 8: 4, 9: 3}.get(n, 4)
+
+
 def _seal(s, ctx):
     """Commitments strip: badge marks with the things every customer gets. Sourced lines only."""
     E = ctx["E"]
     items = "".join(f'<div class="item"><div class="badge" aria-hidden="true"><b>{E(m)}</b></div><div><h3>{E(t)}</h3><p>{E(d)}</p></div></div>' for m, t, d in s["items"])
     src = f'<p class="src">{E(s["source"])}</p>' if s.get("source") else ""
     head = f'<div class="pv-center"><div class="q-eyebrow">{E(s.get("eyebrow", ""))}</div><h2 class="q-h2" style="margin-top:22px;max-width:760px">{E(s["heading"])}</h2>{f"<p class=q-lead style=max-width:640px;margin:16px_auto_0>{E(s[chr(105)+chr(110)+chr(116)+chr(114)+chr(111)])}</p>".replace("_", " ") if s.get("intro") else ""}</div>'
-    return f'{ctx["sec_open"](s)} <div class="q-container">{head}<div class="pv-seal">{items}{src}</div></div></section>'
+    return f'{ctx["sec_open"](s)} <div class="q-container">{head}<div class="pv-seal" style="--cols:{_seal_cols(len(s.get("items") or []))}">{items}{src}</div></div></section>'
 
 
 def _beforeafter(s, ctx):

@@ -5,6 +5,7 @@
  "brand": {
   "accent": "#1B3D6D",
   "ink_secondary": "#0F2748",
+  "highlight": "#F89B2C",
   "chrome": "light",
   "chrome_bg": "#FFFFFF",
   "logo": "assets/logo.svg",
@@ -438,11 +439,7 @@
        "Industries served"
       ]
      ],
-     "ribbon": [
-      "Optical LAN since 2008",
-      "Staffed 24x7 technical support",
-      "Eight industries"
-     ],
+     "ribbon": [],
      "variants": {
       "journal": {
        "stats": null
@@ -460,7 +457,7 @@
      },
      "note": "",
      "image": "assets/hero-1200.jpg",
-     "image_alt": "Two engineers testing a network in a data center",
+     "image_alt": "A modern airport terminal waiting area with floor-to-ceiling windows",
      "image_w": 1200,
      "image_h": 675
     },

@@ -248,7 +248,8 @@ def _res(items):
 
 def build():
     brand = {
-        "accent": "#1B3D6D", "ink_secondary": "#0F2748", "chrome": "light", "chrome_bg": "#FFFFFF",
+        "accent": "#1B3D6D", "ink_secondary": "#0F2748",
+    "highlight": "#F89B2C", "chrome": "light", "chrome_bg": "#FFFFFF",
         "logo": "assets/logo.svg", "logo_alt": "Tellabs", "logo_w": 300, "logo_h": 78,
         "logo_note": "SVG from tellabs.com, navy on a light ground. Orange (#F89B2C) fails contrast against white text, so buttons are navy and orange is not used for text.",
         "phone": PHONE, "phone_href": PHONE_HREF, "email": EMAIL,
@@ -289,11 +290,11 @@ def build():
     home_secs = [
         {"type": "hero", "id": "hero-light", "layout": "split", "eyebrow": "Passive Optical LAN and broadband",
          "stats": [["2008", "Optical LAN launched"], ["20-50%", "Lower cost, as stated by Tellabs"], ["24x7", "Staffed technical support"], ["8", "Industries served"]],
-         "ribbon": ["Optical LAN since 2008", "Staffed 24x7 technical support", "Eight industries"],
+         "ribbon": [],
          "variants": {"journal": {"stats": None}},
          "heading": "A simpler, more secure network that <em>costs less to run</em>.", "subhead": PROMISE,
          "primary": {"label": "Talk to Tellabs", "href": "contact.html"}, "secondary": {"label": "Optical LAN tutorial", "href": "optical-lan-tutorial.html"},
-         "note": "", "image": IMG_HERO, "image_alt": "Two engineers testing a network in a data center", "image_w": 1200, "image_h": 675},
+         "note": "", "image": IMG_HERO, "image_alt": "A modern airport terminal waiting area with floor-to-ceiling windows", "image_w": 1200, "image_h": 675},
         {"type": "partners", "id": "partners", "caption": "Tellabs Advantage Partners", "items": PARTNERS},
         {"type": "services", "id": "services", "heading": "Three ways Tellabs helps", "intro": "Optical LAN for the building, broadband for the operator, and the services to run both.",
          "items": [[s[1], s[3], f"services/{s[0]}.html"] for s in SERVICES]},

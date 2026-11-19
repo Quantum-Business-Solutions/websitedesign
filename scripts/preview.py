@@ -118,6 +118,10 @@ def client_tokens(theme: str, brand: dict) -> tuple[str, dict]:
             tok[key] = type_src[key]
     chrome_bg = brand.get("chrome_bg") if brand.get("chrome") == "dark" else native["--bg"]
     tok["--chrome-bg"] = chrome_bg
+    if brand.get("highlight"):
+        hl = brand["highlight"]
+        tok["--hl"] = hl
+        tok["--hl-ink"] = "#0F2748" if reskin.contrast_ratio("#0F2748", hl) >= 4.5 else reskin.best_on(hl)
     tok["--chrome-fg"] = reskin.best_on(chrome_bg)
     tok["--chrome-muted"] = "rgba(255,255,255,.72)" if tok["--chrome-fg"].lower().startswith("#f") else "rgba(0,0,0,.62)"
     tok["--chrome-border"] = "rgba(255,255,255,.12)" if tok["--chrome-fg"].lower().startswith("#f") else "rgba(0,0,0,.1)"
@@ -240,7 +244,7 @@ h1,h2,h3{text-wrap:balance}
 .pv-ribbon span{display:inline-flex;align-items:center;gap:10px}.pv-ribbon span::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--q-gold)}
 /* proof numeral */
 .pv-proof{text-align:center}.pv-proof b{display:block;font-family:var(--q-serif);font-size:clamp(96px,14vw,200px);line-height:.95;font-weight:800;letter-spacing:-.04em;color:var(--accent-ink)}
-.pv-proof .q-lead{max-width:640px;margin:22px auto 0}.pv-proof .src{margin-top:14px;font-size:13.5px;color:var(--fg-muted)}
+.pv-proof .q-lead{max-width:640px;margin:22px auto 0}.pv-proof .src{margin:14px auto 0;max-width:640px;width:auto;font-size:13.5px;color:var(--fg-muted)}
 /* service-area map */
 .pv-map-wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center}
 .pv-map-svg{width:100%;height:auto;display:block}
@@ -333,6 +337,8 @@ html{scroll-padding-bottom:72px}
 .pv-hero-wide img{width:100%;height:100%;object-fit:cover;display:block}
 .pv-btns{display:flex;gap:16px;margin-top:36px;flex-wrap:wrap;align-items:center}
 .q-h1 em{font-style:normal;color:var(--accent-ink)}
+.pv-hero-stats b{white-space:nowrap}@media(max-width:480px){.pv-hero-stats b{font-size:clamp(26px,8.5vw,34px)}}
+.q-h1 em{--_hl:var(--hl,transparent)}.q-h1 em{background:linear-gradient(var(--_hl),var(--_hl)) 0 58%/100% 78% no-repeat;color:var(--hl-ink,var(--accent-ink));padding:0 .14em;margin:0 -.04em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 /* partners */
 .pv-partners{padding:8px 0 70px}
 .pv-partners .q-container{padding-top:36px;border-top:1px solid var(--border)}

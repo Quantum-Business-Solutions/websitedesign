@@ -37,6 +37,9 @@ EXTRA_CSS = r'''
 .pv-tst-feature figure.lead blockquote::before{content:"\201C";display:block;color:var(--accent-ink);font-size:72px;line-height:.5;margin-bottom:18px}
 .pv-tst-letters{list-style:none;margin:0;padding:0}.pv-tst-letters li{padding:18px 0;border-top:1px solid var(--border)}.pv-tst-letters li:last-child{border-bottom:1px solid var(--border)}
 .pv-tst-letters blockquote{margin:0;font-size:15.5px;line-height:1.55;color:var(--fg)}.pv-tst-letters footer{margin-top:8px;font-size:13.5px;color:var(--fg-muted)}.pv-tst-letters footer b{color:var(--fg);font-weight:600}
+.pv-tst-feature:not(:has(.pv-tst-letters li)){grid-template-columns:minmax(0,820px);justify-content:center}
+.pv-tst-feature:not(:has(.pv-tst-letters li)) figure.lead{align-items:center;text-align:center}
+.pv-tst-feature:not(:has(.pv-tst-letters li)) figure.lead blockquote::before{margin-inline:auto}
 @media(max-width:1024px){.pv-tst-feature{grid-template-columns:1fr}}
 /* ===== timeline ===== */
 .pv-tl{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;position:relative;margin-top:48px}
