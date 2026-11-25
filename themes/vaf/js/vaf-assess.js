@@ -104,7 +104,7 @@
   ].map(function (r) { return { area: r[0], q: r[1], bucket: r[2], fix: r[3], good: r[4] || 'yes', w: r[4] === 'none' ? 0 : 1 }; });
   var COPY = {
     title: 'Take the Technology Strength Assessment',
-    lead: 'Eighty yes or no questions in four areas, taken in eight short steps of ten. About 10 to 15 minutes. You get a score, an eliminate, optimize and leverage roadmap, and a PDF.',
+    lead: 'Eighty yes or no questions in four areas, taken in eight short steps of ten. You get a score, an eliminate, optimize and leverage roadmap, and a PDF.',
     formTitle: 'Where should we send your results?',
     formNote: 'A person from the Indianapolis office reviews your answers and can walk the office with you. We use your details only to respond to this request.',
     submit: 'Show my results',
@@ -185,7 +185,7 @@
     AREAS.concat(['Results']).forEach(function (a, i) { var li = el('li', i < ai ? 'is-done' : (i === ai ? 'is-on' : ''), '<b>' + (i + 1) + '</b><span>' + esc(a) + '</span>'); list.appendChild(li); });
     h.appendChild(list);
     var bar = el('div', 'va__bar'); var f = el('i'); f.style.width = Math.round(100 * pos / (n + 1)) + '%'; bar.appendChild(f); h.appendChild(bar);
-    if (pos <= n - 1) { var left = Math.max(1, Math.round((n - pos) * 1.5)); h.appendChild(el('p', 'va__pace', 'Step ' + (pos + 1) + ' of ' + n + ' &middot; about ' + left + ' minute' + (left === 1 ? '' : 's') + ' left')); }
+    if (pos <= n - 1) { var left = Math.max(1, Math.round((n - pos) * 1.5)); h.appendChild(el('p', 'va__pace', 'Step ' + (pos + 1) + ' of ' + n + '')); }
     return h;
   }
   function viewIntro() {

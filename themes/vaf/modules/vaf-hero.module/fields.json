@@ -309,7 +309,7 @@
     "allow_new_line": true,
     "type": "text",
     "display_width": null,
-    "default": "Ten to fifteen minutes. Information, print, process and communication, scored."
+    "default": "Information, print, process and communication, scored."
   },
   {
     "id": "card_a_items",
@@ -411,7 +411,7 @@
     "allow_new_line": false,
     "type": "text",
     "display_width": null,
-    "default": "The Client Service Center"
+    "default": "The Customer Care Center"
   },
   {
     "id": "card_b_body",
@@ -625,10 +625,6 @@
       {
         "stat_figure": "SOC 2",
         "stat_caption": "Certified service organization"
-      },
-      {
-        "stat_figure": "4,000+",
-        "stat_caption": "Phone systems deployed since 1983"
       }
     ]
   }

@@ -43,7 +43,7 @@
     "allow_new_line": true,
     "type": "text",
     "display_width": null,
-    "default": "Every device family VAF sells and services. Generated product renders for the preview; Canon, Ricoh, Kyocera and HP models replace them."
+    "default": "Every device family VAF sells and services. Generated product renders for the preview; Canon, Kyocera and HP models replace them."
   },
   {
     "id": "prev_label",

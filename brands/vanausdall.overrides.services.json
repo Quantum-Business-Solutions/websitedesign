@@ -1399,7 +1399,7 @@
      ],
      [
       "Support",
-      "Client Service Center",
+      "Customer Care Center",
       "Support requests, supplies and the Customer Care Center number.",
       "Open the page",
       "support.html"
@@ -3172,9 +3172,9 @@
     "alt": false,
     "eyebrow": "After the clips",
     "heading": "Where to turn when a clip does not answer it",
-    "body": "If a clip does not cover your question, existing customers can use the Client Service Center, where the Customer Care Center responds within 24 hours, Monday through Friday, 7:00am to 5:00pm. Your VAF project manager can also pass on a suggestion for a new video.",
+    "body": "If a clip does not cover your question, existing customers can use the Customer Care Center, where the Customer Care Center responds within 24 hours, Monday through Friday, 7:00am to 5:00pm. Your VAF project manager can also pass on a suggestion for a new video.",
     "bullets": [
-     "Request support through the Client Service Center",
+     "Request support through the Customer Care Center",
      "Ask your VAF project manager for a new clip",
      "Review the downloads page for drivers and manuals",
      "Explore the Mitel phone systems VAF installs"
@@ -3240,7 +3240,7 @@
      ],
      [
       "Support",
-      "Client Service Center",
+      "Customer Care Center",
       "Support requests, supplies and the Customer Care Center number.",
       "Open the page",
       "support.html"
@@ -5152,9 +5152,9 @@
     "alt": true,
     "eyebrow": "Still stuck",
     "heading": "When a download is not enough",
-    "body": "Existing customers can use the Client Service Center to request support, order supplies or reach IT support. The Customer Care Center processes requests Monday through Friday, 7:00am to 5:00pm, and responds within 24 hours.",
+    "body": "Existing customers can use the Customer Care Center to request support, order supplies or reach IT support. The Customer Care Center processes requests Monday through Friday, 7:00am to 5:00pm, and responds within 24 hours.",
     "bullets": [
-     "Request support from the Client Service Center",
+     "Request support from the Customer Care Center",
      "Watch the Mitel Connect training clips",
      "Call (317) 634-2913 or toll-free (800) 467-7474",
      "Email support@vanausdall.com"
@@ -5199,7 +5199,7 @@
     "items": [
      [
       "Support",
-      "Client Service Center",
+      "Customer Care Center",
       "Support requests, supplies and the Customer Care Center number.",
       "Open the page",
       "support.html"
@@ -5252,7 +5252,6 @@
     "caption": "Technology partners",
     "items": [
      "Canon",
-     "Ricoh",
      "Kyocera",
      "HP",
      "Brother",
@@ -5343,10 +5342,6 @@
       "imageRUNNER ADVANCE copiers and multifunction printers."
      ],
      [
-      "Ricoh",
-      "Black-and-white and color MFPs with document management built in."
-     ],
-     [
       "Kyocera",
       "Low total cost of ownership and enterprise print security."
      ],
@@ -5394,7 +5389,7 @@
     "items": [
      [
       "Which copier brands does Van Ausdall & Farrar sell and service?",
-      "Canon, Ricoh, Kyocera and HP copiers and multifunction printers, plus Brother and Zebra printers, and most other major office equipment brands for service."
+      "Canon, Kyocera and HP copiers and multifunction printers, plus Brother and Zebra printers, and most other major office equipment brands for service."
      ],
      [
       "Which phone systems does Van Ausdall & Farrar install?",
@@ -5441,7 +5436,7 @@
      [
       "Print",
       "Copier Sales and Lease",
-      "Canon, Ricoh, Kyocera and HP copiers and multifunction printers.",
+      "Canon, Kyocera and HP copiers and multifunction printers.",
       "Open the page",
       "services/copiers.html"
      ],
@@ -5604,7 +5599,7 @@
      [
       "Print",
       "Copier Sales and Lease",
-      "Canon, Ricoh, Kyocera and HP copiers and multifunction printers.",
+      "Canon, Kyocera and HP copiers and multifunction printers.",
       "Open the page",
       "services/copiers.html"
      ],
@@ -5750,7 +5745,7 @@
      [
       "Information",
       "Technology Strength Assessment",
-      "Ten to fifteen minutes online, then a specialist walks the results with you.",
+      "A specialist walks the results with you.",
       "Open the page",
       "technology-strength-assessment.html"
      ],
@@ -6116,7 +6111,7 @@
      [
       "Print",
       "Copier Sales and Lease",
-      "Canon, Ricoh, Kyocera and HP copiers and multifunction printers.",
+      "Canon, Kyocera and HP copiers and multifunction printers.",
       "Open the page",
       "services/copiers.html"
      ],
@@ -6277,7 +6272,7 @@
      [
       "Print",
       "Copier Sales and Lease",
-      "Canon, Ricoh, Kyocera and HP copiers and multifunction printers.",
+      "Canon, Kyocera and HP copiers and multifunction printers.",
       "Open the page",
       "services/copiers.html"
      ],
@@ -7065,7 +7060,7 @@
     "items": [
      [
       "Certified field technicians",
-      "Factory-certified on Canon, Ricoh, Kyocera and HP, plus most other major brands."
+      "Factory-certified on Canon, Kyocera and HP, plus most other major brands."
      ],
      [
       "Remote diagnostics",
@@ -7122,7 +7117,7 @@
      ],
      [
       "Which brands can VAF service?",
-      "Canon, Ricoh, Kyocera and HP, with factory-certified technicians, plus most other major office equipment brands."
+      "Canon, Kyocera and HP, with factory-certified technicians, plus most other major office equipment brands."
      ],
      [
       "Should I repair or replace an aging copier?",
@@ -7130,7 +7125,7 @@
      ],
      [
       "How do I request service or supplies?",
-      "By phone, email or the website through the Client Service Center."
+      "By phone, email or the website through the Customer Care Center."
      ]
     ]
    },
@@ -7143,7 +7138,7 @@
      [
       "Print",
       "Copier Sales and Lease",
-      "Canon, Ricoh, Kyocera and HP copiers and multifunction printers.",
+      "Canon, Kyocera and HP copiers and multifunction printers.",
       "Open the page",
       "services/copiers.html"
      ],
@@ -7163,7 +7158,7 @@
      ],
      [
       "Support",
-      "Client Service Center",
+      "Customer Care Center",
       "Support requests, supplies and the Customer Care Center number.",
       "Open the page",
       "support.html"
@@ -9775,7 +9770,7 @@
      [
       "Information",
       "Technology Strength Assessment",
-      "Ten to fifteen minutes online, then a specialist walks the results with you.",
+      "A specialist walks the results with you.",
       "Open the page",
       "technology-strength-assessment.html"
      ],
@@ -10098,7 +10093,7 @@
      "Mitel Connect Quick Clips for the phone client",
      "Free KnowBe4 security tools and awareness resources",
      "Driver and manual links on the downloads page",
-     "The Client Service Center for support questions"
+     "The Customer Care Center for support questions"
     ]
    },
    {
@@ -10157,7 +10152,7 @@
      ],
      [
       "Support",
-      "Client Service Center",
+      "Customer Care Center",
       "Support requests, supplies and the Customer Care Center number.",
       "Open the page",
       "support.html"
@@ -10390,14 +10385,14 @@
      "Something else"
     ],
     "submit": "Schedule my consultation",
-    "note": "Or call (317) 634-2913, Monday through Friday, 7:00am to 5:00pm. Existing customers: the Client Service Center is faster."
+    "note": "Or call (317) 634-2913, Monday through Friday, 7:00am to 5:00pm. Existing customers: the Customer Care Center is faster."
    },
    {
     "type": "detail",
     "alt": true,
     "eyebrow": "What happens next",
     "heading": "Send the form, and here is what happens",
-    "body": "A person from the Indianapolis office reads it the same business day and calls to set a time; there is no autoresponder and no sales sequence. If the question is about an existing device or agreement, it is routed to the Client Service Center, which answers within 24 hours and dispatches a certified technician locally. If it is a new need, a technology advisor, whose average tenure with the company is fifteen years, walks the Technology Strength Assessment with you: ten to fifteen minutes on your devices, contracts, phones and workflows, then a written roadmap of what to eliminate, optimize and leverage. You keep the roadmap either way.",
+    "body": "A person from the Indianapolis office reads it the same business day and calls to set a time; there is no autoresponder and no sales sequence. If the question is about an existing device or agreement, it is routed to the Customer Care Center, which answers within 24 hours and dispatches a certified technician locally. If it is a new need, a technology advisor, whose average tenure with the company is fifteen years, walks the Technology Strength Assessment with you: your devices, contracts, phones and workflows, then a written roadmap of what to eliminate, optimize and leverage. You keep the roadmap either way.",
     "bullets": [
      "Same-day reply from a named person in Indianapolis",
      "Service requests answered within 24 hours",
@@ -10412,7 +10407,7 @@
     "items": [
      [
       "What are your hours?",
-      "Monday through Friday, 7:00am to 5:00pm at (317) 634-2913. Existing customers reach the Client Service Center the same way, or through the Customer Care app."
+      "Monday through Friday, 7:00am to 5:00pm at (317) 634-2913. Existing customers reach the Customer Care Center the same way, or through the Customer Care app."
      ],
      [
       "Where are the offices?",
@@ -10424,7 +10419,7 @@
      ],
      [
       "I am not sure what I need. Where do I start?",
-      "Start with the free Technology Strength Assessment, about ten to fifteen minutes online. A specialist then walks the results with you and writes a roadmap of what to eliminate, optimize and leverage."
+      "Start with the free Technology Strength Assessment. A specialist then walks the results with you and writes a roadmap of what to eliminate, optimize and leverage."
      ],
      [
       "Can I just call?",
@@ -10441,13 +10436,13 @@
      [
       "Information",
       "Technology Strength Assessment",
-      "Ten to fifteen minutes online, then a specialist walks the results with you.",
+      "A specialist walks the results with you.",
       "Open the page",
       "technology-strength-assessment.html"
      ],
      [
       "Support",
-      "Client Service Center",
+      "Customer Care Center",
       "Support requests, supplies and the Customer Care Center number.",
       "Open the page",
       "support.html"
@@ -10504,7 +10499,7 @@
    {
     "type": "hero",
     "layout": "centered",
-    "eyebrow": "Client Service Center",
+    "eyebrow": "Customer Care Center",
     "heading": "Already a customer? <em>This is the fast lane.</em>",
     "subhead": "Have a problem or concern? Our Customer Care Center serves our entire customer base, processes requests Monday through Friday, 7:00am to 5:00pm, and responds within 24 hours.",
     "primary": {
@@ -10549,7 +10544,7 @@
     "id": "request",
     "eyebrow": "Support",
     "heading": "Request support",
-    "body": "Tell us the equipment and what it is doing. Certified technicians service Canon, Ricoh, Kyocera and HP across Indianapolis and the state, and remote diagnostics resolve many issues without a visit.",
+    "body": "Tell us the equipment and what it is doing. Certified technicians service Canon, Kyocera and HP across Indianapolis and the state, and remote diagnostics resolve many issues without a visit.",
     "bullets": [
      "Same-day service for most Indianapolis metro calls",
      "25 points of inspection on every visit",
@@ -10865,7 +10860,7 @@
      [
       "Print",
       "Copier Sales and Lease",
-      "Canon, Ricoh, Kyocera and HP copiers and multifunction printers.",
+      "Canon, Kyocera and HP copiers and multifunction printers.",
       "Open the page",
       "services/copiers.html"
      ]

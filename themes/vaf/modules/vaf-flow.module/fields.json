@@ -216,10 +216,10 @@
     "default": [
       {
         "step_label": "Assess",
-        "step_when": "10 to 15 minutes, then a visit",
+        "step_when": "Then a visit",
         "step_summary": "Your Technology Strength Score.",
         "step_title": "Know your Technology Strength Score",
-        "step_copy": "<p>Four assessments in two parts each: information, print, process and communication. Ten to fifteen minutes online, then a specialist walks the office and confirms the answers against what is actually running.</p>",
+        "step_copy": "<p>Four assessments in two parts each: information, print, process and communication. A specialist walks the office and confirms the answers against what is actually running.</p>",
         "step_receive": "<ul><li>A Technology Summary Scorecard</li><li>Every device, system and vendor inventoried</li><li>The gaps, in plain English</li></ul>",
         "step_produces": "A Technology Summary Scorecard"
       },

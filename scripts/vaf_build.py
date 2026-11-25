@@ -350,7 +350,9 @@ def cmd_pages(args):
         body = {"name": f"{page_kind(pg['file'])} | {pg['title'].split(' | ')[0]}"[:120], "slug": slug, "templatePath": f"{THEME}/{tpl_name(sl)}",
                 "htmlTitle": pg["title"], "metaDescription": meta_desc(pg), "headHtml": NOINDEX, "language": "en",
                 "featuredImage": og_image(pg), "featuredImageAltText": pg["title"].split("|")[0].strip()}
-        cur = existing.get(slug)
+        cur = existing.get(slug) or existing.get("en/" + slug)   # HubSpot keeps the home and assessment pages under the en/ language prefix
+        if cur:
+            body["slug"] = cur["slug"]
         if cur:
             retrying(lambda: reskin._req("PATCH", f"/cms/v3/pages/site-pages/{cur['id']}", T, json.dumps(body).encode(), "application/json"))
             pid = cur["id"]

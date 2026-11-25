@@ -28,7 +28,7 @@
     "type": "group",
     "default": [
       {
-        "util_label": "Client Service Center",
+        "util_label": "Customer Care Center",
         "util_to": {
           "url": {
             "content_id": null,
@@ -140,7 +140,7 @@
         "mega": true,
         "feat_eyebrow": "Not sure where to start?",
         "feat_title": "Know your Technology Strength Score",
-        "feat_copy": "Ten to fifteen minutes. Information, print, process and communication, scored, with a roadmap of what to eliminate, optimize and leverage.",
+        "feat_copy": "Information, print, process and communication, scored, with a roadmap of what to eliminate, optimize and leverage.",
         "feat_cta": "Take the assessment",
         "feat_to": {
           "url": {

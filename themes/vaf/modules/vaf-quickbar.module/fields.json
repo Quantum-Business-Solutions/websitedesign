@@ -69,7 +69,7 @@
     "name": "drawer_eyebrow",
     "label": "Drawer eyebrow",
     "type": "text",
-    "default": "Client Service Center"
+    "default": "Customer Care Center"
   },
   {
     "id": "drawer_title",

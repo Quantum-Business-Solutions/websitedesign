@@ -163,7 +163,7 @@
     "required": false,
     "locked": false,
     "type": "text",
-    "default": "Ten to fifteen minutes. A person walks the score with you."
+    "default": "A person walks the score with you."
   },
   {
     "id": "cta_label",

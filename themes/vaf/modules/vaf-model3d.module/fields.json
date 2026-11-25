@@ -54,7 +54,7 @@
     "allow_new_line": true,
     "type": "text",
     "display_width": null,
-    "default": "A generated stand-in multifunction device for the preview. Drag to rotate. Canon, Ricoh, Kyocera and HP product imagery replaces it in the build."
+    "default": "A generated stand-in multifunction device for the preview. Drag to rotate. Canon, Kyocera and HP product imagery replaces it in the build."
   },
   {
     "id": "poster",

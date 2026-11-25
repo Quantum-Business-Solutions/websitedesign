@@ -58,7 +58,7 @@ def checklist(s):
                 "items": [{"item_text": t} for t in s["items"]], "score_noun": "checked",
                 "msg_zero": msgs[0], "msg_low": msgs[1], "msg_mid": msgs[2], "msg_high": msgs[3],
                 "band_mid": mid, "band_high": high,
-                "cta_note": "Ten to fifteen minutes online, then a specialist walks it with you.",
+                "cta_note": "A specialist walks it with you.",
                 "cta_label": s.get("cta_label", "Take the assessment"), "cta_link": link(s.get("cta_href", "contact.html"))})
     return clean(out)
 

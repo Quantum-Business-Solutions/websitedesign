@@ -27,7 +27,7 @@
         "alt": false,
         "eyebrow": "Information",
         "heading": "One partner for cloud, security, IT support and physical security",
-        "body": "Most businesses buy information technology from several vendors and then manage the gaps between them. VAF delivers all four from one team in Indianapolis. Start with the free Technology Strength Assessment: ten to fifteen minutes online, then a specialist walks you through a roadmap of what to eliminate, optimize and leverage.",
+        "body": "Most businesses buy information technology from several vendors and then manage the gaps between them. VAF delivers all four from one team in Indianapolis. Start with the free Technology Strength Assessment, then a specialist walks you through a roadmap of what to eliminate, optimize and leverage.",
         "bullets": [
           "Four service areas, each with its own page, from one local team",
           "A 24/7 security operations center and U.S.-based help desk",
@@ -485,10 +485,6 @@
         "type": "stats",
         "items": [
           [
-            "4,000",
-            "Phone systems deployed since 1983"
-          ],
-          [
             "14+",
             "Years average tenure of our unified communications technical staff"
           ],
@@ -724,7 +720,7 @@
         "items": [
           [
             "Copier Sales and Lease",
-            "Copier sales, leasing and rental options from Canon, Ricoh, Kyocera and HP.",
+            "Copier sales, leasing and rental options from Canon, Kyocera and HP.",
             "services/copiers.html"
           ],
           [
@@ -774,7 +770,7 @@
         "body": "<p>Find the right device for your office and keep it running with service from our local team.</p><p><a href=\"/services/copiers\">Explore copier sales and leasing</a></p>",
         "bullets": [
           "Copier sales, leasing, and rental options",
-          "Canon, Ricoh, Kyocera, and HP multifunction printers",
+          "Canon, Kyocera, and HP multifunction printers",
           "Service and maintenance from our local team"
         ],
         "image": "assets/copier-1200.jpg",
@@ -858,7 +854,6 @@
         "caption": "Print hardware partners",
         "items": [
           "Canon",
-          "Ricoh",
           "Kyocera",
           "HP",
           "Brother",
@@ -873,10 +868,6 @@
           [
             "Canon",
             "imageRUNNER ADVANCE copiers and multifunction printers."
-          ],
-          [
-            "Ricoh",
-            "Black-and-white and color MFPs with document management built in."
           ],
           [
             "Kyocera",
@@ -1039,7 +1030,7 @@
           ],
           [
             "What copier and printer brands do you service?",
-            "We sell and service Canon, Ricoh, Kyocera, and HP equipment, plus most other major office equipment brands."
+            "We sell and service Canon, Kyocera, and HP equipment, plus most other major office equipment brands."
           ],
           [
             "What happens in the free print assessment?",
@@ -1456,7 +1447,7 @@
           {
             "tag": "Pillar",
             "title": "Print",
-            "copy": "Copiers, printers, managed print and production print. Canon, Ricoh, Kyocera and HP, serviced by certified local technicians.",
+            "copy": "Copiers, printers, managed print and production print. Canon, Kyocera and HP, serviced by certified local technicians.",
             "image": "assets/svc-3d-copier.webp",
             "alt": "Print, 3D illustration",
             "href": "services/copy-print-solutions.html",
@@ -1465,7 +1456,7 @@
           {
             "tag": "Pillar",
             "title": "Process",
-            "copy": "Document management, document conversion, business process and AI consulting. The paper out, the workflow in.",
+            "copy": "Document management, document scanning, business process and AI consulting. The paper out, the workflow in.",
             "image": "assets/svc-3d-docs.webp",
             "alt": "Process, 3D illustration",
             "href": "solutions-process.html",
@@ -1489,7 +1480,7 @@
             "y": 46,
             "k": "Print",
             "title": "The copier room",
-            "body": "Canon, Ricoh, Kyocera and HP multifunction devices under one managed print agreement, with supplies that arrive before they run out.",
+            "body": "Canon, Kyocera and HP multifunction devices under one managed print agreement, with supplies that arrive before they run out.",
             "href": "services/copiers.html",
             "label": "Copiers and managed print"
           },
@@ -1597,7 +1588,7 @@
         "id": "print",
         "alt": false,
         "heading": "Print",
-        "intro": "Copiers, printers, managed print and production print. Canon, Ricoh, Kyocera and HP, serviced by certified local technicians.",
+        "intro": "Copiers, printers, managed print and production print. Canon, Kyocera and HP, serviced by certified local technicians.",
         "items": [
           [
             "Copiers and printers",
@@ -1626,7 +1617,7 @@
         "id": "process",
         "alt": true,
         "heading": "Process",
-        "intro": "Document management, document conversion, business process and AI consulting. The paper out, the workflow in.",
+        "intro": "Document management, document scanning, business process and AI consulting. The paper out, the workflow in.",
         "items": [
           [
             "Document management",
@@ -1934,7 +1925,7 @@
           ],
           [
             "How do we know what we need?",
-            "Most engagements start with the free Technology Strength Assessment: ten to fifteen minutes online, then a specialist walks the results with you and writes a roadmap of what to eliminate, optimize and leverage."
+            "Most engagements start with the free Technology Strength Assessment, then a specialist walks the results with you and writes a roadmap of what to eliminate, optimize and leverage."
           ]
         ]
       },
@@ -1943,7 +1934,7 @@
         "alt": true,
         "id": "consult",
         "heading": "Not sure where to start? Start with the score.",
-        "body": "Ten to fifteen minutes online, then a specialist walks it with you.",
+        "body": "A specialist walks it with you.",
         "submit": "Take the assessment",
         "note": "A person from the Indianapolis office replies, not an autoresponder."
       }

@@ -18,10 +18,6 @@
           [
             "SOC 2",
             "Certified service organization"
-          ],
-          [
-            "4,000+",
-            "Phone systems deployed since 1983"
           ]
         ],
         "ribbon": [
@@ -49,7 +45,7 @@
           "label": "Schedule a consultation",
           "href": "contact.html"
         },
-        "note": "Canon, Ricoh, Kyocera, HP, Mitel, Fortinet, Sophos and Microsoft partner",
+        "note": "Canon, Kyocera, HP, Mitel, Fortinet, Sophos and Microsoft partner",
         "image": "assets/gen-technician-1200.jpg",
         "image_alt": "A VAF technician replacing a toner unit in a bright office while the office manager looks on",
         "image_w": 1200,
@@ -89,15 +85,11 @@
           [
             "SOC 2",
             "Certified service organization"
-          ],
-          [
-            "4,000+",
-            "Phone systems deployed since 1983"
           ]
         ],
         "card_b": {
           "eyebrow": "Already a customer?",
-          "title": "The Client Service Center",
+          "title": "The Customer Care Center",
           "body": "A person answers. Monday to Friday, 7 to 5.",
           "links": [
             [
@@ -132,7 +124,7 @@
             "Managed IT, cybersecurity, cloud, backup and continuity. A vCIO, 24/7 monitoring and a security operations center, from one team.",
             "services/managed-it.html",
             "Information",
-            "Managed IT|Cybersecurity|Cloud and backup|vCIO",
+            "Managed IT|Cybersecurity|Cloud and backup|vCIO|AI governance",
             "SOC 2 certified, 24/7 monitoring"
           ],
           [
@@ -140,23 +132,23 @@
             "Business phone systems, unified communications and contact center, in the telecom business since 1983 with over 4,000 systems deployed.",
             "services/business-phone-systems.html",
             "Communication",
-            "Business phones|Unified communications|Contact center|Mitel, RingCentral, 8x8",
+            "Business phones|Unified communications|Contact center|Mitel, RingCentral, 8x8, Elevate",
             "Mitel Gold, seven consecutive years"
           ],
           [
             "Print",
-            "Copiers, printers, managed print and production print. Canon, Ricoh, Kyocera and HP, serviced by certified local technicians.",
+            "Copiers, printers, managed print and production print. Canon, Kyocera and HP, serviced by certified local technicians.",
             "services/copiers.html",
             "Print",
-            "Copiers and MFPs|Managed print|Production print|Canon, Ricoh, Kyocera, HP",
+            "Copiers and MFPs|Managed print|Production print|Canon, Kyocera, HP",
             "Certified local technicians"
           ],
           [
             "Process",
-            "Document management, document conversion, business process and AI consulting. The paper out, the workflow in.",
+            "Document management, document scanning, business process and AI consulting. The paper out, the workflow in.",
             "services/document-management.html",
             "Process",
-            "Document management|Document conversion|Business process|AI consulting",
+            "Document management|Document scanning|Business process|AI consulting",
             "Paper out, workflow in"
           ]
         ],
@@ -173,10 +165,10 @@
         "steps": [
           {
             "label": "Assess",
-            "when": "10 to 15 minutes, then a visit",
+            "when": "Then a visit",
             "summary": "Your Technology Strength Score.",
             "title": "Know your Technology Strength Score",
-            "body": "Four assessments in two parts each: information, print, process and communication. Ten to fifteen minutes online, then a specialist walks the office and confirms the answers against what is actually running.",
+            "body": "Four assessments in two parts each: information, print, process and communication. A specialist walks the office and confirms the answers against what is actually running.",
             "receive": [
               "A Technology Summary Scorecard",
               "Every device, system and vendor inventoried",
@@ -319,7 +311,7 @@
             "y": 46,
             "k": "Print",
             "title": "The copier room",
-            "body": "Canon, Ricoh, Kyocera and HP multifunction devices under one managed print agreement, with supplies that arrive before they run out.",
+            "body": "Canon, Kyocera and HP multifunction devices under one managed print agreement, with supplies that arrive before they run out.",
             "href": "services/copiers.html",
             "label": "Copiers and managed print"
           },
@@ -388,7 +380,7 @@
           {
             "title": "Multifunction copiers",
             "band": "Workgroup to department",
-            "brands": "Canon, Ricoh, Kyocera, HP",
+            "brands": "Canon, Kyocera, HP",
             "image": "assets/fleet/mfp.png",
             "bullets": [
               "Print, scan, copy, fax",
@@ -462,7 +454,7 @@
         "id": "film",
         "eyebrow": "Who we are",
         "heading": "Privately owned in Indianapolis since 1914",
-        "intro": "Filmed with VAF people at the 75th Street headquarters.",
+        "intro": "",
         "youtube": "i-q4U5SnvaM",
         "poster": "assets/careers-1200.jpg",
         "title": "What it's like to work at Van Ausdall & Farrar",
@@ -484,11 +476,11 @@
           ],
           [
             "Print",
-            "Copiers, printers, managed print and production print. Canon, Ricoh, Kyocera and HP, serviced by certified local technicians."
+            "Copiers, printers, managed print and production print. Canon, Kyocera and HP, serviced by certified local technicians."
           ],
           [
             "Process",
-            "Document management, document conversion, business process and AI consulting. The paper out, the workflow in."
+            "Document management, document scanning, business process and AI consulting. The paper out, the workflow in."
           ]
         ]
       },
@@ -525,10 +517,6 @@
           [
             "1,000,000",
             "Dollars saved over one contract for Tippecanoe School Corporation"
-          ],
-          [
-            "4,000",
-            "Phone systems deployed since 1983"
           ],
           [
             "250",
@@ -590,7 +578,7 @@
           {
             "label": "Engineering and construction",
             "title": "Engineering and construction",
-            "body": "Firms that run projects from trailers and site offices need phones, print and IT that travel with the work. VAF supplies short-term copier rental for job sites, wide-format print for plan sets, unified communications that follow a project manager between the office and the field, and managed IT that keeps estimating and accounting up. Shiel Sexton, Bowen Engineering and Echo Engineering are on the record.",
+            "body": "Firms that run projects from trailers and site offices need phones, print and IT that travel with the work. VAF supplies short-term copier rental for job sites, wide-format print for plan sets, unified communications that follow a project manager between the office and the field, and managed IT that keeps estimating and accounting up.",
             "bullets": [
               "Short-term copier and printer rental for trailers and temporary offices",
               "Wide-format print and scan for plan sets and submittals",
@@ -674,7 +662,7 @@
           {
             "label": "State and local government",
             "title": "State and local government",
-            "body": "Cities, towns and utilities need billing, records and communications that constituents can trust. For the City of Anderson, VAF's on-site Facilities Management program refreshed print and billing technology, added 2D bar code document security and postal optimization, and streamlined purchasing, for over $40,000 in annual savings. Bloomington's utility department and the Town of Bargersville run on VAF content management.",
+            "body": "Cities, towns and utilities need billing, records and communications that constituents can trust. For the City of Anderson, VAF's on-site Facilities Management program refreshed print and billing technology, added 2D bar code document security and postal optimization, and streamlined purchasing, for over $40,000 in annual savings. A large utility department and an Indiana town run on VAF content management.",
             "bullets": [
               "On-site facilities management with full-time VAF personnel",
               "Print and mail security for billing and records",
@@ -711,7 +699,7 @@
             "lon": -85.145,
             "lat": 41.089,
             "href": "locations/fort-wayne.html",
-            "sub": "1241 N Wells Street",
+            "sub": "(260) 432-1547",
             "label_dx": -96,
             "label_dy": -10
           },
@@ -753,6 +741,11 @@
             "VAF enters the telephone business. More than 4,000 systems deployed since."
           ],
           [
+            "1987",
+            "Copiers",
+            "VAF enters the copier business."
+          ],
+          [
             "1994",
             "Eric von Grimmenstein",
             "Grew up in the business, joined in 1977 after Purdue, and becomes president."
@@ -761,6 +754,16 @@
             "2006",
             "6430 E 75th Street",
             "The 57,000-square-foot corporate headquarters opens in Indianapolis."
+          ],
+          [
+            "2015",
+            "Document Conversion Center",
+            "VAF opens the Document Conversion Center."
+          ],
+          [
+            "2016",
+            "Print Fulfillment Center",
+            "VAF opens the Print Fulfillment Center."
           ],
           [
             "Today",
@@ -775,7 +778,6 @@
         "caption": "Technology partners, including Gartner Magic Quadrant leaders",
         "items": [
           "Canon",
-          "Ricoh",
           "Kyocera",
           "HP",
           "Brother",
@@ -819,7 +821,7 @@
           "Check what you cannot answer yes to.",
           "One is normal.",
           "Two is a pattern.",
-          "Three or more is the reason the assessment exists. Ten to fifteen minutes gives you the full score."
+          "Three or more is the reason the assessment exists."
         ],
         "cta_label": "Take the assessment",
         "cta_href": "technology-strength-assessment.html"
@@ -875,7 +877,7 @@
           ],
           [
             "How fast do you respond?",
-            "The Customer Care Center processes requests Monday through Friday, 7:00am to 5:00pm, and responds within 24 hours. Same-day service for most Indianapolis metro copier calls. Managed IT is monitored 24/7."
+            "The Customer Care Center processes requests Monday through Friday, 7:00am to 5:00pm, and responds within 24 hours. Our average response time for copier calls anywhere in Indiana is under 4 hours. Managed IT is monitored 24/7."
           ],
           [
             "Do you serve outside Indianapolis?",
@@ -887,7 +889,7 @@
         "type": "contact",
         "id": "contact",
         "heading": "Speak with a solutions expert",
-        "body": "Tell us what you run and what is not working. A person from the Indianapolis office replies to set a time. Or start with the ten-minute assessment.",
+        "body": "Tell us what you run and what is not working. One of our technology advisors will set up a time to review your situation. Or start with our complimentary assessment.",
         "options": [
           "Managed IT and security",
           "Business phone systems",
@@ -990,7 +992,8 @@
               "Help desk",
               "Cybersecurity",
               "Cloud and backup",
-              "vCIO"
+              "vCIO",
+              "AI governance"
             ],
             "stat": "SOC 2",
             "stat_label": "Certified service organization",
@@ -1006,10 +1009,10 @@
               "Voice and video",
               "Team chat",
               "Contact center",
-              "Mitel, RingCentral, 8x8"
+              "Mitel, RingCentral, 8x8, Elevate"
             ],
-            "stat": "4,000+",
-            "stat_label": "Phone systems deployed since 1983",
+            "stat": "",
+            "stat_label": "",
             "href": "services/business-phone-systems.html",
             "image": "assets/svc-3d-phone.webp",
             "alt": "Business phone systems, 3D illustration"
@@ -1017,10 +1020,9 @@
           {
             "tag": "Print",
             "title": "Copiers and printers",
-            "copy": "Canon, Ricoh, Kyocera and HP equipment backed by local sales, service and support since 1914.",
+            "copy": "Canon, Kyocera and HP equipment backed by local sales, service and support since 1914.",
             "bullets": [
               "Canon",
-              "Ricoh",
               "Kyocera",
               "HP"
             ],
@@ -1096,7 +1098,7 @@
         "id": "playbook",
         "eyebrow": "Free guide",
         "heading": "Is your business ready for AI in 2026?",
-        "body": "<p>Get the 2026 CIO AI Playbook: your step-by-step guide to secure, strategic AI implementation, written for Indiana businesses.</p><p><a class=\"q-btn\" href=\"/cio-ai-playbook\">Download your free playbook</a></p>",
+        "body": "<p>Get the 2026 CIO AI Playbook: your step-by-step guide to secure, strategic AI implementation, written for your business.</p><p><a class=\"q-btn\" href=\"/cio-ai-playbook\">Download your free playbook</a></p>",
         "bullets": [],
         "image": "assets/ai-playbook-photo",
         "image_alt": "A hand holding glowing AI letters, the cover image of the 2026 CIO AI Playbook"
@@ -1109,7 +1111,7 @@
         "heading": "What is slowing your office down?",
         "intro": "Pick the one that sounds most like Monday morning.",
         "link_label": "See how we fix it",
-        "foot_label": "Not sure? Take the five-minute assessment",
+        "foot_label": "Not sure? Take the assessment",
         "foot_href": "technology-strength-assessment.html",
         "items": [
           {
@@ -1159,7 +1161,7 @@
           {
             "problem": "We are not sure where we stand",
             "service": "The Technology Strength Assessment",
-            "copy": "Twenty yes or no questions give you a score and a roadmap in about five minutes.",
+            "copy": "Twenty yes or no questions give you a score and a roadmap.",
             "bullets": [
               "Score for information, print, process and communication",
               "Eliminate, optimize and leverage roadmap",

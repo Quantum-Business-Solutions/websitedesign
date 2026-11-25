@@ -202,7 +202,7 @@
     "allow_new_line": false,
     "type": "text",
     "display_width": null,
-    "default": "Not sure? Take the five-minute assessment"
+    "default": "Not sure? Take the assessment"
   },
   {
     "id": "foot_link",

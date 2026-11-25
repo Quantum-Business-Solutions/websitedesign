@@ -36,7 +36,7 @@
     "required": false,
     "locked": false,
     "type": "text",
-    "default": "Ten to fifteen minutes online, then a specialist walks it with you."
+    "default": "A specialist walks it with you."
   },
   {
     "id": "phone_prefix",
