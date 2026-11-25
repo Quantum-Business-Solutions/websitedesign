@@ -264,6 +264,7 @@ def template_for(page):
 
 
 def slugs_from(args):
+    args = [a for a in args if not a.startswith("--")]
     # /blog and everything under it belongs to the HubSpot blog, not to site pages
     if args == ["all"]:
         return [slug_of(p["file"]) for p in CONTENT["pages"] if slug_of(p["file"]) != "blog" and not slug_of(p["file"]).startswith("blog/")]
@@ -358,6 +359,13 @@ def cmd_pages(args):
             pid = cur["id"]
         else:
             pid = json.loads(retrying(lambda: reskin._req("POST", "/cms/v3/pages/site-pages", T, json.dumps(body).encode(), "application/json")))["id"]
+        if cur and cur.get("layoutSections"):
+            # saved page-editor content overrides the template, so a rebuild would silently not show. Say so; --clear-saved resets it.
+            if "--clear-saved" in args:
+                retrying(lambda: reskin._req("PATCH", f"/cms/v3/pages/site-pages/{cur['id']}", T, json.dumps({"layoutSections": {}}).encode(), "application/json"))
+                print(f"  cleared saved editor content on /{slug}")
+            else:
+                print(f"  WARNING /{slug} has saved editor content that overrides the template; rerun with --clear-saved to apply the build")
         if cur and cur.get("state") != "DRAFT":
             retrying(lambda: reskin._req("POST", f"/cms/v3/pages/site-pages/{pid}/draft/push-live", T))
         else:   # first publish must be scheduled; push-live only updates a page that is already live
