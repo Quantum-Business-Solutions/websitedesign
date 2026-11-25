@@ -23,7 +23,7 @@
     "layout": "centered",
     "eyebrow": "Company facts",
     "heading": "Van Ausdall & Farrar, <em>at a glance</em>.",
-    "subhead": "Van Ausdall & Farrar, Inc. is one of Indiana's largest independently owned office technology providers: managed IT and cybersecurity, business phone systems, copiers and managed print, document management and conversion, and AI consulting. Privately owned in Indianapolis since 1914.",
+    "subhead": "Van Ausdall & Farrar, Inc. is one of Indiana's largest independently owned office technology providers: managed IT and cybersecurity, business phone systems, copiers and managed print, document management and scanning, and AI consulting. Privately owned in Indianapolis since 1914.",
     "primary": {
      "label": "Schedule a consultation",
      "href": "contact.html"
@@ -82,7 +82,7 @@
       "Built in 2006 at 6430 E 75th Street, home to the secure Document Conversion Center."
      ]
     ],
-    "source": "Sources: vanausdall.com (about, why VAF, copy print, support, document conversion pages), CEO Juice NPS report, SOC 2 certification as displayed on vanausdall.com."
+    "source": "Sources: vanausdall.com (about, why VAF, copy print, support, document scanning pages), CEO Juice NPS report, SOC 2 certification as displayed on vanausdall.com."
    },
    {
     "type": "detail",
@@ -104,7 +104,7 @@
     "items": [
      [
       "Who is Van Ausdall & Farrar?",
-      "Van Ausdall & Farrar, Inc. is one of Indiana's largest independently owned office technology providers, privately owned in Indianapolis since 1914. It provides managed IT and cybersecurity, business phone systems, copiers and managed print, document management and conversion, and AI consulting."
+      "Van Ausdall & Farrar, Inc. is one of Indiana's largest independently owned office technology providers, privately owned in Indianapolis since 1914. It provides managed IT and cybersecurity, business phone systems, copiers and managed print, document management and scanning, and AI consulting."
      ],
      [
       "Where is Van Ausdall & Farrar located?",

@@ -1106,7 +1106,7 @@
             "services/document-management.html"
           ],
           [
-            "Document Conversion",
+            "Document Scanning",
             "Paper to searchable records, with secure electronic storage.",
             "services/document-conversion.html"
           ],
@@ -1191,7 +1191,7 @@
         "alt": true,
         "eyebrow": "Process",
         "heading": "Document Scanning",
-        "body": "<p>Many benefits can be gained when companies choose to go from paper to digital, but the process of doing so can be difficult. Many companies become overwhelmed with everything that goes into document conversion. VAF has the latest technology and strategic initiatives to seamlessly convert your documents to digital formats.</p><p><a href=\"/services/document-scanning\">Explore Document Scanning</a></p>",
+        "body": "<p>Many benefits can be gained when companies choose to go from paper to digital, but the process of doing so can be difficult. Many companies become overwhelmed with everything that goes into document scanning. VAF has the latest technology and strategic initiatives to seamlessly convert your documents to digital formats.</p><p><a href=\"/services/document-scanning\">Explore Document Scanning</a></p>",
         "bullets": [],
         "id": "scanning"
       },
@@ -1518,7 +1518,7 @@
             "title": "The records wall",
             "body": "Boxes of paper become searchable records at the secure Document Conversion Center, with a certificate of destruction at the end.",
             "href": "services/document-conversion.html",
-            "label": "Document conversion"
+            "label": "Document scanning"
           },
           {
             "x": 16,
@@ -1625,7 +1625,7 @@
             "services/document-management.html"
           ],
           [
-            "Document conversion",
+            "Document scanning",
             "Paperless digital imaging and secure electronic storage from VAF's ultra-secure Document Conversion Center inside our 57,000-square-foot Indianapolis.",
             "services/document-conversion.html"
           ],
@@ -1917,7 +1917,7 @@
         "items": [
           [
             "What does Van Ausdall & Farrar actually sell?",
-            "Four pillars under one agreement: information (managed IT, cybersecurity, cloud, backup), communication (business phone systems and unified communications), print (copiers, managed print, production print) and process (document management, conversion and AI consulting)."
+            "Four pillars under one agreement: information (managed IT, cybersecurity, cloud, backup), communication (business phone systems and unified communications), print (copiers, managed print, production print) and process (document management, scanning and AI consulting)."
           ],
           [
             "Can we buy one service, or is it all or nothing?",

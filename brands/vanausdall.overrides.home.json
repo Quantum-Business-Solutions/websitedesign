@@ -262,7 +262,7 @@
             "Built in 2006 at 6430 E 75th Street, home to the secure Document Conversion Center."
           ]
         ],
-        "source": "Sources: vanausdall.com (about, why VAF, copy print, support, document conversion pages), CEO Juice NPS report, SOC 2 certification as displayed on vanausdall.com."
+        "source": "Sources: vanausdall.com (about, why VAF, copy print, support, document scanning pages), CEO Juice NPS report, SOC 2 certification as displayed on vanausdall.com."
       },
       {
         "type": "beforeafter",
@@ -349,7 +349,7 @@
             "title": "The records wall",
             "body": "Boxes of paper become searchable records at the secure Document Conversion Center, with a certificate of destruction at the end.",
             "href": "services/document-conversion.html",
-            "label": "Document conversion"
+            "label": "Document scanning"
           },
           {
             "x": 16,
@@ -568,7 +568,7 @@
             "bullets": [
               "Fleet consolidation across every building, priced as one agreement",
               "Mobile and cloud printing for staff and students",
-              "Document conversion for student records with a retention policy"
+              "Document scanning for student records with a retention policy"
             ],
             "image": "assets/team-1200.jpg",
             "image_alt": "Education",
@@ -894,7 +894,7 @@
           "Managed IT and security",
           "Business phone systems",
           "Copiers and managed print",
-          "Document management or conversion",
+          "Document management or scanning",
           "AI consulting",
           "Something else"
         ],
@@ -1050,7 +1050,7 @@
           },
           {
             "tag": "Process",
-            "title": "Document conversion",
+            "title": "Document scanning",
             "copy": "Go paperless with secure electronic storage, searchable digital archives and a smaller on-site footprint.",
             "bullets": [
               "Scanning",
@@ -1062,7 +1062,7 @@
             "stat_label": "Workflow in",
             "href": "services/document-conversion.html",
             "image": "assets/svc-3d-docs.webp",
-            "alt": "Document conversion, 3D illustration"
+            "alt": "Document scanning, 3D illustration"
           },
           {
             "tag": "Process",
@@ -1149,7 +1149,7 @@
           },
           {
             "problem": "Paper and approvals slow everything down",
-            "service": "Document conversion and workflow",
+            "service": "Document scanning and workflow",
             "copy": "Get paper out of the way, then route the approvals that wait longest.",
             "bullets": [
               "Scan and index into one searchable home",

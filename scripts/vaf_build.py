@@ -40,7 +40,7 @@ def seo_titles():
         "index.html": "Managed IT, cybersecurity, business phones, copiers and print, and document services for Indiana businesses, locally owned in Indianapolis since 1914.",
         "about.html": "Privately owned in Indianapolis since 1914, Van Ausdall & Farrar delivers managed IT, phones, print and document services across Indiana.",
         "case-studies/city-facilities-management.html": "How VAF's on-site facilities management program saved an Indiana city over $40,000 a year on print, billing and purchasing.",
-        "services/document-conversion.html": "Document scanning and conversion in Indianapolis: paperless digital imaging, searchable archives and secure electronic storage from VAF's Document Conversion Center.",
+        "services/document-conversion.html": "Document scanning in Indianapolis: paperless digital imaging, searchable archives and secure electronic storage from VAF's Document Conversion Center.",
     }
     PLACES = ("indianapolis", "indiana", "fort wayne", "evansville", "bloomington", "carmel", "fishers", "noblesville", "greenwood", "muncie", "columbus", "south bend")
     fit = lambda c: 30 <= len(c) <= 60

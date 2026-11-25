@@ -122,7 +122,7 @@
       "services/document-management.html"
      ],
      [
-      "Document conversion",
+      "Document scanning",
       "services/document-conversion.html"
      ],
      [
@@ -250,7 +250,7 @@
   "org_name": "Van Ausdall & Farrar, Inc.",
   "org_url": "https://www.vanausdall.com",
   "org_logo": "https://50498425.fs1.hubspotusercontent-na1.net/hubfs/50498425/vaf/assets/logo-600.png",
-  "org_description": "One of Indiana's largest independently owned office technology providers, privately owned in Indianapolis since 1914: managed IT and cybersecurity, business phone systems, copiers and managed print, document management and conversion, and AI consulting.",
+  "org_description": "One of Indiana's largest independently owned office technology providers, privately owned in Indianapolis since 1914: managed IT and cybersecurity, business phone systems, copiers and managed print, document management and scanning, and AI consulting.",
   "sameAs": [
    "https://www.linkedin.com/company/van-ausdall-&-farrar",
    "https://www.facebook.com/Vanausdallinc/",
@@ -344,7 +344,7 @@
        "services/document-management.html"
       ],
       [
-       "Document conversion",
+       "Document scanning",
        "services/document-conversion.html"
       ],
       [
@@ -796,7 +796,7 @@
        "Built in 2006 at 6430 E 75th Street, home to the secure Document Conversion Center."
       ]
      ],
-     "source": "Sources: vanausdall.com (about, why VAF, copy print, support, document conversion pages), CEO Juice NPS report, SOC 2 certification as displayed on vanausdall.com."
+     "source": "Sources: vanausdall.com (about, why VAF, copy print, support, document scanning pages), CEO Juice NPS report, SOC 2 certification as displayed on vanausdall.com."
     },
     {
      "type": "beforeafter",
@@ -883,7 +883,7 @@
        "title": "The records wall",
        "body": "Boxes of paper become searchable records at the secure Document Conversion Center, with a certificate of destruction at the end.",
        "href": "services/document-conversion.html",
-       "label": "Document conversion"
+       "label": "Document scanning"
       },
       {
        "x": 16,
@@ -1102,7 +1102,7 @@
        "bullets": [
         "Fleet consolidation across every building, priced as one agreement",
         "Mobile and cloud printing for staff and students",
-        "Document conversion for student records with a retention policy"
+        "Document scanning for student records with a retention policy"
        ],
        "image": "assets/team-1200.jpg",
        "image_alt": "Education",
@@ -1417,7 +1417,7 @@
        "services/document-management.html"
       ],
       [
-       "Document conversion",
+       "Document scanning",
        "Paperless digital imaging and secure electronic storage from VAF's ultra-secure Document Conversion Center inside our 57,000-square-foot Indianapolis.",
        "services/document-conversion.html"
       ],
@@ -1496,7 +1496,7 @@
       "Managed IT and security",
       "Business phone systems",
       "Copiers and managed print",
-      "Document management or conversion",
+      "Document management or scanning",
       "AI consulting",
       "Something else"
      ],
@@ -1610,7 +1610,7 @@
        "title": "The records wall",
        "body": "Boxes of paper become searchable records at the secure Document Conversion Center, with a certificate of destruction at the end.",
        "href": "services/document-conversion.html",
-       "label": "Document conversion"
+       "label": "Document scanning"
       },
       {
        "x": 16,
@@ -1717,7 +1717,7 @@
        "services/document-management.html"
       ],
       [
-       "Document conversion",
+       "Document scanning",
        "Paperless digital imaging and secure electronic storage from VAF's ultra-secure Document Conversion Center inside our 57,000-square-foot Indianapolis.",
        "services/document-conversion.html"
       ],
@@ -2158,7 +2158,7 @@
      "items": [
       [
        "What does Van Ausdall & Farrar actually sell?",
-       "Four pillars under one agreement: information (managed IT, cybersecurity, cloud, backup), communication (business phone systems and unified communications), print (copiers, managed print, production print) and process (document management, conversion and AI consulting)."
+       "Four pillars under one agreement: information (managed IT, cybersecurity, cloud, backup), communication (business phone systems and unified communications), print (copiers, managed print, production print) and process (document management, scanning and AI consulting)."
       ],
       [
        "Can we buy one service, or is it all or nothing?",
@@ -4750,7 +4750,7 @@
      "items": [
       [
        "Solutions",
-       "Document Conversion",
+       "Document Scanning",
        "",
        "Open the page",
        "services/document-conversion.html"
@@ -4785,7 +4785,7 @@
       ],
       [
        "Process",
-       "Document Conversion in Evansville, IN",
+       "Document Scanning in Evansville, IN",
        "",
        "Open the page",
        "locations/evansville-document-conversion-solutions.html"
@@ -4868,15 +4868,15 @@
   },
   {
    "file": "services/document-conversion.html",
-   "title": "Document Conversion, Indianapolis | Van Ausdall & Farrar",
+   "title": "Document Scanning Services, Indianapolis | Van Ausdall & Farrar",
    "description": "Paperless digital imaging and secure electronic storage from VAF's ultra-secure Document Conversion Center inside our 57,000-square-foot Indianapolis.",
    "schema": [
     {
      "@context": "https://schema.org",
      "@type": "Service",
      "@id": "https://www.vanausdall.com/services/document-conversion#service",
-     "name": "Document conversion",
-     "serviceType": "Document conversion",
+     "name": "Document scanning",
+     "serviceType": "Document scanning",
      "description": "Paperless digital imaging and secure electronic storage from VAF's ultra-secure Document Conversion Center inside our 57,000-square-foot Indianapolis headquarters. Scan, index and retrieve your business documents without the cost of on-site or off-site storage.",
      "provider": {
       "@id": "https://www.vanausdall.com/#organization"
@@ -4913,7 +4913,7 @@
      "solutions.html"
     ],
     [
-     "Document conversion",
+     "Document scanning",
      "services/document-conversion.html"
     ]
    ],
@@ -4933,7 +4933,7 @@
       "href": "technology-strength-assessment.html"
      },
      "image": "assets/gen-conversion-1200.jpg",
-     "image_alt": "Document conversion",
+     "image_alt": "Document scanning",
      "image_w": 1200,
      "image_h": 800
     },
@@ -4941,7 +4941,7 @@
      "type": "cards",
      "alt": true,
      "eyebrow": "What is included",
-     "heading": "What changes with VAF document conversion",
+     "heading": "What changes with VAF document scanning",
      "items": [
       [
        "Secure facility",
@@ -4967,7 +4967,7 @@
      "alt": true,
      "eyebrow": "The closed-loop process",
      "heading": "Seven stages, with signed custody at every handover",
-     "intro": "Click a stage. This is the process from the document conversion page.",
+     "intro": "Click a stage. This is the process from the document scanning page.",
      "receive_label": "What you receive",
      "steps": [
       {
@@ -5118,7 +5118,7 @@
     },
     {
      "type": "faq",
-     "heading": "Questions we get about document conversion",
+     "heading": "Questions we get about document scanning",
      "items": [
       [
        "How secure is the conversion center?",
@@ -5312,7 +5312,7 @@
       ],
       [
        "Solutions",
-       "Document Conversion",
+       "Document Scanning",
        "",
        "Open the page",
        "services/document-conversion.html"
@@ -5340,7 +5340,7 @@
       ],
       [
        "Process",
-       "Document Conversion in Evansville, IN",
+       "Document Scanning in Evansville, IN",
        "",
        "Open the page",
        "locations/evansville-document-conversion-solutions.html"
@@ -5460,7 +5460,7 @@
        "bullets": [
         "Fleet consolidation across every building, priced as one agreement",
         "Mobile and cloud printing for staff and students",
-        "Document conversion for student records with a retention policy"
+        "Document scanning for student records with a retention policy"
        ],
        "image": "assets/team-1200.jpg",
        "image_alt": "Education",
@@ -5728,7 +5728,7 @@
      "bullets": [
       "Fleet consolidation across every building, priced as one agreement",
       "Mobile and cloud printing for staff and students",
-      "Document conversion for student records with a retention policy",
+      "Document scanning for student records with a retention policy",
       "Managed IT, security awareness training and continuity for the district office"
      ]
     },
@@ -5835,7 +5835,7 @@
       ],
       [
        "What is included for education?",
-       "Fleet consolidation across every building, priced as one agreement; Mobile and cloud printing for staff and students; Document conversion for student records with a retention policy; Managed IT, security awareness training and continuity for the district office. All of it under one agreement with one Customer Care Center."
+       "Fleet consolidation across every building, priced as one agreement; Mobile and cloud printing for staff and students; Document scanning for student records with a retention policy; Managed IT, security awareness training and continuity for the district office. All of it under one agreement with one Customer Care Center."
       ],
       [
        "Does Van Ausdall & Farrar serve education across Indiana?",
@@ -6276,7 +6276,7 @@
       "Consolidated print spend, centralized management and authenticated release",
       "Tools to aid HIPAA compliance around patient records",
       "Cloud, premise and hybrid unified communications, telehealth platforms and overhead paging",
-      "On-site or off-site document conversion with strict chain of custody"
+      "On-site or off-site document scanning with strict chain of custody"
      ]
     },
     {
@@ -6382,7 +6382,7 @@
       ],
       [
        "What is included for healthcare?",
-       "Consolidated print spend, centralized management and authenticated release; Tools to aid HIPAA compliance around patient records; Cloud, premise and hybrid unified communications, telehealth platforms and overhead paging; On-site or off-site document conversion with strict chain of custody. All of it under one agreement with one Customer Care Center."
+       "Consolidated print spend, centralized management and authenticated release; Tools to aid HIPAA compliance around patient records; Cloud, premise and hybrid unified communications, telehealth platforms and overhead paging; On-site or off-site document scanning with strict chain of custody. All of it under one agreement with one Customer Care Center."
       ],
       [
        "Does Van Ausdall & Farrar serve healthcare across Indiana?",
@@ -8001,7 +8001,7 @@
        "id": "the-strategy",
        "title": "The strategy",
        "paras": [
-        "Document conversion specialists came on site to inventory and index every box. Records then went to Van Ausdall's corporate office for systematic scanning. Since the law allowed everything older than 2009 to be properly destroyed, Van Ausdall stayed inside the budget by keeping only the files required by law. Over 1.5 million files were scanned in 90 days. Once the project was finished and all files indexed, the paper files were safely destroyed and Van Ausdall issued a certificate of destruction.",
+        "Document scanning specialists came on site to inventory and index every box. Records then went to Van Ausdall's corporate office for systematic scanning. Since the law allowed everything older than 2009 to be properly destroyed, Van Ausdall stayed inside the budget by keeping only the files required by law. Over 1.5 million files were scanned in 90 days. Once the project was finished and all files indexed, the paper files were safely destroyed and Van Ausdall issued a certificate of destruction.",
         "callout:Retention first|Scanning only what the policy required is how a project five times larger than estimated came in on budget."
        ]
       },
@@ -8009,7 +8009,7 @@
        "id": "the-results",
        "title": "The results",
        "paras": [
-        "All files were inventoried, scanned and indexed within 90 days and inside the allotted budget. The clerks responsible for the records can pull files quickly and securely, increasing their efficiency in daily tasks. A cost-effective approach to records management and document conversion let Johnson Memorial meet a high-pressure deadline while staying under budget.",
+        "All files were inventoried, scanned and indexed within 90 days and inside the allotted budget. The clerks responsible for the records can pull files quickly and securely, increasing their efficiency in daily tasks. A cost-effective approach to records management and document scanning let Johnson Memorial meet a high-pressure deadline while staying under budget.",
         "pq:1.5 million files. 90 days. Under budget."
        ]
       }
@@ -9480,7 +9480,7 @@
       ],
       [
        "What does Van Ausdall & Farrar do?",
-       "Managed IT and cybersecurity, business phone systems, copiers and managed print, document management and conversion, and AI consulting, for businesses, schools, hospitals and municipalities across Indiana and the Midwest."
+       "Managed IT and cybersecurity, business phone systems, copiers and managed print, document management and scanning, and AI consulting, for businesses, schools, hospitals and municipalities across Indiana and the Midwest."
       ]
      ]
     },
@@ -10717,8 +10717,8 @@
       ],
       [
        "Evansville",
-       "Document Conversion in Evansville, IN",
-       "Document conversion can be very labor intensive and costly for your business, especially if you lack trained staff and the need to train.",
+       "Document Scanning in Evansville, IN",
+       "Document scanning can be very labor intensive and costly for your business, especially if you lack trained staff and the need to train.",
        "Open the page",
        "locations/evansville-document-conversion-solutions.html"
       ],
@@ -10996,7 +10996,7 @@
        "Mitel, RingCentral, 8x8 and Elevate, in the telecom business since 1983."
       ],
       [
-       "Document management and conversion",
+       "Document management and scanning",
        "OnBase, Square 9 and the secure Document Conversion Center in Indianapolis."
       ]
      ]
@@ -11243,7 +11243,7 @@
        "Mitel, RingCentral, 8x8 and Elevate, in the telecom business since 1983."
       ],
       [
-       "Document management and conversion",
+       "Document management and scanning",
        "OnBase, Square 9 and the secure Document Conversion Center in Indianapolis."
       ]
      ]
@@ -11538,7 +11538,7 @@
        "Mitel, RingCentral, 8x8 and Elevate, in the telecom business since 1983."
       ],
       [
-       "Document management and conversion",
+       "Document management and scanning",
        "OnBase, Square 9 and the secure Document Conversion Center in Indianapolis."
       ]
      ]
@@ -11672,7 +11672,7 @@
   {
    "file": "blog.html",
    "title": "News and Insights, Indianapolis | Van Ausdall & Farrar",
-   "description": "Plain-spoken guides on managed IT, cybersecurity, business phone systems, document conversion, copiers and AI governance, from the Van Ausdall & Farrar team.",
+   "description": "Plain-spoken guides on managed IT, cybersecurity, business phone systems, document scanning, copiers and AI governance, from the Van Ausdall & Farrar team.",
    "crumbs": [
     [
      "Home",
@@ -12244,7 +12244,7 @@
        "id": "why-convert",
        "title": "Why organizations convert",
        "paras": [
-        "On-site storage consumes work space. Off-site storage is a monthly bill that never ends. Neither is searchable, and neither survives a demolition schedule. Document conversion replaces both with paperless, digital imaging and secure electronic storage, after a review of your retention policy that often means keeping less than you thought.",
+        "On-site storage consumes work space. Off-site storage is a monthly bill that never ends. Neither is searchable, and neither survives a demolition schedule. Document scanning replaces both with paperless, digital imaging and secure electronic storage, after a review of your retention policy that often means keeping less than you thought.",
         "callout:The retention review comes first|For Johnson Memorial Health, the law allowed everything older than 2009 to be properly destroyed. Scanning only what the policy required is how the project came in on budget."
        ]
       },
@@ -12310,7 +12310,7 @@
     {
      "type": "leadform",
      "id": "guide",
-     "heading": "Talk to us about document conversion",
+     "heading": "Talk to us about document scanning",
      "body": "Tell us a little about your organization and a person from the Indianapolis office will call to set a time.",
      "submit": "Schedule my consultation",
      "note": "A person replies, not an autoresponder."
@@ -14005,7 +14005,7 @@
       "Managed IT and security",
       "Business phone systems",
       "Copiers and managed print",
-      "Document management or conversion",
+      "Document management or scanning",
       "AI consulting",
       "Something else"
      ],
@@ -14316,7 +14316,7 @@
       ],
       [
        "Solutions",
-       "Document Conversion",
+       "Document Scanning",
        "",
        "Open the page",
        "services/document-conversion.html"
@@ -14344,7 +14344,7 @@
       ],
       [
        "Process",
-       "Document Conversion in Evansville, IN",
+       "Document Scanning in Evansville, IN",
        "",
        "Open the page",
        "locations/evansville-document-conversion-solutions.html"
@@ -23161,7 +23161,7 @@
       ],
       [
        "Solutions",
-       "Document Conversion",
+       "Document Scanning",
        "",
        "Open the page",
        "services/document-conversion.html"
@@ -23189,7 +23189,7 @@
       ],
       [
        "Process",
-       "Document Conversion in Evansville, IN",
+       "Document Scanning in Evansville, IN",
        "",
        "Open the page",
        "locations/evansville-document-conversion-solutions.html"
@@ -23418,7 +23418,7 @@
       ],
       [
        "Solutions",
-       "Document Conversion",
+       "Document Scanning",
        "",
        "Open the page",
        "services/document-conversion.html"
@@ -23446,7 +23446,7 @@
       ],
       [
        "Process",
-       "Document Conversion in Evansville, IN",
+       "Document Scanning in Evansville, IN",
        "",
        "Open the page",
        "locations/evansville-document-conversion-solutions.html"
@@ -24227,7 +24227,7 @@
       ],
       [
        "Process",
-       "Document Conversion in Evansville, IN",
+       "Document Scanning in Evansville, IN",
        "",
        "Open the page",
        "locations/evansville-document-conversion-solutions.html"
@@ -24489,8 +24489,8 @@
   },
   {
    "file": "locations/evansville-document-conversion-solutions.html",
-   "title": "Document Conversion in Evansville, IN",
-   "description": "Document Conversion Service in Evanville, IN Solutions in Indiana. IT support, managed services, and business technology solutions. Learn more. Learn more.",
+   "title": "Document Scanning in Evansville, IN",
+   "description": "Document Scanning Service in Evanville, IN Solutions in Indiana. IT support, managed services, and business technology solutions. Learn more. Learn more.",
    "crumbs": [
     [
      "Home",
@@ -24501,7 +24501,7 @@
      "locations.html"
     ],
     [
-     "Document Conversion in Evansville, IN",
+     "Document Scanning in Evansville, IN",
      "locations/evansville-document-conversion-solutions.html"
     ]
    ],
@@ -24510,8 +24510,8 @@
      "type": "hero",
      "layout": "centered",
      "eyebrow": "Locations: Process",
-     "heading": "Document Conversion Service in Evanville, IN",
-     "subhead": "Document conversion can be very labor intensive and costly for your business, especially if you lack trained staff and the need to train your staff on such matters.",
+     "heading": "Document Scanning Service in Evanville, IN",
+     "subhead": "Document scanning can be very labor intensive and costly for your business, especially if you lack trained staff and the need to train your staff on such matters.",
      "primary": {
       "label": "Schedule a consultation",
       "href": "contact.html"
@@ -24521,7 +24521,7 @@
       "href": "technology-strength-assessment.html"
      },
      "image": "assets/gen-conversion-1200.jpg",
-     "image_alt": "Document Conversion in Evansville, IN",
+     "image_alt": "Document Scanning in Evansville, IN",
      "image_w": 1200,
      "image_h": 800
     },
@@ -24529,32 +24529,32 @@
      "type": "detail",
      "alt": false,
      "eyebrow": "Process",
-     "heading": "About Document Conversion in Evansville, IN",
-     "body": "This change has been attributed to the improved security, searchability, and ease of accessibility of documents when converted. Also, using traditional paper documents makes them prone to destruction or damage during disasters like fire or flooding. For this reason, it is essential to convert your documents to digital copies where they can be stored online, making it easy for you to access them anywhere and at any time. You may think that switching your business documents to digital is daunting and could come with issues. This is where Van Ausdall & Farrar comes in as a leading document conversion service provider for businesses in Evansville. Our years of experience and expertise make us a suitable partner for all of your document conversion needs. As businesses are switching to paperless, it is also essential for you to do so to streamline your business operations. And it is just as crucial for you to choose the right company to help you do so.",
+     "heading": "About Document Scanning in Evansville, IN",
+     "body": "This change has been attributed to the improved security, searchability, and ease of accessibility of documents when converted. Also, using traditional paper documents makes them prone to destruction or damage during disasters like fire or flooding. For this reason, it is essential to convert your documents to digital copies where they can be stored online, making it easy for you to access them anywhere and at any time. You may think that switching your business documents to digital is daunting and could come with issues. This is where Van Ausdall & Farrar comes in as a leading document scanning service provider for businesses in Evansville. Our years of experience and expertise make us a suitable partner for all of your document scanning needs. As businesses are switching to paperless, it is also essential for you to do so to streamline your business operations. And it is just as crucial for you to choose the right company to help you do so.",
      "bullets": []
     },
     {
      "type": "detail",
      "alt": true,
      "eyebrow": "Process",
-     "heading": "What Is Document Conversion?",
-     "body": "The document conversion process can be defined as converting large files into different digital formats and copies. This process can be made successful using software instead of manual conversions. Manual conversions consume more time and energy and generally impact productivity more than automated document conversion. Converting documents into digital copies comes with several benefits, including searchability and accessibility.",
+     "heading": "What Is Document Scanning?",
+     "body": "The document scanning process can be defined as converting large files into different digital formats and copies. This process can be made successful using software instead of manual conversions. Manual conversions consume more time and energy and generally impact productivity more than automated document scanning. Converting documents into digital copies comes with several benefits, including searchability and accessibility.",
      "bullets": []
     },
     {
      "type": "detail",
      "alt": false,
      "eyebrow": "Process",
-     "heading": "Advantages of Document Conversion for Your Business",
-     "body": "Converting documents into digital copies can help businesses stand above the competition. The benefits can be attributed to working with a trusted document conversion company like Van Ausdall & Farrar. Working with the premier document conversion company further helps your company gain a competitive advantage over its rivals. Some of the advantages of document conversion for your business include:",
+     "heading": "Advantages of Document Scanning for Your Business",
+     "body": "Converting documents into digital copies can help businesses stand above the competition. The benefits can be attributed to working with a trusted document scanning company like Van Ausdall & Farrar. Working with the premier document scanning company further helps your company gain a competitive advantage over its rivals. Some of the advantages of document scanning for your business include:",
      "bullets": []
     },
     {
      "type": "detail",
      "alt": true,
      "eyebrow": "Process",
-     "heading": "Van Ausdall & Farrar: Your Document Conversion Service Provider",
-     "body": "In Evansville, several companies offer document conversion services. But remember, not every company is created equal. Finding the most suitable document conversion company for your needs can be challenging. However, as a leader with a reputation and experience in this field, none match the exemplary services offered by Van Ausdall & Farrar. Training your staff for document conversion can be very costly for a business. This is why you need a trusted document conversion service provider. Using a document conversion company will help save you the money required to train your staff on matters of document conversion. As a leading document conversion service provider in Evansville, Van Ausdall & Farrar has a team of qualified experts ready to address all of your needs.",
+     "heading": "Van Ausdall & Farrar: Your Document Scanning Service Provider",
+     "body": "In Evansville, several companies offer document scanning services. But remember, not every company is created equal. Finding the most suitable document scanning company for your needs can be challenging. However, as a leader with a reputation and experience in this field, none match the exemplary services offered by Van Ausdall & Farrar. Training your staff for document scanning can be very costly for a business. This is why you need a trusted document scanning service provider. Using a document scanning company will help save you the money required to train your staff on matters of document scanning. As a leading document scanning service provider in Evansville, Van Ausdall & Farrar has a team of qualified experts ready to address all of your needs.",
      "bullets": []
     },
     {
@@ -24562,7 +24562,7 @@
      "alt": false,
      "eyebrow": "Process",
      "heading": "Document Service Provider to any Business and Project",
-     "body": "Businesses in Evansville have projects of various sizes. These companies may require document conversion services for their needs. However, finding the right document conversion service provider can be very difficult. Van Ausdall & Farrar prides itself on offering document conversion services to companies in Evansville, regardless of size. Our services cover projects of different sizes as we can convert millions of images and documents into digital copies monthly.",
+     "body": "Businesses in Evansville have projects of various sizes. These companies may require document scanning services for their needs. However, finding the right document scanning service provider can be very difficult. Van Ausdall & Farrar prides itself on offering document scanning services to companies in Evansville, regardless of size. Our services cover projects of different sizes as we can convert millions of images and documents into digital copies monthly.",
      "bullets": []
     },
     {
@@ -24570,7 +24570,7 @@
      "alt": true,
      "eyebrow": "Process",
      "heading": "FEATURES INCLUDED",
-     "body": "Our exclusive features make us the right partner for your document conversion needs. We offer the following services:",
+     "body": "Our exclusive features make us the right partner for your document scanning needs. We offer the following services:",
      "bullets": [
       "Document Pick-Up & Staging",
       "Document Prep",
@@ -24586,8 +24586,8 @@
      "heading": "Questions we get in Evansville",
      "items": [
       [
-       "What Is Document Conversion?",
-       "The document conversion process can be defined as converting large files into different digital formats and copies. This process can be made successful using software instead of manual conversions."
+       "What Is Document Scanning?",
+       "The document scanning process can be defined as converting large files into different digital formats and copies. This process can be made successful using software instead of manual conversions."
       ],
       [
        "Does Van Ausdall & Farrar serve Evansville?",
@@ -24620,8 +24620,8 @@
     {
      "@context": "https://schema.org",
      "@type": "Service",
-     "name": "Document Conversion in Evansville, IN",
-     "serviceType": "Document Conversion in Evansville, IN",
+     "name": "Document Scanning in Evansville, IN",
+     "serviceType": "Document Scanning in Evansville, IN",
      "provider": {
       "@type": "Organization",
       "name": "Van Ausdall & Farrar, Inc.",
@@ -24633,14 +24633,14 @@
        "name": "Evansville"
       }
      ],
-     "description": "Document conversion can be very labor intensive and costly for your business, especially if you lack trained staff and the need to train your staff on such matters."
+     "description": "Document scanning can be very labor intensive and costly for your business, especially if you lack trained staff and the need to train your staff on such matters."
     }
    ],
    "migrated_from": "/evansville/document-conversion-solutions",
    "ptype": "city",
    "pillar": "Process",
-   "name": "Document Conversion in Evansville, IN",
-   "one": "Document conversion can be very labor intensive and costly for your business, especially if you lack trained staff and the need to train."
+   "name": "Document Scanning in Evansville, IN",
+   "one": "Document scanning can be very labor intensive and costly for your business, especially if you lack trained staff and the need to train."
   },
   {
    "file": "locations/evansville-managed-it-solutions.html",
@@ -33234,7 +33234,7 @@
      "alt": true,
      "eyebrow": "Process",
      "heading": "Document Scanning",
-     "body": "Many benefits can be gained when companies choose to go from paper to digital, but the process of doing so can be difficult. Many companies become overwhelmed with everything that goes into document conversion. VAF has the latest technology and strategic initiatives to seamlessly convert your documents to digital formats. Some of the benefits of a digital transformation include: Backfile Scanning and Indexing. VAF has the latest Opex scanning systems and industry-leading intelligence capture software to ensure your documents are handled securely. Day-Forward Business Process Outsourcing. We can process your day-forward documents via a secure lock-box/BPO arrangement, or we can provide your company with the staffing, equipment and hardware to support your critical business areas onsite. Secure Document Destruction. After your files are scanned and signed off by Van Ausdall & Farrar’s chain of custody, files are destroyed safely and securely at our headquarters.",
+     "body": "Many benefits can be gained when companies choose to go from paper to digital, but the process of doing so can be difficult. Many companies become overwhelmed with everything that goes into document scanning. VAF has the latest technology and strategic initiatives to seamlessly convert your documents to digital formats. Some of the benefits of a digital transformation include: Backfile Scanning and Indexing. VAF has the latest Opex scanning systems and industry-leading intelligence capture software to ensure your documents are handled securely. Day-Forward Business Process Outsourcing. We can process your day-forward documents via a secure lock-box/BPO arrangement, or we can provide your company with the staffing, equipment and hardware to support your critical business areas onsite. Secure Document Destruction. After your files are scanned and signed off by Van Ausdall & Farrar’s chain of custody, files are destroyed safely and securely at our headquarters.",
      "bullets": []
     },
     {
@@ -33567,7 +33567,7 @@
       ],
       [
        "Solutions",
-       "Document Conversion",
+       "Document Scanning",
        "",
        "Open the page",
        "services/document-conversion.html"
@@ -33842,7 +33842,7 @@
       ],
       [
        "Solutions",
-       "Document Conversion",
+       "Document Scanning",
        "",
        "Open the page",
        "services/document-conversion.html"
@@ -34099,7 +34099,7 @@
       ],
       [
        "Solutions",
-       "Document Conversion",
+       "Document Scanning",
        "",
        "Open the page",
        "services/document-conversion.html"
@@ -34494,7 +34494,7 @@
       ],
       [
        "Solutions",
-       "Document Conversion",
+       "Document Scanning",
        "",
        "Open the page",
        "services/document-conversion.html"
@@ -34749,7 +34749,7 @@
       ],
       [
        "Solutions",
-       "Document Conversion",
+       "Document Scanning",
        "",
        "Open the page",
        "services/document-conversion.html"
@@ -34992,7 +34992,7 @@
       ],
       [
        "Solutions",
-       "Document Conversion",
+       "Document Scanning",
        "",
        "Open the page",
        "services/document-conversion.html"
@@ -40570,12 +40570,12 @@
      {
       "url": "/document-conversion/",
       "type": "service",
-      "title": "Document Conversion Indianapolis | Van Ausdall & Farrar",
+      "title": "Document Scanning Indianapolis | Van Ausdall & Farrar",
       "title_len": 55,
       "city": true,
-      "meta": "Document conversion in Indianapolis from Van Ausdall & Farrar: paperless digital imaging, secure electronic storage, and cost-effective retrieval for your business documents.",
+      "meta": "Document scanning in Indianapolis from Van Ausdall & Farrar: paperless digital imaging, secure electronic storage, and cost-effective retrieval for your business documents.",
       "meta_len": 174,
-      "h1": "Document Conversion in Indianapolis",
+      "h1": "Document Scanning in Indianapolis",
       "h1_count": 1,
       "h2_count": 5,
       "h3_count": 17,
@@ -42161,12 +42161,12 @@
      {
       "url": "/evansville/document-conversion-solutions",
       "type": "city",
-      "title": "Document Conversion in Evansville, IN | Van Ausdall & Farrar",
+      "title": "Document Scanning in Evansville, IN | Van Ausdall & Farrar",
       "title_len": 60,
       "city": true,
-      "meta": "Document Conversion Service in Evanville, IN Solutions in Indiana. IT support, managed services, and business technology solutions. Learn more. Learn more.",
+      "meta": "Document Scanning Service in Evanville, IN Solutions in Indiana. IT support, managed services, and business technology solutions. Learn more. Learn more.",
       "meta_len": 155,
-      "h1": "Document Conversion Service in Evanville, IN",
+      "h1": "Document Scanning Service in Evanville, IN",
       "h1_count": 1,
       "h2_count": 6,
       "h3_count": 10,
@@ -44698,10 +44698,10 @@
      {
       "url": "/process/document-scanning",
       "type": "service",
-      "title": "Document Scanning & Conversion Service | Indianapolis",
+      "title": "Document Scanning Service | Indianapolis",
       "title_len": 53,
       "city": true,
-      "meta": "Document Scanning & Conversion Service | Indianapolis and IT services from Van Ausdall & Farrar for your business. Learn more. Schedule a consultation today.",
+      "meta": "Document Scanning Service | Indianapolis and IT services from Van Ausdall & Farrar for your business. Learn more. Schedule a consultation today.",
       "meta_len": 157,
       "h1": "Business Document Scanning Service",
       "h1_count": 1,
@@ -47449,7 +47449,7 @@
       {
        "url": "/locations/evansville-document-conversion-solutions.html",
        "type": "city",
-       "title": "Document Conversion in Evansville, IN",
+       "title": "Document Scanning in Evansville, IN",
        "title_len": 37,
        "city": true,
        "meta_len": 155,
@@ -49271,7 +49271,7 @@
       {
        "url": "/services/document-conversion.html",
        "type": "service",
-       "title": "Document Conversion, Indianapolis | Van Ausdall & Farrar",
+       "title": "Document Scanning Services, Indianapolis | Van Ausdall & Farrar",
        "title_len": 56,
        "city": true,
        "meta_len": 150,

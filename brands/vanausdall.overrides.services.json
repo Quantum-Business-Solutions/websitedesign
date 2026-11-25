@@ -2840,7 +2840,7 @@
      ],
      [
       "Process",
-      "Document Conversion",
+      "Document Scanning",
       "Closed-loop scanning in the secure Document Conversion Center.",
       "Open the page",
       "services/document-conversion.html"
@@ -4000,7 +4000,7 @@
      ],
      [
       "Process",
-      "Document Conversion",
+      "Document Scanning",
       "Closed-loop scanning in the secure Document Conversion Center.",
       "Open the page",
       "services/document-conversion.html"
@@ -4122,7 +4122,7 @@
     "bullets": [
      "Capture into a content management system",
      "Route documents with workflow",
-     "Use document conversion for big backfiles",
+     "Use document scanning for big backfiles",
      "Scan from your VAF multifunction devices"
     ]
    },
@@ -4149,7 +4149,7 @@
      ],
      [
       "Does VAF only sell scanners?",
-      "No. VAF also provides document conversion, content management and workflow software, so scanned images can be indexed and used."
+      "No. VAF also provides document scanning, content management and workflow software, so scanned images can be indexed and used."
      ],
      [
       "Where can I download scanner drivers?",
@@ -4165,7 +4165,7 @@
     "items": [
      [
       "Process",
-      "Document Conversion",
+      "Document Scanning",
       "Closed-loop scanning in the secure Document Conversion Center.",
       "Open the page",
       "services/document-conversion.html"
@@ -4401,7 +4401,7 @@
      ],
      [
       "Process",
-      "Document Conversion",
+      "Document Scanning",
       "Closed-loop scanning in the secure Document Conversion Center.",
       "Open the page",
       "services/document-conversion.html"
@@ -9965,7 +9965,7 @@
     "type": "resources",
     "alt": true,
     "heading": "Related document pages",
-    "intro": "Platform, scanning and conversion pages behind document management.",
+    "intro": "Platform, scanning pages behind document management.",
     "items": [
      [
       "Process",
@@ -9990,7 +9990,7 @@
      ],
      [
       "Process",
-      "Document Conversion",
+      "Document Scanning",
       "Closed-loop scanning in the secure Document Conversion Center.",
       "Open the page",
       "services/document-conversion.html"
@@ -10380,7 +10380,7 @@
      "Managed IT and security",
      "Business phone systems",
      "Copiers and managed print",
-     "Document management or conversion",
+     "Document management or scanning",
      "AI consulting",
      "Something else"
     ],

@@ -13,7 +13,7 @@ INDUSTRY_PAGES = {"Education": "industries/education.html", "Engineering and Con
                   "Real Estate": "industries/real-estate.html", "State and Local Government": "industries/government.html"}
 TOP_SERVICES = [("Managed IT services", "services/managed-it.html"), ("Cybersecurity", "services/cybersecurity.html"),
                 ("Business phone systems", "services/business-phone-systems.html"), ("Copiers and printers", "services/copiers.html"),
-                ("Managed print services", "services/managed-print.html"), ("Document conversion", "services/document-conversion.html")]
+                ("Managed print services", "services/managed-print.html"), ("Document scanning", "services/document-conversion.html")]
 TAG_RULES = [  # first match wins: (regex on the page file, blog tag slug, heading topic)
     (r"cyber|security|knowbe4|phish|network-sec|firewall", "cybersecurity", "security"),
     (r"managed-it|proactive-it|help-desk|it-services|infrastructure|network", "managed-it", "managed IT"),

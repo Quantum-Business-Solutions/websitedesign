@@ -336,7 +336,7 @@
             "sub_kind": "link"
           },
           {
-            "sub_label": "Document conversion",
+            "sub_label": "Document scanning",
             "sub_to": {
               "url": {
                 "content_id": null,

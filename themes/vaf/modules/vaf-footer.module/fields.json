@@ -253,7 +253,7 @@
             }
           },
           {
-            "link_label": "Document conversion",
+            "link_label": "Document scanning",
             "to": {
               "url": {
                 "content_id": null,

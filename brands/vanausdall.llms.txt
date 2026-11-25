@@ -1,6 +1,6 @@
 # Van Ausdall & Farrar, Inc.
 
-> one of Indiana's largest independently owned office technology providers, privately owned in Indianapolis since 1914: managed IT and cybersecurity, business phone systems, copiers and managed print, document management and conversion, and AI consulting.
+> one of Indiana's largest independently owned office technology providers, privately owned in Indianapolis since 1914: managed IT and cybersecurity, business phone systems, copiers and managed print, document management and scanning, and AI consulting.
 
 Facts: founded 1914 (Thomas Edison Company distributor); privately owned and operated in Indianapolis; headquarters 6430 E 75th Street, Indianapolis, IN 46250; offices in Fort Wayne and Evansville; SOC 2 certified; Net Promoter Score 94.6 audited by CEO Juice; Mitel Gold partner; Customer Care Center Monday to Friday 7:00am to 5:00pm, (317) 634-2913.
 
@@ -24,7 +24,7 @@ Facts: founded 1914 (Thomas Edison Company distributor); privately owned and ope
 - [Copier Repair Service, Indianapolis](https://www.vanausdall.com/services/copier-service): Certified field service technicians are on the road across Indianapolis and central Indiana every day.
 - [Production Print, Indianapolis](https://www.vanausdall.com/services/production-print): In-plant printing, variable data and color workflow for high-volume environments: presses, finishing.
 - [Document Management, Indianapolis](https://www.vanausdall.com/services/document-management): Capture, store and automate business documents to cut paper and boost productivity.
-- [Document Conversion, Indianapolis](https://www.vanausdall.com/services/document-conversion): Paperless digital imaging and secure electronic storage from VAF's ultra-secure Document Conversion Center inside our 57,000-square-foot Indianapolis.
+- [Document Scanning, Indianapolis](https://www.vanausdall.com/services/document-conversion): Paperless digital imaging and secure electronic storage from VAF's ultra-secure Document Conversion Center inside our 57,000-square-foot Indianapolis.
 - [AI Consulting for Indiana Businesses](https://www.vanausdall.com/services/ai-consulting): From strategy to governance: adopt AI responsibly, protect client trust and company data, and stay ahead of the competition.
 - [Backup and Recovery, Indianapolis](https://www.vanausdall.com/services/business-continuity): Business continuity starts with that question. From Van Ausdall & Farrar, one of Indiana's largest independently owned office technology providers since 1914.
 - [Indianapolis IT Support](https://www.vanausdall.com/services/it-support): Indianapolis IT support from Van Ausdall & Farrar: help desk, remote and on-site support, and proactive monitoring since 1914. Call (317) 634-2913.
