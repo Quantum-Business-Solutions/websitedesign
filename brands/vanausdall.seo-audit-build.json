@@ -29,9 +29,9 @@
    "WebSite"
   ],
   "faq_questions": 4,
-  "imgs": 74,
-  "imgs_no_alt": 32,
-  "words": 3765,
+  "imgs": 72,
+  "imgs_no_alt": 31,
+  "words": 3742,
   "internal_links": 164,
   "has_city": true
  },
@@ -61,7 +61,7 @@
   "faq_questions": 3,
   "imgs": 7,
   "imgs_no_alt": 0,
-  "words": 1639,
+  "words": 1621,
   "internal_links": 209,
   "has_city": true
  },
@@ -94,7 +94,7 @@
   "faq_questions": 6,
   "imgs": 8,
   "imgs_no_alt": 0,
-  "words": 1693,
+  "words": 1686,
   "internal_links": 138,
   "has_city": true
  },
@@ -127,7 +127,7 @@
   "faq_questions": 4,
   "imgs": 7,
   "imgs_no_alt": 0,
-  "words": 1335,
+  "words": 1319,
   "internal_links": 138,
   "has_city": true
  },
@@ -160,7 +160,7 @@
   "faq_questions": 6,
   "imgs": 7,
   "imgs_no_alt": 0,
-  "words": 1200,
+  "words": 1189,
   "internal_links": 145,
   "has_city": true
  },
@@ -193,7 +193,7 @@
   "faq_questions": 6,
   "imgs": 7,
   "imgs_no_alt": 0,
-  "words": 1232,
+  "words": 1221,
   "internal_links": 145,
   "has_city": true
  },
@@ -226,7 +226,7 @@
   "faq_questions": 4,
   "imgs": 7,
   "imgs_no_alt": 0,
-  "words": 1303,
+  "words": 1287,
   "internal_links": 138,
   "has_city": true
  },
@@ -257,9 +257,9 @@
    "State"
   ],
   "faq_questions": 6,
-  "imgs": 25,
+  "imgs": 23,
   "imgs_no_alt": 0,
-  "words": 1672,
+  "words": 1640,
   "internal_links": 141,
   "has_city": true
  },
@@ -292,7 +292,7 @@
   "faq_questions": 4,
   "imgs": 7,
   "imgs_no_alt": 0,
-  "words": 1612,
+  "words": 1596,
   "internal_links": 136,
   "has_city": true
  },
@@ -325,7 +325,7 @@
   "faq_questions": 6,
   "imgs": 7,
   "imgs_no_alt": 0,
-  "words": 1195,
+  "words": 1181,
   "internal_links": 143,
   "has_city": true
  },
@@ -358,7 +358,7 @@
   "faq_questions": 6,
   "imgs": 7,
   "imgs_no_alt": 0,
-  "words": 1163,
+  "words": 1152,
   "internal_links": 143,
   "has_city": true
  },
@@ -391,7 +391,7 @@
   "faq_questions": 6,
   "imgs": 7,
   "imgs_no_alt": 0,
-  "words": 1248,
+  "words": 1237,
   "internal_links": 145,
   "has_city": true
  },
@@ -424,7 +424,7 @@
   "faq_questions": 4,
   "imgs": 7,
   "imgs_no_alt": 0,
-  "words": 1554,
+  "words": 1538,
   "internal_links": 138,
   "has_city": true
  },
@@ -457,7 +457,7 @@
   "faq_questions": 6,
   "imgs": 7,
   "imgs_no_alt": 0,
-  "words": 1185,
+  "words": 1168,
   "internal_links": 145,
   "has_city": true
  },
@@ -484,7 +484,7 @@
   "faq_questions": 3,
   "imgs": 18,
   "imgs_no_alt": 0,
-  "words": 1622,
+  "words": 1598,
   "internal_links": 138,
   "has_city": true
  },
@@ -517,7 +517,7 @@
   "faq_questions": 5,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1320,
+  "words": 1299,
   "internal_links": 140,
   "has_city": true
  },
@@ -550,7 +550,7 @@
   "faq_questions": 5,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1215,
+  "words": 1164,
   "internal_links": 139,
   "has_city": true
  },
@@ -583,7 +583,7 @@
   "faq_questions": 5,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1229,
+  "words": 1208,
   "internal_links": 138,
   "has_city": true
  },
@@ -616,7 +616,7 @@
   "faq_questions": 5,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1279,
+  "words": 1260,
   "internal_links": 140,
   "has_city": true
  },
@@ -649,7 +649,7 @@
   "faq_questions": 5,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1176,
+  "words": 1155,
   "internal_links": 137,
   "has_city": true
  },
@@ -682,7 +682,7 @@
   "faq_questions": 5,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1189,
+  "words": 1168,
   "internal_links": 139,
   "has_city": true
  },
@@ -715,7 +715,7 @@
   "faq_questions": 5,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1333,
+  "words": 1312,
   "internal_links": 142,
   "has_city": true
  },
@@ -748,7 +748,7 @@
   "faq_questions": 5,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1299,
+  "words": 1278,
   "internal_links": 140,
   "has_city": true
  },
@@ -775,7 +775,7 @@
   "faq_questions": 4,
   "imgs": 2,
   "imgs_no_alt": 0,
-  "words": 1213,
+  "words": 1204,
   "internal_links": 140,
   "has_city": true
  },
@@ -804,7 +804,7 @@
   "faq_questions": 4,
   "imgs": 4,
   "imgs_no_alt": 1,
-  "words": 1089,
+  "words": 1085,
   "internal_links": 127,
   "has_city": true
  },
@@ -833,15 +833,15 @@
   "faq_questions": 4,
   "imgs": 4,
   "imgs_no_alt": 1,
-  "words": 1495,
+  "words": 1491,
   "internal_links": 140,
   "has_city": true
  },
  {
   "slug": "case-studies/johnson-memorial-hospital",
   "ok": true,
-  "title": "Community Hospital Case Study, Indiana | VAF",
-  "title_len": 44,
+  "title": "Regional Hospital Case Study, Indiana | Van Ausdall & Farrar",
+  "title_len": 60,
   "desc_len": 154,
   "h1": 1,
   "h2": 10,
@@ -862,7 +862,7 @@
   "faq_questions": 4,
   "imgs": 4,
   "imgs_no_alt": 1,
-  "words": 1101,
+  "words": 1099,
   "internal_links": 127,
   "has_city": true
  },
@@ -891,7 +891,7 @@
   "faq_questions": 4,
   "imgs": 4,
   "imgs_no_alt": 1,
-  "words": 1069,
+  "words": 1065,
   "internal_links": 126,
   "has_city": true
  },
@@ -900,7 +900,7 @@
   "ok": true,
   "title": "Tech Strength Assessment, Indiana | Van Ausdall & Farrar",
   "title_len": 56,
-  "desc_len": 147,
+  "desc_len": 141,
   "h1": 1,
   "h2": 8,
   "canonical": true,
@@ -918,7 +918,7 @@
   "faq_questions": 4,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1389,
+  "words": 1354,
   "internal_links": 117,
   "has_city": true
  },
@@ -949,7 +949,7 @@
   "faq_questions": 6,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1012,
+  "words": 1000,
   "internal_links": 125,
   "has_city": true
  },
@@ -976,7 +976,7 @@
   "faq_questions": 6,
   "imgs": 2,
   "imgs_no_alt": 0,
-  "words": 1083,
+  "words": 1078,
   "internal_links": 127,
   "has_city": true
  },
@@ -1003,7 +1003,7 @@
   "faq_questions": 6,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1062,
+  "words": 1045,
   "internal_links": 125,
   "has_city": true
  },
@@ -1040,7 +1040,7 @@
   "faq_questions": 4,
   "imgs": 6,
   "imgs_no_alt": 1,
-  "words": 1717,
+  "words": 1736,
   "internal_links": 128,
   "has_city": true
  },
@@ -1065,9 +1065,9 @@
    "Question"
   ],
   "faq_questions": 6,
-  "imgs": 68,
-  "imgs_no_alt": 24,
-  "words": 1089,
+  "imgs": 65,
+  "imgs_no_alt": 23,
+  "words": 1071,
   "internal_links": 126,
   "has_city": true
  },
@@ -1094,15 +1094,15 @@
   "faq_questions": 6,
   "imgs": 4,
   "imgs_no_alt": 1,
-  "words": 1479,
+  "words": 1468,
   "internal_links": 124,
   "has_city": true
  },
  {
   "slug": "support",
   "ok": true,
-  "title": "Client Service Center, Indianapolis | Van Ausdall & Farrar",
-  "title_len": 58,
+  "title": "Customer Care Center, Indianapolis | Van Ausdall & Farrar",
+  "title_len": 57,
   "desc_len": 153,
   "h1": 1,
   "h2": 9,
@@ -1124,7 +1124,7 @@
   "faq_questions": 5,
   "imgs": 2,
   "imgs_no_alt": 0,
-  "words": 1068,
+  "words": 1056,
   "internal_links": 124,
   "has_city": true
  },
@@ -1156,7 +1156,7 @@
   "faq_questions": 4,
   "imgs": 2,
   "imgs_no_alt": 0,
-  "words": 1858,
+  "words": 1842,
   "internal_links": 159,
   "has_city": true
  },
@@ -1192,7 +1192,7 @@
   "faq_questions": 7,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1196,
+  "words": 1179,
   "internal_links": 138,
   "has_city": true
  },
@@ -1227,7 +1227,7 @@
   "faq_questions": 7,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1394,
+  "words": 1382,
   "internal_links": 142,
   "has_city": false
  },
@@ -1262,7 +1262,7 @@
   "faq_questions": 7,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1222,
+  "words": 1205,
   "internal_links": 136,
   "has_city": false
  },
@@ -1294,7 +1294,7 @@
   "faq_questions": 5,
   "imgs": 2,
   "imgs_no_alt": 0,
-  "words": 982,
+  "words": 961,
   "internal_links": 126,
   "has_city": true
  },
@@ -1324,7 +1324,7 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1422,
+  "words": 1411,
   "internal_links": 145,
   "has_city": true
  },
@@ -1351,7 +1351,7 @@
   "faq_questions": 7,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1056,
+  "words": 1052,
   "internal_links": 127,
   "has_city": true
  },
@@ -1385,7 +1385,7 @@
   "faq_questions": 6,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1382,
+  "words": 1361,
   "internal_links": 139,
   "has_city": false
  },
@@ -1419,7 +1419,7 @@
   "faq_questions": 4,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1236,
+  "words": 1220,
   "internal_links": 146,
   "has_city": false
  },
@@ -1453,7 +1453,7 @@
   "faq_questions": 4,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1364,
+  "words": 1348,
   "internal_links": 146,
   "has_city": false
  },
@@ -1487,7 +1487,7 @@
   "faq_questions": 4,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1264,
+  "words": 1248,
   "internal_links": 146,
   "has_city": false
  },
@@ -1517,7 +1517,7 @@
   "faq_questions": 5,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1267,
+  "words": 1251,
   "internal_links": 138,
   "has_city": true
  },
@@ -1551,7 +1551,7 @@
   "faq_questions": 6,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1506,
+  "words": 1483,
   "internal_links": 140,
   "has_city": false
  },
@@ -1580,7 +1580,7 @@
   "faq_questions": 3,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1539,
+  "words": 1525,
   "internal_links": 143,
   "has_city": true
  },
@@ -1609,7 +1609,7 @@
   "faq_questions": 3,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1139,
+  "words": 1125,
   "internal_links": 129,
   "has_city": true
  },
@@ -1638,7 +1638,7 @@
   "faq_questions": 3,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1359,
+  "words": 1345,
   "internal_links": 135,
   "has_city": true
  },
@@ -1667,7 +1667,7 @@
   "faq_questions": 3,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1360,
+  "words": 1346,
   "internal_links": 135,
   "has_city": true
  },
@@ -1696,7 +1696,7 @@
   "faq_questions": 3,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1563,
+  "words": 1549,
   "internal_links": 143,
   "has_city": true
  },
@@ -1725,7 +1725,7 @@
   "faq_questions": 3,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1545,
+  "words": 1536,
   "internal_links": 129,
   "has_city": true
  },
@@ -1754,7 +1754,7 @@
   "faq_questions": 3,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1208,
+  "words": 1194,
   "internal_links": 129,
   "has_city": true
  },
@@ -1783,7 +1783,7 @@
   "faq_questions": 3,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1166,
+  "words": 1152,
   "internal_links": 129,
   "has_city": true
  },
@@ -1812,7 +1812,7 @@
   "faq_questions": 3,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1223,
+  "words": 1209,
   "internal_links": 129,
   "has_city": true
  },
@@ -1841,7 +1841,7 @@
   "faq_questions": 3,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1314,
+  "words": 1300,
   "internal_links": 135,
   "has_city": true
  },
@@ -1870,7 +1870,7 @@
   "faq_questions": 3,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1257,
+  "words": 1243,
   "internal_links": 129,
   "has_city": true
  },
@@ -1899,7 +1899,7 @@
   "faq_questions": 3,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1347,
+  "words": 1333,
   "internal_links": 135,
   "has_city": true
  },
@@ -1928,7 +1928,7 @@
   "faq_questions": 3,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1098,
+  "words": 1084,
   "internal_links": 129,
   "has_city": true
  },
@@ -1957,7 +1957,7 @@
   "faq_questions": 3,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1183,
+  "words": 1169,
   "internal_links": 129,
   "has_city": true
  },
@@ -1987,7 +1987,7 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1334,
+  "words": 1323,
   "internal_links": 145,
   "has_city": false
  },
@@ -2021,7 +2021,7 @@
   "faq_questions": 6,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1441,
+  "words": 1416,
   "internal_links": 140,
   "has_city": false
  },
@@ -2055,7 +2055,7 @@
   "faq_questions": 4,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1242,
+  "words": 1226,
   "internal_links": 146,
   "has_city": false
  },
@@ -2089,7 +2089,7 @@
   "faq_questions": 4,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1363,
+  "words": 1347,
   "internal_links": 146,
   "has_city": false
  },
@@ -2123,7 +2123,7 @@
   "faq_questions": 4,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1295,
+  "words": 1279,
   "internal_links": 146,
   "has_city": false
  },
@@ -2155,7 +2155,7 @@
   "faq_questions": 7,
   "imgs": 15,
   "imgs_no_alt": 3,
-  "words": 1976,
+  "words": 1958,
   "internal_links": 155,
   "has_city": false
  },
@@ -2185,7 +2185,7 @@
   "faq_questions": 7,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1308,
+  "words": 1297,
   "internal_links": 145,
   "has_city": true
  },
@@ -2215,7 +2215,7 @@
   "faq_questions": 7,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1322,
+  "words": 1311,
   "internal_links": 145,
   "has_city": true
  },
@@ -2245,7 +2245,7 @@
   "faq_questions": 7,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1263,
+  "words": 1252,
   "internal_links": 145,
   "has_city": true
  },
@@ -2275,7 +2275,7 @@
   "faq_questions": 7,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1288,
+  "words": 1277,
   "internal_links": 145,
   "has_city": true
  },
@@ -2305,7 +2305,7 @@
   "faq_questions": 7,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1323,
+  "words": 1312,
   "internal_links": 145,
   "has_city": true
  },
@@ -2335,7 +2335,7 @@
   "faq_questions": 6,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1225,
+  "words": 1214,
   "internal_links": 144,
   "has_city": true
  },
@@ -2365,7 +2365,7 @@
   "faq_questions": 7,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1395,
+  "words": 1384,
   "internal_links": 144,
   "has_city": true
  },
@@ -2395,7 +2395,7 @@
   "faq_questions": 6,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 966,
+  "words": 955,
   "internal_links": 137,
   "has_city": true
  },
@@ -2425,7 +2425,7 @@
   "faq_questions": 4,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1265,
+  "words": 1249,
   "internal_links": 138,
   "has_city": true
  },
@@ -2455,7 +2455,7 @@
   "faq_questions": 4,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1197,
+  "words": 1181,
   "internal_links": 137,
   "has_city": true
  },
@@ -2485,7 +2485,7 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1182,
+  "words": 1171,
   "internal_links": 145,
   "has_city": true
  },
@@ -2512,7 +2512,7 @@
   "faq_questions": 5,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 888,
+  "words": 884,
   "internal_links": 127,
   "has_city": true
  },
@@ -2542,9 +2542,9 @@
    "State"
   ],
   "faq_questions": 7,
-  "imgs": 17,
+  "imgs": 16,
   "imgs_no_alt": 3,
-  "words": 1944,
+  "words": 1918,
   "internal_links": 153,
   "has_city": true
  },
@@ -2574,7 +2574,7 @@
   "faq_questions": 4,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1452,
+  "words": 1436,
   "internal_links": 138,
   "has_city": true
  },
@@ -2604,7 +2604,7 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1400,
+  "words": 1389,
   "internal_links": 145,
   "has_city": true
  },
@@ -2634,7 +2634,7 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1415,
+  "words": 1404,
   "internal_links": 145,
   "has_city": true
  },
@@ -2664,7 +2664,7 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1224,
+  "words": 1213,
   "internal_links": 145,
   "has_city": true
  },
@@ -2691,7 +2691,7 @@
   "faq_questions": 6,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 984,
+  "words": 980,
   "internal_links": 127,
   "has_city": true
  },
@@ -2721,7 +2721,7 @@
   "faq_questions": 6,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1161,
+  "words": 1150,
   "internal_links": 144,
   "has_city": true
  },
@@ -2755,7 +2755,7 @@
   "faq_questions": 4,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1258,
+  "words": 1242,
   "internal_links": 147,
   "has_city": false
  },
@@ -2789,7 +2789,7 @@
   "faq_questions": 5,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1314,
+  "words": 1298,
   "internal_links": 133,
   "has_city": false
  },
@@ -2823,7 +2823,7 @@
   "faq_questions": 5,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1284,
+  "words": 1268,
   "internal_links": 133,
   "has_city": false
  },
@@ -2857,7 +2857,7 @@
   "faq_questions": 4,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1210,
+  "words": 1194,
   "internal_links": 133,
   "has_city": false
  },
@@ -2891,7 +2891,7 @@
   "faq_questions": 4,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1181,
+  "words": 1165,
   "internal_links": 133,
   "has_city": false
  },
@@ -2925,7 +2925,7 @@
   "faq_questions": 4,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1104,
+  "words": 1088,
   "internal_links": 133,
   "has_city": false
  },
@@ -2959,7 +2959,7 @@
   "faq_questions": 7,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1471,
+  "words": 1454,
   "internal_links": 139,
   "has_city": false
  },
@@ -2993,7 +2993,7 @@
   "faq_questions": 4,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1474,
+  "words": 1458,
   "internal_links": 147,
   "has_city": false
  },
@@ -3027,7 +3027,7 @@
   "faq_questions": 4,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1398,
+  "words": 1382,
   "internal_links": 147,
   "has_city": false
  },
@@ -3061,7 +3061,7 @@
   "faq_questions": 5,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1316,
+  "words": 1300,
   "internal_links": 133,
   "has_city": false
  },
@@ -3095,7 +3095,7 @@
   "faq_questions": 4,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1459,
+  "words": 1443,
   "internal_links": 147,
   "has_city": false
  },
@@ -3129,7 +3129,7 @@
   "faq_questions": 4,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1456,
+  "words": 1440,
   "internal_links": 147,
   "has_city": false
  },
@@ -3159,7 +3159,7 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1445,
+  "words": 1434,
   "internal_links": 145,
   "has_city": true
  },
@@ -3189,7 +3189,7 @@
   "faq_questions": 7,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1475,
+  "words": 1464,
   "internal_links": 145,
   "has_city": true
  },
@@ -3223,7 +3223,7 @@
   "faq_questions": 6,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1434,
+  "words": 1417,
   "internal_links": 139,
   "has_city": false
  },
@@ -3257,7 +3257,7 @@
   "faq_questions": 4,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1114,
+  "words": 1098,
   "internal_links": 133,
   "has_city": true
  },
@@ -3289,7 +3289,7 @@
   "faq_questions": 6,
   "imgs": 31,
   "imgs_no_alt": 16,
-  "words": 1894,
+  "words": 1878,
   "internal_links": 155,
   "has_city": true
  },
@@ -3319,7 +3319,7 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1111,
+  "words": 1100,
   "internal_links": 145,
   "has_city": true
  },
@@ -3349,7 +3349,7 @@
   "faq_questions": 4,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1433,
+  "words": 1417,
   "internal_links": 138,
   "has_city": true
  },
@@ -3379,7 +3379,7 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1256,
+  "words": 1245,
   "internal_links": 145,
   "has_city": true
  },
@@ -3409,7 +3409,7 @@
   "faq_questions": 7,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1331,
+  "words": 1320,
   "internal_links": 144,
   "has_city": true
  },
@@ -3439,7 +3439,7 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1244,
+  "words": 1233,
   "internal_links": 138,
   "has_city": true
  },
@@ -3469,7 +3469,7 @@
   "faq_questions": 7,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1402,
+  "words": 1391,
   "internal_links": 145,
   "has_city": true
  },
@@ -3499,7 +3499,7 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1252,
+  "words": 1241,
   "internal_links": 138,
   "has_city": true
  },
@@ -3529,7 +3529,7 @@
   "faq_questions": 7,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1266,
+  "words": 1255,
   "internal_links": 138,
   "has_city": true
  },
@@ -3559,7 +3559,7 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1431,
+  "words": 1420,
   "internal_links": 145,
   "has_city": true
  },
@@ -3589,7 +3589,7 @@
   "faq_questions": 7,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1383,
+  "words": 1372,
   "internal_links": 145,
   "has_city": true
  },
@@ -3623,7 +3623,7 @@
   "faq_questions": 6,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1453,
+  "words": 1436,
   "internal_links": 140,
   "has_city": false
  },
@@ -3657,7 +3657,7 @@
   "faq_questions": 4,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1302,
+  "words": 1286,
   "internal_links": 146,
   "has_city": false
  },
@@ -3691,7 +3691,7 @@
   "faq_questions": 4,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1398,
+  "words": 1382,
   "internal_links": 146,
   "has_city": false
  },
@@ -3725,7 +3725,7 @@
   "faq_questions": 4,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1156,
+  "words": 1140,
   "internal_links": 133,
   "has_city": false
  },
@@ -3755,7 +3755,7 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1197,
+  "words": 1186,
   "internal_links": 145,
   "has_city": true
  },
@@ -3785,7 +3785,7 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1401,
+  "words": 1390,
   "internal_links": 145,
   "has_city": true
  },
@@ -3815,7 +3815,7 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1186,
+  "words": 1175,
   "internal_links": 145,
   "has_city": true
  },
@@ -3849,7 +3849,7 @@
   "faq_questions": 6,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1381,
+  "words": 1359,
   "internal_links": 139,
   "has_city": false
  },
@@ -3879,7 +3879,7 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1108,
+  "words": 1097,
   "internal_links": 138,
   "has_city": true
  },
@@ -3906,7 +3906,7 @@
   "faq_questions": 5,
   "imgs": 2,
   "imgs_no_alt": 0,
-  "words": 897,
+  "words": 893,
   "internal_links": 117,
   "has_city": true
  },
@@ -3933,7 +3933,7 @@
   "faq_questions": 4,
   "imgs": 2,
   "imgs_no_alt": 0,
-  "words": 764,
+  "words": 760,
   "internal_links": 117,
   "has_city": true
  },
@@ -3960,7 +3960,7 @@
   "faq_questions": 4,
   "imgs": 2,
   "imgs_no_alt": 0,
-  "words": 695,
+  "words": 691,
   "internal_links": 123,
   "has_city": true
  },
@@ -3987,7 +3987,7 @@
   "faq_questions": 4,
   "imgs": 2,
   "imgs_no_alt": 0,
-  "words": 774,
+  "words": 770,
   "internal_links": 123,
   "has_city": true
  },
@@ -4014,7 +4014,7 @@
   "faq_questions": 4,
   "imgs": 2,
   "imgs_no_alt": 0,
-  "words": 1773,
+  "words": 1769,
   "internal_links": 120,
   "has_city": true
  },
@@ -4041,7 +4041,7 @@
   "faq_questions": 4,
   "imgs": 2,
   "imgs_no_alt": 0,
-  "words": 1275,
+  "words": 1271,
   "internal_links": 117,
   "has_city": true
  },
@@ -4071,7 +4071,7 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1428,
+  "words": 1416,
   "internal_links": 143,
   "has_city": true
  },
@@ -4101,7 +4101,7 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1222,
+  "words": 1211,
   "internal_links": 143,
   "has_city": true
  },
@@ -4131,7 +4131,7 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1332,
+  "words": 1321,
   "internal_links": 145,
   "has_city": true
  },
@@ -4163,7 +4163,7 @@
   "faq_questions": 5,
   "imgs": 16,
   "imgs_no_alt": 3,
-  "words": 2001,
+  "words": 1990,
   "internal_links": 159,
   "has_city": true
  },
@@ -4193,7 +4193,7 @@
   "faq_questions": 4,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1364,
+  "words": 1348,
   "internal_links": 138,
   "has_city": true
  },
@@ -4223,7 +4223,7 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1337,
+  "words": 1326,
   "internal_links": 145,
   "has_city": true
  },
@@ -4253,7 +4253,7 @@
   "faq_questions": 6,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1200,
+  "words": 1189,
   "internal_links": 144,
   "has_city": true
  },
@@ -4283,7 +4283,7 @@
   "faq_questions": 6,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1229,
+  "words": 1218,
   "internal_links": 144,
   "has_city": true
  },
@@ -4313,7 +4313,7 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1196,
+  "words": 1185,
   "internal_links": 138,
   "has_city": false
  },
@@ -4343,7 +4343,7 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1275,
+  "words": 1264,
   "internal_links": 145,
   "has_city": true
  },
@@ -4373,7 +4373,7 @@
   "faq_questions": 6,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1091,
+  "words": 1080,
   "internal_links": 144,
   "has_city": true
  },
@@ -4403,7 +4403,7 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1260,
+  "words": 1249,
   "internal_links": 145,
   "has_city": true
  },
@@ -4433,7 +4433,7 @@
   "faq_questions": 6,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1103,
+  "words": 1092,
   "internal_links": 144,
   "has_city": true
  },
@@ -4467,7 +4467,7 @@
   "faq_questions": 6,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1495,
+  "words": 1474,
   "internal_links": 141,
   "has_city": false
  },
@@ -4501,7 +4501,7 @@
   "faq_questions": 4,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1282,
+  "words": 1266,
   "internal_links": 147,
   "has_city": false
  },
@@ -4535,7 +4535,7 @@
   "faq_questions": 4,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1119,
+  "words": 1103,
   "internal_links": 133,
   "has_city": false
  },
@@ -4569,7 +4569,7 @@
   "faq_questions": 4,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1390,
+  "words": 1374,
   "internal_links": 147,
   "has_city": false
  },
@@ -4599,7 +4599,7 @@
   "faq_questions": 6,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1205,
+  "words": 1194,
   "internal_links": 138,
   "has_city": true
  },
@@ -4629,7 +4629,7 @@
   "faq_questions": 7,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1280,
+  "words": 1269,
   "internal_links": 145,
   "has_city": true
  },
@@ -4659,7 +4659,7 @@
   "faq_questions": 6,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1216,
+  "words": 1205,
   "internal_links": 144,
   "has_city": true
  },
@@ -4686,7 +4686,7 @@
   "faq_questions": 4,
   "imgs": 2,
   "imgs_no_alt": 0,
-  "words": 1386,
+  "words": 1382,
   "internal_links": 117,
   "has_city": true
  },
@@ -4713,7 +4713,7 @@
   "faq_questions": 6,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1000,
+  "words": 996,
   "internal_links": 127,
   "has_city": true
  },
@@ -4743,7 +4743,7 @@
   "faq_questions": 5,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1368,
+  "words": 1352,
   "internal_links": 138,
   "has_city": true
  },
@@ -4773,7 +4773,7 @@
   "faq_questions": 7,
   "imgs": 6,
   "imgs_no_alt": 0,
-  "words": 1307,
+  "words": 1296,
   "internal_links": 138,
   "has_city": true
  },
@@ -4803,7 +4803,7 @@
   "faq_questions": 5,
   "imgs": 3,
   "imgs_no_alt": 0,
-  "words": 1039,
+  "words": 1027,
   "internal_links": 142,
   "has_city": true
  }
